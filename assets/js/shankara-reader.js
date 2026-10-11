@@ -18,7 +18,7 @@ const WORKS=[
  {id:"hastamalaka-stotram",title:"Hastāmalaka-stotram",author:"Hastāmalaka",path:"/advaita/books/adi-shankaracharya/hastamalaka-stotram/"},
  {id:"panchikarana-prakarana",title:"Pañcīkaraṇa-prakaraṇa",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/panchikarana-prakarana/"},
  {id:"aparokshanubhuti",title:"Aparokṣānubhūti",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/aparokshanubhuti/"},
- {id:"panchadasi",title:"Pañcadaśī — Chapter 1",author:"Vidyāraṇya",path:"/advaita/books/adi-shankaracharya/panchadasi/"},
+ {id:"panchadasi",title:"Pañcadaśī",author:"Vidyāraṇya",path:"/advaita/books/adi-shankaracharya/panchadasi/"},
  {id:"brahmajnanavali-mala",title:"Brahmajñānāvalīmālā",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/brahmajnanavali-mala/"},
  {id:"advaita-makaranda",title:"Advaitamakaranda",author:"Lakṣmīdhara Kavi",path:"/advaita/books/adi-shankaracharya/advaita-makaranda/"},
  {id:"atmavidya-vilasa",title:"Ātmavidyāvilāsa",author:"Sadāśiva Brahmendra",path:"/advaita/books/adi-shankaracharya/atmavidya-vilasa/"},
@@ -55,7 +55,7 @@ const cleanAuthor=s=>String(s||"").replace(/,\s*traditional attribution/ig,"").t
 function aboutHTML(item){
  const summary=ABOUT[item.id];if(!summary)return "";
  const source=item.id==="panchadasi"?'<p class="shankara-about-source"><a href="https://www.upasanayoga.org/PancD.htm" target="_blank" rel="noopener noreferrer">Open the complete 15-chapter source edition ↗</a></p>':"";
- return '<details class="shankara-about"><summary>About this text</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
+ return '<details class="shankara-about"><summary>Info</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
 }
 function chapterOf(unit,id){
  const m=String(unit.id||"").match(/^panchadasi-(\d+)-/);
@@ -156,6 +156,7 @@ async function start(root){
  }catch(err){
   root.setAttribute("aria-busy","false");
   root.dataset.readerFallback="true";
+  enhanceFallback(root,item);
   console.error(err);
  }
 }
