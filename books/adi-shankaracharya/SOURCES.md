@@ -31,20 +31,20 @@ These were consulted to check the Sanskrit readings: [Advaita Śāradā, Sringer
 
 Dṛg-dṛśya-viveka uses the 1931 Sri Ramakrishna Asrama edition as its Sanskrit witness. Its English translation and word-level gloss are newly prepared for this site. The attribution is described as traditional rather than certain.
 
-## Source references for treatises awaiting local readers
+## Online source editions linked from the portal
 
-These citations support collation and translation work. Reader pages on the site contain the Sanskrit text, English translation, and word-for-word gloss; source pages are not the site's reading destinations.
+For locally hosted texts, these references support collation and translation. For titles without a local reader, the portal links directly to an online source edition. Translation and transcription rights vary by source; links do not imply permission to republish third-party material.
 
 | Work | Source text / edition |
 | --- | --- |
-| Upadeśasāhasrī | [English translation by Swami Jagadananda](https://www.sankaracharya.org/upadesa_sahasri.html); [Sanskrit source](https://sanskritdocuments.org/doc_z_misc_shankara/upadeshasaahasrii1.pdf) |
-| Vivekacūḍāmaṇi | [Sanskrit text and English translation](https://www.wisdomlib.org/hinduism/book/vivekachudamani) |
-| Pañcadaśī | [Complete Sanskrit and English text, all fifteen chapters](https://www.upasanayoga.org/PancD.htm); the page identifies its CC BY-NC-SA 4.0 terms |
-| Vedāntasāra | [Sanskrit text with Swami Nikhilananda's English translation](https://estudantedavedanta.net/Vedantasara-Nikhilananda.pdf); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/vedantasara.html) |
-| Sarvavedāntasiddhāntasārasaṅgraha | [Scanned source edition](https://archive.org/details/SarvaVedantaSiddhantaSaraSangraha) |
-| Māṇḍūkyakārikā | [Complete Sanskrit text, GRETIL](https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mANDUkyopaniSatkArikA.htm) |
-| Naiṣkarmyasiddhi | [Complete Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/naishk.html); [English edition catalogued by Open Library](https://openlibrary.org/works/OL23667095W/The_Nai%E1%B9%A3karmya_siddhi_of_Sure%C5%9Bvar%C4%81c%C4%81rya) |
-| Jīvanmuktiviveka | [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/jIvanmuktivivekaH.html); [English translation scan](https://commons.wikimedia.org/wiki/File:The_Jivanmukti-viveka;_or,_The_path_to_liberation_in_this_life_(IA_jivanmuktiviveka00madhiala).pdf) |
+| Upadeśasāhasrī | [English translation with Sanskrit](https://estudantedavedanta.net/UpadeshasahasriofShriShankaracharya.pdf); [online reading edition](https://www.sankaracharya.org/upadesa_sahasri.html); [Sanskrit source](https://sanskritdocuments.org/doc_z_misc_shankara/upadeshasaahasrii1.pdf) |
+| Vivekacūḍāmaṇi | [Translation and word meanings](https://shlokam.org/text/vivekachudamani.htm); [complete text and translation](https://www.wisdomlib.org/hinduism/book/vivekachudamani); [1921 English edition](https://archive.org/details/vivekachudamanio00sankrich) |
+| Pañcadaśī | [Complete Sanskrit and English text, all fifteen chapters](https://www.upasanayoga.org/PancD.htm), licensed CC BY-NC-SA 4.0; [license](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+| Vedāntasāra | [Swami Nikhilananda's English translation](https://estudantedavedanta.net/Vedantasara-Nikhilananda.pdf); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/vedantasara.html) |
+| Sarvavedāntasiddhāntasārasaṅgraha | [Complete Sanskrit and English text with Sanskrit prose order](https://www.upasanayoga.org/SVSSS.htm), licensed CC BY-NC-SA 4.0; [license](https://creativecommons.org/licenses/by-nc-sa/4.0/); [scanned edition](https://archive.org/details/SarvaVedantaSiddhantaSaraSangraha) |
+| Māṇḍūkyakārikā | [Complete English translation with Sanskrit and IAST](https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya); [Sanskrit text](https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mANDUkyopaniSatkArikA.htm) |
+| Naiṣkarmyasiddhi | [1965 English translation edition](https://archive.org/details/Acc.No.6179Naiskarmyasiddhi1965); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/naishk.html) |
+| Jīvanmuktiviveka | [1897 English translation scan](https://commons.wikimedia.org/wiki/File:The_Jivanmukti-viveka;_or,_The_path_to_liberation_in_this_life_(IA_jivanmuktiviveka00madhiala).pdf); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/jIvanmuktivivekaH.html) |
 | Ātmavidyāvilāsa | Local reader: `/advaita/books/adi-shankaracharya/atmavidya-vilasa/`; source witness: [The Theosophist, vol. XIV, no. 9 (1893)](https://iapsop.com/archive/materials/theosophist/theosophist_v14_n09_june_1893.pdf) |
-| Brahmasiddhi | [Scanned Sanskrit source edition](https://archive.org/details/Brahma-siddhi.by.mandanaMisra.sanskrit) |
+| Brahmasiddhi | [Complete Sanskrit text, GRETIL](https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm); [scanned edition](https://archive.org/details/Brahma-siddhi.by.mandanaMisra.sanskrit) |
 | Prasthānabheda | [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/prasthAnabheda.html); [English translation](https://sanskritdocuments.org/sites/snsastri/PrasthAnabheda-Engl.pdf) |
