@@ -7,7 +7,7 @@ const WORKS=[
  {id:"kashi-panchakam",title:"Kāśīpañcakam",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/kashi-panchakam/"},
  {id:"dakshinamurti-ashtakam",title:"Śrī Dakṣiṇāmūrtyaṣṭakam",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/dakshinamurti-ashtakam/"},
  {id:"shatpadi-stotram",title:"Viṣṇu Ṣaṭpadī Stotram",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/shatpadi-stotram/"},
- {id:"bhaja-govindam",title:"Bhajagovindam (Mohamudgara)",author:"Ādi Śaṅkara, traditional attribution",path:"/advaita/books/adi-shankaracharya/bhaja-govindam/"},
+ {id:"bhaja-govindam",title:"Bhajagovindam (Mohamudgara)",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/bhaja-govindam/"},
  {id:"manisha-panchakam",title:"Manīṣāpañcakam",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/manisha-panchakam/"},
  {id:"upadesha-panchakam",title:"Upadeśapañcakam",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/upadesha-panchakam/"},
  {id:"dashashloki",title:"Daśaślokī",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/dashashloki/"},
@@ -17,13 +17,76 @@ const WORKS=[
  {id:"drg-drsya-viveka",title:"Dṛg-dṛśya-viveka",author:"Bhāratī Tīrtha",path:"/advaita/books/adi-shankaracharya/drg-drsya-viveka/"},
  {id:"hastamalaka-stotram",title:"Hastāmalaka-stotram",author:"Hastāmalaka",path:"/advaita/books/adi-shankaracharya/hastamalaka-stotram/"},
  {id:"panchikarana-prakarana",title:"Pañcīkaraṇa-prakaraṇa",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/panchikarana-prakarana/"},
- {id:"aparokshanubhuti",title:"Aparokṣānubhūti",author:"Ādi Śaṅkara, traditional attribution",path:"/advaita/books/adi-shankaracharya/aparokshanubhuti/"},
+ {id:"aparokshanubhuti",title:"Aparokṣānubhūti",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/aparokshanubhuti/"},
  {id:"panchadasi",title:"Pañcadaśī — Chapter 1",author:"Vidyāraṇya",path:"/advaita/books/adi-shankaracharya/panchadasi/"},
  {id:"brahmajnanavali-mala",title:"Brahmajñānāvalīmālā",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/brahmajnanavali-mala/"},
  {id:"advaita-makaranda",title:"Advaitamakaranda",author:"Lakṣmīdhara Kavi",path:"/advaita/books/adi-shankaracharya/advaita-makaranda/"},
  {id:"atmavidya-vilasa",title:"Ātmavidyāvilāsa",author:"Sadāśiva Brahmendra",path:"/advaita/books/adi-shankaracharya/atmavidya-vilasa/"},
  {id:"prasthanabheda",title:"Prasthānabheda",author:"Madhusūdana Sarasvatī",path:"/advaita/books/adi-shankaracharya/prasthanabheda/"},
 ];
+
+const ABOUT={
+ "nirvana-shatkam":"Six verses that loosen identification with body, mind, senses, and roles, pointing to the Self as awareness.",
+ "maya-panchakam":"Five verses on how māyā makes non-dual reality appear divided and how knowledge clears that confusion.",
+ "advaita-pancharatnam":"Five verses expressing the non-dual vision and recognition of the Self as Brahman.",
+ "yati-panchakam":"Five verses on the discipline and clarity of a renunciate established in Self-knowledge.",
+ "kashi-panchakam":"Five verses that interpret Kāśī and pilgrimage through the inward vision of the Self.",
+ "dakshinamurti-ashtakam":"Eight verses on Dakṣiṇāmūrti as teacher and the world as an appearance in consciousness.",
+ "shatpadi-stotram":"A short prayer to Viṣṇu asking for refuge, guidance, and freedom from ignorance.",
+ "bhaja-govindam":"A devotional teaching poem urging discernment and freedom from attachment to what passes away.",
+ "manisha-panchakam":"Five verses affirming that the knower of Brahman is worthy of reverence, regardless of social status.",
+ "upadesha-panchakam":"Five verses outlining practical disciplines and inquiry for a seeker of liberation.",
+ "dashashloki":"Ten verses describing the Self beyond the body, mind, and ordinary descriptions.",
+ "ekashloki":"A single verse using waking and dream to point toward the one consciousness.",
+ "atma-bodha":"A concise verse manual on Self-knowledge, using familiar examples to explain the distinction between Self and not-Self.",
+ "tattvabodha":"An introductory guide to Vedānta terms, the three bodies, five sheaths, and discrimination between Self and not-Self.",
+ "drg-drsya-viveka":"A compact inquiry that distinguishes the seer from the seen and follows perception back to awareness.",
+ "hastamalaka-stotram":"Twelve verses describing immediate Self-knowledge through the image of a fruit resting in the palm.",
+ "panchikarana-prakarana":"A brief prose teaching on the fivefold combination of elements and the formation of the perceptible world.",
+ "aparokshanubhuti":"A verse text on immediate knowledge of the Self, with sections on qualification, discrimination, and contemplative practice.",
+ "panchadasi":"A fifteen-chapter exposition of reality, consciousness, and bliss through a sequence of Advaita teachings.",
+ "brahmajnanavali-mala":"A garland of verses returning to the understanding that one's essential nature is Brahman.",
+ "advaita-makaranda":"Twenty-eight verses on non-dual knowledge, combining direct inquiry with devotional address.",
+ "atmavidya-vilasa":"A poetic teaching on the joy of Self-knowledge and the life of one established in it.",
+ "prasthanabheda":"A short survey of scriptural sources and their distinct approaches within Vedānta."
+};
+const PANCHADASI_CHAPTERS={1:"Tattva-viveka",2:"Pañca-mahā-bhūta-viveka",3:"Pañca-kośa-viveka",4:"Dvaita-viveka",5:"Mahā-vākya",6:"Citra-dīpa",7:"Tṛpti-dīpa",8:"Kūṭastha-dīpa",9:"Dhyāna-dīpa",10:"Nāṭa-dīpa",11:"Brahmānanda",12:"Ātmānanda",13:"Advaitānanda",14:"Vidyānanda",15:"Viṣayānanda"};
+const cleanAuthor=s=>String(s||"").replace(/,\s*traditional attribution/ig,"").trim();
+function aboutHTML(item){
+ const summary=ABOUT[item.id];if(!summary)return "";
+ const source=item.id==="panchadasi"?'<p class="shankara-about-source"><a href="https://www.upasanayoga.org/PancD.htm" target="_blank" rel="noopener noreferrer">Open the complete 15-chapter source edition ↗</a></p>':"";
+ return '<details class="shankara-about"><summary>About this text</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
+}
+function chapterOf(unit,id){
+ const m=String(unit.id||"").match(/^panchadasi-(\d+)-/);
+ if(id==="panchadasi"&&m)return m[1];
+ const label=String(unit.label||"").match(/chapter\s+(\d+)/i);
+ return label?label[1]:null;
+}
+function contentsHTML(units,id){
+ const groups=new Map();
+ units.forEach((unit,index)=>{
+  const chapter=chapterOf(unit,id),key=chapter?String(chapter):"all";
+  if(!groups.has(key))groups.set(key,[]);
+  groups.get(key).push({unit,index});
+ });
+ return [...groups.entries()].map(([key,items])=>{
+  const chapter=key==="all"?null:Number(key);
+  const label=chapter?("Chapter "+chapter+(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?": "+PANCHADASI_CHAPTERS[chapter]:"")):("Verses ("+items.length+")");
+  return '<details class="shankara-chapter"><summary>'+esc(label)+'</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(index+1)))+'</a></li>').join("")+'</ol></details>';
+ }).join("");
+}
+function enhanceFallback(root,item){
+ const author=root.querySelector(".shankara-author");
+ if(author&&item.author)author.textContent="By "+cleanAuthor(item.author);
+ const hero=root.querySelector(".gita-hero"),controls=hero?.querySelector(".script-controls");
+ if(hero&&!hero.querySelector(".shankara-about"))controls?.insertAdjacentHTML("beforebegin",aboutHTML(item));
+ const nav=root.querySelector(".gita-contents");
+ if(nav&&!nav.querySelector(".shankara-chapter")){
+  const links=[...nav.querySelectorAll("li a")].map(a=>({id:(a.getAttribute("href")||"").replace(/^#/,""),label:a.textContent.trim()})).filter(x=>x.id);
+  if(links.length)nav.innerHTML='<h2>Contents</h2>'+contentsHTML(links,item.id);
+ }
+}
 const VOWELS={"अ":"a","आ":"ā","इ":"i","ई":"ī","उ":"u","ऊ":"ū","ऋ":"ṛ","ॠ":"ṝ","ऌ":"ḷ","ॡ":"ḹ","ए":"e","ऐ":"ai","ओ":"o","औ":"au"};
 const SIGNS={"ा":"ā","ि":"i","ी":"ī","ु":"u","ू":"ū","ृ":"ṛ","ॄ":"ṝ","ॢ":"ḷ","ॣ":"ḹ","े":"e","ै":"ai","ो":"o","ौ":"au"};
 const CONS={"क":"k","ख":"kh","ग":"g","घ":"gh","ङ":"ṅ","च":"c","छ":"ch","ज":"j","झ":"jh","ञ":"ñ","ट":"ṭ","ठ":"ṭh","ड":"ḍ","ढ":"ḍh","ण":"ṇ","त":"t","थ":"th","द":"d","ध":"dh","न":"n","प":"p","फ":"ph","ब":"b","भ":"bh","म":"m","य":"y","र":"r","ल":"l","व":"v","श":"ś","ष":"ṣ","स":"s","ह":"h","ळ":"ḷ"};
@@ -86,7 +149,7 @@ async function start(root){
   const data=await res.json();
   if(!complete(data)||data.id!==id)throw new Error("Incomplete text data");
   document.title=data.title+" — Advaita Texts — Viveka Dṛṣṭi";
-  root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">('+esc(item.author)+')</p>':'')+'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div><p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Texts</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2><ol>'+data.units.map((u,i)=>'<li><a href="#'+esc(u.id)+'">'+esc(u.label||("Verse "+(i+1)))+'</a></li>').join("")+'</ol></nav><div class="shankara-unit-column">'+data.units.map(unitHTML).join("")+navHTML(id)+'</div></div>';
+  root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div><p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Texts</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map(unitHTML).join("")+navHTML(id)+'</div></div>';
   root.setAttribute("aria-busy","false");
   delete root.dataset.readerFallback;
   bindScript(root);
