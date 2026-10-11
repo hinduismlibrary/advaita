@@ -574,3 +574,18 @@ body.home-page .site-footer{
   body.home-page .hp-directory>.hp-panel{padding:13px 0 17px!important}
   body.home-page .hp-section-title{font-size:17px!important}
 }
+
+body.home-page .hero{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  background:var(--home-edge)!important;
+}
+body.home-page .hero img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:680px!important;
+  object-fit:cover!important;
+  object-position:center 55%!important;
+}
