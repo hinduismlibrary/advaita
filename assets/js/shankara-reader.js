@@ -81,8 +81,8 @@ function aboutHTML(item){
  if(item.id==="upadesha-sahasri")source='<p class="shankara-about-source">Sanskrit and IAST from the GRETIL text, data entry by Ivan Andrijanić, based on Sengaku Mayeda’s edition (1973; 2006). Licensed CC BY-NC-SA 4.0. All 787 source-marked verse and prose passages are included. No English translation or word-for-word gloss is supplied.</p>';
  if(item.id==="vedantasara")source='<p class="shankara-about-source">Sanskrit text of Sadānanda Yogīndra’s work, distributed from a CC BY-SA 4.0 Wikisource edition. The complete local text includes prose and all 38 numbered source passages in this recension. No English translation or word-for-word gloss is supplied.</p>';
  if(item.id==="naishkarmya-siddhi")source='<p class="shankara-about-source">Sanskrit Wikisource text, compiled and transliterated by the ERC-funded Intellexus project, under CC BY-SA 4.0. The complete four-chapter source is converted from IAST to Devanāgarī for this local reader. No English translation or word-for-word gloss is supplied.</p>';
- if(item.id==="brahma-siddhi")source='<p class="shankara-about-source">Sanskrit from GRETIL, data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition. Licensed CC BY-NC-SA 4.0. All 231 source-marked passages are included across the source’s Kāṇḍas 1, 2, and 4. No English translation or word-for-word gloss is supplied.</p>';
- if(item.id==="jivanmukti-viveka")source='<p class="shankara-about-source">Full English translation by Manilal Nabhubhai Dvivedi, first published in 1897 and now in the public domain. The book is arranged by printed page in this local reader; the Sanskrit text is not included. Digital transcription credited to Maryse Locke.</p>';
+ if(item.id==="brahma-siddhi")source='<p class="shankara-about-source">Sanskrit from GRETIL, data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition. Licensed CC BY-NC-SA 4.0. This local reader contains the 231 source-marked passages present in that transcription, across Kāṇḍas 1, 2, and 4; it makes no claim for unrepresented sections. No English translation or word-for-word gloss is supplied.</p>';
+ if(item.id==="jivanmukti-viveka")source='<p class="shankara-about-source">English translation by Manilal Nabhubhai Dvivedi, first published in 1897 and now in the public domain. All 165 printed-page units are arranged into the five chapter sections, front matter, glossary, and publisher’s catalogue present in this transcription. Sanskrit text is not included. Digital transcription credited to Maryse Locke.</p>';
 
  return '<details class="shankara-about"><summary>Info</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
 }
@@ -105,6 +105,76 @@ function contentsHTML(units,id){
   const label=chapter?(first?.sectionTitle||(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?"Chapter "+chapter+": "+PANCHADASI_CHAPTERS[chapter]:id==="svsss"&&SVSSS_SECTIONS[chapter]?SVSSS_SECTIONS[chapter]:id==="mandukya-karika"&&MANDUKYA_CHAPTERS[chapter]?"Chapter "+chapter+": "+MANDUKYA_CHAPTERS[chapter]:"Chapter "+chapter)):(id==="jivanmukti-viveka"?"Pages ("+items.length+")":"Verses ("+items.length+")");
   return '<details class="shankara-chapter"><summary>'+esc(label)+'</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(index+1)))+'</a></li>').join("")+'</ol></details>';
  }).join("");
+}
+
+const TREATISE_READERS=new Set(["upadesha-sahasri","vedantasara","naishkarmya-siddhi","jivanmukti-viveka","brahma-siddhi"]);
+function jivanGroup(unit){
+ const match=String(unit.number||unit.label||"").match(/(\d+)/),page=match?Number(match[1]):0;
+ if(page<=9)return "Front matter · Pages 1–9";
+ if(page<=40)return "Chapter I · On Liberation in This Life";
+ if(page<=80)return "Chapter II · On the Destruction of Latent Desire";
+ if(page<=115)return "Chapter III · On the Dissolution of Mind";
+ if(page<=129)return "Chapter IV · The Aim of Self-realisation in This Life";
+ if(page<=151)return "Chapter V · Renunciation-of-the-accomplished";
+ if(page<=155)return "Glossary · Words Not Englished in the Text";
+ return "Publisher’s catalogue · Pages 156–165";
+}
+function vedantasaraGroup(index){
+ if(index<8)return "Opening · Anubandha-catuṣṭaya";
+ if(index<19)return "Avidyā and its effects";
+ if(index<24)return "Subtle body and sheaths";
+ if(index<32)return "Pañcīkaraṇa and gross creation";
+ if(index<37)return "Superimposition and negation";
+ if(index<55)return "Mahāvākya and knowledge";
+ if(index<62)return "Samādhi";
+ return "Jīvanmukti";
+}
+function treatiseGroups(units,id){
+ const groups=[];
+ units.forEach((unit,index)=>{
+  let title;
+  if(id==="jivanmukti-viveka")title=jivanGroup(unit);
+  else if(id==="vedantasara")title=vedantasaraGroup(index);
+  else title=unit.sectionTitle||("Section "+(unit.chapter||""));
+  let group=groups[groups.length-1];
+  if(!group||group.title!==title){group={title,items:[],anchor:"treatise-"+id+"-section-"+(groups.length+1)};groups.push(group)}
+  group.items.push({unit,index});
+ });
+ return groups;
+}
+function treatiseContentsHTML(groups,englishOnly){
+ return groups.map(group=>'<details class="gita-details treatise-contents-group"><summary><span>'+esc(group.title)+'</span><small>'+group.items.length+(englishOnly?' pages':' entries')+'</small></summary><div class="gita-reveal"><ol>'+group.items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||unit.number||("Entry "+(index+1)))+'</a></li>').join("")+'</ol><p class="treatise-section-jump"><a href="#'+group.anchor+'">Read this section</a></p></div></details>').join("");
+}
+function breakLines(value){return esc(value).replace(/\r?\n/g,"<br/>")}
+function treatiseUnitHTML(unit,index,englishOnly){
+ const label=unit.label||("Passage "+(index+1)),number=unit.number||String(index+1);
+ if(englishOnly){
+  const paragraphs=String(unit.translation||"").split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\r?\n/g," "))+'</p>').join("");
+  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/>'+paragraphs+'</article>';
+ }
+ const deva=String(unit.deva||"");
+ const transliteration=unit.iast||iast(deva);
+ const isLong=deva.length>260||/\n/.test(deva);
+ const classes="gita-sanskrit sa-text"+(isLong?" treatise-long-text":"");
+ const wordGloss=Array.isArray(unit.gloss)&&unit.gloss.length
+  ?'<div class="gita-reveal"><div class="gita-word-list">'+glossHTML(unit.gloss)+'</div></div>'
+  :'<div class="gita-reveal"><p>This source edition does not include a separate word-for-word gloss.</p></div>';
+ const translation=unit.translation?'<p class="gita-translation">'+esc(unit.translation)+'</p>':"";
+ return '<article class="gita-verse shankara-verse'+(isLong?" treatise-long-unit":"")+'" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/><div class="'+classes+'" lang="sa-Deva" data-iast="'+esc(unit.iast||"")+'">'+breakLines(deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details><details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary>'+wordGloss+'</details></div></article>';
+}
+function treatiseSubtitle(data,id){
+ if(id==="jivanmukti-viveka")return "1897 English translation · 165 printed-page units";
+ if(id==="upadesha-sahasri")return "Sanskrit text · 787 verse and prose passages";
+ if(id==="vedantasara")return "Sanskrit text · 70 local units retaining all 38 numbered passages";
+ if(id==="naishkarmya-siddhi")return "Sanskrit text · four Adhyāyas · 1,300 units";
+ return "Sanskrit text · 231 source-marked passages in the available transcription";
+}
+function treatiseReaderHTML(data,item,id){
+ const groups=treatiseGroups(data.units,id);
+ const byline=id==="jivanmukti-viveka"?'By '+esc(cleanAuthor(item.author))+' · English translation by Manilal Nabhubhai Dvivedi':'By '+esc(cleanAuthor(item.author));
+ const controls=data.englishOnly?"":'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>';
+ const sections=groups.map((group,index)=>'<section class="treatise-reader-section" id="'+group.anchor+'" aria-labelledby="'+group.anchor+'-heading"><header class="treatise-section-heading"><p class="eyebrow">'+(data.englishOnly?'Printed text':'Section '+(index+1)+' · '+group.items.length+' entries')+'</p><h2 id="'+group.anchor+'-heading">'+esc(group.title)+'</h2></header>'+group.items.map(({unit,index:unitIndex})=>treatiseUnitHTML(unit,unitIndex,data.englishOnly)).join("")+'</section>').join("");
+ return '<header class="gita-hero"><p class="eyebrow">Advaita Treatises</p><h1>'+esc(item.title)+'</h1><p class="subtitle">'+esc(treatiseSubtitle(data,id))+'</p><p class="shankara-author">'+byline+'</p>'+aboutHTML(item)+controls+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header><nav class="gita-contents treatise-contents" aria-label="Contents"><h2>Contents</h2>'+treatiseContentsHTML(groups,data.englishOnly)+'</nav>'+sections+navHTML(id);
 }
 function enhanceFallback(root,item){
  const author=root.querySelector(".shankara-author");
@@ -171,7 +241,7 @@ function bindScript(root){
   root.querySelectorAll("[data-script]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
   root.querySelectorAll(".sa-text").forEach(el=>{
    if(!el.dataset.deva)el.dataset.deva=el.textContent;
-   el.textContent=mode==="iast"?iast(el.dataset.deva):el.dataset.deva;
+   el.textContent=mode==="iast"?(el.dataset.iast||iast(el.dataset.deva)):el.dataset.deva;
    el.lang=mode==="iast"?"sa-Latn":"sa-Deva";
   });
  }));
@@ -188,8 +258,8 @@ async function start(root){
   if(!res.ok)throw new Error("Work data unavailable");
   const data=await res.json();
   if(!complete(data)||data.id!==id)throw new Error("Incomplete text data");
-  document.title=data.title+" — Advaita Treatises — Viveka Dṛṣṭi";
-  root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+(data.englishOnly?'':'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>')+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map((u,i)=>unitHTML(u,i,data.englishOnly,data.translationAvailable)).join("")+navHTML(id)+'</div></div>';
+  document.title=item.title+" — Advaita Treatises — Viveka Dṛṣṭi";
+  root.innerHTML=TREATISE_READERS.has(id)?treatiseReaderHTML(data,item,id):'<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+(data.englishOnly?'':'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>')+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map((u,i)=>unitHTML(u,i,data.englishOnly,data.translationAvailable)).join("")+navHTML(id)+'</div></div>';
   root.setAttribute("aria-busy","false");
   delete root.dataset.readerFallback;
   bindScript(root);
