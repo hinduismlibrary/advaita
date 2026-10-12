@@ -19,6 +19,7 @@ const WORKS=[
  {id:"panchikarana-prakarana",title:"Pañcīkaraṇa-prakaraṇa",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/panchikarana-prakarana/"},
  {id:"aparokshanubhuti",title:"Aparokṣānubhūti",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/aparokshanubhuti/"},
  {id:"panchadasi",title:"Pañcadaśī",author:"Vidyāraṇya",path:"/advaita/books/adi-shankaracharya/panchadasi/"},
+ {id:"svsss",title:"Sarvavedāntasiddhāntasārasaṅgraha",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/svsss/"},
  {id:"brahmajnanavali-mala",title:"Brahmajñānāvalīmālā",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/brahmajnanavali-mala/"},
  {id:"advaita-makaranda",title:"Advaitamakaranda",author:"Lakṣmīdhara Kavi",path:"/advaita/books/adi-shankaracharya/advaita-makaranda/"},
  {id:"atmavidya-vilasa",title:"Ātmavidyāvilāsa",author:"Sadāśiva Brahmendra",path:"/advaita/books/adi-shankaracharya/atmavidya-vilasa/"},
@@ -45,6 +46,7 @@ const ABOUT={
  "panchikarana-prakarana":"A brief prose teaching on the fivefold combination of elements and the formation of the perceptible world.",
  "aparokshanubhuti":"A verse text on immediate knowledge of the Self, with sections on qualification, discrimination, and contemplative practice.",
  "panchadasi":"A fifteen-chapter exposition of reality, consciousness, and bliss through a sequence of Advaita teachings.",
+ "svsss":"A five-part summary of Vedānta covering preparation, self-knowledge, mistaken identity, and assimilation of the teaching.",
  "brahmajnanavali-mala":"A garland of verses returning to the understanding that one's essential nature is Brahman.",
  "advaita-makaranda":"Twenty-eight verses on non-dual knowledge, combining direct inquiry with devotional address.",
  "atmavidya-vilasa":"A poetic teaching on the joy of Self-knowledge and the life of one established in it.",
@@ -52,14 +54,17 @@ const ABOUT={
 };
 const PANCHADASI_CHAPTERS={1:"Tattva-viveka",2:"Pañca-mahā-bhūta-viveka",3:"Pañca-kośa-viveka",4:"Dvaita-viveka",5:"Mahā-vākya",6:"Citra-dīpa",7:"Tṛpti-dīpa",8:"Kūṭastha-dīpa",9:"Dhyāna-dīpa",10:"Nāṭa-dīpa",11:"Brahmānanda",12:"Ātmānanda",13:"Advaitānanda",14:"Vidyānanda",15:"Viṣayānanda"};
 const cleanAuthor=s=>String(s||"").replace(/,\s*traditional attribution/ig,"").trim();
+const SVSSS_SECTIONS={1:"Part 1 · The Topic of this Study and the Successful Student",2:"Part 2 · Identifying Only with Ultimate Reality",3:"Part 3 · Otherwise Mis-identifying with Untruth",4:"Part 4 · You are Only that Ultimate Reality",5:"Part 5 · Assimilating this Knowledge"};
 function aboutHTML(item){
  const summary=ABOUT[item.id];if(!summary)return "";
- const source=item.id==="panchadasi"?'<p class="shankara-about-source">Sanskrit and English text: A.K. Aruna, <i>Pañca-Daśī</i> (2020); translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai. Licensed CC BY-NC-SA 4.0. This on-site reader groups six adjacent verse pairs as ranges; Sanskrit at 10.22–10.23 was checked against a second text witness. Word-for-word glosses are available for Chapter 1 only.</p>':"";
+ let source="";
+ if(item.id==="panchadasi")source='<p class="shankara-about-source">Sanskrit and English text: A.K. Aruna, <i>Pañca-Daśī</i> (2020); translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai. Licensed CC BY-NC-SA 4.0. This on-site reader groups six adjacent verse pairs as ranges; Sanskrit at 10.22–10.23 was checked against a second text witness. Word-for-word glosses are available for Chapter 1 only.</p>';
+ if(item.id==="svsss")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2020 v3.0); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā. Licensed CC BY-NC-SA 4.0. This on-site reader groups adjacent source verses where the English translation spans them. The source prose order is not presented as a word-for-word gloss.</p>';
  return '<details class="shankara-about"><summary>Info</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
 }
 function chapterOf(unit,id){
- const m=String(unit.id||"").match(/^panchadasi-(\d+)-/);
- if(id==="panchadasi"&&m)return m[1];
+ const m=String(unit.id||"").match(/^(?:panchadasi|svsss)-(\d+)-/);
+ if((id==="panchadasi"||id==="svsss")&&m)return m[1];
  const label=String(unit.label||"").match(/chapter\s+(\d+)/i);
  return label?label[1]:null;
 }
@@ -72,7 +77,7 @@ function contentsHTML(units,id){
  });
  return [...groups.entries()].map(([key,items])=>{
   const chapter=key==="all"?null:Number(key);
-  const label=chapter?("Chapter "+chapter+(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?": "+PANCHADASI_CHAPTERS[chapter]:"")):("Verses ("+items.length+")");
+  const label=chapter?(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?"Chapter "+chapter+": "+PANCHADASI_CHAPTERS[chapter]:id==="svsss"&&SVSSS_SECTIONS[chapter]?SVSSS_SECTIONS[chapter]:"Chapter "+chapter):("Verses ("+items.length+")");
   return '<details class="shankara-chapter"><summary>'+esc(label)+'</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(index+1)))+'</a></li>').join("")+'</ol></details>';
  }).join("");
 }
@@ -120,7 +125,7 @@ function unitHTML(u,index){
  const transliteration=u.iast||iast(u.deva);
  const wordGloss=Array.isArray(u.gloss)&&u.gloss.length
   ?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(u.gloss)+'</div></div></details>'
-  :'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><p class="shankara-gloss-unavailable">A word-for-word gloss is currently available for Chapter 1 only.</p></div></details>';
+  :'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><p class="shankara-gloss-unavailable">No word-for-word gloss is included for this entry.</p></div></details>';
  return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'"><p class="shankara-unit-label">'+esc(label)+'</p><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva">'+esc(u.deva)+'</div><p class="gita-translation">'+esc(u.translation)+'</p><div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
 }
 function navHTML(id){
