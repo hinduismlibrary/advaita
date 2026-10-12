@@ -1,0 +1,40 @@
+/* Advaita Treatise readers reuse the Bhagavad Gītā / Viṣṇu Purāṇa reader shell.
+   These rules only style the extra chapter sections and script controls. */
+.treatise-reader-page .shankara-author{margin:10px auto 8px;color:#655e57;font-family:"Noto Serif",Georgia,serif;font-size:13px;line-height:1.45}
+.treatise-reader-page .shankara-about{max-width:840px;margin:12px auto 8px;text-align:left}
+.treatise-reader-page .shankara-about-copy{margin:7px 0 2px;color:#514a43;font-family:"Noto Serif",Georgia,serif;font-size:12px;line-height:1.55}
+.treatise-reader-page .shankara-about-copy p{margin:0 0 7px}
+.treatise-reader-page .shankara-about-source{color:#655e57}
+.treatise-reader-page .script-controls{display:flex;justify-content:center;gap:7px;margin:12px auto 8px}
+.treatise-reader-page .script-controls button{min-height:0;border:1px solid #9bc5c7;border-radius:999px;padding:4px 11px;background:transparent;color:#2f7f82;font-family:Merriweather,Georgia,serif;font-size:12px;line-height:1.2;font-weight:600;cursor:pointer}
+.treatise-reader-page .script-controls button[aria-pressed="true"]{background:#e8f0ef}
+.treatise-reader-page .script-controls button:focus-visible,.treatise-reader-page .gita-details summary:focus-visible{outline:2px solid #2f7f82;outline-offset:2px}
+.treatise-reader-page .treatise-contents{margin-bottom:20px}
+.treatise-reader-page .treatise-contents-group{margin:0 0 6px!important}
+.treatise-reader-page .treatise-contents-group>summary{display:flex!important;align-items:center;justify-content:space-between;gap:12px;width:100%!important;text-align:left!important;overflow-wrap:anywhere}
+.treatise-reader-page .treatise-contents-group>summary small{flex:0 0 auto;color:#766e67;font-size:10px;font-weight:400}
+.treatise-reader-page .treatise-contents-group .gita-reveal{padding:4px 0 3px}
+.treatise-reader-page .treatise-section-jump{margin:8px 0 3px!important;text-align:right}
+.treatise-reader-page .treatise-section-jump a{color:#2f7f82}
+.treatise-reader-page .treatise-reader-section{margin:22px 0 0;padding:16px 0 0;border-top:1px solid #dedbd6;scroll-margin-top:24px}
+.treatise-reader-page .treatise-section-heading{max-width:840px;margin:0 auto 20px;text-align:center}
+.treatise-reader-page .treatise-section-heading .eyebrow{margin:0 0 5px;color:#766e67;font-family:Merriweather,Georgia,serif;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.treatise-reader-page .treatise-section-heading h2{margin:0;color:#2f7f82;font-family:Vollkorn,Georgia,serif;font-size:clamp(23px,3.4vw,30px);font-weight:400;line-height:1.18;overflow-wrap:anywhere}
+.treatise-reader-page .shankara-verse{scroll-margin-top:20px}
+.treatise-reader-page .treatise-long-text{max-width:800px!important;margin:0 auto 14px!important;text-align:left!important;font-size:15px!important;line-height:1.68!important;white-space:pre-wrap;overflow-wrap:anywhere}
+.treatise-reader-page .shankara-english-unit .gita-translation{max-width:800px!important;margin:0 auto 14px!important;text-align:left!important;font-family:"Noto Serif",Georgia,serif!important;font-size:14px!important;line-height:1.68!important;overflow-wrap:anywhere}
+.treatise-reader-page .shankara-english-unit .gita-verse-rule{margin-bottom:14px!important}
+.treatise-reader-page .shankara-iast{font-family:"Noto Serif",Georgia,serif}
+.treatise-reader-page .shankara-work-nav{margin:30px auto 10px}
+.treatise-reader-page .shankara-work-nav .shankara-index-link{font-weight:700}
+.treatise-reader-page .treatise-reader-section:last-of-type{margin-bottom:0}
+@media(max-width:700px){
+ .treatise-reader-page .shankara-author{font-size:12px}
+ .treatise-reader-page .script-controls{margin:10px auto 7px}
+ .treatise-reader-page .treatise-reader-section{margin-top:18px;padding-top:13px}
+ .treatise-reader-page .treatise-section-heading{margin-bottom:16px}
+ .treatise-reader-page .treatise-long-text{font-size:14px!important;line-height:1.62!important}
+ .treatise-reader-page .shankara-english-unit .gita-translation{font-size:13.5px!important;line-height:1.62!important}
+ .treatise-reader-page .treatise-contents-group>summary{gap:8px}
+ .treatise-reader-page .treatise-contents-group>summary small{font-size:9px}
+}
