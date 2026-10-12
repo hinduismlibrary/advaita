@@ -31,20 +31,20 @@ These were consulted to check the Sanskrit readings: [Advaita Śāradā, Sringer
 
 Dṛg-dṛśya-viveka uses the 1931 Sri Ramakrishna Asrama edition as its Sanskrit witness. Its English translation and word-level gloss are newly prepared for this site. The attribution is described as traditional rather than certain.
 
-## Online source editions linked from the portal
+## Source editions and attribution
 
-For locally hosted texts, these references support collation and translation. For titles without a local reader, the portal links directly to an online source edition. Translation and transcription rights vary by source; links do not imply permission to republish third-party material.
+Treatise cards now open the local readers on this site. These entries record the texts, editions, and licenses used for those readers; cited websites are attribution and source references, not reading destinations.
 
 | Work | Source text / edition |
 | --- | --- |
-| Upadeśasāhasrī | [English translation with Sanskrit](https://estudantedavedanta.net/UpadeshasahasriofShriShankaracharya.pdf); [online reading edition](https://www.sankaracharya.org/upadesa_sahasri.html); [Sanskrit source](https://sanskritdocuments.org/doc_z_misc_shankara/upadeshasaahasrii1.pdf) |
+| Upadeśasāhasrī | Local complete Sanskrit reader: 787 source-marked verse and prose passages. GRETIL text entered by Ivan Andrijanić, based on Sengaku Mayeda’s 1973/2006 edition; CC BY-NC-SA 4.0. IAST converted to Devanāgarī. |
 | Vivekacūḍāmaṇi | [Translation and word meanings](https://shlokam.org/text/vivekachudamani.htm); [complete text and translation](https://www.wisdomlib.org/hinduism/book/vivekachudamani); [1921 English edition](https://archive.org/details/vivekachudamanio00sankrich) |
 | Pañcadaśī | Fifteen-chapter Sanskrit and English reader hosted locally; transcribed from [A.K. Aruna’s 2020 electronic edition](https://www.upasanayoga.org/PancD.htm), licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) | Six adjacent verse pairs are grouped and labelled as ranges; source numbering is retained; text at 10.22–23 checked against a second text witness; word-for-word gloss is available for Chapter 1 only. |
-| Vedāntasāra | [Swami Nikhilananda's English translation](https://estudantedavedanta.net/Vedantasara-Nikhilananda.pdf); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/vedantasara.html) |
+| Vedāntasāra | Local complete Sanskrit reader: prose plus 38 numbered source passages (passages 1–2 share the opening paragraph). Sadānanda Yogīndra recension; source text aligned with the CC BY-SA 4.0 Sanskrit Wikisource edition. No English translation. |
 | Sarvavedāntasiddhāntasārasaṅgraha | Complete Sanskrit and English text hosted in the local five-part reader; transcribed from [A.K. Aruna’s 2020 edition](https://www.upasanayoga.org/SVSSS.htm), licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) | English translation adopted from Swami Tattwananda; Sanskrit prose order from Pandit Rāmasvarūpaśarmā; all 1,006 source verses retained and translations spanning adjacent verses are grouped as ranges. The edition provides no word-for-word lexical gloss. |
 | Māṇḍūkyakārikā | [Complete English translation with Sanskrit and IAST](https://www.wisdomlib.org/hinduism/book/mandukya-upanishad-karika-bhashya); [Sanskrit text](https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mANDUkyopaniSatkArikA.htm) |
-| Naiṣkarmyasiddhi | [1965 English translation edition](https://archive.org/details/Acc.No.6179Naiskarmyasiddhi1965); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/naishk.html) |
-| Jīvanmuktiviveka | [1897 English translation scan](https://commons.wikimedia.org/wiki/File:The_Jivanmukti-viveka;_or,_The_path_to_liberation_in_this_life_(IA_jivanmuktiviveka00madhiala).pdf); [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/jIvanmuktivivekaH.html) |
+| Naiṣkarmyasiddhi | Local complete Sanskrit reader across all four chapters. Sanskrit Wikisource text compiled and transliterated by the ERC-funded Intellexus project; CC BY-SA 4.0. IAST converted to Devanāgarī. No English translation. |
+| Jīvanmuktiviveka | Local reader of the complete English translation by Manilal Nabhubhai Dvivedi, first published in 1897 and in the public domain; arranged by printed page. Digital transcription credit: Maryse Locke. Sanskrit text is not included. |
 | Ātmavidyāvilāsa | Local reader: `/advaita/books/adi-shankaracharya/atmavidya-vilasa/`; source witness: [The Theosophist, vol. XIV, no. 9 (1893)](https://iapsop.com/archive/materials/theosophist/theosophist_v14_n09_june_1893.pdf) |
-| Brahmasiddhi | [Complete Sanskrit text, GRETIL](https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm); [scanned edition](https://archive.org/details/Brahma-siddhi.by.mandanaMisra.sanskrit) |
+| Brahmasiddhi | Local complete Sanskrit reader: all 231 GRETIL source-marked passages from Kāṇḍas 1, 2, and 4. Data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition; CC BY-NC-SA 4.0. |
 | Prasthānabheda | [Sanskrit text](https://sanskritdocuments.org/doc_z_misc_major_works/prasthAnabheda.html); [English translation](https://sanskritdocuments.org/sites/snsastri/PrasthAnabheda-Engl.pdf) |
