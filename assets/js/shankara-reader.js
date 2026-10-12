@@ -26,6 +26,11 @@ const WORKS=[
  {id:"advaita-makaranda",title:"Advaitamakaranda",author:"Lakṣmīdhara Kavi",path:"/advaita/books/adi-shankaracharya/advaita-makaranda/"},
  {id:"atmavidya-vilasa",title:"Ātmavidyāvilāsa",author:"Sadāśiva Brahmendra",path:"/advaita/books/adi-shankaracharya/atmavidya-vilasa/"},
  {id:"prasthanabheda",title:"Prasthānabheda",author:"Madhusūdana Sarasvatī",path:"/advaita/books/adi-shankaracharya/prasthanabheda/"},
+ {id:"upadesha-sahasri",title:"Upadeśasāhasrī",author:"Ādi Śaṅkara",path:"/advaita/books/adi-shankaracharya/upadesha-sahasri/"},
+ {id:"vedantasara",title:"Vedāntasāra",author:"Sadānanda Yogīndra",path:"/advaita/books/adi-shankaracharya/vedantasara/"},
+ {id:"naishkarmya-siddhi",title:"Naiṣkarmyasiddhi",author:"Sureśvara",path:"/advaita/books/adi-shankaracharya/naishkarmya-siddhi/"},
+ {id:"jivanmukti-viveka",title:"Jīvanmuktiviveka",author:"Vidyāraṇya",path:"/advaita/books/adi-shankaracharya/jivanmukti-viveka/"},
+ {id:"brahma-siddhi",title:"Brahmasiddhi",author:"Maṇḍana Miśra",path:"/advaita/books/adi-shankaracharya/brahma-siddhi/"},
 ];
 
 const ABOUT={
@@ -54,7 +59,13 @@ const ABOUT={
  "brahmajnanavali-mala":"A garland of verses returning to the understanding that one's essential nature is Brahman.",
  "advaita-makaranda":"Twenty-eight verses on non-dual knowledge, combining direct inquiry with devotional address.",
  "atmavidya-vilasa":"A poetic teaching on the joy of Self-knowledge and the life of one established in it.",
- "prasthanabheda":"A short survey of scriptural sources and their distinct approaches within Vedānta."
+ "prasthanabheda":"A short survey of scriptural sources and their distinct approaches within Vedānta.",
+ "upadesha-sahasri":"A systematic teaching on Self-knowledge presented through verse and prose.",
+ "vedantasara":"A concise manual introducing the central structure and teachings of Vedānta.",
+ "naishkarmya-siddhi":"Sureśvara’s sustained inquiry into knowledge, action, and liberation.",
+ "jivanmukti-viveka":"Vidyāraṇya’s inquiry into liberation while embodied, renunciation, and mental discipline.",
+ "brahma-siddhi":"Maṇḍana Miśra’s major examination of Brahman, knowledge, and liberation.",
+
 };
 const PANCHADASI_CHAPTERS={1:"Tattva-viveka",2:"Pañca-mahā-bhūta-viveka",3:"Pañca-kośa-viveka",4:"Dvaita-viveka",5:"Mahā-vākya",6:"Citra-dīpa",7:"Tṛpti-dīpa",8:"Kūṭastha-dīpa",9:"Dhyāna-dīpa",10:"Nāṭa-dīpa",11:"Brahmānanda",12:"Ātmānanda",13:"Advaitānanda",14:"Vidyānanda",15:"Viṣayānanda"};
 const cleanAuthor=s=>String(s||"").replace(/,\s*traditional attribution/ig,"").trim();
@@ -67,10 +78,16 @@ function aboutHTML(item){
  if(item.id==="svsss")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2020 v3.0); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā. Licensed CC BY-NC-SA 4.0. This on-site reader groups adjacent source verses where the English translation spans them. The source prose order is not presented as a word-for-word gloss.</p>';
  if(item.id==="vivekachudamani")source='<p class="shankara-about-source">English translation by Swami Madhavananda, Himalayan Series No. XLIII (1921), a public-domain edition. Sanskrit electronic witness from GRETIL, marked not proofread; normalized and converted from IAST to Devanāgarī for this reader. This reader includes all 580 numbered verses, with translations spanning adjacent verses shown as ranges. Editorial notes and index are excluded. No separate word-for-word lexical gloss is supplied.</p>';
  if(item.id==="mandukya-karika")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2022 version 6.0); Kārikā verse translation adopted from Swami Nikhilananda; Devanāgarī text credited by the source edition to Śāradā Peetham, Sringeri. Licensed CC BY-NC-SA 4.0. This reader includes all 215 numbered Kārikā verses and excludes the Upaniṣad mantras, Śaṅkara Bhāṣya, and Ṭīkā glosses. Translations spanning adjacent Sanskrit verses are shown as numbered ranges. No separate word-for-word gloss is included.</p>';
+ if(item.id==="upadesha-sahasri")source='<p class="shankara-about-source">Sanskrit and IAST from the GRETIL text, data entry by Ivan Andrijanić, based on Sengaku Mayeda’s edition (1973; 2006). Licensed CC BY-NC-SA 4.0. All 787 source-marked verse and prose passages are included. No English translation or word-for-word gloss is supplied.</p>';
+ if(item.id==="vedantasara")source='<p class="shankara-about-source">Sanskrit text of Sadānanda Yogīndra’s work, distributed from a CC BY-SA 4.0 Wikisource edition. The complete local text includes prose and all 38 numbered source passages in this recension. No English translation or word-for-word gloss is supplied.</p>';
+ if(item.id==="naishkarmya-siddhi")source='<p class="shankara-about-source">Sanskrit Wikisource text, compiled and transliterated by the ERC-funded Intellexus project, under CC BY-SA 4.0. The complete four-chapter source is converted from IAST to Devanāgarī for this local reader. No English translation or word-for-word gloss is supplied.</p>';
+ if(item.id==="brahma-siddhi")source='<p class="shankara-about-source">Sanskrit from GRETIL, data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition. Licensed CC BY-NC-SA 4.0. All 231 source-marked passages are included across the source’s Kāṇḍas 1, 2, and 4. No English translation or word-for-word gloss is supplied.</p>';
+ if(item.id==="jivanmukti-viveka")source='<p class="shankara-about-source">Full English translation by Manilal Nabhubhai Dvivedi, first published in 1897 and now in the public domain. The book is arranged by printed page in this local reader; the Sanskrit text is not included. Digital transcription credited to Maryse Locke.</p>';
+
  return '<details class="shankara-about"><summary>Info</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
 }
 function chapterOf(unit,id){
- if(id==="mandukya-karika"&&unit.chapter)return String(unit.chapter);
+ if(unit.chapter)return String(unit.chapter);
  const m=String(unit.id||"").match(/^(?:panchadasi|svsss)-(\d+)-/);
  if((id==="panchadasi"||id==="svsss")&&m)return m[1];
  const label=String(unit.label||"").match(/chapter\s+(\d+)/i);
@@ -84,8 +101,8 @@ function contentsHTML(units,id){
   groups.get(key).push({unit,index});
  });
  return [...groups.entries()].map(([key,items])=>{
-  const chapter=key==="all"?null:Number(key);
-  const label=chapter?(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?"Chapter "+chapter+": "+PANCHADASI_CHAPTERS[chapter]:id==="svsss"&&SVSSS_SECTIONS[chapter]?SVSSS_SECTIONS[chapter]:id==="mandukya-karika"&&MANDUKYA_CHAPTERS[chapter]?"Chapter "+chapter+": "+MANDUKYA_CHAPTERS[chapter]:"Chapter "+chapter):("Verses ("+items.length+")");
+  const chapter=key==="all"?null:Number(key),first=items[0]?.unit;
+  const label=chapter?(first?.sectionTitle||(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?"Chapter "+chapter+": "+PANCHADASI_CHAPTERS[chapter]:id==="svsss"&&SVSSS_SECTIONS[chapter]?SVSSS_SECTIONS[chapter]:id==="mandukya-karika"&&MANDUKYA_CHAPTERS[chapter]?"Chapter "+chapter+": "+MANDUKYA_CHAPTERS[chapter]:"Chapter "+chapter)):(id==="jivanmukti-viveka"?"Pages ("+items.length+")":"Verses ("+items.length+")");
   return '<details class="shankara-chapter"><summary>'+esc(label)+'</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(index+1)))+'</a></li>').join("")+'</ol></details>';
  }).join("");
 }
@@ -114,6 +131,7 @@ function iast(s){
   else if(ch==="ः")out+="ḥ";
   else if(ch==="ँ")out+="m̐";
   else if(ch==="ऽ")out+="’";
+  else if(ch==="॥")out+="||";
   else if(ch==="।")out+="|";
   else if(ch==="॥")out+="||";
   else if(/[०-९]/.test(ch))out+=String("0123456789")["०१२३४५६७८९".indexOf(ch)];
@@ -124,21 +142,27 @@ function iast(s){
 }
 function esc(s){return String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]))}
 function complete(data){
- return data&&Array.isArray(data.units)&&data.units.length===data.expectedUnits&&data.units.length>0&&
-  data.units.every(u=>u.id&&u.deva&&u.translation&&Array.isArray(u.gloss)&&u.gloss.every(w=>w&&w.sa&&w.en));
+ if(!data||!Array.isArray(data.units)||!Number.isInteger(data.expectedUnits)||data.units.length!==data.expectedUnits||!data.units.length)return false;
+ if(data.englishOnly)return data.units.every(u=>u&&u.id&&u.translation);
+ return data.units.every(u=>u&&u.id&&u.deva&&Array.isArray(u.gloss)&&u.gloss.every(w=>w&&w.sa&&w.en)&&(data.translationAvailable===false||u.translation));
 }
 function glossHTML(words){return words.map(w=>'<div class="gita-word-row"><span class="gita-word-source"><span class="gita-word-dev" lang="sa-Deva">'+esc(w.sa)+'</span> <span class="gita-word-iast">('+esc(iast(w.sa))+')</span></span><span class="gita-word-gloss">'+esc(w.en)+'</span></div>').join("")}
-function unitHTML(u,index){
+function unitHTML(u,index,englishOnly,translationAvailable){
  const label=u.label||("Verse "+(index+1));
+ if(englishOnly){
+  const paragraphs=String(u.translation||"").split(/\n{2,}/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\n/g," "))+'</p>').join("");
+  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(u.id)+'"><p class="shankara-unit-label">'+esc(label)+'</p><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/>'+paragraphs+'</article>';
+ }
  const transliteration=u.iast||iast(u.deva);
  const wordGloss=Array.isArray(u.gloss)&&u.gloss.length
   ?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(u.gloss)+'</div></div></details>'
-  :'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><p class="shankara-gloss-unavailable">No word-for-word gloss is included for this entry.</p></div></details>';
- return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'"><p class="shankara-unit-label">'+esc(label)+'</p><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva">'+esc(u.deva)+'</div><p class="gita-translation">'+esc(u.translation)+'</p><div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
+  :translationAvailable===false?"":'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><p class="shankara-gloss-unavailable">No word-for-word gloss is included for this entry.</p></div></details>';
+ const translation=u.translation?'<p class="gita-translation">'+esc(u.translation)+'</p>':"";
+ return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'"><p class="shankara-unit-label">'+esc(label)+'</p><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva">'+esc(u.deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
 }
 function navHTML(id){
  const i=WORKS.findIndex(w=>w.id===id),prev=WORKS[i-1],next=WORKS[i+1];
- return '<nav class="shankara-work-nav" aria-label="Work navigation">'+(prev?'<a rel="prev" href="'+prev.path+'">← '+esc(prev.title)+'</a>':'<span></span>')+'<a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">Advaita Texts</a>'+(next?'<a rel="next" href="'+next.path+'">'+esc(next.title)+' →</a>':'<span></span>')+'</nav>';
+ return '<nav class="shankara-work-nav" aria-label="Work navigation">'+(prev?'<a rel="prev" href="'+prev.path+'">← '+esc(prev.title)+'</a>':'<span></span>')+'<a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a>'+(next?'<a rel="next" href="'+next.path+'">'+esc(next.title)+' →</a>':'<span></span>')+'</nav>';
 }
 function bindScript(root){
  root.dataset.scriptMode="deva";
@@ -164,8 +188,8 @@ async function start(root){
   if(!res.ok)throw new Error("Work data unavailable");
   const data=await res.json();
   if(!complete(data)||data.id!==id)throw new Error("Incomplete text data");
-  document.title=data.title+" — Advaita Texts — Viveka Dṛṣṭi";
-  root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div><p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Texts</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map(unitHTML).join("")+navHTML(id)+'</div></div>';
+  document.title=data.title+" — Advaita Treatises — Viveka Dṛṣṭi";
+  root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+(data.englishOnly?'':'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>')+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map((u,i)=>unitHTML(u,i,data.englishOnly,data.translationAvailable)).join("")+navHTML(id)+'</div></div>';
   root.setAttribute("aria-busy","false");
   delete root.dataset.readerFallback;
   bindScript(root);
