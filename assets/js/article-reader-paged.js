@@ -9,6 +9,7 @@ const config=document.getElementById('article-config');
 const source=document.getElementById('source-document');
 if(!config||!source)return;
 const title=config.dataset.title||'Article';
+const subtitle=config.dataset.subtitle||'';
 const base=config.dataset.base||location.pathname.replace(/\/?$/,'/');
 const text=n=>(n?.textContent||'').replace(/\s+/g,' ').trim();
 const unnumber=s=>(s||'').replace(/^\s*(?:[IVX]+[.)]|\d+(?:\.\d+)*[.)]?)\s*/i,'').trim();
@@ -108,6 +109,7 @@ const bar=el('header','sitebar'),brand=el('a',null,'Viveka Dṛṣṭi');
 brand.href='/advaita/';bar.append(brand);
 const main=el('main','page'),header=el('header','article-head');
 header.append(el('h1',null,title));
+if(subtitle)header.append(el('p','article-subtitle',subtitle));
 const grid=el('div','reader-grid'),side=el('aside','side-toc'),sideNav=el('nav','toc');
 side.setAttribute('aria-label','Table of contents');
 side.append(el('h2','side-toc-title','Contents'),sideNav);
@@ -129,6 +131,18 @@ function makeToc(nav){
       items=el('div','toc-children');wrap.append(label,items);nav.append(wrap);
     }
     const a=el('a',null,p.title);a.dataset.section=p.id;a.href=href(p);items.append(a);
+    for(const n of p.nodes){
+      const subheads=[];
+      if(n.matches?.('h4[id]'))subheads.push(n);
+      subheads.push(...(n.querySelectorAll?.('h4[id]')||[]));
+      for(const heading of subheads){
+        const sub=el('a','toc-subitem',text(heading));
+        sub.dataset.section=p.id;
+        sub.dataset.subsection=heading.id;
+        sub.href=href(p)+'#'+encodeURIComponent(heading.id);
+        items.append(sub);
+      }
+    }
   }
 }
 makeToc(sideNav);makeToc(mobileNav);
@@ -271,6 +285,12 @@ function render(index){
       const active=a.dataset.section===page.id;a.classList.toggle('is-active',active);
       if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
     }
+    for(const a of nav.querySelectorAll('a[data-subsection]')){
+      const active=page.id===a.dataset.section &&
+        location.hash.slice(1)===encodeURIComponent(a.dataset.subsection);
+      a.classList.toggle('is-active-subsection',!!active);
+      if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
+    }
     for(const group of nav.querySelectorAll('.toc-group')){
       const active=group.querySelector('a[aria-current="page"]');
       const current=group.querySelector('.toc-current');
@@ -290,7 +310,7 @@ function render(index){
 /* Replace only after the entire document was successfully indexed. */
 if(segments.every(p=>p.nodes.length===0)){source.hidden=false;return;}
 document.body.replaceChildren(bar,main);
-document.body.className='document-paged-page shastric-article';
+document.body.className='document-paged-page shastric-article'+(title==='Śrī Sadvarṇārthaprakāśinī'?' sadvarn-reader':'');
 const requested=new URLSearchParams(location.search).get('section');
 let initial=segments.findIndex(p=>p.id===requested);
 if(initial<0&&location.hash){

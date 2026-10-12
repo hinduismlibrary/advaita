@@ -392,3 +392,179 @@
   .document-paged-page details.toc-group>.toc-children a{font-size:13.5px}
   .document-paged-page .meat-cover-art{width:min(100%,132px);margin-bottom:23px}
 }
+
+/* Additional controls for the Sadvarṇārthaprakāśinī reader. */
+.shastric-article .article-head .article-subtitle{
+  margin:12px 0 0;
+  color:#625b54;
+  font-family:Merriweather,Georgia,serif;
+  font-size:16px;
+  line-height:1.5;
+  font-style:italic;
+}
+.sadvarn-reader .document-content h4{
+  margin:38px 0 16px;
+  color:var(--teal);
+  font-family:Vollkorn,Georgia,serif;
+  font-size:22px;
+  line-height:1.32;
+  font-weight:500;
+  scroll-margin-top:22px;
+}
+.shastric-article .toc a.toc-subitem{
+  margin:0 0 7px 13px;
+  padding-left:10px;
+  border-left:1px solid #e0dbd5;
+  color:#7a726a;
+  font-size:12px;
+}
+.shastric-article .toc a.toc-subitem:hover,
+.shastric-article .toc a.toc-subitem.is-active-subsection{
+  color:var(--purple);
+}
+.sadvarn-reader .document-content .editorial-note{
+  margin:16px 0 24px;
+  padding:12px 15px;
+  border-left:2px solid #c5a48f;
+  background:#f0ece7;
+  color:#625b54;
+  font-size:14px;
+  line-height:1.55;
+}
+.sadvarn-reader .document-content .definition-verse{
+  margin:20px 0 26px;
+  padding:3px 0 0 14px;
+  border-left:1px solid #d8d2ca;
+}
+.sadvarn-reader .document-content .definition-verse p.translation{
+  margin-bottom:0!important;
+}
+.sadvarn-reader .document-content .rendering-label{
+  display:block;
+  margin:0 0 5px;
+  color:#8a8179;
+  font-size:10px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.sadvarn-reader .document-content .sanskrit-inline,
+.sadvarn-reader .document-content .source-postscript-heading{
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  unicode-bidi:isolate;
+}
+.sadvarn-reader .document-content .sanskrit-inline{
+  font-size:.97em;
+}
+.sadvarn-reader .document-content .source-postscript-heading{
+  margin:0 0 18px;
+  font-size:21px;
+  line-height:1.65;
+  text-align:center;
+}
+.sadvarn-reader .document-content .postscript-verse{
+  margin:20px 0 24px;
+  padding:0 0 0 14px;
+  border-left:1px solid #d8d2ca;
+}
+.sadvarn-reader .document-content .postscript-verse .verse-number{
+  margin:0 0 2px;
+  color:#8a8179;
+  font-size:12px;
+  line-height:1.4;
+  font-weight:700;
+}
+.sadvarn-reader .document-content .postscript-verse p.translation{
+  margin-bottom:0!important;
+}
+.sadvarn-reader .document-content .postscript-verse details.sanskrit-reveal{
+  margin-top:3px;
+}
+@media(max-width:620px){
+  .shastric-article .article-head .article-subtitle{font-size:14.5px}
+  .sadvarn-reader .document-content h4{margin:31px 0 13px;font-size:20px}
+  .shastric-article .toc a.toc-subitem{font-size:12px}
+  .sadvarn-reader .document-content .editorial-note{padding:11px 12px;font-size:13px}
+  .sadvarn-reader .document-content .definition-verse,
+  .sadvarn-reader .document-content .postscript-verse{padding-left:11px}
+  .sadvarn-reader .document-content .source-postscript-heading{font-size:19px}
+  .sadvarn-reader .document-content table.evidence-table,
+  .sadvarn-reader .document-content table.acharya-table{
+    display:block;
+    overflow:visible;
+    font-size:13.5px;
+  }
+  .sadvarn-reader .document-content table.evidence-table thead,
+  .sadvarn-reader .document-content table.acharya-table thead{
+    position:absolute;
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    clip-path:inset(50%);
+    white-space:nowrap;
+  }
+  .sadvarn-reader .document-content table.evidence-table tbody,
+  .sadvarn-reader .document-content table.acharya-table tbody{
+    display:block;
+    width:100%;
+  }
+  .sadvarn-reader .document-content table.evidence-table tr,
+  .sadvarn-reader .document-content table.acharya-table tr{
+    display:grid;
+    grid-template-columns:32px minmax(0,1fr);
+    gap:0 10px;
+    width:100%;
+    margin:0 0 13px;
+    padding:10px 12px 12px;
+    border:1px solid #ded8d1;
+    border-radius:6px;
+    background:#fff;
+  }
+  .sadvarn-reader .document-content table.evidence-table td,
+  .sadvarn-reader .document-content table.acharya-table td{
+    display:block;
+    width:100%;
+    min-width:0!important;
+    padding:4px 0!important;
+    border:0!important;
+    background:transparent!important;
+    overflow-wrap:anywhere;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:first-child,
+  .sadvarn-reader .document-content table.acharya-table td:first-child{
+    grid-column:1;
+    grid-row:1 / span 3;
+    color:#817970;
+    font-weight:700;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(2),
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(3),
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(2),
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(3),
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(4){
+    grid-column:2;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(2)::before,
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(3)::before,
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(2)::before,
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(3)::before,
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(4)::before{
+    display:block;
+    margin:0 0 2px;
+    color:#8a8179;
+    font-size:10px;
+    line-height:1.35;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(2)::before{content:"Reference"}
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(3)::before{content:"Statement"}
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(2)::before{content:"Ācārya"}
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(3)::before{content:"Tradition"}
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(4)::before{content:"Statement"}
+}
