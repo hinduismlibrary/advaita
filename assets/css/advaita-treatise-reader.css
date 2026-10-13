@@ -1,40 +1,48 @@
-/* Advaita Treatise readers reuse the Bhagavad Gītā / Viṣṇu Purāṇa reader shell.
-   These rules only style the extra chapter sections and script controls. */
-.treatise-reader-page .shankara-author{margin:10px auto 8px;color:#655e57;font-family:"Noto Serif",Georgia,serif;font-size:13px;line-height:1.45}
+/* The five treatise readers use the same centered Gītā / Viṣṇu Purāṇa reader flow. */
+.treatise-reader-page .gita-hero{padding:44px 0 24px}
+.treatise-reader-page .gita-hero .eyebrow{color:#817970}
+.treatise-reader-page .gita-hero h1{color:#2f7f82}
+.treatise-reader-page .gita-hero .subtitle{max-width:760px;color:#655e57}
+.treatise-reader-page .treatise-section-count{margin:7px 0 0;color:#817970;font-size:12px;line-height:1.4}
+.treatise-reader-page .shankara-author{margin:10px auto 8px;color:#655e57;font-family:Merriweather,Georgia,serif;font-size:14px;line-height:1.5}
 .treatise-reader-page .shankara-about{max-width:840px;margin:12px auto 8px;text-align:left}
-.treatise-reader-page .shankara-about-copy{margin:7px 0 2px;color:#514a43;font-family:"Noto Serif",Georgia,serif;font-size:12px;line-height:1.55}
+.treatise-reader-page .shankara-about-copy{max-width:760px;margin:7px auto 2px;padding:8px 11px;border:1px solid #e2ddd7;border-radius:8px;background:#fffdfb;color:#514a43;font-family:"Noto Serif",Georgia,serif;font-size:13px;line-height:1.6}
 .treatise-reader-page .shankara-about-copy p{margin:0 0 7px}
+.treatise-reader-page .shankara-about-copy p:last-child{margin-bottom:0}
 .treatise-reader-page .shankara-about-source{color:#655e57}
-.treatise-reader-page .script-controls{display:flex;justify-content:center;gap:7px;margin:12px auto 8px}
-.treatise-reader-page .script-controls button{min-height:0;border:1px solid #9bc5c7;border-radius:999px;padding:4px 11px;background:transparent;color:#2f7f82;font-family:Merriweather,Georgia,serif;font-size:12px;line-height:1.2;font-weight:600;cursor:pointer}
+.treatise-reader-page .script-controls{display:flex;justify-content:center;gap:8px;margin:15px auto 6px}
+.treatise-reader-page .script-controls button{min-height:30px;border:1px solid #9bc5c7;border-radius:999px;padding:5px 13px;background:#fffdfb;color:#2f7f82;font-family:Merriweather,Georgia,serif;font-size:12px;line-height:1.2;font-weight:600;cursor:pointer}
 .treatise-reader-page .script-controls button[aria-pressed="true"]{background:#e8f0ef}
-.treatise-reader-page .script-controls button:focus-visible,.treatise-reader-page .gita-details summary:focus-visible{outline:2px solid #2f7f82;outline-offset:2px}
-.treatise-reader-page .treatise-contents{margin-bottom:20px}
-.treatise-reader-page .treatise-contents-group{margin:0 0 6px!important}
-.treatise-reader-page .treatise-contents-group>summary{display:flex!important;align-items:center;justify-content:space-between;gap:12px;width:100%!important;text-align:left!important;overflow-wrap:anywhere}
-.treatise-reader-page .treatise-contents-group>summary small{flex:0 0 auto;color:#766e67;font-size:10px;font-weight:400}
-.treatise-reader-page .treatise-contents-group .gita-reveal{padding:4px 0 3px}
-.treatise-reader-page .treatise-section-jump{margin:8px 0 3px!important;text-align:right}
-.treatise-reader-page .treatise-section-jump a{color:#2f7f82}
-.treatise-reader-page .treatise-reader-section{margin:22px 0 0;padding:16px 0 0;border-top:1px solid #dedbd6;scroll-margin-top:24px}
-.treatise-reader-page .treatise-section-heading{max-width:840px;margin:0 auto 20px;text-align:center}
-.treatise-reader-page .treatise-section-heading .eyebrow{margin:0 0 5px;color:#766e67;font-family:Merriweather,Georgia,serif;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.treatise-reader-page .treatise-section-heading h2{margin:0;color:#2f7f82;font-family:Vollkorn,Georgia,serif;font-size:clamp(23px,3.4vw,30px);font-weight:400;line-height:1.18;overflow-wrap:anywhere}
-.treatise-reader-page .shankara-verse{scroll-margin-top:20px}
-.treatise-reader-page .treatise-long-text{max-width:800px!important;margin:0 auto 14px!important;text-align:left!important;font-size:15px!important;line-height:1.68!important;white-space:pre-wrap;overflow-wrap:anywhere}
-.treatise-reader-page .shankara-english-unit .gita-translation{max-width:800px!important;margin:0 auto 14px!important;text-align:left!important;font-family:"Noto Serif",Georgia,serif!important;font-size:14px!important;line-height:1.68!important;overflow-wrap:anywhere}
+.treatise-reader-page .script-controls button:focus-visible,
+.treatise-reader-page .treatise-section-picker select:focus-visible,
+.treatise-reader-page .gita-details summary:focus-visible{outline:2px solid #2f7f82;outline-offset:2px}
+.treatise-reader-page .gita-chapter-nav.treatise-section-nav{align-items:center}
+.treatise-reader-page .treatise-section-picker{display:inline-flex;align-items:center;max-width:min(520px,100%)}
+.treatise-reader-page .treatise-section-picker select{min-height:32px;max-width:min(520px,calc(100vw - 36px));padding:5px 30px 5px 12px;border:1px solid #9bc5c7;border-radius:999px;background:#fffdfb;color:#2f7f82;font-family:Vollkorn,Georgia,serif;font-size:12.5px;line-height:1.15;cursor:pointer}
+.treatise-reader-page .treatise-visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.treatise-reader-page .gita-contents{margin-bottom:18px}
+.treatise-reader-page .gita-contents ol{font-family:Merriweather,Georgia,serif}
+.treatise-reader-page .treatise-contents--large ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:row;gap:0 22px;max-height:380px;overflow:auto;columns:unset;padding:2px 8px 6px 20px;list-style-position:outside}
+.treatise-reader-page .treatise-contents--large li{break-inside:auto;margin:0 0 3px}
+.treatise-reader-page .treatise-contents--large a{overflow-wrap:anywhere}
+.treatise-reader-page .treatise-reader-section{margin:0;padding:0}
+.treatise-reader-page .treatise-reader-section .gita-verse{scroll-margin-top:20px}
+.treatise-reader-page .treatise-reader-section .gita-sanskrit{white-space:pre-line;overflow-wrap:anywhere}
+.treatise-reader-page .treatise-reader-section .treatise-long-text{max-width:800px!important;margin:0 auto 14px!important;text-align:left!important;font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;font-size:16px!important;line-height:1.62!important}
+.treatise-reader-page[data-script-mode="iast"] .treatise-reader-section .treatise-long-text{font-family:Merriweather,Georgia,serif!important;font-size:15px!important}
+.treatise-reader-page .shankara-english-unit .gita-translation{max-width:800px!important;margin:0 auto 14px!important;text-align:left!important;font-family:"Noto Serif",Georgia,serif!important;font-size:15px!important;line-height:1.65!important;white-space:pre-wrap;overflow-wrap:anywhere}
 .treatise-reader-page .shankara-english-unit .gita-verse-rule{margin-bottom:14px!important}
-.treatise-reader-page .shankara-iast{font-family:"Noto Serif",Georgia,serif}
+.treatise-reader-page .shankara-transliteration .shankara-iast{margin:0;color:#514a43;font-family:"Noto Serif",Georgia,serif;font-size:15px;line-height:1.62;overflow-wrap:anywhere}
 .treatise-reader-page .shankara-work-nav{margin:30px auto 10px}
 .treatise-reader-page .shankara-work-nav .shankara-index-link{font-weight:700}
-.treatise-reader-page .treatise-reader-section:last-of-type{margin-bottom:0}
 @media(max-width:700px){
- .treatise-reader-page .shankara-author{font-size:12px}
- .treatise-reader-page .script-controls{margin:10px auto 7px}
- .treatise-reader-page .treatise-reader-section{margin-top:18px;padding-top:13px}
- .treatise-reader-page .treatise-section-heading{margin-bottom:16px}
+ .treatise-reader-page .gita-hero{padding:30px 0 18px}
+ .treatise-reader-page .gita-hero h1{font-size:32px}
+ .treatise-reader-page .shankara-author{font-size:13px}
+ .treatise-reader-page .script-controls{margin:11px auto 6px}
+ .treatise-reader-page .treatise-section-picker{width:100%;justify-content:center}
+ .treatise-reader-page .treatise-section-picker select{width:min(100%,420px);max-width:calc(100vw - 36px)}
+ .treatise-reader-page .treatise-contents--large ol{grid-template-columns:repeat(2,minmax(0,1fr));max-height:320px;gap:0 14px}
  .treatise-reader-page .treatise-long-text{font-size:14px!important;line-height:1.62!important}
- .treatise-reader-page .shankara-english-unit .gita-translation{font-size:13.5px!important;line-height:1.62!important}
- .treatise-reader-page .treatise-contents-group>summary{gap:8px}
- .treatise-reader-page .treatise-contents-group>summary small{font-size:9px}
+ .treatise-reader-page .shankara-english-unit .gita-translation{font-size:15px!important;line-height:1.58!important}
 }
