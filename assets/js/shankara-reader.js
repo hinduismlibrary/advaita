@@ -305,6 +305,7 @@ async function start(root){
  const id=root.dataset.work,item=WORKS.find(w=>w.id===id);
  if(!item)return;
  const hasStaticText=Boolean(root.querySelector(".gita-verse,.shankara-verse"));
+ if(root.dataset.readerStatic==="true"&&hasStaticText){root.setAttribute("aria-busy","false");bindScript(root);return;}
  root.setAttribute("aria-busy","true");
  bindScript(root);
  if(!hasStaticText){

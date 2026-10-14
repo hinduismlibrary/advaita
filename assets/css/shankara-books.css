@@ -199,3 +199,12 @@
  .shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,
  .shankara-content .gita-word-gloss{font-size:15px!important;line-height:1.58!important}
 }
+
+/* Shared coverage and section styles for the Ātmabodha-format text readers. */
+.shankara-content .shankara-reader-coverage{margin:14px auto 20px;padding:12px 15px;border-left:3px solid #b78353;background:#f0eee9;color:#514c46;font:400 14px/1.65 Merriweather,Georgia,serif;text-align:left}
+.shankara-content .shankara-reader-coverage strong{color:#302b25}
+.shankara-content .shankara-section-heading{margin:32px 0 16px;padding:10px 14px;border:1px solid #b9d9ce;background:#d6eee6;color:#287f80;font:600 20px/1.35 Vollkorn,Georgia,serif;scroll-margin-top:90px}
+.shankara-content .shankara-toc-details{margin:5px 0 8px}
+.shankara-content .shankara-toc-details>summary{cursor:pointer;color:#297e83}
+.shankara-content .shankara-toc-details ol{max-height:28rem;overflow:auto;padding-left:2rem}
+.shankara-content .shankara-verse{scroll-margin-top:80px}
