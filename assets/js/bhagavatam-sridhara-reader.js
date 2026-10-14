@@ -194,15 +194,27 @@
     return /^\\s*न\\s+(?:(?:कतमेन(?:ापि)?)\\s+)?व्याख्यातम्\\s*[।.]?\\s*$/.test(String(value || ''));
   }
 
+  function readerVerseRange(targetCanto, targetChapter, startValue, endValue) {
+    const start = Number(startValue);
+    const end = Number(endValue);
+    // In the pinned 11.23 witness, markers 35+ run one label ahead of the
+    // English mirror. The second source marker 42 is already canonical 42.
+    const offset = targetCanto === 11 && targetChapter === 23 && start >= 35 ? -1 : 0;
+    return { start: start + offset, end: end + offset };
+  }
+
   function parseEnglishCommentary(data, targetCanto, targetChapter) {
     return Array.isArray(data && data.entries)
       ? data.entries
         .filter((entry) => Number(entry.canto) === targetCanto && Number(entry.chapter) === targetChapter)
-        .map((entry) => ({
-          start: Number(entry.start),
-          end: Number(entry.end),
-          text: String(entry.text || '').trim()
-        }))
+        .map((entry) => {
+          const range = readerVerseRange(targetCanto, targetChapter, entry.start, entry.end);
+          return {
+            start: range.start,
+            end: range.end,
+            text: String(entry.text || '').trim()
+          };
+        })
         .filter((entry) => entry.text && !/^Śrīdhara Svāmī does not (?:explain this verse here|provide a separate explanatory block for (?:this verse|these verses) in the pinned Sanskrit file)\.?$/i.test(entry.text) && !isCommentatorAttribution(entry.text))
       : [];
   }
@@ -229,6 +241,7 @@
       .replace(/(॥\s*[०-९]+\s*\.\s*[०-९]+\s*\.\s*[०-९]+(?:\s*[-–—]\s*[०-९]+)?)\s*\*{1,2}\s*॥/g, '$1 ॥')
       .replace(/॥\s*\*{1,2}([०-९]+\s*\.\s*[०-९]+\s*\.\s*[०-९]+(?:\s*[-–—]\s*[०-९]+)?)\*{1,2}\s*॥/g, '॥ $1 ॥');
     const markers = Array.from(sourceText.matchAll(markerPattern));
+    let canto11Chapter23Verse42Seen = 0;
 
     markers.forEach((marker, index) => {
       const markerCanto = Number(toAsciiDigits(marker[1]));
@@ -238,9 +251,19 @@
       if (markerCanto !== targetCanto || markerChapter !== targetChapter) return;
       // The pinned VishvAsa file has a one-verse editorial numbering shift
       // after its 1.16.12 block: its markers 13+ match Vedabase 12+.
-      const sourceOffset = markerCanto === 1 && markerChapter === 16 && sourceStart >= 13 ? -1
+      // Canto 11, chapter 22 keeps its independently checked 36–38 correction.
+      // In chapter 23, source markers 35+ are one ahead of the mirror; the
+      // repeated source marker 42 is split by source order across mirror 41–42.
+      let sourceOffset = markerCanto === 1 && markerChapter === 16 && sourceStart >= 13 ? -1
         : markerCanto === 11 && markerChapter === 22 && sourceStart >= 36 && sourceStart <= 38 ? 1
         : 0;
+      if (markerCanto === 11 && markerChapter === 23 && sourceStart >= 35) {
+        sourceOffset = -1;
+        if (sourceStart === 42 && sourceEnd === 42) {
+          sourceOffset = canto11Chapter23Verse42Seen === 0 ? -1 : 0;
+          canto11Chapter23Verse42Seen += 1;
+        }
+      }
       const start = sourceStart + sourceOffset;
       const end = sourceEnd + sourceOffset;
 
@@ -271,19 +294,22 @@
     return entries;
   }
 
-  function parseLocalSridhara(data) {
+  function parseLocalSridhara(data, targetCanto, targetChapter) {
     return Object.values(data && data.entries ? data.entries : {})
       .filter((entry) => entry && entry.source_available && String(entry.sanskrit || '').trim() && !isNoCommentaryMarker(String(entry.sanskrit || '')))
-      .map((entry) => ({
-        start: Number(entry.start),
-        end: Number(entry.end),
-        text: String(entry.sanskrit).trim(),
-        sourceAvailable: true,
-        wordForWord: Array.isArray(entry.word_for_word) ? entry.word_for_word : [],
-        transliteration: Array.isArray(entry.transliteration)
-          ? entry.transliteration.join('\\n')
-          : devanagariToIast(entry.sanskrit)
-      }));
+      .map((entry) => {
+        const range = readerVerseRange(targetCanto, targetChapter, entry.start, entry.end);
+        return {
+          start: range.start,
+          end: range.end,
+          text: String(entry.sanskrit).trim(),
+          sourceAvailable: true,
+          wordForWord: Array.isArray(entry.word_for_word) ? entry.word_for_word : [],
+          transliteration: Array.isArray(entry.transliteration)
+            ? entry.transliteration.join('\\n')
+            : devanagariToIast(entry.sanskrit)
+        };
+      });
   }
 
   function parseLocalCommentary(data, targetCanto, targetChapter) {
@@ -297,6 +323,7 @@
       .map((entry) => {
         const sanskrit = String(entry.sanskrit || '').trim();
         const literal = String(entry.literal_english || '').trim();
+        const range = readerVerseRange(targetCanto, targetChapter, entry.start, entry.end);
         const generatedPlaceholder = /^(?:contextual literal sense of|generic filler|translation pending|to be translated|placeholder(?:\s+(?:commentary|translation|gloss))?)/i.test(literal);
         const commentatorAttribution = isCommentatorAttribution(literal);
         const noCommentary = (entry.source_available === false && entry.source_gap !== true) ||
@@ -305,8 +332,8 @@
         const sourceGap = entry.source_gap === true ||
           (entry.source_available === false && !noCommentary);
         return {
-          start: Number(entry.start),
-          end: Number(entry.end),
+          start: range.start,
+          end: range.end,
           text: noCommentary || sourceGap || generatedPlaceholder || commentatorAttribution ? '' : literal,
           noCommentary,
           sourceGap
@@ -334,9 +361,10 @@
         (Array.isArray(entry.word_for_word) || Array.isArray(entry.pairs)))
       .map((entry) => {
         const sourcePairs = Array.isArray(entry.word_for_word) ? entry.word_for_word : entry.pairs;
+        const range = readerVerseRange(targetCanto, targetChapter, entry.start, entry.end);
         return {
-          start: Number(entry.start),
-          end: Number(entry.end),
+          start: range.start,
+          end: range.end,
           pairs: sourcePairs
             .filter((pair) => Array.isArray(pair) && pair.length >= 2 && pair[0] && pair[1] && !/contextual literal sense of|generic filler|translation pending|to be translated|placeholder(?:\s+(?:gloss|translation|commentary))?|^no commentary\.?$/i.test(String(pair[1])) && !isNoCommentaryMarker(String(pair[1])))
             .map((pair) => [String(pair[0]), String(pair[1])])
@@ -725,7 +753,7 @@
       const localCommentaryEntries = wfwResults.flatMap((data) => parseLocalCommentary(data, canto, chapter));
       const sridharaEntries = sridharaUrl
         ? (config.sridhara_mode === 'local-cached'
-          ? parseLocalSridhara(sridharaResult)
+          ? parseLocalSridhara(sridharaResult, canto, chapter)
           : parseSridhara(sridharaResult, canto, chapter))
         : [];
       const commentaryEntries = commentaryResult

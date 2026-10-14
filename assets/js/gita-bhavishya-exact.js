@@ -103,7 +103,7 @@
         imp(heading, 'text-align', 'center');
         imp(heading, 'color', '#2f7f82');
         imp(heading, 'font-family', 'Vollkorn, Georgia, serif');
-        imp(heading, 'font-size', '23px');
+        imp(heading, 'font-size', narrow ? '21px' : '23px');
         imp(heading, 'line-height', '1.1');
         imp(heading, 'font-weight', '600');
         imp(heading, 'letter-spacing', '.01em');
@@ -125,7 +125,7 @@
         imp(sanskrit, 'text-align', 'center');
         imp(sanskrit, 'color', '#3c362e');
         imp(sanskrit, 'font-family', '"Noto Serif Devanagari", "Noto Serif", serif');
-        imp(sanskrit, 'font-size', narrow ? '16px' : '17px');
+        imp(sanskrit, 'font-size', narrow ? '16.5px' : '18px');
         imp(sanskrit, 'line-height', '1.45');
         imp(sanskrit, 'font-weight', '400');
       }
@@ -144,7 +144,7 @@
         imp(translation, 'text-align', 'center');
         imp(translation, 'color', '#3c362e');
         imp(translation, 'font-family', 'Noto Serif, Georgia, serif');
-        imp(translation, 'font-size', '13px');
+        imp(translation, 'font-size', '14px');
         imp(translation, 'line-height', '1.45');
         imp(translation, 'font-weight', '400');
       }
@@ -207,8 +207,8 @@
           imp(label, 'line-height', '1.2');
         });
         reveal.querySelectorAll('.gita-wfw-list').forEach((list) => {
-          imp(list, 'font-size', '11.5px');
-          imp(list, 'line-height', '1.42');
+          imp(list, 'font-size', narrow ? '13.5px' : '15.5px');
+          imp(list, 'line-height', narrow ? '1.48' : '1.55');
         });
       });
 
