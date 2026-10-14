@@ -49,7 +49,7 @@
     });
   }
 
-  function evidenceRow(item) {
+  function evidenceRow(item, section, chapter) {
     const kind = item.kind === 'quotation' ? 'Quoted in' : 'Parallel in';
     const author = item.author ? '<span class="author">· ' + esc(item.author) + '</span>' : '';
     const source = item.source_locus
@@ -58,7 +58,12 @@
     const label = item.label
       ? '<div class="source-locus">Cited under the title ' + esc(item.label.replace(/^as /, '')) + '</div>'
       : '';
-    const note = item.note ? '<p class="note">' + esc(item.note) + '</p>' : '';
+    let noteText = item.note || '';
+    if (item.passage === 'unspecified' && item.source_locus && item.kind === 'parallel') {
+      noteText = 'Chapter-level link only: Bhaviṣya ' + section + '.' + chapter + ' is associated with ' +
+        item.work + ' ' + item.source_locus + '; no corresponding verse range is identified there.';
+    }
+    const note = noteText ? '<p class="note">' + esc(noteText) + '</p>' : '';
     const range = item.passage === 'unspecified'
       ? 'verse range not specified'
       : 'vv. ' + item.passage;
@@ -71,7 +76,7 @@
   function detail(section, chapter) {
     const found = byChapter.get(key(section, chapter)) || [];
     const name = sectionName[section] || section;
-    const rows = compactEvidence(found).map(evidenceRow).join('');
+    const rows = compactEvidence(found).map(item => evidenceRow(item, section, chapter)).join('');
     const empty = found.length
       ? ''
       : '<p class="no-entry">No quotation or parallel is recorded for this chapter.</p>';
@@ -80,7 +85,7 @@
       (found.length ? '<ul class="evidence-list">' + rows + '</ul>' : empty);
   }
 
-  function chapterRow(section, first, last) {
+  function chapterRow(section, first, last, firstInSection) {
     let tiles = '';
     for (let chapter = first; chapter <= last; chapter++) {
       const evidence = byChapter.get(key(section.id, chapter)) || [];
@@ -96,20 +101,20 @@
         '" data-chapter="' + chapter + '" aria-expanded="false" aria-label="' +
         esc(section.name) + ', chapter ' + chapter + ': ' + label + '">' + chapter + '</button>';
     }
-    return '<div class="chapter-row"><div class="cells">' + tiles +
-      '</div><div class="detail" hidden></div></div>';
+    const label = firstInSection
+      ? '<div class="row-section"><strong>' + esc(section.id) + '</strong><span>' +
+        esc(sectionName[section.id] || section.name) + '</span></div>'
+      : '<div class="row-section continuation" aria-hidden="true"></div>';
+    return '<div class="chapter-row">' + label + '<div class="row-content"><div class="cells">' + tiles +
+      '</div><div class="detail" hidden></div></div></div>';
   }
 
   function renderSection(section, columns) {
     let rows = '';
     for (let first = 1; first <= section.chapters; first += columns) {
-      rows += chapterRow(section, first, Math.min(section.chapters, first + columns - 1));
+      rows += chapterRow(section, first, Math.min(section.chapters, first + columns - 1), first === 1);
     }
-    const name = sectionName[section.id] || section.name;
-    return '<section class="heat-section" aria-label="' + esc(section.name) + '">' +
-      '<aside class="section-label"><strong>' + esc(section.id) + '</strong><span>' +
-      esc(name) + '</span><small>1–' + section.chapters + '</small></aside>' +
-      '<div class="section-body">' + rows + '</div></section>';
+    return '<section class="heat-section" aria-label="' + esc(section.name) + '">' + rows + '</section>';
   }
 
   function unplaced() {
