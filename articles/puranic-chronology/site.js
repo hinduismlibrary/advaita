@@ -109,7 +109,7 @@
     const passage = uncertain ? '' : 'vv. ' + esc(item.passage);
     const partialUnspecified = !uncertain && item.hasUnspecified;
     const noteText = cleanNote(item);
-    const warning = item.missing || /no match|absent|not found|not located|do not occur|unmatched/i.test(noteText);
+    const warning = item.missing || /no match|absent|not found|not located|do not|unmatched/i.test(noteText);
     const note = noteText ? '<div class="note' + (warning ? ' warning' : '') + '">' + esc(noteText) + '</div>' : '';
     let citation;
     if (item.kind === 'quotation') {
@@ -144,7 +144,7 @@
     for (let chapter = first; chapter <= last; chapter++) {
       const evidence = byChapter.get(key(section.id, chapter)) || [];
       const marked = evidence.length > 0;
-      const gap = evidence.some(item => item.missing === true || /no match|absent|not found|not located|do not occur/i.test(item.note || ''));
+      const gap = evidence.some(item => item.missing === true || /no match|absent|not found|not located|do not/i.test(item.note || ''));
       const entryCount = compactEvidence(evidence).length;
       const label = (marked ? entryCount + ' references' : 'no located entry') +
         (gap ? '; at least one cited line is unmatched' : '');
