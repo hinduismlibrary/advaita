@@ -142,15 +142,6 @@
           "kind": "quotation",
           "section": "I",
           "chapter": 4,
-          "passage": "4",
-          "work": "Smṛticandrikā",
-          "author": "Devaṇṇabhaṭṭa",
-          "note": "Same passage also appears at I.103.19b–20a."
-        },
-        {
-          "kind": "quotation",
-          "section": "I",
-          "chapter": 4,
           "passage": "117b–118a, 120b–121a",
           "work": "Caturvargacintāmaṇi",
           "author": "Hemādri",
@@ -635,6 +626,15 @@
           "author": "Hemādri",
           "note": "A line has no match.",
           "missing": true
+        },
+        {
+          "kind": "quotation",
+          "section": "I",
+          "chapter": 64,
+          "passage": "3",
+          "work": "Dānasāgara",
+          "author": "Ballālasena",
+          "note": "The citation gives 1.64.4; the corresponding wording in this edition is at 1.64.3 and also at 1.103.19b–20a."
         }
       ]
     },
@@ -1290,14 +1290,6 @@
       "chapter": 93,
       "evidence": [
         {
-          "kind": "quotation",
-          "section": "I",
-          "chapter": 93,
-          "passage": "74b–75a",
-          "work": "Smṛticandrikā",
-          "author": "Devaṇṇabhaṭṭa"
-        },
-        {
           "kind": "parallel",
           "section": "I",
           "chapter": 93,
@@ -1326,7 +1318,7 @@
           "kind": "quotation",
           "section": "I",
           "chapter": 93,
-          "passage": "42–45, 49–51, 58, 59b, 60–61a, 62, 68–71",
+          "passage": "42–45, 49–51, 58, 59b, 60–61a, 62, 68–71, 74b–75a",
           "work": "Dānasāgara",
           "author": "Ballālasena"
         },
@@ -1532,18 +1524,18 @@
           "kind": "quotation",
           "section": "I",
           "chapter": 103,
-          "passage": "19b–20a",
-          "work": "Smṛticandrikā",
-          "author": "Devaṇṇabhaṭṭa",
-          "note": "Same passage also appears at I.4.4."
+          "passage": "39b–41a",
+          "work": "Caturvargacintāmaṇi",
+          "author": "Hemādri"
         },
         {
           "kind": "quotation",
           "section": "I",
           "chapter": 103,
-          "passage": "39b–41a",
-          "work": "Caturvargacintāmaṇi",
-          "author": "Hemādri"
+          "passage": "19b–20a",
+          "work": "Dānasāgara",
+          "author": "Ballālasena",
+          "note": "The citation identifies this passage as equivalent to 1.64.4; the corresponding wording in this edition is at 1.64.3."
         }
       ]
     },
@@ -2338,14 +2330,6 @@
           "kind": "quotation",
           "section": "I",
           "chapter": 181,
-          "passage": "34",
-          "work": "Smṛticandrikā",
-          "author": "Devaṇṇabhaṭṭa"
-        },
-        {
-          "kind": "quotation",
-          "section": "I",
-          "chapter": 181,
           "passage": "28–29",
           "work": "Caturvargacintāmaṇi",
           "author": "Hemādri"
@@ -2421,6 +2405,14 @@
           "work": "Commentary on Manusmṛti",
           "author": "Kullūkabhaṭṭa",
           "source_locus": "Manusmṛti III.7"
+        },
+        {
+          "kind": "quotation",
+          "section": "I",
+          "chapter": 181,
+          "passage": "34",
+          "work": "Dānasāgara",
+          "author": "Ballālasena"
         }
       ]
     },
