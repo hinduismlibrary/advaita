@@ -568,3 +568,39 @@
   .sadvarn-reader .document-content table.acharya-table td:nth-child(3)::before{content:"Tradition"}
   .sadvarn-reader .document-content table.acharya-table td:nth-child(4)::before{content:"Statement"}
 }
+
+
+/* Prevent nested quote styling from drawing parallel left rules. */
+.sadvarn-reader .document-content .aside-note > p.translation{
+  padding-left:0;
+  border-left:0;
+}
+.sadvarn-reader .document-content .definition-verse{
+  padding-left:17px;
+  border-left:2px solid var(--quote-rule);
+}
+.sadvarn-reader .document-content .definition-verse > details.sanskrit-reveal [lang="sa-Deva"],
+.sadvarn-reader .document-content .definition-verse > p.translation{
+  padding-left:0;
+  border-left:0;
+}
+.sadvarn-reader .document-content .postscript-translations{
+  margin:12px 0 28px 28px;
+  padding:0;
+  list-style:decimal;
+}
+.sadvarn-reader .document-content .postscript-translations li{
+  margin:0 0 20px;
+  padding-left:4px;
+}
+.sadvarn-reader .document-content .postscript-translations li::marker{
+  color:#8a8179;
+  font-weight:700;
+}
+.sadvarn-reader .document-content .postscript-translations p.translation{
+  margin:0!important;
+}
+@media(max-width:620px){
+  .sadvarn-reader .document-content .postscript-translations{margin-left:24px}
+  .sadvarn-reader .document-content .postscript-translations li{margin-bottom:17px}
+}
