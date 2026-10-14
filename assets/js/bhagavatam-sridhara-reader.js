@@ -648,6 +648,8 @@
   }
 
   function chapterEnglishUrl(manifest, config, chapter) {
+    const localPath = config.english_path_overrides && config.english_path_overrides[String(chapter)];
+    if (localPath) return localPath.charAt(0) === '/' ? localPath : '/advaita/' + localPath;
     return rawUrl(
       chapterEnglishPath(config, chapter),
       manifest.english_source.mirror_path_root,
@@ -695,6 +697,17 @@
       requests.push(fetchJson(checkpointUrl));
       const results = await Promise.all(requests);
       const english = parseEnglish(results[0]);
+      const overlayPath = config.english_path_overlays && config.english_path_overlays[String(chapter)];
+      if (overlayPath) {
+        const overlayUrl = overlayPath.charAt(0) === '/' ? overlayPath : '/advaita/' + overlayPath;
+        const overlay = parseEnglish(await fetchText(overlayUrl));
+        if (!overlay.entries.length) throw new Error('No verse records found in the local English overlay.');
+        english.entries = english.entries
+          .filter((entry) => !overlay.entries.some((replacement) =>
+            replacement.end >= entry.start && replacement.start <= entry.end))
+          .concat(overlay.entries)
+          .sort((a, b) => a.start - b.start || a.end - b.end);
+      }
       const sridharaResult = sridharaUrl ? results[1] : null;
       const commentaryResult = commentaryUrlValue ? results[sridharaUrl ? 2 : 1] : null;
       const checkpointResult = results[sridharaUrl ? (commentaryUrlValue ? 3 : 2) : (commentaryUrlValue ? 2 : 1)];

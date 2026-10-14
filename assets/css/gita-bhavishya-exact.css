@@ -8,11 +8,11 @@
 .gita-page .gita-controls{display:block!important;max-width:840px!important;margin:0 auto!important;padding:0!important}
 .gita-page .gita-details,.gita-page .gita-details[open]{display:block!important;width:auto!important;max-width:840px!important;margin:0 auto 6px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
 .gita-page .gita-details summary,.gita-page .gita-details[open] summary{display:block!important;width:max-content!important;max-width:100%!important;min-height:0!important;margin:0!important;cursor:pointer!important;border:1px solid #9bc5c7!important;border-radius:999px!important;padding:4px 10px!important;color:#2f7f82!important;background:transparent!important;box-shadow:none!important;font-family:Merriweather,Georgia,serif!important;font-size:12px!important;line-height:1.15!important;font-weight:600!important;text-decoration:none!important}
-.gita-page .gita-details:not([open])>.gita-reveal{display:none!important}.gita-page .gita-details[open]>.gita-reveal{display:block!important}.gita-page .gita-reveal{margin:6px 0 9px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e!important;font-size:11.5px!important;line-height:1.42!important}
-.gita-page .gita-reveal p{margin:0!important;font-size:11.5px!important;line-height:1.42!important}
-.gita-page .gita-reveal p[lang^="sa"]{font-size:15px!important;line-height:1.55!important}
-.gita-page .gita-reveal .gita-dual-label{margin:0 0 3px!important;font-family:Vollkorn,Georgia,serif!important;font-size:11.5px!important;line-height:1.2!important}
-.gita-page .gita-reveal .gita-wfw-list{font-size:11.5px!important;line-height:1.42!important}
+.gita-page .gita-details:not([open])>.gita-reveal{display:none!important}.gita-page .gita-details[open]>.gita-reveal{display:block!important}.gita-page .gita-reveal{margin:6px 0 9px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e!important;font-size:14px!important;line-height:1.5!important}
+.gita-page .gita-reveal p{margin:0!important;font-size:14px!important;line-height:1.5!important}
+.gita-page .gita-reveal p[lang^="sa"]{font-size:18px!important;line-height:1.55!important}
+.gita-page .gita-reveal .gita-dual-label{margin:0 0 3px!important;font-family:Vollkorn,Georgia,serif!important;font-size:19px!important;line-height:1.25!important}
+.gita-page .gita-reveal .gita-wfw-list{font-size:15.5px!important;line-height:1.55!important}
 .gita-page .gita-commentary{display:block!important;max-width:840px!important;margin:12px auto 20px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e!important;font-size:14px!important;line-height:1.45!important;text-align:left!important}
 .gita-page .gita-commentary h3{margin:0 0 4px!important;color:#65516f!important;font-family:Vollkorn,Georgia,serif!important;font-size:16px!important;font-weight:500!important;line-height:1.25!important}
 @media(max-width:700px){.gita-page .gita-content{padding:0 14px 18px!important}.gita-page .gita-sanskrit{font-size:16px!important}.gita-page .gita-verse h2{font-size:21px!important}.gita-page .gita-translation{font-size:13px!important;line-height:1.45!important}.gita-page .gita-details summary{font-size:12px!important;padding:4px 10px!important}.gita-page .gita-reveal p{font-size:11px!important;line-height:1.4!important}.gita-page .gita-reveal p[lang^="sa"]{font-size:14px!important;line-height:1.5!important}.gita-page .gita-commentary{font-size:13.5px!important;line-height:1.42!important}.gita-page .gita-commentary h3{font-size:15px!important}}
@@ -110,7 +110,7 @@
   margin:12px auto 0!important;
   color:#655e57!important;
   font-family:Noto Serif,Georgia,serif!important;
-  font-size:13px!important;
+  font-size:14px!important;
   line-height:1.45!important;
   font-style:italic!important;
 }
@@ -147,7 +147,7 @@
   text-align:center!important;
   color:#3c362e!important;
   font-family:"Noto Serif Devanagari","Noto Serif",serif!important;
-  font-size:17px!important;
+  font-size:18px!important;
   line-height:1.45!important;
   font-weight:400!important;
 }
@@ -161,7 +161,7 @@
   text-align:center!important;
   color:#3c362e!important;
   font-family:Noto Serif,Georgia,serif!important;
-  font-size:13px!important;
+  font-size:14px!important;
   line-height:1.45!important;
   font-weight:400!important;
 }
@@ -285,10 +285,10 @@
   .gita-page .article-heading{padding:30px 14px 18px!important}
   .gita-page .article-heading h1{font-size:32px!important}
   .gita-page .gita-content{padding:0 14px 18px!important}
-  .gita-page .gita-verse>.gita-sanskrit{font-size:16px!important}
-  .gita-page .gita-verse>.gita-translation{font-size:13px!important}
+  .gita-page .gita-verse>.gita-sanskrit{font-size:16.5px!important}
+  .gita-page .gita-verse>.gita-translation{font-size:14px!important}
   .gita-page .gita-verse>.gita-verse-heading,
-  .gita-page .gita-verse>h3{font-size:21px!important}
+  .gita-page .gita-verse>h3{font-size:20px!important}
   .gita-page .gita-contents ul{columns:1!important}
   .gita-page .bp-reader{padding:0 14px 18px!important}
 }
@@ -297,6 +297,7 @@
 /* Word-for-word reader rows: Sanskrit, IAST, and gloss, matching the source-reader style. */
 .gita-page .gita-word-list{display:block;margin:0;padding:0}
 .gita-page .gita-word-row{display:block;margin:0 0 4px;color:#3c362e;font-family:Merriweather,Georgia,'Times New Roman',serif;font-size:15.5px!important;line-height:1.55!important}
+.gita-page .gita-wfw-list{font-size:15.5px!important;line-height:1.55!important}
 .gita-page .gita-word-dev{color:#84432f;font-family:"Noto Serif Devanagari","Noto Serif",serif;font-size:1.06em;font-weight:700}
 .gita-page .gita-word-iast{color:#3c362e;font-size:.96em;font-weight:700}
 .gita-page .gita-word-iast em{font-style:italic}
@@ -307,6 +308,9 @@
 .gita-page .gita-dual-sridhara .gita-dual-label{color:#9a3d34!important}
 .gita-page .gita-dual-empty{margin:0!important;color:#6e665c;font-size:14px!important;font-style:italic}
 @media(max-width:700px){
-  .gita-page .gita-word-row{font-size:13.5px!important;line-height:1.48!important}
+  .gita-page .gita-word-row,.gita-page .gita-wfw-list,.gita-page .gita-reveal .gita-wfw-list{font-size:13.5px!important;line-height:1.48!important}
+  .gita-page .gita-reveal,.gita-page .gita-reveal p{font-size:13.5px!important;line-height:1.48!important}
+  .gita-page .gita-reveal p[lang^="sa"]{font-size:16.5px!important;line-height:1.5!important}
+  .gita-page .gita-reveal .gita-dual-label{font-size:17px!important}
   .gita-page .gita-dual-label{font-size:17px!important}
 }

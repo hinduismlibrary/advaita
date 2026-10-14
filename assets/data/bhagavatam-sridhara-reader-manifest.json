@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-27",
+  "generated_at": "2026-10-14",
   "primary_sanskrit": {
     "name": "VishvAsa purANam_vaiShNavam — gauDIya-prastutiH",
     "repository": "vishvAsa/purANam_vaiShNavam",
@@ -16,10 +16,10 @@
     "mirror_commit": "100560de6c9f68c2875097d40a2012a84c784179",
     "mirror_path_root": "bhAgavatam/gauDIyo_abhaya-charaNaH",
     "repository_url": "https://github.com/vishvAsa/purANam_vaiShNavam/tree/100560de6c9f68c2875097d40a2012a84c784179/bhAgavatam/gauDIyo_abhaya-charaNaH",
-    "note": "The displayed Bhāgavatam verse text, transliteration, synonyms and English translation are loaded from the pinned VishvAsa/Vasuki GitHub corpus."
+    "note": "The displayed Bhāgavatam verse text, transliteration, synonyms and English translation are loaded from the pinned VishvAsa/Vasuki corpus, except for the Canto 12.1 source-aligned tail and Canto 12.13, supplied as local strict word-for-word records."
   },
   "verification": {
-    "english_fields": "Bhāgavatam verse text, transliteration, synonyms and English translation are loaded from the pinned vishvAsa/purANam_vaiShNavam gauDIyo_abhaya-charaNaH files.",
+    "english_fields": "Chapters 1–12 load Devanāgarī, transliteration, synonyms and English translation from the pinned vishvAsa/purANam_vaiShNavam gauDIyo_abhaya-charaNaH files; Canto 12.1 verses 39–44 use a source-aligned local overlay and Canto 12.13 uses a complete local strict word-for-word source.",
     "sanskrit_fields": "Śrīdhara Svāmī commentary is loaded from the pinned vishvAsa/purANam_vaiShNavam gauDIya-prastutiH files and kept source-bound; another commentator is never substituted for a missing Śrīdhara block.",
     "commentary_english": "Literal English commentary renderings are keyed to those pinned Śrīdhara Sanskrit blocks; explicit source silence is shown as no commentary."
   },
@@ -394,7 +394,13 @@
         "13": "12/13_skandhArtha-nirUpaNaM.md"
       },
       "merged_source_ranges": [],
-      "english_path_template": "12/{chapter2}.md"
+      "english_path_template": "12/{chapter2}.md",
+      "english_path_overlays": {
+        "1": "assets/data/bhagavatam-canto12-ch01-tail.md?v=20261014-wfw-1"
+      },
+      "english_path_overrides": {
+        "13": "assets/data/bhagavatam-canto12-ch13.md?v=20261014-wfw-1"
+      }
     }
   },
   "english_commentary": {
