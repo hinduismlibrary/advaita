@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f8f4">
+  <meta name="description" content="A chapter heat map of Purāṇic citations and exact textual parallels.">
+  <title>Purāṇa Analysis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8f8f4;
+      --ink: #252823;
+      --muted: #72766e;
+      --rule: #d7d9d1;
+      --empty: #eeefe9;
+      --green: #bfd4c3;
+      --green-ink: #244c35;
+      --blue: #c3d7dc;
+      --blue-ink: #28515b;
+      --red: #a4473b;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Arial, Helvetica, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 13px/1.42 var(--sans); }
+    button, select { font: inherit; }
+    :focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
+    .page { width: min(1160px, calc(100% - 36px)); margin: 0 auto; }
+    .top {
+      min-height: 40px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--ink); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .top a { color: inherit; text-decoration: none; }
+    .top a:first-child { font-weight: 700; }
+    .top a:last-child { color: var(--muted); }
+    header { padding: 23px 0 15px; border-bottom: 1px solid var(--ink); }
+    h1 { margin: 0; font: 400 clamp(34px, 4.4vw, 46px)/1.02 var(--serif); letter-spacing: -.04em; }
+    .chooser { display: flex; align-items: center; gap: 10px; padding: 13px 0 11px; border-bottom: 1px solid var(--rule); }
+    .chooser label { color: var(--muted); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+    .chooser select {
+      min-width: min(310px, 72vw); max-width: 100%; padding: 6px 28px 6px 8px;
+      border: 1px solid var(--rule); border-radius: 2px; color: var(--ink); background: #fff;
+    }
+    #map { padding: 2px 0 30px; }
+    .section-row { display: grid; grid-template-columns: 122px minmax(0,1fr); gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
+    .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.25; }
+    .section-content { min-width: 0; }
+    .cells { display: grid; grid-template-columns: repeat(24, 22px); gap: 3px; align-content: start; }
+    .tile {
+      position: relative; display: grid; place-items: center; width: 22px; height: 22px;
+      padding: 0; border: 1px solid #dfe1d9; border-radius: 2px; color: #777b73;
+      background: var(--empty); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer;
+    }
+    .tile.quoted { border-color: #a9c3ae; color: var(--green-ink); background: var(--green); font-weight: 700; }
+    .tile.parallel { border-color: #a9c7cd; color: var(--blue-ink); background: var(--blue); font-weight: 700; }
+    .tile.both { border-color: #a9c3ae; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--blue) 51% 100%); font-weight: 700; }
+    .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
+    .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
+    .tile.unmatched::after { position: absolute; right: 1px; bottom: 1px; width: 5px; height: 5px; background: var(--red); content: ""; }
+    .detail { margin: 5px 0 1px; padding: 8px 10px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); background: #fff; }
+    .detail[hidden] { display: none; }
+    .detail h2 { margin: 0 0 6px; font: 400 17px/1.15 var(--serif); }
+    .group { display: grid; grid-template-columns: 78px minmax(0,1fr); gap: 8px; padding: 5px 0 0; }
+    .group + .group { margin-top: 4px; border-top: 1px solid #e7e8e2; }
+    .group h3 { margin: 2px 0 0; color: var(--muted); font: 700 9px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+    .entries { min-width: 0; margin: 0; padding: 0; list-style: none; }
+    .entry { padding: 1px 0 4px; overflow-wrap: anywhere; }
+    .work { font-weight: 600; }
+    .refs { display: block; padding-top: 1px; color: #42463f; font-variant-numeric: tabular-nums; }
+    .pair { font-variant-numeric: tabular-nums; }
+    .arrow { padding: 0 6px; color: var(--muted); }
+    .note { display: block; padding-top: 2px; color: #565b53; font: italic 12px/1.35 var(--serif); }
+    .no-entry { margin: 0; color: var(--muted); font-size: 11px; }
+    .error { padding: 14px 0; color: var(--red); }
+    @media (max-width: 760px) {
+      .page { width: calc(100% - 24px); }
+      header { padding: 19px 0 12px; }
+      .chooser { padding: 10px 0; }
+      .section-row { grid-template-columns: 92px minmax(0,1fr); gap: 5px; padding: 4px 0; }
+      .section-label { font-size: 9px; }
+      .cells { grid-template-columns: repeat(12, 22px); gap: 3px; }
+      .group { grid-template-columns: 66px minmax(0,1fr); gap: 5px; }
+    }
+    @media (max-width: 360px) {
+      .page { width: calc(100% - 18px); }
+      .section-row { grid-template-columns: 74px minmax(0,1fr); gap: 4px; }
+      .cells { grid-template-columns: repeat(10, 21px); gap: 2px; }
+      .tile { width: 21px; height: 21px; font-size: 9px; }
+      .group { grid-template-columns: 58px minmax(0,1fr); gap: 4px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="top" aria-label="Site">
+      <a href="/advaita/">Viveka Dṛṣṭi</a>
+      <a href="/advaita/pages/purana-library/">Purāṇa Library</a>
+    </nav>
+    <header><h1>Purāṇa Analysis</h1></header>
+    <div class="chooser">
+      <label for="purana">Purāṇa</label>
+      <select id="purana" aria-label="Choose a Purāṇa"></select>
+    </div>
+    <main id="map" aria-live="polite"></main>
+  </div>
+  <script>
+    (() => {
+      const map = document.getElementById("map");
+      const select = document.getElementById("purana");
+      let data = null;
+      let selectedTile = null;
+      let selectedDetail = null;
+
+      function chapterNumber(section, chapter) {
+        return (section.numbering ? section.numbering + "." : "") + chapter;
+      }
+
+      function addGroup(parent, label, entries, type) {
+        if (!entries || !entries.length) return;
+        const group = document.createElement("section");
+        group.className = "group";
+        const heading = document.createElement("h3");
+        heading.textContent = label;
+        group.appendChild(heading);
+        const list = document.createElement("ul");
+        list.className = "entries";
+        for (const entry of entries) {
+          const item = document.createElement("li");
+          item.className = "entry";
+          if (type === "quoted") {
+            const work = document.createElement("span");
+            work.className = "work";
+            const name = entry.work === "Work title unclear" ? "Work not identified" : entry.work;
+            work.textContent = entry.author ? `${name} — ${entry.author}` : name;
+            const refs = document.createElement("span");
+            refs.className = "refs";
+            refs.textContent = entry.refs.join(", ");
+            item.append(work, refs);
+          } else if (type === "parallel") {
+            const pair = document.createElement("span");
+            pair.className = "pair";
+            pair.append(document.createTextNode(entry.left));
+            const arrow = document.createElement("span");
+            arrow.className = "arrow";
+            arrow.textContent = "↔";
+            pair.append(arrow, document.createTextNode(entry.right));
+            item.appendChild(pair);
+            if (entry.note) {
+              const note = document.createElement("span");
+              note.className = "note";
+              note.textContent = entry.note;
+              item.appendChild(note);
+            }
+          } else {
+            if (entry.work) {
+              const work = document.createElement("span");
+              work.className = "work";
+              work.textContent = entry.author ? `${entry.work} — ${entry.author}` : entry.work;
+              item.appendChild(work);
+            }
+            if (entry.refs && entry.refs.length) {
+              const refs = document.createElement("span");
+              refs.className = "refs";
+              refs.textContent = entry.refs.join(", ");
+              item.appendChild(refs);
+            }
+            const note = document.createElement("span");
+            note.className = "note";
+            note.textContent = entry.note || "Quoted line not located.";
+            item.appendChild(note);
+          }
+          list.appendChild(item);
+        }
+        group.appendChild(list);
+        parent.appendChild(group);
+      }
+
+      function showChapter(purana, section, chapter, record, tile, content) {
+        if (selectedTile === tile) {
+          selectedDetail?.remove();
+          tile.setAttribute("aria-expanded", "false");
+          selectedTile = null;
+          selectedDetail = null;
+          return;
+        }
+        if (selectedTile) selectedTile.setAttribute("aria-expanded", "false");
+        selectedDetail?.remove();
+        selectedTile = tile;
+        tile.setAttribute("aria-expanded", "true");
+        const detail = document.createElement("section");
+        detail.className = "detail";
+        detail.setAttribute("aria-label", "Chapter references");
+        const title = document.createElement("h2");
+        title.textContent = `${purana.name} ${chapterNumber(section, chapter)}`;
+        detail.appendChild(title);
+        addGroup(detail, "Quoted in", record.quoted, "quoted");
+        addGroup(detail, "Parallel", record.parallel, "parallel");
+        addGroup(detail, "Unmatched", record.missing, "missing");
+        if (!record.quoted?.length && !record.parallel?.length && !record.missing?.length) {
+          const empty = document.createElement("p");
+          empty.className = "no-entry";
+          empty.textContent = "No citation listed for this chapter.";
+          detail.appendChild(empty);
+        }
+        content.appendChild(detail);
+        selectedDetail = detail;
+        requestAnimationFrame(() => detail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
+      }
+
+      function render(purana) {
+        selectedTile = null;
+        selectedDetail = null;
+        map.replaceChildren();
+        for (const section of purana.sections) {
+          const row = document.createElement("section");
+          row.className = "section-row";
+          const label = document.createElement("div");
+          label.className = "section-label";
+          label.textContent = section.label;
+          const content = document.createElement("div");
+          content.className = "section-content";
+          const cells = document.createElement("div");
+          cells.className = "cells";
+          for (let chapter = 1; chapter <= section.last; chapter += 1) {
+            const record = section.chapters[String(chapter)] || {};
+            const hasQuoted = Boolean(record.quoted?.length);
+            const hasParallel = Boolean(record.parallel?.length);
+            const hasMissing = Boolean(record.missing?.length);
+            const tile = document.createElement("button");
+            tile.type = "button";
+            tile.className = "tile";
+            tile.textContent = String(chapter);
+            tile.setAttribute("aria-expanded", "false");
+            if (hasQuoted && hasParallel) tile.classList.add("both");
+            else if (hasQuoted) tile.classList.add("quoted");
+            else if (hasParallel) tile.classList.add("parallel");
+            if (hasMissing) tile.classList.add("unmatched");
+            const states = [hasQuoted && "quoted in another work", hasParallel && "exact parallel", hasMissing && "unmatched line"].filter(Boolean);
+            tile.setAttribute("aria-label", `${purana.name} ${chapterNumber(section, chapter)}${states.length ? ": " + states.join("; ") : ": no citation listed"}`);
+            tile.title = `${chapterNumber(section, chapter)}`;
+            tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
+            cells.appendChild(tile);
+          }
+          content.appendChild(cells);
+          row.append(label, content);
+          map.appendChild(row);
+        }
+      }
+
+      fetch("./data.json")
+        .then(response => {
+          if (!response.ok) throw new Error("Chapter data unavailable");
+          return response.json();
+        })
+        .then(payload => {
+          data = payload;
+          for (const purana of data.puranas) {
+            const option = document.createElement("option");
+            option.value = purana.id;
+            option.textContent = purana.name;
+            select.appendChild(option);
+          }
+          select.value = data.default;
+          if (!select.value && data.puranas.length) select.value = data.puranas[0].id;
+          render(data.puranas.find(item => item.id === select.value));
+          select.addEventListener("change", () => {
+            const purana = data.puranas.find(item => item.id === select.value);
+            if (purana) render(purana);
+          });
+        })
+        .catch(() => {
+          const error = document.createElement("p");
+          error.className = "error";
+          error.textContent = "Chapter data could not be loaded.";
+          map.appendChild(error);
+        });
+    })();
+  </script>
+</body>
+</html>
