@@ -30,7 +30,7 @@ The Synonyms and verse translations above are source fields. Their presence is n
 - 2939 pinned Sanskrit source-cache records cover 3078 canonical verse IDs.
 - 725 source-cache records explicitly say `न व्याख्यातम्।` (no commentary).
 - 858 canonical verse IDs have no local Śrīdhara source-cache record.
-- 2 additional source-cache records are present but have no Sanskrit text.
+- 2 additional source-cache records are present but have no Sanskrit text: 10.3.30 and 10.3.46.
 
 The Canto 10 reader now distinguishes an explicit no-commentary marker from a missing local source record. Missing records are labeled “Śrīdhara source record unavailable.” The page no longer infers “No commentary” from `source_available: false` for Canto 10.
 
@@ -39,7 +39,7 @@ The Canto 10 reader now distinguishes an explicit no-commentary marker from a mi
 All 90 Canto 10 word-for-word JSON files now say `source-linked; word-for-word review pending`; their previous “individually audited” claim was removed.
 
 - Final data contains 3790 entries covering all 3936 canonical verse IDs. Coverage records do not mean that each gloss is complete.
-- 584 entries are marked `translation_pending`; 47 of these were added for canonical verses with no matching local Śrīdhara source-cache record or verified gloss.
+- 587 entries are marked `translation_pending`; 47 of these were added for canonical verses with no matching local Śrīdhara source-cache record or verified gloss.
 - 514 false `श्रीधर — Śrīdhara` placeholder pairs were removed.
 - 8 attribution-only placeholders for “Śrīdhara Svāmī” were removed or cleared; the genuine name in 10.14.61 was retained.
 - 13 false “No commentary” gloss claims were removed. A further 10.73.4 no-commentary record was removed because the pinned range 10.73.2–4 contains real commentary.
