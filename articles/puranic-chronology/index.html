@@ -35,6 +35,7 @@ button { font: inherit; }
 .top a { color: inherit; text-decoration: none; }
 .top a:first-child { font-weight: 700; }
 .top a:last-child { color: var(--muted); }
+.top-links { display: flex; gap: 18px; color: var(--muted); }
 header { padding: 23px 0 15px; border-bottom: 1px solid var(--ink); }
 h1 { margin: 0; font: 400 clamp(34px, 4.2vw, 46px)/1.04 var(--serif); letter-spacing: -.04em; }
 #map { padding: 3px 0 16px; }
@@ -113,7 +114,7 @@ h1 { margin: 0; font: 400 clamp(34px, 4.2vw, 46px)/1.04 var(--serif); letter-spa
 <div class="page">
   <nav class="top" aria-label="Site">
     <a href="/advaita/">Viveka Dṛṣṭi</a>
-    <a href="/advaita/pages/purana-library/">Purāṇa Library</a>
+    <div class="top-links"><a href="/advaita/articles/puranic-chronology/markandeya/">Mārkaṇḍeya map</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a></div>
   </nav>
   <header><h1>Bhaviṣya Purāṇa</h1></header>
   <main id="map" aria-label="Bhaviṣya Purāṇa chapter map"></main>
