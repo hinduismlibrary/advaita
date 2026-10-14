@@ -221,26 +221,30 @@
         requestAnimationFrame(() => detail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
       }
 
-      function addAnalysis(purana) {
-        const total = purana.sections.reduce((sum, section) => sum + section.last, 0);
+      function addAnalysis(puranas, combined = false) {
+        const total = puranas.reduce((sum, purana) => sum + purana.sections.reduce((sectionTotal, section) => sectionTotal + section.last, 0), 0);
         let quoted = 0;
         let parallel = 0;
         let both = 0;
         let either = 0;
         let unmatchedNotes = 0;
         let unmatchedChapters = 0;
-        for (const section of purana.sections) {
-          for (let chapter = 1; chapter <= section.last; chapter += 1) {
-            const record = section.chapters[String(chapter)] || {};
-            const hasQuoted = Boolean(record.quoted?.length);
-            const hasParallel = Boolean(record.parallel?.length);
-            if (hasQuoted) quoted += 1;
-            if (hasParallel) parallel += 1;
-            if (hasQuoted && hasParallel) both += 1;
-            if (hasQuoted || hasParallel) either += 1;
-            const notes = record.missing?.length || 0;
-            unmatchedNotes += notes;
-            if (notes) unmatchedChapters += 1;
+        let citationEntries = 0;
+        for (const purana of puranas) {
+          for (const section of purana.sections) {
+            for (let chapter = 1; chapter <= section.last; chapter += 1) {
+              const record = section.chapters[String(chapter)] || {};
+              const hasQuoted = Boolean(record.quoted?.length);
+              const hasParallel = Boolean(record.parallel?.length);
+              if (hasQuoted) quoted += 1;
+              if (hasParallel) parallel += 1;
+              if (hasQuoted && hasParallel) both += 1;
+              if (hasQuoted || hasParallel) either += 1;
+              const notes = record.missing?.length || 0;
+              unmatchedNotes += notes;
+              if (notes) unmatchedChapters += 1;
+              citationEntries += record.quoted?.length || 0;
+            }
           }
         }
         const percent = value => `${(100 * value / total).toFixed(1)}%`;
@@ -248,17 +252,19 @@
         row.className = "section-row analysis-row";
         const heading = document.createElement("h2");
         heading.className = "section-label analysis-title";
-        heading.textContent = "Analysis";
+        heading.textContent = combined ? "Combined analysis" : "Analysis";
         const content = document.createElement("div");
         content.className = "section-content";
         const metrics = document.createElement("dl");
         metrics.className = "analysis-grid";
         const values = [
+          ...(combined ? [["Purāṇas", String(puranas.length)]] : []),
           ["Total chapters", `${total} · 100%`],
           ["Chapters quoted elsewhere", `${quoted} · ${percent(quoted)}`],
           ["Chapters with exact Purāṇa parallels", `${parallel} · ${percent(parallel)}`],
           ["Both kinds of match", `${both} · ${percent(both)}`],
           ["At least one match", `${either} · ${percent(either)}`],
+          ...(combined ? [["Quotation entries", String(citationEntries)]] : []),
           ["Unmatched citation notes", `${unmatchedNotes} in ${unmatchedChapters} chapters`],
         ];
         for (const [label, value] of values) {
@@ -273,7 +279,7 @@
         }
         const formula = document.createElement("p");
         formula.className = "analysis-formula";
-        formula.textContent = `At least one match = quoted chapters + parallel chapters − chapters with both (${quoted} + ${parallel} − ${both} = ${either}). Percentages use ${total} mapped chapters.`;
+        formula.textContent = `At least one match = quoted chapters + parallel chapters − chapters with both (${quoted} + ${parallel} − ${both} = ${either}). Percentages use ${total} chapters counted across ${puranas.length} Purāṇas.`;
         metrics.appendChild(formula);
         content.appendChild(metrics);
         row.append(heading, content);
@@ -318,7 +324,14 @@
           row.append(label, content);
           map.appendChild(row);
         }
-        addAnalysis(purana);
+        addAnalysis([purana]);
+      }
+
+      function renderCombined() {
+        selectedTile = null;
+        selectedDetail = null;
+        map.replaceChildren();
+        addAnalysis(data.puranas, true);
       }
 
       fetch("./data.json")
@@ -328,6 +341,10 @@
         })
         .then(payload => {
           data = payload;
+          const combinedOption = document.createElement("option");
+          combinedOption.value = "all-combined";
+          combinedOption.textContent = "All Purāṇas combined";
+          select.appendChild(combinedOption);
           for (const purana of data.puranas) {
             const option = document.createElement("option");
             option.value = purana.id;
@@ -337,7 +354,12 @@
           select.value = data.default;
           if (!select.value && data.puranas.length) select.value = data.puranas[0].id;
           render(data.puranas.find(item => item.id === select.value));
+          if (select.value === "all-combined") renderCombined();
           select.addEventListener("change", () => {
+            if (select.value === "all-combined") {
+              renderCombined();
+              return;
+            }
             const purana = data.puranas.find(item => item.id === select.value);
             if (purana) render(purana);
           });
