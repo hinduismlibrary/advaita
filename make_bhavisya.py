@@ -6,6 +6,7 @@ the Sāmba concordance follows Studies in the Upapurāṇas, pp. 57–59.
 Keep uncertain two-column OCR alignments out of the public data.
 """
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -26,12 +27,20 @@ records = []
 
 def q(author, work, locus, refs, note="", label=""):
     """refs: semicolon-separated book.chapter:verse spans."""
-    for item in refs.split(";"):
+    items = refs.split(";")
+    has_absence = bool(re.search(r"\b(absent|no match|do not occur)\b", note, re.I))
+    multiple_chapters = len(items) > 1
+    for item in items:
         book_chapter, passage = item.strip().split(":", 1)
         book, chapter = book_chapter.rsplit(".", 1)
+        displayed_note = (
+            "In this cited group (the unmatched lines cannot be assigned to this chapter): " + note
+            if has_absence and multiple_chapters else note
+        )
         records.append(dict(kind="quotation", section=book, chapter=int(chapter),
                             passage=passage.strip(), work=work, author=author,
-                            locus=locus, note=note, label=label))
+                            locus=locus, note=displayed_note, label=label,
+                            missing=has_absence and not multiple_chapters))
 
 def p(work, locus, refs, note=""):
     for item in refs.split(";"):
@@ -71,10 +80,14 @@ q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "I, p. 53", "I.181:34")
 q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "III.i, p. 54", "I.4:4; I.103:19b–20a", "The text is given as an alternative placement in the received Bhaviṣya.")
 q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "IV, pp. 163–164", "I.93:74b–75a")
 
-# Some Dānasāgara folio assignments are interleaved by the OCR. Preserve
-# only mappings whose position in the two-column print can be determined.
-# The folio-to-verse alignment for this two-column table is not reliably
-# recoverable from the available scan OCR; avoid publishing a guessed folio.
+# The verse-to-chapter matches in the Dānasāgara list are legible, but the
+# alignment of individual folios to each match is not recoverable from the
+# two-column OCR. Give the full folio group and explicitly flag that limit.
+ds = "fols. 14b, 23a, 276b, 287b–290a; individual folio unresolved"
+ds_note = "The Bhaviṣya verse location is identified; the individual Dānasāgara folio is unresolved within this cited group."
+q("Ballālasena", "Dānasāgara", ds, "I.93:30, 35, 37, 42–45, 49–51, 58, 59b, 60–61a, 62, 68–71", ds_note)
+q("Ballālasena", "Dānasāgara", ds, "I.103:39b–41a", ds_note)
+q("Ballālasena", "Dānasāgara", ds, "I.118:50b–52a", ds_note)
 
 hem = "Caturvargacintāmaṇi"
 q("Hemādri", hem, "vol. I, p. 40", "I.3:6–7a")
@@ -236,7 +249,7 @@ data = {
     "unplaced": [
         {"work": "Caturvargacintāmaṇi", "locus": "vol. II, vows for aṣṭamī and following tithis", "detail": "Verses attributed to Bhaviṣya have no secure position in the received Brāhma-parvan."},
         {"work": "Caturvargacintāmaṇi", "locus": "vol. III, śrāddha passages", "detail": "Additional attributed verses were reported without a chapter by chapter alignment."},
-        {"work": "Dānasāgara", "locus": "fols. 14b, 23a, 276b, 287b–290a", "detail": "Citations align with passages in I.4, I.93, I.103, I.118 and I.181, but the printed folio-to-verse alignment requires a clearer two-column scan."},
+        {"work": "Dānasāgara", "locus": "fols. 14b, 23a, 276b, 287b–290a", "detail": "The quoted verses beginning bheryāṇi ca vādyāni and vimānam iti, and three lines beginning dhana-dhānyam, have no located match in the received text. Other passages are placed by chapter above, though their individual folios remain unresolved."},
         {"work": "Dānasāgara", "locus": "fol. 3b", "detail": "The Bhaviṣya is described through the saptamī-kalpa; the aṣṭamī and navamī sections of that witness are not present in this received form."},
     ],
 }
