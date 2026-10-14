@@ -22,9 +22,36 @@
     return section + '.' + chapter;
   }
 
+  function compactEvidence(found) {
+    const groups = new Map();
+    found.forEach(item => {
+      const groupKey = JSON.stringify([
+        item.kind, item.work, item.author || '', item.source_locus || '', item.label || ''
+      ]);
+      let group = groups.get(groupKey);
+      if (!group) {
+        group = { ...item, passages: [], notes: [], missing: false };
+        groups.set(groupKey, group);
+      }
+      if (!group.passages.includes(item.passage)) group.passages.push(item.passage);
+      if (item.note && !group.notes.includes(item.note)) group.notes.push(item.note);
+      group.missing = group.missing || item.missing === true;
+    });
+    return [...groups.values()].map(group => ({
+      ...group,
+      passage: group.passages.includes('unspecified')
+        ? 'unspecified'
+        : group.passages.join(', '),
+      note: group.notes.join(' ')
+    })).sort((a, b) => {
+      if (a.kind !== b.kind) return a.kind === 'quotation' ? -1 : 1;
+      return a.work.localeCompare(b.work);
+    });
+  }
+
   function evidenceRow(item) {
     const kind = item.kind === 'quotation' ? 'Quoted in' : 'Parallel in';
-    const author = item.author ? '<span class="author">' + esc(item.author) + '</span>' : '';
+    const author = item.author ? '<span class="author">· ' + esc(item.author) + '</span>' : '';
     const source = item.source_locus
       ? '<div class="source-locus">' + (item.kind === 'quotation' ? 'At ' : '') + esc(item.source_locus) + '</div>'
       : '';
@@ -32,8 +59,11 @@
       ? '<div class="source-locus">Cited under the title ' + esc(item.label.replace(/^as /, '')) + '</div>'
       : '';
     const note = item.note ? '<p class="note">' + esc(item.note) + '</p>' : '';
+    const range = item.passage === 'unspecified'
+      ? 'verse range not specified'
+      : 'vv. ' + item.passage;
     return '<li class="evidence-entry">' +
-      '<div class="verse"><span class="kind">' + kind + '</span>Bhaviṣya ' + esc(item.passage) + '</div>' +
+      '<div class="verse"><span class="kind">' + kind + '</span>Bhaviṣya ' + esc(range) + '</div>' +
       '<div><div class="work"><em>' + esc(item.work) + '</em>' + author + '</div>' + source + label + '</div>' +
       note + '</li>';
   }
@@ -41,7 +71,7 @@
   function detail(section, chapter) {
     const found = byChapter.get(key(section, chapter)) || [];
     const name = sectionName[section] || section;
-    const rows = found.map(evidenceRow).join('');
+    const rows = compactEvidence(found).map(evidenceRow).join('');
     const empty = found.length
       ? ''
       : '<p class="no-entry">No quotation or parallel is recorded for this chapter.</p>';
@@ -56,8 +86,9 @@
       const evidence = byChapter.get(key(section.id, chapter)) || [];
       const marked = evidence.length > 0;
       const gap = evidence.some(item => item.missing === true);
+      const entryCount = compactEvidence(evidence).length;
       const label = marked
-        ? evidence.length + ' located ' + (evidence.length === 1 ? 'entry' : 'entries')
+        ? entryCount + ' grouped ' + (entryCount === 1 ? 'reference' : 'references')
         : 'no located entry';
       const tileId = 'tile-' + section.id.replaceAll('.', '-') + '-' + chapter;
       tiles += '<button class="tile' + (marked ? ' marked' : '') + (gap ? ' gap' : '') +
