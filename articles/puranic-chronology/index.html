@@ -3,38 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f7f7f4">
-<title>Bhaviṣya Purāṇa · Chapter concordance</title>
-<meta name="description" content="A chapter map of located quotations and textual parallels in the received Bhaviṣya Purāṇa.">
+<meta name="theme-color" content="#fafaf7">
+<title>Bhaviṣya Purāṇa · Chapter map</title>
+<meta name="description" content="Chapter by chapter map of quotations and textual parallels in the Bhaviṣya Purāṇa.">
 <style>
-:root{--paper:#f7f7f4;--ink:#202a25;--secondary:#53645c;--quiet:#76827c;--line:#cbd3cc;--green:#417a5d;--green-dark:#20563b;--green-soft:#d7e9da;--empty:#e8ebe6;--red:#9a584a;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:13px/1.48 var(--sans)}a{color:inherit;text-underline-offset:3px}a:hover{color:var(--green-dark)}button{font:inherit;cursor:pointer}:focus-visible{outline:2px solid var(--green);outline-offset:2px}
-.page{width:min(1110px,calc(100% - 58px));margin:auto}.top{min-height:61px;border-bottom:1px solid var(--ink);display:flex;align-items:center;justify-content:space-between;gap:18px;text-transform:uppercase;letter-spacing:.12em;font-size:10px}.top a{text-decoration:none}.top a:first-child{font-weight:bold;letter-spacing:.16em}.top a:last-child{color:var(--secondary)}
-header{padding:64px 0 45px;border-bottom:1px solid var(--ink)}.kicker,.small-label{color:var(--green-dark);font-size:10px;font-weight:bold;letter-spacing:.17em;text-transform:uppercase}.kicker{margin:0 0 15px}h1,h2,h3,p{margin-top:0}h1{font:400 clamp(43px,5.5vw,68px)/1 var(--serif);letter-spacing:-.05em;margin:0}.dek{font:18px/1.43 var(--serif);color:var(--secondary);max-width:670px;margin:18px 0 0}
-.overview{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0 24px;border-bottom:1px solid var(--line)}.overview p{margin:0;color:var(--secondary);font-size:12px;line-height:1.55;max-width:730px}.overview strong{color:var(--ink)}.overview .stat{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--green-dark);font-size:11px}
-.jump{display:flex;gap:22px;flex-wrap:wrap;padding:18px 0 15px;border-bottom:1px solid var(--line);font-size:11px}.jump a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}.jump a:hover{border-color:var(--green)}
-.key{display:flex;gap:19px 25px;align-items:center;flex-wrap:wrap;padding:19px 0 31px;color:var(--secondary);font-size:11px}.key b{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:7px}.key .present{background:var(--green-soft)}.key .unlocated{background:var(--empty)}.key .variant{background:var(--green-soft);border-bottom:3px solid var(--red)}
-.division{padding:30px 0 52px;border-bottom:1px solid var(--ink);scroll-margin-top:16px}.division:last-child{border-bottom:0}.division-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:12px}.division-heading h2{font:400 clamp(30px,3.3vw,39px)/1.12 var(--serif);letter-spacing:-.035em;margin:8px 0 0}.division-heading .total{color:var(--quiet);font-size:11px;font-variant-numeric:tabular-nums;white-space:nowrap}.division-note{font:14px/1.5 var(--serif);color:var(--secondary);max-width:720px;margin:0 0 25px}
-.part{padding:15px 0 19px;border-top:1px solid var(--line)}.part-title{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}.part-title h3{font:400 18px/1.2 var(--serif);margin:0}.part-title span{color:var(--quiet);font-size:11px;font-variant-numeric:tabular-nums}.row{display:grid;grid-template-columns:54px minmax(0,1fr);column-gap:13px;align-items:start;margin-bottom:4px}.range{color:var(--quiet);font-size:10px;font-variant-numeric:tabular-nums;line-height:31px}.cells{display:grid;grid-template-columns:repeat(24,minmax(0,1fr));gap:3px;max-width:895px}.tile{height:30px;position:relative;min-width:0;padding:0;border:1px solid transparent;border-radius:0;color:#76827a;background:var(--empty);font-size:11px;font-variant-numeric:tabular-nums}.tile.marked{color:var(--green-dark);background:var(--green-soft);font-weight:600}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}.tile.gap:after{position:absolute;content:"";height:3px;background:var(--red);left:2px;right:2px;bottom:1px}
-.detail{grid-column:2;max-width:895px;margin:8px 0 16px;padding:20px 22px 22px;background:#fff;border-left:3px solid var(--green)}.detail[hidden]{display:none}.detail h3{font:400 26px/1.2 var(--serif);letter-spacing:-.025em;margin:0}.detail .detail-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:13px;border-bottom:1px solid var(--line)}.detail .detail-head span{font-size:11px;color:var(--quiet)}.detail .empty-note{padding-top:15px;color:var(--secondary);max-width:620px;margin:0;font-size:12px}.detail .edition-link{display:inline-block;margin-top:15px;color:var(--green-dark);font-size:11px}
-.evidence-group{padding-top:16px}.evidence-group+.evidence-group{margin-top:10px;border-top:1px solid var(--line)}.evidence-group h4{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--green-dark);margin:0 0 8px}.evidence-table{border-collapse:collapse;width:100%;font-size:12px}.evidence-table tr{border-top:1px solid #e7ebe6}.evidence-table td{padding:9px 12px 10px 0;vertical-align:top;overflow-wrap:anywhere}.evidence-table td:first-child{width:30%;font-variant-numeric:tabular-nums;font-weight:600;white-space:normal}.evidence-table td:nth-child(2){width:36%}.evidence-table td:nth-child(3){color:var(--secondary)}.evidence-table em{font-family:var(--serif);font-size:14px}.evidence-table .sub{display:block;color:var(--quiet);font-size:10px;line-height:1.4;margin-top:2px}.evidence-table .note{display:block;color:var(--red);font-size:11px;margin-top:5px;line-height:1.45}.evidence-table .variant-label{display:block;color:var(--secondary);font-size:10px;margin-top:4px}
-.unplaced{padding:35px 0 30px;border-bottom:1px solid var(--ink)}.unplaced h2{font:400 31px var(--serif);letter-spacing:-.035em;margin:8px 0 11px}.unplaced>p{max-width:710px;color:var(--secondary);font:14px/1.45 var(--serif);margin:0 0 20px}.unplaced-list{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.unplaced-list li{display:grid;grid-template-columns:240px 1fr;gap:15px;border-bottom:1px solid var(--line);padding:12px 0;color:var(--secondary);font-size:12px}.unplaced-list strong{color:var(--ink);font-weight:normal}.unplaced-list span{display:block;font-size:11px;margin-top:2px;color:var(--quiet)}
-footer{padding:29px 0 70px;color:var(--secondary);font-size:11px;max-width:815px;line-height:1.6}footer p{margin:0 0 9px}footer strong{color:var(--ink)}
-@media(max-width:760px){.page{width:min(100% - 32px,550px)}.top{min-height:52px;font-size:9px}.top a:last-child{display:none}header{padding:43px 0 35px}.dek{font-size:16px}.overview{display:block}.overview .stat{display:block;margin-top:9px}.jump{gap:14px}.division{padding:28px 0 40px}.division-heading h2{font-size:32px}.part-title{flex-wrap:wrap;gap:4px 10px}.row{grid-template-columns:34px minmax(0,1fr);column-gap:5px}.range{font-size:9px}.cells{grid-template-columns:repeat(12,minmax(0,1fr));gap:2px}.tile{height:31px;font-size:10px}.detail{grid-column:1/-1;padding:15px 13px;margin:7px 0 14px}.detail h3{font-size:23px}.detail .detail-head span{font-size:10px}.evidence-table{font-size:11px}.evidence-table td{padding:8px 7px 9px 0}.evidence-table td:first-child{width:27%}.evidence-table td:nth-child(2){width:39%}.evidence-table em{font-size:12px}.unplaced-list li{display:block}.unplaced-list li>div+div{margin-top:7px}}
-@media(max-width:390px){.cells{grid-template-columns:repeat(10,minmax(0,1fr))}.tile{height:30px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root {
+  color-scheme: light;
+  --paper: #fafaf7;
+  --ink: #252b27;
+  --muted: #69746e;
+  --rule: #d9ded8;
+  --empty: #e8ebe7;
+  --green: #d7e8da;
+  --green-ink: #27593d;
+  --red: #a54f45;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 13px/1.42 var(--sans); }
+a { color: inherit; text-underline-offset: 2px; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
+.page { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+.top { height: 42px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--ink); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.top a { text-decoration: none; }
+.top a:first-child { font-weight: 700; }
+.top a:last-child { color: var(--muted); }
+header { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 25px 0 16px; border-bottom: 1px solid var(--ink); }
+.title h1 { margin: 0; font: 400 clamp(34px, 4.2vw, 48px)/1.05 var(--serif); letter-spacing: -.04em; }
+.title p { margin: 5px 0 0; color: var(--muted); font: 15px/1.35 var(--serif); }
+.stat { margin: 0 0 2px; color: var(--green-ink); font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; padding: 11px 0 13px; color: var(--muted); font-size: 10px; border-bottom: 1px solid var(--rule); }
+.legend span { white-space: nowrap; }
+.swatch { display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -2px; background: var(--empty); }
+.swatch.found { background: var(--green); }
+.swatch.gap { background: var(--green); border-bottom: 3px solid var(--red); }
+#map { padding: 0; }
+.heat-section { display: grid; grid-template-columns: 128px minmax(0,1fr); gap: 10px; padding: 7px 0 8px; border-bottom: 1px solid var(--rule); scroll-margin-top: 8px; }
+.section-label { padding-top: 2px; color: var(--muted); font-size: 10px; line-height: 1.3; }
+.section-label strong { display: block; color: var(--ink); font: 400 15px/1.15 var(--serif); }
+.section-label span { display: block; margin-top: 2px; }
+.section-label small { display: block; margin-top: 3px; color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; }
+.section-body { min-width: 0; }
+.chapter-row { margin: 0; }
+.cells { display: grid; grid-template-columns: repeat(24, minmax(0,1fr)); gap: 2px; max-width: 960px; }
+.tile { position: relative; height: 25px; min-width: 0; padding: 0; border: 1px solid transparent; border-radius: 0; color: #748077; background: var(--empty); font-size: 10px; font-variant-numeric: tabular-nums; }
+.tile.marked { color: var(--green-ink); background: var(--green); font-weight: 600; }
+.tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
+.tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
+.tile.gap::after { position: absolute; right: 1px; bottom: 1px; left: 1px; height: 3px; background: var(--red); content: ""; }
+.detail { max-width: 960px; margin: 4px 0 5px; padding: 10px 13px 9px; border-left: 2px solid var(--green-ink); background: #fff; }
+.detail[hidden] { display: none; }
+.detail-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+.detail-head h3 { margin: 0; font: 400 20px/1.2 var(--serif); }
+.detail-head span { color: var(--muted); font-size: 10px; }
+.no-entry { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
+.evidence-list { margin: 0; padding: 0; list-style: none; }
+.evidence-entry { display: grid; grid-template-columns: 190px minmax(0,1fr); gap: 2px 14px; padding: 7px 0; border-bottom: 1px solid #edf0ec; }
+.evidence-entry:last-child { border-bottom: 0; }
+.verse { align-self: start; padding-top: 1px; color: var(--green-ink); font-size: 11px; font-variant-numeric: tabular-nums; }
+.kind { display: block; margin-bottom: 2px; color: var(--muted); font-size: 8px; letter-spacing: .11em; text-transform: uppercase; }
+.work { font: 15px/1.22 var(--serif); }
+.author { margin-left: 7px; color: var(--muted); font-size: 10px; }
+.source-locus { margin-top: 2px; color: var(--muted); font-size: 10px; }
+.note { grid-column: 2; margin: -1px 0 1px; color: var(--red); font-size: 10px; }
+details.unplaced { padding: 11px 0 12px; border-bottom: 1px solid var(--ink); }
+details.unplaced summary { width: fit-content; color: var(--muted); font-size: 10px; cursor: pointer; }
+.unplaced-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px 24px; margin: 9px 0 0; padding: 0; list-style: none; }
+.unplaced-list li { color: var(--muted); font-size: 10px; }
+.unplaced-list em { color: var(--ink); font: italic 12px var(--serif); }
+footer { padding: 12px 0 25px; color: var(--muted); font-size: 10px; }
+footer p { margin: 0; }
+@media (max-width: 720px) {
+  .page { width: calc(100% - 24px); }
+  .top { height: 38px; font-size: 9px; }
+  .top a:last-child { display: none; }
+  header { align-items: start; padding: 21px 0 12px; }
+  .title p { font-size: 13px; }
+  .stat { max-width: 104px; text-align: right; white-space: normal; font-size: 9px; }
+  .legend { gap: 6px 13px; padding: 9px 0 10px; font-size: 9px; }
+  .heat-section { grid-template-columns: 82px minmax(0,1fr); gap: 6px; padding: 6px 0; }
+  .section-label { font-size: 9px; }
+  .section-label strong { font-size: 13px; }
+  .section-label small { font-size: 8px; }
+  .cells { grid-template-columns: repeat(12,minmax(0,1fr)); gap: 2px; }
+  .tile { height: 26px; font-size: 9px; }
+  .detail { padding: 8px 9px 7px; }
+  .detail-head h3 { font-size: 18px; }
+  .evidence-entry { grid-template-columns: 115px minmax(0,1fr); gap: 2px 8px; padding: 6px 0; }
+  .verse { font-size: 10px; }
+  .work { font-size: 13px; }
+  .author, .source-locus, .note { font-size: 9px; }
+  .unplaced-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 360px) {
+  .heat-section { grid-template-columns: 69px minmax(0,1fr); gap: 4px; }
+  .cells { grid-template-columns: repeat(10,minmax(0,1fr)); }
+  .tile { height: 25px; }
+  .evidence-entry { grid-template-columns: 100px minmax(0,1fr); gap: 2px 6px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 <script src="./site.js" defer></script>
 </head>
 <body>
 <div class="page">
-<nav class="top" aria-label="Site"><a href="/advaita/">Viveka Dṛṣṭi</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a></nav>
-<header><p class="kicker">Textual reception / Chapter concordance</p><h1>Bhaviṣya Purāṇa</h1><p class="dek">Where passages reappear: citations in later works and shared verses in other Purāṇas, chapter by chapter.</p></header>
-<div class="overview"><p><strong>How to read the map.</strong> A coloured chapter has a located textual match. Open it for the Bhaviṣya verses and the place in the other work. An uncoloured chapter has no located entry here.</p><span class="stat" id="stat">Loading…</span></div>
-<nav class="jump" aria-label="Parvans"><a href="#brahma">Brāhma</a><a href="#madhyama">Madhyama</a><a href="#pratisarga">Pratisarga</a><a href="#uttara">Uttara</a><a href="#unplaced">Unplaced citations</a></nav>
-<div class="key" aria-label="Map key"><span><b class="present"></b>Located match</span><span><b class="unlocated"></b>No located entry</span><span><b class="variant"></b>Cited lines also missing from received text</span></div>
-<main id="map"><p>Loading chapter map…</p></main>
-<footer><p><strong>Scope.</strong> The nine subdivisions and their chapter counts follow the <a href="https://www.wisdomlib.org/hinduism/book/bhavishya-purana-sanskrit" target="_blank" rel="noopener noreferrer">online Sanskrit edition of the received text</a>. Chapter numbers and verse readings vary by edition; cited works are identified by the printed volume, page, folio, or commentary location shown in each entry.</p><p>“1–end” means a correspondence was noted through the end of that chapter; it does not establish letter for letter identity. Quoted lines absent from the received text are identified separately. Empty tiles do not imply that a chapter was never quoted.</p></footer>
+  <nav class="top" aria-label="Site"><a href="/advaita/">Viveka Dṛṣṭi</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a></nav>
+  <header>
+    <div class="title"><h1>Bhaviṣya Purāṇa</h1><p>Quotations and parallels by chapter</p></div>
+    <p class="stat" id="stat">585 chapters</p>
+  </header>
+  <div class="legend" aria-label="Map key">
+    <span><i class="swatch found"></i>Quotation or parallel located</span>
+    <span><i class="swatch"></i>No located entry</span>
+    <span><i class="swatch gap"></i>A quoted verse is missing from this text</span>
+  </div>
+  <main id="map" aria-label="Bhaviṣya Purāṇa chapter heatmap"><p>Loading chapters…</p></main>
+  <footer><p>Each section restarts at chapter 1. An uncoloured chapter has no entry in this concordance.</p></footer>
 </div>
 </body>
 </html>
