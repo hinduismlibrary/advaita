@@ -60,15 +60,15 @@ header { display: flex; align-items: end; justify-content: space-between; gap: 2
 .detail-head span { color: var(--muted); font-size: 10px; }
 .no-entry { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
 .evidence-list { margin: 0; padding: 0; list-style: none; }
-.evidence-entry { padding: 5px 0; border-bottom: 1px solid #edf0ec; }
+.evidence-entry { padding: 4px 0; border-bottom: 1px solid #edf0ec; }
 .evidence-entry:last-child { border-bottom: 0; }
-.citation { display: grid; grid-template-columns: 78px minmax(0,1fr); gap: 8px; align-items: baseline; }
-.kind { color: var(--muted); font-size: 9px; }
-.citation-text { font-size: 12px; line-height: 1.35; }
-.citation-text em { font: italic 14px/1.2 var(--serif); }
+.citation { display: grid; grid-template-columns: 54px minmax(0,1fr); gap: 6px; align-items: baseline; }
+.kind { color: var(--muted); font-size: 10px; }
+.citation-text { font-size: 14px; line-height: 1.4; }
+.citation-text em { font: italic 15px/1.2 var(--serif); }
 .relation { padding: 0 4px; color: var(--muted); }
-.citation-as, .source-locus { color: var(--muted); font-size: 10px; }
-.note { margin: 2px 0 0 86px; color: var(--muted); font-size: 10px; line-height: 1.3; }
+.citation-as, .source-locus { color: var(--muted); font-size: 11px; }
+.note { margin: 2px 0 0 60px; color: var(--muted); font-size: 11px; line-height: 1.3; }
 .note.warning { color: var(--red); }
 details.unplaced { padding: 11px 0 12px; border-bottom: 1px solid var(--ink); }
 details.unplaced summary { width: fit-content; color: var(--muted); font-size: 10px; cursor: pointer; }
@@ -92,29 +92,29 @@ footer p { margin: 0; }
   .tile { height: 26px; font-size: 9px; }
   .detail { padding: 8px 9px 7px; }
   .detail-head h3 { font-size: 18px; }
-  .citation { grid-template-columns: 63px minmax(0,1fr); gap: 6px; }
-  .citation-text { font-size: 11px; }
-  .citation-text em { font-size: 13px; }
-  .citation-as, .source-locus, .note { font-size: 9px; }
-  .note { margin-left: 69px; }
+  .citation { grid-template-columns: 50px minmax(0,1fr); gap: 5px; }
+  .citation-text { font-size: 13px; }
+  .citation-text em { font-size: 14px; }
+  .citation-as, .source-locus, .note { font-size: 10px; }
+  .note { margin-left: 55px; }
   .unplaced-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 360px) {
   .chapter-row { grid-template-columns: 68px minmax(0,1fr); gap: 3px; }
   .cells { grid-template-columns: repeat(10,minmax(0,1fr)); }
   .tile { height: 25px; }
-  .citation { grid-template-columns: 55px minmax(0,1fr); gap: 5px; }
-  .note { margin-left: 60px; }
+  .citation { grid-template-columns: 46px minmax(0,1fr); gap: 4px; }
+  .note { margin-left: 50px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
-<script src="./site.js?v=20261014-2" defer></script>
+<script src="./site.js?v=20261014-3" defer></script>
 </head>
 <body>
 <div class="page">
   <nav class="top" aria-label="Site"><a href="/advaita/">Viveka Dṛṣṭi</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a></nav>
   <header>
-    <div class="title"><h1>Bhaviṣya Purāṇa</h1><p>Quotations and parallels by chapter</p></div>
+    <div class="title"><h1>Bhaviṣya Purāṇa</h1><p>Bhaviṣya references: section.chapter.verse</p></div>
     <p class="stat" id="stat">585 chapters</p>
   </header>
   <div class="legend" aria-label="Map key">
