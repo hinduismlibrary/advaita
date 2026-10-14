@@ -63,3 +63,8 @@ Chapter-local verse numbering and the selected Vasuki sequence were left intact.
 ## Remaining review limit
 
 These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 13,327 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. No such blanket accuracy claim is made here.
+
+
+## Follow-up structural verification — 14 October 2026
+
+All 22 live Book 1 chapter pages were fetched again after the earlier content audit. The verification found 1,407 verse cards and 13,327 word-for-word rows. Every card still has its English translation, word-for-word control, and transliteration control; all 22 pages expose their source note, carry the Book 1 reader class and cache version, and have balanced `div`, `details`, and `article` tags. No `.wfw-map` or `gita-dual-sridhara` material remains inside a word-for-word control. The 934 supplied Śrīdhara commentary/Sanskrit panels remain available in their separate layers. This recheck confirms page structure and the prior targeted corrections; it does not certify every English gloss as philologically perfect. The review limit above remains in force.
