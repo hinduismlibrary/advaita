@@ -80,9 +80,11 @@ q("Aparārka", ap, "p. 283", "I.184:35b–37, 41")
 q("Aparārka", ap, "pp. 626–627", "I.181:23–24a, 26a, 28–32")
 q("Aparārka", ap, "p. 1186", "I.65:9b–10a, 10, 13a, 14–15", "A line in the citation has no match here.")
 
-# The three loci below occupy adjacent columns in the printed table.
+# The table equates Bhaviṣya I.4.4 with I.103.19b–20a. Keep the direction
+# explicit in each chapter panel so the cross-reference is useful on its own.
 q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "I, p. 53", "I.181:34")
-q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "III.i, p. 54", "I.4:4; I.103:19b–20a", "The text is given as an alternative placement in the received Bhaviṣya.")
+q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "III.i, p. 54", "I.4:4", "Same passage also appears at I.103.19b–20a.")
+q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "III.i, p. 54", "I.103:19b–20a", "Same passage also appears at I.4.4.")
 q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "IV, pp. 163–164", "I.93:74b–75a")
 
 # The verse-to-chapter matches in the Dānasāgara list are legible, but the
