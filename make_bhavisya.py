@@ -28,7 +28,7 @@ records = []
 def q(author, work, locus, refs, note="", label=""):
     """refs: semicolon-separated book.chapter:verse spans."""
     items = refs.split(";")
-    has_absence = bool(re.search(r"\b(absent|no match|do not occur)\b", note, re.I))
+    has_absence = bool(re.search(r"\b(absent|no match|do not occur|not found|not present)\b", note, re.I))
     multiple_chapters = len(items) > 1
     for item in items:
         book_chapter, passage = item.strip().split(":", 1)
@@ -37,9 +37,14 @@ def q(author, work, locus, refs, note="", label=""):
             "In this cited group (the unmatched lines cannot be assigned to this chapter): " + note
             if has_absence and multiple_chapters else note
         )
+        source_locus = ""
+        if locus.startswith("on Yaj. "):
+            source_locus = "Yājñavalkyasmṛti " + locus.removeprefix("on Yaj. ")
+        elif locus.startswith("on Manu "):
+            source_locus = "Manusmṛti " + locus.removeprefix("on Manu ")
         records.append(dict(kind="quotation", section=book, chapter=int(chapter),
                             passage=passage.strip(), work=work, author=author,
-                            locus=locus, note=displayed_note, label=label,
+                            source_locus=source_locus, note=displayed_note, label=label,
                             missing=has_absence and not multiple_chapters))
 
 def p(work, locus, refs, note=""):
@@ -47,7 +52,7 @@ def p(work, locus, refs, note=""):
         book_chapter, passage = item.strip().split(":", 1)
         book, chapter = book_chapter.rsplit(".", 1)
         records.append(dict(kind="parallel", section=book, chapter=int(chapter),
-                            passage=passage.strip(), work=work, locus=locus, note=note))
+                            passage=passage.strip(), work=work, source_locus=locus, note=note))
 
 # Citations in later works. A page/folio refers to the cited work, not a
 # page of the Bhaviṣya. A reference to a whole chapter is stated explicitly.
@@ -84,10 +89,9 @@ q("Devaṇṇabhaṭṭa", "Smṛticandrikā", "IV, pp. 163–164", "I.93:74b–
 # alignment of individual folios to each match is not recoverable from the
 # two-column OCR. Give the full folio group and explicitly flag that limit.
 ds = "fols. 14b, 23a, 276b, 287b–290a; individual folio unresolved"
-ds_note = "The Bhaviṣya verse location is identified; the individual Dānasāgara folio is unresolved within this cited group."
-q("Ballālasena", "Dānasāgara", ds, "I.93:30, 35, 37, 42–45, 49–51, 58, 59b, 60–61a, 62, 68–71", ds_note)
-q("Ballālasena", "Dānasāgara", ds, "I.103:39b–41a", ds_note)
-q("Ballālasena", "Dānasāgara", ds, "I.118:50b–52a", ds_note)
+q("Ballālasena", "Dānasāgara", ds, "I.93:30, 35, 37, 42–45, 49–51, 58, 59b, 60–61a, 62, 68–71")
+q("Ballālasena", "Dānasāgara", ds, "I.103:39b–41a")
+q("Ballālasena", "Dānasāgara", ds, "I.118:50b–52a")
 
 hem = "Caturvargacintāmaṇi"
 q("Hemādri", hem, "vol. I, p. 40", "I.3:6–7a")
@@ -189,42 +193,43 @@ q("Raghunandana", "Smṛtitattva", "vol. II, p. 509", "II.3.18:1, 4–10", "Two 
 # Parallels with another Purāṇa. The Sāmba concordance records shared
 # material, not a claim that every verse in the indicated Bhaviṣya chapter is
 # identical. Numbering and extent differ between editions.
-p("Sāmba Purāṇa", "ch. 2, except 21b", "I.66:42–46, 49–63a")
-p("Sāmba Purāṇa", "ch. 3, except 10–12, 26–27, 30b, 31b–32a, 52b, 56", "I.72:3, 6–14a; I.73:1, 2b–10a, 14–24a, 25–41a, 43b–45, 49–50")
-p("Sāmba Purāṇa", "ch. 4", "I.74:1–4, 7–24, 26a, 28b–29")
-p("Sāmba Purāṇa", "ch. 5, with omissions", "I.67:3–6a, 7b–10, 12b–15, 25b–32a")
-p("Sāmba Purāṇa", "ch. 6, except 12b", "I.75:1, 3a, 4–6a, 7a, 10–13, 16–17; I.76:1–5a, 6b–8a, 10b–15")
-p("Sāmba Purāṇa", "ch. 7, except 37, 62b–71", "I.76:16b–20a; I.77:1–21; I.78:1–24a, 25b–41a")
-p("Sāmba Purāṇa", "ch. 8, except 13b and second half of 13a", "I.54:2–14, except final quarter of v. 14")
-p("Sāmba Purāṇa", "ch. 8, except 11b–13", "I.78:43b–53b")
+p("Sāmba Purāṇa", "ch. 2, except v. 21b", "I.66:42–46, 49–63a")
+p("Sāmba Purāṇa", "ch. 3, except vv. 10–12", "I.72:3, 6–14a; I.73:1, 2b–10a, 14–24a, 25–41a, 43b–45, 49–50")
+p("Sāmba Purāṇa", "ch. 4, except vv. 26–27, 30b, 31b–32a, 52b, 56", "I.74:1–4, 7–24, 26a, 28b–29")
+p("Sāmba Purāṇa", "ch. 5, except vv. 1–9a, 21a, 26a, 30b–39", "I.67:3–6a, 7b–10, 12b–15, 25b–32a")
+p("Sāmba Purāṇa", "ch. 6, except v. 12b", "I.75:1, 3a, 4–6a, 7a, 10–13, 16–17; I.76:1–5a, 6b–8a, 10b–15")
+p("Sāmba Purāṇa", "ch. 7, except vv. 37, 62b–71", "I.76:16b–20a; I.77:1–21; I.78:1–24a, 25b–41a")
+p("Sāmba Purāṇa", "ch. 8, except v. 13b and the second half of 13a", "I.54:2–14, except the final pāda of v. 14")
+p("Sāmba Purāṇa", "ch. 8, except vv. 11b–13", "I.78:43b–53b")
 p("Sāmba Purāṇa", "ch. 8, vv. 1–4a, 5, 6b–7", "I.161:2–5, 6b–7")
-p("Sāmba Purāṇa", "ch. 9, except 11a, 15–43", "I.78:53b–66, 67–69, 71–73, 75–84a")
+p("Sāmba Purāṇa", "ch. 9, except vv. 11a, 15–43", "I.78:53b–66, 67–69, 71–73, 75–84a")
 p("Sāmba Purāṇa", "ch. 10", "I.79:1–22a")
-p("Sāmba Purāṇa", "ch. 11, with omissions", "I.79:23–58, 63a, 64–79a, 78b–81a, 82b–83a; I.124:32a")
-p("Sāmba Purāṇa", "ch. 12, except 3, 20a", "I.121:1–13, 15b–19a, 20b–28")
-p("Sāmba Purāṇa", "ch. 13, except 9b–11", "I.122:all except 8b–9")
-p("Sāmba Purāṇa", "ch. 14, except 17b, 21", "I.123:1–19, 21b–22, 23b–34")
-p("Sāmba Purāṇa", "ch. 15, except 16, 26", "I.123:36–40a, 41a, 42a, 43b–44a, 45–66a with gaps")
-p("Sāmba Purāṇa", "ch. 16, except 14–16, 19b–20a, 33", "I.124:1–10, 13–15a, 16, 25b–28, 31, 34–38, 40")
-p("Sāmba Purāṇa", "ch. 18, with omissions", "I.125:2, 4, 7–25a, 26b–38a, 39–63a, 64b–71")
-p("Sāmba Purāṇa", "ch. 19, except 2–3, 15a", "I.126:1, 3–6a, 7–9a, 10b–28")
-p("Sāmba Purāṇa", "ch. 20, with omissions", "I.53:35b–44, 45b–51a")
-p("Sāmba Purāṇa", "ch. 21, with omissions", "I.52:8–23, 24b–25a, 28–45a, 46–49a; I.53:10–13a, 21–35a")
-p("Sāmba Purāṇa", "ch. 24, with omissions", "I.127:3–9, 10b–27a, 28–29a, 30–36a")
+p("Sāmba Purāṇa", "ch. 11, except vv. 2–12a, 39, 48b–50, 70", "I.79:23–58, 63a, 64–79a, 78b–81a, 82b–83a")
+p("Sāmba Purāṇa", "ch. 11, v. 51a", "I.124:32a")
+p("Sāmba Purāṇa", "ch. 12, except vv. 3, 20a", "I.121:1–13, 15b–19a, 20b–28")
+p("Sāmba Purāṇa", "ch. 13, except vv. 9b–11", "I.122:all except 8b–9")
+p("Sāmba Purāṇa", "ch. 14, except vv. 17b, 21", "I.123:1–19, 21b–22, 23b–34")
+p("Sāmba Purāṇa", "ch. 15, except vv. 16, 26", "I.123:36–40a, 41a, 42a, 43b–44a, 45–46a, 46b–49a, 51a, 53–56a, 56b–57, 58–66a")
+p("Sāmba Purāṇa", "ch. 16, except vv. 14–16, 19b–20a, 33", "I.124:1–10, 13–15a, 16, 25b–28, 31, 34–38, 40")
+p("Sāmba Purāṇa", "ch. 18, except vv. 2b–8, 20a, 32", "I.125:2, 4, 7–25a, 26b–38a, 39–63a, 64b–71")
+p("Sāmba Purāṇa", "ch. 19, except vv. 2–3, 15a", "I.126:1, 3–6a, 7–9a, 10b–28")
+p("Sāmba Purāṇa", "ch. 20, except vv. 1–4, 7b–8, 15–16", "I.53:35b–44, 45b–51a")
+p("Sāmba Purāṇa", "ch. 21, except vv. 4b, 29a, 38b–39, 40b, 42b, 52–53, 58", "I.52:8–23, 24b–25a, 28–45a, 46–49a; I.53:10–13a, 21–35a")
+p("Sāmba Purāṇa", "ch. 24, except vv. 17b, 34b–36a", "I.127:3–9, 10b–27a, 28–29a, 30–36a")
 p("Sāmba Purāṇa", "ch. 25", "I.128:substantial passage")
-p("Sāmba Purāṇa", "ch. 26, with omissions", "I.129:substantial passage; I.139:1–9a, 10b, 70b–81, 83–97")
-p("Sāmba Purāṇa", "ch. 27, with omissions", "I.140:20–23; I.144:9b–16a, 17–24, 25b–26")
-p("Sāmba Purāṇa", "ch. 28, with omissions", "I.145:2–7, 8b–21, 22b–24, 25–27")
-p("Sāmba Purāṇa", "ch. 29, except 1–7, 20a", "I.130:42–56, 59–60a, 63b")
-p("Sāmba Purāṇa", "ch. 30, except 28b–29, 31b", "I.131:1a, 2–3a, 5–13a, 19–20, 23–30, 36–41, 46–47")
-p("Sāmba Purāṇa", "ch. 32, with omissions", "I.132:1–24")
-p("Sāmba Purāṇa", "ch. 33, with omissions", "I.133:1a; I.135:6b–8, 9b–16, 20b–27a, 51–52a; I.136:2–7a, 9b–11a, 25b–26a, 37b–52a, 67–73, 75b–79a, 82; I.137:1–2")
-p("Sāmba Purāṇa", "ch. 34, with omissions", "I.138:1a, 2–4, 21b–22a, 34a, 35–38a, 39a, 40b, 41b, 47, 53a, 64–69a, 70a, 71a, 72a, 73a, 76")
-p("Sāmba Purāṇa", "ch. 35, with omissions", "I.55:23b–25, 28b–29a, 30b–32, 36b–37a, 39a, 48b–75; I.56:7b–31, 47–51a; I.57:27b, 31a; I.58:1a, 2, 18–20a")
-p("Sāmba Purāṇa", "ch. 36, with omissions", "I.58:22b–45 with gaps")
-p("Sāmba Purāṇa", "ch. 38, with omissions", "I.143:5b–13, 14b–41a, 46–55a")
-p("Sāmba Purāṇa", "ch. 46, with omissions", "I.80:2, 9–11, 14, 16–18; I.81:2–3, 15b–16a; I.82:3a, 6a; I.93:1, 3–5a, 7, 9a, 15b–16a, 26a, 28, 30, 32a, 42a, 64, 66")
-p("Sāmba Purāṇa", "ch. 84, opening verses", "I.208:4–35 with gaps; I.209:1–16a with gaps; I.120:1a, 2b–3a, 4")
+p("Sāmba Purāṇa", "ch. 26, except vv. 15, 22b–23, 50a", "I.129:substantial passage; I.139:1–9a, 10b, 70b–81, 83–97")
+p("Sāmba Purāṇa", "ch. 27, except vv. 5, 19a", "I.140:20–23; I.144:9b–16a, 17–24, 25b–26")
+p("Sāmba Purāṇa", "ch. 28", "I.145:2–7, 8b–21, 22b–24, 25–27")
+p("Sāmba Purāṇa", "ch. 29, except vv. 1–7, 20a", "I.130:42–56, 59–60a, 63b")
+p("Sāmba Purāṇa", "ch. 30, except vv. 28b–29, 31b", "I.131:1a, 2–3a, 5–13a, 19–20, 23–30, 36–41, 46–47")
+p("Sāmba Purāṇa", "ch. 32, except vv. 13, 36b, 39a, 43–44, 49–50a, 62", "I.132:1–24")
+p("Sāmba Purāṇa", "ch. 33, except vv. 1–3a, 10b, 72", "I.133:1a; I.135:6b–8, 9b–16, 20b–27a, 51–52a; I.136:2–7a, 9b–11a, 25b–26a, 37b–52a, 67–73, 75b–79a, 82; I.137:1–2")
+p("Sāmba Purāṇa", "ch. 34, except vv. 1–3, 10b, 72", "I.138:1a, 2–4, 21b–22a, 34a, 35–38a, 39a, 40b, 41b, 47, 53a, 64–69a, 70a, 71a, 72a, 73a, 76")
+p("Sāmba Purāṇa", "ch. 35, except vv. 1b, 2b", "I.55:23b–25, 28b–29a, 30b–32, 36b–37a, 39a, 48b–75; I.56:7b–31, 47–51a; I.57:27b, 31a; I.58:1a, 2, 18–20a")
+p("Sāmba Purāṇa", "ch. 36, except vv. 1, 4b, 10b–11a, 30, 40b–44", "I.58:22b–45 with gaps")
+p("Sāmba Purāṇa", "ch. 38, except vv. 1–3a, 4b–16a, 21a, 24–26a, 33–35a, 36b–39, 40b–46a, 47b–48a, 50, 52b, 55b–56", "I.143:5b–13, 14b–41a, 46–55a")
+p("Sāmba Purāṇa", "ch. 46, except vv. 1–3a, 4b–5a, 9b, 22b–23a, 25b–26a, 27b–28a, 38–39", "I.80:2, 9–11, 14, 16–18; I.81:2–3, 15b–16a; I.82:3a, 6a; I.93:1, 3–5a, 7, 9a, 15b–16a, 26a, 28, 30, 32a, 42a, 64, 66")
+p("Sāmba Purāṇa", "ch. 84, vv. 1–2a, 3", "I.208:4–5, 6, 7–16a, 17–18a, 21–23a, 23b, 24a, 27a, 28–35; I.209:1–5a, 6b–12a, 13b–14a, 15b–16a; I.120:1a, 2b–3a, 4")
 
 # Independent Purāṇic parallels mentioned in the same Sanskrit comparisons.
 p("Matsya Purāṇa", "ch. 268, vv. 28–53", "I.130:27–35", "Corresponding temple descriptions; do not assume every verse is verbatim.")
@@ -236,21 +241,34 @@ p("Bṛhatsaṃhitā", "60.14–19, 22a", "I.137:4–6a")
 
 assert len({(s, n) for s, _, n in sections}) == 9
 limits = {s: n for s, _, n in sections}
+def public_record(r):
+    out = {k: v for k, v in r.items() if v and k != "locus"}
+    note = out.get("note", "")
+    note = re.sub(r"\s*\(on p{1,2}\.\s*\d+(?:[–-]\d+)?\)", "", note, flags=re.I)
+    note = re.sub(r"\s+on p{1,2}\.\s*\d+(?:[–-]\d+)?(?:\s+and\s+\d+)?", "", note, flags=re.I)
+    note = re.sub(r"\s*\(on p{1,2}\.\s*\d+(?:[–-]\d+)?\s+and\s+\d+\)", "", note, flags=re.I)
+    if note:
+        out["note"] = note.strip()
+    else:
+        out.pop("note", None)
+    return out
+
 for r in records:
     assert 1 <= r["chapter"] <= limits[r["section"]], r
-    assert r["passage"] and r["locus"] and r["work"], r
+    assert r["passage"] and r["work"], r
+    assert r.get("source_locus") is not None, r
 by_chapter = defaultdict(list)
 for r in records:
-    by_chapter[(r.pop("section"), r.pop("chapter"))].append({k: v for k, v in r.items() if v})
+    by_chapter[(r["section"], r["chapter"])].append(public_record(r))
 data = {
     "edition": edition,
     "sections": [{"id": s, "name": name, "chapters": n} for s, name, n in sections],
     "chapters": [{"section": s, "chapter": n, "evidence": ev} for (s,n),ev in sorted(by_chapter.items(), key=lambda pair: (list(limits).index(pair[0][0]),pair[0][1]))],
     "unplaced": [
-        {"work": "Caturvargacintāmaṇi", "locus": "vol. II, vows for aṣṭamī and following tithis", "detail": "Verses attributed to Bhaviṣya have no secure position in the received Brāhma-parvan."},
-        {"work": "Caturvargacintāmaṇi", "locus": "vol. III, śrāddha passages", "detail": "Additional attributed verses were reported without a chapter by chapter alignment."},
-        {"work": "Dānasāgara", "locus": "fols. 14b, 23a, 276b, 287b–290a", "detail": "The quoted verses beginning bheryāṇi ca vādyāni and vimānam iti, and three lines beginning dhana-dhānyam, have no located match in the received text. Other passages are placed by chapter above, though their individual folios remain unresolved."},
-        {"work": "Dānasāgara", "locus": "fol. 3b", "detail": "The Bhaviṣya is described through the saptamī-kalpa; the aṣṭamī and navamī sections of that witness are not present in this received form."},
+        {"work": "Caturvargacintāmaṇi", "detail": "Verses attributed to Bhaviṣya for vows on aṣṭamī and later tithis have no secure place in the received Brāhma-parvan."},
+        {"work": "Caturvargacintāmaṇi", "detail": "Additional śrāddha verses are attributed to Bhaviṣya, without a chapter by chapter match."},
+        {"work": "Dānasāgara", "detail": "Several quoted lines have no match in the received text, including passages beginning bheryāṇi ca vādyāni, vimānam iti and dhana-dhānyam."},
+        {"work": "Dānasāgara", "detail": "The work describes a Bhaviṣya text with saptamī-kalpa material; its aṣṭamī and navamī sections are absent from the received form used here."},
     ],
 }
 out.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
