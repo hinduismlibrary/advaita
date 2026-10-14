@@ -27,13 +27,20 @@ if(first){
     if(heads.length>=2){content=el;break;}
   }
   if(content===root&&first.parentElement!==root){
-    let best=null,score=-1;
-    for(let el=first.parentElement;el&&el!==root;el=el.parentElement){
-      const heads=[...el.children].filter(isHeading);
-      const points=heads.length*100+[...el.children].filter(n=>n.matches?.('p,ol,ul,table,details,figure')).length;
-      if(points>score){score=points;best=el;}
+    const rootHeadings=[...root.children].filter(realHeading);
+    if(rootHeadings.length>=2){
+      /* The first nested heading may be a title-page heading. If the article
+         itself has a chapter outline, keep the whole article as the source. */
+      content=root;
+    }else{
+      let best=null,score=-1;
+      for(let el=first.parentElement;el&&el!==root;el=el.parentElement){
+        const heads=[...el.children].filter(isHeading);
+        const points=heads.length*100+[...el.children].filter(n=>n.matches?.('p,ol,ul,table,details,figure')).length;
+        if(points>score){score=points;best=el;}
+      }
+      if(best&&score>0)content=best;
     }
-    if(best&&score>0)content=best;
   }
 }
 let nodes=[...content.children];
