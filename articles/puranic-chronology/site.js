@@ -39,9 +39,8 @@
     });
     return [...groups.values()].map(group => ({
       ...group,
-      passage: group.passages.includes('unspecified')
-        ? 'unspecified'
-        : group.passages.join(', '),
+      passage: group.passages.filter(passage => passage !== 'unspecified').join(', '),
+      hasUnspecified: group.passages.includes('unspecified'),
       note: group.notes.join(' ')
     })).sort((a, b) => {
       if (a.kind !== b.kind) return a.kind === 'quotation' ? -1 : 1;
@@ -49,28 +48,82 @@
     });
   }
 
+  function cleanNote(item) {
+    let note = item.note || '';
+    if (!note) return '';
+    if (!item.passage && item.hasUnspecified && item.kind === 'parallel') return '';
+    const placementUnresolved = /^In this cited group \(the unmatched lines cannot be assigned to this chapter\):/i.test(note);
+    note = note.replace(/^In this cited group \(the unmatched lines cannot be assigned to this chapter\):\s*/i, '');
+    note = note.replace(/^Shared chapter group;.*$/i, '');
+    note = note.replace(/^Shared chapter;.*$/i, '');
+    note = note.replace(/^Shared passages; exact ranges in chs\. 82 and 93 are not specified in the comparison\.?$/i, '');
+    note = note.replace(/^Shared passages, with no exact verse limits in this entry\.?$/i, '');
+    note = note.replace(/^Quoted there under (?:the title )?Bhaviṣyottara;?\s*/i, '');
+    note = note.replace(/A line beginning (.+?) is absent from the received text\./i, 'Unmatched line: “$1”.');
+    note = note.replace(/Four lines beginning (.+?) are absent from the received text\./i, 'Four unmatched lines beginning “$1”.');
+    note = note.replace(/A further quoted verse has no match; the verse numbers in the I\.100 line of this entry are indistinct\./i, 'One verse unmatched; the I.100 verse number is unclear.');
+    note = note.replace(/An additional quoted verse has no match\./i, 'One additional verse unmatched.');
+    note = note.replace(/An additional verse in the citation is absent from the received chapter\./i, 'One additional verse absent from the received chapter.');
+    note = note.replace(/An additional quoted verse is absent\./i, 'One additional verse absent from the received text.');
+    note = note.replace(/Some intermediate verse numbers in the printed alignment are indistinct\./i, 'Some verse numbers are illegible.');
+    note = note.replace(/Three further lines have no match\./i, 'Three further lines unmatched.');
+    note = note.replace(/Three further quoted lines have no match\./i, 'Three further lines unmatched.');
+    note = note.replace(/Two further lines have no match\./i, 'Two further lines unmatched.');
+    note = note.replace(/A further line in the citation has no match\./i, 'One further line unmatched.');
+    note = note.replace(/A further line has no match\./i, 'One further line unmatched.');
+    note = note.replace(/An additional line has no match\./i, 'One additional line unmatched.');
+    note = note.replace(/A line has no match\./i, 'One line unmatched.');
+    note = note.replace(/A few lines have no match\./i, 'Several lines unmatched.');
+    note = note.replace(/The matching order of verses differs from the received chapter\./i, 'Verse order differs from the received chapter.');
+    note = note.replace(/The text is given as an alternative placement in the received Bhaviṣya\./i, 'Alternative placement in the received text.');
+    note = note.replace(/The same verse occurs at both places in this Purāṇa\./i, 'Same verse also occurs at the other listed location.');
+    note = note.replace(/The shared verses are rearranged across the chapters; no single continuous verse sequence is implied\./i, 'Shared verses are distributed across the chapter.');
+    note = note.replace(/Multiple shared verses; a complete verse by verse alignment is not given\./i, 'Several shared verses; no complete verse-by-verse alignment.');
+    note = note.replace(/An extensive, variant correspondence; individual verse limits for chs\. 55–57 are not specified\./i, 'Verse limits not specified for chapters 55–57.');
+    note = note.replace(/Correspondence noted for both chapters; I\.212 is not aligned verse by verse\./i, 'Verse-by-verse alignment not given for I.212.');
+    note = note.replace(/;\s*the verse numbers in the I\.100 line of this entry are indistinct\.?/i, '; I.100 verse number unclear.');
+    note = note.trim();
+    if (placementUnresolved && note) note += ' Chapter assignment unresolved.';
+    return note;
+  }
+
+  function sourceLocus(item) {
+    const locus = item.source_locus || '';
+    const exact = locus.match(/^ch\.\s*(\d+),\s*vv\.\s*(.+)$/i);
+    if (exact) return 'ch. ' + exact[1] + ', vv. ' + exact[2];
+    const chapter = locus.match(/^ch\.\s*(\d+),\s*except\s+(.+)$/i);
+    if (chapter) return 'ch. ' + chapter[1] + ' (except ' + chapter[2] + ')';
+    const chapters = locus.match(/^chs\.\s*(.+)$/i);
+    if (chapters) return 'chs. ' + chapters[1];
+    return locus;
+  }
+
   function evidenceRow(item, section, chapter) {
-    const kind = item.kind === 'quotation' ? 'Quoted in' : 'Parallel in';
-    const author = item.author ? '<span class="author">· ' + esc(item.author) + '</span>' : '';
-    const source = item.source_locus
-      ? '<div class="source-locus">' + (item.kind === 'quotation' ? 'At ' : '') + esc(item.source_locus) + '</div>'
-      : '';
-    const label = item.label
-      ? '<div class="source-locus">Cited under the title ' + esc(item.label.replace(/^as /, '')) + '</div>'
-      : '';
-    let noteText = item.note || '';
-    if (item.passage === 'unspecified' && item.source_locus && item.kind === 'parallel') {
-      noteText = 'Chapter-level link only: Bhaviṣya ' + section + '.' + chapter + ' is associated with ' +
-        item.work + ' ' + item.source_locus + '; no corresponding verse range is identified there.';
+    const source = sourceLocus(item);
+    const work = '<em>' + esc(item.work) + '</em>';
+    const witness = item.author ? esc(item.author) + ', ' + work : work;
+    const label = item.label ? ' <span class="citation-as">(cited as ' + esc(item.label.replace(/^as /, '')) + ')</span>' : '';
+    const locus = item.source_locus && item.kind === 'quotation'
+      ? ' <span class="source-locus">' + esc(item.source_locus) + '</span>' : '';
+    const uncertain = !item.passage;
+    const passage = uncertain ? '' : 'vv. ' + esc(item.passage);
+    const partialUnspecified = !uncertain && item.hasUnspecified;
+    const noteText = cleanNote(item);
+    const note = noteText ? '<div class="note">' + esc(noteText) + '</div>' : '';
+    let citation;
+    if (item.kind === 'quotation') {
+      citation = '<span class="kind">Quote</span><span class="citation-text">' +
+        (uncertain ? 'Bhaviṣya ' + esc(section) + '.' + chapter + ' (verses unspecified)' : passage) +
+        ' <span class="relation">→</span> ' + witness + locus + label + '</span>';
+    } else if (uncertain) {
+      citation = '<span class="kind">Chapter link</span><span class="citation-text">' + work + ' ' + esc(source) +
+        ' <span class="citation-as">(corresponding verse ranges not specified)</span></span>';
+    } else {
+      citation = '<span class="kind">Parallel</span><span class="citation-text">' + passage +
+        ' <span class="relation">↔</span> ' + work + (source ? ' ' + esc(source) : '') + label +
+        (partialUnspecified ? ' <span class="citation-as">(other verse ranges unspecified)</span>' : '') + '</span>';
     }
-    const note = noteText ? '<p class="note">' + esc(noteText) + '</p>' : '';
-    const range = item.passage === 'unspecified'
-      ? 'verse range not specified'
-      : 'vv. ' + item.passage;
-    return '<li class="evidence-entry">' +
-      '<div class="verse"><span class="kind">' + kind + '</span>Bhaviṣya ' + esc(range) + '</div>' +
-      '<div><div class="work"><em>' + esc(item.work) + '</em>' + author + '</div>' + source + label + '</div>' +
-      note + '</li>';
+    return '<li class="evidence-entry"><div class="citation">' + citation + '</div>' + note + '</li>';
   }
 
   function detail(section, chapter) {
@@ -79,7 +132,7 @@
     const rows = compactEvidence(found).map(item => evidenceRow(item, section, chapter)).join('');
     const empty = found.length
       ? ''
-      : '<p class="no-entry">No quotation or parallel is recorded for this chapter.</p>';
+      : '<p class="no-entry">No located quotation or parallel.</p>';
     return '<div class="detail-head"><h3>Bhaviṣya Purāṇa ' + esc(section) + '.' + chapter +
       '</h3><span>' + esc(name) + '</span></div>' +
       (found.length ? '<ul class="evidence-list">' + rows + '</ul>' : empty);
@@ -90,11 +143,10 @@
     for (let chapter = first; chapter <= last; chapter++) {
       const evidence = byChapter.get(key(section.id, chapter)) || [];
       const marked = evidence.length > 0;
-      const gap = evidence.some(item => item.missing === true);
+      const gap = evidence.some(item => item.missing === true || /no match|absent|not found|not located|do not occur/i.test(item.note || ''));
       const entryCount = compactEvidence(evidence).length;
-      const label = marked
-        ? entryCount + ' grouped ' + (entryCount === 1 ? 'reference' : 'references')
-        : 'no located entry';
+      const label = (marked ? entryCount + ' references' : 'no located entry') +
+        (gap ? '; at least one cited line is unmatched' : '');
       const tileId = 'tile-' + section.id.replaceAll('.', '-') + '-' + chapter;
       tiles += '<button class="tile' + (marked ? ' marked' : '') + (gap ? ' gap' : '') +
         '" id="' + tileId + '" type="button" data-section="' + esc(section.id) +
@@ -106,7 +158,7 @@
         esc(sectionName[section.id] || section.name) + '</span></div>'
       : '<div class="row-section continuation" aria-hidden="true"></div>';
     return '<div class="chapter-row">' + label + '<div class="row-content"><div class="cells">' + tiles +
-      '</div><div class="detail" hidden></div></div></div>';
+      '</div></div><div class="detail" hidden></div></div>';
   }
 
   function renderSection(section, columns) {
