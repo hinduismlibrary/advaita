@@ -261,11 +261,34 @@ function styleArticleQuotes(root){
     }
   }
 }
+
+function pairWomenScripture(root){
+  if(title!=='Hinduism on Women')return;
+  const sources=[...root.querySelectorAll('details.sanskrit-reveal,p[lang^="sa"]')];
+  for(const source of sources){
+    if(source.closest('.women-scripture-pair'))continue;
+    const next=source.nextElementSibling;
+    if(!next||next.closest('.women-scripture-pair'))continue;
+    const isList=next.matches('ol.women-name-list');
+    const isBlockquote=next.matches('blockquote.translation');
+    const isTranslationParagraph=next.matches('p.translation')||
+      (source.matches('details.sanskrit-reveal')&&next.matches('p')&&
+       !next.matches('[lang^="sa"],.reference,.source-citation'));
+    const quotedParagraph=next.matches('p')&&/^[“"'‘]/u.test(text(next));
+    if(!isList&&!isBlockquote&&!isTranslationParagraph&&!quotedParagraph)continue;
+    const pair=el('div','women-scripture-pair');
+    source.before(pair);
+    pair.append(source,next);
+    if(next.matches('p')&&!next.classList.contains('translation'))
+      next.classList.add('women-scripture-translation');
+  }
+}
 function render(index){
   const page=segments[index];if(!page)return;
   const frag=document.createDocumentFragment();
   const h=el('h3',null,page.title);h.id=page.id;frag.append(h);
   for(const n of page.nodes)frag.append(clean(n,page));
+  pairWomenScripture(frag);
   styleArticleQuotes(frag);reader.replaceChildren(frag);
   for(const d of reader.querySelectorAll('details.sanskrit-reveal')){
     const summary=d.querySelector(':scope>summary');if(!summary)continue;
@@ -310,7 +333,7 @@ function render(index){
 /* Replace only after the entire document was successfully indexed. */
 if(segments.every(p=>p.nodes.length===0)){source.hidden=false;return;}
 document.body.replaceChildren(bar,main);
-document.body.className='document-paged-page shastric-article'+(title==='Śrī Sadvarṇārthaprakāśinī'?' sadvarn-reader':'');
+document.body.className='document-paged-page shastric-article'+(title==='Hinduism on Women'?' women-reader':'')+(title==='Śrī Sadvarṇārthaprakāśinī'?' sadvarn-reader':'');
 const requested=new URLSearchParams(location.search).get('section');
 let initial=segments.findIndex(p=>p.id===requested);
 if(initial<0&&location.hash){
