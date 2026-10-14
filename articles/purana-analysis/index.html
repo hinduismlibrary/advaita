@@ -42,7 +42,7 @@
       min-width: min(310px, 72vw); max-width: 100%; padding: 6px 28px 6px 8px;
       border: 1px solid var(--rule); border-radius: 2px; color: var(--ink); background: #fff;
     }
-    #map { padding: 2px 0 30px; }
+    #map { padding: 2px 0 16px; }
     .section-row { display: grid; grid-template-columns: 122px minmax(0,1fr); gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
     .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.25; }
     .section-content { min-width: 0; }
@@ -73,6 +73,13 @@
     .note { display: block; padding-top: 2px; color: #565b53; font: italic 12px/1.35 var(--serif); }
     .no-entry { margin: 0; color: var(--muted); font-size: 11px; }
     .error { padding: 14px 0; color: var(--red); }
+    .analysis-row { border-top: 1px solid var(--ink); border-bottom: 0; padding-top: 8px; padding-bottom: 12px; }
+    .analysis-title { margin: 0; padding-top: 2px; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .analysis-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 18px; margin: 0; }
+    .analysis-item { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px solid var(--rule); }
+    .analysis-item dt { color: var(--muted); font-size: 10px; }
+    .analysis-item dd { margin: 0; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+    .analysis-formula { grid-column: 1 / -1; margin: 5px 0 0; color: var(--muted); font-size: 10px; }
     @media (max-width: 760px) {
       .page { width: calc(100% - 24px); }
       header { padding: 19px 0 12px; }
@@ -81,6 +88,7 @@
       .section-label { font-size: 9px; }
       .cells { grid-template-columns: repeat(12, 22px); gap: 3px; }
       .group { grid-template-columns: 66px minmax(0,1fr); gap: 5px; }
+      .analysis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
     }
     @media (max-width: 360px) {
       .page { width: calc(100% - 18px); }
@@ -88,6 +96,8 @@
       .cells { grid-template-columns: repeat(10, 21px); gap: 2px; }
       .tile { width: 21px; height: 21px; font-size: 9px; }
       .group { grid-template-columns: 58px minmax(0,1fr); gap: 4px; }
+      .analysis-grid { grid-template-columns: 1fr; }
+      .analysis-formula { grid-column: 1; }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
   </style>
@@ -133,7 +143,8 @@
             const work = document.createElement("span");
             work.className = "work";
             const name = entry.work === "Work title unclear" ? "Work not identified" : entry.work;
-            work.textContent = entry.author ? `${name} — ${entry.author}` : name;
+            const author = entry.author?.trim() || "Author not identified";
+            work.textContent = `${name} — ${author}`;
             const refs = document.createElement("span");
             refs.className = "refs";
             refs.textContent = entry.refs.join(", ");
@@ -157,7 +168,8 @@
             if (entry.work) {
               const work = document.createElement("span");
               work.className = "work";
-              work.textContent = entry.author ? `${entry.work} — ${entry.author}` : entry.work;
+              const author = entry.author?.trim() || "Author not identified";
+              work.textContent = `${entry.work} — ${author}`;
               item.appendChild(work);
             }
             if (entry.refs && entry.refs.length) {
@@ -209,6 +221,65 @@
         requestAnimationFrame(() => detail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
       }
 
+      function addAnalysis(purana) {
+        const total = purana.sections.reduce((sum, section) => sum + section.last, 0);
+        let quoted = 0;
+        let parallel = 0;
+        let both = 0;
+        let either = 0;
+        let unmatchedNotes = 0;
+        let unmatchedChapters = 0;
+        for (const section of purana.sections) {
+          for (let chapter = 1; chapter <= section.last; chapter += 1) {
+            const record = section.chapters[String(chapter)] || {};
+            const hasQuoted = Boolean(record.quoted?.length);
+            const hasParallel = Boolean(record.parallel?.length);
+            if (hasQuoted) quoted += 1;
+            if (hasParallel) parallel += 1;
+            if (hasQuoted && hasParallel) both += 1;
+            if (hasQuoted || hasParallel) either += 1;
+            const notes = record.missing?.length || 0;
+            unmatchedNotes += notes;
+            if (notes) unmatchedChapters += 1;
+          }
+        }
+        const percent = value => `${(100 * value / total).toFixed(1)}%`;
+        const row = document.createElement("section");
+        row.className = "section-row analysis-row";
+        const heading = document.createElement("h2");
+        heading.className = "section-label analysis-title";
+        heading.textContent = "Analysis";
+        const content = document.createElement("div");
+        content.className = "section-content";
+        const metrics = document.createElement("dl");
+        metrics.className = "analysis-grid";
+        const values = [
+          ["Total chapters", `${total} · 100%`],
+          ["Chapters quoted elsewhere", `${quoted} · ${percent(quoted)}`],
+          ["Chapters with exact Purāṇa parallels", `${parallel} · ${percent(parallel)}`],
+          ["Both kinds of match", `${both} · ${percent(both)}`],
+          ["At least one match", `${either} · ${percent(either)}`],
+          ["Unmatched citation notes", `${unmatchedNotes} in ${unmatchedChapters} chapters`],
+        ];
+        for (const [label, value] of values) {
+          const item = document.createElement("div");
+          item.className = "analysis-item";
+          const term = document.createElement("dt");
+          term.textContent = label;
+          const number = document.createElement("dd");
+          number.textContent = value;
+          item.append(term, number);
+          metrics.appendChild(item);
+        }
+        const formula = document.createElement("p");
+        formula.className = "analysis-formula";
+        formula.textContent = `At least one match = quoted chapters + parallel chapters − chapters with both (${quoted} + ${parallel} − ${both} = ${either}). Percentages use ${total} mapped chapters.`;
+        metrics.appendChild(formula);
+        content.appendChild(metrics);
+        row.append(heading, content);
+        map.appendChild(row);
+      }
+
       function render(purana) {
         selectedTile = null;
         selectedDetail = null;
@@ -247,6 +318,7 @@
           row.append(label, content);
           map.appendChild(row);
         }
+        addAnalysis(purana);
       }
 
       fetch("./data.json")
