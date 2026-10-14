@@ -1,96 +1,146 @@
 (() => {
   'use strict';
-  const url = 'https://www.wisdomlib.org/hinduism/book/bhavishya-purana-sanskrit';
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  const divisions = [
-    {id:'brahma', name:'Brāhma-parvan', sections:['I'], note:'The opening book. Quotations in later legal and ritual works overlap here with extensive solar passages shared with the Sāmba Purāṇa.'},
-    {id:'madhyama', name:'Madhyama-parvan', sections:['II.1','II.2','II.3'], note:'Three bhāgas, numbered separately. A citation to the third bhāga is placed in chapter 18, although the citing work numbers it differently.'},
-    {id:'pratisarga', name:'Pratisarga-parvan', sections:['III.1','III.2','III.3','III.4'], note:'Four separately numbered khaṇḍas. No located verse correspondence has yet been entered for these chapters.'},
-    {id:'uttara', name:'Uttara-parvan', sections:['IV'], note:'Also circulated as Bhaviṣyottara. A title used by a citing work does not always predict where its verses fall in the received text.'}
-  ];
-  const key = (section, chapter) => `${section}.${chapter}`;
-  let data, byChapter;
 
-  function entryRow(item, section, chapter) {
-    const shown = `${section}.${chapter}.${item.passage}`;
-    const note = item.note ? `<span class="note">${esc(item.note)}</span>` : '';
-    const label = item.label ? `<span class="variant-label">${esc(item.label)}</span>` : '';
-    return `<tr><td>${esc(shown)}</td><td><em>${esc(item.work)}</em>${item.author ? `<span class="sub">${esc(item.author)}</span>` : ''}${label}</td><td>${esc(item.locus)}${note}</td></tr>`;
+  const sectionName = {
+    I: 'Brāhma-parvan',
+    'II.1': 'Madhyama · first bhāga',
+    'II.2': 'Madhyama · second bhāga',
+    'II.3': 'Madhyama · third bhāga',
+    'III.1': 'Pratisarga · first khaṇḍa',
+    'III.2': 'Pratisarga · second khaṇḍa',
+    'III.3': 'Pratisarga · third khaṇḍa',
+    'III.4': 'Pratisarga · fourth khaṇḍa',
+    IV: 'Uttara-parvan'
+  };
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[char]));
+  let data;
+  let byChapter;
+
+  function key(section, chapter) {
+    return section + '.' + chapter;
   }
+
+  function evidenceRow(item) {
+    const kind = item.kind === 'quotation' ? 'Quoted in' : 'Parallel in';
+    const author = item.author ? '<span class="author">' + esc(item.author) + '</span>' : '';
+    const source = item.source_locus
+      ? '<div class="source-locus">' + (item.kind === 'quotation' ? 'At ' : '') + esc(item.source_locus) + '</div>'
+      : '';
+    const label = item.label
+      ? '<div class="source-locus">Cited under the title ' + esc(item.label.replace(/^as /, '')) + '</div>'
+      : '';
+    const note = item.note ? '<p class="note">' + esc(item.note) + '</p>' : '';
+    return '<li class="evidence-entry">' +
+      '<div class="verse"><span class="kind">' + kind + '</span>Bhaviṣya ' + esc(item.passage) + '</div>' +
+      '<div><div class="work"><em>' + esc(item.work) + '</em>' + author + '</div>' + source + label + '</div>' +
+      note + '</li>';
+  }
+
   function detail(section, chapter) {
     const found = byChapter.get(key(section, chapter)) || [];
-    const title = data.sections.find(s => s.id === section).name;
-    const names = [
-      ['Later quotations', found.filter(x => x.kind === 'quotation')],
-      ['Parallels in other Purāṇas', found.filter(x => x.kind === 'parallel' && x.work.includes('Purāṇa'))],
-      ['Other textual parallels', found.filter(x => x.kind === 'parallel' && !x.work.includes('Purāṇa'))]
-    ];
-    let html = `<div class="detail-head"><h3>${esc(section)}.${chapter}</h3><span>${esc(title)}</span></div>`;
-    if (!found.length) html += '<p class="empty-note">No quotation or verse parallel has a located entry for this chapter in the present concordance.</p>';
-    else for (const [label, items] of names) if (items.length) {
-      html += `<div class="evidence-group"><h4>${label} · ${items.length}</h4><table class="evidence-table"><tbody>${items.map(x => entryRow(x, section, chapter)).join('')}</tbody></table></div>`;
-    }
-    return html + `<a class="edition-link" href="${url}" target="_blank" rel="noopener noreferrer">Received Sanskrit text ↗</a>`;
+    const name = sectionName[section] || section;
+    const rows = found.map(evidenceRow).join('');
+    const empty = found.length
+      ? ''
+      : '<p class="no-entry">No quotation or parallel is recorded for this chapter.</p>';
+    return '<div class="detail-head"><h3>Bhaviṣya Purāṇa ' + esc(section) + '.' + chapter +
+      '</h3><span>' + esc(name) + '</span></div>' +
+      (found.length ? '<ul class="evidence-list">' + rows + '</ul>' : empty);
   }
-  function row(section, first, last) {
-    let html = `<div class="row"><span class="range">${first}–${last}</span><div class="cells">`;
-    for (let chapter=first;chapter<=last;chapter++) {
-      const evidence = byChapter.get(key(section.id,chapter)) || [];
-      const marked = evidence.length>0;
-      const gap = evidence.some(x => x.missing === true);
-      const status = marked ? `${evidence.length} located ${evidence.length===1?'match':'matches'}` : 'no located entry';
-      html += `<button class="tile${marked?' marked':''}${gap?' gap':''}" id="tile-${section.id.replace('.','-')}-${chapter}" type="button" data-section="${section.id}" data-chapter="${chapter}" aria-expanded="false" aria-label="${esc(section.name)}, chapter ${chapter}: ${status}">${chapter}</button>`;
+
+  function chapterRow(section, first, last) {
+    let tiles = '';
+    for (let chapter = first; chapter <= last; chapter++) {
+      const evidence = byChapter.get(key(section.id, chapter)) || [];
+      const marked = evidence.length > 0;
+      const gap = evidence.some(item => item.missing === true);
+      const label = marked
+        ? evidence.length + ' located ' + (evidence.length === 1 ? 'entry' : 'entries')
+        : 'no located entry';
+      const tileId = 'tile-' + section.id.replaceAll('.', '-') + '-' + chapter;
+      tiles += '<button class="tile' + (marked ? ' marked' : '') + (gap ? ' gap' : '') +
+        '" id="' + tileId + '" type="button" data-section="' + esc(section.id) +
+        '" data-chapter="' + chapter + '" aria-expanded="false" aria-label="' +
+        esc(section.name) + ', chapter ' + chapter + ': ' + label + '">' + chapter + '</button>';
     }
-    return html + '</div><div class="detail" hidden></div></div>';
+    return '<div class="chapter-row"><div class="cells">' + tiles +
+      '</div><div class="detail" hidden></div></div>';
   }
+
+  function renderSection(section, columns) {
+    let rows = '';
+    for (let first = 1; first <= section.chapters; first += columns) {
+      rows += chapterRow(section, first, Math.min(section.chapters, first + columns - 1));
+    }
+    const name = sectionName[section.id] || section.name;
+    return '<section class="heat-section" aria-label="' + esc(section.name) + '">' +
+      '<aside class="section-label"><strong>' + esc(section.id) + '</strong><span>' +
+      esc(name) + '</span><small>1–' + section.chapters + '</small></aside>' +
+      '<div class="section-body">' + rows + '</div></section>';
+  }
+
+  function unplaced() {
+    if (!data.unplaced?.length) return '';
+    const items = data.unplaced.map(item =>
+      '<li><em>' + esc(item.work) + '</em> · ' + esc(item.detail) + '</li>'
+    ).join('');
+    return '<details class="unplaced"><summary>Passages without a chapter match · ' +
+      data.unplaced.length + '</summary><ul class="unplaced-list">' + items + '</ul></details>';
+  }
+
   function render() {
-    const total = data.sections.reduce((a,s)=>a+s.chapters,0);
-    document.getElementById('stat').textContent = `${byChapter.size} / ${total} chapters with located entries`;
-    const columns = window.matchMedia('(max-width:390px)').matches ? 10 : window.matchMedia('(max-width:760px)').matches ? 12 : 24;
-    let html = '';
-    for (const division of divisions) {
-      const parts = division.sections.map(id => data.sections.find(s=>s.id===id));
-      const n = parts.reduce((sum,s)=>sum+s.chapters,0);
-      const matches = [...byChapter.keys()].filter(k=>parts.some(s=>k.startsWith(s.id+'.'))).length;
-      html += `<section class="division" id="${division.id}"><div class="division-heading"><div><span class="small-label">${esc(parts.map(x=>x.id).join(' · '))}</span><h2>${division.name}</h2></div><span class="total">${matches} / ${n} chapters</span></div><p class="division-note">${division.note}</p>`;
-      for (const section of parts) {
-        html += `<div class="part"><div class="part-title"><h3>${parts.length===1?'Chapters':esc(section.name)}</h3><span>1–${section.chapters}</span></div>`;
-        for (let first=1;first<=section.chapters;first+=columns) html += row(section,first,Math.min(section.chapters,first+columns-1));
-        html += '</div>';
-      }
-      html += '</section>';
-    }
-    html += `<section class="unplaced" id="unplaced"><span class="small-label">Outside the grid</span><h2>Unplaced citations</h2><p>Some passages are attributed to the Bhaviṣya but cannot be assigned to a numbered chapter of this received text. They are listed here, rather than coloured into a guessed position.</p><ul class="unplaced-list">${data.unplaced.map(x=>`<li><div><strong><em>${esc(x.work)}</em></strong><span>${esc(x.locus)}</span></div><div>${esc(x.detail)}</div></li>`).join('')}</ul></section>`;
-    document.getElementById('map').innerHTML = html;
+    const total = data.sections.reduce((sum, section) => sum + section.chapters, 0);
+    document.getElementById('stat').textContent =
+      byChapter.size + ' of ' + total + ' chapters have a located entry';
+    const columns = window.matchMedia('(max-width: 360px)').matches ? 10
+      : window.matchMedia('(max-width: 720px)').matches ? 12 : 24;
+    document.getElementById('map').innerHTML =
+      data.sections.map(section => renderSection(section, columns)).join('') + unplaced();
   }
-  function openTile(tile, scroll=false) {
-    const row = tile.closest('.row');
+
+  function openTile(tile, scroll = false) {
+    const row = tile.closest('.chapter-row');
     const panel = row.querySelector('.detail');
-    const already = tile.getAttribute('aria-expanded')==='true';
-    row.querySelectorAll('.tile').forEach(x=>x.setAttribute('aria-expanded','false'));
-    if (already && !scroll) {panel.hidden=true;return;}
-    tile.setAttribute('aria-expanded','true');
+    const wasOpen = tile.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.chapter-row .detail').forEach(detailPanel => {
+      detailPanel.hidden = true;
+      detailPanel.innerHTML = '';
+    });
+    document.querySelectorAll('.tile[aria-expanded="true"]').forEach(open => {
+      open.setAttribute('aria-expanded', 'false');
+    });
+    if (wasOpen && !scroll) return;
+    tile.setAttribute('aria-expanded', 'true');
     panel.innerHTML = detail(tile.dataset.section, Number(tile.dataset.chapter));
-    panel.hidden=false;
-    if (scroll) tile.scrollIntoView({block:'center',behavior:'smooth'});
+    panel.hidden = false;
+    if (scroll) tile.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
-  document.getElementById('map').addEventListener('click',event=>{
+
+  document.getElementById('map').addEventListener('click', event => {
     const tile = event.target.closest('.tile');
     if (!tile) return;
     openTile(tile);
-    history.replaceState(null,'',`#${tile.dataset.section}.${tile.dataset.chapter}`);
+    history.replaceState(null, '', '#' + tile.dataset.section + '.' + tile.dataset.chapter);
   });
-  fetch('./bhavisya-evidence.json').then(response=>{
-    if (!response.ok) throw Error('Unable to load chapter data');
+
+  fetch('./bhavisya-evidence.json').then(response => {
+    if (!response.ok) throw new Error('Chapter data could not load');
     return response.json();
-  }).then(json=>{
-    data=json;
-    byChapter=new Map(json.chapters.map(x=>[key(x.section,x.chapter),x.evidence]));
+  }).then(json => {
+    data = json;
+    byChapter = new Map(json.chapters.map(item =>
+      [key(item.section, item.chapter), item.evidence]
+    ));
     render();
     const match = location.hash.match(/^#(I|II\.[123]|III\.[1234]|IV)\.(\d+)$/);
     if (match) {
-      const tile=document.getElementById(`tile-${match[1].replace('.','-')}-${match[2]}`);
-      if (tile) openTile(tile,true);
+      const tileId = 'tile-' + match[1].replaceAll('.', '-') + '-' + match[2];
+      const tile = document.getElementById(tileId);
+      if (tile) openTile(tile, true);
     }
-  }).catch(()=>{document.getElementById('map').innerHTML='<p>Chapter data could not load. Reload this page.</p>';});
+  }).catch(() => {
+    document.getElementById('map').innerHTML = '<p>Chapter data could not load. Reload this page.</p>';
+  });
 })();
