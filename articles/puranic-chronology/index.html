@@ -13,9 +13,11 @@
   --ink: #252b27;
   --muted: #69746e;
   --rule: #d9ded8;
-  --empty: #e8ebe7;
+  --empty: #f1e4e1;
   --green: #d7e8da;
   --green-ink: #27593d;
+  --parallel: #dbe8ef;
+  --parallel-ink: #345c70;
   --red: #a54f45;
   --serif: Georgia, 'Times New Roman', serif;
   --sans: Arial, Helvetica, sans-serif;
@@ -38,8 +40,10 @@ header { display: flex; align-items: end; justify-content: space-between; gap: 2
 .legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; padding: 11px 0 13px; color: var(--muted); font-size: 10px; border-bottom: 1px solid var(--rule); }
 .legend span { white-space: nowrap; }
 .swatch { display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -2px; background: var(--empty); }
-.swatch.found { background: var(--green); }
-.swatch.gap { background: var(--green); border-bottom: 3px solid var(--red); }
+.swatch.quote { background: var(--green); }
+.swatch.parallel { background: var(--parallel); }
+.swatch.both { background: linear-gradient(135deg, var(--green) 0 49%, var(--parallel) 51% 100%); }
+.swatch.gap { background: var(--empty); border-bottom: 3px solid var(--red); }
 #map { padding: 0; }
 .heat-section { padding: 0; border-bottom: 1px solid var(--rule); }
 .chapter-row { display: grid; grid-template-columns: 116px minmax(0,1fr); gap: 8px; padding: 2px 0; }
@@ -48,8 +52,10 @@ header { display: flex; align-items: end; justify-content: space-between; gap: 2
 .row-section span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .row-content { min-width: 0; }
 .cells { display: grid; grid-template-columns: repeat(24, minmax(0,1fr)); gap: 1px; max-width: 960px; }
-.tile { position: relative; height: 23px; min-width: 0; padding: 0; border: 1px solid transparent; border-radius: 0; color: #748077; background: var(--empty); font-size: 10px; font-variant-numeric: tabular-nums; }
-.tile.marked { color: var(--green-ink); background: var(--green); font-weight: 600; }
+.tile { position: relative; height: 23px; min-width: 0; padding: 0; border: 1px solid transparent; border-radius: 0; color: #855950; background: var(--empty); font-size: 10px; font-variant-numeric: tabular-nums; }
+.tile.quoted { color: var(--green-ink); background: var(--green); font-weight: 600; }
+.tile.parallel { color: var(--parallel-ink); background: var(--parallel); font-weight: 600; }
+.tile.both { color: var(--ink); background: linear-gradient(135deg, var(--green) 0 49%, var(--parallel) 51% 100%); font-weight: 600; }
 .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
 .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
 .tile.gap::after { position: absolute; right: 1px; bottom: 1px; left: 1px; height: 3px; background: var(--red); content: ""; }
@@ -59,16 +65,16 @@ header { display: flex; align-items: end; justify-content: space-between; gap: 2
 .detail-head h3 { margin: 0; font: 400 20px/1.2 var(--serif); }
 .detail-head span { color: var(--muted); font-size: 10px; }
 .no-entry { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
+.evidence-group + .evidence-group { margin-top: 5px; padding-top: 5px; border-top: 1px solid var(--rule); }
+.evidence-group h4 { margin: 0 0 2px; color: var(--muted); font: 600 10px/1.3 var(--sans); }
 .evidence-list { margin: 0; padding: 0; list-style: none; }
-.evidence-entry { padding: 4px 0; border-bottom: 1px solid #edf0ec; }
-.evidence-entry:last-child { border-bottom: 0; }
-.citation { display: grid; grid-template-columns: 54px minmax(0,1fr); gap: 6px; align-items: baseline; }
-.kind { color: var(--muted); font-size: 10px; }
-.citation-text { font-size: 14px; line-height: 1.4; }
-.citation-text em { font: italic 15px/1.2 var(--serif); }
-.relation { padding: 0 4px; color: var(--muted); }
-.citation-as, .source-locus { color: var(--muted); font-size: 11px; }
-.note { margin: 2px 0 0 60px; color: var(--muted); font-size: 11px; line-height: 1.3; }
+.evidence-entry { padding: 2px 0; }
+.citation { font-size: 13px; line-height: 1.4; }
+.citation-ref { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.target em { font: italic 14px/1.2 var(--serif); }
+.relation { padding: 0 3px; color: var(--muted); }
+.citation-as { color: var(--muted); font-size: 10px; }
+.note { margin: 1px 0 0; color: var(--muted); font-size: 10px; line-height: 1.3; }
 .note.warning { color: var(--red); }
 details.unplaced { padding: 11px 0 12px; border-bottom: 1px solid var(--ink); }
 details.unplaced summary { width: fit-content; color: var(--muted); font-size: 10px; cursor: pointer; }
@@ -92,38 +98,36 @@ footer p { margin: 0; }
   .tile { height: 26px; font-size: 9px; }
   .detail { padding: 8px 9px 7px; }
   .detail-head h3 { font-size: 18px; }
-  .citation { grid-template-columns: 50px minmax(0,1fr); gap: 5px; }
-  .citation-text { font-size: 13px; }
-  .citation-text em { font-size: 14px; }
-  .citation-as, .source-locus, .note { font-size: 10px; }
-  .note { margin-left: 55px; }
+  .citation { font-size: 12px; }
+  .citation-as, .note { font-size: 9px; }
   .unplaced-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 360px) {
   .chapter-row { grid-template-columns: 68px minmax(0,1fr); gap: 3px; }
   .cells { grid-template-columns: repeat(10,minmax(0,1fr)); }
   .tile { height: 25px; }
-  .citation { grid-template-columns: 46px minmax(0,1fr); gap: 4px; }
-  .note { margin-left: 50px; }
+  .citation { font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
-<script src="./site.js?v=20261014-3" defer></script>
+<script src="./site.js?v=20261014-4" defer></script>
 </head>
 <body>
 <div class="page">
   <nav class="top" aria-label="Site"><a href="/advaita/">Viveka Dṛṣṭi</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a></nav>
   <header>
-    <div class="title"><h1>Bhaviṣya Purāṇa</h1><p>Bhaviṣya references: section.chapter.verse</p></div>
+    <div class="title"><h1>Bhaviṣya Purāṇa</h1><p>Chapter index · citations and parallels</p></div>
     <p class="stat" id="stat">585 chapters</p>
   </header>
   <div class="legend" aria-label="Map key">
-    <span><i class="swatch found"></i>Quotation or parallel located</span>
-    <span><i class="swatch"></i>No located entry</span>
-    <span><i class="swatch gap"></i>A quoted verse is missing from this text</span>
+    <span><i class="swatch quote"></i>Cited in another text</span>
+    <span><i class="swatch parallel"></i>Textual parallel</span>
+    <span><i class="swatch both"></i>Both</span>
+    <span><i class="swatch"></i>No located reference</span>
+    <span><i class="swatch gap"></i>Some cited lines unmatched</span>
   </div>
   <main id="map" aria-label="Bhaviṣya Purāṇa chapter heatmap"><p>Loading chapters…</p></main>
-  <footer><p>Each section restarts at chapter 1. An uncoloured chapter has no entry in this concordance.</p></footer>
+  <footer><p>Click a chapter for its references. 1.45.42 = section 1, chapter 45, verse 42; divided sections add a part number.</p></footer>
 </div>
 </body>
 </html>
