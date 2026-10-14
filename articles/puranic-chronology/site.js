@@ -49,6 +49,10 @@
   }
 
   function cleanNote(item) {
+    if (item.author === 'Devaṇṇabhaṭṭa' && item.work === 'Smṛticandrikā' && item.section === 'I') {
+      if (item.chapter === 4) return 'Same passage also appears at I.103.19b–20a.';
+      if (item.chapter === 103) return 'Same passage also appears at I.4.4.';
+    }
     let note = item.note || '';
     if (!note) return '';
     if (!item.passage && item.hasUnspecified && item.kind === 'parallel') return '';
@@ -75,7 +79,6 @@
     note = note.replace(/A line has no match\./i, 'One line unmatched.');
     note = note.replace(/A few lines have no match\./i, 'Several lines unmatched.');
     note = note.replace(/The matching order of verses differs from the received chapter\./i, 'Verse order differs from the received chapter.');
-    note = note.replace(/The text is given as an alternative placement in the received Bhaviṣya\./i, 'Alternative placement in the received text.');
     note = note.replace(/The same verse occurs at both places in this Purāṇa\./i, 'Same verse also occurs at the other listed location.');
     note = note.replace(/The shared verses are rearranged across the chapters; no single continuous verse sequence is implied\./i, 'Shared verses are distributed across the chapter.');
     note = note.replace(/Multiple shared verses; a complete verse by verse alignment is not given\./i, 'Several shared verses; no complete verse-by-verse alignment.');
@@ -214,7 +217,7 @@
     history.replaceState(null, '', '#' + tile.dataset.section + '.' + tile.dataset.chapter);
   });
 
-  fetch('./bhavisya-evidence.json').then(response => {
+  fetch('./bhavisya-evidence.json', { cache: 'no-store' }).then(response => {
     if (!response.ok) throw new Error('Chapter data could not load');
     return response.json();
   }).then(json => {
