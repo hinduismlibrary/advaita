@@ -37,7 +37,7 @@
     for (let chapter=first;chapter<=last;chapter++) {
       const evidence = byChapter.get(key(section.id,chapter)) || [];
       const marked = evidence.length>0;
-      const gap = evidence.some(x => /(?:absent|no match|do not occur)/i.test(x.note || ''));
+      const gap = evidence.some(x => x.missing === true);
       const status = marked ? `${evidence.length} located ${evidence.length===1?'match':'matches'}` : 'no located entry';
       html += `<button class="tile${marked?' marked':''}${gap?' gap':''}" id="tile-${section.id.replace('.','-')}-${chapter}" type="button" data-section="${section.id}" data-chapter="${chapter}" aria-expanded="false" aria-label="${esc(section.name)}, chapter ${chapter}: ${status}">${chapter}</button>`;
     }
