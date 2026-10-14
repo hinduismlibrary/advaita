@@ -109,7 +109,8 @@
     const passage = uncertain ? '' : 'vv. ' + esc(item.passage);
     const partialUnspecified = !uncertain && item.hasUnspecified;
     const noteText = cleanNote(item);
-    const note = noteText ? '<div class="note">' + esc(noteText) + '</div>' : '';
+    const warning = item.missing || /no match|absent|not found|not located|do not occur|unmatched/i.test(noteText);
+    const note = noteText ? '<div class="note' + (warning ? ' warning' : '') + '">' + esc(noteText) + '</div>' : '';
     let citation;
     if (item.kind === 'quotation') {
       citation = '<span class="kind">Quote</span><span class="citation-text">' +
