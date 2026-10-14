@@ -191,7 +191,7 @@
   }
 
   function isNoCommentaryMarker(value) {
-    return /^\\s*न\\s+(?:(?:कतमेन(?:ापि)?)\\s+)?व्याख्यातम्\\s*[।.]?\\s*$/.test(String(value || ''));
+    return /^\s*न\s+(?:(?:कतमेन(?:ापि)?)\s+)?व्याख्यातम्\s*[।.。]?\s*$/.test(String(value || ''));
   }
 
   function readerVerseRange(targetCanto, targetChapter, startValue, endValue) {
@@ -326,11 +326,11 @@
         const range = readerVerseRange(targetCanto, targetChapter, entry.start, entry.end);
         const generatedPlaceholder = /^(?:contextual literal sense of|generic filler|translation pending|to be translated|placeholder(?:\s+(?:commentary|translation|gloss))?)/i.test(literal);
         const commentatorAttribution = isCommentatorAttribution(literal);
-        const noCommentary = (entry.source_available === false && entry.source_gap !== true) ||
+        const noCommentary = (targetCanto !== 10 && entry.source_available === false && entry.source_gap !== true) ||
           isNoCommentaryMarker(sanskrit) ||
           /^no commentary[.]?$/i.test(literal);
         const sourceGap = entry.source_gap === true ||
-          (entry.source_available === false && !noCommentary);
+          (targetCanto !== 10 && entry.source_available === false && !noCommentary);
         return {
           start: range.start,
           end: range.end,
@@ -573,7 +573,12 @@
     const sridharaSanskritDetails = makeDetails('Śrīdhara Sanskrit', [
       sridharaSanskrit
         ? makeParagraph(sridharaSanskrit, { lang: 'sa-Deva' })
-        : makeParagraph(commentaryStatus === 'source-gap' ? 'Source gap.' : 'No commentary.', { className: 'gita-no-source' })
+        : makeParagraph(
+          commentaryStatus === 'source-gap' ? 'Source gap.' :
+            commentaryStatus === 'no-commentary' ? 'No commentary.' :
+              'Śrīdhara source record unavailable.',
+          { className: 'gita-no-source' }
+        )
     ]);
     if (sridharaSanskrit) {
       const previewLine = sridharaSanskrit.split(/\r?\n/).map((line) => line.trim()).filter(Boolean)[0] || '';

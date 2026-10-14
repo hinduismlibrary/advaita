@@ -212,7 +212,8 @@
     end: Number(entry.end || entry.start),
     pairs: Array.isArray(entry.pairs) ? entry.pairs : entry.word_for_word,
     literal: String(entry.literal_english || '').trim(),
-    sourceGap: Boolean(entry.source_gap)
+    sourceGap: Boolean(entry.source_gap),
+    translationPending: Boolean(entry.translation_pending)
   }))).catch((error) => {
     console.warn('Reviewed Śrīdhara word meanings unavailable:', error);
     return [];
@@ -258,13 +259,25 @@
       section.append(label, paragraph);
       return section;
     }
-    const result = pairsParagraph(Array.isArray(entry.pairs) ? entry.pairs : []);
-    section.append(label, result.empty ? (() => {
+    const pairs = Array.isArray(entry.pairs) ? entry.pairs : [];
+    const result = pairsParagraph(pairs);
+    section.append(label);
+    if (result.empty) {
       const paragraph = document.createElement('p');
       paragraph.className = 'gita-dual-empty';
-      paragraph.textContent = 'No commentary.';
-      return paragraph;
-    })() : result.node);
+      paragraph.textContent = entry.translationPending && !noCommentary(pairs)
+        ? 'Word-for-word gloss pending review.'
+        : 'No commentary.';
+      section.appendChild(paragraph);
+      return section;
+    }
+    section.appendChild(result.node);
+    if (entry.translationPending) {
+      const pending = document.createElement('p');
+      pending.className = 'gita-dual-empty';
+      pending.textContent = 'Word-for-word gloss review pending.';
+      section.appendChild(pending);
+    }
     return section;
   }
 
@@ -298,13 +311,20 @@
         const matching = chapterEntries.filter((candidate) =>
           candidate.start <= bounds[1] && candidate.end >= bounds[0]);
         const explicitKey = canto + ':' + chapter + ':' + bounds[0];
-        if (!matching.length && !explicitNoCommentary.has(explicitKey)) return;
+        if (!matching.length && !explicitNoCommentary.has(explicitKey) && canto !== 10) return;
         const resolved = matching.length === 1 ? matching[0] : matching.length > 1 ? {
           pairs: matching.flatMap((candidate) => Array.isArray(candidate.pairs) ? candidate.pairs : []),
-          literal: matching.map((candidate) => candidate.literal).filter(Boolean).join('\\n\\n')
-        } : {
+          literal: matching.map((candidate) => candidate.literal).filter(Boolean).join('\\n\\n'),
+          sourceGap: matching.some((candidate) => candidate.sourceGap),
+          translationPending: matching.some((candidate) => candidate.translationPending)
+        } : explicitNoCommentary.has(explicitKey) ? {
           pairs: [['न व्याख्यातम्', 'No commentary']],
           literal: 'No commentary'
+        } : {
+          pairs: [],
+          literal: '',
+          sourceGap: false,
+          translationPending: true
         };
         const reveal = details.querySelector('.gita-reveal');
         if (!reveal) return;
