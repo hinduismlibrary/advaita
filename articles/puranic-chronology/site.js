@@ -22,6 +22,27 @@
     return section + '.' + chapter;
   }
 
+  function numericSection(section) {
+    const roman = { I: '1', II: '2', III: '3', IV: '4' };
+    return String(section).split('.').map(part => roman[part] || part).join('.');
+  }
+
+  function numericTextReferences(text) {
+    const roman = { IV: '4', III: '3', II: '2', I: '1' };
+    return String(text ?? '').replace(/\b(IV|III|II|I)(?=\.(?:\d+))/g, value => roman[value]);
+  }
+
+  function bhaviṣyaReference(section, chapter, passage) {
+    const base = numericSection(section) + '.' + chapter;
+    return passage && passage !== 'unspecified' ? base + '.' + normalizeVerseMarkers(passage) : base;
+  }
+
+  function normalizeVerseMarkers(text) {
+    return numericTextReferences(text)
+      .replace(/\bvv\.\s*/gi, 'verses ')
+      .replace(/\bv\.\s*/gi, 'verse ');
+  }
+
   function compactEvidence(found) {
     const groups = new Map();
     found.forEach(item => {
@@ -50,8 +71,8 @@
 
   function cleanNote(item) {
     if (item.author === 'Devaṇṇabhaṭṭa' && item.work === 'Smṛticandrikā' && item.section === 'I') {
-      if (item.chapter === 4) return 'Same passage also appears at I.103.19b–20a.';
-      if (item.chapter === 103) return 'Same passage also appears at I.4.4.';
+      if (item.chapter === 4) return 'Same passage also appears at 1.103.19b–20a.';
+      if (item.chapter === 103) return 'Same passage also appears at 1.4.4.';
     }
     let note = item.note || '';
     if (!note) return '';
@@ -85,7 +106,7 @@
     note = note.replace(/An extensive, variant correspondence; individual verse limits for chs\. 55–57 are not specified\./i, 'Verse limits not specified for chapters 55–57.');
     note = note.replace(/Correspondence noted for both chapters; I\.212 is not aligned verse by verse\./i, 'Verse-by-verse alignment not given for I.212.');
     note = note.replace(/;\s*the verse numbers in the I\.100 line of this entry are indistinct\.?/i, '; I.100 verse number unclear.');
-    note = note.trim();
+    note = numericTextReferences(note).trim();
     if (placementUnresolved && note) note += ' Chapter assignment unresolved.';
     return note;
   }
@@ -93,39 +114,44 @@
   function sourceLocus(item) {
     const locus = item.source_locus || '';
     const exact = locus.match(/^ch\.\s*(\d+),\s*vv\.\s*(.+)$/i);
-    if (exact) return 'ch. ' + exact[1] + ', vv. ' + exact[2];
-    const chapter = locus.match(/^ch\.\s*(\d+),\s*except\s+(.+)$/i);
-    if (chapter) return 'ch. ' + chapter[1] + ' (except ' + chapter[2] + ')';
+    if (exact) return exact[1] + '.' + normalizeVerseMarkers(exact[2]);
+    const single = locus.match(/^ch\.\s*(\d+),\s*(?:v\.|verse\s+)(.+)$/i);
+    if (single) return single[1] + '.' + normalizeVerseMarkers(single[2]);
+    const except = locus.match(/^ch\.\s*(\d+),\s*except\s+(.+)$/i);
+    if (except) return except[1] + ' (except ' + normalizeVerseMarkers(except[2]) + ')';
+    const chapter = locus.match(/^ch\.\s*(\d+)$/i);
+    if (chapter) return chapter[1] + ' (verse range unspecified)';
     const chapters = locus.match(/^chs\.\s*(.+)$/i);
-    if (chapters) return 'chs. ' + chapters[1];
-    return locus;
+    if (chapters) return 'chapters ' + normalizeVerseMarkers(chapters[1]) + ' (verse ranges unspecified)';
+    return normalizeVerseMarkers(locus);
   }
 
   function evidenceRow(item, section, chapter) {
-    const source = sourceLocus(item);
+    const source = item.kind === 'parallel' ? sourceLocus(item) : '';
     const work = '<em>' + esc(item.work) + '</em>';
     const witness = item.author ? esc(item.author) + ', ' + work : work;
     const label = item.label ? ' <span class="citation-as">(cited as ' + esc(item.label.replace(/^as /, '')) + ')</span>' : '';
-    const locus = item.source_locus && item.kind === 'quotation'
-      ? ' <span class="source-locus">' + esc(item.source_locus) + '</span>' : '';
     const uncertain = !item.passage;
-    const passage = uncertain ? '' : 'vv. ' + esc(item.passage);
     const partialUnspecified = !uncertain && item.hasUnspecified;
+    const bhaviṣya = 'Bhaviṣya Purāṇa ' + esc(bhaviṣyaReference(section, chapter, item.passage)) +
+      (uncertain ? ' (verse range unspecified)' : '');
     const noteText = cleanNote(item);
     const warning = item.missing || /no match|absent|not found|not located|do not|unmatched/i.test(noteText);
     const note = noteText ? '<div class="note' + (warning ? ' warning' : '') + '">' + esc(noteText) + '</div>' : '';
     let citation;
     if (item.kind === 'quotation') {
       citation = '<span class="kind">Quote</span><span class="citation-text">' +
-        (uncertain ? 'Bhaviṣya ' + esc(section) + '.' + chapter + ' (verses unspecified)' : passage) +
-        ' <span class="relation">→</span> ' + witness + locus + label + '</span>';
-    } else if (uncertain) {
-      citation = '<span class="kind">Chapter link</span><span class="citation-text">' + work + ' ' + esc(source) +
-        ' <span class="citation-as">(corresponding verse ranges not specified)</span></span>';
+        bhaviṣya + ' <span class="relation">→</span> ' + witness + label + '</span>';
     } else {
-      citation = '<span class="kind">Parallel</span><span class="citation-text">' + passage +
-        ' <span class="relation">↔</span> ' + work + (source ? ' ' + esc(source) : '') + label +
-        (partialUnspecified ? ' <span class="citation-as">(other verse ranges unspecified)</span>' : '') + '</span>';
+      const sourceLocusText = source
+        ? (item.work === 'Commentary on Manusmṛti' && source.startsWith('Manusmṛti ')
+          ? ' (' + esc(source) + ')'
+          : ' ' + esc(source))
+        : (uncertain ? ' (location unspecified)' : '');
+      citation = '<span class="kind">Parallel</span><span class="citation-text">' +
+        bhaviṣya + ' <span class="relation">↔</span> ' + witness + sourceLocusText + label +
+        (partialUnspecified ? ' <span class="citation-as">(other verse ranges unspecified)</span>' : '') +
+        '</span>';
     }
     return '<li class="evidence-entry"><div class="citation">' + citation + '</div>' + note + '</li>';
   }
@@ -137,7 +163,7 @@
     const empty = found.length
       ? ''
       : '<p class="no-entry">No located quotation or parallel.</p>';
-    return '<div class="detail-head"><h3>Bhaviṣya Purāṇa ' + esc(section) + '.' + chapter +
+    return '<div class="detail-head"><h3>Bhaviṣya Purāṇa ' + esc(numericSection(section)) + '.' + chapter +
       '</h3><span>' + esc(name) + '</span></div>' +
       (found.length ? '<ul class="evidence-list">' + rows + '</ul>' : empty);
   }
@@ -158,7 +184,7 @@
         esc(section.name) + ', chapter ' + chapter + ': ' + label + '">' + chapter + '</button>';
     }
     const label = firstInSection
-      ? '<div class="row-section"><strong>' + esc(section.id) + '</strong><span>' +
+      ? '<div class="row-section"><strong>' + esc(numericSection(section.id)) + '</strong><span>' +
         esc(sectionName[section.id] || section.name) + '</span></div>'
       : '<div class="row-section continuation" aria-hidden="true"></div>';
     return '<div class="chapter-row">' + label + '<div class="row-content"><div class="cells">' + tiles +
@@ -176,7 +202,7 @@
   function unplaced() {
     if (!data.unplaced?.length) return '';
     const items = data.unplaced.map(item =>
-      '<li><em>' + esc(item.work) + '</em> · ' + esc(item.detail) + '</li>'
+      '<li><em>' + esc(item.work) + '</em> · ' + esc(numericTextReferences(item.detail)) + '</li>'
     ).join('');
     return '<details class="unplaced"><summary>Passages without a chapter match · ' +
       data.unplaced.length + '</summary><ul class="unplaced-list">' + items + '</ul></details>';
