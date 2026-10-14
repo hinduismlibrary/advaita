@@ -1,4 +1,4 @@
-/* Shared Chapter 1 reader treatment for all Viṣṇu Purāṇa chapter routes. */
+/* Shared reader treatment for all Viṣṇu Purāṇa chapter routes. */
 .gita-page .gita-controls,
 .gita-page .gita-controls > .gita-details,
 .gita-page .gita-details > .gita-reveal,
@@ -52,9 +52,10 @@
   }
 }
 
-/* Keep source notes hidden on other routes; Book 1 exposes its edition and witness links. */
+/* Keep source notes hidden on other routes; Books 1 and 2 expose their edition notes. */
 .gita-page .gita-source-note{display:none!important;}
-.gita-page.vp-book-1 .gita-source-note{
+.gita-page.vp-book-1 .gita-source-note,
+.gita-page.vp-book-2 .gita-source-note{
   display:block!important;
   box-sizing:border-box!important;
   width:100%!important;
@@ -70,11 +71,15 @@
   line-height:1.55!important;
   overflow-wrap:anywhere!important;
 }
-.gita-page.vp-book-1 .gita-source-note strong{color:#3c362e!important;}
-.gita-page.vp-book-1 .gita-source-note p{margin:6px 0 0!important;}
-.gita-page.vp-book-1 .gita-source-note a{color:#675339!important;overflow-wrap:anywhere!important;}
+.gita-page.vp-book-1 .gita-source-note strong,
+.gita-page.vp-book-2 .gita-source-note strong{color:#3c362e!important;}
+.gita-page.vp-book-1 .gita-source-note p,
+.gita-page.vp-book-2 .gita-source-note p{margin:6px 0 0!important;}
+.gita-page.vp-book-1 .gita-source-note a,
+.gita-page.vp-book-2 .gita-source-note a{color:#675339!important;overflow-wrap:anywhere!important;}
 @media(max-width:760px){
-  .gita-page.vp-book-1 .gita-source-note{
+  .gita-page.vp-book-1 .gita-source-note,
+  .gita-page.vp-book-2 .gita-source-note{
     font-size:12px!important;
     line-height:1.48!important;
     padding:10px 12px!important;
