@@ -70,7 +70,10 @@ header { display: flex; align-items: end; justify-content: space-between; gap: 2
 .evidence-list { margin: 0; padding: 0; list-style: none; }
 .evidence-entry { padding: 2px 0; }
 .citation { font-size: 13px; line-height: 1.4; }
-.citation-ref { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.citation-ref { font-variant-numeric: tabular-nums; font-weight: 600; }
+.kind-label { font-size: 9px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+.kind-label.quoted { color: var(--green-ink); }
+.kind-label.parallel-kind { color: var(--parallel-ink); }
 .target em { font: italic 14px/1.2 var(--serif); }
 .relation { padding: 0 3px; color: var(--muted); }
 .citation-as { color: var(--muted); font-size: 10px; }
@@ -110,7 +113,7 @@ footer p { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
-<script src="./site.js?v=20261014-4" defer></script>
+<script src="./site.js?v=20261014-5" defer></script>
 </head>
 <body>
 <div class="page">
@@ -120,14 +123,14 @@ footer p { margin: 0; }
     <p class="stat" id="stat">585 chapters</p>
   </header>
   <div class="legend" aria-label="Map key">
-    <span><i class="swatch quote"></i>Cited in another text</span>
-    <span><i class="swatch parallel"></i>Textual parallel</span>
+    <span><i class="swatch quote"></i>Bhaviṣya quoted in another work</span>
+    <span><i class="swatch parallel"></i>Parallel in another Purāṇa</span>
     <span><i class="swatch both"></i>Both</span>
     <span><i class="swatch"></i>No located reference</span>
-    <span><i class="swatch gap"></i>Some cited lines unmatched</span>
+    <span><i class="swatch gap"></i>Some quoted lines unmatched</span>
   </div>
   <main id="map" aria-label="Bhaviṣya Purāṇa chapter heatmap"><p>Loading chapters…</p></main>
-  <footer><p>Click a chapter for its references. 1.45.42 = section 1, chapter 45, verse 42; divided sections add a part number.</p></footer>
+  <footer><p>Click a chapter for exact Bhaviṣya verse references and named works. 1.45.42 = section 1, chapter 45, verse 42; numbering restarts in each section.</p></footer>
 </div>
 </body>
 </html>
