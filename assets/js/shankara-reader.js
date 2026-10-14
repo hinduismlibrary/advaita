@@ -107,7 +107,7 @@ function contentsHTML(units,id){
  }).join("");
 }
 
-const TREATISE_READERS=new Set(["upadesha-sahasri","vedantasara","naishkarmya-siddhi","jivanmukti-viveka","brahma-siddhi"]);
+const TREATISE_READERS=new Set(["upadesha-sahasri","vedantasara","naishkarmya-siddhi","jivanmukti-viveka","brahma-siddhi","panchadasi","svsss","mandukya-karika"]);
 function jivanGroup(unit){
  const match=String(unit.number||unit.label||"").match(/(\d+)/),page=match?Number(match[1]):0;
  if(page<=9)return "Front matter · Pages 1–9";
@@ -135,7 +135,16 @@ function treatiseGroups(units,id){
   let title;
   if(id==="jivanmukti-viveka")title=jivanGroup(unit);
   else if(id==="vedantasara")title=vedantasaraGroup(index);
-  else title=unit.sectionTitle||("Section "+(unit.chapter||""));
+  else if(id==="panchadasi"){
+   const chapter=chapterOf(unit,id);
+   title="Chapter "+chapter+(PANCHADASI_CHAPTERS[chapter]?": "+PANCHADASI_CHAPTERS[chapter]:"");
+  }else if(id==="svsss"){
+   const chapter=chapterOf(unit,id);
+   title=SVSSS_SECTIONS[chapter]||unit.sectionTitle||("Part "+chapter);
+  }else if(id==="mandukya-karika"){
+   const chapter=chapterOf(unit,id);
+   title="Chapter "+chapter+": "+(MANDUKYA_CHAPTERS[chapter]||unit.sectionTitle||"");
+  }else title=unit.sectionTitle||("Section "+(unit.chapter||""));
   let group=groups[groups.length-1];
   if(!group||group.title!==title){group={title,items:[],anchor:"treatise-"+id+"-section-"+(groups.length+1)};groups.push(group)}
   group.items.push({unit,index});
@@ -149,6 +158,18 @@ function treatiseContentsHTML(group,englishOnly){
  '</ol></div>';
 }
 function breakLines(value){return esc(value).replace(/\r?\n/g,"<br/>")}
+function readerCoverageNote(data){
+ if(data.englishOnly)return "";
+ let note=data.wordGlossCoverage&&data.wordGlossCoverage.note;
+ if(!note&&data.id==="panchadasi")note="Word-for-word glosses are available for Chapter 1 only; the source edition does not include separate glosses for Chapters 2–15.";
+ if(!note&&data.translationAvailable===false)note="The available source transcription is in Sanskrit only; no English translation or separate word-for-word gloss is included.";
+ return note?'<p class="shankara-reader-coverage" role="note">'+esc(note)+'</p>':"";
+}
+function treatiseNoun(id){
+ if(id==="panchadasi"||id==="mandukya-karika"||id==="naishkarmya-siddhi")return "chapter";
+ if(id==="svsss")return "part";
+ return "section";
+}
 function treatiseUnitHTML(unit,index,englishOnly){
  const label=unit.label||("Passage "+(index+1)),number=unit.number||String(index+1);
  if(englishOnly){
@@ -159,11 +180,10 @@ function treatiseUnitHTML(unit,index,englishOnly){
  const transliteration=unit.iast||iast(deva);
  const isLong=deva.length>260||/\n/.test(deva);
  const classes="gita-sanskrit sa-text"+(isLong?" treatise-long-text":"");
- const wordGloss=Array.isArray(unit.gloss)&&unit.gloss.length
-  ?'<div class="gita-reveal"><div class="gita-word-list">'+glossHTML(unit.gloss)+'</div></div>'
-  :'<div class="gita-reveal"><p>This source edition does not include a separate word-for-word gloss.</p></div>';
+ const gloss=Array.isArray(unit.gloss)?unit.gloss:[];
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
  const translation=unit.translation?'<p class="gita-translation">'+esc(unit.translation)+'</p>':"";
- return '<article class="gita-verse shankara-verse'+(isLong?" treatise-long-unit":"")+'" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/><div class="'+classes+'" lang="sa-Deva" data-iast="'+esc(unit.iast||"")+'">'+breakLines(deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details><details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary>'+wordGloss+'</details></div></article>';
+ return '<article class="gita-verse shankara-verse'+(isLong?" treatise-long-unit":"")+'" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/><div class="'+classes+'" lang="sa-Deva" data-iast="'+esc(unit.iast||"")+'">'+breakLines(deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
 }
 function treatiseSubtitle(data,id){
  if(id==="jivanmukti-viveka")return "1897 English translation · 165 printed-page units";
@@ -173,36 +193,40 @@ function treatiseSubtitle(data,id){
  return "Sanskrit text · 231 source-marked passages in the available transcription";
 }
 function treatiseNavigationHTML(item,id,groups,sectionIndex){
- const noun=id==="naishkarmya-siddhi"?"chapter":"section";
+ const noun=treatiseNoun(id),label=noun.charAt(0).toUpperCase()+noun.slice(1);
  const urlFor=index=>item.path+"?section="+(index+1);
  const previous=sectionIndex>0?'<a class="gita-nav-prev" rel="prev" href="'+esc(urlFor(sectionIndex-1))+'">← Previous '+noun+'</a>':"";
  const next=sectionIndex<groups.length-1?'<a class="gita-nav-next" rel="next" href="'+esc(urlFor(sectionIndex+1))+'">Next '+noun+' →</a>':"";
  const options=groups.map((group,index)=>'<option value="'+esc(urlFor(index))+'"'+(index===sectionIndex?' selected':'')+'>'+(index+1)+'. '+esc(group.title)+'</option>').join("");
- return '<nav class="gita-chapter-nav treatise-section-nav" aria-label="Section navigation"><a class="gita-nav-all" href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a>'+previous+
- '<label class="treatise-section-picker"><span class="treatise-visually-hidden">Choose a section</span><select data-treatise-section aria-label="Choose a section">'+options+'</select></label>'+next+'</nav>';
+ return '<nav class="gita-chapter-nav treatise-section-nav" aria-label="'+label+' navigation"><a class="gita-nav-all" href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a>'+previous+
+ '<label class="treatise-section-picker"><span class="treatise-visually-hidden">Choose a '+noun+'</span><select data-treatise-section aria-label="Choose a '+noun+'">'+options+'</select></label>'+next+'</nav>';
 }
 function treatiseReaderHTML(data,item,id,sectionIndex){
  const groups=treatiseGroups(data.units,id);
  const group=groups[sectionIndex]||groups[0];
  const byline=id==="jivanmukti-viveka"?'By '+esc(cleanAuthor(item.author))+' · English translation by Manilal Nabhubhai Dvivedi':'By '+esc(cleanAuthor(item.author));
  const controls=data.englishOnly?"":'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>';
- const position='Section '+(sectionIndex+1)+' of '+groups.length;
+ const noun=treatiseNoun(id),position=noun.charAt(0).toUpperCase()+noun.slice(1)+' '+(sectionIndex+1)+' of '+groups.length;
  const nav=treatiseNavigationHTML(item,id,groups,sectionIndex);
  const entries=group.items.map(({unit,index})=>treatiseUnitHTML(unit,index,data.englishOnly)).join("");
  const section='<section class="treatise-reader-section" aria-label="'+esc(group.title)+'">'+entries+'</section>';
- return '<header class="gita-hero"><p class="eyebrow">Advaita Treatises</p><h1>'+esc(item.title)+'</h1><p class="subtitle">'+esc(group.title)+'</p><p class="treatise-section-count">'+position+'</p><p class="shankara-author">'+byline+'</p>'+aboutHTML(item)+controls+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header>'+
+ return '<header class="gita-hero"><p class="eyebrow">Advaita Treatises</p><h1>'+esc(item.title)+'</h1><p class="subtitle">'+esc(group.title)+'</p><p class="treatise-section-count">'+position+'</p><p class="shankara-author">'+byline+'</p>'+aboutHTML(item)+readerCoverageNote(data)+controls+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header>'+
  nav+treatiseContentsHTML(group,data.englishOnly)+section+nav;
 }
 function enhanceFallback(root,item){
  const author=root.querySelector(".shankara-author");
  if(author&&item.author)author.textContent="By "+cleanAuthor(item.author);
  const hero=root.querySelector(".gita-hero"),controls=hero?.querySelector(".script-controls");
+ if(hero&&!hero.querySelector(".eyebrow"))hero.insertAdjacentHTML("afterbegin",'<p class="eyebrow">Advaita Treatises</p>');
  if(hero&&!hero.querySelector(".shankara-about"))controls?.insertAdjacentHTML("beforebegin",aboutHTML(item));
+ root.querySelectorAll(".shankara-unit-label").forEach(label=>label.remove());
+ root.querySelectorAll(".shankara-word-gloss").forEach(details=>{if(!details.querySelector(".gita-word-row"))details.remove()});
  const nav=root.querySelector(".gita-contents");
  if(nav&&!nav.querySelector(".shankara-chapter")){
   const links=[...nav.querySelectorAll("li a")].map(a=>({id:(a.getAttribute("href")||"").replace(/^#/,""),label:a.textContent.trim()})).filter(x=>x.id);
   if(links.length)nav.innerHTML='<h2>Contents</h2>'+contentsHTML(links,item.id);
  }
+ if(!root.querySelector(".shankara-work-nav"))root.insertAdjacentHTML("beforeend",navHTML(item.id));
 }
 const VOWELS={"अ":"a","आ":"ā","इ":"i","ई":"ī","उ":"u","ऊ":"ū","ऋ":"ṛ","ॠ":"ṝ","ऌ":"ḷ","ॡ":"ḹ","ए":"e","ऐ":"ai","ओ":"o","औ":"au"};
 const SIGNS={"ा":"ā","ि":"i","ी":"ī","ु":"u","ू":"ū","ृ":"ṛ","ॄ":"ṝ","ॢ":"ḷ","ॣ":"ḹ","े":"e","ै":"ai","ो":"o","ौ":"au"};
@@ -238,14 +262,13 @@ function unitHTML(u,index,englishOnly,translationAvailable){
  const label=u.label||("Verse "+(index+1));
  if(englishOnly){
   const paragraphs=String(u.translation||"").split(/\n{2,}/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\n/g," "))+'</p>').join("");
-  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(u.id)+'"><p class="shankara-unit-label">'+esc(label)+'</p><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/>'+paragraphs+'</article>';
+  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(u.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/>'+paragraphs+'</article>';
  }
  const transliteration=u.iast||iast(u.deva);
- const wordGloss=Array.isArray(u.gloss)&&u.gloss.length
-  ?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(u.gloss)+'</div></div></details>'
-  :translationAvailable===false?"":'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><p class="shankara-gloss-unavailable">No word-for-word gloss is included for this entry.</p></div></details>';
+ const gloss=Array.isArray(u.gloss)?u.gloss:[];
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
  const translation=u.translation?'<p class="gita-translation">'+esc(u.translation)+'</p>':"";
- return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'"><p class="shankara-unit-label">'+esc(label)+'</p><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva">'+esc(u.deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
+ return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva">'+esc(u.deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
 }
 function navHTML(id){
  const i=WORKS.findIndex(w=>w.id===id),prev=WORKS[i-1],next=WORKS[i+1];
@@ -272,15 +295,28 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
+const READER_DATA_VERSION="reader-refresh-20261014a";
+function readerErrorHTML(item,fallback){
+ const retry=esc(location.pathname+location.search);
+ if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
+ return '<header class="gita-hero"><p class="eyebrow">Advaita Treatises</p><h1>'+esc(item.title)+'</h1><p class="shankara-reader-error" role="alert">The locally stored text could not be loaded. Check the connection and reload this page. <a href="'+retry+'">Reload this text</a></p><p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p></header>';
+}
 async function start(root){
  const id=root.dataset.work,item=WORKS.find(w=>w.id===id);
  if(!item)return;
+ const hasStaticText=Boolean(root.querySelector(".gita-verse,.shankara-verse"));
  root.setAttribute("aria-busy","true");
  bindScript(root);
+ if(!hasStaticText){
+  const hero=root.querySelector(".gita-hero");
+  const status='<p class="gita-loading shankara-loading-status" role="status" aria-live="polite">Loading the complete text stored on this site…</p>';
+  if(!root.querySelector(".shankara-loading-status")){if(hero)hero.insertAdjacentHTML("afterend",status);else root.insertAdjacentHTML("afterbegin",status)}
+ }
  try{
   const readerScript=Array.from(document.scripts).find(s=>s.src&&/\/assets\/js\/shankara-reader\.js(?:\?|$)/.test(s.src));
-  const dataUrl=readerScript?new URL("../data/shankara/"+encodeURIComponent(id)+".json",readerScript.src).href:"/advaita/assets/data/shankara/"+encodeURIComponent(id)+".json";
-  const res=await fetch(dataUrl);
+  const dataUrl=readerScript?new URL("../data/shankara/"+encodeURIComponent(id)+".json",readerScript.src):new URL("/advaita/assets/data/shankara/"+encodeURIComponent(id)+".json",location.origin);
+  dataUrl.searchParams.set("v",READER_DATA_VERSION);
+  const res=await fetch(dataUrl.href,{cache:"no-store"});
   if(!res.ok)throw new Error("Work data unavailable");
   const data=await res.json();
   if(!complete(data)||data.id!==id)throw new Error("Incomplete text data");
@@ -291,7 +327,7 @@ async function start(root){
    root.innerHTML=treatiseReaderHTML(data,item,id,sectionIndex);
   }else{
    document.title=item.title+" — Advaita Treatises — Viveka Dṛṣṭi";
-   root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+(data.englishOnly?'':'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>')+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map((u,i)=>unitHTML(u,i,data.englishOnly,data.translationAvailable)).join("")+navHTML(id)+'</div></div>';
+   root.innerHTML='<div class="shankara-reading-grid"><header class="gita-hero"><p class="eyebrow">Advaita Treatises</p><h1>'+esc(data.title)+'</h1>'+(item.author?'<p class="shankara-author">By '+esc(cleanAuthor(item.author))+'</p>':'')+aboutHTML(item)+readerCoverageNote(data)+(data.englishOnly?'':'<div class="script-controls" role="group" aria-label="Sanskrit script"><button type="button" data-script="deva" aria-pressed="true">देवनागरी</button><button type="button" data-script="iast" aria-pressed="false">IAST</button></div>')+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita Treatises</a></p></header><nav class="gita-contents" aria-label="Contents"><h2>Contents</h2>'+contentsHTML(data.units,id)+'</nav><div class="shankara-unit-column">'+data.units.map((u,i)=>unitHTML(u,i,data.englishOnly,data.translationAvailable)).join("")+navHTML(id)+'</div></div>';
   }
   root.setAttribute("aria-busy","false");
   delete root.dataset.readerFallback;
@@ -300,7 +336,14 @@ async function start(root){
  }catch(err){
   root.setAttribute("aria-busy","false");
   root.dataset.readerFallback="true";
-  enhanceFallback(root,item);
+  if(hasStaticText){
+   const hero=root.querySelector(".gita-hero");
+   if(hero&&!hero.querySelector(".eyebrow"))hero.insertAdjacentHTML("afterbegin",'<p class="eyebrow">Advaita Treatises</p>');
+   root.querySelector(".shankara-loading-status")?.remove();
+   if(hero)hero.insertAdjacentHTML("beforeend",readerErrorHTML(item,true));
+   else root.insertAdjacentHTML("afterbegin",readerErrorHTML(item,true));
+   enhanceFallback(root,item);
+  }else root.innerHTML=readerErrorHTML(item,false);
   console.error(err);
  }
 }

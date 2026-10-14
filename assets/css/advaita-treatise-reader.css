@@ -46,3 +46,25 @@
  .treatise-reader-page .treatise-long-text{font-size:14px!important;line-height:1.62!important}
  .treatise-reader-page .shankara-english-unit .gita-translation{font-size:15px!important;line-height:1.58!important}
 }
+
+
+/* Local reader repair: bound every text column and preserve natural wrapping on narrow screens. */
+.treatise-reader-page .shankara-content,.treatise-reader-page .shankara-reading-grid,
+.treatise-reader-page .shankara-unit-column,.treatise-reader-page .gita-hero,
+.treatise-reader-page .gita-contents,.treatise-reader-page .gita-verse,
+.treatise-reader-page .gita-controls,.treatise-reader-page .gita-reveal,
+.treatise-reader-page .gita-word-list{box-sizing:border-box;min-width:0;max-width:100%}
+.treatise-reader-page .gita-sanskrit,.treatise-reader-page .sa-text,
+.treatise-reader-page .shankara-iast,.treatise-reader-page .gita-translation,
+.treatise-reader-page .gita-word-row,.treatise-reader-page .gita-word-source,
+.treatise-reader-page .gita-word-dev,.treatise-reader-page .gita-word-iast,
+.treatise-reader-page .gita-word-gloss{
+ max-width:100%;white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:break-word
+}
+.treatise-reader-page .shankara-reader-coverage{max-width:840px;margin:10px auto;padding:9px 12px;border:1px solid #d9e6e2;border-radius:8px;background:#f6faf8;color:#46534d;font-size:14px;line-height:1.55;text-align:left}
+.treatise-reader-page .shankara-reader-error{max-width:840px;margin:10px auto;padding:10px 12px;border:1px solid #e2c9b9;border-radius:8px;background:#fff9f5;color:#60483b;font-size:14px;line-height:1.55;text-align:left}
+.treatise-reader-page .shankara-reader-error a{color:#2f6e66;font-weight:700;text-decoration:underline}
+@media(max-width:700px){
+ .treatise-reader-page .shankara-reading-grid{grid-template-columns:minmax(0,1fr)}
+ .treatise-reader-page .gita-sanskrit,.treatise-reader-page .sa-text{font-size:18px!important;line-height:1.62!important}
+}

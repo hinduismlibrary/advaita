@@ -171,3 +171,31 @@
   font-size:15px!important;line-height:1.58!important
  }
 }
+
+
+/* Local reader repair: keep long Sanskrit, IAST, translation, and gloss text inside the reading column. */
+.shankara-content,.shankara-content *{box-sizing:border-box}
+.shankara-content,.shankara-content .shankara-reading-grid,.shankara-content .shankara-unit-column,
+.shankara-content .gita-hero,.shankara-content .gita-contents,.shankara-content .gita-verse,
+.shankara-content .gita-controls,.shankara-content .gita-reveal,.shankara-content .gita-word-list{
+ min-width:0;max-width:100%
+}
+.shankara-content .gita-sanskrit,.shankara-content .sa-text,.shankara-content .shankara-iast,
+.shankara-content .gita-translation,.shankara-content .gita-word-row,.shankara-content .gita-word-source,
+.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss,
+.shankara-content .treatise-section-picker select{
+ max-width:100%;white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:break-word
+}
+.shankara-content .gita-loading,.shankara-content .shankara-reader-error,.shankara-content .shankara-reader-coverage{
+ max-width:840px;margin:10px auto;padding:9px 12px;border:1px solid #d9e6e2;border-radius:8px;
+ background:#f6faf8;color:#46534d;font-size:14px;line-height:1.55;text-align:left
+}
+.shankara-content .shankara-reader-error{border-color:#e2c9b9;background:#fff9f5;color:#60483b}
+.shankara-content .shankara-reader-error a{color:#2f6e66;font-weight:700;text-decoration:underline}
+@media(max-width:700px){
+ .shankara-content .shankara-reading-grid{grid-template-columns:minmax(0,1fr)}
+ .shankara-content .gita-sanskrit,.shankara-content .sa-text{font-size:18px!important;line-height:1.62!important}
+ .shankara-content .gita-translation,.shankara-content .shankara-iast,.shankara-content .gita-word-row,
+ .shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,
+ .shankara-content .gita-word-gloss{font-size:15px!important;line-height:1.58!important}
+}
