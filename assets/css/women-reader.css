@@ -274,3 +274,97 @@
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
+
+
+/* Pair each Sanskrit quotation with its English text under one quiet rule. */
+.document-paged-page.women-reader .document-content .women-scripture-pair{
+  margin:17px 0 27px;
+  padding:1px 0 1px 16px;
+  border-left:2px solid var(--quote-rule);
+}
+.document-paged-page.women-reader .document-content .women-scripture-pair>details.sanskrit-reveal{
+  margin:0 0 8px;
+}
+.document-paged-page.women-reader .document-content .women-scripture-pair>details.sanskrit-reveal [lang^="sa"],
+.document-paged-page.women-reader .document-content .women-scripture-pair>p.sanskrit-text{
+  margin:8px 0 12px;
+  padding:0;
+  border:0;
+  line-height:1.82;
+}
+.document-paged-page.women-reader .document-content .women-scripture-pair>blockquote.translation,
+.document-paged-page.women-reader .document-content .women-scripture-pair>p.translation,
+.document-paged-page.women-reader .document-content .women-scripture-pair>p.women-scripture-translation,
+.document-paged-page.women-reader .document-content .women-scripture-pair>p.women-colophon-translation{
+  margin:0!important;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--quote);
+  font-size:17.5px;
+  line-height:1.62;
+  font-style:normal;
+}
+.document-paged-page.women-reader .document-content .women-scripture-pair>ol.women-name-list{
+  margin-top:4px;
+  margin-bottom:0;
+}
+.document-paged-page.women-reader .document-content .women-opening-heading:after{
+  display:none;
+}
+.document-paged-page.women-reader .document-content .women-colophon{
+  margin:18px auto 0;
+  padding:0 0 8px;
+  border-top:0;
+  text-align:center;
+}
+.document-paged-page.women-reader .document-content .women-colophon-source-title{
+  margin:0 0 24px;
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:17px;
+  line-height:1.6;
+  text-align:center;
+}
+.document-paged-page.women-reader .document-content .women-colophon-verse{
+  margin:20px 0 26px;
+  text-align:left;
+}
+.document-paged-page.women-reader .document-content .women-colophon-verse>.sanskrit-text{
+  text-align:left;
+}
+.document-paged-page.women-reader .document-content .women-colophon-finish{
+  margin-top:34px;
+  text-align:left;
+}
+.document-paged-page.women-reader .document-content .women-colophon-finish .women-closing-line{
+  margin:3px 0 10px;
+  text-align:left;
+}
+.document-paged-page.women-reader .document-content .women-om{
+  margin:18px 0 8px;
+  text-align:center;
+}
+@media(max-width:620px){
+  .document-paged-page.women-reader .document-content .women-scripture-pair{
+    margin:15px 0 23px;
+    padding-left:12px;
+  }
+  .document-paged-page.women-reader .document-content .women-scripture-pair>blockquote.translation,
+  .document-paged-page.women-reader .document-content .women-scripture-pair>p.translation,
+  .document-paged-page.women-reader .document-content .women-scripture-pair>p.women-scripture-translation,
+  .document-paged-page.women-reader .document-content .women-scripture-pair>p.women-colophon-translation{
+    font-size:16.2px;
+    line-height:1.68;
+  }
+  .document-paged-page.women-reader .document-content .women-colophon-source-title{
+    margin-bottom:20px;
+    font-size:16px;
+  }
+  .document-paged-page.women-reader .document-content .women-colophon-verse{
+    margin:17px 0 22px;
+  }
+  .document-paged-page.women-reader .document-content .women-colophon-finish{
+    margin-top:28px;
+  }
+}
