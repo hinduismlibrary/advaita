@@ -47,7 +47,9 @@
     const groups = new Map();
     found.forEach(item => {
       const groupKey = JSON.stringify([
-        item.kind, item.work, item.author || '', item.source_locus || '', item.label || ''
+        item.kind, item.work, item.author || '',
+        item.kind === 'quotation' ? '' : item.source_locus || '',
+        item.label || ''
       ]);
       let group = groups.get(groupKey);
       if (!group) {
@@ -60,7 +62,7 @@
     });
     return [...groups.values()].map(group => ({
       ...group,
-      passage: group.passages.filter(passage => passage !== 'unspecified').join(', '),
+      passage: group.passages.filter(passage => passage !== 'unspecified').join('; '),
       hasUnspecified: group.passages.includes('unspecified'),
       note: group.notes.join(' ')
     })).sort((a, b) => {
@@ -98,7 +100,7 @@
     note = note.replace(/A further line has no match\./i, 'One further line unmatched.');
     note = note.replace(/An additional line has no match\./i, 'One additional line unmatched.');
     note = note.replace(/A line has no match\./i, 'One line unmatched.');
-    note = note.replace(/A few lines have no match\./i, 'Several lines unmatched.');
+    note = note.replace(/A few lines have no match\./i, 'Some quoted lines lack a match; their verse numbers are not specified.');
     note = note.replace(/The matching order of verses differs from the received chapter\./i, 'Verse order differs from the received chapter.');
     note = note.replace(/The same verse occurs at both places in this Purāṇa\./i, 'Same verse also occurs at the other listed location.');
     note = note.replace(/The shared verses are rearranged across the chapters; no single continuous verse sequence is implied\./i, 'Shared verses are distributed across the chapter.');
@@ -113,78 +115,94 @@
 
   function sourceLocus(item) {
     const locus = item.source_locus || '';
-    const exact = locus.match(/^ch\.\s*(\d+),\s*vv\.\s*(.+)$/i);
-    if (exact) return exact[1] + '.' + normalizeVerseMarkers(exact[2]);
-    const single = locus.match(/^ch\.\s*(\d+),\s*(?:v\.|verse\s+)(.+)$/i);
-    if (single) return single[1] + '.' + normalizeVerseMarkers(single[2]);
-    const except = locus.match(/^ch\.\s*(\d+),\s*except\s+(.+)$/i);
-    if (except) return except[1] + ' (except ' + normalizeVerseMarkers(except[2]) + ')';
-    const chapter = locus.match(/^ch\.\s*(\d+)$/i);
-    if (chapter) return chapter[1] + ' (verse range unspecified)';
-    const chapters = locus.match(/^chs\.\s*(.+)$/i);
-    if (chapters) return 'chapters ' + normalizeVerseMarkers(chapters[1]) + ' (verse ranges unspecified)';
-    return normalizeVerseMarkers(locus);
+    let match = locus.match(/^ch\.\s*(\d+),\s*vv\.\s*(.+)$/i);
+    if (match) return { text: match[1] + '.' + normalizeVerseMarkers(match[2]), qualifier: '' };
+    match = locus.match(/^ch\.\s*(\d+),\s*(?:v\.|verse\s+)(.+)$/i);
+    if (match) return { text: match[1] + '.' + normalizeVerseMarkers(match[2]), qualifier: '' };
+    match = locus.match(/^ch\.\s*(\d+),\s*except\s+(.+)$/i);
+    if (match) return {
+      text: match[1] + ' (except ' + normalizeVerseMarkers(match[2]).replace(/\bverses\s*/gi, '') + ')',
+      qualifier: 'verse pairs are not listed'
+    };
+    match = locus.match(/^ch\.\s*(\d+)$/i);
+    if (match) return { text: 'chapter ' + match[1], qualifier: 'verse numbers are not specified' };
+    match = locus.match(/^chs\.\s*(.+)$/i);
+    if (match) return { text: 'chapters ' + normalizeVerseMarkers(match[1]), qualifier: 'verse numbers are not specified' };
+    return { text: normalizeVerseMarkers(locus), qualifier: '' };
   }
 
   function evidenceRow(item, section, chapter) {
-    const source = item.kind === 'parallel' ? sourceLocus(item) : '';
     const work = '<em>' + esc(item.work) + '</em>';
     const witness = item.author ? esc(item.author) + ', ' + work : work;
-    const label = item.label ? ' <span class="citation-as">(cited as ' + esc(item.label.replace(/^as /, '')) + ')</span>' : '';
-    const uncertain = !item.passage;
-    const partialUnspecified = !uncertain && item.hasUnspecified;
-    const bhaviṣya = 'Bhaviṣya Purāṇa ' + esc(bhaviṣyaReference(section, chapter, item.passage)) +
-      (uncertain ? ' (verse range unspecified)' : '');
+    const label = item.label
+      ? ' <span class="citation-as">(title in the citation: ' + esc(item.label.replace(/^as /, '')) + ')</span>'
+      : '';
+    const passages = item.passages.filter(passage => passage !== 'unspecified');
+    const uncertain = passages.length === 0;
+    const reference = passages.length
+      ? passages.map(passage => bhaviṣyaReference(section, chapter, passage)).join('; ')
+      : numericSection(section) + '.' + chapter;
     const noteText = cleanNote(item);
     const warning = item.missing || /no match|absent|not found|not located|do not|unmatched/i.test(noteText);
     const note = noteText ? '<div class="note' + (warning ? ' warning' : '') + '">' + esc(noteText) + '</div>' : '';
-    let citation;
+    const location = item.kind === 'parallel' ? sourceLocus(item) : null;
+    let body;
     if (item.kind === 'quotation') {
-      citation = '<span class="kind">Quote</span><span class="citation-text">' +
-        bhaviṣya + ' <span class="relation">→</span> ' + witness + label + '</span>';
+      body = '<strong class="citation-ref">' + esc(reference) + '</strong>' +
+        (uncertain ? ' <span class="citation-as">(verse range not specified)</span>' : '') +
+        ' <span class="relation">→</span> <span class="target">' + witness + label + '</span>' +
+        (item.hasUnspecified && !uncertain ? ' <span class="citation-as">(additional verse range not specified)</span>' : '');
     } else {
-      const sourceLocusText = source
-        ? (item.work === 'Commentary on Manusmṛti' && source.startsWith('Manusmṛti ')
-          ? ' (' + esc(source) + ')'
-          : ' ' + esc(source))
-        : (uncertain ? ' (location unspecified)' : '');
-      citation = '<span class="kind">Parallel</span><span class="citation-text">' +
-        bhaviṣya + ' <span class="relation">↔</span> ' + witness + sourceLocusText + label +
-        (partialUnspecified ? ' <span class="citation-as">(other verse ranges unspecified)</span>' : '') +
-        '</span>';
+      body = '<strong class="citation-ref">' + esc(reference) + '</strong>' +
+        (uncertain ? ' <span class="citation-as">(Bhaviṣya verse range not specified)</span>' : '') +
+        ' <span class="relation">↔</span> <span class="target">' + esc(item.work) +
+        (location?.text ? ' ' + esc(location.text) : '') + '</span>' +
+        (location?.qualifier ? ' <span class="citation-as">(' + esc(location.qualifier) + ')</span>' : '') +
+        (item.hasUnspecified && !uncertain ? ' <span class="citation-as">(additional Bhaviṣya range not specified)</span>' : '') +
+        label;
     }
-    return '<li class="evidence-entry"><div class="citation">' + citation + '</div>' + note + '</li>';
+    return '<li class="evidence-entry"><div class="citation">' + body + '</div>' + note + '</li>';
+  }
+
+  function evidenceGroup(title, items, section, chapter) {
+    if (!items.length) return '';
+    const rows = compactEvidence(items).map(item => evidenceRow(item, section, chapter)).join('');
+    return '<section class="evidence-group"><h4>' + title + '</h4><ul class="evidence-list">' +
+      rows + '</ul></section>';
   }
 
   function detail(section, chapter) {
     const found = byChapter.get(key(section, chapter)) || [];
     const name = sectionName[section] || section;
-    const rows = compactEvidence(found).map(item => evidenceRow(item, section, chapter)).join('');
-    const empty = found.length
-      ? ''
-      : '<p class="no-entry">No located quotation or parallel.</p>';
+    const quotations = found.filter(item => item.kind === 'quotation');
+    const parallels = found.filter(item => item.kind === 'parallel');
+    const content = evidenceGroup('Cited in other texts', quotations, section, chapter) +
+      evidenceGroup('Textual parallels', parallels, section, chapter);
+    const empty = found.length ? '' : '<p class="no-entry">No located citation or parallel.</p>';
     return '<div class="detail-head"><h3>Bhaviṣya Purāṇa ' + esc(numericSection(section)) + '.' + chapter +
-      '</h3><span>' + esc(name) + '</span></div>' +
-      (found.length ? '<ul class="evidence-list">' + rows + '</ul>' : empty);
+      '</h3><span>' + esc(name) + '</span></div>' + (content || empty);
   }
 
   function chapterRow(section, first, last, firstInSection) {
     let tiles = '';
     for (let chapter = first; chapter <= last; chapter++) {
       const evidence = byChapter.get(key(section.id, chapter)) || [];
-      const marked = evidence.length > 0;
-      const gap = evidence.some(item => item.missing === true || /no match|absent|not found|not located|do not/i.test(item.note || ''));
-      const entryCount = compactEvidence(evidence).length;
-      const label = (marked ? entryCount + ' references' : 'no located entry') +
-        (gap ? '; at least one cited line is unmatched' : '');
+      const hasQuote = evidence.some(item => item.kind === 'quotation');
+      const hasParallel = evidence.some(item => item.kind === 'parallel');
+      const gap = evidence.some(item => item.missing === true ||
+        /no match|absent|not found|not located|do not|unmatched/i.test(item.note || ''));
+      const status = hasQuote && hasParallel ? 'both' : hasQuote ? 'quoted' : hasParallel ? 'parallel' : 'empty';
+      const statusText = hasQuote && hasParallel ? 'cited and parallel' : hasQuote ? 'cited in another text' :
+        hasParallel ? 'parallel text' : 'no located reference';
+      const label = statusText + (gap ? '; some cited lines are unmatched' : '') + '; click for verse references';
       const tileId = 'tile-' + section.id.replaceAll('.', '-') + '-' + chapter;
-      tiles += '<button class="tile' + (marked ? ' marked' : '') + (gap ? ' gap' : '') +
+      tiles += '<button class="tile ' + status + (gap ? ' gap' : '') +
         '" id="' + tileId + '" type="button" data-section="' + esc(section.id) +
         '" data-chapter="' + chapter + '" aria-expanded="false" aria-label="' +
         esc(section.name) + ', chapter ' + chapter + ': ' + label + '">' + chapter + '</button>';
     }
     const label = firstInSection
-      ? '<div class="row-section"><strong>' + esc(numericSection(section.id)) + '</strong><span>' +
+      ? '<div class="row-section"><strong>' + esc(section.id) + '</strong><span>' +
         esc(sectionName[section.id] || section.name) + '</span></div>'
       : '<div class="row-section continuation" aria-hidden="true"></div>';
     return '<div class="chapter-row">' + label + '<div class="row-content"><div class="cells">' + tiles +
@@ -209,9 +227,10 @@
   }
 
   function render() {
-    const total = data.sections.reduce((sum, section) => sum + section.chapters, 0);
+    const quoteCount = data.chapters.filter(chapter => chapter.evidence.some(item => item.kind === 'quotation')).length;
+    const parallelCount = data.chapters.filter(chapter => chapter.evidence.some(item => item.kind === 'parallel')).length;
     document.getElementById('stat').textContent =
-      byChapter.size + ' of ' + total + ' chapters have a located entry';
+      quoteCount + ' chapters cited · ' + parallelCount + ' with parallels';
     const columns = window.matchMedia('(max-width: 360px)').matches ? 10
       : window.matchMedia('(max-width: 720px)').matches ? 12 : 24;
     document.getElementById('map').innerHTML =
