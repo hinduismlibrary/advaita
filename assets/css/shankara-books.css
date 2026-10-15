@@ -94,25 +94,6 @@
 .shankara-content .gita-word-list{white-space:normal;overflow-wrap:anywhere}
 @media(max-width:700px){.shankara-content .gita-sanskrit{font-size:18px}.shankara-content .gita-translation{font-size:15px!important}.shankara-content .gita-word-list,.shankara-content .gita-word-row,.shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{font-size:13px!important}}
 
-/* Warm, plain reading palette for Advaita texts. */
-.gita-page .shankara-content{background:#fbf8f1!important;color:#3c362e!important}
-.shankara-content .gita-hero h1{color:#8a4f2b!important}
-.shankara-content .gita-hero .eyebrow{color:#8a6e59!important}
-.shankara-content .gita-hero .subtitle{color:#4b4036!important}
-.shankara-content .gita-contents{border-right-color:#ddcdb8!important}
-.shankara-content .gita-contents h2{color:#8a4f2b!important}
-.shankara-content .gita-contents ol{color:#3c362e!important}
-.shankara-content .gita-contents a{color:#8a4f2b!important}
-.shankara-content .gita-contents a:hover,.shankara-content .gita-contents a:focus-visible{color:#a45b34!important}
-.shankara-content .gita-verse-rule{border-color:#ddcdb8!important}
-.shankara-content .shankara-unit-label{color:#8a6e59!important}
-.shankara-content .gita-sanskrit,.shankara-content .gita-translation{color:#3c362e!important}
-.shankara-content .gita-details>summary{color:#8a4f2b!important}
-.shankara-content .script-controls button{border-color:#c89568!important;color:#8a4f2b!important}
-.shankara-content .script-controls button[aria-pressed="true"]{background:#f2e7d7!important}
-.shankara-content .shankara-work-nav{border-top-color:#ddcdb8!important}
-.shankara-content .shankara-work-nav a,.shankara-content .shankara-index-link{color:#8a4f2b!important}
-
 /* Word glosses align as a two-column reading aid at the same scale as the translation. */
 .shankara-content .gita-word-list{display:block;max-width:840px;margin:0 auto;padding:0;color:#3c362e!important;font:400 17px/1.62 Merriweather,Georgia,serif!important}
 .shankara-content .gita-word-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:4px 18px;align-items:baseline;margin:0;padding:7px 0;border-bottom:1px solid #e6dac9;color:#3c362e!important;font:400 17px/1.62 Merriweather,Georgia,serif!important}
@@ -212,3 +193,7 @@
 /* Keep two-digit verse numbers inside the Contents column. */
 .shankara-reader-page .gita-contents ol{padding-inline-start:2.5em!important;}
 .shankara-reader-page .gita-contents li::marker{font-variant-numeric:tabular-nums;}
+
+
+/* Keep verse, translation, gloss, links and controls at one readable size. */
+.gita-page .shankara-content :where(*){font-size:16px!important}
