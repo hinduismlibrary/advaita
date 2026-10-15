@@ -155,6 +155,10 @@
     .commentary-title { font-size: 19px; }
     .commentary-search { width: min(100%, 320px); margin: 0 0 12px; padding: 7px 9px; border: 1px solid var(--rule); border-radius: 3px; font-size: 11px; }
     .commentary-card[hidden], .commentary-section[hidden] { display: none; }
+    .group-quoted { border-left-color: var(--green-ink); }
+    .group-parallel { border-left-color: var(--blue-ink); }
+    .group-bhashya, .group-chapterRelations { border-left-color: var(--violet-ink); }
+    .group-other, .group-missing { border-left-color: #b8bcb4; }
     @media (max-width: 760px) {
       .page { width: calc(100% - 28px); }
       .workspace { grid-template-columns: 1fr; gap: 15px; padding-top: 14px; }
@@ -704,16 +708,11 @@
 
       function renderSourceList() {
         commentarySources.replaceChildren();
-        const hazra = [
-          ["R. C. Hazra · Puranic records and rites (1940)", "https://archive.org/details/in.ernet.dli.2015.110115"],
-          ["R. C. Hazra · Studies in the Upapurāṇas, vol. I (OCR)", "https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr"],
-          ["R. C. Hazra · Studies in the Upapurāṇas, vol. II (OCR)", "https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr"]
-        ];
-        const sources = [...hazra, ...Object.values(commentaryData.sources)
-          .map(source => [source.label, source.url])];
+        const sources = Object.values(commentaryData.sources)
+          .map(source => [source.label, source.url]);
         const seen = new Set();
         for (const [label, url] of sources) {
-          const key = label + "|" + url;
+          const key = url;
           if (seen.has(key)) continue;
           seen.add(key);
           const link = document.createElement("a");
