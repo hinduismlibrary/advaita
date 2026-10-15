@@ -6,7 +6,7 @@ Source snapshot: [vishvAsa/purANam_vaiShNavam commit fc117aa4514dfd4e4840037aeb3
 
 ## Scope and coverage
 
-The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 722 cards (5149 lexical rows); 795 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
+The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 857 cards (6,642 lexical rows); 660 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
 
 The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 cards have no Śrīdhara excerpt displayed from the pinned source material; that absence does not establish that no commentary survives in other witnesses.
 
@@ -119,3 +119,8 @@ Added one-word Sanskrit, IAST, and direct gloss rows to all 26 Book 5, Chapter 1
 ## 2026-10-15 follow-up — Chapter 21 word-for-word panels
 
 Added one-word Sanskrit, IAST, and direct gloss rows to all 32 Book 5, Chapter 21 verse cards (339 rows). The audit now records 857/1,517 cards with panels and 660 cards still without one.
+
+
+## 2026-10-15 verification note
+
+A wording review corrected 5.5.1 *prahṛṣṭaḥ* to accusative *prahṛṣṭam*, agreeing with *Nandam* in the verse. The coverage summary has also been reconciled to the updated chapter table: 857 panels and 6,642 rows total; 660 verse cards remain without a word-for-word panel.
