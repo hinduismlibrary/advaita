@@ -411,7 +411,7 @@ function normalizeCitationOrder(root){
   const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation');
   const isQuoteSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text,blockquote.translation,blockquote.scripture-translation');
   for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
-    if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\\s*:?[.]?$/i.test(articleText(citation.textContent)))continue;
+    if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\s*:?[.]?$/i.test(articleText(citation.textContent)))continue;
     let target=citation.previousElementSibling;
     if(isTranslation(target)){
       while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
