@@ -1,8 +1,8 @@
 {
   "version": "commentaries-2026-10-15",
   "cutoff": {
-    "label": "Pre-Nīlakaṇṭha (mid-18th c.)",
-    "note": "Working boundary: Nīlakaṇṭha’s mid-18th-century Tilaka. Later-dated works are excluded; unresolved dates remain separate and are not counted as pre-cutoff."
+    "label": "Through Nīlakaṇṭha (late 17th c.)",
+    "note": "Boundary follows Nīlakaṇṭha Caturdhara; later compositions are excluded, and uncertain dates remain separate."
   },
   "sources": {
     "rocher": {
@@ -152,6 +152,14 @@
     "hazraPuranicRecordsOCR": {
       "label": "Hazra, Studies in the Puranic Records on Hindu Rites and Customs · full OCR",
       "url": "https://archive.org/stream/in.ernet.dli.2015.110115/2015.110115.Studies-In-The-Puranic-Records-On-Hindu-Rites-And-Customs_djvu.txt"
+    },
+    "hazraUpapuranasBibliography": {
+      "label": "Hazra, Studies in the Upapurāṇas, Vol. II bibliography",
+      "url": "https://www.wisdomlib.org/hinduism/book/studies-in-the-upapuranas/d/doc1471630.html"
+    },
+    "nilakantha17c": {
+      "label": "Oxford AMES, Nīlakaṇṭha Caturdhara (17th century)",
+      "url": "https://www.ames.ox.ac.uk/the-mahabharatas-supporting-texts-in-literary-culture-and-history"
     }
   },
   "entries": [
@@ -231,13 +239,13 @@
       "work": "Sārārtha-darśinī",
       "author": "Viśvanātha Cakravartin",
       "scope": "Full Purāṇa",
-      "period": "17th c.",
-      "status": "within-cutoff",
+      "period": "17th c.; exact date relative to Nīlakaṇṭha unresolved",
+      "status": "date-unverified",
       "sourceIds": [
         "rocher",
         "bhagavataEditions"
       ],
-      "note": ""
+      "note": "The current sources do not place this work before the late-17th-century boundary."
     },
     {
       "id": "comm-7",
@@ -315,7 +323,7 @@
       "author": "Puruṣottamacaraṇa Gosvāmin",
       "scope": "Subcommentary on Vallabha’s Subodhinī",
       "period": "c. 1700",
-      "status": "within-cutoff",
+      "status": "post-cutoff",
       "sourceIds": [
         "rocher"
       ],
@@ -555,7 +563,7 @@
       "author": "Bhāskararāya",
       "scope": "Devī Māhātmya; partial commentary",
       "period": "c. 1741",
-      "status": "within-cutoff",
+      "status": "post-cutoff",
       "sourceIds": [
         "guptavati",
         "guptavatiVerses",
@@ -825,19 +833,6 @@
       "note": ""
     },
     {
-      "id": "comm-53",
-      "puranaId": "markandeya-purana",
-      "work": "Tattvāvabodhinī",
-      "author": "Vidyāvinoda",
-      "scope": "Devī Māhātmya",
-      "period": "Date not established in the consulted catalogue",
-      "status": "date-unverified",
-      "sourceIds": [
-        "deviCatalog2"
-      ],
-      "note": ""
-    },
-    {
       "id": "comm-55",
       "puranaId": "markandeya-purana",
       "work": "Commentary on the Devī Māhātmya",
@@ -917,19 +912,6 @@
       "note": ""
     },
     {
-      "id": "comm-62",
-      "puranaId": "padma-purana",
-      "work": "Yogasāra-stotra-ṭīkā (Padma-purāṇastha Yogasāra-stotra-ṭīkā)",
-      "author": "Jīva Gosvāmin",
-      "scope": "Stotra embedded/attributed to the Padma Purāṇa",
-      "period": "16th c.",
-      "status": "within-cutoff",
-      "sourceIds": [
-        "jivaWorks"
-      ],
-      "note": ""
-    },
-    {
       "id": "comm-63",
       "puranaId": "skanda-purana",
       "work": "Commentary on the Kāśī-khaṇḍa",
@@ -964,10 +946,10 @@
       "period": "Date not established in the consulted catalogues",
       "status": "date-unverified",
       "sourceIds": [
-        "deviCatalog",
-        "deviCatalog2"
+        "deviCatalog2",
+        "deviCatalog"
       ],
-      "note": ""
+      "note": "Catalogued under the same title and author in both consulted lists."
     },
     {
       "id": "comm-extra-tattvaprakashika",
@@ -1249,7 +1231,7 @@
       "author": "Bhāskararāya",
       "scope": "Lalitā-sahasranāma in the Lalitopākhyāna",
       "period": "Completed 1728 CE",
-      "status": "within-cutoff",
+      "status": "post-cutoff",
       "sourceIds": [
         "igncaLalita",
         "sastryLalita",
@@ -1581,7 +1563,7 @@
       "author": "Baladeva Vidyābhūṣaṇa",
       "scope": "Bhāgavata portions including cantos I and X",
       "period": "18th c.; exact composition date unresolved",
-      "status": "date-unverified",
+      "status": "post-cutoff",
       "sourceIds": [
         "baladevaBhagavata"
       ],
@@ -1594,7 +1576,7 @@
       "author": "Āḍavī Jayatīrtha",
       "scope": "Bhāgavata Purāṇa; extent not established",
       "period": "18th c. in secondary lists; exact date unresolved",
-      "status": "date-unverified",
+      "status": "post-cutoff",
       "sourceIds": [
         "bhagavataCommentaryLists"
       ],
@@ -1607,7 +1589,7 @@
       "author": "Satyadharma Tīrtha",
       "scope": "Bhāgavata Purāṇa; extent not established",
       "period": "18th c. in secondary lists; exact date unresolved",
-      "status": "date-unverified",
+      "status": "post-cutoff",
       "sourceIds": [
         "bhagavataCommentaryLists"
       ],
@@ -1721,15 +1703,16 @@
     {
       "id": "comm-padma-yogasara-stotra-tika",
       "puranaId": "padma-purana",
-      "work": "Yogasāra-stotra-ṭīkā (Padma-purāṇastha)",
+      "work": "Yogasāra-stotra-ṭīkā",
       "author": "Jīva Gosvāmin",
-      "scope": "Yogasāra hymn within the Padma Purāṇa",
+      "scope": "Padma Purāṇa · Yogasāra hymn",
       "period": "16th c.",
       "status": "within-cutoff",
       "sourceIds": [
+        "jivaWorks",
         "jivaWorksDirect"
       ],
-      "note": "A subsection-level ṭīkā on a hymn in the Padma Purāṇa, listed among Jīva Gosvāmin’s works."
+      "note": "Subsection-level ṭīkā on a hymn in the Padma Purāṇa."
     },
     {
       "id": "comm-vishnu-sanketa",
@@ -1796,6 +1779,46 @@
         "rasHaribhaktisudhodaya"
       ],
       "note": "The Royal Asiatic Society catalogues the text as part of the Nāradīya Purāṇa and records a commentary; the c. 1800 witness is after the working boundary, so the work is not counted as pre-boundary."
+    },
+    {
+      "id": "comm-devi-bhagavata-tilaka",
+      "puranaId": "devi-bhagavata-purana",
+      "work": "Tilaka",
+      "author": "Śaiva Nīlakaṇṭha",
+      "scope": "Full Purāṇa",
+      "period": "Late 17th c.",
+      "status": "boundary",
+      "sourceIds": [
+        "hazraUpapuranasBibliography",
+        "nilakantha17c"
+      ],
+      "note": "Hazra lists this commentary on the Devī Bhāgavata; treated as the cutoff work."
+    },
+    {
+      "id": "comm-agni-prosody-commentary",
+      "puranaId": "agni-purana",
+      "work": "Anonymous commentary within the prosody chapters",
+      "author": "Anonymous",
+      "scope": "Agni Purāṇa · eight prosody chapters",
+      "period": "Before the second half of the 10th c.",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "hazraPuranicRecordsOCR"
+      ],
+      "note": "Hazra identifies an unnamed commentary on Piṅgala's sūtras summarized in these chapters; Halāyudha critiques it in the late 10th century."
+    },
+    {
+      "id": "comm-bhagavata-anvitartha-prakashika",
+      "puranaId": "bhagavata-purana",
+      "work": "Anvitārtha-prakāśikā",
+      "author": "Gaṅgāsahāya",
+      "scope": "Bhāgavata Purāṇa",
+      "period": "Date not supplied",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentators"
+      ],
+      "note": "Named in G. V. Tagare's commentator survey; composition date not established."
     }
   ]
 }
