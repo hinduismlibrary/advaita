@@ -36,7 +36,7 @@
       .replace(/\n{3,}/g,'\n\n')
       .trim();
   }
-  function extractVerses(text,expected){
+  function extractVerses(text,expected,chapter){
     text=cleanText(text);
     const marker=/[।॥]{2}\s*(?:1\.)?(?:\d+\.)?([०-९]+)\s*[।॥]{2}/g;
     const found=[]; let last=0,m;
@@ -53,7 +53,7 @@
       found.push({n,sa:block});
     }
     const by=new Map();
-    for(const v of found){if(v.n>=1&&v.n<=expected){if(!by.has(v.n))by.set(v.n,v.sa);else by.set(v.n,`${by.get(v.n)} ${v.sa}`.trim());}}
+    for(const v of found){let n=v.n;if(chapter===189&&n===36&&!by.has(26))n=26;if(n>=1&&n<=expected){if(!by.has(n))by.set(n,v.sa);else by.set(n,`${by.get(n)} ${v.sa}`.trim());}}
     return Array.from({length:expected},(_,i)=>({n:i+1,sa:by.get(i+1)||''}));
   }
   async function fetchSanskrit(chapter,expected){
@@ -65,7 +65,7 @@
     d.querySelectorAll('style,script,sup.reference,.mw-editsection').forEach(x=>x.remove());
     const root=d.querySelector('.mw-parser-output')||d.body;
     const text=root.innerText||root.textContent||'';
-    return extractVerses(text,expected);
+    return extractVerses(text,expected,chapter);
   }
   window.renderBhavishyaLiveChapter=async function(config,translations){
     const mount=document.getElementById('chapter-mount'); if(!mount)return;
