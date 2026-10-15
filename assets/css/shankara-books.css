@@ -1,91 +1,214 @@
-/* Shared Advaita reader — colors and spacing follow the Bhaviṣya Purāṇa chapter reader. */
-:root{--reader-paper:#f7f6f4;--reader-ink:#3c362e;--reader-teal:#2f7f82;--reader-link:#65516f;--reader-line:#dedbd6}
-.gita-page .site-header{border-bottom:0!important;box-shadow:none!important}
-.gita-page .site-main{width:min(1080px,100%);max-width:none;margin:0 auto;padding:0;background:#2b261f!important}
-.gita-page .article-shell{width:100%;max-width:none;margin:0;padding:0;background:transparent}
-.gita-page .article-body{width:100%;max-width:920px;margin:0 auto;padding:0;background:var(--reader-paper);color:var(--reader-ink);font-family:Merriweather,Georgia,"Times New Roman",serif}
-.gita-page .shankara-content{width:100%!important;max-width:920px!important;margin:0 auto!important;padding:0 24px 28px!important;background:var(--reader-paper)!important;color:var(--reader-ink)!important;font:400 16px/1.6 Merriweather,Georgia,"Times New Roman",serif!important}
-.shankara-content *{box-sizing:border-box;min-width:0}
-.shankara-reading-grid{display:grid;grid-template-columns:minmax(155px,185px) minmax(0,1fr);column-gap:clamp(20px,3vw,36px);align-items:start}
-.shankara-content .gita-hero{grid-column:2;grid-row:1;width:100%;margin:0 auto;text-align:center;padding:40px 0 22px}
-.shankara-content .gita-hero .eyebrow{display:none}
-.shankara-content .gita-hero h1{margin:0;color:var(--reader-teal)!important;font:400 32px/1.18 Vollkorn,Georgia,serif!important}
-.shankara-content .shankara-author{margin:9px auto 0;color:var(--reader-ink)!important;font:400 16px/1.5 Merriweather,Georgia,serif!important;text-align:center}
-.shankara-content .gita-contents{grid-column:1;grid-row:2;position:sticky;top:16px;align-self:start;width:auto;max-height:calc(100vh - 32px);overflow:auto;margin:0;padding:0 14px 8px 0;border:0;border-right:1px solid var(--reader-line);background:transparent}
-.shankara-content .gita-contents h2{margin:0 0 8px;color:var(--reader-teal)!important;font:400 16px/1.5 Vollkorn,Georgia,serif!important}
-.shankara-content .gita-contents ol{margin:4px 0 0;padding:0 0 0 20px;columns:1!important;color:var(--reader-ink)!important;font:400 16px/1.5 Merriweather,Georgia,serif!important}
+/* Advaita reading pages share the Viṣṇu Purāṇa reader palette and content scale. */
+.shankara-content{padding-bottom:36px}
+.gita-page .shankara-content{width:100%!important;max-width:920px!important;margin:0 auto!important;padding:0 24px 36px!important;background:#f7f6f4!important;color:#3c362e!important;font-family:Merriweather,Georgia,serif!important}
+.shankara-reading-grid{display:grid;grid-template-columns:minmax(142px,185px) minmax(0,1fr);column-gap:clamp(20px,3vw,42px);align-items:start}
+.shankara-content .gita-hero{grid-column:2;grid-row:1;width:100%;margin:0 auto;text-align:center;padding:44px 0 24px}
+.shankara-content .gita-hero h1{color:#2f7f82;font-family:Vollkorn,Georgia,serif;font-size:clamp(34px,4.8vw,46px);font-weight:400;line-height:1.08}
+.shankara-content .gita-hero .eyebrow{color:#817970;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.shankara-content .gita-hero .subtitle{color:#655e57;font-size:16px;line-height:1.5;font-style:italic}
+.shankara-content .gita-contents{grid-column:1;grid-row:2;position:sticky;top:18px;align-self:start;width:auto;max-height:calc(100vh - 36px);overflow:auto;margin:0;padding:0 15px 8px 0;border:0;border-right:1px solid #dedbd6;background:transparent}
+.shankara-content .gita-contents h2{margin:0 0 10px;color:#2f7f82;font:400 17px Vollkorn,Georgia,serif}
+.shankara-content .gita-contents ol{columns:1;margin:0;padding-left:18px;color:#3c362e;font:500 12px/1.5 Merriweather,Georgia,serif}
 .shankara-content .gita-contents li{margin:0 0 5px;break-inside:avoid}
-.shankara-content .gita-contents a,.shankara-content .shankara-index-link{color:var(--reader-link)!important;font:400 16px/1.5 Merriweather,Georgia,serif!important;text-decoration:none}
-.shankara-content .gita-contents a:hover,.shankara-content .gita-contents a:focus-visible,.shankara-content .shankara-index-link:hover{text-decoration:underline}
+.shankara-content .gita-contents a{color:#5d4c68;text-decoration:none}
+.shankara-content .gita-contents a:hover,.shankara-content .gita-contents a:focus-visible{text-decoration:underline}
 .shankara-content .shankara-unit-column{grid-column:2;grid-row:2;min-width:0}
-.shankara-content .gita-verse{scroll-margin-top:28px;margin:0 0 24px;padding:0;border:0;background:transparent}
-.shankara-content .gita-verse h2{margin:0;text-align:center;color:var(--reader-teal)!important;font:600 16px/1.4 Vollkorn,Georgia,serif!important;letter-spacing:0}
-.shankara-content .gita-verse-rule{width:56%;max-width:520px;margin:10px auto 14px;border:0;border-top:1px solid var(--reader-line)}
-.shankara-content .gita-sanskrit,.shankara-content .sa-text{max-width:840px;margin:0 auto 12px;color:var(--reader-ink)!important;font:400 16px/1.65 "Noto Serif Devanagari",Merriweather,Georgia,serif!important;text-align:center;white-space:pre-wrap!important;overflow-wrap:anywhere}
-.shankara-content .gita-translation{display:block!important;max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:var(--reader-ink)!important;font:400 16px/1.65 Merriweather,Georgia,serif!important;text-align:left!important}
-.shankara-content .gita-translation:before{content:none!important;display:none!important}
-.shankara-content .gita-controls{display:block;max-width:840px;margin:0 auto;padding:0}
-.shankara-content .gita-details{display:block;max-width:840px;margin:0 auto 7px;padding:0;text-align:left}
-.shankara-content .gita-details summary{display:block;width:max-content;max-width:100%;min-height:32px;margin:0;padding:6px 12px;border:1px solid #9bc5c7!important;border-radius:999px!important;background:transparent!important;box-shadow:none!important;color:var(--reader-teal)!important;cursor:pointer;font:600 16px/1.15 Merriweather,Georgia,serif!important;list-style:none;text-decoration:none}
-.shankara-content .gita-details summary::-webkit-details-marker{display:none}
-.shankara-content .gita-details summary::marker{content:""}
-.shankara-content .gita-details[open] summary{margin-bottom:0;border-color:#9bc5c7!important;background:transparent!important}
-.shankara-content .gita-reveal{max-width:840px;margin:7px auto 12px;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;color:var(--reader-ink)!important;font:400 16px/1.6 Merriweather,Georgia,serif!important;overflow-wrap:anywhere}
-.shankara-content .shankara-iast{margin:0;color:var(--reader-ink)!important;font:400 16px/1.6 Merriweather,Georgia,serif!important;white-space:pre-wrap;overflow-wrap:anywhere}
-.shankara-content .gita-word-list{display:block;max-width:840px;margin:0 auto;padding:0;color:var(--reader-ink)!important;font:400 16px/1.6 Merriweather,Georgia,serif!important;white-space:normal;overflow-wrap:anywhere}
-.shankara-content .gita-word-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:4px 18px;align-items:baseline;margin:0;padding:5px 0;border:0;border-bottom:1px solid #e6e1dc;color:var(--reader-ink)!important;font:400 16px/1.6 Merriweather,Georgia,serif!important}
-.shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{min-width:0;color:var(--reader-ink)!important;font:400 16px/1.6 Merriweather,Georgia,serif!important;overflow-wrap:anywhere}
+.shankara-content .gita-sanskrit{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;white-space:pre-line;overflow-wrap:anywhere}
+.shankara-content[data-script-mode="iast"] .gita-sanskrit{font-family:Merriweather,Georgia,serif;font-size:16px;line-height:1.7}
+.shankara-content .gita-verse{scroll-margin-top:24px;margin:0 0 24px}
+.shankara-content .gita-word-row{overflow-wrap:anywhere;color:#3c362e!important;font-family:Merriweather,Georgia,serif!important;font-size:14px!important;line-height:1.55!important}
+.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{color:#3c362e!important;font-size:1em!important;font-weight:400!important}
 .shankara-content .gita-word-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
-.shankara-content .gita-word-iast{font-style:normal!important}
-.shankara-content .shankara-unit-label{margin:0 0 4px;color:#766e67;font:400 16px/1.4 Merriweather,Georgia,serif!important;text-align:center}
-.shankara-content .shankara-section-heading{margin:28px 0 14px;padding:0 0 10px;border:0;border-bottom:1px solid var(--reader-line);background:transparent;color:var(--reader-teal)!important;font:500 18px/1.4 Vollkorn,Georgia,serif!important;scroll-margin-top:24px}
-.shankara-content .shankara-toc-details{margin:4px 0 8px}
-.shankara-content .shankara-toc-details>summary{color:var(--reader-teal)!important;font:400 16px/1.5 Merriweather,Georgia,serif!important;cursor:pointer}
-.shankara-content .shankara-toc-details ol{max-height:28rem;overflow:auto;padding-left:2rem}
-.shankara-content .shankara-chapter{margin:0 0 7px}
-.shankara-content .shankara-chapter summary,.shankara-content .shankara-about summary{display:inline-flex;align-items:center;gap:7px;max-width:100%;min-height:32px;padding:6px 12px;border:1px solid #c8dcdc;border-radius:999px;background:transparent;color:var(--reader-teal);cursor:pointer;font:600 16px/1.25 Merriweather,Georgia,serif;list-style:none}
-.shankara-content .shankara-chapter summary::-webkit-details-marker,.shankara-content .shankara-about summary::-webkit-details-marker{display:none}
-.shankara-content .shankara-chapter summary::marker,.shankara-content .shankara-about summary::marker{content:""}
-.shankara-content .shankara-chapter[open]>summary,.shankara-content .shankara-about[open]>summary{background:#fff}
-.shankara-content .shankara-about{width:min(840px,100%);margin:10px auto 0;text-align:left}
-.shankara-content .shankara-about summary{margin:0 auto}
-.shankara-content .shankara-about-copy{max-width:720px;margin:8px auto 0;padding:0;border:0;background:transparent;color:var(--reader-ink);font:400 16px/1.6 Merriweather,Georgia,serif;text-align:left}
-.shankara-content .shankara-about-copy p{margin:0 0 8px}
-.shankara-content .shankara-about-source{margin-top:8px!important}
-.shankara-content .shankara-about-source a{color:var(--reader-link);text-decoration:underline}
-.shankara-content .shankara-work-nav{display:flex;justify-content:space-between;gap:16px;margin:30px 0 0;padding-top:16px;border-top:1px solid var(--reader-line)}
-.shankara-content .shankara-work-nav a{color:var(--reader-teal);font:400 16px/1.5 Merriweather,Georgia,serif;text-decoration:none}
-.shankara-content .shankara-work-nav a:hover{text-decoration:underline}
-.shankara-content .shankara-reader-error,.shankara-content .gita-loading{max-width:840px;margin:10px auto;color:var(--reader-ink);font:400 16px/1.6 Merriweather,Georgia,serif}
-.shankara-content .shankara-reader-error a{color:var(--reader-link);text-decoration:underline}
+.shankara-content .gita-word-iast{font-family:Merriweather,Georgia,serif!important}
+.shankara-content .gita-word-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif}
+.shankara-content .gita-translation{font-size:14px;line-height:1.55}
+.shankara-content .shankara-iast{margin:0;color:#514a43;font-family:Merriweather,Georgia,serif;font-size:14px;line-height:1.55;overflow-wrap:anywhere}
+.shankara-content .script-controls{display:flex;justify-content:center;gap:8px;margin:20px auto 4px}
+.shankara-content .script-controls button{border:1px solid #9bc5c7;border-radius:999px;padding:6px 13px;background:transparent;color:#2f7f82;font:600 12px Merriweather,Georgia,serif;cursor:pointer}
+.shankara-content .script-controls button[aria-pressed="true"]{background:#e7f0ef}
+.shankara-content .shankara-unit-label{margin:0 0 3px;color:#817970;font-size:11px;text-align:center}
+.shankara-content .gita-controls{max-width:840px;margin:0 auto}
+.shankara-content .gita-details{display:block;margin:0 auto 6px}
+.shankara-content .shankara-work-nav{display:flex;justify-content:space-between;gap:16px;margin:34px 0 0;padding-top:18px;border-top:1px solid #dedbd6}
+.shankara-content .shankara-work-nav a,.shankara-content .shankara-index-link{color:#2f7f82;text-decoration:none}
+.shankara-content .shankara-work-nav a:hover,.shankara-content .shankara-index-link:hover{text-decoration:underline}
 .shankara-content .shankara-source-link{display:none}
+
 .shankara-directory{max-width:1040px;margin:0 auto}
 .shankara-group{margin:26px 0 0}
-.shankara-group h2{margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid #d8d3cd;color:var(--reader-teal);font:400 25px Vollkorn,Georgia,serif}
+.shankara-group h2{margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid #d8d3cd;color:#00787a;font:400 25px Vollkorn,Georgia,serif}
 .shankara-directory-note{margin-top:12px;padding-left:14px;border-left:2px solid #9bc5c7;color:#514a43;font-size:13px;line-height:1.6}
 .shankara-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 20px}
 .shankara-card{display:block;padding:11px 0;border-bottom:1px solid #e2ddd7;color:#4a443e;text-decoration:none}
-.shankara-card:hover{color:var(--reader-link)}
+.shankara-card:hover{color:#65516f}
 .shankara-card strong{display:block;font:400 20px Vollkorn,Georgia,serif}
 .shankara-card span{display:block;margin-top:3px;color:#756e67;font-size:12px;line-height:1.5}
-.shankara-card small{display:inline-block;margin-top:6px;color:var(--reader-teal);font:600 10px Merriweather,Georgia,serif;letter-spacing:.03em}
+.shankara-card small{display:inline-block;margin-top:6px;color:#2f7f82;font:600 10px Merriweather,Georgia,serif;letter-spacing:.03em}
 .shankara-card--planned{cursor:default}
 .shankara-card--planned:hover{color:#4a443e}
-.shankara-content .treatise-chapter-list{padding-left:20px!important}
-.shankara-content .treatise-chapter-item{margin-bottom:7px!important}
-.shankara-content .treatise-chapter-link{display:inline;color:var(--reader-link)!important}
-.shankara-content .treatise-chapter-item>.shankara-toc-details{margin-left:6px}
-@media(max-width:900px){.shankara-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+@media(max-width:900px){
+ .shankara-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .shankara-reading-grid{grid-template-columns:minmax(126px,160px) minmax(0,1fr);column-gap:20px}
+}
 @media(max-width:700px){
- .gita-page .shankara-content{padding:0 16px 24px!important}
+ .gita-page .shankara-content{padding:0 14px 24px!important}
  .shankara-reading-grid{display:block}
- .shankara-content .gita-hero{padding:28px 0 18px}
- .shankara-content .gita-hero h1{font-size:28px!important}
- .shankara-content .gita-contents{position:static;max-height:260px;margin:0 0 18px;padding:0 0 12px;border-right:0;border-bottom:1px solid var(--reader-line)}
- .shankara-content .gita-contents ol{columns:1!important}
+ .shankara-content .gita-hero{padding:30px 0 18px}
+ .shankara-content .gita-hero h1{font-size:32px}
+ .shankara-content .gita-contents{position:static;max-height:220px;margin:0 0 22px;padding:0 0 10px;border-right:0;border-bottom:1px solid #dedbd6}
+ .shankara-content .gita-contents ol{columns:2;column-gap:18px;font-size:11px}
  .shankara-content .shankara-unit-column{display:block}
- .shankara-content .gita-word-row{grid-template-columns:minmax(0,1fr);gap:0;padding:5px 0}
- .shankara-content .shankara-work-nav{flex-wrap:wrap;font-size:16px}
+ .shankara-content[data-script-mode="iast"] .gita-sanskrit{font-size:14.5px}
+ .shankara-content .shankara-work-nav{font-size:12px}
  .shankara-cards{grid-template-columns:1fr}
 }
-@media(prefers-reduced-motion:reduce){.shankara-content{scroll-behavior:auto}}
+
+.shankara-source-note{max-width:68ch;margin:12px auto 0;color:#756e67;font-size:13px;line-height:1.65}
+
+.shankara-content .gita-translation{color:#3c362e!important;font-size:14px!important;line-height:1.55!important}
+.shankara-content .shankara-author{margin:12px auto 0;color:#3c362e;font:400 14px/1.45 Merriweather,Georgia,serif;text-align:center}
+.shankara-content .gita-translation,.shankara-content .gita-sanskrit{color:#3c362e}
+.ad-entry small{color:#4a443e}
+
+/* Word-for-word entries use the same ink and text scale as the translation. */
+.shankara-content .gita-word-list{margin:0;padding:0}
+.shankara-content .gita-word-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:4px 18px;align-items:baseline;margin:0;padding:4px 0;border-bottom:1px solid #e2ddd7;color:#3c362e!important;font:400 14px/1.5 Merriweather,Georgia,serif!important}
+.shankara-content .gita-word-source{min-width:0;color:#3c362e!important;font-size:14px!important;font-weight:400!important;overflow-wrap:anywhere}
+.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{color:#3c362e!important;font-size:14px!important;font-weight:400!important}
+.shankara-content .gita-word-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+.shankara-content .gita-word-iast{font-family:Merriweather,Georgia,serif!important;font-style:normal!important}
+.shankara-content .gita-word-gloss{font-family:Merriweather,Georgia,serif!important}
+@media(max-width:700px){.shankara-content .gita-word-row{grid-template-columns:minmax(0,1fr);gap:1px;padding:5px 0}}
+
+/* Plain scripture typography, in the same warm reader palette. */
+.gita-page .shankara-content{background:#f7f6f4!important;color:#3c362e!important}
+.shankara-content .shankara-author{color:#655e57;font-size:14px;font-style:italic}
+.shankara-content .gita-sanskrit{font-size:20px;line-height:1.58}
+.shankara-content .gita-translation{font-size:17px!important;line-height:1.62!important;text-align:left}
+.shankara-content .gita-word-list{display:block;max-width:840px;margin:0 auto;padding:0;color:#3c362e;font:400 14px/1.55 Merriweather,Georgia,serif}
+.shankara-content .gita-word-row{display:inline;margin:0;padding:0;border:0;color:#3c362e!important;font:400 14px/1.55 Merriweather,Georgia,serif!important}
+.shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{color:#3c362e!important;font-size:14px!important;font-weight:400!important}
+.shankara-content .gita-word-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{font-family:Merriweather,Georgia,serif!important;font-style:normal!important}
+.shankara-content .gita-word-list{white-space:normal;overflow-wrap:anywhere}
+@media(max-width:700px){.shankara-content .gita-sanskrit{font-size:18px}.shankara-content .gita-translation{font-size:15px!important}.shankara-content .gita-word-list,.shankara-content .gita-word-row,.shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{font-size:13px!important}}
+
+/* Warm, plain reading palette for Advaita texts. */
+.gita-page .shankara-content{background:#fbf8f1!important;color:#3c362e!important}
+.shankara-content .gita-hero h1{color:#8a4f2b!important}
+.shankara-content .gita-hero .eyebrow{color:#8a6e59!important}
+.shankara-content .gita-hero .subtitle{color:#4b4036!important}
+.shankara-content .gita-contents{border-right-color:#ddcdb8!important}
+.shankara-content .gita-contents h2{color:#8a4f2b!important}
+.shankara-content .gita-contents ol{color:#3c362e!important}
+.shankara-content .gita-contents a{color:#8a4f2b!important}
+.shankara-content .gita-contents a:hover,.shankara-content .gita-contents a:focus-visible{color:#a45b34!important}
+.shankara-content .gita-verse-rule{border-color:#ddcdb8!important}
+.shankara-content .shankara-unit-label{color:#8a6e59!important}
+.shankara-content .gita-sanskrit,.shankara-content .gita-translation{color:#3c362e!important}
+.shankara-content .gita-details>summary{color:#8a4f2b!important}
+.shankara-content .script-controls button{border-color:#c89568!important;color:#8a4f2b!important}
+.shankara-content .script-controls button[aria-pressed="true"]{background:#f2e7d7!important}
+.shankara-content .shankara-work-nav{border-top-color:#ddcdb8!important}
+.shankara-content .shankara-work-nav a,.shankara-content .shankara-index-link{color:#8a4f2b!important}
+
+/* Word glosses align as a two-column reading aid at the same scale as the translation. */
+.shankara-content .gita-word-list{display:block;max-width:840px;margin:0 auto;padding:0;color:#3c362e!important;font:400 17px/1.62 Merriweather,Georgia,serif!important}
+.shankara-content .gita-word-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:4px 18px;align-items:baseline;margin:0;padding:7px 0;border-bottom:1px solid #e6dac9;color:#3c362e!important;font:400 17px/1.62 Merriweather,Georgia,serif!important}
+.shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{color:#3c362e!important;font-size:17px!important;font-weight:400!important;line-height:1.62!important}
+.shankara-content .gita-word-source{min-width:0;font-family:Merriweather,Georgia,serif!important;overflow-wrap:anywhere}
+.shankara-content .gita-word-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{font-family:Merriweather,Georgia,serif!important}
+.shankara-content .gita-word-iast{font-style:italic!important}
+@media(max-width:700px){
+ .shankara-content .gita-word-list,.shankara-content .gita-word-row,.shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{font-size:15px!important;line-height:1.58!important}
+ .shankara-content .gita-word-row{grid-template-columns:minmax(0,1fr);gap:1px;padding:7px 0}
+}
+
+/* Reader refresh: neutral paper, consistent reading size, and compact chapter menus. */
+.gita-page,.gita-page .site-main,.gita-page .article-shell,.gita-page .article-body,
+.gita-page .shankara-content,.shankara-content .shankara-reading-grid{background:#fff!important}
+.gita-page .shankara-content{color:#302d29!important;font-size:16px!important;line-height:1.58!important}
+.shankara-content .gita-translation,.shankara-content .gita-word-row,.shankara-content .gita-word-source,
+.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{
+ color:#302d29!important;font-size:16px!important;line-height:1.58!important
+}
+.shankara-content .gita-translation{max-width:840px!important;margin:0 auto 12px!important;text-align:left!important}
+.shankara-content .gita-sanskrit{font-size:18px!important;line-height:1.55!important}
+.shankara-content .gita-contents ol{margin:6px 0 0!important;padding:0 0 0 19px!important;columns:1!important;font-size:13px!important;line-height:1.48!important}
+.shankara-content .gita-contents li{margin:0 0 4px!important}
+.shankara-content .shankara-chapter{margin:0 0 7px}
+.shankara-content .shankara-chapter summary,.shankara-content .shankara-about summary{
+ display:inline-flex;align-items:center;gap:7px;max-width:100%;min-height:30px;padding:5px 9px;
+ border:1px solid #cfd9d5;border-radius:7px;background:#fff;color:#425c55;cursor:pointer;
+ font-family:Merriweather,Georgia,serif;font-size:13px;font-weight:600;line-height:1.35;list-style:none
+}
+.shankara-content .shankara-chapter summary::-webkit-details-marker,.shankara-content .shankara-about summary::-webkit-details-marker{display:none}
+.shankara-content .shankara-chapter summary::marker,.shankara-content .shankara-about summary::marker{content:""}
+.shankara-content .shankara-chapter[open]>summary,.shankara-content .shankara-about[open]>summary{border-color:#98b7ab;background:#f8fbf9}
+.shankara-content .shankara-about{width:min(840px,100%);margin:9px auto 0;text-align:left}
+.shankara-content .shankara-about summary{margin:0 auto}
+.shankara-content .shankara-about-copy{max-width:720px;margin:8px auto 0;padding:10px 12px;border:1px solid #e2e8e4;border-radius:8px;background:#fbfcfb;color:#383531;font-size:15px;line-height:1.55;text-align:left}
+.shankara-content .shankara-about-copy p{margin:0}
+.shankara-content .shankara-about-source{margin-top:8px!important}
+.shankara-content .shankara-about-source a{color:#315c50;text-decoration:underline}
+.shankara-content .shankara-author{font-size:15px!important}
+@media(max-width:700px){
+ .gita-page .shankara-content{padding:0 16px 30px!important}
+ .shankara-content .gita-translation,.shankara-content .gita-word-row,.shankara-content .gita-word-source,
+ .shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{font-size:16px!important;line-height:1.58!important}
+ .shankara-content .gita-sanskrit{font-size:18px!important}
+ .shankara-content .gita-contents{position:static!important;max-height:none!important;overflow:visible!important;margin:0 0 18px!important;padding:0 0 12px!important;border-right:0!important;border-bottom:1px solid #dedbd6!important}
+}
+
+/* Keep the English translation and word gloss on the same reading scale on mobile. */
+@media(max-width:700px){
+ .shankara-content .gita-translation{font-size:15px!important;line-height:1.58!important}
+ .shankara-content .gita-word-list,.shankara-content .gita-word-row,
+ .shankara-content .gita-word-source,.shankara-content .gita-word-dev,
+ .shankara-content .gita-word-iast,.shankara-content .gita-word-gloss{
+  font-size:15px!important;line-height:1.58!important
+ }
+}
+
+
+/* Local reader repair: keep long Sanskrit, IAST, translation, and gloss text inside the reading column. */
+.shankara-content,.shankara-content *{box-sizing:border-box}
+.shankara-content,.shankara-content .shankara-reading-grid,.shankara-content .shankara-unit-column,
+.shankara-content .gita-hero,.shankara-content .gita-contents,.shankara-content .gita-verse,
+.shankara-content .gita-controls,.shankara-content .gita-reveal,.shankara-content .gita-word-list{
+ min-width:0;max-width:100%
+}
+.shankara-content .gita-sanskrit,.shankara-content .sa-text,.shankara-content .shankara-iast,
+.shankara-content .gita-translation,.shankara-content .gita-word-row,.shankara-content .gita-word-source,
+.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,.shankara-content .gita-word-gloss,
+.shankara-content .treatise-section-picker select{
+ max-width:100%;white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:break-word
+}
+.shankara-content .gita-loading,.shankara-content .shankara-reader-error,.shankara-content .shankara-reader-coverage{
+ max-width:840px;margin:10px auto;padding:9px 12px;border:1px solid #d9e6e2;border-radius:8px;
+ background:#f6faf8;color:#46534d;font-size:14px;line-height:1.55;text-align:left
+}
+.shankara-content .shankara-reader-error{border-color:#e2c9b9;background:#fff9f5;color:#60483b}
+.shankara-content .shankara-reader-error a{color:#2f6e66;font-weight:700;text-decoration:underline}
+@media(max-width:700px){
+ .shankara-content .shankara-reading-grid{grid-template-columns:minmax(0,1fr)}
+ .shankara-content .gita-sanskrit,.shankara-content .sa-text{font-size:18px!important;line-height:1.62!important}
+ .shankara-content .gita-translation,.shankara-content .shankara-iast,.shankara-content .gita-word-row,
+ .shankara-content .gita-word-source,.shankara-content .gita-word-dev,.shankara-content .gita-word-iast,
+ .shankara-content .gita-word-gloss{font-size:15px!important;line-height:1.58!important}
+}
+
+/* Shared coverage and section styles for the Ātmabodha-format text readers. */
+.shankara-content .shankara-reader-coverage{margin:14px auto 20px;padding:12px 15px;border-left:3px solid #b78353;background:#f0eee9;color:#514c46;font:400 14px/1.65 Merriweather,Georgia,serif;text-align:left}
+.shankara-content .shankara-reader-coverage strong{color:#302b25}
+.shankara-content .shankara-section-heading{margin:32px 0 16px;padding:10px 14px;border:1px solid #b9d9ce;background:#d6eee6;color:#287f80;font:600 20px/1.35 Vollkorn,Georgia,serif;scroll-margin-top:90px}
+.shankara-content .shankara-toc-details{margin:5px 0 8px}
+.shankara-content .shankara-toc-details>summary{cursor:pointer;color:#297e83}
+.shankara-content .shankara-toc-details ol{max-height:28rem;overflow:auto;padding-left:2rem}
+.shankara-content .shankara-verse{scroll-margin-top:80px}
+
+/* Keep two-digit verse numbers inside the Contents column. */
+.shankara-reader-page .gita-contents ol{padding-inline-start:2.5em!important;}
+.shankara-reader-page .gita-contents li::marker{font-variant-numeric:tabular-nums;}
