@@ -88,6 +88,10 @@
     "bhagavataCommentators": {
       "label": "Bhāgavata Purāṇa, introduction: commentators (Wisdomlib edition)",
       "url": "https://www.wisdomlib.org/hinduism/book/the-bhagavata-purana/d/doc1113126.html"
+    },
+    "lingaSivatoshini": {
+      "label": "CiNii, Liṅga Purāṇa with Gaṇeśa Nātu’s Śivatoṣiṇī commentary",
+      "url": "https://ci.nii.ac.jp/ncid/BA1981248X"
     }
   },
   "entries": [
@@ -1417,6 +1421,19 @@
         "bhagavataCommentators"
       ],
       "note": "Named as an additional commentary used by the translator; date and exact extent are not established in the cited introduction."
+    },
+    {
+      "id": "comm-linga-sivatoshini",
+      "puranaId": "linga-purana",
+      "work": "Śivatoṣiṇī",
+      "author": "Gaṇeśa Nātu",
+      "scope": "Liṅga Purāṇa",
+      "period": "Composition date not established; catalogued edition published 1989 CE",
+      "status": "date-unverified",
+      "sourceIds": [
+        "lingaSivatoshini"
+      ],
+      "note": "CiNii identifies a Sanskrit commentary by Gaṇeśa Nātu. The edition date does not establish when the commentary was composed, so it remains a separate unresolved lead and is not counted as pre-boundary."
     }
   ]
 }
