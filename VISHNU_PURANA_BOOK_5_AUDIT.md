@@ -50,7 +50,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 36 | 24 | 24 | 0 | 134 | 6 |
 | 37 | 75 | 75 | 0 | 514 | 29 |
 | 38 | 94 | 94 | 0 | 495 | 36 |
-| **Total** | **1517** | **671** | **846** | **4,520** | **656** |
+| **Total** | **1517** | **857** | **660** | **6,642** | **656** |
 
 ## Changes made
 
@@ -79,46 +79,46 @@ This check is a normalized text-presence test, not a critical-edition collation 
 
 ## Not complete
 
-Book 5 still does **not** have a complete strict word-for-word translation. 846 cards have no WFW panel, and the 4,520 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
+Book 5 still does **not** have a complete strict word-for-word translation. 660 cards have no WFW panel, and the 6,642 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
 
 ## 2026-10-15 follow-up — Chapter 4 word-for-word panels
 
-Added strict one-word rows to all 17 Book 5, Chapter 4 verse cards (222 rows). IAST was generated from each displayed Devanagari word form. The Sanskrit segmentation was checked against the chapter’s Śrīdhara verse text and the current verse IDs; compound words remain single rows, while clear external sandhi was separated into lexical words. The 829-card gap elsewhere in Book 5 remains open; this update does not claim full-book completion or independent Sanskrit-scholar certification.
+Added strict one-word rows to all 17 Book 5, Chapter 4 verse cards (222 rows). IAST was generated from each displayed Devanagari word form. The Sanskrit segmentation was checked against the chapter’s Śrīdhara verse text and the current verse IDs; compound words remain single rows, while clear external sandhi was separated into lexical words. The then-current 829-card gap elsewhere in Book 5 remained open; this update does not claim full-book completion or independent Sanskrit-scholar certification.
 
 
 ## 2026-10-15 follow-up — Chapter 8 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 13 Book 5, Chapter 8 verses (161 rows). Clear word boundaries were taken from the verse text and compounds were kept as single lexical units. The audit now records 701/1,517 cards with a panel; 816 cards still lack one. This is a coverage update, not a claim of full-book completion.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 13 Book 5, Chapter 8 verses (161 rows). Clear word boundaries were taken from the verse text and compounds were kept as single lexical units. The historical checkpoint recorded 701/1,517 cards with a panel; 816 cards still lacked one. This is a coverage update, not a claim of full-book completion.
 
 
 ## 2026-10-15 follow-up — Chapter 2 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 21 Book 5, Chapter 2 verse cards (246 rows). IAST was generated from the padaccheda forms. The displayed reading in 5.2.20 repeats *svadhā* where the numbered and Śrīdhara verse witnesses read *sudhā*; the main witness reading is preserved in the panel and this variant remains logged for editorial review. The audit now records 722/1,517 cards with panels and 795 cards still without one.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 21 Book 5, Chapter 2 verse cards (246 rows). IAST was generated from the padaccheda forms. The displayed reading in 5.2.20 repeats *svadhā* where the numbered and Śrīdhara verse witnesses read *sudhā*; the main witness reading is preserved in the panel and this variant remains logged for editorial review. The historical checkpoint recorded 722/1,517 cards with panels and 795 cards still without one.
 
 
 ## 2026-10-15 follow-up — Chapter 3 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 29 Book 5, Chapter 3 verse cards (325 rows). IAST was generated from each Devanāgarī padaccheda form. The audit now records 751/1,517 cards with panels and 766 cards still without one.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 29 Book 5, Chapter 3 verse cards (325 rows). IAST was generated from each Devanāgarī padaccheda form. The historical checkpoint recorded 751/1,517 cards with panels and 766 cards still without one.
 
 
 ## 2026-10-15 follow-up — Chapter 5 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 23 Book 5, Chapter 5 verse cards (261 rows). Compound expressions remain one lexical row; inflected words are individually glossed. The audit now records 774/1,517 cards with panels and 743 cards still without one.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 23 Book 5, Chapter 5 verse cards (261 rows). Compound expressions remain one lexical row; inflected words are individually glossed. The historical checkpoint recorded 774/1,517 cards with panels and 743 cards still without one.
 
 
 ## 2026-10-15 follow-up — Chapter 11 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 25 Book 5, Chapter 11 verse cards (270 rows). The audit now records 799/1,517 cards with panels and 718 cards still without one.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 25 Book 5, Chapter 11 verse cards (270 rows). The historical checkpoint recorded 799/1,517 cards with panels and 718 cards still without one.
 
 
 ## 2026-10-15 follow-up — Chapter 12 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 26 Book 5, Chapter 12 verse cards (298 rows). The audit now records 825/1,517 cards with panels and 692 cards still without one.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 26 Book 5, Chapter 12 verse cards (298 rows). The historical checkpoint recorded 825/1,517 cards with panels and 692 cards still without one.
 
 
 ## 2026-10-15 follow-up — Chapter 21 word-for-word panels
 
-Added one-word Sanskrit, IAST, and direct gloss rows to all 32 Book 5, Chapter 21 verse cards (339 rows). The audit now records 857/1,517 cards with panels and 660 cards still without one.
+Added one-word Sanskrit, IAST, and direct gloss rows to all 32 Book 5, Chapter 21 verse cards (339 rows). The audit records 857/1,517 cards with panels and 660 cards still without one.
 
 
 ## 2026-10-15 verification note
