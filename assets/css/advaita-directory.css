@@ -20,7 +20,7 @@ body.advaita-directory-page{margin:0;background:var(--outer);color:var(--ink);fo
 .ad-section>h2{margin:0 0 8px;color:var(--ink);font:600 16px/1.5 Merriweather,Georgia,serif}
 .ad-guru-group{margin:16px 0 20px;scroll-margin-top:24px}
 .ad-guru-group h3{margin:0 0 5px;color:var(--teal);font:600 16px/1.5 Merriweather,Georgia,serif}
-.ad-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px}
+.ad-links{display:grid;grid-template-columns:1fr;row-gap:1px}
 .ad-entry{min-width:0;margin:0;padding:2px 0;overflow-wrap:anywhere}
 .ad-entry-link{display:block;color:var(--ink);font:400 16px/1.5 Merriweather,Georgia,serif;text-decoration:none}
 .ad-guru-group:target>h3{color:var(--purple)}
