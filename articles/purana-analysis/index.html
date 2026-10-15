@@ -7,205 +7,27 @@
   <meta name="description" content="A chapter heat map of Purāṇic citations and inter-Purāṇa parallels.">
   <title>Purāṇa Analysis</title>
   <style>
-    :root {
-      color-scheme: light;
-      --paper: #fff;
-      --ink: #262821;
-      --muted: #74766f;
-      --rule: #e4e6df;
-      --green: #dcebe0;
-      --green-ink: #315d40;
-      --violet: #ece5f2;
-      --violet-ink: #674b7a;
-      --blue: #dfeaf0;
-      --blue-ink: #3e6274;
-      --neutral: #f3f4f0;
-      --amber: #f2e7cf;
-      --amber-ink: #765a24;
-      --subject: #edeee9;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font: 13px/1.45 var(--sans); }
-    button { font: inherit; }
-    :focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
-    .page { width: min(1280px, calc(100% - 48px)); margin: 0 auto; }
-    .top { min-height: 42px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
-    .top a { color: inherit; text-decoration: none; }
-    .top a:first-child { font-weight: 650; }
-    .top a:last-child { color: var(--muted); }
-    header { padding: 26px 0 18px; border-bottom: 1px solid var(--ink); }
-    h1 { margin: 0; font: 400 clamp(32px, 4vw, 44px)/1.05 var(--serif); letter-spacing: -.035em; }
-    .dek { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
-    .workspace { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: clamp(24px, 4vw, 54px); align-items: start; padding: 26px 0 0; }
-    .contents-panel { position: sticky; top: 18px; min-width: 0; }
-    .contents-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-bottom: 9px; border-bottom: 1px solid var(--rule); }
-    .contents-heading h2 { margin: 0; font: 400 21px/1.1 var(--serif); }
-    .contents-heading span { color: var(--muted); font-size: 9px; }
-    #contents { display: flex; flex-direction: column; gap: 14px; margin-top: 13px; }
-    .contents-button { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: baseline; gap: 8px; padding: 6px 7px; border: 0; border-left: 2px solid transparent; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
-    .contents-button:hover { background: #f7f8f5; }
-    .contents-button.active { border-left-color: var(--green-ink); background: #f0f5f1; }
-    .contents-name { min-width: 0; font-size: 11px; line-height: 1.35; }
-    .contents-category { color: var(--muted); font-size: 8px; letter-spacing: .03em; text-transform: uppercase; white-space: nowrap; }
-    .evidence-count { color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; }
-    .viewer { min-width: 0; }
-    .selected-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 0 0 12px; border-bottom: 1px solid var(--ink); }
-    .selected-category { margin: 0 0 4px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
-    #selected-name { margin: 0; font: 400 clamp(25px, 3vw, 35px)/1.05 var(--serif); letter-spacing: -.03em; }
-    .selected-evidence { margin: 0 0 2px; color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
-    .legend { display: flex; flex-wrap: wrap; gap: 8px 17px; padding: 10px 0 9px; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 10px; }
-    .legend-item { display: inline-flex; align-items: center; gap: 6px; }
-    .legend-swatch { width: 10px; height: 10px; border-radius: 2px; background: #f1f2ee; }
-    .legend-swatch.quoted { background: var(--green); }
-    .legend-swatch.bhashya { background: var(--violet); }
-    .legend-swatch.parallel { background: var(--blue); }
-    .legend-swatch.mention { background: var(--amber); }
-    .legend-swatch.subject { background: var(--subject); }
-    .legend-swatch.none { border: 1px solid #e8e9e4; background: #f5f6f3; }
-    #map { padding: 8px 0 22px; }
-    .section-row { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
-    .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.35; }
-    .section-content { min-width: 0; }
-    .cells { display: grid; grid-template-columns: repeat(auto-fill, 24px); gap: 3px; align-content: start; }
-    .tile { position: relative; display: grid; place-items: center; width: 24px; height: 24px; padding: 0; border: 1px solid #e8e9e4; border-radius: 3px; color: #8a8d85; background: #f5f6f3; font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer; }
-    .tile.quoted { border-color: #bfd2c2; color: var(--green-ink); background: var(--green); font-weight: 650; }
-    .tile.bhashya { border-color: #d3c4de; color: var(--violet-ink); background: var(--violet); }
-    .tile.parallel { border-color: #c7d9e1; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
-    .tile.mention { border-color: #dfd0b1; color: var(--amber-ink); background: var(--amber); }
-    .tile.subject { border-color: #d9ddd5; color: #565a52; background: var(--subject); }
-    .tile.mixed { border-color: #d4d7d0; color: var(--ink); background: conic-gradient(from -45deg, var(--tile-evidence)); font-weight: 650; }
-    .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
-    .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
-    .detail { margin: 6px 0 2px; padding: 9px 11px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); border-radius: 3px; background: #fff; }
-    .detail[hidden] { display: none; }
-    .detail h2 { margin: 0 0 7px; font: 400 17px/1.2 var(--serif); }
-    .group { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 5px 0 0; }
-    .group + .group { margin-top: 4px; border-top: 1px solid #eff0ec; }
-    .group h3 { margin: 2px 0 0; color: var(--muted); font: 650 9px/1.4 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
-    .group-quoted h3 { color: var(--green-ink); }
-    .group-bhashya h3 { color: var(--violet-ink); }
-    .group-parallel h3 { color: var(--blue-ink); }
-    .group-mention h3 { color: var(--amber-ink); }
-    .entries { min-width: 0; margin: 0; padding: 0; list-style: none; }
-    .entry { padding: 1px 0 4px; overflow-wrap: anywhere; }
-    .work { font-weight: 600; }
-    .work-link { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
-    .refs { display: block; padding-top: 1px; color: #4e514b; font-variant-numeric: tabular-nums; }
-    .pair { font-variant-numeric: tabular-nums; }
-    .arrow { padding: 0 6px; color: var(--muted); }
-    .note { display: block; padding-top: 2px; color: #6a6d65; font: italic 12px/1.4 var(--serif); }
-    .no-entry { margin: 0; color: var(--muted); font-size: 11px; }
-    .error { padding: 14px 0; color: #9b443c; }
-    .commentary-panel { margin: 25px 0 42px; border-top: 1px solid var(--ink); }
-    .commentary-disclosure > summary { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 13px 0; cursor: pointer; list-style: none; }
-    .commentary-disclosure > summary::-webkit-details-marker { display: none; }
-    .commentary-disclosure > summary::after { content: "+"; order: 2; color: var(--muted); }
-    .commentary-disclosure[open] > summary::after { content: "−"; }
-    .commentary-title { font: 400 22px/1.1 var(--serif); }
-    .commentary-count { margin-left: auto; color: var(--muted); font-size: 10px; text-align: right; }
-    .commentary-note { margin: 0 0 13px; color: var(--muted); font-size: 10px; }
-    .commentary-section { margin: 15px 0 0; }
-    .commentary-section h3 { margin: 0 0 6px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
-    .commentary-grid { display: grid; grid-template-columns: 1fr; gap: 3px; }
-    .commentary-card { min-width: 0; border-bottom: 1px solid var(--rule); }
-    .commentary-card > summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(100px, .6fr) auto; align-items: baseline; gap: 10px; padding: 7px 2px; cursor: pointer; list-style: none; }
-    .commentary-card > summary::-webkit-details-marker { display: none; }
-    .commentary-card > summary::before { color: var(--muted); content: "+"; }
-    .commentary-card[open] > summary::before { content: "−"; }
-    .commentary-card h4 { grid-column: 2; grid-row: 1; margin: 0; font: 500 13px/1.3 var(--serif); }
-    .commentary-author { grid-column: 2; grid-row: 2; margin: 0; color: var(--muted); font-size: 10px; }
-    .commentary-period { grid-column: 3; grid-row: 1 / span 2; margin: 0; color: var(--muted); font-size: 9px; white-space: nowrap; }
-    .commentary-body { padding: 0 0 9px 20px; }
-    .commentary-scope, .commentary-body-note { margin: 3px 0; color: var(--muted); font-size: 10px; }
-    .commentary-status { display: inline-block; margin-top: 5px; color: var(--green-ink); font-size: 9px; }
-    .commentary-status.uncertain { color: var(--violet-ink); }
-    .commentary-sources { display: flex; flex-wrap: wrap; gap: 4px 13px; margin-top: 5px; font-size: 9px; }
-    .commentary-sources a, .source-list a { color: var(--green-ink); text-underline-offset: 2px; }
-    .commentary-empty { margin: 8px 0 12px; color: var(--muted); font-size: 10px; }
-    .source-details { margin: 17px 0 24px; padding-top: 9px; border-top: 1px solid var(--rule); }
-    .source-details > summary { color: var(--muted); font-size: 10px; cursor: pointer; }
-    .source-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; margin-top: 9px; font-size: 9px; }
-    .source-limit { margin: 9px 0 0; color: var(--muted); font-size: 9px; }
-    @media (max-width: 760px) {
-      .page { width: calc(100% - 28px); }
-      header { padding: 21px 0 14px; }
-      .workspace { grid-template-columns: 1fr; gap: 18px; padding-top: 18px; }
-      .contents-panel { position: static; }
-      #contents { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
-      .contents-group { min-width: 0; }
-      .section-row { grid-template-columns: 82px minmax(0, 1fr); gap: 7px; }
-      .section-label { font-size: 9px; }
-      .cells { grid-template-columns: repeat(auto-fill, 22px); gap: 2px; }
-      .tile { width: 22px; height: 22px; }
-      .group { grid-template-columns: 72px minmax(0, 1fr); gap: 7px; }
-      .commentary-card > summary { grid-template-columns: minmax(0, 1fr) auto; gap: 3px 8px; }
-      .commentary-card > summary::before { grid-column: 1; grid-row: 1 / span 2; }
-      .commentary-card h4, .commentary-author { grid-column: 2; }
-      .commentary-period { grid-column: 2; grid-row: 3; }
-      .source-list { grid-template-columns: 1fr; }
-    }
-  
-    /* Quiet, compact layout: keep the data, remove the extra framing. */
-    .page { width: min(1400px, calc(100% - 44px)); }
-    header { padding: 15px 0 11px; border-bottom-color: var(--rule); }
-    h1 { font-size: 23px; }
-    .dek, .contents-heading span { display: none; }
-    .workspace { grid-template-columns: 250px minmax(0, 1fr); gap: clamp(24px, 3vw, 42px); padding-top: 18px; }
-    .contents-heading { padding-bottom: 8px; }
-    .contents-heading h2 { font-size: 18px; }
-    #contents { gap: 1px; margin-top: 5px; max-height: calc(100vh - 112px); overflow-y: auto; }
-    .contents-button { padding: 5px 7px; }
-    .selected-evidence { font-size: 11px; }
-    .legend { gap: 6px 14px; padding: 9px 0 8px; font-size: 9px; }
-    .section-row { padding: 5px 0; }
-    .commentary-panel { margin-top: 18px; }
-    .commentary-title { font-size: 19px; }
-    .commentary-search { width: min(100%, 320px); margin: 0 0 12px; padding: 7px 9px; border: 1px solid var(--rule); border-radius: 3px; font-size: 11px; }
-    .commentary-card[hidden], .commentary-section[hidden] { display: none; }
-    .group-quoted { border-left-color: var(--green-ink); }
-    .group-parallel { border-left-color: var(--blue-ink); }
-    .group-bhashya, .group-chapterRelations { border-left-color: var(--violet-ink); }
-    .group-other, .group-missing { border-left-color: #b8bcb4; }
-    @media (max-width: 760px) {
-      .page { width: calc(100% - 28px); }
-      .workspace { grid-template-columns: 1fr; gap: 15px; padding-top: 14px; }
-      #contents { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; max-height: none; }
-    }
-    .view-tabs { display: flex; gap: 18px; margin: 0 0 2px; border-bottom: 1px solid var(--rule); }
-    .view-tab { display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; }
-    .view-tab.active { border-bottom-color: var(--ink); color: var(--ink); }
-    .view-count { color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; }
-    #map-pane[hidden], .commentary-panel[hidden] { display: none; }
-    .commentary-panel { margin: 0 0 42px; border-top: 0; }
-    .commentary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 0 5px; border-bottom: 1px solid var(--rule); }
-    .commentary-title { font: 400 19px/1.1 var(--serif); }
-    .commentary-note { margin: 0; color: var(--muted); font-size: 9px; }
-    .commentary-search { margin-top: 10px; }
-    .commentary-status.boundary { color: var(--blue-ink); }
-    .commentary-empty { padding: 6px 0; }
-    @media (max-width: 760px) {
-      .commentary-head { align-items: start; flex-direction: column; gap: 4px; }
-    }
-    /* Grouped contents keep the side index scannable. */
-    #contents { display: flex; flex-direction: column; gap: 15px; margin-top: 10px; }
-    .contents-group-title { margin: 0 0 5px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; }
-    .contents-list { display: flex; flex-direction: column; gap: 1px; }
-    .contents-button { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 5px 7px; }
-    .contents-name { grid-column: 1; grid-row: 1; }
-    .evidence-count { grid-column: 2; grid-row: 1; align-self: center; }
-    .contents-category { display: none; }
-    .legend { gap: 6px 12px; }
-    @media (max-width: 760px) {
-      #contents { display: flex; flex-direction: column; gap: 13px; max-height: none; }
-      .contents-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px 8px; }
-    }
-    .commentary-section-collapsed { margin-top: 13px; border-top: 1px solid var(--rule); }
-    .commentary-section-summary { padding: 7px 0; color: var(--muted); font-size: 10px; cursor: pointer; list-style: none; }
-    .commentary-section-summary::-webkit-details-marker { display: none; }
-    .commentary-section-summary::after { float: right; content: "+"; }
-    .commentary-section-collapsed[open] > .commentary-section-summary::after { content: "−"; }
+
+    :root{color-scheme:light;--paper:#fff;--ink:#242722;--muted:#747970;--rule:#e5e7e1;--green:#dcebe0;--green-ink:#315d40;--violet:#ece5f2;--violet-ink:#674b7a;--blue:#dfeaf0;--blue-ink:#3e6274;--amber:#f2e7cf;--amber-ink:#765a24;--subject:#edeee9;--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:13px/1.45 var(--sans)}button,input{font:inherit}:focus-visible{outline:2px solid var(--green-ink);outline-offset:2px}
+    .page{width:min(1440px,calc(100% - 48px));margin:0 auto}.top{min-height:36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);font-size:10px;letter-spacing:.06em;text-transform:uppercase}.top a{color:inherit;text-decoration:none}.top a:last-child{color:var(--muted)}
+    header{padding:15px 0 12px;border-bottom:1px solid var(--rule)}h1{margin:0;font:400 24px/1.12 var(--serif);letter-spacing:-.025em}.dek{display:none}
+    .workspace{display:grid;grid-template-columns:246px minmax(0,1fr);gap:clamp(24px,3vw,42px);align-items:start;padding-top:18px}
+    .contents-panel{position:sticky;top:16px;min-width:0;max-height:calc(100vh - 32px);overflow-y:auto}.contents-heading{padding-bottom:8px;border-bottom:1px solid var(--rule)}.contents-heading h2{margin:0;font:400 17px/1.2 var(--serif)}.contents-heading span{display:none}
+    #contents{display:flex;flex-direction:column;gap:15px;margin-top:10px}.contents-group{min-width:0}.contents-group-title{margin:0 0 5px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.07em;text-transform:uppercase}.contents-list{display:flex;flex-direction:column;gap:1px}
+    .contents-button{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:5px 7px;border:0;border-left:2px solid transparent;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.contents-button:hover{background:#f7f8f5}.contents-button.active{border-left-color:var(--green-ink);background:#f0f5f1}.contents-name{min-width:0;font-size:11px;line-height:1.35}.evidence-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}
+    .viewer{min-width:0}.selected-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 0 10px;border-bottom:1px solid var(--ink)}.selected-category{margin:0 0 4px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.07em;text-transform:uppercase}#selected-name{margin:0;font:400 clamp(24px,3vw,32px)/1.08 var(--serif);letter-spacing:-.025em}.selected-evidence{margin:0 0 2px;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .view-tabs{display:flex;gap:18px;margin:0 0 2px;border-bottom:1px solid var(--rule)}.view-tab{display:inline-flex;align-items:baseline;gap:6px;padding:8px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);cursor:pointer;font-size:11px}.view-tab.active{border-bottom-color:var(--ink);color:var(--ink)}.view-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}#map-pane[hidden],.commentary-panel[hidden]{display:none}
+    .legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:9px 0 8px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:9px}.legend-item{display:inline-flex;align-items:center;gap:5px}.legend-swatch{width:9px;height:9px;border-radius:2px}.legend-swatch.quoted{background:var(--green)}.legend-swatch.bhashya{background:var(--violet)}.legend-swatch.parallel{background:var(--blue)}.legend-swatch.mention{background:var(--amber)}.legend-swatch.subject{background:var(--subject)}.legend-swatch.none{border:1px solid #e4e7e0;background:#f7f8f5}
+    #map{padding:6px 0 22px}.section-row{display:grid;grid-template-columns:122px minmax(0,1fr);gap:10px;padding:5px 0;border-bottom:1px solid var(--rule)}.section-label{padding-top:4px;color:var(--muted);font-size:10px;line-height:1.35}.section-content{min-width:0}.cells{display:grid;grid-template-columns:repeat(auto-fill,24px);gap:3px;align-content:start}
+    .tile{display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #e6e8e2;border-radius:3px;color:#858a81;background:#f7f8f5;font-size:10px;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer}.tile.quoted{border-color:#bfd2c2;color:var(--green-ink);background:var(--green);font-weight:650}.tile.bhashya{border-color:#d3c4de;color:var(--violet-ink);background:var(--violet)}.tile.parallel{border-color:#c7d9e1;color:var(--blue-ink);background:var(--blue);font-weight:650}.tile.mention{border-color:#dfd0b1;color:var(--amber-ink);background:var(--amber)}.tile.subject{border-color:#d9ddd5;color:#565a52;background:var(--subject)}.tile.mixed{border-color:#d4d7d0;color:var(--ink);background:conic-gradient(from -45deg,var(--tile-evidence));font-weight:650}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}
+    .detail{margin:5px 0 2px;padding:8px 10px;border:1px solid var(--rule);border-left:2px solid var(--ink);border-radius:3px;background:#fff}.detail[hidden]{display:none}.detail h2{margin:0 0 5px;font:400 15px/1.2 var(--serif)}
+    .group{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;padding:4px 0 0}.group+.group{margin-top:3px;border-top:1px solid #eff0ec}.group h3{margin:2px 0 0;color:var(--muted);font:650 9px/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase}.group-quoted h3{color:var(--green-ink)}.group-bhashya h3{color:var(--violet-ink)}.group-parallel h3{color:var(--blue-ink)}.group-mention h3{color:var(--amber-ink)}.entries{min-width:0;margin:0;padding:0;list-style:none;font-size:11px}.entry{padding:1px 0 3px;overflow-wrap:anywhere}.work{font-weight:600}.work-link{color:inherit;text-decoration-color:var(--rule);text-underline-offset:2px}.refs{display:block;padding-top:1px;color:#555951;font-size:10px;font-variant-numeric:tabular-nums}.pair{font-variant-numeric:tabular-nums}.note{display:block;padding-top:2px;color:#6a6d65;font:italic 11px/1.35 var(--serif)}.no-entry{margin:0;color:var(--muted);font-size:10px}.error{padding:14px 0;color:#9b443c}
+    .commentary-panel{margin:0 0 40px}.commentary-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:11px 0 5px;border-bottom:1px solid var(--rule)}.commentary-title{margin:0;font:400 19px/1.1 var(--serif)}.commentary-note{margin:0;color:var(--muted);font-size:9px}.commentary-search{width:min(100%,320px);margin:10px 0 3px;padding:7px 9px;border:1px solid var(--rule);border-radius:3px;font-size:11px}.commentary-card[hidden],.commentary-section[hidden]{display:none}
+    .commentary-section{margin:15px 0 0}.commentary-section h3{margin:0 0 6px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.08em;text-transform:uppercase}.commentary-grid{display:grid;grid-template-columns:1fr;gap:2px}.commentary-card{min-width:0;border-bottom:1px solid var(--rule)}.commentary-card>summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(100px,.55fr) auto;align-items:baseline;gap:8px;padding:7px 2px;cursor:pointer;list-style:none}.commentary-card>summary::-webkit-details-marker,.commentary-section-summary::-webkit-details-marker{display:none}.commentary-card>summary::before{color:var(--muted);content:"+"}.commentary-card[open]>summary::before{content:"−"}.commentary-card h4{grid-column:2;grid-row:1;margin:0;font:500 13px/1.3 var(--serif)}.commentary-author{grid-column:2;grid-row:2;margin:0;color:var(--muted);font-size:10px}.commentary-period{grid-column:3;grid-row:1/span 2;margin:0;color:var(--muted);font-size:9px;white-space:nowrap}.commentary-body{padding:0 0 8px 20px}.commentary-scope,.commentary-body-note{margin:3px 0;color:var(--muted);font-size:10px}.commentary-status{display:inline-block;margin-top:5px;color:var(--green-ink);font-size:9px}.commentary-status.uncertain{color:var(--violet-ink)}.commentary-sources{display:flex;flex-wrap:wrap;gap:4px 13px;margin-top:5px;font-size:9px}.commentary-sources a,.source-list a{color:var(--green-ink);text-underline-offset:2px}.commentary-empty{margin:8px 0 12px;color:var(--muted);font-size:10px}.commentary-section-collapsed{margin-top:13px;border-top:1px solid var(--rule)}.commentary-section-summary{padding:7px 0;color:var(--muted);font-size:10px;cursor:pointer;list-style:none}.commentary-section-summary::after{float:right;content:"+"}.commentary-section-collapsed[open]>.commentary-section-summary::after{content:"−"}
+    .source-details{margin:17px 0 24px;padding-top:9px;border-top:1px solid var(--rule)}.source-details>summary{color:var(--muted);font-size:10px;cursor:pointer}.source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;margin-top:9px;font-size:9px}.source-limit{margin:9px 0 0;color:var(--muted);font-size:9px}
+    @media(max-width:760px){.page{width:calc(100% - 28px)}header{padding:13px 0 10px}.workspace{grid-template-columns:1fr;gap:14px;padding-top:14px}.contents-panel{position:static;max-height:36vh}#contents{gap:11px}.contents-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px 8px}.section-row{grid-template-columns:82px minmax(0,1fr);gap:7px}.section-label{font-size:9px}.cells{grid-template-columns:repeat(auto-fill,22px);gap:2px}.tile{width:22px;height:22px}.group{grid-template-columns:70px minmax(0,1fr);gap:7px}.commentary-head{align-items:start;flex-direction:column;gap:4px}.commentary-card>summary{grid-template-columns:minmax(0,1fr) auto;gap:3px 8px}.commentary-card>summary::before{grid-column:1;grid-row:1/span 2}.commentary-card h4,.commentary-author{grid-column:2}.commentary-period{grid-column:2;grid-row:3}.source-list{grid-template-columns:1fr}}
+
   </style>
 </head>
 <body>
@@ -242,9 +64,9 @@
       <div class="legend" aria-label="Heat map key">
         <span class="legend-item"><i class="legend-swatch none" aria-hidden="true"></i>None</span>
         <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Commentary</span>
+        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya only</span>
         <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-        <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Purāṇa mention</span>
+        <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Purāṇa ref.</span>
         <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Subject</span>
       </div>
       <main id="map" aria-live="polite"></main>
@@ -252,14 +74,14 @@
     <section id="commentary-panel" class="commentary-panel" aria-labelledby="commentary-heading" hidden>
       <div class="commentary-head">
         <h2 id="commentary-heading" class="commentary-title">Bhāṣyas</h2>
-        <span class="commentary-note">Through Nīlakaṇṭha · late 17th c.</span>
+        <span class="commentary-note">Before Nīlakaṇṭha</span>
       </div>
       <input id="commentary-search" class="commentary-search" type="search" placeholder="Search title or author" aria-label="Search bhāṣya titles, authors, scope, or date">
       <div id="commentary-list"></div>
       <details class="source-details">
         <summary>Sources</summary>
         <div id="commentary-sources" class="source-list"></div>
-        <p class="source-limit">Later works excluded · unclear dates uncounted.</p>
+        <p class="source-limit">Later works excluded · unclear dates separate.</p>
       </details>
     </section>
       </div>
@@ -316,12 +138,12 @@
           if (type === "quoted") {
             const work = document.createElement("span");
             work.className = "work";
-            const name = entry.work === "Work title unclear" ? "Work not identified" : entry.work;
-            const author = entry.author?.trim() || "Author not identified";
-            work.textContent = `${name} — ${author}`;
+            const name = entry.work === "Work title unclear" ? "Work not identified" : (entry.work || entry.label || "Work not identified");
+            const author = entry.author?.trim();
+            work.textContent = author ? name + " — " + author : name;
             item.appendChild(work);
-            if (entry.refs?.length) {
-              const refs = document.createElement("span");
+            const refsList = entry.refs?.length ? entry.refs : (entry.ref ? [entry.ref] : []);
+            if (refsList.length) {
               refs.className = "refs";
               refs.textContent = entry.refs.map(ref => {
                 const scoped = section?.part && !section.prefix ? section.part + " " + ref : ref;
@@ -420,7 +242,7 @@
         if (!entries?.length) return;
         const isCommentary = /commentary/i.test(headingText);
         const group = document.createElement("section");
-        group.className = "group " + (isCommentary ? "group-bhashya" : "group-subject");
+        group.className = "group " + (isCommentary ? "group-bhashya" : /purāṇa|puran|reference|contents/i.test(headingText) ? "group-mention" : "group-subject");
         const heading = document.createElement("h3");
         heading.textContent = headingText;
         group.appendChild(heading);
@@ -482,26 +304,19 @@
         parent.appendChild(group);
       }
 
-      function evidenceCount(purana) {
-        const fields = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "commentaryCitations", "topics"];
-        const repeatedRelations = { parallel: new Set(), chapterRelations: new Set() };
+      function chapterHasEvidence(record) {
+        const fields = [
+          "quoted", "parallel", "chapterRelations", "textReferences",
+          "contents", "commentaryCitations", "topics", "puranaMentions"
+        ];
+        return fields.some(field => record[field]?.length);
+      }
+
+      function attestedChapterCount(purana) {
         let count = 0;
         for (const section of purana.sections || []) {
           for (const record of Object.values(section.chapters || {})) {
-            for (const field of fields) {
-              const entries = record[field] || [];
-              if (field === "parallel" || field === "chapterRelations") {
-                for (const entry of entries) {
-                  const key = JSON.stringify(entry);
-                  if (!repeatedRelations[field].has(key)) {
-                    repeatedRelations[field].add(key);
-                    count += 1;
-                  }
-                }
-              } else {
-                count += entries.length;
-              }
-            }
+            if (chapterHasEvidence(record)) count += 1;
           }
         }
         return count;
@@ -533,8 +348,20 @@
           }
           section.chapters[patch.chapter] = current;
         }
-        payload.puranas = payload.puranas.filter(item => evidenceCount(item) > 0);
+        payload.puranas = payload.puranas.filter(item => attestedChapterCount(item) > 0);
         return payload;
+      }
+
+      function isChapterCoverage(entry) {
+        return (entry.details || []).some(text => /^Full chapter commentary; not an external quotation\.?$/i.test(text));
+      }
+
+      function isDirectCommentaryCitation(entry) {
+        return !isChapterCoverage(entry) && Boolean(entry.refs?.length || (entry.ref && /\d/.test(entry.ref)));
+      }
+
+      function isQuotedEntry(entry) {
+        return Boolean(entry.refs?.length || /chapter cited/i.test(entry.note || ""));
       }
 
       function showChapter(purana, section, chapter, record, tile, content) {
@@ -553,29 +380,35 @@
         detail.className = "detail";
         detail.setAttribute("aria-label", "Chapter evidence");
         const title = document.createElement("h2");
-        const sectionName = section.part || (section.book ? section.label : "");
-        const chapterRef = chapterNumber(section, chapter);
-        title.textContent = sectionName
-          ? `${purana.name} · ${sectionName} · ${chapterRef}`
-          : `${purana.name} ${chapterRef}`;
+        const sectionName = section.label && section.label !== "Chapters" ? section.label : "";
+        title.textContent = sectionName ? sectionName + " · ch. " + chapter : "Chapter " + chapter;
         detail.appendChild(title);
 
-        const chapterCitations = (record.quoted || []).filter(entry =>
-          entry.refs?.length || /chapter cited/i.test(entry.note || "")
-        );
+        const citedCommentaries = (record.commentaryCitations || [])
+          .filter(isDirectCommentaryCitation)
+          .map(entry => ({
+            work: entry.label || "Commentary",
+            refs: entry.refs?.length ? entry.refs : [entry.ref],
+            note: (entry.details || []).join(" · ")
+          }));
+        const chapterCitations = [
+          ...(record.quoted || []).filter(isQuotedEntry),
+          ...citedCommentaries
+        ];
         addGroup(detail, "Quoted", chapterCitations, "quoted", section);
         addGroup(detail, "Parallel", (record.parallel || []).filter(entry => entry.level !== "chapter"), "parallel");
         const chapterRelations = [
           ...(record.chapterRelations || []),
           ...(record.parallel || []).filter(entry => entry.level === "chapter")
         ];
-        addGroup(detail, "Chapter relation", chapterRelations, "chapterRelations");
+        addGroup(detail, "Purāṇa relation", chapterRelations, "chapterRelations");
         addTextReferencesGroup(detail, record.textReferences);
         addContentsGroup(detail, record.contents);
-        addTaggedGroup(detail, "Commentary", record.commentaryCitations);
+        addTaggedGroup(detail, "Purāṇa mention", record.puranaMentions);
+        addTaggedGroup(detail, "Commentary", (record.commentaryCitations || []).filter(entry => !isDirectCommentaryCitation(entry)));
         addTaggedGroup(detail, "Subject", record.topics);
         addGroup(detail, "Unmatched", record.missing, "missing");
-        const hasRecord = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "commentaryCitations", "topics", "missing"]
+        const hasRecord = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "puranaMentions", "commentaryCitations", "topics", "missing"]
           .some(field => record[field]?.length);
         if (!hasRecord) {
           const empty = document.createElement("p");
@@ -613,10 +446,13 @@
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
               const quoteEntries = record.quoted || [];
-              const isChapterCitation = entry => /chapter cited/i.test(entry.note || "");
+              const commentaryEntries = record.commentaryCitations || [];
               const evidence = [];
-              if (quoteEntries.some(entry => entry.refs?.length || isChapterCitation(entry))) evidence.push("quoted");
-              if (quoteEntries.some(entry => !entry.refs?.length && !isChapterCitation(entry)) || record.commentaryCitations?.length) evidence.push("bhashya");
+              if (quoteEntries.some(isQuotedEntry) || commentaryEntries.some(isDirectCommentaryCitation)) evidence.push("quoted");
+              if (
+                quoteEntries.some(entry => !isQuotedEntry(entry)) ||
+                commentaryEntries.some(entry => !isDirectCommentaryCitation(entry))
+              ) evidence.push("bhashya");
               if (record.parallel?.some(entry => entry.level !== "chapter")) evidence.push("parallel");
               if (
                 record.puranaMentions?.length ||
@@ -645,7 +481,7 @@
               }
               const labels = {
                 quoted: "quoted",
-                bhashya: "commentary",
+                bhashya: "commentary only",
                 parallel: "parallel",
                 mention: "Purāṇa mention or list",
                 subject: "subject"
@@ -679,7 +515,7 @@
       ]);
 
       function categoryFor(purana) {
-        return upaIds.has(purana.id) ? "Upa" : "Mahā";
+        return upaIds.has(purana.id) ? "Upapurāṇa" : "Mahāpurāṇa";
       }
 
       function setActiveContents(id) {
@@ -693,9 +529,9 @@
       function renderContents() {
         contents.replaceChildren();
         const items = [...data.puranas].sort((a, b) =>
-          evidenceCount(b) - evidenceCount(a) || a.name.localeCompare(b.name, "en")
+          attestedChapterCount(b) - attestedChapterCount(a) || a.name.localeCompare(b.name, "en")
         );
-        const categories = ["Mahā", "Upa"];
+        const categories = ["Mahāpurāṇa", "Upapurāṇa"];
         for (const categoryName of categories) {
           const members = items.filter(item => categoryFor(item) === categoryName);
           if (!members.length) continue;
@@ -703,7 +539,7 @@
           group.className = "contents-group";
           const heading = document.createElement("h3");
           heading.className = "contents-group-title";
-          heading.textContent = categoryName === "Upa" ? "Upapurāṇas" : "Mahāpurāṇas";
+          heading.textContent = categoryName === "Upapurāṇa" ? "Upapurāṇas" : "Mahāpurāṇas";
           const list = document.createElement("div");
           list.className = "contents-list";
           for (const purana of members) {
@@ -718,8 +554,8 @@
             name.textContent = purana.name;
             const count = document.createElement("span");
             count.className = "evidence-count";
-            count.textContent = evidenceCount(purana).toLocaleString();
-            count.setAttribute("aria-label", evidenceCount(purana).toLocaleString() + " evidence records");
+            count.textContent = attestedChapterCount(purana).toLocaleString();
+            count.setAttribute("aria-label", attestedChapterCount(purana).toLocaleString() + " attested chapters");
             button.append(name, count);
             button.addEventListener("click", () => render(purana));
             list.appendChild(button);
@@ -790,22 +626,21 @@
       function renderCommentaries(puranaId) {
         commentaryList.replaceChildren();
         const entries = commentaryData.entries.filter(entry =>
-          entry.puranaId === puranaId && entry.status !== "post-cutoff"
+          entry.puranaId === puranaId && !["post-cutoff", "boundary"].includes(entry.status)
         );
         const dated = entries.filter(entry => entry.status === "within-cutoff");
         const boundary = entries.filter(entry => entry.status === "boundary");
         const unresolved = entries.filter(entry => entry.status === "date-unverified");
-        const verifiedCount = dated.length + boundary.length;
+        const verifiedCount = dated.length;
         commentaryCount.textContent = verifiedCount.toLocaleString();
-        commentaryCount.title = `${verifiedCount} dated through Nīlakaṇṭha · ${unresolved.length} date unclear`;
+        commentaryCount.title = `${verifiedCount} before Nīlakaṇṭha · ${unresolved.length} date unclear`;
         commentarySearch.value = "";
         addCommentarySection("Before Nīlakaṇṭha", dated, "within-cutoff");
-        addCommentarySection("Nīlakaṇṭha", boundary, "boundary");
         addCommentarySection("Date unclear", unresolved, "date-unverified", true);
         if (verifiedCount === 0) {
           const note = document.createElement("p");
           note.className = "commentary-empty";
-          note.textContent = "No dated bhāṣya found.";
+          note.textContent = "No pre-cutoff bhāṣya found.";
           commentaryList.appendChild(note);
         }
         commentarySearch.oninput = () => {
@@ -858,8 +693,8 @@
         setActiveContents(purana.id);
         selectedCategory.textContent = categoryFor(purana);
         selectedName.textContent = purana.name;
-        selectedEvidence.textContent = evidenceCount(purana).toLocaleString();
-        selectedEvidence.title = evidenceCount(purana).toLocaleString() + " evidence records";
+        selectedEvidence.textContent = attestedChapterCount(purana).toLocaleString() + " chapters";
+        selectedEvidence.title = attestedChapterCount(purana).toLocaleString() + " attested chapters";
         renderMaps([purana]);
         renderCommentaries(purana.id);
       }
@@ -871,7 +706,7 @@
             dataResponse.json(), subjectResponse.json(), commentaryResponse.json()
           ]);
           data = applySubjectIndex(payload, subjectIndex);
-          data.puranas = data.puranas.filter(item => evidenceCount(item) > 0);
+          data.puranas = data.puranas.filter(item => attestedChapterCount(item) > 0);
           commentaryData = commentaryPayload;
           renderSourceList();
           renderContents();
