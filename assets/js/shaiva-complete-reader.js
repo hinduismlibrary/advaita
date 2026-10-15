@@ -422,7 +422,7 @@ function normalizeCitationOrder(root){
 }
 
 function href(section){
-  return section.id==='contents'?base:base+'?section='+encodeURIComponent(section.id);
+  return section.id==='opening-salutation'?base:base+'?section='+encodeURIComponent(section.id);
 }
 
 function tocInto(node,sections,selected){
@@ -483,9 +483,7 @@ async function load(){
 
 async function render(){
   const pages=await load();
-  const sections=sectionsFrom(pages);
-  const contentsIndex=sections.findIndex(section=>section.id==='contents');
-  if(contentsIndex>0)sections.unshift(sections.splice(contentsIndex,1)[0]);
+  const sections=sectionsFrom(pages).filter(section=>section.id!=='contents');
   const requested=new URLSearchParams(location.search).get('section');
   const legacy={
     opening:'opening-salutation',index:'contents',
