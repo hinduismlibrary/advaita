@@ -128,6 +128,10 @@
     "jivaWorksDirect": {
       "label": "Jīva Gosvāmī works index, including Padma Purāṇa Yogasāra-stotra-ṭīkā",
       "url": "https://bvmlu.org/SJG/index.html"
+    },
+    "rasHaribhaktisudhodaya": {
+      "label": "Royal Asiatic Society, Whish MS 80: Haribhaktisudhodaya from the Nāradīya Purāṇa",
+      "url": "https://royalasiaticcollections.org/south-indian-sanskrit-ms-080-whish-ms-80haribhaktisudhodaya/"
     }
   },
   "entries": [
@@ -1770,6 +1774,19 @@
         "vallabhaBhagavata"
       ],
       "note": "A short interpretive work on the Bhāgavata, distinct from the Subodhinī commentary."
+    },
+    {
+      "id": "comm-naradiya-haribhaktisudhodaya",
+      "puranaId": "naradiya-purana",
+      "work": "Haribhaktisudhodaya with commentary",
+      "author": "Anonymous",
+      "scope": "Nāradīya Purāṇa, 20 adhyāyas",
+      "period": "Composition date unresolved; RAS manuscript witness dated c. 1800",
+      "status": "date-unverified",
+      "sourceIds": [
+        "rasHaribhaktisudhodaya"
+      ],
+      "note": "The Royal Asiatic Society catalogues the text as part of the Nāradīya Purāṇa and records a commentary; the c. 1800 witness is after the working boundary, so the work is not counted as pre-boundary."
     }
   ]
 }
