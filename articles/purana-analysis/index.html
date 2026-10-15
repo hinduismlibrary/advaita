@@ -9,97 +9,102 @@
   <style>
     :root {
       color-scheme: light;
-      --paper: #f8f8f4;
-      --ink: #252823;
-      --muted: #72766e;
-      --rule: #d7d9d1;
-      --empty: #eeefe9;
-      --green: #bfd4c3;
-      --green-ink: #244c35;
-      --blue: #c3d7dc;
-      --blue-ink: #28515b;
-      --red: #a4473b;
-      --serif: Georgia, 'Times New Roman', serif;
-      --sans: Arial, Helvetica, sans-serif;
+      --paper: #faf9f6;
+      --ink: #292822;
+      --muted: #716d63;
+      --rule: #dedbd3;
+      --empty: #f0eee8;
+      --green: #d5e5d7;
+      --green-ink: #2d563a;
+      --blue: #d9e5e8;
+      --blue-ink: #31525a;
+      --red: #a3473b;
+      --serif: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--ink); background: var(--paper); font: 13px/1.42 var(--sans); }
     button, select { font: inherit; }
     :focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
-    .page { width: min(1160px, calc(100% - 36px)); margin: 0 auto; }
+    .page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
     .top {
-      min-height: 40px; display: flex; align-items: center; justify-content: space-between;
-      border-bottom: 1px solid var(--ink); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+      min-height: 42px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--rule); font-size: 10px; letter-spacing: .09em; text-transform: uppercase;
     }
     .top a { color: inherit; text-decoration: none; }
-    .top a:first-child { font-weight: 700; }
+    .top a:first-child { font-weight: 650; }
     .top a:last-child { color: var(--muted); }
-    header { padding: 23px 0 15px; border-bottom: 1px solid var(--ink); }
-    h1 { margin: 0; font: 400 clamp(34px, 4.4vw, 46px)/1.02 var(--serif); letter-spacing: -.04em; }
-    .chooser { display: flex; align-items: center; gap: 10px; padding: 13px 0 11px; border-bottom: 1px solid var(--rule); }
-    .chooser label { color: var(--muted); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+    header { padding: 24px 0 17px; border-bottom: 1px solid var(--ink); }
+    h1 { margin: 0; font: 400 clamp(34px, 4.3vw, 46px)/1.02 var(--serif); letter-spacing: -.035em; }
+    .chooser { display: flex; align-items: center; gap: 11px; padding: 12px 0 9px; }
+    .chooser label { color: var(--muted); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
     .chooser select {
-      min-width: min(310px, 72vw); max-width: 100%; padding: 6px 28px 6px 8px;
-      border: 1px solid var(--rule); border-radius: 2px; color: var(--ink); background: #fff;
+      min-width: min(310px, 72vw); max-width: 100%; padding: 7px 30px 7px 9px;
+      border: 1px solid var(--rule); border-radius: 3px; color: var(--ink); background: #fff;
     }
-    #map { padding: 2px 0 16px; }
-    .section-row { display: grid; grid-template-columns: 122px minmax(0,1fr); gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
-    .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.25; }
+    .legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 17px; padding: 0 0 10px; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 10px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    .legend-swatch { width: 11px; height: 11px; border: 1px solid var(--rule); border-radius: 3px; background: var(--empty); }
+    .legend-swatch.quoted { border-color: #b8cdbb; background: var(--green); }
+    .legend-swatch.parallel { border-color: #bfd0d3; background: var(--blue); }
+    .legend-dot { width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--red); }
+    #map { padding: 3px 0 18px; }
+    .section-row { display: grid; grid-template-columns: 128px minmax(0,1fr); gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
+    .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.3; }
     .section-content { min-width: 0; }
-    .cells { display: grid; grid-template-columns: repeat(24, 22px); gap: 3px; align-content: start; }
+    .cells { display: grid; grid-template-columns: repeat(auto-fill, 22px); gap: 2px; align-content: start; }
     .tile {
       position: relative; display: grid; place-items: center; width: 22px; height: 22px;
-      padding: 0; border: 1px solid #dfe1d9; border-radius: 2px; color: #777b73;
+      padding: 0; border: 1px solid #e1ded6; border-radius: 3px; color: #77736a;
       background: var(--empty); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer;
+      transition: border-color .12s ease, background-color .12s ease;
     }
-    .tile.quoted { border-color: #a9c3ae; color: var(--green-ink); background: var(--green); font-weight: 700; }
-    .tile.parallel { border-color: #a9c7cd; color: var(--blue-ink); background: var(--blue); font-weight: 700; }
-    .tile.both { border-color: #a9c3ae; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--blue) 51% 100%); font-weight: 700; }
+    .tile.quoted { border-color: #b8cdbb; color: var(--green-ink); background: var(--green); font-weight: 650; }
+    .tile.parallel { border-color: #bfd0d3; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
+    .tile.both { border-color: #b8cdbb; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--blue) 51% 100%); font-weight: 700; }
     .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
     .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
-    .tile.unmatched::after { position: absolute; right: 1px; bottom: 1px; width: 5px; height: 5px; background: var(--red); content: ""; }
-    .detail { margin: 5px 0 1px; padding: 8px 10px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); background: #fff; }
+    .tile.unmatched::after { position: absolute; right: 1px; bottom: 1px; width: 5px; height: 5px; border-radius: 50%; background: var(--red); content: ""; }
+    .detail { margin: 5px 0 1px; padding: 8px 10px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); border-radius: 3px; background: #fff; }
     .detail[hidden] { display: none; }
     .detail h2 { margin: 0 0 6px; font: 400 17px/1.15 var(--serif); }
     .group { display: grid; grid-template-columns: 78px minmax(0,1fr); gap: 8px; padding: 5px 0 0; }
-    .group + .group { margin-top: 4px; border-top: 1px solid #e7e8e2; }
-    .group h3 { margin: 2px 0 0; color: var(--muted); font: 700 9px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+    .group + .group { margin-top: 4px; border-top: 1px solid #e9e6df; }
+    .group h3 { margin: 2px 0 0; color: var(--muted); font: 650 9px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
     .entries { min-width: 0; margin: 0; padding: 0; list-style: none; }
     .entry { padding: 1px 0 4px; overflow-wrap: anywhere; }
     .work { font-weight: 600; }
-    .refs { display: block; padding-top: 1px; color: #42463f; font-variant-numeric: tabular-nums; }
+    .refs { display: block; padding-top: 1px; color: #45433d; font-variant-numeric: tabular-nums; }
     .pair { font-variant-numeric: tabular-nums; }
     .arrow { padding: 0 6px; color: var(--muted); }
-    .note { display: block; padding-top: 2px; color: #565b53; font: italic 12px/1.35 var(--serif); }
+    .note { display: block; padding-top: 2px; color: #5f5b53; font: italic 12px/1.35 var(--serif); }
     .no-entry { margin: 0; color: var(--muted); font-size: 11px; }
     .error { padding: 14px 0; color: var(--red); }
-    .analysis-row { border-top: 1px solid var(--ink); border-bottom: 0; padding-top: 8px; padding-bottom: 12px; }
-    .analysis-title { margin: 0; padding-top: 2px; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-    .analysis-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 18px; margin: 0; }
-    .analysis-item { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px solid var(--rule); }
-    .analysis-item dt { color: var(--muted); font-size: 10px; }
-    .analysis-item dd { margin: 0; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
-    .analysis-formula { grid-column: 1 / -1; margin: 5px 0 0; color: var(--muted); font-size: 10px; }
+    .analysis-row { border-top: 1px solid var(--ink); border-bottom: 0; padding-top: 8px; padding-bottom: 8px; }
+    .analysis-title { margin: 0; padding-top: 3px; color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .analysis-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 16px; margin: 0; }
+    .analysis-item { display: flex; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; gap: 3px; min-height: 65px; padding: 9px 0 8px; border-bottom: 1px solid var(--rule); }
+    .analysis-item dt { color: var(--muted); font-size: 9px; line-height: 1.35; }
+    .analysis-item dd { margin: 0; color: var(--ink); font: 400 clamp(19px, 2.1vw, 23px)/1.05 var(--serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
     @media (max-width: 760px) {
-      .page { width: calc(100% - 24px); }
-      header { padding: 19px 0 12px; }
-      .chooser { padding: 10px 0; }
-      .section-row { grid-template-columns: 92px minmax(0,1fr); gap: 5px; padding: 4px 0; }
+      .page { width: calc(100% - 26px); }
+      header { padding: 20px 0 14px; }
+      .section-row { grid-template-columns: 88px minmax(0,1fr); gap: 7px; padding: 4px 0; }
       .section-label { font-size: 9px; }
-      .cells { grid-template-columns: repeat(12, 22px); gap: 3px; }
+      .cells { grid-template-columns: repeat(auto-fill, 21px); gap: 2px; }
+      .tile { width: 21px; height: 21px; }
       .group { grid-template-columns: 66px minmax(0,1fr); gap: 5px; }
       .analysis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+      .analysis-item { min-height: 60px; padding: 8px 0 7px; }
     }
-    @media (max-width: 360px) {
-      .page { width: calc(100% - 18px); }
-      .section-row { grid-template-columns: 74px minmax(0,1fr); gap: 4px; }
-      .cells { grid-template-columns: repeat(10, 21px); gap: 2px; }
-      .tile { width: 21px; height: 21px; font-size: 9px; }
+    @media (max-width: 380px) {
+      .page { width: calc(100% - 20px); }
+      .section-row { grid-template-columns: 72px minmax(0,1fr); gap: 5px; }
       .group { grid-template-columns: 58px minmax(0,1fr); gap: 4px; }
-      .analysis-grid { grid-template-columns: 1fr; }
-      .analysis-formula { grid-column: 1; }
+      .analysis-grid { gap: 0 9px; }
+      .analysis-item dt { font-size: 8.5px; }
     }
-    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
   </style>
 </head>
 <body>
@@ -112,6 +117,11 @@
     <div class="chooser">
       <label for="purana">Purāṇa</label>
       <select id="purana" aria-label="Choose a Purāṇa"></select>
+    </div>
+    <div class="legend" aria-label="Heat map key">
+      <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted elsewhere</span>
+      <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Purāṇa parallel</span>
+      <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Unmatched citation</span>
     </div>
     <main id="map" aria-live="polite"></main>
   </div>
@@ -222,52 +232,30 @@
       }
 
       function addAnalysis(puranas, combined = false) {
-        const total = puranas.reduce((sum, purana) => sum + purana.sections.reduce((sectionTotal, section) => sectionTotal + section.last, 0), 0);
-        let quoted = 0;
-        let parallel = 0;
-        let both = 0;
-        let either = 0;
-        let unmatchedNotes = 0;
-        let unmatchedChapters = 0;
-        let citationEntries = 0;
+        let total = 0;
+        let quotedChapters = 0;
+        let parallelChapters = 0;
+        let emptySectionChapters = 0;
         for (const purana of puranas) {
           for (const section of purana.sections) {
+            total += section.last;
+            let sectionHasReferences = false;
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
               const hasQuoted = Boolean(record.quoted?.length);
               const hasParallel = Boolean(record.parallel?.length);
-              if (hasQuoted) quoted += 1;
-              if (hasParallel) parallel += 1;
-              if (hasQuoted && hasParallel) both += 1;
-              if (hasQuoted || hasParallel) either += 1;
-              const notes = record.missing?.length || 0;
-              unmatchedNotes += notes;
-              if (notes) unmatchedChapters += 1;
-              citationEntries += record.quoted?.length || 0;
+              const hasNote = Boolean(record.missing?.length);
+              if (hasQuoted) quotedChapters += 1;
+              if (hasParallel) parallelChapters += 1;
+              if (hasQuoted || hasParallel || hasNote) sectionHasReferences = true;
             }
+            if (!sectionHasReferences) emptySectionChapters += section.last;
           }
         }
-        let sectionCount = 0;
-        let emptySections = 0;
-        let emptySectionChapters = 0;
-        for (const purana of puranas) {
-          for (const section of purana.sections) {
-            sectionCount += 1;
-            let hasReference = false;
-            for (let chapter = 1; chapter <= section.last; chapter += 1) {
-              const record = section.chapters[String(chapter)] || {};
-              if (record.quoted?.length || record.parallel?.length || record.missing?.length) hasReference = true;
-            }
-            if (!hasReference) {
-              emptySections += 1;
-              emptySectionChapters += section.last;
-            }
-          }
-        }
-        const chaptersWithoutMatch = total - either;
-        const remainingAfterEmptyGroups = total - emptySectionChapters;
-        const coverageAfterExclusion = either / remainingAfterEmptyGroups;
-        const percent = value => `${(100 * value / total).toFixed(1)}%`;
+        const populatedChapterCount = total - emptySectionChapters;
+        const percent = (value, denominator) => denominator
+          ? (100 * value / denominator).toFixed(1) + "%"
+          : "—";
         const row = document.createElement("section");
         row.className = "section-row analysis-row";
         const heading = document.createElement("h2");
@@ -278,21 +266,13 @@
         const metrics = document.createElement("dl");
         metrics.className = "analysis-grid";
         const values = [
-          ...(combined ? [["Purāṇas", String(puranas.length)]] : []),
-          ["Total chapters", `${total} · 100%`],
-          ["Chapters quoted elsewhere", `${quoted} · ${percent(quoted)}`],
-          ["Chapters with exact Purāṇa parallels", `${parallel} · ${percent(parallel)}`],
-          ["Both kinds of match", `${both} · ${percent(both)}`],
-          ["At least one match", `${either} · ${percent(either)}`],
-          ...(combined ? [
-            ["Chapters without a match", `${chaptersWithoutMatch} · ${percent(chaptersWithoutMatch)}`],
-            ["Section groups with no references", `${emptySections} of ${sectionCount} · ${(100 * emptySections / sectionCount).toFixed(1)}%`],
-            ["Chapters in empty groups", `${emptySectionChapters} · ${percent(emptySectionChapters)}`],
-            ["Chapters after excluding empty groups", String(remainingAfterEmptyGroups)],
-            ["Matched chapters after exclusion", `${either} of ${remainingAfterEmptyGroups} · ${(100 * coverageAfterExclusion).toFixed(1)}%`],
-            ["Quotation entries", String(citationEntries)],
-          ] : []),
-          ["Unmatched citation notes", `${unmatchedNotes} in ${unmatchedChapters} chapters`],
+          ["Total chapters", total.toLocaleString("en-GB")],
+          ["Chapters quoted elsewhere", quotedChapters.toLocaleString("en-GB")],
+          ["Chapters with Purāṇa parallels", parallelChapters.toLocaleString("en-GB")],
+          ["Quoted (%)", percent(quotedChapters, total)],
+          ["Found in parallel (%)", percent(parallelChapters, total)],
+          ["Quoted (%) · empty sections removed", percent(quotedChapters, populatedChapterCount)],
+          ["Parallel (%) · empty sections removed", percent(parallelChapters, populatedChapterCount)],
         ];
         for (const [label, value] of values) {
           const item = document.createElement("div");
@@ -304,10 +284,6 @@
           item.append(term, number);
           metrics.appendChild(item);
         }
-        const formula = document.createElement("p");
-        formula.className = "analysis-formula";
-        formula.textContent = combined ? `Matched chapters = quoted + parallel − both (${quoted} + ${parallel} − ${both} = ${either}). An empty group has no quotation, parallel, or unmatched note in any chapter. Excluding ${emptySections} empty groups removes ${emptySectionChapters} of ${total} chapter positions; coverage then is ${either}/${remainingAfterEmptyGroups} = ${(100 * coverageAfterExclusion).toFixed(1)}%. Each Purāṇa’s chapter positions are counted separately.` : `At least one match = quoted chapters + parallel chapters − chapters with both (${quoted} + ${parallel} − ${both} = ${either}). Percentages use ${total} chapters counted across ${puranas.length} Purāṇas.`;
-        metrics.appendChild(formula);
         content.appendChild(metrics);
         row.append(heading, content);
         map.appendChild(row);
