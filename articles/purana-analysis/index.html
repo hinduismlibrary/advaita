@@ -137,7 +137,30 @@
       .commentary-period { grid-column: 2; grid-row: 3; }
       .source-list { grid-template-columns: 1fr; }
     }
-  </style>
+  
+    /* Quiet, compact layout: keep the data, remove the extra framing. */
+    .page { width: min(1400px, calc(100% - 44px)); }
+    header { padding: 15px 0 11px; border-bottom-color: var(--rule); }
+    h1 { font-size: 23px; }
+    .dek, .contents-heading span { display: none; }
+    .workspace { grid-template-columns: 250px minmax(0, 1fr); gap: clamp(24px, 3vw, 42px); padding-top: 18px; }
+    .contents-heading { padding-bottom: 8px; }
+    .contents-heading h2 { font-size: 18px; }
+    #contents { gap: 1px; margin-top: 5px; max-height: calc(100vh - 112px); overflow-y: auto; }
+    .contents-button { padding: 5px 7px; }
+    .selected-evidence { font-size: 11px; }
+    .legend { gap: 6px 14px; padding: 9px 0 8px; font-size: 9px; }
+    .section-row { padding: 5px 0; }
+    .commentary-panel { margin-top: 18px; }
+    .commentary-title { font-size: 19px; }
+    .commentary-search { width: min(100%, 320px); margin: 0 0 12px; padding: 7px 9px; border: 1px solid var(--rule); border-radius: 3px; font-size: 11px; }
+    .commentary-card[hidden], .commentary-section[hidden] { display: none; }
+    @media (max-width: 760px) {
+      .page { width: calc(100% - 28px); }
+      .workspace { grid-template-columns: 1fr; gap: 15px; padding-top: 14px; }
+      #contents { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; max-height: none; }
+    }
+</style>
 </head>
 <body>
   <div class="page">
@@ -147,13 +170,13 @@
     </nav>
     <header>
       <h1>Purāṇa Analysis</h1>
-      <p class="dek">Citations, parallels and bhāṣyas by Purāṇa.</p>
+      
     </header>
     <div class="workspace">
       <aside class="contents-panel" aria-label="Purāṇa contents">
         <div class="contents-heading">
           <h2>Contents</h2>
-          <span>Most attested</span>
+          
         </div>
         <nav id="contents" aria-label="Purāṇas"></nav>
       </aside>
@@ -167,7 +190,7 @@
         </div>
     <div class="legend" aria-label="Heat map key">
       <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-      <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya / chapter only</span>
+      <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya only</span>
       <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
       <span class="legend-item"><i class="legend-swatch other" aria-hidden="true"></i>Other</span>
     </div>
@@ -178,12 +201,13 @@
               <span id="commentary-heading" class="commentary-title">Bhāṣya index</span>
               <span id="commentary-count" class="commentary-count"></span>
             </summary>
-            <p class="commentary-note">Before Nīlakaṇṭha; undated catalogue leads are separate.</p>
+            <p class="commentary-note">Cut-off: mid-18th century · uncertain dates separate.</p>
+            <input id="commentary-search" class="commentary-search" type="search" placeholder="Find a work or author" aria-label="Search bhāṣya titles, authors, scope, or date">
             <div id="commentary-list"></div>
             <details class="source-details">
-              <summary>Books and citations</summary>
+              <summary>Sources</summary>
               <div id="commentary-sources" class="source-list"></div>
-              <p class="source-limit">A source-indexed catalogue; lost and uncatalogued works cannot be verified here.</p>
+              <p class="source-limit">Dates outside the cut-off are excluded; uncertain dates stay separate.</p>
             </details>
           </details>
         </section>
@@ -198,6 +222,7 @@
       const selectedCategory = document.getElementById("selected-category");
       const selectedEvidence = document.getElementById("selected-evidence");
       const commentaryList = document.getElementById("commentary-list");
+      const commentarySearch = document.getElementById("commentary-search");
       const commentaryCount = document.getElementById("commentary-count");
       const commentarySources = document.getElementById("commentary-sources");
       let commentaryData = null;
@@ -224,7 +249,7 @@
       function addGroup(parent, label, entries, type, section = null) {
         if (!entries || !entries.length) return;
         const group = document.createElement("section");
-        group.className = "group";
+        group.className = "group group-" + (type === "chapterRelations" ? "bhashya" : type === "missing" ? "other" : type);
         const heading = document.createElement("h3");
         heading.textContent = label;
         group.appendChild(heading);
@@ -309,7 +334,7 @@
       function addContentsGroup(parent, entries) {
         if (!entries?.length) return;
         const group = document.createElement("section");
-        group.className = "group";
+        group.className = "group group-other";
         const heading = document.createElement("h3");
         heading.textContent = "Contents";
         group.appendChild(heading);
@@ -345,7 +370,7 @@
       function addTaggedGroup(parent, headingText, entries) {
         if (!entries?.length) return;
         const group = document.createElement("section");
-        group.className = "group";
+        group.className = "group " + (/commentary/i.test(headingText) ? "group-bhashya" : "group-other");
         const heading = document.createElement("h3");
         heading.textContent = headingText;
         group.appendChild(heading);
@@ -376,7 +401,7 @@
       function addTextReferencesGroup(parent, entries) {
         if (!entries?.length) return;
         const group = document.createElement("section");
-        group.className = "group";
+        group.className = "group group-other";
         const heading = document.createElement("h3");
         heading.textContent = "Textual reference";
         group.appendChild(heading);
@@ -547,7 +572,7 @@
       const upaIds = new Set(["brhannaradiya-purana", "devi-bhagavata-purana"]);
 
       function categoryFor(purana) {
-        return upaIds.has(purana.id) ? "Upapurāṇa" : "Mahāpurāṇa list";
+        return upaIds.has(purana.id) ? "Upa" : "Mahā";
       }
 
       function setActiveContents(id) {
@@ -579,6 +604,7 @@
           const count = document.createElement("span");
           count.className = "evidence-count";
           count.textContent = evidenceCount(purana).toLocaleString();
+          count.setAttribute("aria-label", evidenceCount(purana).toLocaleString() + " evidence records");
           button.append(name, category, count);
           button.addEventListener("click", () => render(purana));
           contents.appendChild(button);
@@ -623,7 +649,7 @@
           }
           const badge = document.createElement("span");
           badge.className = "commentary-status" + (status === "date-unverified" ? " uncertain" : "");
-          badge.textContent = status === "date-unverified" ? "Date unresolved" : "Before Nīlakaṇṭha";
+          badge.textContent = status === "date-unverified" ? "Date unclear" : "Before Nīlakaṇṭha";
           body.appendChild(badge);
 
           const sources = document.createElement("div");
@@ -651,15 +677,29 @@
         const entries = commentaryData.entries.filter(entry => entry.puranaId === puranaId && entry.status !== "boundary");
         const dated = entries.filter(entry => entry.status === "within-cutoff");
         const unresolved = entries.filter(entry => entry.status === "date-unverified");
-        commentaryCount.textContent = dated.length + " dated · " + unresolved.length + " undated";
+        commentaryCount.textContent = dated.length + " · " + unresolved.length;
+        commentaryCount.title = dated.length + " dated · " + unresolved.length + " date unclear";
+        commentarySearch.value = "";
         addCommentarySection("Before Nīlakaṇṭha", dated, "within-cutoff");
-        addCommentarySection("Date unresolved", unresolved, "date-unverified");
+        addCommentarySection("Dates unclear", unresolved, "date-unverified");
         if (!entries.length) {
           const note = document.createElement("p");
           note.className = "commentary-empty";
-          note.textContent = "No bhāṣya entries indexed for this Purāṇa.";
+          note.textContent = "No entries in the current index.";
           commentaryList.appendChild(note);
         }
+        commentarySearch.oninput = () => {
+          const query = commentarySearch.value.trim().toLocaleLowerCase();
+          for (const section of commentaryList.querySelectorAll(".commentary-section")) {
+            const cards = [...section.querySelectorAll(".commentary-card")];
+            const shown = cards.filter(card => {
+              const match = !query || card.dataset.search.includes(query);
+              card.hidden = !match;
+              return match;
+            }).length;
+            section.hidden = shown === 0;
+          }
+        };
       }
 
       function renderSourceList() {
@@ -690,7 +730,8 @@
         setActiveContents(purana.id);
         selectedCategory.textContent = categoryFor(purana);
         selectedName.textContent = purana.name;
-        selectedEvidence.textContent = evidenceCount(purana).toLocaleString() + " evidence records";
+        selectedEvidence.textContent = evidenceCount(purana).toLocaleString();
+        selectedEvidence.title = evidenceCount(purana).toLocaleString() + " evidence records";
         renderMaps([purana]);
         renderCommentaries(purana.id);
       }
