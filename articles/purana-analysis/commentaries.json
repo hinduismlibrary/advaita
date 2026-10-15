@@ -1,8 +1,8 @@
 {
   "version": "commentaries-2026-10-15",
   "cutoff": {
-    "label": "Through the Nīlakaṇṭha boundary",
-    "note": "Works securely dated before c. 1750 are counted. Śaiva Nīlakaṇṭha’s Tilaka is shown separately as the boundary item: Hazra places it no earlier than the mid-18th century. Works clearly later than this boundary are omitted. Manuscript-catalogued works with unresolved dates are shown separately and do not count as pre-boundary."
+    "label": "Before the Nīlakaṇṭha cutoff",
+    "note": "Commentaries securely dated before Nīlakaṇṭha are included. Later works are excluded. Manuscript-catalogued works with unresolved dates remain separate and are not counted as pre-cutoff."
   },
   "sources": {
     "rocher": {
@@ -136,6 +136,18 @@
     "vallabhaBhagavataTreatise": {
       "label": "Vallabha and His Date, Bhāgavata-tattva-dīpikā (Wisdomlib edition)",
       "url": "https://www.wisdomlib.org/hinduism/essay/srikara-bhashya-commentary/d/doc1471651.html"
+    },
+    "hazraPuranicRites": {
+      "label": "R. C. Hazra, Studies in the Puranic Records on Hindu Rites and Customs (1940)",
+      "url": "https://archive.org/details/in.ernet.dli.2015.110115"
+    },
+    "hazraUpaVolumeI": {
+      "label": "R. C. Hazra, Studies in the Upapurāṇas, Volume I (OCR index)",
+      "url": "https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr"
+    },
+    "hazraUpaVolumeII": {
+      "label": "R. C. Hazra, Studies in the Upapurāṇas, Volume II (OCR index)",
+      "url": "https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr"
     }
   },
   "entries": [
@@ -938,20 +950,6 @@
         "hazra"
       ],
       "note": ""
-    },
-    {
-      "id": "comm-65",
-      "puranaId": "devi-bhagavata-purana",
-      "work": "Tilaka",
-      "author": "Śaiva Nīlakaṇṭha",
-      "scope": "Full Devī Bhāgavata Purāṇa",
-      "period": "Not earlier than c. 1750; boundary item",
-      "status": "boundary",
-      "sourceIds": [
-        "hazra",
-        "hazraOCR"
-      ],
-      "note": "Hazra distinguishes this Śaiva Nīlakaṇṭha from Nīlakaṇṭha Caturdhara, the Mahābhārata commentator, and from Śrīdhara Svāmin."
     },
     {
       "id": "comm-extra-tattvavabodhi",
