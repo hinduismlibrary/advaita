@@ -22,7 +22,7 @@
       "url": "https://www.wisdomlib.org/hinduism/book/studies-in-the-upapuranas/ocr"
     },
     "bhagavata1895": {
-      "label": "Mohendra Nath Chatterjee, 1895 bibliography of 136 Bhāgavata commentaries/dissertations (scan/OCR)",
+      "label": "M. N. Chatterjee, Bhāgavata introduction (1895), pp. 18–21: 136 related works across mixed genres",
       "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/The_%C3%87r%C4%ABmadbh%C4%81gavatam_%28IA_cu31924009113279%29.pdf"
     },
     "jivaBhagavata": {
@@ -86,7 +86,7 @@
       "url": "https://searcharchives.bl.uk/catalog/032-003719782"
     },
     "bhagavataCommentators": {
-      "label": "Bhāgavata Purāṇa, introduction: commentators (Wisdomlib edition)",
+      "label": "G. V. Tagare, Bhāgavata Purāṇa introduction, part 5: selected commentators and works",
       "url": "https://www.wisdomlib.org/hinduism/book/the-bhagavata-purana/d/doc1113126.html"
     },
     "lingaSivatoshini": {
@@ -154,7 +154,7 @@
       "url": "https://archive.org/stream/in.ernet.dli.2015.110115/2015.110115.Studies-In-The-Puranic-Records-On-Hindu-Rites-And-Customs_djvu.txt"
     },
     "hazraUpapuranasBibliography": {
-      "label": "Hazra, Studies in the Upapurāṇas, Vol. II bibliography",
+      "label": "Hazra, Studies in the Upapurāṇas, Vol. II bibliography, printed pp. 516–517",
       "url": "https://www.wisdomlib.org/hinduism/book/studies-in-the-upapuranas/d/doc1471630.html"
     },
     "nilakantha17c": {
@@ -277,15 +277,16 @@
     {
       "id": "comm-9",
       "puranaId": "bhagavata-purana",
-      "work": "Bhāgavatātparyanirṇaya",
+      "work": "Bhāgavatātparyanirṇaya (digest)",
       "author": "Ānandatīrtha (Madhva)",
-      "scope": "Digest / interpretive commentary",
+      "scope": "Interpretive digest of the Purāṇa, not a direct commentary",
       "period": "13th c.",
       "status": "within-cutoff",
       "sourceIds": [
-        "rocher"
+        "rocher",
+        "bhagavataCommentators"
       ],
-      "note": ""
+      "note": "Tagare distinguishes it from a direct commentary."
     },
     {
       "id": "comm-10",
@@ -332,16 +333,17 @@
     {
       "id": "comm-13",
       "puranaId": "bhagavata-purana",
-      "work": "Bhāvārtha-dīpikā-dīpanī",
+      "work": "Dīpinī / Dīpanī (subcommentary on Śrīdhara’s Bhāvārtha-dīpikā)",
       "author": "Rādhāramaṇa Gosvāmin",
-      "scope": "Subcommentary on Śrīdhara’s Bhāvārtha-dīpikā",
+      "scope": "Full-Purāṇa subcommentary on Śrīdhara’s commentary",
       "period": "Date not established in the consulted catalogue",
       "status": "date-unverified",
       "sourceIds": [
         "rocher",
-        "rocherEditions"
+        "rocherEditions",
+        "bhagavataCommentators"
       ],
-      "note": ""
+      "note": "Tagare calls it Dīpinī; some lists style it Bhāvārtha-dīpikā-dīpanī."
     },
     {
       "id": "comm-14",
@@ -1820,5 +1822,10 @@
       ],
       "note": "Named in G. V. Tagare's commentator survey; composition date not established."
     }
-  ]
+  ],
+  "coverage": {
+    "status": "Source-led index; not an exhaustive manuscript census.",
+    "cutoff": "Through Nīlakaṇṭha Caturdhara (late 17th century).",
+    "counting": "Only dated entries at or before the cutoff are counted; unclear dates remain separate."
+  }
 }
