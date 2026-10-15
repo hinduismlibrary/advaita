@@ -96,6 +96,30 @@
     "hrcPuranaCatalog": {
       "label": "Harry Ransom Center, Sanskrit Manuscript Collection MS-04889 catalogue",
       "url": "https://research.hrc.utexas.edu/fasearch/pdf/00339.pdf"
+    },
+    "jivaGranthaCaitanya": {
+      "label": "Jīva Grantha, Bhāgavata canto commentaries and Caitanya-mata-mañjuṣā",
+      "url": "https://grantha.jiva.org/index.php?e_no=637&show=entry"
+    },
+    "vallabhaBhagavata": {
+      "label": "Pushtimarga literature overview, Vallabha’s Bhāgavata works and glosses",
+      "url": "https://www.pushtipedia.com/wiki/Literature-overview"
+    },
+    "vitthalanathaSubodhini": {
+      "label": "CiNii, Subodhinī with Viṭṭhalanātha’s Ṭippaṇī and Puruṣottama’s Prakāśa",
+      "url": "https://ci.nii.ac.jp/ncid/BA44929208"
+    },
+    "baladevaBhagavata": {
+      "label": "BVMLU, works of Baladeva Vidyābhūṣaṇa",
+      "url": "https://www.bvmlu.org/SBBTM/p_sbv.html"
+    },
+    "caitanyaCommentaryStudy": {
+      "label": "Research note on Śrīnātha Cakravartī’s Caitanyamatamañjuṣā",
+      "url": "https://www.researchgate.net/publication/354377868_iSlesa_Readings_on_Bhagavata_Purana_111_Srinatha_Cakravarti%27s_Caitanyamatamanjusa_Commentary"
+    },
+    "bhagavataCommentaryLists": {
+      "label": "Bhāgavata Purāṇa commentary title list (secondary overview; leads require verification)",
+      "url": "https://en.wikipedia.org/wiki/Bhagavata_Purana#Commentaries_and_translations"
     }
   },
   "entries": [
@@ -139,12 +163,12 @@
         "rocher",
         "jivaBhagavata"
       ],
-      "note": ""
+      "note": "Jīva Gosvāmin’s sequential commentary; some secondary lists also attribute a Bṛhat-krama-sandarbha, whose relation to this text is unresolved."
     },
     {
       "id": "comm-4",
       "puranaId": "bhagavata-purana",
-      "work": "Vaiṣṇava-toṣiṇī",
+      "work": "Laghu-vaiṣṇava-toṣiṇī (also styled Vaiṣṇava-toṣiṇī)",
       "author": "Jīva Gosvāmin (attribution varies in editions)",
       "scope": "Skandha X",
       "period": "16th c.",
@@ -154,12 +178,12 @@
         "hazra",
         "jivaBhagavata"
       ],
-      "note": ""
+      "note": "Canto X commentary by Jīva Gosvāmin; the title is distinguished in some lists from Sanātana’s Bṛhad-vaiṣṇava-toṣiṇī. Manuscript and edition traditions vary in the shorter title."
     },
     {
       "id": "comm-5",
       "puranaId": "bhagavata-purana",
-      "work": "Bṛhat-toṣiṇī",
+      "work": "Bṛhad-vaiṣṇava-toṣiṇī (Bṛhat-toṣiṇī)",
       "author": "Sanātana Gosvāmin",
       "scope": "Skandha X",
       "period": "16th c.",
@@ -167,7 +191,7 @@
       "sourceIds": [
         "hazra"
       ],
-      "note": ""
+      "note": "Canto X commentary by Sanātana Gosvāmin; title normalized with the fuller form found in commentary lists."
     },
     {
       "id": "comm-6",
@@ -335,7 +359,7 @@
     {
       "id": "comm-18",
       "puranaId": "bhagavata-purana",
-      "work": "Commentary (title not specified in the catalogue)",
+      "work": "Durghaṭa-bhāvadīpa",
       "author": "Satyabhinava Tīrtha",
       "scope": "Full Purāṇa",
       "period": "Date not established in the consulted catalogue",
@@ -343,7 +367,7 @@
       "sourceIds": [
         "bhagavata1895"
       ],
-      "note": ""
+      "note": "Named in secondary Bhāgavata commentator lists; this catalogue’s 1895 source also names Satyabhinava Tīrtha, but the title identification remains a lead pending direct edition or manuscript verification."
     },
     {
       "id": "comm-19",
@@ -1416,7 +1440,7 @@
     {
       "id": "comm-bhagavata-bhaktamanoranjani",
       "puranaId": "bhagavata-purana",
-      "work": "Bhaktamanorañjanī",
+      "work": "Bhakta-manorañjanī (also listed as Bhakta-rañjanī)",
       "author": "Bhagavat Prasāda",
       "scope": "Bhāgavata Purāṇa",
       "period": "Date not established; associated with the Svāmī Nārāyaṇa tradition",
@@ -1424,7 +1448,7 @@
       "sourceIds": [
         "bhagavataCommentators"
       ],
-      "note": "Named as an additional commentary used by the translator; date and exact extent are not established in the cited introduction."
+      "note": "Named as an additional commentary used by the translator; secondary lists vary the title form. Date and exact extent are not established in the cited introduction."
     },
     {
       "id": "comm-linga-sivatoshini",
@@ -1477,6 +1501,216 @@
         "hrcPuranaCatalog"
       ],
       "note": "The Harry Ransom Center catalogue records a Sanskrit commentary-bearing Garuḍa Purāṇa witness. The catalogue gives a press but no composition or witness date, so it is not counted as pre-boundary."
+    },
+    {
+      "id": "comm-bhagavata-caitanya-mata-manjusa",
+      "puranaId": "bhagavata-purana",
+      "work": "Caitanya-mata-mañjuṣā",
+      "author": "Śrīnātha Cakravartī",
+      "scope": "Bhāgavata Purāṇa; surviving/edited portions include canto I and portions of cantos III, IV, VIII–X",
+      "period": "15th–16th c.; described as contemporary with Caitanya",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "jivaGranthaCaitanya",
+        "caitanyaCommentaryStudy"
+      ],
+      "note": "The Jīva Grantha canto files identify this commentary and its incomplete coverage; the author is distinguished from Viśvanātha Cakravartin."
+    },
+    {
+      "id": "comm-bhagavata-bhagavatartha-prakarana",
+      "puranaId": "bhagavata-purana",
+      "work": "Bhāgavatārtha-prakaraṇa",
+      "author": "Vallabhācārya",
+      "scope": "Interpretive exposition of the Bhāgavata; extent not established here",
+      "period": "c. 1479–1531",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "vallabhaBhagavata"
+      ],
+      "note": "Included as a Bhāgavata interpretive work; it may not be a verse-by-verse bhāṣya."
+    },
+    {
+      "id": "comm-bhagavata-dasama-anukramanika",
+      "puranaId": "bhagavata-purana",
+      "work": "Daśama-skandha-anukramaṇikā",
+      "author": "Vallabhācārya",
+      "scope": "Skandha X; section-level contents/sequence guide",
+      "period": "c. 1479–1531",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "vallabhaBhagavata"
+      ],
+      "note": "A small section-level companion work, included separately from Vallabha’s Subodhinī."
+    },
+    {
+      "id": "comm-bhagavata-sukshma-tika",
+      "puranaId": "bhagavata-purana",
+      "work": "Sūkṣma-ṭīkā",
+      "author": "Vallabhācārya",
+      "scope": "Bhāgavata Purāṇa; a short gloss with only fragments currently identified",
+      "period": "c. 1479–1531",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "vallabhaBhagavata"
+      ],
+      "note": "The consulted tradition overview reports extant material on Vedastuti and the opening four verses of Skandha I; this is a small gloss rather than a full commentary."
+    },
+    {
+      "id": "comm-bhagavata-vitthalanatha-tippani",
+      "puranaId": "bhagavata-purana",
+      "work": "Ṭippaṇī on Vallabha’s Subodhinī",
+      "author": "Viṭṭhalanātha Dīkṣita",
+      "scope": "Subcommentary on the Janma-prakaraṇa of Skandha X",
+      "period": "16th c.; exact composition date not established",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "vitthalanathaSubodhini"
+      ],
+      "note": "CiNii’s edition record identifies the layered glosses: Viṭṭhalanātha’s Ṭippaṇī and Puruṣottama’s Prakāśa on Vallabha’s Subodhinī."
+    },
+    {
+      "id": "comm-bhagavata-vaishnavanandini",
+      "puranaId": "bhagavata-purana",
+      "work": "Vaiṣṇavānandinī",
+      "author": "Baladeva Vidyābhūṣaṇa",
+      "scope": "Bhāgavata portions including cantos I and X",
+      "period": "18th c.; exact composition date unresolved",
+      "status": "date-unverified",
+      "sourceIds": [
+        "baladevaBhagavata"
+      ],
+      "note": "Recorded as a Bhāgavata commentary; because the author’s period overlaps the working boundary and the work date is not established, it is not counted as pre-boundary."
+    },
+    {
+      "id": "comm-bhagavata-saroddhara",
+      "puranaId": "bhagavata-purana",
+      "work": "Bhāgavata-sāroddhāra",
+      "author": "Āḍavī Jayatīrtha",
+      "scope": "Bhāgavata Purāṇa; extent not established",
+      "period": "18th c. in secondary lists; exact date unresolved",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Included as a title-list lead. Its exact date and whether it falls before the Nīlakaṇṭha boundary need primary-source confirmation."
+    },
+    {
+      "id": "comm-bhagavata-satyadharma-tippani",
+      "puranaId": "bhagavata-purana",
+      "work": "Śrīmadbhāgavata-ṭippaṇī",
+      "author": "Satyadharma Tīrtha",
+      "scope": "Bhāgavata Purāṇa; extent not established",
+      "period": "18th c. in secondary lists; exact date unresolved",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "A title-list lead only; the work is not counted as pre-boundary without a firmer date."
+    },
+    {
+      "id": "comm-bhagavata-tantra",
+      "puranaId": "bhagavata-purana",
+      "work": "Tantra-Bhāgavata",
+      "author": "Anonymous; associated with the Pāñcarātra tradition",
+      "scope": "Bhāgavata Purāṇa; details of extent and attribution unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Described in secondary overviews as an early exegetical commentary; no secure author or date is supplied here."
+    },
+    {
+      "id": "comm-bhagavata-brihat-krama",
+      "puranaId": "bhagavata-purana",
+      "work": "Bṛhat-krama-sandarbha (attribution/identity unresolved)",
+      "author": "Attributed to Jīva Gosvāmin in some title lists",
+      "scope": "Sequential Bhāgavata commentary or expanded Krama-sandarbha; relationship unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "jivaGranthaCaitanya",
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Kept as a separate bibliographic lead because lists distinguish it from Krama-sandarbha; it may be a variant or expanded form rather than an independent work."
+    },
+    {
+      "id": "comm-bhagavata-title-hanumad",
+      "puranaId": "bhagavata-purana",
+      "work": "Hanumad-bhāṣya",
+      "author": "Not identified in the consulted title list",
+      "scope": "Bhāgavata Purāṇa; scope and text status unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
+    },
+    {
+      "id": "comm-bhagavata-title-vasana",
+      "puranaId": "bhagavata-purana",
+      "work": "Vāsanā-bhāṣya",
+      "author": "Not identified in the consulted title list",
+      "scope": "Bhāgavata Purāṇa; scope and text status unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
+    },
+    {
+      "id": "comm-bhagavata-title-sambandhokti",
+      "puranaId": "bhagavata-purana",
+      "work": "Sambandhokti",
+      "author": "Not identified in the consulted title list",
+      "scope": "Bhāgavata Purāṇa; scope and text status unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
+    },
+    {
+      "id": "comm-bhagavata-title-vidvat-kamadhenu",
+      "puranaId": "bhagavata-purana",
+      "work": "Vidvat-kāmadhenu",
+      "author": "Not identified in the consulted title list",
+      "scope": "Bhāgavata Purāṇa; scope and text status unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
+    },
+    {
+      "id": "comm-bhagavata-title-paramahamsa-priya",
+      "puranaId": "bhagavata-purana",
+      "work": "Paramahaṁsa-priyā",
+      "author": "Not identified in the consulted title list",
+      "scope": "Bhāgavata Purāṇa; scope and text status unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
+    },
+    {
+      "id": "comm-bhagavata-title-suka-hrdaya",
+      "puranaId": "bhagavata-purana",
+      "work": "Śuka-hṛdaya",
+      "author": "Not identified in the consulted title list",
+      "scope": "Bhāgavata Purāṇa; scope and text status unresolved",
+      "period": "Date not established",
+      "status": "date-unverified",
+      "sourceIds": [
+        "bhagavataCommentaryLists"
+      ],
+      "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
     }
   ]
 }
