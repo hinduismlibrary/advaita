@@ -18,9 +18,9 @@
     .contents-button{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:5px 7px;border:0;border-left:2px solid transparent;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.contents-button:hover{background:#f7f8f5}.contents-button.active{border-left-color:var(--green-ink);background:#f0f5f1}.contents-name{min-width:0;font-size:11px;line-height:1.35}.evidence-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}
     .viewer{min-width:0}.selected-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 0 10px;border-bottom:1px solid var(--ink)}.selected-category{margin:0 0 4px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.07em;text-transform:uppercase}#selected-name{margin:0;font:400 clamp(24px,3vw,32px)/1.08 var(--serif);letter-spacing:-.025em}.selected-evidence{margin:0 0 2px;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
     .view-tabs{display:flex;gap:18px;margin:0 0 2px;border-bottom:1px solid var(--rule)}.view-tab{display:inline-flex;align-items:baseline;gap:6px;padding:8px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);cursor:pointer;font-size:11px}.view-tab.active{border-bottom-color:var(--ink);color:var(--ink)}.view-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}#map-pane[hidden],.commentary-panel[hidden]{display:none}
-    .legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:9px 0 8px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:9px}.legend-item{display:inline-flex;align-items:center;gap:5px}.legend-swatch{width:9px;height:9px;border-radius:2px}.legend-swatch.quoted{background:var(--green)}.legend-swatch.bhashya{background:var(--violet)}.legend-swatch.parallel{background:var(--blue)}.legend-swatch.mention{background:var(--amber)}.legend-swatch.subject{background:var(--subject)}.legend-swatch.none{border:1px solid #e4e7e0;background:#f7f8f5}.legend-swatch.multiple{color:var(--ink);font-size:11px;font-weight:700;line-height:1}
+    .legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:9px 0 8px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:9px}.legend-item{display:inline-flex;align-items:center;gap:5px}.legend-swatch{width:9px;height:9px;border-radius:2px}.legend-swatch.quoted{background:var(--green)}.legend-swatch.bhashya{background:var(--violet)}.legend-swatch.parallel{background:var(--blue)}.legend-swatch.mention{background:var(--amber)}.legend-swatch.subject{background:var(--subject)}.legend-swatch.none{border:1px solid #e4e7e0;background:#f7f8f5}.legend-swatch.multiple{background:linear-gradient(90deg,var(--green) 0 20%,var(--violet) 20% 40%,var(--blue) 40% 60%,var(--amber) 60% 80%,var(--subject) 80% 100%)}
     #map{padding:6px 0 22px}.section-row{display:grid;grid-template-columns:122px minmax(0,1fr);gap:10px;padding:5px 0;border-bottom:1px solid var(--rule)}.section-label{padding-top:4px;color:var(--muted);font-size:10px;line-height:1.35}.section-content{min-width:0}.cells{display:grid;grid-template-columns:repeat(auto-fill,24px);gap:3px;align-content:start}
-    .tile{position:relative;display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #e6e8e2;border-radius:3px;color:#858a81;background:#f7f8f5;font-size:10px;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer}.tile.quoted{border-color:#bfd2c2;color:var(--green-ink);background:var(--green);font-weight:650}.tile.bhashya{border-color:#d3c4de;color:var(--violet-ink);background:var(--violet)}.tile.parallel{border-color:#c7d9e1;color:var(--blue-ink);background:var(--blue);font-weight:650}.tile.mention{border-color:#dfd0b1;color:var(--amber-ink);background:var(--amber)}.tile.subject{border-color:#d9ddd5;color:#565a52;background:var(--subject)}.tile.multiple::after{position:absolute;top:1px;right:1px;content:"+";color:var(--ink);font:700 7px/1 var(--sans)}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}
+    .tile{position:relative;display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #e6e8e2;border-radius:3px;color:#858a81;background:#f7f8f5;font-size:10px;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer}.tile.quoted{border-color:#bfd2c2;color:var(--green-ink);background:var(--green);font-weight:650}.tile.bhashya{border-color:#d3c4de;color:var(--violet-ink);background:var(--violet)}.tile.parallel{border-color:#c7d9e1;color:var(--blue-ink);background:var(--blue);font-weight:650}.tile.mention{border-color:#dfd0b1;color:var(--amber-ink);background:var(--amber)}.tile.subject{border-color:#d9ddd5;color:#565a52;background:var(--subject)}.tile.multiple{color:var(--ink);background:#fff;border-color:#d9ddd5}.tile-markers{position:absolute;right:4px;bottom:3px;left:4px;display:flex;height:2px;gap:1px}.tile-marker{flex:1;border-radius:1px}.tile-marker.quoted{background:var(--green-ink)}.tile-marker.bhashya{background:var(--violet-ink)}.tile-marker.parallel{background:var(--blue-ink)}.tile-marker.mention{background:var(--amber-ink)}.tile-marker.subject{background:#565a52}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}
     .detail{margin:5px 0 2px;padding:8px 10px;border:1px solid var(--rule);border-left:2px solid var(--ink);border-radius:3px;background:#fff}.detail[hidden]{display:none}.detail h2{margin:0 0 5px;font:400 15px/1.2 var(--serif)}
     .group{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;padding:4px 0 0}.group+.group{margin-top:3px;border-top:1px solid #eff0ec}.group h3{margin:2px 0 0;color:var(--muted);font:650 9px/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase}.group-quoted h3{color:var(--green-ink)}.group-bhashya h3{color:var(--violet-ink)}.group-parallel h3{color:var(--blue-ink)}.group-mention h3{color:var(--amber-ink)}.entries{min-width:0;margin:0;padding:0;list-style:none;font-size:11px}.entry{padding:1px 0 3px;overflow-wrap:anywhere}.work{font-weight:600}.work-link{color:inherit;text-decoration-color:var(--rule);text-underline-offset:2px}.source-link{color:var(--green-ink);text-decoration-color:var(--rule);text-underline-offset:2px}.refs{display:block;padding-top:1px;color:#555951;font-size:10px;font-variant-numeric:tabular-nums}.pair{font-variant-numeric:tabular-nums}.note{display:block;padding-top:2px;color:#6a6d65;font:italic 11px/1.35 var(--serif)}.no-entry{margin:0;color:var(--muted);font-size:10px}.error{padding:14px 0;color:#9b443c}
     .commentary-panel{margin:0 0 40px}.commentary-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:11px 0 5px;border-bottom:1px solid var(--rule)}.commentary-title{margin:0;font:400 19px/1.1 var(--serif)}.commentary-note{margin:0;color:var(--muted);font-size:9px}.commentary-search{width:min(100%,320px);margin:10px 0 3px;padding:7px 9px;border:1px solid var(--rule);border-radius:3px;font-size:11px}.commentary-card[hidden],.commentary-section[hidden]{display:none}
@@ -56,35 +56,16 @@
           </div>
           <p id="selected-evidence" class="selected-evidence"></p>
         </div>
-    <nav class="view-tabs" aria-label="Selected Purāṇa view">
-      <button id="citations-tab" class="view-tab active" type="button" aria-pressed="true">Citations</button>
-      <button id="bhashyas-tab" class="view-tab" type="button" aria-pressed="false">Bhāṣyas <span id="commentary-count" class="view-count"></span></button>
-    </nav>
-    <div id="map-pane">
-      <div class="legend" aria-label="Heat map key">
-        <span class="legend-item"><i class="legend-swatch none" aria-hidden="true"></i>None</span>
-        <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya</span>
-        <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-        <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Cross-text</span>
-        <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Topic</span>
-        <span class="legend-item"><i class="legend-swatch multiple" aria-hidden="true">+</i>Multiple</span>
-      </div>
-      <main id="map" aria-live="polite"></main>
-      <details class="source-details">
-        <summary>Hazra OCR</summary>
-        <div id="commentary-sources" class="source-list"></div>
-      </details>
+    <div class="legend" aria-label="Heat map key">
+      <span class="legend-item"><i class="legend-swatch none" aria-hidden="true"></i>None</span>
+      <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
+      <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya</span>
+      <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
+      <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Other Purāṇa</span>
+      <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Tīrtha / topic</span>
+      <span class="legend-item"><i class="legend-swatch multiple" aria-hidden="true"></i>Multiple</span>
     </div>
-    <section id="commentary-panel" class="commentary-panel" aria-labelledby="commentary-heading" hidden>
-      <div class="commentary-head">
-        <h2 id="commentary-heading" class="commentary-title">Bhāṣyas</h2>
-        <span class="commentary-note">Before Nīlakaṇṭha</span>
-      </div>
-      <input id="commentary-search" class="commentary-search" type="search" placeholder="Search title or author" aria-label="Search bhāṣya titles, authors, scope, or date">
-      <div id="commentary-list"></div>
-
-    </section>
+    <main id="map" aria-live="polite"></main>
       </div>
     </div>
   </div>
@@ -95,14 +76,6 @@
       const selectedName = document.getElementById("selected-name");
       const selectedCategory = document.getElementById("selected-category");
       const selectedEvidence = document.getElementById("selected-evidence");
-      const commentaryList = document.getElementById("commentary-list");
-      const commentarySearch = document.getElementById("commentary-search");
-      const commentaryCount = document.getElementById("commentary-count");
-      const commentarySources = document.getElementById("commentary-sources");
-      const citationsTab = document.getElementById("citations-tab");
-      const bhashyasTab = document.getElementById("bhashyas-tab");
-      const mapPane = document.getElementById("map-pane");
-      const commentaryPanel = document.getElementById("commentary-panel");
       let commentaryData = null;
       let data = null;
       let selectedTile = null;
@@ -156,8 +129,9 @@
             item.appendChild(work);
             const refsList = entry.refs?.length ? entry.refs : (entry.ref ? [entry.ref] : []);
             if (refsList.length) {
+              const refs = document.createElement("span");
               refs.className = "refs";
-              refs.textContent = entry.refs.map(ref => {
+              refs.textContent = refsList.map(ref => {
                 const scoped = section?.part && !section.prefix ? section.part + " " + ref : ref;
                 return scoped.replace(/–\?/g, "–[end unclear]");
               }).join(", ");
@@ -208,7 +182,6 @@
             note.textContent = entry.note || "Quoted line not located.";
             item.appendChild(note);
           }
-          addSourceLink(item, entry);
           list.appendChild(item);
         }
         group.appendChild(list);
@@ -230,11 +203,6 @@
           const title = document.createElement(entry.url ? "a" : "span");
           title.className = entry.url ? "work work-link" : "work";
           title.textContent = entry.label;
-          if (entry.url) {
-            title.href = entry.url;
-            title.target = "_blank";
-            title.rel = "noopener noreferrer";
-          }
           const ref = document.createElement("span");
           ref.className = "refs";
           ref.textContent = entry.ref;
@@ -253,9 +221,9 @@
 
       function addTaggedGroup(parent, headingText, entries) {
         if (!entries?.length) return;
-        const isCommentary = /commentary/i.test(headingText);
+        const headingKey = headingText.toLowerCase();
         const group = document.createElement("section");
-        group.className = "group " + (isCommentary ? "group-bhashya" : mentionsPurana(headingText) || /reference|contents/i.test(headingText) ? "group-mention" : "group-subject");
+        group.className = "group " + (/bhāṣya|commentary/i.test(headingKey) ? "group-bhashya" : /other purāṇa|reference|contents/i.test(headingKey) ? "group-mention" : /tīrtha|topic/i.test(headingKey) ? "group-subject" : "group-mention");
         const heading = document.createElement("h3");
         heading.textContent = headingText;
         group.appendChild(heading);
@@ -280,7 +248,12 @@
             details.textContent = detailsText;
             item.appendChild(details);
           }
-          addSourceLink(item, entry);
+          if (entry.sourceLabel) {
+            const source = document.createElement("span");
+            source.className = "refs";
+            source.textContent = entry.sourceLabel;
+            item.appendChild(source);
+          }
           list.appendChild(item);
         }
         group.appendChild(list);
@@ -318,17 +291,20 @@
         parent.appendChild(group);
       }
 
-      function chapterHasEvidence(record, purana) {
-        return chapterEvidence(record, purana).some(kind => kind !== "subject");
+      function chapterHasEvidence(record, purana, section, chapter) {
+        return chapterEvidence(record, purana, section, chapter).length > 0;
       }
 
+      const attestedCountCache = new WeakMap();
       function attestedChapterCount(purana) {
+        if (attestedCountCache.has(purana)) return attestedCountCache.get(purana);
         let count = 0;
         for (const section of purana.sections || []) {
-          for (const record of Object.values(section.chapters || {})) {
-            if (chapterHasEvidence(record, purana)) count += 1;
+          for (const [chapter, record] of Object.entries(section.chapters || {})) {
+            if (chapterHasEvidence(record, purana, section, chapter)) count += 1;
           }
         }
+        attestedCountCache.set(purana, count);
         return count;
       }
 
@@ -366,10 +342,24 @@
         return /pur(?:a|ā)(?:n|ṇ)(?:a|as|ic)?/i.test(String(text || ""));
       }
 
-      function isPuranicTopic(entry) {
+      function mentionsOtherPurana(text, purana) {
+        const normalizedText = normalizePuranaName(text);
+        if (!normalizedText.includes("purana") && !normalizedText.includes("mahatmya")) return false;
+        return (data?.puranas || []).some(other => {
+          if (other.id === purana?.id) return false;
+          const fullName = normalizePuranaName(other.name);
+          const shortName = fullName.replace(/purana$/, "");
+          return normalizedText.includes(fullName) ||
+            (shortName.length >= 5 && normalizedText.includes(shortName));
+        });
+      }
+
+      function isPuranicTopic(entry, purana) {
         const kind = String(entry.kind || "").toLowerCase();
+        const text = [entry.label, ...(entry.details || [])].join(" ");
+        if (kind === "classification" || mentionsOtherPurana(text, purana)) return true;
         if (["pilgrimage", "mahatmya", "subject"].includes(kind)) return false;
-        return kind === "classification" || mentionsPurana([entry.label, ...(entry.details || [])].join(" "));
+        return mentionsPurana(text);
       }
 
       function isChapterCoverage(entry) {
@@ -389,46 +379,129 @@
           .toLowerCase().replace(/[^a-z0-9]+/g, "");
       }
 
-      function isIntraPuranaRelation(entry, purana) {
-        const currentName = normalizePuranaName(purana?.name);
-        if (!currentName) return false;
-        const loci = (entry.loci || []).map(item => item.p).filter(Boolean);
-        if (loci.length > 1) return loci.every(name => normalizePuranaName(name) === currentName);
-        const members = Array.isArray(entry.members) ? entry.members : [entry.left, entry.right].filter(Boolean);
-        return members.length > 1 && members.every(member => normalizePuranaName(member).startsWith(currentName));
+      function romanSectionNumber(value) {
+        const values = {I:1,II:2,III:3,IV:4,V:5,VI:6,VII:7,VIII:8,IX:9,X:10,XI:11,XII:12};
+        return values[String(value || "").toUpperCase()] || 0;
       }
 
-      function hasOtherPuranaContents(record, purana) {
-        const currentName = normalizePuranaName(purana?.name);
-        return (record.contents || []).some(entry =>
-          !entry.purana || !currentName || normalizePuranaName(entry.purana) !== currentName
-        );
+      function commentaryCoversChapter(entry, purana, section, chapter) {
+        if (!entry || entry.status !== "within-cutoff" || entry.puranaId !== purana.id) return false;
+        const scope = String(entry.scope || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const note = String(entry.note || "").toLowerCase();
+        if (/digest|interpretive|guide|not a direct commentary|not located|not extant|not identified.*extant|text not located|extent not established|unresolved/.test(scope + " " + note)) {
+          if (!/full purana/.test(scope) || /not located|not extant|not identified.*extant|text not located|extent not established|unresolved/.test(note)) return false;
+        }
+        const ch = Number(chapter);
+        if (/full[-\s]*purana/.test(scope)) return true;
+        if (normalizePuranaName(entry.scope) === normalizePuranaName(purana.name) && !/not located|unresolved/.test(note)) return true;
+        if (purana.id === "bhagavata-purana") {
+          const skandha = romanSectionNumber(section.id);
+          if (/bhagavata\s+1\.1\.1/.test(scope)) return section.numbering === "1" && ch === 1;
+          if (/skandha\s+x\b/.test(scope) && skandha === 10) return true;
+          if (/skandhas\s+i\s*[-–]\s*iii/.test(scope) && skandha >= 1 && skandha <= 3) return true;
+          if (/skandhas\s+i\s*[-–]\s*iii/.test(scope) && /,\s*x\b/.test(scope) && skandha === 10) return true;
+          if (/vedastuti/.test(note) && section.numbering === "1" && ch === 1) return true;
+          if (/vedastuti/.test(note) && skandha === 10 && ch === 87) return true;
+          if (/canto\s+i\b/.test(scope) && skandha === 1) return true;
+        }
+        if (purana.id === "kurma-purana" && /isvaragita/.test(scope)) {
+          return String(section.id).toUpperCase() === "II" && ch >= 1 && ch <= 11;
+        }
+        if (purana.id === "markandeya-purana" && /devi mahatmya/.test(scope)) {
+          return ch >= 81 && ch <= 93;
+        }
+        if (purana.id === "agni-purana") {
+          if (/chapter\s+216/.test(scope)) return ch === 216;
+          if (/eight prosody chapters/.test(scope)) return ch >= 328 && ch <= 335;
+        }
+        if (purana.id === "padma-purana" && /yogasara hymn/.test(scope)) {
+          return /uttara/.test(String(section.id).toLowerCase()) && ch === 128;
+        }
+        return false;
       }
 
-      function chapterEvidence(record, purana) {
+      const commentaryCoverageCache = new Map();
+      function commentaryEntriesForChapter(purana, section, chapter) {
+        const key = [purana.id, section.id, chapter].join("|");
+        if (commentaryCoverageCache.has(key)) return commentaryCoverageCache.get(key);
+        const seen = new Set();
+        const entries = [];
+        for (const entry of commentaryData?.entries || []) {
+          if (!commentaryCoversChapter(entry, purana, section, chapter)) continue;
+          const identity = [entry.puranaId, entry.work, entry.author].join("|");
+          if (seen.has(identity)) continue;
+          seen.add(identity);
+          entries.push(entry);
+        }
+        commentaryCoverageCache.set(key, entries);
+        return entries;
+      }
+
+      function commentaryCitation(entry) {
+        const note = String(entry.note || "");
+        const hazra = note.match(/Vol(?:ume)?\.?\s+(I|II)\s*,?\s*p{1,2}\.?\s*(\d+(?:[-–]\d+)?)/i);
+        const labels = {
+          rocher: "Rocher 1986",
+          rocherEditions: "Rocher",
+          hazra: "Hazra",
+          hazraUpaVolumeI: "Hazra I",
+          hazraUpaVolumeII: "Hazra II",
+          hazraPuranicRites: "Hazra · Puranic Rites",
+          jivaBhagavata: "Jīva Grantha",
+          jivaAgni: "Jīva Grantha",
+          jivaVishnu: "Jīva Grantha",
+          jivaWorks: "Jīva works",
+          jivaWorksDirect: "Jīva works",
+          bhagavataEditions: "Bhāgavata editions",
+          bhagavataCommentators: "Bhāgavata bibliography",
+          deviCatalog: "Devī catalogue",
+          deviCatalog2: "Sanskrit catalogue",
+          vishnuEdition: "Viṣṇu Purāṇa edition",
+          vishnuCommentaries: "Viṣṇu commentary survey",
+          vitthalanathaSubodhini: "Subodhinī catalogue",
+          vallabhaBhagavata: "Vallabha bibliography",
+          vallabhaBhagavataTreatise: "Vallabha bibliography",
+          jivaGranthaCaitanya: "Jīva Grantha",
+          caitanyaCommentaryStudy: "Caitanya commentary study"
+        };
+        const citations = [];
+        if (hazra) citations.push("Hazra " + hazra[1] + " · p. " + hazra[2]);
+        for (const id of entry.sourceIds || []) {
+          const label = labels[id];
+          if (label && !citations.some(value => value.startsWith(label))) citations.push(label);
+        }
+        return citations.join(" · ");
+      }
+
+      function isKnownPreCutoffCommentary(entry) {
+        const label = normalizePuranaName(entry.label || entry.work || "");
+        if (!label || !commentaryData?.entries) return false;
+        return commentaryData.entries.some(item => {
+          if (item.status !== "within-cutoff") return false;
+          const names = [item.work, item.author].map(normalizePuranaName).filter(name => name.length > 6);
+          return names.some(name => label.includes(name) || name.includes(label));
+        });
+      }
+
+      function chapterEvidence(record, purana, section, chapter) {
         const kinds = [];
         const quoteEntries = record.quoted || [];
-        const commentaryEntries = record.commentaryCitations || [];
-        if (quoteEntries.some(isQuotedEntry) || commentaryEntries.some(isDirectCommentaryCitation)) kinds.push("quoted");
-        if (commentaryEntries.some(entry => !isDirectCommentaryCitation(entry))) kinds.push("bhashya");
-
-        const relations = [
-          ...(record.chapterRelations || []),
-          ...(record.parallel || []).filter(entry => entry.level === "chapter")
-        ];
-        if (
-          (record.parallel || []).some(entry => entry.level !== "chapter") ||
-          relations.some(entry => isIntraPuranaRelation(entry, purana))
-        ) kinds.push("parallel");
-
+        const citedCommentaries = (record.commentaryCitations || []).filter(entry =>
+          isDirectCommentaryCitation(entry) && isKnownPreCutoffCommentary(entry)
+        );
+        if (quoteEntries.some(isQuotedEntry) || citedCommentaries.length) kinds.push("quoted");
+        if (commentaryEntriesForChapter(purana, section, chapter).length ||
+          (record.commentaryCitations || []).some(entry =>
+            isChapterCoverage(entry) && isKnownPreCutoffCommentary(entry)
+          )) kinds.push("bhashya");
+        if ((record.parallel || []).length || (record.chapterRelations || []).length) kinds.push("parallel");
         if (
           record.puranaMentions?.length ||
           record.textReferences?.length ||
-          hasOtherPuranaContents(record, purana) ||
-          relations.some(entry => !isIntraPuranaRelation(entry, purana)) ||
-          record.topics?.some(isPuranicTopic)
+          record.contents?.length ||
+          record.topics?.some(entry => isPuranicTopic(entry, purana))
         ) kinds.push("mention");
-        if (record.topics?.some(entry => !isPuranicTopic(entry))) kinds.push("subject");
+        if (record.topics?.some(entry => !isPuranicTopic(entry, purana))) kinds.push("subject");
         return kinds;
       }
 
@@ -448,40 +521,57 @@
         detail.className = "detail";
         detail.setAttribute("aria-label", "Chapter evidence");
         const title = document.createElement("h2");
-        const sectionName = section.label && section.label !== "Chapters" ? section.label : "";
-        title.textContent = sectionName ? sectionName + " · ch. " + chapter : "Chapter " + chapter;
+        const sectionName = section.label && section.label !== "Chapters" ? section.label + " · " : "";
+        title.textContent = sectionName + "Chapter " + chapter;
         detail.appendChild(title);
 
-        const citedCommentaries = (record.commentaryCitations || [])
-          .filter(isDirectCommentaryCitation)
+        const directCommentaryQuotes = (record.commentaryCitations || [])
+          .filter(entry => isDirectCommentaryCitation(entry) && isKnownPreCutoffCommentary(entry))
           .map(entry => ({
             work: entry.label || "Commentary",
-            refs: entry.refs?.length ? entry.refs : [entry.ref],
+            refs: entry.refs?.length ? entry.refs : (entry.ref ? [entry.ref] : []),
             note: (entry.details || []).join(" · ")
           }));
-        const chapterCitations = [
+        addGroup(detail, "Quoted", [
           ...(record.quoted || []).filter(isQuotedEntry),
-          ...citedCommentaries
-        ];
-        addGroup(detail, "Quoted", chapterCitations, "quoted", section);
-        const relations = [
-          ...(record.chapterRelations || []),
-          ...(record.parallel || []).filter(entry => entry.level === "chapter")
-        ];
+          ...directCommentaryQuotes
+        ], "quoted", section);
+
+        const bhashyas = commentaryEntriesForChapter(purana, section, chapter).map(entry => ({
+          label: entry.work + " — " + entry.author,
+          ref: commentaryCitation(entry)
+        }));
+        addTaggedGroup(detail, "Bhāṣya", bhashyas);
+
         addGroup(detail, "Parallel", [
-          ...(record.parallel || []).filter(entry => entry.level !== "chapter"),
-          ...relations.filter(entry => isIntraPuranaRelation(entry, purana))
+          ...(record.parallel || []),
+          ...(record.chapterRelations || [])
         ], "parallel");
-        addGroup(detail, "Cross-text relation", relations.filter(entry => !isIntraPuranaRelation(entry, purana)), "chapterRelations");
-        addTextReferencesGroup(detail, record.textReferences);
-        addContentsGroup(detail, record.contents);
-        addTaggedGroup(detail, "Purāṇa mention", record.puranaMentions);
-        addTaggedGroup(detail, "Commentary", (record.commentaryCitations || []).filter(entry => !isDirectCommentaryCitation(entry)));
-        addTaggedGroup(detail, "Purāṇa classification", (record.topics || []).filter(isPuranicTopic));
-        addTaggedGroup(detail, "Topic", (record.topics || []).filter(entry => !isPuranicTopic(entry)));
-        addGroup(detail, "Unmatched", record.missing, "missing");
+
+        const otherPurana = [
+          ...(record.puranaMentions || []),
+          ...(record.textReferences || []),
+          ...(record.contents || []),
+          ...(record.topics || []).filter(entry => isPuranicTopic(entry, purana))
+        ].map(entry => ({
+          label: entry.label || entry.work || "Purāṇa reference",
+          ref: entry.ref,
+          details: entry.details,
+          sourceLabel: entry.sourceLabel
+        }));
+        const seenOther = new Set();
+        const uniqueOtherPurana = otherPurana.filter(entry => {
+          const key = entry.label + "|" + entry.ref;
+          if (seenOther.has(key)) return false;
+          seenOther.add(key);
+          return true;
+        });
+        addTaggedGroup(detail, "Other Purāṇa", uniqueOtherPurana);
+        addTaggedGroup(detail, "Tīrtha / topic", (record.topics || []).filter(entry => !isPuranicTopic(entry, purana)));
+        addGroup(detail, "Not located", record.missing, "missing");
+
         const hasRecord = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "puranaMentions", "commentaryCitations", "topics", "missing"]
-          .some(field => record[field]?.length);
+          .some(field => record[field]?.length) || commentaryEntriesForChapter(purana, section, chapter).length;
         if (!hasRecord) {
           const empty = document.createElement("p");
           empty.className = "no-entry";
@@ -501,10 +591,10 @@
           quoted: "quoted",
           bhashya: "bhāṣya",
           parallel: "parallel",
-          mention: "cross-text",
-          subject: "topic"
+          mention: "other Purāṇa",
+          subject: "tīrtha / topic"
         };
-        const priority = ["quoted", "bhashya", "mention", "parallel", "subject"];
+        const order = ["quoted", "bhashya", "parallel", "mention", "subject"];
         for (const purana of puranas) {
           for (const section of purana.sections) {
             const row = document.createElement("section");
@@ -518,8 +608,8 @@
             cells.className = "cells";
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
-              const evidence = chapterEvidence(record, purana);
-              const kind = priority.find(item => evidence.includes(item)) || "none";
+              const evidence = chapterEvidence(record, purana, section, String(chapter));
+              const kind = evidence.length === 1 ? evidence[0] : evidence.length > 1 ? "multiple" : "none";
 
               const tile = document.createElement("button");
               tile.type = "button";
@@ -528,7 +618,18 @@
               tile.setAttribute("aria-expanded", "false");
               tile.dataset.evidence = evidence.join(" ") || "none";
               if (kind !== "none") tile.classList.add(kind);
-              if (evidence.length > 1) tile.classList.add("multiple");
+              const markers = document.createElement("span");
+              markers.className = "tile-markers";
+              markers.setAttribute("aria-hidden", "true");
+              if (evidence.length > 1) {
+                tile.classList.add("multiple");
+                for (const category of order.filter(item => evidence.includes(item))) {
+                  const marker = document.createElement("i");
+                  marker.className = "tile-marker " + category;
+                  markers.appendChild(marker);
+                }
+                tile.appendChild(markers);
+              }
               const evidenceLabel = evidence.map(item => labels[item]).join(" · ") || "no attestation";
               tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
                 chapterNumber(section, chapter) + ": " + evidenceLabel);
@@ -607,131 +708,6 @@
         }
       }
 
-      function addCommentarySection(label, items, status, collapsible = false) {
-        if (!items.length) return;
-        const section = document.createElement(collapsible ? "details" : "section");
-        section.className = "commentary-section" + (collapsible ? " commentary-section-collapsed" : "");
-        const heading = document.createElement(collapsible ? "summary" : "h3");
-        if (collapsible) heading.className = "commentary-section-summary";
-        heading.textContent = collapsible ? label + " · " + items.length : label;
-        const grid = document.createElement("div");
-        grid.className = "commentary-grid";
-        for (const entry of items) {
-          const card = document.createElement("details");
-          card.className = "commentary-card";
-          card.dataset.search = [entry.work, entry.author, entry.scope, entry.period, entry.note].join(" ").toLocaleLowerCase();
-
-          const summary = document.createElement("summary");
-          const work = document.createElement("h4");
-          work.textContent = entry.work;
-          const author = document.createElement("p");
-          author.className = "commentary-author";
-          author.textContent = entry.author;
-          const period = document.createElement("p");
-          period.className = "commentary-period";
-          period.textContent = entry.period;
-          summary.append(work, author, period);
-
-          const body = document.createElement("div");
-          body.className = "commentary-body";
-          const scope = document.createElement("p");
-          scope.className = "commentary-scope";
-          scope.textContent = entry.scope;
-          body.appendChild(scope);
-          if (entry.note) {
-            const note = document.createElement("p");
-            note.className = "commentary-body-note";
-            note.textContent = entry.note;
-            body.appendChild(note);
-          }
-
-          const sources = document.createElement("div");
-          sources.className = "commentary-sources";
-          for (const sourceId of [...new Set(entry.sourceIds || [])]) {
-            const source = commentaryData.sources[sourceId];
-            if (!source) continue;
-            const link = document.createElement("a");
-            link.href = source.url;
-            link.target = "_blank";
-            link.rel = "noreferrer";
-            link.textContent = source.label;
-            sources.appendChild(link);
-          }
-          if (sources.childElementCount) body.appendChild(sources);
-          card.append(summary, body);
-          grid.appendChild(card);
-        }
-        section.append(heading, grid);
-        commentaryList.appendChild(section);
-      }
-
-      function renderCommentaries(puranaId) {
-        commentaryList.replaceChildren();
-        const entries = commentaryData.entries.filter(entry =>
-          entry.puranaId === puranaId && !["post-cutoff", "boundary"].includes(entry.status)
-        );
-        const dated = entries.filter(entry => entry.status === "within-cutoff");
-        const unresolved = entries.filter(entry => entry.status === "date-unverified");
-        const verifiedCount = dated.length;
-        commentaryCount.textContent = verifiedCount.toLocaleString();
-        commentaryCount.title = `${verifiedCount} before Nīlakaṇṭha · ${unresolved.length} date unclear`;
-        commentarySearch.value = "";
-        addCommentarySection("Before Nīlakaṇṭha", dated, "within-cutoff");
-        addCommentarySection("Date unclear", unresolved, "date-unverified", true);
-        if (verifiedCount === 0) {
-          const note = document.createElement("p");
-          note.className = "commentary-empty";
-          note.textContent = "No pre-cutoff bhāṣya found.";
-          commentaryList.appendChild(note);
-        }
-        commentarySearch.oninput = () => {
-          const query = commentarySearch.value.trim().toLocaleLowerCase();
-          for (const section of commentaryList.querySelectorAll(".commentary-section")) {
-            const cards = [...section.querySelectorAll(".commentary-card")];
-            const shown = cards.filter(card => {
-              const match = !query || card.dataset.search.includes(query);
-              card.hidden = !match;
-              return match;
-            }).length;
-            section.hidden = shown === 0;
-            if (section.tagName === "DETAILS") section.open = Boolean(query && shown);
-          }
-        };
-      }
-
-      function setView(view) {
-        const showBhashyas = view === "bhashyas";
-        mapPane.hidden = showBhashyas;
-        commentaryPanel.hidden = !showBhashyas;
-        citationsTab.classList.toggle("active", !showBhashyas);
-        bhashyasTab.classList.toggle("active", showBhashyas);
-        citationsTab.setAttribute("aria-pressed", String(!showBhashyas));
-        bhashyasTab.setAttribute("aria-pressed", String(showBhashyas));
-      }
-
-      citationsTab.addEventListener("click", () => setView("citations"));
-      bhashyasTab.addEventListener("click", () => setView("bhashyas"));
-      function renderSourceList() {
-        commentarySources.replaceChildren();
-        const sourceIds = ["hazraPuranicRecordsOCR", "hazraUpaVolumeI", "hazraUpaVolumeII"];
-        const sources = sourceIds
-          .map(id => commentaryData.sources[id])
-          .filter(Boolean)
-          .map(source => [source.label, source.url]);
-        const seen = new Set();
-        for (const [label, url] of sources) {
-          const key = url;
-          if (seen.has(key)) continue;
-          seen.add(key);
-          const link = document.createElement("a");
-          link.href = url;
-          link.target = "_blank";
-          link.rel = "noreferrer";
-          link.textContent = label;
-          commentarySources.appendChild(link);
-        }
-      }
-
       function render(purana) {
         if (!purana) return;
         setActiveContents(purana.id);
@@ -740,7 +716,6 @@
         selectedEvidence.textContent = attestedChapterCount(purana).toLocaleString() + " chapters";
         selectedEvidence.title = attestedChapterCount(purana).toLocaleString() + " attested chapters";
         renderMaps([purana]);
-        renderCommentaries(purana.id);
       }
 
       Promise.all([fetch("./data.json"), fetch("./subject-index.json"), fetch("./commentaries.json")])
@@ -749,10 +724,10 @@
           const [payload, subjectIndex, commentaryPayload] = await Promise.all([
             dataResponse.json(), subjectResponse.json(), commentaryResponse.json()
           ]);
-          data = applySubjectIndex(payload, subjectIndex);
-          data.puranas = data.puranas.filter(item => attestedChapterCount(item) > 0);
           commentaryData = commentaryPayload;
-          renderSourceList();
+          data = payload;
+          data = applySubjectIndex(data, subjectIndex);
+          data.puranas = data.puranas.filter(item => attestedChapterCount(item) > 0);
           renderContents();
           const initial = data.puranas.find(item => item.id === data.default) || data.puranas[0];
           render(initial);
