@@ -153,13 +153,28 @@ jobs:
 
             discovery=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
             initial=wait_for_reader(discovery,revision_url(shaiva_base))
-            items=discovery.locator('.side-toc .toc a[data-section]').evaluate_all("(links)=>links.map(a=>({id:a.dataset.section,title:a.textContent.trim()}))")
+            items=discovery.locator('.side-toc .toc a[data-section]:not([data-subsection])').evaluate_all("(links)=>links.map(a=>({id:a.dataset.section,title:a.textContent.trim()}))")
+            subsections=discovery.locator('.side-toc .toc a[data-subsection]').evaluate_all("(links)=>links.map(a=>({id:a.dataset.subsection,title:a.textContent.trim(),href:a.href}))")
             assert initial and initial.status==200
-            assert len(items)==19, f'Expected all 19 article sections, got {len(items)}'
+            assert len(items)>=8, f'Expected the main article pages, got {len(items)}'
             ids=[item['id'] for item in items]
-            assert len(set(ids))==len(ids), 'Duplicate article section links'
-            samples={'opening-salutation','introduction','padma-pur-a-s-contradiction','the-vai-ava-claim-relative-superiority-and-courtesy','smriti-testimony'}
-            assert samples.issubset(set(ids)), f'Missing sample sections: {samples-set(ids)}'
+            assert len(set(ids))==len(ids), 'Duplicate article page links'
+            subsection_ids=[item['id'] for item in subsections]
+            assert len(subsections)>=10, f'Expected at least 10 nested subsections, got {len(subsections)}'
+            assert len(set(subsection_ids))==len(subsection_ids), 'Duplicate subsection anchor links'
+            assert len(items)+len(subsections)>=20, f'Contents is missing nested entries: {len(items)} pages, {len(subsections)} subsections'
+            page_samples={'opening-salutation','section-1','section-2','section-5','smriti-testimony'}
+            assert page_samples.issubset(set(ids)), f'Missing article pages: {page_samples-set(ids)}'
+            subsection_samples={'introduction','padma-pur-a-s-contradiction','the-vai-ava-claim-relative-superiority-and-courtesy'}
+            assert subsection_samples.issubset(set(subsection_ids)), f'Missing subsection anchors: {subsection_samples-set(subsection_ids)}'
+            for subsection_id in subsection_samples:
+              link=discovery.locator(f'.side-toc .toc a[data-subsection="{subsection_id}"]')
+              target=link.evaluate('(a)=>a.href')
+              assert target and target.endswith('#'+subsection_id), f'Invalid subsection target: {subsection_id}'
+              response=discovery.goto(target,wait_until='domcontentloaded',timeout=45000)
+              discovery.wait_for_function("id => !!document.getElementById(id)",subsection_id)
+              anchor=discovery.evaluate("id => ({hash:location.hash,target:document.getElementById(id)?.tagName})",subsection_id)
+              assert response and response.status==200 and anchor['hash']=='#'+subsection_id and anchor['target']=='H3', f'Broken subsection jump: {subsection_id}'
             discovery.close()
 
             for index,item in enumerate(items):
