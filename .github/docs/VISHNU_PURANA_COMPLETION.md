@@ -441,7 +441,7 @@ Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śr�
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
 
-Book 1 cumulative ledger: 17,818 word-for-word panel rows; 246/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 688 remaining. Chapter 5–7 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 1181 rows across these chapters. The active next chapter is Book 1, Chapter 8.
+Book 1 cumulative ledger: 18,170 word-for-word panel rows; 283/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 651 remaining. Chapters 5–7 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 1,181 rows across these chapters. The active next chapter is Book 1, Chapter 8.
 
 
 ## User-directed Book 1 Word-for-word panel repair — Chapter 5 — 15 October 2026
@@ -464,8 +464,8 @@ Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla
 
 ## User-directed Book 1 Word-for-word panel repair — Chapter 7 — 15 October 2026
 
-Chapter 7 has 48 contiguous verse cards and exactly three controls per verse. All 0 supplied Śrīdhara entries are included in their existing **Word-for-word** control alongside the root map, with source Devanāgarī, IAST, and the visible English translation. 48 no-commentary cards remain. The visible label is “Śrīdhara translation.” The 0 pairings are passage-level and still need lexical segmentation; 315 existing root rows were retained. The page has no public Wilson or “Textual basis” note.
+Chapter 7 has 48 contiguous verse cards and exactly three controls per verse. All 37 supplied Śrīdhara entries are paired inside their existing **Word-for-word** control with the source Devanāgarī, IAST, and the displayed English translation. Eleven no-commentary cards remain. The visible label is “Śrīdhara translation.” These 37 pairings are passage-level and still need lexical segmentation; the 315 root rows were retained. The page has no public Wilson or “Textual basis” note.
 
-Validation: 48 IDs and root translations, 48 of each control, 0 Śrīdhara labels and pairings inside Word-for-word, balanced divs.
+Validation: 48 IDs, root translations, and each of the three controls; 37 Śrīdhara labels and WFW pairings; 11 no-commentary cards; balanced divs.
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla blob `624170f48f48bd15ded65e1ccce0b15310e4b0b5`; numbered witness blob `b58a0b4ec02a6426247ca17ba16cbb7ca7f4916b`; Śrīdhara blob `3ec99981ee33c49caf2c678a737210c250c2345a`; English cross-check blob `3ea1d03c07ee61d9933a5f814bb8b5693b315f38`.
