@@ -192,6 +192,11 @@
       #contents { display: flex; flex-direction: column; gap: 13px; max-height: none; }
       .contents-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px 8px; }
     }
+    .commentary-section-collapsed { margin-top: 13px; border-top: 1px solid var(--rule); }
+    .commentary-section-summary { padding: 7px 0; color: var(--muted); font-size: 10px; cursor: pointer; list-style: none; }
+    .commentary-section-summary::-webkit-details-marker { display: none; }
+    .commentary-section-summary::after { float: right; content: "+"; }
+    .commentary-section-collapsed[open] > .commentary-section-summary::after { content: "−"; }
   </style>
 </head>
 <body>
@@ -674,12 +679,13 @@
         }
       }
 
-      function addCommentarySection(label, items, status) {
+      function addCommentarySection(label, items, status, collapsible = false) {
         if (!items.length) return;
-        const section = document.createElement("section");
-        section.className = "commentary-section";
-        const heading = document.createElement("h3");
-        heading.textContent = label;
+        const section = document.createElement(collapsible ? "details" : "section");
+        section.className = "commentary-section" + (collapsible ? " commentary-section-collapsed" : "");
+        const heading = document.createElement(collapsible ? "summary" : "h3");
+        if (collapsible) heading.className = "commentary-section-summary";
+        heading.textContent = collapsible ? label + " · " + items.length : label;
         const grid = document.createElement("div");
         grid.className = "commentary-grid";
         for (const entry of items) {
@@ -710,12 +716,6 @@
             note.textContent = entry.note;
             body.appendChild(note);
           }
-          const badge = document.createElement("span");
-          badge.className = "commentary-status" +
-            (status === "date-unverified" ? " uncertain" : status === "boundary" ? " boundary" : "");
-          badge.textContent = status === "date-unverified" ? "Date unclear" :
-            status === "boundary" ? "At cutoff" : "Before cutoff";
-          body.appendChild(badge);
 
           const sources = document.createElement("div");
           sources.className = "commentary-sources";
@@ -745,16 +745,17 @@
         const dated = entries.filter(entry => entry.status === "within-cutoff");
         const boundary = entries.filter(entry => entry.status === "boundary");
         const unresolved = entries.filter(entry => entry.status === "date-unverified");
-        commentaryCount.textContent = entries.length ? entries.length.toLocaleString() : "";
-        commentaryCount.title = `${dated.length} before · ${boundary.length} at cutoff · ${unresolved.length} unclear`;
+        const verifiedCount = dated.length + boundary.length;
+        commentaryCount.textContent = verifiedCount.toLocaleString();
+        commentaryCount.title = `${verifiedCount} dated through Nīlakaṇṭha · ${unresolved.length} date unclear`;
         commentarySearch.value = "";
         addCommentarySection("Before Nīlakaṇṭha", dated, "within-cutoff");
         addCommentarySection("Nīlakaṇṭha", boundary, "boundary");
-        addCommentarySection("Date unclear", unresolved, "date-unverified");
-        if (!entries.length) {
+        addCommentarySection("Date unclear", unresolved, "date-unverified", true);
+        if (verifiedCount === 0) {
           const note = document.createElement("p");
           note.className = "commentary-empty";
-          note.textContent = "No pre-cutoff commentary found.";
+          note.textContent = "No dated bhāṣya found.";
           commentaryList.appendChild(note);
         }
         commentarySearch.oninput = () => {
@@ -767,6 +768,7 @@
               return match;
             }).length;
             section.hidden = shown === 0;
+            if (section.tagName === "DETAILS") section.open = Boolean(query && shown);
           }
         };
       }
