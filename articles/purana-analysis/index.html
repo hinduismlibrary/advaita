@@ -145,6 +145,18 @@
         return (section.numbering ? section.numbering + "." : "") + chapter;
       }
 
+      function expandChapterSpec(spec) {
+        const out = [];
+        for (const item of String(spec).split(",")) {
+          const match = item.trim().match(/^(\d+)(?:\s*[-–]\s*(\d+))?$/);
+          if (!match) continue;
+          const first = Number(match[1]);
+          const last = Number(match[2] || match[1]);
+          for (let n = first; n <= last; n += 1) out.push(String(n));
+        }
+        return out;
+      }
+
       function addGroup(parent, label, entries, type, section = null) {
         if (!entries || !entries.length) return;
         const group = document.createElement("section");
@@ -309,6 +321,8 @@
         const comparisonEntries = new Set();
         const verseComparisonEntries = new Set();
         const chapterComparisonEntries = new Set();
+        const counterpartLoci = new Set();
+        const selectedNames = new Set(puranas.map(purana => purana.name));
         for (const purana of puranas) {
           for (const section of purana.sections) {
             total += section.last;
@@ -333,6 +347,17 @@
                   comparisonEntries.add(key);
                   if (entry.level === "chapter") chapterComparisonEntries.add(key);
                   else verseComparisonEntries.add(key);
+                  if (entry.loci?.length) {
+                    for (const source of entry.loci) {
+                      if (!selectedNames.has(source.p)) continue;
+                      for (const target of entry.loci) {
+                        if (target.p === source.p) continue;
+                        for (const chapter of expandChapterSpec(target.c)) {
+                          counterpartLoci.add(target.p + "|" + target.s + "|" + chapter);
+                        }
+                      }
+                    }
+                  }
                 }
               }
               if (hasParallel && !hasQuoted) parallelOnlyChapters += 1;
@@ -355,9 +380,14 @@
         metrics.className = "analysis-grid";
         const quoteDetail = verseReferenceEntries.toLocaleString("en-GB") + " verse-reference entries · " +
           chapterLevelQuotes.toLocaleString("en-GB") + " chapter-level records";
-        const parallelDetail = comparisonEntries.size.toLocaleString("en-GB") + " comparison groups · " +
-          verseComparisonEntries.size.toLocaleString("en-GB") + " verse-level · " +
-          chapterComparisonEntries.size.toLocaleString("en-GB") + " chapter-level";
+        const parallelDetail = combined
+          ? comparisonEntries.size.toLocaleString("en-GB") + " comparison groups · " +
+            verseComparisonEntries.size.toLocaleString("en-GB") + " verse-level · " +
+            chapterComparisonEntries.size.toLocaleString("en-GB") + " chapter-level"
+          : comparisonEntries.size.toLocaleString("en-GB") + " comparison groups · " +
+            counterpartLoci.size.toLocaleString("en-GB") + " other-Purāṇa chapters · " +
+            verseComparisonEntries.size.toLocaleString("en-GB") + " verse-level · " +
+            chapterComparisonEntries.size.toLocaleString("en-GB") + " chapter-level";
         const values = [
           ["Total chapters", total.toLocaleString("en-GB"), "chapter slots in displayed sections"],
           ["Total chapters quoted", quotedChapters.toLocaleString("en-GB"), quoteDetail],
