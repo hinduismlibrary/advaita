@@ -405,7 +405,7 @@ Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śr�
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
 
-Book 1 cumulative ledger: 18,170 word-for-word panel rows; 283/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 651 remaining. Chapters 5–7 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 1,181 rows across these chapters. The active next chapter is Book 1, Chapter 8.
+Book 1 cumulative ledger: 17,855 word-for-word panel rows; 283/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 651 remaining. Chapters 5–7 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 1,181 rows across these chapters. The active next chapter is Book 1, Chapter 8.
 
 
 ## Book 1, Chapter 5 WFW panel repair — 15 October 2026
