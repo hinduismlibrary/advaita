@@ -50,7 +50,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 36 | 24 | 24 | 0 | 134 | 6 |
 | 37 | 75 | 75 | 0 | 514 | 29 |
 | 38 | 94 | 94 | 0 | 495 | 36 |
-| **Total** | **1517** | **895** | **622** | **7086** | **656** |
+| **Total** | **1517** | **993** | **524** | **8,152** | **656** |
 
 ## Changes made
 
