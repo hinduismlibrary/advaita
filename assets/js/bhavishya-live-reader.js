@@ -53,7 +53,7 @@
       found.push({n,sa:block});
     }
     const by=new Map();
-    for(const v of found){let n=v.n;if(chapter===189&&n===36&&!by.has(26))n=26;if(n>=1&&n<=expected){if(!by.has(n))by.set(n,v.sa);else by.set(n,`${by.get(n)} ${v.sa}`.trim());}}
+    for(const v of found){let n=v.n;if(chapter===189&&n===36&&!by.has(26))n=26;if(chapter===192&&n===32&&!by.has(12))n=12;if(n>=1&&n<=expected){if(!by.has(n))by.set(n,v.sa);else by.set(n,`${by.get(n)} ${v.sa}`.trim());}}
     return Array.from({length:expected},(_,i)=>({n:i+1,sa:by.get(i+1)||''}));
   }
   async function fetchSanskrit(chapter,expected){
