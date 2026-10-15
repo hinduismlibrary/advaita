@@ -9,198 +9,133 @@
   <style>
     :root {
       color-scheme: light;
-      --paper: #faf9f6;
-      --ink: #292822;
-      --muted: #716d63;
-      --rule: #dedbd3;
-      --empty: #f3e0dd;
-      --green: #d5e5d7;
-      --green-ink: #2d563a;
-      --blue: #d9e5e8;
-      --blue-ink: #31525a;
-      --gold: #efe2c6;
-      --gold-ink: #765b2c;
-      --teal: #d3e8e4;
-      --teal-ink: #285b52;
-      --violet: #e9e1ef;
-      --violet-ink: #564268;
-      --neutral: #e9e7e1;
-      --neutral-ink: #514f48;
-      --red: #a3473b;
-      --serif: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+      --paper: #fff;
+      --ink: #262821;
+      --muted: #74766f;
+      --rule: #e4e6df;
+      --green: #dcebe0;
+      --green-ink: #315d40;
+      --violet: #ece5f2;
+      --violet-ink: #674b7a;
+      --blue: #dfeaf0;
+      --blue-ink: #3e6274;
+      --neutral: #f3f4f0;
+      --serif: Georgia, "Times New Roman", serif;
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font: 13px/1.42 var(--sans); }
-    button, select { font: inherit; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 13px/1.45 var(--sans); }
+    button { font: inherit; }
     :focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
-    .page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    .top {
-      min-height: 42px; display: flex; align-items: center; justify-content: space-between;
-      border-bottom: 1px solid var(--rule); font-size: 10px; letter-spacing: .09em; text-transform: uppercase;
-    }
+    .page { width: min(1280px, calc(100% - 48px)); margin: 0 auto; }
+    .top { min-height: 42px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
     .top a { color: inherit; text-decoration: none; }
     .top a:first-child { font-weight: 650; }
     .top a:last-child { color: var(--muted); }
-    header { padding: 24px 0 17px; border-bottom: 1px solid var(--ink); }
-    h1 { margin: 0; font: 400 clamp(34px, 4.3vw, 46px)/1.02 var(--serif); letter-spacing: -.035em; }
-    .chooser { display: flex; align-items: center; gap: 11px; padding: 12px 0 9px; }
-    .chooser label { color: var(--muted); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
-    .chooser select {
-      min-width: min(310px, 72vw); max-width: 100%; padding: 7px 30px 7px 9px;
-      border: 1px solid var(--rule); border-radius: 3px; color: var(--ink); background: #fff;
-    }
-    .legend { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 17px; padding: 0 0 10px; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 10px; }
+    header { padding: 26px 0 18px; border-bottom: 1px solid var(--ink); }
+    h1 { margin: 0; font: 400 clamp(32px, 4vw, 44px)/1.05 var(--serif); letter-spacing: -.035em; }
+    .dek { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+    .workspace { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: clamp(24px, 4vw, 54px); align-items: start; padding: 26px 0 0; }
+    .contents-panel { position: sticky; top: 18px; min-width: 0; }
+    .contents-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-bottom: 9px; border-bottom: 1px solid var(--rule); }
+    .contents-heading h2 { margin: 0; font: 400 21px/1.1 var(--serif); }
+    .contents-heading span { color: var(--muted); font-size: 9px; }
+    #contents { display: flex; flex-direction: column; gap: 14px; margin-top: 13px; }
+    .contents-group h3 { margin: 0 0 5px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    .contents-items { display: flex; flex-direction: column; gap: 1px; }
+    .contents-button { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 8px; padding: 6px 7px; border: 0; border-left: 2px solid transparent; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+    .contents-button:hover { background: #f7f8f5; }
+    .contents-button.active { border-left-color: var(--green-ink); background: #f0f5f1; }
+    .contents-name { min-width: 0; font-size: 11px; line-height: 1.35; }
+    .evidence-count { color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; }
+    .viewer { min-width: 0; }
+    .selected-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 0 0 12px; border-bottom: 1px solid var(--ink); }
+    .selected-category { margin: 0 0 4px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    #selected-name { margin: 0; font: 400 clamp(25px, 3vw, 35px)/1.05 var(--serif); letter-spacing: -.03em; }
+    .selected-evidence { margin: 0 0 2px; color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 17px; padding: 10px 0 9px; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 10px; }
     .legend-item { display: inline-flex; align-items: center; gap: 6px; }
-    .legend-swatch { width: 11px; height: 11px; border: 1px solid var(--rule); border-radius: 3px; background: var(--empty); }
-    .legend-swatch.quoted { border-color: #b8cdbb; background: var(--green); }
-    .legend-swatch.parallel { border-color: #bfd0d3; background: var(--blue); }
-    .legend-swatch.contents { border-color: #d8c59c; background: var(--gold); }
-    .legend-swatch.pilgrimage { border-color: #b6d2cc; background: var(--teal); }
-    .legend-swatch.mahatmya { border-color: #cbbbd5; background: var(--violet); }
-    .legend-swatch.subject { border-color: #cbc8bf; background: var(--neutral); }
-    .legend-swatch.chapter-relation { border-color: #bdbab2; background: var(--neutral); border-style: dashed; }
-    .legend-swatch.commentary { border-color: #cbbbd5; background: #fff; box-shadow: inset 0 -3px var(--violet-ink); }
-    .legend-dot { width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--red); }
-    #map { padding: 3px 0 18px; }
-    .section-row { display: grid; grid-template-columns: 128px minmax(0,1fr); gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
-    .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.3; }
+    .legend-swatch { width: 10px; height: 10px; border-radius: 2px; background: #f1f2ee; }
+    .legend-swatch.quoted { background: var(--green); }
+    .legend-swatch.bhashya { background: var(--violet); }
+    .legend-swatch.parallel { background: var(--blue); }
+    #map { padding: 8px 0 22px; }
+    .section-row { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+    .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.35; }
     .section-content { min-width: 0; }
-    .cells { display: grid; grid-template-columns: repeat(auto-fill, 22px); gap: 2px; align-content: start; }
-    .tile {
-      position: relative; display: grid; place-items: center; width: 22px; height: 22px;
-      padding: 0; border: 1px solid #e5c5c0; border-radius: 3px; color: #855f58;
-      background: var(--empty); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer;
-      transition: border-color .12s ease, background-color .12s ease;
-    }
-    .tile.quoted { border-color: #b8cdbb; color: var(--green-ink); background: var(--green); font-weight: 650; }
-    .tile.parallel { border-color: #bfd0d3; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
-    .tile.contents:not(.quoted):not(.parallel):not(.both) { border-color: #d8c59c; color: var(--gold-ink); background: var(--gold); }
-    .tile.contents::before { position: absolute; top: 1px; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--gold-ink); content: ""; }
-    .tile.pilgrimage:not(.quoted):not(.parallel):not(.both):not(.contents) { border-color: #b6d2cc; color: var(--teal-ink); background: var(--teal); }
-    .tile.pilgrimage::before { position: absolute; top: 1px; right: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--teal-ink); content: ""; }
-    .tile.mahatmya:not(.quoted):not(.parallel):not(.both):not(.contents):not(.pilgrimage) { border-color: #cbbbd5; color: var(--violet-ink); background: var(--violet); }
-    .tile.mahatmya::before { position: absolute; bottom: 1px; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--violet-ink); content: ""; }
-    .tile.subject:not(.quoted):not(.parallel):not(.both):not(.contents):not(.pilgrimage):not(.mahatmya) { border-color: #cbc8bf; color: var(--neutral-ink); background: var(--neutral); }
-    .tile.subject { border-style: dashed; }
-    .tile.chapter-relation:not(.quoted):not(.parallel):not(.both):not(.contents):not(.pilgrimage):not(.mahatmya):not(.subject) { border-color: #bdbab2; color: var(--neutral-ink); background: var(--neutral); }
-    .tile.chapter-relation { border-style: dashed; }
-    .tile.commentary { border-bottom: 3px solid var(--violet-ink); }
-    .tile.both { border-color: #b8cdbb; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--blue) 51% 100%); font-weight: 700; }
+    .cells { display: grid; grid-template-columns: repeat(auto-fill, 24px); gap: 3px; align-content: start; }
+    .tile { position: relative; display: grid; place-items: center; width: 24px; height: 24px; padding: 0; border: 1px solid #e8e9e4; border-radius: 3px; color: #8a8d85; background: #f5f6f3; font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer; }
+    .tile.quoted { border-color: #bfd2c2; color: var(--green-ink); background: var(--green); font-weight: 650; }
+    .tile.bhashya:not(.quoted):not(.parallel) { border-color: #d3c4de; color: var(--violet-ink); background: var(--violet); }
+    .tile.parallel:not(.quoted):not(.bhashya) { border-color: #c7d9e1; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
+    .tile.both { border-color: #c4d6c9; color: var(--ink); background: linear-gradient(135deg, var(--green) 0 49%, var(--blue) 51% 100%); font-weight: 700; }
+    .tile.indexed:not(.quoted):not(.bhashya):not(.parallel) { border-color: #d9ddd5; color: #565a52; background: var(--neutral); }
+    .tile.bhashya::after { position: absolute; top: 2px; right: 2px; width: 4px; height: 4px; border-radius: 50%; background: var(--violet-ink); content: ""; }
     .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
     .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
-    .tile.unmatched::after { position: absolute; right: 1px; bottom: 1px; width: 5px; height: 5px; border-radius: 50%; background: var(--red); content: ""; }
-    .detail { margin: 5px 0 1px; padding: 8px 10px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); border-radius: 3px; background: #fff; }
+    .detail { margin: 6px 0 2px; padding: 9px 11px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); border-radius: 3px; background: #fff; }
     .detail[hidden] { display: none; }
-    .detail h2 { margin: 0 0 6px; font: 400 17px/1.15 var(--serif); }
-    .group { display: grid; grid-template-columns: 78px minmax(0,1fr); gap: 8px; padding: 5px 0 0; }
-    .group + .group { margin-top: 4px; border-top: 1px solid #e9e6df; }
-    .group h3 { margin: 2px 0 0; color: var(--muted); font: 650 9px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+    .detail h2 { margin: 0 0 7px; font: 400 17px/1.2 var(--serif); }
+    .group { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 5px 0 0; }
+    .group + .group { margin-top: 4px; border-top: 1px solid #eff0ec; }
+    .group h3 { margin: 2px 0 0; color: var(--muted); font: 650 9px/1.4 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
     .entries { min-width: 0; margin: 0; padding: 0; list-style: none; }
     .entry { padding: 1px 0 4px; overflow-wrap: anywhere; }
     .work { font-weight: 600; }
     .work-link { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
-    .refs { display: block; padding-top: 1px; color: #45433d; font-variant-numeric: tabular-nums; }
+    .refs { display: block; padding-top: 1px; color: #4e514b; font-variant-numeric: tabular-nums; }
     .pair { font-variant-numeric: tabular-nums; }
     .arrow { padding: 0 6px; color: var(--muted); }
-    .note { display: block; padding-top: 2px; color: #5f5b53; font: italic 12px/1.35 var(--serif); }
+    .note { display: block; padding-top: 2px; color: #6a6d65; font: italic 12px/1.4 var(--serif); }
     .no-entry { margin: 0; color: var(--muted); font-size: 11px; }
-    .error { padding: 14px 0; color: var(--red); }
-    .analysis-row { border-top: 1px solid var(--ink); border-bottom: 0; padding-top: 8px; padding-bottom: 8px; }
-    .analysis-title { margin: 0; padding-top: 3px; color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
-    .analysis-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 16px; margin: 0; }
-    .analysis-item { display: flex; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; gap: 2px; min-height: 54px; padding: 6px 0 5px; border-bottom: 1px solid var(--rule); }
-    .analysis-item dt { color: var(--muted); font-size: 9px; line-height: 1.35; }
-    .analysis-item dd { margin: 0; color: var(--ink); font: 400 clamp(19px, 2.1vw, 23px)/1.05 var(--serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
-    .analysis-item dd small { display: block; margin-top: 4px; color: var(--muted); font: 400 9px/1.3 var(--sans); letter-spacing: 0; }
+    .error { padding: 14px 0; color: #9b443c; }
+    .commentary-panel { margin: 25px 0 42px; border-top: 1px solid var(--ink); }
+    .commentary-disclosure > summary { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 13px 0; cursor: pointer; list-style: none; }
+    .commentary-disclosure > summary::-webkit-details-marker { display: none; }
+    .commentary-disclosure > summary::after { content: "+"; order: 2; color: var(--muted); }
+    .commentary-disclosure[open] > summary::after { content: "−"; }
+    .commentary-title { font: 400 22px/1.1 var(--serif); }
+    .commentary-count { margin-left: auto; color: var(--muted); font-size: 10px; text-align: right; }
+    .commentary-note { margin: 0 0 13px; color: var(--muted); font-size: 10px; }
+    .commentary-section { margin: 15px 0 0; }
+    .commentary-section h3 { margin: 0 0 6px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    .commentary-grid { display: grid; grid-template-columns: 1fr; gap: 3px; }
+    .commentary-card { min-width: 0; border-bottom: 1px solid var(--rule); }
+    .commentary-card > summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(100px, .6fr) auto; align-items: baseline; gap: 10px; padding: 7px 2px; cursor: pointer; list-style: none; }
+    .commentary-card > summary::-webkit-details-marker { display: none; }
+    .commentary-card > summary::before { color: var(--muted); content: "+"; }
+    .commentary-card[open] > summary::before { content: "−"; }
+    .commentary-card h4 { grid-column: 2; grid-row: 1; margin: 0; font: 500 13px/1.3 var(--serif); }
+    .commentary-author { grid-column: 2; grid-row: 2; margin: 0; color: var(--muted); font-size: 10px; }
+    .commentary-period { grid-column: 3; grid-row: 1 / span 2; margin: 0; color: var(--muted); font-size: 9px; white-space: nowrap; }
+    .commentary-body { padding: 0 0 9px 20px; }
+    .commentary-scope, .commentary-body-note { margin: 3px 0; color: var(--muted); font-size: 10px; }
+    .commentary-status { display: inline-block; margin-top: 5px; color: var(--green-ink); font-size: 9px; }
+    .commentary-status.uncertain { color: var(--violet-ink); }
+    .commentary-sources { display: flex; flex-wrap: wrap; gap: 4px 13px; margin-top: 5px; font-size: 9px; }
+    .commentary-sources a, .source-list a { color: var(--green-ink); text-underline-offset: 2px; }
+    .commentary-empty { margin: 8px 0 12px; color: var(--muted); font-size: 10px; }
+    .source-details { margin: 17px 0 24px; padding-top: 9px; border-top: 1px solid var(--rule); }
+    .source-details > summary { color: var(--muted); font-size: 10px; cursor: pointer; }
+    .source-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; margin-top: 9px; font-size: 9px; }
+    .source-limit { margin: 9px 0 0; color: var(--muted); font-size: 9px; }
     @media (max-width: 760px) {
-      .page { width: calc(100% - 26px); }
-      header { padding: 20px 0 14px; }
-      .section-row { grid-template-columns: 88px minmax(0,1fr); gap: 7px; padding: 4px 0; }
+      .page { width: calc(100% - 28px); }
+      header { padding: 21px 0 14px; }
+      .workspace { grid-template-columns: 1fr; gap: 18px; padding-top: 18px; }
+      .contents-panel { position: static; }
+      #contents { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
+      .contents-group { min-width: 0; }
+      .section-row { grid-template-columns: 82px minmax(0, 1fr); gap: 7px; }
       .section-label { font-size: 9px; }
-      .cells { grid-template-columns: repeat(auto-fill, 21px); gap: 2px; }
-      .tile { width: 21px; height: 21px; }
-      .group { grid-template-columns: 66px minmax(0,1fr); gap: 5px; }
-      .analysis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
-      .analysis-item { min-height: 60px; padding: 8px 0 7px; }
-    }
-    @media (max-width: 380px) {
-      .page { width: calc(100% - 20px); }
-      .section-row { grid-template-columns: 72px minmax(0,1fr); gap: 5px; }
-      .group { grid-template-columns: 58px minmax(0,1fr); gap: 4px; }
-      .analysis-grid { gap: 0 9px; }
-      .analysis-item dt { font-size: 8.5px; }
-    }
-    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
-    .dek { margin: 9px 0 0; color: var(--muted); font-size: 12px; }
-    .workspace { display: grid; grid-template-columns: minmax(210px, 248px) minmax(0, 1fr); gap: clamp(18px, 3vw, 34px); align-items: start; padding-top: 17px; }
-    .contents-panel { position: sticky; top: 14px; align-self: start; min-width: 0; padding: 13px 12px 12px; border: 1px solid var(--rule); border-radius: 4px; background: #fffdfa; }
-    .contents-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
-    .contents-heading h2 { margin: 0; font: 400 21px/1.1 var(--serif); letter-spacing: -.02em; }
-    .contents-heading span, .contents-foot { color: var(--muted); font-size: 9px; }
-    .contents-note { margin: 9px 0 10px; color: var(--muted); font-size: 10px; line-height: 1.45; }
-    #contents { display: flex; flex-direction: column; gap: 14px; margin-top: 7px; }
-    .contents-group h3 { margin: 0 0 5px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
-    .contents-items { display: flex; flex-direction: column; gap: 1px; }
-    .contents-button { width: 100%; min-width: 0; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 7px; padding: 5px 6px; border: 0; border-left: 2px solid transparent; border-radius: 0; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
-    .contents-button:hover { background: #f4f2ec; }
-    .contents-button.active { border-left-color: var(--green-ink); background: #f0f3ee; }
-    .contents-name { min-width: 0; font-size: 10px; line-height: 1.3; }
-    .evidence-count { color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .combined-button { margin: 10px 0 1px; border-bottom: 1px solid var(--rule); padding: 7px 6px 9px; }
-    .contents-foot { margin: 12px 0 0; line-height: 1.45; }
-    .viewer { min-width: 0; }
-    .selected-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 1px 0 12px; border-bottom: 1px solid var(--ink); }
-    .selected-category { margin: 0 0 4px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
-    #selected-name { margin: 0; font: 400 clamp(24px,3vw,34px)/1.05 var(--serif); letter-spacing: -.03em; }
-    .selected-evidence { margin: 0 0 2px; color: var(--muted); font-size: 10px; white-space: nowrap; }
-    .legend { padding-top: 10px; gap: 7px 12px; font-size: 9px; }
-    #map { padding-top: 7px; }
-    .commentary-panel { margin: 18px 0 40px; padding: 17px 0 0; border-top: 1px solid var(--ink); }
-    .commentary-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
-    .commentary-heading h2 { margin: 0; font: 400 25px/1.1 var(--serif); letter-spacing: -.025em; }
-    .commentary-count { margin: 0 0 3px; color: var(--muted); font-size: 10px; text-align: right; }
-    .commentary-note { max-width: 780px; margin: 11px 0 16px; color: var(--muted); font-size: 10px; line-height: 1.5; }
-    .commentary-section { margin: 17px 0 0; }
-    .commentary-section h3 { margin: 0 0 7px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
-    .commentary-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
-    .commentary-card { min-width: 0; padding: 9px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fffdfa; }
-    .commentary-card h4 { margin: 0; font: 500 13px/1.3 var(--serif); }
-    .commentary-author { margin: 3px 0 0; color: var(--ink); font-size: 10px; }
-    .commentary-scope, .commentary-period { margin: 3px 0 0; color: var(--muted); font-size: 9px; line-height: 1.4; }
-    .commentary-status { display: inline-block; margin-top: 6px; padding: 2px 5px; border-radius: 2px; background: #edf2eb; color: #38533a; font-size: 8px; letter-spacing: .04em; text-transform: uppercase; }
-    .commentary-status.boundary { background: #f3eadb; color: #765b2c; }
-    .commentary-status.uncertain { background: #f0eee8; color: #656057; }
-    .commentary-source { display: inline-block; margin-top: 6px; color: var(--green-ink); font-size: 9px; text-decoration-thickness: 1px; text-underline-offset: 2px; }
-    .commentary-empty { margin: 13px 0; padding: 11px 12px; border-left: 2px solid var(--rule); color: var(--muted); font-size: 10px; }
-    .research-sources { display: flex; flex-wrap: wrap; gap: 7px 14px; margin-top: 19px; padding-top: 10px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 9px; }
-    .research-sources a { color: var(--green-ink); }
-    @media (max-width: 900px) { .workspace { grid-template-columns: minmax(190px, 215px) minmax(0,1fr); gap: 18px; } }
-    @media (max-width: 760px) {
-      .page { width: calc(100% - 26px); }
-      .workspace { grid-template-columns: minmax(0,1fr); gap: 14px; padding-top: 13px; }
-      .contents-panel { position: static; padding: 10px; }
-      #contents { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 13px; max-height: 250px; overflow: auto; }
-      .contents-button { padding: 5px 4px; }
-      .contents-name { font-size: 10px; }
-      .combined-button { margin-top: 7px; }
-      .selected-heading { align-items: start; }
-      .selected-evidence { white-space: normal; text-align: right; }
-      .commentary-grid { grid-template-columns: 1fr; }
-      .section-row { grid-template-columns: 88px minmax(0,1fr); gap: 7px; padding: 4px 0; }
-      .section-label { font-size: 9px; }
-      .cells { grid-template-columns: repeat(auto-fill, 21px); gap: 2px; }
-      .tile { width: 21px; height: 21px; }
-      .group { grid-template-columns: 66px minmax(0,1fr); gap: 5px; }
-      .analysis-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 12px; }
-      .analysis-item { min-height: 60px; padding: 8px 0 7px; }
-    }
-    @media (max-width: 380px) {
-      .page { width: calc(100% - 20px); }
-      .section-row { grid-template-columns: 72px minmax(0,1fr); gap: 5px; }
-      .group { grid-template-columns: 58px minmax(0,1fr); gap: 4px; }
-      .analysis-grid { gap: 0 9px; }
-      .analysis-item dt { font-size: 8.5px; }
+      .cells { grid-template-columns: repeat(auto-fill, 22px); gap: 2px; }
+      .tile { width: 22px; height: 22px; }
+      .group { grid-template-columns: 72px minmax(0, 1fr); gap: 7px; }
+      .commentary-card > summary { grid-template-columns: minmax(0, 1fr) auto; gap: 3px 8px; }
+      .commentary-card > summary::before { grid-column: 1; grid-row: 1 / span 2; }
+      .commentary-card h4, .commentary-author { grid-column: 2; }
+      .commentary-period { grid-column: 2; grid-row: 3; }
+      .source-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -212,20 +147,15 @@
     </nav>
     <header>
       <h1>Purāṇa Analysis</h1>
-      <p class="dek">Chapter evidence, arranged by text and source.</p>
+      <p class="dek">Citations, parallels and bhāṣyas by Purāṇa.</p>
     </header>
     <div class="workspace">
       <aside class="contents-panel" aria-label="Purāṇa contents">
         <div class="contents-heading">
           <h2>Contents</h2>
-          <span>Most attested first</span>
+          <span>Most attested</span>
         </div>
-        <p class="contents-note">Lists differ: Vāyu and Śiva appear as alternatives in some Mahāpurāṇa lists; Devī Bhāgavata’s classification also varies.</p>
-        <button class="contents-button combined-button" id="all-combined" type="button" data-purana="all-combined" aria-pressed="false">
-          <span>All Purāṇas together</span><span class="evidence-count">combined</span>
-        </button>
         <nav id="contents" aria-label="Purāṇas"></nav>
-        <p class="contents-foot">Sorted by indexed evidence items across quotations, parallels, chapter links, contents lists, and subjects.</p>
       </aside>
       <div class="viewer">
         <div class="selected-heading">
@@ -236,34 +166,26 @@
           <p id="selected-evidence" class="selected-evidence"></p>
         </div>
     <div class="legend" aria-label="Heat map key">
-      <span class="legend-item"><i class="legend-swatch" aria-hidden="true"></i>No located reference</span>
-      <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted elsewhere</span>
-      <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Verse parallel</span>
-      <span class="legend-item"><i class="legend-swatch chapter-relation" aria-hidden="true"></i>Chapter link only</span>
-      <span class="legend-item"><i class="legend-swatch commentary" aria-hidden="true"></i>Commentary</span>
-      <span class="legend-item"><i class="legend-swatch contents" aria-hidden="true"></i>Purāṇa list / measures</span>
-      <span class="legend-item"><i class="legend-swatch pilgrimage" aria-hidden="true"></i>Tīrtha / sacred places</span>
-      <span class="legend-item"><i class="legend-swatch mahatmya" aria-hidden="true"></i>Bhāgavata-māhātmya</span>
-      <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Other subject</span>
-      <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Unmatched citation</span>
+      <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
+      <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya / chapter only</span>
+      <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
+      <span class="legend-item"><i class="legend-swatch" aria-hidden="true"></i>No indexed mark</span>
     </div>
         <main id="map" aria-live="polite"></main>
         <section class="commentary-panel" aria-labelledby="commentary-heading">
-          <div class="commentary-heading">
-            <div>
-              <p class="selected-category">Text and section commentaries</p>
-              <h2 id="commentary-heading">Bhāṣya index</h2>
-            </div>
-            <p id="commentary-count" class="commentary-count"></p>
-          </div>
-          <p class="commentary-note">Dated works through the c. 1750 Nīlakaṇṭha boundary are counted. The boundary commentary is shown separately; later works are omitted. Manuscript-catalogued works with unresolved dates are listed separately and are not counted as pre-boundary.</p>
-          <div id="commentary-list"></div>
-          <div class="research-sources">
-            <span>Research indexes</span>
-            <a href="https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr" target="_blank" rel="noreferrer">Hazra OCR (unproofread)</a>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/c/ce/The_%C3%87r%C4%ABmadbh%C4%81gavatam_%28IA_cu31924009113279%29.pdf" target="_blank" rel="noreferrer">Chatterjee’s 1895 list of 136 Bhāgavata commentaries and dissertations</a>
-            <a href="https://www.wisdomlib.org/definition/devimahatmya" target="_blank" rel="noreferrer">Devī Māhātmya manuscript catalogue</a>
-          </div>
+          <details class="commentary-disclosure">
+            <summary>
+              <span id="commentary-heading" class="commentary-title">Bhāṣya index</span>
+              <span id="commentary-count" class="commentary-count"></span>
+            </summary>
+            <p class="commentary-note">Before Nīlakaṇṭha; undated catalogue leads are separate.</p>
+            <div id="commentary-list"></div>
+            <details class="source-details">
+              <summary>Books and citations</summary>
+              <div id="commentary-sources" class="source-list"></div>
+              <p class="source-limit">A source-indexed catalogue; lost and uncatalogued works cannot be verified here.</p>
+            </details>
+          </details>
         </section>
       </div>
     </div>
@@ -277,7 +199,7 @@
       const selectedEvidence = document.getElementById("selected-evidence");
       const commentaryList = document.getElementById("commentary-list");
       const commentaryCount = document.getElementById("commentary-count");
-      const allCombinedButton = document.getElementById("all-combined");
+      const commentarySources = document.getElementById("commentary-sources");
       let commentaryData = null;
       let data = null;
       let selectedTile = null;
@@ -483,12 +405,11 @@
       }
 
       function evidenceCount(purana) {
+        const fields = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "commentaryCitations", "topics"];
         let count = 0;
         for (const section of purana.sections || []) {
           for (const record of Object.values(section.chapters || {})) {
-            for (const value of Object.values(record || {})) {
-              if (Array.isArray(value)) count += value.length;
-            }
+            for (const field of fields) count += record[field]?.length || 0;
           }
         }
         return count;
@@ -567,107 +488,7 @@
         requestAnimationFrame(() => detail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
       }
 
-      function addAnalysis(puranas, combined = false) {
-        let total = 0;
-        let quotedChapters = 0;
-        let parallelChapters = 0;
-        let emptySectionChapters = 0;
-        let parallelOnlyChapters = 0;
-        let verseReferenceEntries = 0;
-        let chapterLevelQuotes = 0;
-        const verseComparisonEntries = new Set();
-        const counterpartLoci = new Set();
-        const selectedNames = new Set(puranas.map(purana => purana.name));
-        for (const purana of puranas) {
-          for (const section of purana.sections) {
-            total += section.last;
-            let sectionHasReferences = false;
-            for (let chapter = 1; chapter <= section.last; chapter += 1) {
-              const record = section.chapters[String(chapter)] || {};
-              const hasQuoted = Boolean(record.quoted?.length);
-              const hasParallel = Boolean(record.parallel?.some(entry => entry.level !== "chapter"));
-              const hasChapterRelation = Boolean(record.chapterRelations?.length || record.parallel?.some(entry => entry.level === "chapter"));
-              const hasContents = Boolean(record.contents?.length);
-              const hasNote = Boolean(record.missing?.length);
-              if (hasQuoted) {
-                quotedChapters += 1;
-                for (const witness of record.quoted) {
-                  verseReferenceEntries += witness.refs?.length || 0;
-                  if (!witness.refs?.length) chapterLevelQuotes += 1;
-                }
-              }
-              if (hasParallel) {
-                parallelChapters += 1;
-                for (const entry of record.parallel) {
-                  const key = JSON.stringify(entry);
-                  if (entry.level !== "chapter") verseComparisonEntries.add(key);
-                  if (entry.loci?.length) {
-                    for (const source of entry.loci) {
-                      if (!selectedNames.has(source.p)) continue;
-                      for (const target of entry.loci) {
-                        if (target.p === source.p) continue;
-                        for (const chapter of expandChapterSpec(target.c)) {
-                          counterpartLoci.add(target.p + "|" + target.s + "|" + chapter);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              if (hasParallel && !hasQuoted) parallelOnlyChapters += 1;
-              if (hasQuoted || hasParallel || hasChapterRelation || hasContents || hasNote || record.textReferences?.length || record.commentaryCitations?.length || record.topics?.length) sectionHasReferences = true;
-            }
-            if (!sectionHasReferences) emptySectionChapters += section.last;
-          }
-        }
-        const percent = (value, denominator) => denominator
-          ? (100 * value / denominator).toFixed(1) + "%"
-          : "—";
-        const row = document.createElement("section");
-        row.className = "section-row analysis-row";
-        const heading = document.createElement("h2");
-        heading.className = "section-label analysis-title";
-        heading.textContent = combined ? "Combined analysis" : "Analysis";
-        const content = document.createElement("div");
-        content.className = "section-content";
-        const metrics = document.createElement("dl");
-        metrics.className = "analysis-grid";
-        const quoteDetail = verseReferenceEntries.toLocaleString("en-GB") + " verse-reference entries · " +
-          chapterLevelQuotes.toLocaleString("en-GB") + " chapter-level records";
-        const parallelDetail = combined
-          ? verseComparisonEntries.size.toLocaleString("en-GB") + " verse-paired comparison groups"
-          : verseComparisonEntries.size.toLocaleString("en-GB") + " verse-paired groups · " +
-            counterpartLoci.size.toLocaleString("en-GB") + " other-Purāṇa chapters";
-        const values = [
-          ["Total chapters", total.toLocaleString("en-GB"), "chapter slots in displayed sections"],
-          ["Total chapters quoted", quotedChapters.toLocaleString("en-GB"), quoteDetail],
-          ["Total chapters found parallel", parallelChapters.toLocaleString("en-GB"), parallelDetail],
-          ["% quoted", percent(quotedChapters, total)],
-          ["% found elsewhere", percent(parallelChapters, total)],
-          ["% quoted · empty sections removed", percent(quotedChapters, total - emptySectionChapters)],
-          ["% quoted · parallel-only chapters removed", percent(quotedChapters, total - parallelOnlyChapters)],
-        ];
-        for (const [label, value, detail] of values) {
-          const item = document.createElement("div");
-          item.className = "analysis-item";
-          const term = document.createElement("dt");
-          term.textContent = label;
-          const number = document.createElement("dd");
-          number.textContent = value;
-          if (detail) {
-            const small = document.createElement("small");
-            small.textContent = detail;
-            number.appendChild(small);
-          }
-          item.append(term, number);
-          metrics.appendChild(item);
-        }
-        content.appendChild(metrics);
-        row.append(heading, content);
-        map.appendChild(row);
-      }
-
-      function renderMaps(puranas, combined = false) {
+      function renderMaps(puranas) {
         selectedTile = null;
         selectedDetail = null;
         map.replaceChildren();
@@ -677,50 +498,38 @@
             row.className = "section-row";
             const label = document.createElement("div");
             label.className = "section-label";
-            label.textContent = combined ? purana.name + " · " + section.label : section.label;
+            label.textContent = section.label;
             const content = document.createElement("div");
             content.className = "section-content";
             const cells = document.createElement("div");
             cells.className = "cells";
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
-              const hasQuoted = Boolean(record.quoted?.length);
+              const quoteEntries = record.quoted || [];
+              const hasQuoted = quoteEntries.some(entry => entry.refs?.length);
+              const hasBhashya = Boolean(record.commentaryCitations?.length) ||
+                quoteEntries.some(entry => !entry.refs?.length);
               const hasParallel = Boolean(record.parallel?.some(entry => entry.level !== "chapter"));
               const hasChapterRelation = Boolean(record.chapterRelations?.length || record.parallel?.some(entry => entry.level === "chapter"));
-              const hasMissing = Boolean(record.missing?.length);
-              const hasContents = Boolean(record.contents?.length);
-              const hasPilgrimage = Boolean(record.topics?.some(entry => entry.kind === "pilgrimage"));
-              const hasMahatmya = Boolean(record.topics?.some(entry => entry.kind === "mahatmya"));
-              const hasSubject = Boolean(record.topics?.some(entry => entry.kind === "subject"));
-              const hasCommentary = Boolean(record.commentaryCitations?.length);
+              const hasOther = Boolean(record.contents?.length || record.textReferences?.length || record.topics?.length || hasChapterRelation);
               const tile = document.createElement("button");
               tile.type = "button";
               tile.className = "tile";
               tile.textContent = String(chapter);
               tile.setAttribute("aria-expanded", "false");
+              if (hasQuoted) tile.classList.add("quoted");
+              if (hasBhashya) tile.classList.add("bhashya");
+              if (hasParallel) tile.classList.add("parallel");
               if (hasQuoted && hasParallel) tile.classList.add("both");
-              else if (hasQuoted) tile.classList.add("quoted");
-              else if (hasParallel) tile.classList.add("parallel");
-              if (hasContents) tile.classList.add("contents");
-              if (hasPilgrimage) tile.classList.add("pilgrimage");
-              if (hasMahatmya) tile.classList.add("mahatmya");
-              if (hasSubject) tile.classList.add("subject");
-              if (hasChapterRelation) tile.classList.add("chapter-relation");
-              if (hasCommentary) tile.classList.add("commentary");
-              if (hasMissing) tile.classList.add("unmatched");
+              if (hasOther) tile.classList.add("indexed");
               const states = [
-                hasQuoted && "quoted elsewhere",
-                hasParallel && "verse parallel listed",
-                hasChapterRelation && "chapter link only; no verse-to-verse match stated",
-                hasContents && "lists Purāṇic contents",
-                hasPilgrimage && "tīrtha or sacred-place material",
-                hasMahatmya && "Bhāgavata-māhātmya",
-                hasSubject && "subject note",
-                hasCommentary && "commentary available",
-                hasMissing && "unmatched quotation",
+                hasQuoted && "verse citation",
+                hasBhashya && "bhāṣya or chapter-only citation",
+                hasParallel && "parallel",
+                hasOther && "other indexed evidence"
               ].filter(Boolean);
               tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
-                chapterNumber(section, chapter) + (states.length ? ": " + states.join("; ") : ": no located reference"));
+                chapterNumber(section, chapter) + (states.length ? ": " + states.join("; ") : ": no indexed mark"));
               tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter);
               tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
               cells.appendChild(tile);
@@ -730,7 +539,6 @@
             map.appendChild(row);
           }
         }
-        addAnalysis(puranas, combined);
       }
 
       const upaIds = new Set(["brhannaradiya-purana", "devi-bhagavata-purana"]);
@@ -794,34 +602,52 @@
         const grid = document.createElement("div");
         grid.className = "commentary-grid";
         for (const entry of items) {
-          const card = document.createElement("article");
+          const card = document.createElement("details");
           card.className = "commentary-card";
+          card.dataset.search = [entry.work, entry.author, entry.scope, entry.period, entry.note].join(" ").toLocaleLowerCase();
+
+          const summary = document.createElement("summary");
           const work = document.createElement("h4");
           work.textContent = entry.work;
           const author = document.createElement("p");
           author.className = "commentary-author";
           author.textContent = entry.author;
-          const scope = document.createElement("p");
-          scope.className = "commentary-scope";
-          scope.textContent = entry.scope;
           const period = document.createElement("p");
           period.className = "commentary-period";
           period.textContent = entry.period;
+          summary.append(work, author, period);
+
+          const body = document.createElement("div");
+          body.className = "commentary-body";
+          const scope = document.createElement("p");
+          scope.className = "commentary-scope";
+          scope.textContent = entry.scope;
+          body.appendChild(scope);
+          if (entry.note) {
+            const note = document.createElement("p");
+            note.className = "commentary-body-note";
+            note.textContent = entry.note;
+            body.appendChild(note);
+          }
           const badge = document.createElement("span");
-          badge.className = "commentary-status" + (status === "boundary" ? " boundary" : status === "date-unverified" ? " uncertain" : "");
-          badge.textContent = status === "boundary" ? "Boundary item" : status === "date-unverified" ? "Date unresolved" : "Within cutoff";
-          card.append(work, author, scope, period, badge);
-          const sourceId = entry.sourceIds?.[0];
-          const source = sourceId && commentaryData.sources[sourceId];
-          if (source) {
+          badge.className = "commentary-status" + (status === "date-unverified" ? " uncertain" : "");
+          badge.textContent = status === "date-unverified" ? "Date unresolved" : "Before Nīlakaṇṭha";
+          body.appendChild(badge);
+
+          const sources = document.createElement("div");
+          sources.className = "commentary-sources";
+          for (const sourceId of [...new Set(entry.sourceIds || [])]) {
+            const source = commentaryData.sources[sourceId];
+            if (!source) continue;
             const link = document.createElement("a");
-            link.className = "commentary-source";
             link.href = source.url;
             link.target = "_blank";
             link.rel = "noreferrer";
-            link.textContent = "Source: " + source.label;
-            card.appendChild(link);
+            link.textContent = source.label;
+            sources.appendChild(link);
           }
+          if (sources.childElementCount) body.appendChild(sources);
+          card.append(summary, body);
           grid.appendChild(card);
         }
         section.append(heading, grid);
@@ -830,24 +656,40 @@
 
       function renderCommentaries(puranaId) {
         commentaryList.replaceChildren();
-        const entries = commentaryData.entries.filter(entry => entry.puranaId === puranaId);
+        const entries = commentaryData.entries.filter(entry => entry.puranaId === puranaId && entry.status !== "boundary");
         const dated = entries.filter(entry => entry.status === "within-cutoff");
-        const boundary = entries.filter(entry => entry.status === "boundary");
         const unresolved = entries.filter(entry => entry.status === "date-unverified");
-        commentaryCount.textContent = dated.length + " dated · " + boundary.length + " boundary · " + unresolved.length + " date unresolved";
-        addCommentarySection("Dated before the boundary", dated, "within-cutoff");
-        addCommentarySection("Boundary commentary", boundary, "boundary");
-        addCommentarySection("Attested in catalogues; date unresolved", unresolved, "date-unverified");
+        commentaryCount.textContent = dated.length + " dated · " + unresolved.length + " undated";
+        addCommentarySection("Before Nīlakaṇṭha", dated, "within-cutoff");
+        addCommentarySection("Date unresolved", unresolved, "date-unverified");
         if (!entries.length) {
           const note = document.createElement("p");
           note.className = "commentary-empty";
-          note.textContent = "No pre-boundary commentary has been located in the catalogues indexed here. This is an indexing gap, not evidence that none exists.";
+          note.textContent = "No bhāṣya entries indexed for this Purāṇa.";
           commentaryList.appendChild(note);
-        } else if (!dated.length && !boundary.length) {
-          const note = document.createElement("p");
-          note.className = "commentary-empty";
-          note.textContent = "These catalogue notices are included as leads, but their dates are unresolved and they are not counted as pre-boundary works.";
-          commentaryList.prepend(note);
+        }
+      }
+
+      function renderSourceList() {
+        commentarySources.replaceChildren();
+        const hazra = [
+          ["R. C. Hazra · Puranic records and rites (1940)", "https://archive.org/details/in.ernet.dli.2015.110115"],
+          ["R. C. Hazra · Studies in the Upapurāṇas, vol. I (OCR)", "https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr"],
+          ["R. C. Hazra · Studies in the Upapurāṇas, vol. II (OCR)", "https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr"]
+        ];
+        const sources = [...hazra, ...Object.values(commentaryData.sources)
+          .map(source => [source.label, source.url])];
+        const seen = new Set();
+        for (const [label, url] of sources) {
+          const key = label + "|" + url;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          const link = document.createElement("a");
+          link.href = url;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.textContent = label;
+          commentarySources.appendChild(link);
         }
       }
 
@@ -856,23 +698,9 @@
         setActiveContents(purana.id);
         selectedCategory.textContent = categoryFor(purana);
         selectedName.textContent = purana.name;
-        selectedEvidence.textContent = evidenceCount(purana).toLocaleString() + " indexed evidence items";
+        selectedEvidence.textContent = evidenceCount(purana).toLocaleString() + " references";
         renderMaps([purana]);
         renderCommentaries(purana.id);
-      }
-
-      function renderCombined() {
-        setActiveContents("all-combined");
-        selectedCategory.textContent = "Combined view";
-        selectedName.textContent = "All Purāṇas together";
-        selectedEvidence.textContent = data.puranas.length + " attested texts";
-        renderMaps(data.puranas, true);
-        commentaryList.replaceChildren();
-        const note = document.createElement("p");
-        note.className = "commentary-empty";
-        note.textContent = "Choose one Purāṇa in Contents to see its commentary index.";
-        commentaryList.appendChild(note);
-        commentaryCount.textContent = "";
       }
 
       Promise.all([fetch("./data.json"), fetch("./subject-index.json"), fetch("./commentaries.json")])
@@ -882,9 +710,10 @@
             dataResponse.json(), subjectResponse.json(), commentaryResponse.json()
           ]);
           data = applySubjectIndex(payload, subjectIndex);
+          data.puranas = data.puranas.filter(item => evidenceCount(item) > 0);
           commentaryData = commentaryPayload;
+          renderSourceList();
           renderContents();
-          allCombinedButton.addEventListener("click", renderCombined);
           const initial = data.puranas.find(item => item.id === data.default) || data.puranas[0];
           render(initial);
         })        .catch(() => {
