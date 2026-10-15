@@ -120,6 +120,14 @@
     "bhagavataCommentaryLists": {
       "label": "Bhāgavata Purāṇa commentary title list (secondary overview; leads require verification)",
       "url": "https://en.wikipedia.org/wiki/Bhagavata_Purana#Commentaries_and_translations"
+    },
+    "vishnuCommentaries": {
+      "label": "Sucharita Adluri, Textual Authority in Classical Indian Thought, Viṣṇu Purāṇa commentary survey",
+      "url": "https://www.perlego.com/book/1666264/textual-authority-in-classical-indian-thought-ramanuja-and-the-vishnu-purana-pdf"
+    },
+    "jivaWorksDirect": {
+      "label": "Jīva Gosvāmī works index, including Padma Purāṇa Yogasāra-stotra-ṭīkā",
+      "url": "https://bvmlu.org/SJG/index.html"
     }
   },
   "entries": [
@@ -446,20 +454,6 @@
       "status": "date-unverified",
       "sourceIds": [
         "jivaVishnu",
-        "rocherEditions"
-      ],
-      "note": ""
-    },
-    {
-      "id": "comm-25",
-      "puranaId": "visnu-purana",
-      "work": "Vaiṣṇavākūtacandrikā",
-      "author": "Ratnagarbha Bhaṭṭācārya",
-      "scope": "Full Purāṇa",
-      "period": "Date not established in manuscript catalogue",
-      "status": "date-unverified",
-      "sourceIds": [
-        "blVishnu",
         "rocherEditions"
       ],
       "note": ""
@@ -1711,6 +1705,71 @@
         "bhagavataCommentaryLists"
       ],
       "note": "Retained as a title-only commentary lead from a secondary Bhāgavata bibliography. Author, extent, manuscript witnesses, and cutoff date still need verification."
+    },
+    {
+      "id": "comm-padma-yogasara-stotra-tika",
+      "puranaId": "padma-purana",
+      "work": "Yogasāra-stotra-ṭīkā (Padma-purāṇastha)",
+      "author": "Jīva Gosvāmin",
+      "scope": "Yogasāra hymn within the Padma Purāṇa",
+      "period": "16th c.",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "jivaWorksDirect"
+      ],
+      "note": "A subsection-level ṭīkā on a hymn in the Padma Purāṇa, listed among Jīva Gosvāmin’s works."
+    },
+    {
+      "id": "comm-vishnu-sanketa",
+      "puranaId": "visnu-purana",
+      "work": "Saṅketa",
+      "author": "Gaṅgādhara",
+      "scope": "Viṣṇu Purāṇa",
+      "period": "1383 CE",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "vishnuCommentaries"
+      ],
+      "note": "A dated commentary listed among the Viṣṇu Purāṇa commentarial tradition."
+    },
+    {
+      "id": "comm-vishnu-nrihari",
+      "puranaId": "visnu-purana",
+      "work": "Commentary on the Viṣṇu Purāṇa (title not specified)",
+      "author": "Nṛhari",
+      "scope": "Viṣṇu Purāṇa",
+      "period": "Date not established in the cited survey",
+      "status": "date-unverified",
+      "sourceIds": [
+        "vishnuCommentaries"
+      ],
+      "note": "Named in the scholarly survey; no date or fuller work title is supplied there."
+    },
+    {
+      "id": "comm-vishnu-kumara-yogin",
+      "puranaId": "visnu-purana",
+      "work": "Viṣṇu-vallabhā",
+      "author": "Kumāra Yogin",
+      "scope": "Viṣṇu Purāṇa",
+      "period": "Date not established in the cited survey",
+      "status": "date-unverified",
+      "sourceIds": [
+        "vishnuCommentaries"
+      ],
+      "note": "Named in the scholarly survey; no date is supplied there, so it is not counted as pre-boundary."
+    },
+    {
+      "id": "comm-bhagavata-tattva-dipika",
+      "puranaId": "bhagavata-purana",
+      "work": "Bhāgavata-tattva-dīpikā (Tattva-dīpa / Tattva-dīpani-bandhana)",
+      "author": "Vallabhācārya",
+      "scope": "Interpretive exposition fixing the meaning of the Bhāgavata",
+      "period": "c. 1479–1531",
+      "status": "within-cutoff",
+      "sourceIds": [
+        "vallabhaBhagavata"
+      ],
+      "note": "A short interpretive work on the Bhāgavata, distinct from the Subodhinī commentary."
     }
   ]
 }
