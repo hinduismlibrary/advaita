@@ -164,7 +164,22 @@
       .workspace { grid-template-columns: 1fr; gap: 15px; padding-top: 14px; }
       #contents { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; max-height: none; }
     }
-</style>
+    .view-tabs { display: flex; gap: 18px; margin: 0 0 2px; border-bottom: 1px solid var(--rule); }
+    .view-tab { display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; }
+    .view-tab.active { border-bottom-color: var(--ink); color: var(--ink); }
+    .view-count { color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; }
+    #map-pane[hidden], .commentary-panel[hidden] { display: none; }
+    .commentary-panel { margin: 0 0 42px; border-top: 0; }
+    .commentary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 0 5px; border-bottom: 1px solid var(--rule); }
+    .commentary-title { font: 400 19px/1.1 var(--serif); }
+    .commentary-note { margin: 0; color: var(--muted); font-size: 9px; }
+    .commentary-search { margin-top: 10px; }
+    .commentary-status.boundary { color: var(--blue-ink); }
+    .commentary-empty { padding: 6px 0; }
+    @media (max-width: 760px) {
+      .commentary-head { align-items: start; flex-direction: column; gap: 4px; }
+    }
+  </style>
 </head>
 <body>
   <div class="page">
@@ -192,29 +207,32 @@
           </div>
           <p id="selected-evidence" class="selected-evidence"></p>
         </div>
-    <div class="legend" aria-label="Heat map key">
-      <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-      <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya only</span>
-      <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-      <span class="legend-item"><i class="legend-swatch other" aria-hidden="true"></i>Other</span>
+    <nav class="view-tabs" aria-label="Selected Purāṇa view">
+      <button id="citations-tab" class="view-tab active" type="button" aria-pressed="true">Citations</button>
+      <button id="bhashyas-tab" class="view-tab" type="button" aria-pressed="false">Bhāṣyas <span id="commentary-count" class="view-count"></span></button>
+    </nav>
+    <div id="map-pane">
+      <div class="legend" aria-label="Heat map key">
+        <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
+        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya / chapter</span>
+        <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
+        <span class="legend-item"><i class="legend-swatch other" aria-hidden="true"></i>Other</span>
+      </div>
+      <main id="map" aria-live="polite"></main>
     </div>
-        <main id="map" aria-live="polite"></main>
-        <section class="commentary-panel" aria-labelledby="commentary-heading">
-          <details class="commentary-disclosure">
-            <summary>
-              <span id="commentary-heading" class="commentary-title">Bhāṣya index</span>
-              <span id="commentary-count" class="commentary-count"></span>
-            </summary>
-            <p class="commentary-note">Cut-off: mid-18th century · uncertain dates separate.</p>
-            <input id="commentary-search" class="commentary-search" type="search" placeholder="Find a work or author" aria-label="Search bhāṣya titles, authors, scope, or date">
-            <div id="commentary-list"></div>
-            <details class="source-details">
-              <summary>Sources</summary>
-              <div id="commentary-sources" class="source-list"></div>
-              <p class="source-limit">Dates outside the cut-off are excluded; uncertain dates stay separate.</p>
-            </details>
-          </details>
-        </section>
+    <section id="commentary-panel" class="commentary-panel" aria-labelledby="commentary-heading" hidden>
+      <div class="commentary-head">
+        <h2 id="commentary-heading" class="commentary-title">Bhāṣyas</h2>
+        <span class="commentary-note">Through Nīlakaṇṭha · late 17th c.</span>
+      </div>
+      <input id="commentary-search" class="commentary-search" type="search" placeholder="Search title or author" aria-label="Search bhāṣya titles, authors, scope, or date">
+      <div id="commentary-list"></div>
+      <details class="source-details">
+        <summary>Sources</summary>
+        <div id="commentary-sources" class="source-list"></div>
+        <p class="source-limit">Later works excluded · unclear dates uncounted.</p>
+      </details>
+    </section>
       </div>
     </div>
   </div>
@@ -229,6 +247,10 @@
       const commentarySearch = document.getElementById("commentary-search");
       const commentaryCount = document.getElementById("commentary-count");
       const commentarySources = document.getElementById("commentary-sources");
+      const citationsTab = document.getElementById("citations-tab");
+      const bhashyasTab = document.getElementById("bhashyas-tab");
+      const mapPane = document.getElementById("map-pane");
+      const commentaryPanel = document.getElementById("commentary-panel");
       let commentaryData = null;
       let data = null;
       let selectedTile = null;
@@ -435,10 +457,24 @@
 
       function evidenceCount(purana) {
         const fields = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "commentaryCitations", "topics"];
+        const repeatedRelations = { parallel: new Set(), chapterRelations: new Set() };
         let count = 0;
         for (const section of purana.sections || []) {
           for (const record of Object.values(section.chapters || {})) {
-            for (const field of fields) count += record[field]?.length || 0;
+            for (const field of fields) {
+              const entries = record[field] || [];
+              if (field === "parallel" || field === "chapterRelations") {
+                for (const entry of entries) {
+                  const key = JSON.stringify(entry);
+                  if (!repeatedRelations[field].has(key)) {
+                    repeatedRelations[field].add(key);
+                    count += 1;
+                  }
+                }
+              } else {
+                count += entries.length;
+              }
+            }
           }
         }
         return count;
@@ -652,8 +688,10 @@
             body.appendChild(note);
           }
           const badge = document.createElement("span");
-          badge.className = "commentary-status" + (status === "date-unverified" ? " uncertain" : "");
-          badge.textContent = status === "date-unverified" ? "Date unclear" : "Before Nīlakaṇṭha";
+          badge.className = "commentary-status" +
+            (status === "date-unverified" ? " uncertain" : status === "boundary" ? " boundary" : "");
+          badge.textContent = status === "date-unverified" ? "Date unclear" :
+            status === "boundary" ? "At cutoff" : "Before cutoff";
           body.appendChild(badge);
 
           const sources = document.createElement("div");
@@ -678,18 +716,22 @@
 
       function renderCommentaries(puranaId) {
         commentaryList.replaceChildren();
-        const entries = commentaryData.entries.filter(entry => entry.puranaId === puranaId && entry.status !== "boundary");
+        const entries = commentaryData.entries.filter(entry =>
+          entry.puranaId === puranaId && entry.status !== "post-cutoff"
+        );
         const dated = entries.filter(entry => entry.status === "within-cutoff");
+        const boundary = entries.filter(entry => entry.status === "boundary");
         const unresolved = entries.filter(entry => entry.status === "date-unverified");
-        commentaryCount.textContent = dated.length + " · " + unresolved.length;
-        commentaryCount.title = dated.length + " dated · " + unresolved.length + " date unclear";
+        commentaryCount.textContent = entries.length ? entries.length.toLocaleString() : "";
+        commentaryCount.title = `${dated.length} before · ${boundary.length} at cutoff · ${unresolved.length} unclear`;
         commentarySearch.value = "";
         addCommentarySection("Before Nīlakaṇṭha", dated, "within-cutoff");
-        addCommentarySection("Dates unclear", unresolved, "date-unverified");
+        addCommentarySection("Nīlakaṇṭha", boundary, "boundary");
+        addCommentarySection("Date unclear", unresolved, "date-unverified");
         if (!entries.length) {
           const note = document.createElement("p");
           note.className = "commentary-empty";
-          note.textContent = "No entries in the current index.";
+          note.textContent = "No pre-cutoff commentary found.";
           commentaryList.appendChild(note);
         }
         commentarySearch.oninput = () => {
@@ -706,6 +748,18 @@
         };
       }
 
+      function setView(view) {
+        const showBhashyas = view === "bhashyas";
+        mapPane.hidden = showBhashyas;
+        commentaryPanel.hidden = !showBhashyas;
+        citationsTab.classList.toggle("active", !showBhashyas);
+        bhashyasTab.classList.toggle("active", showBhashyas);
+        citationsTab.setAttribute("aria-pressed", String(!showBhashyas));
+        bhashyasTab.setAttribute("aria-pressed", String(showBhashyas));
+      }
+
+      citationsTab.addEventListener("click", () => setView("citations"));
+      bhashyasTab.addEventListener("click", () => setView("bhashyas"));
       function renderSourceList() {
         commentarySources.replaceChildren();
         const sources = Object.values(commentaryData.sources)
