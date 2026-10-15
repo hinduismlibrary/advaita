@@ -3,759 +3,395 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f8f8f4">
-  <meta name="description" content="A chapter heat map of Purāṇic citations and inter-Purāṇa parallels.">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Chapter evidence for the seven Major Puranas covered by R. C. Hazra.">
   <title>Purāṇa Analysis</title>
   <style>
-
-    :root{color-scheme:light;--paper:#fff;--ink:#242722;--muted:#747970;--rule:#e5e7e1;--green:#dcebe0;--green-ink:#315d40;--violet:#ece5f2;--violet-ink:#674b7a;--blue:#dfeaf0;--blue-ink:#3e6274;--amber:#f2e7cf;--amber-ink:#765a24;--tirtha:#e5eeee;--tirtha-ink:#39575b;--topic:#edeee9;--topic-ink:#565a52;--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:13px/1.45 var(--sans)}button,input{font:inherit}:focus-visible{outline:2px solid var(--green-ink);outline-offset:2px}
-    .page{width:min(1440px,calc(100% - 48px));margin:0 auto}.top{min-height:36px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);font-size:10px;letter-spacing:.06em;text-transform:uppercase}.top a{color:inherit;text-decoration:none}.top a:last-child{color:var(--muted)}
-    header{padding:15px 0 12px;border-bottom:1px solid var(--rule)}h1{margin:0;font:400 24px/1.12 var(--serif);letter-spacing:-.025em}.dek{display:none}
-    .workspace{display:grid;grid-template-columns:246px minmax(0,1fr);gap:clamp(24px,3vw,42px);align-items:start;padding-top:18px}
-    .contents-panel{position:sticky;top:16px;min-width:0;max-height:calc(100vh - 32px);overflow-y:auto}.contents-heading{padding-bottom:8px;border-bottom:1px solid var(--rule)}.contents-heading h2{margin:0;font:400 17px/1.2 var(--serif)}.contents-heading span{display:none}
-    #contents{display:flex;flex-direction:column;gap:15px;margin-top:10px}.contents-group{min-width:0}.contents-group-title{margin:0 0 5px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.07em;text-transform:uppercase}.contents-list{display:flex;flex-direction:column;gap:1px}
-    .contents-button{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:5px 7px;border:0;border-left:2px solid transparent;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.contents-button:hover{background:#f7f8f5}.contents-button.active{border-left-color:var(--green-ink);background:#f0f5f1}.contents-name{min-width:0;font-size:11px;line-height:1.35}.evidence-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}
-    .viewer{min-width:0}.selected-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 0 10px;border-bottom:1px solid var(--ink)}.selected-category{margin:0 0 4px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.07em;text-transform:uppercase}#selected-name{margin:0;font:400 clamp(24px,3vw,32px)/1.08 var(--serif);letter-spacing:-.025em}.selected-evidence{margin:0 0 2px;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
-    .view-tabs{display:flex;gap:18px;margin:0 0 2px;border-bottom:1px solid var(--rule)}.view-tab{display:inline-flex;align-items:baseline;gap:6px;padding:8px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);cursor:pointer;font-size:11px}.view-tab.active{border-bottom-color:var(--ink);color:var(--ink)}.view-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}#map-pane[hidden],.commentary-panel[hidden]{display:none}
-    .legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:9px 0 8px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:9px}.legend-item{display:inline-flex;align-items:center;gap:5px}.legend-swatch{width:9px;height:9px;border-radius:2px}.legend-swatch.quoted{background:var(--green)}.legend-swatch.bhashya{background:var(--violet)}.legend-swatch.parallel{background:var(--blue)}.legend-swatch.mention{background:var(--amber)}.legend-swatch.tirtha{background:var(--tirtha)}.legend-swatch.topic{background:var(--topic)}
-    #map{padding:6px 0 22px}.section-row{display:grid;grid-template-columns:122px minmax(0,1fr);gap:10px;padding:5px 0;border-bottom:1px solid var(--rule)}.section-label{padding-top:4px;color:var(--muted);font-size:10px;line-height:1.35}.section-content{min-width:0}.cells{display:grid;grid-template-columns:repeat(auto-fill,24px);gap:3px;align-content:start}
-    .tile{position:relative;display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #e6e8e2;border-radius:3px;color:#858a81;background:#f7f8f5;font-size:10px;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer}.tile.quoted{border-color:#bfd2c2;color:var(--green-ink);background:var(--green);font-weight:650}.tile.bhashya{border-color:#d3c4de;color:var(--violet-ink);background:var(--violet)}.tile.parallel{border-color:#c7d9e1;color:var(--blue-ink);background:var(--blue);font-weight:650}.tile.mention{border-color:#dfd0b1;color:var(--amber-ink);background:var(--amber)}.tile.tirtha{border-color:#c6d8d7;color:var(--tirtha-ink);background:var(--tirtha)}.tile.topic{border-color:#d9ddd5;color:var(--topic-ink);background:var(--topic)}.tile.multiple{color:var(--ink);background:#fff;border-color:#d9ddd5}.tile-markers{position:absolute;right:4px;bottom:3px;left:4px;display:flex;height:2px;gap:1px;pointer-events:none}.tile-marker{flex:1;border-radius:1px}.tile-marker.quoted{background:var(--green-ink)}.tile-marker.bhashya{background:var(--violet-ink)}.tile-marker.parallel{background:var(--blue-ink)}.tile-marker.mention{background:var(--amber-ink)}.tile-marker.tirtha{background:var(--tirtha-ink)}.tile-marker.topic{background:var(--topic-ink)}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}
-    .detail{margin:5px 0 2px;padding:8px 10px;border:1px solid var(--rule);border-left:2px solid var(--ink);border-radius:3px;background:#fff}.detail[hidden]{display:none}.detail h2{margin:0 0 5px;font:400 15px/1.2 var(--serif)}
-    .group{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;padding:4px 0 0}.group+.group{margin-top:3px;border-top:1px solid #eff0ec}.group h3{margin:2px 0 0;color:var(--muted);font:650 9px/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase}.group-quoted h3{color:var(--green-ink)}.group-bhashya h3{color:var(--violet-ink)}.group-parallel h3{color:var(--blue-ink)}.group-mention h3{color:var(--amber-ink)}.entries{min-width:0;margin:0;padding:0;list-style:none;font-size:11px}.entry{padding:1px 0 3px;overflow-wrap:anywhere}.work{font-weight:600}.work-link{color:inherit;text-decoration-color:var(--rule);text-underline-offset:2px}.source-link{color:var(--green-ink);text-decoration-color:var(--rule);text-underline-offset:2px}.refs{display:block;padding-top:1px;color:#555951;font-size:10px;font-variant-numeric:tabular-nums}.pair{font-variant-numeric:tabular-nums}.note{display:block;padding-top:2px;color:#6a6d65;font:italic 11px/1.35 var(--serif)}.no-entry{margin:0;color:var(--muted);font-size:10px}.error{padding:14px 0;color:#9b443c}
-    .commentary-panel{margin:0 0 40px}.commentary-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:11px 0 5px;border-bottom:1px solid var(--rule)}.commentary-title{margin:0;font:400 19px/1.1 var(--serif)}.commentary-note{margin:0;color:var(--muted);font-size:9px}.commentary-search{width:min(100%,320px);margin:10px 0 3px;padding:7px 9px;border:1px solid var(--rule);border-radius:3px;font-size:11px}.commentary-card[hidden],.commentary-section[hidden]{display:none}
-    .commentary-section{margin:15px 0 0}.commentary-section h3{margin:0 0 6px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.08em;text-transform:uppercase}.commentary-grid{display:grid;grid-template-columns:1fr;gap:2px}.commentary-card{min-width:0;border-bottom:1px solid var(--rule)}.commentary-card>summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(100px,.55fr) auto;align-items:baseline;gap:8px;padding:7px 2px;cursor:pointer;list-style:none}.commentary-card>summary::-webkit-details-marker,.commentary-section-summary::-webkit-details-marker{display:none}.commentary-card>summary::before{color:var(--muted);content:"+"}.commentary-card[open]>summary::before{content:"−"}.commentary-card h4{grid-column:2;grid-row:1;margin:0;font:500 13px/1.3 var(--serif)}.commentary-author{grid-column:2;grid-row:2;margin:0;color:var(--muted);font-size:10px}.commentary-period{grid-column:3;grid-row:1/span 2;margin:0;color:var(--muted);font-size:9px;white-space:nowrap}.commentary-body{padding:0 0 8px 20px}.commentary-scope,.commentary-body-note{margin:3px 0;color:var(--muted);font-size:10px}.commentary-status{display:inline-block;margin-top:5px;color:var(--green-ink);font-size:9px}.commentary-status.uncertain{color:var(--violet-ink)}.commentary-sources{display:flex;flex-wrap:wrap;gap:4px 13px;margin-top:5px;font-size:9px}.commentary-sources a,.source-list a{color:var(--green-ink);text-underline-offset:2px}.commentary-empty{margin:8px 0 12px;color:var(--muted);font-size:10px}.commentary-section-collapsed{margin-top:13px;border-top:1px solid var(--rule)}.commentary-section-summary{padding:7px 0;color:var(--muted);font-size:10px;cursor:pointer;list-style:none}.commentary-section-summary::after{float:right;content:"+"}.commentary-section-collapsed[open]>.commentary-section-summary::after{content:"−"}
-    .source-details{margin:17px 0 24px;padding-top:9px;border-top:1px solid var(--rule)}.source-details>summary{color:var(--muted);font-size:10px;cursor:pointer}.source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;margin-top:9px;font-size:9px}.source-limit{margin:9px 0 0;color:var(--muted);font-size:9px}
-    @media(max-width:760px){.page{width:calc(100% - 28px)}header{padding:13px 0 10px}.workspace{grid-template-columns:1fr;gap:14px;padding-top:14px}.contents-panel{position:static;max-height:36vh}#contents{gap:11px}.contents-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px 8px}.section-row{grid-template-columns:82px minmax(0,1fr);gap:7px}.section-label{font-size:9px}.cells{grid-template-columns:repeat(auto-fill,22px);gap:2px}.tile{width:22px;height:22px}.group{grid-template-columns:70px minmax(0,1fr);gap:7px}.commentary-head{align-items:start;flex-direction:column;gap:4px}.commentary-card>summary{grid-template-columns:minmax(0,1fr) auto;gap:3px 8px}.commentary-card>summary::before{grid-column:1;grid-row:1/span 2}.commentary-card h4,.commentary-author{grid-column:2}.commentary-period{grid-column:2;grid-row:3}.source-list{grid-template-columns:1fr}}
-
+    :root {
+      color-scheme: light;
+      --paper: #f7f7f2;
+      --surface: #fffefa;
+      --ink: #25332f;
+      --muted: #62716a;
+      --rule: #dce2dc;
+      --accent: #365d50;
+      --quote-bg: #dceee4;
+      --quote-ink: #24543d;
+      --parallel-bg: #e1ebf6;
+      --parallel-ink: #2f5276;
+      --tirtha-bg: #f4e8d0;
+      --tirtha-ink: #684e20;
+      --topic-bg: #eee8f3;
+      --topic-ink: #554565;
+      --blank-bg: #f1f3ef;
+      --blank-ink: #768079;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 14px/1.5 var(--sans); }
+    button { font: inherit; }
+    :focus-visible { outline: 3px solid #527c6d; outline-offset: 2px; }
+    .page { width: min(1240px, calc(100% - 44px)); margin: 0 auto; }
+    header { padding: 24px 0 18px; border-bottom: 1px solid var(--rule); }
+    h1 { margin: 0; font: 400 clamp(27px, 3.4vw, 38px)/1.1 var(--serif); letter-spacing: -.025em; }
+    .dek { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+    .layout { display: grid; grid-template-columns: 224px minmax(0, 1fr); gap: 34px; align-items: start; padding: 20px 0 36px; }
+    .contents { position: sticky; top: 14px; }
+    .contents h2 { margin: 0 0 8px; font: 400 19px/1.2 var(--serif); }
+    #contents { display: grid; gap: 3px; }
+    .purana-button {
+      display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 8px;
+      padding: 8px 9px; border: 1px solid transparent; border-radius: 5px;
+      background: transparent; color: var(--ink); text-align: left; cursor: pointer;
+    }
+    .purana-button:hover { background: #eff2ed; }
+    .purana-button[aria-pressed="true"] { border-color: #c8d9ce; background: #e8f0eb; color: #244f3c; }
+    .purana-name { font: 500 13px/1.35 var(--serif); }
+    .purana-count { color: var(--muted); font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .viewer { min-width: 0; }
+    .selected-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 18px; padding-bottom: 11px; border-bottom: 1px solid var(--ink); }
+    #selected-name { margin: 0; font: 400 clamp(24px, 2.8vw, 32px)/1.12 var(--serif); letter-spacing: -.02em; }
+    #selected-count { margin: 0; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+    .legend { display: flex; flex-wrap: wrap; gap: 7px 17px; padding: 12px 0 8px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 7px; color: #46564e; font-size: 12px; }
+    .swatch { width: 12px; height: 12px; border: 1px solid transparent; border-radius: 3px; }
+    .swatch.quoted { background: var(--quote-bg); border-color: #bad5c5; }
+    .swatch.parallel { background: var(--parallel-bg); border-color: #c3d4e7; }
+    .swatch.tirtha { background: var(--tirtha-bg); border-color: #e0cda7; }
+    .swatch.topic { background: var(--topic-bg); border-color: #d8cbe2; }
+    .swatch.none { background: var(--blank-bg); border-color: #dde2dc; }
+    .map-note { margin: 0 0 7px; color: var(--muted); font-size: 11px; }
+    #map { border-top: 1px solid var(--rule); }
+    .section-row { display: grid; grid-template-columns: 134px minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
+    .section-label { padding-top: 5px; color: #596a62; font: 500 12px/1.35 var(--serif); }
+    .cells { display: grid; grid-template-columns: repeat(auto-fill, 28px); gap: 4px; align-content: start; }
+    .tile {
+      position: relative; display: grid; place-items: center; width: 28px; height: 28px; padding: 0;
+      border: 1px solid #dce2dc; border-radius: 4px; background: var(--blank-bg); color: var(--blank-ink);
+      font-size: 11px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer;
+    }
+    .tile:hover, .tile[aria-pressed="true"] { border-color: #435c50; box-shadow: inset 0 0 0 1px #435c50; }
+    .tile.quoted { border-color: #bad5c5; background: var(--quote-bg); color: var(--quote-ink); font-weight: 650; }
+    .tile.parallel { border-color: #c3d4e7; background: var(--parallel-bg); color: var(--parallel-ink); font-weight: 650; }
+    .tile.tirtha { border-color: #e0cda7; background: var(--tirtha-bg); color: var(--tirtha-ink); font-weight: 650; }
+    .tile.topic { border-color: #d8cbe2; background: var(--topic-bg); color: var(--topic-ink); }
+    .tile.multiple { border-color: #c9d0c9; background: #e9ede8; color: #273931; font-weight: 650; }
+    .tile.none { background: var(--blank-bg); color: var(--blank-ink); }
+    .markers { position: absolute; right: 4px; bottom: 3px; left: 4px; display: flex; height: 2px; gap: 1px; pointer-events: none; }
+    .marker { flex: 1; border-radius: 1px; }
+    .marker.quoted { background: var(--quote-ink); }
+    .marker.parallel { background: var(--parallel-ink); }
+    .marker.tirtha { background: var(--tirtha-ink); }
+    .marker.topic { background: var(--topic-ink); }
+    #detail { margin-top: 12px; padding: 14px 16px; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 5px; background: var(--surface); }
+    #detail[hidden] { display: none; }
+    #detail h2 { margin: 0; font: 400 20px/1.25 var(--serif); }
+    .detail-empty { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+    .detail-group { margin-top: 10px; padding-top: 8px; border-top: 1px solid #e7ebe5; }
+    .detail-group h3 { margin: 0 0 4px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .detail-group ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
+    .detail-entry { font-size: 13px; overflow-wrap: anywhere; }
+    .detail-entry strong { font-weight: 600; }
+    .detail-meta { display: block; margin-top: 1px; color: var(--muted); font-size: 11px; }
+    .source-note { margin: 17px 0 0; padding-top: 9px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 11px; }
+    .error { padding: 18px 0; color: #8b3e34; }
+    @media (max-width: 800px) {
+      .page { width: min(100% - 28px, 680px); }
+      header { padding-top: 18px; }
+      .layout { grid-template-columns: 1fr; gap: 18px; padding-top: 14px; }
+      .contents { position: static; }
+      #contents { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-row { grid-template-columns: 100px minmax(0, 1fr); gap: 8px; }
+      .cells { grid-template-columns: repeat(auto-fill, 26px); gap: 3px; }
+      .tile { width: 26px; height: 26px; }
+    }
+    @media (max-width: 420px) {
+      .page { width: calc(100% - 24px); }
+      #contents { gap: 1px; }
+      .purana-button { padding: 7px 5px; }
+      .purana-name { font-size: 12px; }
+      .section-row { grid-template-columns: 75px minmax(0, 1fr); gap: 6px; }
+      .cells { grid-template-columns: repeat(auto-fill, 24px); gap: 2px; }
+      .tile { width: 24px; height: 24px; font-size: 10px; }
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    <nav class="top" aria-label="Site">
-      <a href="/advaita/">Viveka Dṛṣṭi</a>
-      <a href="/advaita/pages/purana-library/">Purāṇa Library</a>
-    </nav>
     <header>
-      <h1>Purāṇa Analysis</h1>
-      
+      <h1>Purāṇa analysis</h1>
+      <p class="dek">Hazra’s seven Major Purāṇas · chapters on rites, customs, and tīrthas</p>
     </header>
-    <div class="workspace">
-      <aside class="contents-panel" aria-label="Purāṇa contents">
-        <div class="contents-heading">
-          <h2>Contents</h2>
-          
-        </div>
-        <nav id="contents" aria-label="Purāṇas"></nav>
+    <div class="layout">
+      <aside class="contents" aria-label="Major Purāṇas">
+        <h2>Purāṇas</h2>
+        <nav id="contents" aria-label="Select a Purāṇa"></nav>
       </aside>
-      <div class="viewer">
+      <main class="viewer">
         <div class="selected-heading">
-          <div>
-            <p id="selected-category" class="selected-category">Loading</p>
-            <h2 id="selected-name">Purāṇas</h2>
-          </div>
-          <p id="selected-evidence" class="selected-evidence"></p>
+          <h2 id="selected-name">Loading</h2>
+          <p id="selected-count"></p>
         </div>
-    <div class="legend" aria-label="Heat map key">
-      <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-      <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya only</span>
-      <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-      <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Purāṇa reference</span>
-      <span class="legend-item"><i class="legend-swatch tirtha" aria-hidden="true"></i>Tīrtha</span>
-      <span class="legend-item"><i class="legend-swatch topic" aria-hidden="true"></i>Topic</span>
-    </div>
-    <main id="map" aria-live="polite"></main>
-      </div>
+        <div class="legend" aria-label="Heat map key">
+          <span class="legend-item"><i class="swatch quoted" aria-hidden="true"></i>Quoted</span>
+          <span class="legend-item"><i class="swatch parallel" aria-hidden="true"></i>Parallel</span>
+          <span class="legend-item"><i class="swatch tirtha" aria-hidden="true"></i>Tīrtha</span>
+          <span class="legend-item"><i class="swatch topic" aria-hidden="true"></i>Subject</span>
+          <span class="legend-item"><i class="swatch none" aria-hidden="true"></i>No indexed entry</span>
+        </div>
+        <p class="map-note">Select any chapter number for its references. Verse-only ranges remain visible in the detail.</p>
+        <div id="map" aria-live="polite"></div>
+        <section id="detail" aria-live="polite" hidden></section>
+        <p class="source-note">R. C. Hazra, <i>Studies in the Puranic Records on Hindu Rites and Customs</i> (1940), Part I, Chapters II and IV.</p>
+      </main>
     </div>
   </div>
   <script>
     (() => {
-      const map = document.getElementById("map");
+      const majorIds = [
+        "markandeya-purana", "vayu-purana", "brahmanda-purana",
+        "visnu-purana", "matsya-purana", "bhagavata-purana", "kurma-purana"
+      ];
+      const names = {
+        quoted: "Quoted",
+        parallel: "Parallel",
+        tirtha: "Tīrtha",
+        topic: "Subject"
+      };
       const contents = document.getElementById("contents");
+      const map = document.getElementById("map");
       const selectedName = document.getElementById("selected-name");
-      const selectedCategory = document.getElementById("selected-category");
-      const selectedEvidence = document.getElementById("selected-evidence");
-      let commentaryData = null;
-      let data = null;
-      let selectedTile = null;
-      let selectedDetail = null;
+      const selectedCount = document.getElementById("selected-count");
+      const detail = document.getElementById("detail");
+      let profiles = [];
+      let profileById = new Map();
+      let topicByKey = new Map();
+      let activeId = "";
 
-      function chapterNumber(section, chapter) {
-        return (section.numbering ? section.numbering + "." : "") + chapter;
+      function make(tag, className, text) {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        if (text !== undefined && text !== null) element.textContent = String(text);
+        return element;
       }
 
-      function expandChapterSpec(spec) {
-        const out = [];
-        for (const item of String(spec).split(",")) {
-          const match = item.trim().match(/^(\d+)(?:\s*[-–]\s*(\d+))?$/);
-          if (!match) continue;
-          const first = Number(match[1]);
-          const last = Number(match[2] || match[1]);
-          for (let n = first; n <= last; n += 1) out.push(String(n));
-        }
-        return out;
+      function chapterRef(section, chapter) {
+        return section.prefix && section.id !== "main"
+          ? section.prefix + "." + chapter
+          : String(chapter);
       }
 
-      function addSourceLink(parent, entry) {
-        if (!entry.sourceUrl) return;
-        const link = document.createElement("a");
-        link.className = "refs source-link";
-        link.href = entry.sourceUrl;
-        link.target = "_blank";
-        link.rel = "noreferrer";
-        link.textContent = entry.sourceLabel || "Source";
-        parent.appendChild(link);
+      function keyFor(id, section, chapter) {
+        return id + "|" + section + "|" + chapter;
       }
 
-      function addGroup(parent, label, entries, type, section = null) {
-        if (!entries || !entries.length) return;
-        const group = document.createElement("section");
-        group.className = "group group-" + (type === "chapterRelations" ? "mention" : type === "missing" ? "subject" : type);
-        const heading = document.createElement("h3");
-        heading.textContent = label;
-        group.appendChild(heading);
-        const list = document.createElement("ul");
-        list.className = "entries";
-        for (const entry of entries) {
-          const item = document.createElement("li");
-          item.className = "entry";
-          if (type === "quoted") {
-            const work = document.createElement("span");
-            work.className = "work";
-            const name = entry.work === "Work title unclear" ? "Work not identified" : (entry.work || entry.label || "Work not identified");
-            const author = entry.author?.trim();
-            work.textContent = author ? name + " — " + author : name;
-            item.appendChild(work);
-            const refsList = entry.refs?.length ? entry.refs : (entry.ref ? [entry.ref] : []);
-            if (refsList.length) {
-              const refs = document.createElement("span");
-              refs.className = "refs";
-              refs.textContent = refsList.map(ref => {
-                const scoped = section?.part && !section.prefix ? section.part + " " + ref : ref;
-                return scoped.replace(/–\?/g, "–[end unclear]");
-              }).join(", ");
-              item.appendChild(refs);
-            }
-            if (entry.refs?.some(ref => ref.includes("–?"))) {
-              const note = document.createElement("span");
-              note.className = "note";
-              note.textContent = "One or more range endpoints are unreadable.";
-              item.appendChild(note);
-            }
-            if (entry.note) {
-              const note = document.createElement("span");
-              note.className = "note";
-              note.textContent = entry.note;
-              item.appendChild(note);
-            }
-          } else if (type === "parallel" || type === "chapterRelations") {
-            const pair = document.createElement("span");
-            pair.className = "pair";
-            const refs = Array.isArray(entry.members)
-              ? entry.members
-              : [entry.left, entry.right].filter(Boolean);
-            pair.textContent = refs.join(" ↔ ");
-            item.appendChild(pair);
-            if (entry.note) {
-              const note = document.createElement("span");
-              note.className = "note";
-              note.textContent = entry.note;
-              item.appendChild(note);
-            }
-          } else {
-            if (entry.work) {
-              const work = document.createElement("span");
-              work.className = "work";
-              const author = entry.author?.trim() || "Author not identified";
-              work.textContent = `${entry.work} — ${author}`;
-              item.appendChild(work);
-            }
-            if (entry.refs && entry.refs.length) {
-              const refs = document.createElement("span");
-              refs.className = "refs";
-              refs.textContent = entry.refs.join(", ");
-              item.appendChild(refs);
-            }
-            const note = document.createElement("span");
-            note.className = "note";
-            note.textContent = entry.note || "Quoted line not located.";
-            item.appendChild(note);
-          }
-          list.appendChild(item);
-        }
-        group.appendChild(list);
-        parent.appendChild(group);
+      function topicsFor(id, section, chapter, base) {
+        const patch = topicByKey.get(keyFor(id, section.id, chapter));
+        return (base.topics || []).concat(patch ? patch.topics || [] : []);
       }
 
-      function addContentsGroup(parent, entries) {
-        if (!entries?.length) return;
-        const group = document.createElement("section");
-        group.className = "group group-mention";
-        const heading = document.createElement("h3");
-        heading.textContent = "Purāṇa contents";
-        group.appendChild(heading);
-        const list = document.createElement("ul");
-        list.className = "entries";
-        for (const entry of entries) {
-          const item = document.createElement("li");
-          item.className = "entry";
-          const title = document.createElement(entry.url ? "a" : "span");
-          title.className = entry.url ? "work work-link" : "work";
-          title.textContent = entry.label;
-          const ref = document.createElement("span");
-          ref.className = "refs";
-          ref.textContent = entry.ref;
-          item.append(title, ref);
-          if (entry.details?.length) {
-            const details = document.createElement("span");
-            details.className = "refs contents-details";
-            details.textContent = entry.details.join(" · ");
-            item.appendChild(details);
-          }
-          list.appendChild(item);
-        }
-        group.appendChild(list);
-        parent.appendChild(group);
-      }
-
-      function addTaggedGroup(parent, headingText, entries) {
-        if (!entries?.length) return;
-        const headingKey = headingText.toLowerCase();
-        const group = document.createElement("section");
-        group.className = "group " + (/bhāṣya|commentary/i.test(headingKey) ? "group-bhashya" : /other purāṇa|reference|contents/i.test(headingKey) ? "group-mention" : /tīrtha|topic/i.test(headingKey) ? "group-subject" : "group-mention");
-        const heading = document.createElement("h3");
-        heading.textContent = headingText;
-        group.appendChild(heading);
-        const list = document.createElement("ul");
-        list.className = "entries";
-        for (const entry of entries) {
-          const item = document.createElement("li");
-          item.className = "entry";
-          const label = document.createElement("span");
-          label.className = "work";
-          label.textContent = entry.label;
-          const ref = document.createElement("span");
-          ref.className = "refs";
-          ref.textContent = entry.ref;
-          item.append(label, ref);
-          if (entry.sourceLabel) {
-            const source = document.createElement("span");
-            source.className = "refs";
-            source.textContent = entry.sourceLabel;
-            item.appendChild(source);
-          }
-          list.appendChild(item);
-        }
-        group.appendChild(list);
-        parent.appendChild(group);
-      }
-
-      function addTextReferencesGroup(parent, entries) {
-        if (!entries?.length) return;
-        const group = document.createElement("section");
-        group.className = "group group-mention";
-        const heading = document.createElement("h3");
-        heading.textContent = "Text reference";
-        group.appendChild(heading);
-        const list = document.createElement("ul");
-        list.className = "entries";
-        for (const entry of entries) {
-          const item = document.createElement("li");
-          item.className = "entry";
-          const title = document.createElement("span");
-          title.className = "work";
-          title.textContent = entry.label;
-          const ref = document.createElement("span");
-          ref.className = "refs";
-          ref.textContent = entry.ref;
-          item.append(title, ref);
-          if (entry.details?.length) {
-            const details = document.createElement("span");
-            details.className = "refs contents-details";
-            details.textContent = entry.details.join(" · ");
-            item.appendChild(details);
-          }
-          list.appendChild(item);
-        }
-        group.appendChild(list);
-        parent.appendChild(group);
-      }
-
-      function chapterHasEvidence(record, purana, section, chapter) {
-        return chapterEvidence(record, purana, section, chapter).length > 0;
-      }
-
-      const attestedCountCache = new WeakMap();
-      function attestedChapterCount(purana) {
-        if (attestedCountCache.has(purana)) return attestedCountCache.get(purana);
-        let count = 0;
-        for (const section of purana.sections || []) {
-          for (const [chapter, record] of Object.entries(section.chapters || {})) {
-            if (chapterHasEvidence(record, purana, section, chapter)) count += 1;
-          }
-        }
-        attestedCountCache.set(purana, count);
-        return count;
-      }
-
-      function applySubjectIndex(payload, subjectIndex) {
-        const profiles = new Map(payload.puranas.map(item => [item.id, item]));
-        for (const extra of subjectIndex.puranas || []) {
-          if (!profiles.has(extra.id)) {
-            payload.puranas.push(extra);
-            profiles.set(extra.id, extra);
-          }
-        }
-        for (const patch of subjectIndex.patches || []) {
-          const purana = profiles.get(patch.id);
-          const section = purana?.sections.find(item => item.id === patch.section);
-          if (!section) continue;
-          const current = section.chapters[patch.chapter] || {};
-          for (const [field, value] of Object.entries(patch.record || {})) {
-            if (!Array.isArray(value)) {
-              current[field] = value;
-              continue;
-            }
-            const entries = current[field] || (current[field] = []);
-            for (const entry of value) {
-              const key = JSON.stringify(entry);
-              if (!entries.some(existing => JSON.stringify(existing) === key)) entries.push(entry);
-            }
-          }
-          section.chapters[patch.chapter] = current;
-        }
-        payload.puranas = payload.puranas.filter(item => attestedChapterCount(item) > 0);
-        return payload;
-      }
-
-      function puranaReferenceText(entry) {
-        if (typeof entry === "string") return entry;
-        return [
-          entry?.label, entry?.ref, entry?.purana, entry?.work,
-          ...(entry?.details || [])
-        ].filter(Boolean).join(" ");
-      }
-
-      function mentionsOtherPurana(text, purana) {
-        const normalizedText = normalizePuranaName(text);
-        const hasPuranaContext = normalizedText.includes("purana") ||
-          normalizedText.includes("mahatmya") || normalizedText.includes("classification");
-        if (!hasPuranaContext) return false;
-        return (data?.puranas || []).some(other => {
-          if (other.id === purana?.id) return false;
-          const fullName = normalizePuranaName(other.name);
-          const shortName = fullName.replace(/purana$/, "");
-          return normalizedText.includes(fullName) ||
-            (shortName.length >= 6 && normalizedText.includes(shortName));
+      function chapterRecord(purana, section, chapter) {
+        const base = (section.chapters || {})[String(chapter)] || {};
+        return Object.assign({}, base, {
+          topics: topicsFor(purana.id, section, chapter, base)
         });
       }
 
-      function isOtherPuranaReference(entry, purana) {
-        if (entry?.kind === "classification") return true;
-        if (entry?.puranaId && entry.puranaId !== purana?.id) return true;
-        return mentionsOtherPurana(puranaReferenceText(entry), purana);
+      function isTirtha(topic) {
+        return topic.kind === "pilgrimage" || topic.kind === "tirtha" ||
+          /holy places|sacred places|pilgrimage|tirtha|tīrtha|gayā/i.test(topic.label || "");
       }
 
-      function isPuranicTopic(entry, purana) {
-        return isOtherPuranaReference(entry, purana);
-      }
-
-      function isTirthaTopic(entry) {
-        return String(entry?.kind || "").toLowerCase() === "pilgrimage";
-      }
-
-      function isChapterCoverage(entry) {
-        return (entry.details || []).some(text => /^Full chapter commentary; not an external quotation\.?$/i.test(text));
-      }
-
-      function isDirectCommentaryCitation(entry) {
-        return !isChapterCoverage(entry) && Boolean(entry.refs?.length || (entry.ref && /\d/.test(entry.ref)));
-      }
-
-      function isQuotedEntry(entry) {
-        return Boolean(entry.refs?.length || /\bcited\b/i.test(entry.note || ""));
-      }
-
-      function normalizePuranaName(value) {
-        return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-          .toLowerCase().replace(/[^a-z0-9]+/g, "");
-      }
-
-      function romanSectionNumber(value) {
-        const values = {I:1,II:2,III:3,IV:4,V:5,VI:6,VII:7,VIII:8,IX:9,X:10,XI:11,XII:12};
-        return values[String(value || "").toUpperCase()] || 0;
-      }
-
-      function commentaryCoversChapter(entry, purana, section, chapter) {
-        if (!entry || entry.status !== "within-cutoff" || entry.puranaId !== purana.id) return false;
-        const scope = String(entry.scope || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-        const note = String(entry.note || "").toLowerCase();
-        if (/digest|interpretive|guide|not a direct commentary|not located|not extant|not identified.*extant|text not located|extent not established|unresolved/.test(scope + " " + note)) {
-          if (!/full purana/.test(scope) || /not located|not extant|not identified.*extant|text not located|extent not established|unresolved/.test(note)) return false;
-        }
-        const ch = Number(chapter);
-        if (/full[-\s]*purana/.test(scope)) return true;
-        if (normalizePuranaName(entry.scope) === normalizePuranaName(purana.name) && !/not located|unresolved/.test(note)) return true;
-        if (purana.id === "bhagavata-purana") {
-          const skandha = romanSectionNumber(section.id);
-          if (/bhagavata\s+1\.1\.1/.test(scope)) return section.numbering === "1" && ch === 1;
-          if (/skandha\s+x\b/.test(scope) && skandha === 10) return true;
-          if (/skandhas\s+i\s*[-–]\s*iii/.test(scope) && skandha >= 1 && skandha <= 3) return true;
-          if (/skandhas\s+i\s*[-–]\s*iii/.test(scope) && /,\s*x\b/.test(scope) && skandha === 10) return true;
-          if (/vedastuti/.test(note) && section.numbering === "1" && ch === 1) return true;
-          if (/vedastuti/.test(note) && skandha === 10 && ch === 87) return true;
-          if (/canto\s+i\b/.test(scope) && skandha === 1) return true;
-        }
-        if (purana.id === "kurma-purana" && /isvaragita/.test(scope)) {
-          return String(section.id).toUpperCase() === "II" && ch >= 1 && ch <= 11;
-        }
-        if (purana.id === "markandeya-purana" && /devi mahatmya/.test(scope)) {
-          return ch >= 81 && ch <= 93;
-        }
-        if (purana.id === "agni-purana") {
-          if (/chapter\s+216/.test(scope)) return ch === 216;
-          if (/eight prosody chapters/.test(scope)) return ch >= 328 && ch <= 335;
-        }
-        if (purana.id === "padma-purana" && /yogasara hymn/.test(scope)) {
-          return /uttara/.test(String(section.id).toLowerCase()) && ch === 128;
-        }
-        return false;
-      }
-
-      const commentaryCoverageCache = new Map();
-      function commentaryEntriesForChapter(purana, section, chapter) {
-        const key = [purana.id, section.id, chapter].join("|");
-        if (commentaryCoverageCache.has(key)) return commentaryCoverageCache.get(key);
-        const seen = new Set();
-        const entries = [];
-        for (const entry of commentaryData?.entries || []) {
-          if (!commentaryCoversChapter(entry, purana, section, chapter)) continue;
-          const identity = [entry.puranaId, entry.work, entry.author].join("|");
-          if (seen.has(identity)) continue;
-          seen.add(identity);
-          entries.push(entry);
-        }
-        commentaryCoverageCache.set(key, entries);
-        return entries;
-      }
-
-      function commentaryCitation(entry) {
-        const note = String(entry.note || "");
-        const hazra = note.match(/Vol(?:ume)?\.?\s+(I|II)\s*,?\s*p{1,2}\.?\s*(\d+(?:[-–]\d+)?)/i);
-        const labels = {
-          rocher: "Rocher 1986",
-          rocherEditions: "Rocher",
-          hazra: "Hazra",
-          hazraUpaVolumeI: "Hazra I",
-          hazraUpaVolumeII: "Hazra II",
-          hazraPuranicRites: "Hazra · Puranic Rites",
-          jivaBhagavata: "Jīva Grantha",
-          jivaAgni: "Jīva Grantha",
-          jivaVishnu: "Jīva Grantha",
-          jivaWorks: "Jīva works",
-          jivaWorksDirect: "Jīva works",
-          bhagavataEditions: "Bhāgavata editions",
-          bhagavataCommentators: "Bhāgavata bibliography",
-          deviCatalog: "Devī catalogue",
-          deviCatalog2: "Sanskrit catalogue",
-          vishnuEdition: "Viṣṇu Purāṇa edition",
-          vishnuCommentaries: "Viṣṇu commentary survey",
-          vitthalanathaSubodhini: "Subodhinī catalogue",
-          vallabhaBhagavata: "Vallabha bibliography",
-          vallabhaBhagavataTreatise: "Vallabha bibliography",
-          jivaGranthaCaitanya: "Jīva Grantha",
-          caitanyaCommentaryStudy: "Caitanya commentary study"
-        };
-        const citations = [];
-        if (hazra) citations.push("Hazra " + hazra[1] + " · p. " + hazra[2]);
-        for (const id of entry.sourceIds || []) {
-          const label = labels[id];
-          if (label && !citations.some(value => value.startsWith(label))) citations.push(label);
-        }
-        return citations.join(" · ");
-      }
-
-      function isKnownPreCutoffCommentary(entry) {
-        const label = normalizePuranaName(entry.label || entry.work || "");
-        if (!label || !commentaryData?.entries) return false;
-        return commentaryData.entries.some(item => {
-          if (item.status !== "within-cutoff") return false;
-          const names = [item.work, item.author].map(normalizePuranaName).filter(name => name.length > 6);
-          return names.some(name => label.includes(name) || name.includes(label));
-        });
-      }
-
-      function chapterEvidence(record, purana, section, chapter) {
+      function evidenceKinds(record) {
         const kinds = [];
-        const quoteEntries = record.quoted || [];
-        const citedCommentaries = (record.commentaryCitations || []).filter(entry =>
-          isDirectCommentaryCitation(entry) && isKnownPreCutoffCommentary(entry)
-        );
-        if (quoteEntries.some(isQuotedEntry) || citedCommentaries.length) kinds.push("quoted");
-        if (commentaryEntriesForChapter(purana, section, chapter).length ||
-          (record.commentaryCitations || []).some(entry =>
-            isChapterCoverage(entry) && isKnownPreCutoffCommentary(entry)
-          )) kinds.push("bhashya");
+        if ((record.quoted || []).length) kinds.push("quoted");
         if ((record.parallel || []).length || (record.chapterRelations || []).length) kinds.push("parallel");
-        const puranaReferences = [
-          ...(record.puranaMentions || []),
-          ...(record.textReferences || []),
-          ...(record.contents || []),
-          ...(record.topics || [])
-        ].filter(entry => isOtherPuranaReference(entry, purana));
-        if (puranaReferences.length) kinds.push("mention");
-        if (record.topics?.some(entry => isTirthaTopic(entry) && !isOtherPuranaReference(entry, purana))) kinds.push("tirtha");
-        if (record.topics?.some(entry => !isTirthaTopic(entry) && !isOtherPuranaReference(entry, purana))) kinds.push("topic");
+        if ((record.topics || []).some(isTirtha)) kinds.push("tirtha");
+        if ((record.topics || []).some(topic => !isTirtha(topic))) kinds.push("topic");
         return kinds;
       }
 
-      function showChapter(purana, section, chapter, record, tile, content) {
-        if (selectedTile === tile) {
-          selectedDetail?.remove();
-          tile.setAttribute("aria-expanded", "false");
-          selectedTile = null;
-          selectedDetail = null;
-          return;
-        }
-        if (selectedTile) selectedTile.setAttribute("aria-expanded", "false");
-        selectedDetail?.remove();
-        selectedTile = tile;
-        tile.setAttribute("aria-expanded", "true");
-        const detail = document.createElement("section");
-        detail.className = "detail";
-        detail.setAttribute("aria-label", "Chapter evidence");
-        const title = document.createElement("h2");
-        const sectionName = section.label && section.label !== "Chapters" ? section.label + " · " : "";
-        title.textContent = sectionName + "Chapter " + chapter;
-        detail.appendChild(title);
-
-        const directCommentaryQuotes = (record.commentaryCitations || [])
-          .filter(entry => isDirectCommentaryCitation(entry) && isKnownPreCutoffCommentary(entry))
-          .map(entry => ({
-            work: entry.label || "Commentary",
-            refs: entry.refs?.length ? entry.refs : (entry.ref ? [entry.ref] : []),
-            note: (entry.details || []).join(" · ")
-          }));
-        addGroup(detail, "Quoted", [
-          ...(record.quoted || []).filter(isQuotedEntry),
-          ...directCommentaryQuotes
-        ], "quoted", section);
-
-        const bhashyas = commentaryEntriesForChapter(purana, section, chapter).map(entry => ({
-          label: entry.work + " — " + entry.author,
-          ref: commentaryCitation(entry)
-        }));
-        addTaggedGroup(detail, "Bhāṣya", bhashyas);
-
-        addGroup(detail, "Parallel", [
-          ...(record.parallel || []),
-          ...(record.chapterRelations || [])
-        ], "parallel");
-
-        const otherPurana = [
-          ...(record.puranaMentions || []),
-          ...(record.textReferences || []),
-          ...(record.contents || []),
-          ...(record.topics || [])
-        ].filter(entry => isOtherPuranaReference(entry, purana))
-          .map(entry => ({
-            label: entry.label || entry.work || "Purāṇa reference",
-            ref: entry.ref,
-            details: entry.details,
-            sourceLabel: entry.sourceLabel
-          }));
-        const seenOther = new Set();
-        const uniqueOtherPurana = otherPurana.filter(entry => {
-          const key = entry.label + "|" + entry.ref;
-          if (seenOther.has(key)) return false;
-          seenOther.add(key);
-          return true;
-        });
-        addTaggedGroup(detail, "Other Purāṇa", uniqueOtherPurana);
-        addTaggedGroup(detail, "Tīrtha", (record.topics || []).filter(entry =>
-          isTirthaTopic(entry) && !isOtherPuranaReference(entry, purana)
-        ));
-        addTaggedGroup(detail, "Topic", (record.topics || []).filter(entry =>
-          !isTirthaTopic(entry) && !isOtherPuranaReference(entry, purana)
-        ));
-        addGroup(detail, "Not located", record.missing, "missing");
-
-        const hasRecord =
-          (record.quoted || []).some(isQuotedEntry) ||
-          (record.commentaryCitations || []).some(entry =>
-            isDirectCommentaryCitation(entry) || isChapterCoverage(entry)
-          ) ||
-          (record.parallel || []).length || (record.chapterRelations || []).length ||
-          otherPurana.length || (record.topics || []).length || (record.missing || []).length ||
-          commentaryEntriesForChapter(purana, section, chapter).length;
-        if (!hasRecord) {
-          const empty = document.createElement("p");
-          empty.className = "no-entry";
-          empty.textContent = "No attestation.";
-          detail.appendChild(empty);
-        }
-        content.appendChild(detail);
-        selectedDetail = detail;
-        requestAnimationFrame(() => detail.scrollIntoView({ behavior: "smooth", block: "nearest" }));
-      }
-
-      function renderMaps(puranas) {
-        selectedTile = null;
-        selectedDetail = null;
-        map.replaceChildren();
-        const labels = {
-          quoted: "quoted",
-          bhashya: "bhāṣya only",
-          parallel: "parallel",
-          mention: "Purāṇa reference",
-          tirtha: "tīrtha",
-          topic: "topic"
-        };
-        const order = ["quoted", "bhashya", "parallel", "mention", "tirtha", "topic"];
-        for (const purana of puranas) {
-          for (const section of purana.sections) {
-            const row = document.createElement("section");
-            row.className = "section-row";
-            const label = document.createElement("div");
-            label.className = "section-label";
-            label.textContent = section.label;
-            const content = document.createElement("div");
-            content.className = "section-content";
-            const cells = document.createElement("div");
-            cells.className = "cells";
-            for (let chapter = 1; chapter <= section.last; chapter += 1) {
-              const record = section.chapters[String(chapter)] || {};
-              const evidence = chapterEvidence(record, purana, section, String(chapter));
-              const kind = evidence.length === 1 ? evidence[0] : evidence.length > 1 ? "multiple" : "none";
-
-              const tile = document.createElement("button");
-              tile.type = "button";
-              tile.className = "tile";
-              tile.textContent = String(chapter);
-              tile.setAttribute("aria-expanded", "false");
-              tile.dataset.evidence = evidence.join(" ") || "none";
-              if (kind !== "none") tile.classList.add(kind);
-              const markers = document.createElement("span");
-              markers.className = "tile-markers";
-              markers.setAttribute("aria-hidden", "true");
-              if (evidence.length > 1) {
-                tile.classList.add("multiple");
-                for (const category of order.filter(item => evidence.includes(item))) {
-                  const marker = document.createElement("i");
-                  marker.className = "tile-marker " + category;
-                  markers.appendChild(marker);
-                }
-                tile.appendChild(markers);
-              }
-              const evidenceLabel = evidence.map(item => labels[item]).join(" · ") || "no attestation";
-              tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
-                chapterNumber(section, chapter) + ": " + evidenceLabel);
-              tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter) + " · " + evidenceLabel;
-              tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
-              cells.appendChild(tile);
-            }
-            content.appendChild(cells);
-            row.append(label, content);
-            map.appendChild(row);
+      function allChapters(purana) {
+        const output = [];
+        for (const section of purana.sections || []) {
+          for (let chapter = 1; chapter <= Number(section.last || 0); chapter++) {
+            output.push({ section, chapter, record: chapterRecord(purana, section, chapter) });
           }
         }
+        return output;
       }
 
-      const upaIds = new Set([
-        "brhannaradiya-purana",
-        "devi-bhagavata-purana",
-        "devi-purana",
-        "kalika-purana",
-        "mahabhagavata-purana",
-        "brhaddharma-purana",
-        "narasimha-purana",
-        "kriyayogasara",
-        "kalki-purana",
-        "samba-purana"
-      ]);
-
-      function categoryFor(purana) {
-        return upaIds.has(purana.id) ? "Upapurāṇa" : "Mahāpurāṇa";
+      function stats(purana) {
+        let indexed = 0;
+        let tirtha = 0;
+        for (const item of allChapters(purana)) {
+          const kinds = evidenceKinds(item.record);
+          if (kinds.length) indexed++;
+          if (kinds.includes("tirtha")) tirtha++;
+        }
+        return { indexed, tirtha };
       }
 
-      function setActiveContents(id) {
-        for (const button of document.querySelectorAll(".contents-button[data-purana]")) {
+      function setActive(id) {
+        activeId = id;
+        const purana = profileById.get(id);
+        if (!purana) return;
+        for (const button of contents.querySelectorAll(".purana-button")) {
           const active = button.dataset.purana === id;
-          button.classList.toggle("active", active);
           button.setAttribute("aria-pressed", String(active));
         }
+        selectedName.textContent = purana.name;
+        const count = stats(purana);
+        const total = allChapters(purana).length;
+        selectedCount.textContent = count.indexed + " indexed of " + total + " chapters · " + count.tirtha + " tīrtha";
+        detail.hidden = true;
+        detail.replaceChildren();
+        renderMap(purana);
       }
 
       function renderContents() {
         contents.replaceChildren();
-        const items = [...data.puranas].sort((a, b) =>
-          attestedChapterCount(b) - attestedChapterCount(a) || a.name.localeCompare(b.name, "en")
-        );
-        const categories = ["Mahāpurāṇa", "Upapurāṇa"];
-        for (const categoryName of categories) {
-          const members = items.filter(item => categoryFor(item) === categoryName);
-          if (!members.length) continue;
-          const group = document.createElement("section");
-          group.className = "contents-group";
-          const heading = document.createElement("h3");
-          heading.className = "contents-group-title";
-          heading.textContent = categoryName === "Upapurāṇa" ? "Upapurāṇas" : "Mahāpurāṇas";
-          const list = document.createElement("div");
-          list.className = "contents-list";
-          for (const purana of members) {
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "contents-button";
-            button.dataset.purana = purana.id;
-            button.setAttribute("aria-pressed", "false");
-
-            const name = document.createElement("span");
-            name.className = "contents-name";
-            name.textContent = purana.name;
-            const count = document.createElement("span");
-            count.className = "evidence-count";
-            count.textContent = attestedChapterCount(purana).toLocaleString();
-            count.setAttribute("aria-label", attestedChapterCount(purana).toLocaleString() + " attested chapters");
-            button.append(name, count);
-            button.addEventListener("click", () => render(purana));
-            list.appendChild(button);
-          }
-          group.append(heading, list);
-          contents.appendChild(group);
+        for (const purana of profiles) {
+          const button = make("button", "purana-button");
+          button.type = "button";
+          button.dataset.purana = purana.id;
+          button.setAttribute("aria-pressed", "false");
+          const name = make("span", "purana-name", purana.name);
+          const count = make("span", "purana-count", stats(purana).tirtha + " tīrtha");
+          button.append(name, count);
+          button.addEventListener("click", () => setActive(purana.id));
+          contents.appendChild(button);
         }
       }
 
-      function render(purana) {
-        if (!purana) return;
-        setActiveContents(purana.id);
-        selectedCategory.textContent = categoryFor(purana);
-        selectedName.textContent = purana.name;
-        selectedEvidence.textContent = attestedChapterCount(purana).toLocaleString() + " chapters";
-        selectedEvidence.title = attestedChapterCount(purana).toLocaleString() + " attested chapters";
-        renderMaps([purana]);
+      function sectionLabel(section) {
+        return (section.label || section.id).replace(/\s*·\s*[IVXLCDM]+$/, "");
       }
 
-      Promise.all([fetch("./data.json"), fetch("./subject-index.json"), fetch("./commentaries.json")])
-        .then(async ([dataResponse, subjectResponse, commentaryResponse]) => {
-          if (!dataResponse.ok || !subjectResponse.ok || !commentaryResponse.ok) throw new Error("Chapter data unavailable");
-          const [payload, subjectIndex, commentaryPayload] = await Promise.all([
-            dataResponse.json(), subjectResponse.json(), commentaryResponse.json()
-          ]);
-          commentaryData = commentaryPayload;
-          data = payload;
-          data = applySubjectIndex(data, subjectIndex);
-          data.puranas = data.puranas.filter(item => attestedChapterCount(item) > 0);
-          renderContents();
-          const initial = data.puranas.find(item => item.id === data.default) || data.puranas[0];
-          render(initial);
-        })        .catch(() => {
-          const error = document.createElement("p");
-          error.className = "error";
-          error.textContent = "Chapter data could not be loaded.";
-          map.appendChild(error);
-        });
+      function renderMap(purana) {
+        map.replaceChildren();
+        for (const section of purana.sections || []) {
+          const row = make("section", "section-row");
+          const label = make("div", "section-label", sectionLabel(section));
+          const cells = make("div", "cells");
+          cells.setAttribute("role", "group");
+          cells.setAttribute("aria-label", sectionLabel(section));
+          for (let chapter = 1; chapter <= Number(section.last || 0); chapter++) {
+            const record = chapterRecord(purana, section, chapter);
+            const kinds = evidenceKinds(record);
+            const button = make("button", "tile");
+            button.type = "button";
+            button.classList.add(kinds.length === 0 ? "none" : kinds.length === 1 ? kinds[0] : "multiple");
+            button.dataset.section = section.id;
+            button.dataset.chapter = String(chapter);
+            button.setAttribute("aria-pressed", "false");
+            const ref = chapterRef(section, chapter);
+            const summary = kinds.length ? kinds.map(kind => names[kind]).join(", ") : "No indexed entry";
+            button.setAttribute("aria-label", purana.name + " " + ref + " — " + summary);
+            button.title = purana.name + " " + ref + " — " + summary;
+            button.textContent = String(chapter);
+            if (kinds.length > 1) {
+              const markers = make("span", "markers");
+              markers.setAttribute("aria-hidden", "true");
+              for (const kind of kinds) markers.appendChild(make("i", "marker " + kind));
+              button.appendChild(markers);
+            }
+            cells.appendChild(button);
+          }
+          row.append(label, cells);
+          map.appendChild(row);
+        }
+      }
+
+      function addGroup(title, rows) {
+        if (!rows.length) return;
+        const section = make("section", "detail-group");
+        section.appendChild(make("h3", "", title));
+        const list = make("ul", "");
+        for (const row of rows) {
+          const li = make("li", "detail-entry");
+          li.appendChild(make("strong", "", row.title || ""));
+          if (row.meta) li.appendChild(make("span", "detail-meta", row.meta));
+          list.appendChild(li);
+        }
+        section.appendChild(list);
+        detail.appendChild(section);
+      }
+
+      function showDetail(purana, section, chapter, record) {
+        detail.replaceChildren();
+        detail.hidden = false;
+        detail.appendChild(make("h2", "", purana.name + " · " + chapterRef(section, chapter)));
+        const topics = record.topics || [];
+        const tirthas = topics.filter(isTirtha).map(topic => ({
+          title: topic.label || "Holy places",
+          meta: [topic.ref, topic.scope, ...(topic.details || []), topic.sourceLabel].filter(Boolean).join(" · ")
+        }));
+        const subjects = topics.filter(topic => !isTirtha(topic)).map(topic => ({
+          title: topic.label || "Subject",
+          meta: [topic.ref, ...(topic.details || []), topic.sourceLabel].filter(Boolean).join(" · ")
+        }));
+        const quoted = (record.quoted || []).map(item => ({
+          title: [item.work, item.author].filter(Boolean).join(" · ") || item.ref || "Citation",
+          meta: [item.refs && item.refs.join("; "), item.note].filter(Boolean).join(" · ")
+        }));
+        const relations = (record.parallel || []).concat(record.chapterRelations || []).map(item => ({
+          title: (item.members || [item.left, item.right]).filter(Boolean).join(" ↔ ") || item.ref || "Related passages",
+          meta: [item.level, item.note].filter(Boolean).join(" · ")
+        }));
+        addGroup("Tīrtha", tirthas);
+        addGroup("Subject", subjects);
+        addGroup("Quoted in", quoted);
+        addGroup("Parallels", relations);
+        const missing = (record.missing || []).map(item => ({
+          title: item.work ? [item.work, item.author].filter(Boolean).join(" · ") : "Citation not located",
+          meta: item.note || item.refs?.join("; ") || ""
+        }));
+        addGroup("Citation notes", missing);
+        if (!tirthas.length && !subjects.length && !quoted.length && !relations.length && !missing.length) {
+          detail.appendChild(make("p", "detail-empty", "No indexed entry for this chapter."));
+        }
+      }
+
+      map.addEventListener("click", event => {
+        const button = event.target.closest(".tile");
+        if (!button) return;
+        for (const selected of map.querySelectorAll(".tile[aria-pressed=\"true\"]")) {
+          selected.setAttribute("aria-pressed", "false");
+        }
+        button.setAttribute("aria-pressed", "true");
+        const purana = profileById.get(activeId);
+        const section = purana.sections.find(item => item.id === button.dataset.section);
+        const chapter = Number(button.dataset.chapter);
+        if (section) showDetail(purana, section, chapter, chapterRecord(purana, section, chapter));
+      });
+
+      async function start() {
+        const responses = await Promise.all([
+          fetch("data.json", { cache: "no-cache" }),
+          fetch("subject-index.json", { cache: "no-cache" })
+        ]);
+        if (responses.some(response => !response.ok)) throw new Error("Data unavailable");
+        const payload = await responses[0].json();
+        const index = await responses[1].json();
+        const available = new Map((payload.puranas || []).map(item => [item.id, item]));
+        profiles = majorIds.map(id => available.get(id)).filter(Boolean);
+        if (profiles.length !== majorIds.length) throw new Error("Major Purāṇa data incomplete");
+        profileById = new Map(profiles.map(item => [item.id, item]));
+        for (const patch of index.patches || []) {
+          if (!profileById.has(patch.id) || !patch.record?.topics?.length) continue;
+          topicByKey.set(keyFor(patch.id, patch.section, patch.chapter), patch.record);
+        }
+        renderContents();
+        setActive(payload.default && profileById.has(payload.default) ? payload.default : majorIds[0]);
+      }
+
+      start().catch(() => {
+        const error = make("p", "error", "The chapter data could not be loaded.");
+        map.replaceChildren(error);
+      });
     })();
   </script>
 </body>
 </html>
-
