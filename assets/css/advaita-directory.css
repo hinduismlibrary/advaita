@@ -104,7 +104,8 @@ body.advaita-directory-page{
 }
 .ad-links>.ad-entry:last-child:nth-child(odd){
   grid-column:1/-1;
-  justify-content:center;
+  width:calc(50% - 11px);
+  justify-self:center;
 }
 .ad-entry-link{
   display:block;
@@ -178,6 +179,6 @@ body.advaita-directory-page{
   .ad-page{width:calc(100% - 32px);padding:20px 0 42px}
   .ad-side nav{grid-template-columns:1fr;gap:4px}
   .ad-links{grid-template-columns:1fr;column-gap:0}
-  .ad-links>.ad-entry:last-child:nth-child(odd){grid-column:auto;justify-content:initial}
+  .ad-links>.ad-entry:last-child:nth-child(odd){grid-column:auto;width:auto;justify-self:stretch}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
