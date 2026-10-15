@@ -177,7 +177,8 @@ function sectionGroup(number){
   if(number===null)return 'Opening';
   if(number<=3)return 'Introduction and Puranas';
   if(number<=6)return 'Scriptural evidence';
-  return 'Objections and Dharmashastra';
+  if(number<=8)return 'Objections';
+  return 'Dharmashastra';
 }
 
 function sectionsFrom(pages){
@@ -233,15 +234,24 @@ function sectionsFrom(pages){
       chapterTitle=info.title;
       current=null;
       pending=[];
-      if(major===1||major===2||major===3||major===5)return;
+      if(major===7){
+        start('objections','Objections',major,'Objections');
+        append(current,{kind:'subheading',value:info.title});
+        return;
+      }
+      if(major===8){
+        const objections=sections[sections.length-1];
+        if(objections?.id==='objections')current=objections;
+        else start('objections','Objections',major,'Objections');
+        append(current,{kind:'subheading',value:info.title});
+        return;
+      }
       if(major===6&&info.prefix){
         const first=subsectionTitles['6.1'];
         start(first.id,first.title,major,chapterTitle);
         return;
       }
       const id=major===4?'double-standards-on-absolute-and-relative-supremacy':
-        major===7?'purva-paksha-mahanarayana-upanishad':
-        major===8?'addressing-the-scope-of-questions-argument':
         major===9?'smriti-testimony':info.id;
       start(id,info.title,major,null);
       return;
@@ -256,7 +266,8 @@ function sectionsFrom(pages){
         const key=misnumberedFiveThree?'5.3':`${sourceMajor}.${minor}`;
         const definition=subsectionTitles[key];
         if(definition&&(sourceMajor===major||misnumberedFiveThree)){
-          start(definition.id,definition.title,major,chapterTitle);
+          if(major===6)start(definition.id,definition.title,major,chapterTitle);
+          else if(current)append(current,{kind:'subheading',value:definition.title});
           return;
         }
       }
@@ -429,27 +440,35 @@ function tocInto(node,sections,selected){
   node.replaceChildren();
   const groups=new Map();
   for(const section of sections){
-    let group=groups.get(section.parent);
-    if(!group){
-      const wrapper=make('details','toc-group');
-      const summary=make('summary','toc-parent');
-      summary.append(make('span','toc-parent-title',section.parent));
-      const children=make('div','toc-children');
-      wrapper.append(summary,children);
-      node.append(wrapper);
-      group={wrapper,summary,children,current:null};
-      groups.set(section.parent,group);
+    if(!groups.has(section.parent))groups.set(section.parent,[]);
+    groups.get(section.parent).push(section);
+  }
+  for(const [parent,items] of groups){
+    if(items.length===1){
+      const section=items[0];
+      const link=make('a','toc-main'+(section.id===selected.id?' is-active':''),section.title);
+      link.href=href(section);
+      link.dataset.section=section.id;
+      if(section.id===selected.id)link.setAttribute('aria-current','page');
+      node.append(link);
+      continue;
     }
-    const link=make('a',section.id===selected.id?'is-active':'',section.title);
-    link.href=href(section);
-    link.dataset.section=section.id;
-    if(section.id===selected.id){
-      link.setAttribute('aria-current','page');
-      group.wrapper.classList.add('has-current');
-      group.current=make('span','toc-current',section.title);
-      group.summary.append(group.current);
+    const wrapper=make('details','toc-group');
+    const summary=make('summary','toc-parent');
+    summary.append(make('span','toc-parent-title',parent));
+    const children=make('div','toc-children');
+    wrapper.append(summary,children);node.append(wrapper);
+    for(const section of items){
+      const link=make('a',section.id===selected.id?'is-active':'',section.title);
+      link.href=href(section);
+      link.dataset.section=section.id;
+      if(section.id===selected.id){
+        link.setAttribute('aria-current','page');
+        wrapper.classList.add('has-current');
+        summary.append(make('span','toc-current',section.title));
+      }
+      children.append(link);
     }
-    group.children.append(link);
   }
 }
 
@@ -487,12 +506,19 @@ async function render(){
   const requested=new URLSearchParams(location.search).get('section');
   const legacy={
     opening:'opening-salutation',index:'contents',
-    'section-1':'introduction','section-2':'padma-pur-a-s-contradiction',
-    'section-3':'shiva-purana-on-the-true-nature-of-vishnu',
+    'section-1':'section-1','section-2':'section-2','section-3':'section-3',
     'section-4':'double-standards-on-absolute-and-relative-supremacy',
-    'section-5':'shvetashvatara-upanishad-and-adi-shankaracharya-on-shivas-supremacy',
-    'section-6':'lord-rama-on-supremacy-of-shiva','section-7':'purva-paksha-mahanarayana-upanishad',
-    'section-8':'addressing-the-scope-of-questions-argument','section-9':'smriti-testimony'
+    'section-5':'section-5','section-6':'lord-rama-on-supremacy-of-shiva',
+    'section-7':'objections','section-8':'objections','section-9':'smriti-testimony',
+    introduction:'section-1',methodology:'section-1',
+    'padma-pur-a-s-contradiction':'section-2','garuda-pur-a-s-contradiction':'section-2',
+    'supremacy-of-shiva-in-vaishnava-puranas':'section-2',
+    'shiva-purana-on-the-true-nature-of-vishnu':'section-3',
+    'tamasic-nature-of-vaishnava-puranas':'section-3',
+    'shvetashvatara-upanishad-and-adi-shankaracharya-on-shivas-supremacy':'section-5',
+    'the-vai-ava-claim-relative-superiority-and-courtesy':'section-5',
+    'hara-as-the-destroyer-of-the-root-of-bondage':'section-5',
+    'sri-rudram-in-yajurveda':'section-5','supremacy-of-vishnu-in-brahmanas':'section-5'
   };
   const resolved=requested&&legacy[requested]||requested;
   let selected=sections.find(section=>section.id===resolved)||sections[0];
