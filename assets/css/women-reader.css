@@ -395,3 +395,38 @@
     margin-bottom:12px!important;
   }
 }
+
+/* Inline Sanskrit follows the surrounding sentence's scale and color. */
+.document-paged-page.women-reader .document-content p span.sanskrit-text,
+.document-paged-page.women-reader .document-content p span[lang^="sa"],
+.document-paged-page.women-reader .document-content p .mixed-sanskrit{
+  margin:0!important;
+  padding:0;
+  border:0;
+  color:inherit;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:1em;
+  line-height:inherit;
+  font-weight:inherit;
+  font-style:inherit;
+  vertical-align:baseline;
+}
+
+/* Every scripture label uses the same type, size, weight, and color. */
+.document-paged-page.women-reader .document-content .source-citation,
+.document-paged-page.women-reader .document-content .reference,
+.document-paged-page.women-reader .document-content .citation{
+  color:#006f71!important;
+  font-family:Merriweather,Georgia,serif;
+  font-size:16px!important;
+  line-height:1.45!important;
+  font-weight:700!important;
+  font-style:normal;
+}
+@media(max-width:620px){
+  .document-paged-page.women-reader .document-content .source-citation,
+  .document-paged-page.women-reader .document-content .reference,
+  .document-paged-page.women-reader .document-content .citation{
+    font-size:14px!important;
+  }
+}

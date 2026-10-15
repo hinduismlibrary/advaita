@@ -212,8 +212,11 @@ function clean(node,page){
     const isSa=(n.getAttribute('lang')||'').toLowerCase().startsWith('sa');
     if(n.matches('details')&&/\b(?:show|hide)\s+sanskrit\b/i.test(text(n.querySelector('summary'))))n.classList.add('sanskrit-reveal');
     if(n.matches('p')){
-      const citationSource=/^(?:Lord Krsna|Manusmriti|Mahabharata|Bhagavata|Bhagavatam|Skanda|Siva|Padma|Gita|Yajnavalkya|Taittiriya|Taittirlya|Rgveda|Veda|Satapatha|Apastamba|Baudhayana|Gautama|Visnu|Vishnu|Matsya|Harivamsa|Brahmavaivarta|Mahanirvana|Gobhila|Garuda|Devala|Daksa|Angiras|Bhavisya|Bhavishya|Vasistha|Valmiki Ramayana)\b/i.test(value);
-      if(n.classList.contains('scripture-source')||(title==='Hinduism on Women'&&citationSource&&/\d/.test(value)))n.classList.add('source-citation');
+      const citationSource=/^(?:Lord Krsna|Krsna|Manusmriti|Manu Smriti|Mahabharata|Bhagavata|Bhagavatam|Bhagavad Gita|Skanda|Siva|Shiva|Padma|Gita|Yajnavalkya|Taittiriya|Taittirlya|Rgveda|Ṛgveda|Veda|Satapatha|Apastamba|Baudhayana|Gautama|Visnu|Vishnu|Matsya|Harivamsa|Brahmavaivarta|Mahanirvana|Gobhila|Garuda|Devala|Daksa|Angiras|Bhavisya|Bhavishya|Vasistha|Valmiki Ramayana|Atri|Katyayana|Kātyāyana|Parasara|Parashara|Narada|Nārada|Yama|Sankha|Sankhalikhita|Vatsyayana|Harita|Atharva|Brahma|Agni|Vayu|Brahmanda)(?=$|[\\s(,.:])/i.test(value);
+      const hasCitationNumber=/\\d/.test(value);
+      const proseCitationCue=/\\b(?:says?|states?|mentions?|discusses?|speaks?|describes?|explains?|elaborates?|concludes?|writes?|teaches?|gives?|calls?|regards?|regarding|is|are|was|were|the|this|these|that|which|his|her|they|there|because|since|if|when|for)\\b/i.test(value);
+      const citationLabel=citationSource&&hasCitationNumber&&value.length<=160&&!proseCitationCue;
+      if(n.classList.contains('scripture-source')||(title==='Hinduism on Women'&&citationLabel))n.classList.add('source-citation');
       else if(n.classList.contains('scripture-translation')||n.classList.contains('translation')||
               /color\s*:\s*#(?:a92727|65516f|7b3d35)/i.test(style))n.classList.add('translation');
       if(isSa&&!n.closest('details.sanskrit-reveal'))n.classList.add('sanskrit-text');
