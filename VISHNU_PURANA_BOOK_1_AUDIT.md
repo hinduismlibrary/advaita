@@ -1,16 +1,16 @@
 # Viṣṇu Purāṇa Book 1 — correction and coverage log
 
-Audit date: 2026-10-14  
+Audit date: 2026-10-15  
 Repository: [krishnavyasmuni/advaita](https://github.com/krishnavyasmuni/advaita)  
 Reader: [Book 1](https://krishnavyasmuni.github.io/advaita/pages/vishnu-purana/)
 
 ## Coverage checked
 
-Structural checks were run across all 22 Book 1 chapter pages. They contain 1,407 verse cards. Every card has a Sanskrit text block, Wilson English translation paragraph, base-verse transliteration panel, and word-for-word panel. Every displayed word-for-word row contains Devanāgarī, IAST, and an English gloss. The audit counted 13,532 word-for-word rows after the corrections below.
+Structural checks were run across all 22 Book 1 chapter pages. They contain 1,407 verse cards. Every card has a Sanskrit text block, Wilson English translation paragraph, base-verse transliteration panel, and word-for-word panel. Where Śrīdhara source is attached, its transliteration is included under the Transliteration control and its Devanāgarī is under a separate Devanāgarī control. Every displayed word-for-word row contains Devanāgarī, IAST, and an English gloss. The audit counted 13,551 word-for-word rows after the corrections below.
 
 All 22 chapter pages link to the same reader stylesheet. Both base stylesheets use 15.5 px / 1.55 line height for word rows on wider screens and 13.5 px / 1.48 on mobile; no chapter-specific word-row size overrides were found. Book 1 pages now expose the pinned textual-basis note at a consistent 12.5 px / 12 px size; a cache-busting version was added to the Book 1 stylesheet links.
 
-| Chapter | Verse cards | Word-for-word rows | Śrīdhara Sanskrit panels |
+| Chapter | Verse cards | Word-for-word rows | Śrīdhara source blocks |
 |---:|---:|---:|---:|
 | 1 | 35 | 209 | 19 |
 | 2 | 68 | 507 | 49 |
@@ -28,20 +28,21 @@ All 22 chapter pages link to the same reader stylesheet. Both base stylesheets u
 | 14 | 49 | 524 | 30 |
 | 15 | 156 | 1786 | 102 |
 | 16 | 16 | 201 | 4 |
-| 17 | 91 | 527 | 59 |
+| 17 | 91 | 546 | 59 |
 | 18 | 43 | 319 | 23 |
 | 19 | 86 | 1022 | 53 |
 | 20 | 39 | 464 | 22 |
 | 21 | 41 | 476 | 24 |
 | 22 | 90 | 478 | 60 |
-| **Total** | **1407** | **13532** | **934** |
+| **Total** | **1407** | **13551** | **934** |
 
-A Śrīdhara Sanskrit panel is shown where the source commentary block is attached. The source sometimes comments on a verse range rather than repeating a comment for each verse. This audit did not duplicate or invent commentary to make the panel count equal the verse count. The panel counts above are not a claim that every verse has a standalone commentary block.
+A Śrīdhara source block is exposed where the source commentary block is attached. The source sometimes comments on a verse range rather than repeating a comment for each verse. This audit did not duplicate or invent commentary to make the source-block count equal the verse count. The counts above are not a claim that every verse has a standalone commentary block.
 
 ## Corrections made
 
-- Removed 934 Śrīdhara explanatory/gloss blocks from the *Word-for-word* panels across Book 1. These blocks contained commentary summaries and phrase-level explanations, so they did not belong in a strict lexical panel. The source's Sanskrit commentary and its transliteration remain in their separate panels.
+- Removed 934 Śrīdhara explanatory/gloss blocks from the *Word-for-word* panels across Book 1. These blocks contained commentary summaries and phrase-level explanations, so they did not belong in a strict lexical panel. The Sanskrit source now appears under Devanāgarī, and both the base verse and Śrīdhara source appear under Transliteration.
 - **1.1.1:** Split grouped phrases into separate lexical entries and corrected the glosses for *viśva-bhāvana*, *mahā-puruṣa*, and *pūrvaja*.
+- **1.17.1:** Added 19 token-level Śrīdhara entries for the Hiraṇyakaśipu sentence, splitting the compounds *bhagavad-dveṣa* and *sva-putra-dveṣa*.
 - **1.1.2:** Reassigned the glosses to the correct Sanskrit components. *Pumān* is “Person/Puruṣa”; *guṇormi* is the wave of the qualities. The remaining words and compound components now appear in source order.
 - **1.3.24:** Restored the omitted *tu* and the second *trailokya* in the final compound; corrected the case-sensitive glosses.
 - **1.5.7, 1.5.23–25, 1.5.46–49:** Removed trailing word rows copied from later verse cards. The following verses retain their own word lists.
@@ -63,9 +64,9 @@ Chapter-local verse numbering and the selected Vasuki sequence were left intact.
 
 ## Remaining review limit
 
-These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 13,327 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. No such blanket accuracy claim is made here.
+These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 13,327 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. Śrīdhara token-level word-for-word entries are currently added for 1.17.1 only; the other attached commentary blocks still need a full lexical pass. No blanket accuracy claim is made here.
 
 
 ## Follow-up structural verification — 14 October 2026
 
-All 22 live Book 1 chapter pages were fetched again after the earlier content audit. The verification found 1,407 verse cards and 13,327 word-for-word rows. Every card still has its English translation, word-for-word control, and transliteration control; all 22 pages expose their source note, carry the Book 1 reader class and cache version, and have balanced `div`, `details`, and `article` tags. No `.wfw-map` or `gita-dual-sridhara` material remains inside a word-for-word control. The 934 supplied Śrīdhara commentary/Sanskrit panels remain available in their separate layers. This recheck confirms page structure and the prior targeted corrections; it does not certify every English gloss as philologically perfect. The review limit above remains in force.
+All 22 live Book 1 chapter pages were fetched again after the earlier content audit. The verification found 1,407 verse cards, 13,551 word-for-word rows, 934 Śrīdhara source blocks, 1,407 transliteration controls, and 934 Devanāgarī controls. Each source block is represented in both the transliteration and Devanāgarī controls. 63 missing IAST strings were transliterated from the attached Devanāgarī source. The Śrīdhara lexical breakdown is present for 1.17.1 only; the other source blocks do not yet have token-level glosses.
