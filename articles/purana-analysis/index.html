@@ -247,6 +247,26 @@
             }
           }
         }
+        let sectionCount = 0;
+        let emptySections = 0;
+        let emptySectionChapters = 0;
+        for (const purana of puranas) {
+          for (const section of purana.sections) {
+            sectionCount += 1;
+            let hasReference = false;
+            for (let chapter = 1; chapter <= section.last; chapter += 1) {
+              const record = section.chapters[String(chapter)] || {};
+              if (record.quoted?.length || record.parallel?.length || record.missing?.length) hasReference = true;
+            }
+            if (!hasReference) {
+              emptySections += 1;
+              emptySectionChapters += section.last;
+            }
+          }
+        }
+        const chaptersWithoutMatch = total - either;
+        const remainingAfterEmptyGroups = total - emptySectionChapters;
+        const coverageAfterExclusion = either / remainingAfterEmptyGroups;
         const percent = value => `${(100 * value / total).toFixed(1)}%`;
         const row = document.createElement("section");
         row.className = "section-row analysis-row";
@@ -263,8 +283,15 @@
           ["Chapters quoted elsewhere", `${quoted} · ${percent(quoted)}`],
           ["Chapters with exact Purāṇa parallels", `${parallel} · ${percent(parallel)}`],
           ["Both kinds of match", `${both} · ${percent(both)}`],
-          ["At least one match", `${either} · ${percent(either)}`],
-          ...(combined ? [["Quotation entries", String(citationEntries)]] : []),
+          ["At least one match", `${either} · `${percent(either)}`],
+          ...(combined ? [
+            ["Chapters without a match", `${chaptersWithoutMatch} · `${percent(chaptersWithoutMatch)}`],
+            ["Section groups with no references", `${emptySections} of `${sectionCount} · `${(100 * emptySections / sectionCount).toFixed(1)}%`],
+            ["Chapters in empty groups", `${emptySectionChapters} · `${percent(emptySectionChapters)}`],
+            ["Chapters after excluding empty groups", String(remainingAfterEmptyGroups)],
+            ["Matched chapters after exclusion", `${either} of `${remainingAfterEmptyGroups} · `${(100 * coverageAfterExclusion).toFixed(1)}%`],
+            ["Quotation entries", String(citationEntries)],
+          ] : []),
           ["Unmatched citation notes", `${unmatchedNotes} in ${unmatchedChapters} chapters`],
         ];
         for (const [label, value] of values) {
@@ -279,7 +306,7 @@
         }
         const formula = document.createElement("p");
         formula.className = "analysis-formula";
-        formula.textContent = `At least one match = quoted chapters + parallel chapters − chapters with both (${quoted} + ${parallel} − ${both} = ${either}). Percentages use ${total} chapters counted across ${puranas.length} Purāṇas.`;
+        formula.textContent = `Matched chapters = quoted + parallel − both (${quoted} + ${parallel} − ${both} = ${either}). An empty group has no quotation, parallel, or unmatched note in any chapter. Excluding ${emptySections} empty groups removes ${emptySectionChapters} of ${total} chapter positions; coverage then is ${either}/${remainingAfterEmptyGroups} = ${(100 * coverageAfterExclusion).toFixed(1)}%. Each Purāṇa’s chapter positions are counted separately.`;
         metrics.appendChild(formula);
         content.appendChild(metrics);
         row.append(heading, content);
