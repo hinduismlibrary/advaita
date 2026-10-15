@@ -429,4 +429,16 @@ Book 1, Chapter 3 is complete and read back on `main`. Its 28 verse articles now
 
 Source pins: upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`; mūla blob `f0a74063b72d9197cf7ac4f1fc205518dd1d3f20`; Śrīdhara blob `74b309ba972130e1cb8c3479c8eb7f6614d4e74c`.
 
-Book 1 cumulative ledger: 16,106 word-for-word rows; 95/934 attached Śrīdhara passages mapped, with 839 remaining. The active next chapter is Book 1, Chapter 4.
+## User-directed Book 1 word-for-word pass — Chapter 4 — 15 October 2026
+
+Book 1, Chapter 4 now has 52 contiguous verse articles. Every root verse has a Sanskrit-derived English translation, a 590-row lexical map, and IAST regenerated from the displayed Devanāgarī. All 52 supplied Śrīdhara passages have direct English and a lexical map inside the same **Word-for-word** control as the root verse. The 303 phrase-level Śrīdhara rows cover all 900 Sanskrit word tokens; each row pairs source Devanāgarī, IAST, and a concise English gloss. The page retains exactly three controls per verse: **Word-for-word**, **Transliteration**, and **Devanagari**. Both Sanskrit layers appear in the latter two controls. The visible label is “Śrīdhara translation”; its English text remains regular weight. Shared Book 1 styling keeps the verse and Śrīdhara translation text at the same font, size, and color, with bold Sanskrit and a bold black Śrīdhara label as the specified exceptions.
+
+The English root layer was rewritten from the Sanskrit rather than copied from Wilson. The existing Śrīdhara English was checked against its supplied Sanskrit; the wording was corrected where it drifted or added material, including 1.4.1–2, 1.4.13–14, 1.4.17, 1.4.21, 1.4.23, 1.4.34, 1.4.49, and 1.4.51. Technical terms such as Sattva, Rajas, Pradhāna, Yajña, Veda, and Brahman remain untranslated.
+
+Text decisions: 1.4.11 uses **पाताल**; 1.4.16 restores **संभक्षयित्वा**; 1.4.17 follows the numbered witness **भवतो यत् परं तत्त्वं तन्न जानाति कश्चन**, where the mūla file is corrupt; 1.4.32 separates **दन्तेषु यज्ञाः**; 1.4.42 restores **शं नो देहि**; 1.4.48 follows the numbered reading **प्रभावेण**; 1.4.51 uses **सृज्यानां**; and 1.4.52 follows **मुक्त्वैनं**.
+
+Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śrīdhara translations and maps; 303 Śrīdhara phrase rows covering 900 source tokens; 52 paired root/Śrīdhara transliteration and Devanāgarī controls; exactly 156 matched details and summaries; 1,937 balanced div openings and closings; no Wilson or “Textual basis” note in the public article.
+
+Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
+
+Book 1 cumulative ledger: 16,538 word-for-word rows; 147/934 attached Śrīdhara passages mapped, with 787 remaining. The active next chapter is Book 1, Chapter 5.
