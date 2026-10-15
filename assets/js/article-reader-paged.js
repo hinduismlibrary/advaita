@@ -73,6 +73,19 @@ const topHeads=nodes.filter(n=>n.matches?.('h2')&&realHeading(n));
 const chapterHeads=topHeads.length?topHeads:nodes.filter(realHeading);
 const hasMaterial=node=>!!text(node)||!!node.matches?.('img,svg,video,table,figure,canvas,hr')||
   !!node.querySelector?.('img,svg,video,table,figure,canvas,hr');
+const headingLabel=raw=>{
+  const value=unnumber(raw);
+  const hasBibliography=/\bbibliograph(?:y|ies)\b/i.test(value);
+  const hasSources=/\b(?:primary\s+)?(?:references?|sources?|works cited)\b/i.test(value);
+  if(hasBibliography&&hasSources)return 'Bibliography & Sources';
+  if(hasBibliography)return 'Bibliography';
+  if(hasSources)return 'Sources';
+  if(/^objections?\b/i.test(value))return 'Objections';
+  return value;
+};
+const isSourceHeading=raw=>/^\s*(?:(?:primary|secondary|selected|additional|further|list of)\s+)*(?:bibliograph(?:y|ies)|references?|sources?|works cited)\b/i.test(unnumber(raw));
+const isObjectionsHeading=raw=>/^\s*objections?\b/i.test(unnumber(raw));
+const isStorySection=raw=>/\b(?:examples?\s+of|stories|narratives?|episodes?)\b/i.test(unnumber(raw));
 let segments=[];
 if(chapterHeads.length){
   const opening=nodes.slice(0,nodes.indexOf(chapterHeads[0]));
@@ -88,29 +101,21 @@ if(chapterHeads.length){
     const start=nodes.indexOf(heading),stop=i+1<chapterHeads.length?nodes.indexOf(chapterHeads[i+1]):nodes.length;
     const body=nodes.slice(start+1,stop);
     const children=heading.matches('h2')?body.filter(n=>n.matches?.('h3')):[];
-    const group={title:unnumber(text(heading)),heading,entries:[]};
-    const isSourceSection=/\b(?:bibliograph(?:y|ies)|references?|sources?|works cited)\b/i.test(unnumber(text(heading)));
-    if(children.length&&!isSourceSection){
-      for(let j=0;j<children.length;){
+    const group={title:headingLabel(text(heading)),heading,entries:[]};
+    const isSourceSection=isSourceHeading(text(heading));
+    const isObjectionSection=isObjectionsHeading(text(heading));
+    const hasSourceChild=children.some(child=>isSourceHeading(text(child)));
+    const splitChildren=children.length&&!isSourceSection&&!isObjectionSection&&
+      (isStorySection(text(heading))||hasSourceChild);
+    if(splitChildren){
+      for(let j=0;j<children.length;j++){
         const child=children[j];
-        const next=children[j+1];
-        const childTitle=unnumber(text(child));
-        const nextTitle=next?unnumber(text(next)):'';
-        const isObjection=/^(?:objection\b|p(?:u|ū)rva[\s-]*pak(?:ṣ|sh)a\b)/i.test(childTitle);
-        const isAnswer=next&&/^(?:answer\b|uttara[\s-]*pak(?:ṣ|sh)a\b|siddhānta\b|siddhanta\b)/i.test(nextTitle);
         const from=body.indexOf(child);
-        const prefix=j===0?body.slice(0,from):[];
-        if(isObjection&&isAnswer){
-          const to=j+2<children.length?body.indexOf(children[j+2]):body.length;
-          group.entries.push({heading:child,nodes:[...prefix,...body.slice(from+1,to)]});
-          j+=2;
-        }else{
-          const to=j+1<children.length?body.indexOf(children[j+1]):body.length;
-          group.entries.push({heading:child,nodes:[...prefix,...body.slice(from+1,to)]});
-          j++;
-        }
+        const to=j+1<children.length?body.indexOf(children[j+1]):body.length;
+        group.entries.push({heading:child,title:headingLabel(text(child)),
+          nodes:[...(j===0?body.slice(0,from):[]),...body.slice(from+1,to)]});
       }
-    }else group.entries.push({heading,nodes:body});
+    }else group.entries.push({heading,title:group.title,nodes:body});
     groups.push(group);
   }
   for(const group of groups){
@@ -132,7 +137,7 @@ if(chapterHeads.length){
       }else j=next;
     }
     for(const entry of entries){
-      segments.push({group,heading:entry.heading,title:unnumber(text(entry.heading)),
+      segments.push({group,heading:entry.heading,title:entry.title||headingLabel(text(entry.heading)),
         nodes:[...(segments.length===0?opening:[]),...entry.nodes]});
     }
   }
@@ -141,9 +146,9 @@ if(chapterHeads.length){
   segments=[{group:{title:'Article',heading:null},heading:null,title:'Full text',nodes}];
 }
 // Heading-only source artifacts should not create empty reader tabs.
- const materialSegments=segments.filter(page=>page.nodes.some(hasMaterial));
- if(materialSegments.length)segments=materialSegments;
- const seen=new Set(),idFor=(raw)=>{
+const materialSegments=segments.filter(page=>page.nodes.some(hasMaterial));
+if(materialSegments.length)segments=materialSegments;
+const seen=new Set(),idFor=(raw)=>{
   let id=raw||'section',suffix=2;
   while(seen.has(id))id=raw+'-'+suffix++;
   seen.add(id);return id;
@@ -184,26 +189,30 @@ const pager=el('nav','page-nav'),prev=el('a','prev'),next=el('a','next');
 pager.setAttribute('aria-label','Article sections');pager.append(prev,next);
 article.append(mobile,context,reader,pager);grid.append(side,article);main.append(header,grid);
 function makeToc(nav){
-  let group=null,items=null;
-  for(const p of segments){
-    if(group!==p.group){
-      group=p.group;const wrap=el('details','toc-group');
-      const label=el('summary','toc-parent');
-      label.append(el('span','toc-parent-title',group.title),el('span','toc-current',''));
-      items=el('div','toc-children');wrap.append(label,items);nav.append(wrap);
+  const grouped=new Map();
+  for(const page of segments){
+    if(!grouped.has(page.group))grouped.set(page.group,[]);
+    grouped.get(page.group).push(page);
+  }
+  for(const [group,pages] of grouped){
+    if(pages.length===1){
+      const page=pages[0];
+      const link=el('a','toc-main',page.title);
+      link.dataset.section=page.id;
+      link.href=href(page);
+      nav.append(link);
+      continue;
     }
-    const a=el('a',null,p.title);a.dataset.section=p.id;a.href=href(p);items.append(a);
-    for(const n of p.nodes){
-      const subheads=[];
-      if(n.matches?.('h4[id]'))subheads.push(n);
-      subheads.push(...(n.querySelectorAll?.('h4[id]')||[]));
-      for(const heading of subheads){
-        const sub=el('a','toc-subitem',text(heading));
-        sub.dataset.section=p.id;
-        sub.dataset.subsection=heading.id;
-        sub.href=href(p)+'#'+encodeURIComponent(heading.id);
-        items.append(sub);
-      }
+    const wrap=el('details','toc-group');
+    const label=el('summary','toc-parent');
+    label.append(el('span','toc-parent-title',group.title),el('span','toc-current',''));
+    const items=el('div','toc-children');
+    wrap.append(label,items);nav.append(wrap);
+    for(const page of pages){
+      const link=el('a',null,page.title);
+      link.dataset.section=page.id;
+      link.href=href(page);
+      items.append(link);
     }
   }
 }
