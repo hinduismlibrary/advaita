@@ -41,5 +41,6 @@ This source alignment is confirmed by the pinned Sanskrit structure and independ
 - Canto 2’s page now uses the current shared reader sizing styles and matching exact-layout script versions used by the updated Canto 1 and Canto 10 pages.
 - The Canto 2 reader now loads the source-alignment logic and a cache-busted checkpoint file.
 - Chapter 9’s raw English heading split is normalized before commentary, Śrīdhara Sanskrit and WFW data are attached.
+- The merged 2.9.11 synonym list joins both mirror blocks with one clean terminal period; all six verse lines and both translation paragraphs are preserved.
 - The chapter 9 and 10 WFW JSON files now use the same full canonical source path in top-level metadata and each row, consistent with chapters 1–8.
 - This audit fixes data alignment, metadata, reader assets and coverage logging. It does not newly certify the wording of every inherited English prose translation or each of the 2,616 glosses as a fresh independent lexical translation.
