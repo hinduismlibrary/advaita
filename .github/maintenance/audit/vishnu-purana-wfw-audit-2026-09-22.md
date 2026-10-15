@@ -379,3 +379,18 @@ Book 3, Chapter 7 was checked against the pinned Vishvas/Vasuki mūla, numbered 
 - Validation: 39 IDs, translations, main WFW panels, and root IAST panels; 487 main word-map rows including one full-verse IAST row per verse; 29 Śrīdhara Sanskrit controls; 107 matched details and summaries; 530 opening and closing div tags; no square brackets, curly quotation marks, Latin characters in Devanāgarī fields, or caste wording in verse translations and word maps.
 
 Source pins at upstream commit `4f878940be057c6efcc644dc688b604e0b2e64a1`: mūla `00515e32ba3b6fb472a603ae35ed3041eb64837d`; numbered witness `f99784cc4320f21834579c2f337b186d4e8894a1`; Śrīdhara `0a474c4aa2db43845758b11eabad29efe8bb64ef`; Vasuki English `4de94ead6b0e10f30fbd21967fe53082ffded4e4`. Wilson cross-check: Wisdom Library chapter VII and Sacred Texts chapter VII.
+
+
+## User-directed Book 1 Śrīdhara word-for-word pass — Chapter 3 — 15 October 2026
+
+Book 1, Chapter 3 is complete and read back on `main`. Its 28 verse articles now have complete English translations written against the Sanskrit, paired root-text word maps, and root transliteration matching the displayed Devanāgarī. The 26 supplied Śrīdhara passages have English translations and 565 lexical rows inside the same **Word-for-word** control as their root-verse maps. The 2 verses without a supplied commentary retain the exact `No commentary.` state.
+
+- Root lexical maps: 315 Devanāgarī/IAST/gloss rows across 28 verses. Commentary maps: 565 rows across 26 passages. Every row pairs the Sanskrit form with its IAST and a concise gloss.
+- All 28 root translations were rewritten from the Sanskrit; the page no longer attributes the translation to Wilson. Verse IAST was regenerated from the displayed Sanskrit. The source-backed corrections at 1.3.1 and 1.3.12 repair the duplicated/truncated root reading and the readings `dve` and `divyābdānām`.
+- At 1.3.16 the page retains `parimāṇam`, matching the Śrīdhara verse and its “Manvantara measure” gloss. The mūla verse reads `pariṇāmam`; its commentary records both the dissolution and measurement readings.
+- Each commentary map is inside its verse’s existing **Word-for-word** control. The **Transliteration** control contains both root and Śrīdhara IAST; the Devanāgarī control contains the Śrīdhara text. The visible label is “Śrīdhara translation,” and the translation text remains regular weight.
+- Validation: 28 contiguous article IDs, 28 root translations, 28 root WFW controls and root IAST controls, 26 commentary translations and maps, 565 commentary rows, 315 root rows, 2 exact no-commentary states, 82 matched details/summaries, and 1,422 balanced div openings/closings. No public “Textual basis” or Wilson note remains.
+
+Source pins: upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`; mūla blob `f0a74063b72d9197cf7ac4f1fc205518dd1d3f20`; Śrīdhara blob `74b309ba972130e1cb8c3479c8eb7f6614d4e74c`.
+
+Book 1 cumulative ledger: 16,106 word-for-word rows; 95/934 attached Śrīdhara passages mapped, with 839 remaining. The active next chapter is Book 1, Chapter 4.
