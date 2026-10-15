@@ -111,3 +111,86 @@
   .document-paged-page .document-content .translation-comparison{margin:17px 0 26px}
   .document-paged-page .document-content .translation-option{margin-bottom:18px}
 }
+
+
+/* Apply the same translation and Sanskrit control styling to every article reader. */
+.document-paged-page .document-content blockquote.translation,
+.document-paged-page .document-content p.translation,
+.document-paged-page .document-content blockquote.scripture-translation,
+.document-paged-page .document-content p.scripture-translation{
+  margin:0 0 30px!important;
+  padding:1px 0 1px 17px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:18.5px!important;
+  line-height:1.62!important;
+  font-style:normal!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary,
+.document-paged-page #source-content details.sanskrit-reveal>summary{
+  display:inline-flex!important;
+  align-items:center!important;
+  padding:4px 11px 5px!important;
+  border:1px solid var(--orange-soft)!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#9b4e1d!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.45!important;
+  letter-spacing:0!important;
+  cursor:pointer!important;
+  list-style:none!important;
+  user-select:none!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary:hover,
+.document-paged-page #source-content details.sanskrit-reveal>summary:hover{
+  background:#eee8e2!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+.document-paged-page #source-content details.sanskrit-reveal [lang^="sa"]{
+  color:var(--sanskrit)!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:20px!important;
+  font-weight:400!important;
+  line-height:1.8!important;
+  letter-spacing:0!important;
+}
+.document-paged-page .document-content .sanskrit-transliteration,
+.document-paged-page #source-content .sanskrit-transliteration{
+  color:var(--sanskrit)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.55!important;
+  font-style:normal!important;
+}
+@media(max-width:620px){
+  .document-paged-page .document-content blockquote.translation,
+  .document-paged-page .document-content p.translation,
+  .document-paged-page .document-content blockquote.scripture-translation,
+  .document-paged-page .document-content p.scripture-translation{
+    margin-bottom:27px!important;
+    padding-left:13px!important;
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal>summary,
+  .document-paged-page #source-content details.sanskrit-reveal>summary{
+    padding:3px 9px 4px!important;
+    font-size:12.5px!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+  .document-paged-page #source-content details.sanskrit-reveal [lang^="sa"]{
+    font-size:18px!important;
+    line-height:1.78!important;
+  }
+  .document-paged-page .document-content .sanskrit-transliteration,
+  .document-paged-page #source-content .sanskrit-transliteration{
+    font-size:14px!important;
+    line-height:1.58!important;
+  }
+}
