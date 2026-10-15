@@ -20,6 +20,12 @@
       --blue-ink: #31525a;
       --gold: #efe2c6;
       --gold-ink: #765b2c;
+      --teal: #d3e8e4;
+      --teal-ink: #285b52;
+      --violet: #e9e1ef;
+      --violet-ink: #564268;
+      --neutral: #e9e7e1;
+      --neutral-ink: #514f48;
       --red: #a3473b;
       --serif: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -50,6 +56,9 @@
     .legend-swatch.quoted { border-color: #b8cdbb; background: var(--green); }
     .legend-swatch.parallel { border-color: #bfd0d3; background: var(--blue); }
     .legend-swatch.contents { border-color: #d8c59c; background: var(--gold); }
+    .legend-swatch.pilgrimage { border-color: #b6d2cc; background: var(--teal); }
+    .legend-swatch.mahatmya { border-color: #cbbbd5; background: var(--violet); }
+    .legend-swatch.subject { border-color: #cbc8bf; background: var(--neutral); }
     .legend-dot { width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--red); }
     #map { padding: 3px 0 18px; }
     .section-row { display: grid; grid-template-columns: 128px minmax(0,1fr); gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
@@ -66,6 +75,12 @@
     .tile.parallel { border-color: #bfd0d3; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
     .tile.contents:not(.quoted):not(.parallel):not(.both) { border-color: #d8c59c; color: var(--gold-ink); background: var(--gold); }
     .tile.contents::before { position: absolute; top: 1px; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--gold-ink); content: ""; }
+    .tile.pilgrimage:not(.quoted):not(.parallel):not(.both):not(.contents) { border-color: #b6d2cc; color: var(--teal-ink); background: var(--teal); }
+    .tile.pilgrimage::before { position: absolute; top: 1px; right: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--teal-ink); content: ""; }
+    .tile.mahatmya:not(.quoted):not(.parallel):not(.both):not(.contents):not(.pilgrimage) { border-color: #cbbbd5; color: var(--violet-ink); background: var(--violet); }
+    .tile.mahatmya::before { position: absolute; bottom: 1px; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--violet-ink); content: ""; }
+    .tile.subject:not(.quoted):not(.parallel):not(.both):not(.contents):not(.pilgrimage):not(.mahatmya) { border-color: #cbc8bf; color: var(--neutral-ink); background: var(--neutral); }
+    .tile.subject { border-style: dashed; }
     .tile.both { border-color: #b8cdbb; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--blue) 51% 100%); font-weight: 700; }
     .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
     .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
@@ -79,6 +94,7 @@
     .entries { min-width: 0; margin: 0; padding: 0; list-style: none; }
     .entry { padding: 1px 0 4px; overflow-wrap: anywhere; }
     .work { font-weight: 600; }
+    .work-link { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
     .refs { display: block; padding-top: 1px; color: #45433d; font-variant-numeric: tabular-nums; }
     .pair { font-variant-numeric: tabular-nums; }
     .arrow { padding: 0 6px; color: var(--muted); }
@@ -128,7 +144,10 @@
       <span class="legend-item"><i class="legend-swatch" aria-hidden="true"></i>No located reference</span>
       <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted elsewhere</span>
       <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Purāṇa parallel</span>
-      <span class="legend-item"><i class="legend-swatch contents" aria-hidden="true"></i>Contents listed</span>
+      <span class="legend-item"><i class="legend-swatch contents" aria-hidden="true"></i>Purāṇa list / measures</span>
+      <span class="legend-item"><i class="legend-swatch pilgrimage" aria-hidden="true"></i>Tīrtha / sacred places</span>
+      <span class="legend-item"><i class="legend-swatch mahatmya" aria-hidden="true"></i>Bhāgavata-māhātmya</span>
+      <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Other subject</span>
       <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Unmatched citation</span>
     </div>
     <main id="map" aria-live="polite"></main>
@@ -205,10 +224,10 @@
               : [entry.left, entry.right].filter(Boolean);
             pair.textContent = refs.join(" ↔ ");
             item.appendChild(pair);
-            if (entry.level === "chapter") {
+            if (entry.level === "chapter" && !entry.note) {
               const levelNote = document.createElement("span");
               levelNote.className = "note";
-              levelNote.textContent = "Chapter-level comparison; verse range is not specified for one or more texts.";
+              levelNote.textContent = "Chapter-level only; no paired verse numbers are stated.";
               item.appendChild(levelNote);
             }
             if (entry.note) {
@@ -254,6 +273,73 @@
         for (const entry of entries) {
           const item = document.createElement("li");
           item.className = "entry";
+          const title = document.createElement(entry.url ? "a" : "span");
+          title.className = entry.url ? "work work-link" : "work";
+          title.textContent = entry.label;
+          if (entry.url) {
+            title.href = entry.url;
+            title.target = "_blank";
+            title.rel = "noopener noreferrer";
+          }
+          const ref = document.createElement("span");
+          ref.className = "refs";
+          ref.textContent = entry.ref;
+          item.append(title, ref);
+          if (entry.details?.length) {
+            const details = document.createElement("span");
+            details.className = "refs contents-details";
+            details.textContent = entry.details.join(" · ");
+            item.appendChild(details);
+          }
+          list.appendChild(item);
+        }
+        group.appendChild(list);
+        parent.appendChild(group);
+      }
+
+      function addTaggedGroup(parent, headingText, entries) {
+        if (!entries?.length) return;
+        const group = document.createElement("section");
+        group.className = "group";
+        const heading = document.createElement("h3");
+        heading.textContent = headingText;
+        group.appendChild(heading);
+        const list = document.createElement("ul");
+        list.className = "entries";
+        for (const entry of entries) {
+          const item = document.createElement("li");
+          item.className = "entry";
+          const label = document.createElement("span");
+          label.className = "work";
+          label.textContent = entry.label;
+          const ref = document.createElement("span");
+          ref.className = "refs";
+          ref.textContent = entry.ref;
+          item.append(label, ref);
+          if (entry.details?.length) {
+            const details = document.createElement("span");
+            details.className = "refs contents-details";
+            details.textContent = entry.details.join(" · ");
+            item.appendChild(details);
+          }
+          list.appendChild(item);
+        }
+        group.appendChild(list);
+        parent.appendChild(group);
+      }
+
+      function addTextReferencesGroup(parent, entries) {
+        if (!entries?.length) return;
+        const group = document.createElement("section");
+        group.className = "group";
+        const heading = document.createElement("h3");
+        heading.textContent = "Textual reference";
+        group.appendChild(heading);
+        const list = document.createElement("ul");
+        list.className = "entries";
+        for (const entry of entries) {
+          const item = document.createElement("li");
+          item.className = "entry";
           const title = document.createElement("span");
           title.className = "work";
           title.textContent = entry.label;
@@ -271,6 +357,35 @@
         }
         group.appendChild(list);
         parent.appendChild(group);
+      }
+
+      function applySubjectIndex(payload, subjectIndex) {
+        const profiles = new Map(payload.puranas.map(item => [item.id, item]));
+        for (const extra of subjectIndex.puranas || []) {
+          if (!profiles.has(extra.id)) {
+            payload.puranas.push(extra);
+            profiles.set(extra.id, extra);
+          }
+        }
+        for (const patch of subjectIndex.patches || []) {
+          const purana = profiles.get(patch.id);
+          const section = purana?.sections.find(item => item.id === patch.section);
+          if (!section) continue;
+          const current = section.chapters[patch.chapter] || {};
+          for (const [field, value] of Object.entries(patch.record || {})) {
+            if (!Array.isArray(value)) {
+              current[field] = value;
+              continue;
+            }
+            const entries = current[field] || (current[field] = []);
+            for (const entry of value) {
+              const key = JSON.stringify(entry);
+              if (!entries.some(existing => JSON.stringify(existing) === key)) entries.push(entry);
+            }
+          }
+          section.chapters[patch.chapter] = current;
+        }
+        return payload;
       }
 
       function showChapter(purana, section, chapter, record, tile, content) {
@@ -297,12 +412,17 @@
         detail.appendChild(title);
         addGroup(detail, "Quoted in", record.quoted, "quoted", section);
         addGroup(detail, "Parallel", record.parallel, "parallel");
+        addTextReferencesGroup(detail, record.textReferences);
         addContentsGroup(detail, record.contents);
+        addTaggedGroup(detail, "Commentary", record.commentaryCitations);
+        addTaggedGroup(detail, "Tīrtha / sacred places", record.topics?.filter(entry => entry.kind === "pilgrimage"));
+        addTaggedGroup(detail, "Bhāgavata-māhātmya", record.topics?.filter(entry => entry.kind === "mahatmya"));
+        addTaggedGroup(detail, "Subject", record.topics?.filter(entry => entry.kind === "subject"));
         addGroup(detail, "Unmatched", record.missing, "missing");
-        if (!record.quoted?.length && !record.parallel?.length && !record.contents?.length && !record.missing?.length) {
+        if (!record.quoted?.length && !record.parallel?.length && !record.textReferences?.length && !record.contents?.length && !record.commentaryCitations?.length && !record.topics?.length && !record.missing?.length) {
           const empty = document.createElement("p");
           empty.className = "no-entry";
-          empty.textContent = "No indexed reference for this chapter.";
+          empty.textContent = "No indexed citation or subject for this chapter.";
           detail.appendChild(empty);
         }
         content.appendChild(detail);
@@ -438,6 +558,9 @@
               const hasParallel = Boolean(record.parallel?.length);
               const hasMissing = Boolean(record.missing?.length);
               const hasContents = Boolean(record.contents?.length);
+              const hasPilgrimage = Boolean(record.topics?.some(entry => entry.kind === "pilgrimage"));
+              const hasMahatmya = Boolean(record.topics?.some(entry => entry.kind === "mahatmya"));
+              const hasSubject = Boolean(record.topics?.some(entry => entry.kind === "subject"));
               const tile = document.createElement("button");
               tile.type = "button";
               tile.className = "tile";
@@ -447,11 +570,18 @@
               else if (hasQuoted) tile.classList.add("quoted");
               else if (hasParallel) tile.classList.add("parallel");
               if (hasContents) tile.classList.add("contents");
+              if (hasPilgrimage) tile.classList.add("pilgrimage");
+              if (hasMahatmya) tile.classList.add("mahatmya");
+              if (hasSubject) tile.classList.add("subject");
               if (hasMissing) tile.classList.add("unmatched");
               const states = [
                 hasQuoted && "quoted elsewhere",
                 hasParallel && "Purāṇa parallel listed",
                 hasContents && "lists Purāṇic contents",
+                hasPilgrimage && "tīrtha or sacred-place material",
+                hasMahatmya && "Bhāgavata-māhātmya",
+                hasSubject && "subject note",
+                record.commentaryCitations?.length && "commentary cited",
                 hasMissing && "unmatched quotation",
               ].filter(Boolean);
               tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
@@ -476,13 +606,11 @@
         renderMaps(data.puranas, true);
       }
 
-      fetch("./data.json")
-        .then(response => {
-          if (!response.ok) throw new Error("Chapter data unavailable");
-          return response.json();
-        })
-        .then(payload => {
-          data = payload;
+      Promise.all([fetch("./data.json"), fetch("./subject-index.json")])
+        .then(async ([dataResponse, subjectResponse]) => {
+          if (!dataResponse.ok || !subjectResponse.ok) throw new Error("Chapter data unavailable");
+          const [payload, subjectIndex] = await Promise.all([dataResponse.json(), subjectResponse.json()]);
+          data = applySubjectIndex(payload, subjectIndex);
           const combinedOption = document.createElement("option");
           combinedOption.value = "all-combined";
           combinedOption.textContent = "All Purāṇas combined";
@@ -516,3 +644,4 @@
   </script>
 </body>
 </html>
+
