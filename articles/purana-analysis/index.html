@@ -503,7 +503,7 @@
               }
               const labels = {
                 quoted: "quoted",
-                bhashya: "commentary only",
+                bhashya: "bhāṣya only",
                 parallel: "parallel",
                 mention: "Purāṇa reference",
                 subject: "subject"
@@ -651,7 +651,6 @@
           entry.puranaId === puranaId && !["post-cutoff", "boundary"].includes(entry.status)
         );
         const dated = entries.filter(entry => entry.status === "within-cutoff");
-        const boundary = entries.filter(entry => entry.status === "boundary");
         const unresolved = entries.filter(entry => entry.status === "date-unverified");
         const verifiedCount = dated.length;
         commentaryCount.textContent = verifiedCount.toLocaleString();
