@@ -168,7 +168,6 @@
       <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
       <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya / chapter only</span>
       <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-      <span class="legend-item"><i class="legend-swatch" aria-hidden="true"></i>No indexed mark</span>
     </div>
         <main id="map" aria-live="polite"></main>
         <section class="commentary-panel" aria-labelledby="commentary-heading">
@@ -511,6 +510,8 @@
               const hasParallel = Boolean(record.parallel?.some(entry => entry.level !== "chapter"));
               const hasChapterRelation = Boolean(record.chapterRelations?.length || record.parallel?.some(entry => entry.level === "chapter"));
               const hasOther = Boolean(record.contents?.length || record.textReferences?.length || record.topics?.length || hasChapterRelation);
+              if (!hasQuoted && !hasBhashya && !hasParallel && !hasOther) continue;
+
               const tile = document.createElement("button");
               tile.type = "button";
               tile.className = "tile";
@@ -528,11 +529,12 @@
                 hasOther && "other indexed evidence"
               ].filter(Boolean);
               tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
-                chapterNumber(section, chapter) + (states.length ? ": " + states.join("; ") : ": no indexed mark"));
+                chapterNumber(section, chapter) + ": " + states.join("; "));
               tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter);
               tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
               cells.appendChild(tile);
             }
+            if (!cells.childElementCount) continue;
             content.appendChild(cells);
             row.append(label, content);
             map.appendChild(row);
@@ -686,7 +688,7 @@
         setActiveContents(purana.id);
         selectedCategory.textContent = categoryFor(purana);
         selectedName.textContent = purana.name;
-        selectedEvidence.textContent = evidenceCount(purana).toLocaleString() + " references";
+        selectedEvidence.textContent = evidenceCount(purana).toLocaleString() + " evidence records";
         renderMaps([purana]);
         renderCommentaries(purana.id);
       }
