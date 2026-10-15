@@ -158,13 +158,7 @@ function treatiseContentsHTML(group,englishOnly){
  '</ol></div>';
 }
 function breakLines(value){return esc(value).replace(/\r?\n/g,"<br/>")}
-function readerCoverageNote(data){
- if(data.englishOnly)return "";
- let note=data.wordGlossCoverage&&data.wordGlossCoverage.note;
- if(!note&&data.id==="panchadasi")note="Word-for-word glosses are available for Chapter 1 only; the source edition does not include separate glosses for Chapters 2–15.";
- if(!note&&data.translationAvailable===false)note="The available source transcription is in Sanskrit only; no English translation or separate word-for-word gloss is included.";
- return note?'<p class="shankara-reader-coverage" role="note">'+esc(note)+'</p>':"";
-}
+function readerCoverageNote(){return "";}
 function treatiseNoun(id){
  if(id==="panchadasi"||id==="mandukya-karika"||id==="naishkarmya-siddhi")return "chapter";
  if(id==="svsss")return "part";
@@ -276,15 +270,7 @@ function navHTML(id){
 }
 function bindScript(root){
  root.dataset.scriptMode="deva";
- root.querySelectorAll("[data-script]").forEach(btn=>btn.addEventListener("click",()=>{
-  const mode=btn.dataset.script;root.dataset.scriptMode=mode;
-  root.querySelectorAll("[data-script]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
-  root.querySelectorAll(".sa-text").forEach(el=>{
-   if(!el.dataset.deva)el.dataset.deva=el.textContent;
-   el.textContent=mode==="iast"?(el.dataset.iast||iast(el.dataset.deva)):el.dataset.deva;
-   el.lang=mode==="iast"?"sa-Latn":"sa-Deva";
-  });
- }));
+ root.querySelectorAll(".script-controls,.shankara-reader-coverage").forEach(node=>node.remove());
 }
 function selectedTreatiseSection(groups,search){
  const requested=Number(new URLSearchParams(search||"").get("section")||"1");
