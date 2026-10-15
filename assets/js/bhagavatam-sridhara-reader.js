@@ -261,6 +261,29 @@
     return entries;
   }
 
+  // The pinned English mirror splits source verse 2.9.11 across Texts 11 and 12.
+  // Merge those two halves, then align Texts 13–46 to source verses 2.9.12–2.9.45.
+  function alignCanto2EnglishEntries(entries, chapter) {
+    if (chapter !== 9) return entries;
+    const firstHalf = findEnglishRecord(entries, 11, 11);
+    const secondHalf = findEnglishRecord(entries, 12, 12);
+    const finalText = findEnglishRecord(entries, 46, 46);
+    if (!firstHalf || !secondHalf || !finalText || entries.length !== 46) {
+      throw new Error('Unexpected English source ranges for ŚB 2.9; source alignment was not applied.');
+    }
+    const merged = new Set([firstHalf, secondHalf]);
+    const aligned = entries
+      .filter((entry) => !merged.has(entry))
+      .map((entry) => entry.start >= 13 ? shiftEnglishRecord(entry, -1) : entry)
+      .concat(mergeEnglishRecords([firstHalf, secondHalf], 11, 11))
+      .sort((a, b) => a.start - b.start || a.end - b.end);
+    if (aligned.length !== 45 || aligned.some((entry, index) =>
+      entry.start !== index + 1 || entry.end !== index + 1)) {
+      throw new Error('ŚB 2.9 source alignment did not produce verses 1–45 exactly once.');
+    }
+    return aligned;
+  }
+
   function isCommentatorAttribution(text) {
     return /(?:Śrīdhara|Sridhara)(?:\s+Svāmī)?\s+(?:says|asks)\b|joint\s+[^.!?]{0,100}\bnote\s+says\b/i.test(String(text || ''));
   }
@@ -808,7 +831,7 @@
       const englishUrl = chapterEnglishUrl(manifest, config, chapter);
       const sridharaUrl = chapterSridharaUrl(manifest, config, chapter);
       const commentaryUrlValue = commentaryUrl(manifest);
-      const checkpointUrl = '/advaita/assets/data/bhagavatam-sridhara-checkpoints.json?v=20261003-direct-translation-2';
+      const checkpointUrl = '/advaita/assets/data/bhagavatam-sridhara-checkpoints.json?v=20261015-canto2-source-alignment-1';
       const requests = [fetchText(englishUrl)];
       if (sridharaUrl) {
         requests.push(config.sridhara_mode === 'local-cached' ? fetchJson(sridharaUrl) : fetchText(sridharaUrl));
@@ -829,6 +852,7 @@
           .sort((a, b) => a.start - b.start || a.end - b.end);
       }
       if (canto === 1) english.entries = alignCanto1EnglishEntries(english.entries, chapter);
+      if (canto === 2) english.entries = alignCanto2EnglishEntries(english.entries, chapter);
       const sridharaResult = sridharaUrl ? results[1] : null;
       const commentaryResult = commentaryUrlValue ? results[sridharaUrl ? 2 : 1] : null;
       const checkpointResult = results[sridharaUrl ? (commentaryUrlValue ? 3 : 2) : (commentaryUrlValue ? 2 : 1)];
