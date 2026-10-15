@@ -427,7 +427,7 @@ body.gita-page.vp-book-1 article.gita-verse .gita-no-commentary{
   }
 }
 
-/* Book 1: three vertically stacked Bhaviṣya-style controls. */
+/* Book 1: visible verse text with only the two commentary controls. */
 body.gita-page.vp-book-1 article.gita-verse .gita-controls{
   display:flex!important;
   flex-direction:column!important;
@@ -456,4 +456,25 @@ body.gita-page.vp-book-1 article.gita-verse .gita-translation-details .gita-dual
 }
 body.gita-page.vp-book-1 article.gita-verse .gita-translation-details .gita-dual-label:first-child{
   margin-top:0!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-transliteration{
+  display:block!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
+  font-size:18px!important;
+  line-height:1.55!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  text-align:center!important;
+  overflow-wrap:anywhere!important;
+}
+@media(max-width:700px){
+  body.gita-page.vp-book-1 article.gita-verse .gita-transliteration{
+    font-size:17px!important;
+    line-height:1.5!important;
+  }
 }
