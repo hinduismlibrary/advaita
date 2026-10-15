@@ -78,7 +78,7 @@
         if(obj.omit&&!v.sa)return '';
         const en=obj.en||'';
         const wfw=obj.wfw||obj.gloss||'';
-        const sa=v.sa||obj.sa||`[Sanskrit verse ${v.n} could not be isolated automatically from the source page.]`;
+        const sa=(config.preferEmbeddedSanskrit&&obj.sa)?obj.sa:(v.sa||obj.sa||`[Sanskrit verse ${v.n} could not be isolated automatically from the source page.]`);
         const iast=obj.iast||devToIast(sa);
         const note=obj.note?`<details><summary>Textual note</summary><div class="bp-detail">${esc(obj.note)}</div></details>`:'';
         return `<section class="bp-verse" id="bp-1-${config.chapter}-${v.n}"><h3>BP 1.${config.chapter}.${v.n}</h3><hr><div class="bp-sa" lang="sa">${br(sa)}</div><p class="bp-en">${esc(en||'Translation pending source check.')}</p><details><summary>Word-for-word</summary><div class="bp-detail">${esc(wfw||'Word-for-word gloss pending source check.')}</div></details><details><summary>Transliteration</summary><div class="bp-detail"><em>${br(iast)}</em></div></details>${note}</section>`;
