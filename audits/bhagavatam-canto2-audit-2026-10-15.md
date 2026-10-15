@@ -28,7 +28,7 @@ All ten pinned Śrīdhara source blob hashes match the chapter-complete checkpoi
 
 Across the raw English mirror blocks, IAST, synonyms and prose translation are present in 370/370. Devanāgarī is present in 369/370. The blank English-mirror Devanāgarī field at 2.8.8 is supplied by the reader override, which matches the pinned Śrīdhara source text. Chapter 2.9 is aligned in the reader before source-keyed commentary and WFW records are matched.
 
-Each chapter’s WFW records cover every source verse ID exactly once. All 2,616 pairs have non-empty Sanskrit and English values. The dataset source blob hashes match the pinned source hashes. Per-entry source_path values are chapter-relative to bhAgavatam/gauDIya-prastutiH; the top-level source paths for chapters 2.9 and 2.10 were corrected to include that repository root.
+Each chapter’s WFW records cover every source verse ID exactly once. All 2,616 pairs have non-empty Sanskrit and English values. The dataset source blob hashes match the pinned source hashes. All ten datasets now use the full canonical source path in both the top-level metadata and every WFW row; the shortened row paths and top-level paths in chapters 2.9 and 2.10 were corrected.
 
 ## Chapter 2.9 numbering correction
 
@@ -41,5 +41,5 @@ This source alignment is confirmed by the pinned Sanskrit structure and independ
 - Canto 2’s page now uses the current shared reader sizing styles and matching exact-layout script versions used by the updated Canto 1 and Canto 10 pages.
 - The Canto 2 reader now loads the source-alignment logic and a cache-busted checkpoint file.
 - Chapter 9’s raw English heading split is normalized before commentary, Śrīdhara Sanskrit and WFW data are attached.
-- The chapter 9 and 10 WFW JSON files now use the full canonical source path in their top-level metadata, consistent with chapters 1–8.
+- The chapter 9 and 10 WFW JSON files now use the same full canonical source path in top-level metadata and each row, consistent with chapters 1–8.
 - This audit fixes data alignment, metadata, reader assets and coverage logging. It does not newly certify the wording of every inherited English prose translation or each of the 2,616 glosses as a fresh independent lexical translation.
