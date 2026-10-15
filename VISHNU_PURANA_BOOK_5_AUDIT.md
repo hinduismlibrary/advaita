@@ -6,14 +6,14 @@ Source snapshot: [vishvAsa/purANam_vaiShNavam commit fc117aa4514dfd4e4840037aeb3
 
 ## Scope and coverage
 
-The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 701 cards (4,903 lexical rows); 816 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
+The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 722 cards (5149 lexical rows); 795 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
 
 The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 cards have no Śrīdhara excerpt displayed from the pinned source material; that absence does not establish that no commentary survives in other witnesses.
 
 | Chapter | Verse cards | With WFW panel | Without WFW panel | Existing lexical rows | Śrīdhara Sanskrit excerpts |
 |---:|---:|---:|---:|---:|---:|
 | 1 | 87 | 0 | 87 | 0 | 54 |
-| 2 | 21 | 0 | 21 | 0 | 10 |
+| 2 | 21 | 21 | 0 | 246 | 10 |
 | 3 | 29 | 0 | 29 | 0 | 18 |
 | 4 | 17 | 17 | 0 | 222 | 9 |
 | 5 | 23 | 0 | 23 | 0 | 10 |
@@ -89,3 +89,8 @@ Added strict one-word rows to all 17 Book 5, Chapter 4 verse cards (222 rows). I
 ## 2026-10-15 follow-up — Chapter 8 word-for-word panels
 
 Added one-word Sanskrit, IAST, and direct gloss rows to all 13 Book 5, Chapter 8 verses (161 rows). Clear word boundaries were taken from the verse text and compounds were kept as single lexical units. The audit now records 701/1,517 cards with a panel; 816 cards still lack one. This is a coverage update, not a claim of full-book completion.
+
+
+## 2026-10-15 follow-up — Chapter 2 word-for-word panels
+
+Added one-word Sanskrit, IAST, and direct gloss rows to all 21 Book 5, Chapter 2 verse cards (246 rows). IAST was generated from the padaccheda forms. The displayed reading in 5.2.20 repeats *svadhā* where the numbered and Śrīdhara verse witnesses read *sudhā*; the main witness reading is preserved in the panel and this variant remains logged for editorial review. The audit now records 722/1,517 cards with panels and 795 cards still without one.
