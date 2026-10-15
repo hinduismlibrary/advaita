@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f8f8f4">
-  <meta name="description" content="A chapter heat map of Purāṇic citations and exact textual parallels.">
+  <meta name="description" content="A chapter heat map of Purāṇic citations and inter-Purāṇa parallels.">
   <title>Purāṇa Analysis</title>
   <style>
     :root {
@@ -83,7 +83,7 @@
     .analysis-row { border-top: 1px solid var(--ink); border-bottom: 0; padding-top: 8px; padding-bottom: 8px; }
     .analysis-title { margin: 0; padding-top: 3px; color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
     .analysis-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 16px; margin: 0; }
-    .analysis-item { display: flex; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; gap: 3px; min-height: 65px; padding: 9px 0 8px; border-bottom: 1px solid var(--rule); }
+    .analysis-item { display: flex; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; gap: 2px; min-height: 54px; padding: 6px 0 5px; border-bottom: 1px solid var(--rule); }
     .analysis-item dt { color: var(--muted); font-size: 9px; line-height: 1.35; }
     .analysis-item dd { margin: 0; color: var(--ink); font: 400 clamp(19px, 2.1vw, 23px)/1.05 var(--serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
     @media (max-width: 760px) {
@@ -162,11 +162,10 @@
           } else if (type === "parallel") {
             const pair = document.createElement("span");
             pair.className = "pair";
-            pair.append(document.createTextNode(entry.left));
-            const arrow = document.createElement("span");
-            arrow.className = "arrow";
-            arrow.textContent = "↔";
-            pair.append(arrow, document.createTextNode(entry.right));
+            const refs = Array.isArray(entry.members)
+              ? entry.members
+              : [entry.left, entry.right].filter(Boolean);
+            pair.textContent = refs.join(" ↔ ");
             item.appendChild(pair);
             if (entry.note) {
               const note = document.createElement("span");
@@ -223,7 +222,7 @@
         if (!record.quoted?.length && !record.parallel?.length && !record.missing?.length) {
           const empty = document.createElement("p");
           empty.className = "no-entry";
-          empty.textContent = "No citation listed for this chapter.";
+          empty.textContent = "No indexed reference for this chapter.";
           detail.appendChild(empty);
         }
         content.appendChild(detail);
@@ -236,6 +235,7 @@
         let quotedChapters = 0;
         let parallelChapters = 0;
         let emptySectionChapters = 0;
+        let parallelOnlyChapters = 0;
         for (const purana of puranas) {
           for (const section of purana.sections) {
             total += section.last;
@@ -247,12 +247,12 @@
               const hasNote = Boolean(record.missing?.length);
               if (hasQuoted) quotedChapters += 1;
               if (hasParallel) parallelChapters += 1;
+              if (hasParallel && !hasQuoted) parallelOnlyChapters += 1;
               if (hasQuoted || hasParallel || hasNote) sectionHasReferences = true;
             }
             if (!sectionHasReferences) emptySectionChapters += section.last;
           }
         }
-        const populatedChapterCount = total - emptySectionChapters;
         const percent = (value, denominator) => denominator
           ? (100 * value / denominator).toFixed(1) + "%"
           : "—";
@@ -267,12 +267,12 @@
         metrics.className = "analysis-grid";
         const values = [
           ["Total chapters", total.toLocaleString("en-GB")],
-          ["Chapters quoted elsewhere", quotedChapters.toLocaleString("en-GB")],
-          ["Chapters with Purāṇa parallels", parallelChapters.toLocaleString("en-GB")],
-          ["Quoted (%)", percent(quotedChapters, total)],
-          ["Found in parallel (%)", percent(parallelChapters, total)],
-          ["Quoted (%) · empty sections removed", percent(quotedChapters, populatedChapterCount)],
-          ["Parallel (%) · empty sections removed", percent(parallelChapters, populatedChapterCount)],
+          ["Total chapters quoted", quotedChapters.toLocaleString("en-GB")],
+          ["Total chapters found parallel", parallelChapters.toLocaleString("en-GB")],
+          ["% quoted", percent(quotedChapters, total)],
+          ["% found elsewhere", percent(parallelChapters, total)],
+          ["% quoted · empty sections removed", percent(quotedChapters, total - emptySectionChapters)],
+          ["% quoted · parallel-only chapters removed", percent(quotedChapters, total - parallelOnlyChapters)],
         ];
         for (const [label, value] of values) {
           const item = document.createElement("div");
@@ -317,8 +317,8 @@
             else if (hasQuoted) tile.classList.add("quoted");
             else if (hasParallel) tile.classList.add("parallel");
             if (hasMissing) tile.classList.add("unmatched");
-            const states = [hasQuoted && "quoted in another work", hasParallel && "exact parallel", hasMissing && "unmatched line"].filter(Boolean);
-            tile.setAttribute("aria-label", `${purana.name} ${chapterNumber(section, chapter)}${states.length ? ": " + states.join("; ") : ": no citation listed"}`);
+            const states = [hasQuoted && "quoted in another work", hasParallel && "Purāṇa parallel listed", hasMissing && "unmatched line"].filter(Boolean);
+            tile.setAttribute("aria-label", `${purana.name} ${chapterNumber(section, chapter)}${states.length ? ": " + states.join("; ") : ": no reference listed"}`);
             tile.title = `${chapterNumber(section, chapter)}`;
             tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
             cells.appendChild(tile);
