@@ -427,13 +427,58 @@ body.gita-page.vp-book-1 article.gita-verse .gita-no-commentary{
   }
 }
 
-/* Book 1: visible verse text with only the two commentary controls. */
+
+/* Book 1 verse display: only the Devanagari śloka is bold; translations stay visible. */
+body.gita-page.vp-book-1 article.gita-verse .gita-sanskrit,
+body.gita-page.vp-book-1 article.gita-verse .gita-translation,
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation,
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation *,
+body.gita-page.vp-book-1 article.gita-verse .gita-no-commentary{
+  color:#3c362e!important;
+  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
+  font-size:18px!important;
+  line-height:1.55!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-sanskrit{
+  font-weight:700!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-translation{
+  font-weight:400!important;
+  text-align:center!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 16px!important;
+  font-weight:400!important;
+  text-align:left!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation *,
+body.gita-page.vp-book-1 article.gita-verse .gita-no-commentary{
+  font-weight:400!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-label{
+  margin:0 0 5px!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-body p{
+  margin:0 0 12px!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-no-commentary{
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 16px!important;
+}
 body.gita-page.vp-book-1 article.gita-verse .gita-controls{
   display:flex!important;
   flex-direction:column!important;
   align-items:flex-start!important;
   justify-content:flex-start!important;
   gap:8px!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 18px!important;
+  padding:0!important;
 }
 body.gita-page.vp-book-1 article.gita-verse .gita-controls>details.gita-details{
   display:block!important;
@@ -442,39 +487,42 @@ body.gita-page.vp-book-1 article.gita-verse .gita-controls>details.gita-details{
   width:max-content!important;
   max-width:100%!important;
   margin:0!important;
+  padding:0!important;
 }
 body.gita-page.vp-book-1 article.gita-verse .gita-controls>details.gita-details>summary{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
   margin:0!important;
+  font-family:Merriweather,Georgia,"Times New Roman",serif!important;
+  font-size:12px!important;
+  line-height:1.15!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-controls details.gita-details>.gita-reveal,
+body.gita-page.vp-book-1 article.gita-verse .gita-controls details.gita-details>.gita-reveal *{
+  color:#3c362e!important;
+  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+  font-weight:400!important;
 }
 body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-wfw-content{
   margin:14px 0 0!important;
   padding:10px 0 0!important;
   border-top:1px solid rgba(81,74,67,.2)!important;
 }
-body.gita-page.vp-book-1 article.gita-verse .gita-translation-details .gita-dual-label{
-  margin:12px 0 5px!important;
-}
-body.gita-page.vp-book-1 article.gita-verse .gita-translation-details .gita-dual-label:first-child{
-  margin-top:0!important;
-}
-body.gita-page.vp-book-1 article.gita-verse .gita-transliteration{
-  display:block!important;
-  box-sizing:border-box!important;
-  width:100%!important;
-  max-width:840px!important;
-  margin:0 auto 14px!important;
-  color:#3c362e!important;
-  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
-  font-size:18px!important;
-  line-height:1.55!important;
-  font-weight:400!important;
-  font-style:normal!important;
-  text-align:center!important;
-  overflow-wrap:anywhere!important;
-}
 @media(max-width:700px){
-  body.gita-page.vp-book-1 article.gita-verse .gita-transliteration{
+  body.gita-page.vp-book-1 article.gita-verse .gita-sanskrit,
+  body.gita-page.vp-book-1 article.gita-verse .gita-translation,
+  body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation,
+  body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation *,
+  body.gita-page.vp-book-1 article.gita-verse .gita-no-commentary{
     font-size:17px!important;
     line-height:1.5!important;
+  }
+  body.gita-page.vp-book-1 article.gita-verse .gita-controls details.gita-details>.gita-reveal,
+  body.gita-page.vp-book-1 article.gita-verse .gita-controls details.gita-details>.gita-reveal *{
+    font-size:14.5px!important;
+    line-height:1.45!important;
   }
 }
