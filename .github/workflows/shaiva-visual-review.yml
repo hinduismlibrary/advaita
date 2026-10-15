@@ -1,11 +1,20 @@
-name: Review Shaiva and Varna rendered layouts
+name: Review all six article Contents layouts
 on:
   push:
+    branches:
+      - main
     paths:
       - .github/workflows/shaiva-visual-review.yml
+      - .github/workflows/repair-other-document-pages.yml
+      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
       - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
       - articles/a-shashtric-lens-of-varna-part-one/index.html
+      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - articles/hinduism-on-women/index.html
+      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
       - assets/js/article-reader-paged.js
+      - assets/js/shaiva-complete-reader.js
       - assets/css/document-paged.css
       - assets/css/varna-vicara-paged.css
   workflow_dispatch:
@@ -22,13 +31,13 @@ jobs:
         run: |
           python3 -m pip install --user --quiet playwright
           if ! command -v google-chrome >/dev/null && ! command -v chromium >/dev/null; then python3 -m playwright install chromium; fi
-      - name: Compare deployed Śaiva and Varṇa designs and every section
+      - name: Compare deployed reader layouts and Contents across all six articles
         env:
           PAGE_REVISION: ${{ github.event.workflow_run.head_sha || github.sha }}
         run: |
           mkdir -p /tmp/shaiva-qa
           python3 - <<'PY'
-          import json,os,shutil,time
+          import json,os,re,shutil,time
           from pathlib import Path
           from urllib.parse import quote
           from playwright.sync_api import sync_playwright
@@ -53,6 +62,24 @@ jobs:
                 return response
               time.sleep(5)
             raise AssertionError('The published article reader did not finish deploying.')
+
+          def wait_for_contents_assets(page,url,reader_script):
+            deadline=time.monotonic()+120
+            response=None
+            while time.monotonic()<deadline:
+              response=page.goto(url,wait_until='domcontentloaded',timeout=45000)
+              page.wait_for_timeout(1000)
+              ready=page.evaluate("""reader => {
+                const css=[...document.querySelectorAll('link[rel="stylesheet"]')]
+                  .some(link=>link.href.includes('document-paged.css?v=20261016-contents-2'));
+                const js=[...document.querySelectorAll('script[src]')]
+                  .some(script=>script.src.includes(reader+'?v=20261016-contents-2'));
+                return css&&js&&document.body.classList.contains('document-paged-page');
+              }""",reader_script)
+              if response and response.status==200 and ready:
+                return response
+              time.sleep(5)
+            raise AssertionError('The new Contents assets have not finished deploying.')
           
           def style_of(page):
             return page.evaluate("""() => {
@@ -104,6 +131,78 @@ jobs:
             chrome=shutil.which('google-chrome') or shutil.which('chromium')
             browser=playwright.chromium.launch(headless=True,executable_path=chrome) if chrome else playwright.chromium.launch(headless=True)
             records=[]
+            contents_cases=[
+              ('agamas','a-case-for-the-scriptural-validity-of-the-agamas','.side-toc .toc',True),
+              ('shaiva','a-shaiva-lens-on-shiva-as-the-supreme-deity','#shaiva-desktop-toc',False),
+              ('varna','a-shashtric-lens-of-varna-part-one','.side-toc .toc',False),
+              ('vaishnava','a-vaishnava-lens-on-vishnu-as-the-supreme-deity','.side-toc .toc',True),
+              ('women','hinduism-on-women','.side-toc .toc',True),
+              ('meat','meat-eating-in-hinduism-through-the-lens-of-shastra','.side-toc .toc',True),
+            ]
+            toc_reference=None
+            source_reference=None
+            for label,slug,toc_selector,has_bibliography in contents_cases:
+              content_page=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
+              content_errors=[]
+              content_page.on('pageerror',lambda error,bucket=content_errors:bucket.append(str(error)))
+              content_base=root+slug+'/'
+              reader_script='shaiva-complete-reader.js' if label=='shaiva' else 'article-reader-paged.js'
+              content_response=wait_for_contents_assets(content_page,revision_url(content_base),reader_script)
+              contents=content_page.evaluate("""selector => {
+                const nav=document.querySelector(selector);
+                if(!nav)return null;
+                const links=[...nav.querySelectorAll('a[data-section]:not([data-subsection])')]
+                  .map(a=>({id:a.dataset.section,title:a.textContent.trim(),href:a.href}));
+                const subsections=[...nav.querySelectorAll('a[data-subsection]')]
+                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href}));
+                const first=nav.querySelector('a[data-subsection]');
+                const style=first?getComputedStyle(first):null;
+                return {
+                  links,subsections,
+                  tocStyle:style?{
+                    fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
+                    whiteSpace:style.whiteSpace,textOverflow:style.textOverflow,overflowX:style.overflowX,color:style.color
+                  }:null
+                };
+              }""",toc_selector)
+              assert content_response and content_response.status==200, f'{label}: article did not load'
+              assert contents, f'{label}: Contents navigation did not load'
+              assert len(contents['links'])>=3, f'{label}: expected the main article sections, got {len(contents["links"])}'
+              assert len(contents['subsections'])>=10, f'{label}: expected at least 10 nested contents links, got {len(contents["subsections"])}'
+              page_ids=[item['id'] for item in contents['links']]
+              subsection_ids=[item['id'] for item in contents['subsections']]
+              assert len(set(page_ids))==len(page_ids), f'{label}: duplicate section links'
+              assert len(set(subsection_ids))==len(subsection_ids), f'{label}: duplicate subsection links'
+              source_pages=[item for item in contents['links'] if re.search(r'bibliography|sources?|references?|works cited',item['title'],re.I)]
+              assert len(source_pages)<=1, f'{label}: source material is split into multiple reader pages: {[x["title"] for x in source_pages]}'
+              if has_bibliography:
+                assert len(source_pages)==1, f'{label}: missing single Bibliography/Sources page'
+              style=contents['tocStyle']
+              assert style and style['whiteSpace']=='nowrap' and style['textOverflow']=='ellipsis' and style['overflowX']=='hidden', f'{label}: subsection links are not compact: {style}'
+              signature={key:style[key] for key in ['fontFamily','fontSize','lineHeight','whiteSpace','textOverflow','overflowX','color']}
+              if toc_reference is None:toc_reference=signature
+              else:assert signature==toc_reference, f'{label}: Contents link style differs: {signature} != {toc_reference}'
+              if source_pages:
+                source_response=content_page.goto(revision_url(source_pages[0]['href']),wait_until='domcontentloaded',timeout=45000)
+                content_page.wait_for_function("document.querySelector('#source-content')?.classList.contains('document-reference-page')")
+                source_style=content_page.evaluate("""() => {
+                  const root=document.querySelector('#source-content');
+                  const heading=root?.querySelector('.women-bibliography-group>p:first-child, h3.reader-subheading');
+                  if(!root||!heading)return null;
+                  const style=getComputedStyle(heading);
+                  return {fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,color:style.color};
+                }""")
+                assert source_response and source_response.status==200 and source_style, f'{label}: Bibliography/Sources page did not use the shared source layout'
+                if source_reference is None:source_reference=source_style
+                else:assert source_style==source_reference, f'{label}: Bibliography/Sources styling differs: {source_style} != {source_reference}'
+              data={
+                'site':label,'http':content_response.status,'mainPages':len(contents['links']),
+                'subsections':len(contents['subsections']),'sourcePages':len(source_pages),'errors':content_errors
+              }
+              print(json.dumps(data,ensure_ascii=False),flush=True)
+              assert not content_errors, f'{label}: browser errors: {content_errors}'
+              content_page.close()
+
             varna_base=root+'varna-vicara/'
             shaiva_base=root+'a-shaiva-lens-on-shiva-as-the-supreme-deity/'
 
@@ -180,7 +279,7 @@ jobs:
             for index,item in enumerate(items):
               section=item['id']
               widths=[390]
-              if section in samples:
+              if section in page_samples:
                 widths=[320,390,1365]
               for width in widths:
                 shot=None

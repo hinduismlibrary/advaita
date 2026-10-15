@@ -104,6 +104,7 @@ if(chapterHeads.length){
     const group={title:headingLabel(text(heading)),heading,entries:[]};
     const isSourceSection=isSourceHeading(text(heading));
     const isObjectionSection=isObjectionsHeading(text(heading));
+    const sourceChildren=children.filter(child=>isSourceHeading(text(child)));
     const splitChildren=children.length&&!isSourceSection&&!isObjectionSection&&
       isStorySection(text(heading));
     if(splitChildren){
@@ -113,6 +114,23 @@ if(chapterHeads.length){
         const to=j+1<children.length?body.indexOf(children[j+1]):body.length;
         group.entries.push({heading:child,title:headingLabel(text(child)),
           nodes:[...(j===0?body.slice(0,from):[]),...body.slice(from+1,to)]});
+      }
+    }else if(sourceChildren.length===1){
+      const sourceHeading=sourceChildren[0];
+      const sourceIndex=children.indexOf(sourceHeading);
+      const from=body.indexOf(sourceHeading);
+      const nextChild=children[sourceIndex+1];
+      const to=nextChild?body.indexOf(nextChild):body.length;
+      const parentNodes=body.slice(0,from);
+      if(parentNodes.some(hasMaterial))group.entries.push({heading,title:group.title,nodes:parentNodes});
+      group.entries.push({heading:sourceHeading,title:headingLabel(text(sourceHeading)),
+        nodes:body.slice(from+1,to)});
+      for(let j=sourceIndex+1;j<children.length;j++){
+        const child=children[j];
+        const childFrom=body.indexOf(child);
+        const childTo=j+1<children.length?body.indexOf(children[j+1]):body.length;
+        group.entries.push({heading:child,title:headingLabel(text(child)),
+          nodes:body.slice(childFrom+1,childTo)});
       }
     }else group.entries.push({heading,title:group.title,nodes:body});
     groups.push(group);
@@ -159,8 +177,9 @@ segments.forEach(p=>{
   put(p.heading?.id);put(p.id);
   p.nodes.forEach(n=>{
     const headings=[];
-    if(n.matches?.('h3'))headings.push(n);
-    n.querySelectorAll?.('h3').forEach(h=>headings.push(h));
+    const headingSelector='h3,h4,h5';
+    if(n.matches?.(headingSelector))headings.push(n);
+    n.querySelectorAll?.(headingSelector).forEach(h=>headings.push(h));
     for(const heading of headings){
       if(!heading.id||idMap.has(heading.id))heading.id=idFor(p.id+'-'+slug(text(heading)));
       else seen.add(heading.id);
@@ -198,19 +217,73 @@ const reader=el('div','document-content');reader.id='source-content';
 const pager=el('nav','page-nav'),prev=el('a','prev'),next=el('a','next');
 pager.setAttribute('aria-label','Article sections');pager.append(prev,next);
 article.append(mobile,context,reader,pager);grid.append(side,article);main.append(header,grid);
+function tocLabel(raw){
+  const label=String(raw??'').replace(/\s+/g,' ').trim();
+  const numberedObjection=label.match(/^objection\s+([ivxlcdm]+|\d+)\s*:/i);
+  if(numberedObjection)return 'Objection '+numberedObjection[1].toUpperCase();
+  return label;
+}
 function pageSubheadings(page){
   const headings=[];
+  const selector='h3,h4,h5';
   for(const node of page.nodes){
-    if(node.matches?.('h3'))headings.push(node);
-    node.querySelectorAll?.('h3').forEach(heading=>headings.push(heading));
+    if(node.matches?.(selector))headings.push(node);
+    node.querySelectorAll?.(selector).forEach(heading=>headings.push(heading));
   }
+  const rootLevel=Number(page.heading?.tagName?.slice(1))||2;
+  const root={level:rootLevel,children:[]};
+  const stack=[root];
   const seenHeadings=new Set();
-  return headings.filter(heading=>{
+  let skippedAnswerLevel=null;
+  for(const heading of headings){
+    const level=Number(heading.tagName?.slice(1))||3;
+    if(skippedAnswerLevel!==null){
+      if(level>skippedAnswerLevel)continue;
+      skippedAnswerLevel=null;
+    }
+    while(stack.length>1&&stack[stack.length-1].level>=level)stack.pop();
     const label=text(heading);
-    if(!heading.id||!label||/^answer\s*:/i.test(label)||seenHeadings.has(heading.id))return false;
+    if(!heading.id||!label||seenHeadings.has(heading.id))continue;
     seenHeadings.add(heading.id);
-    return true;
-  });
+    if(/^answer\s*:/i.test(label)){
+      skippedAnswerLevel=level;
+      continue;
+    }
+    if(level<=rootLevel)continue;
+    const item={heading,label:tocLabel(label),fullLabel:label,level,children:[]};
+    stack[stack.length-1].children.push(item);
+    stack.push({level,children:item.children});
+  }
+  return root.children;
+}
+function containsSubheading(items,id){
+  return items.some(item=>item.heading.id===id||containsSubheading(item.children,id));
+}
+function buildSubheadingList(items,page){
+  const nested=el('div','toc-subitems');
+  for(const item of items){
+    const sublink=el('a',`toc-subitem toc-level-${item.level}`,item.label);
+    sublink.dataset.section=page.id;
+    sublink.dataset.subsection=item.heading.id;
+    sublink.href=href(page)+'#'+encodeURIComponent(item.heading.id);
+    sublink.title=item.fullLabel;
+    sublink.setAttribute('aria-label',item.fullLabel);
+    nested.append(sublink);
+    if(item.children.length){
+      const childList=buildSubheadingList(item.children,page);
+      childList.classList.add('toc-subitems-nested');
+      if(item.children.length>5){
+        const group=el('details','toc-subgroup toc-subgroup-nested');
+        const summary=el('summary',null,`Subsections (${item.children.length})`);
+        let hash='';
+        try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
+        if(containsSubheading(item.children,hash))group.open=true;
+        group.append(summary,childList);
+        nested.append(group);
+      }else nested.append(childList);
+    }
+  }
+  return nested;
 }
 function appendPageEntry(container,page,linkClass){
   const link=el('a',linkClass,page.title);
@@ -219,21 +292,13 @@ function appendPageEntry(container,page,linkClass){
   container.append(link);
   const headings=pageSubheadings(page);
   if(!headings.length)return;
-  const nested=el('div','toc-subitems');
-  for(const heading of headings){
-    const label=text(heading);
-    const sublink=el('a','toc-subitem',label);
-    sublink.dataset.section=page.id;
-    sublink.dataset.subsection=heading.id;
-    sublink.href=href(page)+'#'+encodeURIComponent(heading.id);
-    sublink.title=label;
-    sublink.setAttribute('aria-label',label);
-    nested.append(sublink);
-  }
-  if(headings.length>6){
+  const nested=buildSubheadingList(headings,page);
+  if(headings.length>5){
     const group=el('details','toc-subgroup');
     const summary=el('summary',null,`Sections (${headings.length})`);
-    if(headings.some(heading=>heading.id===location.hash.slice(1)))group.open=true;
+    let hash='';
+    try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
+    if(containsSubheading(headings,hash))group.open=true;
     group.append(summary,nested);
     container.append(group);
   }else container.append(nested);
@@ -470,6 +535,7 @@ function render(index){
   styleArticleQuotes(frag);
   normalizeCitationOrder(frag);
   reader.replaceChildren(frag);
+  reader.classList.toggle('document-reference-page',isSourceHeading(page.title));
   for(const d of reader.querySelectorAll('details.sanskrit-reveal')){
     const summary=d.querySelector(':scope>summary');if(!summary)continue;
     const sync=()=>summary.textContent=d.open?'Hide Sanskrit':'Show Sanskrit';
