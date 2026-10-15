@@ -100,13 +100,26 @@ function contentsHTML(units,id){
   if(!groups.has(key))groups.set(key,[]);
   groups.get(key).push({unit,index});
  });
- return [...groups.entries()].map(([key,items])=>{
+ const makeLinks=(items,groupIndex)=>{
+  if(items.length<=20)return items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(index+1)))+'</a></li>').join("");
+  const size=items.length>200?50:items.length>100?25:10;
+  const ranges=[];
+  for(let i=0;i<items.length;i+=size){
+   const part=items.slice(i,i+size),first=part[0],last=part[part.length-1];
+   const start=first.unit.number||String(first.index+1),end=last.unit.number||String(last.index+1);
+   const type=id==="jivanmukti-viveka"?"Pages":(first.unit.label&&/^Page/i.test(first.unit.label)?"Pages":"Verses");
+   ranges.push('<li><a href="#'+esc(first.unit.id)+'">'+esc(type+" "+start+"–"+end)+'</a></li>');
+  }
+  return ranges.join("");
+ };
+ return '<ol>'+[...groups.entries()].map(([key,items],groupIndex)=>{
   const chapter=key==="all"?null:Number(key),first=items[0]?.unit;
   const label=chapter?(first?.sectionTitle||(id==="panchadasi"&&PANCHADASI_CHAPTERS[chapter]?"Chapter "+chapter+": "+PANCHADASI_CHAPTERS[chapter]:id==="svsss"&&SVSSS_SECTIONS[chapter]?SVSSS_SECTIONS[chapter]:id==="mandukya-karika"&&MANDUKYA_CHAPTERS[chapter]?"Chapter "+chapter+": "+MANDUKYA_CHAPTERS[chapter]:"Chapter "+chapter)):(id==="jivanmukti-viveka"?"Pages ("+items.length+")":"Verses ("+items.length+")");
-  return '<details class="shankara-chapter"><summary>'+esc(label)+'</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(index+1)))+'</a></li>').join("")+'</ol></details>';
- }).join("");
+  if(chapter&&items.length>20)return '<li><a href="#'+esc(first.id)+'">'+esc(label)+'</a></li>';
+  if(chapter)return '<li><a href="#'+esc(first.id)+'">'+esc(label)+'</a></li>';
+  return makeLinks(items,groupIndex);
+ }).join("")+'</ol>';
 }
-
 const TREATISE_READERS=new Set(["upadesha-sahasri","vedantasara","naishkarmya-siddhi","jivanmukti-viveka","brahma-siddhi","panchadasi","svsss","mandukya-karika"]);
 function jivanGroup(unit){
  const match=String(unit.number||unit.label||"").match(/(\d+)/),page=match?Number(match[1]):0;
@@ -153,11 +166,9 @@ function treatiseGroups(units,id){
 }
 function treatiseContentsHTML(groups){
  return '<nav class="gita-contents treatise-contents" aria-label="Contents"><h2>Contents</h2><ol class="treatise-chapter-list">'+groups.map(group=>{
-  const items=group.items||[];
-  return '<li class="treatise-chapter-item"><a class="treatise-chapter-link" href="#'+esc(group.anchor)+'">'+esc(group.title)+'</a><details class="shankara-toc-details"><summary>'+items.length+' entries</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||unit.number||("Entry "+(index+1)))+'</a></li>').join("")+'</ol></details></li>';
+  return '<li class="treatise-chapter-item"><a class="treatise-chapter-link" href="#'+esc(group.anchor)+'">'+esc(group.title)+'</a></li>';
  }).join("")+'</ol></nav>';
-}
-function treatiseUnitHTML(unit,index,englishOnly){
+}function treatiseUnitHTML(unit,index,englishOnly){
  const label=unit.label||("Passage "+(index+1)),number=unit.number||String(index+1);
  if(englishOnly){
   const paragraphs=String(unit.translation||"").split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\r?\n/g," "))+'</p>').join("");
@@ -275,7 +286,7 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-uniform-20261016a";
+const READER_DATA_VERSION="reader-contents-20261016b";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
  if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
