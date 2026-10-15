@@ -245,21 +245,32 @@
 }
 
 
-/* Book 1: consistent typography and Śrīdhara translation controls. */
+/* Book 1: match Brāhmaparvan reader controls and unify verse/commentary text. */
 .gita-page.vp-book-1 .gita-sanskrit,
 .gita-page.vp-book-1 .gita-translation,
 .gita-page.vp-book-1 .gita-commentary,
 .gita-page.vp-book-1 .gita-commentary p{
   color:#3c362e!important;
-  font-family:"Noto Serif","Noto Serif Devanagari",Georgia,serif!important;
+  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
   font-size:16px!important;
   line-height:1.55!important;
   font-weight:400!important;
 }
-.gita-page.vp-book-1 .gita-translation{
-  margin:0 auto 12px!important;
+.gita-page.vp-book-1 .gita-sanskrit{
+  max-width:840px!important;
+  margin:0 auto 14px!important;
   text-align:center!important;
 }
+.gita-page.vp-book-1 .gita-translation{
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  text-align:center!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.gita-page.vp-book-1 .gita-translation:before{content:none!important;display:none!important}
 .gita-page.vp-book-1 .gita-commentary{
   display:block!important;
   box-sizing:border-box!important;
@@ -270,12 +281,52 @@
   text-align:left!important;
 }
 .gita-page.vp-book-1 .gita-commentary p{margin:0 0 12px!important}
-.gita-page.vp-book-1 .gita-details summary{
-  color:#3c362e!important;
-  font-family:"Noto Serif","Noto Serif Devanagari",Georgia,serif!important;
-  font-size:13px!important;
-  line-height:1.25!important;
+.gita-page.vp-book-1 .gita-controls{
+  display:block!important;
+  max-width:840px!important;
+  margin:0 auto!important;
+  padding:0!important;
+}
+.gita-page.vp-book-1 .gita-details,
+.gita-page.vp-book-1 .gita-details[open]{
+  display:block!important;
+  width:auto!important;
+  max-width:840px!important;
+  margin:0 auto 8px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.gita-page.vp-book-1 .gita-details summary,
+.gita-page.vp-book-1 .gita-details[open] summary{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  min-height:0!important;
+  margin:0!important;
+  cursor:pointer!important;
+  border:1px solid #9bc5c7!important;
+  border-radius:999px!important;
+  padding:5px 13px!important;
+  color:#2f7f82!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  font-family:Merriweather,Georgia,"Times New Roman",serif!important;
+  font-size:14px!important;
+  line-height:1.15!important;
   font-weight:600!important;
+  text-decoration:none!important;
+}
+.gita-page.vp-book-1 .gita-details summary::-webkit-details-marker{display:none!important}
+.gita-page.vp-book-1 .gita-details:not([open])>.gita-reveal{display:none!important}
+.gita-page.vp-book-1 .gita-details[open]>.gita-reveal{
+  display:block!important;
+  margin:8px 0 12px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
 }
 .gita-page.vp-book-1 .gita-details>.gita-reveal,
 .gita-page.vp-book-1 .gita-details>.gita-reveal p,
@@ -287,7 +338,7 @@
 .gita-page.vp-book-1 .gita-details>.gita-reveal .gita-dual-label,
 .gita-page.vp-book-1 .gita-details>.gita-reveal .wfw-map{
   color:#3c362e!important;
-  font-family:"Noto Serif","Noto Serif Devanagari",Georgia,serif!important;
+  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
   font-size:13.5px!important;
   line-height:1.5!important;
   font-weight:400!important;
@@ -301,9 +352,7 @@
   max-width:840px!important;
   margin:8px auto 18px!important;
 }
-.gita-page.vp-book-1 .gita-commentary-details>.gita-reveal{
-  margin:7px 0 12px!important;
-}
+.gita-page.vp-book-1 .gita-commentary-details>.gita-reveal{margin:8px 0 12px!important}
 @media(max-width:700px){
   .gita-page.vp-book-1 .gita-sanskrit,
   .gita-page.vp-book-1 .gita-translation,
