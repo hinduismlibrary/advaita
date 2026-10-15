@@ -417,3 +417,36 @@
     line-height:1.68;
   }
 }
+
+
+/* Keep the printed page available inside the same Sanskrit reveal. */
+.document-paged-page.women-reader .document-content .women-source-facsimile{
+  margin:12px 0 0;
+  padding-top:12px;
+  border-top:1px solid #e5ddd2;
+}
+.document-paged-page.women-reader .document-content .women-source-facsimile a{
+  display:block;
+  width:fit-content;
+  max-width:100%;
+  margin:0 auto;
+  overflow:hidden;
+  border:1px solid #e5e0d7;
+  border-radius:4px;
+  background:#fff;
+}
+.document-paged-page.women-reader .document-content .women-source-facsimile img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:78vh;
+  object-fit:contain;
+}
+.document-paged-page.women-reader .document-content .women-source-facsimile figcaption{
+  margin:7px 0 0;
+  color:#746d63;
+  font-size:12px;
+  line-height:1.45;
+  text-align:center;
+}
