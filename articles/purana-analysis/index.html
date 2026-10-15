@@ -306,7 +306,7 @@
         }
         const formula = document.createElement("p");
         formula.className = "analysis-formula";
-        formula.textContent = `Matched chapters = quoted + parallel − both (${quoted} + ${parallel} − ${both} = ${either}). An empty group has no quotation, parallel, or unmatched note in any chapter. Excluding ${emptySections} empty groups removes ${emptySectionChapters} of ${total} chapter positions; coverage then is ${either}/${remainingAfterEmptyGroups} = ${(100 * coverageAfterExclusion).toFixed(1)}%. Each Purāṇa’s chapter positions are counted separately.`;
+        formula.textContent = combined ? `Matched chapters = quoted + parallel − both (${quoted} + ${parallel} − ${both} = ${either}). An empty group has no quotation, parallel, or unmatched note in any chapter. Excluding ${emptySections} empty groups removes ${emptySectionChapters} of ${total} chapter positions; coverage then is ${either}/${remainingAfterEmptyGroups} = ${(100 * coverageAfterExclusion).toFixed(1)}%. Each Purāṇa’s chapter positions are counted separately.` : `At least one match = quoted chapters + parallel chapters − chapters with both (${quoted} + ${parallel} − ${both} = ${either}). Percentages use ${total} chapters counted across ${puranas.length} Purāṇas.`;
         metrics.appendChild(formula);
         content.appendChild(metrics);
         row.append(heading, content);
