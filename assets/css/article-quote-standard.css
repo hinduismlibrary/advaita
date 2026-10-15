@@ -1,0 +1,113 @@
+/* Shared quote and Sanskrit controls for both scholarly article readers. */
+.document-paged-page .document-content blockquote.translation,
+.document-paged-page .document-content p.translation{
+  margin:0 0 30px!important;
+  padding:1px 0 1px 17px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:18.5px!important;
+  line-height:1.62!important;
+  font-style:normal!important;
+}
+.document-paged-page .document-content blockquote.translation>p{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:inherit!important;
+  font:inherit!important;
+}
+.document-paged-page .document-content .women-scripture-pair>p.women-scripture-translation{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font:normal 18.5px/1.62 Merriweather,Georgia,serif!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 11px 5px;
+  border:1px solid var(--orange-soft);
+  border-radius:999px;
+  background:transparent;
+  color:#9b4e1d;
+  font-family:Merriweather,Georgia,serif;
+  font-size:13px;
+  font-weight:400;
+  line-height:1.45;
+  letter-spacing:0;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary::-webkit-details-marker{display:none}
+.document-paged-page .document-content details.sanskrit-reveal>summary::marker{content:""}
+.document-paged-page .document-content details.sanskrit-reveal>summary:hover{background:#eee8e2}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"]{
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.8;
+  letter-spacing:0;
+}
+.document-paged-page .document-content .translation-comparison{
+  margin:20px 0 30px;
+}
+.document-paged-page .document-content .translation-option{
+  margin:0 0 22px;
+}
+.document-paged-page .document-content .translation-option:last-child{margin-bottom:0}
+.document-paged-page .document-content .translation-attribution{
+  margin:0 0 7px!important;
+  padding:0!important;
+  border:0!important;
+  color:#625b54!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+  font-weight:700!important;
+}
+.document-paged-page .document-content .translation-option>details.sanskrit-reveal{
+  margin:0 0 8px;
+}
+.document-paged-page .document-content details.quote-source-note{
+  margin:8px 0 10px;
+}
+.document-paged-page .document-content details.quote-source-note .translation-note{
+  margin:8px 0 12px!important;
+  padding:0!important;
+  border:0!important;
+  color:#625b54!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+}
+.document-paged-page .document-content .postscript-translations li>details.sanskrit-reveal{
+  margin:0 0 8px;
+}
+@media(max-width:620px){
+  .document-paged-page .document-content blockquote.translation,
+  .document-paged-page .document-content p.translation{
+    margin-bottom:27px!important;
+    padding-left:13px!important;
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  .document-paged-page .document-content .women-scripture-pair>p.women-scripture-translation{
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal>summary{
+    padding:3px 9px 4px;
+    font-size:12.5px;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal [lang^="sa"]{
+    font-size:18px;
+    line-height:1.78;
+  }
+  .document-paged-page .document-content .translation-comparison{margin:17px 0 26px}
+  .document-paged-page .document-content .translation-option{margin-bottom:18px}
+}
