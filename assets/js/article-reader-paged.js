@@ -274,23 +274,6 @@ function pairWomenScripture(root){
   if(title!=='Hinduism on Women')return;
   const isStaticSanskrit=p=>p.closest('.women-title-page')||
     p.matches('.women-colophon-source-title,.women-om');
-  const appendSourcePage=(details,page)=>{
-    const number=Number(page);
-    if(!details||!Number.isInteger(number)||number<1||number>98||
-       details.querySelector('.women-source-facsimile'))return;
-    const padded=String(number).padStart(2,'0');
-    const url='/advaita/assets/images/hinduism-on-women-source/p'+padded+'.webp';
-    const figure=el('figure','women-source-facsimile');
-    const link=el('a');
-    link.href=url;link.target='_blank';link.rel='noopener';
-    const image=el('img');
-    image.src=url;
-    image.alt='Printed source page '+number+' with the cited Sanskrit passage';
-    image.loading='lazy';image.decoding='async';
-    link.append(image);
-    figure.append(link,el('figcaption',null,'Printed source, p. '+number+'. Open page image.'));
-    details.append(figure);
-  };
   const pending=new Set([...root.querySelectorAll('p[lang^="sa"]')]
     .filter(p=>!p.closest('details.sanskrit-reveal')&&!isStaticSanskrit(p)));
   for(const source of [...pending]){
@@ -314,12 +297,7 @@ function pairWomenScripture(root){
     reveal.append(el('summary',null,'Show Sanskrit'),span);
     term.append(reveal);
   }
-  for(const authoredPair of root.querySelectorAll('.women-scripture-pair[data-source-page]')){
-    const details=authoredPair.querySelector(':scope>details.sanskrit-reveal');
-    if(details)appendSourcePage(details,authoredPair.dataset.sourcePage);
-  }
   const sources=[...root.querySelectorAll('details.sanskrit-reveal,p[lang^="sa"]')];
-  const pairedQuotes=new Set();
   for(const source of sources){
     if(source.closest('.women-scripture-pair'))continue;
     let next=source.nextElementSibling;
@@ -340,21 +318,6 @@ function pairWomenScripture(root){
     pair.append(source,...citations,next);
     if(next.matches('p')&&!next.classList.contains('translation'))
       next.classList.add('women-scripture-translation');
-    if(next.matches('blockquote.translation'))pairedQuotes.add(next);
-    if(next.dataset.sourcePage)appendSourcePage(source,next.dataset.sourcePage);
-  }
-  for(const quote of root.querySelectorAll('blockquote.translation[data-source-page]')){
-    if(pairedQuotes.has(quote))continue;
-    const details=el('details','sanskrit-reveal');
-    details.append(el('summary',null,'Show Sanskrit'));
-    appendSourcePage(details,quote.dataset.sourcePage);
-    const pair=quote.closest('.women-scripture-pair');
-    if(pair)quote.before(details);
-    else{
-      const wrapper=el('div','women-scripture-pair');
-      quote.before(wrapper);
-      wrapper.append(details,quote);
-    }
   }
 }
 function render(index){
