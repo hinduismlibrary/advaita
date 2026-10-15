@@ -92,6 +92,10 @@
     "lingaSivatoshini": {
       "label": "CiNii, Liṅga Purāṇa with Gaṇeśa Nātu’s Śivatoṣiṇī commentary",
       "url": "https://ci.nii.ac.jp/ncid/BA1981248X"
+    },
+    "hrcPuranaCatalog": {
+      "label": "Harry Ransom Center, Sanskrit Manuscript Collection MS-04889 catalogue",
+      "url": "https://research.hrc.utexas.edu/fasearch/pdf/00339.pdf"
     }
   },
   "entries": [
@@ -1434,6 +1438,45 @@
         "lingaSivatoshini"
       ],
       "note": "CiNii identifies a Sanskrit commentary by Gaṇeśa Nātu. The edition date does not establish when the commentary was composed, so it remains a separate unresolved lead and is not counted as pre-boundary."
+    },
+    {
+      "id": "comm-bhagavata-maheshvara-curnika",
+      "puranaId": "bhagavata-purana",
+      "work": "Maheśvara-cūrṇikā",
+      "author": "Maheśvara",
+      "scope": "Additional gloss on the Bhāgavata alongside Śrīdhara’s Bhāvārtha-dīpikā",
+      "period": "Date not established in the manuscript collection catalogue",
+      "status": "date-unverified",
+      "sourceIds": [
+        "hrcPuranaCatalog"
+      ],
+      "note": "The Harry Ransom Center catalogue records a Bhāgavata manuscript/edition with both Śrīdhara’s commentary and Maheśvara’s cūrṇikā; this is a small layered gloss rather than another full independent commentary."
+    },
+    {
+      "id": "comm-skanda-kashi-anon",
+      "puranaId": "skanda-purana",
+      "work": "Commentary on the Kāśī-khaṇḍa Pūrvārdha (title/author not specified)",
+      "author": "Anonymous",
+      "scope": "Skanda Purāṇa, Kāśī-khaṇḍa Pūrvārdha",
+      "period": "Date not established in the manuscript collection catalogue",
+      "status": "date-unverified",
+      "sourceIds": [
+        "hrcPuranaCatalog"
+      ],
+      "note": "Recorded as a commentary-bearing Kāśī-khaṇḍa witness; included separately from the named Rāmānanda lead because the catalogue does not establish identity."
+    },
+    {
+      "id": "comm-garuda-anon",
+      "puranaId": "garuda-purana",
+      "work": "Commentary on the Garuḍa Purāṇa (title not specified)",
+      "author": "Anonymous",
+      "scope": "Garuḍa Purāṇa",
+      "period": "Date not established in the manuscript collection catalogue",
+      "status": "date-unverified",
+      "sourceIds": [
+        "hrcPuranaCatalog"
+      ],
+      "note": "The Harry Ransom Center catalogue records a Sanskrit commentary-bearing Garuḍa Purāṇa witness. The catalogue gives a press but no composition or witness date, so it is not counted as pre-boundary."
     }
   ]
 }
