@@ -216,9 +216,6 @@ function clean(node,page){
       const hasCitationNumber=/\d/.test(value);
       const proseCitationCue=/\b(?:says?|states?|mentions?|discusses?|speaks?|describes?|explains?|elaborates?|concludes?|writes?|teaches?|gives?|calls?|regards?|regarding|is|are|was|were|the|this|these|that|which|his|her|they|there|because|since|if|when|for)\b/i.test(value);
       const citationLabel=citationSource&&hasCitationNumber&&value.length<=160&&!proseCitationCue;
-      const hasCitationNumber=/\\d/.test(value);
-      const proseCitationCue=/\\b(?:says?|states?|mentions?|discusses?|speaks?|describes?|explains?|elaborates?|concludes?|writes?|teaches?|gives?|calls?|regards?|regarding|is|are|was|were|the|this|these|that|which|his|her|they|there|because|since|if|when|for)\\b/i.test(value);
-      const citationLabel=citationSource&&hasCitationNumber&&value.length<=160&&!proseCitationCue;
       if(n.classList.contains('scripture-source')||(title==='Hinduism on Women'&&citationLabel))n.classList.add('source-citation');
       else if(n.classList.contains('scripture-translation')||n.classList.contains('translation')||
               /color\s*:\s*#(?:a92727|65516f|7b3d35)/i.test(style))n.classList.add('translation');
