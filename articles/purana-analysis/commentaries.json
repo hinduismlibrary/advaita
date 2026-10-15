@@ -1,8 +1,8 @@
 {
   "version": "commentaries-2026-10-15",
   "cutoff": {
-    "label": "Through Nīlakaṇṭha (late 17th c.)",
-    "note": "Boundary follows Nīlakaṇṭha Caturdhara; later compositions are excluded, and uncertain dates remain separate."
+    "label": "Before Nīlakaṇṭha",
+    "note": "Works by or after Nīlakaṇṭha are excluded; unclear dates stay separate. Hazra dates the Devī Bhāgavata Tilaka no earlier than the mid-18th century, so it is excluded."
   },
   "sources": {
     "rocher": {
@@ -142,15 +142,15 @@
       "url": "https://archive.org/details/in.ernet.dli.2015.110115"
     },
     "hazraUpaVolumeI": {
-      "label": "Hazra, Studies in the Upapurāṇas, Vol. I · full OCR",
+      "label": "R. C. Hazra, Studies in the Upapurāṇas, Vol. I (1958) · full OCR",
       "url": "https://archive.org/stream/dli.ernet.52150/52150-Studies%20In%20The%20Upapuranas%20Vol-i%20%281958%29_djvu.txt"
     },
     "hazraUpaVolumeII": {
-      "label": "Hazra, Studies in the Upapurāṇas, Vol. II · full OCR",
+      "label": "R. C. Hazra, Studies in the Upapurāṇas, Vol. II (1963) · full OCR",
       "url": "https://archive.org/stream/in.gov.ignca.18862/18862_djvu.txt"
     },
     "hazraPuranicRecordsOCR": {
-      "label": "Hazra, Studies in the Puranic Records on Hindu Rites and Customs · full OCR",
+      "label": "R. C. Hazra, Studies in the Purāṇic Records on Hindu Rites and Customs (1940) · full OCR",
       "url": "https://archive.org/stream/in.ernet.dli.2015.110115/2015.110115.Studies-In-The-Puranic-Records-On-Hindu-Rites-And-Customs_djvu.txt"
     },
     "hazraUpapuranasBibliography": {
@@ -174,9 +174,10 @@
       "sourceIds": [
         "rocher",
         "rocherEditions",
-        "bhagavataEditions"
+        "bhagavataEditions",
+        "hazraUpaVolumeI"
       ],
-      "note": "Distinct from Śaiva Nīlakaṇṭha, the commentator on the Devī Bhāgavata."
+      "note": "Distinct from Śaiva Nīlakaṇṭha, the commentator on the Devī Bhāgavata. Hazra lists the edition with Śrīdhara’s commentary (Vol. I, p. 362)."
     },
     {
       "id": "comm-2",
@@ -201,9 +202,10 @@
       "status": "within-cutoff",
       "sourceIds": [
         "rocher",
-        "jivaBhagavata"
+        "jivaBhagavata",
+        "hazraUpaVolumeI"
       ],
-      "note": "Jīva Gosvāmin’s sequential commentary; some secondary lists also attribute a Bṛhat-krama-sandarbha, whose relation to this text is unresolved."
+      "note": "Jīva Gosvāmin’s sequential commentary; some secondary lists also attribute a Bṛhat-krama-sandarbha, whose relation to this text is unresolved. Hazra lists the Krama-sandarbha edition (Vol. I, p. 362)."
     },
     {
       "id": "comm-4",
@@ -216,9 +218,10 @@
       "sourceIds": [
         "rocher",
         "hazra",
-        "jivaBhagavata"
+        "jivaBhagavata",
+        "hazraUpaVolumeI"
       ],
-      "note": "Canto X commentary by Jīva Gosvāmin; the title is distinguished in some lists from Sanātana’s Bṛhad-vaiṣṇava-toṣiṇī. Manuscript and edition traditions vary in the shorter title."
+      "note": "Canto X commentary by Jīva Gosvāmin; the title is distinguished in some lists from Sanātana’s Bṛhad-vaiṣṇava-toṣiṇī. Manuscript and edition traditions vary in the shorter title. Hazra lists Vaiṣṇava-toṣiṇī on Skandha X and notes its attribution to Jīva in that edition (Vol. I, p. 362)."
     },
     {
       "id": "comm-5",
@@ -229,9 +232,10 @@
       "period": "16th c.",
       "status": "within-cutoff",
       "sourceIds": [
-        "hazra"
+        "hazra",
+        "hazraUpaVolumeI"
       ],
-      "note": "Canto X commentary by Sanātana Gosvāmin; title normalized with the fuller form found in commentary lists."
+      "note": "Canto X commentary by Sanātana Gosvāmin; title normalized with the fuller form found in commentary lists. Hazra lists Bṛhat-toṣiṇī on Skandha X (Vol. I, p. 362)."
     },
     {
       "id": "comm-6",
@@ -243,9 +247,10 @@
       "status": "date-unverified",
       "sourceIds": [
         "rocher",
-        "bhagavataEditions"
+        "bhagavataEditions",
+        "hazraUpaVolumeI"
       ],
-      "note": "The current sources do not place this work before the late-17th-century boundary."
+      "note": "The current sources do not place this work before the late-17th-century boundary. Hazra includes Sārārtha-darśinī in an edition listing (Vol. I, p. 362); its date relative to the cutoff remains unclear."
     },
     {
       "id": "comm-7",
@@ -935,9 +940,10 @@
       "period": "Date not established in Hazra’s notice",
       "status": "date-unverified",
       "sourceIds": [
-        "hazra"
+        "hazra",
+        "hazraUpaVolumeII"
       ],
-      "note": ""
+      "note": "Hazra discusses Gaṅgādhara’s commentary on the Śiva Purāṇa Dharma-saṃhitā (Vol. II, p. 345)."
     },
     {
       "id": "comm-extra-tattvavabodhi",
@@ -1788,13 +1794,13 @@
       "work": "Tilaka",
       "author": "Śaiva Nīlakaṇṭha",
       "scope": "Full Purāṇa",
-      "period": "Late 17th c.",
-      "status": "boundary",
+      "period": "No earlier than mid-18th c. (Hazra)",
+      "status": "post-cutoff",
       "sourceIds": [
         "hazraUpapuranasBibliography",
-        "nilakantha17c"
+        "hazraUpaVolumeII"
       ],
-      "note": "Hazra lists this commentary on the Devī Bhāgavata; treated as the cutoff work."
+      "note": "Hazra dates this Tilaka no earlier than the middle of the 18th century; excluded by the pre-Nīlakaṇṭha cutoff."
     },
     {
       "id": "comm-agni-prosody-commentary",
