@@ -382,6 +382,24 @@
 .document-paged-page details.toc-group.has-current>.toc-parent{color:var(--teal)}
 .document-paged-page details.toc-group>.toc-children{margin-top:8px}
 .document-paged-page details.toc-group>.toc-children a{font-size:13.5px}
+.document-paged-page .toc a.toc-main{
+  display:block;
+  margin:0 0 13px;
+  padding:0;
+  color:var(--ink);
+  font-family:Merriweather,Georgia,serif;
+  font-size:15px;
+  line-height:1.4;
+  font-weight:600;
+}
+.document-paged-page .toc a.toc-main:hover{
+  color:var(--teal);
+  text-decoration:none;
+}
+.document-paged-page .toc a.toc-main.is-active{
+  color:var(--purple);
+  font-weight:700;
+}
 .document-paged-page .meat-cover-art{
   width:min(100%,150px);
   margin:0 auto 28px;
