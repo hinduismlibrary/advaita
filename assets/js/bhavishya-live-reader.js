@@ -53,7 +53,7 @@
       found.push({n,sa:block});
     }
     const by=new Map();
-    for(const v of found){if(v.n>=1&&v.n<=expected&&!by.has(v.n))by.set(v.n,v.sa);}
+    for(const v of found){if(v.n>=1&&v.n<=expected){if(!by.has(v.n))by.set(v.n,v.sa);else by.set(v.n,`${by.get(v.n)} ${v.sa}`.trim());}}
     return Array.from({length:expected},(_,i)=>({n:i+1,sa:by.get(i+1)||''}));
   }
   async function fetchSanskrit(chapter,expected){
