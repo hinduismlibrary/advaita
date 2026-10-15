@@ -20,6 +20,9 @@
       --blue: #dfeaf0;
       --blue-ink: #3e6274;
       --neutral: #f3f4f0;
+      --amber: #f2e7cf;
+      --amber-ink: #765a24;
+      --subject: #edeee9;
       --serif: Georgia, "Times New Roman", serif;
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
@@ -58,7 +61,9 @@
     .legend-swatch.quoted { background: var(--green); }
     .legend-swatch.bhashya { background: var(--violet); }
     .legend-swatch.parallel { background: var(--blue); }
-    .legend-swatch.other { background: var(--neutral); }
+    .legend-swatch.mention { background: var(--amber); }
+    .legend-swatch.subject { background: var(--subject); }
+    .legend-swatch.none { border: 1px solid #e8e9e4; background: #f5f6f3; }
     #map { padding: 8px 0 22px; }
     .section-row { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
     .section-label { padding-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.35; }
@@ -66,11 +71,11 @@
     .cells { display: grid; grid-template-columns: repeat(auto-fill, 24px); gap: 3px; align-content: start; }
     .tile { position: relative; display: grid; place-items: center; width: 24px; height: 24px; padding: 0; border: 1px solid #e8e9e4; border-radius: 3px; color: #8a8d85; background: #f5f6f3; font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer; }
     .tile.quoted { border-color: #bfd2c2; color: var(--green-ink); background: var(--green); font-weight: 650; }
-    .tile.bhashya:not(.quoted):not(.parallel) { border-color: #d3c4de; color: var(--violet-ink); background: var(--violet); }
-    .tile.parallel:not(.quoted):not(.bhashya) { border-color: #c7d9e1; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
-    .tile.both { border-color: #c4d6c9; color: var(--ink); background: linear-gradient(135deg, var(--green) 0 49%, var(--blue) 51% 100%); font-weight: 700; }
-    .tile.indexed:not(.quoted):not(.bhashya):not(.parallel) { border-color: #d9ddd5; color: #565a52; background: var(--neutral); }
-    .tile.bhashya::after { position: absolute; top: 2px; right: 2px; width: 4px; height: 4px; border-radius: 50%; background: var(--violet-ink); content: ""; }
+    .tile.bhashya { border-color: #d3c4de; color: var(--violet-ink); background: var(--violet); }
+    .tile.parallel { border-color: #c7d9e1; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
+    .tile.mention { border-color: #dfd0b1; color: var(--amber-ink); background: var(--amber); }
+    .tile.subject { border-color: #d9ddd5; color: #565a52; background: var(--subject); }
+    .tile.mixed { border-color: #d4d7d0; color: var(--ink); background: conic-gradient(from -45deg, var(--tile-evidence)); font-weight: 650; }
     .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
     .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
     .detail { margin: 6px 0 2px; padding: 9px 11px; border: 1px solid var(--rule); border-left: 2px solid var(--ink); border-radius: 3px; background: #fff; }
@@ -79,6 +84,10 @@
     .group { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 5px 0 0; }
     .group + .group { margin-top: 4px; border-top: 1px solid #eff0ec; }
     .group h3 { margin: 2px 0 0; color: var(--muted); font: 650 9px/1.4 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
+    .group-quoted h3 { color: var(--green-ink); }
+    .group-bhashya h3 { color: var(--violet-ink); }
+    .group-parallel h3 { color: var(--blue-ink); }
+    .group-mention h3 { color: var(--amber-ink); }
     .entries { min-width: 0; margin: 0; padding: 0; list-style: none; }
     .entry { padding: 1px 0 4px; overflow-wrap: anywhere; }
     .work { font-weight: 600; }
@@ -231,9 +240,12 @@
     </nav>
     <div id="map-pane">
       <div class="legend" aria-label="Heat map key">
-        <span class="legend-item" title="Includes passages cited in commentaries"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Chapter only</span>
+        <span class="legend-item"><i class="legend-swatch none" aria-hidden="true"></i>None</span>
+        <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
+        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Commentary</span>
         <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
+        <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Purāṇa mention</span>
+        <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Subject</span>
       </div>
       <main id="map" aria-live="polite"></main>
     </div>
@@ -292,7 +304,7 @@
       function addGroup(parent, label, entries, type, section = null) {
         if (!entries || !entries.length) return;
         const group = document.createElement("section");
-        group.className = "group group-" + (type === "chapterRelations" ? "bhashya" : type === "missing" ? "other" : type);
+        group.className = "group group-" + (type === "chapterRelations" ? "mention" : type === "missing" ? "subject" : type);
         const heading = document.createElement("h3");
         heading.textContent = label;
         group.appendChild(heading);
@@ -337,12 +349,6 @@
               : [entry.left, entry.right].filter(Boolean);
             pair.textContent = refs.join(" ↔ ");
             item.appendChild(pair);
-            if (type === "chapterRelations" && !entry.note) {
-              const levelNote = document.createElement("span");
-              levelNote.className = "note";
-              levelNote.textContent = "Chapter link only; no verse-to-verse match is stated.";
-              item.appendChild(levelNote);
-            }
             if (entry.note) {
               const note = document.createElement("span");
               note.className = "note";
@@ -412,8 +418,9 @@
 
       function addTaggedGroup(parent, headingText, entries) {
         if (!entries?.length) return;
+        const isCommentary = /commentary/i.test(headingText);
         const group = document.createElement("section");
-        group.className = "group " + (/commentary/i.test(headingText) ? "group-bhashya" : "group-other");
+        group.className = "group " + (isCommentary ? "group-bhashya" : "group-subject");
         const heading = document.createElement("h3");
         heading.textContent = headingText;
         group.appendChild(heading);
@@ -429,10 +436,13 @@
           ref.className = "refs";
           ref.textContent = entry.ref;
           item.append(label, ref);
-          if (entry.details?.length) {
+          const detailsText = (entry.details || [])
+            .filter(text => !/^Full chapter commentary; not an external quotation\.?$/i.test(text))
+            .join(" · ");
+          if (detailsText) {
             const details = document.createElement("span");
             details.className = "refs contents-details";
-            details.textContent = entry.details.join(" · ");
+            details.textContent = detailsText;
             item.appendChild(details);
           }
           list.appendChild(item);
@@ -541,7 +551,7 @@
         tile.setAttribute("aria-expanded", "true");
         const detail = document.createElement("section");
         detail.className = "detail";
-        detail.setAttribute("aria-label", "Chapter references");
+        detail.setAttribute("aria-label", "Chapter evidence");
         const title = document.createElement("h2");
         const sectionName = section.part || (section.book ? section.label : "");
         const chapterRef = chapterNumber(section, chapter);
@@ -549,20 +559,28 @@
           ? `${purana.name} · ${sectionName} · ${chapterRef}`
           : `${purana.name} ${chapterRef}`;
         detail.appendChild(title);
-        addGroup(detail, "Quoted in", record.quoted, "quoted", section);
-        addGroup(detail, "Parallel", record.parallel, "parallel");
-        addGroup(detail, "Chapter link only", record.chapterRelations, "chapterRelations");
+
+        const chapterCitations = (record.quoted || []).filter(entry =>
+          entry.refs?.length || /chapter cited/i.test(entry.note || "")
+        );
+        addGroup(detail, "Quoted", chapterCitations, "quoted", section);
+        addGroup(detail, "Parallel", (record.parallel || []).filter(entry => entry.level !== "chapter"), "parallel");
+        const chapterRelations = [
+          ...(record.chapterRelations || []),
+          ...(record.parallel || []).filter(entry => entry.level === "chapter")
+        ];
+        addGroup(detail, "Chapter relation", chapterRelations, "chapterRelations");
         addTextReferencesGroup(detail, record.textReferences);
         addContentsGroup(detail, record.contents);
-        addTaggedGroup(detail, "Quoted in commentary", record.commentaryCitations);
-        addTaggedGroup(detail, "Tīrtha / sacred places", record.topics?.filter(entry => entry.kind === "pilgrimage"));
-        addTaggedGroup(detail, "Bhāgavata-māhātmya", record.topics?.filter(entry => entry.kind === "mahatmya"));
-        addTaggedGroup(detail, "Subject", record.topics?.filter(entry => entry.kind === "subject"));
+        addTaggedGroup(detail, "Commentary", record.commentaryCitations);
+        addTaggedGroup(detail, "Subject", record.topics);
         addGroup(detail, "Unmatched", record.missing, "missing");
-        if (!record.quoted?.length && !record.parallel?.length && !record.chapterRelations?.length && !record.textReferences?.length && !record.contents?.length && !record.commentaryCitations?.length && !record.topics?.length && !record.missing?.length) {
+        const hasRecord = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "commentaryCitations", "topics", "missing"]
+          .some(field => record[field]?.length);
+        if (!hasRecord) {
           const empty = document.createElement("p");
           empty.className = "no-entry";
-          empty.textContent = "No indexed citation or subject for this chapter.";
+          empty.textContent = "No attestation.";
           detail.appendChild(empty);
         }
         content.appendChild(detail);
@@ -574,6 +592,13 @@
         selectedTile = null;
         selectedDetail = null;
         map.replaceChildren();
+        const colorFor = {
+          quoted: "var(--green)",
+          bhashya: "var(--violet)",
+          parallel: "var(--blue)",
+          mention: "var(--amber)",
+          subject: "var(--subject)"
+        };
         for (const purana of puranas) {
           for (const section of purana.sections) {
             const row = document.createElement("section");
@@ -588,37 +613,51 @@
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
               const quoteEntries = record.quoted || [];
-              const hasQuoted = quoteEntries.some(entry => entry.refs?.length) ||
-                Boolean(record.commentaryCitations?.length);
-              const hasBhashya = quoteEntries.some(entry => !entry.refs?.length);
-              const hasParallel = Boolean(record.parallel?.some(entry => entry.level !== "chapter"));
-              const hasChapterRelation = Boolean(record.chapterRelations?.length || record.parallel?.some(entry => entry.level === "chapter"));
-              const hasOther = Boolean(record.contents?.length || record.textReferences?.length || record.topics?.length || hasChapterRelation);
-              if (!hasQuoted && !hasBhashya && !hasParallel && !hasOther) continue;
+              const isChapterCitation = entry => /chapter cited/i.test(entry.note || "");
+              const evidence = [];
+              if (quoteEntries.some(entry => entry.refs?.length || isChapterCitation(entry))) evidence.push("quoted");
+              if (quoteEntries.some(entry => !entry.refs?.length && !isChapterCitation(entry)) || record.commentaryCitations?.length) evidence.push("bhashya");
+              if (record.parallel?.some(entry => entry.level !== "chapter")) evidence.push("parallel");
+              if (
+                record.puranaMentions?.length ||
+                record.textReferences?.length ||
+                record.contents?.length ||
+                record.chapterRelations?.length ||
+                record.parallel?.some(entry => entry.level === "chapter") ||
+                record.topics?.some(entry => /purana|puranic/i.test([entry.label, ...(entry.details || [])].join(" ")))
+              ) evidence.push("mention");
+              if (record.topics?.some(entry => !/purana|puranic/i.test([entry.label, ...(entry.details || [])].join(" "))) || record.missing?.length) evidence.push("subject");
 
               const tile = document.createElement("button");
               tile.type = "button";
               tile.className = "tile";
               tile.textContent = String(chapter);
               tile.setAttribute("aria-expanded", "false");
-              if (hasQuoted) tile.classList.add("quoted");
-              if (hasBhashya) tile.classList.add("bhashya");
-              if (hasParallel) tile.classList.add("parallel");
-              if (hasQuoted && hasParallel) tile.classList.add("both");
-              if (hasOther) tile.classList.add("indexed");
-              const states = [
-                hasQuoted && "verse citation",
-                hasBhashya && "chapter-only citation",
-                hasParallel && "parallel",
-                hasOther && "other indexed evidence"
-              ].filter(Boolean);
+              tile.dataset.evidence = evidence.join(" ") || "none";
+              if (evidence.length === 1) tile.classList.add(evidence[0]);
+              else if (evidence.length > 1) {
+                tile.classList.add("mixed");
+                const step = 360 / evidence.length;
+                const wedges = evidence.map((kind, index) =>
+                  `${colorFor[kind]} ${index * step}deg ${(index + 1) * step}deg`
+                ).join(", ");
+                tile.style.setProperty("--tile-evidence", wedges);
+              }
+              const labels = {
+                quoted: "quoted",
+                bhashya: "commentary",
+                parallel: "parallel",
+                mention: "Purāṇa mention or list",
+                subject: "subject"
+              };
+              const states = evidence.map(kind => labels[kind]);
+              const evidenceLabel = states.join("; ") || "no attestation";
               tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
-                chapterNumber(section, chapter) + ": " + states.join("; "));
-              tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter);
+                chapterNumber(section, chapter) + ": " + evidenceLabel);
+              tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter) + " · " + evidenceLabel;
               tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
               cells.appendChild(tile);
             }
-            if (!cells.childElementCount) continue;
             content.appendChild(cells);
             row.append(label, content);
             map.appendChild(row);
@@ -626,7 +665,18 @@
         }
       }
 
-      const upaIds = new Set(["brhannaradiya-purana", "devi-bhagavata-purana"]);
+      const upaIds = new Set([
+        "brhannaradiya-purana",
+        "devi-bhagavata-purana",
+        "devi-purana",
+        "kalika-purana",
+        "mahabhagavata-purana",
+        "brhaddharma-purana",
+        "narasimha-purana",
+        "kriyayogasara",
+        "kalki-purana",
+        "samba-purana"
+      ]);
 
       function categoryFor(purana) {
         return upaIds.has(purana.id) ? "Upa" : "Mahā";
