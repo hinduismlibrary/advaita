@@ -6,7 +6,7 @@ Source snapshot: [vishvAsa/purANam_vaiShNavam commit fc117aa4514dfd4e4840037aeb3
 
 ## Scope and coverage
 
-The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 993 cards (8,152 lexical rows); 524 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
+The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 1,042 cards (8,730 lexical rows); 475 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
 
 The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 cards have no Śrīdhara excerpt displayed from the pinned source material; that absence does not establish that no commentary survives in other witnesses.
 
@@ -21,7 +21,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 7 | 83 | 0 | 83 | 0 | 36 |
 | 8 | 13 | 13 | 0 | 161 | 5 |
 | 9 | 38 | 38 | 0 | 444 | 22 |
-| 10 | 49 | 0 | 49 | 0 | 28 |
+| 10 | 49 | 49 | 0 | 578 | 28 |
 | 11 | 25 | 25 | 0 | 270 | 14 |
 | 12 | 26 | 26 | 0 | 298 | 12 |
 | 13 | 62 | 0 | 62 | 0 | 25 |
@@ -50,7 +50,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 36 | 24 | 24 | 0 | 134 | 6 |
 | 37 | 75 | 75 | 0 | 514 | 29 |
 | 38 | 94 | 94 | 0 | 495 | 36 |
-| **Total** | **1517** | **993** | **524** | **8,152** | **656** |
+| **Total** | **1517** | **1042** | **475** | **8730** | **656** |
 
 ## Changes made
 
@@ -79,7 +79,7 @@ This check is a normalized text-presence test, not a critical-edition collation 
 
 ## Not complete
 
-Book 5 still does **not** have a complete strict word-for-word translation. 524 cards have no WFW panel, and the 8,152 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
+Book 5 still does **not** have a complete strict word-for-word translation. 475 cards have no WFW panel, and the 8,730 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
 
 ## 2026-10-15 follow-up — Chapter 4 word-for-word panels
 
@@ -139,3 +139,8 @@ Added individual Sanskrit, IAST, and direct gloss rows to all 51 Book 5, Chapter
 ## 2026-10-15 follow-up — Chapter 23 word-for-word panels
 
 Added individual Sanskrit, IAST, and direct gloss rows to all 47 Book 5, Chapter 23 verse cards (538 rows). The page’s supplied Śrīdhara Sanskrit remains alongside its corresponding verses. The “not complete” counts now reflect 993/1,517 cards covered and 524 still uncovered.
+
+
+## 2026-10-15 follow-up — Chapter 10 source corrections and word-for-word panels
+
+Added Sanskrit, IAST, and direct gloss rows to all 49 Chapter 10 verse cards (578 rows). Source collation found that verses 32 and 39 had Śrīdhara prose in the main-verse field, and verse 36 repeated the ending of verse 43. Restored the mūla readings at 32, 36, and 39 from the pinned source witness; normalized the unclear OCR form “मीमान्तं” at 32 to “सीमान्तं” with support from the parallel reading and commentary. The audit now records 1,042/1,517 panels and 475 remaining.
