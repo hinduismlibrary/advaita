@@ -18,9 +18,9 @@
     .contents-button{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding:5px 7px;border:0;border-left:2px solid transparent;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.contents-button:hover{background:#f7f8f5}.contents-button.active{border-left-color:var(--green-ink);background:#f0f5f1}.contents-name{min-width:0;font-size:11px;line-height:1.35}.evidence-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}
     .viewer{min-width:0}.selected-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 0 10px;border-bottom:1px solid var(--ink)}.selected-category{margin:0 0 4px;color:var(--muted);font-size:9px;font-weight:650;letter-spacing:.07em;text-transform:uppercase}#selected-name{margin:0;font:400 clamp(24px,3vw,32px)/1.08 var(--serif);letter-spacing:-.025em}.selected-evidence{margin:0 0 2px;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
     .view-tabs{display:flex;gap:18px;margin:0 0 2px;border-bottom:1px solid var(--rule)}.view-tab{display:inline-flex;align-items:baseline;gap:6px;padding:8px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);cursor:pointer;font-size:11px}.view-tab.active{border-bottom-color:var(--ink);color:var(--ink)}.view-count{color:var(--muted);font-size:9px;font-variant-numeric:tabular-nums}#map-pane[hidden],.commentary-panel[hidden]{display:none}
-    .legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:9px 0 8px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:9px}.legend-item{display:inline-flex;align-items:center;gap:5px}.legend-swatch{width:9px;height:9px;border-radius:2px}.legend-swatch.quoted{background:var(--green)}.legend-swatch.bhashya{background:var(--violet)}.legend-swatch.parallel{background:var(--blue)}.legend-swatch.mention{background:var(--amber)}.legend-swatch.subject{background:var(--subject)}.legend-swatch.none{border:1px solid #e4e7e0;background:#f7f8f5}
+    .legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:9px 0 8px;border-bottom:1px solid var(--rule);color:var(--muted);font-size:9px}.legend-item{display:inline-flex;align-items:center;gap:5px}.legend-swatch{width:9px;height:9px;border-radius:2px}.legend-swatch.quoted{background:var(--green)}.legend-swatch.bhashya{background:var(--violet)}.legend-swatch.parallel{background:var(--blue)}.legend-swatch.mention{background:var(--amber)}.legend-swatch.subject{background:var(--subject)}.legend-swatch.none{border:1px solid #e4e7e0;background:#f7f8f5}.legend-swatch.multiple{color:var(--ink);font-size:11px;font-weight:700;line-height:1}
     #map{padding:6px 0 22px}.section-row{display:grid;grid-template-columns:122px minmax(0,1fr);gap:10px;padding:5px 0;border-bottom:1px solid var(--rule)}.section-label{padding-top:4px;color:var(--muted);font-size:10px;line-height:1.35}.section-content{min-width:0}.cells{display:grid;grid-template-columns:repeat(auto-fill,24px);gap:3px;align-content:start}
-    .tile{display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #e6e8e2;border-radius:3px;color:#858a81;background:#f7f8f5;font-size:10px;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer}.tile.quoted{border-color:#bfd2c2;color:var(--green-ink);background:var(--green);font-weight:650}.tile.bhashya{border-color:#d3c4de;color:var(--violet-ink);background:var(--violet)}.tile.parallel{border-color:#c7d9e1;color:var(--blue-ink);background:var(--blue);font-weight:650}.tile.mention{border-color:#dfd0b1;color:var(--amber-ink);background:var(--amber)}.tile.subject{border-color:#d9ddd5;color:#565a52;background:var(--subject)}.tile.mixed{border-color:#d4d7d0;color:var(--ink);background:conic-gradient(from -45deg,var(--tile-evidence));font-weight:650}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}
+    .tile{position:relative;display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #e6e8e2;border-radius:3px;color:#858a81;background:#f7f8f5;font-size:10px;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer}.tile.quoted{border-color:#bfd2c2;color:var(--green-ink);background:var(--green);font-weight:650}.tile.bhashya{border-color:#d3c4de;color:var(--violet-ink);background:var(--violet)}.tile.parallel{border-color:#c7d9e1;color:var(--blue-ink);background:var(--blue);font-weight:650}.tile.mention{border-color:#dfd0b1;color:var(--amber-ink);background:var(--amber)}.tile.subject{border-color:#d9ddd5;color:#565a52;background:var(--subject)}.tile.multiple::after{position:absolute;top:1px;right:1px;content:"+";color:var(--ink);font:700 7px/1 var(--sans)}.tile:hover,.tile[aria-expanded=true]{border-color:var(--ink)}.tile[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--ink)}
     .detail{margin:5px 0 2px;padding:8px 10px;border:1px solid var(--rule);border-left:2px solid var(--ink);border-radius:3px;background:#fff}.detail[hidden]{display:none}.detail h2{margin:0 0 5px;font:400 15px/1.2 var(--serif)}
     .group{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;padding:4px 0 0}.group+.group{margin-top:3px;border-top:1px solid #eff0ec}.group h3{margin:2px 0 0;color:var(--muted);font:650 9px/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase}.group-quoted h3{color:var(--green-ink)}.group-bhashya h3{color:var(--violet-ink)}.group-parallel h3{color:var(--blue-ink)}.group-mention h3{color:var(--amber-ink)}.entries{min-width:0;margin:0;padding:0;list-style:none;font-size:11px}.entry{padding:1px 0 3px;overflow-wrap:anywhere}.work{font-weight:600}.work-link{color:inherit;text-decoration-color:var(--rule);text-underline-offset:2px}.source-link{color:var(--green-ink);text-decoration-color:var(--rule);text-underline-offset:2px}.refs{display:block;padding-top:1px;color:#555951;font-size:10px;font-variant-numeric:tabular-nums}.pair{font-variant-numeric:tabular-nums}.note{display:block;padding-top:2px;color:#6a6d65;font:italic 11px/1.35 var(--serif)}.no-entry{margin:0;color:var(--muted);font-size:10px}.error{padding:14px 0;color:#9b443c}
     .commentary-panel{margin:0 0 40px}.commentary-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:11px 0 5px;border-bottom:1px solid var(--rule)}.commentary-title{margin:0;font:400 19px/1.1 var(--serif)}.commentary-note{margin:0;color:var(--muted);font-size:9px}.commentary-search{width:min(100%,320px);margin:10px 0 3px;padding:7px 9px;border:1px solid var(--rule);border-radius:3px;font-size:11px}.commentary-card[hidden],.commentary-section[hidden]{display:none}
@@ -64,10 +64,11 @@
       <div class="legend" aria-label="Heat map key">
         <span class="legend-item"><i class="legend-swatch none" aria-hidden="true"></i>None</span>
         <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya only</span>
+        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya</span>
         <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-        <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Purāṇa ref.</span>
-        <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Subject</span>
+        <span class="legend-item"><i class="legend-swatch mention" aria-hidden="true"></i>Cross-text</span>
+        <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Topic</span>
+        <span class="legend-item"><i class="legend-swatch multiple" aria-hidden="true">+</i>Multiple</span>
       </div>
       <main id="map" aria-live="polite"></main>
       <details class="source-details">
@@ -291,7 +292,7 @@
         const group = document.createElement("section");
         group.className = "group group-mention";
         const heading = document.createElement("h3");
-        heading.textContent = "Purāṇa reference";
+        heading.textContent = "Text reference";
         group.appendChild(heading);
         const list = document.createElement("ul");
         list.className = "entries";
@@ -317,19 +318,15 @@
         parent.appendChild(group);
       }
 
-      function chapterHasEvidence(record) {
-        const fields = [
-          "quoted", "parallel", "chapterRelations", "textReferences",
-          "contents", "commentaryCitations", "topics", "puranaMentions"
-        ];
-        return fields.some(field => record[field]?.length);
+      function chapterHasEvidence(record, purana) {
+        return chapterEvidence(record, purana).some(kind => kind !== "subject");
       }
 
       function attestedChapterCount(purana) {
         let count = 0;
         for (const section of purana.sections || []) {
           for (const record of Object.values(section.chapters || {})) {
-            if (chapterHasEvidence(record)) count += 1;
+            if (chapterHasEvidence(record, purana)) count += 1;
           }
         }
         return count;
@@ -370,7 +367,9 @@
       }
 
       function isPuranicTopic(entry) {
-        return mentionsPurana([entry.label, entry.ref, ...(entry.details || [])].join(" "));
+        const kind = String(entry.kind || "").toLowerCase();
+        if (["pilgrimage", "mahatmya", "subject"].includes(kind)) return false;
+        return kind === "classification" || mentionsPurana([entry.label, ...(entry.details || [])].join(" "));
       }
 
       function isChapterCoverage(entry) {
@@ -382,7 +381,55 @@
       }
 
       function isQuotedEntry(entry) {
-        return Boolean(entry.refs?.length || /chapter cited/i.test(entry.note || ""));
+        return Boolean(entry.refs?.length || /\bcited\b/i.test(entry.note || ""));
+      }
+
+      function normalizePuranaName(value) {
+        return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase().replace(/[^a-z0-9]+/g, "");
+      }
+
+      function isIntraPuranaRelation(entry, purana) {
+        const currentName = normalizePuranaName(purana?.name);
+        if (!currentName) return false;
+        const loci = (entry.loci || []).map(item => item.p).filter(Boolean);
+        if (loci.length > 1) return loci.every(name => normalizePuranaName(name) === currentName);
+        const members = Array.isArray(entry.members) ? entry.members : [entry.left, entry.right].filter(Boolean);
+        return members.length > 1 && members.every(member => normalizePuranaName(member).startsWith(currentName));
+      }
+
+      function hasOtherPuranaContents(record, purana) {
+        const currentName = normalizePuranaName(purana?.name);
+        return (record.contents || []).some(entry =>
+          !entry.purana || !currentName || normalizePuranaName(entry.purana) !== currentName
+        );
+      }
+
+      function chapterEvidence(record, purana) {
+        const kinds = [];
+        const quoteEntries = record.quoted || [];
+        const commentaryEntries = record.commentaryCitations || [];
+        if (quoteEntries.some(isQuotedEntry) || commentaryEntries.some(isDirectCommentaryCitation)) kinds.push("quoted");
+        if (commentaryEntries.some(entry => !isDirectCommentaryCitation(entry))) kinds.push("bhashya");
+
+        const relations = [
+          ...(record.chapterRelations || []),
+          ...(record.parallel || []).filter(entry => entry.level === "chapter")
+        ];
+        if (
+          (record.parallel || []).some(entry => entry.level !== "chapter") ||
+          relations.some(entry => isIntraPuranaRelation(entry, purana))
+        ) kinds.push("parallel");
+
+        if (
+          record.puranaMentions?.length ||
+          record.textReferences?.length ||
+          hasOtherPuranaContents(record, purana) ||
+          relations.some(entry => !isIntraPuranaRelation(entry, purana)) ||
+          record.topics?.some(isPuranicTopic)
+        ) kinds.push("mention");
+        if (record.topics?.some(entry => !isPuranicTopic(entry))) kinds.push("subject");
+        return kinds;
       }
 
       function showChapter(purana, section, chapter, record, tile, content) {
@@ -417,18 +464,21 @@
           ...citedCommentaries
         ];
         addGroup(detail, "Quoted", chapterCitations, "quoted", section);
-        addGroup(detail, "Parallel", (record.parallel || []).filter(entry => entry.level !== "chapter"), "parallel");
-        const chapterRelations = [
+        const relations = [
           ...(record.chapterRelations || []),
           ...(record.parallel || []).filter(entry => entry.level === "chapter")
         ];
-        addGroup(detail, "Purāṇa relation", chapterRelations, "chapterRelations");
+        addGroup(detail, "Parallel", [
+          ...(record.parallel || []).filter(entry => entry.level !== "chapter"),
+          ...relations.filter(entry => isIntraPuranaRelation(entry, purana))
+        ], "parallel");
+        addGroup(detail, "Cross-text relation", relations.filter(entry => !isIntraPuranaRelation(entry, purana)), "chapterRelations");
         addTextReferencesGroup(detail, record.textReferences);
         addContentsGroup(detail, record.contents);
         addTaggedGroup(detail, "Purāṇa mention", record.puranaMentions);
         addTaggedGroup(detail, "Commentary", (record.commentaryCitations || []).filter(entry => !isDirectCommentaryCitation(entry)));
-        addTaggedGroup(detail, "Purāṇa topic", (record.topics || []).filter(isPuranicTopic));
-        addTaggedGroup(detail, "Subject", (record.topics || []).filter(entry => !isPuranicTopic(entry)));
+        addTaggedGroup(detail, "Purāṇa classification", (record.topics || []).filter(isPuranicTopic));
+        addTaggedGroup(detail, "Topic", (record.topics || []).filter(entry => !isPuranicTopic(entry)));
         addGroup(detail, "Unmatched", record.missing, "missing");
         const hasRecord = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "puranaMentions", "commentaryCitations", "topics", "missing"]
           .some(field => record[field]?.length);
@@ -447,13 +497,14 @@
         selectedTile = null;
         selectedDetail = null;
         map.replaceChildren();
-        const colorFor = {
-          quoted: "var(--green)",
-          bhashya: "var(--violet)",
-          parallel: "var(--blue)",
-          mention: "var(--amber)",
-          subject: "var(--subject)"
+        const labels = {
+          quoted: "quoted",
+          bhashya: "bhāṣya",
+          parallel: "parallel",
+          mention: "cross-text",
+          subject: "topic"
         };
+        const priority = ["quoted", "bhashya", "mention", "parallel", "subject"];
         for (const purana of puranas) {
           for (const section of purana.sections) {
             const row = document.createElement("section");
@@ -467,24 +518,8 @@
             cells.className = "cells";
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
-              const quoteEntries = record.quoted || [];
-              const commentaryEntries = record.commentaryCitations || [];
-              const evidence = [];
-              if (quoteEntries.some(isQuotedEntry) || commentaryEntries.some(isDirectCommentaryCitation)) evidence.push("quoted");
-              if (
-                quoteEntries.some(entry => !isQuotedEntry(entry)) ||
-                commentaryEntries.some(entry => !isDirectCommentaryCitation(entry))
-              ) evidence.push("bhashya");
-              if (record.parallel?.some(entry => entry.level !== "chapter")) evidence.push("parallel");
-              if (
-                record.puranaMentions?.length ||
-                record.textReferences?.length ||
-                record.contents?.length ||
-                record.chapterRelations?.length ||
-                record.parallel?.some(entry => entry.level === "chapter") ||
-                record.topics?.some(isPuranicTopic)
-              ) evidence.push("mention");
-              if (record.topics?.some(entry => !isPuranicTopic(entry)) || record.missing?.length) evidence.push("subject");
+              const evidence = chapterEvidence(record, purana);
+              const kind = priority.find(item => evidence.includes(item)) || "none";
 
               const tile = document.createElement("button");
               tile.type = "button";
@@ -492,24 +527,9 @@
               tile.textContent = String(chapter);
               tile.setAttribute("aria-expanded", "false");
               tile.dataset.evidence = evidence.join(" ") || "none";
-              if (evidence.length === 1) tile.classList.add(evidence[0]);
-              else if (evidence.length > 1) {
-                tile.classList.add("mixed");
-                const step = 360 / evidence.length;
-                const wedges = evidence.map((kind, index) =>
-                  `${colorFor[kind]} ${index * step}deg ${(index + 1) * step}deg`
-                ).join(", ");
-                tile.style.setProperty("--tile-evidence", wedges);
-              }
-              const labels = {
-                quoted: "quoted",
-                bhashya: "bhāṣya only",
-                parallel: "parallel",
-                mention: "Purāṇa reference",
-                subject: "subject"
-              };
-              const states = evidence.map(kind => labels[kind]);
-              const evidenceLabel = states.join("; ") || "no attestation";
+              if (kind !== "none") tile.classList.add(kind);
+              if (evidence.length > 1) tile.classList.add("multiple");
+              const evidenceLabel = evidence.map(item => labels[item]).join(" · ") || "no attestation";
               tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
                 chapterNumber(section, chapter) + ": " + evidenceLabel);
               tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter) + " · " + evidenceLabel;
