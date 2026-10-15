@@ -6,7 +6,7 @@ Source snapshot: [vishvAsa/purANam_vaiShNavam commit fc117aa4514dfd4e4840037aeb3
 
 ## Scope and coverage
 
-The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 1,042 cards (8,730 lexical rows); 475 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
+The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 1,104 cards (9,421 lexical rows); 413 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
 
 The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 cards have no Śrīdhara excerpt displayed from the pinned source material; that absence does not establish that no commentary survives in other witnesses.
 
@@ -24,7 +24,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 10 | 49 | 49 | 0 | 578 | 28 |
 | 11 | 25 | 25 | 0 | 270 | 14 |
 | 12 | 26 | 26 | 0 | 298 | 12 |
-| 13 | 62 | 0 | 62 | 0 | 25 |
+| 13 | 62 | 62 | 0 | 691 | 25 |
 | 14 | 14 | 14 | 0 | 71 | 7 |
 | 15 | 24 | 24 | 0 | 106 | 4 |
 | 16 | 28 | 28 | 0 | 114 | 10 |
@@ -50,7 +50,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 36 | 24 | 24 | 0 | 134 | 6 |
 | 37 | 75 | 75 | 0 | 514 | 29 |
 | 38 | 94 | 94 | 0 | 495 | 36 |
-| **Total** | **1517** | **1042** | **475** | **8730** | **656** |
+| **Total** | **1517** | **1104** | **413** | **9421** | **656** |
 
 ## Changes made
 
@@ -79,7 +79,7 @@ This check is a normalized text-presence test, not a critical-edition collation 
 
 ## Not complete
 
-Book 5 still does **not** have a complete strict word-for-word translation. 475 cards have no WFW panel, and the 8,730 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
+Book 5 still does **not** have a complete strict word-for-word translation. 413 cards have no WFW panel, and the 9,421 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
 
 ## 2026-10-15 follow-up — Chapter 4 word-for-word panels
 
@@ -144,3 +144,8 @@ Added individual Sanskrit, IAST, and direct gloss rows to all 47 Book 5, Chapter
 ## 2026-10-15 follow-up — Chapter 10 source corrections and word-for-word panels
 
 Added Sanskrit, IAST, and direct gloss rows to all 49 Chapter 10 verse cards (578 rows). Source collation found that verses 32 and 39 had Śrīdhara prose in the main-verse field, and verse 36 repeated the ending of verse 43. Restored the mūla readings at 32, 36, and 39 from the pinned source witness; normalized the unclear OCR form “मीमान्तं” at 32 to “सीमान्तं” with support from the parallel reading and commentary. The audit now records 1,042/1,517 panels and 475 remaining.
+
+
+## 2026-10-15 follow-up — Chapter 13 source correction and word-for-word panels
+
+Added Sanskrit, IAST, and direct gloss rows to all 62 Chapter 13 verse cards (691 rows). Restored the actual mūla verse in 5.13.32, where Śrīdhara's explanatory prose had occupied the main Sanskrit field. The source correction follows the pinned mūla-text witness. Coverage is 1,104/1,517; 413 cards remain without panels.
