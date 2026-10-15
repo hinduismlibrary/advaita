@@ -6,80 +6,98 @@ Source snapshot: [vishvAsa/purANam_vaiShNavam commit fc117aa4514dfd4e4840037aeb3
 
 ## Scope and coverage
 
-The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 1,242 cards (10,991 lexical rows); 275 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
+The 38 current chapter pages contain **1517 verse cards**, each with a word-for-word panel (**1517/1517**) and **16,715 lexical rows**. Each row contains one Sanskrit lexical form, its IAST transliteration, and a direct English gloss. Compounds remain single lexical units. Structural checks found no blank row fields, mixed-script Sanskrit forms, multi-form Sanskrit rows, or mechanical IAST mismatches after normalizing the typographic avagraha.
 
-The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 cards have no Śrīdhara excerpt displayed from the pinned source material; that absence does not establish that no commentary survives in other witnesses.
+The pages show **772 numbered Śrīdhara Sanskrit excerpts** with corresponding IAST, and 34 cards state that no numbered excerpt is supplied in the pinned source material. That absence does not establish that no commentary survives in other witnesses. IAST was generated mechanically from Devanāgarī; this is not independent scholarly transliteration review. The supplied English prose renderings remain separate from the word-for-word rows.
 
-| Chapter | Verse cards | With WFW panel | Without WFW panel | Existing lexical rows | Śrīdhara Sanskrit excerpts |
-|---:|---:|---:|---:|---:|---:|
-| 1 | 87 | 0 | 87 | 0 | 54 |
-| 2 | 21 | 21 | 0 | 246 | 10 |
-| 3 | 29 | 29 | 0 | 325 | 18 |
-| 4 | 17 | 17 | 0 | 222 | 9 |
-| 5 | 23 | 23 | 0 | 261 | 10 |
-| 6 | 51 | 51 | 0 | 528 | 27 |
-| 7 | 83 | 0 | 83 | 0 | 36 |
-| 8 | 13 | 13 | 0 | 161 | 5 |
-| 9 | 38 | 38 | 0 | 444 | 22 |
-| 10 | 49 | 49 | 0 | 578 | 28 |
-| 11 | 25 | 25 | 0 | 270 | 14 |
-| 12 | 26 | 26 | 0 | 298 | 12 |
-| 13 | 62 | 62 | 0 | 691 | 25 |
-| 14 | 14 | 14 | 0 | 71 | 7 |
-| 15 | 24 | 24 | 0 | 106 | 4 |
-| 16 | 28 | 28 | 0 | 114 | 10 |
-| 17 | 33 | 33 | 0 | 118 | 9 |
-| 18 | 58 | 58 | 0 | 644 | 35 |
-| 19 | 29 | 29 | 0 | 116 | 11 |
-| 20 | 105 | 0 | 105 | 0 | 40 |
-| 21 | 32 | 32 | 0 | 339 | 6 |
-| 22 | 18 | 18 | 0 | 178 | 9 |
-| 23 | 47 | 47 | 0 | 538 | 18 |
-| 24 | 21 | 21 | 0 | 211 | 15 |
-| 25 | 19 | 19 | 0 | 80 | 0 |
-| 26 | 12 | 12 | 0 | 50 | 3 |
-| 27 | 32 | 32 | 0 | 360 | 11 |
-| 28 | 28 | 28 | 0 | 326 | 15 |
-| 29 | 35 | 35 | 0 | 275 | 12 |
-| 30 | 80 | 80 | 0 | 926 | 30 |
-| 31 | 20 | 20 | 0 | 210 | 8 |
-| 32 | 30 | 30 | 0 | 209 | 12 |
-| 33 | 53 | 53 | 0 | 399 | 25 |
-| 34 | 44 | 44 | 0 | 307 | 19 |
-| 35 | 38 | 38 | 0 | 247 | 16 |
-| 36 | 24 | 24 | 0 | 134 | 6 |
-| 37 | 75 | 75 | 0 | 514 | 29 |
-| 38 | 94 | 94 | 0 | 495 | 36 |
-| **Total** | **1517** | **1242** | **275** | **10991** | **656** |
+| Chapter | Verse cards | WFW panels | WFW lexical rows | Numbered Śrīdhara Sanskrit excerpts |
+|---:|---:|---:|---:|---:|
+| 1 | 87 | 87 | 934 | 75 |
+| 2 | 21 | 21 | 246 | 10 |
+| 3 | 29 | 29 | 325 | 18 |
+| 4 | 17 | 17 | 222 | 9 |
+| 5 | 23 | 23 | 261 | 10 |
+| 6 | 51 | 51 | 528 | 28 |
+| 7 | 83 | 83 | 811 | 70 |
+| 8 | 13 | 13 | 161 | 5 |
+| 9 | 38 | 38 | 444 | 23 |
+| 10 | 49 | 49 | 579 | 28 |
+| 11 | 25 | 25 | 270 | 14 |
+| 12 | 26 | 26 | 298 | 12 |
+| 13 | 62 | 62 | 691 | 25 |
+| 14 | 14 | 14 | 133 | 7 |
+| 15 | 24 | 24 | 267 | 4 |
+| 16 | 28 | 28 | 301 | 10 |
+| 17 | 33 | 33 | 322 | 9 |
+| 18 | 58 | 58 | 644 | 35 |
+| 19 | 29 | 29 | 332 | 11 |
+| 20 | 105 | 105 | 935 | 96 |
+| 21 | 32 | 32 | 339 | 6 |
+| 22 | 18 | 18 | 202 | 9 |
+| 23 | 47 | 47 | 538 | 20 |
+| 24 | 21 | 21 | 237 | 15 |
+| 25 | 19 | 19 | 204 | 0 |
+| 26 | 12 | 12 | 135 | 3 |
+| 27 | 32 | 32 | 383 | 11 |
+| 28 | 28 | 28 | 346 | 15 |
+| 29 | 35 | 35 | 390 | 12 |
+| 30 | 80 | 80 | 926 | 31 |
+| 31 | 20 | 20 | 221 | 8 |
+| 32 | 30 | 30 | 370 | 12 |
+| 33 | 53 | 53 | 576 | 25 |
+| 34 | 44 | 44 | 467 | 19 |
+| 35 | 38 | 38 | 397 | 16 |
+| 36 | 24 | 24 | 238 | 6 |
+| 37 | 75 | 75 | 875 | 29 |
+| 38 | 94 | 94 | 1167 | 36 |
+| **Total** | **1517** | **1517** | **16715** | **772** |
 
 ## Changes made
 
-- Added the Book 5 body class so source notes and lexical styles display, and added matching Book 5 CSS for consistent reader widths and type sizes (15.5 px desktop / 13.5 px mobile lexical rows; 12.5 px / 12 px source notes).
-- Rebuilt IAST transliteration for all 1,517 displayed main Sanskrit verse blocks and all 656 displayed Śrīdhara Sanskrit excerpts; regenerated the IAST fields in all 4,520 existing lexical rows. This is mechanical transliteration from displayed Devanāgarī, not an independent scholarly transliteration review.
-- Removed 65 inline numeric reference markers from the displayed Sanskrit verses and moved 63 speaker labels out of the verse text into separate speaker lines.
-- Removed 199 embedded map blocks from word-for-word panels to keep their text separate from lexical rows.
-- Replaced 433 “Śrīdhara commentary” paragraphs that exactly repeated the card’s English rendering with “No separate English commentary is supplied.” Changed broad “No commentary” placeholders to say that no Śrīdhara text is supplied in that card.
-- Corrected the copied Śrīdhara commentary colophon that named Book 5, Chapter 12 in Chapters 14, 17, 18, and 23; updated each corresponding IAST colophon as well.
-- Corrected three concrete verse/lexical mismatches: in 5.28.16, changed बुधैव / बुधैः (“by the wise”) to मुधैव / मुधा (“in vain”), matching the pinned text; in 5.31.13, corrected कुर्वतो to कुर्वन्तो to agree with the verse source and lexical row; in 5.33.24, aligned the word row to the displayed reading प्रणेशुः (“fled”) instead of प्रणेमुः and tightened the gloss from “fled / withdrew” to “fled.”
-- Corrected the source note so it describes comparison across the pinned mūla, numbered Sanskrit/Hindi, and Śrīdhara witnesses without claiming a single witness is followed throughout; renamed the Wilson link as a comparison translation.
-- Added the coverage limitation and this audit link to every Book 5 page.
+- Added word-for-word panels to the 275 cards that were missing them in Chapters 1, 7, and 20. Every Book 5 verse card now has a panel.
+- Built individual Sanskrit, IAST, and direct-gloss rows; split 1,919 grouped entries where the displayed text contained separate words, while keeping compounds together as lexical units.
+- Compared exact verse matches with a second word-by-word source, removed 54 imported grammar labels that were not verse words, repaired three panels that duplicated morphemes, and manually reviewed the new Chapter 1, 7, and 20 rows. Unclear readings remain marked instead of being silently emended.
+- Corrected mixed-script rows at 5.18.4 (ताभ्याम्; *tābhyām*), 5.20.20 (जायते; *jāyate*), and 5.30.67 (भिन्नेषु; *bhinneṣu*).
+- Corrected the source reading and word rows at 5.28.11 to the pinned Gorakhpur/Gita Press reading, and corrected the displayed reading, IAST, and word row at 5.33.25 to ततो (*tato*). Corrected the mistranslated epithet at 5.31.6 from “slayer of Mura” to “slayer of asuras.”
+- Rebuilt Śrīdhara Sanskrit excerpts and IAST in Chapters 1, 7, and 20 from the pinned source files; corrected misplaced excerpt markers elsewhere so commentary appears with the corresponding verse.
+- Rebuilt IAST for all 1517 main verse blocks and 772 Śrīdhara excerpts. IAST generation is mechanical, not an independent scholarly review.
+- Removed 65 inline numeric reference markers, moved 63 speaker labels out of the verse text into separate speaker lines, and removed 199 embedded map blocks from word-for-word panels.
+- Replaced 433 English commentary paragraphs that only repeated the supplied rendering with “No separate English commentary is supplied”; clarified absence notes and corrected copied commentary colophons in Chapters 14, 17, 18, and 23.
+- Repaired the word-panel closing markup on all 1517 cards so each panel’s HTML elements balance; cleaned 203 empty or malformed paragraph class attributes in the commentary blocks.
+- Standardized the Book 5 reader width to 840 px, lexical row size to 15.5 px desktop / 13.5 px mobile, and source-note size to 12.5 px desktop / 12 px mobile. Updated all 38 page notices and their audit links.
 
-## Source-text check and remaining items
+## Source-text comparison and variants reviewed
 
-A normalized text-presence check compared the displayed Sanskrit readings (ignoring line breaks, punctuation, removed reference digits, and separated speaker labels) against the pinned mūla, numbered Sanskrit/Hindi, and Śrīdhara source files. 1,499 of 1,517 cards matched at least one of those source texts after the corrections above; the following 18 remain unresolved by that check:
+An earlier normalized text-presence test flagged 18 cards. Each flagged verse was manually checked against the pinned mūla/Śrīdhara source and the pinned Gorakhpur/Gita Press Sanskrit-Hindi witness. The table records why the earlier exact match failed and the reading now displayed. Some variants remain between the witnesses; those are explicit editorial choices rather than hidden corrections.
 
-- 5.22.11
-- 5.27.5, 5.27.6, 5.27.14, 5.27.18, 5.27.20, 5.27.26
-- 5.28.11
-- 5.31.6, 5.31.13, 5.31.16
-- 5.33.22, 5.33.24, 5.33.25, 5.33.28, 5.33.37
-- 5.34.26, 5.34.42
+| Verse(s) | Comparison result and disposition |
+|---|---|
+| 5.22.11 | The mūla transcription has *saṅgrāma* with the long vowel dropped; the Gorakhpur witness confirms *saṅgrāmān*. The page keeps the complete reading. |
+| 5.27.5 | The page’s *ekaḥ* is the lexical padaccheda corresponding to the printed sandhied *eko*; the word row keeps the unsandhied form. |
+| 5.27.6 | The mūla transcription has apparent OCR errors *dvaja* and *asūra*; the Gorakhpur witness confirms द्विज and असुरवर्याय, retained on the page. |
+| 5.27.14, 5.27.18, 5.27.26 | The verse page separates lexical words; the Gorakhpur witness prints the same forms joined by external sandhi. Word rows retain padaccheda. |
+| 5.27.20 | The page keeps *utpatya*, the regular absolutive form; the Gorakhpur witness prints *utpattya*. The spelling variant is logged. |
+| 5.28.11 | The page now follows the Gorakhpur reading **न जयामो बलं कस्माद् द्यूतेनैनं महाबलम्**. Its WFW rows and IAST now match this reading. The mūla/Śrīdhara file has the variant **तज्जयामो बलं कस्माद् द्यूते नैनं महाबलम्**; that variant is logged rather than silently combined. |
+| 5.31.6 | The page keeps *pravṛttau* (“in the work of protecting”), found in the mūla witness; the Gorakhpur witness reads *pravṛttaḥ* (“engaged in protecting”). The separate gloss for *asura-sūdana* now correctly says “slayer of asuras.” |
+| 5.31.13 | The page keeps मुखदर्शनम्, supported by the Gorakhpur witness; the mūla transcription’s मखदर्शनम् is an apparent reading/transcription error. |
+| 5.31.16 | The page separates words that the Gorakhpur witness joins by sandhi; no lexical change was needed. |
+| 5.33.22 | The page keeps प्रतापिताः, supported by the Gorakhpur witness; the mūla transcription’s प्रतापितिः is an apparent error. |
+| 5.33.24 | *jṛmbha/jṛṃbha* is an anusvāra spelling difference; the page retains the displayed Sanskrit form. |
+| 5.33.25 | The page now follows the mūla and Gorakhpur reading ततो (*tato*); its Sanskrit, IAST, and WFW row were updated from तदा (*tadā*). |
+| 5.33.28 | The nasal in *saṅgṛhīta* is written with a homorganic nasal or anusvāra across the witnesses; the reading is the same. |
+| 5.33.37 | The Gorakhpur witness joins forms by sandhi; the page keeps separate lexical forms in the WFW rows. |
+| 5.34.26 | The page follows the Gorakhpur form *kāśipuryām* and retains the sandhied *śiraśśaraiḥ*; the mūla source has *kāśīpuryām* and *śiraḥ śaraiḥ*. Both witness readings are logged. |
+| 5.34.42 | The page keeps दुर्निरीक्ष्यां, supported by the Gorakhpur witness; the mūla transcription’s दुर्निरिक्ष्यां has a short vowel where the Sanskrit root requires long ī. |
 
-This check is a normalized text-presence test, not a critical-edition collation or a proof that the matching reading is correct. The witnesses differ in spelling, sandhi, segmentation, and sometimes wording; these 18 references need direct collation before their readings can be adjudicated.
+The comparison sources are pinned to commit [fc117aa4514dfd4e4840037aeb3ca825ba030b05](https://github.com/vishvAsa/purANam_vaiShNavam/tree/fc117aa4514dfd4e4840037aeb3ca825ba030b05): [mūla/Śrīdhara chapter 28](https://github.com/vishvAsa/purANam_vaiShNavam/blob/fc117aa4514dfd4e4840037aeb3ca825ba030b05/viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/05/28.md) and [Gorakhpur Sanskrit/Hindi chapter 28](https://github.com/vishvAsa/purANam_vaiShNavam/blob/fc117aa4514dfd4e4840037aeb3ca825ba030b05/viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/05/28.md). The same source paths for the remaining checked chapters are in the pinned repository snapshot.
 
-## Not complete
+## Remaining verification limits
 
-Book 5 still does **not** have a complete strict word-for-word translation. 275 cards have no WFW panel, and the 10,991 existing lexical rows have not all been independently verified for morphology, sandhi, compounds, and gloss accuracy. The English prose is retained as a supplied rendering; it has not been converted into a strict word-by-word translation. Further philological work is required before describing this book as complete or perfect.
+All 18 earlier text-presence flags have an explicit disposition in the comparison table above. Some witness variants remain, especially at 5.28.11, 5.31.6, and 5.34.26. This is not a critical-edition collation. The word-level English glosses and morphological decisions have not received independent specialist review, so complete panel coverage must not be described as a guarantee that every translation choice is perfect. The supplied prose renderings remain separate from the lexical rows.
+
+## Historical progress log
+
+The entries below are dated snapshots from earlier stages. Their coverage totals are superseded by the current 1,517-panel table above.
 
 ## 2026-10-15 follow-up — Chapter 4 word-for-word panels
 
@@ -159,3 +177,10 @@ Added Sanskrit, IAST, and direct gloss rows to all 58 Chapter 18 verse cards (64
 ## 2026-10-15 follow-up — Chapter 30 word-for-word panels
 
 Added Sanskrit, IAST, and direct gloss rows to all 80 Chapter 30 verse cards (926 rows). Corrected a copied English rendering at 5.30.38 so it translates that verse. Coverage is now 1,242/1,517; 275 cards remain without panels.
+
+
+## 2026-10-15 final completion — Book 5
+
+Completed panels on all 1517 verse cards, with 16,715 word rows and 772 numbered Śrīdhara Sanskrit excerpts paired with IAST. The final structural pass found no blank row fields, mixed-script Sanskrit forms, multi-form rows, mechanical IAST mismatches, unbalanced word-panel markup, or unclosed details panels. It also corrected the 5.28.11 and 5.33.25 source readings and recorded the remaining witness variants above.
+
+Reader styling and page notices are consistent across all 38 chapters. The lexical rows are complete as site content; independent philological certification is still needed before calling every gloss perfect.
