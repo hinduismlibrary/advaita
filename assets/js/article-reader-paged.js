@@ -46,11 +46,11 @@ if(first){
 }
 let nodes=[...content.children];
 if(title==='Hinduism on Women')nodes=nodes.filter(n=>!n.matches?.('.women-index'));
-/* Source PDFs often include their own Contents/Index between article sections.
-   Build one shared Contents page from the extracted sections instead. */
+/* Source PDFs may include an embedded Contents/Index between sections.
+   The reader navigation already provides links, so omit that duplicate page. */
 const contentFiltered=[];let skippingEmbeddedContents=false;
 for(const node of nodes){
-  const isContentsHeading=isHeading(node)&&/^\\s*(?:contents|index)\\s*$/i.test(text(node));
+  const isContentsHeading=isHeading(node)&&/^\s*(?:contents|index)\s*$/i.test(text(node));
   if(skippingEmbeddedContents){
     if(isHeading(node)){
       skippingEmbeddedContents=false;
@@ -71,6 +71,8 @@ if(!nodes.some(realHeading)){
 }
 const topHeads=nodes.filter(n=>n.matches?.('h2')&&realHeading(n));
 const chapterHeads=topHeads.length?topHeads:nodes.filter(realHeading);
+const hasMaterial=node=>!!text(node)||!!node.matches?.('img,svg,video,table,figure,canvas,hr')||
+  !!node.querySelector?.('img,svg,video,table,figure,canvas,hr');
 let segments=[];
 if(chapterHeads.length){
   const opening=nodes.slice(0,nodes.indexOf(chapterHeads[0]));
@@ -87,19 +89,49 @@ if(chapterHeads.length){
     const body=nodes.slice(start+1,stop);
     const children=heading.matches('h2')?body.filter(n=>n.matches?.('h3')):[];
     const group={title:unnumber(text(heading)),heading,entries:[]};
-    const isBibliography=/\\b(?:bibliography|references|sources)\\b/i.test(unnumber(text(heading)));
-    if(children.length&&!isBibliography){
-      for(let j=0;j<children.length;j++){
-        const from=body.indexOf(children[j]);
-        const to=j+1<children.length?body.indexOf(children[j+1]):body.length;
+    const isSourceSection=/\b(?:bibliograph(?:y|ies)|references?|sources?|works cited)\b/i.test(unnumber(text(heading)));
+    if(children.length&&!isSourceSection){
+      for(let j=0;j<children.length;){
+        const child=children[j];
+        const next=children[j+1];
+        const childTitle=unnumber(text(child));
+        const nextTitle=next?unnumber(text(next)):'';
+        const isObjection=/^(?:objection\b|p(?:u|ū)rva[\s-]*pak(?:ṣ|sh)a\b)/i.test(childTitle);
+        const isAnswer=next&&/^(?:answer\b|uttara[\s-]*pak(?:ṣ|sh)a\b|siddhānta\b|siddhanta\b)/i.test(nextTitle);
+        const from=body.indexOf(child);
         const prefix=j===0?body.slice(0,from):[];
-        group.entries.push({heading:children[j],nodes:[...prefix,...body.slice(from+1,to)]});
+        if(isObjection&&isAnswer){
+          const to=j+2<children.length?body.indexOf(children[j+2]):body.length;
+          group.entries.push({heading:child,nodes:[...prefix,...body.slice(from+1,to)]});
+          j+=2;
+        }else{
+          const to=j+1<children.length?body.indexOf(children[j+1]):body.length;
+          group.entries.push({heading:child,nodes:[...prefix,...body.slice(from+1,to)]});
+          j++;
+        }
       }
     }else group.entries.push({heading,nodes:body});
     groups.push(group);
   }
   for(const group of groups){
-    for(const entry of group.entries){
+    const entries=[];
+    for(let j=0;j<group.entries.length;){
+      const entry=group.entries[j];
+      if(entry.nodes.some(hasMaterial)){entries.push(entry);j++;continue;}
+      let next=j+1;
+      const nestedHeadings=[];
+      while(next<group.entries.length&&!group.entries[next].nodes.some(hasMaterial)){
+        nestedHeadings.push(group.entries[next].heading);
+        next++;
+      }
+      if(next<group.entries.length){
+        nestedHeadings.push(group.entries[next].heading);
+        entry.nodes=[...nestedHeadings,...group.entries[next].nodes];
+        entries.push(entry);
+        j=next+1;
+      }else j=next;
+    }
+    for(const entry of entries){
       segments.push({group,heading:entry.heading,title:unnumber(text(entry.heading)),
         nodes:[...(segments.length===0?opening:[]),...entry.nodes]});
     }
@@ -108,7 +140,10 @@ if(chapterHeads.length){
   // A failed heading extraction must show the full paper, never a blank page.
   segments=[{group:{title:'Article',heading:null},heading:null,title:'Full text',nodes}];
 }
-const seen=new Set(),idFor=(raw)=>{
+// Heading-only source artifacts should not create empty reader tabs.
+ const materialSegments=segments.filter(page=>page.nodes.some(hasMaterial));
+ if(materialSegments.length)segments=materialSegments;
+ const seen=new Set(),idFor=(raw)=>{
   let id=raw||'section',suffix=2;
   while(seen.has(id))id=raw+'-'+suffix++;
   seen.add(id);return id;
@@ -224,6 +259,8 @@ function clean(node,page){
     }
   }
   const copy=node.cloneNode(true);
+  if(copy.matches?.('h3'))copy.classList.add('reader-subheading');
+  copy.querySelectorAll?.('h3').forEach(heading=>heading.classList.add('reader-subheading'));
   if(copy.matches?.('.sanskrit-transliteration,[lang^="sa-Latn"]'))return document.createDocumentFragment();
   copy.querySelectorAll('.sanskrit-transliteration,[lang^="sa-Latn"]').forEach(n=>n.remove());
   if(title==='Hinduism on Women')copy.querySelectorAll('.women-title-subtitle,.women-title-author').forEach(n=>n.remove());
@@ -349,7 +386,7 @@ function normalizeCitationOrder(root){
   const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation');
   const isQuoteSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text,blockquote.translation,blockquote.scripture-translation');
   for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
-    if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\\s*:?[.]?$/i.test(text(citation)))continue;
+    if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\s*:?[.]?$/i.test(text(citation)))continue;
     let target=citation.previousElementSibling;
     if(isTranslation(target)){
       while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
