@@ -1106,12 +1106,12 @@
     },
     {
       "id": "canto-2-chapter-9-verses-1-15",
-      "range": "ŚB 2.9.1–2.9.15",
-      "status": "source-checked-and-live",
+      "range": "English mirror Texts 1–16 → source ŚB 2.9.1–2.9.15",
+      "status": "source-checked-and-reader-alignment-corrected",
       "english_source": "https://vedabase.io/en/library/sb/2/9/advanced-view/",
       "sanskrit_primary_source": "https://github.com/vishvAsa/purANam_vaiShNavam/blob/100560de6c9f68c2875097d40a2012a84c784179/bhAgavatam/gauDIya-prastutiH/02/09_chatuHshloka-bhAgavatam.md",
       "independent_comparison_source": "https://archive.org/details/Bhagavata_with_Sridhari_Tika_Ramtej_Pandey_1949_PanditPustakalay",
-      "records_checked": 15,
+      "records_checked": 16,
       "primary_source_commit": "100560de6c9f68c2875097d40a2012a84c784179",
       "sanskrit_source_blocks": [
         "2.9.1",
@@ -1131,20 +1131,22 @@
         "2.9.15"
       ],
       "findings": [
-        "Vedabase English translation and synonyms for verses 1–15 were checked against the pinned English mirror after normalizing only Markdown escapes, grouped headings and line wrapping; the wording matches.",
-        "The literal English layer is translated directly from the corresponding Śrīdhara Svāmī Sanskrit blocks, with the embedded ŚB 1.7.5–6 quotation and source footnote material retained where present.",
-        "The 2.9.9–2.9.12 source labels are irregular in the pinned file; the reader segments those blocks by exact verse-heading boundaries so the live source remains attached to the correct verse.",
-        "The independent 1949 Śrīdharī scan remains the comparison witness; its OCR is noisy, so the scan image takes precedence over OCR for character-level questions."
+        "The pinned English mirror’s Texts 11 and 12 together contain source verse 2.9.11; the reader merges the two partial text records without dropping either translation paragraph.",
+        "English Texts 13–16 align to source verses 2.9.12–2.9.15 after that merge; the reader now displays source records 2.9.1–2.9.45 exactly once.",
+        "The 2.9.9–2.9.12 source labels are irregular in the pinned file; the reader segments those blocks by exact verse-heading boundaries so commentary remains attached to the correct source verse.",
+        "The independent 1949 Śrīdharī scan remains a comparison witness; its OCR is noisy, so the scan image takes precedence over OCR for character-level questions."
       ],
       "reference_url": "https://vedabase.io/en/library/sb/2/9/advanced-view/",
       "live_render": {
-        "url": "https://krishnavyasmuni.github.io/advaita/articles/srimad-bhagavatam-canto-02-sridhara-svami/?refresh=canto-2-chapter-9-final#chapter-9",
-        "displayed_records": 46,
-        "sridhara_records_with_text": 45,
+        "url": "https://krishnavyasmuni.github.io/advaita/articles/srimad-bhagavatam-canto-02-sridhara-svami/?refresh=canto-2-chapter-9-source-alignment#chapter-9",
+        "expected_displayed_records": 45,
+        "expected_sridhara_records_with_text": 45,
         "literal_english_records": 15,
         "literal_english_source_blocks": 15,
-        "verified_range": "2.9.1–2.9.15"
-      }
+        "verified_range": "2.9.1–2.9.15",
+        "render_verification": "Reader code corrected; live deployment not yet rechecked."
+      },
+      "source_note": "Pinned English mirror Texts 1–16 map to source ŚB 2.9.1–2.9.15. Texts 11–12 combine as source verse 2.9.11. The pinned Sanskrit source has all fifteen source verse IDs in this range."
     },
     {
       "id": "canto-2-chapter-10-verses-1-15",
@@ -2818,16 +2820,17 @@
       "reference_url": "https://vedabase.io/en/library/sb/2/8/advanced-view/"
     },
     {
-      "id": "canto-2-chapter-9-verses-16-46",
-      "range": "ŚB 2.9.16–2.9.46",
-      "status": "source-checked-and-remote-committed",
-      "english_source": "https://vedabase.io/en/library/sb/2/9/advanced-view/",
+      "id": "canto-2-chapter-9-english-texts-16-46-source-alignment",
+      "range": "English mirror Texts 16–46 → source ŚB 2.9.15–2.9.45",
+      "status": "source-checked-and-reader-alignment-corrected",
+      "english_source": "https://github.com/vishvAsa/purANam_vaiShNavam/blob/100560de6c9f68c2875097d40a2012a84c784179/bhAgavatam/gauDIyo_abhaya-charaNaH/02/09.md",
       "sanskrit_primary_source": "https://github.com/vishvAsa/purANam_VaiShNavam/tree/100560de6c9f68c2875097d40a2012a84c784179/bhAgavatam/gauDIya-prastutiH/02/09_chatuHshloka-bhAgavatam.md",
       "independent_comparison_source": "https://archive.org/details/Bhagavata_with_Sridhari_Tika_Ramtej_Pandey_1949_PanditPustakalay",
       "records_checked": 31,
       "numbered_verses": 31,
       "primary_source_commit": "100560de6c9f68c2875097d40a2012a84c784179",
       "sanskrit_source_blocks": [
+        "2.9.15",
         "2.9.16",
         "2.9.17",
         "2.9.18",
@@ -2858,15 +2861,12 @@
         "2.9.44",
         "2.9.45"
       ],
-      "unavailable_sanskrit_source_blocks": [
-        "2.9.46"
-      ],
-      "source_note": "The pinned English mirror has thirty-one one-verse records for 2.9.16–2.9.46. The pinned Sanskrit file has twenty-nine Śrīdhara blocks covering thirty numbered verses, including one grouped block for 2.9.26–2.9.27; it has no separate Śrīdhara block for 2.9.46.",
+      "source_note": "Raw English mirror Texts 16–46 map to source verses 2.9.15–2.9.45 after Texts 11–12 are combined as source verse 2.9.11. These 31 source IDs are covered. The pinned Sanskrit witness has 30 Śrīdhara blocks for this range, including one grouped block for 2.9.26–2.9.27; there is no separate source verse 2.9.46.",
       "findings": [
-        "The literal English layer is rendered directly from the twenty-nine corresponding Śrīdhara Svāmī source blocks; it does not copy the Bhagavatam translation.",
-        "The grouped 2.9.26–2.9.27 source block remains one grouped JSON entry.",
-        "The pinned Sanskrit file supplies no separate Śrīdhara explanation for 2.9.46; that verse is marked rather than given an invented rendering.",
-        "The independent 1949 Śrīdharī scan remains a comparison witness and is not an automatic correction."
+        "English mirror Texts 16–46 align to source ŚB 2.9.15–2.9.45 after the chapter 9.11 split is merged; all 31 source verse IDs are present once.",
+        "The pinned Sanskrit witness has 30 Śrīdhara blocks spanning these 31 source IDs, with the grouped 2.9.26–2.9.27 block preserved.",
+        "English Text 46 is source verse 2.9.45 in the pinned numbering. No separate source verse 2.9.46 is missing, and no gap marker is added.",
+        "The independent 1949 Śrīdharī scan remains a comparison witness and is not used to silently replace the pinned source."
       ],
       "reference_url": "https://vedabase.io/en/library/sb/2/9/advanced-view/"
     },
@@ -12778,13 +12778,13 @@
       "sanskrit_primary_source": "https://github.com/vishvAsa/purANam_vaiShNavam/blob/100560de6c9f68c2875097d40a2012a84c784179/bhAgavatam/gauDIya-prastutiH/02/09_chatuHshloka-bhAgavatam.md",
       "source_blob_sha": "459193f61f8dd35f9827285c2d0c9119a467fc20",
       "records_checked": 45,
-      "source_note": "Pinned Śrīdhara source checked at bhAgavatam/gauDIya-prastutiH/02/09_chatuHshloka-bhAgavatam.md; each WFW row cites blob 459193f61f8dd35f9827285c2d0c9119a467fc20.",
+      "source_note": "Pinned Śrīdhara source checked at bhAgavatam/gauDIya-prastutiH/02/09_chatuHshloka-bhAgavatam.md; each WFW row cites this file’s blob. English mirror Texts 11–12 are source verse 2.9.11 and are merged in the reader before verse-keyed layers load.",
       "findings": [
         "The 44 word-for-word records cover all 45 numbered verses; the Śrīdhara block for 2.9.26–27 remains grouped.",
         "The malformed source joins “अखिल्…आनां” and “धेह् इति” are recorded and normalized where clear; the doubtful “विमोऽहं” reading is flagged in its WFW note."
       ],
       "reader_data_files": [
-        "assets/data/bhagavatam-sridhara-wfw-canto2-ch09-reviewed.json?v=20260924-c2-ch09-wfw-1"
+        "assets/data/bhagavatam-sridhara-wfw-canto2-ch09-reviewed.json?v=20261015-canto2-source-alignment-1"
       ],
       "word_for_word_records": 44,
       "word_for_word_verse_coverage": 45,
@@ -12806,7 +12806,7 @@
         "The source’s blank opening fragment and damaged spellings/joins are documented in the affected WFW notes; clear Sanskrit spellings are normalized in the gloss."
       ],
       "reader_data_files": [
-        "assets/data/bhagavatam-sridhara-wfw-canto2-ch10-reviewed.json?v=20260924-c2-ch10-wfw-1"
+        "assets/data/bhagavatam-sridhara-wfw-canto2-ch10-reviewed.json?v=20261015-canto2-source-alignment-1"
       ],
       "word_for_word_records": 45,
       "word_for_word_verse_coverage": 51,
