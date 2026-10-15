@@ -212,3 +212,47 @@
 /* Keep two-digit verse numbers inside the Contents column. */
 .shankara-reader-page .gita-contents ol{padding-inline-start:2.5em!important;}
 .shankara-reader-page .gita-contents li::marker{font-variant-numeric:tabular-nums;}
+
+
+/* Shared continuous reader: one scroll, a section Contents rail, and a single text scale. */
+.shankara-reader-page .shankara-content,.shankara-reader-page .shankara-content *{box-sizing:border-box;font-size:16px!important;line-height:1.62!important}
+.shankara-reader-page .shankara-content{width:min(1080px,100%)!important;max-width:1080px!important;margin:0 auto!important;padding:38px 32px 64px!important;background:#fff!important;color:#302d29!important}
+.shankara-reader-page .shankara-reading-grid{display:grid!important;grid-template-columns:minmax(170px,210px) minmax(0,700px)!important;gap:34px!important;align-items:start!important;max-width:944px!important;margin:0 auto!important}
+.shankara-reader-page .shankara-contents{position:sticky!important;top:24px!important;max-height:calc(100vh - 48px)!important;overflow:auto!important;margin:0!important;padding:0 20px 16px 0!important;border:0!important;border-right:1px solid #d8d3cd!important;background:transparent!important}
+.shankara-reader-page .shankara-contents h2,.shankara-reader-page .shankara-section-heading{margin:0 0 12px!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important;font-weight:700!important;scroll-margin-top:22px}
+.shankara-reader-page .shankara-contents ol{display:block!important;columns:1!important;max-height:none!important;overflow:visible!important;margin:0!important;padding:0!important;list-style:none!important}
+.shankara-reader-page .shankara-contents li{margin:0!important;padding:0!important;border:0!important}
+.shankara-reader-page .shankara-contents a,.shankara-reader-page .shankara-all-texts{display:block!important;padding:7px 0!important;color:#3c362e!important;text-decoration:none!important;border-bottom:1px solid #e2ddd7!important}
+.shankara-reader-page .shankara-contents a:hover,.shankara-reader-page .shankara-all-texts:hover{color:#00787a!important}
+.shankara-reader-page .shankara-all-texts{margin-top:14px!important;border-bottom:0!important;color:#00787a!important}
+.shankara-reader-page .shankara-reader-column{min-width:0!important;max-width:700px!important}
+.shankara-reader-page .gita-hero{width:100%!important;max-width:none!important;margin:0 0 28px!important;padding:0!important;text-align:center!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.shankara-reader-page .gita-hero h1,.shankara-reader-page .shankara-author{margin:0 0 8px!important;padding:0!important;color:#3c362e!important;font-weight:700!important}
+.shankara-reader-page .shankara-author{font-weight:400!important}
+.shankara-reader-page .shankara-unit-column{min-width:0!important;max-width:100%!important}
+.shankara-reader-page .shankara-reader-section{margin:0 0 28px!important;scroll-margin-top:20px}
+.shankara-reader-page .shankara-section-heading{margin:28px 0 12px!important;padding:8px 0!important;border-bottom:1px solid #d8d3cd!important;font-weight:700!important}
+.shankara-reader-page .gita-verse{display:block!important;max-width:100%!important;margin:0!important;padding:14px 0!important;border:0!important;border-bottom:1px solid #e2ddd7!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;scroll-margin-top:20px}
+.shankara-reader-page .gita-verse-rule{display:none!important}
+.shankara-reader-page .shankara-unit-number{margin:0 0 8px!important;color:#3c362e!important;font-weight:700!important}
+.shankara-reader-page .gita-sanskrit,.shankara-reader-page .sa-text{display:block!important;margin:0 0 8px!important;color:#3c362e!important;font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+.shankara-reader-page .gita-translation{max-width:none!important;margin:0 0 8px!important;padding:0!important;color:#3c362e!important;text-align:left!important;white-space:pre-wrap!important;overflow-wrap:anywhere!important}
+.shankara-reader-page .gita-details{margin:6px 0 0!important;padding:0!important;border:0!important;background:transparent!important}
+.shankara-reader-page .gita-details>summary{display:inline-block!important;margin:0!important;padding:5px 10px!important;border:0!important;border-radius:0!important;background:#00787a!important;color:#fff!important;cursor:pointer!important;font-weight:400!important;list-style:none!important}
+.shankara-reader-page .gita-details>summary::-webkit-details-marker{display:none!important}
+.shankara-reader-page .gita-details>summary::marker{content:""}
+.shankara-reader-page .gita-reveal{margin:8px 0 0!important;padding:0!important;border:0!important;background:transparent!important}
+.shankara-reader-page .gita-word-list{display:block!important;max-width:none!important;margin:0!important;padding:0!important}
+.shankara-reader-page .gita-word-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:4px 18px!important;margin:0!important;padding:6px 0!important;border:0!important;border-bottom:1px solid #e2ddd7!important;background:transparent!important;color:#3c362e!important}
+.shankara-reader-page .gita-word-dev,.shankara-reader-page .gita-word-gloss{color:#3c362e!important}
+.shankara-reader-page .shankara-reader-error{margin:12px 0!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important}
+@media(max-width:800px){
+ .shankara-reader-page .shankara-content{padding:26px 16px 48px!important}
+ .shankara-reader-page .shankara-reading-grid{grid-template-columns:minmax(0,1fr)!important;gap:22px!important}
+ .shankara-reader-page .shankara-contents{position:static!important;max-height:none!important;overflow:visible!important;padding:0 0 14px!important;border-right:0!important;border-bottom:1px solid #d8d3cd!important}
+ .shankara-reader-page .shankara-contents ol{display:flex!important;flex-wrap:wrap!important;gap:0 16px!important}
+ .shankara-reader-page .shankara-contents li{flex:0 1 auto!important}
+ .shankara-reader-page .shankara-contents a{padding:6px 0!important}
+ .shankara-reader-page .shankara-reader-column{max-width:none!important}
+ .shankara-reader-page .gita-word-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:4px 10px!important}
+}
