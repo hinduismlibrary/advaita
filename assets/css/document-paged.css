@@ -437,16 +437,48 @@
   font-weight:500;
   scroll-margin-top:22px;
 }
-.shastric-article .toc a.toc-subitem{
-  margin:0 0 7px 13px;
-  padding-left:10px;
+.shastric-article .document-paged-page .toc .toc-subitems{
+  margin:-6px 0 13px;
+}
+.document-paged-page .toc a.toc-subitem{
+  display:block;
+  margin:0 0 6px 13px;
+  padding:0 0 0 10px;
+  overflow:hidden;
   border-left:1px solid #e0dbd5;
   color:#7a726a;
   font-size:12px;
+  line-height:1.45;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
-.shastric-article .toc a.toc-subitem:hover,
-.shastric-article .toc a.toc-subitem.is-active-subsection{
+.document-paged-page .toc details.toc-subgroup{
+  margin:0 0 8px;
+}
+.document-paged-page .toc details.toc-subgroup>summary{
+  margin:0 0 6px 13px;
+  padding:0 18px 0 10px;
+  border-left:1px solid #e0dbd5;
+  color:#817970;
+  font-size:11px;
+  line-height:1.45;
+  cursor:pointer;
+  list-style:none;
+}
+.document-paged-page .toc details.toc-subgroup>summary::-webkit-details-marker{display:none}
+.document-paged-page .toc details.toc-subgroup>summary::marker{content:""}
+.document-paged-page .toc details.toc-subgroup>summary::after{
+  float:right;
+  margin-right:-15px;
+  color:#8c837b;
+  content:"+";
+}
+.document-paged-page .toc details.toc-subgroup[open]>summary::after{content:"−"}
+.document-paged-page .toc details.toc-subgroup>.toc-subitems{margin-bottom:8px}
+.document-paged-page .toc a.toc-subitem:hover,
+.document-paged-page .toc a.toc-subitem.is-active-subsection{
   color:var(--purple);
+  text-decoration:none;
 }
 .sadvarn-reader .document-content .editorial-note{
   margin:16px 0 24px;
