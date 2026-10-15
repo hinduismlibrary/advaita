@@ -102,11 +102,6 @@ function cleanSanskrit(value){
 
 const devanagariRun=/(?:[॥।]\s*)?[\u0900-\u097F][\u0900-\u097F\s।॥०-९|,.;:!?()\-–—\u200c\u200d]*[\u0900-\u097F।॥]/gu;
 
-function invocationTransliteration(text){
-  if(!/शिवपरमत्वसाधनम्/u.test(text))return '';
-  return 'Sadashivam ajam nityam vishvottirnam niranjanam Adi rupam maha devam vande Shiva paratva siddhaye';
-}
-
 function sanskrit(value){
   const text=cleanSanskrit(value);
   if(!text)return empty();
@@ -115,8 +110,6 @@ function sanskrit(value){
   const source=make('div',null,text);
   source.lang='sa-Deva';
   details.append(summary,source);
-  const roman=invocationTransliteration(text);
-  if(roman)details.append(make('div','sanskrit-transliteration',roman));
   details.addEventListener('toggle',()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit';});
   return details;
 }
@@ -209,7 +202,6 @@ function sectionsFrom(pages){
   let current=opening;
   let major=null;
   let chapterTitle='Opening Salutation';
-  let skippingIndex=false;
   let pending=[];
   const append=(target,block)=>{
     const previous=target.blocks[target.blocks.length-1];
@@ -230,13 +222,13 @@ function sectionsFrom(pages){
     if(kind==='heading'){
       const info=normaliseMajorHeading(value);
       if(info.id==='index'){
-        skippingIndex=true;
-        current=null;
         major=null;
+        chapterTitle='Contents';
+        current={id:'contents',title:'Contents',parent:'Contents',chapterTitle:'Contents',blocks:pending};
+        sections.push(current);
         pending=[];
         return;
       }
-      skippingIndex=false;
       major=info.number;
       chapterTitle=info.title;
       current=null;
@@ -254,7 +246,6 @@ function sectionsFrom(pages){
       start(id,info.title,major,null);
       return;
     }
-    if(skippingIndex)return;
     if(kind==='p'){
       const text=articleText(value);
       const match=/^\s*(\d{1,2})\.(\d{1,2})\s+(.+)$/.exec(text);
@@ -378,7 +369,7 @@ function renderTable(value){
 function renderParagraph(value,section){
   const visible=articleText(value);
   if(!visible||/popcultking/i.test(visible))return empty();
-  if(section==='index')return indexList(visible);
+  if(section==='contents')return indexList(visible);
   const mixed=mixedSanskrit(value,/^\s*\(?translation\s*:/i.test(String(value??''))?'translation':'paragraph');
   if(mixed){
     const first=mixed.firstElementChild;
@@ -416,8 +407,22 @@ function renderBlock(block,section){
   return make('p',null,articleText(block.value));
 }
 
+function normalizeCitationOrder(root){
+  const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation');
+  const isQuoteSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text,blockquote.translation,blockquote.scripture-translation');
+  for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
+    if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\\s*:?[.]?$/i.test(articleText(citation.textContent)))continue;
+    let target=citation.previousElementSibling;
+    if(isTranslation(target)){
+      while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
+      if(isQuoteSource(target.previousElementSibling))target=target.previousElementSibling;
+      target.before(citation);
+    }else if(isQuoteSource(target))target.before(citation);
+  }
+}
+
 function href(section){
-  return section.id==='opening-salutation'?base:base+'?section='+encodeURIComponent(section.id);
+  return section.id==='contents'?base:base+'?section='+encodeURIComponent(section.id);
 }
 
 function tocInto(node,sections,selected){
@@ -479,9 +484,11 @@ async function load(){
 async function render(){
   const pages=await load();
   const sections=sectionsFrom(pages);
+  const contentsIndex=sections.findIndex(section=>section.id==='contents');
+  if(contentsIndex>0)sections.unshift(sections.splice(contentsIndex,1)[0]);
   const requested=new URLSearchParams(location.search).get('section');
   const legacy={
-    opening:'opening-salutation',index:'opening-salutation',
+    opening:'opening-salutation',index:'contents',
     'section-1':'introduction','section-2':'padma-pur-a-s-contradiction',
     'section-3':'shiva-purana-on-the-true-nature-of-vishnu',
     'section-4':'double-standards-on-absolute-and-relative-supremacy',
@@ -505,6 +512,7 @@ async function render(){
   const content=document.createDocumentFragment();
   content.append(make('h3',null,selected.title));
   for(const block of selected.blocks)content.append(renderBlock(block,selected.id));
+  normalizeCitationOrder(content);
   root.replaceChildren(content);
 }
 

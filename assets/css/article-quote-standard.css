@@ -194,3 +194,99 @@
     line-height:1.58!important;
   }
 }
+
+
+/* One content scale for all six article readers: 20px desktop, 18px mobile. */
+.document-paged-page .document-content,
+.document-paged-page #source-content{
+  font-size:20px!important;
+  line-height:1.62!important;
+}
+.document-paged-page .document-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button),
+.document-paged-page #source-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button){
+  font-size:20px!important;
+  line-height:1.62!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+.document-paged-page #source-content details.sanskrit-reveal [lang^="sa"],
+.document-paged-page .document-content .sanskrit-text,
+.document-paged-page #source-content .sanskrit-text{
+  font-size:20px!important;
+  line-height:1.7!important;
+}
+.document-paged-page .document-content p.reference,
+.document-paged-page .document-content p.source-citation,
+.document-paged-page .document-content p.scripture-source,
+.document-paged-page .document-content p.citation,
+.document-paged-page #source-content p.reference,
+.document-paged-page #source-content p.source-citation,
+.document-paged-page #source-content p.scripture-source,
+.document-paged-page #source-content p.citation{
+  margin:14px 0 8px!important;
+  color:#006f71!important;
+  font-size:20px!important;
+  line-height:1.55!important;
+  font-weight:700!important;
+}
+.document-paged-page .document-content blockquote.translation,
+.document-paged-page .document-content p.translation,
+.document-paged-page .document-content blockquote.scripture-translation,
+.document-paged-page .document-content p.scripture-translation,
+.document-paged-page #source-content blockquote.translation,
+.document-paged-page #source-content p.translation,
+.document-paged-page #source-content blockquote.scripture-translation,
+.document-paged-page #source-content p.scripture-translation{
+  margin:0 0 24px!important;
+  padding:1px 0 1px 17px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:20px!important;
+  line-height:1.62!important;
+  font-style:normal!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa-Latn"],
+.document-paged-page .document-content .sanskrit-transliteration,
+.document-paged-page #source-content [lang^="sa-Latn"],
+.document-paged-page #source-content .sanskrit-transliteration{display:none!important}
+.document-paged-page .document-content .contents-page-list{
+  margin:0;
+  padding-left:1.5em;
+}
+.document-paged-page .document-content .contents-page-list li{margin:0 0 10px}
+@media(max-width:620px){
+  .document-paged-page .document-content,
+  .document-paged-page #source-content,
+  .document-paged-page .document-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button),
+  .document-paged-page #source-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button){
+    font-size:18px!important;
+    line-height:1.6!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+  .document-paged-page #source-content details.sanskrit-reveal [lang^="sa"],
+  .document-paged-page .document-content .sanskrit-text,
+  .document-paged-page #source-content .sanskrit-text{
+    font-size:18px!important;
+    line-height:1.7!important;
+  }
+  .document-paged-page .document-content p.reference,
+  .document-paged-page .document-content p.source-citation,
+  .document-paged-page .document-content p.scripture-source,
+  .document-paged-page .document-content p.citation,
+  .document-paged-page #source-content p.reference,
+  .document-paged-page #source-content p.source-citation,
+  .document-paged-page #source-content p.scripture-source,
+  .document-paged-page #source-content p.citation,
+  .document-paged-page .document-content blockquote.translation,
+  .document-paged-page .document-content p.translation,
+  .document-paged-page .document-content blockquote.scripture-translation,
+  .document-paged-page .document-content p.scripture-translation,
+  .document-paged-page #source-content blockquote.translation,
+  .document-paged-page #source-content p.translation,
+  .document-paged-page #source-content blockquote.scripture-translation,
+  .document-paged-page #source-content p.scripture-translation{
+    font-size:18px!important;
+  }
+}

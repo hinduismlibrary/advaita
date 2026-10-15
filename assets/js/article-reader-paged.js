@@ -1,5 +1,5 @@
-/* PDF-informed reader repair for the four essays under Other.
- * Do not modify the separate Varna-vicara reader or its source material.
+/* Shared reader for the five HTML-backed articles using the paged layout.
+ * Keep the separate Varna-vicara reader and its source material untouched.
  * Keep every source node: the old reader selected the outermost wrapper and could
  * mistake a page shell for a document, leaving its article empty.
  */
@@ -46,6 +46,21 @@ if(first){
 }
 let nodes=[...content.children];
 if(title==='Hinduism on Women')nodes=nodes.filter(n=>!n.matches?.('.women-index'));
+/* Source PDFs often include their own Contents/Index between article sections.
+   Build one shared Contents page from the extracted sections instead. */
+const contentFiltered=[];let skippingEmbeddedContents=false;
+for(const node of nodes){
+  const isContentsHeading=isHeading(node)&&/^\\s*(?:contents|index)\\s*$/i.test(text(node));
+  if(skippingEmbeddedContents){
+    if(isHeading(node)){
+      skippingEmbeddedContents=false;
+      if(isContentsHeading){skippingEmbeddedContents=true;continue;}
+    }else continue;
+  }
+  if(isContentsHeading){skippingEmbeddedContents=true;continue;}
+  contentFiltered.push(node);
+}
+nodes=contentFiltered;
 /* If headings sit within a single inner wrapper, descend without discarding
    opening dedications, introductions, footnotes or final bibliography. */
 if(!nodes.some(realHeading)){
@@ -72,7 +87,8 @@ if(chapterHeads.length){
     const body=nodes.slice(start+1,stop);
     const children=heading.matches('h2')?body.filter(n=>n.matches?.('h3')):[];
     const group={title:unnumber(text(heading)),heading,entries:[]};
-    if(children.length){
+    const isBibliography=/\\b(?:bibliography|references|sources)\\b/i.test(unnumber(text(heading)));
+    if(children.length&&!isBibliography){
       for(let j=0;j<children.length;j++){
         const from=body.indexOf(children[j]);
         const to=j+1<children.length?body.indexOf(children[j+1]):body.length;
@@ -107,6 +123,9 @@ segments.forEach((p,i)=>{
 for(const p of segments){
   if(p.group.heading?.id&&!idMap.has(p.group.heading.id))idMap.set(p.group.heading.id,p);
 }
+const contentsPage={group:{title:'Contents',heading:null},heading:null,title:'Contents',nodes:[],id:idFor('contents'),isContents:true};
+segments.unshift(contentsPage);
+idMap.set(contentsPage.id,contentsPage);
 const href=p=>p===segments[0]?base:base+'?section='+encodeURIComponent(p.id);
 const el=(tag,cls,value)=>{
   const n=document.createElement(tag);
@@ -207,6 +226,9 @@ function clean(node,page){
     }
   }
   const copy=node.cloneNode(true);
+  if(copy.matches?.('.sanskrit-transliteration,[lang^="sa-Latn"]'))return document.createDocumentFragment();
+  copy.querySelectorAll('.sanskrit-transliteration,[lang^="sa-Latn"]').forEach(n=>n.remove());
+  if(title==='Hinduism on Women')copy.querySelectorAll('.women-title-subtitle,.women-title-author').forEach(n=>n.remove());
   for(const n of [copy,...copy.querySelectorAll('*')]){
     if(!(n instanceof Element))continue;
     const style=n.getAttribute('style')||'';
@@ -325,13 +347,35 @@ function pairWomenScripture(root){
       next.classList.add('women-scripture-translation');
   }
 }
+function normalizeCitationOrder(root){
+  const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation');
+  const isQuoteSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text,blockquote.translation,blockquote.scripture-translation');
+  for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
+    if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\\s*:?[.]?$/i.test(text(citation)))continue;
+    let target=citation.previousElementSibling;
+    if(isTranslation(target)){
+      while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
+      if(isQuoteSource(target.previousElementSibling))target=target.previousElementSibling;
+      target.before(citation);
+    }else if(isQuoteSource(target))target.before(citation);
+  }
+}
 function render(index){
   const page=segments[index];if(!page)return;
   const frag=document.createDocumentFragment();
   const h=el('h3',null,page.title);h.id=page.id;frag.append(h);
-  for(const n of page.nodes)frag.append(clean(n,page));
+  if(page.isContents){
+    const list=el('ol','contents-page-list');
+    for(const section of segments.slice(1)){
+      const item=el('li');const link=el('a',null,section.title);link.href=href(section);
+      item.append(link);list.append(item);
+    }
+    frag.append(list);
+  }else for(const n of page.nodes)frag.append(clean(n,page));
   pairWomenScripture(frag);
-  styleArticleQuotes(frag);reader.replaceChildren(frag);
+  styleArticleQuotes(frag);
+  normalizeCitationOrder(frag);
+  reader.replaceChildren(frag);
   for(const d of reader.querySelectorAll('details.sanskrit-reveal')){
     const summary=d.querySelector(':scope>summary');if(!summary)continue;
     const sync=()=>summary.textContent=d.open?'Hide Sanskrit':'Show Sanskrit';
