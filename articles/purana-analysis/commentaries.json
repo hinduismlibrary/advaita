@@ -132,6 +132,10 @@
     "rasHaribhaktisudhodaya": {
       "label": "Royal Asiatic Society, Whish MS 80: Haribhaktisudhodaya from the Nāradīya Purāṇa",
       "url": "https://royalasiaticcollections.org/south-indian-sanskrit-ms-080-whish-ms-80haribhaktisudhodaya/"
+    },
+    "vallabhaBhagavataTreatise": {
+      "label": "Vallabha and His Date, Bhāgavata-tattva-dīpikā (Wisdomlib edition)",
+      "url": "https://www.wisdomlib.org/hinduism/essay/srikara-bhashya-commentary/d/doc1471651.html"
     }
   },
   "entries": [
@@ -1523,9 +1527,10 @@
       "period": "c. 1479–1531",
       "status": "within-cutoff",
       "sourceIds": [
-        "vallabhaBhagavata"
+        "vallabhaBhagavata",
+        "bhagavataCommentaryLists"
       ],
-      "note": "Included as a Bhāgavata interpretive work; it may not be a verse-by-verse bhāṣya."
+      "note": "Included as a Bhāgavata interpretive work; it may not be a verse-by-verse bhāṣya. Title appears in a secondary Bhāgavata bibliography; exact work and genre need primary-source confirmation."
     },
     {
       "id": "comm-bhagavata-dasama-anukramanika",
@@ -1536,9 +1541,10 @@
       "period": "c. 1479–1531",
       "status": "within-cutoff",
       "sourceIds": [
-        "vallabhaBhagavata"
+        "vallabhaBhagavata",
+        "bhagavataCommentaryLists"
       ],
-      "note": "A small section-level companion work, included separately from Vallabha’s Subodhinī."
+      "note": "A small section-level companion work, included separately from Vallabha’s Subodhinī. Title appears in a secondary Bhāgavata bibliography; exact work and genre need primary-source confirmation."
     },
     {
       "id": "comm-bhagavata-sukshma-tika",
@@ -1771,7 +1777,8 @@
       "period": "c. 1479–1531",
       "status": "within-cutoff",
       "sourceIds": [
-        "vallabhaBhagavata"
+        "vallabhaBhagavata",
+        "vallabhaBhagavataTreatise"
       ],
       "note": "A short interpretive work on the Bhāgavata, distinct from the Subodhinī commentary."
     },
