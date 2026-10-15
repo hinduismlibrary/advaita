@@ -5,7 +5,7 @@
   --green:#cfeee2;
   --green-border:#a8cabb;
   --line:#d8d8d8;
-  --muted:#777;
+  --muted:#686868;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:18px}
@@ -13,11 +13,11 @@ body.advaita-directory-page{
   margin:0;
   background:var(--paper);
   color:var(--ink);
-  font:400 16px/1.48 Arial,Helvetica,sans-serif;
+  font:400 16px/1.5 Arial,Helvetica,sans-serif;
 }
 .ad-topbar{
   width:min(1040px,calc(100% - 28px));
-  height:50px;
+  min-height:50px;
   margin:0 auto;
   display:flex;
   align-items:center;
@@ -25,7 +25,7 @@ body.advaita-directory-page{
 }
 .ad-topbar a{
   color:#111;
-  font:700 22px/1.2 Arial,Helvetica,sans-serif;
+  font:700 16px/1.5 Arial,Helvetica,sans-serif;
   text-decoration:none;
 }
 .ad-topbar a:hover,.ad-topbar a:focus-visible{color:var(--blue);text-decoration:underline}
@@ -39,7 +39,7 @@ body.advaita-directory-page{
 .ad-reader{
   display:grid;
   grid-template-columns:190px minmax(0,1fr);
-  gap:22px;
+  gap:24px;
   align-items:start;
 }
 .ad-side{
@@ -51,20 +51,20 @@ body.advaita-directory-page{
   padding:0 14px 8px 0;
   border-right:1px solid var(--line);
 }
-.ad-side h2{
-  margin:0 0 9px;
-  padding:4px 8px;
+.ad-side h2,.ad-section>h2{
+  margin:0 0 8px;
+  padding:6px 9px;
   border:1px solid var(--green-border);
   background:var(--green);
   color:#111;
-  font:700 16px/1.25 Arial,Helvetica,sans-serif;
+  font:700 16px/1.5 Arial,Helvetica,sans-serif;
 }
 .ad-side nav{display:grid;gap:4px}
 .ad-side a{
   display:block;
   margin:0;
   color:var(--blue);
-  font:400 16px/1.45 Arial,Helvetica,sans-serif;
+  font:400 16px/1.5 Arial,Helvetica,sans-serif;
   text-decoration:none;
 }
 .ad-side a:hover,.ad-side a:focus-visible{text-decoration:underline}
@@ -74,97 +74,87 @@ body.advaita-directory-page{
 .ad-hero h1{
   margin:0;
   color:#111;
-  font:600 30px/1.2 Arial,Helvetica,sans-serif;
+  font:700 16px/1.5 Arial,Helvetica,sans-serif;
 }
 .ad-section{
   min-width:0;
   margin:0 0 26px;
   scroll-margin-top:18px;
 }
-.ad-section>h2{
-  margin:0 0 3px;
-  padding:4px 8px;
-  border:1px solid var(--green-border);
-  background:var(--green);
-  color:#111;
-  font:700 19px/1.2 Arial,Helvetica,sans-serif;
-  text-align:left;
-}
+.ad-section>h2{margin-bottom:0}
 .ad-links{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  column-gap:30px;
+  column-gap:22px;
   align-items:stretch;
   margin:0;
   padding:0;
   list-style:none;
 }
 .ad-entry{
+  position:relative;
+  display:flex;
   min-width:0;
+  min-height:56px;
+  align-items:center;
+  gap:8px;
   margin:0;
+  padding:8px 2px;
   border-bottom:1px solid var(--line);
 }
 .ad-links>.ad-entry:last-child:nth-child(odd){
   grid-column:1/-1;
-  width:calc(50% - 15px);
-  justify-self:center;
+  justify-content:center;
 }
-.ad-entry details{height:100%}
-.ad-entry summary{
-  position:relative;
-  display:flex;
-  min-height:50px;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  padding:6px 1px 6px 17px;
-  color:var(--ink);
-  font:400 16px/1.45 Arial,Helvetica,sans-serif;
+.ad-entry-link{
+  display:block;
+  min-width:0;
+  flex:1 1 auto;
+  color:var(--blue);
+  font:400 16px/1.5 Arial,Helvetica,sans-serif;
+  text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.ad-entry-link:hover{text-decoration:underline}
+.ad-entry-title,.ad-entry-author{font:400 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-entry-author{color:var(--muted)}
+.ad-entry-count{
+  flex:0 0 auto;
+  color:#444;
+  font:400 16px/1.5 Arial,Helvetica,sans-serif;
+  white-space:nowrap;
+}
+.ad-entry-info{position:relative;flex:0 0 auto}
+.ad-entry-info summary{
+  display:grid;
+  width:30px;
+  height:30px;
+  place-items:center;
+  border:1px solid var(--green-border);
+  border-radius:50%;
+  background:#f7fbf9;
+  color:var(--blue);
+  font:400 16px/1 Arial,Helvetica,sans-serif;
   list-style:none;
   cursor:pointer;
 }
-.ad-entry summary::-webkit-details-marker{display:none}
-.ad-entry summary::marker{content:""}
-.ad-entry summary::before{
-  position:absolute;
-  left:2px;
-  top:50%;
-  color:var(--muted);
-  content:"•";
-  transform:translateY(-50%);
-}
-.ad-entry-label{min-width:0;overflow-wrap:anywhere}
-.ad-entry-link{
-  color:var(--blue);
-  font:400 16px/1.45 Arial,Helvetica,sans-serif;
-  text-decoration:none;
-}
-.ad-entry-link:hover{text-decoration:underline}
-.ad-entry-author{
-  color:var(--muted);
-  font:400 16px/1.45 Arial,Helvetica,sans-serif;
-}
-.ad-info-label{
-  flex:0 0 auto;
-  display:inline-block;
-  padding:2px 7px;
-  border:1px solid var(--green-border);
-  background:#f7fbf9;
-  color:var(--blue);
-  font:400 16px/1.35 Arial,Helvetica,sans-serif;
-}
-.ad-entry summary:hover .ad-info-label,
-.ad-entry[open] summary .ad-info-label{background:var(--green)}
+.ad-entry-info summary::-webkit-details-marker{display:none}
+.ad-entry-info summary::marker{content:""}
+.ad-entry-info summary:hover,.ad-entry-info[open] summary{background:var(--green)}
 .ad-entry-note{
+  position:absolute;
+  z-index:2;
+  top:calc(100% + 6px);
+  right:0;
+  width:min(290px,70vw);
   margin:0;
-  padding:0 0 11px 17px;
-  color:#555;
-  font:400 16px/1.48 Arial,Helvetica,sans-serif;
+  padding:10px 12px;
+  border:1px solid var(--green-border);
+  background:#fff;
+  color:#444;
+  font:400 16px/1.5 Arial,Helvetica,sans-serif;
 }
-.ad-entry summary:focus-visible,
-.ad-entry-link:focus-visible,
-.ad-side a:focus-visible,
-.ad-topbar a:focus-visible{
+.ad-entry summary:focus-visible,.ad-entry-link:focus-visible,.ad-side a:focus-visible,.ad-topbar a:focus-visible{
   outline:2px solid var(--green-border);
   outline-offset:2px;
 }
@@ -184,14 +174,10 @@ body.advaita-directory-page{
   .ad-side nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 14px}
 }
 @media(max-width:560px){
-  .ad-topbar{width:calc(100% - 32px);height:50px}
+  .ad-topbar{width:calc(100% - 32px);min-height:50px}
   .ad-page{width:calc(100% - 32px);padding:20px 0 42px}
   .ad-side nav{grid-template-columns:1fr;gap:4px}
   .ad-links{grid-template-columns:1fr;column-gap:0}
-  .ad-links>.ad-entry:last-child:nth-child(odd){
-    grid-column:auto;
-    width:auto;
-    justify-self:stretch;
-  }
+  .ad-links>.ad-entry:last-child:nth-child(odd){grid-column:auto;justify-content:initial}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
