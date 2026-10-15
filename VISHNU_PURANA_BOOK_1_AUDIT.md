@@ -64,9 +64,9 @@ Chapter-local verse numbering and the selected Vasuki sequence were left intact.
 
 ## Remaining review limit
 
-These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 13,327 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. Śrīdhara token-level word-for-word entries are currently added for 1.17.1 only; the other attached commentary blocks still need a full lexical pass. No blanket accuracy claim is made here.
+These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 13,551 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. Śrīdhara token-level word-for-word entries are currently added for 1.17.1 only; the other attached commentary blocks still need a full lexical pass. No blanket accuracy claim is made here.
 
 
-## Follow-up structural verification — 14 October 2026
+## Follow-up structural verification — 15 October 2026
 
 All 22 live Book 1 chapter pages were fetched again after the earlier content audit. The verification found 1,407 verse cards, 13,551 word-for-word rows, 934 Śrīdhara source blocks, 1,407 transliteration controls, and 934 Devanāgarī controls. Each source block is represented in both the transliteration and Devanāgarī controls. 63 missing IAST strings were transliterated from the attached Devanāgarī source. The Śrīdhara lexical breakdown is present for 1.17.1 only; the other source blocks do not yet have token-level glosses.
