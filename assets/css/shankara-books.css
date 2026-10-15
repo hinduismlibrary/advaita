@@ -208,3 +208,7 @@
 .shankara-content .shankara-toc-details>summary{cursor:pointer;color:#297e83}
 .shankara-content .shankara-toc-details ol{max-height:28rem;overflow:auto;padding-left:2rem}
 .shankara-content .shankara-verse{scroll-margin-top:80px}
+
+/* Keep two-digit verse numbers inside the Contents column. */
+.shankara-reader-page .gita-contents ol{padding-inline-start:2.5em!important;}
+.shankara-reader-page .gita-contents li::marker{font-variant-numeric:tabular-nums;}
