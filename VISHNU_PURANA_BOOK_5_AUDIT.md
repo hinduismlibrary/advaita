@@ -32,7 +32,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 18 | 58 | 0 | 58 | 0 | 35 |
 | 19 | 29 | 29 | 0 | 116 | 11 |
 | 20 | 105 | 0 | 105 | 0 | 40 |
-| 21 | 32 | 0 | 32 | 0 | 6 |
+| 21 | 32 | 32 | 0 | 339 | 6 |
 | 22 | 18 | 18 | 0 | 178 | 9 |
 | 23 | 47 | 0 | 47 | 0 | 18 |
 | 24 | 21 | 21 | 0 | 211 | 15 |
@@ -114,3 +114,8 @@ Added one-word Sanskrit, IAST, and direct gloss rows to all 25 Book 5, Chapter 1
 ## 2026-10-15 follow-up — Chapter 12 word-for-word panels
 
 Added one-word Sanskrit, IAST, and direct gloss rows to all 26 Book 5, Chapter 12 verse cards (298 rows). The audit now records 825/1,517 cards with panels and 692 cards still without one.
+
+
+## 2026-10-15 follow-up — Chapter 21 word-for-word panels
+
+Added one-word Sanskrit, IAST, and direct gloss rows to all 32 Book 5, Chapter 21 verse cards (339 rows). The audit now records 857/1,517 cards with panels and 660 cards still without one.
