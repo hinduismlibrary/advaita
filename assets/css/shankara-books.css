@@ -171,7 +171,7 @@
  max-width:840px;margin:10px auto;padding:9px 12px;border:1px solid #d9e6e2;border-radius:8px;
  background:#f6faf8;color:#46534d;font-size:14px;line-height:1.55;text-align:left
 }
-.shankara-content .shankara-reader-error{border-color:#e2c9b9;background:#fff9f5;color:#60483b}
+.shankara-content .shankara-reader-error{border-color:#9bc5c7;background:#f6faf8;color:#425c55}
 .shankara-content .shankara-reader-error a{color:#2f6e66;font-weight:700;text-decoration:underline}
 @media(max-width:700px){
  .shankara-content .shankara-reading-grid{grid-template-columns:minmax(0,1fr)}
@@ -182,7 +182,7 @@
 }
 
 /* Shared coverage and section styles for the Ātmabodha-format text readers. */
-.shankara-content .shankara-reader-coverage{margin:14px auto 20px;padding:12px 15px;border-left:3px solid #b78353;background:#f0eee9;color:#514c46;font:400 14px/1.65 Merriweather,Georgia,serif;text-align:left}
+
 .shankara-content .shankara-reader-coverage strong{color:#302b25}
 .shankara-content .shankara-section-heading{margin:32px 0 16px;padding:10px 14px;border:1px solid #b9d9ce;background:#d6eee6;color:#287f80;font:600 20px/1.35 Vollkorn,Georgia,serif;scroll-margin-top:90px}
 .shankara-content .shankara-toc-details{margin:5px 0 8px}
