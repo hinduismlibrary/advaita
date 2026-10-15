@@ -957,3 +957,60 @@ body {
     font-size:19px!important
   }
 }
+
+/* Minimal shared reading scale; preserve the existing paper and ink palette. */
+body.gita-page .shankara-content .shankara-reader-coverage,
+body.gita-page .shankara-content .script-controls{display:none!important}
+body.gita-page .shankara-content,
+body.gita-page .shankara-content .gita-sanskrit,
+body.gita-page .shankara-content .sa-text,
+body.gita-page .shankara-content .gita-translation,
+body.gita-page .shankara-content .shankara-iast,
+body.gita-page .shankara-content .gita-word-list,
+body.gita-page .shankara-content .gita-word-row,
+body.gita-page .shankara-content .gita-word-source,
+body.gita-page .shankara-content .gita-word-dev,
+body.gita-page .shankara-content .gita-word-iast,
+body.gita-page .shankara-content .gita-word-gloss,
+body.gita-page .shankara-content .shankara-author,
+body.gita-page .shankara-content .gita-contents h2,
+body.gita-page .shankara-content .gita-contents ol,
+body.gita-page .shankara-content .gita-contents li,
+body.gita-page .shankara-content .gita-contents a,
+body.gita-page .shankara-content .shankara-unit-label,
+body.gita-page .shankara-content .gita-verse h2,
+body.gita-page .shankara-content .gita-hero .eyebrow,
+body.gita-page .shankara-content .gita-hero .subtitle,
+body.gita-page .shankara-content .treatise-section-count,
+body.gita-page .shankara-content .treatise-section-picker select,
+body.gita-page .shankara-content .gita-chapter-nav a,
+body.gita-page .shankara-content .shankara-work-nav a,
+body.gita-page .shankara-content .shankara-index-link,
+body.gita-page .shankara-content .shankara-about-copy,
+body.gita-page .shankara-content .shankara-reader-error,
+body.gita-page .shankara-content .gita-loading,
+body.gita-page .shankara-content .shankara-section-heading,
+body.gita-page .shankara-content .shankara-toc-details ol{
+ font-size:16px!important;line-height:1.58!important
+}
+body.gita-page .shankara-content .gita-sanskrit,
+body.gita-page .shankara-content .sa-text{
+ font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+ font-size:16px!important;line-height:1.58!important
+}
+body.gita-page .shankara-content .gita-details>summary,
+body.gita-page .shankara-content .shankara-chapter>summary,
+body.gita-page .shankara-content .shankara-about>summary,
+body.gita-page .shankara-content .shankara-toc-details>summary{
+ display:inline-flex!important;align-items:center;min-height:0!important;
+ padding:6px 10px!important;border:1px solid #c89568!important;border-radius:4px!important;
+ background:transparent!important;color:#8a4f2b!important;
+ font:400 16px/1.5 Merriweather,Georgia,serif!important;list-style:none
+}
+body.gita-page .shankara-content .gita-details>summary::-webkit-details-marker,
+body.gita-page .shankara-content .shankara-chapter>summary::-webkit-details-marker,
+body.gita-page .shankara-content .shankara-about>summary::-webkit-details-marker,
+body.gita-page .shankara-content .shankara-toc-details>summary::-webkit-details-marker{display:none}
+body.gita-page .shankara-content .gita-details[open]>summary,
+body.gita-page .shankara-content .shankara-chapter[open]>summary,
+body.gita-page .shankara-content .shankara-about[open]>summary{background:#fbf8f1!important}
