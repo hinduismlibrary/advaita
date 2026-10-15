@@ -44,6 +44,7 @@ if(first){
   }
 }
 let nodes=[...content.children];
+if(title==='Hinduism on Women')nodes=nodes.filter(n=>!n.matches?.('.women-index'));
 /* If headings sit within a single inner wrapper, descend without discarding
    opening dedications, introductions, footnotes or final bibliography. */
 if(!nodes.some(realHeading)){
@@ -271,6 +272,31 @@ function styleArticleQuotes(root){
 
 function pairWomenScripture(root){
   if(title!=='Hinduism on Women')return;
+  const isStaticSanskrit=p=>p.closest('.women-title-page')||
+    p.matches('.women-colophon-source-title,.women-closing-line,.women-om');
+  const pending=new Set([...root.querySelectorAll('p[lang^="sa"]')]
+    .filter(p=>!p.closest('details.sanskrit-reveal')&&!isStaticSanskrit(p)));
+  for(const source of [...pending]){
+    if(!pending.has(source))continue;
+    const run=[source];
+    let sibling=source.nextElementSibling;
+    while(sibling&&pending.has(sibling)){run.push(sibling);sibling=sibling.nextElementSibling;}
+    for(const p of run)pending.delete(p);
+    const reveal=el('details','sanskrit-reveal');
+    reveal.append(el('summary',null,'Show Sanskrit'));
+    source.before(reveal);
+    reveal.append(...run);
+  }
+  for(const term of root.querySelectorAll('dt[lang^="sa"]')){
+    if(term.closest('details.sanskrit-reveal'))continue;
+    const span=el('span','sanskrit-text');
+    span.lang=term.lang||'sa-Deva';
+    while(term.firstChild)span.append(term.firstChild);
+    term.removeAttribute('lang');
+    const reveal=el('details','sanskrit-reveal');
+    reveal.append(el('summary',null,'Show Sanskrit'),span);
+    term.append(reveal);
+  }
   const sources=[...root.querySelectorAll('details.sanskrit-reveal,p[lang^="sa"]')];
   for(const source of sources){
     if(source.closest('.women-scripture-pair'))continue;
