@@ -273,7 +273,7 @@ function styleArticleQuotes(root){
 function pairWomenScripture(root){
   if(title!=='Hinduism on Women')return;
   const isStaticSanskrit=p=>p.closest('.women-title-page')||
-    p.matches('.women-colophon-source-title,.women-closing-line,.women-om');
+    p.matches('.women-colophon-source-title,.women-om');
   const pending=new Set([...root.querySelectorAll('p[lang^="sa"]')]
     .filter(p=>!p.closest('details.sanskrit-reveal')&&!isStaticSanskrit(p)));
   for(const source of [...pending]){
