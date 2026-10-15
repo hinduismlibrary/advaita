@@ -179,6 +179,19 @@
     @media (max-width: 760px) {
       .commentary-head { align-items: start; flex-direction: column; gap: 4px; }
     }
+    /* Grouped contents keep the side index scannable. */
+    #contents { display: flex; flex-direction: column; gap: 15px; margin-top: 10px; }
+    .contents-group-title { margin: 0 0 5px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; }
+    .contents-list { display: flex; flex-direction: column; gap: 1px; }
+    .contents-button { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 5px 7px; }
+    .contents-name { grid-column: 1; grid-row: 1; }
+    .evidence-count { grid-column: 2; grid-row: 1; align-self: center; }
+    .contents-category { display: none; }
+    .legend { gap: 6px 12px; }
+    @media (max-width: 760px) {
+      #contents { display: flex; flex-direction: column; gap: 13px; max-height: none; }
+      .contents-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px 8px; }
+    }
   </style>
 </head>
 <body>
@@ -213,10 +226,9 @@
     </nav>
     <div id="map-pane">
       <div class="legend" aria-label="Heat map key">
-        <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
-        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Bhāṣya / chapter</span>
+        <span class="legend-item" title="Includes passages cited in commentaries"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted</span>
+        <span class="legend-item"><i class="legend-swatch bhashya" aria-hidden="true"></i>Chapter only</span>
         <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Parallel</span>
-        <span class="legend-item"><i class="legend-swatch other" aria-hidden="true"></i>Other</span>
       </div>
       <main id="map" aria-live="polite"></main>
     </div>
@@ -537,7 +549,7 @@
         addGroup(detail, "Chapter link only", record.chapterRelations, "chapterRelations");
         addTextReferencesGroup(detail, record.textReferences);
         addContentsGroup(detail, record.contents);
-        addTaggedGroup(detail, "Commentary", record.commentaryCitations);
+        addTaggedGroup(detail, "Quoted in commentary", record.commentaryCitations);
         addTaggedGroup(detail, "Tīrtha / sacred places", record.topics?.filter(entry => entry.kind === "pilgrimage"));
         addTaggedGroup(detail, "Bhāgavata-māhātmya", record.topics?.filter(entry => entry.kind === "mahatmya"));
         addTaggedGroup(detail, "Subject", record.topics?.filter(entry => entry.kind === "subject"));
@@ -571,9 +583,9 @@
             for (let chapter = 1; chapter <= section.last; chapter += 1) {
               const record = section.chapters[String(chapter)] || {};
               const quoteEntries = record.quoted || [];
-              const hasQuoted = quoteEntries.some(entry => entry.refs?.length);
-              const hasBhashya = Boolean(record.commentaryCitations?.length) ||
-                quoteEntries.some(entry => !entry.refs?.length);
+              const hasQuoted = quoteEntries.some(entry => entry.refs?.length) ||
+                Boolean(record.commentaryCitations?.length);
+              const hasBhashya = quoteEntries.some(entry => !entry.refs?.length);
               const hasParallel = Boolean(record.parallel?.some(entry => entry.level !== "chapter"));
               const hasChapterRelation = Boolean(record.chapterRelations?.length || record.parallel?.some(entry => entry.level === "chapter"));
               const hasOther = Boolean(record.contents?.length || record.textReferences?.length || record.topics?.length || hasChapterRelation);
@@ -591,7 +603,7 @@
               if (hasOther) tile.classList.add("indexed");
               const states = [
                 hasQuoted && "verse citation",
-                hasBhashya && "bhāṣya or chapter-only citation",
+                hasBhashya && "chapter-only citation",
                 hasParallel && "parallel",
                 hasOther && "other indexed evidence"
               ].filter(Boolean);
@@ -628,26 +640,37 @@
         const items = [...data.puranas].sort((a, b) =>
           evidenceCount(b) - evidenceCount(a) || a.name.localeCompare(b.name, "en")
         );
-        for (const purana of items) {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = "contents-button";
-          button.dataset.purana = purana.id;
-          button.setAttribute("aria-pressed", "false");
+        const categories = ["Mahā", "Upa"];
+        for (const categoryName of categories) {
+          const members = items.filter(item => categoryFor(item) === categoryName);
+          if (!members.length) continue;
+          const group = document.createElement("section");
+          group.className = "contents-group";
+          const heading = document.createElement("h3");
+          heading.className = "contents-group-title";
+          heading.textContent = categoryName === "Upa" ? "Upapurāṇas" : "Mahāpurāṇas";
+          const list = document.createElement("div");
+          list.className = "contents-list";
+          for (const purana of members) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "contents-button";
+            button.dataset.purana = purana.id;
+            button.setAttribute("aria-pressed", "false");
 
-          const name = document.createElement("span");
-          name.className = "contents-name";
-          name.textContent = purana.name;
-          const category = document.createElement("span");
-          category.className = "contents-category";
-          category.textContent = upaIds.has(purana.id) ? "Upa" : "Mahā";
-          const count = document.createElement("span");
-          count.className = "evidence-count";
-          count.textContent = evidenceCount(purana).toLocaleString();
-          count.setAttribute("aria-label", evidenceCount(purana).toLocaleString() + " evidence records");
-          button.append(name, category, count);
-          button.addEventListener("click", () => render(purana));
-          contents.appendChild(button);
+            const name = document.createElement("span");
+            name.className = "contents-name";
+            name.textContent = purana.name;
+            const count = document.createElement("span");
+            count.className = "evidence-count";
+            count.textContent = evidenceCount(purana).toLocaleString();
+            count.setAttribute("aria-label", evidenceCount(purana).toLocaleString() + " evidence records");
+            button.append(name, count);
+            button.addEventListener("click", () => render(purana));
+            list.appendChild(button);
+          }
+          group.append(heading, list);
+          contents.appendChild(group);
         }
       }
 
