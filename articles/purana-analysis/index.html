@@ -70,6 +70,10 @@
         <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Subject</span>
       </div>
       <main id="map" aria-live="polite"></main>
+      <details class="source-details">
+        <summary>Hazra OCR</summary>
+        <div id="commentary-sources" class="source-list"></div>
+      </details>
     </div>
     <section id="commentary-panel" class="commentary-panel" aria-labelledby="commentary-heading" hidden>
       <div class="commentary-head">
@@ -78,11 +82,7 @@
       </div>
       <input id="commentary-search" class="commentary-search" type="search" placeholder="Search title or author" aria-label="Search bhāṣya titles, authors, scope, or date">
       <div id="commentary-list"></div>
-      <details class="source-details">
-        <summary>Sources</summary>
-        <div id="commentary-sources" class="source-list"></div>
-        <p class="source-limit">Later works excluded · unclear dates separate.</p>
-      </details>
+
     </section>
       </div>
     </div>
@@ -694,7 +694,10 @@
       bhashyasTab.addEventListener("click", () => setView("bhashyas"));
       function renderSourceList() {
         commentarySources.replaceChildren();
-        const sources = Object.values(commentaryData.sources)
+        const sourceIds = ["hazraPuranicRecordsOCR", "hazraUpaVolumeI", "hazraUpaVolumeII"];
+        const sources = sourceIds
+          .map(id => commentaryData.sources[id])
+          .filter(Boolean)
           .map(source => [source.label, source.url]);
         const seen = new Set();
         for (const [label, url] of sources) {
