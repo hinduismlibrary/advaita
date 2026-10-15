@@ -205,9 +205,9 @@
       function addContentsGroup(parent, entries) {
         if (!entries?.length) return;
         const group = document.createElement("section");
-        group.className = "group group-other";
+        group.className = "group group-mention";
         const heading = document.createElement("h3");
-        heading.textContent = "Contents";
+        heading.textContent = "Purāṇa contents";
         group.appendChild(heading);
         const list = document.createElement("ul");
         list.className = "entries";
@@ -242,7 +242,7 @@
         if (!entries?.length) return;
         const isCommentary = /commentary/i.test(headingText);
         const group = document.createElement("section");
-        group.className = "group " + (isCommentary ? "group-bhashya" : /purāṇa|puran|reference|contents/i.test(headingText) ? "group-mention" : "group-subject");
+        group.className = "group " + (isCommentary ? "group-bhashya" : mentionsPurana(headingText) || /reference|contents/i.test(headingText) ? "group-mention" : "group-subject");
         const heading = document.createElement("h3");
         heading.textContent = headingText;
         group.appendChild(heading);
@@ -276,9 +276,9 @@
       function addTextReferencesGroup(parent, entries) {
         if (!entries?.length) return;
         const group = document.createElement("section");
-        group.className = "group group-other";
+        group.className = "group group-mention";
         const heading = document.createElement("h3");
-        heading.textContent = "Textual reference";
+        heading.textContent = "Purāṇa reference";
         group.appendChild(heading);
         const list = document.createElement("ul");
         list.className = "entries";
@@ -352,6 +352,14 @@
         return payload;
       }
 
+      function mentionsPurana(text) {
+        return /pur(?:a|ā)(?:n|ṇ)(?:a|as|ic)?/i.test(String(text || ""));
+      }
+
+      function isPuranicTopic(entry) {
+        return mentionsPurana([entry.label, entry.ref, ...(entry.details || [])].join(" "));
+      }
+
       function isChapterCoverage(entry) {
         return (entry.details || []).some(text => /^Full chapter commentary; not an external quotation\.?$/i.test(text));
       }
@@ -406,7 +414,8 @@
         addContentsGroup(detail, record.contents);
         addTaggedGroup(detail, "Purāṇa mention", record.puranaMentions);
         addTaggedGroup(detail, "Commentary", (record.commentaryCitations || []).filter(entry => !isDirectCommentaryCitation(entry)));
-        addTaggedGroup(detail, "Subject", record.topics);
+        addTaggedGroup(detail, "Purāṇa topic", (record.topics || []).filter(isPuranicTopic));
+        addTaggedGroup(detail, "Subject", (record.topics || []).filter(entry => !isPuranicTopic(entry)));
         addGroup(detail, "Unmatched", record.missing, "missing");
         const hasRecord = ["quoted", "parallel", "chapterRelations", "textReferences", "contents", "puranaMentions", "commentaryCitations", "topics", "missing"]
           .some(field => record[field]?.length);
@@ -460,9 +469,9 @@
                 record.contents?.length ||
                 record.chapterRelations?.length ||
                 record.parallel?.some(entry => entry.level === "chapter") ||
-                record.topics?.some(entry => /purana|puranic/i.test([entry.label, ...(entry.details || [])].join(" ")))
+                record.topics?.some(isPuranicTopic)
               ) evidence.push("mention");
-              if (record.topics?.some(entry => !/purana|puranic/i.test([entry.label, ...(entry.details || [])].join(" "))) || record.missing?.length) evidence.push("subject");
+              if (record.topics?.some(entry => !isPuranicTopic(entry)) || record.missing?.length) evidence.push("subject");
 
               const tile = document.createElement("button");
               tile.type = "button";
@@ -483,7 +492,7 @@
                 quoted: "quoted",
                 bhashya: "commentary only",
                 parallel: "parallel",
-                mention: "Purāṇa mention or list",
+                mention: "Purāṇa reference",
                 subject: "subject"
               };
               const states = evidence.map(kind => labels[kind]);
