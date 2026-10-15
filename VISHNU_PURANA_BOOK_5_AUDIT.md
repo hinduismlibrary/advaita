@@ -14,7 +14,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 |---:|---:|---:|---:|---:|---:|
 | 1 | 87 | 0 | 87 | 0 | 54 |
 | 2 | 21 | 21 | 0 | 246 | 10 |
-| 3 | 29 | 0 | 29 | 0 | 18 |
+| 3 | 29 | 29 | 0 | 325 | 18 |
 | 4 | 17 | 17 | 0 | 222 | 9 |
 | 5 | 23 | 0 | 23 | 0 | 10 |
 | 6 | 51 | 0 | 51 | 0 | 27 |
@@ -94,3 +94,8 @@ Added one-word Sanskrit, IAST, and direct gloss rows to all 13 Book 5, Chapter 8
 ## 2026-10-15 follow-up — Chapter 2 word-for-word panels
 
 Added one-word Sanskrit, IAST, and direct gloss rows to all 21 Book 5, Chapter 2 verse cards (246 rows). IAST was generated from the padaccheda forms. The displayed reading in 5.2.20 repeats *svadhā* where the numbered and Śrīdhara verse witnesses read *sudhā*; the main witness reading is preserved in the panel and this variant remains logged for editorial review. The audit now records 722/1,517 cards with panels and 795 cards still without one.
+
+
+## 2026-10-15 follow-up — Chapter 3 word-for-word panels
+
+Added one-word Sanskrit, IAST, and direct gloss rows to all 29 Book 5, Chapter 3 verse cards (325 rows). IAST was generated from each Devanāgarī padaccheda form. The audit now records 751/1,517 cards with panels and 766 cards still without one.
