@@ -132,6 +132,76 @@
       .analysis-item dt { font-size: 8.5px; }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+    .dek { margin: 9px 0 0; color: var(--muted); font-size: 12px; }
+    .workspace { display: grid; grid-template-columns: minmax(210px, 248px) minmax(0, 1fr); gap: clamp(18px, 3vw, 34px); align-items: start; padding-top: 17px; }
+    .contents-panel { position: sticky; top: 14px; align-self: start; min-width: 0; padding: 13px 12px 12px; border: 1px solid var(--rule); border-radius: 4px; background: #fffdfa; }
+    .contents-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+    .contents-heading h2 { margin: 0; font: 400 21px/1.1 var(--serif); letter-spacing: -.02em; }
+    .contents-heading span, .contents-foot { color: var(--muted); font-size: 9px; }
+    .contents-note { margin: 9px 0 10px; color: var(--muted); font-size: 10px; line-height: 1.45; }
+    #contents { display: flex; flex-direction: column; gap: 14px; margin-top: 7px; }
+    .contents-group h3 { margin: 0 0 5px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    .contents-items { display: flex; flex-direction: column; gap: 1px; }
+    .contents-button { width: 100%; min-width: 0; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 7px; padding: 5px 6px; border: 0; border-left: 2px solid transparent; border-radius: 0; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+    .contents-button:hover { background: #f4f2ec; }
+    .contents-button.active { border-left-color: var(--green-ink); background: #f0f3ee; }
+    .contents-name { min-width: 0; font-size: 10px; line-height: 1.3; }
+    .evidence-count { color: var(--muted); font-size: 9px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .combined-button { margin: 10px 0 1px; border-bottom: 1px solid var(--rule); padding: 7px 6px 9px; }
+    .contents-foot { margin: 12px 0 0; line-height: 1.45; }
+    .viewer { min-width: 0; }
+    .selected-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 1px 0 12px; border-bottom: 1px solid var(--ink); }
+    .selected-category { margin: 0 0 4px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    #selected-name { margin: 0; font: 400 clamp(24px,3vw,34px)/1.05 var(--serif); letter-spacing: -.03em; }
+    .selected-evidence { margin: 0 0 2px; color: var(--muted); font-size: 10px; white-space: nowrap; }
+    .legend { padding-top: 10px; gap: 7px 12px; font-size: 9px; }
+    #map { padding-top: 7px; }
+    .commentary-panel { margin: 18px 0 40px; padding: 17px 0 0; border-top: 1px solid var(--ink); }
+    .commentary-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+    .commentary-heading h2 { margin: 0; font: 400 25px/1.1 var(--serif); letter-spacing: -.025em; }
+    .commentary-count { margin: 0 0 3px; color: var(--muted); font-size: 10px; text-align: right; }
+    .commentary-note { max-width: 780px; margin: 11px 0 16px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+    .commentary-section { margin: 17px 0 0; }
+    .commentary-section h3 { margin: 0 0 7px; color: var(--muted); font-size: 9px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    .commentary-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
+    .commentary-card { min-width: 0; padding: 9px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fffdfa; }
+    .commentary-card h4 { margin: 0; font: 500 13px/1.3 var(--serif); }
+    .commentary-author { margin: 3px 0 0; color: var(--ink); font-size: 10px; }
+    .commentary-scope, .commentary-period { margin: 3px 0 0; color: var(--muted); font-size: 9px; line-height: 1.4; }
+    .commentary-status { display: inline-block; margin-top: 6px; padding: 2px 5px; border-radius: 2px; background: #edf2eb; color: #38533a; font-size: 8px; letter-spacing: .04em; text-transform: uppercase; }
+    .commentary-status.boundary { background: #f3eadb; color: #765b2c; }
+    .commentary-status.uncertain { background: #f0eee8; color: #656057; }
+    .commentary-source { display: inline-block; margin-top: 6px; color: var(--green-ink); font-size: 9px; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    .commentary-empty { margin: 13px 0; padding: 11px 12px; border-left: 2px solid var(--rule); color: var(--muted); font-size: 10px; }
+    .research-sources { display: flex; flex-wrap: wrap; gap: 7px 14px; margin-top: 19px; padding-top: 10px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 9px; }
+    .research-sources a { color: var(--green-ink); }
+    @media (max-width: 900px) { .workspace { grid-template-columns: minmax(190px, 215px) minmax(0,1fr); gap: 18px; } }
+    @media (max-width: 760px) {
+      .page { width: calc(100% - 26px); }
+      .workspace { grid-template-columns: minmax(0,1fr); gap: 14px; padding-top: 13px; }
+      .contents-panel { position: static; padding: 10px; }
+      #contents { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 13px; max-height: 250px; overflow: auto; }
+      .contents-button { padding: 5px 4px; }
+      .contents-name { font-size: 10px; }
+      .combined-button { margin-top: 7px; }
+      .selected-heading { align-items: start; }
+      .selected-evidence { white-space: normal; text-align: right; }
+      .commentary-grid { grid-template-columns: 1fr; }
+      .section-row { grid-template-columns: 88px minmax(0,1fr); gap: 7px; padding: 4px 0; }
+      .section-label { font-size: 9px; }
+      .cells { grid-template-columns: repeat(auto-fill, 21px); gap: 2px; }
+      .tile { width: 21px; height: 21px; }
+      .group { grid-template-columns: 66px minmax(0,1fr); gap: 5px; }
+      .analysis-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 12px; }
+      .analysis-item { min-height: 60px; padding: 8px 0 7px; }
+    }
+    @media (max-width: 380px) {
+      .page { width: calc(100% - 20px); }
+      .section-row { grid-template-columns: 72px minmax(0,1fr); gap: 5px; }
+      .group { grid-template-columns: 58px minmax(0,1fr); gap: 4px; }
+      .analysis-grid { gap: 0 9px; }
+      .analysis-item dt { font-size: 8.5px; }
+    }
   </style>
 </head>
 <body>
@@ -140,11 +210,31 @@
       <a href="/advaita/">Viveka Dṛṣṭi</a>
       <a href="/advaita/pages/purana-library/">Purāṇa Library</a>
     </nav>
-    <header><h1>Purāṇa Analysis</h1></header>
-    <div class="chooser">
-      <label for="purana">Purāṇa</label>
-      <select id="purana" aria-label="Choose a Purāṇa"></select>
-    </div>
+    <header>
+      <h1>Purāṇa Analysis</h1>
+      <p class="dek">Chapter evidence, arranged by text and source.</p>
+    </header>
+    <div class="workspace">
+      <aside class="contents-panel" aria-label="Purāṇa contents">
+        <div class="contents-heading">
+          <h2>Contents</h2>
+          <span>Most attested first</span>
+        </div>
+        <p class="contents-note">Lists differ: Vāyu and Śiva appear as alternatives in some Mahāpurāṇa lists; Devī Bhāgavata’s classification also varies.</p>
+        <button class="contents-button combined-button" id="all-combined" type="button" data-purana="all-combined" aria-pressed="false">
+          <span>All Purāṇas together</span><span class="evidence-count">combined</span>
+        </button>
+        <nav id="contents" aria-label="Purāṇas"></nav>
+        <p class="contents-foot">Sorted by indexed evidence items across quotations, parallels, chapter links, contents lists, and subjects.</p>
+      </aside>
+      <div class="viewer">
+        <div class="selected-heading">
+          <div>
+            <p id="selected-category" class="selected-category">Loading</p>
+            <h2 id="selected-name">Purāṇas</h2>
+          </div>
+          <p id="selected-evidence" class="selected-evidence"></p>
+        </div>
     <div class="legend" aria-label="Heat map key">
       <span class="legend-item"><i class="legend-swatch" aria-hidden="true"></i>No located reference</span>
       <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted elsewhere</span>
@@ -157,12 +247,38 @@
       <span class="legend-item"><i class="legend-swatch subject" aria-hidden="true"></i>Other subject</span>
       <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Unmatched citation</span>
     </div>
-    <main id="map" aria-live="polite"></main>
+        <main id="map" aria-live="polite"></main>
+        <section class="commentary-panel" aria-labelledby="commentary-heading">
+          <div class="commentary-heading">
+            <div>
+              <p class="selected-category">Text and section commentaries</p>
+              <h2 id="commentary-heading">Bhāṣya index</h2>
+            </div>
+            <p id="commentary-count" class="commentary-count"></p>
+          </div>
+          <p class="commentary-note">Dated works through the c. 1750 Nīlakaṇṭha boundary are counted. The boundary commentary is shown separately; later works are omitted. Manuscript-catalogued works with unresolved dates are listed separately and are not counted as pre-boundary.</p>
+          <div id="commentary-list"></div>
+          <div class="research-sources">
+            <span>Research indexes</span>
+            <a href="https://www.wisdomlib.org/hinduism/essay/studies-in-the-upapuranas/ocr" target="_blank" rel="noreferrer">Hazra OCR (unproofread)</a>
+            <a href="https://upload.wikimedia.org/wikipedia/commons/c/ce/The_%C3%87r%C4%ABmadbh%C4%81gavatam_%28IA_cu31924009113279%29.pdf" target="_blank" rel="noreferrer">Chatterjee’s 1895 list of 136 Bhāgavata commentaries and dissertations</a>
+            <a href="https://www.wisdomlib.org/definition/devimahatmya" target="_blank" rel="noreferrer">Devī Māhātmya manuscript catalogue</a>
+          </div>
+        </section>
+      </div>
+    </div>
   </div>
   <script>
     (() => {
       const map = document.getElementById("map");
-      const select = document.getElementById("purana");
+      const contents = document.getElementById("contents");
+      const selectedName = document.getElementById("selected-name");
+      const selectedCategory = document.getElementById("selected-category");
+      const selectedEvidence = document.getElementById("selected-evidence");
+      const commentaryList = document.getElementById("commentary-list");
+      const commentaryCount = document.getElementById("commentary-count");
+      const allCombinedButton = document.getElementById("all-combined");
+      let commentaryData = null;
       let data = null;
       let selectedTile = null;
       let selectedDetail = null;
@@ -366,6 +482,18 @@
         parent.appendChild(group);
       }
 
+      function evidenceCount(purana) {
+        let count = 0;
+        for (const section of purana.sections || []) {
+          for (const record of Object.values(section.chapters || {})) {
+            for (const value of Object.values(record || {})) {
+              if (Array.isArray(value)) count += value.length;
+            }
+          }
+        }
+        return count;
+      }
+
       function applySubjectIndex(payload, subjectIndex) {
         const profiles = new Map(payload.puranas.map(item => [item.id, item]));
         for (const extra of subjectIndex.puranas || []) {
@@ -392,6 +520,7 @@
           }
           section.chapters[patch.chapter] = current;
         }
+        payload.puranas = payload.puranas.filter(item => evidenceCount(item) > 0);
         return payload;
       }
 
@@ -604,43 +733,161 @@
         addAnalysis(puranas, combined);
       }
 
+      const upaIds = new Set(["brhannaradiya-purana", "devi-bhagavata-purana"]);
+
+      function categoryFor(purana) {
+        return upaIds.has(purana.id) ? "Upapurāṇa" : "Mahāpurāṇa list";
+      }
+
+      function setActiveContents(id) {
+        for (const button of document.querySelectorAll(".contents-button[data-purana]")) {
+          const active = button.dataset.purana === id;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-pressed", String(active));
+        }
+      }
+
+      function renderContents() {
+        contents.replaceChildren();
+        const groups = [
+          { label: "Mahāpurāṇas", items: data.puranas.filter(item => !upaIds.has(item.id)) },
+          { label: "Upapurāṇas", items: data.puranas.filter(item => upaIds.has(item.id)) }
+        ];
+        for (const groupData of groups) {
+          if (!groupData.items.length) continue;
+          const section = document.createElement("section");
+          section.className = "contents-group";
+          const heading = document.createElement("h3");
+          heading.textContent = groupData.label;
+          const list = document.createElement("div");
+          list.className = "contents-items";
+          const items = [...groupData.items].sort((a, b) =>
+            evidenceCount(b) - evidenceCount(a) || a.name.localeCompare(b.name, "en")
+          );
+          for (const purana of items) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "contents-button";
+            button.dataset.purana = purana.id;
+            button.setAttribute("aria-pressed", "false");
+            const name = document.createElement("span");
+            name.className = "contents-name";
+            name.textContent = purana.name;
+            const count = document.createElement("span");
+            count.className = "evidence-count";
+            count.textContent = evidenceCount(purana).toLocaleString() + " items";
+            button.append(name, count);
+            button.addEventListener("click", () => render(purana));
+            list.appendChild(button);
+          }
+          section.append(heading, list);
+          contents.appendChild(section);
+        }
+      }
+
+      function addCommentarySection(label, items, status) {
+        if (!items.length) return;
+        const section = document.createElement("section");
+        section.className = "commentary-section";
+        const heading = document.createElement("h3");
+        heading.textContent = label;
+        const grid = document.createElement("div");
+        grid.className = "commentary-grid";
+        for (const entry of items) {
+          const card = document.createElement("article");
+          card.className = "commentary-card";
+          const work = document.createElement("h4");
+          work.textContent = entry.work;
+          const author = document.createElement("p");
+          author.className = "commentary-author";
+          author.textContent = entry.author;
+          const scope = document.createElement("p");
+          scope.className = "commentary-scope";
+          scope.textContent = entry.scope;
+          const period = document.createElement("p");
+          period.className = "commentary-period";
+          period.textContent = entry.period;
+          const badge = document.createElement("span");
+          badge.className = "commentary-status" + (status === "boundary" ? " boundary" : status === "date-unverified" ? " uncertain" : "");
+          badge.textContent = status === "boundary" ? "Boundary item" : status === "date-unverified" ? "Date unresolved" : "Within cutoff";
+          card.append(work, author, scope, period, badge);
+          const sourceId = entry.sourceIds?.[0];
+          const source = sourceId && commentaryData.sources[sourceId];
+          if (source) {
+            const link = document.createElement("a");
+            link.className = "commentary-source";
+            link.href = source.url;
+            link.target = "_blank";
+            link.rel = "noreferrer";
+            link.textContent = "Source: " + source.label;
+            card.appendChild(link);
+          }
+          grid.appendChild(card);
+        }
+        section.append(heading, grid);
+        commentaryList.appendChild(section);
+      }
+
+      function renderCommentaries(puranaId) {
+        commentaryList.replaceChildren();
+        const entries = commentaryData.entries.filter(entry => entry.puranaId === puranaId);
+        const dated = entries.filter(entry => entry.status === "within-cutoff");
+        const boundary = entries.filter(entry => entry.status === "boundary");
+        const unresolved = entries.filter(entry => entry.status === "date-unverified");
+        commentaryCount.textContent = dated.length + " dated · " + boundary.length + " boundary · " + unresolved.length + " date unresolved";
+        addCommentarySection("Dated before the boundary", dated, "within-cutoff");
+        addCommentarySection("Boundary commentary", boundary, "boundary");
+        addCommentarySection("Attested in catalogues; date unresolved", unresolved, "date-unverified");
+        if (!entries.length) {
+          const note = document.createElement("p");
+          note.className = "commentary-empty";
+          note.textContent = "No pre-boundary commentary has been located in the catalogues indexed here. This is an indexing gap, not evidence that none exists.";
+          commentaryList.appendChild(note);
+        } else if (!dated.length && !boundary.length) {
+          const note = document.createElement("p");
+          note.className = "commentary-empty";
+          note.textContent = "These catalogue notices are included as leads, but their dates are unresolved and they are not counted as pre-boundary works.";
+          commentaryList.prepend(note);
+        }
+      }
+
       function render(purana) {
+        if (!purana) return;
+        setActiveContents(purana.id);
+        selectedCategory.textContent = categoryFor(purana);
+        selectedName.textContent = purana.name;
+        selectedEvidence.textContent = evidenceCount(purana).toLocaleString() + " indexed evidence items";
         renderMaps([purana]);
+        renderCommentaries(purana.id);
       }
 
       function renderCombined() {
+        setActiveContents("all-combined");
+        selectedCategory.textContent = "Combined view";
+        selectedName.textContent = "All Purāṇas together";
+        selectedEvidence.textContent = data.puranas.length + " attested texts";
         renderMaps(data.puranas, true);
+        commentaryList.replaceChildren();
+        const note = document.createElement("p");
+        note.className = "commentary-empty";
+        note.textContent = "Choose one Purāṇa in Contents to see its commentary index.";
+        commentaryList.appendChild(note);
+        commentaryCount.textContent = "";
       }
 
-      Promise.all([fetch("./data.json"), fetch("./subject-index.json")])
-        .then(async ([dataResponse, subjectResponse]) => {
-          if (!dataResponse.ok || !subjectResponse.ok) throw new Error("Chapter data unavailable");
-          const [payload, subjectIndex] = await Promise.all([dataResponse.json(), subjectResponse.json()]);
+      Promise.all([fetch("./data.json"), fetch("./subject-index.json"), fetch("./commentaries.json")])
+        .then(async ([dataResponse, subjectResponse, commentaryResponse]) => {
+          if (!dataResponse.ok || !subjectResponse.ok || !commentaryResponse.ok) throw new Error("Chapter data unavailable");
+          const [payload, subjectIndex, commentaryPayload] = await Promise.all([
+            dataResponse.json(), subjectResponse.json(), commentaryResponse.json()
+          ]);
           data = applySubjectIndex(payload, subjectIndex);
-          const combinedOption = document.createElement("option");
-          combinedOption.value = "all-combined";
-          combinedOption.textContent = "All Purāṇas combined";
-          select.appendChild(combinedOption);
-          for (const purana of [...data.puranas].sort((a, b) => a.name.localeCompare(b.name, "en"))) {
-            const option = document.createElement("option");
-            option.value = purana.id;
-            option.textContent = purana.name;
-            select.appendChild(option);
-          }
-          select.value = data.default;
-          if (!select.value && data.puranas.length) select.value = data.puranas[0].id;
-          render(data.puranas.find(item => item.id === select.value));
-          if (select.value === "all-combined") renderCombined();
-          select.addEventListener("change", () => {
-            if (select.value === "all-combined") {
-              renderCombined();
-              return;
-            }
-            const purana = data.puranas.find(item => item.id === select.value);
-            if (purana) render(purana);
-          });
-        })
-        .catch(() => {
+          commentaryData = commentaryPayload;
+          renderContents();
+          allCombinedButton.addEventListener("click", renderCombined);
+          const initial = data.puranas.find(item => item.id === data.default) || data.puranas[0];
+          render(initial);
+        })        .catch(() => {
           const error = document.createElement("p");
           error.className = "error";
           error.textContent = "Chapter data could not be loaded.";
