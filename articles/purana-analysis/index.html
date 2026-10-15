@@ -13,11 +13,13 @@
       --ink: #292822;
       --muted: #716d63;
       --rule: #dedbd3;
-      --empty: #f0eee8;
+      --empty: #f3e0dd;
       --green: #d5e5d7;
       --green-ink: #2d563a;
       --blue: #d9e5e8;
       --blue-ink: #31525a;
+      --gold: #efe2c6;
+      --gold-ink: #765b2c;
       --red: #a3473b;
       --serif: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -47,6 +49,7 @@
     .legend-swatch { width: 11px; height: 11px; border: 1px solid var(--rule); border-radius: 3px; background: var(--empty); }
     .legend-swatch.quoted { border-color: #b8cdbb; background: var(--green); }
     .legend-swatch.parallel { border-color: #bfd0d3; background: var(--blue); }
+    .legend-swatch.contents { border-color: #d8c59c; background: var(--gold); }
     .legend-dot { width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: var(--red); }
     #map { padding: 3px 0 18px; }
     .section-row { display: grid; grid-template-columns: 128px minmax(0,1fr); gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
@@ -55,12 +58,14 @@
     .cells { display: grid; grid-template-columns: repeat(auto-fill, 22px); gap: 2px; align-content: start; }
     .tile {
       position: relative; display: grid; place-items: center; width: 22px; height: 22px;
-      padding: 0; border: 1px solid #e1ded6; border-radius: 3px; color: #77736a;
+      padding: 0; border: 1px solid #e5c5c0; border-radius: 3px; color: #855f58;
       background: var(--empty); font-size: 10px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer;
       transition: border-color .12s ease, background-color .12s ease;
     }
     .tile.quoted { border-color: #b8cdbb; color: var(--green-ink); background: var(--green); font-weight: 650; }
     .tile.parallel { border-color: #bfd0d3; color: var(--blue-ink); background: var(--blue); font-weight: 650; }
+    .tile.contents:not(.quoted):not(.parallel):not(.both) { border-color: #d8c59c; color: var(--gold-ink); background: var(--gold); }
+    .tile.contents::before { position: absolute; top: 1px; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: var(--gold-ink); content: ""; }
     .tile.both { border-color: #b8cdbb; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--blue) 51% 100%); font-weight: 700; }
     .tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
     .tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
@@ -86,6 +91,7 @@
     .analysis-item { display: flex; flex-direction: column-reverse; align-items: flex-start; justify-content: flex-end; gap: 2px; min-height: 54px; padding: 6px 0 5px; border-bottom: 1px solid var(--rule); }
     .analysis-item dt { color: var(--muted); font-size: 9px; line-height: 1.35; }
     .analysis-item dd { margin: 0; color: var(--ink); font: 400 clamp(19px, 2.1vw, 23px)/1.05 var(--serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+    .analysis-item dd small { display: block; margin-top: 4px; color: var(--muted); font: 400 9px/1.3 var(--sans); letter-spacing: 0; }
     @media (max-width: 760px) {
       .page { width: calc(100% - 26px); }
       header { padding: 20px 0 14px; }
@@ -119,8 +125,10 @@
       <select id="purana" aria-label="Choose a Purāṇa"></select>
     </div>
     <div class="legend" aria-label="Heat map key">
+      <span class="legend-item"><i class="legend-swatch" aria-hidden="true"></i>No located reference</span>
       <span class="legend-item"><i class="legend-swatch quoted" aria-hidden="true"></i>Quoted elsewhere</span>
       <span class="legend-item"><i class="legend-swatch parallel" aria-hidden="true"></i>Purāṇa parallel</span>
+      <span class="legend-item"><i class="legend-swatch contents" aria-hidden="true"></i>Contents listed</span>
       <span class="legend-item"><i class="legend-dot" aria-hidden="true"></i>Unmatched citation</span>
     </div>
     <main id="map" aria-live="polite"></main>
@@ -137,7 +145,7 @@
         return (section.numbering ? section.numbering + "." : "") + chapter;
       }
 
-      function addGroup(parent, label, entries, type) {
+      function addGroup(parent, label, entries, type, section = null) {
         if (!entries || !entries.length) return;
         const group = document.createElement("section");
         group.className = "group";
@@ -155,10 +163,28 @@
             const name = entry.work === "Work title unclear" ? "Work not identified" : entry.work;
             const author = entry.author?.trim() || "Author not identified";
             work.textContent = `${name} — ${author}`;
-            const refs = document.createElement("span");
-            refs.className = "refs";
-            refs.textContent = entry.refs.join(", ");
-            item.append(work, refs);
+            item.appendChild(work);
+            if (entry.refs?.length) {
+              const refs = document.createElement("span");
+              refs.className = "refs";
+              refs.textContent = entry.refs.map(ref => {
+                const scoped = section?.part && !section.prefix ? section.part + " " + ref : ref;
+                return scoped.replace(/–\?/g, "–[end unclear]");
+              }).join(", ");
+              item.appendChild(refs);
+            }
+            if (entry.refs?.some(ref => ref.includes("–?"))) {
+              const note = document.createElement("span");
+              note.className = "note";
+              note.textContent = "One or more range endpoints are unreadable.";
+              item.appendChild(note);
+            }
+            if (entry.note) {
+              const note = document.createElement("span");
+              note.className = "note";
+              note.textContent = entry.note;
+              item.appendChild(note);
+            }
           } else if (type === "parallel") {
             const pair = document.createElement("span");
             pair.className = "pair";
@@ -167,6 +193,12 @@
               : [entry.left, entry.right].filter(Boolean);
             pair.textContent = refs.join(" ↔ ");
             item.appendChild(pair);
+            if (entry.level === "chapter") {
+              const levelNote = document.createElement("span");
+              levelNote.className = "note";
+              levelNote.textContent = "Chapter-level comparison; verse range is not specified for one or more texts.";
+              item.appendChild(levelNote);
+            }
             if (entry.note) {
               const note = document.createElement("span");
               note.className = "note";
@@ -198,6 +230,37 @@
         parent.appendChild(group);
       }
 
+      function addContentsGroup(parent, entries) {
+        if (!entries?.length) return;
+        const group = document.createElement("section");
+        group.className = "group";
+        const heading = document.createElement("h3");
+        heading.textContent = "Contents";
+        group.appendChild(heading);
+        const list = document.createElement("ul");
+        list.className = "entries";
+        for (const entry of entries) {
+          const item = document.createElement("li");
+          item.className = "entry";
+          const title = document.createElement("span");
+          title.className = "work";
+          title.textContent = entry.label;
+          const ref = document.createElement("span");
+          ref.className = "refs";
+          ref.textContent = entry.ref;
+          item.append(title, ref);
+          if (entry.details?.length) {
+            const details = document.createElement("span");
+            details.className = "refs contents-details";
+            details.textContent = entry.details.join(" · ");
+            item.appendChild(details);
+          }
+          list.appendChild(item);
+        }
+        group.appendChild(list);
+        parent.appendChild(group);
+      }
+
       function showChapter(purana, section, chapter, record, tile, content) {
         if (selectedTile === tile) {
           selectedDetail?.remove();
@@ -214,12 +277,17 @@
         detail.className = "detail";
         detail.setAttribute("aria-label", "Chapter references");
         const title = document.createElement("h2");
-        title.textContent = `${purana.name} ${chapterNumber(section, chapter)}`;
+        const sectionName = section.part || (section.book ? section.label : "");
+        const chapterRef = chapterNumber(section, chapter);
+        title.textContent = sectionName
+          ? `${purana.name} · ${sectionName} · ${chapterRef}`
+          : `${purana.name} ${chapterRef}`;
         detail.appendChild(title);
-        addGroup(detail, "Quoted in", record.quoted, "quoted");
+        addGroup(detail, "Quoted in", record.quoted, "quoted", section);
         addGroup(detail, "Parallel", record.parallel, "parallel");
+        addContentsGroup(detail, record.contents);
         addGroup(detail, "Unmatched", record.missing, "missing");
-        if (!record.quoted?.length && !record.parallel?.length && !record.missing?.length) {
+        if (!record.quoted?.length && !record.parallel?.length && !record.contents?.length && !record.missing?.length) {
           const empty = document.createElement("p");
           empty.className = "no-entry";
           empty.textContent = "No indexed reference for this chapter.";
@@ -236,6 +304,11 @@
         let parallelChapters = 0;
         let emptySectionChapters = 0;
         let parallelOnlyChapters = 0;
+        let verseReferenceEntries = 0;
+        let chapterLevelQuotes = 0;
+        const comparisonEntries = new Set();
+        const verseComparisonEntries = new Set();
+        const chapterComparisonEntries = new Set();
         for (const purana of puranas) {
           for (const section of purana.sections) {
             total += section.last;
@@ -244,11 +317,26 @@
               const record = section.chapters[String(chapter)] || {};
               const hasQuoted = Boolean(record.quoted?.length);
               const hasParallel = Boolean(record.parallel?.length);
+              const hasContents = Boolean(record.contents?.length);
               const hasNote = Boolean(record.missing?.length);
-              if (hasQuoted) quotedChapters += 1;
-              if (hasParallel) parallelChapters += 1;
+              if (hasQuoted) {
+                quotedChapters += 1;
+                for (const witness of record.quoted) {
+                  verseReferenceEntries += witness.refs?.length || 0;
+                  if (!witness.refs?.length) chapterLevelQuotes += 1;
+                }
+              }
+              if (hasParallel) {
+                parallelChapters += 1;
+                for (const entry of record.parallel) {
+                  const key = JSON.stringify(entry);
+                  comparisonEntries.add(key);
+                  if (entry.level === "chapter") chapterComparisonEntries.add(key);
+                  else verseComparisonEntries.add(key);
+                }
+              }
               if (hasParallel && !hasQuoted) parallelOnlyChapters += 1;
-              if (hasQuoted || hasParallel || hasNote) sectionHasReferences = true;
+              if (hasQuoted || hasParallel || hasContents || hasNote) sectionHasReferences = true;
             }
             if (!sectionHasReferences) emptySectionChapters += section.last;
           }
@@ -265,22 +353,32 @@
         content.className = "section-content";
         const metrics = document.createElement("dl");
         metrics.className = "analysis-grid";
+        const quoteDetail = verseReferenceEntries.toLocaleString("en-GB") + " verse-reference entries · " +
+          chapterLevelQuotes.toLocaleString("en-GB") + " chapter-level records";
+        const parallelDetail = comparisonEntries.size.toLocaleString("en-GB") + " comparison groups · " +
+          verseComparisonEntries.size.toLocaleString("en-GB") + " verse-level · " +
+          chapterComparisonEntries.size.toLocaleString("en-GB") + " chapter-level";
         const values = [
-          ["Total chapters", total.toLocaleString("en-GB")],
-          ["Total chapters quoted", quotedChapters.toLocaleString("en-GB")],
-          ["Total chapters found parallel", parallelChapters.toLocaleString("en-GB")],
+          ["Total chapters", total.toLocaleString("en-GB"), "chapter slots in displayed sections"],
+          ["Total chapters quoted", quotedChapters.toLocaleString("en-GB"), quoteDetail],
+          ["Total chapters found parallel", parallelChapters.toLocaleString("en-GB"), parallelDetail],
           ["% quoted", percent(quotedChapters, total)],
           ["% found elsewhere", percent(parallelChapters, total)],
           ["% quoted · empty sections removed", percent(quotedChapters, total - emptySectionChapters)],
           ["% quoted · parallel-only chapters removed", percent(quotedChapters, total - parallelOnlyChapters)],
         ];
-        for (const [label, value] of values) {
+        for (const [label, value, detail] of values) {
           const item = document.createElement("div");
           item.className = "analysis-item";
           const term = document.createElement("dt");
           term.textContent = label;
           const number = document.createElement("dd");
           number.textContent = value;
+          if (detail) {
+            const small = document.createElement("small");
+            small.textContent = detail;
+            number.appendChild(small);
+          }
           item.append(term, number);
           metrics.appendChild(item);
         }
@@ -289,52 +387,63 @@
         map.appendChild(row);
       }
 
-      function render(purana) {
+      function renderMaps(puranas, combined = false) {
         selectedTile = null;
         selectedDetail = null;
         map.replaceChildren();
-        for (const section of purana.sections) {
-          const row = document.createElement("section");
-          row.className = "section-row";
-          const label = document.createElement("div");
-          label.className = "section-label";
-          label.textContent = section.label;
-          const content = document.createElement("div");
-          content.className = "section-content";
-          const cells = document.createElement("div");
-          cells.className = "cells";
-          for (let chapter = 1; chapter <= section.last; chapter += 1) {
-            const record = section.chapters[String(chapter)] || {};
-            const hasQuoted = Boolean(record.quoted?.length);
-            const hasParallel = Boolean(record.parallel?.length);
-            const hasMissing = Boolean(record.missing?.length);
-            const tile = document.createElement("button");
-            tile.type = "button";
-            tile.className = "tile";
-            tile.textContent = String(chapter);
-            tile.setAttribute("aria-expanded", "false");
-            if (hasQuoted && hasParallel) tile.classList.add("both");
-            else if (hasQuoted) tile.classList.add("quoted");
-            else if (hasParallel) tile.classList.add("parallel");
-            if (hasMissing) tile.classList.add("unmatched");
-            const states = [hasQuoted && "quoted in another work", hasParallel && "Purāṇa parallel listed", hasMissing && "unmatched line"].filter(Boolean);
-            tile.setAttribute("aria-label", `${purana.name} ${chapterNumber(section, chapter)}${states.length ? ": " + states.join("; ") : ": no reference listed"}`);
-            tile.title = `${chapterNumber(section, chapter)}`;
-            tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
-            cells.appendChild(tile);
+        for (const purana of puranas) {
+          for (const section of purana.sections) {
+            const row = document.createElement("section");
+            row.className = "section-row";
+            const label = document.createElement("div");
+            label.className = "section-label";
+            label.textContent = combined ? purana.name + " · " + section.label : section.label;
+            const content = document.createElement("div");
+            content.className = "section-content";
+            const cells = document.createElement("div");
+            cells.className = "cells";
+            for (let chapter = 1; chapter <= section.last; chapter += 1) {
+              const record = section.chapters[String(chapter)] || {};
+              const hasQuoted = Boolean(record.quoted?.length);
+              const hasParallel = Boolean(record.parallel?.length);
+              const hasMissing = Boolean(record.missing?.length);
+              const hasContents = Boolean(record.contents?.length);
+              const tile = document.createElement("button");
+              tile.type = "button";
+              tile.className = "tile";
+              tile.textContent = String(chapter);
+              tile.setAttribute("aria-expanded", "false");
+              if (hasQuoted && hasParallel) tile.classList.add("both");
+              else if (hasQuoted) tile.classList.add("quoted");
+              else if (hasParallel) tile.classList.add("parallel");
+              if (hasContents) tile.classList.add("contents");
+              if (hasMissing) tile.classList.add("unmatched");
+              const states = [
+                hasQuoted && "quoted elsewhere",
+                hasParallel && "Purāṇa parallel listed",
+                hasContents && "lists Purāṇic contents",
+                hasMissing && "unmatched quotation",
+              ].filter(Boolean);
+              tile.setAttribute("aria-label", purana.name + " · " + section.label + " · " +
+                chapterNumber(section, chapter) + (states.length ? ": " + states.join("; ") : ": no located reference"));
+              tile.title = purana.name + " · " + section.label + " · " + chapterNumber(section, chapter);
+              tile.addEventListener("click", () => showChapter(purana, section, chapter, record, tile, content));
+              cells.appendChild(tile);
+            }
+            content.appendChild(cells);
+            row.append(label, content);
+            map.appendChild(row);
           }
-          content.appendChild(cells);
-          row.append(label, content);
-          map.appendChild(row);
         }
-        addAnalysis([purana]);
+        addAnalysis(puranas, combined);
+      }
+
+      function render(purana) {
+        renderMaps([purana]);
       }
 
       function renderCombined() {
-        selectedTile = null;
-        selectedDetail = null;
-        map.replaceChildren();
-        addAnalysis(data.puranas, true);
+        renderMaps(data.puranas, true);
       }
 
       fetch("./data.json")
