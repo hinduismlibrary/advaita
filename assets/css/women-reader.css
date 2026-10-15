@@ -450,3 +450,7 @@
   line-height:1.45;
   text-align:center;
 }
+
+.document-paged-page.women-reader .document-content .women-scripture-pair>blockquote.translation:empty{
+  display:none;
+}
