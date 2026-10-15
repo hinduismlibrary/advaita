@@ -705,3 +705,124 @@
   .document-paged-page .article-body .article-footnote,
   .shastric-article .article-body .article-footnote{font-size:12px}
 }
+
+
+/* Keep every nested Contents link compact and identical in all document readers. */
+.document-paged-page .toc .toc-subitems a.toc-subitem{
+  display:block;
+  box-sizing:border-box;
+  width:auto;
+  max-width:calc(100% - 13px);
+  min-width:0;
+  margin:0 0 5px 13px!important;
+  padding:0 10px 0 9px;
+  overflow:hidden!important;
+  color:#7a726a!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+  font-weight:400!important;
+  text-decoration:none;
+  text-overflow:ellipsis!important;
+  white-space:nowrap!important;
+}
+.document-paged-page .toc .toc-subitems a.toc-subitem:hover,
+.document-paged-page .toc .toc-subitems a.toc-subitem.is-active-subsection{
+  color:var(--purple)!important;
+  text-decoration:none;
+}
+.document-paged-page .toc .toc-subitems a.toc-subitem.toc-level-4{
+  max-width:calc(100% - 23px);
+  margin-left:23px!important;
+}
+.document-paged-page .toc .toc-subitems a.toc-subitem.toc-level-5{
+  max-width:calc(100% - 33px);
+  margin-left:33px!important;
+}
+.document-paged-page .toc .toc-subitems.toc-subitems-nested{
+  margin:3px 0 6px 8px!important;
+}
+.document-paged-page .toc details.toc-subgroup{
+  margin:0 0 7px;
+}
+.document-paged-page .toc details.toc-subgroup>summary{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.document-paged-page .toc .toc-current{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap!important;
+}
+
+/* Bibliography and source pages share one quiet, single-column treatment. */
+.document-paged-page .document-content.document-reference-page .article-index{
+  margin:0 0 8px;
+}
+.document-paged-page .document-content.document-reference-page .index-entry{
+  padding:8px 0 9px;
+  border-color:#e5e1db;
+}
+.document-paged-page .document-content.document-reference-page .index-heading{
+  font-size:16px;
+  line-height:1.42;
+}
+.document-paged-page .document-content.document-reference-page .index-subitem{
+  margin-top:5px;
+  font-size:13px;
+  line-height:1.48;
+}
+#source-content.document-reference-page h3.reader-subheading{
+  margin:18px 0 7px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.38!important;
+  font-weight:500!important;
+}
+#source-content.document-reference-page h3.reader-subheading::after{
+  display:none!important;
+  content:none!important;
+}
+#source-content.document-reference-page h4{
+  margin:13px 0 6px!important;
+  color:#625b54!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.4!important;
+  font-weight:500!important;
+}
+.document-paged-page .document-content.document-reference-page ol,
+.document-paged-page .document-content.document-reference-page ul{
+  margin:0 0 12px;
+  padding-left:22px;
+}
+.document-paged-page .document-content.document-reference-page li{
+  margin:0 0 4px;
+  line-height:1.48;
+}
+.document-paged-page .document-content.document-reference-page .women-bibliography{
+  display:block;
+  margin:0 0 8px;
+}
+.document-paged-page .document-content.document-reference-page .women-bibliography-group{
+  margin:0 0 15px;
+  padding:0 0 12px;
+  border-bottom:1px solid #e5e1db;
+}
+.document-paged-page .document-content.document-reference-page .women-bibliography-group:last-child{
+  margin-bottom:0;
+  border-bottom:0;
+}
+#source-content.document-reference-page .women-bibliography-group>p:first-child{
+  margin:0 0 7px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.38!important;
+  font-weight:500!important;
+}
+#source-content.document-reference-page .women-bibliography-group>p:first-child strong{
+  font-weight:500!important;
+}

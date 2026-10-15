@@ -440,6 +440,13 @@ function href(section){
   return section.id==='opening-salutation'?base:base+'?section='+encodeURIComponent(section.id);
 }
 
+function tocLabel(value){
+  const label=sentenceTitle(value);
+  const numberedObjection=label.match(/^objection\s+([ivxlcdm]+|\d+)\s*:/i);
+  if(numberedObjection)return 'Objection '+numberedObjection[1].toUpperCase();
+  return label;
+}
+
 function tocInto(node,sections,selected){
   node.replaceChildren();
   const appendSubsections=(container,section)=>{
@@ -447,7 +454,7 @@ function tocInto(node,sections,selected){
     if(!subsections.length)return;
     const nested=make('div','toc-subitems');
     for(const block of subsections){
-      const label=sentenceTitle(block.value);
+      const label=tocLabel(block.value);
       const link=make('a','toc-subitem',label);
       link.href=href(section)+'#'+encodeURIComponent(block.id);
       link.dataset.section=section.id;
@@ -460,7 +467,7 @@ function tocInto(node,sections,selected){
       }
       nested.append(link);
     }
-    if(subsections.length>6){
+    if(subsections.length>5){
       const group=make('details','toc-subgroup');
       const summary=make('summary',null,'Sections ('+subsections.length+')');
       if(subsections.some(block=>block.id===location.hash.slice(1)))group.open=true;
