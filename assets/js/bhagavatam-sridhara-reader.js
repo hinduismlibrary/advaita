@@ -272,10 +272,15 @@
       throw new Error('Unexpected English source ranges for ŚB 2.9; source alignment was not applied.');
     }
     const merged = new Set([firstHalf, secondHalf]);
+    const mergedVerse = mergeEnglishRecords([firstHalf, secondHalf], 11, 11);
+    const synonymParts = [firstHalf.synonyms, secondHalf.synonyms]
+      .map((value) => String(value || '').trim().replace(/[.;]\s*$/, ''))
+      .filter(Boolean);
+    mergedVerse.synonyms = synonymParts.length ? synonymParts.join('; ') + '.' : '';
     const aligned = entries
       .filter((entry) => !merged.has(entry))
       .map((entry) => entry.start >= 13 ? shiftEnglishRecord(entry, -1) : entry)
-      .concat(mergeEnglishRecords([firstHalf, secondHalf], 11, 11))
+      .concat(mergedVerse)
       .sort((a, b) => a.start - b.start || a.end - b.end);
     if (aligned.length !== 45 || aligned.some((entry, index) =>
       entry.start !== index + 1 || entry.end !== index + 1)) {
