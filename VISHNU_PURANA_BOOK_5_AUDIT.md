@@ -60,21 +60,22 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 - Removed 199 embedded map blocks from word-for-word panels to keep their text separate from lexical rows.
 - Replaced 433 “Śrīdhara commentary” paragraphs that exactly repeated the card’s English rendering with “No separate English commentary is supplied.” Changed broad “No commentary” placeholders to say that no Śrīdhara text is supplied in that card.
 - Corrected the copied Śrīdhara commentary colophon that named Book 5, Chapter 12 in Chapters 14, 17, 18, and 23; updated each corresponding IAST colophon as well.
+- Corrected three concrete verse/lexical mismatches: in 5.28.16, changed बुधैव / बुधैः (“by the wise”) to मुधैव / मुधा (“in vain”), matching the pinned text; in 5.31.13, corrected कुर्वतो to कुर्वन्तो to agree with the verse source and lexical row; in 5.33.24, aligned the word row to the displayed reading प्रणेशुः (“fled”) instead of प्रणेमुः and tightened the gloss from “fled / withdrew” to “fled.”
 - Corrected the source note so it describes comparison across the pinned mūla, numbered Sanskrit/Hindi, and Śrīdhara witnesses without claiming a single witness is followed throughout; renamed the Wilson link as a comparison translation.
 - Added the coverage limitation and this audit link to every Book 5 page.
 
 ## Source-text check and remaining items
 
-A normalized text-presence check compared the displayed Sanskrit readings (ignoring line breaks, punctuation, removed reference digits, and separated speaker labels) against the pinned mūla, numbered Sanskrit/Hindi, and Śrīdhara source files. 1,498 of 1,517 cards matched at least one of those source texts; the following 19 remain unresolved by that check:
+A normalized text-presence check compared the displayed Sanskrit readings (ignoring line breaks, punctuation, removed reference digits, and separated speaker labels) against the pinned mūla, numbered Sanskrit/Hindi, and Śrīdhara source files. 1,499 of 1,517 cards matched at least one of those source texts after the corrections above; the following 18 remain unresolved by that check:
 
 - 5.22.11
 - 5.27.5, 5.27.6, 5.27.14, 5.27.18, 5.27.20, 5.27.26
-- 5.28.11, 5.28.16
+- 5.28.11
 - 5.31.6, 5.31.13, 5.31.16
 - 5.33.22, 5.33.24, 5.33.25, 5.33.28, 5.33.37
 - 5.34.26, 5.34.42
 
-This check is a normalized text-presence test, not a critical-edition collation or a proof that the matching reading is correct. These 19 references need direct review against the source witnesses.
+This check is a normalized text-presence test, not a critical-edition collation or a proof that the matching reading is correct. The witnesses differ in spelling, sandhi, segmentation, and sometimes wording; these 18 references need direct collation before their readings can be adjudicated.
 
 ## Not complete
 
