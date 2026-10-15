@@ -104,9 +104,8 @@ if(chapterHeads.length){
     const group={title:headingLabel(text(heading)),heading,entries:[]};
     const isSourceSection=isSourceHeading(text(heading));
     const isObjectionSection=isObjectionsHeading(text(heading));
-    const hasSourceChild=children.some(child=>isSourceHeading(text(child)));
     const splitChildren=children.length&&!isSourceSection&&!isObjectionSection&&
-      (isStorySection(text(heading))||hasSourceChild);
+      isStorySection(text(heading));
     if(splitChildren){
       for(let j=0;j<children.length;j++){
         const child=children[j];
@@ -154,11 +153,22 @@ const seen=new Set(),idFor=(raw)=>{
   seen.add(id);return id;
 };
 const idMap=new Map();
-segments.forEach((p,i)=>{
+segments.forEach(p=>{
   p.id=idFor(p.heading?.id||slug(p.title));
   const put=id=>{if(id&&!idMap.has(id))idMap.set(id,p);};
   put(p.heading?.id);put(p.id);
-  p.nodes.forEach(n=>{put(n.id);n.querySelectorAll?.('[id]').forEach(c=>put(c.id));});
+  p.nodes.forEach(n=>{
+    const headings=[];
+    if(n.matches?.('h3'))headings.push(n);
+    n.querySelectorAll?.('h3').forEach(h=>headings.push(h));
+    for(const heading of headings){
+      if(!heading.id||idMap.has(heading.id))heading.id=idFor(p.id+'-'+slug(text(heading)));
+      else seen.add(heading.id);
+      put(heading.id);
+    }
+    put(n.id);
+    n.querySelectorAll?.('[id]').forEach(c=>{seen.add(c.id);put(c.id);});
+  });
 });
 for(const p of segments){
   if(p.group.heading?.id&&!idMap.has(p.group.heading.id))idMap.set(p.group.heading.id,p);
@@ -188,6 +198,46 @@ const reader=el('div','document-content');reader.id='source-content';
 const pager=el('nav','page-nav'),prev=el('a','prev'),next=el('a','next');
 pager.setAttribute('aria-label','Article sections');pager.append(prev,next);
 article.append(mobile,context,reader,pager);grid.append(side,article);main.append(header,grid);
+function pageSubheadings(page){
+  const headings=[];
+  for(const node of page.nodes){
+    if(node.matches?.('h3'))headings.push(node);
+    node.querySelectorAll?.('h3').forEach(heading=>headings.push(heading));
+  }
+  const seenHeadings=new Set();
+  return headings.filter(heading=>{
+    const label=text(heading);
+    if(!heading.id||!label||/^answer\s*:/i.test(label)||seenHeadings.has(heading.id))return false;
+    seenHeadings.add(heading.id);
+    return true;
+  });
+}
+function appendPageEntry(container,page,linkClass){
+  const link=el('a',linkClass,page.title);
+  link.dataset.section=page.id;
+  link.href=href(page);
+  container.append(link);
+  const headings=pageSubheadings(page);
+  if(!headings.length)return;
+  const nested=el('div','toc-subitems');
+  for(const heading of headings){
+    const label=text(heading);
+    const sublink=el('a','toc-subitem',label);
+    sublink.dataset.section=page.id;
+    sublink.dataset.subsection=heading.id;
+    sublink.href=href(page)+'#'+encodeURIComponent(heading.id);
+    sublink.title=label;
+    sublink.setAttribute('aria-label',label);
+    nested.append(sublink);
+  }
+  if(headings.length>6){
+    const group=el('details','toc-subgroup');
+    const summary=el('summary',null,`Sections (${headings.length})`);
+    if(headings.some(heading=>heading.id===location.hash.slice(1)))group.open=true;
+    group.append(summary,nested);
+    container.append(group);
+  }else container.append(nested);
+}
 function makeToc(nav){
   const grouped=new Map();
   for(const page of segments){
@@ -196,11 +246,7 @@ function makeToc(nav){
   }
   for(const [group,pages] of grouped){
     if(pages.length===1){
-      const page=pages[0];
-      const link=el('a','toc-main',page.title);
-      link.dataset.section=page.id;
-      link.href=href(page);
-      nav.append(link);
+      appendPageEntry(nav,pages[0],'toc-main');
       continue;
     }
     const wrap=el('details','toc-group');
@@ -209,14 +255,25 @@ function makeToc(nav){
     const items=el('div','toc-children');
     wrap.append(label,items);nav.append(wrap);
     for(const page of pages){
-      const link=el('a',null,page.title);
-      link.dataset.section=page.id;
-      link.href=href(page);
-      items.append(link);
+      const entry=el('div','toc-page-item');
+      appendPageEntry(entry,page,'');
+      items.append(entry);
     }
   }
 }
 makeToc(sideNav);makeToc(mobileNav);
+function syncSubsectionToc(){
+  let hash='';
+  try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
+  for(const nav of [sideNav,mobileNav]){
+    for(const link of nav.querySelectorAll('a[data-subsection]')){
+      const active=link.dataset.subsection===hash;
+      link.classList.toggle('is-active-subsection',active);
+      if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');
+    }
+  }
+}
+window.addEventListener('hashchange',syncSubsectionToc);
 const devanagari=/[\u0900-\u097f]/;
 function styleQuotedText(root){
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
@@ -427,15 +484,9 @@ function render(index){
   };
   button(prev,segments[index-1],'Previous');button(next,segments[index+1],'Next');
   for(const nav of [sideNav,mobileNav]){
-    for(const a of nav.querySelectorAll('a[data-section]')){
+    for(const a of nav.querySelectorAll('a[data-section]:not([data-subsection])')){
       const active=a.dataset.section===page.id;a.classList.toggle('is-active',active);
       if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
-    }
-    for(const a of nav.querySelectorAll('a[data-subsection]')){
-      const active=page.id===a.dataset.section &&
-        location.hash.slice(1)===encodeURIComponent(a.dataset.subsection);
-      a.classList.toggle('is-active-subsection',!!active);
-      if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
     }
     for(const group of nav.querySelectorAll('.toc-group')){
       const active=group.querySelector('a[aria-current="page"]');
@@ -444,6 +495,7 @@ function render(index){
       if(current)current.textContent=active?text(active):'';
     }
   }
+  syncSubsectionToc();
   document.title=`${page.title} — ${title} — Viveka Dṛṣṭi`;
   const u=new URL(location.href);
   if(index===0)u.searchParams.delete('section');else u.searchParams.set('section',page.id);

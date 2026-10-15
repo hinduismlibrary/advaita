@@ -236,14 +236,14 @@ function sectionsFrom(pages){
       pending=[];
       if(major===7){
         start('objections','Objections',major,'Objections');
-        append(current,{kind:'subheading',value:info.title});
+        append(current,{kind:'subheading',value:info.title,id:'objections-section-'+major});
         return;
       }
       if(major===8){
         const objections=sections[sections.length-1];
         if(objections?.id==='objections')current=objections;
         else start('objections','Objections',major,'Objections');
-        append(current,{kind:'subheading',value:info.title});
+        append(current,{kind:'subheading',value:info.title,id:'objections-section-'+major});
         return;
       }
       if(major===6&&info.prefix){
@@ -267,7 +267,7 @@ function sectionsFrom(pages){
         const definition=subsectionTitles[key];
         if(definition&&(sourceMajor===major||misnumberedFiveThree)){
           if(major===6)start(definition.id,definition.title,major,chapterTitle);
-          else if(current)append(current,{kind:'subheading',value:definition.title});
+          else if(current)append(current,{kind:'subheading',value:definition.title,id:definition.id});
           return;
         }
       }
@@ -409,7 +409,11 @@ function renderBlock(block,section){
   if(block.kind==='sa')return sanskrit(block.value);
   if(block.kind==='quote')return renderQuote(block.value);
   if(block.kind==='table')return renderTable(block.value);
-  if(block.kind==='subheading')return make('h3',null,sentenceTitle(block.value));
+  if(block.kind==='subheading'){
+    const heading=make('h3','reader-subheading',sentenceTitle(block.value));
+    if(block.id)heading.id=block.id;
+    return heading;
+  }
   if(block.kind==='p'){
     const visible=articleText(block.value);
     if(section==='opening-salutation'&&/^a scripture-based case for the supremacy of shiva$/i.test(visible))return empty();
@@ -438,6 +442,43 @@ function href(section){
 
 function tocInto(node,sections,selected){
   node.replaceChildren();
+  const appendSubsections=(container,section)=>{
+    const subsections=section.blocks.filter(block=>block.kind==='subheading'&&block.id);
+    if(!subsections.length)return;
+    const nested=make('div','toc-subitems');
+    for(const block of subsections){
+      const label=sentenceTitle(block.value);
+      const link=make('a','toc-subitem',label);
+      link.href=href(section)+'#'+encodeURIComponent(block.id);
+      link.dataset.section=section.id;
+      link.dataset.subsection=block.id;
+      link.title=label;
+      link.setAttribute('aria-label',label);
+      if(location.hash.slice(1)===encodeURIComponent(block.id)){
+        link.classList.add('is-active-subsection');
+        link.setAttribute('aria-current','location');
+      }
+      nested.append(link);
+    }
+    if(subsections.length>6){
+      const group=make('details','toc-subgroup');
+      const summary=make('summary',null,'Sections ('+subsections.length+')');
+      if(subsections.some(block=>block.id===location.hash.slice(1)))group.open=true;
+      group.append(summary,nested);
+      container.append(group);
+    }else container.append(nested);
+  };
+  const appendSection=(container,section,linkClass)=>{
+    const link=make('a',linkClass,section.title);
+    link.href=href(section);
+    link.dataset.section=section.id;
+    if(section.id===selected.id){
+      link.classList.add('is-active');
+      link.setAttribute('aria-current','page');
+    }
+    container.append(link);
+    appendSubsections(container,section);
+  };
   const groups=new Map();
   for(const section of sections){
     if(!groups.has(section.parent))groups.set(section.parent,[]);
@@ -445,12 +486,7 @@ function tocInto(node,sections,selected){
   }
   for(const [parent,items] of groups){
     if(items.length===1){
-      const section=items[0];
-      const link=make('a','toc-main'+(section.id===selected.id?' is-active':''),section.title);
-      link.href=href(section);
-      link.dataset.section=section.id;
-      if(section.id===selected.id)link.setAttribute('aria-current','page');
-      node.append(link);
+      appendSection(node,items[0],'toc-main');
       continue;
     }
     const wrapper=make('details','toc-group');
@@ -459,19 +495,14 @@ function tocInto(node,sections,selected){
     const children=make('div','toc-children');
     wrapper.append(summary,children);node.append(wrapper);
     for(const section of items){
-      const link=make('a',section.id===selected.id?'is-active':'',section.title);
-      link.href=href(section);
-      link.dataset.section=section.id;
+      appendSection(children,section,'');
       if(section.id===selected.id){
-        link.setAttribute('aria-current','page');
         wrapper.classList.add('has-current');
         summary.append(make('span','toc-current',section.title));
       }
-      children.append(link);
     }
   }
 }
-
 function navLink(anchor,section,label){
   anchor.replaceChildren(make('small',null,label));
   if(!section){
@@ -538,6 +569,11 @@ async function render(){
   for(const block of selected.blocks)content.append(renderBlock(block,selected.id));
   normalizeCitationOrder(content);
   root.replaceChildren(content);
+  if(location.hash){
+    let target=null;
+    try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch{}
+    if(target)requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
+  }
 }
 
 render().catch(error=>{
