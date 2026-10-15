@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Vollkorn:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/advaita/assets/css/advaita-directory.css?v=directory-minimal-20261015">
+<link rel="stylesheet" href="/advaita/assets/css/advaita-directory.css?v=author-scroll-20261015">
 </head>
 <body class="advaita-directory-page">
 <header class="ad-topbar"><a href="/advaita/">Viveka Dṛṣṭi</a></header>
@@ -31,32 +31,5 @@
 </section>
 </div>
 </main>
-<script>
-(()=> {
- const sections=[...document.querySelectorAll(".ad-section")];
- const groups=[...document.querySelectorAll(".ad-guru-group")];
- const heading=document.getElementById("page-title");
- const defaultTitle="Advaita Texts";
- const titleById={stotrams:"Stotrams","short-teachings":"Short Texts",treatises:"Treatises"};
- const update=()=>{
-  const target=document.getElementById(location.hash.slice(1));
-  const activeSection=target?.classList.contains("ad-section")?target:(target?.closest(".ad-section")||null);
-  const activeGroup=target?.classList.contains("ad-guru-group")?target:null;
-  sections.forEach(section=>{section.hidden=Boolean(activeSection)&&section!==activeSection});
-  groups.forEach(group=>{group.hidden=Boolean(activeGroup)&&group!==activeGroup});
-  const category=activeSection?(titleById[activeSection.id]||activeSection.querySelector("h2").textContent.trim()):defaultTitle;
-  heading.textContent=activeGroup?(activeGroup.querySelector("h3")?.textContent.trim()||category):category;
-  document.title=heading.textContent+" — Viveka Dṛṣṭi";
-  document.querySelectorAll(".ad-category-link,.ad-subnav a").forEach(link=>{
-   if(link.getAttribute("href")===location.hash)link.setAttribute("aria-current","location");
-   else link.removeAttribute("aria-current");
-  });
- };
- update();
- const scrollToSelection=()=>{const target=document.getElementById(location.hash.slice(1));if(target&&(target.classList.contains("ad-section")||target.classList.contains("ad-guru-group")))requestAnimationFrame(()=>target.scrollIntoView({block:"start"}));};
- scrollToSelection();
- window.addEventListener("hashchange",()=>{update();scrollToSelection();});
-})();
-</script>
 </body>
 </html>
