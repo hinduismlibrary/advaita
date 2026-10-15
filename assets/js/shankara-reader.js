@@ -157,6 +157,21 @@ function treatiseContentsHTML(groups){
   return '<li class="treatise-chapter-item"><a class="treatise-chapter-link" href="#'+esc(group.anchor)+'">'+esc(group.title)+'</a><details class="shankara-toc-details"><summary>'+items.length+' entries</summary><ol>'+items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||unit.number||("Entry "+(index+1)))+'</a></li>').join("")+'</ol></details></li>';
  }).join("")+'</ol></nav>';
 }
+function treatiseUnitHTML(unit,index,englishOnly){
+ const label=unit.label||("Passage "+(index+1)),number=unit.number||String(index+1);
+ if(englishOnly){
+  const paragraphs=String(unit.translation||"").split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\r?\n/g," "))+'</p>').join("");
+  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/>'+paragraphs+'</article>';
+ }
+ const deva=String(unit.deva||"");
+ const transliteration=unit.iast||iast(deva);
+ const isLong=deva.length>260||/\n/.test(deva);
+ const classes="gita-sanskrit sa-text"+(isLong?" treatise-long-text":"");
+ const gloss=Array.isArray(unit.gloss)?unit.gloss:[];
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
+ const translation=unit.translation?'<p class="gita-translation">'+esc(unit.translation)+'</p>':"";
+ return '<article class="gita-verse shankara-verse'+(isLong?" treatise-long-unit":"")+'" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/><div class="'+classes+'" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+breakLines(deva)+'</div>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
+}
 function treatiseReaderHTML(data,item,id){
  const groups=treatiseGroups(data.units,id);
  const byline=id==="jivanmukti-viveka"?'By '+esc(cleanAuthor(item.author))+' · English translation by Manilal Nabhubhai Dvivedi':'By '+esc(cleanAuthor(item.author));
@@ -224,7 +239,7 @@ function unitHTML(u,index,englishOnly,translationAvailable){
  const gloss=Array.isArray(u.gloss)?u.gloss:[];
  const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
  const translation=u.translation?'<p class="gita-translation">'+esc(u.translation)+'</p>':"";
- return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva">'+esc(u.deva)+'</div>'+translation+'<div class="gita-controls"><details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details>'+wordGloss+'</div></article>';
+ return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+esc(u.deva)+'</div>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
 }
 function navHTML(id){
  const i=WORKS.findIndex(w=>w.id===id),prev=WORKS[i-1],next=WORKS[i+1];
