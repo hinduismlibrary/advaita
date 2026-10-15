@@ -123,9 +123,7 @@ segments.forEach((p,i)=>{
 for(const p of segments){
   if(p.group.heading?.id&&!idMap.has(p.group.heading.id))idMap.set(p.group.heading.id,p);
 }
-const contentsPage={group:{title:'Contents',heading:null},heading:null,title:'Contents',nodes:[],id:idFor('contents'),isContents:true};
-segments.unshift(contentsPage);
-idMap.set(contentsPage.id,contentsPage);
+
 const href=p=>p===segments[0]?base:base+'?section='+encodeURIComponent(p.id);
 const el=(tag,cls,value)=>{
   const n=document.createElement(tag);
@@ -364,14 +362,7 @@ function render(index){
   const page=segments[index];if(!page)return;
   const frag=document.createDocumentFragment();
   const h=el('h3',null,page.title);h.id=page.id;frag.append(h);
-  if(page.isContents){
-    const list=el('ol','contents-page-list');
-    for(const section of segments.slice(1)){
-      const item=el('li');const link=el('a',null,section.title);link.href=href(section);
-      item.append(link);list.append(item);
-    }
-    frag.append(list);
-  }else for(const n of page.nodes)frag.append(clean(n,page));
+  for(const n of page.nodes)frag.append(clean(n,page));
   pairWomenScripture(frag);
   styleArticleQuotes(frag);
   normalizeCitationOrder(frag);
