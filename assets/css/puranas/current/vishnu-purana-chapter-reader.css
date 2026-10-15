@@ -78,7 +78,7 @@
   }
 }
 
-/* Keep source notes hidden on other routes; Books 1 through 4 expose their edition notes. */
+/* Keep source notes hidden on other routes; Books 1 through 5 expose their edition notes. */
 .gita-page .gita-source-note{display:none!important;}
 .gita-page.vp-book-1 .gita-source-note,
 .gita-page.vp-book-2 .gita-source-note,
@@ -169,5 +169,77 @@
     line-height:1.48!important;
     padding:10px 12px!important;
     margin:16px auto 10px!important;
+  }
+}
+
+/* Book 5 lexical rows follow the shared desktop and mobile reader scale. */
+.gita-page.vp-book-5 .gita-reveal .gita-word-list{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+}
+.gita-page.vp-book-5 .gita-reveal .gita-word-row{
+  box-sizing:border-box!important;
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 0 5px!important;
+  color:#514a43!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15.5px!important;
+  line-height:1.55!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+@media(max-width:760px){
+  .gita-page.vp-book-5 .gita-reveal .gita-word-row{
+    font-size:13.5px!important;
+    line-height:1.48!important;
+  }
+}
+.gita-page.vp-book-5 .gita-source-note{
+  display:block!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:22px auto 14px!important;
+  padding:12px 14px!important;
+  border:1px solid rgba(81,74,67,.24)!important;
+  border-radius:8px!important;
+  background:#faf8f4!important;
+  color:#5f574e!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:12.5px!important;
+  line-height:1.55!important;
+  overflow-wrap:anywhere!important;
+}
+.gita-page.vp-book-5 .gita-source-note strong{color:#3c362e!important;}
+.gita-page.vp-book-5 .gita-source-note p{margin:6px 0 0!important;}
+.gita-page.vp-book-5 .gita-source-note a{color:#675339!important;overflow-wrap:anywhere!important;}
+@media(max-width:760px){
+  .gita-page.vp-book-5 .gita-source-note{
+    font-size:12px!important;
+    line-height:1.48!important;
+    padding:10px 12px!important;
+    margin:16px auto 10px!important;
+  }
+}
+
+.gita-page.vp-book-5 .gita-speaker{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:8px auto 4px!important;
+  color:#675339!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:12.5px!important;
+  font-style:italic!important;
+  line-height:1.55!important;
+  text-align:center!important;
+}
+@media(max-width:760px){
+  .gita-page.vp-book-5 .gita-speaker{
+    font-size:12px!important;
+    line-height:1.48!important;
   }
 }
