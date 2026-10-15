@@ -506,11 +506,6 @@ body.gita-page.vp-book-1 article.gita-verse .gita-controls details.gita-details>
   line-height:1.5!important;
   font-weight:400!important;
 }
-body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-wfw-content{
-  margin:14px 0 0!important;
-  padding:10px 0 0!important;
-  border-top:1px solid rgba(81,74,67,.2)!important;
-}
 @media(max-width:700px){
   body.gita-page.vp-book-1 article.gita-verse .gita-sanskrit,
   body.gita-page.vp-book-1 article.gita-verse .gita-translation,
@@ -524,5 +519,30 @@ body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-wfw-content{
   body.gita-page.vp-book-1 article.gita-verse .gita-controls details.gita-details>.gita-reveal *{
     font-size:14.5px!important;
     line-height:1.45!important;
+  }
+}
+
+
+/* Book 1: distinguish Śrīdhara's English rendering and give its source a separate control. */
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation,
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation *,
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-body,
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-body p{
+  color:#000!important;
+  font-family:Merriweather,"Noto Serif Devanagari",Georgia,"Times New Roman",serif!important;
+  font-size:18px!important;
+  line-height:1.55!important;
+  font-weight:700!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-label{
+  font-weight:700!important;
+}
+@media(max-width:700px){
+  body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation,
+  body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-translation *,
+  body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-body,
+  body.gita-page.vp-book-1 article.gita-verse .gita-sridhara-body p{
+    font-size:17px!important;
+    line-height:1.5!important;
   }
 }
