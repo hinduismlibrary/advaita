@@ -6,13 +6,13 @@ Reader: [Book 1](https://krishnavyasmuni.github.io/advaita/pages/vishnu-purana/)
 
 ## Coverage checked
 
-Structural checks were run across all 22 Book 1 chapter pages. They contain 1,407 verse cards. Every card has a Sanskrit text block, Wilson English translation paragraph, base-verse transliteration panel, and word-for-word panel. Where Śrīdhara source is attached, its transliteration is included under the Transliteration control and its Devanāgarī is under a separate Devanāgarī control. Every displayed word-for-word row contains Devanāgarī, IAST, and an English gloss. The audit counted 13,551 word-for-word rows after the corrections below.
+Structural checks were run across all 22 Book 1 chapter pages. They contain 1,407 verse cards. Every card has a Sanskrit text block, Wilson English translation paragraph, base-verse transliteration panel, and word-for-word panel. Where Śrīdhara source is attached, its transliteration is included under the Transliteration control and its Devanāgarī is under a separate Devanāgarī control. Every displayed word-for-word row contains Devanāgarī, IAST, and an English gloss. The audit counted 14,179 word-for-word rows after the Chapter 1 update: 13,551 existing rows plus 628 Śrīdhara lexical rows.
 
 All 22 chapter pages link to the same reader stylesheet. Both base stylesheets use 15.5 px / 1.55 line height for word rows on wider screens and 13.5 px / 1.48 on mobile; no chapter-specific word-row size overrides were found. Book 1 pages now expose the pinned textual-basis note at a consistent 12.5 px / 12 px size; a cache-busting version was added to the Book 1 stylesheet links.
 
 | Chapter | Verse cards | Word-for-word rows | Śrīdhara source blocks |
 |---:|---:|---:|---:|
-| 1 | 35 | 209 | 19 |
+| 1 | 35 | 837 | 19 |
 | 2 | 68 | 507 | 49 |
 | 3 | 28 | 226 | 26 |
 | 4 | 52 | 461 | 52 |
@@ -34,7 +34,7 @@ All 22 chapter pages link to the same reader stylesheet. Both base stylesheets u
 | 20 | 39 | 464 | 22 |
 | 21 | 41 | 476 | 24 |
 | 22 | 90 | 478 | 60 |
-| **Total** | **1407** | **13551** | **934** |
+| **Total** | **1407** | **14179** | **934** |
 
 A Śrīdhara source block is exposed where the source commentary block is attached. The source sometimes comments on a verse range rather than repeating a comment for each verse. This audit did not duplicate or invent commentary to make the source-block count equal the verse count. The counts above are not a claim that every verse has a standalone commentary block.
 
@@ -64,9 +64,19 @@ Chapter-local verse numbering and the selected Vasuki sequence were left intact.
 
 ## Remaining review limit
 
-These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 13,551 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. Śrīdhara token-level word-for-word entries are currently added for 1.17.1 only; the other attached commentary blocks still need a full lexical pass. No blanket accuracy claim is made here.
+These edits correct identified errors and verify the presence and structure of all verse layers. They do **not** constitute an independent philological proof of every one of the 14,179 English glosses. A complete lexical and grammatical review of every verse remains necessary before describing the whole Book 1 translation as perfect. At the time of that checkpoint, Śrīdhara token-level word-for-word entries were present for 1.17.1 only; the remaining attached commentary blocks needed a full lexical pass. No blanket accuracy claim is made here.
 
 
 ## Follow-up structural verification — 15 October 2026
 
-All 22 live Book 1 chapter pages were fetched again after the earlier content audit. The verification found 1,407 verse cards, 13,551 word-for-word rows, 934 Śrīdhara source blocks, 1,407 transliteration controls, and 934 Devanāgarī controls. Each source block is represented in both the transliteration and Devanāgarī controls. 63 missing IAST strings were transliterated from the attached Devanāgarī source. The Śrīdhara lexical breakdown is present for 1.17.1 only; the other source blocks do not yet have token-level glosses.
+All 22 live Book 1 chapter pages were fetched again after the earlier content audit. The earlier verification found 1,407 verse cards, 13,551 word-for-word rows, 934 Śrīdhara source blocks, 1,407 transliteration controls, and 934 Devanāgarī controls. Each source block is represented in both the transliteration and Devanāgarī controls. 63 missing IAST strings were transliterated from the attached Devanāgarī source. At that earlier checkpoint the Śrīdhara lexical breakdown was present for 1.17.1 only; Chapter 1’s later release is recorded below.
+
+
+## Book 1, Chapter 1 Śrīdhara word-for-word update — 15 October 2026
+
+- Chapter 1 contains 35 verse cards and 19 attached Śrīdhara commentary blocks. All 19 now have token-level mappings inside the same **Word-for-word** control as the root verse map.
+- Added 628 rows. Each row pairs the exact displayed Devanāgarī token with its existing IAST token and a concise lexical gloss; no running commentary paragraph was placed in the panel.
+- The Devanāgarī, IAST, and English row counts match for every commentary block. The 35 root Word-for-word controls, 35 Transliteration controls, 19 Śrīdhara Devanāgarī controls, and balanced HTML details were checked after the edit.
+- The root gloss for **ईश्वरं (īśvaraṃ)** in 1.1.2 now preserves **Īśvara**.
+- Source pins already recorded above for Chapter 1: upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`; Śrīdhara source blob `78e86c054c772c7656409b2af527b615cf3f4495`; mūla blob `24d16bbc557e4496384a73f3f2ec9674ead4b7b4`.
+- Book 1 total: 14,179 word-for-word rows. Śrīdhara lexical-map coverage is 20/934 source blocks (the 19 Chapter 1 blocks plus the earlier 1.17.1 map); 914 blocks remain. The Chapter 1 root translations and root glosses were not all re-audited in this pass, so this is not a blanket accuracy claim.

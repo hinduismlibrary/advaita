@@ -2,7 +2,7 @@
 
 ## Objective
 
-Complete and semantically audit all 126 Viṣṇu Purāṇa chapter routes (6,400 verse articles). The active owner-directed semantic audit is Book 3, Chapters 1–18 in ascending order, one fully checked chapter at a time. After Book 3 is complete, resume the paused full-corpus queue through Books 6, 5, 4, 3, 2, and 1. The repository and the progress ledger below are the source of truth.
+Complete and semantically audit all 126 Viṣṇu Purāṇa chapter routes (6,400 verse articles). The active user-directed pass is Viṣṇu Purāṇa Book 1, Chapters 1–22 in ascending order. It covers the root text and translation, Śrīdhara commentary and its word-for-word mappings, and the paired transliteration layers. Publish one fully checked chapter at a time. After Book 1 is complete, resume the paused full-corpus queue through Books 6, 5, 4, 3, and 2. The repository and the progress ledger below are the source of truth.
 
 ## Hard constraints
 
@@ -400,5 +400,11 @@ Book 3, Chapter 8 was reviewed against the pinned mūla, numbered Sanskrit witne
 
 Source pins at upstream commit `4f878940be057c6efcc644dc688b604e0b2e64a1`: mūla `cb9bfcded368db14c6e55468a0808832f936e702`; numbered witness `ad105b21f40a2c5adfac988fedef6733fb65953f`; Śrīdhara `46214b340f0516196a354c03930b1edeac544a06`; Vasuki English `dfc99c1c406fd937d5f8b4f80f5c38ea60e2c316`. Wilson cross-check: Wisdom Library and Sacred Texts.
 
-Book 3 semantic review status: 308/837 verse articles across 8/18 chapters. Ten chapters remain. Continue with Book 3, Chapter 9. This semantic audit remains separate from the baseline main-WFW panel count of 837/837.
+Book 3 semantic review checkpoint before the owner-directed Book 1 pass: 308/837 verse articles across 8/18 chapters. This work is paused. The active next chapter is Book 1, Chapter 2, after the complete Chapter 1 Śrīdhara WFW layer is released.
 
+
+## User-directed Book 1 Śrīdhara word-for-word pass — 15 October 2026
+
+Book 1, Chapter 1 has 35 verse cards and 19 supplied Śrīdhara commentary blocks. The Chapter 1 update adds 628 lexical rows: each commentary word is paired with the corresponding Devanāgarī form, existing IAST form, and a concise English gloss inside the same **Word-for-word** control as the root verse map. The visible Śrīdhara translation and the three-control layout remain intact. Chapter 1 root maps and translations were not independently re-audited in this sub-pass, so this update does not certify every existing English gloss.
+
+Book 1 Śrīdhara lexical-map coverage after Chapter 1: 20/934 source blocks, including the earlier 1.17.1 map; 914 source blocks remain. Book 1’s next user-directed chapter is Chapter 2.
