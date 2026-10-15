@@ -6,7 +6,7 @@ Source snapshot: [vishvAsa/purANam_vaiShNavam commit fc117aa4514dfd4e4840037aeb3
 
 ## Scope and coverage
 
-The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 688 cards (4,520 + 222 lexical rows); 829 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
+The 38 current chapter pages contain 1,517 verse cards. These are counts of the current site, not an assertion that every edition or witness has the same verse numbering. The site currently has a word-for-word panel on 701 cards (4,903 lexical rows); 816 cards do not have a word-for-word panel. The existing rows and English renderings have not been fully checked against Sanskrit lexicons and do not constitute a complete strict one-to-one translation of every verse.
 
 The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 cards have no Śrīdhara excerpt displayed from the pinned source material; that absence does not establish that no commentary survives in other witnesses.
 
@@ -19,7 +19,7 @@ The pages contain 656 supplied Śrīdhara Sanskrit excerpts. The remaining 861 c
 | 5 | 23 | 0 | 23 | 0 | 10 |
 | 6 | 51 | 0 | 51 | 0 | 27 |
 | 7 | 83 | 0 | 83 | 0 | 36 |
-| 8 | 13 | 0 | 13 | 0 | 5 |
+| 8 | 13 | 13 | 0 | 161 | 5 |
 | 9 | 38 | 0 | 38 | 0 | 22 |
 | 10 | 49 | 0 | 49 | 0 | 28 |
 | 11 | 25 | 0 | 25 | 0 | 14 |
@@ -84,3 +84,8 @@ Book 5 still does **not** have a complete strict word-for-word translation. 846 
 ## 2026-10-15 follow-up — Chapter 4 word-for-word panels
 
 Added strict one-word rows to all 17 Book 5, Chapter 4 verse cards (222 rows). IAST was generated from each displayed Devanagari word form. The Sanskrit segmentation was checked against the chapter’s Śrīdhara verse text and the current verse IDs; compound words remain single rows, while clear external sandhi was separated into lexical words. The 829-card gap elsewhere in Book 5 remains open; this update does not claim full-book completion or independent Sanskrit-scholar certification.
+
+
+## 2026-10-15 follow-up — Chapter 8 word-for-word panels
+
+Added one-word Sanskrit, IAST, and direct gloss rows to all 13 Book 5, Chapter 8 verses (161 rows). Clear word boundaries were taken from the verse text and compounds were kept as single lexical units. The audit now records 701/1,517 cards with a panel; 816 cards still lack one. This is a coverage update, not a claim of full-book completion.
