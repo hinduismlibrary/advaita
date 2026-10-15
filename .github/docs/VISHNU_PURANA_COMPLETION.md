@@ -408,3 +408,10 @@ Book 3 semantic review checkpoint before the owner-directed Book 1 pass: 308/837
 Book 1, Chapter 1 has 35 verse cards and 19 supplied Śrīdhara commentary blocks. The Chapter 1 update adds 628 lexical rows: each commentary word is paired with the corresponding Devanāgarī form, existing IAST form, and a concise English gloss inside the same **Word-for-word** control as the root verse map. The visible Śrīdhara translation and the three-control layout remain intact. Chapter 1 root maps and translations were not independently re-audited in this sub-pass, so this update does not certify every existing English gloss.
 
 Book 1 Śrīdhara lexical-map coverage after Chapter 1: 20/934 source blocks, including the earlier 1.17.1 map; 914 source blocks remain. Book 1’s next user-directed chapter is Chapter 2.
+
+
+## User-directed Book 1 Śrīdhara WFW pass — Chapter 2 — 15 October 2026
+
+Chapter 2 has 68 verse articles and 49 supplied Śrīdhara commentaries. All 49 now have lexical maps in the corresponding existing **Word-for-word** control alongside the Viṣṇu Purāṇa verse map. The 1,270 commentary rows pair the source Devanāgarī with IAST transliterated directly from that form and concise English glosses. The chapter’s 19 explicit no-commentary states remain in place. The root word maps for 1.2.2–3 were rebuilt; the root reading at 1.2.2 was corrected to antakāriṇe from the pinned mūla. The visible commentary label is “Śrīdhara translation,” with the translation text in regular weight.
+
+The chapter adds 1,270 Śrīdhara rows and three root rows; Book 1 now has 15,452 word-for-word rows in the ledger and lexical maps for 69/934 attached Śrīdhara blocks. 865 blocks remain. The root translations and root lexical maps in the rest of Book 1 still require semantic review. Source pins: upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`, Chapter 2 Śrīdhara blob `3136ba4326d8c57c8dd2115e48b66d25c35a3e25`, and mūla blob `b1661f729a573bfb7a2b9a83bf7d469bc36fea4e`. The next user-directed chapter is Book 1, Chapter 3.
