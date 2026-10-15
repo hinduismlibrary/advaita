@@ -41,9 +41,9 @@ jobs:
             assert 'id="source-document"' in html, f'Missing manuscript: {path}'
             assert 'article-reader-paged.js' in html, f'Missing shared reader: {path}'
             assert 'document-paged.css' in html, f'Missing shared style: {path}'
-            html, n = re.subn(r'(assets/js/article-reader-paged\.js)\?v=[^"\']+', r'\1?v=20260920-pdf-repair-2', html)
+            html, n = re.subn(r'(assets/js/article-reader-paged\.js)\?v=[^"\']+', r'\1?v=20261016-subcontent-nav-1', html)
             assert n == 1, f'Unexpected reader links in {path}: {n}'
-            html, n = re.subn(r'(assets/css/document-paged\.css)\?v=[^"\']+', r'\1?v=20260920-pdf-repair-2', html)
+            html, n = re.subn(r'(assets/css/document-paged\.css)\?v=[^"\']+', r'\1?v=20261016-subcontent-nav-1', html)
             assert n == 1, f'Unexpected style links in {path}: {n}'
             if 'id="other-document-noscript"' not in html:
               html=html.replace('</head>', '<noscript id="other-document-noscript"><style>#source-document[hidden]{display:block!important}#source-document .site-header,#source-document .site-footer{display:none!important}#source-document .article-body{max-width:652px;margin:auto;padding:24px}</style></noscript>\n</head>', 1)
