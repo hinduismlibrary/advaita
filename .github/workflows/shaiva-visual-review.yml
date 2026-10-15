@@ -172,7 +172,7 @@ jobs:
               target=link.evaluate('(a)=>a.href')
               assert target and target.endswith('#'+subsection_id), f'Invalid subsection target: {subsection_id}'
               response=discovery.goto(target,wait_until='domcontentloaded',timeout=45000)
-              discovery.wait_for_function("id => !!document.getElementById(id)",subsection_id)
+              discovery.wait_for_function("id => !!document.getElementById(id)",arg=subsection_id)
               anchor=discovery.evaluate("id => ({hash:location.hash,target:document.getElementById(id)?.tagName})",subsection_id)
               assert response and response.status==200 and anchor['hash']=='#'+subsection_id and anchor['target']=='H3', f'Broken subsection jump: {subsection_id}'
             discovery.close()
