@@ -53,7 +53,9 @@
   });
  };
  update();
- window.addEventListener("hashchange",update);
+ const scrollToSelection=()=>{const target=document.getElementById(location.hash.slice(1));if(target&&(target.classList.contains("ad-section")||target.classList.contains("ad-guru-group")))requestAnimationFrame(()=>target.scrollIntoView({block:"start"}));};
+ scrollToSelection();
+ window.addEventListener("hashchange",()=>{update();scrollToSelection();});
 })();
 </script>
 </body>
