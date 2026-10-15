@@ -186,6 +186,81 @@
     return { title: frontmatterTitle(markdown), entries };
   }
 
+  function translationParagraphs(entry) {
+    const source = Array.isArray(entry.translations) && entry.translations.length
+      ? entry.translations
+      : String(entry.translation || '').split(/\n{2,}/);
+    return source.map((value) => String(value || '').trim()).filter(Boolean);
+  }
+
+  function mergeEnglishRecords(records, start, end) {
+    const translations = records.flatMap(translationParagraphs);
+    return {
+      start,
+      end,
+      devanagari: records.flatMap((entry) => entry.devanagari || []),
+      transliteration: records.flatMap((entry) => entry.transliteration || []),
+      synonyms: records.map((entry) => String(entry.synonyms || '').trim()).filter(Boolean).join('; '),
+      translation: translations.join('\n\n'),
+      translations
+    };
+  }
+
+  function shiftEnglishRecord(entry, offset) {
+    return { ...entry, start: entry.start + offset, end: entry.end + offset };
+  }
+
+  function findEnglishRecord(entries, start, end) {
+    return entries.find((entry) => entry.start === start && entry.end === end) || null;
+  }
+
+  // The pinned English mirror groups verses differently from the pinned Śrīdhara witness in 1.6 and 1.11. Normalize those ranges before matching source-keyed commentary and glosses.
+  function alignCanto1EnglishEntries(entries, chapter) {
+    if (chapter === 6) {
+      const verse12 = findEnglishRecord(entries, 12, 12);
+      const verse13 = findEnglishRecord(entries, 13, 13);
+      const verse15 = findEnglishRecord(entries, 14, 14);
+      const verse16 = findEnglishRecord(entries, 15, 15);
+      if (!verse12 || !verse13 || !verse15 || !verse16) {
+        throw new Error('Unexpected English source ranges for ŚB 1.6; source alignment was not applied.');
+      }
+      const merged = new Set([verse12, verse13, verse15, verse16]);
+      return entries
+        .filter((entry) => !merged.has(entry))
+        .map((entry) => entry.start >= 16 ? shiftEnglishRecord(entry, 1) : entry)
+        .concat(
+          mergeEnglishRecords([verse12, verse13], 12, 14),
+          mergeEnglishRecords([verse15, verse16], 15, 16)
+        )
+        .sort((a, b) => a.start - b.start || a.end - b.end);
+    }
+
+    if (chapter === 11) {
+      const verses10and11 = findEnglishRecord(entries, 10, 10);
+      const verse16 = findEnglishRecord(entries, 15, 15);
+      const verses17and18 = findEnglishRecord(entries, 16, 17);
+      if (!verses10and11 || !verse16 || !verses17and18) {
+        throw new Error('Unexpected English source ranges for ŚB 1.11; source alignment was not applied.');
+      }
+      const merged = new Set([verses10and11, verse16, verses17and18]);
+      const aligned = entries
+        .filter((entry) => !merged.has(entry))
+        .map((entry) => entry.start >= 11 ? shiftEnglishRecord(entry, 1) : entry);
+      aligned.push({
+        ...verses10and11,
+        end: 11,
+        translations: translationParagraphs(verses10and11)
+      });
+      aligned.push(mergeEnglishRecords([
+        shiftEnglishRecord(verse16, 1),
+        shiftEnglishRecord(verses17and18, 1)
+      ], 16, 18));
+      return aligned.sort((a, b) => a.start - b.start || a.end - b.end);
+    }
+
+    return entries;
+  }
+
   function isCommentatorAttribution(text) {
     return /(?:Śrīdhara|Sridhara)(?:\s+Svāmī)?\s+(?:says|asks)\b|joint\s+[^.!?]{0,100}\bnote\s+says\b/i.test(String(text || ''));
   }
@@ -528,9 +603,21 @@
     devanagari.lang = 'sa-Deva';
     appendLines(devanagari, entry.devanagari.join('\n') || devanagariOverrides[canto + '.' + chapter + '.' + entry.start] || '', false);
 
-    const translation = document.createElement('p');
-    translation.className = 'gita-translation';
-    translation.textContent = entry.translation || 'Translation not present in the source record.';
+    const translationTexts = Array.isArray(entry.translations) && entry.translations.length
+      ? entry.translations.map((value) => String(value || '').trim()).filter(Boolean)
+      : [String(entry.translation || '').trim()].filter(Boolean);
+    const translationNodes = translationTexts.map((text) => {
+      const translation = document.createElement('p');
+      translation.className = 'gita-translation';
+      translation.textContent = text;
+      return translation;
+    });
+    if (!translationNodes.length) {
+      const translation = document.createElement('p');
+      translation.className = 'gita-translation';
+      translation.textContent = 'Translation not present in the source record.';
+      translationNodes.push(translation);
+    }
 
     const verseTransliteration = entry.transliteration.join('\n');
     const sridharaSanskrit = sridharaForRange(sridharaEntries, entry.start, entry.end, chapter);
@@ -593,7 +680,7 @@
     }
     controls.appendChild(sridharaSanskritDetails);
 
-    section.append(heading, rule, devanagari, translation, controls);
+    section.append(heading, rule, devanagari, ...translationNodes, controls);
 
     const commentaryText = commentaryForRange(commentaryEntries, entry.start, entry.end) ||
       commentaryForRange(localCommentaryEntries, entry.start, entry.end);
@@ -741,6 +828,7 @@
           .concat(overlay.entries)
           .sort((a, b) => a.start - b.start || a.end - b.end);
       }
+      if (canto === 1) english.entries = alignCanto1EnglishEntries(english.entries, chapter);
       const sridharaResult = sridharaUrl ? results[1] : null;
       const commentaryResult = commentaryUrlValue ? results[sridharaUrl ? 2 : 1] : null;
       const checkpointResult = results[sridharaUrl ? (commentaryUrlValue ? 3 : 2) : (commentaryUrlValue ? 2 : 1)];
