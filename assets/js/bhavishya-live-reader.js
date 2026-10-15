@@ -75,6 +75,7 @@
       const cards=source.map(v=>{
         const t=translations[v.n]||{};
         const obj=typeof t==='string'?{en:t}:t;
+        if(obj.omit&&!v.sa)return '';
         const en=obj.en||'';
         const wfw=obj.wfw||obj.gloss||'';
         const sa=v.sa||obj.sa||`[Sanskrit verse ${v.n} could not be isolated automatically from the source page.]`;
