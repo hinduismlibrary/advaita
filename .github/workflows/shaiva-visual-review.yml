@@ -80,7 +80,7 @@ jobs:
                 const source=document.getElementById('source-document');
                 const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
                 const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-reference-2'));
-                const js=resources.some(url=>url.includes(reader+'?v=20261016-contents-4'));
+                const js=resources.some(url=>url.includes(reader+'?v=20261016-contents-5'));
                 const readerReady=document.body.classList.contains('document-paged-page') &&
                   !!document.querySelector('.page-context span');
                 return {
@@ -181,12 +181,12 @@ jobs:
                 const links=[...nav.querySelectorAll('a[data-section]:not([data-subsection])')]
                   .map(a=>({id:a.dataset.section,title:a.textContent.trim(),href:a.href}));
                 const subsections=[...nav.querySelectorAll('a[data-subsection]')]
-                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href}));
+                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
                 const first=nav.querySelector('a[data-subsection]');
                 const style=first?getComputedStyle(first):null;
                 const visibleSubsections=[...visibleNav.querySelectorAll('a[data-subsection]')]
                   .filter(a=>a.getClientRects().length>0)
-                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href}));
+                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
                 return {
                   links,subsections,visibleSubsections,
                   tocStyle:style?{
@@ -198,13 +198,17 @@ jobs:
               assert content_response and content_response.status==200, f'{label}: article did not load'
               assert contents, f'{label}: Contents navigation did not load; body={content_page.evaluate("document.body.className")!r}; browserErrors={content_errors}'
               assert len(contents['links'])>=3, f'{label}: expected the main article sections, got {len(contents["links"])}'
-              assert len(contents['subsections'])>=10, f'{label}: expected at least 10 nested contents links, got {len(contents["subsections"])}'
-              assert len(contents['visibleSubsections'])>=10, f'{label}: expected at least 10 visible nested Contents links, got {len(contents["visibleSubsections"])}'
               page_ids=[item['id'] for item in contents['links']]
               subsection_ids=[item['id'] for item in contents['subsections']]
               assert len(set(page_ids))==len(page_ids), f'{label}: duplicate section links'
               assert len(set(subsection_ids))==len(subsection_ids), f'{label}: duplicate subsection links'
               source_pages=[item for item in contents['links'] if re.search(r'bibliography|sources?|references?|works cited',item['title'],re.I)]
+              source_ids={item['id'] for item in source_pages}
+              content_subsections=[item for item in contents['subsections'] if item['section'] not in source_ids]
+              visible_content_subsections=[item for item in contents['visibleSubsections'] if item['section'] not in source_ids]
+              assert len(content_subsections)==len(contents['subsections']), f'{label}: source categories should not be listed in Contents'
+              minimum_visible=min(10,len(content_subsections))
+              assert len(visible_content_subsections)>=minimum_visible, f'{label}: expected {minimum_visible} visible article subsections, got {len(visible_content_subsections)}'
               assert len(source_pages)<=1, f'{label}: source material is split into multiple reader pages: {[x["title"] for x in source_pages]}'
               if has_bibliography:
                 assert len(source_pages)==1, f'{label}: missing single Bibliography/Sources page'

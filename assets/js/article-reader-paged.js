@@ -297,17 +297,17 @@ function appendPageEntry(container,page,linkClass){
   link.dataset.section=page.id;
   link.href=href(page);
   container.append(link);
+  if(isSourceHeading(page.title))return;
   const headings=pageSubheadings(page);
   if(!headings.length)return;
-  const referencePage=isSourceHeading(page.title);
-  const previewCount=headings.length>5?(referencePage?Math.min(4,headings.length):3):headings.length;
+  const previewCount=headings.length>5?3:headings.length;
   const preview=headings.slice(0,previewCount);
   const remaining=headings.slice(previewCount);
   if(preview.length)container.append(buildSubheadingList(preview,page));
   if(!remaining.length)return;
   const hiddenCount=countSubheadings(remaining);
   const group=el('details','toc-subgroup');
-  const summary=el('summary',null,referencePage?`Sections (${hiddenCount})`:`More sections (${hiddenCount})`);
+  const summary=el('summary',null,`More sections (${hiddenCount})`);
   let hash='';
   try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
   if(containsSubheading(remaining,hash))group.open=true;
