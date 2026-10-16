@@ -522,7 +522,7 @@ function tocInto(node,sections,selected){
     summary.append(make('span','toc-parent-title',parent));
     const children=make('div','toc-children');
     wrapper.append(summary,children);node.append(wrapper);
-    if(/stories|examples\s+of/i.test(parent))wrapper.open=true;
+    wrapper.open=true;
     for(const section of items){
       appendSection(children,section,'');
       if(section.id===selected.id){
