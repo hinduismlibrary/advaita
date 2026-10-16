@@ -300,7 +300,7 @@ function appendPageEntry(container,page,linkClass){
   const headings=pageSubheadings(page);
   if(!headings.length)return;
   const referencePage=isSourceHeading(page.title);
-  const previewCount=referencePage&&headings.length>5?0:headings.length>5?3:headings.length;
+  const previewCount=headings.length>5?(referencePage?Math.min(4,headings.length):3):headings.length;
   const preview=headings.slice(0,previewCount);
   const remaining=headings.slice(previewCount);
   if(preview.length)container.append(buildSubheadingList(preview,page));
@@ -330,7 +330,7 @@ function makeToc(nav){
     label.append(el('span','toc-parent-title',group.title),el('span','toc-current',''));
     const items=el('div','toc-children');
     wrap.append(label,items);nav.append(wrap);
-    if(isStorySection(group.title))wrap.open=true;
+    wrap.open=true;
     for(const page of pages){
       const entry=el('div','toc-page-item');
       appendPageEntry(entry,page,'');
