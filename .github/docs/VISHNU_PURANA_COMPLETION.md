@@ -441,7 +441,7 @@ Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śr�
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
 
-Book 1 cumulative ledger: 29,434 word-for-word panel rows; 935/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with -1 remaining. Chapters 5–22 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 12,108 rows across these chapters. The active next chapter is Book 1, Chapter 23.
+Book 1 cumulative ledger: 17,325 word-for-word panel rows across 1,407 verse cards; all 934 attached Śrīdhara passages are paired inside their controls. Chapters 1–4 have lexical maps; Chapters 5–22 currently have passage-level pairings and still need lexical segmentation.
 
 
 ## User-directed Book 1 Word-for-word panel repair — Chapter 5 — 15 October 2026
@@ -604,3 +604,10 @@ Chapter 22 has 90 contiguous verse cards and exactly three controls per verse. A
 Validation: 90 IDs, root translations, and each of the three controls; 60 Śrīdhara labels and WFW pairings; balanced divs; no Wilson or “Textual basis” note.
 
 Source pins at upstream commit fc117aa4514dfd4e4840037aeb3ca825ba030b05: mūla blob ec816b256d90970025c30cf20faa9c609e980580; numbered witness blob 6e85fae0e3479a9f2f2a6ef565cd6aea523fd46e; Śrīdhara blob 6f15d32bac448d1dc934e7dd21510c4c50de47f4; English cross-check blob 4ea136d7adabfce12ea0f22663ef85d7822308c6.
+
+
+## Book 1, Chapter 1 control consistency — 16 October 2026
+
+The 16 no-commentary verse cards now have the same three controls as the other cards. Their Devanāgarī control displays the root verse. The page description no longer attributes the translation to Wilson. All 19 supplied Śrīdhara passages remain paired inside their Word-for-word controls. No public textual-basis note appears.
+
+Validation: 35 cards; 35 Word-for-word, Transliteration, and Devanagari controls; 19 Śrīdhara labels and WFW pairings; balanced markup.

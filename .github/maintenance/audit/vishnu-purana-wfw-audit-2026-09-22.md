@@ -405,7 +405,7 @@ Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śr�
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
 
-Book 1 cumulative ledger: 29,434 word-for-word panel rows; 935/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with -1 remaining. Chapters 5–22 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 12,108 rows across these chapters. The active next chapter is Book 1, Chapter 23.
+Book 1 cumulative ledger: 17,325 word-for-word panel rows across 1,407 verse cards; all 934 attached Śrīdhara passages are paired inside their controls. Chapters 1–4 have lexical maps; Chapters 5–22 currently have passage-level pairings and still need lexical segmentation.
 
 
 ## Book 1, Chapter 5 WFW panel repair — 15 October 2026
@@ -532,3 +532,9 @@ Source pins at upstream commit fc117aa4514dfd4e4840037aeb3ca825ba030b05: mūla b
 All 60 supplied Śrīdhara passages now appear inside the same Word-for-word controls as the root maps, with Devanāgarī, IAST, and their existing English translations. 30 no-commentary cards remain. This structural pairing pass uses passage-level rows; lexical segmentation remains. Root maps: 478 rows. The public page has exactly three controls on every verse and no public Wilson attribution.
 
 Source pins at upstream commit fc117aa4514dfd4e4840037aeb3ca825ba030b05: mūla blob ec816b256d90970025c30cf20faa9c609e980580; numbered witness blob 6e85fae0e3479a9f2f2a6ef565cd6aea523fd46e; Śrīdhara blob 6f15d32bac448d1dc934e7dd21510c4c50de47f4; English cross-check blob 4ea136d7adabfce12ea0f22663ef85d7822308c6.
+
+
+## Book 1, Chapter 1 control consistency — 16 October 2026
+
+Added a Devanagari control to each of the 16 no-commentary cards, displaying the root verse. Removed the public Wilson attribution from the page description. The existing 19 Śrīdhara WFW pairings remain in place.
+
