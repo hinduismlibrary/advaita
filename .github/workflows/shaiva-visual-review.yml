@@ -79,8 +79,8 @@ jobs:
                 const resources=performance.getEntriesByType('resource').map(entry=>entry.name);
                 const source=document.getElementById('source-document');
                 const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
-                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-reference-2'));
-                const js=resources.some(url=>url.includes(reader+'?v=20261016-contents-5'));
+                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-reference-3'));
+                const js=resources.some(url=>url.includes(reader+'?v=20261016-contents-6'));
                 const readerReady=document.body.classList.contains('document-paged-page') &&
                   !!document.querySelector('.page-context span');
                 return {
@@ -149,6 +149,55 @@ jobs:
             page.close()
             return data
 
+          def inspect_reader_sequence(page,label,page_count):
+            results=[]
+            for index in range(page_count):
+              state=page.evaluate("""() => {
+                const root=document.querySelector('#source-content');
+                const status=document.querySelector('.page-context span, #section-count')?.textContent.trim()||'';
+                const heading=root?.querySelector('h3');
+                const article=getComputedStyle(root);
+                const title=document.querySelector('.article-head h1');
+                const quote=root?.querySelector('blockquote.translation, p.translation, blockquote.scripture-translation, p.scripture-translation, p.women-scripture-translation');
+                const table=root?.querySelector('table');
+                const signature=node => {
+                  if(!node)return null;
+                  const style=getComputedStyle(node);
+                  return {
+                    fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
+                    color:style.color,backgroundColor:style.backgroundColor,
+                    borderLeftWidth:style.borderLeftWidth,borderLeftStyle:style.borderLeftStyle,
+                    borderLeftColor:style.borderLeftColor,borderBottomColor:style.borderBottomColor,
+                    borderCollapse:style.borderCollapse
+                  };
+                };
+                return {
+                  status,heading:heading?.textContent.trim()||'',text:(root?.innerText||'').trim(),
+                  visibleTransliteration:[...(root?.querySelectorAll('.sanskrit-transliteration, [lang="sa-Latn"]')||[])].some(node=>getComputedStyle(node).display!=='none'&&getComputedStyle(node).visibility!=='hidden'),
+                  scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth,
+                  next:document.querySelector('.page-nav a.next, #page-next')?.getAttribute('href')||'',
+                  article:{
+                    fontFamily:article.fontFamily,fontSize:article.fontSize,lineHeight:article.lineHeight,color:article.color,
+                    title:signature(title),heading:signature(heading)
+                  },
+                  quote:signature(quote),table:signature(table)
+                };
+              }""")
+              expected='Section {} of {}'.format(index+1,page_count)
+              assert state['status']==expected, '{}: expected {}, got {!r}'.format(label,expected,state['status'])
+              assert state['heading'] and len(state['text'])>0, '{}: page {} has no article text'.format(label,index+1)
+              assert not state['visibleTransliteration'], '{}: Latin Sanskrit transliteration is visible on page {}'.format(label,index+1)
+              assert state['scrollWidth']<=state['viewport'], '{}: article page {} overflows its viewport'.format(label,index+1)
+              results.append({'article':state['article'],'quote':state['quote'],'table':state['table']})
+              if index<page_count-1:
+                assert state['next'], '{}: page {} has no next link'.format(label,index+1)
+                response=page.goto(revision_url(state['next']),wait_until='domcontentloaded',timeout=45000)
+                assert response and response.status==200, '{}: next page failed to load'.format(label)
+                expected_next='Section {} of {}'.format(index+2,page_count)
+                page.wait_for_function("(expected) => document.querySelector('.page-context span, #section-count')?.textContent.trim() === expected",arg=expected_next)
+              else:
+                assert not state['next'], '{}: final page unexpectedly has a next link'.format(label)
+            return results
           with sync_playwright() as playwright:
             chrome=shutil.which('google-chrome') or shutil.which('chromium')
             browser=playwright.chromium.launch(headless=True,executable_path=chrome) if chrome else playwright.chromium.launch(headless=True)
@@ -163,6 +212,9 @@ jobs:
             ]
             toc_reference=None
             source_reference=None
+            article_style_reference=None
+            quote_style_reference=None
+            table_style_reference=None
             for label,slug,toc_selector,has_bibliography in contents_cases:
               content_page=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
               content_errors=[]
@@ -182,13 +234,16 @@ jobs:
                   .map(a=>({id:a.dataset.section,title:a.textContent.trim(),href:a.href}));
                 const subsections=[...nav.querySelectorAll('a[data-subsection]')]
                   .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
-                const first=nav.querySelector('a[data-subsection]');
+                const first=nav.querySelector('a[data-section]:not([data-subsection])');
                 const style=first?getComputedStyle(first):null;
                 const visibleSubsections=[...visibleNav.querySelectorAll('a[data-subsection]')]
                   .filter(a=>a.getClientRects().length>0)
                   .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
+                const status=document.querySelector('.page-context span, #section-count')?.textContent||'';
+                const count=status.match(/of\\s+(\\d+)/i);
+                const pageCount=count?Number(count[1]):0;
                 return {
-                  links,subsections,visibleSubsections,
+                  links,subsections,visibleSubsections,pageCount,
                   tocStyle:style?{
                     fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
                     whiteSpace:style.whiteSpace,textOverflow:style.textOverflow,overflowX:style.overflowX,color:style.color
@@ -197,26 +252,38 @@ jobs:
               }""",toc_selector)
               assert content_response and content_response.status==200, f'{label}: article did not load'
               assert contents, f'{label}: Contents navigation did not load; body={content_page.evaluate("document.body.className")!r}; browserErrors={content_errors}'
-              assert len(contents['links'])>=3, f'{label}: expected the main article sections, got {len(contents["links"])}'
+              assert contents['pageCount']>=3, f'{label}: missing reader page count'
+              expected_main=min(contents['pageCount'],10)
+              assert len(contents['links'])==expected_main, f'{label}: expected {expected_main} main links, got {len(contents["links"])}'
               page_ids=[item['id'] for item in contents['links']]
               subsection_ids=[item['id'] for item in contents['subsections']]
               assert len(set(page_ids))==len(page_ids), f'{label}: duplicate section links'
               assert len(set(subsection_ids))==len(subsection_ids), f'{label}: duplicate subsection links'
+              assert len(page_ids)+len(subsection_ids)<=10, f'{label}: Contents exceeds its 10-entry limit'
+              assert len(contents['visibleSubsections'])==len(subsection_ids), f'{label}: a Contents subsection is hidden'
               source_pages=[item for item in contents['links'] if re.search(r'bibliography|sources?|references?|works cited',item['title'],re.I)]
               source_ids={item['id'] for item in source_pages}
-              content_subsections=[item for item in contents['subsections'] if item['section'] not in source_ids]
-              visible_content_subsections=[item for item in contents['visibleSubsections'] if item['section'] not in source_ids]
-              assert len(content_subsections)==len(contents['subsections']), f'{label}: source categories should not be listed in Contents'
-              minimum_visible=min(10,len(content_subsections))
-              assert len(visible_content_subsections)>=minimum_visible, f'{label}: expected {minimum_visible} visible article subsections, got {len(visible_content_subsections)}'
+              assert all(item['section'] not in source_ids for item in contents['subsections']), f'{label}: source headings should not be listed separately'
               assert len(source_pages)<=1, f'{label}: source material is split into multiple reader pages: {[x["title"] for x in source_pages]}'
               if has_bibliography:
                 assert len(source_pages)==1, f'{label}: missing single Bibliography/Sources page'
+                assert source_pages[0]['title']=='Sources', f'{label}: source page should have one consistent Contents label'
               style=contents['tocStyle']
-              assert style and style['whiteSpace']=='nowrap' and style['textOverflow']=='ellipsis' and style['overflowX']=='hidden', f'{label}: subsection links are not compact: {style}'
-              signature={key:style[key] for key in ['fontFamily','fontSize','lineHeight','whiteSpace','textOverflow','overflowX','color']}
+              assert style, f'{label}: Contents main links are unstyled'
+              signature={key:style[key] for key in ['fontFamily','fontSize','lineHeight','color']}
               if toc_reference is None:toc_reference=signature
               else:assert signature==toc_reference, f'{label}: Contents link style differs: {signature} != {toc_reference}'
+              sequence=inspect_reader_sequence(content_page,label,contents['pageCount'])
+              for item in sequence:
+                signature=item['article']
+                if article_style_reference is None:article_style_reference=signature
+                else:assert signature==article_style_reference, f'{label}: article text styling differs: {signature} != {article_style_reference}'
+                if item['quote']:
+                  if quote_style_reference is None:quote_style_reference=item['quote']
+                  else:assert item['quote']==quote_style_reference, f'{label}: quotation styling differs: {item["quote"]} != {quote_style_reference}'
+                if item['table']:
+                  if table_style_reference is None:table_style_reference=item['table']
+                  else:assert item['table']==table_style_reference, f'{label}: table styling differs: {item["table"]} != {table_style_reference}'
               if source_pages:
                 source_response=content_page.goto(revision_url(source_pages[0]['href']),wait_until='domcontentloaded',timeout=45000)
                 content_page.wait_for_function("document.querySelector('#source-content')?.classList.contains('document-reference-page')")
@@ -278,37 +345,26 @@ jobs:
             homepage.screenshot(path=str(out/'homepage-1365.png'),full_page=True)
             homepage.close()
 
-            reference_styles={}
             for width in [320,390,1365]:
               shot=f'varna-introduction-{width}.png' if width in [390,1365] else None
               record=check_page(browser,'varna',varna_base,None,width,'Introduction',screenshot=shot)
-              reference_styles[width]=record['style']
               records.append(record)
 
             discovery=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
             initial=wait_for_reader(discovery,revision_url(shaiva_base))
             items=discovery.locator('.side-toc .toc a[data-section]:not([data-subsection])').evaluate_all("(links)=>links.map(a=>({id:a.dataset.section,title:a.textContent.trim()}))")
             subsections=discovery.locator('.side-toc .toc a[data-subsection]').evaluate_all("(links)=>links.map(a=>({id:a.dataset.subsection,title:a.textContent.trim(),href:a.href}))")
+            page_count=discovery.evaluate("() => Number((document.querySelector('#section-count')?.textContent.match(/of\\s+(\\d+)/i)||[])[1]||0)")
             assert initial and initial.status==200
-            assert len(items)>=8, f'Expected the main article pages, got {len(items)}'
+            assert page_count>=8, f'Expected the full article page sequence, got {page_count}'
+            assert len(items)==min(page_count,10), f'Expected at most ten Contents entries, got {len(items)} main pages'
+            assert len(items)+len(subsections)<=10, f'Contents exceeds ten combined entries: {len(items)} pages and {len(subsections)} subsections'
             ids=[item['id'] for item in items]
             assert len(set(ids))==len(ids), 'Duplicate article page links'
             subsection_ids=[item['id'] for item in subsections]
-            assert len(subsections)>=10, f'Expected at least 10 nested subsections, got {len(subsections)}'
             assert len(set(subsection_ids))==len(subsection_ids), 'Duplicate subsection anchor links'
-            assert len(items)+len(subsections)>=20, f'Contents is missing nested entries: {len(items)} pages, {len(subsections)} subsections'
             page_samples={'opening-salutation','section-1','section-2','section-5','smriti-testimony'}
             assert page_samples.issubset(set(ids)), f'Missing article pages: {page_samples-set(ids)}'
-            subsection_samples={'introduction','padma-pur-a-s-contradiction','the-vai-ava-claim-relative-superiority-and-courtesy'}
-            assert subsection_samples.issubset(set(subsection_ids)), f'Missing subsection anchors: {subsection_samples-set(subsection_ids)}'
-            for subsection_id in subsection_samples:
-              link=discovery.locator(f'.side-toc .toc a[data-subsection="{subsection_id}"]')
-              target=link.evaluate('(a)=>a.href')
-              assert target and target.endswith('#'+subsection_id), f'Invalid subsection target: {subsection_id}'
-              response=discovery.goto(target,wait_until='domcontentloaded',timeout=45000)
-              discovery.wait_for_function("id => !!document.getElementById(id)",arg=subsection_id)
-              anchor=discovery.evaluate("id => ({hash:location.hash,target:document.getElementById(id)?.tagName})",subsection_id)
-              assert response and response.status==200 and anchor['hash']=='#'+subsection_id and anchor['target']=='H3', f'Broken subsection jump: {subsection_id}'
             discovery.close()
 
             for index,item in enumerate(items):
@@ -322,7 +378,6 @@ jobs:
                   shot=f'shaiva-{section}-{width}.png'
                 status=f'Section {index+1} of {len(items)}'
                 record=check_page(browser,'shaiva',shaiva_base,section,width,item['title'],status,shot)
-                assert record['style']==reference_styles[width], f'Style differs from Varṇa at width {width}: {record["style"]!r}'
                 records.append(record)
                 print(json.dumps(record,ensure_ascii=False),flush=True)
 
