@@ -452,8 +452,34 @@ function tocInto(node,sections,selected){
   const appendSubsections=(container,section)=>{
     const subsections=section.blocks.filter(block=>block.kind==='subheading'&&block.id);
     if(!subsections.length)return;
+    const appendLinks=(target,items)=>{
+      const nested=make('div','toc-subitems');
+      for(const block of items){
+        const label=tocLabel(block.value);
+        const link=make('a','toc-subitem',label);
+        link.href=href(section)+'#'+encodeURIComponent(block.id);
+        link.dataset.section=section.id;
+        link.dataset.subsection=block.id;
+        link.title=label;
+        link.setAttribute('aria-label',label);
+        if(location.hash.slice(1)===encodeURIComponent(block.id)){
+          link.classList.add('is-active-subsection');
+          link.setAttribute('aria-current','location');
+        }
+        nested.append(link);
+      }
+      target.append(nested);
+    };
+    const previewCount=subsections.length>5?3:subsections.length;
+    const preview=subsections.slice(0,previewCount);
+    const remaining=subsections.slice(previewCount);
+    if(preview.length)appendLinks(container,preview);
+    if(!remaining.length)return;
+    const group=make('details','toc-subgroup');
+    const summary=make('summary',null,'More sections ('+remaining.length+')');
+    if(remaining.some(block=>block.id===location.hash.slice(1)))group.open=true;
     const nested=make('div','toc-subitems');
-    for(const block of subsections){
+    for(const block of remaining){
       const label=tocLabel(block.value);
       const link=make('a','toc-subitem',label);
       link.href=href(section)+'#'+encodeURIComponent(block.id);
@@ -467,13 +493,8 @@ function tocInto(node,sections,selected){
       }
       nested.append(link);
     }
-    if(subsections.length>5){
-      const group=make('details','toc-subgroup');
-      const summary=make('summary',null,'Sections ('+subsections.length+')');
-      if(subsections.some(block=>block.id===location.hash.slice(1)))group.open=true;
-      group.append(summary,nested);
-      container.append(group);
-    }else container.append(nested);
+    group.append(summary,nested);
+    container.append(group);
   };
   const appendSection=(container,section,linkClass)=>{
     const link=make('a',linkClass,section.title);
@@ -501,6 +522,7 @@ function tocInto(node,sections,selected){
     summary.append(make('span','toc-parent-title',parent));
     const children=make('div','toc-children');
     wrapper.append(summary,children);node.append(wrapper);
+    if(/stories|examples\s+of/i.test(parent))wrapper.open=true;
     for(const section of items){
       appendSection(children,section,'');
       if(section.id===selected.id){
@@ -576,6 +598,8 @@ async function render(){
   for(const block of selected.blocks)content.append(renderBlock(block,selected.id));
   normalizeCitationOrder(content);
   root.replaceChildren(content);
+  root.classList.toggle('document-reference-page',
+    /bibliograph|sources?|references?|works cited/i.test(selected.title));
   if(location.hash){
     let target=null;
     try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch{}

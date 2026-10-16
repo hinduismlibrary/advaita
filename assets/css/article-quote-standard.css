@@ -290,3 +290,108 @@
     font-size:18px!important;
   }
 }
+
+
+/* The last-loaded shared stylesheet standardises all bibliography and source
+   pages, including pages with article-specific citation markup. */
+.document-paged-page #source-content.document-reference-page{
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+}
+#source-content.document-reference-page p,
+#source-content.document-reference-page li,
+#source-content.document-reference-page .index-subitem,
+#source-content.document-reference-page .women-bibliography-group>p:not(:first-child){
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+}
+#source-content.document-reference-page p:not(.reference):not(.source-citation):not(.scripture-source):not(.citation){
+  margin:0 0 9px!important;
+}
+#source-content.document-reference-page p.reference,
+#source-content.document-reference-page p.source-citation,
+#source-content.document-reference-page p.scripture-source,
+#source-content.document-reference-page p.citation{
+  margin:0 0 9px!important;
+  color:#625b54!important;
+  font-size:13px!important;
+  line-height:1.48!important;
+  font-weight:400!important;
+}
+#source-content.document-reference-page h3.reader-subheading,
+#source-content.document-reference-page h4,
+#source-content.document-reference-page .source-bibliography h4,
+#source-content.document-reference-page [data-vishnu-recap] h4,
+#source-content.document-reference-page .women-bibliography-group>p:first-child{
+  margin:15px 0 7px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:16px!important;
+  line-height:1.4!important;
+  font-weight:500!important;
+}
+#source-content.document-reference-page h3.reader-subheading:after{
+  display:none!important;
+  content:none!important;
+}
+#source-content.document-reference-page ol,
+#source-content.document-reference-page ul,
+#source-content.document-reference-page .source-bibliography ol{
+  margin:0 0 12px!important;
+  padding-left:20px!important;
+}
+#source-content.document-reference-page li,
+#source-content.document-reference-page .source-bibliography li{
+  margin:0 0 5px!important;
+  padding-left:0!important;
+}
+#source-content.document-reference-page .article-index{
+  margin:0 0 8px!important;
+}
+#source-content.document-reference-page .index-entry{
+  padding:8px 0 9px!important;
+  border-bottom:1px solid #e5e1db!important;
+}
+#source-content.document-reference-page .index-heading{
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:16px!important;
+  line-height:1.42!important;
+}
+#source-content.document-reference-page .reference-entry{
+  display:block!important;
+  grid-template-columns:1fr!important;
+  margin:0 0 8px!important;
+  padding:0!important;
+  border:0!important;
+}
+#source-content.document-reference-page table,
+#source-content.document-reference-page table.vishnu-data-table{
+  width:100%!important;
+  max-width:100%!important;
+  margin:12px 0 16px!important;
+  border-collapse:collapse!important;
+  table-layout:auto!important;
+  font-size:13px!important;
+  line-height:1.48!important;
+}
+#source-content.document-reference-page th,
+#source-content.document-reference-page td{
+  padding:6px 7px!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+  text-align:left!important;
+  vertical-align:top!important;
+  overflow-wrap:anywhere;
+}
+#source-content.document-reference-page th{
+  color:#514941!important;
+  background:#f7f6f3!important;
+  font-weight:700!important;
+}
+#source-content.document-reference-page a{
+  color:var(--teal);
+  text-underline-offset:3px;
+}
