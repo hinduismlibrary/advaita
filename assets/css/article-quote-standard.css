@@ -971,9 +971,9 @@ body.document-paged-page #source-content.document-reference-page .source-page-bo
 body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
   color:var(--ink)!important;
   font-family:Merriweather,Georgia,serif!important;
-  font-size:15px!important;
+  font-size:17px!important;
   font-weight:400!important;
-  line-height:1.55!important;
+  line-height:1.65!important;
 }
 body.document-paged-page #source-content.document-reference-page .source-page-body p{
   margin:0 0 9px!important;
@@ -1031,7 +1031,22 @@ body.document-paged-page #source-content.document-reference-page .source-page-bo
   body.document-paged-page #source-content.document-reference-page .source-page-body li,
   body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
   body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
-    font-size:14px!important;
-    line-height:1.55!important;
+    font-size:17px!important;
+    line-height:1.65!important;
   }
+}
+
+body.document-paged-page #source-content.document-reference-page .source-page-body a{
+  color:var(--ink)!important;
+  text-decoration:underline!important;
+  text-decoration-color:var(--side-rule)!important;
+  text-underline-offset:3px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body a:hover{
+  color:var(--teal)!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry strong,
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry b{
+  color:inherit!important;
+  font-weight:500!important;
 }
