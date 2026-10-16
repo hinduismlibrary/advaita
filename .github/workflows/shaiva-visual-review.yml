@@ -118,6 +118,7 @@ jobs:
             page=browser.new_page(viewport={'width':width,'height':900},device_scale_factor=1)
             errors=[]
             page.on('pageerror',lambda error,bucket=errors:bucket.append(str(error)))
+            page.on('response',lambda response,bucket=errors:bucket.append('HTTP '+str(response.status)+' '+response.url) if response.status>=400 else None)
             url=base if section is None else base+'?section='+quote(section)
             response=page.goto(revision_url(url),wait_until='domcontentloaded',timeout=45000)
             page.wait_for_function("document.querySelector('.page-context span')?.textContent.includes('of ')")
