@@ -16,6 +16,7 @@ on:
       - assets/js/article-reader-paged.js
       - assets/js/shaiva-complete-reader.js
       - assets/css/document-paged.css
+      - assets/css/article-quote-standard.css
       - assets/css/varna-vicara-paged.css
   workflow_dispatch:
 permissions:
@@ -63,23 +64,36 @@ jobs:
               time.sleep(5)
             raise AssertionError('The published article reader did not finish deploying.')
 
-          def wait_for_contents_assets(page,url,reader_script):
+          def wait_for_contents_assets(page,url,reader_script,errors):
             deadline=time.monotonic()+120
             response=None
+            state={}
             while time.monotonic()<deadline:
               response=page.goto(url,wait_until='domcontentloaded',timeout=45000)
               page.wait_for_timeout(1000)
-              ready=page.evaluate("""reader => {
-                const css=[...document.querySelectorAll('link[rel="stylesheet"]')]
-                  .some(link=>link.href.includes('document-paged.css?v=20261016-contents-2'));
-                const js=[...document.querySelectorAll('script[src]')]
-                  .some(script=>script.src.includes(reader+'?v=20261016-contents-2'));
-                return css&&js&&document.body.classList.contains('document-paged-page');
+              state=page.evaluate("""reader => {
+                const styles=[...document.querySelectorAll('link[rel="stylesheet"]')].map(link=>link.href);
+                const scripts=[...document.querySelectorAll('script[src]')].map(script=>script.src);
+                const source=document.getElementById('source-document');
+                const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
+                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-reference-2'));
+                const js=scripts.some(url=>url.includes(reader+'?v=20261016-contents-3'));
+                const readerReady=document.body.classList.contains('document-paged-page');
+                return {
+                  css,referenceCss,js,readerReady,bodyClass:document.body.className,
+                  hasConfig:!!document.getElementById('article-config'),
+                  hasSource:!!source,
+                  headingCount:source?.querySelectorAll('h2,h3,h4,h5').length||0,
+                  styles:styles.filter(url=>/document-paged.css|article-quote-standard.css/.test(url)),
+                  scripts:scripts.filter(url=>/article-reader-paged|shaiva-complete-reader/.test(url))
+                };
               }""",reader_script)
-              if response and response.status==200 and ready:
+              if response and response.status==200 and state['css'] and state['referenceCss'] and state['js'] and state['readerReady']:
                 return response
               time.sleep(5)
-            raise AssertionError('The new Contents assets have not finished deploying.')
+            raise AssertionError('Contents reader failed to initialize: '+json.dumps({
+              'http':response.status if response else None,'url':url,'state':state,'browserErrors':errors
+            },ensure_ascii=False))
           
           def style_of(page):
             return page.evaluate("""() => {
@@ -145,9 +159,11 @@ jobs:
               content_page=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
               content_errors=[]
               content_page.on('pageerror',lambda error,bucket=content_errors:bucket.append(str(error)))
+              content_page.on('console',lambda message,bucket=content_errors:bucket.append(message.text) if message.type=='error' else None)
+              content_page.on('requestfailed',lambda request,bucket=content_errors:bucket.append(request.url+': '+str(request.failure)))
               content_base=root+slug+'/'
               reader_script='shaiva-complete-reader.js' if label=='shaiva' else 'article-reader-paged.js'
-              content_response=wait_for_contents_assets(content_page,revision_url(content_base),reader_script)
+              content_response=wait_for_contents_assets(content_page,revision_url(content_base),reader_script,content_errors)
               contents=content_page.evaluate("""selector => {
                 const nav=document.querySelector(selector);
                 if(!nav)return null;
@@ -166,7 +182,7 @@ jobs:
                 };
               }""",toc_selector)
               assert content_response and content_response.status==200, f'{label}: article did not load'
-              assert contents, f'{label}: Contents navigation did not load'
+              assert contents, f'{label}: Contents navigation did not load; body={content_page.evaluate("document.body.className")!r}; browserErrors={content_errors}'
               assert len(contents['links'])>=3, f'{label}: expected the main article sections, got {len(contents["links"])}'
               assert len(contents['subsections'])>=10, f'{label}: expected at least 10 nested contents links, got {len(contents["subsections"])}'
               page_ids=[item['id'] for item in contents['links']]

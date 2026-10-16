@@ -243,6 +243,10 @@ function pageSubheadings(page){
     }
     while(stack.length>1&&stack[stack.length-1].level>=level)stack.pop();
     const label=text(heading);
+    if(label&&!heading.id){
+      heading.id=idFor(page.id+'-'+slug(label));
+      idMap.set(heading.id,page);
+    }
     if(!heading.id||!label||seenHeadings.has(heading.id))continue;
     seenHeadings.add(heading.id);
     if(/^answer\s*:/i.test(label)){
@@ -285,6 +289,9 @@ function buildSubheadingList(items,page){
   }
   return nested;
 }
+function countSubheadings(items){
+  return items.reduce((total,item)=>total+1+countSubheadings(item.children||[]),0);
+}
 function appendPageEntry(container,page,linkClass){
   const link=el('a',linkClass,page.title);
   link.dataset.section=page.id;
@@ -292,16 +299,20 @@ function appendPageEntry(container,page,linkClass){
   container.append(link);
   const headings=pageSubheadings(page);
   if(!headings.length)return;
-  const nested=buildSubheadingList(headings,page);
-  if(headings.length>5){
-    const group=el('details','toc-subgroup');
-    const summary=el('summary',null,`Sections (${headings.length})`);
-    let hash='';
-    try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
-    if(containsSubheading(headings,hash))group.open=true;
-    group.append(summary,nested);
-    container.append(group);
-  }else container.append(nested);
+  const referencePage=isSourceHeading(page.title);
+  const previewCount=referencePage&&headings.length>5?0:headings.length>5?3:headings.length;
+  const preview=headings.slice(0,previewCount);
+  const remaining=headings.slice(previewCount);
+  if(preview.length)container.append(buildSubheadingList(preview,page));
+  if(!remaining.length)return;
+  const hiddenCount=countSubheadings(remaining);
+  const group=el('details','toc-subgroup');
+  const summary=el('summary',null,referencePage?`Sections (${hiddenCount})`:`More sections (${hiddenCount})`);
+  let hash='';
+  try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
+  if(containsSubheading(remaining,hash))group.open=true;
+  group.append(summary,buildSubheadingList(remaining,page));
+  container.append(group);
 }
 function makeToc(nav){
   const grouped=new Map();
@@ -319,6 +330,7 @@ function makeToc(nav){
     label.append(el('span','toc-parent-title',group.title),el('span','toc-current',''));
     const items=el('div','toc-children');
     wrap.append(label,items);nav.append(wrap);
+    if(isStorySection(group.title))wrap.open=true;
     for(const page of pages){
       const entry=el('div','toc-page-item');
       appendPageEntry(entry,page,'');
