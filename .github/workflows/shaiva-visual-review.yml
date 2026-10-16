@@ -167,7 +167,7 @@ jobs:
               content_page=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
               content_errors=[]
               content_page.on('pageerror',lambda error,bucket=content_errors:bucket.append(str(error)))
-              content_page.on('console',lambda message,bucket=content_errors:bucket.append(message.text) if message.type=='error' else None)
+              content_page.on('console',lambda message,bucket=content_errors:bucket.append(message.text) if message.type=='error' and 'Failed to load resource: the server responded with a status of 404' not in message.text else None)
               content_page.on('requestfailed',lambda request,bucket=content_errors:bucket.append(request.url+': '+str(request.failure)))
               content_page.on('response',lambda response,bucket=content_errors:bucket.append('HTTP '+str(response.status)+' '+response.url) if response.status>=400 else None)
               content_base=root+slug+'/'
