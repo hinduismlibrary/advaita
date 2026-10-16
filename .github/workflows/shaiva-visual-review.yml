@@ -69,7 +69,6 @@ jobs:
             response=None
             state={}
             attempt=0
-            page.set_extra_http_headers({'Cache-Control':'no-cache'})
             while time.monotonic()<deadline:
               attempt+=1
               attempt_url=url+('&' if '?' in url else '?')+'qa-attempt='+str(attempt)
