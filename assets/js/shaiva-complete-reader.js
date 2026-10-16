@@ -453,9 +453,11 @@ function tocInto(node,sections,selected){
   const mainLimit=Math.min(sections.length,hasArticleSubsections?8:10);
   const subLimit=Math.max(0,10-mainLimit);
   let mainCount=0,subCount=0;
+  const list=make('ol','toc-list');
   const appendLinks=(target,section,items)=>{
-    const nested=make('div','toc-subitems');
+    const nested=make('ul','toc-subitems');
     for(const block of items){
+      const entry=make('li','toc-subentry');
       const label=tocLabel(block.value);
       const link=make('a','toc-subitem',label);
       link.href=href(section)+'#'+encodeURIComponent(block.id);
@@ -467,7 +469,8 @@ function tocInto(node,sections,selected){
         link.classList.add('is-active-subsection');
         link.setAttribute('aria-current','location');
       }
-      nested.append(link);
+      entry.append(link);
+      nested.append(entry);
     }
     target.append(nested);
   };
@@ -480,47 +483,22 @@ function tocInto(node,sections,selected){
     appendLinks(container,section,selectedSubsections);
     subCount+=selectedSubsections.length;
   };
-  const appendSection=(container,section,linkClass)=>{
-    if(mainCount>=mainLimit)return false;
-    const link=make('a',linkClass,section.title);
+  for(const section of sections){
+    if(mainCount>=mainLimit)break;
+    const entry=make('li','toc-entry');
+    const link=make('a','toc-main',section.title);
     link.href=href(section);
     link.dataset.section=section.id;
     if(section.id===selected.id){
       link.classList.add('is-active');
       link.setAttribute('aria-current','page');
     }
-    container.append(link);
+    entry.append(link);
+    list.append(entry);
     mainCount++;
-    appendSubsections(container,section);
-    return true;
-  };
-  const groups=new Map();
-  for(const section of sections){
-    if(!groups.has(section.parent))groups.set(section.parent,[]);
-    groups.get(section.parent).push(section);
+    appendSubsections(entry,section);
   }
-  for(const [parent,items] of groups){
-    if(mainCount>=mainLimit)break;
-    if(items.length===1){
-      appendSection(node,items[0],'toc-main');
-      continue;
-    }
-    const wrapper=make('details','toc-group');
-    const summary=make('summary','toc-parent');
-    summary.append(make('span','toc-parent-title',parent));
-    const children=make('div','toc-children');
-    wrapper.append(summary,children);
-    wrapper.open=true;
-    for(const section of items){
-      if(mainCount>=mainLimit)break;
-      appendSection(children,section,'');
-      if(section.id===selected.id){
-        wrapper.classList.add('has-current');
-        summary.append(make('span','toc-current',section.title));
-      }
-    }
-    if(children.querySelector('a[data-section]:not([data-subsection])'))node.append(wrapper);
-  }
+  node.append(list);
 }
 function navLink(anchor,section,label){
   anchor.replaceChildren(make('small',null,label));
