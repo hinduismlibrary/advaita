@@ -68,24 +68,32 @@ jobs:
             deadline=time.monotonic()+120
             response=None
             state={}
+            attempt=0
+            page.set_extra_http_headers({'Cache-Control':'no-cache'})
             while time.monotonic()<deadline:
-              response=page.goto(url,wait_until='domcontentloaded',timeout=45000)
+              attempt+=1
+              attempt_url=url+('&' if '?' in url else '?')+'qa-attempt='+str(attempt)
+              response=page.goto(attempt_url,wait_until='domcontentloaded',timeout=45000)
               page.wait_for_timeout(1000)
               state=page.evaluate("""reader => {
                 const styles=[...document.querySelectorAll('link[rel="stylesheet"]')].map(link=>link.href);
-                const scripts=[...document.querySelectorAll('script[src]')].map(script=>script.src);
+                const resources=performance.getEntriesByType('resource').map(entry=>entry.name);
                 const source=document.getElementById('source-document');
                 const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
                 const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-reference-2'));
-                const js=scripts.some(url=>url.includes(reader+'?v=20261016-contents-3'));
-                const readerReady=document.body.classList.contains('document-paged-page');
+                const js=resources.some(url=>url.includes(reader+'?v=20261016-contents-4'));
+                const readerReady=document.body.classList.contains('document-paged-page') &&
+                  !!document.querySelector('.page-context span');
                 return {
                   css,referenceCss,js,readerReady,bodyClass:document.body.className,
+                  title:document.title,
+                  pageTitle:document.querySelector('.article-head h1')?.textContent.trim()||'',
                   hasConfig:!!document.getElementById('article-config'),
                   hasSource:!!source,
                   headingCount:source?.querySelectorAll('h2,h3,h4,h5').length||0,
+                  subsectionLinks:document.querySelectorAll('.toc a[data-subsection]').length,
                   styles:styles.filter(url=>/document-paged.css|article-quote-standard.css/.test(url)),
-                  scripts:scripts.filter(url=>/article-reader-paged|shaiva-complete-reader/.test(url))
+                  readerResources:resources.filter(url=>/article-reader-paged|shaiva-complete-reader/.test(url))
                 };
               }""",reader_script)
               if response and response.status==200 and state['css'] and state['referenceCss'] and state['js'] and state['readerReady']:
@@ -164,17 +172,22 @@ jobs:
               content_base=root+slug+'/'
               reader_script='shaiva-complete-reader.js' if label=='shaiva' else 'article-reader-paged.js'
               content_response=wait_for_contents_assets(content_page,revision_url(content_base),reader_script,content_errors)
+              content_page.locator('.mobile-toc').evaluate('(details)=>{details.open=true}')
               contents=content_page.evaluate("""selector => {
                 const nav=document.querySelector(selector);
-                if(!nav)return null;
+                const visibleNav=window.matchMedia('(max-width:900px)').matches?document.querySelector('.mobile-toc .toc'):nav;
+                if(!nav||!visibleNav)return null;
                 const links=[...nav.querySelectorAll('a[data-section]:not([data-subsection])')]
                   .map(a=>({id:a.dataset.section,title:a.textContent.trim(),href:a.href}));
                 const subsections=[...nav.querySelectorAll('a[data-subsection]')]
                   .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href}));
                 const first=nav.querySelector('a[data-subsection]');
                 const style=first?getComputedStyle(first):null;
+                const visibleSubsections=[...visibleNav.querySelectorAll('a[data-subsection]')]
+                  .filter(a=>a.getClientRects().length>0)
+                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href}));
                 return {
-                  links,subsections,
+                  links,subsections,visibleSubsections,
                   tocStyle:style?{
                     fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
                     whiteSpace:style.whiteSpace,textOverflow:style.textOverflow,overflowX:style.overflowX,color:style.color
@@ -185,6 +198,7 @@ jobs:
               assert contents, f'{label}: Contents navigation did not load; body={content_page.evaluate("document.body.className")!r}; browserErrors={content_errors}'
               assert len(contents['links'])>=3, f'{label}: expected the main article sections, got {len(contents["links"])}'
               assert len(contents['subsections'])>=10, f'{label}: expected at least 10 nested contents links, got {len(contents["subsections"])}'
+              assert len(contents['visibleSubsections'])>=10, f'{label}: expected at least 10 visible nested Contents links, got {len(contents["visibleSubsections"])}'
               page_ids=[item['id'] for item in contents['links']]
               subsection_ids=[item['id'] for item in contents['subsections']]
               assert len(set(page_ids))==len(page_ids), f'{label}: duplicate section links'
