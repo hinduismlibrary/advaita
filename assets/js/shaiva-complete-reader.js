@@ -449,37 +449,12 @@ function tocLabel(value){
 
 function tocInto(node,sections,selected){
   node.replaceChildren();
-  const appendSubsections=(container,section)=>{
-    const subsections=section.blocks.filter(block=>block.kind==='subheading'&&block.id);
-    if(!subsections.length)return;
-    const appendLinks=(target,items)=>{
-      const nested=make('div','toc-subitems');
-      for(const block of items){
-        const label=tocLabel(block.value);
-        const link=make('a','toc-subitem',label);
-        link.href=href(section)+'#'+encodeURIComponent(block.id);
-        link.dataset.section=section.id;
-        link.dataset.subsection=block.id;
-        link.title=label;
-        link.setAttribute('aria-label',label);
-        if(location.hash.slice(1)===encodeURIComponent(block.id)){
-          link.classList.add('is-active-subsection');
-          link.setAttribute('aria-current','location');
-        }
-        nested.append(link);
-      }
-      target.append(nested);
-    };
-    const previewCount=subsections.length>5?3:subsections.length;
-    const preview=subsections.slice(0,previewCount);
-    const remaining=subsections.slice(previewCount);
-    if(preview.length)appendLinks(container,preview);
-    if(!remaining.length)return;
-    const group=make('details','toc-subgroup');
-    const summary=make('summary',null,'More sections ('+remaining.length+')');
-    if(remaining.some(block=>block.id===location.hash.slice(1)))group.open=true;
+  const mainLimit=Math.min(sections.length,10);
+  const subLimit=Math.max(0,10-mainLimit);
+  let mainCount=0,subCount=0;
+  const appendLinks=(target,section,items)=>{
     const nested=make('div','toc-subitems');
-    for(const block of remaining){
+    for(const block of items){
       const label=tocLabel(block.value);
       const link=make('a','toc-subitem',label);
       link.href=href(section)+'#'+encodeURIComponent(block.id);
@@ -493,10 +468,19 @@ function tocInto(node,sections,selected){
       }
       nested.append(link);
     }
-    group.append(summary,nested);
-    container.append(group);
+    target.append(nested);
+  };
+  const appendSubsections=(container,section)=>{
+    const available=subLimit-subCount;
+    if(available<=0)return;
+    const subsections=section.blocks.filter(block=>block.kind==='subheading'&&block.id);
+    const selectedSubsections=subsections.slice(0,available);
+    if(!selectedSubsections.length)return;
+    appendLinks(container,section,selectedSubsections);
+    subCount+=selectedSubsections.length;
   };
   const appendSection=(container,section,linkClass)=>{
+    if(mainCount>=mainLimit)return false;
     const link=make('a',linkClass,section.title);
     link.href=href(section);
     link.dataset.section=section.id;
@@ -505,7 +489,9 @@ function tocInto(node,sections,selected){
       link.setAttribute('aria-current','page');
     }
     container.append(link);
+    mainCount++;
     appendSubsections(container,section);
+    return true;
   };
   const groups=new Map();
   for(const section of sections){
@@ -513,6 +499,7 @@ function tocInto(node,sections,selected){
     groups.get(section.parent).push(section);
   }
   for(const [parent,items] of groups){
+    if(mainCount>=mainLimit)break;
     if(items.length===1){
       appendSection(node,items[0],'toc-main');
       continue;
@@ -521,15 +508,17 @@ function tocInto(node,sections,selected){
     const summary=make('summary','toc-parent');
     summary.append(make('span','toc-parent-title',parent));
     const children=make('div','toc-children');
-    wrapper.append(summary,children);node.append(wrapper);
+    wrapper.append(summary,children);
     wrapper.open=true;
     for(const section of items){
+      if(mainCount>=mainLimit)break;
       appendSection(children,section,'');
       if(section.id===selected.id){
         wrapper.classList.add('has-current');
         summary.append(make('span','toc-current',section.title));
       }
     }
+    if(children.querySelector('a[data-section]:not([data-subsection])'))node.append(wrapper);
   }
 }
 function navLink(anchor,section,label){

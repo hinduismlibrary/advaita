@@ -263,6 +263,7 @@ function pageSubheadings(page){
 function containsSubheading(items,id){
   return items.some(item=>item.heading.id===id||containsSubheading(item.children,id));
 }
+const TOC_ENTRY_LIMIT=10;
 function buildSubheadingList(items,page){
   const nested=el('div','toc-subitems');
   for(const item of items){
@@ -276,15 +277,7 @@ function buildSubheadingList(items,page){
     if(item.children.length){
       const childList=buildSubheadingList(item.children,page);
       childList.classList.add('toc-subitems-nested');
-      if(item.children.length>5){
-        const group=el('details','toc-subgroup toc-subgroup-nested');
-        const summary=el('summary',null,`Subsections (${item.children.length})`);
-        let hash='';
-        try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
-        if(containsSubheading(item.children,hash))group.open=true;
-        group.append(summary,childList);
-        nested.append(group);
-      }else nested.append(childList);
+      nested.append(childList);
     }
   }
   return nested;
@@ -292,27 +285,34 @@ function buildSubheadingList(items,page){
 function countSubheadings(items){
   return items.reduce((total,item)=>total+1+countSubheadings(item.children||[]),0);
 }
-function appendPageEntry(container,page,linkClass){
-  const link=el('a',linkClass,page.title);
+function limitSubheadings(items,limit){
+  const selected=[];
+  for(const item of items){
+    if(limit<=0)break;
+    const children=limitSubheadings(item.children||[],limit-1);
+    selected.push({...item,children});
+    limit-=1+countSubheadings(children);
+  }
+  return selected;
+}
+function appendPageEntry(container,page,linkClass,state){
+  if(state.mainCount>=state.mainLimit)return false;
+  const sourcePage=isSourceHeading(page.title);
+  const link=el('a',linkClass,sourcePage?'Sources':page.title);
   link.dataset.section=page.id;
   link.href=href(page);
   container.append(link);
-  if(isSourceHeading(page.title))return;
+  state.mainCount++;
+  if(sourcePage)return true;
+  const available=state.subLimit-state.subCount;
+  if(available<=0)return true;
   const headings=pageSubheadings(page);
-  if(!headings.length)return;
-  const previewCount=headings.length>5?3:headings.length;
-  const preview=headings.slice(0,previewCount);
-  const remaining=headings.slice(previewCount);
-  if(preview.length)container.append(buildSubheadingList(preview,page));
-  if(!remaining.length)return;
-  const hiddenCount=countSubheadings(remaining);
-  const group=el('details','toc-subgroup');
-  const summary=el('summary',null,`More sections (${hiddenCount})`);
-  let hash='';
-  try{hash=decodeURIComponent(location.hash.slice(1));}catch{}
-  if(containsSubheading(remaining,hash))group.open=true;
-  group.append(summary,buildSubheadingList(remaining,page));
-  container.append(group);
+  if(!headings.length)return true;
+  const selected=limitSubheadings(headings,available);
+  const selectedCount=countSubheadings(selected);
+  if(selectedCount)container.append(buildSubheadingList(selected,page));
+  state.subCount+=selectedCount;
+  return true;
 }
 function makeToc(nav){
   const grouped=new Map();
@@ -320,22 +320,31 @@ function makeToc(nav){
     if(!grouped.has(page.group))grouped.set(page.group,[]);
     grouped.get(page.group).push(page);
   }
+  const state={
+    mainLimit:Math.min(segments.length,TOC_ENTRY_LIMIT),
+    mainCount:0,
+    subLimit:Math.max(0,TOC_ENTRY_LIMIT-Math.min(segments.length,TOC_ENTRY_LIMIT)),
+    subCount:0
+  };
   for(const [group,pages] of grouped){
+    if(state.mainCount>=state.mainLimit)break;
     if(pages.length===1){
-      appendPageEntry(nav,pages[0],'toc-main');
+      appendPageEntry(nav,pages[0],'toc-main',state);
       continue;
     }
     const wrap=el('details','toc-group');
     const label=el('summary','toc-parent');
     label.append(el('span','toc-parent-title',group.title),el('span','toc-current',''));
     const items=el('div','toc-children');
-    wrap.append(label,items);nav.append(wrap);
+    wrap.append(label,items);
     wrap.open=true;
     for(const page of pages){
+      if(state.mainCount>=state.mainLimit)break;
       const entry=el('div','toc-page-item');
-      appendPageEntry(entry,page,'');
+      appendPageEntry(entry,page,'',state);
       items.append(entry);
     }
+    if(items.querySelector('a[data-section]:not([data-subsection])'))nav.append(wrap);
   }
 }
 makeToc(sideNav);makeToc(mobileNav);
