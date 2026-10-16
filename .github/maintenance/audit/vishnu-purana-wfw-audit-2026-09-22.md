@@ -405,7 +405,7 @@ Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śr�
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
 
-Book 1 cumulative ledger: 20,165 word-for-word panel rows; 425/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 509 remaining. Chapters 5–10 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 3,349 rows across these chapters. The active next chapter is Book 1, Chapter 11.
+Book 1 cumulative ledger: 20,885 word-for-word panel rows; 459/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 475 remaining. Chapters 5–11 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 4,035 rows across these chapters. The active next chapter is Book 1, Chapter 12.
 
 
 ## Book 1, Chapter 5 WFW panel repair — 15 October 2026
@@ -448,3 +448,10 @@ Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla
 All 13 supplied Śrīdhara passages now appear inside the same Word-for-word controls as the root maps, with Devanāgarī, IAST, and their existing English translations. 8 no-commentary cards remain. This structural pairing pass uses passage-level rows; lexical segmentation remains. Root maps: 243 rows. The public page has exactly three controls on every verse and no public Wilson attribution.
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla blob `dac8bfa64a36fee35ddf3ad22a813949f40f2f26`; numbered witness blob `928c18a82ea89a9a09a1271745dffd7c887b919f`; Śrīdhara blob `d5c420a5ae35b2ddca611e81c429fd744e4a3380`; English cross-check blob `0431dabebcb907002fb339826c79f850f75c527d`.
+
+
+## Book 1, Chapter 11 WFW panel repair — 16 October 2026
+
+All 34 supplied Śrīdhara passages now appear inside the same Word-for-word controls as the root maps, with Devanāgarī, IAST, and their existing English translations. 23 no-commentary cards remain. This structural pairing pass uses passage-level rows; lexical segmentation remains. Root maps: 686 rows. The public page has exactly three controls on every verse and no public Wilson attribution.
+
+Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla blob `99cb7be5e8dc29fab3278efeaca476240e9d6d6a`; numbered witness blob `8655f9fb2808772efcb6be144f8b8eac0d34023f`; Śrīdhara blob `43b9789f2e5ca9cd43b8c36edf2e44d83f32aa2b`; English cross-check blob `de1c6fc6aef2ca07fcd9ec38923b4466c4d66eeb`.
