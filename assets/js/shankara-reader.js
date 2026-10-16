@@ -82,7 +82,7 @@ function aboutHTML(item){
  if(item.id==="vedantasara")source='<p class="shankara-about-source">Sanskrit text of Sadānanda Yogīndra’s work, distributed from a CC BY-SA 4.0 Wikisource edition. The complete local text includes prose and all 38 numbered source passages in this recension. No English translation or word-for-word gloss is supplied.</p>';
  if(item.id==="naishkarmya-siddhi")source='<p class="shankara-about-source">Sanskrit Wikisource text, compiled and transliterated by the ERC-funded Intellexus project, under CC BY-SA 4.0. The complete four-chapter source is converted from IAST to Devanāgarī for this local reader. No English translation or word-for-word gloss is supplied.</p>';
  if(item.id==="brahma-siddhi")source='<p class="shankara-about-source">Sanskrit from GRETIL, data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition. Licensed CC BY-NC-SA 4.0. This local reader contains the 231 source-marked passages present in that transcription, across Kāṇḍas 1, 2, and 4; it makes no claim for unrepresented sections. No English translation or word-for-word gloss is supplied.</p>';
- if(item.id==="jivanmukti-viveka")source='<p class="shankara-about-source">English translation by Manilal Nabhubhai Dvivedi, first published in 1897 and now in the public domain. All 165 printed-page units are arranged into the five chapter sections, front matter, glossary, and publisher’s catalogue present in this transcription. Sanskrit text is not included. Digital transcription credited to Maryse Locke.</p>';
+ if(item.id==="jivanmukti-viveka")source='<p class="shankara-about-source">English translation by Manilal Nabhubhai Dvivedi (1897), public domain. The 165 printed-page English transcription is retained. Chapter I, verses 1–13 are shown in Sanskrit with simple literal readings and token-by-token “Word-for-word” glosses. The remaining Sanskrit text and full word-for-word gloss are not included in this reader.</p><p class="shankara-about-source">Sanskrit source for verses 1–13: <a href="https://sanskritdocuments.org/doc_z_misc_major_works/jIvanmuktivivekaH.html">Sanskrit Documents, Jivanmuktivivekah</a>. Literal readings and glosses are original to this reader.</p>';
 
  return '<details class="gita-details shankara-about"><summary>Info</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
 }
@@ -168,11 +168,22 @@ function treatiseContentsHTML(groups){
  return '<nav class="gita-contents treatise-contents" aria-label="Contents"><h2>Contents</h2><ol class="treatise-chapter-list">'+groups.map(group=>{
   return '<li class="treatise-chapter-item"><a class="treatise-chapter-link" href="#'+esc(group.anchor)+'">'+esc(group.title)+'</a></li>';
  }).join("")+'</ol></nav>';
-}function treatiseUnitHTML(unit,index,englishOnly){
+}function sourceVerseHTML(verse){
+ const label=verse.label||("Verse "+(verse.number||"")),number=verse.number||"";
+ const deva=String(verse.deva||""),transliteration=verse.iast||iast(deva),gloss=Array.isArray(verse.gloss)?verse.gloss:[];
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
+ const translation=verse.translation?'<p class="gita-translation">'+esc(verse.translation)+'</p>':"";
+ return '<article class="gita-verse shankara-verse jmv-source-verse" id="'+esc(verse.id)+'" aria-label="'+esc(label)+'"><h3>Verse '+esc(number)+'</h3><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+breakLines(deva)+'</div><p class="jmv-literal-label">Literal translation</p>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
+}
+function treatiseUnitHTML(unit,index,englishOnly){
  const label=unit.label||("Passage "+(index+1)),number=unit.number||String(index+1);
  if(englishOnly){
   const paragraphs=String(unit.translation||"").split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\r?\n/g," "))+'</p>').join("");
-  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/>'+paragraphs+'</article>';
+  const verses=Array.isArray(unit.verses)?unit.verses:[];
+  const verseRange=verses.length?("Verses "+verses[0].number+"–"+verses[verses.length-1].number):"";
+  const literalSection=verses.length?'<section class="jmv-literal-section" aria-label="Sanskrit and literal translations"><h3>Chapter I · '+esc(verseRange)+'</h3>'+verses.map(sourceVerseHTML).join("")+'</section>':"";
+  const legacySection=paragraphs?'<section class="jmv-1897-section" aria-label="1897 English edition"><h3>1897 English edition</h3>'+paragraphs+'</section>':"";
+  return '<article class="gita-verse shankara-verse shankara-english-unit" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/>'+literalSection+legacySection+'</article>';
  }
  const deva=String(unit.deva||"");
  const transliteration=unit.iast||iast(deva);
@@ -286,7 +297,7 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-contents-20261016b";
+const READER_DATA_VERSION="reader-contents-20261016c";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
  if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
