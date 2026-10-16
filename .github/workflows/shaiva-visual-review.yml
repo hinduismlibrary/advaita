@@ -40,7 +40,7 @@ jobs:
           python3 - <<'PY'
           import json,os,re,shutil,time
           from pathlib import Path
-          from urllib.parse import quote
+          from urllib.parse import quote,urljoin
           from playwright.sync_api import sync_playwright
 
           out=Path('/tmp/shaiva-qa')
@@ -191,7 +191,8 @@ jobs:
               results.append({'article':state['article'],'quote':state['quote'],'table':state['table']})
               if index<page_count-1:
                 assert state['next'], '{}: page {} has no next link'.format(label,index+1)
-                response=page.goto(revision_url(state['next']),wait_until='domcontentloaded',timeout=45000)
+                next_url=urljoin(page.url,state['next'])
+                response=page.goto(revision_url(next_url),wait_until='domcontentloaded',timeout=45000)
                 assert response and response.status==200, '{}: next page failed to load'.format(label)
                 expected_next='Section {} of {}'.format(index+2,page_count)
                 page.wait_for_function("(expected) => document.querySelector('.page-context span, #section-count')?.textContent.trim() === expected",arg=expected_next)
