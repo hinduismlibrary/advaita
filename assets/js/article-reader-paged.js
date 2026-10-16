@@ -264,6 +264,7 @@ function containsSubheading(items,id){
   return items.some(item=>item.heading.id===id||containsSubheading(item.children,id));
 }
 const TOC_ENTRY_LIMIT=10;
+const TOC_SUBSECTION_RESERVE=2;
 function buildSubheadingList(items,page){
   const nested=el('div','toc-subitems');
   for(const item of items){
@@ -320,10 +321,12 @@ function makeToc(nav){
     if(!grouped.has(page.group))grouped.set(page.group,[]);
     grouped.get(page.group).push(page);
   }
+  const hasArticleSubheadings=segments.some(page=>!isSourceHeading(page.title)&&pageSubheadings(page).length>0);
+  const mainLimit=Math.min(segments.length,hasArticleSubheadings?TOC_ENTRY_LIMIT-TOC_SUBSECTION_RESERVE:TOC_ENTRY_LIMIT);
   const state={
-    mainLimit:Math.min(segments.length,TOC_ENTRY_LIMIT),
+    mainLimit,
     mainCount:0,
-    subLimit:Math.max(0,TOC_ENTRY_LIMIT-Math.min(segments.length,TOC_ENTRY_LIMIT)),
+    subLimit:Math.max(0,TOC_ENTRY_LIMIT-mainLimit),
     subCount:0
   };
   for(const [group,pages] of grouped){

@@ -44,13 +44,13 @@ jobs:
             html = path.read_text(encoding='utf-8')
             assert 'document-paged.css' in html, f'Missing shared style: {path}'
             if slug == shaiva_slug:
-              html, n = re.subn(r'(assets/js/shaiva-complete-reader\.js)\?v=[^"\']+', r'\1?v=20261016-contents-6', html)
+              html, n = re.subn(r'(assets/js/shaiva-complete-reader\.js)\?v=[^"\']+', r'\1?v=20261016-contents-7', html)
               assert n == 1, f'Unexpected Śaiva reader links in {path}: {n}'
             else:
               assert 'id="article-config"' in html, f'Missing article config: {path}'
               assert 'id="source-document"' in html, f'Missing manuscript: {path}'
               assert 'article-reader-paged.js' in html, f'Missing shared reader: {path}'
-              html, n = re.subn(r'(assets/js/article-reader-paged\.js)\?v=[^"\']+', r'\1?v=20261016-contents-6', html)
+              html, n = re.subn(r'(assets/js/article-reader-paged\.js)\?v=[^"\']+', r'\1?v=20261016-contents-7', html)
               assert n == 1, f'Unexpected reader links in {path}: {n}'
               if not re.search(r'<noscript\b[^>]*>[\s\S]*?#source-document\[hidden\]', html):
                 html=html.replace('</head>', '<noscript id="other-document-noscript"><style>#source-document[hidden]{display:block!important}#source-document .site-header,#source-document .site-footer{display:none!important}#source-document .article-body{max-width:652px;margin:auto;padding:24px}</style></noscript>\n</head>', 1)
