@@ -618,3 +618,10 @@ Validation: 35 cards; 35 Word-for-word, Transliteration, and Devanagari controls
 Added a root-Devanāgarī control to each no-commentary card. All 68 cards now have the same three controls; all 49 supplied Śrīdhara passages remain inside Word-for-word.
 
 Validation: 68 controls of each type; 49 Śrīdhara labels and WFW panels; balanced markup.
+
+
+## Book 1, Chapter 3 control consistency — 16 October 2026
+
+Added a root-Devanāgarī control to each no-commentary card. All 28 cards now have the same three controls; all 26 supplied Śrīdhara passages remain inside Word-for-word.
+
+Validation: 28 controls of each type; 26 Śrīdhara labels and WFW panels; balanced markup.

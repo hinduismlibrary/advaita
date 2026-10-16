@@ -544,3 +544,9 @@ Added a Devanagari control to each of the 16 no-commentary cards, displaying the
 
 Added a root-Devanāgarī control to every no-commentary verse. All 68 cards now have all three controls, and all 49 supplied Śrīdhara passages remain paired inside Word-for-word.
 
+
+
+## Book 1, Chapter 3 control consistency — 16 October 2026
+
+Added a root-Devanāgarī control to every no-commentary verse. All 28 cards now have all three controls, and all 26 supplied Śrīdhara passages remain paired inside Word-for-word.
+
