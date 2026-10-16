@@ -21,8 +21,10 @@
       --parallel-ink: #2f5276;
       --tirtha-bg: #f4e8d0;
       --tirtha-ink: #684e20;
-      --topic-bg: #eee8f3;
-      --topic-ink: #554565;
+      --topic-bg: #f4e2e9;
+      --topic-ink: #75465a;
+      --commentary-bg: #e9e6f4;
+      --commentary-ink: #4e457a;
       --blank-bg: #f1f3ef;
       --blank-ink: #768079;
       --serif: Georgia, "Times New Roman", serif;
@@ -48,7 +50,6 @@
     .purana-button:hover { background: #eff2ed; }
     .purana-button[aria-pressed="true"] { border-color: #c8d9ce; background: #e8f0eb; color: #244f3c; }
     .purana-name { font: 500 13px/1.35 var(--serif); }
-    .purana-count { color: var(--muted); font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .viewer { min-width: 0; }
     .selected-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 18px; padding-bottom: 11px; border-bottom: 1px solid var(--ink); }
     #selected-name { margin: 0; font: 400 clamp(24px, 2.8vw, 32px)/1.12 var(--serif); letter-spacing: -.02em; }
@@ -59,7 +60,8 @@
     .swatch.quoted { background: var(--quote-bg); border-color: #bad5c5; }
     .swatch.parallel { background: var(--parallel-bg); border-color: #c3d4e7; }
     .swatch.tirtha { background: var(--tirtha-bg); border-color: #e0cda7; }
-    .swatch.topic { background: var(--topic-bg); border-color: #d8cbe2; }
+    .swatch.topic { background: var(--topic-bg); border-color: #e5c6d2; }
+    .swatch.commentary { background: var(--commentary-bg); border-color: #cdc6e5; }
     .swatch.none { background: var(--blank-bg); border-color: #dde2dc; }
     .map-note { margin: 0 0 7px; color: var(--muted); font-size: 11px; }
     #map { border-top: 1px solid var(--rule); }
@@ -75,15 +77,10 @@
     .tile.quoted { border-color: #bad5c5; background: var(--quote-bg); color: var(--quote-ink); font-weight: 650; }
     .tile.parallel { border-color: #c3d4e7; background: var(--parallel-bg); color: var(--parallel-ink); font-weight: 650; }
     .tile.tirtha { border-color: #e0cda7; background: var(--tirtha-bg); color: var(--tirtha-ink); font-weight: 650; }
-    .tile.topic { border-color: #d8cbe2; background: var(--topic-bg); color: var(--topic-ink); }
+    .tile.topic { border-color: #e5c6d2; background: var(--topic-bg); color: var(--topic-ink); }
+    .tile.commentary { border-color: #cdc6e5; background: var(--commentary-bg); color: var(--commentary-ink); font-weight: 650; }
     .tile.multiple { border-color: #c9d0c9; background: #e9ede8; color: #273931; font-weight: 650; }
     .tile.none { background: var(--blank-bg); color: var(--blank-ink); }
-    .markers { position: absolute; right: 4px; bottom: 3px; left: 4px; display: flex; height: 2px; gap: 1px; pointer-events: none; }
-    .marker { flex: 1; border-radius: 1px; }
-    .marker.quoted { background: var(--quote-ink); }
-    .marker.parallel { background: var(--parallel-ink); }
-    .marker.tirtha { background: var(--tirtha-ink); }
-    .marker.topic { background: var(--topic-ink); }
     #detail { margin-top: 12px; padding: 14px 16px; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 5px; background: var(--surface); }
     #detail[hidden] { display: none; }
     #detail h2 { margin: 0; font: 400 20px/1.25 var(--serif); }
@@ -135,9 +132,10 @@
         </div>
         <div class="legend" aria-label="Heat map key">
           <span class="legend-item"><i class="swatch quoted" aria-hidden="true"></i>Quoted</span>
+          <span class="legend-item"><i class="swatch commentary" aria-hidden="true"></i>Commentary</span>
           <span class="legend-item"><i class="swatch parallel" aria-hidden="true"></i>Parallel</span>
           <span class="legend-item"><i class="swatch tirtha" aria-hidden="true"></i>Tīrtha</span>
-          <span class="legend-item"><i class="swatch topic" aria-hidden="true"></i>Subject</span>
+          <span class="legend-item"><i class="swatch topic" aria-hidden="true"></i>Other texts</span>
           <span class="legend-item"><i class="swatch none" aria-hidden="true"></i>No indexed entry</span>
         </div>
         <p class="map-note">Select any chapter number for its references. Verse-only ranges remain visible in the detail.</p>
@@ -158,9 +156,17 @@
       ];
       const names = {
         quoted: "Quoted",
+        commentary: "Commentary",
         parallel: "Parallel",
         tirtha: "Tīrtha",
-        topic: "Subject"
+        topic: "Other texts"
+      };
+      const tileColors = {
+        quoted: "var(--quote-bg)",
+        commentary: "var(--commentary-bg)",
+        parallel: "var(--parallel-bg)",
+        tirtha: "var(--tirtha-bg)",
+        topic: "var(--topic-bg)"
       };
       const contents = document.getElementById("contents");
       const map = document.getElementById("map");
@@ -207,12 +213,36 @@
           /holy places?|sacred places?|pilgrimage|tirtha|tīrtha|gayā/i.test(topic.label || "");
       }
 
+      const commentaryWorks = new Set([
+        "Commentary",
+        "Commentary on Bhagavadgītā",
+        "Commentary on Manusmṛti",
+        "Commentary on Parāśarasmṛti",
+        "Commentary on the Trikāṇḍamaṇḍana",
+        "Commentary on Yājñavalkyasmṛti",
+        "Krama-sandarbha",
+        "Mitākṣarā",
+        "Sāṃkhyapravacanabhāṣya",
+        "Śrībhāṣya",
+        "Ṭīkāsarvasva"
+      ]);
+
+      function isCommentary(item) {
+        return commentaryWorks.has(item.work || "");
+      }
+
+      function isOtherText(topic) {
+        return topic.kind === "other-text";
+      }
+
       function evidenceKinds(record) {
         const kinds = [];
-        if ((record.quoted || []).length) kinds.push("quoted");
+        const citations = record.quoted || [];
+        if (citations.some(item => !isCommentary(item))) kinds.push("quoted");
+        if (citations.some(isCommentary)) kinds.push("commentary");
         if ((record.parallel || []).length || (record.chapterRelations || []).length) kinds.push("parallel");
         if ((record.topics || []).some(isTirtha)) kinds.push("tirtha");
-        if ((record.topics || []).some(topic => !isTirtha(topic))) kinds.push("topic");
+        if ((record.topics || []).some(isOtherText)) kinds.push("topic");
         return kinds;
       }
 
@@ -228,13 +258,10 @@
 
       function stats(purana) {
         let indexed = 0;
-        let tirtha = 0;
         for (const item of allChapters(purana)) {
-          const kinds = evidenceKinds(item.record);
-          if (kinds.length) indexed++;
-          if (kinds.includes("tirtha")) tirtha++;
+          if (evidenceKinds(item.record).length) indexed++;
         }
-        return { indexed, tirtha };
+        return { indexed };
       }
 
       function setActive(id) {
@@ -248,7 +275,7 @@
         selectedName.textContent = purana.name;
         const count = stats(purana);
         const total = allChapters(purana).length;
-        selectedCount.textContent = count.indexed + " indexed of " + total + " chapters · " + count.tirtha + " tīrtha";
+        selectedCount.textContent = count.indexed + " indexed of " + total + " chapters";
         detail.hidden = true;
         detail.replaceChildren();
         renderMap(purana);
@@ -262,8 +289,7 @@
           button.dataset.purana = purana.id;
           button.setAttribute("aria-pressed", "false");
           const name = make("span", "purana-name", purana.name);
-          const count = make("span", "purana-count", stats(purana).tirtha + " tīrtha");
-          button.append(name, count);
+          button.appendChild(name);
           button.addEventListener("click", () => setActive(purana.id));
           contents.appendChild(button);
         }
@@ -296,10 +322,13 @@
             button.title = purana.name + " " + ref + " — " + summary;
             button.textContent = String(chapter);
             if (kinds.length > 1) {
-              const markers = make("span", "markers");
-              markers.setAttribute("aria-hidden", "true");
-              for (const kind of kinds) markers.appendChild(make("i", "marker " + kind));
-              button.appendChild(markers);
+              const width = 100 / kinds.length;
+              const segments = kinds.map((kind, index) => {
+                const start = index * width;
+                const end = (index + 1) * width;
+                return tileColors[kind] + " " + start + "% " + end + "%";
+              });
+              button.style.backgroundImage = "linear-gradient(90deg, " + segments.join(", ") + ")";
             }
             cells.appendChild(button);
           }
@@ -332,11 +361,16 @@
           title: topic.label || "Holy places",
           meta: [topic.ref, topic.scope, ...(topic.details || []), topic.sourceLabel].filter(Boolean).join(" · ")
         }));
-        const subjects = topics.filter(topic => !isTirtha(topic)).map(topic => ({
-          title: topic.label || "Subject",
+        const otherTexts = topics.filter(isOtherText).map(topic => ({
+          title: topic.label || "Other text",
           meta: [topic.ref, ...(topic.details || []), topic.sourceLabel].filter(Boolean).join(" · ")
         }));
-        const quoted = (record.quoted || []).map(item => ({
+        const citations = record.quoted || [];
+        const commentary = citations.filter(isCommentary).map(item => ({
+          title: [item.work, item.author].filter(Boolean).join(" · ") || item.ref || "Commentary",
+          meta: [item.refs && item.refs.join("; "), item.note].filter(Boolean).join(" · ")
+        }));
+        const quoted = citations.filter(item => !isCommentary(item)).map(item => ({
           title: [item.work, item.author].filter(Boolean).join(" · ") || item.ref || "Citation",
           meta: [item.refs && item.refs.join("; "), item.note].filter(Boolean).join(" · ")
         }));
@@ -345,7 +379,8 @@
           meta: [item.level, item.note].filter(Boolean).join(" · ")
         }));
         addGroup("Tīrtha", tirthas);
-        addGroup("Subject", subjects);
+        addGroup("Other texts", otherTexts);
+        addGroup("Commentary", commentary);
         addGroup("Quoted in", quoted);
         addGroup("Parallels", relations);
         const missing = (record.missing || []).map(item => ({
@@ -353,7 +388,7 @@
           meta: item.note || item.refs?.join("; ") || ""
         }));
         addGroup("Citation notes", missing);
-        if (!tirthas.length && !subjects.length && !quoted.length && !relations.length && !missing.length) {
+        if (!tirthas.length && !otherTexts.length && !commentary.length && !quoted.length && !relations.length && !missing.length) {
           detail.appendChild(make("p", "detail-empty", "No indexed entry for this chapter."));
         }
       }
