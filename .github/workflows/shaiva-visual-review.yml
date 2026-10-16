@@ -168,6 +168,7 @@ jobs:
               content_page.on('pageerror',lambda error,bucket=content_errors:bucket.append(str(error)))
               content_page.on('console',lambda message,bucket=content_errors:bucket.append(message.text) if message.type=='error' else None)
               content_page.on('requestfailed',lambda request,bucket=content_errors:bucket.append(request.url+': '+str(request.failure)))
+              content_page.on('response',lambda response,bucket=content_errors:bucket.append('HTTP '+str(response.status)+' '+response.url) if response.status>=400 else None)
               content_base=root+slug+'/'
               reader_script='shaiva-complete-reader.js' if label=='shaiva' else 'article-reader-paged.js'
               content_response=wait_for_contents_assets(content_page,revision_url(content_base),reader_script,content_errors)
