@@ -1,0 +1,411 @@
+name: Review all six article Contents layouts
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/shaiva-visual-review.yml
+      - .github/workflows/repair-other-document-pages.yml
+      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
+      - articles/a-shashtric-lens-of-varna-part-one/index.html
+      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - articles/hinduism-on-women/index.html
+      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - assets/js/article-reader-paged.js
+      - assets/js/shaiva-complete-reader.js
+      - assets/css/document-paged.css
+      - assets/css/article-quote-standard.css
+      - assets/css/varna-vicara-paged.css
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - name: Install browser QA dependencies
+        run: |
+          python3 -m pip install --user --quiet playwright
+          if ! command -v google-chrome >/dev/null && ! command -v chromium >/dev/null; then python3 -m playwright install chromium; fi
+      - name: Compare deployed reader layouts and Contents across all six articles
+        env:
+          PAGE_REVISION: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          mkdir -p /tmp/shaiva-qa
+          python3 - <<'PY'
+          import json,os,re,shutil,time
+          from pathlib import Path
+          from urllib.parse import quote,urljoin
+          from playwright.sync_api import sync_playwright
+
+          out=Path('/tmp/shaiva-qa')
+          root='https://krishnavyasmuni.github.io/advaita/articles/'
+          revision=os.environ.get('PAGE_REVISION','')
+
+          def revision_url(url):
+            if not revision:
+              return url
+            return url+('&' if '?' in url else '?')+'rev='+quote(revision)
+
+          def wait_for_reader(page,url):
+            deadline=time.monotonic()+120
+            response=None
+            while time.monotonic()<deadline:
+              response=page.goto(url,wait_until='domcontentloaded',timeout=45000)
+              page.wait_for_timeout(1000)
+              ready=page.evaluate("document.body.classList.contains('document-paged-page') && !!document.querySelector('.page-context span')")
+              if response and response.status==200 and ready:
+                return response
+              time.sleep(5)
+            raise AssertionError('The published article reader did not finish deploying.')
+
+          def wait_for_contents_assets(page,url,reader_script,errors):
+            deadline=time.monotonic()+120
+            response=None
+            state={}
+            attempt=0
+            while time.monotonic()<deadline:
+              attempt+=1
+              attempt_url=url+('&' if '?' in url else '?')+'qa-attempt='+str(attempt)
+              response=page.goto(attempt_url,wait_until='domcontentloaded',timeout=45000)
+              page.wait_for_timeout(1000)
+              state=page.evaluate("""reader => {
+                const styles=[...document.querySelectorAll('link[rel="stylesheet"]')].map(link=>link.href);
+                const resources=performance.getEntriesByType('resource').map(entry=>entry.name);
+                const source=document.getElementById('source-document');
+                const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
+                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-standard-2'));
+                const js=resources.some(url=>url.includes(reader+'?v=20261016-standard-1'));
+                const readerReady=document.body.classList.contains('document-paged-page') &&
+                  !!document.querySelector('.page-context span');
+                return {
+                  css,referenceCss,js,readerReady,bodyClass:document.body.className,
+                  title:document.title,
+                  pageTitle:document.querySelector('.article-head h1')?.textContent.trim()||'',
+                  hasConfig:!!document.getElementById('article-config'),
+                  hasSource:!!source,
+                  headingCount:source?.querySelectorAll('h2,h3,h4,h5').length||0,
+                  subsectionLinks:document.querySelectorAll('.toc a[data-subsection]').length,
+                  styles:styles.filter(url=>/document-paged.css|article-quote-standard.css/.test(url)),
+                  readerResources:resources.filter(url=>/article-reader-paged|shaiva-complete-reader/.test(url))
+                };
+              }""",reader_script)
+              if response and response.status==200 and state['css'] and state['referenceCss'] and state['js'] and state['readerReady']:
+                return response
+              time.sleep(5)
+            raise AssertionError('Contents reader failed to initialize: '+json.dumps({
+              'http':response.status if response else None,'url':url,'state':state,'browserErrors':errors
+            },ensure_ascii=False))
+          
+          def style_of(page):
+            return page.evaluate("""() => {
+              const article=document.querySelector('.article');
+              const title=document.querySelector('.article-head h1');
+              return {
+                articleFont:getComputedStyle(article).fontFamily,
+                titleFont:getComputedStyle(title).fontFamily,
+                titleSize:getComputedStyle(title).fontSize,
+                titleColor:getComputedStyle(title).color
+              };
+            }""")
+
+          def check_page(browser,label,base,section,width,expected_title=None,expected_status=None,screenshot=None):
+            page=browser.new_page(viewport={'width':width,'height':900},device_scale_factor=1)
+            errors=[]
+            page.on('pageerror',lambda error,bucket=errors:bucket.append(str(error)))
+            page.on('response',lambda response,bucket=errors:bucket.append('HTTP '+str(response.status)+' '+response.url) if response.status>=400 else None)
+            url=base if section is None else base+'?section='+quote(section)
+            response=page.goto(revision_url(url),wait_until='domcontentloaded',timeout=45000)
+            page.wait_for_function("document.querySelector('.page-context span')?.textContent.includes('of ')")
+            page.wait_for_function("document.querySelector('#source-content h3')?.textContent.trim().length > 0")
+            data=page.evaluate("""() => ({
+              scrollWidth:document.documentElement.scrollWidth,
+              viewport:innerWidth,
+              section:document.querySelector('.page-context span')?.textContent.trim(),
+              heading:document.querySelector('#source-content h3')?.textContent.trim(),
+              articleFont:getComputedStyle(document.querySelector('.article')).fontFamily
+            })""")
+            data.update(site=label,requested=section,width=width,http=response.status if response else None,errors=errors,style=style_of(page))
+            article_text=page.locator('#source-content').inner_text().lower()
+            data['articleTextChars']=len(article_text)
+            if label=='shaiva':
+              for term in ['pdf','source document','popcultking','page 1','manuscript','loading manuscript']:
+                assert term not in article_text, f'Unexpected presentation label {term!r} in {section!r}'
+            assert data['http']==200
+            assert data['scrollWidth']<=width, f'Horizontal overflow: {data}'
+            assert not errors, f'Browser errors: {errors}'
+            assert data['articleTextChars']>0
+            if expected_title is not None:
+              assert data['heading']==expected_title, f'Wrong section: expected {expected_title!r}, got {data["heading"]!r}'
+            if expected_status is not None:
+              assert data['section']==expected_status, f'Wrong section status: {data["section"]!r}'
+            if screenshot:
+              page.screenshot(path=str(out/screenshot),full_page=False)
+            page.close()
+            return data
+
+          def inspect_reader_sequence(page,label,page_count):
+            results=[]
+            for index in range(page_count):
+              state=page.evaluate("""() => {
+                const root=document.querySelector('#source-content');
+                const status=document.querySelector('.page-context span, #section-count')?.textContent.trim()||'';
+                const heading=root?.querySelector('h3');
+                const article=getComputedStyle(root);
+                const title=document.querySelector('.article-head h1');
+                const quote=root?.querySelector('blockquote.translation, p.translation, blockquote.scripture-translation, p.scripture-translation, p.women-scripture-translation');
+                const table=root?.querySelector('table');
+                const signature=node => {
+                  if(!node)return null;
+                  const style=getComputedStyle(node);
+                  return {
+                    fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
+                    color:style.color,backgroundColor:style.backgroundColor,
+                    borderLeftWidth:style.borderLeftWidth,borderLeftStyle:style.borderLeftStyle,
+                    borderLeftColor:style.borderLeftColor,borderBottomColor:style.borderBottomColor,
+                    borderCollapse:style.borderCollapse
+                  };
+                };
+                const visibleTaggedTransliteration=[...(root?.querySelectorAll('.sanskrit-transliteration, [lang="sa-Latn"]')||[])].some(node=>getComputedStyle(node).display!=='none'&&getComputedStyle(node).visibility!=='hidden');
+                const visibleLatinQuote=[...(root?.querySelectorAll('.source-page-body .index-subitem')||[])].some(node=>{
+                  const field=node.textContent.trim().match(/^(?:quote(?: begins| includes)?|sanskrit)\s*:\s*(.*)$/i);
+                  return !!field&&/[A-Za-z]/.test(field[1]);
+                });
+                return {
+                  status,heading:heading?.textContent.trim()||'',text:(root?.innerText||'').trim(),
+                  visibleTransliteration:visibleTaggedTransliteration||visibleLatinQuote,
+                  scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth,
+                  next:document.querySelector('.page-nav a.next, #page-next')?.getAttribute('href')||'',
+                  article:{
+                    fontFamily:article.fontFamily,fontSize:article.fontSize,lineHeight:article.lineHeight,color:article.color,
+                    title:signature(title),heading:signature(heading)
+                  },
+                  quote:signature(quote),table:signature(table)
+                };
+              }""")
+              expected='Section {} of {}'.format(index+1,page_count)
+              assert state['status']==expected, '{}: expected {}, got {!r}'.format(label,expected,state['status'])
+              assert state['heading'] and len(state['text'])>0, '{}: page {} has no article text'.format(label,index+1)
+              assert not state['visibleTransliteration'], '{}: Latin Sanskrit transliteration is visible on page {}'.format(label,index+1)
+              assert state['scrollWidth']<=state['viewport'], '{}: article page {} overflows its viewport'.format(label,index+1)
+              results.append({'article':state['article'],'quote':state['quote'],'table':state['table']})
+              if index<page_count-1:
+                assert state['next'], '{}: page {} has no next link'.format(label,index+1)
+                next_url=urljoin(page.url,state['next'])
+                response=page.goto(revision_url(next_url),wait_until='domcontentloaded',timeout=45000)
+                assert response and response.status==200, '{}: next page failed to load'.format(label)
+                expected_next='Section {} of {}'.format(index+2,page_count)
+                page.wait_for_function("(expected) => document.querySelector('.page-context span, #section-count')?.textContent.trim() === expected",arg=expected_next)
+              else:
+                assert not state['next'], '{}: final page unexpectedly has a next link'.format(label)
+            return results
+          with sync_playwright() as playwright:
+            chrome=shutil.which('google-chrome') or shutil.which('chromium')
+            browser=playwright.chromium.launch(headless=True,executable_path=chrome) if chrome else playwright.chromium.launch(headless=True)
+            records=[]
+            contents_cases=[
+              ('agamas','a-case-for-the-scriptural-validity-of-the-agamas','.side-toc .toc',True),
+              ('shaiva','a-shaiva-lens-on-shiva-as-the-supreme-deity','#shaiva-desktop-toc',False),
+              ('varna','a-shashtric-lens-of-varna-part-one','.side-toc .toc',False),
+              ('vaishnava','a-vaishnava-lens-on-vishnu-as-the-supreme-deity','.side-toc .toc',True),
+              ('women','hinduism-on-women','.side-toc .toc',True),
+              ('meat','meat-eating-in-hinduism-through-the-lens-of-shastra','.side-toc .toc',True),
+            ]
+            toc_reference=None
+            source_reference=None
+            article_style_reference=None
+            quote_style_reference=None
+            table_style_reference=None
+            for label,slug,toc_selector,has_bibliography in contents_cases:
+              content_page=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
+              content_errors=[]
+              content_page.on('pageerror',lambda error,bucket=content_errors:bucket.append(str(error)))
+              content_page.on('console',lambda message,bucket=content_errors:bucket.append(message.text) if message.type=='error' and 'Failed to load resource: the server responded with a status of 404' not in message.text else None)
+              content_page.on('requestfailed',lambda request,bucket=content_errors:bucket.append(request.url+': '+str(request.failure)))
+              content_page.on('response',lambda response,bucket=content_errors:bucket.append('HTTP '+str(response.status)+' '+response.url) if response.status>=400 else None)
+              content_base=root+slug+'/'
+              reader_script='shaiva-complete-reader.js' if label=='shaiva' else 'article-reader-paged.js'
+              content_response=wait_for_contents_assets(content_page,revision_url(content_base),reader_script,content_errors)
+              content_page.locator('.mobile-toc').evaluate('(details)=>{details.open=true}')
+              contents=content_page.evaluate("""selector => {
+                const nav=document.querySelector(selector);
+                const visibleNav=window.matchMedia('(max-width:900px)').matches?document.querySelector('.mobile-toc .toc'):nav;
+                if(!nav||!visibleNav)return null;
+                const links=[...nav.querySelectorAll('a[data-section]:not([data-subsection])')]
+                  .map(a=>({id:a.dataset.section,title:a.textContent.trim(),href:a.href}));
+                const subsections=[...nav.querySelectorAll('a[data-subsection]')]
+                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
+                const tocList=!!nav.querySelector(':scope > ol.toc-list');
+                const first=nav.querySelector('a[data-section]:not([data-subsection])');
+                const style=first?getComputedStyle(first):null;
+                const visibleSubsections=[...visibleNav.querySelectorAll('a[data-subsection]')]
+                  .filter(a=>a.getClientRects().length>0)
+                  .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
+                const status=document.querySelector('.page-context span, #section-count')?.textContent||'';
+                const count=status.match(/of\\s+(\\d+)/i);
+                const pageCount=count?Number(count[1]):0;
+                return {
+                  links,subsections,visibleSubsections,pageCount,tocList,
+                  tocStyle:style?{
+                    fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
+                    whiteSpace:style.whiteSpace,textOverflow:style.textOverflow,overflowX:style.overflowX,color:style.color
+                  }:null
+                };
+              }""",toc_selector)
+              assert content_response and content_response.status==200, f'{label}: article did not load'
+              assert contents, f'{label}: Contents navigation did not load; body={content_page.evaluate("document.body.className")!r}; browserErrors={content_errors}'
+              assert contents['tocList'], f'{label}: Contents does not use the shared list structure'
+              assert contents['pageCount']>=3, f'{label}: missing reader page count'
+              expected_main=min(contents['pageCount'],8 if label in {'shaiva','varna'} else 10)
+              assert len(contents['links'])==expected_main, f'{label}: expected {expected_main} main links, got {len(contents["links"])}'
+              page_ids=[item['id'] for item in contents['links']]
+              subsection_ids=[item['id'] for item in contents['subsections']]
+              assert len(set(page_ids))==len(page_ids), f'{label}: duplicate section links'
+              assert len(set(subsection_ids))==len(subsection_ids), f'{label}: duplicate subsection links'
+              assert len(page_ids)+len(subsection_ids)<=10, f'{label}: Contents exceeds its 10-entry limit'
+              if label in {'shaiva','varna'}:
+                assert len(subsection_ids)>=2, f'{label}: long Contents should reserve space for real subsection links'
+                assert len(page_ids)+len(subsection_ids)==10, f'{label}: expected ten main and nested Contents entries'
+              assert len(contents['visibleSubsections'])==len(subsection_ids), f'{label}: a Contents subsection is hidden'
+              source_pages=[item for item in contents['links'] if re.search(r'bibliography|sources?|references?|works cited',item['title'],re.I)]
+              source_ids={item['id'] for item in source_pages}
+              assert all(item['section'] not in source_ids for item in contents['subsections']), f'{label}: source headings should not be listed separately'
+              assert len(source_pages)<=1, f'{label}: source material is split into multiple reader pages: {[x["title"] for x in source_pages]}'
+              if has_bibliography:
+                assert len(source_pages)==1, f'{label}: missing single Bibliography/Sources page'
+                assert source_pages[0]['title']=='Sources', f'{label}: source page should have one consistent Contents label'
+              style=contents['tocStyle']
+              assert style, f'{label}: Contents main links are unstyled'
+              signature={key:style[key] for key in ['fontFamily','fontSize','lineHeight','color']}
+              if toc_reference is None:toc_reference=signature
+              else:assert signature==toc_reference, f'{label}: Contents link style differs: {signature} != {toc_reference}'
+              sequence=inspect_reader_sequence(content_page,label,contents['pageCount'])
+              for item in sequence:
+                signature=item['article']
+                if article_style_reference is None:article_style_reference=signature
+                else:assert signature==article_style_reference, f'{label}: article text styling differs: {signature} != {article_style_reference}'
+                if item['quote']:
+                  if quote_style_reference is None:quote_style_reference=item['quote']
+                  else:assert item['quote']==quote_style_reference, f'{label}: quotation styling differs: {item["quote"]} != {quote_style_reference}'
+                if item['table']:
+                  if table_style_reference is None:table_style_reference=item['table']
+                  else:assert item['table']==table_style_reference, f'{label}: table styling differs: {item["table"]} != {table_style_reference}'
+              if source_pages:
+                source_response=content_page.goto(revision_url(source_pages[0]['href']),wait_until='domcontentloaded',timeout=45000)
+                content_page.wait_for_function("document.querySelector('#source-content')?.classList.contains('document-reference-page')")
+                source_style=content_page.evaluate("""() => {
+                  const root=document.querySelector('#source-content');
+                  const heading=root?.querySelector('.source-group-heading');
+                  const pageHeading=root?.querySelector('.source-page-heading');
+                  const entry=root?.querySelector('.source-page-body .source-entry-list>li, .source-page-body .source-entry-index .index-heading, .source-page-body li, .source-page-body .index-heading');
+                  if(!root||!heading||!pageHeading||!entry)return null;
+                  const style=getComputedStyle(heading);
+                  const entryStyle=getComputedStyle(entry);
+                  return {title:pageHeading.textContent.trim(),fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,color:style.color,entryFontFamily:entryStyle.fontFamily,entryFontSize:entryStyle.fontSize,entryLineHeight:entryStyle.lineHeight,entryColor:entryStyle.color};
+                }""")
+                assert source_response and source_response.status==200 and source_style and source_style['title']=='Sources', f'{label}: Bibliography/Sources page did not use the shared source layout'
+                source_entry_style={key:source_style['entry'+key[0].upper()+key[1:]] for key in ['fontFamily','fontSize','lineHeight','color']}
+                reader_text_style={key:article_style_reference[key] for key in ['fontFamily','fontSize','lineHeight','color']}
+                assert source_entry_style==reader_text_style, f'{label}: Sources entry typography differs from the article text: {source_entry_style} != {reader_text_style}'
+                if source_reference is None:source_reference=source_style
+                else:assert source_style==source_reference, f'{label}: Bibliography/Sources styling differs: {source_style} != {source_reference}'
+              data={
+                'site':label,'http':content_response.status,'mainPages':len(contents['links']),
+                'subsections':len(contents['subsections']),'sourcePages':len(source_pages),'errors':content_errors
+              }
+              print(json.dumps(data,ensure_ascii=False),flush=True)
+              assert not content_errors, f'{label}: browser errors: {content_errors}'
+              content_page.close()
+
+            varna_base=root+'varna-vicara/'
+            shaiva_base=root+'a-shaiva-lens-on-shiva-as-the-supreme-deity/'
+
+            homepage=browser.new_page(viewport={'width':1365,'height':900},device_scale_factor=1)
+            home_errors=[]
+            homepage.on('pageerror',lambda error,bucket=home_errors:bucket.append(str(error)))
+            home_response=homepage.goto(revision_url('https://krishnavyasmuni.github.io/advaita/'),wait_until='domcontentloaded',timeout=45000)
+            homepage.wait_for_load_state('networkidle',timeout=15000)
+            home=homepage.evaluate("""() => {
+              const title=document.querySelector('.hp-home h1');
+              const panel=document.querySelector('.hp-section-title');
+              return {
+                title:title?.textContent.trim(),
+                bodyFont:getComputedStyle(document.body).fontFamily,
+                bodyMargin:getComputedStyle(document.body).margin,
+                titleFont:title ? getComputedStyle(title).fontFamily : null,
+                titleSize:title ? getComputedStyle(title).fontSize : null,
+                panelBackground:panel ? getComputedStyle(panel).backgroundColor : null,
+                stylesheets:[...document.querySelectorAll('link[rel="stylesheet"]')].map(link=>link.href)
+              };
+            }""")
+            home['http']=home_response.status if home_response else None
+            home['errors']=home_errors
+            home['cssResponses']=homepage.evaluate("""async () => Promise.all(
+              [...document.querySelectorAll('link[rel="stylesheet"]')].map(async link => {
+                const response=await fetch(link.href,{cache:'no-store'});
+                return {url:link.href,status:response.status};
+              })
+            )""")
+            print(json.dumps({'site':'homepage',**home},ensure_ascii=False),flush=True)
+            assert home['http']==200, f'Homepage HTTP error: {home}'
+            assert 'Arial' in (home['bodyFont'] or ''), f'Homepage stylesheet did not set the site font: {home}'
+            assert home['bodyMargin']=='0px', f'Homepage stylesheet did not reset the body margin: {home}'
+            assert home['titleFont'] and 'Arial' in home['titleFont'], f'Homepage heading is unstyled: {home}'
+            assert home['panelBackground']=='rgb(207, 238, 226)', f'Homepage category panels are unstyled: {home}'
+            assert all(item['status']==200 for item in home['cssResponses']), f'Homepage stylesheet request failed: {home}'
+            assert not home_errors, f'Homepage browser errors: {home_errors}'
+            homepage.screenshot(path=str(out/'homepage-1365.png'),full_page=True)
+            homepage.close()
+
+            for width in [320,390,1365]:
+              shot=f'varna-introduction-{width}.png' if width in [390,1365] else None
+              record=check_page(browser,'varna',varna_base,None,width,'Introduction',screenshot=shot)
+              records.append(record)
+
+            discovery=browser.new_page(viewport={'width':390,'height':900},device_scale_factor=1)
+            initial=wait_for_reader(discovery,revision_url(shaiva_base))
+            items=discovery.locator('.side-toc .toc a[data-section]:not([data-subsection])').evaluate_all("(links)=>links.map(a=>({id:a.dataset.section,title:a.textContent.trim()}))")
+            subsections=discovery.locator('.side-toc .toc a[data-subsection]').evaluate_all("(links)=>links.map(a=>({id:a.dataset.subsection,title:a.textContent.trim(),href:a.href}))")
+            page_count=discovery.evaluate("() => Number((document.querySelector('#section-count')?.textContent.match(/of\\s+(\\d+)/i)||[])[1]||0)")
+            assert initial and initial.status==200
+            assert page_count>=8, f'Expected the full article page sequence, got {page_count}'
+            assert len(items)==min(page_count,8), f'Expected eight main links when nested links are available, got {len(items)}'
+            assert len(items)+len(subsections)<=10, f'Contents exceeds ten combined entries: {len(items)} pages and {len(subsections)} subsections'
+            assert len(subsections)>=2 and len(items)+len(subsections)==10, f'Expected ten entries with nested article detail: {len(items)} pages and {len(subsections)} subsections'
+            ids=[item['id'] for item in items]
+            assert len(set(ids))==len(ids), 'Duplicate article page links'
+            subsection_ids=[item['id'] for item in subsections]
+            assert len(set(subsection_ids))==len(subsection_ids), 'Duplicate subsection anchor links'
+            page_samples=set(ids[:4])
+            assert len(page_samples)>=4, f'Expected four main section links to review, got {len(page_samples)}'
+            discovery.close()
+
+            for index,item in enumerate(items):
+              section=item['id']
+              widths=[390]
+              if section in page_samples:
+                widths=[320,390,1365]
+              for width in widths:
+                shot=None
+                if width==390 and section in {'opening-salutation','padma-pur-a-s-contradiction','smriti-testimony'}:
+                  shot=f'shaiva-{section}-{width}.png'
+                status=f'Section {index+1} of {page_count}'
+                record=check_page(browser,'shaiva',shaiva_base,section,width,item['title'],status,shot)
+                records.append(record)
+                print(json.dumps(record,ensure_ascii=False),flush=True)
+
+            (out/'results.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
+            browser.close()
+          assert all(x['http']==200 and x['scrollWidth']<=x['width'] and not x['errors'] for x in records)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shaiva-actual-page-visual-review
+          path: /tmp/shaiva-qa
+          retention-days: 7

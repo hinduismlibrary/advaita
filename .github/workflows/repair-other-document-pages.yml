@@ -1,0 +1,71 @@
+name: Refresh all article reader assets
+on:
+  push:
+    paths:
+      - .github/workflows/repair-other-document-pages.yml
+      - assets/js/article-reader-paged.js
+      - assets/js/shaiva-complete-reader.js
+      - assets/css/document-paged.css
+      - assets/css/article-quote-standard.css
+      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - articles/a-shashtric-lens-of-varna-part-one/index.html
+      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - articles/hinduism-on-women/index.html
+      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validate and refresh all six article readers
+        run: |
+          node --check assets/js/article-reader-paged.js
+          node --check assets/js/shaiva-complete-reader.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          slugs = (
+            'a-case-for-the-scriptural-validity-of-the-agamas',
+            'a-shaiva-lens-on-shiva-as-the-supreme-deity',
+            'a-shashtric-lens-of-varna-part-one',
+            'a-vaishnava-lens-on-vishnu-as-the-supreme-deity',
+            'hinduism-on-women',
+            'meat-eating-in-hinduism-through-the-lens-of-shastra',
+          )
+          shaiva_slug = 'a-shaiva-lens-on-shiva-as-the-supreme-deity'
+          for slug in slugs:
+            path = Path('articles') / slug / 'index.html'
+            html = path.read_text(encoding='utf-8')
+            assert 'document-paged.css' in html, f'Missing shared style: {path}'
+            if slug == shaiva_slug:
+              html, n = re.subn(r'(assets/js/shaiva-complete-reader\.js)\?v=[^"\']+', r'\1?v=20261016-standard-1', html)
+              assert n == 1, f'Unexpected Śaiva reader links in {path}: {n}'
+            else:
+              assert 'id="article-config"' in html, f'Missing article config: {path}'
+              assert 'id="source-document"' in html, f'Missing manuscript: {path}'
+              assert 'article-reader-paged.js' in html, f'Missing shared reader: {path}'
+              html, n = re.subn(r'(assets/js/article-reader-paged\.js)\?v=[^"\']+', r'\1?v=20261016-standard-1', html)
+              assert n == 1, f'Unexpected reader links in {path}: {n}'
+              if not re.search(r'<noscript\b[^>]*>[\s\S]*?#source-document\[hidden\]', html):
+                html=html.replace('</head>', '<noscript id="other-document-noscript"><style>#source-document[hidden]{display:block!important}#source-document .site-header,#source-document .site-footer{display:none!important}#source-document .article-body{max-width:652px;margin:auto;padding:24px}</style></noscript>\n</head>', 1)
+            html, n = re.subn(r'(assets/css/document-paged\.css)\?v=[^"\']+', r'\1?v=20261016-contents-2', html)
+            assert n == 1, f'Unexpected style links in {path}: {n}'
+            assert 'article-quote-standard.css' in html, f'Missing shared source style: {path}'
+            html, n = re.subn(r'(assets/css/article-quote-standard\.css)\?v=[^"\']+', r'\1?v=20261016-standard-2', html)
+            assert n == 1, f'Unexpected shared source style links in {path}: {n}'
+            path.write_text(html, encoding='utf-8')
+            print(f'Validated and refreshed: {path}')
+          PY
+          if ! git diff --quiet -- articles; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html articles/a-shashtric-lens-of-varna-part-one/index.html articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html articles/hinduism-on-women/index.html articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+            git commit -m 'Refresh shared article Contents assets'
+            git push
+          fi

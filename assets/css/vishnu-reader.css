@@ -1,0 +1,258 @@
+/* Article-specific figures and tables. The page uses the shared Shiva and
+   Varna reader layout and palette from varna-vicara-paged.css. */
+#source-content,
+#source-content *{
+  font-family:Merriweather,Georgia,serif;
+}
+
+#source-content [lang^="sa"]:not([lang="sa-Latn"]),
+#source-content .sanskrit-text{
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+}
+
+#source-content details.sanskrit-reveal{margin:8px 0 15px}
+
+#source-content details.sanskrit-reveal>summary{
+  display:inline-block;
+  padding:4px 11px 5px;
+  border:1px solid var(--orange-soft);
+  border-radius:999px;
+  color:#9b4e1d;
+  background:transparent;
+  font-size:13px;
+  line-height:1.45;
+  cursor:pointer;
+  user-select:none;
+}
+
+#source-content details.sanskrit-reveal>summary:hover{background:#eee8e2}
+
+#source-content details.sanskrit-reveal [lang^="sa"]:not([lang="sa-Latn"]),
+#source-content .sanskrit-text{
+  margin:16px 0;
+  padding:0 0 0 17px;
+  border-left:2px solid #c5a48f;
+  color:var(--sanskrit);
+  font-size:20px;
+  line-height:1.58;
+  white-space:pre-line;
+  overflow-wrap:break-word;
+}
+
+#source-content .sanskrit-transliteration{
+  margin:12px 0 16px;
+  color:var(--sanskrit);
+  font-size:15px;
+  line-height:1.55;
+  font-style:normal;
+  overflow-wrap:break-word;
+}
+
+#source-content .vishnu-cover-art,
+#source-content .vishnu-closing-figure{
+  width:100%;
+  margin:20px auto 34px;
+  text-align:center;
+}
+
+#source-content .vishnu-cover-art img{
+  display:block;
+  width:min(360px,100%);
+  height:auto;
+  margin:0 auto;
+}
+
+#source-content .vishnu-cover-art figcaption{
+  margin:12px 0 0;
+  color:#817970;
+  font-size:13px;
+  line-height:1.45;
+  text-align:center;
+}
+
+#source-content .vishnu-closing-figure img{
+  display:block;
+  width:min(250px,100%);
+  height:auto;
+  margin:24px auto 0;
+}
+
+#source-content .vishnu-diagram{
+  margin:34px 0 42px;
+  padding:20px 16px;
+  border:1px solid #d8d2ca;
+  background:#faf9f7;
+  color:var(--ink);
+  font-size:13px;
+  line-height:1.45;
+}
+
+#source-content .vishnu-diagram figcaption{
+  margin:0 0 18px;
+  color:var(--teal);
+  font-size:17px;
+  line-height:1.35;
+  text-align:center;
+}
+
+#source-content .vishnu-veda-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+}
+
+#source-content .vishnu-veda-column{min-width:0;border:1px solid #d8d2ca;background:#fff}
+
+#source-content .vishnu-veda-column h4{
+  margin:0;
+  padding:9px 4px;
+  border-bottom:1px solid #d8d2ca;
+  background:#eee9e2;
+  color:#514941;
+  font-size:13px;
+  line-height:1.4;
+  text-align:center;
+}
+
+#source-content .vishnu-veda-unit{min-height:72px;padding:8px 7px;border-bottom:1px solid #e2ded8}
+#source-content .vishnu-veda-unit:last-child{border-bottom:0}
+#source-content .vishnu-veda-unit strong,
+#source-content .vishnu-veda-unit span{display:block}
+#source-content .vishnu-veda-unit strong{margin:0 0 4px;color:var(--teal);font-weight:700}
+
+#source-content .vishnu-veda-groups{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin:12px 0 0;
+  text-align:center;
+}
+
+#source-content .vishnu-veda-groups>div{padding:10px;border-top:2px solid var(--quote-rule);background:#f4f1f5}
+#source-content .vishnu-veda-groups strong,
+#source-content .vishnu-veda-groups span{display:block}
+#source-content .vishnu-veda-groups strong{font-weight:700}
+
+#source-content .vishnu-smriti-root,
+#source-content .vishnu-smriti-source,
+#source-content .vishnu-smriti-node{
+  padding:9px;
+  border:1px solid #d8d2ca;
+  text-align:center;
+}
+
+#source-content .vishnu-smriti-root{
+  position:relative;
+  width:max-content;
+  min-width:100px;
+  margin:0 auto 28px;
+  border-color:var(--teal);
+  background:#f4f4f4;
+  color:var(--teal);
+  font-weight:700;
+}
+
+#source-content .vishnu-smriti-root:after{
+  position:absolute;
+  top:100%;
+  left:50%;
+  height:28px;
+  border-left:1px solid #a8a19a;
+  content:"";
+}
+
+#source-content .vishnu-smriti-branches{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+#source-content .vishnu-smriti-branches:before{
+  position:absolute;
+  top:-1px;
+  right:16.66%;
+  left:16.66%;
+  border-top:1px solid #a8a19a;
+  content:"";
+}
+
+#source-content .vishnu-smriti-branch{position:relative;min-width:0;padding-top:15px}
+
+#source-content .vishnu-smriti-branch:before{
+  position:absolute;
+  top:0;
+  left:50%;
+  height:15px;
+  border-left:1px solid #a8a19a;
+  content:"";
+}
+
+#source-content .vishnu-smriti-source{background:#eee9e2;color:#514941}
+#source-content .vishnu-smriti-node{margin:12px 0 0;border-color:#c5a48f;background:#fff;color:var(--teal)}
+#source-content .vishnu-smriti-branch ul{margin:8px 0 0;padding:0;list-style:none}
+#source-content .vishnu-smriti-branch li{margin:0;padding:8px 5px;border-bottom:1px solid #e2ded8;text-align:center}
+#source-content .vishnu-smriti-branch li span{display:block;margin-top:5px;color:var(--quote)}
+#source-content .vishnu-vedanga-list{display:grid;grid-template-columns:1fr 1fr}
+
+#source-content table.vishnu-data-table{
+  width:100%;
+  margin:28px 0 38px;
+  border-collapse:collapse;
+  table-layout:fixed;
+  font-size:14px;
+  line-height:1.5;
+}
+
+#source-content table.vishnu-data-table caption{
+  margin:0 0 12px;
+  color:#5d554e;
+  font-size:17px;
+  line-height:1.35;
+  text-align:left;
+}
+
+#source-content table.vishnu-data-table th,
+#source-content table.vishnu-data-table td{
+  padding:9px 10px;
+  border:1px solid #d8d2ca;
+  text-align:left;
+  vertical-align:top;
+  overflow-wrap:anywhere;
+}
+
+#source-content table.vishnu-data-table th{background:#eee9e2;color:#514941;font-weight:700}
+#source-content table.vishnu-data-table tbody tr:nth-child(even) td{background:#f7f4f0}
+#source-content table.vishnu-data-table a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+
+#source-content .source-bibliography h4,
+#source-content [data-vishnu-recap] h4{
+  margin:30px 0 12px;
+  color:var(--teal);
+  font-size:18px;
+  line-height:1.4;
+}
+
+#source-content .source-bibliography ol{margin:0 0 24px;padding-left:28px}
+#source-content .source-bibliography li{margin:0 0 8px;padding-left:4px}
+
+@media(max-width:620px){
+  #source-content details.sanskrit-reveal [lang^="sa"]:not([lang="sa-Latn"]),
+  #source-content .sanskrit-text{padding-left:12px;font-size:18px;line-height:1.68}
+  #source-content .sanskrit-transliteration{font-size:14px;line-height:1.58}
+  #source-content .vishnu-cover-art,
+  #source-content .vishnu-closing-figure{margin:18px auto 28px}
+  #source-content .vishnu-diagram{padding:16px 11px}
+  #source-content .vishnu-veda-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  #source-content .vishnu-veda-unit{min-height:65px;padding:7px 6px}
+  #source-content .vishnu-veda-groups{grid-template-columns:1fr}
+  #source-content .vishnu-smriti-root{margin-bottom:12px}
+  #source-content .vishnu-smriti-root:after,
+  #source-content .vishnu-smriti-branches:before,
+  #source-content .vishnu-smriti-branch:before{display:none}
+  #source-content .vishnu-smriti-branches{grid-template-columns:1fr;gap:12px}
+  #source-content .vishnu-smriti-branch{padding:0}
+  #source-content .vishnu-data-table{display:block;overflow-x:auto;table-layout:auto}
+  #source-content .vishnu-data-table th,
+  #source-content .vishnu-data-table td{min-width:105px}
+}

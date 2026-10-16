@@ -1,0 +1,41 @@
+name: Correct Bhagavatam 11.22 verse mapping
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/reconcile-bhagavatam-canto11-ch22.yml'
+      - '.github/maintenance/scripts/reconcile_bhagavatam_canto11_ch22.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Align chapter 22 source commentary with canonical verses 37 through 39
+        run: python .github/maintenance/scripts/reconcile_bhagavatam_canto11_ch22.py
+      - name: Validate updated reader and data structure
+        run: |
+          node --check assets/js/bhagavatam-sridhara-reader.js
+          python - <<'PY'
+          import json
+          d=json.load(open('assets/data/bhagavatam-sridhara-wfw-canto11-ch22-verses01-61.json'))
+          for v in range(35,40):
+              matches=[x for x in d['entries'] if x['start']<=v<=x['end']]
+              assert len(matches)==1,(v,len(matches))
+          print('PASS: unique local source mapping for 11.22.35–39; reader syntax valid')
+          PY
+      - name: Refresh full Canto 11 mapping results
+        run: python .github/maintenance/scripts/audit_bhagavatam_canto11.py
+      - name: Commit source-number corrections and diagnostics
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/js/bhagavatam-sridhara-reader.js assets/data/bhagavatam-sridhara-wfw-canto11-ch22-verses01-61.json .github/maintenance/audit/canto11/automated-summary.md .github/maintenance/audit/canto11/automated-summary.json .github/maintenance/audit/canto11/automated-verse-map.csv
+          git commit -m 'Correct Canto 11 Chapter 22 verses 37–39 source mapping'
+          git push

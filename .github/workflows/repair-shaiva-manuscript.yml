@@ -1,0 +1,40 @@
+name: Repair Shaiva manuscript page
+on:
+  push:
+    paths:
+      - .github/workflows/repair-shaiva-manuscript.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify new reader and install it before the shared reader
+        run: |
+          node --check assets/js/shaiva-document-layout.js
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html')
+          html = p.read_text(encoding='utf-8')
+          original = '<script src="/vivekadrishti/assets/js/article-reader-paged.js?v=20260920-pdf-repair-2"></script>'
+          injected = '<script src="/vivekadrishti/assets/js/shaiva-document-layout.js?v=20260920-manuscript-1"></script>\n'
+          assert html.count(original) == 1, 'Shared reader reference changed; leave existing article untouched'
+          if injected not in html:
+              html = html.replace(original, injected + original, 1)
+              p.write_text(html, encoding='utf-8')
+          assert html.count(injected) == 1, 'Shaiva-specific reader must load exactly once'
+          assert html.index(injected) < html.index(original), 'Shaiva source repair must run before pagination'
+          print('Shaiva source repair wired before the shared reader')
+          PY
+          git diff --check
+          if ! git diff --quiet -- articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+            git commit -m 'Load Shaiva manuscript repair before shared page renderer'
+            git push
+          fi

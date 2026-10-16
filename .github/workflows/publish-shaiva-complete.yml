@@ -1,0 +1,79 @@
+name: Publish complete Shaiva manuscript
+on:
+  push:
+    paths:
+      - .github/workflows/publish-shaiva-complete.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify every source data shard before replacing live article
+        run: |
+          node --check assets/js/shaiva-complete-reader.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, json, zlib
+          folder=Path('assets/data')
+          expected=['14c2c8c989c1162f79d17117709fc1a7cba09d62','513dcbf1618fef774a5900a04c35d2a7e8820ee0','084689b49354ccace33c10ccb495fc6697cdab78','8b15c949f9d2f65bb9aa4f373dd68183a6fbb4a9','330cb0c100ac3ceced252ff93f4097556598ebaf']
+          def blob_sha(s):
+              b=s.encode('utf-8');return hashlib.sha1(b'blob '+str(len(b)).encode()+b'\x00'+b).hexdigest()
+          shards=[(folder/('shaiva-manuscript-'+str(n)+'.b64')).read_text(encoding='ascii').strip() for n in range(1,6)]
+          # Correct one confirmed transfer typo, verified against original local file's Git blob hash.
+          assert shards[0].count('TppvGJ')==1
+          shards[0]=shards[0].replace('TppvGJ','Tpp9GV')
+          for n,(text,sha) in enumerate(zip(shards,expected),1):
+              assert blob_sha(text)==sha,'Manuscript shard %d differs from PDF-verified data' % n
+          joined=''.join(shards)
+          assert hashlib.sha256(joined.encode('ascii')).hexdigest()=='1b3e13b40902575ae46a1ed28fe20956206818e7fd96da85a1af79402b05035c'
+          original=zlib.decompress(base64.b64decode(joined,validate=True))
+          pages=json.loads(original)
+          assert len(pages)==52
+          assert sum(bool(page) for page in pages)==50
+          assert sum(block[0]=='table' for page in pages for block in page)==20
+          assert sum(len(block[1]) for page in pages for block in page if block[0]=='table')==67
+          assert original.decode('utf-8').count('शिव')>=10
+          (folder/'shaiva-manuscript.b64').write_text(joined,encoding='ascii')
+          cover=(folder/'shaiva-cover.webp.b64').read_text(encoding='ascii').strip()
+          assert blob_sha(cover)=='0f4a715744bcb78a1af23d21108ef9676348f14c'
+          image=base64.b64decode(cover,validate=True)
+          assert image.startswith(b'RIFF') and image[8:12]==b'WEBP'
+          dest=Path('assets/images/source-documents/shaiva-original-cover.webp')
+          dest.parent.mkdir(parents=True,exist_ok=True)
+          dest.write_bytes(image)
+          article=Path('articles/a-shaiva-lens-on-shiva-as-the-supreme-deity')
+          page=article/'index.html';backup=article/'source-original.html'
+          if not backup.exists():
+              source=page.read_text(encoding='utf-8')
+              assert len(source.encode('utf-8'))>90000 and 'id="source-document"' in source,'Unexpected old article; do not replace'
+              backup.write_text(source,encoding='utf-8')
+          shell='''<!doctype html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <meta name="description" content="A Scripture-Based Case for the Supremacy of Shiva. Complete 52-page manuscript with aligned Sanskrit and English.">
+          <title>A Scripture-Based Case for the Supremacy of Shiva — Viveka Dṛṣṭi</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="/vivekadrishti/assets/css/shaiva-complete.css?v=20260921-full-1">
+          <script src="/vivekadrishti/assets/js/shaiva-complete-reader.js?v=20260921-full-1" defer></script>
+          </head><body>
+          <div id="shaiva-root" aria-live="polite"><p class="shaiva-error">Preparing the complete manuscript… If this does not load, try refreshing the page.</p></div>
+          <noscript><p class="shaiva-error">JavaScript is required for this reader. <a href="source-original.html">Read the earlier HTML edition instead.</a></p></noscript>
+          </body></html>
+          '''
+          page.write_text('\n'.join(line.strip() for line in shell.splitlines())+'\n',encoding='utf-8')
+          assert 'shaiva-complete-reader.js' in page.read_text()
+          print('PASS: 52 PDF pages, 50 with text, 20 aligned original tables, 67 source-derived rows, original artwork preserved and earlier HTML backed up')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/data/shaiva-manuscript.b64 assets/images/source-documents/shaiva-original-cover.webp articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
+          git diff --cached --quiet || { git commit -m 'Publish source-verified complete Shaiva manuscript reader'; git push; }

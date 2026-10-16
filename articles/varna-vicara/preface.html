@@ -1,0 +1,91 @@
+<style>
+/* Section-page reader: keep the left Contents rail, but show one major part at a time. */
+#source-content > .reader-page{display:none}
+#source-content > .reader-page--preface{display:block}
+#source-content > .reader-page--purvapaksha ~ *{display:none}
+
+/* Any target inside the second part makes that part the active page. */
+#source-content:has(.reader-page--purvapaksha :target) > .reader-page--preface{display:none}
+#source-content:has(.reader-page--purvapaksha :target) > .reader-page--purvapaksha{display:block}
+
+/* Rejection is the final loaded part; reveal it when one of its anchors is targeted. */
+#source-content:has(> #rejection:target) > .reader-page,
+#source-content:has(> #rejection ~ :target) > .reader-page{display:none}
+#source-content:has(> #rejection:target) > .reader-page--purvapaksha ~ *,
+#source-content:has(> #rejection ~ :target) > .reader-page--purvapaksha ~ *{display:revert}
+
+.reader-page-position{
+  margin:0 0 13px;
+  color:#8a8179;
+  font-family:Merriweather,Georgia,serif;
+  font-size:12.5px;
+  font-weight:700;
+  line-height:1.4;
+  letter-spacing:.045em;
+  text-align:center;
+}
+.section-pager{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin:68px 0 4px;
+  padding-top:20px;
+  border-top:1px solid #d8d2cb;
+  font-size:14px;
+  line-height:1.45;
+}
+.section-pager a{color:#5e5751}
+.section-pager a:hover{color:var(--purple);text-decoration:none}
+.section-pager .next{margin-left:auto;text-align:right}
+
+@media(max-width:620px){
+  .reader-page-position{margin-bottom:10px;font-size:11.5px}
+  .section-pager{margin-top:52px;padding-top:17px;font-size:13px}
+}
+</style>
+<section class="reader-page reader-page--preface" data-reader-page="preface">
+<div class="reader-page-position">Part 1 of 3</div>
+<h2 id="preface">Preface</h2>
+<h3 id="introduction">Introduction</h3>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">सरस्वति नमस्तुभ्यं वरदे कामरूपिणि ।<br/>विद्यारम्भं करिष्यामि सिद्धिर्भवतु मे सदा ॥</div></details>
+<p><em>O Goddess Saraswati, I bow to you. You are the giver of boons and the fulfiller of wishes. As I begin my studies, please bless me so that I may attain success always.</em></p>
+<p>Before we embark onto the topic of Varna in Sanatana-Dharma we must begin with an investigation into <em>how</em> something may be proven <em>at all</em> within Hinduism as a whole. The scope of this project does not exclude evidence pertaining to data external to Hinduism nor to dogmatically assert internal claims. The preceding sentence will be explained in further detail as the document goes on but was iterated as such to provide a basic pre-print of our method. Let us now investigate some pramanas which we shall reflect upon to conclude how investigation on Varna or Varṇa-vicāra.</p>
+<p class="reference">Gita 16:23-24</p>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">यः शास्त्रविधिमुत्सृज्य वर्तते कामकारतः । न स सिद्धिमवाप्नोति न सुखं न परां गतिम् ॥ तस्माच्छास्त्रं प्रमाणं ते कार्याकार्यव्यवस्थितौ । ज्ञात्वा शास्त्रविधानोक्तं कर्म कर्तुमिहार्हसि ॥</div></details>
+<p class="translation">The supreme lord said : " He who, discarding scriptural procedure, proceeds as per his own wishes, he does not attain success, neither happiness, nor the highest goal. Therefore, the scripture is your basis in the determination of what is to be done and what is not to be done. Having known the scriptural injunction, it befits you to perform actions in this world."</p>
+<p class="reference">Mīmāmsā sūtras, which are the maxims for Scriptural interpretation, state in their very second aphorism:</p>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">चोदनालक्षणोऽर्थो धर्मः।। १.१.२ ।।</div></details>
+<p class="translation">"That which is enjoined by the statement of scripture is dharma"</p>
+<p class="reference">The Mahābhārata states in its first chapter</p>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">इतिहासपुराणाभ्यां वेदं समुपबृंहयेत्। बिभेत्यल्पश्रुतावेदो मामयं प्रतरिष्यति।</div></details>
+<p class="translation">One should understand the vedas using the Itihāsas and Purāņas (for) the vedas fear the one who has studied little, saying "this one shall misinterpret me</p>
+<p class="reference">Yājñavalkya Śikṣā</p>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">युक्तियुक्तं वचो ग्राह्यं न ग्राह्यं गुरुगौरवात्॥</div></details>
+<p class="translation">One should accept a guru’s statement when it is reasonable or established by scripture; one should not accept it merely because it was spoken by a guru.</p>
+<p class="reference">Yoga Vāsiṣṭha, attributed to Vālmīki</p>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">युक्तियुक्तमुपादेयं वचनं बालकादपि। अन्यत्तृणमिव त्याज्यमप्युक्तं पद्मजन्मना॥ ३॥</div></details>
+<p class="translation">A reasonable statement should be accepted even when spoken by a child. An unreasonable statement should be discarded like a piece of straw, even if it was spoken by lotus-born Brahmā himself.</p>
+<p class="reference">Taittirīya Āraṇyaka</p>
+<details class="sanskrit-reveal"><summary>Show Sanskrit</summary><div lang="sa-Deva">यान्यनवद्यानि कर्माणि तानि सेवितव्यानि। नो इतराणि॥ यान्यस्माकं सुचरितानि तानि त्वयोपास्यानि। नो इतराणि॥</div></details>
+<p class="translation">Only those actions of ours that are unobjectionable should be followed, not the others. Only those good deeds of ours should be emulated, not the others</p>
+<details class="remark-section" id="remark-1">
+<summary class="remark-label">Show Remark 1</summary>
+<p>Thus , with the support of pramanas as well as sound reasoning one may conclude that the consensus amongst acharyas is no proof of a scriptural stance. The statements , conduct and conclusions of all acharyas are to be subjected to</p>
+<ol class="alpha-list" type="a"><li>logic and reasoning</li><li>shashtra</li></ol>
+<p class="debate"><strong>Objection.</strong> But acharyas dedicate many years to studying the Shashtras , and follow a strict parampara. Hence the consensus of the paramparas is to be taken with confidence as one should interpret the scripture with the stance of an acharya based on the fact that an acharya is entirely based on the scripture.</p>
+<p class="debate"><strong>Reply.</strong> This is not so for many issues. If consensus / agreement of the currently existing paramparas is to be taken as a valid stance in its own regard we reject this for many gurus have gone against the Paramparic consensus to establish their sampradaya. Shankarcharya , Ramanuja , Madhva etc. This objection will also be in conflict with the previously established pramanas that one should verify an acharyas claim using the scriptures , <strong>THERE IS NO STATEMENT</strong> anywhere saying the consensus of acharyas on a topic pertains to an established fact on that topic.</p>
+<p class="debate"><strong>Objection.</strong> This is in regards to theological issues which we take the acharyas to be infallible on , and not philosophical</p>
+<p class="debate"><strong>Reply.</strong> This is not so , we reject this for the very obvious reason that Varna has direct philosophical implications meaning it is to be addressed by the scope of philosophy as well. This is because the only way to judge if a theological claim is consistent with other theological claims is through some metaphysical or logical laws. Also , theological claims that directly entail certain behaviours and actions in society crosses directly over into ethics , meta-ethics and epistemology. It is impossible to imagine a theological claim entirely devoid of interaction with philosophy or empirical data and is relevant to day to day life. Another obvious reason to reject the current statement is the basic fact that acharyas conflict on matters of theology ( and philosophy ) all the time , including varna.</p>
+</details>
+<details class="remark-section" id="remark-2">
+<summary class="remark-label">Show Remark 2</summary>
+<p>The notion that one needs a parampara to interpret scripture also may fall into a circular chain of reasoning</p>
+<ol class="argument-list"><li>Our sect is authoritative because the shashtras support it</li><li>The guru parampara tells us how the shashtra is to be interpreted, <em><strong>including the passages establishing its own authority</strong></em></li></ol>
+<p class="argument-chain">Shashtra validates a parampara → Parampara determines how to interpret shashtra → The prior interpretation validates the parampara</p>
+<p>The statements stated above are no actual issue in and of themselves as no system can prove its own fundamental foundations without some pre-existing assumptions within the particular system.</p>
+<p>Hence it is proven that any notion of an infallible parmapara is simply a faith based claim from which their system is developed but there is no reason for any one else to accept this. Hence we should validate any claim using the maxim:</p>
+<blockquote class="maxim">“One should accept a guru’s statement when it is reasonable or established by scripture; one should not accept it merely because it was spoken by a guru.”</blockquote>
+</details>
+<nav class="section-pager" aria-label="Section navigation"><span></span><a class="next" href="#purvapaksha">Next: Pūrvapakṣa →</a></nav>
+</section>

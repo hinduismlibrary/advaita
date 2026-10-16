@@ -1,0 +1,60 @@
+/* Shared Mahapurana reader — exact visual language of the approved Vishnu Purana article. */
+.mahapurana-wiki-reader{background:#fff!important;font-family:Arial,Helvetica,sans-serif!important}
+.mahapurana-wiki-reader .kena-article-head{width:1040px!important;max-width:calc(100% - 32px)!important;margin:0 auto!important;padding:18px 0 12px!important;border-bottom:1px solid #a2a9b1!important;background:#fff!important;color:#202122!important}
+.mahapurana-wiki-reader .kena-article-head .eyebrow{color:#54595d!important;font-family:Arial,Helvetica,sans-serif!important;font-size:12px!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important}
+.mahapurana-wiki-reader .kena-article-head h1{margin:3px 0 0!important;color:#202122!important;font-family:Georgia,'Times New Roman',serif!important;font-size:31px!important;font-weight:400!important;line-height:1.2!important}
+.mahapurana-wiki-reader .kena-article-close{color:#202122!important;border-color:#a2a9b1!important;background:#fff!important}
+.mahapurana-wiki-reader .kena-article-scroll{background:#fff!important;padding:0 0 48px!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article{box-sizing:border-box!important;width:1040px!important;max-width:calc(100% - 32px)!important;margin:0 auto!important;padding:22px 8px 70px!important;background:#fff!important;color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-size:16px!important;font-weight:400!important;line-height:1.6!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article.vishnu-purana-scholarly::before{display:none!important;content:none!important}
+.mahapurana-wiki-reader .mahapurana-main-title{display:block;margin:0 0 2px!important;color:#202122!important;font-family:Georgia,'Times New Roman',serif!important;font-size:38px!important;font-weight:400!important;line-height:1.2!important;text-align:left!important}
+.mahapurana-wiki-reader .mahapurana-devanagari{margin:0 0 20px!important;padding:0 0 10px!important;border-bottom:1px solid #a2a9b1!important;color:#54595d!important;font-family:Georgia,'Noto Serif Devanagari',serif!important;font-size:18px!important;line-height:1.4!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article p,.mahapurana-wiki-reader .mahapurana-wiki-article li{color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-size:16px!important;font-weight:400!important;line-height:1.6!important;letter-spacing:normal!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article p{margin:0 0 16px!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article a{color:#36c!important;text-decoration:none!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article a:visited{color:#795cb2!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article a:hover{text-decoration:underline!important}
+
+.mahapurana-wiki-reader .mahapurana-wiki-article .universal-infobox{float:right!important;width:300px!important;max-width:38%!important;margin:0 0 24px 28px!important;padding:2px!important;border:1px solid #a2a9b1!important;border-radius:0!important;box-shadow:none!important;background:#f8f9fa!important;color:#202122!important;font-family:Arial,Helvetica,sans-serif!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-infobox-title{padding:8px 10px 5px!important;color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-size:18px!important;font-weight:700!important;line-height:1.25!important;text-align:center!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .universal-devanagari{padding:0 10px 8px!important;color:#202122!important;font-family:Georgia,'Noto Serif Devanagari',serif!important;font-size:15px!important;text-align:center!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .universal-infobox-image{margin:0!important;border:0!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .universal-infobox-image img{display:block!important;width:100%!important;height:auto!important;max-height:340px!important;object-fit:cover!important;border-radius:0!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .universal-infobox-image figcaption{padding:6px 8px 8px!important;color:#54595d!important;font-size:12px!important;line-height:1.35!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-info-row{display:grid!important;grid-template-columns:40% 60%!important;gap:0!important;padding:6px 8px!important;border-top:1px solid #eaecf0!important;background:transparent!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-info-row b,.mahapurana-wiki-reader .mahapurana-wiki-article .kena-info-row span{color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-size:13px!important;line-height:1.35!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-info-row b{font-weight:700!important}
+
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-lead{margin:0!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-toc{display:table!important;clear:left!important;width:auto!important;max-width:500px!important;margin:24px 0 34px!important;padding:10px 14px!important;border:1px solid #a2a9b1!important;border-radius:0!important;background:#f8f9fa!important;box-shadow:none!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-toc-title{margin:0 0 6px!important;color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-size:15px!important;font-weight:700!important;text-align:left!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-toc ol{margin:0!important;padding-left:1.5em!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-toc li,.mahapurana-wiki-reader .mahapurana-wiki-article .kena-toc a{font-size:14px!important;line-height:1.5!important}
+
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-section{clear:both!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .kena-section h3,.mahapurana-wiki-reader .mahapurana-wiki-article .purana-book h3{margin:24px 0 10px!important;padding:0!important;color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-size:18px!important;font-weight:700!important;line-height:1.3!important;text-align:left!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .purana-book{margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article ul,.mahapurana-wiki-reader .mahapurana-wiki-article ol{margin:0 0 16px!important;padding-left:1.6em!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article li{margin:0 0 5px!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .purana-source-cite{margin-left:2px!important;font-size:11px!important;vertical-align:super!important}
+
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section{border-top:1px solid #a2a9b1!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section:last-of-type{border-bottom:1px solid #a2a9b1!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section>h2{position:relative!important;margin:0!important;padding:12px 34px 12px 0!important;border:0!important;cursor:pointer!important;user-select:none!important;color:#202122!important;font-family:Georgia,'Times New Roman',serif!important;font-size:22px!important;font-weight:400!important;line-height:1.25!important;text-align:left!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section>h2::after{content:'›';position:absolute;right:5px;top:50%;transform:translateY(-50%) rotate(90deg);color:#54595d;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:400;transition:transform .14s ease}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section.is-open>h2::after{transform:translateY(-50%) rotate(-90deg)}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section>h2:focus-visible{outline:2px solid #36c!important;outline-offset:3px!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-body{padding:8px 0 22px!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-body[hidden]{display:none!important}
+.mahapurana-wiki-reader .mahapurana-wiki-article .universal-references li{margin:0 0 10px!important;font-size:14px!important;line-height:1.5!important}
+
+@media(max-width:760px){
+ .mahapurana-wiki-reader .kena-article-head{max-width:calc(100% - 24px)!important}
+ .mahapurana-wiki-reader .mahapurana-wiki-article{max-width:calc(100% - 20px)!important;padding:18px 4px 52px!important;font-size:15px!important}
+ .mahapurana-wiki-reader .mahapurana-main-title{font-size:32px!important}
+ .mahapurana-wiki-reader .mahapurana-devanagari{font-size:16px!important;margin-bottom:16px!important}
+ .mahapurana-wiki-reader .mahapurana-wiki-article p,.mahapurana-wiki-reader .mahapurana-wiki-article li{font-size:15px!important;line-height:1.58!important}
+ .mahapurana-wiki-reader .mahapurana-wiki-article .universal-infobox{float:none!important;width:100%!important;max-width:100%!important;margin:14px 0 24px!important}
+ .mahapurana-wiki-reader .mahapurana-wiki-article .kena-toc{display:block!important;width:auto!important;max-width:none!important;margin-bottom:26px!important}
+ .mahapurana-wiki-reader .mahapurana-wiki-article .mahapurana-collapse-section>h2{padding:11px 32px 11px 0!important;font-size:20px!important}
+}

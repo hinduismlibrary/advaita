@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#faf9f6">
+<title>Mārkaṇḍeya Purāṇa · Chapter map</title>
+<meta name="description" content="Chapter map of passages quoted from, and parallels in, the Mārkaṇḍeya Purāṇa.">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #faf9f6;
+  --ink: #282a26;
+  --muted: #73766f;
+  --rule: #d8d9d2;
+  --empty: #f1e1de;
+  --empty-ink: #80574f;
+  --green: #dce9dd;
+  --green-ink: #28593d;
+  --parallel: #dce9ed;
+  --parallel-ink: #315e69;
+  --red: #a14a40;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 13px/1.42 var(--sans); }
+a { color: inherit; text-underline-offset: 2px; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
+.page { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+.top {
+  min-height: 42px; display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; border-bottom: 1px solid var(--ink); font-size: 10px;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.top a { text-decoration: none; white-space: nowrap; }
+.top > a { font-weight: 700; }
+.top-links { display: flex; gap: 18px; color: var(--muted); }
+header {
+  display: flex; align-items: end; justify-content: space-between; gap: 20px;
+  padding: 24px 0 15px; border-bottom: 1px solid var(--ink);
+}
+h1 { margin: 0; font: 400 clamp(34px, 4.2vw, 46px)/1.04 var(--serif); letter-spacing: -.04em; }
+.text-link { margin-bottom: 4px; color: var(--muted); font-size: 11px; white-space: nowrap; }
+.legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 7px 18px;
+  padding: 9px 0 10px; border-bottom: 1px solid var(--rule);
+  color: var(--muted); font-size: 10px;
+}
+.legend span { white-space: nowrap; }
+.swatch { display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -2px; background: var(--empty); }
+.swatch.quoted { background: var(--green); }
+.swatch.parallel { background: var(--parallel); }
+.swatch.missing { background: #fff; border-bottom: 3px solid var(--red); }
+.grid {
+  display: grid; grid-template-columns: repeat(24, minmax(0,1fr)); gap: 2px;
+  max-width: 1000px; padding: 11px 0 15px;
+}
+.tile {
+  position: relative; aspect-ratio: 1; min-width: 0; padding: 0;
+  border: 1px solid #e1e0d9; border-radius: 2px;
+  color: var(--empty-ink); background: var(--empty); cursor: pointer;
+  font-size: 11px; line-height: 1; font-variant-numeric: tabular-nums;
+}
+.tile.quoted { border-color: #c6d9ca; color: var(--green-ink); background: var(--green); font-weight: 600; }
+.tile.parallel { border-color: #c9d9dd; color: var(--parallel-ink); background: var(--parallel); font-weight: 600; }
+.tile.both { border-color: #d0d6cd; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--parallel) 51% 100%); font-weight: 600; }
+.tile:hover, .tile[aria-pressed="true"] { border-color: var(--ink); }
+.tile[aria-pressed="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
+.tile.gap::after { position: absolute; right: 1px; bottom: 1px; left: 1px; height: 3px; background: var(--red); content: ""; }
+.detail {
+  max-width: 1000px; margin: 0 0 14px; padding: 9px 12px 10px;
+  border: 1px solid var(--rule); border-left: 2px solid var(--ink); background: #fff;
+}
+.detail[hidden] { display: none; }
+.detail-head { display: flex; align-items: baseline; gap: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+.detail-head h2 { margin: 0; font: 400 20px/1.15 var(--serif); }
+.group { display: grid; grid-template-columns: 118px minmax(0,1fr); gap: 8px; padding-top: 7px; }
+.group + .group { margin-top: 6px; border-top: 1px solid #edf0ec; }
+.group h3 { margin: 2px 0 0; color: var(--muted); font: 700 9px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.items { margin: 0; padding: 0; list-style: none; }
+.items li + li { margin-top: 5px; }
+.work { font-size: 12px; font-weight: 600; }
+.refs { display: block; margin-top: 1px; color: var(--muted); font-size: 11px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.parallel-line { font-size: 12px; line-height: 1.4; }
+.parallel-line strong { font-weight: 600; font-variant-numeric: tabular-nums; }
+.parallel-line .arrow { padding: 0 5px; color: var(--muted); }
+.note { display: block; margin-top: 2px; color: var(--muted); font-size: 10px; line-height: 1.35; }
+.missing-line { color: var(--red); font-size: 11px; line-height: 1.4; }
+.no-entry { margin: 8px 0 0; color: var(--muted); font-size: 11px; }
+footer { padding: 0 0 24px; color: var(--muted); font-size: 10px; }
+@media (max-width: 720px) {
+  .page { width: calc(100% - 24px); }
+  .top { min-height: 38px; font-size: 9px; }
+  .top-links { gap: 12px; }
+  header { padding: 20px 0 12px; }
+  h1 { font-size: clamp(30px, 8vw, 38px); }
+  .legend { gap: 6px 12px; padding: 8px 0 9px; font-size: 9px; }
+  .grid { grid-template-columns: repeat(12,minmax(0,1fr)); gap: 2px; padding: 9px 0 12px; }
+  .tile { font-size: 10px; }
+  .detail { padding: 8px 9px; }
+  .detail-head h2 { font-size: 18px; }
+  .group { grid-template-columns: 91px minmax(0,1fr); gap: 6px; }
+  .work, .parallel-line { font-size: 11px; }
+  .refs, .missing-line { font-size: 10px; }
+}
+@media (max-width: 400px) {
+  .page { width: calc(100% - 18px); }
+  .top-links { gap: 8px; letter-spacing: .06em; }
+  .grid { grid-template-columns: repeat(10,minmax(0,1fr)); }
+  .tile { font-size: 9px; }
+  .group { grid-template-columns: 75px minmax(0,1fr); gap: 5px; }
+  .group h3 { font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="top" aria-label="Site">
+    <a href="/advaita/">Viveka Dṛṣṭi</a>
+    <div class="top-links"><a href="/advaita/articles/purana-analysis/">All maps</a>
+      <a href="/advaita/articles/puranic-chronology/">Bhaviṣya map</a>
+      <a href="/advaita/pages/purana-library/">Purāṇa Library</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Mārkaṇḍeya Purāṇa</h1>
+    <a class="text-link" href="https://www.wisdomlib.org/hinduism/book/the-markandeya-purana" target="_blank" rel="noopener">Read the text ↗</a>
+  </header>
+  <div class="legend" aria-label="Map key">
+    <span><i class="swatch quoted"></i>Quoted in a work</span>
+    <span><i class="swatch parallel"></i>Parallel in another Purāṇa</span>
+    <span><i class="swatch missing"></i>Cited line not found</span>
+    <span><i class="swatch"></i>No reference listed</span>
+  </div>
+  <main>
+    <div class="grid" id="grid" role="group" aria-label="Chapters 1 to 137"></div>
+    <section class="detail" id="detail" aria-live="polite" hidden></section>
+  </main>
+  <footer>Chapter numbering follows F. E. Pargiter’s 137-chapter text.</footer>
+</div>
+<script id="map-data" type="application/json">
+{
+  "4": {
+    "parallel": [
+      {
+        "left": "Mārkaṇḍeya Purāṇa 4.36–40a",
+        "right": "Brahma Purāṇa 180.1–5",
+        "note": "Brahma Purāṇa 180.3a is excluded."
+      }
+    ]
+  },
+  "10": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 10.26–28a"},
+      {"work":"Dānasāgara · Ballālasena","refs":"Mārkaṇḍeya Purāṇa 10.57a (cited twice)"},
+      {"work":"Haralatā · Aniruddhabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 10.74"}
+    ]
+  },
+  "11": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 11.1–19"}
+    ]
+  },
+  "15": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 15.60–61"}
+    ]
+  },
+  "16": {
+    "quoted": [
+      {"work":"Dānasāgara · Ballālasena","refs":"Mārkaṇḍeya Purāṇa 16.36b–37a"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 16.36b–37a; 16.61; 16.63"}
+    ],
+    "missing": [
+      "Caturvargacintāmaṇi also cites a line beginning “dharmārthe kāma-saṃsiddhyai”; that line is not found in the chapter."
+    ]
+  },
+  "29": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 29.33; 29.35–36"},
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 29.22b–23a; 29.24b–25a; 29.26b–27; 29.28–29; 29.46; 29.53; 29.81; 29.89"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 29.26b–28; 29.27–28; 29.31"},
+      {"work":"Kṛtyācāra · Śrīdattopādhyāya","refs":"Mārkaṇḍeya Purāṇa 29.35–36"}
+    ]
+  },
+  "30": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 30.17; 30.19; 30.22–23"},
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 30.19–20; 30.22–23"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 30.5a; 30.5b; 30.6b–7a; 30.7a; 30.8–11; 30.12"}
+    ],
+    "missing": [
+      "Caturvargacintāmaṇi also cites a line beginning “iti hṛdyāt prayatnena”; that line is not found in the chapter."
+    ]
+  },
+  "31": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 31.53b–54"},
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 31.10; 31.21–22"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 31.3–4; 31.8; 31.12; 31.20; 31.20–22; 31.21–22; 31.21a and 22; 31.21a and 22b; 31.30; 31.31a; 31.32–34; 31.34; 31.36–38; 31.39a; 31.40a; 31.40b–41a; 31.40–41; 31.41b–42a; 31.42b–44; 31.46; 31.48; 31.50b–51; 31.52–53a; 31.54–55a; 31.56b–58a; 31.59; 31.60a and 62; 31.62"},
+      {"work":"Madanapārijāta · Madanapāla","refs":"Mārkaṇḍeya Purāṇa 31.7–10; 31.12–13; 31.15"}
+    ]
+  },
+  "32": {
+    "quoted": [
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 32.10"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 32.9–10; 32.11; 32.12–13a; 32.14a; 32.14b–15a; 32.17b–18; 32.18b–c; 32.25b–c; 32.28; 32.30–34"}
+    ],
+    "missing": [
+      "Caturvargacintāmaṇi also cites a line beginning “varjyāś cābhakto nityam”; that line is not found in the chapter."
+    ]
+  },
+  "33": {
+    "quoted": [
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 33.1–8a (except 33.6a); 33.4b–5a"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 33.1a; 33.1–5; 33.6b–8a; 33.8b–end of chapter"}
+    ],
+    "missing": [
+      "Two opening lines cited with Mārkaṇḍeya Purāṇa 33 are absent from the chapter; they correspond to Brahma Purāṇa 220.14 and begin “kanyāgate savitari”."
+    ]
+  },
+  "34": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 34.63; 34.109"},
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 34.52; 34.59; 34.67b–68a; 34.70b–71"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 34.52; 34.63; 34.67b–68a; 34.69–70; 34.109"},
+      {"work":"Kṛtyācāra · Śrīdattopādhyāya","refs":"Mārkaṇḍeya Purāṇa 34.52a; 34.70–71"},
+      {"work":"Madanapārijāta · Madanapāla","refs":"Mārkaṇḍeya Purāṇa 34.83–84; 34.114; 34.116"}
+    ],
+    "missing": [
+      "Madanapārijāta says further verses in its citation are not found in this chapter; their verse numbers are not specified."
+    ]
+  },
+  "35": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 35.36–38a"},
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 35.36–37; 35.39; 35.40–41a"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 35.36–37"},
+      {"work":"Kṛtyācāra · Śrīdattopādhyāya","refs":"Mārkaṇḍeya Purāṇa 35.36–37a"},
+      {"work":"Madanapārijāta · Madanapāla","refs":"Mārkaṇḍeya Purāṇa 35.33–35 (except 35.33b)"}
+    ]
+  },
+  "39": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 39.12b; 39.13–16a; 39.16–38a"},
+      {"work":"Madanapārijāta · Madanapāla","refs":"Mārkaṇḍeya Purāṇa 39.12–14"}
+    ]
+  },
+  "40": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 40.15–25; 40.29–34a"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 40.23–25"}
+    ]
+  },
+  "43": {
+    "quoted": [
+      {"work":"Adbhutasāgara · Ballālasena","refs":"Mārkaṇḍeya Purāṇa 43.4–12; 43.13a; 43.14–24; 43.26–33; 43.35–37"}
+    ],
+    "notes": [
+      "Adbhutasāgara also gives 43.13a as a comparison for Mārkaṇḍeya Purāṇa 43.22."
+    ]
+  },
+  "49": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 49.37–40; 49.64–72"}
+    ]
+  },
+  "57": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 57.1–3a; 57.7b–8a; 57.10a; 57.34; 57.59–63"}
+    ]
+  },
+  "58": {
+    "quoted": [
+      {"work":"Adbhutasāgara · Ballālasena","refs":"Mārkaṇḍeya Purāṇa 58.6–9; 58.11–13a; 58.16–19a; 58.20b–28; 58.30–33a; 58.34–36a; 58.36b; 58.37a; 58.37; 58.38b–40a; 58.40b–47; 58.48b–58a; 58.56; 58.65–67; 58.69–73a; 58.70b–80; 58.75b–79a"}
+    ]
+  },
+  "80": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 80.6a"}
+    ],
+    "missing": [
+      "Caturvargacintāmaṇi cites a line beginning “vṛddhi-śrāddham”; that line is not found in the chapter."
+    ]
+  },
+  "81": {
+    "quoted": [
+      {"work":"Smṛticandrikā · Devaṇṇabhaṭṭa","refs":"Mārkaṇḍeya Purāṇa 81.1–15 (except 81.5 and 81.14)"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 81.34; 81.50"},
+      {"work":"Kṛtyācāra · Śrīdattopādhyāya","refs":"Mārkaṇḍeya Purāṇa 81.91b"}
+    ]
+  },
+  "82": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 82.10"}
+    ]
+  },
+  "88": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 88.14–18; 88.20"}
+    ]
+  },
+  "95": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 95.7"}
+    ],
+    "parallel": [
+      {
+        "left": "Mārkaṇḍeya Purāṇa 95.1–26",
+        "right": "Garuḍa Purāṇa 1.88.2–27"
+      }
+    ]
+  },
+  "96": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 96.7c–end of chapter"}
+    ]
+  },
+  "97": {
+    "quoted": [
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 97.1–26"}
+    ]
+  },
+  "98": {
+    "parallel": [
+      {
+        "left": "Mārkaṇḍeya Purāṇa 98.1–7",
+        "right": "Garuḍa Purāṇa 1.90.1–7",
+        "note": "The daughter's name differs at verse 5: Mālinī in Mārkaṇḍeya, Mānini in Garuḍa."
+      }
+    ]
+  },
+  "131": {
+    "quoted": [
+      {"work":"Aparārka · commentary on Yājñavalkya-smṛti","refs":"Mārkaṇḍeya Purāṇa 131.25"},
+      {"work":"Caturvargacintāmaṇi · Hemādri","refs":"Mārkaṇḍeya Purāṇa 131.8–10; 131.12–17"}
+    ],
+    "missing": [
+      "Caturvargacintāmaṇi cites a line beginning “piśācām anuprāptāḥ”; that line is not found in the chapter."
+    ]
+  }
+}
+</script>
+<script>
+(() => {
+  "use strict";
+  const data = JSON.parse(document.getElementById("map-data").textContent);
+  const grid = document.getElementById("grid");
+  const detail = document.getElementById("detail");
+  let selected = null;
+
+  function addGroup(parent, title, entries, type) {
+    if (!entries || !entries.length) return;
+    const group = document.createElement("div");
+    group.className = "group";
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+    group.appendChild(heading);
+    const list = document.createElement("ul");
+    list.className = "items";
+    entries.forEach(entry => {
+      const item = document.createElement("li");
+      if (type === "parallel") {
+        const line = document.createElement("div");
+        line.className = "parallel-line";
+        const left = document.createElement("strong");
+        left.textContent = entry.left;
+        const arrow = document.createElement("span");
+        arrow.className = "arrow";
+        arrow.textContent = "↔";
+        const right = document.createElement("strong");
+        right.textContent = entry.right;
+        line.append(left, arrow, right);
+        item.appendChild(line);
+        if (entry.note) {
+          const note = document.createElement("span");
+          note.className = "note";
+          note.textContent = entry.note;
+          item.appendChild(note);
+        }
+      } else if (type === "missing") {
+        item.className = "missing-line";
+        item.textContent = entry;
+      } else if (type === "notes") {
+        const note = document.createElement("span");
+        note.className = "note";
+        note.textContent = entry;
+        item.appendChild(note);
+      } else {
+        const work = document.createElement("div");
+        work.className = "work";
+        work.textContent = entry.work;
+        const refs = document.createElement("span");
+        refs.className = "refs";
+        refs.textContent = entry.refs;
+        item.append(work, refs);
+      }
+      list.appendChild(item);
+    });
+    group.appendChild(list);
+    parent.appendChild(group);
+  }
+
+  function openChapter(chapter, button) {
+    if (selected) selected.setAttribute("aria-pressed", "false");
+    if (selected === button) {
+      selected = null;
+      detail.hidden = true;
+      detail.replaceChildren();
+      return;
+    }
+    selected = button;
+    selected.setAttribute("aria-pressed", "true");
+    const record = data[String(chapter)] || {};
+    detail.replaceChildren();
+    const head = document.createElement("div");
+    head.className = "detail-head";
+    const title = document.createElement("h2");
+    title.textContent = "Mārkaṇḍeya Purāṇa " + chapter;
+    head.appendChild(title);
+    detail.appendChild(head);
+    addGroup(detail, "Quoted in", record.quoted, "quoted");
+    addGroup(detail, "Parallel in another Purāṇa", record.parallel, "parallel");
+    addGroup(detail, "Cited line not found", record.missing, "missing");
+    addGroup(detail, "Note", record.notes, "notes");
+    if (!record.quoted && !record.parallel && !record.missing && !record.notes) {
+      const empty = document.createElement("p");
+      empty.className = "no-entry";
+      empty.textContent = "No reference listed for this chapter.";
+      detail.appendChild(empty);
+    }
+    detail.hidden = false;
+    detail.scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+
+  for (let chapter = 1; chapter <= 137; chapter += 1) {
+    const record = data[String(chapter)] || {};
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "tile";
+    button.textContent = String(chapter);
+    button.setAttribute("aria-pressed", "false");
+    const hasQuoted = Boolean(record.quoted && record.quoted.length);
+    const hasParallel = Boolean(record.parallel && record.parallel.length);
+    if (hasQuoted && hasParallel) button.classList.add("both");
+    else if (hasQuoted) button.classList.add("quoted");
+    else if (hasParallel) button.classList.add("parallel");
+    if (record.missing && record.missing.length) button.classList.add("gap");
+    button.setAttribute("aria-label", "Mārkaṇḍeya Purāṇa chapter " + chapter);
+    button.addEventListener("click", () => openChapter(chapter, button));
+    grid.appendChild(button);
+  }
+})();
+</script>
+</body>
+</html>

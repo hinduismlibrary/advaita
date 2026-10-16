@@ -1,0 +1,242 @@
+/* Śaiva-specific additions to the actual Varṇa-vicāra stylesheet. */
+[hidden]{display:none!important}
+.article-head h1{font-size:clamp(32px,3.6vw,43px);line-height:1.23;letter-spacing:-.018em}
+#source-content{min-height:9rem}
+.shaiva-tools{display:flex;justify-content:flex-start;align-items:center;min-height:35px;margin:0 0 18px}
+.shaiva-sanskrit-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:6px 14px;border:1px solid var(--orange-soft);border-radius:999px;color:#9b4e1d;background:transparent;font:400 13px/1.45 Merriweather,Georgia,serif;cursor:pointer;white-space:nowrap}
+.shaiva-sanskrit-toggle:hover,.shaiva-sanskrit-toggle[aria-pressed="true"]{background:#eee8e2}
+.shaiva-sanskrit-toggle:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.article h3.shaiva-section-title{margin:0 0 24px;overflow-wrap:break-word}
+.article h3.shaiva-subheading{margin:37px 0 22px;font-size:25px;line-height:1.32;text-align:left;overflow-wrap:break-word}
+.article h3.shaiva-subheading:after{display:none}
+.shaiva-source-anchor{display:block;height:0;overflow:hidden;scroll-margin-top:18px}
+.article #source-content p.shaiva-paragraph{overflow-wrap:break-word;word-break:normal}
+.article #source-content p.shaiva-sanskrit{margin:0 0 22px;padding:2px 0 2px 17px;border-left:2px solid #c5a48f;color:var(--sanskrit);font-family:'Noto Serif Devanagari','Nirmala UI',Mangal,serif;font-size:20px;line-height:1.83;white-space:pre-line;overflow-wrap:break-word;word-break:normal}
+.shaiva-verse-pair{margin:22px 0 34px;padding:0;break-inside:avoid}
+.shaiva-verse-pair .translation{margin:0!important}
+.shaiva-verse-pair .shaiva-note{display:block;margin:10px 0 0 17px;color:#887b72;font:11px/1.5 Merriweather,Georgia,serif}
+.shaiva-quote{margin:22px 0 30px!important;font-style:normal}
+.shaiva-byline{margin:23px 0!important;text-align:center;color:#7e7269;font-size:13px!important;letter-spacing:.045em}
+.shaiva-passage-label{margin:24px 0 9px!important;color:var(--teal);font-size:13px;font-weight:700}
+.shaiva-index-entry{margin:0;padding:16px 0 17px;border-bottom:1px solid #ddd8d2}
+.shaiva-index-entry:first-of-type{padding-top:0}
+.shaiva-index-heading{display:block;color:var(--teal);font:400 22px/1.35 Vollkorn,Georgia,serif;text-decoration:none;overflow-wrap:anywhere}
+.shaiva-index-heading:hover{text-decoration:underline}
+.shaiva-index-subitem{margin:9px 0 0 24px;color:#625b54;font:400 14.5px/1.65 Merriweather,Georgia,serif;overflow-wrap:anywhere}
+.shaiva-cover{display:block;max-width:min(100%,475px);height:auto;margin:28px auto 36px}
+.shaiva-source-range{display:block;margin:42px 0 0;padding-top:12px;border-top:1px solid var(--rule);color:#817970;font:11px/1.5 Merriweather,Georgia,serif}
+.shaiva-loading-error{padding:22px 0;color:#7b3d35}
+.shaiva-loading-error a{color:var(--teal);text-decoration:underline}
+/* Original quotations can contain unspaced Devanāgarī compounds. Break only at grapheme boundaries. */
+.article #source-content blockquote.shaiva-quote,.article #source-content p.shaiva-paragraph,.article #source-content p.translation,.article #source-content h3.shaiva-subheading{overflow-wrap:anywhere;word-break:normal;min-width:0}
+@media(max-width:900px){.article-head h1{font-size:clamp(31px,5vw,42px)}}
+@media(max-width:620px){.article-head h1{font-size:clamp(29px,8vw,35px);line-height:1.2}.shaiva-tools{min-height:34px;margin:0 0 17px}.shaiva-sanskrit-toggle{min-height:34px;padding:5px 12px;font-size:12.5px}.article h3.shaiva-subheading{font-size:22px;margin:29px 0 17px}.article #source-content p.shaiva-sanskrit{font-size:18px;line-height:1.85;padding-left:12px;margin-bottom:19px}.shaiva-verse-pair{margin:20px 0 30px}.shaiva-cover{max-width:100%}.shaiva-index-entry{padding:14px 0}.shaiva-index-heading{font-size:20px}.shaiva-index-subitem{margin-left:16px;font-size:13.5px}.shaiva-source-range{font-size:10.5px}}
+@media print{body{background:var(--paper)}.sitebar,.side-toc,.mobile-toc,.page-nav,.shaiva-tools{display:none!important}.page{padding:0}.article-head{max-width:100%;margin:0 auto 25px}.reader-grid,.article{display:block;width:100%;max-width:100%}.shaiva-verse-pair{break-inside:avoid}.article #source-content p.shaiva-sanskrit{display:block!important}}
+
+/* Article-specific visual polish: keep this reader in the Varṇa-vicāra visual language. */
+.shaiva-article-page{
+  --paper:#f4f4f4;
+  --ink:#3c362e;
+  --sanskrit:#7f432f;
+  --quote:#65516f;
+  --quote-rule:#8c739a;
+  --rule:rgba(119,119,119,.12);
+  --side-rule:#d4d0ca;
+  --orange-soft:#d8ad8b;
+  background:#2b261f;
+}
+.shaiva-article-page .sitebar,
+.shaiva-article-page .page{background:var(--paper)}
+.shaiva-article-page .sitebar{border-bottom-color:var(--rule)}
+.shaiva-article-page .article-head h1{color:var(--teal)}
+.shaiva-article-page .page-context{border-bottom-color:#ddd8d2}
+.shaiva-article-page .shaiva-sanskrit-toggle{
+  border-color:var(--orange-soft);
+  color:#9b4e1d;
+  background:transparent;
+  box-shadow:none;
+}
+.shaiva-article-page .shaiva-sanskrit-toggle:hover,
+.shaiva-article-page .shaiva-sanskrit-toggle[aria-pressed="true"]{
+  background:#eee8e2;
+}
+.shaiva-article-page .shaiva-sanskrit-toggle:focus-visible{
+  outline-color:var(--teal);
+}
+
+/* Aligned Sanskrit/English source blocks: quiet, readable tables. */
+.shaiva-article-page #source-content .shaiva-parallel{
+  width:100%;
+  margin:30px 0 40px;
+  border:1px solid #d7d1ca;
+  border-radius:2px;
+  border-collapse:separate;
+  border-spacing:0;
+  background:transparent;
+  box-shadow:none;
+  overflow:hidden;
+  table-layout:fixed;
+  font-size:16.5px;
+  line-height:1.66;
+}
+.shaiva-article-page #source-content .shaiva-parallel th,
+.shaiva-article-page #source-content .shaiva-parallel td{
+  min-width:0;
+  padding:18px 20px;
+  vertical-align:top;
+  text-align:left;
+  border:0;
+  border-bottom:1px solid #ddd8d2;
+  overflow-wrap:anywhere;
+}
+.shaiva-article-page #source-content .shaiva-parallel thead th{
+  background:#eceae7;
+  color:#625a53;
+  font:700 11px/1.45 Merriweather,Georgia,serif;
+  letter-spacing:0;
+  text-transform:none;
+}
+.shaiva-article-page #source-content .shaiva-parallel th:first-child,
+.shaiva-article-page #source-content .shaiva-parallel td:first-child{width:46%}
+.shaiva-article-page #source-content .shaiva-parallel th+th,
+.shaiva-article-page #source-content .shaiva-parallel td+td{
+  border-left:1px solid #e1ddd8;
+}
+.shaiva-article-page #source-content .shaiva-parallel tbody tr:last-child td{border-bottom:0}
+.shaiva-article-page #source-content .shaiva-parallel tbody tr:nth-child(even) td{background:#f8f7f6}
+.shaiva-article-page #source-content .shaiva-parallel td.shaiva-parallel__sanskrit{
+  color:var(--sanskrit);
+  font:400 19px/1.92 "Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  white-space:pre-line;
+}
+.shaiva-article-page #source-content .shaiva-parallel td.shaiva-parallel__english{
+  color:var(--ink);
+  font:400 16.5px/1.72 Merriweather,Georgia,serif;
+}
+.shaiva-article-page #source-content .shaiva-parallel td.shaiva-parallel__english small{
+  display:block;
+  margin-top:9px;
+  color:#817970;
+  font:11px/1.5 Merriweather,Georgia,serif;
+}
+.shaiva-article-page #source-content .shaiva-parallel td::before{display:none}
+@media(max-width:620px){
+  .shaiva-article-page #source-content .shaiva-parallel,
+  .shaiva-article-page #source-content .shaiva-parallel thead,
+  .shaiva-article-page #source-content .shaiva-parallel tbody,
+  .shaiva-article-page #source-content .shaiva-parallel tr{display:block;width:100%}
+  .shaiva-article-page #source-content .shaiva-parallel thead{display:none}
+  .shaiva-article-page #source-content .shaiva-parallel tr{
+    border-bottom:1px solid #ddd8d2;
+  }
+  .shaiva-article-page #source-content .shaiva-parallel tr:last-child{border-bottom:0}
+  .shaiva-article-page #source-content .shaiva-parallel td{
+    display:block;
+    width:100%!important;
+    padding:14px 16px 17px;
+    border:0!important;
+  }
+  .shaiva-article-page #source-content .shaiva-parallel td::before{
+    display:block;
+    content:attr(data-label);
+    margin:0 0 6px;
+    color:#817970;
+    font:700 10px/1.35 Merriweather,Georgia,serif;
+    letter-spacing:0;
+    text-transform:none;
+  }
+  .shaiva-article-page #source-content .shaiva-parallel td+td{
+    border-top:1px dashed #d7d1ca!important;
+  }
+  .shaiva-article-page #source-content .shaiva-parallel td.shaiva-parallel__sanskrit{font-size:18px;line-height:1.9}
+  .shaiva-article-page #source-content .shaiva-parallel td.shaiva-parallel__english{font-size:16px;line-height:1.7}
+}
+
+/* Edited verse presentation: quiet references and natural prose lists. */
+.shaiva-article-page #source-content blockquote.shaiva-quote .shaiva-verse-reference{
+  display:block;
+  margin-top:9px;
+  color:#817970;
+  font:400 11px/1.45 Merriweather,Georgia,serif;
+  letter-spacing:0;
+}
+.shaiva-article-page #source-content p.shaiva-bullet{
+  display:list-item;
+  margin:0 0 12px 1.35em;
+  padding-left:4px;
+  list-style:disc;
+}
+@media(max-width:620px){
+  .shaiva-article-page #source-content p.shaiva-bullet{
+    margin-left:1.2em;
+    padding-left:2px;
+  }
+}
+
+.shaiva-article-page #source-content > .shaiva-note{
+  display:block;
+  margin:8px 0 24px;
+  color:#817970;
+  font:400 11px/1.5 Merriweather,Georgia,serif;
+}
+
+/* Match the reference article's native disclosures and restrained subsection rhythm. */
+.shaiva-article-page #source-content details.sanskrit-reveal{margin:8px 0 15px}
+.shaiva-article-page #source-content details.sanskrit-reveal summary{cursor:pointer;user-select:none}
+.shaiva-article-page #source-content details.sanskrit-reveal [lang="sa-Deva"]{white-space:pre-line;overflow-wrap:break-word}
+.shaiva-article-page .article h3.shaiva-subheading{
+  margin:0;
+  padding:0;
+  color:var(--teal);
+  font-family:Vollkorn,Georgia,serif;
+  font-size:30px;
+  line-height:1.2;
+  font-weight:400;
+  text-align:center;
+  overflow-wrap:break-word;
+}
+.shaiva-article-page .article h3.shaiva-subheading:after{
+  display:block;
+  content:"";
+  width:260px;
+  max-width:40%;
+  height:2px;
+  margin:30px auto 42px;
+  background:var(--rule);
+}
+.shaiva-article-page #source-content p.translation .shaiva-verse-reference{
+  display:block;
+  margin-top:10px;
+  color:#817970;
+  font:400 11px/1.45 Merriweather,Georgia,serif;
+  letter-spacing:0;
+}
+/* Keep source tables aligned without the spreadsheet-like card treatment. */
+.shaiva-article-page #source-content .shaiva-parallel{
+  border:0;
+  border-radius:0;
+  border-collapse:collapse;
+  background:transparent;
+  box-shadow:none;
+}
+.shaiva-article-page #source-content .shaiva-parallel th,
+.shaiva-article-page #source-content .shaiva-parallel td{
+  padding:17px 16px;
+  border:0;
+  border-bottom:1px solid #ddd8d2;
+}
+.shaiva-article-page #source-content .shaiva-parallel thead th{
+  padding:0 16px 11px;
+  background:transparent;
+  color:#817970;
+  font:700 11px/1.45 Merriweather,Georgia,serif;
+}
+.shaiva-article-page #source-content .shaiva-parallel th:first-child,
+.shaiva-article-page #source-content .shaiva-parallel td:first-child{padding-left:0}
+.shaiva-article-page #source-content .shaiva-parallel th:last-child,
+.shaiva-article-page #source-content .shaiva-parallel td:last-child{padding-right:0}
+.shaiva-article-page #source-content .shaiva-parallel tbody tr:nth-child(even) td{background:transparent}
+@media(max-width:620px){
+  .shaiva-article-page .article h3.shaiva-subheading{font-size:25px;line-height:1.25}
+  .shaiva-article-page .article h3.shaiva-subheading:after{width:160px;max-width:52%;margin:21px auto 31px}
+}

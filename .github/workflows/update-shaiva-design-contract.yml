@@ -1,0 +1,42 @@
+name: Document Shaiva Varna design baseline
+on:
+  push:
+    paths:
+      - .github/workflows/update-shaiva-design-contract.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  document:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Update article design guide
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('.github/docs/SITE_GUIDE.md')
+          text=p.read_text(encoding='utf-8')
+          marker='## Śaiva article: Varṇa-vicāra design contract (2026-09-21)'
+          if marker not in text:
+              first_line=text.split('\n',1)[0]
+              note=('**Current Śaiva article design:** The owner explicitly requires the complete Śaiva article to use '
+                    'the design of [`Varṇa-vicāra`](https://krishnavyasmuni.github.io/vivekadrishti/articles/varna-vicara/). '
+                    'Follow the specific contract below; it supersedes the older provisional Śaiva styling notes in §8. '
+                    'The content-fidelity rules in this handbook still apply.')
+              text=text.replace(first_line,first_line+'\n\n'+note,1)
+              text += '''\n\n'''+marker+'''\n\n'''+'''The exact design exemplar is `articles/varna-vicara/index.html`, with `assets/css/varna-vicara-paged.css` and `assets/js/varna-vicara-paged.js`. This user-requested reference, not the previous Śaiva card/PDF-page reader, controls the **whole Śaiva article** at `articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html`. Do not replace the Varṇa-vicāra visual system with a merely similar warm-paper aesthetic.\n\n- **Match the reference shell and typography:** same `sitebar` and centered `page`, Merriweather body type, Vollkorn headings and menu, dark outer background and pale paper, teal title/section headings, narrow readable article measure, desktop sticky left contents, mobile disclosure contents, section context strip, Previous/Next links, purple translation/quotation rules, and orange `Show Sanskrit` / `Hide Sanskrit` pills. Reuse the original `varna-vicara-paged.css` on the Śaiva page; add only targeted Śaiva-specific CSS. Reference behavior on desktop and mobile, not a superficial color match.\n- **Current Śaiva implementation:** `assets/js/shaiva-complete-reader.js` converts the existing structured original into titled, URL-addressable `?section=` sections, builds the reference-style contents navigation and section pager, and displays source-derived bilingual rows as paired Sanskrit toggles followed immediately by their English translations. `assets/css/shaiva-complete.css` is a small *extension* of the Varṇa stylesheet rather than a competing design. The complete original PDF-derived dataset remains `assets/data/shaiva-manuscript.b64`; the original cover artwork remains `assets/images/source-documents/shaiva-original-cover.webp` / `assets/data/shaiva-cover.webp.b64`. Preserve the original authorial words, order, passage associations, notes, headings, and closing pages. Never generate or substitute deity art.\n- **Retired presentation:** `shaiva-document-layout.js`, `shaiva-repair-all.js`, and the older standalone `shaiva-complete.css` card layout are not the current reader. `articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html` retains the earlier publication as a backup; do not load its old patch scripts into the new reader. Do not run the old installation workflows on the new article.\n- **Faithfulness and verification:** The structured manuscript was automatically recovered from a 52-page supplied PDF (50 populated pages; final two blank); automated checks count 20 bilingual table blocks and 67 paired rows. Those counts validate structural completeness **only**. They do not prove that every Sanskrit syllable, bibliographic reference, translation alignment, image placement, or original footnote has been manually collated against the PDF. Compare the rendered text and every bilingual row against the PDF before reporting word-for-word or scholarly source fidelity. The request to match Varṇa-vicāra is a **design change**, not permission to alter the underlying text.\n- **Definition of done for future changes:** Verify that the same Varṇa CSS loads on both articles; check every Śaiva `?section=` route, both desktop and mobile contents, active navigation, previous/next endpoints, every Sanskrit toggle and its paired English, original artwork and final invocation, and 320/375/390/430 px as well as desktop widths for overflow or clipping. Check GitHub Pages deployment and visually compare both articles. Record defects accurately rather than claiming a fully proofread text when only layout and structural checks passed.\n'''
+              p.write_text(text,encoding='utf-8')
+              print('Updated the article design guide with the exact Śaiva/Varṇa contract')
+          else:
+              print('Design contract already present')
+          PY
+          if ! git diff --quiet -- .github/docs/SITE_GUIDE.md; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add .github/docs/SITE_GUIDE.md
+            git commit -m 'Make Varṇa-vicāra the binding Śaiva article design in design guide'
+            git push
+          fi

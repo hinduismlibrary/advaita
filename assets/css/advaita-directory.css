@@ -1,0 +1,103 @@
+:root{
+  --paper:#ffffff;
+  --ink:#302d29;
+  --blue:#16539b;
+  --green:#cfeee2;
+  --green-border:#a8cabb;
+  --line:#dedbd6;
+  --muted:#686868;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body.advaita-directory-page{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-topbar{width:min(1040px,calc(100% - 32px));min-height:52px;margin:0 auto;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.ad-topbar a{color:#111;font:700 16px/1.5 Arial,Helvetica,sans-serif;text-decoration:none}
+.ad-topbar a:hover,.ad-topbar a:focus-visible{color:var(--blue);text-decoration:underline}
+.ad-page{width:min(1040px,calc(100% - 32px));min-height:calc(100vh - 52px);margin:0 auto;padding:26px 0 56px;background:#fff}
+.ad-reader{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px;align-items:start}
+.ad-side{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 14px 8px 0;border-right:1px solid var(--line)}
+.ad-side h2,.ad-section>h2{margin:0;padding:7px 10px;border:1px solid var(--green-border);background:var(--green);color:#202020;font:700 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-side h2{margin-bottom:8px}
+.ad-side nav{display:grid;gap:5px}
+.ad-side a{display:block;margin:0;color:var(--blue);font:400 16px/1.5 Arial,Helvetica,sans-serif;text-decoration:none}
+.ad-side a:hover,.ad-side a:focus-visible{text-decoration:underline}
+.ad-side .ad-category-link{font-weight:700}
+.ad-main{min-width:0}
+.ad-hero{margin:0 0 20px;text-align:left}
+.ad-hero h1{margin:0;color:#111;font:700 24px/1.35 Arial,Helvetica,sans-serif}
+.ad-section{min-width:0;margin:0 0 28px;scroll-margin-top:18px}
+.ad-section>h2{margin-bottom:0}
+.ad-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;align-items:stretch;margin:0;padding:0;list-style:none}
+.ad-entry{display:grid;grid-template-columns:minmax(0,1fr) max-content;min-width:0;min-height:58px;align-items:center;gap:14px;margin:0;padding:8px 2px;border-bottom:1px solid var(--line)}
+.ad-links>.ad-entry:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 12px);justify-self:center}
+.ad-entry-link{display:block;min-width:0;color:var(--blue);font:400 16px/1.5 Arial,Helvetica,sans-serif;text-decoration:none;overflow-wrap:anywhere}
+.ad-entry-link:hover{text-decoration:underline}
+.ad-entry-title,.ad-entry-author{font:400 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-entry-author{color:var(--muted)}
+.ad-entry-count{color:#444;font:400 16px/1.5 Arial,Helvetica,sans-serif;white-space:nowrap}
+.ad-entry:focus-within{background:#fbfdfc}
+@media(max-width:820px){
+ .ad-topbar,.ad-page{width:calc(100% - 40px)}
+ .ad-reader{display:block;width:100%;margin:0 auto}
+ .ad-side{position:static;max-height:none;overflow:visible;margin:0 0 24px;padding:0 0 14px;border-right:0;border-bottom:1px solid var(--line)}
+ .ad-side nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 14px}
+}
+@media(max-width:600px){
+ .ad-topbar,.ad-page{width:calc(100% - 32px)}
+ .ad-page{padding:20px 0 42px}
+ .ad-side nav{grid-template-columns:1fr;gap:4px}
+ .ad-links{grid-template-columns:1fr;column-gap:0}
+ .ad-links>.ad-entry:last-child:nth-child(odd){grid-column:auto;width:auto;justify-self:stretch}
+ .ad-entry{min-height:54px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Two-column, linked-text layout for the Ādi Śaṅkara book index. */
+body.ad-shankar-index-page .ad-reader{display:block}
+body.ad-shankar-index-page .ad-side{display:none}
+body.ad-shankar-index-page .ad-main{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:22px 24px;
+ align-items:start;
+}
+body.ad-shankar-index-page .ad-hero{grid-column:1/-1;margin:0}
+body.ad-shankar-index-page .ad-section{margin:0}
+body.ad-shankar-index-page .ad-section>h2{
+ margin:0;
+ padding:3px 9px;
+ font-size:18px;
+ line-height:1.4;
+}
+body.ad-shankar-index-page .ad-links{
+ display:block;
+ margin:0;
+ padding:5px 0 0 29px;
+ list-style:disc;
+}
+body.ad-shankar-index-page .ad-entry{
+ display:list-item;
+ min-height:0;
+ margin:0;
+ padding:2px 0;
+ border:0;
+}
+body.ad-shankar-index-page .ad-entry::marker{color:#858585}
+body.ad-shankar-index-page .ad-entry-link{display:inline}
+body.ad-shankar-index-page .ad-entry-count{
+ display:inline;
+ margin-left:5px;
+ color:var(--muted);
+ font-size:14px;
+ white-space:normal;
+}
+body.ad-shankar-index-page .ad-entry:focus-within{background:transparent}
+body.ad-shankar-index-page .ad-links>.ad-entry:last-child:nth-child(odd){
+ grid-column:auto;
+ width:auto;
+ justify-self:stretch;
+}
+@media(max-width:760px){
+ body.ad-shankar-index-page .ad-main{grid-template-columns:1fr}
+}
+
