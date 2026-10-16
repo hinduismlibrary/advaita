@@ -553,7 +553,8 @@ function normalizeSourcePage(root){
      as verified Sanskrit text in the reader. */
   for(const snippet of [...root.querySelectorAll('.index-subitem')]){
     const value=text(snippet);
-    if(/^(?:quote(?: begins| includes)?|sanskrit)\s*:/i.test(value)&&!devanagari.test(value))snippet.remove();
+    const field=value.match(/^(?:quote(?: begins| includes)?|sanskrit)\s*:\s*(.*)$/i);
+    if(field&&/[A-Za-z]/.test(field[1]))snippet.remove();
   }
   root.querySelectorAll('ol,ul').forEach(list=>list.classList.add('source-entry-list'));
   root.querySelectorAll('li').forEach(entry=>entry.classList.add('source-entry'));

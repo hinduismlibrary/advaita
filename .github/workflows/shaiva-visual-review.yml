@@ -172,9 +172,10 @@ jobs:
                   };
                 };
                 const visibleTaggedTransliteration=[...(root?.querySelectorAll('.sanskrit-transliteration, [lang="sa-Latn"]')||[])].some(node=>getComputedStyle(node).display!=='none'&&getComputedStyle(node).visibility!=='hidden');
-                const visibleLatinQuote=[...(root?.querySelectorAll('.source-page-body .index-subitem')||[])].some(node=>
-                  /^(?:quote(?: begins| includes)?|sanskrit)\s*:/i.test(node.textContent.trim())&&
-                  !/[\u0900-\u097f]/.test(node.textContent));
+                const visibleLatinQuote=[...(root?.querySelectorAll('.source-page-body .index-subitem')||[])].some(node=>{
+                  const field=node.textContent.trim().match(/^(?:quote(?: begins| includes)?|sanskrit)\s*:\s*(.*)$/i);
+                  return !!field&&/[A-Za-z]/.test(field[1]);
+                });
                 return {
                   status,heading:heading?.textContent.trim()||'',text:(root?.innerText||'').trim(),
                   visibleTransliteration:visibleTaggedTransliteration||visibleLatinQuote,
