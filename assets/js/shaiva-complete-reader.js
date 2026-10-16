@@ -449,7 +449,8 @@ function tocLabel(value){
 
 function tocInto(node,sections,selected){
   node.replaceChildren();
-  const mainLimit=Math.min(sections.length,10);
+  const hasArticleSubsections=sections.some(section=>section.blocks.some(block=>block.kind==='subheading'&&block.id));
+  const mainLimit=Math.min(sections.length,hasArticleSubsections?8:10);
   const subLimit=Math.max(0,10-mainLimit);
   let mainCount=0,subCount=0;
   const appendLinks=(target,section,items)=>{
