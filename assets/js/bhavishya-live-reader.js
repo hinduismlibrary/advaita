@@ -38,10 +38,10 @@
   }
   function extractVerses(text,expected,chapter){
     text=cleanText(text);
-    const marker=/[।॥]{2}\s*(?:1\.)?(?:\d+\.)?([०-९]+)\s*[।॥]{2}/g;
+    const marker=/[।॥]{1,2}\s*(?:1\.)?(?:\d+\.)?([०-९](?:\s*[०-९])*)\s*[।॥]{1,2}/g;
     const found=[]; let last=0,m;
     while((m=marker.exec(text))){
-      const n=Number([...m[1]].map(x=>DEV_DIGITS.indexOf(x)).join(''));
+      const n=Number([...m[1].replace(/\s+/g,'')].map(x=>DEV_DIGITS.indexOf(x)).join(''));
       if(!n||n>expected+3)continue;
       let block=text.slice(last,m.index+m[0].length).trim();
       last=m.index+m[0].length;
