@@ -79,8 +79,8 @@ jobs:
                 const resources=performance.getEntriesByType('resource').map(entry=>entry.name);
                 const source=document.getElementById('source-document');
                 const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
-                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-reference-3'));
-                const js=resources.some(url=>url.includes(reader+'?v=20261016-contents-7'));
+                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-standard-1'));
+                const js=resources.some(url=>url.includes(reader+'?v=20261016-standard-1'));
                 const readerReady=document.body.classList.contains('document-paged-page') &&
                   !!document.querySelector('.page-context span');
                 return {
@@ -235,6 +235,7 @@ jobs:
                   .map(a=>({id:a.dataset.section,title:a.textContent.trim(),href:a.href}));
                 const subsections=[...nav.querySelectorAll('a[data-subsection]')]
                   .map(a=>({id:a.dataset.subsection,title:a.title||a.textContent.trim(),href:a.href,section:a.dataset.section}));
+                const tocList=!!nav.querySelector(':scope > ol.toc-list');
                 const first=nav.querySelector('a[data-section]:not([data-subsection])');
                 const style=first?getComputedStyle(first):null;
                 const visibleSubsections=[...visibleNav.querySelectorAll('a[data-subsection]')]
@@ -244,7 +245,7 @@ jobs:
                 const count=status.match(/of\\s+(\\d+)/i);
                 const pageCount=count?Number(count[1]):0;
                 return {
-                  links,subsections,visibleSubsections,pageCount,
+                  links,subsections,visibleSubsections,pageCount,tocList,
                   tocStyle:style?{
                     fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,
                     whiteSpace:style.whiteSpace,textOverflow:style.textOverflow,overflowX:style.overflowX,color:style.color
@@ -253,6 +254,7 @@ jobs:
               }""",toc_selector)
               assert content_response and content_response.status==200, f'{label}: article did not load'
               assert contents, f'{label}: Contents navigation did not load; body={content_page.evaluate("document.body.className")!r}; browserErrors={content_errors}'
+              assert contents['tocList'], f'{label}: Contents does not use the shared list structure'
               assert contents['pageCount']>=3, f'{label}: missing reader page count'
               expected_main=min(contents['pageCount'],8 if label in {'shaiva','varna'} else 10)
               assert len(contents['links'])==expected_main, f'{label}: expected {expected_main} main links, got {len(contents["links"])}'
@@ -293,12 +295,13 @@ jobs:
                 content_page.wait_for_function("document.querySelector('#source-content')?.classList.contains('document-reference-page')")
                 source_style=content_page.evaluate("""() => {
                   const root=document.querySelector('#source-content');
-                  const heading=root?.querySelector('.women-bibliography-group>p:first-child, h3.reader-subheading');
-                  if(!root||!heading)return null;
+                  const heading=root?.querySelector('.source-group-heading');
+                  const pageHeading=root?.querySelector('.source-page-heading');
+                  if(!root||!heading||!pageHeading)return null;
                   const style=getComputedStyle(heading);
-                  return {fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,color:style.color};
+                  return {title:pageHeading.textContent.trim(),fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,color:style.color};
                 }""")
-                assert source_response and source_response.status==200 and source_style, f'{label}: Bibliography/Sources page did not use the shared source layout'
+                assert source_response and source_response.status==200 and source_style and source_style['title']=='Sources', f'{label}: Bibliography/Sources page did not use the shared source layout'
                 if source_reference is None:source_reference=source_style
                 else:assert source_style==source_reference, f'{label}: Bibliography/Sources styling differs: {source_style} != {source_reference}'
               data={

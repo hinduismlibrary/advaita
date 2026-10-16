@@ -899,3 +899,139 @@ body.document-paged-page .toc details.toc-subgroup>summary{
     font-size:15px!important;
   }
 }
+
+
+/* Shared Contents and Sources presentation across all six article readers. */
+body.document-paged-page .toc ol.toc-list,
+body.document-paged-page .toc ul.toc-subitems{
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.document-paged-page .toc li.toc-entry,
+body.document-paged-page .toc li.toc-subentry{
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.document-paged-page .toc ul.toc-subitems{
+  margin:3px 0 8px 10px!important;
+  padding:0 0 0 10px!important;
+  border:0!important;
+  border-left:1px solid var(--rule)!important;
+}
+body.document-paged-page .toc ul.toc-subitems ul.toc-subitems{
+  margin:3px 0 6px 0!important;
+}
+body.document-paged-page .toc a.toc-main{
+  display:block!important;
+  margin:0!important;
+  padding:4px 0!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.document-paged-page .toc a.toc-subitem{
+  display:block!important;
+  margin:0 0 5px!important;
+  padding:0!important;
+  border:0!important;
+  color:#69736c!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+body.document-paged-page .toc a.toc-subitem:hover,
+body.document-paged-page .toc a.toc-subitem.is-active-subsection{
+  color:var(--teal)!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body{
+  max-width:100%!important;
+  font-family:Merriweather,Georgia,serif!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-group-heading{
+  display:block!important;
+  margin:18px 0 8px!important;
+  padding:0 0 5px!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+  color:#514941!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  font-weight:500!important;
+  line-height:1.4!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-group-heading::before,
+body.document-paged-page #source-content.document-reference-page .source-group-heading::after{
+  display:none!important;
+  content:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body p:not(.translation):not(.scripture-translation):not(.sanskrit-text),
+body.document-paged-page #source-content.document-reference-page .source-page-body li,
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  font-weight:400!important;
+  line-height:1.55!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body p{
+  margin:0 0 9px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body ol,
+body.document-paged-page #source-content.document-reference-page .source-page-body ul{
+  margin:0 0 14px!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry-list>li{
+  margin:0!important;
+  padding:7px 0!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+  list-style:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry-list>li:last-child{
+  border-bottom:0!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .article-index{
+  margin:0 0 14px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-entry{
+  margin:0!important;
+  padding:7px 0!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-entry:last-child{
+  border-bottom:0!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  text-decoration:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+  margin-top:4px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading:hover{
+  color:var(--teal)!important;
+  text-decoration:underline!important;
+}
+@media(max-width:620px){
+  body.document-paged-page #source-content.document-reference-page .source-group-heading{
+    margin:16px 0 7px!important;
+    padding-bottom:4px!important;
+    font-size:16px!important;
+  }
+  body.document-paged-page #source-content.document-reference-page .source-page-body p:not(.translation):not(.scripture-translation):not(.sanskrit-text),
+  body.document-paged-page #source-content.document-reference-page .source-page-body li,
+  body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
+  body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+    font-size:14px!important;
+    line-height:1.55!important;
+  }
+}

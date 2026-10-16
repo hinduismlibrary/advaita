@@ -77,9 +77,7 @@ const headingLabel=raw=>{
   const value=unnumber(raw);
   const hasBibliography=/\bbibliograph(?:y|ies)\b/i.test(value);
   const hasSources=/\b(?:primary\s+)?(?:references?|sources?|works cited)\b/i.test(value);
-  if(hasBibliography&&hasSources)return 'Bibliography & Sources';
-  if(hasBibliography)return 'Bibliography';
-  if(hasSources)return 'Sources';
+  if(hasBibliography||hasSources)return 'Sources';
   if(/^objections?\b/i.test(value))return 'Objections';
   return value;
 };
@@ -266,20 +264,22 @@ function containsSubheading(items,id){
 const TOC_ENTRY_LIMIT=10;
 const TOC_SUBSECTION_RESERVE=2;
 function buildSubheadingList(items,page){
-  const nested=el('div','toc-subitems');
+  const nested=el('ul','toc-subitems');
   for(const item of items){
+    const entry=el('li','toc-subentry');
     const sublink=el('a',`toc-subitem toc-level-${item.level}`,item.label);
     sublink.dataset.section=page.id;
     sublink.dataset.subsection=item.heading.id;
     sublink.href=href(page)+'#'+encodeURIComponent(item.heading.id);
     sublink.title=item.fullLabel;
     sublink.setAttribute('aria-label',item.fullLabel);
-    nested.append(sublink);
+    entry.append(sublink);
     if(item.children.length){
       const childList=buildSubheadingList(item.children,page);
       childList.classList.add('toc-subitems-nested');
-      nested.append(childList);
+      entry.append(childList);
     }
+    nested.append(entry);
   }
   return nested;
 }
@@ -316,11 +316,6 @@ function appendPageEntry(container,page,linkClass,state){
   return true;
 }
 function makeToc(nav){
-  const grouped=new Map();
-  for(const page of segments){
-    if(!grouped.has(page.group))grouped.set(page.group,[]);
-    grouped.get(page.group).push(page);
-  }
   const hasArticleSubheadings=segments.some(page=>!isSourceHeading(page.title)&&pageSubheadings(page).length>0);
   const mainLimit=Math.min(segments.length,hasArticleSubheadings?TOC_ENTRY_LIMIT-TOC_SUBSECTION_RESERVE:TOC_ENTRY_LIMIT);
   const state={
@@ -329,26 +324,14 @@ function makeToc(nav){
     subLimit:Math.max(0,TOC_ENTRY_LIMIT-mainLimit),
     subCount:0
   };
-  for(const [group,pages] of grouped){
+  const list=el('ol','toc-list');
+  for(const page of segments){
     if(state.mainCount>=state.mainLimit)break;
-    if(pages.length===1){
-      appendPageEntry(nav,pages[0],'toc-main',state);
-      continue;
-    }
-    const wrap=el('details','toc-group');
-    const label=el('summary','toc-parent');
-    label.append(el('span','toc-parent-title',group.title),el('span','toc-current',''));
-    const items=el('div','toc-children');
-    wrap.append(label,items);
-    wrap.open=true;
-    for(const page of pages){
-      if(state.mainCount>=state.mainLimit)break;
-      const entry=el('div','toc-page-item');
-      appendPageEntry(entry,page,'',state);
-      items.append(entry);
-    }
-    if(items.querySelector('a[data-section]:not([data-subsection])'))nav.append(wrap);
+    const entry=el('li','toc-entry');
+    appendPageEntry(entry,page,'toc-main',state);
+    list.append(entry);
   }
+  nav.replaceChildren(list);
 }
 makeToc(sideNav);makeToc(mobileNav);
 function syncSubsectionToc(){
@@ -550,16 +533,39 @@ function normalizeCitationOrder(root){
     }else if(isQuoteSource(target))target.before(citation);
   }
 }
+function normalizeSourcePage(root){
+  for(const heading of [...root.querySelectorAll('h2,h3,h4,h5,h6')]){
+    const normalized=el('h4','source-group-heading',text(heading));
+    if(heading.id)normalized.id=heading.id;
+    heading.replaceWith(normalized);
+  }
+  for(const paragraph of [...root.querySelectorAll('p')]){
+    const next=paragraph.nextElementSibling;
+    if(!next||!next.matches('ol,ul,.article-index'))continue;
+    const label=text(paragraph);
+    if(!label||label.length>100)continue;
+    const heading=el('h4','source-group-heading',label);
+    if(paragraph.id)heading.id=paragraph.id;
+    paragraph.replaceWith(heading);
+  }
+  root.querySelectorAll('ol,ul').forEach(list=>list.classList.add('source-entry-list'));
+  root.querySelectorAll('li').forEach(entry=>entry.classList.add('source-entry'));
+  root.querySelectorAll('.article-index').forEach(index=>index.classList.add('source-entry-index'));
+  root.querySelectorAll('.index-entry').forEach(entry=>entry.classList.add('source-entry'));
+}
 function render(index){
   const page=segments[index];if(!page)return;
+  const sourcePage=isSourceHeading(page.title);
   const frag=document.createDocumentFragment();
-  const h=el('h3',null,page.title);h.id=page.id;frag.append(h);
-  for(const n of page.nodes)frag.append(clean(n,page));
+  const h=el('h3',sourcePage?'source-page-heading':null,page.title);h.id=page.id;frag.append(h);
+  const body=sourcePage?el('div','source-page-body'):frag;
+  for(const n of page.nodes)body.append(clean(n,page));
+  if(sourcePage){normalizeSourcePage(body);frag.append(body);}
   pairWomenScripture(frag);
   styleArticleQuotes(frag);
   normalizeCitationOrder(frag);
   reader.replaceChildren(frag);
-  reader.classList.toggle('document-reference-page',isSourceHeading(page.title));
+  reader.classList.toggle('document-reference-page',sourcePage);
   for(const d of reader.querySelectorAll('details.sanskrit-reveal')){
     const summary=d.querySelector(':scope>summary');if(!summary)continue;
     const sync=()=>summary.textContent=d.open?'Hide Sanskrit':'Show Sanskrit';
