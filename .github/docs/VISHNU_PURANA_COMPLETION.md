@@ -611,3 +611,10 @@ Source pins at upstream commit fc117aa4514dfd4e4840037aeb3ca825ba030b05: mūla b
 The 16 no-commentary verse cards now have the same three controls as the other cards. Their Devanāgarī control displays the root verse. The page description no longer attributes the translation to Wilson. All 19 supplied Śrīdhara passages remain paired inside their Word-for-word controls. No public textual-basis note appears.
 
 Validation: 35 cards; 35 Word-for-word, Transliteration, and Devanagari controls; 19 Śrīdhara labels and WFW pairings; balanced markup.
+
+
+## Book 1, Chapter 2 control consistency — 16 October 2026
+
+Added a root-Devanāgarī control to each no-commentary card. All 68 cards now have the same three controls; all 49 supplied Śrīdhara passages remain inside Word-for-word.
+
+Validation: 68 controls of each type; 49 Śrīdhara labels and WFW panels; balanced markup.

@@ -538,3 +538,9 @@ Source pins at upstream commit fc117aa4514dfd4e4840037aeb3ca825ba030b05: mūla b
 
 Added a Devanagari control to each of the 16 no-commentary cards, displaying the root verse. Removed the public Wilson attribution from the page description. The existing 19 Śrīdhara WFW pairings remain in place.
 
+
+
+## Book 1, Chapter 2 control consistency — 16 October 2026
+
+Added a root-Devanāgarī control to every no-commentary verse. All 68 cards now have all three controls, and all 49 supplied Śrīdhara passages remain paired inside Word-for-word.
+
