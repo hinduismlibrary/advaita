@@ -103,8 +103,7 @@ if(chapterHeads.length){
     const isSourceSection=isSourceHeading(text(heading));
     const isObjectionSection=isObjectionsHeading(text(heading));
     const sourceChildren=children.filter(child=>isSourceHeading(text(child)));
-    const splitChildren=children.length&&!isSourceSection&&!isObjectionSection&&
-      isStorySection(text(heading));
+    const splitChildren=children.length&&!isSourceSection&&!isObjectionSection;
     if(splitChildren){
       for(let j=0;j<children.length;j++){
         const child=children[j];
@@ -316,22 +315,103 @@ function appendPageEntry(container,page,linkClass,state){
   return true;
 }
 function makeToc(nav){
-  const hasArticleSubheadings=segments.some(page=>!isSourceHeading(page.title)&&pageSubheadings(page).length>0);
-  const mainLimit=Math.min(segments.length,hasArticleSubheadings?TOC_ENTRY_LIMIT-TOC_SUBSECTION_RESERVE:TOC_ENTRY_LIMIT);
-  const state={
-    mainLimit,
-    mainCount:0,
-    subLimit:Math.max(0,TOC_ENTRY_LIMIT-mainLimit),
-    subCount:0
+  const selectedPages=[];
+  const selectedSet=new Set();
+  const nestedByPage=new Map();
+  const totalLinks=()=>selectedPages.length+
+    [...nestedByPage.values()].reduce((n,items)=>n+countSubheadings(items),0);
+  const addPage=page=>{
+    if(!page||selectedSet.has(page)||totalLinks()>=TOC_ENTRY_LIMIT)return false;
+    selectedSet.add(page);selectedPages.push(page);return true;
   };
-  const list=el('ol','toc-list');
+  const groups=[];
+  const groupByKey=new Map();
+  const keyFor=page=>isSourceHeading(page.title)?'__sources__':page.group;
   for(const page of segments){
-    if(state.mainCount>=state.mainLimit)break;
-    const entry=el('li','toc-entry');
-    appendPageEntry(entry,page,'toc-main',state);
-    list.append(entry);
+    const key=keyFor(page);
+    let group=groupByKey.get(key);
+    if(!group){
+      group={key,title:isSourceHeading(page.title)?'Sources':page.group?.title||page.title,pages:[]};
+      groupByKey.set(key,group);groups.push(group);
+    }
+    group.pages.push(page);
   }
-  nav.replaceChildren(list);
+  addPage(segments[0]);
+  addPage(segments.find(page=>isSourceHeading(page.title)));
+  for(const group of groups)addPage(group.pages[0]);
+
+  const omittedIds=items=>{
+    const ids=new Set();
+    const walk=list=>list.forEach(item=>{ids.add(item.heading.id);walk(item.children||[]);});
+    walk(items);return ids;
+  };
+  const omitSelected=(items,ids)=>items.flatMap(item=>{
+    const children=omitSelected(item.children||[],ids);
+    return ids.has(item.heading.id)?children:[{...item,children}];
+  });
+  const addNested=(budget)=>{
+    let added=0;
+    for(const page of selectedPages){
+      if(isSourceHeading(page.title)||added>=budget||totalLinks()>=TOC_ENTRY_LIMIT)continue;
+      const current=nestedByPage.get(page)||[];
+      const ids=omittedIds(current);
+      const remaining=omitSelected(pageSubheadings(page),ids);
+      const room=Math.min(budget-added,TOC_ENTRY_LIMIT-totalLinks());
+      const chosen=limitSubheadings(remaining,room);
+      const count=countSubheadings(chosen);
+      if(count){nestedByPage.set(page,[...current,...chosen]);added+=count;}
+    }
+    return added;
+  };
+  addNested(Math.min(TOC_SUBSECTION_RESERVE,TOC_ENTRY_LIMIT-totalLinks()));
+  for(const page of segments){
+    if(totalLinks()>=TOC_ENTRY_LIMIT)break;
+    addPage(page);
+  }
+  if(totalLinks()<TOC_ENTRY_LIMIT)addNested(TOC_ENTRY_LIMIT-totalLinks());
+
+  const selectedGroups=new Map();
+  for(const page of segments){
+    if(!selectedSet.has(page))continue;
+    const group=groupByKey.get(keyFor(page));
+    if(!selectedGroups.has(group))selectedGroups.set(group,[]);
+    selectedGroups.get(group).push(page);
+  }
+  const linkFor=(page,label,cls)=>{
+    const link=el('a',cls,label);
+    link.href=href(page);link.dataset.section=page.id;
+    link.title=label;link.setAttribute('aria-label',label);
+    return link;
+  };
+  const addSubLinks=(container,page)=>{
+    const items=nestedByPage.get(page)||[];
+    if(items.length)container.append(buildSubheadingList(items,page));
+  };
+  const output=document.createDocumentFragment();
+  for(const group of groups){
+    const pages=selectedGroups.get(group)||[];
+    if(!pages.length)continue;
+    const wrapper=el('div','toc-group');
+    const singleDirect=pages.length===1&&pages[0].title===group.title;
+    if(singleDirect){
+      const page=pages[0];
+      const direct=linkFor(page,isSourceHeading(page.title)?'Sources':group.title,'toc-parent');
+      wrapper.append(direct);
+      const children=el('div','toc-children');addSubLinks(children,page);
+      if(children.childElementCount)wrapper.append(children);
+    }else{
+      wrapper.append(el('div','toc-parent',group.title));
+      const children=el('div','toc-children');
+      for(const page of pages){
+        const label=isSourceHeading(page.title)?'Sources':page.title;
+        const link=linkFor(page,label,'toc-main');
+        children.append(link);addSubLinks(children,page);
+      }
+      wrapper.append(children);
+    }
+    output.append(wrapper);
+  }
+  nav.replaceChildren(output);
 }
 makeToc(sideNav);makeToc(mobileNav);
 function syncSubsectionToc(){
