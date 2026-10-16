@@ -448,57 +448,93 @@ function tocLabel(value){
 }
 
 function tocInto(node,sections,selected){
-  node.replaceChildren();
-  const hasArticleSubsections=sections.some(section=>section.blocks.some(block=>block.kind==='subheading'&&block.id));
-  const mainLimit=Math.min(sections.length,hasArticleSubsections?8:10);
-  const subLimit=Math.max(0,10-mainLimit);
-  let mainCount=0,subCount=0;
-  const list=make('ol','toc-list');
-  const appendLinks=(target,section,items)=>{
-    const nested=make('ul','toc-subitems');
-    for(const block of items){
-      const entry=make('li','toc-subentry');
-      const label=tocLabel(block.value);
-      const link=make('a','toc-subitem',label);
-      link.href=href(section)+'#'+encodeURIComponent(block.id);
-      link.dataset.section=section.id;
-      link.dataset.subsection=block.id;
-      link.title=label;
-      link.setAttribute('aria-label',label);
-      if(location.hash.slice(1)===encodeURIComponent(block.id)){
-        link.classList.add('is-active-subsection');
-        link.setAttribute('aria-current','location');
-      }
-      entry.append(link);
-      nested.append(entry);
-    }
-    target.append(nested);
+  const limit=10;
+  const chosen=[];
+  const chosenSet=new Set();
+  const nestedBySection=new Map();
+  const total=()=>chosen.length+[...nestedBySection.values()].reduce((n,items)=>n+items.length,0);
+  const addSection=section=>{
+    if(!section||chosenSet.has(section)||total()>=limit)return;
+    chosenSet.add(section);chosen.push(section);
   };
-  const appendSubsections=(container,section)=>{
-    const available=subLimit-subCount;
-    if(available<=0)return;
-    const subsections=section.blocks.filter(block=>block.kind==='subheading'&&block.id);
-    const selectedSubsections=subsections.slice(0,available);
-    if(!selectedSubsections.length)return;
-    appendLinks(container,section,selectedSubsections);
-    subCount+=selectedSubsections.length;
-  };
+  const groupMap=new Map(),groups=[];
+  const isSources=section=>/bibliograph|sources?|references?|works cited/i.test(section.title);
+  const keyFor=section=>isSources(section)?'__sources__':section.parent||'Article';
   for(const section of sections){
-    if(mainCount>=mainLimit)break;
-    const entry=make('li','toc-entry');
-    const link=make('a','toc-main',section.title);
-    link.href=href(section);
-    link.dataset.section=section.id;
-    if(section.id===selected.id){
-      link.classList.add('is-active');
-      link.setAttribute('aria-current','page');
-    }
-    entry.append(link);
-    list.append(entry);
-    mainCount++;
-    appendSubsections(entry,section);
+    const key=keyFor(section);
+    let group=groupMap.get(key);
+    if(!group){group={key,title:isSources(section)?'Sources':section.parent||'Article',sections:[]};groupMap.set(key,group);groups.push(group);}
+    group.sections.push(section);
   }
-  node.append(list);
+  addSection(sections[0]);
+  addSection(sections.find(isSources));
+  for(const group of groups)addSection(group.sections[0]);
+
+  const addNested=(budget)=>{
+    let added=0;
+    for(const section of chosen){
+      if(isSources(section)||added>=budget||total()>=limit)continue;
+      const existing=nestedBySection.get(section)||[];
+      const used=new Set(existing.map(item=>item.id));
+      const available=section.blocks.filter(block=>block.kind==='subheading'&&block.id&&!used.has(block.id));
+      const take=Math.min(budget-added,limit-total(),available.length);
+      if(take){nestedBySection.set(section,[...existing,...available.slice(0,take)]);added+=take;}
+    }
+    return added;
+  };
+  addNested(Math.min(2,limit-total()));
+  for(const section of sections){if(total()>=limit)break;addSection(section);}
+  if(total()<limit)addNested(limit-total());
+
+  const chosenGroups=new Map();
+  for(const section of sections){
+    if(!chosenSet.has(section))continue;
+    const group=groupMap.get(keyFor(section));
+    if(!chosenGroups.has(group))chosenGroups.set(group,[]);
+    chosenGroups.get(group).push(section);
+  }
+  const makeLink=(section,label,cls)=>{
+    const link=make('a',cls,label);
+    link.href=href(section);link.dataset.section=section.id;
+    link.title=label;link.setAttribute('aria-label',label);
+    if(section.id===selected.id){link.classList.add('is-active');link.setAttribute('aria-current','page');}
+    return link;
+  };
+  const output=document.createDocumentFragment();
+  for(const group of groups){
+    const items=chosenGroups.get(group)||[];
+    if(!items.length)continue;
+    const wrapper=make('div','toc-group');
+    const direct=items.length===1&&items[0].title===group.title;
+    if(direct){
+      wrapper.append(makeLink(items[0],isSources(items[0])?'Sources':group.title,'toc-parent'));
+    }else wrapper.append(make('div','toc-parent',group.title));
+    const children=make('div','toc-children');
+    for(const section of items){
+      if(!direct){
+        const label=isSources(section)?'Sources':section.title;
+        children.append(makeLink(section,label,'toc-main'));
+      }
+      const blocks=nestedBySection.get(section)||[];
+      if(blocks.length){
+        const list=make('ul','toc-subitems');
+        for(const block of blocks){
+          const entry=make('li','toc-subentry');
+          const link=make('a','toc-subitem',tocLabel(block.value));
+          link.href=href(section)+'#'+encodeURIComponent(block.id);
+          link.dataset.section=section.id;link.dataset.subsection=block.id;
+          if(location.hash.slice(1)===encodeURIComponent(block.id)){
+            link.classList.add('is-active-subsection');link.setAttribute('aria-current','location');
+          }
+          entry.append(link);list.append(entry);
+        }
+        children.append(list);
+      }
+    }
+    if(children.childElementCount)wrapper.append(children);
+    output.append(wrapper);
+  }
+  node.replaceChildren(output);
 }
 function navLink(anchor,section,label){
   anchor.replaceChildren(make('small',null,label));
