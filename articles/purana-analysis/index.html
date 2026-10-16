@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f7f7f2">
-  <meta name="description" content="Chapter evidence for the seven Major Puranas covered by R. C. Hazra.">
+  <meta name="description" content="Chapter evidence for the Purāṇas covered by R. C. Hazra.">
   <title>Purāṇa Analysis</title>
   <style>
     :root {
@@ -121,10 +121,10 @@
   <div class="page">
     <header>
       <h1>Purāṇa analysis</h1>
-      <p class="dek">Hazra’s seven Major Purāṇas · chapters on rites, customs, and tīrthas</p>
+      <p class="dek">Purāṇas covered by Hazra · chapters on rites, customs, and tīrthas</p>
     </header>
     <div class="layout">
-      <aside class="contents" aria-label="Major Purāṇas">
+      <aside class="contents" aria-label="Purāṇas">
         <h2>Purāṇas</h2>
         <nav id="contents" aria-label="Select a Purāṇa"></nav>
       </aside>
@@ -143,15 +143,18 @@
         <p class="map-note">Select any chapter number for its references. Verse-only ranges remain visible in the detail.</p>
         <div id="map" aria-live="polite"></div>
         <section id="detail" aria-live="polite" hidden></section>
-        <p class="source-note">R. C. Hazra, <i>Studies in the Puranic Records on Hindu Rites and Customs</i> (1940), Part I, Chapters II and IV.</p>
+        <p class="source-note">R. C. Hazra, <i>Studies in the Puranic Records on Hindu Rites and Customs</i> (1940), Part I, Chapters II–IV.</p>
       </main>
     </div>
   </div>
   <script>
     (() => {
-      const majorIds = [
+      const hazraIds = [
         "markandeya-purana", "vayu-purana", "brahmanda-purana",
-        "visnu-purana", "matsya-purana", "bhagavata-purana", "kurma-purana"
+        "visnu-purana", "matsya-purana", "bhagavata-purana", "kurma-purana",
+        "vamana-purana", "linga-purana", "varaha-purana", "padma-purana",
+        "brhannaradiya-purana", "naradiya-purana", "agni-purana", "garuda-purana",
+        "brahma-purana", "skanda-purana", "brahmavaivarta-purana", "bhavisya-purana"
       ];
       const names = {
         quoted: "Quoted",
@@ -177,9 +180,10 @@
       }
 
       function chapterRef(section, chapter) {
-        return section.prefix && section.id !== "main"
+        if (section.id === "main") return String(chapter);
+        return section.prefix
           ? section.prefix + "." + chapter
-          : String(chapter);
+          : section.id + " " + chapter;
       }
 
       function keyFor(id, section, chapter) {
@@ -200,7 +204,7 @@
 
       function isTirtha(topic) {
         return topic.kind === "pilgrimage" || topic.kind === "tirtha" ||
-          /holy places|sacred places|pilgrimage|tirtha|tīrtha|gayā/i.test(topic.label || "");
+          /holy places?|sacred places?|pilgrimage|tirtha|tīrtha|gayā/i.test(topic.label || "");
       }
 
       function evidenceKinds(record) {
@@ -376,15 +380,15 @@
         const payload = await responses[0].json();
         const index = await responses[1].json();
         const available = new Map((payload.puranas || []).map(item => [item.id, item]));
-        profiles = majorIds.map(id => available.get(id)).filter(Boolean);
-        if (profiles.length !== majorIds.length) throw new Error("Major Purāṇa data incomplete");
+        profiles = hazraIds.map(id => available.get(id)).filter(Boolean);
+        if (profiles.length !== hazraIds.length) throw new Error("Hazra Purāṇa data incomplete");
         profileById = new Map(profiles.map(item => [item.id, item]));
         for (const patch of index.patches || []) {
           if (!profileById.has(patch.id) || !patch.record?.topics?.length) continue;
           topicByKey.set(keyFor(patch.id, patch.section, patch.chapter), patch.record);
         }
         renderContents();
-        setActive(payload.default && profileById.has(payload.default) ? payload.default : majorIds[0]);
+        setActive(payload.default && profileById.has(payload.default) ? payload.default : hazraIds[0]);
       }
 
       start().catch(() => {
