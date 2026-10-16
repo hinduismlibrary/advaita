@@ -79,7 +79,7 @@ jobs:
                 const resources=performance.getEntriesByType('resource').map(entry=>entry.name);
                 const source=document.getElementById('source-document');
                 const css=styles.some(url=>url.includes('document-paged.css?v=20261016-contents-2'));
-                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-standard-1'));
+                const referenceCss=styles.some(url=>url.includes('article-quote-standard.css?v=20261016-standard-2'));
                 const js=resources.some(url=>url.includes(reader+'?v=20261016-standard-1'));
                 const readerReady=document.body.classList.contains('document-paged-page') &&
                   !!document.querySelector('.page-context span');
@@ -302,11 +302,16 @@ jobs:
                   const root=document.querySelector('#source-content');
                   const heading=root?.querySelector('.source-group-heading');
                   const pageHeading=root?.querySelector('.source-page-heading');
-                  if(!root||!heading||!pageHeading)return null;
+                  const entry=root?.querySelector('.source-page-body .source-entry-list>li, .source-page-body .source-entry-index .index-heading, .source-page-body li, .source-page-body .index-heading');
+                  if(!root||!heading||!pageHeading||!entry)return null;
                   const style=getComputedStyle(heading);
-                  return {title:pageHeading.textContent.trim(),fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,color:style.color};
+                  const entryStyle=getComputedStyle(entry);
+                  return {title:pageHeading.textContent.trim(),fontFamily:style.fontFamily,fontSize:style.fontSize,lineHeight:style.lineHeight,color:style.color,entryFontFamily:entryStyle.fontFamily,entryFontSize:entryStyle.fontSize,entryLineHeight:entryStyle.lineHeight,entryColor:entryStyle.color};
                 }""")
                 assert source_response and source_response.status==200 and source_style and source_style['title']=='Sources', f'{label}: Bibliography/Sources page did not use the shared source layout'
+                source_entry_style={key:source_style['entry'+key[0].upper()+key[1:]] for key in ['fontFamily','fontSize','lineHeight','color']}
+                reader_text_style={key:article_style_reference[key] for key in ['fontFamily','fontSize','lineHeight','color']}
+                assert source_entry_style==reader_text_style, f'{label}: Sources entry typography differs from the article text: {source_entry_style} != {reader_text_style}'
                 if source_reference is None:source_reference=source_style
                 else:assert source_style==source_reference, f'{label}: Bibliography/Sources styling differs: {source_style} != {source_reference}'
               data={

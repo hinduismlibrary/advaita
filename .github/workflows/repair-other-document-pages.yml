@@ -57,7 +57,7 @@ jobs:
             html, n = re.subn(r'(assets/css/document-paged\.css)\?v=[^"\']+', r'\1?v=20261016-contents-2', html)
             assert n == 1, f'Unexpected style links in {path}: {n}'
             assert 'article-quote-standard.css' in html, f'Missing shared source style: {path}'
-            html, n = re.subn(r'(assets/css/article-quote-standard\.css)\?v=[^"\']+', r'\1?v=20261016-standard-1', html)
+            html, n = re.subn(r'(assets/css/article-quote-standard\.css)\?v=[^"\']+', r'\1?v=20261016-standard-2', html)
             assert n == 1, f'Unexpected shared source style links in {path}: {n}'
             path.write_text(html, encoding='utf-8')
             print(f'Validated and refreshed: {path}')
