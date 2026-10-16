@@ -171,9 +171,13 @@ jobs:
                     borderCollapse:style.borderCollapse
                   };
                 };
+                const visibleTaggedTransliteration=[...(root?.querySelectorAll('.sanskrit-transliteration, [lang="sa-Latn"]')||[])].some(node=>getComputedStyle(node).display!=='none'&&getComputedStyle(node).visibility!=='hidden');
+                const visibleLatinQuote=[...(root?.querySelectorAll('.source-page-body .index-subitem')||[])].some(node=>
+                  /^(?:quote(?: begins| includes)?|sanskrit)\s*:/i.test(node.textContent.trim())&&
+                  !/[\u0900-\u097f]/.test(node.textContent));
                 return {
                   status,heading:heading?.textContent.trim()||'',text:(root?.innerText||'').trim(),
-                  visibleTransliteration:[...(root?.querySelectorAll('.sanskrit-transliteration, [lang="sa-Latn"]')||[])].some(node=>getComputedStyle(node).display!=='none'&&getComputedStyle(node).visibility!=='hidden'),
+                  visibleTransliteration:visibleTaggedTransliteration||visibleLatinQuote,
                   scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth,
                   next:document.querySelector('.page-nav a.next, #page-next')?.getAttribute('href')||'',
                   article:{

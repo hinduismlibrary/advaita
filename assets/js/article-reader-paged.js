@@ -548,6 +548,13 @@ function normalizeSourcePage(root){
     if(paragraph.id)heading.id=paragraph.id;
     paragraph.replaceWith(heading);
   }
+  /* Some citation indexes contain unmarked Romanized verse snippets.
+     Keep the bibliographic entries and notes, but don't present those snippets
+     as verified Sanskrit text in the reader. */
+  for(const snippet of [...root.querySelectorAll('.index-subitem')]){
+    const value=text(snippet);
+    if(/^(?:quote(?: begins| includes)?|sanskrit)\s*:/i.test(value)&&!devanagari.test(value))snippet.remove();
+  }
   root.querySelectorAll('ol,ul').forEach(list=>list.classList.add('source-entry-list'));
   root.querySelectorAll('li').forEach(entry=>entry.classList.add('source-entry'));
   root.querySelectorAll('.article-index').forEach(index=>index.classList.add('source-entry-index'));
