@@ -441,7 +441,7 @@ Validation: 52 contiguous IDs and root translations; 590 root word rows; 52 Śr�
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla `viShNu-purANam/viShNu-chitta-TIkA/mUlam_me/01/04.md`, blob `f76974eef290bfe14a5ab4e1e4212dda5a3628ce`; numbered witness `viShNu-purANam/goraxapura-pAThaH/hindy-anuvAdaH/01/04.md`, blob `126debac6f79562850fc1dcae3813711f18afc03`; Śrīdhara `viShNu-purANam/shrIdhara-viShNu-chittau/1/04_kalpAnte_sarga-varNanaM.md`, blob `85b032d035d4fd23a11cd632296e493ed5d22d31`; English cross-check `viShNu-purANam/viShNu-chitta-TIkA/en/01/04.md`, blob `83fe115f5feb8d0fb6f54e5941e46ac51d5e6c90`. English cross-checks informed corrections but were not copied.
 
-Book 1 cumulative ledger: 26,835 word-for-word panel rows; 776/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 158 remaining. Chapters 5–18 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 9,668 rows across these chapters. The active next chapter is Book 1, Chapter 19.
+Book 1 cumulative ledger: 27,910 word-for-word panel rows; 829/934 attached Śrīdhara passages have Sanskrit, IAST, and English paired inside the control, with 105 remaining. Chapters 5–19 Śrīdhara entries are passage-level pairings and still need lexical segmentation; root maps contain 10,690 rows across these chapters. The active next chapter is Book 1, Chapter 20.
 
 
 ## User-directed Book 1 Word-for-word panel repair — Chapter 5 — 15 October 2026
@@ -568,3 +568,12 @@ Chapter 18 has 43 contiguous verse cards and exactly three controls per verse. A
 Validation: 43 IDs, root translations, and each of the three controls; 23 Śrīdhara labels and WFW pairings; balanced divs; no Wilson or “Textual basis” note.
 
 Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla blob `4247989218affbd077c77bf960a0b09e3295da1d`; numbered witness blob `8777450e4dba39b5e270b7d3d32cdef8de92f5bd`; Śrīdhara blob `aae2db5c8cdd87060a6d5db61a7e36b18a7bb137`; English cross-check blob `undefined`.
+
+
+## User-directed Book 1 Word-for-word panel repair — Chapter 19 — 16 October 2026
+
+Chapter 19 has 86 contiguous verse cards and exactly three controls per verse. All 53 supplied Śrīdhara entries appear inside their existing **Word-for-word** control with source Devanāgarī, IAST, and the visible English translation. 33 no-commentary cards remain. The visible label is “Śrīdhara translation.” These pairings are passage-level and still need lexical segmentation; 1022 existing root rows were retained. The page description no longer attributes the translation to Wilson.
+
+Validation: 86 IDs, root translations, and each of the three controls; 53 Śrīdhara labels and WFW pairings; balanced divs; no Wilson or “Textual basis” note.
+
+Source pins at upstream commit `fc117aa4514dfd4e4840037aeb3ca825ba030b05`: mūla blob `bc63e2448277dcc0790db2f445b7b3d18eb4404f`; numbered witness blob `51c727faa692da6cc6764c87eb299085e506f7c0`; Śrīdhara blob `8799fe7c8745d6b135b25db5924bb2a845fd4ad1`; English cross-check blob `96fc014cd636f8f28591cb50334e9cfd05cdab76`.
