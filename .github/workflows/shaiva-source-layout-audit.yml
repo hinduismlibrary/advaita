@@ -17,7 +17,7 @@ jobs:
           python3 - <<'PY'
           import base64,zlib,json,re
           from pathlib import Path
-          data=Path('assets/data/shaiva-manuscript.b64').read_text().strip()
+          data=Path('site/assets/data/shaiva-manuscript.b64').read_text().strip()
           pages=json.loads(zlib.decompress(base64.b64decode(data)))
           Path('/tmp/shaiva-structure/pages.json').write_text(json.dumps(pages,ensure_ascii=False,indent=2),encoding='utf-8')
           report=[]

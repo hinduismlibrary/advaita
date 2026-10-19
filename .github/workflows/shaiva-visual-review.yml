@@ -6,17 +6,17 @@ on:
     paths:
       - .github/workflows/shaiva-visual-review.yml
       - .github/workflows/repair-other-document-pages.yml
-      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
-      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
-      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
-      - articles/a-shashtric-lens-of-varna-part-one/index.html
-      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
-      - articles/hinduism-on-women/index.html
-      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
-      - assets/js/article-reader-paged.js
-      - assets/js/shaiva-complete-reader.js
-      - assets/css/varna-vicara-paged.css
-      - assets/css/article-reader-template.css
+      - site/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
+      - site/articles/a-shashtric-lens-of-varna-part-one/index.html
+      - site/articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - site/articles/hinduism-on-women/index.html
+      - site/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - site/assets/js/article-reader-paged.js
+      - site/assets/js/shaiva-complete-reader.js
+      - site/assets/css/varna-vicara-paged.css
+      - site/assets/css/article-reader-template.css
   workflow_dispatch:
 permissions:
   contents: read

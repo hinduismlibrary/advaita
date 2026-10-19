@@ -15,11 +15,11 @@ jobs:
           persist-credentials: true
       - name: Verify every source data shard before replacing live article
         run: |
-          node --check assets/js/shaiva-complete-reader.js
+          node --check site/assets/js/shaiva-complete-reader.js
           python3 - <<'PY'
           from pathlib import Path
           import base64, hashlib, json, zlib
-          folder=Path('assets/data')
+          folder=Path('site/assets/data')
           expected=['14c2c8c989c1162f79d17117709fc1a7cba09d62','513dcbf1618fef774a5900a04c35d2a7e8820ee0','084689b49354ccace33c10ccb495fc6697cdab78','8b15c949f9d2f65bb9aa4f373dd68183a6fbb4a9','330cb0c100ac3ceced252ff93f4097556598ebaf']
           def blob_sha(s):
               b=s.encode('utf-8');return hashlib.sha1(b'blob '+str(len(b)).encode()+b'\x00'+b).hexdigest()
@@ -43,10 +43,10 @@ jobs:
           assert blob_sha(cover)=='0f4a715744bcb78a1af23d21108ef9676348f14c'
           image=base64.b64decode(cover,validate=True)
           assert image.startswith(b'RIFF') and image[8:12]==b'WEBP'
-          dest=Path('assets/images/source-documents/shaiva-original-cover.webp')
+          dest=Path('site/assets/images/source-documents/shaiva-original-cover.webp')
           dest.parent.mkdir(parents=True,exist_ok=True)
           dest.write_bytes(image)
-          article=Path('articles/a-shaiva-lens-on-shiva-as-the-supreme-deity')
+          article=Path('site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity')
           page=article/'index.html';backup=article/'source-original.html'
           if not backup.exists():
               source=page.read_text(encoding='utf-8')
@@ -75,5 +75,5 @@ jobs:
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/data/shaiva-manuscript.b64 assets/images/source-documents/shaiva-original-cover.webp articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
+          git add site/assets/data/shaiva-manuscript.b64 site/assets/images/source-documents/shaiva-original-cover.webp site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
           git diff --cached --quiet || { git commit -m 'Publish source-verified complete Shaiva manuscript reader'; git push; }

@@ -4,8 +4,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/audit-bhagavatam-canto11.yml'
-      - '.github/maintenance/scripts/audit_bhagavatam_canto11.py'
-      - '.github/maintenance/scripts/reconcile_bhagavatam_canto11_verified.py'
+      - 'tools/scripts/content-maintenance/audit_bhagavatam_canto11.py'
+      - 'tools/scripts/content-maintenance/reconcile_bhagavatam_canto11_verified.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,18 +19,18 @@ jobs:
         with:
           python-version: '3.12'
       - name: Correct source-confirmed entries and retract unverified completion labels
-        run: python .github/maintenance/scripts/reconcile_bhagavatam_canto11_verified.py
+        run: python tools/scripts/content-maintenance/reconcile_bhagavatam_canto11_verified.py
       - name: Collate all 31 chapters against pinned Sanskrit and English mirrors
-        run: python .github/maintenance/scripts/audit_bhagavatam_canto11.py
+        run: python tools/scripts/content-maintenance/audit_bhagavatam_canto11.py
       - name: Assemble complete pinned comparison corpus for manual review
         run: |
           python - <<'PY'
           from pathlib import Path
           import json, shutil, urllib.request, zipfile
-          m = json.loads(Path('assets/data/bhagavatam-sridhara-reader-manifest.json').read_text())
+          m = json.loads(Path('site/assets/data/bhagavatam-sridhara-reader-manifest.json').read_text())
           c = m['cantos']['11']
           pin = m['primary_sanskrit']['commit']
-          root = Path('.github/maintenance/audit/canto11/pinned-review-bundle')
+          root = Path('docs/audits/canto11/pinned-review-bundle')
           root.mkdir(parents=True, exist_ok=True)
           for ch in range(1, 32):
               src = m['primary_sanskrit']['path_root'] + '/' + c['sridhara_paths'][str(ch)]
@@ -38,11 +38,11 @@ jobs:
               for kind, path in [('source', src), ('mirror', eng)]:
                   with urllib.request.urlopen('https://raw.githubusercontent.com/vishvAsa/purANam_vaiShNavam/' + pin + '/' + path, timeout=75) as response:
                       (root / f'{kind}-{ch:02d}.md').write_bytes(response.read())
-          for f in Path('assets/data').glob('bhagavatam-sridhara-wfw-canto11-*.json'):
+          for f in Path('site/assets/data').glob('bhagavatam-sridhara-wfw-canto11-*.json'):
               shutil.copy2(f, root / f.name)
-          for f in ['assets/js/bhagavatam-sridhara-reader.js', 'assets/js/bhagavatam-sridhara-clarity.js', 'assets/data/bhagavatam-sridhara-reader-manifest.json', 'assets/data/bhagavatam-sridhara-english-checkpoints.json']:
+          for f in ['site/assets/js/bhagavatam-sridhara-reader.js', 'site/assets/js/bhagavatam-sridhara-clarity.js', 'site/assets/data/bhagavatam-sridhara-reader-manifest.json', 'site/assets/data/bhagavatam-sridhara-english-checkpoints.json']:
               shutil.copy2(f, root / Path(f).name)
-          with zipfile.ZipFile('.github/maintenance/audit/canto11/pinned-review-bundle.zip', 'w', compression=zipfile.ZIP_DEFLATED) as z:
+          with zipfile.ZipFile('docs/audits/canto11/pinned-review-bundle.zip', 'w', compression=zipfile.ZIP_DEFLATED) as z:
               for f in root.iterdir():
                   z.write(f, f.name)
           print('Source bundle ready, files:', len(list(root.iterdir())))
@@ -52,23 +52,23 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bhagavatam-canto11-verse-audit
-          path: .github/maintenance/audit/canto11/automated-*
+          path: docs/audits/canto11/automated-*
           if-no-files-found: warn
       - name: Store complete pinned comparison corpus
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: bhagavatam-canto11-pinned-sources
-          path: .github/maintenance/audit/canto11/pinned-review-bundle.zip
+          path: docs/audits/canto11/pinned-review-bundle.zip
           if-no-files-found: error
       - name: Commit audited repairs and result
         if: success()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/docs/BHAGAVATAM_COMPLETION.md articles/srimad-bhagavatam-canto-11-sridhara-svami/index.html
-          git add assets/data/bhagavatam-sridhara-wfw-canto11-ch11-verses01-49.json assets/data/bhagavatam-sridhara-wfw-canto11-ch12-verses01-24.json assets/data/bhagavatam-sridhara-wfw-canto11-ch31-verses01-28.json
-          git add .github/maintenance/audit/canto11/automated-summary.md .github/maintenance/audit/canto11/automated-summary.json .github/maintenance/audit/canto11/automated-verse-map.csv
+          git add docs/project-history/BHAGAVATAM_COMPLETION.md site/articles/srimad-bhagavatam-canto-11-sridhara-svami/index.html
+          git add site/assets/data/bhagavatam-sridhara-wfw-canto11-ch11-verses01-49.json site/assets/data/bhagavatam-sridhara-wfw-canto11-ch12-verses01-24.json site/assets/data/bhagavatam-sridhara-wfw-canto11-ch31-verses01-28.json
+          git add docs/audits/canto11/automated-summary.md docs/audits/canto11/automated-summary.json docs/audits/canto11/automated-verse-map.csv
           if ! git diff --cached --quiet; then
             git commit -m 'Correct verified Canto 11 commentary errors and retract completion claim'
             git push

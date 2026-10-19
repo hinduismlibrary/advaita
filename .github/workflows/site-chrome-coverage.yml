@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check every full HTML page
-        run: python3 .github/scripts/verify-site-chrome.py
+        run: python3 tools/scripts/site-checks/verify-site-chrome.py

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Conservative Canto 11 mapping audit. Flags are NOT linguistic certification.
-Run from the repository root: python .github/maintenance/scripts/audit_bhagavatam_canto11.py
+Run from the repository root: python tools/scripts/content-maintenance/audit_bhagavatam_canto11.py
 Requires Python 3 stdlib and network access to GitHub's pinned public raw files.
 """
 from collections import Counter, defaultdict
@@ -13,12 +13,12 @@ import unicodedata
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / '_maintenance' / 'audit' / 'canto11'
+OUT = ROOT / 'docs' / 'audits' / 'canto11'
 PIN = '100560de6c9f68c2875097d40a2012a84c784179'
-M = json.loads((ROOT / 'assets/data/bhagavatam-sridhara-reader-manifest.json').read_text())
+M = json.loads((ROOT / 'site/assets/data/bhagavatam-sridhara-reader-manifest.json').read_text())
 assert M['primary_sanskrit']['commit'] == M['english_source']['mirror_commit'] == PIN
 CONFIG = M['cantos']['11']
-JS = (ROOT / 'assets/js/bhagavatam-sridhara-clarity.js').read_text()
+JS = (ROOT / 'site/assets/js/bhagavatam-sridhara-clarity.js').read_text()
 LOCAL_PATHS = sorted(set(re.findall(r'/vivekadrishti/(assets/data/bhagavatam-sridhara-wfw-canto11-[^?\'"\s]+?\.json)', JS)))
 RAW = 'https://raw.githubusercontent.com/vishvAsa/purANam_vaiShNavam/' + PIN + '/'
 DEV = str.maketrans('०१२३४५६७८९', '0123456789')
@@ -105,7 +105,7 @@ def main():
     records = defaultdict(list)
     issues = []
     for path in LOCAL_PATHS:
-        file = ROOT / path
+        file = ROOT / 'site' / path
         if not file.is_file():
             issue(issues, 0, 0, 0, 'missing_local_file', path)
             continue

@@ -15,10 +15,10 @@ jobs:
           persist-credentials: true
       - name: Verify new reader and install it before the shared reader
         run: |
-          node --check assets/js/shaiva-document-layout.js
+          node --check site/assets/js/shaiva-document-layout.js
           python3 - <<'PY'
           from pathlib import Path
-          p = Path('articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html')
+          p = Path('site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html')
           html = p.read_text(encoding='utf-8')
           original = '<script src="/vivekadrishti/assets/js/article-reader-paged.js?v=20260920-pdf-repair-2"></script>'
           injected = '<script src="/vivekadrishti/assets/js/shaiva-document-layout.js?v=20260920-manuscript-1"></script>\n'
@@ -31,10 +31,10 @@ jobs:
           print('Shaiva source repair wired before the shared reader')
           PY
           git diff --check
-          if ! git diff --quiet -- articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html; then
+          if ! git diff --quiet -- site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+            git add site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
             git commit -m 'Load Shaiva manuscript repair before shared page renderer'
             git push
           fi

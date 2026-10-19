@@ -10,7 +10,8 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-out = Path(__file__).parent / "articles/puranic-chronology/bhavisya-evidence.json"
+ROOT = Path(__file__).resolve().parents[3]
+out = ROOT / "site/articles/puranic-chronology/bhavisya-evidence.json"
 edition = "https://www.wisdomlib.org/hinduism/book/bhavishya-purana-sanskrit"
 sections = [
     ("I", "Brāhma-parvan", 216),
