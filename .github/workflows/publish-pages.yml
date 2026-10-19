@@ -2,6 +2,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+  page_build:
   workflow_run:
     workflows: ['pages build and deployment']
     types: [completed]
