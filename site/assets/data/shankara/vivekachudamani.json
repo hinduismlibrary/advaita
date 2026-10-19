@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 299
+      "end": 304
     },
-    "note": "Source verses 1–299 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 300 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, and 248–249."
+    "note": "Source verses 1–304 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 305 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, and 248–249."
   },
   "units": [
     {
@@ -23344,60 +23344,410 @@
       "number": "300",
       "label": "Verse 300",
       "deva": "अहंकारग्रहान्मुक्तः स्वरूपमुपपद्यते ।\nचन्द्रवद्विमलः पूर्णः सदानन्दः स्वयंप्रभः ॥",
-      "iast": "ahaṃkāragrahānmuktaḥ svarūpamupapadyate |\ncandravadvimalaḥ pūrṇaḥ sadānandaḥ svayaṃprabhaḥ ||",
-      "translation": "Freed from the clutches of egoism, as the moon from those of Rahu, man attains to his real nature, and becomes pure, infinite, ever blissful and self-luminous.",
-      "gloss": [],
+      "iast": "ahaṃkāra-grahān muktaḥ svarūpam upapadyate |\ncandravat vimalaḥ pūrṇaḥ sadānandaḥ svayaṃprabhaḥ ||",
+      "translation": "Freed from the grasp of ego, one attains one's own nature: pure as the moon, full, ever-blissful, and self-luminous.",
+      "gloss": [
+        {
+          "sa": "अहंकारग्रहम्",
+          "en": "ego's grasp"
+        },
+        {
+          "sa": "मुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "स्वरूपम्",
+          "en": "one's own nature"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "attains; enters"
+        },
+        {
+          "sa": "चन्द्रवत्",
+          "en": "like the moon"
+        },
+        {
+          "sa": "विमलः",
+          "en": "spotless; pure"
+        },
+        {
+          "sa": "पूर्णः",
+          "en": "full; complete"
+        },
+        {
+          "sa": "सदानन्दः",
+          "en": "ever-blissful"
+        },
+        {
+          "sa": "स्वयंप्रभः",
+          "en": "self-luminous"
+        }
+      ],
       "sourceNumbers": [
         300
-      ]
+      ],
+      "editionTranslation": "Freed from the clutches of egoism, as the moon from those of Rahu, man attains to his real nature, and becomes pure, infinite, ever blissful and self-luminous."
     },
     {
       "id": "vivekachudamani-301",
       "number": "301",
       "label": "Verse 301",
       "deva": "यो वा पुरे सोऽहम् इति प्रतीतो\nबुद्ध्या प्रकॢप्तस्तमसातिमूढया ।\nतस्यैव निःशेषतया विनाशे\nब्रह्मात्मभावः प्रतिबन्धशून्यः ॥",
-      "iast": "yo vā pure so'ham iti pratīto\nbuddhyā prakḷptastamasātimūḍhayā |\ntasyaiva niḥśeṣatayā vināśe\nbrahmātmabhāvaḥ pratibandhaśūnyaḥ ||",
-      "translation": "That which has been created by the Buddhi extremely deluded by Nescience, and which is perceived in this body as \"I am such and such\" – when that egoism is totally destroyed, one attains an unobstructed identity with Brahman.",
-      "gloss": [],
+      "iast": "yo vā pure so 'ham iti pratīto\nbuddhyā prakḷptas tamasātimūḍhayā |\ntasyaiva niḥśeṣatayā vināśe\nbrahmātma-bhāvaḥ pratibandhaśūnyaḥ ||",
+      "translation": "The notion perceived in the body as “I am that,” fashioned by an intellect utterly deluded by ignorance—when that very notion is completely destroyed, identity with Brahman is free from obstruction.",
+      "gloss": [
+        {
+          "sa": "यः",
+          "en": "who; that which"
+        },
+        {
+          "sa": "वा",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुरे",
+          "en": "in the city; in the body"
+        },
+        {
+          "sa": "सः",
+          "en": "that one"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "as; thus"
+        },
+        {
+          "sa": "प्रतीतः",
+          "en": "perceived; regarded"
+        },
+        {
+          "sa": "बुद्ध्या",
+          "en": "by the intellect"
+        },
+        {
+          "sa": "प्रकॢप्तः",
+          "en": "fashioned; imagined"
+        },
+        {
+          "sa": "तमसा",
+          "en": "by ignorance"
+        },
+        {
+          "sa": "अति",
+          "en": "exceedingly"
+        },
+        {
+          "sa": "मूढया",
+          "en": "deluded (feminine)"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "एव",
+          "en": "itself; very"
+        },
+        {
+          "sa": "निःशेषतया",
+          "en": "completely"
+        },
+        {
+          "sa": "विनाशे",
+          "en": "upon destruction"
+        },
+        {
+          "sa": "ब्रह्मात्मभावः",
+          "en": "identity of Brahman and the Self"
+        },
+        {
+          "sa": "प्रतिबन्ध",
+          "en": "obstruction"
+        },
+        {
+          "sa": "शून्यः",
+          "en": "free from"
+        }
+      ],
       "sourceNumbers": [
         301
-      ]
+      ],
+      "editionTranslation": "That which has been created by the Buddhi extremely deluded by Nescience, and which is perceived in this body as \"I am such and such\" – when that egoism is totally destroyed, one attains an unobstructed identity with Brahman."
     },
     {
       "id": "vivekachudamani-302",
       "number": "302",
       "label": "Verse 302",
       "deva": "ब्रह्मानन्दनिधिर्महाबलवताहंकारघोराहिना\nसंवेष्ट्य् आत्मनि रक्ष्यते गुणमयैश्चण्डेस्त्रिभिर्मस्तकैः ।\nविज्ञानाख्यमहासिना श्रुतिमता विच्छिद्य शीर्षत्रयं\nनिर्मूल्याहिमिमं निधिं सुखकरं धीरोऽनुभोक्तुंक्षमः ॥",
-      "iast": "brahmānandanidhirmahābalavatāhaṃkāraghorāhinā\nsaṃveṣṭy ātmani rakṣyate guṇamayaiścaṇḍestribhirmastakaiḥ |\nvijñānākhyamahāsinā śrutimatā vicchidya śīrṣatrayaṃ\nnirmūlyāhimimaṃ nidhiṃ sukhakaraṃ dhīro'nubhoktuṃkṣamaḥ ||",
-      "translation": "The treasure of the Bliss of Brahman is coiled round by the mighty and dreadful serpent of egoism, and guarded for its own use by means of its three fierce hoods consisting of the three Gunas. Only the wise man, destroying it by severing its three hoods with the great sword of realisation in accordance with the teachings of the Shrutis, can enjoy this treasure which confers bliss.",
-      "gloss": [],
+      "iast": "brahmānanda-nidhir mahābalavatāhaṃkāra-ghorāhinā\nsaṃveṣṭyātmani rakṣyate guṇamayaiś caṇḍais tribhir mastakaiḥ |\nvijñānākhya-mahāsinā śrutimatā vicchidya śīrṣatrayaṃ\nnirmūlyāhim imaṃ nidhiṃ sukhakaraṃ dhīro 'nubhoktuṃ kṣamaḥ ||",
+      "translation": "The treasure of Brahman-bliss is encircled and guarded by the mighty, dreadful serpent of ego, whose three fierce heads are made of the guṇas. Having severed its three heads with the great sword called knowledge, guided by scripture, and uprooted this serpent, the wise one can enjoy this bliss-giving treasure.",
+      "gloss": [
+        {
+          "sa": "ब्रह्मानन्दनिधिः",
+          "en": "treasure of Brahman-bliss"
+        },
+        {
+          "sa": "महाबलवता",
+          "en": "by the very mighty"
+        },
+        {
+          "sa": "अहंकारघोराहिना",
+          "en": "by the dreadful serpent of ego"
+        },
+        {
+          "sa": "संवेष्ट्य",
+          "en": "having coiled around"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "around itself; in itself"
+        },
+        {
+          "sa": "रक्ष्यते",
+          "en": "is guarded"
+        },
+        {
+          "sa": "गुणमयैः",
+          "en": "made of the guṇas"
+        },
+        {
+          "sa": "चण्डैः",
+          "en": "fierce"
+        },
+        {
+          "sa": "त्रिभिः",
+          "en": "by three"
+        },
+        {
+          "sa": "मस्तकैः",
+          "en": "with heads; hoods"
+        },
+        {
+          "sa": "विज्ञानाख्यमहासिना",
+          "en": "with the great sword called knowledge"
+        },
+        {
+          "sa": "श्रुतिमता",
+          "en": "guided by scripture; endowed with śruti"
+        },
+        {
+          "sa": "विच्छिद्य",
+          "en": "having severed"
+        },
+        {
+          "sa": "शीर्षत्रयम्",
+          "en": "the three heads"
+        },
+        {
+          "sa": "निर्मूल्य",
+          "en": "having uprooted"
+        },
+        {
+          "sa": "अहिम्",
+          "en": "the serpent"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "निधिम्",
+          "en": "treasure"
+        },
+        {
+          "sa": "सुखकरम्",
+          "en": "bliss-giving"
+        },
+        {
+          "sa": "धीरः",
+          "en": "the wise; steady one"
+        },
+        {
+          "sa": "अनुभोक्तुम्",
+          "en": "to enjoy"
+        },
+        {
+          "sa": "क्षमः",
+          "en": "is able"
+        }
+      ],
       "sourceNumbers": [
         302
-      ]
+      ],
+      "editionTranslation": "The treasure of the Bliss of Brahman is coiled round by the mighty and dreadful serpent of egoism, and guarded for its own use by means of its three fierce hoods consisting of the three Gunas. Only the wise man, destroying it by severing its three hoods with the great sword of realisation in accordance with the teachings of the Shrutis, can enjoy this treasure which confers bliss."
     },
     {
       "id": "vivekachudamani-303",
       "number": "303",
       "label": "Verse 303",
       "deva": "यावद्वा यत् किंचिद् विषदोषस्फूर्तिरस्ति चेद्देहे ।\nकथम् आरोग्याय भवेत्तद्वदहन्तापि योगिनो मुक्त्यै ॥",
-      "iast": "yāvadvā yat kiṃcid viṣadoṣasphūrtirasti ceddehe |\nkatham ārogyāya bhavettadvadahantāpi yogino muktyai ||",
-      "translation": "As long as there is a trace of poisoning left in the body, how can one hope for recovery ? Similar is the effect of egoism on the Yogi’s Liberation.",
-      "gloss": [],
+      "iast": "yāvadvā yat kiṃcid viṣadoṣasphūrtir asti ced dehe |\nkatham ārogyāya bhavet tadvat ahantāpi yogino muktyai ||",
+      "translation": "As long as even some trace of poison's harmful effect remains in the body, how could there be health? In the same way, ego-sense is an obstacle to the yogin's liberation.",
+      "gloss": [
+        {
+          "sa": "यावत्",
+          "en": "as long as"
+        },
+        {
+          "sa": "वा",
+          "en": "or; indeed"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "a little; any trace"
+        },
+        {
+          "sa": "विष",
+          "en": "poison"
+        },
+        {
+          "sa": "दोष",
+          "en": "harm; harmful effect"
+        },
+        {
+          "sa": "स्फूर्तिः",
+          "en": "manifestation; trace"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "देहे",
+          "en": "in the body"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "आरोग्याय",
+          "en": "for health; recovery"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "could there be"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "अहन्ता",
+          "en": "ego-sense; I-am-ness"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "योगिनः",
+          "en": "of the yogin"
+        },
+        {
+          "sa": "मुक्त्यै",
+          "en": "for liberation"
+        }
+      ],
       "sourceNumbers": [
         303
-      ]
+      ],
+      "editionTranslation": "As long as there is a trace of poisoning left in the body, how can one hope for recovery ? Similar is the effect of egoism on the Yogi’s Liberation."
     },
     {
       "id": "vivekachudamani-304",
       "number": "304",
       "label": "Verse 304",
       "deva": "अहमोऽत्यन्तनिवृत्त्या तत्कृतनानाविकल्पसंहृत्या ।\nप्रत्यक्तत्त्वविवेकादिदमहमस्मीति विन्दते तत्त्वम् ॥",
-      "iast": "ahamo'tyantanivṛttyā tatkṛtanānāvikalpasaṃhṛtyā |\npratyaktattvavivekādidamahamasmīti vindate tattvam ||",
-      "translation": "Through the complete cessation of egoism, through the stoppage of the diverse mental waves due to it, and through the discrimination of the inner Reality, one realises that Reality as \"I am This\".",
-      "gloss": [],
+      "iast": "ahamo 'tyanta-nivṛttyā tat-kṛta-nānā-vikalpa-saṃhṛtyā |\npratyak-tattva-vivekād idam aham asmīti vindate tattvam ||",
+      "translation": "Through the ego's complete cessation, the dissolving of its many thought-constructs, and discrimination of the inner Reality, one realizes the Truth: “I am this.”",
+      "gloss": [
+        {
+          "sa": "अहमः",
+          "en": "of the ego"
+        },
+        {
+          "sa": "अत्यन्त",
+          "en": "complete; utter"
+        },
+        {
+          "sa": "निवृत्त्या",
+          "en": "by cessation"
+        },
+        {
+          "sa": "तत्",
+          "en": "by it; its"
+        },
+        {
+          "sa": "कृत",
+          "en": "made; caused"
+        },
+        {
+          "sa": "नाना",
+          "en": "many; manifold"
+        },
+        {
+          "sa": "विकल्प",
+          "en": "thought-constructs; distinctions"
+        },
+        {
+          "sa": "संहृत्या",
+          "en": "by dissolving; withdrawing"
+        },
+        {
+          "sa": "प्रत्यक्",
+          "en": "inward; inner"
+        },
+        {
+          "sa": "तत्त्व",
+          "en": "reality; principle"
+        },
+        {
+          "sa": "विवेकात्",
+          "en": "through discrimination"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "am"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विन्दते",
+          "en": "realizes"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "the truth; reality"
+        }
+      ],
       "sourceNumbers": [
         304
-      ]
+      ],
+      "editionTranslation": "Through the complete cessation of egoism, through the stoppage of the diverse mental waves due to it, and through the discrimination of the inner Reality, one realises that Reality as \"I am This\"."
     },
     {
       "id": "vivekachudamani-305",
@@ -26678,5 +27028,8 @@
         580
       ]
     }
+  ],
+  "changes": [
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 300–304; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297."
   ]
 }
