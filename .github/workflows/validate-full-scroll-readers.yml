@@ -2,7 +2,7 @@ name: Validate full-scroll reader assets
 on:
   push:
     paths:
-      - .github/workflows/repair-other-document-pages.yml
+      - .github/workflows/validate-full-scroll-readers.yml
       - site/assets/js/article-reader-paged.js
       - site/assets/js/shaiva-complete-reader.js
       - site/assets/data/shaiva-manuscript.b64
@@ -52,7 +52,7 @@ jobs:
           assert len(Path('site/assets/data/shaiva-manuscript.b64').read_text(encoding='utf-8').strip()) > 10000
 
           for slug in slugs:
-            path = Path('articles') / slug / 'index.html'
+            path = Path('site/articles') / slug / 'index.html'
             html = path.read_text(encoding='utf-8')
             assert html.count('varna-vicara-paged.css?v=20260914-3') == 1, f'{path}: missing shared base style'
             assert html.count('article-reader-template.css?v=' + full_scroll) == 1, f'{path}: stale shared style cache'

@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - .github/workflows/shaiva-visual-review.yml
-      - .github/workflows/repair-other-document-pages.yml
+      - .github/workflows/validate-full-scroll-readers.yml
       - site/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
       - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
       - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
