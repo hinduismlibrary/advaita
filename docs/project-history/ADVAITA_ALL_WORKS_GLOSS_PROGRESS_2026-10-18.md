@@ -32,7 +32,7 @@ All 16 works with at least 20 items link to a contents/group navigation (Bhajago
 | Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
 | Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
 | Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
-| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 342/566 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 347/566 |
 | Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
 | Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
 | Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
@@ -53,7 +53,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
 2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
-3. **Vivekacūḍāmaṇi** — 342/566 data units have glosses, covering source verses 1–355; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
+3. **Vivekacūḍāmaṇi** — 347/566 data units have glosses, covering source verses 1–360; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
 4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
 5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
 
@@ -211,4 +211,5 @@ The prior log stopped at verses 111–115 even though later source commits were 
 - **23:56 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 340–344. Added five literal translations and Devanāgarī-backed word glosses; corrected the IAST/Sanskrit form in verse 342 to कर्तुं न शक्यः and separated न हि in verse 344. Checked source wording and glosses against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [de576a6d](https://github.com/krishnavyasmuni/advaita/commit/de576a6dc34a7e3f190202fbba80286b058942a7).
 - **23:57 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 345–350. Added six literal translations and Devanāgarī-backed word glosses across five reader units; verses 349–350 are paired in the source data. Corrected verse 346's Sanskrit/IAST spelling to वह्निः (vahniḥ); checked wording against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [e32ce9de](https://github.com/krishnavyasmuni/advaita/commit/e32ce9de7e0435ce744ce67eef4b767ad71a7b3c).
 - **23:58 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 351–355. Added five literal translations and Devanāgarī-backed word glosses; retained prior English as `editionTranslation`. Checked terms and readings against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [6ef08e95](https://github.com/krishnavyasmuni/advaita/commit/6ef08e956cf9c4e2585f93a0e835f1ac20078430).
-- **Active batch:** Vivekacūḍāmaṇi, source verses 356–360.
+- **23:59 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 356–360. Added five literal translations and Devanāgarī-backed word glosses, preserving prior English as `editionTranslation`; corrected verse 360's Devanāgarī spelling to वृत्त्या. Checked the text against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [1ab2ea11](https://github.com/krishnavyasmuni/advaita/commit/1ab2ea113a78d04656c32b5df541314435fc8ed4).
+- **Active batch:** Vivekacūḍāmaṇi, source verses 361–365.
