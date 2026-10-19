@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 334
+      "end": 339
     },
-    "note": "Source verses 1–334 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 335 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
+    "note": "Source verses 1–339 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 340 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
   },
   "units": [
     {
@@ -26245,60 +26245,450 @@
       "number": "335",
       "label": "Verse 335",
       "deva": "बाह्ये निरुद्धे मनसः प्रसन्नता\nमनःप्रसादे परमात्मदर्शनम् ।\nतस्मिन्सुदृष्टे भवबन्धनाशो\nबहिर्निरोधः पदवी विमुक्तेः ॥",
-      "iast": "bāhye niruddhe manasaḥ prasannatā\nmanaḥprasāde paramātmadarśanam |\ntasminsudṛṣṭe bhavabandhanāśo\nbahirnirodhaḥ padavī vimukteḥ ||",
-      "translation": "When the external world is shut out, the mind is cheerful, and cheerfulness of the mind brings on the vision of the Paramatman. When It is perfectly realised, the chain of birth and death is broken. Hence the shutting out of the external world is the stepping-stone to Liberation.",
-      "gloss": [],
+      "iast": "bāhye niruddhe manasaḥ prasannatā\nmanaḥ-prasāde paramātma-darśanam |\ntasmin sudṛṣṭe bhava-bandha-nāśo\nbahir-nirodhaḥ padavī vimukteḥ ||",
+      "translation": "When the external is restrained, the mind becomes clear; when the mind is clear, the Supreme Self is seen. When that is clearly seen, bondage to worldly existence ends. Restraining the external is the path to liberation.",
+      "gloss": [
+        {
+          "sa": "बाह्ये",
+          "en": "in the external"
+        },
+        {
+          "sa": "निरुद्धे",
+          "en": "when restrained"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "प्रसन्नता",
+          "en": "clarity; serenity"
+        },
+        {
+          "sa": "मनः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "प्रसादे",
+          "en": "in clarity; calm"
+        },
+        {
+          "sa": "परमात्म",
+          "en": "Supreme Self"
+        },
+        {
+          "sa": "दर्शनम्",
+          "en": "vision; seeing"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "when that"
+        },
+        {
+          "sa": "सुदृष्टे",
+          "en": "clearly seen"
+        },
+        {
+          "sa": "भव",
+          "en": "worldly existence"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "नाशः",
+          "en": "destruction; ending"
+        },
+        {
+          "sa": "बहिः",
+          "en": "external"
+        },
+        {
+          "sa": "निरोधः",
+          "en": "restraint"
+        },
+        {
+          "sa": "पदवी",
+          "en": "path"
+        },
+        {
+          "sa": "विमुक्तेः",
+          "en": "to liberation"
+        }
+      ],
       "sourceNumbers": [
         335
-      ]
+      ],
+      "editionTranslation": "When the external world is shut out, the mind is cheerful, and cheerfulness of the mind brings on the vision of the Paramatman. When It is perfectly realised, the chain of birth and death is broken. Hence the shutting out of the external world is the stepping-stone to Liberation."
     },
     {
       "id": "vivekachudamani-336",
       "number": "336",
       "label": "Verse 336",
       "deva": "कः पण्डितः सन्सदसद्विवेकी\nश्रुतिप्रमाणः परमार्थदर्शी ।\nजानन्हि कुर्यादसतोऽवलम्बं\nस्वपातहेतोः शिशुवन्मुमुक्षुः ॥",
-      "iast": "kaḥ paṇḍitaḥ sansadasadvivekī\nśrutipramāṇaḥ paramārthadarśī |\njānanhi kuryādasato'valambaṃ\nsvapātahetoḥ śiśuvanmumukṣuḥ ||",
-      "translation": "Where is the man who being learned, able to discriminate the real from the unreal, believing the Vedas as authority, fixing his gaze on the Atman, the Supreme Reality, and being a seeker after Liberation, will, like a child, consciously have recourse to the unreal (the universe) which will cause his fall ?",
-      "gloss": [],
+      "iast": "kaḥ paṇḍitaḥ san sad-asad-vivekī\nśruti-pramāṇaḥ paramārtha-darśī |\njānan hi kuryād asato 'valambaṃ\nsva-pāta-hetoḥ śiśuvat mumukṣuḥ ||",
+      "translation": "Knowing this, what seeker of liberation—discerning the real from the unreal, taking scripture as authority, and seeing the highest truth—would knowingly take recourse to the unreal, like a child, for the sake of his own fall?",
+      "gloss": [
+        {
+          "sa": "कः",
+          "en": "who; what"
+        },
+        {
+          "sa": "पण्डितः",
+          "en": "wise person"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "सत्",
+          "en": "real"
+        },
+        {
+          "sa": "असत्",
+          "en": "unreal"
+        },
+        {
+          "sa": "विवेकी",
+          "en": "discerning"
+        },
+        {
+          "sa": "श्रुति",
+          "en": "revealed scripture"
+        },
+        {
+          "sa": "प्रमाणः",
+          "en": "authority; source of proof"
+        },
+        {
+          "sa": "परमार्थ",
+          "en": "highest truth; ultimate reality"
+        },
+        {
+          "sa": "दर्शी",
+          "en": "seer"
+        },
+        {
+          "sa": "जानन्",
+          "en": "knowing"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "कुर्यात्",
+          "en": "would do"
+        },
+        {
+          "sa": "असतः",
+          "en": "of the unreal"
+        },
+        {
+          "sa": "अवलम्बम्",
+          "en": "support; recourse"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "पात",
+          "en": "fall"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "for the sake of; cause"
+        },
+        {
+          "sa": "शिशुवत्",
+          "en": "like a child"
+        },
+        {
+          "sa": "मुमुक्षुः",
+          "en": "seeker of liberation"
+        }
+      ],
       "sourceNumbers": [
         336
-      ]
+      ],
+      "editionTranslation": "Where is the man who being learned, able to discriminate the real from the unreal, believing the Vedas as authority, fixing his gaze on the Atman, the Supreme Reality, and being a seeker after Liberation, will, like a child, consciously have recourse to the unreal (the universe) which will cause his fall ?"
     },
     {
       "id": "vivekachudamani-337",
       "number": "337",
       "label": "Verse 337",
       "deva": "देहादिसंसक्तिमतो न मुक्तिः\nमुक्तस्य देहाद्यभिमत्यभावः ।\nसुप्तस्य नो जागरणं न जाग्रतः\nस्वप्नस्तयोर् भिन्नगुणाश्रयत्वात् ॥",
-      "iast": "dehādisaṃsaktimato na muktiḥ\nmuktasya dehādyabhimatyabhāvaḥ |\nsuptasya no jāgaraṇaṃ na jāgrataḥ\nsvapnastayor bhinnaguṇāśrayatvāt ||",
-      "translation": "There is no Liberation for one who has attachment to the body etc., and the liberated man has no identification with the body etc. The sleeping man is not awake, nor is the waking man asleep, for these two states are contradictory in nature.",
-      "gloss": [],
+      "iast": "dehādi-saṃsaktimato na muktiḥ\nmuktasya dehādy-abhimaty-abhāvaḥ |\nsuptasya no jāgaraṇaṃ na jāgrataḥ\nsvapnas tayoḥ bhinna-guṇāśrayatvāt ||",
+      "translation": "One attached to the body and so on has no liberation; the liberated one has no identification with the body and so on. A sleeper is not awake, and the waking person does not dream, because the two rest on different qualities.",
+      "gloss": [
+        {
+          "sa": "देह",
+          "en": "body"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "सं सक्तिमतः",
+          "en": "for one attached"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मुक्तिः",
+          "en": "liberation"
+        },
+        {
+          "sa": "मुक्तस्य",
+          "en": "of the liberated one"
+        },
+        {
+          "sa": "देह",
+          "en": "body"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "अभिमति",
+          "en": "identification"
+        },
+        {
+          "sa": "अभावः",
+          "en": "absence"
+        },
+        {
+          "sa": "सुप्तस्य",
+          "en": "of the sleeper"
+        },
+        {
+          "sa": "नो",
+          "en": "not"
+        },
+        {
+          "sa": "जागरणम्",
+          "en": "waking"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "जाग्रतः",
+          "en": "of the waking person"
+        },
+        {
+          "sa": "स्वप्नः",
+          "en": "dream"
+        },
+        {
+          "sa": "तयोः",
+          "en": "of the two"
+        },
+        {
+          "sa": "भिन्न",
+          "en": "different"
+        },
+        {
+          "sa": "गुण",
+          "en": "qualities"
+        },
+        {
+          "sa": "आश्रयत्वात्",
+          "en": "because they depend on; rest on"
+        }
+      ],
       "sourceNumbers": [
         337
-      ]
+      ],
+      "editionTranslation": "There is no Liberation for one who has attachment to the body etc., and the liberated man has no identification with the body etc. The sleeping man is not awake, nor is the waking man asleep, for these two states are contradictory in nature."
     },
     {
       "id": "vivekachudamani-338",
       "number": "338",
       "label": "Verse 338",
       "deva": "अन्तर्बहिः स्वं स्थिरजङ्गमेषु\nज्ञात्वात्मनाधारतया विलोक्य ।\nत्यक्ताखिलोपाधिरखण्डरूपः\nपूर्णात्मना यः स्थित एष मुक्तः ॥",
-      "iast": "antarbahiḥ svaṃ sthirajaṅgameṣu\njñātvātmanādhāratayā vilokya |\ntyaktākhilopādhirakhaṇḍarūpaḥ\npūrṇātmanā yaḥ sthita eṣa muktaḥ ||",
-      "translation": "He is free who, knowing through his mind the Self in moving and unmoving objects and observing It as their substratum, gives up all superimpositions and remains as the Absolute and the infinite Self.",
-      "gloss": [],
+      "iast": "antarbahiḥ svaṃ sthira-jaṅgameṣu\njñātvā ātmanā ādhāratayā vilokya |\ntyaktākhilopādhiḥ akhaṇḍa-rūpaḥ\npūrṇātmanā yaḥ sthita eṣa muktaḥ ||",
+      "translation": "Knowing the Self within and without, in moving and still things, and seeing it as their support, whoever abandons all limiting adjuncts and abides as undivided, as the complete Self, is liberated.",
+      "gloss": [
+        {
+          "sa": "अन्तः",
+          "en": "within"
+        },
+        {
+          "sa": "बहिः",
+          "en": "without"
+        },
+        {
+          "sa": "स्वम्",
+          "en": "the Self; oneself"
+        },
+        {
+          "sa": "स्थिर",
+          "en": "still; unmoving"
+        },
+        {
+          "sa": "जङ्गमेषु",
+          "en": "among moving things"
+        },
+        {
+          "sa": "ज्ञात्वा",
+          "en": "having known"
+        },
+        {
+          "sa": "आत्मना",
+          "en": "as the Self"
+        },
+        {
+          "sa": "आधारतया",
+          "en": "as the support"
+        },
+        {
+          "sa": "विलोक्य",
+          "en": "having seen"
+        },
+        {
+          "sa": "त्यक्त",
+          "en": "abandoned"
+        },
+        {
+          "sa": "अखिल",
+          "en": "all"
+        },
+        {
+          "sa": "उपाधिः",
+          "en": "limiting adjunct"
+        },
+        {
+          "sa": "अखण्ड",
+          "en": "undivided"
+        },
+        {
+          "sa": "रूपः",
+          "en": "of the nature"
+        },
+        {
+          "sa": "पूर्णात्मना",
+          "en": "as the complete Self"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "स्थितः",
+          "en": "abides"
+        },
+        {
+          "sa": "एषः",
+          "en": "this one"
+        },
+        {
+          "sa": "मुक्तः",
+          "en": "liberated"
+        }
+      ],
       "sourceNumbers": [
         338
-      ]
+      ],
+      "editionTranslation": "He is free who, knowing through his mind the Self in moving and unmoving objects and observing It as their substratum, gives up all superimpositions and remains as the Absolute and the infinite Self."
     },
     {
       "id": "vivekachudamani-339",
       "number": "339",
       "label": "Verse 339",
       "deva": "सर्वात्मना बन्धविमुक्तिहेतुः\nसर्वात्मभावान् न परोऽस्ति कश्चित् ।\nदृश्याग्रहे सत्युपपद्यतेऽसौ\nसर्वात्मभावोऽस्य सदात्मनिष्ठया ॥",
-      "iast": "sarvātmanā bandhavimuktihetuḥ\nsarvātmabhāvān na paro'sti kaścit |\ndṛśyāgrahe satyupapadyate'sau\nsarvātmabhāvo'sya sadātmaniṣṭhayā ||",
-      "translation": "To realise the whole universe as the Self is the means of getting rid of bondage. There is nothing higher than identifying the universe with the Self. One realises this state by excluding the objective world through steadfastness in the eternal Atman.",
-      "gloss": [],
+      "iast": "sarvātmanā bandha-vimukti-hetuḥ\nsarvātmabhāvān na paro 'sti kaścit |\ndṛśyāgrahe sati upapadyate 'sau\nsarvātmabhāvo 'sya sadātma-niṣṭhayā ||",
+      "translation": "Seeing all as the Self is the way to freedom from bondage; there is nothing higher than this state of being the Self of all. This universal Selfhood arises when the seen is no longer grasped, through constant abidance in the true Self.",
+      "gloss": [
+        {
+          "sa": "सर्वात्मना",
+          "en": "as the Self of all"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "विमुक्ति",
+          "en": "freedom; liberation"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "cause; means"
+        },
+        {
+          "sa": "सर्वात्मभावात्",
+          "en": "from the state of being the Self of all"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "परः",
+          "en": "higher; beyond"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "anything; anyone"
+        },
+        {
+          "sa": "दृश्य",
+          "en": "the seen"
+        },
+        {
+          "sa": "आग्रहे",
+          "en": "in grasping; apprehending"
+        },
+        {
+          "sa": "सति",
+          "en": "when"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "arises; is possible"
+        },
+        {
+          "sa": "असौ",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वात्मभावः",
+          "en": "the state of being the Self of all"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for this person"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "निष्ठया",
+          "en": "through steadfast abidance"
+        }
+      ],
       "sourceNumbers": [
         339
-      ]
+      ],
+      "editionTranslation": "To realise the whole universe as the Self is the means of getting rid of bondage. There is nothing higher than identifying the universe with the Self. One realises this state by excluding the objective world through steadfastness in the eternal Atman."
     },
     {
       "id": "vivekachudamani-340",
@@ -29178,6 +29568,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 315–319; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 320–324; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 325–329; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 330–334; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 330–334; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 335–339; preserved prior translations as editionTranslation."
   ]
 }
