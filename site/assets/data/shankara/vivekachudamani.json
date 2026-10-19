@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 324
+      "end": 329
     },
-    "note": "Source verses 1–324 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 325 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
+    "note": "Source verses 1–329 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 330 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
   },
   "units": [
     {
@@ -25357,60 +25357,394 @@
       "number": "325",
       "label": "Verse 325",
       "deva": "लक्ष्यच्युतं चेद्यदि चित्तमीषद्\nबहिर्मुखं सन्निपतेत्ततस्ततः ।\nप्रमादतः प्रच्युतकेलिकन्दुकः\nसोपानपङ्क्तौ पतितो यथा तथा ॥",
-      "iast": "lakṣyacyutaṃ cedyadi cittamīṣad\nbahirmukhaṃ sannipatettatastataḥ |\npramādataḥ pracyutakelikandukaḥ\nsopānapaṅktau patito yathā tathā ||",
-      "translation": "If the mind ever so slightly strays from the Ideal and becomes outgoing, then it goes down and down, just as a play-ball inadvertently dropped on the staircase bounds down from one step to another.",
-      "gloss": [],
+      "iast": "lakṣyacyutaṃ ced yadi cittaṃ īṣad\nbahirmukhaṃ sannipatet tatas tataḥ |\npramādataḥ pracyuta-keli-kandukaḥ\nsopāna-paṅktau patito yathā tathā ||",
+      "translation": "If the mind slips even slightly from its goal and turns outward, it falls from one level to another, just as a play-ball, dropped through carelessness, falls down a flight of stairs.",
+      "gloss": [
+        {
+          "sa": "लक्ष्य",
+          "en": "goal"
+        },
+        {
+          "sa": "च्युतम्",
+          "en": "fallen from"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "यदि",
+          "en": "indeed; if"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "ईषत्",
+          "en": "slightly"
+        },
+        {
+          "sa": "बहिर्मुखम्",
+          "en": "turned outward"
+        },
+        {
+          "sa": "सन्निपतेत्",
+          "en": "falls; descends"
+        },
+        {
+          "sa": "ततः",
+          "en": "from there"
+        },
+        {
+          "sa": "ततः",
+          "en": "to there; onward"
+        },
+        {
+          "sa": "प्रमादतः",
+          "en": "through carelessness"
+        },
+        {
+          "sa": "प्रच्युत",
+          "en": "dropped"
+        },
+        {
+          "sa": "केलि",
+          "en": "play"
+        },
+        {
+          "sa": "कन्दुकः",
+          "en": "ball"
+        },
+        {
+          "sa": "सोपान",
+          "en": "stairs"
+        },
+        {
+          "sa": "पङ्क्तौ",
+          "en": "in a row; flight"
+        },
+        {
+          "sa": "पतितः",
+          "en": "fallen"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        }
+      ],
       "sourceNumbers": [
         325
-      ]
+      ],
+      "editionTranslation": "If the mind ever so slightly strays from the Ideal and becomes outgoing, then it goes down and down, just as a play-ball inadvertently dropped on the staircase bounds down from one step to another."
     },
     {
       "id": "vivekachudamani-326",
       "number": "326",
       "label": "Verse 326",
       "deva": "विषयेष्वाविशच्चेतः संकल्पयति तद्गुणान् ।\nसम्यक्संकल्पनात्कामः कामात्पुंसः प्रवर्तनम् ॥",
-      "iast": "viṣayeṣvāviśaccetaḥ saṃkalpayati tadguṇān |\nsamyaksaṃkalpanātkāmaḥ kāmātpuṃsaḥ pravartanam ||",
-      "translation": "The mind that is attached to the sense-objects reflects on their qualities; from mature reflection arises desire, and after desiring a man sets about having that thing.",
-      "gloss": [],
+      "iast": "viṣayeṣv āviśac cetaḥ saṃkalpayati tadguṇān |\nsamyaksaṃkalpanāt kāmaḥ kāmāt puṃsaḥ pravartanam ||",
+      "translation": "When the mind enters into sense-objects, it imagines their qualities. From clear imagining comes desire; from desire comes a person's action.",
+      "gloss": [
+        {
+          "sa": "विषयेषु",
+          "en": "in sense-objects"
+        },
+        {
+          "sa": "आविशन्",
+          "en": "entering"
+        },
+        {
+          "sa": "चेतः",
+          "en": "mind"
+        },
+        {
+          "sa": "संकल्पयति",
+          "en": "imagines; constructs thoughts"
+        },
+        {
+          "sa": "तत्",
+          "en": "their"
+        },
+        {
+          "sa": "गुणान्",
+          "en": "qualities"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "clearly; fully"
+        },
+        {
+          "sa": "संकल्पनात्",
+          "en": "from imagining"
+        },
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "कामात्",
+          "en": "from desire"
+        },
+        {
+          "sa": "पुंसः",
+          "en": "of a person"
+        },
+        {
+          "sa": "प्रवर्तनम्",
+          "en": "activity; action"
+        }
+      ],
       "sourceNumbers": [
         326
-      ]
+      ],
+      "editionTranslation": "The mind that is attached to the sense-objects reflects on their qualities; from mature reflection arises desire, and after desiring a man sets about having that thing."
     },
     {
       "id": "vivekachudamani-327",
       "number": "327",
       "label": "Verse 327",
       "deva": "अतः प्रमादान् न परोऽस्ति मृत्युः\nविवेकिनो ब्रह्मविदः समाधौ ।\nसमाहितः सिद्धिमुपैति सम्यक्\nसमाहितात्मा भव सावधानः ॥",
-      "iast": "ataḥ pramādān na paro'sti mṛtyuḥ\nvivekino brahmavidaḥ samādhau |\nsamāhitaḥ siddhimupaiti samyak\nsamāhitātmā bhava sāvadhānaḥ ||",
-      "translation": "Hence to the discriminating knower of Brahman there is no worse death than inadvertence with regard to concentration. But the man who is concentrated attains complete success. (Therefore) carefully concentrate thy mind (on Brahman).",
-      "gloss": [],
+      "iast": "ataḥ pramādān na paro 'sti mṛtyur\nvivekino brahmavidaḥ samādhau |\nsamāhitaḥ siddhim upaiti samyak\nsamāhitātmā bhava sāvadhānaḥ ||",
+      "translation": "For the discerning knower of Brahman, there is no greater death than heedlessness in meditation. One who is absorbed attains success fully. Be absorbed and attentive.",
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "प्रमादात्",
+          "en": "from heedlessness"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "परः",
+          "en": "greater"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "मृत्युः",
+          "en": "death"
+        },
+        {
+          "sa": "विवेकिनः",
+          "en": "for the discerning one"
+        },
+        {
+          "sa": "ब्रह्मविदः",
+          "en": "for the knower of Brahman"
+        },
+        {
+          "sa": "समाधौ",
+          "en": "in meditation"
+        },
+        {
+          "sa": "समाहितः",
+          "en": "absorbed; concentrated"
+        },
+        {
+          "sa": "सिद्धिम्",
+          "en": "success; attainment"
+        },
+        {
+          "sa": "उपैति",
+          "en": "attains"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "fully; rightly"
+        },
+        {
+          "sa": "समाहितात्मा",
+          "en": "one with a collected mind"
+        },
+        {
+          "sa": "भव",
+          "en": "be"
+        },
+        {
+          "sa": "सावधानः",
+          "en": "attentive; watchful"
+        }
+      ],
       "sourceNumbers": [
         327
-      ]
+      ],
+      "editionTranslation": "Hence to the discriminating knower of Brahman there is no worse death than inadvertence with regard to concentration. But the man who is concentrated attains complete success. (Therefore) carefully concentrate thy mind (on Brahman)."
     },
     {
       "id": "vivekachudamani-328",
       "number": "328",
       "label": "Verse 328",
       "deva": "ततः स्वरूपविभ्रंशो विभ्रष्टस्तु पतत्यधः ।\nपतितस्य विना नाशं पुनर्नारोह ईक्ष्यते ॥",
-      "iast": "tataḥ svarūpavibhraṃśo vibhraṣṭastu patatyadhaḥ |\npatitasya vinā nāśaṃ punarnāroha īkṣyate ||",
-      "translation": "Through inadvertence a man deviates from his real nature, and the man who has thus deviated falls. The fallen man comes to ruin, and is scarcely seen to rise again.",
-      "gloss": [],
+      "iast": "tataḥ svarūpa-vibhraṃśo vibhraṣṭas tu pataty adhaḥ |\npatitasya vinā nāśaṃ punar nāroha īkṣyate ||",
+      "translation": "Then comes a fall from one's true nature; once fallen, one goes downward. For one who has fallen, a return to the ascent is not seen without complete ruin.",
+      "gloss": [
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "स्वरूप",
+          "en": "true nature"
+        },
+        {
+          "sa": "विभ्रंशः",
+          "en": "falling away; loss"
+        },
+        {
+          "sa": "विभ्रष्टः",
+          "en": "one who has fallen"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed; then"
+        },
+        {
+          "sa": "पतति",
+          "en": "falls"
+        },
+        {
+          "sa": "अधः",
+          "en": "downward"
+        },
+        {
+          "sa": "पतितस्य",
+          "en": "for the fallen one"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "नाशम्",
+          "en": "complete ruin"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आरोहः",
+          "en": "ascent; rising"
+        },
+        {
+          "sa": "ईक्ष्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         328
-      ]
+      ],
+      "editionTranslation": "Through inadvertence a man deviates from his real nature, and the man who has thus deviated falls. The fallen man comes to ruin, and is scarcely seen to rise again."
     },
     {
       "id": "vivekachudamani-329",
       "number": "329",
       "label": "Verse 329",
       "deva": "संकल्पं वर्जयेत्तस्मात्सर्वानर्थस्य कारणम् ।\nजीवतो यस्य कैवल्यं विदेहे स च केवलः\n\nयत् किंचित् पश्यतो भेदं भयं ब्रूते यजुःश्रुतिः ॥",
-      "iast": "saṃkalpaṃ varjayettasmātsarvānarthasya kāraṇam |\njīvato yasya kaivalyaṃ videhe sa ca kevalaḥ\n\nyat kiṃcit paśyato bhedaṃ bhayaṃ brūte yajuḥśrutiḥ ||",
-      "translation": "Therefore one should give up reflecting on the sense-objects, which is the root of all mischief. He who is completely aloof even while living, is alone aloof after the dissolution of the body. The Yajur-Veda declares that there is fear for one who sees the least bit of distinction.",
-      "gloss": [],
+      "iast": "saṃkalpaṃ varjayet tasmāt sarvānarthasya kāraṇam |\njīvato yasya kaivalyaṃ videhe sa ca kevalaḥ\n\nyat kiṃcit paśyato bhedaṃ bhayaṃ brūte yajuḥśrutiḥ ||",
+      "translation": "Therefore, give up intention-making, the cause of every harm. The one who is free while living remains alone when the body falls away. The Yajur Veda declares that fear arises for one who sees even the least difference.",
+      "gloss": [
+        {
+          "sa": "संकल्पम्",
+          "en": "intention; thought-construct"
+        },
+        {
+          "sa": "वर्जयेत्",
+          "en": "one should give up"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "अनर्थस्य",
+          "en": "of harm; misfortune"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "cause"
+        },
+        {
+          "sa": "जीवतः",
+          "en": "while living; of the living"
+        },
+        {
+          "sa": "यस्य",
+          "en": "for whom"
+        },
+        {
+          "sa": "कैवल्यम्",
+          "en": "aloneness; liberation"
+        },
+        {
+          "sa": "विदेहे",
+          "en": "when the body is gone"
+        },
+        {
+          "sa": "सः",
+          "en": "that one"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "केवलः",
+          "en": "alone; free"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "even a little"
+        },
+        {
+          "sa": "पश्यतः",
+          "en": "for one who sees"
+        },
+        {
+          "sa": "भेदम्",
+          "en": "difference"
+        },
+        {
+          "sa": "भयम्",
+          "en": "fear"
+        },
+        {
+          "sa": "ब्रूते",
+          "en": "declares"
+        },
+        {
+          "sa": "यजुःश्रुतिः",
+          "en": "the Yajur Veda revelation"
+        }
+      ],
       "sourceNumbers": [
         329
-      ]
+      ],
+      "editionTranslation": "Therefore one should give up reflecting on the sense-objects, which is the root of all mischief. He who is completely aloof even while living, is alone aloof after the dissolution of the body. The Yajur-Veda declares that there is fear for one who sees the least bit of distinction."
     },
     {
       "id": "vivekachudamani-330",
@@ -28408,6 +28742,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 305–309; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 310–314; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 315–319; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 320–324; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 320–324; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 325–329; preserved prior translations as editionTranslation."
   ]
 }
