@@ -32,7 +32,7 @@ All 16 works with at least 20 items link to a contents/group navigation (Bhajago
 | Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
 | Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
 | Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
-| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 234/566 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 238/566 |
 | Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
 | Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
 | Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
@@ -53,7 +53,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
 2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
-3. **Vivekacūḍāmaṇi** — 234/566 data units have glosses, covering source verses 1–244; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
+3. **Vivekacūḍāmaṇi** — 238/566 data units have glosses, covering source verses 1–249; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
 4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
 5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
 
@@ -180,4 +180,7 @@ The prior log stopped at verses 111–115 even though later source commits were 
 - **23:27 UTC — Editorial correction:** Clarified the sky-quality example and restored verse 235’s four-line layout. Commit: [c86dd36b](https://github.com/krishnavyasmuni/advaita/commit/c86dd36b9dd398b8806f0839a8fe71a209eeee6b).
 
 - **23:29 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 239–244. Added five complete reader units (241–242 remain paired), with literal English and Devanāgarī-backed glosses; normalized the transliteration and word divisions around “That” and “you.” Commit: [0f07df35](https://github.com/krishnavyasmuni/advaita/commit/0f07df35f57775e8342c70538de88febb9800d95).
-- **Active batch:** Vivekacūḍāmaṇi, source verses 245–249.
+- **Active batch:** Vivekacūḍāmaṇi, source verses 250–254.
+
+- **23:31 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 245–249. Added four complete reader units (248–249 remain paired), with literal English and Devanāgarī-backed word glosses. Commit: [fdd5a82e](https://github.com/krishnavyasmuni/advaita/commit/fdd5a82e7728cd52b28a584f623f6c68987d65ce).
+- **23:32 UTC — Transliteration cleanup:** Replaced Devanāgarī danda and avagraha marks with Latin IAST punctuation in all 523 entries that contained them. Verification found no Devanāgarī characters remaining in any IAST field. Commit: [e3a43ef7](https://github.com/krishnavyasmuni/advaita/commit/e3a43ef78ad05c2ec8b2ed46efd8292be4616267).
