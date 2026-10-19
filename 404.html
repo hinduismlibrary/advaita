@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Viveka Dṛṣṭi — Hindu scripture, philosophy, translation, and Indology.">
+  <meta name="color-scheme" content="light">
+  <title>Page not found — Viveka Dṛṣṭi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Vollkorn:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/advaita/assets/css/site.css">
+  <script>
+    (() => {
+      const correctedPath = location.pathname.replace(/^\/advaita\/+advaita(?=\/|$)/, '/advaita');
+      if (correctedPath !== location.pathname) {
+        location.replace(correctedPath + location.search + location.hash);
+        return;
+      }
+
+      const sections = new Map([
+        ['/advaita/introduction-to-hinduism/', '/advaita/pages/introduction-to-hinduism/'],
+        ['/advaita/indology/', '/advaita/pages/indology/'],
+        ['/advaita/purana-library/', '/advaita/pages/purana-library/'],
+        ['/advaita/bhagavatam-with-sridhara-bhasya/', '/advaita/pages/bhagavatam-with-sridhara-bhasya/'],
+        ['/advaita/bhavishya-purana-brahmaparvan/', '/advaita/pages/bhavishya-purana-brahmaparvan/'],
+        ['/advaita/bhagavad-gita/', '/advaita/pages/bhagavad-gita/']
+      ]);
+
+      if (sections.has(location.pathname)) {
+        location.replace(sections.get(location.pathname));
+        return;
+      }
+
+      const match = location.pathname.match(/^\/advaita\/\d{4}\/\d{2}\/\d{2}\/([^/]+)\/?$/);
+      if (!match) return;
+
+      const oldSlug = decodeURIComponent(match[1]);
+      const removed = new Set([
+        'a-sastric-lens-of-varṇa-part-one-design-draft',
+        'design-preview-a-shashtric-lens-of-varna-part-one',
+        'test-a-shashtric-lens-of-varna-part-one'
+      ]);
+
+      if (removed.has(oldSlug)) {
+        location.replace('/advaita/articles/');
+        return;
+      }
+
+      const cleanSlug = oldSlug.replaceAll('│', '-');
+      location.replace('/advaita/articles/' + encodeURIComponent(cleanSlug) + '/');
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/advaita/favicon.svg">
+</head>
+<body class="not-found-page">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/advaita/">Viveka Dṛṣṭi</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="/advaita/">Home</a>
+        <a href="/advaita/pages/introduction-to-hinduism/">Introduction to Hinduism</a>
+        <a href="/advaita/pages/indology/">Indology</a>
+        <a href="/advaita/pages/purana-library/">Purāṇa Library</a>
+        <a href="/advaita/books/">Other books</a>
+        <a href="/advaita/pages/bhagavad-gita/">Bhagavad Gītā</a>
+      </nav>
+    </div>
+  </header>
+  <main class="site-main"><section class="not-found"><h1>Page not found</h1><p>The address does not match a page in Viveka Dṛṣṭi.</p><p><a href="/advaita/articles/">Browse all writings</a></p></section></main>
+  <footer class="site-footer"><p>Viveka Dṛṣṭi</p></footer>
+  <script src="/advaita/assets/js/site.js?v=20261019-site-chrome"></script>
+</body>
+</html>

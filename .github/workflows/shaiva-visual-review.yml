@@ -1,0 +1,291 @@
+name: Review all six article Contents layouts
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/shaiva-visual-review.yml
+      - .github/workflows/repair-other-document-pages.yml
+      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
+      - articles/a-shashtric-lens-of-varna-part-one/index.html
+      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - articles/hinduism-on-women/index.html
+      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - assets/js/article-reader-paged.js
+      - assets/js/shaiva-complete-reader.js
+      - assets/css/varna-vicara-paged.css
+      - assets/css/article-reader-template.css
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - name: Install browser QA dependencies
+        run: |
+          python3 -m pip install --user --quiet playwright
+          if ! command -v google-chrome >/dev/null && ! command -v chromium >/dev/null; then python3 -m playwright install chromium; fi
+      - name: Verify full-scroll content and Contents across all six articles
+        env:
+          PAGE_REVISION: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          mkdir -p /tmp/shaiva-qa
+          python3 - <<'PY'
+          import json, os, shutil, time
+          from pathlib import Path
+          from urllib.parse import quote
+          from playwright.sync_api import sync_playwright
+          
+          out = Path('/tmp/shaiva-qa')
+          root = 'https://krishnavyasmuni.github.io/advaita/articles/'
+          revision = os.environ.get('PAGE_REVISION', '')
+          articles = [
+            ('agamas', 'a-case-for-the-scriptural-validity-of-the-agamas'),
+            ('shaiva', 'a-shaiva-lens-on-shiva-as-the-supreme-deity'),
+            ('varna', 'a-shashtric-lens-of-varna-part-one'),
+            ('vaishnava', 'a-vaishnava-lens-on-vishnu-as-the-supreme-deity'),
+            ('women', 'hinduism-on-women'),
+            ('meat', 'meat-eating-in-hinduism-through-the-lens-of-shastra'),
+          ]
+          
+          def versioned(url, attempt):
+            query = 'qa-attempt=' + str(attempt)
+            if revision:
+              query += '&rev=' + quote(revision)
+            return url + ('&' if '?' in url else '?') + query
+          
+          def open_reader(page, url, errors):
+            deadline = time.monotonic() + 120
+            attempt = 0
+            last_status = None
+            last_error = ''
+            last_state = {}
+            while time.monotonic() < deadline:
+              attempt += 1
+              errors.clear()
+              try:
+                response = page.goto(versioned(url, attempt), wait_until='domcontentloaded', timeout=45000)
+                last_status = response.status if response else None
+                page.wait_for_timeout(500)
+                ready = page.evaluate("""() => {
+                  const article = document.querySelector('#source-content');
+                  const sections = article ? article.querySelectorAll(':scope > .document-section').length : 0;
+                  const status = document.querySelector('.page-context span, #section-count')?.textContent.trim() || '';
+                  const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\.js(?:\?|$)/.test(url)) || '';
+                  const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
+                  const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
+                  const assetsReady = sharedStyle?.href.includes('20261019-unified-theme-3') && contentReady;
+                  return assetsReady;
+                }""")
+                last_state = page.evaluate("""() => {
+                  const article = document.querySelector('#source-content');
+                  const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\\.js(?:\\?|$)/.test(url)) || '';
+                  return {
+                    title: document.title,
+                    pageText: document.body?.innerText?.slice(0,300) || '',
+                    status: document.querySelector('.page-context span, #section-count')?.textContent.trim() || '',
+                    sections: article ? article.querySelectorAll(':scope > .document-section').length : 0,
+                    textChars: article?.innerText.trim().length || 0,
+                    readerScript: performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\\.js(?:\\?|$)/.test(url)) || '',
+                    sharedStyle: document.querySelector('link[href*="article-reader-template.css"]')?.href || ''
+                  };
+                }""")
+                if response and response.status == 200 and ready:
+                  return response
+              except Exception as error:
+                last_error = str(error)
+              time.sleep(3)
+            raise AssertionError('The full-scroll article did not finish deploying: ' + url +
+              '; last HTTP=' + str(last_status) +
+              '; state=' + json.dumps(last_state, ensure_ascii=False) +
+              '; error=' + last_error)
+
+          def metrics(page):
+            return page.evaluate("""() => {
+              const article = document.querySelector('#source-content');
+              const sections = [...article.querySelectorAll(':scope > .document-section')];
+              const sectionLengths = sections.map(section => ({
+                title: section.querySelector('h3')?.textContent.trim() || '',
+                visibleChars: section.innerText.trim().length,
+                allChars: section.textContent.trim().length
+              }));
+              const nav = document.querySelector('.side-toc .toc') || document.querySelector('.mobile-toc .toc');
+              const links = nav ? [...nav.querySelectorAll('a.toc-index-link')] : [];
+              const broken = links.filter(link => {
+                try {
+                  const id = decodeURIComponent(new URL(link.href).hash.slice(1));
+                  return !id || !document.getElementById(id);
+                } catch { return true; }
+              });
+              const sourceSections = sections.filter(section => /^sources$/i.test(section.querySelector('h3')?.textContent.trim() || ''));
+              const paragraphs = [...article.querySelectorAll('p')].filter(p =>
+                !p.closest('details') &&
+                !p.matches('.reference,.source-citation,.scripture-source,.citation,.translation,.scripture-translation,.women-scripture-translation,.sanskrit-text') &&
+                !p.closest('.source-page-body')
+              );
+              const paragraph = paragraphs[0] || article.querySelector('p');
+              const quote = article.querySelector('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation,.women-scripture-translation');
+              const sectionHeading = article.querySelector('h3.document-section-title');
+              const pStyle = paragraph ? getComputedStyle(paragraph) : null;
+              const qStyle = quote ? getComputedStyle(quote) : null;
+              const hStyle = sectionHeading ? getComputedStyle(sectionHeading) : null;
+              return {
+                status: document.querySelector('.page-context span, #section-count')?.textContent.trim() || '',
+                sections: sections.length,
+                sectionLengths,
+                textLength: article.innerText.trim().length,
+                links: links.length,
+                broken: broken.map(link => link.textContent.trim()),
+                sourceSections: sourceSections.length,
+                pageNav: !!document.querySelector('.page-nav,#page-prev,#page-next'),
+                scrollWidth: document.documentElement.scrollWidth,
+                width: window.innerWidth,
+                paragraphStyle: pStyle ? {fontFamily:pStyle.fontFamily,fontSize:pStyle.fontSize} : null,
+                quoteStyle: qStyle ? {fontSize:qStyle.fontSize,color:qStyle.color,borderLeftWidth:qStyle.borderLeftWidth} : null,
+                headingStyle: hStyle ? {fontFamily:hStyle.fontFamily,fontSize:hStyle.fontSize} : null
+              };
+            }""")
+          
+          def scroll_candidates(page, toc_selector):
+            return page.evaluate("""selector => {
+              const nav = document.querySelector(selector);
+              if (!nav) return [];
+              const links = [...nav.querySelectorAll('a.toc-index-link')];
+              const visibleTarget = link => {
+                const id = link.dataset.subsection || (() => {
+                  try { return decodeURIComponent(new URL(link.href).hash.slice(1)); }
+                  catch { return ''; }
+                })();
+                const target = id && document.getElementById(id);
+                return target && target.getClientRects().length ? id : '';
+              };
+              const subsections = links.filter(link => link.dataset.subsection && visibleTarget(link));
+              let chosen = [];
+              if (subsections.length) {
+                chosen = [subsections[0], subsections[subsections.length - 1]];
+              } else {
+                const roots = links.filter(link => !link.dataset.subsection && visibleTarget(link));
+                chosen = [roots[0], roots[roots.length - 1]];
+              }
+              const seen = new Set();
+              return chosen.map(link => {
+                const id = visibleTarget(link);
+                const item = link.dataset.subsection
+                  ? {kind:'sub',id}
+                  : {kind:'root',id,group:link.dataset.group || '',section:link.dataset.section || ''};
+                const key = JSON.stringify(item);
+                if (!id || seen.has(key)) return null;
+                seen.add(key);
+                return item;
+              }).filter(Boolean);
+            }""", toc_selector)
+          
+          def verify_scrollspy(page, label, mobile=False):
+            selector = '.mobile-toc .toc' if mobile else '.side-toc .toc'
+            if mobile:
+              page.evaluate("""() => { const toc=document.querySelector('.mobile-toc'); if(toc)toc.open=true; }""")
+            samples = scroll_candidates(page, selector)
+            assert samples, f'{label}: Contents has no valid scroll targets'
+            for sample in samples:
+              page.evaluate('id => document.getElementById(id).scrollIntoView({block:"start"})', sample['id'])
+              try:
+                page.wait_for_function("""sample => {
+                  const nav = document.querySelector(innerWidth < 900 ? '.mobile-toc .toc' : '.side-toc .toc');
+                  if (!nav) return false;
+                  const active = [...nav.querySelectorAll('a.toc-index-link.is-active, a.toc-index-link.is-active-subsection')];
+                  if (active.length !== 1) return false;
+                  return active.some(link => {
+                    if (sample.kind === 'sub')
+                      return link.classList.contains('is-active-subsection') && link.dataset.subsection === sample.id;
+                    if (link.dataset.subsection) return false;
+                    const key = sample.group || sample.section;
+                    return link.classList.contains('is-active') &&
+                      (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
+                  });
+                }""", arg=sample, timeout=15000)
+              except Exception:
+                state = page.evaluate("""({selector,id}) => {
+                  const nav=document.querySelector(selector);
+                  const target=document.getElementById(id);
+                  return {
+                    active:nav?[...nav.querySelectorAll('a.is-active,a.is-active-subsection')].map(a=>({text:a.textContent.trim(),section:a.dataset.section,subsection:a.dataset.subsection})):[],
+                    section:document.querySelector('#section-parent')?.textContent || document.querySelector('.page-context strong')?.textContent || '',
+                    targetTop:target?.getBoundingClientRect().top,
+                    scrollY:window.scrollY
+                  };
+                }""", {'selector':selector,'id':sample['id']})
+                issue = {'site':label,'mobile':mobile,'sample':sample,'state':state}
+                scrollspy_errors.append(issue)
+                print('SCROLLSPY_DIAGNOSTIC ' + json.dumps(issue,ensure_ascii=False),flush=True)
+          
+          with sync_playwright() as playwright:
+            chrome = shutil.which('google-chrome') or shutil.which('chromium')
+            browser = playwright.chromium.launch(headless=True, executable_path=chrome) if chrome else playwright.chromium.launch(headless=True)
+            records = []
+            scrollspy_errors = []
+            paragraph_reference = None
+            heading_reference = None
+            quote_reference = None
+            for label, slug in articles:
+              page = browser.new_page(viewport={'width':1365,'height':900})
+              errors = []
+              page.on('pageerror', lambda error, bucket=errors: bucket.append(str(error)))
+              url = root + slug + '/'
+              response = open_reader(page, url, errors)
+              desktop = metrics(page)
+              print(json.dumps({'site':label,'desktop':desktop},ensure_ascii=False),flush=True)
+              assert response.status == 200, f'{label}: HTTP {response.status}'
+              assert desktop['status'] == 'Full document', f'{label}: page still has section pagination'
+              assert desktop['sections'] >= 3, f'{label}: only {desktop["sections"]} sections rendered'
+              assert desktop['textLength'] >= 5000, f'{label}: full document text is missing ({desktop["textLength"]} chars)'
+              assert desktop['links'] >= 3, f'{label}: Contents entries are missing'
+              assert not desktop['broken'], f'{label}: broken Contents anchors {desktop["broken"]}'
+              assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
+              assert not desktop['pageNav'], f'{label}: old Previous/Next navigation remains'
+              assert desktop['paragraphStyle'], f'{label}: no article paragraph rendered'
+              assert desktop['headingStyle'], f'{label}: no section heading rendered'
+              if paragraph_reference is None:
+                paragraph_reference = desktop['paragraphStyle']
+                heading_reference = desktop['headingStyle']
+              else:
+                assert desktop['paragraphStyle'] == paragraph_reference, f'{label}: article font differs {desktop["paragraphStyle"]} != {paragraph_reference}'
+                assert desktop['headingStyle'] == heading_reference, f'{label}: section heading style differs {desktop["headingStyle"]} != {heading_reference}'
+              if desktop['quoteStyle']:
+                if quote_reference is None:
+                  quote_reference = desktop['quoteStyle']
+                else:
+                  assert desktop['quoteStyle'] == quote_reference, f'{label}: quote style differs {desktop["quoteStyle"]} != {quote_reference}'
+              verify_scrollspy(page, label)
+              page.set_viewport_size({'width':390,'height':844})
+              page.wait_for_timeout(250)
+              mobile = metrics(page)
+              assert mobile['sections'] == desktop['sections'], f'{label}: sections disappeared on mobile'
+              assert mobile['textLength'] >= 5000, f'{label}: mobile article text is incomplete'
+              assert mobile['scrollWidth'] <= mobile['width'], f'{label}: horizontal overflow at mobile width'
+              verify_scrollspy(page, label, mobile=True)
+              page.screenshot(path=str(out / (label + '-mobile.png')), full_page=False)
+              record = {'site':label,'http':response.status,'sections':desktop['sections'],'textChars':desktop['textLength'],'sectionLengths':desktop['sectionLengths'],
+                        'contentsLinks':desktop['links'],'sourcesSections':desktop['sourceSections'],
+                        'mobileWidth':mobile['scrollWidth'],'errors':errors}
+              records.append(record)
+              print(json.dumps(record,ensure_ascii=False),flush=True)
+              assert not errors, f'{label}: browser errors {errors}'
+              page.close()
+            (out / 'results.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
+            browser.close()
+          assert len(records) == 6
+          if scrollspy_errors: raise AssertionError('Contents highlight mismatches: ' + json.dumps(scrollspy_errors,ensure_ascii=False))
+          
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shaiva-actual-page-visual-review
+          path: /tmp/shaiva-qa
+          retention-days: 7

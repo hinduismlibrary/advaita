@@ -1,0 +1,397 @@
+@import url('/advaita/assets/css/puranas/current/mahapuranas.css?build=20260828-mahapurana-unified-v1');
+
+html,
+body.mahapurana-static-page,
+body.mahapurana-unified-page{
+  margin:0!important;
+  background:#fff!important;
+  color:#202122!important;
+}
+
+.mahapurana-static-page .site-main,
+.mahapurana-static-article,
+#mahapurana-standalone,
+.mahapurana-static-reader,
+.mahapurana-static-reader .kena-article-scroll{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  background:#fff!important;
+  color:#202122!important;
+}
+
+.mahapurana-static-article>.article-breadcrumb,
+.mahapurana-static-article>.mahapurana-heading,
+.mahapurana-static-article>.page-summary,
+.mahapurana-static-article>.article-pagination{
+  display:none!important;
+}
+
+.mahapurana-static-reader{
+  display:block!important;
+  position:static!important;
+  inset:auto!important;
+  max-height:none!important;
+  height:auto!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+
+.mahapurana-static-reader .kena-article-scroll{
+  overflow:visible!important;
+  max-height:none!important;
+  height:auto!important;
+}
+
+.mahapurana-unified-page img,
+.mahapurana-unified-page picture,
+.mahapurana-unified-page figure,
+.mahapurana-unified-page .purana-wiki-image{
+  display:none!important;
+}
+
+.purana-page-nav{
+  box-sizing:border-box;
+  width:1600px;
+  max-width:calc(100% - 20px);
+  margin:0 auto;
+  padding:12px 0 8px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font:600 13px/1.4 Merriweather,Georgia,serif;
+}
+
+.purana-back-button{
+  display:inline-block!important;
+  padding:8px 12px!important;
+  border:1px solid #a2a9b1!important;
+  background:#f8f9fa!important;
+  color:#202122!important;
+  font-weight:700!important;
+  text-decoration:none!important;
+}
+
+.purana-back-button:hover{
+  background:#eaecf0!important;
+  text-decoration:none!important;
+}
+
+.purana-home-link{
+  color:#36c;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.purana-home-link:hover{
+  text-decoration:underline;
+}
+
+.purana-return-nav{
+  box-sizing:border-box;
+  width:1600px;
+  max-width:calc(100% - 20px);
+  margin:0 auto;
+  padding:18px 0 34px;
+  border-top:1px solid #c8ccd1;
+  font:600 14px/1.4 Merriweather,Georgia,serif;
+}
+
+.purana-return-nav a{
+  color:#36c;
+  text-decoration:none;
+}
+
+.purana-return-nav a:hover{
+  text-decoration:underline;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-reader .kena-article-head{
+  box-sizing:border-box!important;
+  width:1600px!important;
+  max-width:calc(100% - 20px)!important;
+  margin:0 auto!important;
+  padding:14px 0 11px!important;
+  border-bottom:1px solid #a2a9b1!important;
+  background:#fff!important;
+}
+
+.mahapurana-unified-page .kena-article-head .eyebrow{
+  color:#54595d!important;
+  font:12px/1.35 Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .kena-article-head h1{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:baseline!important;
+  gap:7px 18px!important;
+  margin:3px 0 0!important;
+  color:#202122!important;
+  font:500 52px/1.03 Vollkorn,Georgia,serif!important;
+}
+
+.purana-devanagari-title{
+  color:#72777d!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:.54em!important;
+  font-weight:400!important;
+  white-space:nowrap!important;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-article{
+  box-sizing:border-box!important;
+  width:1600px!important;
+  max-width:calc(100% - 20px)!important;
+  margin:0 auto!important;
+  padding:16px 0 50px!important;
+  background:#fff!important;
+  color:#202122!important;
+  font:400 17px/1.58 Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-article p,
+.mahapurana-unified-page .mahapurana-wiki-article li{
+  color:#202122!important;
+  font:400 17px/1.58 Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-article p{
+  margin:0 0 13px!important;
+}
+
+.mahapurana-unified-page .universal-infobox{
+  float:right!important;
+  width:560px!important;
+  max-width:42%!important;
+  margin:0 0 18px 32px!important;
+  padding:0!important;
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  background:#f8f9fa!important;
+  box-shadow:none!important;
+  color:#202122!important;
+}
+
+.mahapurana-unified-page .kena-infobox-title{
+  padding:13px 15px 3px!important;
+  color:#202122!important;
+  background:#f8f9fa!important;
+  font:600 32px/1.12 Vollkorn,Georgia,serif!important;
+  text-align:left!important;
+}
+
+.mahapurana-unified-page .universal-devanagari{
+  padding:0 15px 11px!important;
+  color:#54595d!important;
+  background:#f8f9fa!important;
+  font:400 20px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  text-align:left!important;
+}
+
+.mahapurana-unified-page .kena-info-row{
+  display:grid!important;
+  grid-template-columns:38% 62%!important;
+  gap:0!important;
+  padding:11px 14px!important;
+  border-top:1px solid #c8ccd1!important;
+  background:#f8f9fa!important;
+}
+
+.mahapurana-unified-page .kena-info-row b,
+.mahapurana-unified-page .kena-info-row span{
+  color:#202122!important;
+  font:400 15px/1.45 Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .kena-info-row b{
+  padding-right:12px!important;
+  font-weight:700!important;
+}
+
+.mahapurana-unified-page .kena-lead{
+  margin:0!important;
+}
+
+.mahapurana-unified-page .kena-lead p:first-child{
+  margin:0 0 12px!important;
+  padding:2px 0 2px 14px!important;
+  border-left:3px solid #72777d!important;
+  background:#fff!important;
+}
+
+.mahapurana-unified-page .kena-toc{
+  display:table!important;
+  box-sizing:border-box!important;
+  width:auto!important;
+  max-width:820px!important;
+  margin:12px 0 18px!important;
+  padding:9px 13px 8px!important;
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  background:#f8f9fa!important;
+  box-shadow:none!important;
+  font-family:Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .kena-toc-title{
+  margin:0 0 5px!important;
+  color:#202122!important;
+  font:700 15px/1.35 Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .kena-toc ol{
+  columns:2!important;
+  column-gap:32px!important;
+  margin:0!important;
+  padding-left:1.5em!important;
+}
+
+.mahapurana-unified-page .kena-toc li{
+  break-inside:avoid!important;
+  margin:0 0 2px!important;
+}
+
+.mahapurana-unified-page .kena-toc li,
+.mahapurana-unified-page .kena-toc a{
+  font:400 13.5px/1.4 Merriweather,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-article a{
+  color:#36c!important;
+  text-decoration:none!important;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-article a:hover{
+  text-decoration:underline!important;
+}
+
+.mahapurana-unified-page .mahapurana-article-section{
+  clear:none!important;
+  margin:22px 0 0!important;
+  padding:0!important;
+  border:0!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+
+.mahapurana-unified-page .mahapurana-article-section>h2{
+  position:static!important;
+  margin:0 0 10px!important;
+  padding:0 0 4px!important;
+  border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  cursor:default!important;
+  color:#202122!important;
+  background:#fff!important;
+  font:500 31px/1.14 Vollkorn,Georgia,serif!important;
+  text-align:left!important;
+  user-select:text!important;
+}
+
+.mahapurana-unified-page .mahapurana-article-section>.mahapurana-collapse-body{
+  display:block!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0 0 2px!important;
+}
+
+.mahapurana-unified-page .mahapurana-article-section h3{
+  margin:18px 0 6px!important;
+  color:#202122!important;
+  font:600 22px/1.2 Vollkorn,Georgia,serif!important;
+}
+
+.mahapurana-unified-page .mahapurana-article-section ul,
+.mahapurana-unified-page .mahapurana-article-section ol{
+  margin-bottom:13px!important;
+}
+
+.mahapurana-unified-page .mahapurana-wiki-article::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.mahapurana-static-error{
+  box-sizing:border-box;
+  width:1040px;
+  max-width:calc(100% - 32px);
+  margin:0 auto;
+  padding:40px 8px;
+  color:#202122;
+  font:16px/1.6 Merriweather,Georgia,serif;
+}
+
+.mahapurana-static-error h2{
+  font:500 28px/1.25 Vollkorn,Georgia,serif;
+}
+
+.mahapurana-static-error a{
+  color:#36c;
+}
+
+@media(max-width:1250px){
+  .mahapurana-unified-page .universal-infobox{
+    width:470px!important;
+    max-width:44%!important;
+    margin-left:24px!important;
+  }
+}
+
+@media(max-width:820px){
+  .purana-page-nav,
+  .purana-return-nav,
+  .mahapurana-unified-page .kena-article-head,
+  .mahapurana-unified-page .mahapurana-wiki-article{
+    max-width:calc(100% - 22px)!important;
+  }
+
+  .purana-page-nav{
+    padding-top:10px;
+    font-size:12.5px;
+  }
+
+  .mahapurana-unified-page .kena-article-head h1{
+    font-size:40px!important;
+    gap:5px 10px!important;
+  }
+
+  .mahapurana-unified-page .mahapurana-wiki-article p,
+  .mahapurana-unified-page .mahapurana-wiki-article li{
+    font-size:16px!important;
+    line-height:1.56!important;
+  }
+
+  .mahapurana-unified-page .universal-infobox{
+    float:none!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 0 16px!important;
+  }
+
+  .mahapurana-unified-page .kena-info-row{
+    grid-template-columns:40% 60%!important;
+  }
+
+  .mahapurana-unified-page .kena-toc{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+
+  .mahapurana-unified-page .kena-toc ol{
+    columns:1!important;
+  }
+
+  .mahapurana-unified-page .mahapurana-article-section{
+    margin-top:20px!important;
+  }
+
+  .mahapurana-unified-page .mahapurana-article-section>h2{
+    font-size:26px!important;
+  }
+}

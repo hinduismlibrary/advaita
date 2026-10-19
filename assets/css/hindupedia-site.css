@@ -1,0 +1,401 @@
+:root{
+  --hp-paper:#ffffff;
+  --hp-ink:#202020;
+  --hp-blue:#16539b;
+  --hp-green:#cfeee2;
+  --hp-green-border:#a8cabb;
+  --hp-line:#d8d8d8;
+  --hp-muted:#777;
+}
+
+html,body{
+  background:var(--hp-paper)!important;
+  color:var(--hp-ink)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+  line-height:1.48!important;
+}
+
+body{margin:0!important}
+
+.site-header{
+  position:static!important;
+  background:#fff!important;
+  border-bottom:1px solid #ddd!important;
+  box-shadow:none!important;
+}
+
+.nav-wrap{
+  width:min(1040px,calc(100% - 28px))!important;
+  min-height:50px!important;
+  gap:18px!important;
+}
+
+.brand{
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:22px!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+}
+
+.site-nav{gap:3px!important}
+.site-nav a{
+  color:var(--hp-blue)!important;
+  background:transparent!important;
+  border-radius:0!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:14px!important;
+  padding:8px 7px!important;
+  text-decoration:none!important;
+}
+.site-nav a:hover,.site-nav a:focus-visible{text-decoration:underline!important}
+
+.menu-toggle span{background:#222!important}
+
+.site-main{
+  width:min(1040px,calc(100% - 28px))!important;
+  min-height:75vh!important;
+  margin:0 auto!important;
+  background:#fff!important;
+  overflow:visible!important;
+}
+
+.article-shell,.archive-shell{
+  width:100%!important;
+  max-width:none!important;
+  padding:26px 0 58px!important;
+}
+
+.article-heading{
+  width:100%!important;
+  max-width:none!important;
+  margin:0 0 18px!important;
+  text-align:left!important;
+}
+
+.invocation{padding:28px 0 12px!important;text-align:left!important}
+
+.invocation h1,.article-heading h1,.archive-shell h1,.not-found h1{
+  margin:0!important;
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:30px!important;
+  font-weight:600!important;
+  line-height:1.2!important;
+  letter-spacing:0!important;
+  text-align:left!important;
+}
+
+.section-rule{
+  width:100%!important;
+  max-width:none!important;
+  height:1px!important;
+  margin:10px 0 18px!important;
+  background:#cfcfcf!important;
+}
+
+.article-body,.home-content,.archive-shell,.not-found{
+  width:100%!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  color:var(--hp-ink)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+  line-height:1.5!important;
+}
+
+.article-body p,.home-content p,.article-body li,.home-content li{
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+  line-height:1.5!important;
+}
+
+.article-body a,.home-content a,.archive-shell a,.not-found a{
+  color:var(--hp-blue)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  text-decoration:none!important;
+}
+.article-body a:hover,.home-content a:hover,.archive-shell a:hover,.not-found a:hover{text-decoration:underline!important}
+
+.article-body h2,.archive-shell h2{
+  margin:26px 0 8px!important;
+  padding:4px 8px!important;
+  border:1px solid var(--hp-green-border)!important;
+  background:var(--hp-green)!important;
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:20px!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  text-align:left!important;
+}
+
+.article-body h3{
+  margin:22px 0 7px!important;
+  padding:2px 0 4px!important;
+  border-bottom:1px solid #c9c9c9!important;
+  background:transparent!important;
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:18px!important;
+  font-weight:700!important;
+  line-height:1.25!important;
+  text-align:left!important;
+}
+
+.article-body h4{
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+  font-weight:700!important;
+}
+
+.article-body ul,.article-body ol,.home-content ul,.home-content ol{
+  margin-top:4px!important;
+  margin-bottom:18px!important;
+  padding-left:30px!important;
+}
+.article-body li,.home-content li{margin:2px 0!important}
+.article-body li::marker,.home-content li::marker{color:#7f7f7f}
+
+.article-body blockquote,.article-body .wp-block-quote{
+  margin:16px 0!important;
+  padding:8px 14px!important;
+  border-left:4px solid var(--hp-green-border)!important;
+  background:#f7fbf9!important;
+  color:#333!important;
+}
+
+.article-body table{
+  width:100%!important;
+  border-collapse:collapse!important;
+  background:#fff!important;
+}
+.article-body th{
+  background:var(--hp-green)!important;
+  color:#111!important;
+  font-weight:700!important;
+}
+.article-body th,.article-body td{
+  border:1px solid #c7c7c7!important;
+  padding:7px 9px!important;
+}
+
+.article-body hr,.empyrean-divider{
+  width:100%!important;
+  max-width:none!important;
+  height:1px!important;
+  margin:14px 0!important;
+  border:0!important;
+  background:#d7d7d7!important;
+}
+
+.article-body details summary{
+  color:var(--hp-blue)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+}
+
+.article-body details.sanskrit-reveal summary{
+  display:inline-block!important;
+  padding:2px 6px!important;
+  border:1px solid #b8cfc5!important;
+  border-radius:0!important;
+  background:#f7fbf9!important;
+  color:var(--hp-blue)!important;
+  font-size:14px!important;
+}
+
+.empyrean-title-colour-overlay{display:none!important}
+.empyrean-introduction-content,.empyrean-indology-content,.empyrean-home-content,.empyrean-varna-content{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  color:var(--hp-ink)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+  line-height:1.5!important;
+}
+
+.empyrean-final-article{
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  background:#fff!important;
+  color:var(--hp-ink)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+}
+.empyrean-final-article>div{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  background:#fff!important;
+}
+.empyrean-final-article h1:first-of-type{
+  margin:0 0 18px!important;
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:30px!important;
+  font-weight:600!important;
+  text-align:left!important;
+}
+
+.site-footer{
+  width:min(1040px,calc(100% - 28px))!important;
+  margin:0 auto!important;
+  padding:18px 0 34px!important;
+  border-top:1px solid #ddd!important;
+  color:#777!important;
+  background:#fff!important;
+  text-align:left!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:12px!important;
+}
+
+/* Hindupedia-style directory components */
+.hp-home{
+  padding:24px 0 56px;
+  color:var(--hp-ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
+.hp-home h1{
+  margin:0 0 8px;
+  color:#111;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:30px;
+  font-weight:600;
+  line-height:1.2;
+}
+.hp-home-intro{max-width:1000px;margin:0 0 22px}
+.hp-home-intro p{margin:0 0 10px}
+.hp-directory{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:0 12px;
+  align-items:start;
+}
+.hp-column{min-width:0}
+.hp-panel{margin:0 0 20px}
+body.home-page .hp-directory{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:0 12px;
+  align-items:start;
+}
+body.home-page .hp-directory>.hp-panel{
+  display:block;
+  width:auto;
+  margin:0 0 20px;
+}
+@media(max-width:720px){
+  body.home-page .hp-directory{grid-template-columns:1fr}
+}
+.hp-section-title{
+  margin:0 0 3px!important;
+  padding:4px 8px!important;
+  border:1px solid var(--hp-green-border)!important;
+  background:var(--hp-green)!important;
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:19px!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  text-align:left!important;
+}
+.hp-link-list{
+  margin:0!important;
+  padding:0 0 0 29px!important;
+  color:#777;
+}
+.hp-link-list li{
+  margin:1px 0!important;
+  padding:0!important;
+  font-size:16px!important;
+  line-height:1.45!important;
+}
+.hp-link-list a{
+  color:var(--hp-blue)!important;
+  font-size:16px!important;
+  text-decoration:none!important;
+}
+.hp-link-list a:hover{text-decoration:underline!important}
+.hp-itihasa-list>li{margin:5px 0 12px!important}
+.hp-sub-link-list{
+  margin:3px 0 7px!important;
+  padding:0 0 0 22px!important;
+  color:#777;
+}
+.hp-sub-link-list li{margin:0!important;font-size:14px!important;line-height:1.38!important}
+.hp-sub-link-list a{font-size:14px!important}
+.hp-note{margin:5px 0 0;color:#555;font-size:13px;line-height:1.4}
+
+/* Landing-page chapter lists should look like a reference index, not cards. */
+.bhagavatam-canto-index{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  color:var(--hp-ink)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+}
+.bhagavatam-canto-index h2{margin-top:0!important}
+.canto-group{margin:0 0 8px!important}
+.canto-group>summary{
+  width:auto!important;
+  padding:2px 0!important;
+  color:var(--hp-blue)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+}
+.chapter-grid{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fill,minmax(120px,1fr))!important;
+  gap:2px 16px!important;
+  margin:5px 0 14px 22px!important;
+  padding:5px 0 0!important;
+  border-top:1px solid #ddd!important;
+}
+.chapter-grid a{font-family:Arial,Helvetica,sans-serif!important;font-size:14px!important;color:var(--hp-blue)!important}
+
+/* Keep long Bhāgavatam verse readers usable while bringing them into the same palette. */
+body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild,
+body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part{
+  background:#fff!important;
+  color:var(--hp-ink)!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+}
+body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h2,
+body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part .sb-chapter,
+body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part .sb-verse{
+  border:0!important;
+  background:transparent!important;
+  color:#111!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  text-align:left!important;
+}
+body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part .sb-rule{background:#ddd!important}
+
+@media(max-width:720px){
+  .nav-wrap{width:min(100% - 20px,1040px)!important}
+  .site-nav{
+    top:50px!important;
+    background:#fff!important;
+    border-top:1px solid #ddd!important;
+    border-bottom:1px solid #ddd!important;
+  }
+  .site-nav a{color:var(--hp-blue)!important}
+  .site-main,.site-footer{width:calc(100% - 20px)!important}
+  .hp-directory{grid-template-columns:1fr}
+  .article-heading h1,.invocation h1,.archive-shell h1,.not-found h1,.hp-home h1{font-size:26px!important}
+  .article-body h2,.archive-shell h2,.hp-section-title{font-size:18px!important}
+  .article-body,.home-content,.archive-shell,.not-found{font-size:15px!important}
+  .article-body p,.article-body li,.home-content p,.home-content li{font-size:15px!important}
+  .chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}

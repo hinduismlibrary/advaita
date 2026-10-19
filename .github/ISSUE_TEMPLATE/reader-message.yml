@@ -1,0 +1,22 @@
+name: Reader message
+description: Send a question, correction, or report about the Viveka Dṛṣṭi website.
+title: "[Reader message] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This message will be public on the repository. Please do not include private information.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: Which page is this about? Leave blank if not applicable.
+      placeholder: https://krishnavyasmuni.github.io/advaita/...
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: Include enough detail to understand your question or correction.
+      placeholder: Write your message here.
+    validations:
+      required: true

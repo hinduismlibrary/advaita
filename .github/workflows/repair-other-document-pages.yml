@@ -1,0 +1,66 @@
+name: Validate full-scroll reader assets
+on:
+  push:
+    paths:
+      - .github/workflows/repair-other-document-pages.yml
+      - assets/js/article-reader-paged.js
+      - assets/js/shaiva-complete-reader.js
+      - assets/data/shaiva-manuscript.b64
+      - assets/css/varna-vicara-paged.css
+      - assets/css/article-reader-template.css
+      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - articles/a-shashtric-lens-of-varna-part-one/index.html
+      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - articles/hinduism-on-women/index.html
+      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate complete continuous readers
+        run: |
+          node --check assets/js/article-reader-paged.js
+          node --check assets/js/shaiva-complete-reader.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          slugs = (
+            'a-case-for-the-scriptural-validity-of-the-agamas',
+            'a-shaiva-lens-on-shiva-as-the-supreme-deity',
+            'a-shashtric-lens-of-varna-part-one',
+            'a-vaishnava-lens-on-vishnu-as-the-supreme-deity',
+            'hinduism-on-women',
+            'meat-eating-in-hinduism-through-the-lens-of-shastra',
+          )
+          full_scroll = '20261019-unified-theme-3'
+          shared_reader = Path('assets/js/article-reader-paged.js').read_text(encoding='utf-8')
+          shaiva_reader = Path('assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
+          shared_css = Path('assets/css/article-reader-template.css').read_text(encoding='utf-8')
+          assert 'for(const page of segments)fragment.append(renderSection(page));' in shared_reader
+          assert 'for(const section of sections){' in shaiva_reader
+          assert 'document-section+.document-section' in shared_css
+          assert 'function tocTargetId(link)' in shared_reader
+          assert 'const selected=!activeSubsection&&link===activeLink;' in shared_reader
+          assert 'const active=!activeOnce&&matches;' in shaiva_reader
+          assert 'window.innerHeight*.82' not in shared_reader + shaiva_reader
+          assert len(Path('assets/data/shaiva-manuscript.b64').read_text(encoding='utf-8').strip()) > 10000
+
+          for slug in slugs:
+            path = Path('articles') / slug / 'index.html'
+            html = path.read_text(encoding='utf-8')
+            assert html.count('varna-vicara-paged.css?v=20260914-3') == 1, f'{path}: missing shared base style'
+            assert html.count('article-reader-template.css?v=' + full_scroll) == 1, f'{path}: stale shared style cache'
+            if slug == 'a-shaiva-lens-on-shiva-as-the-supreme-deity':
+              assert html.count('shaiva-complete-reader.js?v=' + full_scroll) == 1, f'{path}: stale Śaiva reader cache'
+              assert 'class="page-nav"' not in html, f'{path}: old Previous/Next navigation remains'
+            else:
+              assert 'id="article-config"' in html and 'id="source-document"' in html, f'{path}: source document is missing'
+              assert html.count('article-reader-paged.js?v=' + full_scroll) == 1, f'{path}: stale shared reader cache'
+            print(f'Validated full-scroll reader: {path}')
+          PY

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#faf9f6">
+<title>Bhaviṣya Purāṇa · Chapter map</title>
+<meta name="description" content="Chapter-level quotations and textual parallels in the Bhaviṣya Purāṇa.">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #faf9f6;
+  --ink: #282a26;
+  --muted: #73766f;
+  --rule: #d8d9d2;
+  --empty: #f1e1de;
+  --green: #dce9dd;
+  --green-ink: #28593d;
+  --parallel: #dce9ed;
+  --parallel-ink: #315e69;
+  --red: #a14a40;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 13px/1.42 var(--sans); }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--green-ink); outline-offset: 2px; }
+.page { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+.top {
+  height: 42px; display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--ink); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+}
+.top a { color: inherit; text-decoration: none; }
+.top a:first-child { font-weight: 700; }
+.top a:last-child { color: var(--muted); }
+.top-links { display: flex; gap: 18px; color: var(--muted); }
+header { padding: 23px 0 15px; border-bottom: 1px solid var(--ink); }
+h1 { margin: 0; font: 400 clamp(34px, 4.2vw, 46px)/1.04 var(--serif); letter-spacing: -.04em; }
+#map { padding: 3px 0 16px; }
+.heat-section { padding: 5px 0; border-bottom: 1px solid var(--rule); }
+.chapter-row { display: grid; grid-template-columns: 116px minmax(0,1fr); gap: 8px; padding: 1px 0; }
+.row-section {
+  display: flex; align-items: center; gap: 7px; min-width: 0;
+  color: var(--muted); font-size: 9px; line-height: 1.1;
+}
+.row-section strong { flex: 0 0 auto; color: var(--ink); font: 400 12px/1 var(--serif); }
+.row-section span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-content { min-width: 0; }
+.cells { display: grid; grid-template-columns: repeat(24,minmax(0,1fr)); gap: 2px; max-width: 960px; }
+.tile {
+  position: relative; display: block; width: 100%; aspect-ratio: 1; min-width: 0;
+  padding: 0; border: 1px solid #e1e0d9; border-radius: 2px;
+  color: #80574f; background: var(--empty); font-size: 11px; line-height: 1;
+  font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.tile.quoted { border-color: #c6d9ca; color: var(--green-ink); background: var(--green); font-weight: 600; }
+.tile.parallel { border-color: #c9d9dd; color: var(--parallel-ink); background: var(--parallel); font-weight: 600; }
+.tile.both { border-color: #d0d6cd; color: var(--ink); background: linear-gradient(135deg,var(--green) 0 49%,var(--parallel) 51% 100%); font-weight: 600; }
+.tile:hover, .tile[aria-expanded="true"] { border-color: var(--ink); }
+.tile[aria-expanded="true"] { box-shadow: inset 0 0 0 1px var(--ink); }
+.tile.gap::after { position: absolute; right: 1px; bottom: 1px; left: 1px; height: 3px; background: var(--red); content: ""; }
+.detail {
+  grid-column: 2; max-width: 960px; margin: 3px 0 5px; padding: 8px 11px;
+  border: 1px solid var(--rule); border-left: 2px solid var(--ink); background: #fff;
+}
+.detail[hidden] { display: none; }
+.detail-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 5px; border-bottom: 1px solid var(--rule); }
+.detail-head h3 { margin: 0; font: 400 18px/1.15 var(--serif); }
+.detail-head span { color: var(--muted); font-size: 9px; }
+.evidence-group { display: grid; grid-template-columns: 82px minmax(0,1fr); gap: 8px; padding-top: 6px; }
+.evidence-group + .evidence-group { margin-top: 5px; border-top: 1px solid var(--rule); }
+.evidence-group h4 { margin: 2px 0 0; color: var(--muted); font: 700 9px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.evidence-list { margin: 0; padding: 0; list-style: none; }
+.evidence-entry { padding: 1px 0 3px; }
+.citation { font-size: 12.5px; line-height: 1.35; }
+.citation-ref { font-weight: 600; font-variant-numeric: tabular-nums; }
+.target em { font: italic 13px/1.25 var(--serif); }
+.separator { padding: 0 4px; color: var(--ink); font-size: 11px; }
+.citation-as { color: var(--muted); font-size: 10px; }
+.note { margin: 2px 0 0; color: var(--muted); font-size: 10px; line-height: 1.3; }
+.note.warning { color: var(--red); }
+.no-entry { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
+.error { padding: 12px 0; color: var(--red); }
+@media (max-width: 720px) {
+  .page { width: calc(100% - 24px); }
+  .top { height: 38px; font-size: 9px; }
+  .top a:last-child { display: none; }
+  header { padding: 19px 0 12px; }
+  .chapter-row { grid-template-columns: 88px minmax(0,1fr); gap: 4px; }
+  .row-section { gap: 4px; font-size: 8px; }
+  .row-section strong { font-size: 11px; }
+  .cells { grid-template-columns: repeat(12,minmax(0,1fr)); gap: 2px; }
+  .tile { font-size: 9px; }
+  .detail { padding: 7px 8px; }
+  .evidence-group { grid-template-columns: 68px minmax(0,1fr); gap: 5px; }
+  .detail-head h3 { font-size: 16px; }
+  .citation { font-size: 11px; }
+  .citation-as, .note { font-size: 9px; }
+}
+@media (max-width: 360px) {
+  .page { width: calc(100% - 18px); }
+  .chapter-row { grid-template-columns: 68px minmax(0,1fr); gap: 3px; }
+  .evidence-group { grid-template-columns: 60px minmax(0,1fr); gap: 4px; }
+  .tile { font-size: 8px; }
+  .citation { font-size: 10.5px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+<script src="./site.js?v=20261014-7" defer></script>
+</head>
+<body>
+<div class="page">
+  <nav class="top" aria-label="Site">
+    <a href="/advaita/">Viveka Dṛṣṭi</a>
+    <div class="top-links"><a href="/advaita/articles/purana-analysis/">All maps</a><a href="/advaita/articles/puranic-chronology/markandeya/">Mārkaṇḍeya map</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a></div>
+  </nav>
+  <header><h1>Bhaviṣya Purāṇa</h1></header>
+  <main id="map" aria-label="Bhaviṣya Purāṇa chapter map"></main>
+</div>
+</body>
+</html>

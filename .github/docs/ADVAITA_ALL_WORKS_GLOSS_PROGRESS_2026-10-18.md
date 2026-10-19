@@ -1,0 +1,176 @@
+# Ādi Śaṅkarācārya library: complete-work audit and progress log
+
+Started: 18 October 2026, 22:04 UTC  
+Repository: `krishnavyasmuni/advaita`  
+Index audited: [Ādi Śaṅkarācārya texts](https://krishnavyasmuni.github.io/advaita/books/adi-shankaracharya/)  
+Source branch head at audit: `41266aea1e93678be32280b8f29c5efa0ae64706`
+
+## Scope and method
+
+The index lists 29 works across Introduction to Advaita, Short Texts, Summaries and Explanations, and Stotrams and Hymns. I checked every matching JSON reader in `assets/data/shankara/` for a non-empty Sanskrit field, English field, and Devanāgarī/English word-gloss pairs on each stored unit. This is a **field-coverage** audit; it does not certify that every existing gloss and translation has received a full lexical review. Where the reader has no stored IAST field, it derives transliteration from the Devanāgarī.
+
+All 16 works with at least 20 items link to a contents/group navigation (Bhajagovindam uses its grouped reader). Under-20-verse works keep direct verse navigation as requested. Chapter or section labels are present for works with explicit structure, including Māṇḍūkyakārikā, Brahmasiddhi, Naiṣkarmyasiddhi, Upadeśasāhasrī, SVSSS, and Pañcadaśī. The generic range contents for several unchaptered works still need informative topic notes. Vedāntasāra also needs a count/source reconciliation: the index says 227 verses, while the JSON has 71 reader units.
+
+## Coverage by indexed work
+
+“Sanskrit”, “English”, and “Word for word” count stored reader units with those fields. “Index count” is the count displayed on the index; where it differs from the reader-unit count, the difference is left visible for reconciliation rather than silently treated as extra verses.
+
+| Work | Index count | Data units | Sanskrit | English | Word for word |
+|---|---:|---:|---:|---:|---:|
+| Tattvabodha | 44 sections | 44 | 44/44 | 44/44 | 44/44 |
+| Dṛg-dṛśya-viveka | 46 verses | 46 | 46/46 | 46/46 | 46/46 |
+| Ātmabodha | 68 verses | 69 | 69/69 | 69/69 | 69/69 |
+| Aparokṣānubhūti | 144 verses | 145 | 145/145 | 145/145 | 145/145 |
+| Māṇḍūkyakārikā | 215 verses | 215 | 215/215 | 215/215 | 215/215 |
+| Vedāntasāra | 227 verses | 71 | 71/71 | 71/71 | 71/71 |
+| Ekaślokī | 1 verse | 2 | 2/2 | 2/2 | 2/2 |
+| Upadeśapañcakam | 5 verses | 5 | 5/5 | 5/5 | 5/5 |
+| Pañcīkaraṇa-prakaraṇa | 7 verses | 7 | 7/7 | 7/7 | 7/7 |
+| Daśaślokī | 10 verses | 11 | 11/11 | 11/11 | 11/11 |
+| Brahmajñānāvalīmālā | 21 verses | 21 | 21/21 | 21/21 | 21/21 |
+| Advaitamakaranda | 28 verses | 28 | 28/28 | 28/28 | 28/28 |
+| Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
+| Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
+| Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 219/566 |
+| Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
+| Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
+| Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
+| Advaitapañcaratnam | 5 verses | 6 | 6/6 | 6/6 | 6/6 |
+| Kāśīpañcakam | 5 verses | 6 | 6/6 | 6/6 | 6/6 |
+| Manīṣāpañcakam | 5 verses | 6 | 6/6 | 6/6 | 6/6 |
+| Māyāpañcakam | 5 verses | 6 | 6/6 | 6/6 | 6/6 |
+| Yatipañcakam | 5 verses | 6 | 6/6 | 6/6 | 6/6 |
+| Nirvāṇaṣaṭkam | 6 verses | 7 | 7/7 | 7/7 | 7/7 |
+| Viṣṇu Ṣaṭpadī Stotram | 7 verses | 8 | 8/8 | 8/8 | 8/8 |
+| Śrī Dakṣiṇāmūrtyaṣṭakam | 10 verses | 11 | 11/11 | 11/11 | 11/11 |
+| Hastāmalaka-stotram | 12 verses | 12 | 12/12 | 12/12 | 12/12 |
+| Bhajagovindam (Mohamudgara) | 31 verses | 31 | 31/31 | 31/31 | 31/31 |
+
+The word-for-word notices in the current reader are therefore expected on entries without gloss rows in the five works below. They are not an asset-loading failure when the source JSON itself has no gloss for that entry.
+
+## Content-work queue
+
+1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
+2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
+3. **Vivekacūḍāmaṇi** — 192/566 data units have glosses, covering source verses 1–195; source verses 186–187 share one unit; verses 93–94 and 98–99 each share one unit; source declares 580 verses and some English units span adjacent verses.  
+4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
+5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
+
+## Running work log
+
+- **22:04 UTC — Inventory started.** All 29 index entries mapped to their source data. Five large treatises have missing gloss rows; existing coverage is not being reported as a complete translation-accuracy review.
+- **22:07:19 UTC — Completed batch:** Vivekacūḍāmaṇi verses 21–25. Added literal English and Devanāgarī-backed gloss rows; retained the earlier Madhavananda translations as `editionTranslation`.  
+- **22:08:08 UTC — Completed batch:** Vivekacūḍāmaṇi verses 26–30. Added five literal translations and Devanāgarī-backed gloss lists; retained the prior English readings separately.  
+- **22:09:31 UTC — Completed batch:** Vivekacūḍāmaṇi verses 31–35. Added five literal translations and Devanāgarī-backed gloss lists. Corrected verse 32's `प्राज्ञ्यं / prājñyaṃ` to the proofread reading `प्राज्ञं / prājñaṃ`.  
+- **22:11:37 UTC — Completed batch:** Vivekacūḍāmaṇi verses 36–40. Added five literal translations and Devanāgarī-backed gloss lists. Corrected verse 37's split as `अहेतुना अन्यान् अपि` and verse 40's `किञ्चित्` against the proofread 1921 edition.  
+- **22:13:42 UTC — Completed batch:** Vivekacūḍāmaṇi verses 41–45. Added literal English and Devanāgarī-backed glosses, separated from the prior 1921 wording as `editionTranslation`; normalized IAST for these five entries. Verse 43 translates `apāyaḥ` as “danger,” rather than Madhavananda’s interpretive “death.”  
+- **22:15:01 UTC — Completed batch:** Vivekacūḍāmaṇi verses 46–50. Added literal English, Devanāgarī-backed glosses, and normalized IAST; corrected verse 47's बोधवह्निः against the proofread 1921 page 28. The prior edition translations remain in `editionTranslation`.  
+- **22:16:23 UTC — Completed batch:** Vivekacūḍāmaṇi verses 51–55. Added literal readings and glosses for all five entries, tightened verses 52 and 54 to keep the English aligned with the Sanskrit, and corrected verse 50 `pāvitaṃ / पावितं` against the proofread 1921 scan.  
+- **22:17:48 UTC — Completed batch:** Vivekacūḍāmaṇi verses 56–60. Added literal translations and glosses, corrected verse 57’s `vīṇā` (the previous English said “guitar”) and normalized a doubled-j text typo to the scanned `प्रजारञ्जनम्`; fixed the Devanāgarī gloss spelling for verse 58.  
+- **22:19:13 UTC — Completed batch:** Vivekacūḍāmaṇi verses 61–65. Added literal readings and Devanāgarī-backed glosses for five entries, with the prior 1921 wording retained in `editionTranslation`.  
+- **22:20:50 UTC — Completed batch:** Vivekacūḍāmaṇi verses 66–70. Added literal readings and glosses for all five entries. Corrected verse 67's extra `ज्` against the proofread 1921 scan and aligned its Devanāgarī gloss with the source compound.  
+- **22:23:36 UTC — Completed batch:** Vivekacūḍāmaṇi verses 71–75. Added five literal translations and Devanāgarī-backed gloss lists, retained their 1921 translations, and normalized verse 71’s Self/non-Self compound against the Sanskrit witnesses. Commit: [3bf6cb25](https://github.com/krishnavyasmuni/advaita/commit/3bf6cb259ad890070f522a8bb4a042df8e6217).  
+- **22:25:08 UTC — Completed batch:** Vivekacūḍāmaṇi verses 76–80. Added literal readings and Devanāgarī-backed glosses for all five entries; corrected verse 79’s IAST avagraha. Commit: [032076c3](https://github.com/krishnavyasmuni/advaita/commit/032076c3682073b62bea8b5bfdee8dcdd359cc06).  
+- **22:25:08 UTC — Revision:** tightened verse 75’s translation and gloss so “down below and high above” reflects all three directional terms. Commit: [40d77468](https://github.com/krishnavyasmuni/advaita/commit/40d77468aab9e6dca327f3fc2b23b7c97ff9c1d1).  
+- **22:26:24 UTC — Completed batch:** Vivekacūḍāmaṇi verses 81–85. Added five literal translations and Devanāgarī-backed gloss lists, retained the 1921 readings, and corrected IAST avagrahas in verses 81 and 83. Commits: [f28968eb](https://github.com/krishnavyasmuni/advaita/commit/f28968ebbb15134a66643886a331c2220874fa29), [3f983410](https://github.com/krishnavyasmuni/advaita/commit/3f9834102613b93c9bae186eaf019742fe437fcc).  
+- **22:27:10 UTC — Completed batch:** Vivekacūḍāmaṇi verses 86–90. Added five original literal translations and Devanāgarī-backed gloss lists, preserved the prior 1921 translations, and normalized verse 89’s IAST avagraha. Commit: [d98d2d3c](https://github.com/krishnavyasmuni/advaita/commit/d98d2d3cb65212f3a4651c09b5845de7a76ed54d).  
+- **22:28:13 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 91–95. Added literal English and Devanāgarī-backed glosses, preserved the prior 1921 translation, corrected verse 88’s `जागरः` glossary form, and normalized verse 93’s IAST avagraha. Verses 93–94 share one data unit. Commit: [73a10681](https://github.com/krishnavyasmuni/advaita/commit/73a106812bb083b44c2736b12c4ca965627d6b63).  
+- **22:29:31 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 96–100. Added literal readings and glosses for four stored units (verses 98–99 are grouped), preserved prior 1921 translations, and normalized IAST avagrahas in 97 and 100. Also tightened verse 89’s body-identification wording. Commit: [f728d7a5](https://github.com/krishnavyasmuni/advaita/commit/f728d7a5a952defd7ec06f41437d8bbd5c6a1567).  
+- **22:30:59 UTC — Completed batch:** Vivekacūḍāmaṇi verses 101–105. Added five literal translations and glosses; corrected verse 102’s Devanāgarī `तज्ज्ञाः` and its transliteration, and tightened verse 105’s reference to the ego. Commits: [bd45f0a0](https://github.com/krishnavyasmuni/advaita/commit/bd45f0a0f56a13307b4a5053b0f9916aedc25ab2), [51df837b](https://github.com/krishnavyasmuni/advaita/commit/51df837b491ecffe79068b79ef173ca6cb39a1d5).  
+- **22:31:53 UTC — Completed batch:** Vivekacūḍāmaṇi verses 106–110. Added five literal readings and word-gloss lists, retained prior edition translations, and corrected the compound split in verse 110 from `आश्या` to `नाश्या`. Commits: [671df710](https://github.com/krishnavyasmuni/advaita/commit/671df710d65f71674913b895087ab78e57b23bd3), [29bdd70d](https://github.com/krishnavyasmuni/advaita/commit/29bdd70d251c09b98395b31e9e0abafd5ae06746).  
+- **22:33:02 UTC — Completed batch:** Vivekacūḍāmaṇi verses 111–115. Added five literal readings and word-gloss lists, retained prior 1921 translations, and normalized IAST avagrahas in verses 111, 113, and 114. Commit: [85cabc52](https://github.com/krishnavyasmuni/advaita/commit/85cabc52b01e11c676a17e6c97c963cdc8cdc420).  
+- **22:35 UTC — Completed batch:** Vivekacūḍāmaṇi verses 116–120. Added five literal readings and Devanāgarī-backed gloss lists; preserved the 1921 readings in `editionTranslation`; clarified verse 118’s sandhied `tu amānitādyāḥ`. Commit: [b38d0606](https://github.com/krishnavyasmuni/advaita/commit/b38d06066092d5fbb60d5cd916c2b64c349513c0).  
+- **22:36 UTC — Completed batch:** Vivekacūḍāmaṇi verses 121–125. Added five literal translations and Devanāgarī-backed gloss lists; preserved their 1921 readings in `editionTranslation`; corrected verse 122 to `akhilaṃ ca viśvam` against the Sringeri text witness. Commit: [5ac87134](https://github.com/krishnavyasmuni/advaita/commit/5ac87134a1e790706c1cc050178956c5820a2505).  
+- **22:37 UTC — Completed batch:** Vivekacūḍāmaṇi verses 126–130. Added five literal translations and Devanāgarī-backed gloss lists, preserved the 1921 readings in `editionTranslation`, and corrected verse 128's Sanskrit to the `ābhā-rūpaṃ / bhāntam` reading. Commit: [08852a39](https://github.com/krishnavyasmuni/advaita/commit/08852a395a3cb11c3ff7aded8c42912a0b4d86d2).  
+- **22:39 UTC — Completed batch:** Vivekacūḍāmaṇi verses 131–135. Added five literal translations and Devanāgarī-backed gloss lists, preserved the prior 1921 translations, and normalized Latin-script avagraha marks in verses 131, 133, and 134. Commit: [ce0d43d4](https://github.com/krishnavyasmuni/advaita/commit/ce0d43d45804d7286a56529a51f620b286363004).  
+- **22:40 UTC — Completed batch:** Vivekacūḍāmaṇi verses 136–140. Added five literal translations and Devanāgarī-backed gloss lists; preserved the 1921 translations; normalized apostrophes in verse 137–138 IAST; tightened verse 139’s `bodhaśakti` and verse 140’s `tejovati` gloss. Commits: [1f2bf9f2](https://github.com/krishnavyasmuni/advaita/commit/1f2bf9f279c8b7a398015858f83dd82b558ffe44), [5b45cc7a](https://github.com/krishnavyasmuni/advaita/commit/5b45cc7a64765e321ef7144515f9691ce4ab2abd).  
+- **22:41 UTC — Completed batch:** Vivekacūḍāmaṇi verses 141–145. Added five literal translations and Devanāgarī-backed gloss lists; preserved the 1921 readings; corrected verse 143’s `dinanāthe / jhañjhā` and verse 145’s `skandho 'savaḥ`; aligned IAST in verses 141 and 143. Commits: [ee1d2f9f](https://github.com/krishnavyasmuni/advaita/commit/ee1d2f9f29951eb48aecbde8915ec0a8f544f5fe), [bb559981](https://github.com/krishnavyasmuni/advaita/commit/bb559981f708f55ea66d178f9753dc07792a662e).  
+- **22:42 UTC — Completed batch:** Vivekacūḍāmaṇi verses 146–150. Added five literal translations and Devanāgarī-backed gloss lists, preserved the 1921 readings, normalized Latin avagrahas in verse 146, and corrected verse 147's `वह्निना` spelling. Commit: [bbb5e95e](https://github.com/krishnavyasmuni/advaita/commit/bbb5e95ea1aaf2ae0ae05333babb95c437d6efae).  
+- **22:43 UTC — Completed batch:** Vivekacūḍāmaṇi verses 151–155. Added five literal translations and Devanāgarī-backed gloss lists; preserved 1921 translations; normalized avagrahas in verses 154–155. Commit: [344c92db](https://github.com/krishnavyasmuni/advaita/commit/344c92db03844c9e76efc233541d982180cc76a6).  
+- **Active text:** Vivekacūḍāmaṇi, source verses **156–160**.  
+- **Next after this batch:** Continue at verse 156. Do not mark a work finished until every relevant source item is covered and checked.
+
+## Source checks
+
+- [GRETIL, Vivekacūḍāmaṇi Sanskrit text](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm), verses 21–155.
+- [Swami Madhavananda, 1921 translation, verses 21–40](https://www.wisdomlib.org/hinduism/book/vivekachudamani/d/doc144469.html), with linked following verse pages.
+- [Proofread 1921 Advaita Ashrama scans: pages 21](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/21), [23](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/23), [24](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/24), and [25](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/25) check selected readings through verse 40; pages [27](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/27), [28](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/28), and [29](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/29) check verses 44–51; page [32](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/32) checks verses 57–58; page [33](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/33) checks verses 59–61; [34](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/34) checks 62–64; [35](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/35) checks 65–66; and [36](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/36) checks 67–69. Verse 32 `prājñaṃ`, verse 37 `ahetunā anyān api`, verse 40 `kiñcit`, and verse 47 `bodhavahniḥ / बोधवह्निः` follow the proofread reading where GRETIL's unproofread transcription differs. Verse 47 `bodhavahniḥ / बोधवह्निः` and verse 50 `pāvitaṃ / पावितं` follow pages 28 and 29.
+- [Vedic Tithi, Vivekacūḍāmaṇi text and transliteration](https://vedictithi.com/scriptures/viveka-chudamani) confirms verse 128's `आभारूपम्` and `भान्तम्`, verse 143's `दिननाथे / झञ्झा`, and verse 145's `स्कन्धोऽसवः` readings.
+- [Wisdomlib, verses 42–155](https://www.wisdomlib.org/hinduism/book/vivekachudamani/d/doc144490.html) (follow the Next links) provided cross-checks against Madhavananda’s text and English; verses 71–115 were checked individually, including grouped entries 93–94 and 98–99.
+- [Wikisource, proofread 1921 scan page 38](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/38) checks verses 71–73; [page 39](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/39) supplies the 1921 translation/commentary for verse 74 but is not proofread; page [40](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/40) has the 1921 verse 75 translation but remains unproofread. Verse 71's spelling is normalized to the Sanskrit witnesses’ `आत्मानात्मविवेचनम्` despite transcription errors in the scan.
+- The earlier 1921 English readings for verses 21–155 are retained separately as `editionTranslation`.
+
+## Completion entries
+
+- **22:07:19 UTC — Vivekacūḍāmaṇi 21–25 committed.** The reader data has five literal translations and word-gloss lists. Source: [commit 0983b705](https://github.com/krishnavyasmuni/advaita/commit/0983b70579229bc0fd88edd3610860ee8b4a9258).
+- **22:08:08 UTC — Vivekacūḍāmaṇi 26–30 committed.** The next five entries now have literal translations and word-gloss lists. Source: [commit 82be6f1d](https://github.com/krishnavyasmuni/advaita/commit/82be6f1d8ee64059dbc20ab44d6c55b3d251b626).
+- **22:09:31 UTC — Vivekacūḍāmaṇi 31–35 committed.** Five more literal translations and word-gloss lists were added, and verse 32's Sanskrit spelling was corrected from the unproofread GRETIL form against the 1921 scan. Source: [commit f308fcbc](https://github.com/krishnavyasmuni/advaita/commit/f308fcbccc465d14feda71626e9c0dbb434a9e5c).
+- **22:11:37 UTC — Vivekacūḍāmaṇi 36–40 committed.** Added five literal translations and gloss lists; corrected source-transcription splits in verses 37 and 40 against the proofread scan. Source: [commit 736e5039](https://github.com/krishnavyasmuni/advaita/commit/736e5039f3640dd3ecf24dda5bbfb88794a3f3ce).
+- **22:13:42 UTC — Vivekacūḍāmaṇi 41–45 committed.** Added five literal English readings, Devanāgarī-backed glosses, and normalized IAST, preserving prior 1921 wording. Source: [commit 6fafb89e](https://github.com/krishnavyasmuni/advaita/commit/6fafb89e654be7ec8237d4af3e9c84af4932de83).
+
+
+- **22:23:36 UTC — Vivekacūḍāmaṇi 71–75 committed.** Five previously missing glosses were added with revised literal translations; previous edition translations are preserved. Source: [commit 3bf6cb25](https://github.com/krishnavyasmuni/advaita/commit/3bf6cb259ad890070f522a8bb4a042df8e6217).
+
+- **22:25:08 UTC — Vivekacūḍāmaṇi 76–80 committed.** Added five literal translations and word-gloss lists, preserving each prior 1921 translation. Source: [commit 032076c3](https://github.com/krishnavyasmuni/advaita/commit/032076c3682073b62bea8b5bfdee8dcdd359cc06).
+
+- **22:26:24 UTC — Vivekacūḍāmaṇi 81–85 committed.** Added five original literal readings and word-gloss lists, preserving the prior 1921 text. Source: [commit f28968eb](https://github.com/krishnavyasmuni/advaita/commit/f28968ebbb15134a66643886a331c2220874fa29).
+
+- **22:27:10 UTC — Vivekacūḍāmaṇi 86–90 committed.** Added five original literal readings and word-gloss lists, retaining prior edition translations. Source: [commit d98d2d3c](https://github.com/krishnavyasmuni/advaita/commit/d98d2d3cb65212f3a4651c09b5845de7a76ed54d).
+
+- **22:28:13 UTC — Vivekacūḍāmaṇi 91–95 committed.** Added five source verses in four data units (verses 93–94 are grouped) with literal translations and word-gloss lists. Source: [commit 73a10681](https://github.com/krishnavyasmuni/advaita/commit/73a106812bb083b44c2736b12c4ca965627d6b63).
+
+- **22:29:31 UTC — Vivekacūḍāmaṇi 96–100 committed.** Added five source verses in four data units (verses 98–99 are grouped) with literal translations and word-gloss lists. Source: [commit f728d7a5](https://github.com/krishnavyasmuni/advaita/commit/f728d7a5a952defd7ec06f41437d8bbd5c6a1567).
+
+- **22:30:59 UTC — Vivekacūḍāmaṇi 101–105 committed.** Added five literal translations and word-gloss lists while retaining prior 1921 wording. Source: [commit bd45f0a0](https://github.com/krishnavyasmuni/advaita/commit/bd45f0a0f56a13307b4a5053b0f9916aedc25ab2).
+
+- **22:31:53 UTC — Vivekacūḍāmaṇi 106–110 committed.** Added five literal translations and word-gloss lists while preserving prior 1921 readings. Source: [commit 671df710](https://github.com/krishnavyasmuni/advaita/commit/671df710d65f71674913b895087ab78e57b23bd3).
+
+- **22:33:02 UTC — Vivekacūḍāmaṇi 111–115 committed.** Added five literal translations and Devanāgarī-backed gloss lists, preserving earlier 1921 translations. Source: [commit 85cabc52](https://github.com/krishnavyasmuni/advaita/commit/85cabc52b01e11c676a17e6c97c963cdc8cdc420).
+
+## Current work
+
+**Active:** Vivekacūḍāmaṇi, source verses 166–170. The five missing-gloss notices just filled were verses 161–165. Next queue after this text remains Naiṣkarmyasiddhi, SVSSS, Pañcadaśī, and Brahmasiddhi (see coverage gaps above).
+
+## Reconciled work log (batches after the last previously recorded line)
+
+The prior log stopped at verses 111–115 even though later source commits were present. The following batches are recorded here from the repository history so the status log matches the data:
+
+- **Vivekacūḍāmaṇi 116–120:** added literal translations and Devanāgarī-backed glosses. Commit: [b38d0606](https://github.com/krishnavyasmuni/advaita/commit/b38d06066092d5fbb60d5cd916c2b64c349513c0).
+- **Vivekacūḍāmaṇi 121–125:** added glosses; verse 122 follows the Sringeri Bhāṣyapāṭha reading *akhilaṃ ca viśvam*. Commit: [5ac87134](https://github.com/krishnavyasmuni/advaita/commit/5ac87134a1e790706c1cc050178956c5820a2505).
+- **Vivekacūḍāmaṇi 126–130:** added glosses; verse 128 follows the long-*ā* reading *ābhārūpam* and participle *bhāntam*. Commit: [08852a39](https://github.com/krishnavyasmuni/advaita/commit/08852a395a3cb11c3ff7aded8c42912a0b4d86d2).
+- **Vivekacūḍāmaṇi 131–135:** added glosses; verse 132's gloss was later aligned to the locative/nominative Sanskrit form. Commits: [ce0d43d4](https://github.com/krishnavyasmuni/advaita/commit/ce0d43d45804d7286a56529a51f620b286363004), [53b47617](https://github.com/krishnavyasmuni/advaita/commit/53b47617da69ed7e5a328890b087147e86287bd0).
+- **Vivekacūḍāmaṇi 136–140:** added glosses and tightened readings for verses 139–140. Commits: [1f2bf9f2](https://github.com/krishnavyasmuni/advaita/commit/1f2bf9f279c8b7a398015858f83dd82b558ffe44), [5b45cc7a](https://github.com/krishnavyasmuni/advaita/commit/5b45cc7a64765e321ef7144515f9691ce4ab2abd).
+- **Vivekacūḍāmaṇi 141–145:** added glosses; normalized verse 141 and corrected verse readings in 143 and 145. Commits: [ee1d2f9f](https://github.com/krishnavyasmuni/advaita/commit/ee1d2f9f29951eb48aecbde8915ec0a8f544f5fe), [bb559981](https://github.com/krishnavyasmuni/advaita/commit/bb559981f708f55ea66d178f9753dc07792a662e).
+- **Vivekacūḍāmaṇi 146–150:** added glosses; corrected verse 147's *vahni* reading. Commit: [bbb5e95e](https://github.com/krishnavyasmuni/advaita/commit/bbb5e95ea1aaf2ae0ae05333babb95c437d6efae).
+- **Vivekacūḍāmaṇi 151–155:** added literal translations and glosses; retained prior edition readings. Commit: [344c92db](https://github.com/krishnavyasmuni/advaita/commit/344c92db03844c9e76efc233541d982180cc76a).
+- **22:46:55 UTC — Vivekacūḍāmaṇi 156–160 committed.** Added five original literal readings and Devanāgarī-backed glosses, preserved the 1921 translations in `editionTranslation`, and corrected the IAST apostrophes. Commit: [e5f7a5a1](https://github.com/krishnavyasmuni/advaita/commit/e5f7a5a10920aa05d6eb13c25d144db1216d2721).
+
+- **22:48:24 UTC — Vivekacūḍāmaṇi 161–165 committed.** Added five literal translations and Devanāgarī-backed glosses, retained earlier 1921 translations, corrected verse 162 to *ahaṃtāṃ* (“ego-sense”) against the Sringeri witness, and normalized the IAST avagrahas. Commit: [d43742c6](https://github.com/krishnavyasmuni/advaita/commit/d43742c691c6bbcf3cccbf6e84e7417d72d221d3).
+
+- **22:49:29 UTC — Vivekacūḍāmaṇi 166–170 committed.** Added literal readings and Devanāgarī-backed glosses for the prāṇa and mind sheaths; normalized IAST apostrophes, retaining the 1921 readings in `editionTranslation`. Commit: [126d58c3](https://github.com/krishnavyasmuni/advaita/commit/126d58c3cec3f9c792002ba9cf850cf48bfc95e9).
+
+- **22:50:43 UTC — Reader-control spacing fixed.** Removed the extra gap between the Transliteration and Word for Word buttons and cleared any panel margin. Commit: [2c2ebc5b](https://github.com/krishnavyasmuni/advaita/commit/2c2ebc5bc96db458629933065dac2a0ddac188f0).
+- **22:52:32 and 22:54:44 UTC — Reader style cache refreshed across all 29 Ādi Śaṅkara pages.** Changed the CSS query versions in the 26 regular-size pages and the three largest readers. Commits: [85391b3c](https://github.com/krishnavyasmuni/advaita/commit/85391b3c129c8c8dfdf9d622b7ab7119f5716623), [1fb672b4](https://github.com/krishnavyasmuni/advaita/commit/1fb672b448cd09d33c7e8abd69ea06f82635e5af).
+- **22:54:05 UTC — Vivekacūḍāmaṇi 171–175 committed.** Added literal readings and Devanāgarī-backed glosses; corrected *manaḥkalpita*, *meghaḥ* (against GRETIL's *medhaḥ*), and *suvidhāya* (against GRETIL's *suvudhāya*) to match the 1921/Sringeri witnesses. Commit: [22efd636](https://github.com/krishnavyasmuni/advaita/commit/22efd63600fd7429bcd6d3248306d581728b9964).
+
+- **22:56:01 UTC — Live readers now refresh from the checked-in JSON data.** Removed the early return that had left static verse HTML stale and bumped the data cache version; embedded HTML remains the fallback if data loading fails. Commit: [0d81d84d](https://github.com/krishnavyasmuni/advaita/commit/0d81d84d02d06f667279198e74ff2c427858e3a1).
+- **22:56:36 UTC — Vivekacūḍāmaṇi 176–180 committed.** Added five literal readings and Devanāgarī-backed glosses, preserving earlier English in `editionTranslation`. Commit: [78dffb2d](https://github.com/krishnavyasmuni/advaita/commit/78dffb2d40d7bfafc67c6d55595b57ee8ba6cdd4).
+
+- **22:57:33 UTC — Vivekacūḍāmaṇi 181–185 committed.** Added literal translations and Devanāgarī-backed glosses for the mind and intellect sheaths; retained the prior 1921 translations in `editionTranslation`. Commit: [9bad7321](https://github.com/krishnavyasmuni/advaita/commit/9bad7321c147a1ecace0981da0ad613e94893e0e).
+
+- **22:58:51 UTC — Vivekacūḍāmaṇi 186–190 committed.** Added literal translations and glosses for four units (verses 186–187 share one unit) and preserved prior 1921 translations. Commit: [d320d93e](https://github.com/krishnavyasmuni/advaita/commit/d320d93e7f1b345682a30fa89e79962431977a1a).
+
+- **22:59:56 UTC — Vivekacūḍāmaṇi 191–195 committed.** Added literal translations and Devanāgarī-backed glosses; preserved the earlier 1921 English readings. Commit: [0971d803](https://github.com/krishnavyasmuni/advaita/commit/0971d803d3f7feb7cc3eb437e16297ab5d7a6ac5).
+
+- **23:01:07 UTC — Completed batch:** Vivekacūḍāmaṇi verses 196–201. Added four literal translations and Devanāgarī-backed gloss lists (198–199 and 200–201 remain paired reader units), preserving earlier edition translations. Commit: [f1b4ec97](https://github.com/krishnavyasmuni/advaita/commit/f1b4ec97c99277a98de1314c2050c2621702d5d1).
+
+- **23:02:53 UTC — Completed batch:** Vivekacūḍāmaṇi verses 202–206. Added five strict, readable translations and Devanāgarī-backed word glosses; preserved the prior 1921 English readings. Commit: [a06afb1a](https://github.com/krishnavyasmuni/advaita/commit/a06afb1a72e8b9818ba7f25738babe7e2e3167d9).
+
+- **23:04:23 UTC — Completed batch:** Vivekacūḍāmaṇi verses 207–211. Added five literal translations and gloss lists, preserved the prior 1921 English, corrected verse 208's reading to इष्टसंदर्शनादिना (“through seeing desired things and the like”), and normalized IAST apostrophes. Commit: [0a07486c](https://github.com/krishnavyasmuni/advaita/commit/0a07486c5a7ee423c5d83dfb52335fecfcf0c8db).
+
+- **23:05:22 UTC — Completed batch:** Vivekacūḍāmaṇi verses 212–216. Added original literal translations and Devanāgarī-backed glosses for four reader units (213–214 remain paired); corrected the Sanskrit spelling विद्धि and its IAST m vowel in the paired unit. The 1921 translations remain in editionTranslation. Commits: [55a4f056](https://github.com/krishnavyasmuni/advaita/commit/55a4f056ec3d64d05ef8d3966ff1466a4a0f2a7f), [8707ee8a](https://github.com/krishnavyasmuni/advaita/commit/8707ee8a74df270aff7bacc02581b3b25ceb7756).
+
+- **23:06:42 UTC — Completed batch:** Vivekacūḍāmaṇi verses 217–222. Added literal readings and Devanāgarī-backed glosses for three individual verses and the grouped 220–222 entry; preserved prior English in editionTranslation. Corrected verse 217's sandhi in नित्यानन्दचिदात्मना and normalized IAST apostrophes. Commit: [cb0346cc](https://github.com/krishnavyasmuni/advaita/commit/cb0346cca70ab4c839e2381051492de3e8e13cec).
+
+- **23:07:26 UTC — Completed batch:** Vivekacūḍāmaṇi verses 223–227. Added literal English and Devanāgarī-backed word glosses for five entries, preserving the 1921 English in editionTranslation. Tightened 225–226 after aligning the English to the Sanskrit. Commits: [565ab972](https://github.com/krishnavyasmuni/advaita/commit/565ab972d9b539b5a7c04c52f55dab18513f26ef), [25ba1a28](https://github.com/krishnavyasmuni/advaita/commit/25ba1a28cc6a717d1f86882148e9a65c7849ac90).

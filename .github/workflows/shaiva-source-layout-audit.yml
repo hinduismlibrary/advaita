@@ -1,0 +1,38 @@
+name: Audit Shaiva source layout
+on:
+  push:
+    paths:
+      - .github/workflows/shaiva-source-layout-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export structured source and inspect layout-risk passages
+        run: |
+          mkdir -p /tmp/shaiva-structure
+          python3 - <<'PY'
+          import base64,zlib,json,re
+          from pathlib import Path
+          data=Path('assets/data/shaiva-manuscript.b64').read_text().strip()
+          pages=json.loads(zlib.decompress(base64.b64decode(data)))
+          Path('/tmp/shaiva-structure/pages.json').write_text(json.dumps(pages,ensure_ascii=False,indent=2),encoding='utf-8')
+          report=[]
+          for i,page in enumerate(pages,1):
+            for j,(kind,val) in enumerate(page):
+              text=val if isinstance(val,str) else ' '.join(' '.join(str(x) for x in row) for row in val)
+              scripts=len(re.findall('[\u0900-\u097f]',text)); english=len(re.findall('[A-Za-z]',text))
+              if kind=='heading' or len(text)>700 or (kind=='p' and scripts>60 and english>60):
+                report.append({'page':i,'block':j,'type':kind,'length':len(text),'devanagari':scripts,'english':english,'start':text[:230]})
+          Path('/tmp/shaiva-structure/report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+          print('Pages:',len(pages),'layout-risk blocks:',len(report))
+          for x in report[:35]: print(x['page'],x['block'],x['type'],x['length'],x['start'][:90].replace('\n',' '))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shaiva-source-layout-audit
+          path: /tmp/shaiva-structure
+          retention-days: 7

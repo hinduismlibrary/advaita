@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Read one selected chapter or verse range from an Advaita text.">
+<meta name="color-scheme" content="light">
+<title>Chapter reader — Viveka Dṛṣṭi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Noto+Serif+Devanagari:wght@400;600&family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/advaita/assets/css/site.css">
+<link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
+<link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261016e">
+</head>
+<body class="post-page gita-page shankara-reader-page">
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
+<main class="site-main"><article class="article-shell"><div class="article-body">
+<div class="gita-content shankara-content" id="chapter-reader">
+<div class="shankara-reading-grid">
+<header class="gita-hero">
+<p class="eyebrow">Advaita Treatises</p>
+<h1 id="work-title">Loading text…</h1>
+<p class="shankara-author" id="work-author"></p>
+<p class="shankara-chapter-title" id="chapter-title"></p>
+<p class="shankara-reader-links"><a id="contents-link">All chapters</a><a id="full-text-link">Full text</a></p>
+<p class="shankara-reader-coverage" id="word-coverage" aria-live="polite"></p>
+</header>
+<nav class="gita-contents" aria-label="Text contents"><h2>Contents</h2><ol id="chapter-list"></ol></nav>
+<div class="shankara-unit-column" id="chapter-content" aria-live="polite"><p class="shankara-loading-status" role="status">Loading the selected section…</p></div>
+</div>
+</div>
+</div></article></main>
+<footer class="site-footer shankara-reader-footer"><p><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></p></footer>
+<script src="/advaita/assets/js/site.js"></script>
+<script src="/advaita/assets/js/shankara-reader.js?v=reader-controls-20261016e"></script>
+<script>
+(function(){
+"use strict";
+var allowed=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha"]);
+var params=new URLSearchParams(window.location.search);
+var work=params.get("work")||"";
+var requestedUnit=params.get("unit")||"";
+var root=document.getElementById("chapter-reader");
+var titleNode=document.getElementById("work-title");
+var authorNode=document.getElementById("work-author");
+var chapterTitle=document.getElementById("chapter-title");
+var contentNode=document.getElementById("chapter-content");
+var listNode=document.getElementById("chapter-list");
+var coverageNode=document.getElementById("word-coverage");
+var contentsLink=document.getElementById("contents-link");
+var fullTextLink=document.getElementById("full-text-link");
+var rootUrl=new URL("/advaita/books/adi-shankaracharya/",window.location.origin);
+function chapterUrl(id){
+ var url=new URL("book-chapter.html",rootUrl);
+ url.searchParams.set("work",work);
+ url.searchParams.set("unit",id);
+ return url.href;
+}
+function setError(message){
+ contentNode.replaceChildren();
+ var p=document.createElement("p");
+ p.className="shankara-reader-error";
+ p.setAttribute("role","alert");
+ p.textContent=message+" ";
+ var a=document.createElement("a");
+ a.href=contentsLink.href;
+ a.textContent="Return to the contents";
+ p.append(a);
+ contentNode.append(p);
+}
+function decodeHash(value){try{return decodeURIComponent(value)}catch(e){return value}}
+function topBlock(node,column){
+ var current=node;
+ while(current&&current.parentElement!==column)current=current.parentElement;
+ return current&&current.parentElement===column?current:null;
+}
+function makeGloss(details,words){
+ details.className="gita-details shankara-word-gloss";
+ details.replaceChildren();
+ var summary=document.createElement("summary");
+ summary.textContent="Word for Word";
+ var reveal=document.createElement("div");
+ reveal.className="gita-reveal";
+ var list=document.createElement("div");
+ list.className="gita-word-list";
+ words.forEach(function(word){
+  if(!word||!word.sa||!word.en)return;
+  var row=document.createElement("div");
+  row.className="gita-word-row";
+  var source=document.createElement("span");
+  source.className="gita-word-source";
+  var deva=document.createElement("span");
+  deva.className="gita-word-dev";
+  deva.lang="sa-Deva";
+  deva.textContent=String(word.sa).trim();
+  source.append(deva);
+  var gloss=document.createElement("span");
+  gloss.className="gita-word-gloss";
+  gloss.textContent=String(word.en).trim();
+  row.append(source,gloss);
+  list.append(row);
+ });
+ reveal.append(list);
+ details.append(summary,reveal);
+}
+if(!allowed.has(work)){
+ titleNode.textContent="Text not found";
+ contentsLink.href=rootUrl.href;
+ fullTextLink.href=rootUrl.href;
+ setError("Choose a longer text from the Advaita texts page.");
+ return;
+}
+root.dataset.work=work;
+var readerUrl=new URL(work+"/",rootUrl);
+var dataUrl=new URL("/advaita/assets/data/shankara/"+encodeURIComponent(work)+".json",window.location.origin);
+var contentsUrl=new URL("book-contents.html",rootUrl);
+contentsUrl.searchParams.set("work",work);
+contentsLink.href=contentsUrl.href;
+fullTextLink.href=readerUrl.href;
+Promise.all([
+ fetch(readerUrl.href,{credentials:"same-origin"}).then(function(response){if(!response.ok)throw new Error("The book page could not be loaded.");return response.text()}),
+ fetch(dataUrl.href,{credentials:"same-origin"}).then(function(response){if(!response.ok)throw new Error("Glossary data is unavailable.");return response.json()}).catch(function(){return null})
+]).then(function(results){
+ var doc=new DOMParser().parseFromString(results[0],"text/html");
+ var data=results[1];
+ var title=doc.querySelector(".gita-hero h1")||doc.querySelector("h1");
+ if(title)titleNode.textContent=title.textContent.trim();
+ var author=doc.querySelector(".shankara-author");
+ if(author)authorNode.textContent=author.textContent.trim();
+ document.title=titleNode.textContent+" — Chapter reader — Viveka Dṛṣṭi";
+ var sourceNav=doc.querySelector(".gita-contents");
+ var items=[];
+ if(sourceNav){
+  items=Array.from(sourceNav.querySelectorAll("li a[href^='#']")).map(function(anchor){
+   return {label:anchor.textContent.trim(),id:decodeHash(anchor.getAttribute("href").slice(1))};
+  }).filter(function(item){return item.label&&item.id});
+ }
+ var sourceColumn=doc.querySelector(".shankara-unit-column");
+ if(!sourceColumn)throw new Error("This text has no chapter content.");
+ if(!items.length){
+  items=Array.from(sourceColumn.querySelectorAll(".shankara-section-heading,article.gita-verse,article.shankara-verse")).map(function(node,index){
+   var label=node.querySelector(".shankara-unit-label")||node.querySelector("h2");
+   return {label:(label?label.textContent:("Section "+(index+1))).trim(),id:node.id};
+  }).filter(function(item){return item.label&&item.id});
+ }
+ if(!items.length)throw new Error("No chapter or verse-range links were found.");
+ listNode.replaceChildren();
+ items.forEach(function(item){
+  var li=document.createElement("li");
+  var a=document.createElement("a");
+  a.href=chapterUrl(item.id);
+  a.textContent=item.label;
+  if(item.id===requestedUnit){a.setAttribute("aria-current","page");a.className="is-current"}
+  li.append(a);
+  listNode.append(li);
+ });
+ var selectedId=requestedUnit||items[0].id;
+ var selectedIndex=items.findIndex(function(item){return item.id===selectedId});
+ if(selectedIndex<0){
+  chapterTitle.textContent="Section not found";
+  setError("That chapter or verse range is not in this text.");
+  return;
+ }
+ var target=doc.getElementById(selectedId);
+ if(!target)throw new Error("The selected section could not be found in the text.");
+ var start=topBlock(target,sourceColumn);
+ if(!start)throw new Error("The selected content is outside the text column.");
+ var nextBlock=null;
+ for(var i=selectedIndex+1;i<items.length;i++){
+  var nextTarget=doc.getElementById(items[i].id);
+  var candidate=nextTarget?topBlock(nextTarget,sourceColumn):null;
+  if(candidate&&candidate!==start){nextBlock=candidate;break;}
+ }
+ var selected=[];
+ for(var node=start;node&&node!==nextBlock;node=node.nextElementSibling){
+  if(node!==start&&node.matches(".shankara-section-heading"))break;
+  if(node.matches(".shankara-work-nav"))break;
+  selected.push(node);
+ }
+ if(!selected.length)throw new Error("The selected section is empty.");
+ chapterTitle.textContent=items[selectedIndex].label;
+ contentNode.replaceChildren();
+ selected.forEach(function(node){contentNode.append(document.importNode(node,true))});
+ var glossMap=new Map();
+ if(data&&Array.isArray(data.units))data.units.forEach(function(unit){if(unit&&unit.id)glossMap.set(unit.id,unit)});
+ var cards=Array.from(contentNode.querySelectorAll("article.gita-verse,article.shankara-verse"));
+ cards.forEach(function(card){
+  var details=card.querySelector(".shankara-word-gloss");
+  if(details&&details.querySelector(".gita-word-row"))return;
+  var unit=glossMap.get(card.id);
+  var words=unit&&Array.isArray(unit.gloss)?unit.gloss.filter(function(word){return word&&word.sa&&word.en}):[];
+  if(words.length){
+   if(!details){details=document.createElement("details");var controls=card.querySelector(".gita-controls");if(!controls){controls=document.createElement("div");controls.className="gita-controls";card.append(controls)}controls.append(details)}
+   makeGloss(details,words);
+  }else if(details&&!details.querySelector(".gita-word-row"))details.remove();
+ });
+ var panelCounts=window.ShankaraReaderControls?window.ShankaraReaderControls.apply(contentNode):{total:cards.length,available:0};
+ var total=panelCounts.total||cards.length;
+ var withGloss=panelCounts.available||0;
+ coverageNode.textContent="Word for Word is available for "+withGloss+" of "+total+" entries in this section. Other entries show a notice when opened.";
+ var pager=document.createElement("nav");
+ pager.className="shankara-work-nav";
+ pager.setAttribute("aria-label","Chapter navigation");
+ if(selectedIndex>0){
+  var previous=document.createElement("a");previous.rel="prev";previous.href=chapterUrl(items[selectedIndex-1].id);previous.textContent="← "+items[selectedIndex-1].label;pager.append(previous);
+ }else{
+  var spacer=document.createElement("span");pager.append(spacer);
+ }
+ var middle=document.createElement("a");middle.className="shankara-index-link";middle.href=contentsUrl.href;middle.textContent="All chapters";pager.append(middle);
+ if(selectedIndex<items.length-1){
+  var next=document.createElement("a");next.rel="next";next.href=chapterUrl(items[selectedIndex+1].id);next.textContent=items[selectedIndex+1].label+" →";pager.append(next);
+ }else{
+  var spacerEnd=document.createElement("span");pager.append(spacerEnd);
+ }
+ contentNode.append(pager);
+}).catch(function(error){
+ chapterTitle.textContent="Could not load this section";
+ setError("The selected text could not be loaded. "+error.message);
+ console.error(error);
+});
+})();
+</script>
+</body>
+</html>

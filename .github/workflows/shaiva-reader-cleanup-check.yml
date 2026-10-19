@@ -1,0 +1,61 @@
+name: Validate uncluttered Shaiva reader
+on:
+  push:
+    paths:
+      - .github/workflows/shaiva-reader-cleanup-check.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Check real manuscript data, reader, and update design guide
+        run: |
+          node --check assets/js/shaiva-complete-reader.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64,json,zlib
+          root=Path('.')
+          html=(root/'articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html').read_text()
+          css=(root/'assets/css/document-paged.css').read_text()
+          js=(root/'assets/js/shaiva-complete-reader.js').read_text()
+          assert 'assets/css/varna-vicara-paged.css' in html
+          for element_id in ('shaiva-desktop-toc','shaiva-mobile-toc','section-parent','section-count','source-content','page-prev','page-next'):
+              assert f'id="{element_id}"' in html, element_id
+          assert 'shaiva-complete-reader.js?v=20260923-collapsible-chapters-2' in html
+          assert '20260923-shaiva-parity-1' in js
+          assert "make('summary',null,'Show Sanskrit')" in js
+          assert "details.open?'Hide Sanskrit':'Show Sanskrit'" in js
+          assert 'details.sanskrit-reveal' not in js
+          assert 'shaiva-source-page' not in js
+          assert '.document-content' in css and '.sanskrit-reveal' in css and '.shaiva-parallel' in css
+          packed=(root/'assets/data/shaiva-manuscript.b64').read_text().strip()
+          pages=json.loads(zlib.decompress(base64.b64decode(packed,validate=True)))
+          assert len(pages)==52 and sum(bool(p) for p in pages)==50
+          assert sum(b[0]=='table' for p in pages for b in p)==20
+          assert sum(len(b[1]) for p in pages for b in p if b[0]=='table')==67
+          guide=root/'.github/docs/SITE_GUIDE.md'
+          text=guide.read_text(encoding='utf-8')
+          old='and displays source-derived bilingual rows as paired Sanskrit toggles followed immediately by their English translations.'
+          new='and displays source-derived bilingual rows as paired Sanskrit passages followed immediately by their English translations, with **one compact Show Sanskrit / Hide Sanskrit control per section** rather than a button for every row. The choice persists between sections.'
+          assert old in text or new in text
+          text=text.replace(old,new)
+          old='every Sanskrit toggle and its paired English'
+          new='the single Sanskrit toggle per section and every paired English translation'
+          assert old in text or new in text
+          text=text.replace(old,new)
+          anchor='## Śaiva article: Varṇa-vicāra design contract (2026-09-21)'
+          note='**Reader UI correction (2026-09-21):** The original button-per-passage layout was crowded. Keep only the single section-level Sanskrit control; no repeated visible PDF-page banners between paragraphs. Keep source-page anchors and the unobtrusive source-page range at the end of each section. Use the actual Varṇa-vicāra stylesheet and review visual appearance rather than treating a no-overflow test as proof of good design.\n\n'
+          assert anchor in text
+          if note not in text:text=text.replace(anchor,anchor+'\n\n'+note,1)
+          guide.write_text(text,encoding='utf-8')
+          print('PASS: 52 source pages, 50 populated, 20 bilingual tables, 67 paired rows; active section navigation and Sanskrit labels checked')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/docs/SITE_GUIDE.md
+          git diff --cached --quiet || { git commit -m 'Document single-control Shaiva reader design and source checks'; git push; }

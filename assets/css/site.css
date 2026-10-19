@@ -1,0 +1,1059 @@
+:root {
+  --paper:#f4f4f4;
+  --ink:#3c362e;
+  --teal:#00787a;
+  --red:#a92727;
+  --purple:#6731fb;
+  --dark:#2b261f;
+  --line:rgba(119,119,119,.14)
+}
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth
+}
+
+body {
+  margin:0;
+  background:var(--dark);
+  color:var(--ink);
+  font-family:Merriweather,Georgia,serif;
+  font-size:18px;
+  line-height:1.65
+}
+
+.site-header {
+  display:block;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(43,38,31,.97);
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+
+.nav-wrap {
+  width:min(1180px,calc(100% - 32px));
+  margin:auto;
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  gap:24px
+}
+
+.brand {
+  color:#f3eee5!important;
+  font-family:Vollkorn,Georgia,serif;
+  font-size:26px;
+  text-decoration:none;
+  white-space:nowrap
+}
+
+.site-nav {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  flex-wrap:wrap
+}
+
+.site-nav a {
+  color:#e9e1d5;
+  text-decoration:none;
+  font-size:14px;
+  padding:9px 10px;
+  border-radius:999px
+}
+
+.site-nav a:hover,.site-nav a:focus-visible {
+  background:rgba(255,255,255,.08);
+  color:white
+}
+
+.menu-toggle {
+  display:none;
+  margin-left:auto;
+  background:none;
+  border:0;
+  padding:8px;
+  cursor:pointer
+}
+
+.menu-toggle span {
+  display:block;
+  width:24px;
+  height:2px;
+  background:#fff;
+  margin:5px
+}
+
+.site-main {
+  width:min(920px,100%);
+  min-height:75vh;
+  margin:0 auto;
+  background:var(--paper);
+  overflow:hidden
+}
+
+.invocation {
+  padding:62px 24px 38px;
+  text-align:center
+}
+
+.invocation h1,.article-heading h1,.archive-shell h1,.not-found h1 {
+  margin:0;
+  color:var(--teal);
+  font-family:Vollkorn,Georgia,serif;
+  font-size:clamp(38px,6vw,50px);
+  font-weight:400;
+  line-height:1.125
+}
+
+.hero {
+  margin:0;
+  width:100%;
+  background:#ddd
+}
+
+.hero img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:680px;
+  object-fit:cover
+}
+
+.home-content {
+  width:min(652px,calc(100% - 48px));
+  margin:0 auto;
+  padding:64px 0 96px
+}
+
+.home-content p,.home-content li {
+  font-size:20px;
+  line-height:1.5
+}
+
+.home-content>div:first-child p,.gopi-quote {
+  color:var(--red)
+}
+
+.home-content h2,.home-content h3 {
+  color:var(--teal);
+  font-family:Vollkorn,Georgia,serif;
+  font-weight:400;
+  text-align:center
+}
+
+.home-content h2 {
+  font-size:34px;
+  line-height:1.125
+}
+
+.home-content a,.article-body a,.archive-shell a,.not-found a {
+  color:var(--purple);
+  text-decoration:none
+}
+
+.home-content a:hover,.article-body a:hover,.archive-shell a:hover,.not-found a:hover {
+  text-decoration:underline
+}
+
+.section-rule {
+  width:326px;
+  max-width:50%;
+  height:2px;
+  margin:30px auto 48px;
+  background:var(--line)
+}
+
+.article-shell {
+  padding:64px 0 105px
+}
+
+.article-heading {
+  width:min(720px,calc(100% - 48px));
+  margin:0 auto 58px;
+  text-align:center
+}
+
+.article-heading h1 {
+  font-size:clamp(38px,6vw,50px)
+}
+
+.article-date {
+  margin:16px 0 0;
+  color:#766e64;
+  font-size:14px
+}
+
+.article-body {
+  width:min(720px,calc(100% - 48px));
+  margin:0 auto;
+  font-size:19px;
+  line-height:1.65
+}
+
+.article-body h1,.article-body h2,.article-body h3,.article-body h4 {
+  font-family:Vollkorn,Georgia,serif;
+  color:var(--teal);
+  font-weight:400;
+  line-height:1.18
+}
+
+.article-body h2 {
+  font-size:34px
+}
+
+.article-body h3 {
+  font-size:29px
+}
+
+.article-body p {
+  margin-top:0;
+  margin-bottom:1.5em
+}
+
+.article-body img {
+  max-width:100%;
+  height:auto
+}
+
+.article-body figure {
+  margin:2em auto
+}
+
+.article-body figcaption {
+  text-align:center;
+  color:#777;
+  font-size:14px
+}
+
+.article-body blockquote,.article-body .wp-block-quote {
+  margin:1.8em 0;
+  padding:1em 1.2em;
+  border-left:4px solid #6d5685;
+  background:#eee9f1
+}
+
+.article-body table {
+  width:100%;
+  border-collapse:collapse;
+  display:block;
+  overflow-x:auto
+}
+
+.article-body th,.article-body td {
+  border:1px solid #d6d0c5;
+  padding:10px 12px;
+  text-align:left
+}
+
+.article-body pre {
+  overflow:auto;
+  background:#eee9df;
+  padding:16px
+}
+
+.article-body code {
+  overflow-wrap:anywhere
+}
+
+.article-body hr {
+  border:0;
+  height:2px;
+  background:var(--line)
+}
+
+.article-body details.sanskrit-reveal {
+  margin:.5em 0 1.1em
+}
+
+.article-body details.sanskrit-reveal summary {
+  list-style:none
+}
+
+.article-body details.sanskrit-reveal summary::-webkit-details-marker {
+  display:none
+}
+
+.article-body [lang^="sa"] {
+  font-size:1.04em;
+  line-height:1.8
+}
+
+.article-body .scripture-translation,.article-body .scripture-source {
+  color:var(--red)!important
+}
+
+.article-body .empyrean-final-article {
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,serif!important
+}
+
+.article-body .empyrean-final-article>div {
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+  background:transparent!important
+}
+
+.article-body .empyrean-final-article .empyrean-varna-content {
+  width:100%!important;
+  max-width:100%!important;
+  margin-left:auto!important;
+  margin-right:auto!important
+}
+
+.article-body .empyrean-final-article h1:first-of-type {
+  font-size:clamp(38px,6vw,50px)!important
+}
+
+.wp-block-columns {
+  display:flex;
+  gap:24px
+}
+
+.wp-block-column {
+  flex:1;
+  min-width:0
+}
+
+.wp-block-image img {
+  max-width:100%;
+  height:auto
+}
+
+.archive-shell {
+  width:min(720px,calc(100% - 48px));
+  margin:0 auto;
+  padding:64px 0 105px
+}
+
+.archive-shell h2 {
+  margin:58px 0 22px;
+  color:var(--teal);
+  font-family:Vollkorn,Georgia,serif;
+  font-size:30px;
+  font-weight:400
+}
+
+.archive-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-top:1px solid #ddd6ca
+}
+
+.archive-list li {
+  display:flex;
+  gap:18px;
+  justify-content:space-between;
+  align-items:baseline;
+  padding:14px 0;
+  border-bottom:1px solid #ddd6ca
+}
+
+.archive-list span {
+  color:#7c7469;
+  font-size:13px;
+  white-space:nowrap
+}
+
+.not-found {
+  width:min(652px,calc(100% - 48px));
+  margin:auto;
+  padding:100px 0;
+  text-align:center
+}
+
+.site-footer {
+  width:min(920px,100%);
+  margin:auto;
+  padding:28px 24px 42px;
+  color:#cfc6ba;
+  text-align:center;
+  font-size:13px
+}
+
+.site-footer p {
+  margin:0
+}
+
+/* Bhāgavatam rebuild — use the same compact scripture presentation as the Bhaviṣya Purāṇa chapters. */
+.empyrean-bhagavatam-rebuild {
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.empyrean-bhagavatam-rebuild>div {
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:8px 0 20px!important;
+  background:#f7f6f4!important
+}
+
+.empyrean-bhagavatam-rebuild>div>div {
+  width:100%!important;
+  max-width:760px!important;
+  margin:0 auto!important;
+  padding:0 24px!important;
+  color:var(--ink)!important;
+  font-size:16px!important;
+  line-height:1.45!important
+}
+
+.empyrean-bhagavatam-rebuild h1 {
+  margin:0!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:clamp(38px,6vw,50px)!important;
+  font-weight:400!important;
+  line-height:1.125!important;
+  text-align:center!important
+}
+
+.empyrean-bhagavatam-rebuild h1+p {
+  margin:18px 0 0!important;
+  color:var(--red)!important;
+  font-size:18px!important;
+  line-height:1.45!important;
+  text-align:center!important
+}
+
+.empyrean-bhagavatam-rebuild h2 {
+  color:#2f7f82!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:26px!important;
+  font-weight:600!important;
+  line-height:1.1!important;
+  text-align:center!important
+}
+
+.empyrean-bhagavatam-rebuild ol {
+  max-width:760px;
+  margin:0 auto!important;
+  padding-left:28px!important;
+  font-size:16px!important;
+  line-height:1.4!important
+}
+
+.empyrean-bhagavatam-rebuild-part {
+  width:100%;
+  margin:0 auto 26px
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-panel {
+  width:100%;
+  margin:0 auto
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-inner {
+  padding:0
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-chapter {
+  margin:0 0 26px;
+  padding:0;
+  color:#2f7f82;
+  font-family:Vollkorn,Georgia,serif;
+  font-size:28px;
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:.01em;
+  text-align:center
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-chapter span {
+  color:#2f7f82
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-rule {
+  width:56%;
+  max-width:520px;
+  height:1px;
+  margin:13px auto 16px;
+  background:#dedbd6
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-verse {
+  margin:0;
+  color:#2f7f82;
+  font-family:Vollkorn,Georgia,serif;
+  font-size:26px;
+  font-weight:600;
+  line-height:1.1;
+  letter-spacing:.01em;
+  text-align:center
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-devanagari {
+  max-width:840px;
+  margin:0 auto 14px;
+  color:#3c362e;
+  font-size:21px;
+  font-weight:400;
+  line-height:1.48;
+  text-align:center
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-transliteration {
+  max-width:840px;
+  margin:0 auto 14px;
+  color:#3c362e;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.55;
+  text-align:center
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-translation {
+  max-width:840px;
+  margin:0 auto 14px;
+  color:#3c362e;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.45;
+  text-align:center
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-details {
+  max-width:840px;
+  margin:0 auto 8px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  overflow:visible
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-details summary {
+  display:block;
+  width:max-content;
+  cursor:pointer;
+  list-style:none;
+  border:1px solid #9bc5c7;
+  border-radius:999px;
+  padding:5px 13px;
+  color:#2f7f82;
+  background:transparent;
+  font-size:14px;
+  line-height:1.15;
+  font-weight:600
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-details summary::-webkit-details-marker {
+  display:none
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-details>p,
+.empyrean-bhagavatam-rebuild-part .sb-details>div {
+  margin:8px 0 12px;
+  padding:0;
+  color:#3c362e;
+  font-size:13px;
+  line-height:1.55
+}
+
+.empyrean-bhagavatam-rebuild-part p {
+  max-width:840px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:16px;
+  line-height:1.55
+}
+
+.empyrean-bhagavatam-rebuild-part .sb-details + p {
+  margin-top:14px
+}
+
+@media(max-width:780px) {
+  body {
+    font-size:17px
+  }
+  .nav-wrap {
+    min-height:60px
+  }
+  .menu-toggle {
+    display:block
+  }
+  .site-nav {
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    margin:0;
+    padding:12px 16px 18px;
+    background:var(--dark);
+    border-top:1px solid rgba(255,255,255,.08);
+    flex-direction:column;
+    align-items:stretch
+  }
+  .site-nav.open {
+    display:flex
+  }
+  .site-nav a {
+    font-size:15px;
+    padding:10px 12px
+  }
+  .invocation {
+    padding-top:46px
+  }
+  .home-content,.article-body,.article-heading,.archive-shell {
+    width:calc(100% - 36px)
+  }
+  .home-content {
+    padding:48px 0 72px
+  }
+  .home-content p,.home-content li {
+    font-size:18px
+  }
+  .article-shell {
+    padding:48px 0 72px
+  }
+  .article-body {
+    font-size:17px
+  }
+  .article-body h2 {
+    font-size:30px
+  }
+  .article-body h3 {
+    font-size:26px
+  }
+  .wp-block-columns {
+    flex-direction:column
+  }
+  .archive-list li {
+    display:block
+  }
+  .archive-list span {
+    display:block;
+    margin-top:4px
+  }
+  .empyrean-bhagavatam-rebuild>div {
+    padding-bottom:20px!important
+  }
+  .empyrean-bhagavatam-rebuild>div>div {
+    padding:0 18px!important
+  }
+  .empyrean-bhagavatam-rebuild-part .sb-inner {
+    padding:0
+  }
+  .empyrean-bhagavatam-rebuild-part .sb-chapter,
+  .empyrean-bhagavatam-rebuild-part .sb-verse {
+    font-size:24px
+  }
+  .empyrean-bhagavatam-rebuild-part .sb-devanagari {
+    font-size:19px
+  }
+}
+
+/* Complete Bhāgavatam normalisation. Later chapters use classless, inline-styled sections;
+   these rules intentionally override those inline values so every verse matches Bhaviṣya. */
+.article-body .empyrean-bhagavatam-rebuild-part {
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto 26px!important;
+  padding:0!important;
+  background:#f7f6f4!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part>div,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-panel,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-inner {
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:760px!important;
+  margin:0 auto!important;
+  padding:0 24px!important;
+  background:transparent!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-panel .sb-inner {
+  max-width:100%!important;
+  padding:0!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section {
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 26px!important;
+  padding:0!important;
+  background:transparent!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>h3,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-verse {
+  margin:0!important;
+  padding:0!important;
+  color:#2f7f82!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:26px!important;
+  font-weight:600!important;
+  line-height:1.1!important;
+  letter-spacing:.01em!important;
+  text-align:center!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>hr,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-rule {
+  width:56%!important;
+  max-width:520px!important;
+  height:1px!important;
+  margin:13px auto 16px!important;
+  border:0!important;
+  border-top:1px solid #dedbd6!important;
+  background:transparent!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>div[lang="sa-Deva"],
+.article-body .empyrean-bhagavatam-rebuild-part .sb-devanagari {
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:21px!important;
+  font-style:normal!important;
+  font-weight:400!important;
+  line-height:1.48!important;
+  text-align:center!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>div[lang="sa-Latn"],
+.article-body .empyrean-bhagavatam-rebuild-part .sb-transliteration {
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:14px!important;
+  font-weight:400!important;
+  line-height:1.55!important;
+  text-align:center!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>details,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-details {
+  max-width:840px!important;
+  margin:0 auto 8px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  overflow:visible!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>details>summary,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-details>summary {
+  display:block!important;
+  width:max-content!important;
+  cursor:pointer!important;
+  list-style:none!important;
+  margin:0!important;
+  padding:5px 13px!important;
+  border:1px solid #9bc5c7!important;
+  border-radius:999px!important;
+  color:#2f7f82!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:14px!important;
+  line-height:1.15!important;
+  font-weight:600!important;
+  text-align:left!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>details>summary::-webkit-details-marker,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-details>summary::-webkit-details-marker {
+  display:none!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>details>div,
+.article-body .empyrean-bhagavatam-rebuild-part section>details>p,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-details>div,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-details>p {
+  margin:8px 0 12px!important;
+  padding:0!important;
+  color:#3c362e!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:13px!important;
+  line-height:1.55!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>p,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-translation,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-details+p {
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:16px!important;
+  font-weight:400!important;
+  line-height:1.45!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part section>p>strong:first-child {
+  color:#2f7f82!important;
+  font-size:17px!important;
+  font-weight:700!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-chapter,
+.article-body .empyrean-bhagavatam-rebuild-part h2[id^="chapter-"] {
+  max-width:840px!important;
+  margin:0 auto 26px!important;
+  padding:0!important;
+  color:#2f7f82!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:28px!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  letter-spacing:.01em!important;
+  text-align:center!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-chapter span {
+  color:#2f7f82!important
+}
+
+@media(max-width:780px) {
+  .article-body .empyrean-bhagavatam-rebuild-part>div,
+  .article-body .empyrean-bhagavatam-rebuild-part .sb-panel,
+  .article-body .empyrean-bhagavatam-rebuild-part .sb-inner {
+    padding-left:0!important;
+    padding-right:0!important
+  }
+  .article-body .empyrean-bhagavatam-rebuild-part section>h3,
+  .article-body .empyrean-bhagavatam-rebuild-part .sb-verse,
+  .article-body .empyrean-bhagavatam-rebuild-part .sb-chapter,
+  .article-body .empyrean-bhagavatam-rebuild-part h2[id^="chapter-"] {
+    font-size:24px!important
+  }
+  .article-body .empyrean-bhagavatam-rebuild-part section>div[lang="sa-Deva"],
+  .article-body .empyrean-bhagavatam-rebuild-part .sb-devanagari {
+    font-size:19px!important
+  }
+}
+
+/* Third legacy markup variant used in the later Chapter 5 blocks. */
+.article-body .empyrean-bhagavatam-rebuild-part .sb-dev {
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:21px!important;
+  font-weight:400!important;
+  line-height:1.48!important;
+  text-align:center!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-iast {
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:14px!important;
+  font-style:italic!important;
+  font-weight:400!important;
+  line-height:1.55!important;
+  text-align:center!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part details {
+  display:block!important;
+  max-width:840px!important;
+  margin:0 auto 8px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  overflow:visible!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part details>summary {
+  display:block!important;
+  width:max-content!important;
+  cursor:pointer!important;
+  list-style:none!important;
+  margin:0!important;
+  padding:5px 13px!important;
+  border:1px solid #9bc5c7!important;
+  border-radius:999px!important;
+  color:#2f7f82!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:14px!important;
+  line-height:1.15!important;
+  font-weight:600!important;
+  text-align:left!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part details>summary::-webkit-details-marker {
+  display:none!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-meaning,
+.article-body .empyrean-bhagavatam-rebuild-part .sb-bhasya-text,
+.article-body .empyrean-bhagavatam-rebuild-part details>div,
+.article-body .empyrean-bhagavatam-rebuild-part details>p {
+  max-width:840px!important;
+  margin:8px 0 12px!important;
+  padding:0!important;
+  color:#3c362e!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.55!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-commentary {
+  max-width:840px!important;
+  margin:0 auto 26px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:16px!important;
+  font-weight:400!important;
+  line-height:1.45!important
+}
+
+.article-body .empyrean-bhagavatam-rebuild-part .sb-commentary-label {
+  color:#2f7f82!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:17px!important;
+  font-weight:700!important
+}
+
+@media(max-width:780px) {
+  .article-body .empyrean-bhagavatam-rebuild-part .sb-dev {
+    font-size:19px!important
+  }
+}
+
+/* Minimal shared reading scale; preserve the existing paper and ink palette. */
+body.gita-page .shankara-content .shankara-reader-coverage,
+body.gita-page .shankara-content .script-controls{display:none!important}
+body.gita-page .shankara-content,
+body.gita-page .shankara-content .gita-sanskrit,
+body.gita-page .shankara-content .sa-text,
+body.gita-page .shankara-content .gita-translation,
+body.gita-page .shankara-content .shankara-iast,
+body.gita-page .shankara-content .gita-word-list,
+body.gita-page .shankara-content .gita-word-row,
+body.gita-page .shankara-content .gita-word-source,
+body.gita-page .shankara-content .gita-word-dev,
+body.gita-page .shankara-content .gita-word-iast,
+body.gita-page .shankara-content .gita-word-gloss,
+body.gita-page .shankara-content .shankara-author,
+body.gita-page .shankara-content .gita-contents h2,
+body.gita-page .shankara-content .gita-contents ol,
+body.gita-page .shankara-content .gita-contents li,
+body.gita-page .shankara-content .gita-contents a,
+body.gita-page .shankara-content .shankara-unit-label,
+body.gita-page .shankara-content .gita-verse h2,
+body.gita-page .shankara-content .gita-hero .eyebrow,
+body.gita-page .shankara-content .gita-hero .subtitle,
+body.gita-page .shankara-content .treatise-section-count,
+body.gita-page .shankara-content .treatise-section-picker select,
+body.gita-page .shankara-content .gita-chapter-nav a,
+body.gita-page .shankara-content .shankara-work-nav a,
+body.gita-page .shankara-content .shankara-index-link,
+body.gita-page .shankara-content .shankara-about-copy,
+body.gita-page .shankara-content .shankara-reader-error,
+body.gita-page .shankara-content .gita-loading,
+body.gita-page .shankara-content .shankara-section-heading,
+body.gita-page .shankara-content .shankara-toc-details ol{
+ font-size:16px!important;line-height:1.58!important
+}
+body.gita-page .shankara-content .gita-sanskrit,
+body.gita-page .shankara-content .sa-text{
+ font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+ font-size:16px!important;line-height:1.58!important
+}
+body.gita-page .shankara-content .gita-details>summary,
+body.gita-page .shankara-content .shankara-chapter>summary,
+body.gita-page .shankara-content .shankara-about>summary,
+body.gita-page .shankara-content .shankara-toc-details>summary{
+ display:inline-flex!important;align-items:center;min-height:0!important;
+ padding:6px 10px!important;border:1px solid #c89568!important;border-radius:4px!important;
+ background:transparent!important;color:#8a4f2b!important;
+ font:400 16px/1.5 Merriweather,Georgia,serif!important;list-style:none
+}
+body.gita-page .shankara-content .gita-details>summary::-webkit-details-marker,
+body.gita-page .shankara-content .shankara-chapter>summary::-webkit-details-marker,
+body.gita-page .shankara-content .shankara-about>summary::-webkit-details-marker,
+body.gita-page .shankara-content .shankara-toc-details>summary::-webkit-details-marker{display:none}
+body.gita-page .shankara-content .gita-details[open]>summary,
+body.gita-page .shankara-content .shankara-chapter[open]>summary,
+body.gita-page .shankara-content .shankara-about[open]>summary{background:#fbf8f1!important}
+
+/* Vishnu Purana Book 1 reading typography */
+body.vp-book-1 .shankara-content .gita-sanskrit,
+body.vp-book-1 .shankara-content .gita-translation,
+body.vp-book-1 .shankara-content .gita-sridhara-body,
+body.vp-book-1 .shankara-content .gita-sridhara-body p,
+body.vp-book-1 .shankara-content .gita-sridhara-label {
+  font-family: Merriweather, "Noto Serif Devanagari", Georgia, serif !important;
+  font-size: 16px !important;
+  line-height: 1.58 !important;
+  color: #171717 !important;
+}
+body.vp-book-1 .shankara-content .gita-sanskrit {
+  font-weight: 700 !important;
+}
+body.vp-book-1 .shankara-content .gita-translation,
+body.vp-book-1 .shankara-content .gita-sridhara-body,
+body.vp-book-1 .shankara-content .gita-sridhara-body p {
+  font-weight: 400 !important;
+}
+body.vp-book-1 .shankara-content .gita-sridhara-label {
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+body.vp-book-1 .shankara-content .gita-details > summary {
+  font-family: Merriweather, "Noto Serif Devanagari", Georgia, serif !important;
+  font-size: 14px !important;
+}
+body.vp-book-1 .shankara-content .gita-word-list,
+body.vp-book-1 .shankara-content .gita-word-row,
+body.vp-book-1 .shankara-content .gita-word-source,
+body.vp-book-1 .shankara-content .gita-word-dev,
+body.vp-book-1 .shankara-content .gita-word-iast,
+body.vp-book-1 .shankara-content .gita-word-gloss,
+body.vp-book-1 .shankara-content .gita-dual-label,
+body.vp-book-1 .shankara-content .gita-sridhara-transliteration,
+body.vp-book-1 .shankara-content .gita-sridhara-sanskrit {
+  font-family: Merriweather, "Noto Serif Devanagari", Georgia, serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #171717 !important;
+  font-weight: 400 !important;
+}

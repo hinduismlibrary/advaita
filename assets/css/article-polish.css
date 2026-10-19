@@ -1,0 +1,738 @@
+/* Focused second-pass polish for citation-heavy essays and scripture readers. */
+
+/* ---------- Citation / research article ---------- */
+body.vicara-reader-page.citation-reader-page .empyrean-final-article h1:first-of-type{
+  max-width:620px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  font-size:46px!important;
+  line-height:1.08!important;
+  letter-spacing:-.012em!important;
+}
+body.vicara-reader-page.citation-reader-page .empyrean-final-article>div>div:first-child>p{
+  max-width:590px!important;
+  margin-top:18px!important;
+  color:#6c655e!important;
+  font-size:16px!important;
+  line-height:1.6!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body h2:not(.vicara-side-title){
+  margin-top:56px!important;
+  padding:0 0 13px!important;
+  border-bottom:1px solid #d8d2cb!important;
+  color:#2f7779!important;
+  font-size:29px!important;
+  line-height:1.16!important;
+  text-align:left!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body h2:not(.vicara-side-title) *{
+  font-size:inherit!important;
+  line-height:inherit!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body h2:not(.vicara-side-title)>span:first-child{
+  display:block!important;
+  margin:0 0 5px!important;
+  color:#8a8178!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:12.5px!important;
+  font-weight:700!important;
+  letter-spacing:.045em!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body h2:not(.vicara-side-title)+hr{
+  display:none!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body p{
+  line-height:1.62!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body p[style*="color:#a92727"]:not([style*="font-style:italic"]),
+body.vicara-reader-page.citation-reader-page .article-body p[style*="color: #a92727"]:not([style*="font-style:italic"]){
+  margin:26px 0 8px!important;
+  padding:2px 0 2px 20px!important;
+  border-left:3px solid #8b7496!important;
+  background:transparent!important;
+  color:#4e4652!important;
+  font-size:17.4px!important;
+  line-height:1.68!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body p[style*="color:#a92727"][style*="font-style:italic"],
+body.vicara-reader-page.citation-reader-page .article-body p[style*="color: #a92727"][style*="font-style:italic"]{
+  margin:0 0 42px!important;
+  padding:0 0 2px 20px!important;
+  border-left:3px solid #8b7496!important;
+  background:transparent!important;
+  color:#776b78!important;
+  font-size:13.5px!important;
+  font-style:italic!important;
+  line-height:1.55!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body p[style*="color:#a92727"] strong,
+body.vicara-reader-page.citation-reader-page .article-body p[style*="color: #a92727"] strong{
+  color:#3e3742!important;
+}
+body.vicara-reader-page.citation-reader-page .vicara-side-toc .vicara-toc a{
+  font-size:12.8px!important;
+  line-height:1.42!important;
+}
+body.vicara-reader-page.citation-reader-page .vicara-side-toc .vicara-toc>li>a{
+  font-size:14px!important;
+}
+
+/* Research tables: compact, legible and touch-scrollable instead of forcing the whole page wide. */
+body.vicara-reader-page.citation-reader-page .article-body table{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  overflow-x:auto!important;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  font-size:13.5px!important;
+}
+body.vicara-reader-page.citation-reader-page .article-body th,
+body.vicara-reader-page.citation-reader-page .article-body td{
+  min-width:110px;
+  padding:9px 8px!important;
+  font-size:13.5px!important;
+  line-height:1.45!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere;
+}
+
+/* ---------- Scripture readers ---------- */
+body.vicara-reader-page.scripture-reader-page .vicara-side-title{
+  font-size:27px!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc a{
+  font-size:12.4px!important;
+  line-height:1.4!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc>li>a{
+  font-size:13.6px!important;
+}
+body.vicara-reader-page.scripture-reader-page .article-shell{
+  padding-top:54px!important;
+}
+
+/* Gītā: each verse reads as a clean textual unit rather than a dense stack of controls. */
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero{
+  margin-bottom:54px!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero h1{
+  font-size:46px!important;
+  letter-spacing:-.012em!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero .eyebrow{
+  color:#7b7168!important;
+  font-size:13px!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero .subtitle{
+  margin-top:14px!important;
+  color:#665f58!important;
+  font-size:16px!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-chapter-nav{
+  margin:-24px 0 48px!important;
+  gap:10px!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-chapter-nav a{
+  min-height:34px;
+  padding:7px 11px!important;
+  border:1px solid #d6d0c9!important;
+  border-radius:4px!important;
+  color:#5f5851!important;
+  background:#f7f5f1!important;
+  font-size:12.5px!important;
+  line-height:1.3!important;
+  text-decoration:none!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-verse{
+  margin:0!important;
+  padding:38px 0 44px!important;
+  border-top:1px solid #ddd7d0!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-verse:first-of-type{
+  border-top:0!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-verse h2{
+  margin:0!important;
+  color:#2f7779!important;
+  font-size:24px!important;
+  font-weight:500!important;
+  letter-spacing:.015em!important;
+  text-align:center!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-verse-rule{
+  width:42%!important;
+  margin:11px auto 21px!important;
+  border-color:#ded8d1!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-sanskrit{
+  max-width:620px!important;
+  margin:0 auto 20px!important;
+  color:#39342f!important;
+  font-size:21px!important;
+  line-height:1.62!important;
+  text-align:center!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-translation{
+  max-width:600px!important;
+  margin:0 auto 22px!important;
+  color:#4a4540!important;
+  font-size:16.6px!important;
+  line-height:1.68!important;
+  text-align:left!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-controls{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:8px!important;
+  margin:0 0 20px!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-details{
+  margin:0!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-details summary{
+  min-height:36px;
+  display:flex!important;
+  align-items:center!important;
+  padding:7px 11px!important;
+  border:1px solid #d0cbc5!important;
+  border-radius:4px!important;
+  background:#f8f6f2!important;
+  color:#5b544d!important;
+  font-size:12.8px!important;
+  line-height:1.2!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-details[open]{
+  flex:1 1 100%!important;
+  margin:4px 0 7px!important;
+  padding:13px 0 5px!important;
+  border-top:1px solid #e0dad3!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-details[open] summary{
+  width:max-content!important;
+  margin-bottom:10px!important;
+  border-color:#bcb5ad!important;
+  background:transparent!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-reveal,
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-wfw-list{
+  color:#514a44!important;
+  font-size:14px!important;
+  line-height:1.68!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-dual-label{
+  font-size:14px!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-commentary{
+  display:block!important;
+  margin:25px 0 0!important;
+  padding:4px 0 4px 18px!important;
+  border-left:2px solid #8b7496!important;
+  color:#4f4851!important;
+  font-size:16.2px!important;
+  line-height:1.7!important;
+  text-align:left!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-commentary h3{
+  display:block!important;
+  margin:0 0 7px!important;
+  color:#65516f!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:18px!important;
+  font-weight:500!important;
+  line-height:1.3!important;
+  text-align:left!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-commentary p{
+  display:block!important;
+  margin:0!important;
+  color:inherit!important;
+  font-size:inherit!important;
+  line-height:inherit!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-commentary p:before{
+  content:none!important;
+}
+body.vicara-reader-page.scripture-reader-page.gita-page .gita-source-note{
+  margin-top:44px!important;
+  padding-top:20px!important;
+  border-top:1px solid #d8d2cb!important;
+  color:#756d65!important;
+  font-size:11.8px!important;
+  line-height:1.6!important;
+}
+
+/* Bhāgavatam + Śrīdhara: visible text first, apparatus second. */
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .vicara-side-toc .vicara-toc ol,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .vicara-mobile-toc .vicara-toc ol{
+  display:none!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h1{
+  font-size:46px!important;
+  line-height:1.08!important;
+  letter-spacing:-.012em!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h1+p{
+  margin-top:14px!important;
+  color:#6d645c!important;
+  font-size:15.5px!important;
+  line-height:1.55!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page h2[id^="chapter-"],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-chapter{
+  margin:56px auto 24px!important;
+  padding:0 0 13px!important;
+  border-bottom:1px solid #d8d2cb!important;
+  color:#2f7779!important;
+  font-size:28px!important;
+  font-weight:500!important;
+  text-align:left!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]{
+  margin:0 auto!important;
+  padding:32px 0 38px!important;
+  border-top:1px solid #e0dad3!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page h3[id^="sb-"],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse{
+  color:#2f7779!important;
+  font-size:22px!important;
+  font-weight:500!important;
+  letter-spacing:.015em!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-rule{
+  width:40%!important;
+  margin:10px auto 20px!important;
+  border-color:#ddd7d0!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-devanagari,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-dev,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>div[lang="sa-Deva"],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>div[lang="sa"],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>div[lang="sa-Deva"],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>div[lang="sa"]{
+  max-width:620px!important;
+  margin:0 auto 18px!important;
+  color:#39342f!important;
+  font-size:20.5px!important;
+  line-height:1.64!important;
+  text-align:center!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-translation{
+  max-width:610px!important;
+  margin:0 auto 21px!important;
+  color:#4a4540!important;
+  font-size:16.4px!important;
+  line-height:1.68!important;
+  text-align:left!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>details,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details{
+  margin:0 auto 9px!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details>summary,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>details>summary,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details>summary{
+  min-height:36px;
+  display:flex!important;
+  align-items:center!important;
+  padding:7px 11px!important;
+  border:1px solid #d0cbc5!important;
+  border-radius:4px!important;
+  background:#f8f6f2!important;
+  color:#5b544d!important;
+  font-size:12.8px!important;
+  font-weight:600!important;
+  line-height:1.25!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-bhasya>summary{
+  border-color:#b7a8bf!important;
+  color:#65516f!important;
+  background:#f7f3f8!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details[open],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>details[open],
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details[open]{
+  margin-top:4px!important;
+  padding:12px 0 3px!important;
+  border-top:1px solid #e1dbd5!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details>div,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details>p,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-meaning,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-bhasya-text,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-transliteration,
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-sridhara-auto-transliteration{
+  color:#514a44!important;
+  font-size:14px!important;
+  line-height:1.7!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-sridhara-layer{
+  margin-top:14px!important;
+  padding:14px 0 2px 17px!important;
+  border-left:2px solid #8b7496!important;
+}
+body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-sridhara-layer>.sb-layer-heading{
+  color:#65516f!important;
+}
+
+@media(max-width:620px){
+  body.vicara-reader-page.citation-reader-page .article-shell,
+  body.vicara-reader-page.scripture-reader-page .article-shell{
+    padding:31px 16px 62px!important;
+  }
+  body.vicara-reader-page.citation-reader-page .empyrean-final-article h1:first-of-type{
+    font-size:34px!important;
+    line-height:1.1!important;
+  }
+  body.vicara-reader-page.citation-reader-page .article-body h2:not(.vicara-side-title){
+    margin-top:46px!important;
+    font-size:25px!important;
+    line-height:1.2!important;
+  }
+  body.vicara-reader-page.citation-reader-page .article-body p{
+    font-size:17.2px!important;
+    line-height:1.67!important;
+  }
+  body.vicara-reader-page.citation-reader-page .article-body p[style*="color:#a92727"]:not([style*="font-style:italic"]),
+  body.vicara-reader-page.citation-reader-page .article-body p[style*="color: #a92727"]:not([style*="font-style:italic"]){
+    margin-top:22px!important;
+    padding-left:14px!important;
+    font-size:16.2px!important;
+    line-height:1.72!important;
+  }
+  body.vicara-reader-page.citation-reader-page .article-body p[style*="color:#a92727"][style*="font-style:italic"],
+  body.vicara-reader-page.citation-reader-page .article-body p[style*="color: #a92727"][style*="font-style:italic"]{
+    margin-bottom:34px!important;
+    padding-left:14px!important;
+    font-size:12.8px!important;
+  }
+  body.vicara-reader-page.citation-reader-page .article-body table{
+    font-size:12px!important;
+  }
+  body.vicara-reader-page.citation-reader-page .article-body th,
+  body.vicara-reader-page.citation-reader-page .article-body td{
+    min-width:96px;
+    padding:8px 7px!important;
+    font-size:12px!important;
+    white-space:normal!important;
+  }
+
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:34px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc>summary{
+    font-size:19px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero{
+    margin-bottom:38px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero h1{
+    font-size:36px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero .eyebrow{
+    font-size:11.5px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-hero .subtitle{
+    font-size:15px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-chapter-nav{
+    margin:-12px 0 34px!important;
+    gap:7px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-chapter-nav a{
+    flex:1 1 auto;
+    min-height:38px;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:8px 9px!important;
+    font-size:11.8px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-verse{
+    padding:31px 0 36px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-verse h2{
+    font-size:21px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-sanskrit{
+    margin-bottom:17px!important;
+    font-size:19px!important;
+    line-height:1.68!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-translation{
+    margin-bottom:20px!important;
+    font-size:15.8px!important;
+    line-height:1.72!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-controls{
+    gap:7px!important;
+    margin-bottom:18px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-details{
+    flex:1 1 calc(50% - 7px)!important;
+    min-width:0!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-details summary{
+    width:100%!important;
+    min-height:40px;
+    justify-content:center!important;
+    padding:8px 7px!important;
+    font-size:11.7px!important;
+    text-align:center!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-details[open]{
+    flex-basis:100%!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-details[open] summary{
+    width:100%!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-reveal,
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-wfw-list{
+    font-size:13.2px!important;
+    line-height:1.7!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-commentary{
+    margin-top:22px!important;
+    padding-left:13px!important;
+    font-size:15.3px!important;
+    line-height:1.74!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.gita-page .gita-commentary h3{
+    font-size:16.5px!important;
+  }
+
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h1{
+    font-size:34px!important;
+    line-height:1.1!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page h2[id^="chapter-"],
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-chapter{
+    margin-top:46px!important;
+    font-size:24px!important;
+    line-height:1.2!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]{
+    padding:27px 0 32px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page h3[id^="sb-"],
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse{
+    font-size:20px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-devanagari,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-dev,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>div[lang="sa-Deva"],
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>div[lang="sa"]{
+    font-size:18.5px!important;
+    line-height:1.7!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-translation{
+    font-size:15.7px!important;
+    line-height:1.72!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details>summary,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-verse-section>details>summary,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details>summary{
+    width:100%!important;
+    min-height:40px;
+    justify-content:flex-start!important;
+    padding:9px 10px!important;
+    font-size:12px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details>div,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-details>p,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-meaning,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-bhasya-text,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-transliteration,
+  body.vicara-reader-page.scripture-reader-page.bhagavatam-rebuild-page .sb-sridhara-auto-transliteration{
+    font-size:13.2px!important;
+    line-height:1.72!important;
+  }
+}
+
+/* Compact scripture Contents rail: match the smaller reader index on every device. */
+body.vicara-reader-page.scripture-reader-page .vicara-side-title{
+  margin-bottom:14px!important;
+  font-size:24px!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc > li{margin-bottom:12px!important}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc li li{margin-bottom:4px!important}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc a{
+  font-size:12px!important;
+  line-height:1.35!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc > li > a{
+  font-size:13px!important;
+  line-height:1.32!important;
+}
+@media(max-width:780px){
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:34px!important;
+    padding-bottom:14px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc > summary{font-size:19px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc{
+    margin-top:12px!important;
+    column-gap:22px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li{margin-bottom:10px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc a{
+    font-size:13px!important;
+    line-height:1.35!important;
+  }
+}
+@media(max-width:620px){
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:30px!important;
+    padding-bottom:12px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc > summary{font-size:18px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc{
+    columns:1!important;
+    margin-top:10px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li{margin-bottom:9px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li > a{font-size:13px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc li li a{font-size:12px!important}
+}
+
+/* Very compact polished Contents rail: match the narrower scripture reader layout. */
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc{
+  padding:0 12px 16px 0!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-title{
+  margin:0 0 10px!important;
+  font-size:21px!important;
+  line-height:1.05!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc > li{margin-bottom:8px!important}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc li li{margin-bottom:3px!important}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc a{
+  font-size:11px!important;
+  line-height:1.28!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc > li > a{
+  font-size:12px!important;
+  line-height:1.28!important;
+}
+@media(min-width:901px){
+  body.vicara-reader-page.scripture-reader-page .article-body{
+    grid-template-columns:145px minmax(0,1fr)!important;
+    gap:24px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .article-body > :not(.vicara-side-toc):not(.vicara-mobile-toc){
+    width:100%!important;
+    max-width:100%!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .article-body .empyrean-final-article,
+  body.vicara-reader-page.scripture-reader-page .article-body .empyrean-final-article > div > div,
+  body.vicara-reader-page.scripture-reader-page .article-body .gita-content{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+@media(max-width:780px){
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:26px!important;
+    padding-bottom:10px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc > summary{font-size:17px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc{
+    margin-top:8px!important;
+    column-gap:20px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li{margin-bottom:7px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc a{
+    font-size:12px!important;
+    line-height:1.3!important;
+  }
+}
+@media(max-width:620px){
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:24px!important;
+    padding-bottom:8px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc > summary{font-size:16px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc{
+    columns:1!important;
+    margin-top:7px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li{margin-bottom:6px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li > a{font-size:12px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc li li a{font-size:11px!important}
+}
+
+/* Ultra-compact polished Contents rail: keep the index subordinate to the reading text. */
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc{
+  padding:0 8px 10px 0!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-title{
+  margin:0 0 6px!important;
+  font-size:17px!important;
+  line-height:1.05!important;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc > li{margin-bottom:4px!important}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc li li{margin-bottom:2px!important}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc a{
+  font-size:9.5px!important;
+  line-height:1.18!important;
+  overflow-wrap:anywhere;
+}
+body.vicara-reader-page.scripture-reader-page .vicara-side-toc .vicara-toc > li > a{
+  font-size:10.5px!important;
+  line-height:1.18!important;
+}
+@media(min-width:901px){
+  body.vicara-reader-page.scripture-reader-page .article-body{
+    width:100%!important;
+    max-width:100%!important;
+    grid-template-columns:112px minmax(0,1fr)!important;
+    gap:16px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .article-body > :not(.vicara-side-toc):not(.vicara-mobile-toc){
+    width:100%!important;
+    max-width:100%!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .article-body .empyrean-final-article,
+  body.vicara-reader-page.scripture-reader-page .article-body .empyrean-final-article > div > div,
+  body.vicara-reader-page.scripture-reader-page .article-body .gita-content{
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+@media(max-width:780px){
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:20px!important;
+    padding-bottom:8px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc > summary{font-size:15px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc{
+    margin-top:6px!important;
+    column-gap:16px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li{margin-bottom:5px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc a{
+    font-size:11px!important;
+    line-height:1.22!important;
+  }
+}
+@media(max-width:620px){
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc{
+    margin-bottom:18px!important;
+    padding-bottom:6px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc > summary{font-size:15px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc{
+    columns:1!important;
+    margin-top:5px!important;
+  }
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li{margin-bottom:4px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc > li > a{font-size:11px!important}
+  body.vicara-reader-page.scripture-reader-page .vicara-mobile-toc .vicara-toc li li a{font-size:10px!important}
+}

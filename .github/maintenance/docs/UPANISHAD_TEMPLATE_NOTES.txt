@@ -1,0 +1,1 @@
+The ten principal Upanishad route shells use assets/templates/upanishad-unified-shell.html as their shared source layout. The live route files are synchronized to the same blob in the batch commit.
