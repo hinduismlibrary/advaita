@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 350
+      "end": 355
     },
-    "note": "Source verses 1–350 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 351 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–355 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 356 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -27736,60 +27736,486 @@
       "number": "351",
       "label": "Verse 351",
       "deva": "नित्याद्वयाखण्डचिदेकरूपो\nबुद्ध्यादिसाक्षी सदसद्विलक्षणः ।\nअहंपदप्रत्ययलक्षितार्थः\nप्रत्यक् सदानन्दघनः परात्मा ॥",
-      "iast": "nityādvayākhaṇḍacidekarūpo\nbuddhyādisākṣī sadasadvilakṣaṇaḥ |\nahaṃpadapratyayalakṣitārthaḥ\npratyak sadānandaghanaḥ parātmā ||",
-      "translation": "The Supreme Self is ever of the nature of eternal, indivisible knowledge, one without a second, the Witness of the Buddhi and the rest, distinct from the gross and subtle, the implied meaning of the term and idea \"I\", the embodiment of inward, eternal bliss.",
-      "gloss": [],
+      "iast": "nityādvaya-akhaṇḍa-cid-eka-rūpo\nbuddhyādi-sākṣī sat-asat-vilakṣaṇaḥ |\nahaṃ-pada-pratyaya-lakṣitārthaḥ\npratyak sadānanda-ghanaḥ parātmā ||",
+      "translation": "The Supreme Self is eternal, nondual, indivisible consciousness, one in nature: the witness of the intellect and the rest, distinct from being and non-being, the meaning indicated by the notion of “I,” inward, a mass of ever-present bliss.",
+      "gloss": [
+        {
+          "sa": "नित्य",
+          "en": "eternal"
+        },
+        {
+          "sa": "अद्वय",
+          "en": "nondual"
+        },
+        {
+          "sa": "अखण्ड",
+          "en": "indivisible"
+        },
+        {
+          "sa": "चित्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "एक",
+          "en": "one"
+        },
+        {
+          "sa": "रूपः",
+          "en": "of the nature"
+        },
+        {
+          "sa": "बुद्धि",
+          "en": "intellect"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "साक्षी",
+          "en": "witness"
+        },
+        {
+          "sa": "सत्",
+          "en": "being; existence"
+        },
+        {
+          "sa": "असत्",
+          "en": "non-being"
+        },
+        {
+          "sa": "विलक्षणः",
+          "en": "distinct"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "पद",
+          "en": "word"
+        },
+        {
+          "sa": "प्रत्यय",
+          "en": "notion"
+        },
+        {
+          "sa": "लक्षित",
+          "en": "indicated"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "प्रत्यक्",
+          "en": "inward"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "आनन्द",
+          "en": "bliss"
+        },
+        {
+          "sa": "घनः",
+          "en": "dense mass"
+        },
+        {
+          "sa": "पर",
+          "en": "supreme"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        }
+      ],
       "sourceNumbers": [
         351
-      ]
+      ],
+      "editionTranslation": "The Supreme Self is ever of the nature of eternal, indivisible knowledge, one without a second, the Witness of the Buddhi and the rest, distinct from the gross and subtle, the implied meaning of the term and idea \"I\", the embodiment of inward, eternal bliss."
     },
     {
       "id": "vivekachudamani-352",
       "number": "352",
       "label": "Verse 352",
       "deva": "इत्थं विपश्चित्सदसद्विभज्य\nनिश्चित्य तत्त्वं निजबोधदृष्ट्या ।\nज्ञात्वा स्वमात्मानमखण्डबोधं\nतेभ्यो विमुक्तः स्वयम् एव शाम्यति ॥",
-      "iast": "itthaṃ vipaścitsadasadvibhajya\nniścitya tattvaṃ nijabodhadṛṣṭyā |\njñātvā svamātmānamakhaṇḍabodhaṃ\ntebhyo vimuktaḥ svayam eva śāmyati ||",
-      "translation": "The wise man, discriminating thus the real and the unreal, ascertaining the Truth through his illuminative insight, and realising his own Self which is Knowledge Absolute, gets rid of the obstructions and directly attains Peace.",
-      "gloss": [],
+      "iast": "itthaṃ vipaścit sat-asat vibhajya\nniścitya tattvaṃ nija-bodha-dṛṣṭyā |\njñātvā svam ātmānam akhaṇḍa-bodhaṃ\ntebhyo vimuktaḥ svayam eva śāmyati ||",
+      "translation": "In this way, the wise one distinguishes the real from the unreal and determines the truth through direct insight. Knowing one's own Self as undivided awareness and freed from those [notions], one becomes peaceful.",
+      "gloss": [
+        {
+          "sa": "इत्थम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "विपश्चित्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "सत्",
+          "en": "real"
+        },
+        {
+          "sa": "असत्",
+          "en": "unreal"
+        },
+        {
+          "sa": "विभज्य",
+          "en": "having distinguished"
+        },
+        {
+          "sa": "निश्चित्य",
+          "en": "having determined"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth; reality"
+        },
+        {
+          "sa": "निज",
+          "en": "one's own"
+        },
+        {
+          "sa": "बोध",
+          "en": "understanding"
+        },
+        {
+          "sa": "दृष्ट्या",
+          "en": "through insight"
+        },
+        {
+          "sa": "ज्ञात्वा",
+          "en": "having known"
+        },
+        {
+          "sa": "स्वम्",
+          "en": "one's own"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "Self"
+        },
+        {
+          "sa": "अखण्ड",
+          "en": "undivided"
+        },
+        {
+          "sa": "बोधम्",
+          "en": "awareness"
+        },
+        {
+          "sa": "तेभ्यः",
+          "en": "from those"
+        },
+        {
+          "sa": "विमुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "शाम्यति",
+          "en": "becomes peaceful"
+        }
+      ],
       "sourceNumbers": [
         352
-      ]
+      ],
+      "editionTranslation": "The wise man, discriminating thus the real and the unreal, ascertaining the Truth through his illuminative insight, and realising his own Self which is Knowledge Absolute, gets rid of the obstructions and directly attains Peace."
     },
     {
       "id": "vivekachudamani-353",
       "number": "353",
       "label": "Verse 353",
       "deva": "अज्ञानहृदयग्रन्थेर्निःशेषविलयस्तदा ।\nसमाधिनाविकल्पेन यदाद्वैतात्मदर्शनम् ॥",
-      "iast": "ajñānahṛdayagrantherniḥśeṣavilayastadā |\nsamādhināvikalpena yadādvaitātmadarśanam ||",
-      "translation": "When the Atman, the One without a second, is realised by means of the Nirvikalpa Samadhi, then the heart’s knot of ignorance is totally destroyed.",
-      "gloss": [],
+      "iast": "ajñāna-hṛdaya-granther niḥśeṣa-vilayas tadā |\nsamādhinā avikalpena yadā advaita-ātma-darśanam ||",
+      "translation": "Then the heart-knot of ignorance is dissolved completely, when the nondual Self is seen through thought-free samādhi.",
+      "gloss": [
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "हृदय",
+          "en": "heart"
+        },
+        {
+          "sa": "ग्रन्थेः",
+          "en": "of the knot"
+        },
+        {
+          "sa": "निःशेष",
+          "en": "without remainder"
+        },
+        {
+          "sa": "विलयः",
+          "en": "dissolution"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "समाधिना",
+          "en": "through samādhi"
+        },
+        {
+          "sa": "अविकल्पेन",
+          "en": "free of thought-constructs"
+        },
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "अद्वैत",
+          "en": "nondual"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "दर्शनम्",
+          "en": "vision; realization"
+        }
+      ],
       "sourceNumbers": [
         353
-      ]
+      ],
+      "editionTranslation": "When the Atman, the One without a second, is realised by means of the Nirvikalpa Samadhi, then the heart’s knot of ignorance is totally destroyed."
     },
     {
       "id": "vivekachudamani-354",
       "number": "354",
       "label": "Verse 354",
       "deva": "त्वमहमिदमितीयं कल्पना बुद्धिदोषात्\nप्रभवति परमात्मन्यद्वये निर्विशेषे ।\nप्रविलसति समाधावस्य सर्वो विकल्पो\nविलयनमुपगच्छेद्वस्तुतत्त्वावधृत्या ॥",
-      "iast": "tvamahamidamitīyaṃ kalpanā buddhidoṣāt\nprabhavati paramātmanyadvaye nirviśeṣe |\npravilasati samādhāvasya sarvo vikalpo\nvilayanamupagacchedvastutattvāvadhṛtyā ||",
-      "translation": "Such imaginations as \"thou\", \"I\" or \"this\" take place through the defects of the Buddhi. But when the Paramatman, the Absolute, the One without a second, manifests Itself in Samadhi, all such imaginations are dissolved for the aspirant, through the realisation of the truth of Brahman.",
-      "gloss": [],
+      "iast": "tvam aham idam iti iyaṃ kalpanā buddhi-doṣāt\nprabhavati paramātmany advaye nirviśeṣe |\npravilasati samādhāv asya sarvo vikalpo\nvilayanam upagacched vastu-tattvāvadhṛtyā ||",
+      "translation": "This imagination—“you,” “I,” and “this”—arises from a defect of the intellect even in the nondual, undifferentiated Supreme Self. When that [Self] shines in samādhi, every thought-construct dissolves through firm discernment of reality.",
+      "gloss": [
+        {
+          "sa": "त्वम्",
+          "en": "you"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; the words"
+        },
+        {
+          "sa": "इयम्",
+          "en": "this"
+        },
+        {
+          "sa": "कल्पना",
+          "en": "imagination"
+        },
+        {
+          "sa": "बुद्धि",
+          "en": "intellect"
+        },
+        {
+          "sa": "दोषात्",
+          "en": "from a defect"
+        },
+        {
+          "sa": "प्रभवति",
+          "en": "arises"
+        },
+        {
+          "sa": "परम",
+          "en": "supreme"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "अद्वये",
+          "en": "in the nondual"
+        },
+        {
+          "sa": "निर्विशेषे",
+          "en": "without distinctions"
+        },
+        {
+          "sa": "प्रविलसति",
+          "en": "shines forth"
+        },
+        {
+          "sa": "समाधौ",
+          "en": "in samādhi"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "सर्वः",
+          "en": "every"
+        },
+        {
+          "sa": "विकल्पः",
+          "en": "thought-construct"
+        },
+        {
+          "sa": "विलयनम्",
+          "en": "dissolution"
+        },
+        {
+          "sa": "उपगच्छेत्",
+          "en": "reaches; undergoes"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "तत्त्व",
+          "en": "truth"
+        },
+        {
+          "sa": "अवधृत्या",
+          "en": "through firm discernment"
+        }
+      ],
       "sourceNumbers": [
         354
-      ]
+      ],
+      "editionTranslation": "Such imaginations as \"thou\", \"I\" or \"this\" take place through the defects of the Buddhi. But when the Paramatman, the Absolute, the One without a second, manifests Itself in Samadhi, all such imaginations are dissolved for the aspirant, through the realisation of the truth of Brahman."
     },
     {
       "id": "vivekachudamani-355",
       "number": "355",
       "label": "Verse 355",
       "deva": "शान्तो दान्तः परमुपरतः क्षान्तियुक्तः समाधिं\nकुर्वन्नित्यं कलयति यतिः स्वस्य सर्वात्मभावम् ।\nतेनाविद्यातिमिरजनितान्साधु दग्ध्वा विकल्पान्\nब्रह्माकृत्या निवसति सुखं निष्क्रियो निर्विकल्पः ॥",
-      "iast": "śānto dāntaḥ paramuparataḥ kṣāntiyuktaḥ samādhiṃ\nkurvannityaṃ kalayati yatiḥ svasya sarvātmabhāvam |\ntenāvidyātimirajanitānsādhu dagdhvā vikalpān\nbrahmākṛtyā nivasati sukhaṃ niṣkriyo nirvikalpaḥ ||",
-      "translation": "The Sannyasin, calm, self-controlled, perfectly retiring from the sense-world, forbearing, and devoting himself to the practice of Samadhi, always reflects on his own self being the Self of the whole universe. Destroying completely by this means the imaginations which are due to the gloom of ignorance, he lives blissfully as Brahman, free from action and the oscillations of the mind.",
-      "gloss": [],
+      "iast": "śānto dāntaḥ param uparataḥ kṣānti-yuktaḥ samādhiṃ\nkurvan nityaṃ kalayati yatiḥ svasya sarvātma-bhāvam |\ntenāvidyā-timira-janitān sādhu dagdhvā vikalpān\nbrahmākṛtyā nivasati sukhaṃ niṣkriyo nirvikalpaḥ ||",
+      "translation": "Calm, self-controlled, fully withdrawn, and patient, the renunciate continually practices samādhi and contemplates his own nature as the Self of all. Thoroughly burning the thought-constructs born of ignorance's darkness, he dwells happily as Brahman, inactive and free of thought.",
+      "gloss": [
+        {
+          "sa": "शान्तः",
+          "en": "calm"
+        },
+        {
+          "sa": "दान्तः",
+          "en": "self-controlled"
+        },
+        {
+          "sa": "परम्",
+          "en": "fully; supremely"
+        },
+        {
+          "sa": "उपरतः",
+          "en": "withdrawn"
+        },
+        {
+          "sa": "क्षान्ति",
+          "en": "forbearance"
+        },
+        {
+          "sa": "युक्तः",
+          "en": "endowed with"
+        },
+        {
+          "sa": "समाधिम्",
+          "en": "samādhi"
+        },
+        {
+          "sa": "कुर्वन्",
+          "en": "practicing"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always"
+        },
+        {
+          "sa": "कलयति",
+          "en": "contemplates"
+        },
+        {
+          "sa": "यतिः",
+          "en": "renunciate"
+        },
+        {
+          "sa": "स्वस्य",
+          "en": "of himself"
+        },
+        {
+          "sa": "सर्वात्मभावम्",
+          "en": "nature as the Self of all"
+        },
+        {
+          "sa": "तेन",
+          "en": "by that"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "तिमिर",
+          "en": "darkness"
+        },
+        {
+          "sa": "जनितान्",
+          "en": "born of"
+        },
+        {
+          "sa": "साधु",
+          "en": "thoroughly"
+        },
+        {
+          "sa": "दग्ध्वा",
+          "en": "having burned"
+        },
+        {
+          "sa": "विकल्पान्",
+          "en": "thought-constructs"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "आकृत्या",
+          "en": "in the form; as"
+        },
+        {
+          "sa": "निवसति",
+          "en": "dwells"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happily"
+        },
+        {
+          "sa": "निष्क्रियः",
+          "en": "inactive"
+        },
+        {
+          "sa": "निर्विकल्पः",
+          "en": "free of thought-constructs"
+        }
+      ],
       "sourceNumbers": [
         355
-      ]
+      ],
+      "editionTranslation": "The Sannyasin, calm, self-controlled, perfectly retiring from the sense-world, forbearing, and devoting himself to the practice of Samadhi, always reflects on his own self being the Self of the whole universe. Destroying completely by this means the imaginations which are due to the gloom of ignorance, he lives blissfully as Brahman, free from action and the oscillations of the mind."
     },
     {
       "id": "vivekachudamani-356",
@@ -30491,6 +30917,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 330–334; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 335–339; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 340–344; preserved prior translations as editionTranslation. Corrected Sanskrit/IAST spacing in verses 342 and 344.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 345–350; verses 349–350 share one reader unit. Preserved prior translations as editionTranslation and corrected verse 346's Sanskrit vahniḥ spelling."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 345–350; verses 349–350 share one reader unit. Preserved prior translations as editionTranslation and corrected verse 346's Sanskrit vahniḥ spelling.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 351–355; preserved prior translations as editionTranslation."
   ]
 }
