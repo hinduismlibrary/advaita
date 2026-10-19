@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261019-unified-theme-4";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261020-on-site-search-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -66,6 +66,7 @@ function routeTitle(path){
   if(/\/articles\/mulamadhyamakakarika-with-chandrakirti\/reader$/.test(path))return "Reader";
   if(/\/articles\/mulamadhyamakakarika-with-chandrakirti$/.test(path))return "Mūlamadhyamakakārikā";
   if(path==="/advaita/articles")return "Writings";
+  if(/\/search$/.test(path))return "Search";
   return currentTitle();
 }
 function makeCrumbs(path){
@@ -87,6 +88,8 @@ function makeCrumbs(path){
     return [home,{label:"Introduction to Hinduism",href:SITE+"pages/introduction-to-hinduism/"},{label:title}];
   if(/\/contact$/.test(path))
     return [home,{label:"Contact"}];
+  if(/\/search$/.test(path))
+    return [home,{label:"Search"}];
   if(/\/articles\/(?:bhavishya-purana-|bhavisya-purana-addresses-varna-system|vishnu-purana-|srimad-bhagavatam-)/.test(path)||
      /\/pages\/(?:purana-library|vishnu-purana|bhagavatam-with-sridhara-bhasya|bhavishya-purana)/.test(path))
     return [home,{label:"Purāṇa Library",href:SITE+"pages/purana-library/"},{label:title}];
@@ -165,7 +168,7 @@ function makeHeader(path){
   });
   const form=document.createElement("form");
   form.className="vd-search-form";
-  form.action="https://www.google.com/search";
+  form.action=SITE+"search/";
   form.method="get";
   form.setAttribute("role","search");
   const label=document.createElement("label");
@@ -201,7 +204,7 @@ function makeHeader(path){
   form.addEventListener("submit",event=>{
     const term=input.value.trim();
     if(!term){event.preventDefault();input.focus();return;}
-    input.value="site:krishnavyasmuni.github.io "+term;
+    input.value=term;
   });
   toggle.addEventListener("click",()=>{
     const open=nav.classList.toggle("open");
@@ -217,8 +220,14 @@ function makeHeader(path){
   });
   return header;
 }
+function repairMmkLayout(path){
+  if(!/\/articles\/mulamadhyamakakarika-with-chandrakirti(?:\/|$)/i.test(path))return;
+  document.body.classList.remove("vp-book-1");
+  document.querySelectorAll('link[rel~="stylesheet"][href*="vishnu-purana-chapter-reader.css"]').forEach(link=>link.remove());
+}
 function mount(){
   if(!document.head||!document.body)return false;
+  repairMmkLayout(normalizedPath());
   addFavicon();
   addFonts();
   addStyles();

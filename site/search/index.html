@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Search articles, books, and guides on Viveka Dṛṣṭi.">
+  <meta name="color-scheme" content="light">
+  <title>Search the site — Viveka Dṛṣṭi</title>
+  <link rel="icon" type="image/svg+xml" href="/advaita/favicon.svg">
+</head>
+<body class="search-page" data-pagefind-ignore="all">
+  <main class="site-main">
+    <section class="search-panel" aria-labelledby="page-search-title">
+      <h1 id="page-search-title">Search this site</h1>
+      <p class="search-intro">Search articles, texts, and guides across Viveka Dṛṣṭi. Results come from this website.</p>
+      <form class="page-search-form" id="page-search-form" action="/advaita/search/" method="get" role="search">
+        <label for="page-search-query">Search Viveka Dṛṣṭi</label>
+        <div class="page-search-control">
+          <input id="page-search-query" name="q" type="search" required autocomplete="off" placeholder="Enter a word or phrase">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <p class="search-status" id="page-search-status" aria-live="polite">Enter a word or phrase to search the articles and texts on this site.</p>
+      <ol class="search-results" id="page-search-results" aria-label="Search results"></ol>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Viveka Dṛṣṭi</p></footer>
+  <script src="/advaita/assets/js/site-chrome.js?v=20261020-on-site-search-1" defer></script>
+  <script src="/advaita/assets/js/site-search.js?v=20261020-on-site-search-1" defer></script>
+</body>
+</html>

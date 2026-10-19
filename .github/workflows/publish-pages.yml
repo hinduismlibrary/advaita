@@ -33,6 +33,16 @@ jobs:
           done
           echo 'Timed out waiting for branch Pages deployment' >&2
           exit 1
+      - name: Prepare site deployment
+        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build local site search index
+        run: npx --yes pagefind@1.5.2 --site site
+      - name: Verify local search bundle
+        run: test -s site/pagefind/pagefind.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
