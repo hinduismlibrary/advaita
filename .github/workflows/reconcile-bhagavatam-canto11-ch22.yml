@@ -11,9 +11,14 @@ permissions:
 jobs:
   correct:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -36,6 +41,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/js/bhagavatam-sridhara-reader.js assets/data/bhagavatam-sridhara-wfw-canto11-ch22-verses01-61.json .github/maintenance/audit/canto11/automated-summary.md .github/maintenance/audit/canto11/automated-summary.json .github/maintenance/audit/canto11/automated-verse-map.csv
+          git add assets/js/bhagavatam-sridhara-reader.js assets/data/bhagavatam-sridhara-wfw-canto11-ch22-verses01-61.json ../.github/maintenance/audit/canto11/automated-summary.md ../.github/maintenance/audit/canto11/automated-summary.json ../.github/maintenance/audit/canto11/automated-verse-map.csv
           git commit -m 'Correct Canto 11 Chapter 22 verses 37–39 source mapping'
           git push

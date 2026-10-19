@@ -6,27 +6,32 @@ on:
     paths:
       - .github/workflows/shaiva-visual-review.yml
       - .github/workflows/repair-other-document-pages.yml
-      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
-      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
-      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
-      - articles/a-shashtric-lens-of-varna-part-one/index.html
-      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
-      - articles/hinduism-on-women/index.html
-      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
-      - assets/js/article-reader-paged.js
-      - assets/js/shaiva-complete-reader.js
-      - assets/css/varna-vicara-paged.css
-      - assets/css/article-reader-template.css
+      - docs/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - docs/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - docs/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
+      - docs/articles/a-shashtric-lens-of-varna-part-one/index.html
+      - docs/articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - docs/articles/hinduism-on-women/index.html
+      - docs/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - docs/assets/js/article-reader-paged.js
+      - docs/assets/js/shaiva-complete-reader.js
+      - docs/assets/css/varna-vicara-paged.css
+      - docs/assets/css/article-reader-template.css
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   compare:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
       - name: Install browser QA dependencies
         run: |
           python3 -m pip install --user --quiet playwright

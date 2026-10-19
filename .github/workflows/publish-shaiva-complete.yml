@@ -1,6 +1,7 @@
 name: Publish complete Shaiva manuscript
 on:
   push:
+    branches: [main]
     paths:
       - .github/workflows/publish-shaiva-complete.yml
   workflow_dispatch:
@@ -9,10 +10,15 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
       - name: Verify every source data shard before replacing live article
         run: |
           node --check assets/js/shaiva-complete-reader.js

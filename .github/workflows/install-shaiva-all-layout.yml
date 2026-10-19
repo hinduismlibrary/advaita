@@ -1,19 +1,25 @@
 name: Install Shaiva manuscript layout repair
 on:
   push:
+    branches: [main]
     paths:
       - .github/workflows/install-shaiva-all-layout.yml
-      - assets/js/shaiva-repair-all.js
+      - docs/assets/js/shaiva-repair-all.js
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
   install:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
       - name: Refine text detection and install responsive layout after article renderer
         run: |
           python3 - <<'PY'

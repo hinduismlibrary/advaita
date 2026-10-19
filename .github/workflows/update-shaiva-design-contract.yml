@@ -1,6 +1,7 @@
 name: Document Shaiva Varna design baseline
 on:
   push:
+    branches: [main]
     paths:
       - .github/workflows/update-shaiva-design-contract.yml
   workflow_dispatch:
@@ -9,10 +10,15 @@ permissions:
 jobs:
   document:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
       - name: Update article design guide
         run: |
           python3 - <<'PY'
@@ -36,7 +42,7 @@ jobs:
           if ! git diff --quiet -- .github/docs/SITE_GUIDE.md; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add .github/docs/SITE_GUIDE.md
+            git add ../.github/docs/SITE_GUIDE.md
             git commit -m 'Make Varṇa-vicāra the binding Śaiva article design in design guide'
             git push
           fi
