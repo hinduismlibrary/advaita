@@ -1,0 +1,15 @@
+name: Verify shared site chrome
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  site-chrome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every full HTML page
+        run: python3 .github/scripts/verify-site-chrome.py

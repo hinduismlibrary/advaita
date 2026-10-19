@@ -29,6 +29,6 @@
 <script>
 (()=>{const root=document.getElementById('book-list');if(!root)return;const books=[{book:1,name:'Creation and the origin of the universe',count:22},{book:2,name:'The earth and its regions',count:16},{book:3,name:'The Manus and Manvantaras',count:18},{book:4,name:'The royal dynasties',count:24},{book:5,name:'The life of Kṛṣṇa',count:38},{book:6,name:'Dissolution and liberation',count:8}];const base='/advaita/articles/vishnu-purana-book-';books.forEach(({book,name,count})=>{const section=document.createElement('section');section.className='book';section.id='book-'+book;const h=document.createElement('h3');h.textContent='Book '+book+(name?' — '+name:'');const grid=document.createElement('div');grid.className='chapter-grid';for(let chapter=1;chapter<=count;chapter+=1){const a=document.createElement('a');a.href=base+String(book)+'-chapter-'+String(chapter)+'/';a.textContent=book+'.'+chapter+' — Chapter '+chapter;grid.appendChild(a)}section.append(h,grid);root.appendChild(section)})})();
 </script>
-  <script src="/advaita/assets/js/site-chrome.js?v=20261019-2"></script>
+  <script src="/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-4"></script>
 </body>
 </html>
