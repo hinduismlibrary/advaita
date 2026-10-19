@@ -15,21 +15,21 @@
       --muted: #62716a;
       --rule: #dce2dc;
       --accent: #365d50;
-      --quote-bg: #73b890;
-      --quote-ink: #143024;
-      --quote-edge: #355e48;
-      --parallel-bg: #79b8e3;
-      --parallel-ink: #152f42;
-      --parallel-edge: #355e7a;
-      --tirtha-bg: #efc34f;
-      --tirtha-ink: #362706;
-      --tirtha-edge: #795713;
-      --commentary-bg: #b79be0;
-      --commentary-ink: #2b1d3f;
-      --commentary-edge: #60447f;
-      --text-bg: #e49a9a;
-      --text-ink: #3b2024;
-      --text-edge: #804248;
+      --quote-bg: #167D55;
+      --quote-ink: #FFFFFF;
+      --quote-edge: #0E5237;
+      --parallel-bg: #2374B7;
+      --parallel-ink: #FFFFFF;
+      --parallel-edge: #154A78;
+      --tirtha-bg: #E8A317;
+      --tirtha-ink: #28200C;
+      --tirtha-edge: #6C4709;
+      --commentary-bg: #7A51B6;
+      --commentary-ink: #FFFFFF;
+      --commentary-edge: #4D307A;
+      --text-bg: #C44572;
+      --text-ink: #FFFFFF;
+      --text-edge: #7A2946;
       --blank-bg: #edf1ee;
       --blank-ink: #647169;
       --tile-border: #cbd5ce;
@@ -71,9 +71,9 @@
     #map { border-top: 1px solid var(--rule); }
     .section-row { display: grid; grid-template-columns: 134px minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
     .section-label { padding-top: 5px; color: #596a62; font: 500 12px/1.35 var(--serif); }
-    .cells { display: grid; grid-template-columns: repeat(auto-fill, 40px); gap: 5px; align-content: start; }
+    .cells { display: grid; grid-template-columns: repeat(auto-fill, 46px); gap: 6px; align-content: start; }
     .tile {
-      position: relative; display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
+      position: relative; display: grid; place-items: center; width: 46px; height: 46px; padding: 0;
       border: 1px solid var(--tile-border); border-radius: 5px; background: var(--blank-bg); color: var(--blank-ink);
       font-size: 11px; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer;
     }
@@ -84,14 +84,14 @@
     .tile.commentary { border-color: var(--commentary-edge); background: var(--commentary-bg); color: var(--commentary-ink); font-weight: 700; }
     .tile.other-text { border-color: var(--text-edge); background: var(--text-bg); color: var(--text-ink); font-weight: 700; }
     .tile.multiple { display: block; overflow: hidden; padding: 0; border-color: #40564b; background: var(--surface); color: #17231d; box-shadow: inset 0 0 0 1px rgba(255,255,255,.9); }
-    .tile-bands { position: absolute; inset: 3px; display: grid; grid-template-rows: 1fr; gap: 4px; overflow: hidden; border-radius: 4px; background: #fffefa; pointer-events: none; } .tile-bands.count-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tile-bands.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tile-bands.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
-    .tile-band { min-width: 0; min-height: 0; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(27,42,35,.12); }
+    .tile-bands { position: absolute; inset: 3px; display: grid; grid-template-rows: 1fr; gap: 6px; overflow: hidden; border-radius: 5px; background: #fffefa; pointer-events: none; } .tile-bands.count-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tile-bands.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tile-bands.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .tile-band { min-width: 0; min-height: 0; border-radius: 3px; box-shadow: inset 0 0 0 1px rgba(27,42,35,.18); }
     .tile-band.quoted { background: var(--quote-bg); }
     .tile-band.commentary { background: var(--commentary-bg); }
     .tile-band.parallel { background: var(--parallel-bg); }
     .tile-band.tirtha { background: var(--tirtha-bg); }
     .tile-band.other-text { background: var(--text-bg); }
-    .tile-number { position: absolute; top: 2px; right: 2px; z-index: 2; display: inline-flex; align-items: center; justify-content: center; min-width: 15px; height: 12px; padding: 0 2px; border: 1px solid #40564b; border-radius: 3px; background: #fffefa; color: #17231d; font-size: 8px; font-weight: 800; line-height: 1; text-shadow: none; box-shadow: 0 1px 2px rgba(0,0,0,.18); }
+    .tile-number { position: absolute; top: 2px; right: 2px; z-index: 2; display: inline-flex; align-items: center; justify-content: center; min-width: 17px; height: 13px; padding: 0 2px; border: 1px solid #23362e; border-radius: 4px; background: #fffefa; color: #17231d; font-size: 9px; font-weight: 800; line-height: 1; text-shadow: none; box-shadow: 0 1px 2px rgba(0,0,0,.18); }
     .tile.none { background: var(--blank-bg); color: var(--blank-ink); }
     #detail { margin-top: 12px; padding: 14px 16px; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 5px; background: var(--surface); }
     #detail[hidden] { display: none; }
@@ -121,10 +121,10 @@
       .contents { position: static; }
       #contents { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .section-row { grid-template-columns: 100px minmax(0, 1fr); gap: 8px; }
-      .cells { grid-template-columns: repeat(auto-fill, 32px); gap: 3px; }
-      .tile { width: 32px; height: 32px; }
-      .tile-bands { inset: 2px; gap: 2px; border-radius: 3px; }
-      .tile-number { top: 1px; right: 1px; min-width: 13px; height: 10px; padding: 0 1px; font-size: 7px; }
+      .cells { grid-template-columns: repeat(auto-fill, 38px); gap: 4px; }
+      .tile { width: 38px; height: 38px; }
+      .tile-bands { inset: 2px; gap: 3px; border-radius: 4px; }
+      .tile-number { top: 1px; right: 1px; min-width: 14px; height: 11px; padding: 0 1px; font-size: 8px; }
     }
     @media (max-width: 420px) {
       .page { width: calc(100% - 24px); }
@@ -132,8 +132,10 @@
       .purana-button { padding: 7px 5px; }
       .purana-name { font-size: 12px; }
       .section-row { grid-template-columns: 75px minmax(0, 1fr); gap: 6px; }
-      .cells { grid-template-columns: repeat(auto-fill, 28px); gap: 2px; }
-      .tile { width: 28px; height: 28px; font-size: 10px; }
+      .cells { grid-template-columns: repeat(auto-fill, 34px); gap: 3px; }
+      .tile { width: 34px; height: 34px; font-size: 10px; }
+      .tile-bands { gap: 2px; }
+      .tile-number { min-width: 13px; height: 10px; font-size: 7px; }
     }
   </style>
   <link rel="icon" type="image/svg+xml" href="/advaita/favicon.svg">
