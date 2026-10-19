@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 339
+      "end": 344
     },
-    "note": "Source verses 1–339 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 340 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
+    "note": "Source verses 1–344 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 345 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
   },
   "units": [
     {
@@ -26695,60 +26695,522 @@
       "number": "340",
       "label": "Verse 340",
       "deva": "दृश्यस्याग्रहणं कथं नु घटते देहात्मना तिष्ठतो\nबाह्यार्थानुभवप्रसक्तमनसस्तत्तत्क्रियां कुर्वतः ।\nसंन्यस्ताखिल-धर्म-कर्म-विषयैर् नित्यात्मनिष्ठापरैः\nतत्त्वज्ञैः करणीयम् आत्मनि सदानन्देच्छुभिर्यत्नतः ॥",
-      "iast": "dṛśyasyāgrahaṇaṃ kathaṃ nu ghaṭate dehātmanā tiṣṭhato\nbāhyārthānubhavaprasaktamanasastattatkriyāṃ kurvataḥ |\nsaṃnyastākhila-dharma-karma-viṣayair nityātmaniṣṭhāparaiḥ\ntattvajñaiḥ karaṇīyam ātmani sadānandecchubhiryatnataḥ ||",
-      "translation": "How is the exclusion of the objective world possible for one who lives identified with the body, whose mind is attached to the perception of external objects, and who performs various acts for that end ? This exclusion should be carefully practised by sages who have renounced all kinds of duties and actions and objects, who are passionately devoted to the eternal Atman, and who wish to possess an undying bliss.",
-      "gloss": [],
+      "iast": "dṛśyasyāgrahaṇaṃ kathaṃ nu ghaṭate dehātmanā tiṣṭhataḥ\nbāhyārthānubhava-prasakta-manasaḥ tat-tat-kriyāṃ kurvataḥ |\nsaṃnyastākhila-dharma-karma-viṣayair nityātmaniṣṭhāparaiḥ\ntattvajñaiḥ karaṇīyam ātmani sadānandecchubhir yatnataḥ ||",
+      "translation": "How can non-apprehension of the seen world be possible for one who remains identified with the body, whose mind is attached to experiencing external objects, and who performs the corresponding actions? It should be practiced diligently in the Self by knowers of truth who have renounced all duties, actions, and objects, are devoted solely to the eternal Self, and seek abiding bliss.",
+      "gloss": [
+        {
+          "sa": "दृश्यस्य",
+          "en": "of the seen; visible world"
+        },
+        {
+          "sa": "अग्रहणम्",
+          "en": "non-apprehension"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "नु",
+          "en": "indeed"
+        },
+        {
+          "sa": "घटते",
+          "en": "is possible"
+        },
+        {
+          "sa": "देहात्मना",
+          "en": "identified with the body as self"
+        },
+        {
+          "sa": "तिष्ठतः",
+          "en": "for one remaining"
+        },
+        {
+          "sa": "बाह्य",
+          "en": "external"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "objects"
+        },
+        {
+          "sa": "अनुभव",
+          "en": "experience"
+        },
+        {
+          "sa": "प्रसक्त",
+          "en": "attached"
+        },
+        {
+          "sa": "मनसः",
+          "en": "whose mind"
+        },
+        {
+          "sa": "तत्",
+          "en": "those"
+        },
+        {
+          "sa": "तत्",
+          "en": "various; each"
+        },
+        {
+          "sa": "क्रियाम्",
+          "en": "actions"
+        },
+        {
+          "sa": "कुर्वतः",
+          "en": "for one performing"
+        },
+        {
+          "sa": "संन्यस्त",
+          "en": "renounced"
+        },
+        {
+          "sa": "अखिल",
+          "en": "all"
+        },
+        {
+          "sa": "धर्म",
+          "en": "duties"
+        },
+        {
+          "sa": "कर्म",
+          "en": "actions"
+        },
+        {
+          "sa": "विषयैः",
+          "en": "and objects; by objects"
+        },
+        {
+          "sa": "नित्य",
+          "en": "eternal"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "निष्ठा",
+          "en": "abidance; steadfastness"
+        },
+        {
+          "sa": "अपरैः",
+          "en": "devoted solely to"
+        },
+        {
+          "sa": "तत्त्वज्ञैः",
+          "en": "by knowers of truth"
+        },
+        {
+          "sa": "करणीयम्",
+          "en": "should be practiced"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "आनन्द",
+          "en": "bliss"
+        },
+        {
+          "sa": "इच्छुभिः",
+          "en": "by those desiring"
+        },
+        {
+          "sa": "यत्नतः",
+          "en": "with effort; diligently"
+        }
+      ],
       "sourceNumbers": [
         340
-      ]
+      ],
+      "editionTranslation": "How is the exclusion of the objective world possible for one who lives identified with the body, whose mind is attached to the perception of external objects, and who performs various acts for that end ? This exclusion should be carefully practised by sages who have renounced all kinds of duties and actions and objects, who are passionately devoted to the eternal Atman, and who wish to possess an undying bliss."
     },
     {
       "id": "vivekachudamani-341",
       "number": "341",
       "label": "Verse 341",
       "deva": "सर्वात्मसिद्धये भिक्षोः कृतश्रवणकर्मणः ।\nसमाधिं विदधात्येषा शान्तो दान्त इति श्रुतिः ॥",
-      "iast": "sarvātmasiddhaye bhikṣoḥ kṛtaśravaṇakarmaṇaḥ |\nsamādhiṃ vidadhātyeṣā śānto dānta iti śrutiḥ ||",
-      "translation": "To the Sannyasin who has gone through the act of hearing, the Shruti passage, \"Calm, self-controlled.\" Etc., prescribes Samadhi for realising the identity of the universe with the Self.",
-      "gloss": [],
+      "iast": "sarvātma-siddhaye bhikṣoḥ kṛta-śravaṇa-karmaṇaḥ |\nsamādhiṃ vidadhāty eṣā śrutiḥ śānto dānta iti ||",
+      "translation": "This scripture prescribes meditation for the mendicant who has completed the practice of hearing, for realizing the Self of all: “peaceful, self-controlled.”",
+      "gloss": [
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "सिद्धये",
+          "en": "for realization"
+        },
+        {
+          "sa": "भिक्षोः",
+          "en": "for the mendicant"
+        },
+        {
+          "sa": "कृत",
+          "en": "completed"
+        },
+        {
+          "sa": "श्रवण",
+          "en": "hearing"
+        },
+        {
+          "sa": "कर्मणः",
+          "en": "whose practice"
+        },
+        {
+          "sa": "समाधिम्",
+          "en": "meditation; absorption"
+        },
+        {
+          "sa": "विदधाति",
+          "en": "prescribes"
+        },
+        {
+          "sa": "एषा",
+          "en": "this"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "revealed scripture"
+        },
+        {
+          "sa": "शान्तः",
+          "en": "peaceful"
+        },
+        {
+          "sa": "दान्तः",
+          "en": "self-controlled"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ],
       "sourceNumbers": [
         341
-      ]
+      ],
+      "editionTranslation": "To the Sannyasin who has gone through the act of hearing, the Shruti passage, \"Calm, self-controlled.\" Etc., prescribes Samadhi for realising the identity of the universe with the Self."
     },
     {
       "id": "vivekachudamani-342",
       "number": "342",
       "label": "Verse 342",
-      "deva": "आरूढशक्तेरहमो विनाशः\nकर्तुन् न शक्य सहसापि पण्डितैः ।\nये निर्विकल्पाख्यसमाधिनिश्चलाः\nतानन्तरानन्तभवा हि वासनाः ॥",
-      "iast": "ārūḍhaśakterahamo vināśaḥ\nkartun na śakya sahasāpi paṇḍitaiḥ |\nye nirvikalpākhyasamādhiniścalāḥ\ntānantarānantabhavā hi vāsanāḥ ||",
-      "translation": "Even wise men cannot suddenly destroy egoism after it has once become strong, barring those who are perfectly calm through the Nirvikalpa Samadhi. Desires are verily the effect of innumerable births.",
-      "gloss": [],
+      "deva": "आरूढशक्तेरहमो विनाशः\nकर्तुं न शक्यः सहसापि पण्डितैः ।\nये निर्विकल्पाख्यसमाधिनिश्चलाः\nतानन्तरानन्तभवा हि वासनाः ॥",
+      "iast": "ārūḍhaśakter ahamo vināśaḥ\nkartuṃ na śakyaḥ sahasā api paṇḍitaiḥ |\nye nirvikalpākhya-samādhi-niścalāḥ\ntān antarā ananta-bhavā hi vāsanāḥ ||",
+      "translation": "When ego has grown strong, its destruction cannot be accomplished suddenly, even by the learned. Apart from those steady in the absorption called nirvikalpa, latent tendencies from countless births remain.",
+      "gloss": [
+        {
+          "sa": "आरूढ",
+          "en": "grown; risen"
+        },
+        {
+          "sa": "शक्तेः",
+          "en": "of the power"
+        },
+        {
+          "sa": "अहमः",
+          "en": "of ego"
+        },
+        {
+          "sa": "विनाशः",
+          "en": "destruction"
+        },
+        {
+          "sa": "कर्तुम्",
+          "en": "to accomplish"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शक्यः",
+          "en": "possible"
+        },
+        {
+          "sa": "सहसा",
+          "en": "suddenly"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "पण्डितैः",
+          "en": "by the learned"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "निर्विकल्प",
+          "en": "without thought-constructs"
+        },
+        {
+          "sa": "आख्य",
+          "en": "called"
+        },
+        {
+          "sa": "समाधि",
+          "en": "absorption"
+        },
+        {
+          "sa": "निश्चलाः",
+          "en": "steady"
+        },
+        {
+          "sa": "तान्",
+          "en": "those"
+        },
+        {
+          "sa": "अन्तरा",
+          "en": "without; apart from"
+        },
+        {
+          "sa": "अनन्त",
+          "en": "countless"
+        },
+        {
+          "sa": "भवाः",
+          "en": "births"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "वासनाः",
+          "en": "latent tendencies"
+        }
+      ],
       "sourceNumbers": [
         342
-      ]
+      ],
+      "editionTranslation": "Even wise men cannot suddenly destroy egoism after it has once become strong, barring those who are perfectly calm through the Nirvikalpa Samadhi. Desires are verily the effect of innumerable births."
     },
     {
       "id": "vivekachudamani-343",
       "number": "343",
       "label": "Verse 343",
       "deva": "अहंबुद्ध्यैव मोहिन्या योजयित्वावृतेर्बलात् ।\nविक्षेपशक्तिः पुरुषं विक्षेपयति तद्गुणैः ॥",
-      "iast": "ahaṃbuddhyaiva mohinyā yojayitvāvṛterbalāt |\nvikṣepaśaktiḥ puruṣaṃ vikṣepayati tadguṇaiḥ ||",
-      "translation": "The projecting power, through the aid of the veiling power, connects a man with the siren of an egoistic idea, and distracts him through the attributes of that.",
-      "gloss": [],
+      "iast": "ahaṃ-buddhyaiva mohinyā yojayitvā āvṛter balāt |\nvikṣepa-śaktiḥ puruṣaṃ vikṣepayati tadguṇaiḥ ||",
+      "translation": "By the force of the veiling power, the projecting power joins a person to the deluding ego-thought and distracts him through its qualities.",
+      "gloss": [
+        {
+          "sa": "अहम्",
+          "en": "ego; I"
+        },
+        {
+          "sa": "बुद्ध्या",
+          "en": "by the notion; intellect"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "मोहिन्या",
+          "en": "deluding"
+        },
+        {
+          "sa": "योजयित्वा",
+          "en": "having joined"
+        },
+        {
+          "sa": "आवृतेः",
+          "en": "of the veiling power"
+        },
+        {
+          "sa": "बलात्",
+          "en": "by force"
+        },
+        {
+          "sa": "विक्षेपशक्तिः",
+          "en": "the projecting power"
+        },
+        {
+          "sa": "पुरुषम्",
+          "en": "the person"
+        },
+        {
+          "sa": "विक्षेपयति",
+          "en": "distracts; agitates"
+        },
+        {
+          "sa": "तद्",
+          "en": "its"
+        },
+        {
+          "sa": "गुणैः",
+          "en": "through qualities"
+        }
+      ],
       "sourceNumbers": [
         343
-      ]
+      ],
+      "editionTranslation": "The projecting power, through the aid of the veiling power, connects a man with the siren of an egoistic idea, and distracts him through the attributes of that."
     },
     {
       "id": "vivekachudamani-344",
       "number": "344",
       "label": "Verse 344",
-      "deva": "विक्षेपशक्तिविजयो विषमो विधातुं\nनिःशेषमावरणशक्तिनिवृत्त्यभावे ।\nदृग्दृश्ययोः स्फुटपयोजलवद्विभागे\nनश्येत्तदावरणम् आत्मनि च स्वभावात्\n\nनिःसंशयेन भवति प्रतिबन्धशून्यो\nविक्षेपणं नहिं तदा यदि चेन्मृषार्थे ॥",
-      "iast": "vikṣepaśaktivijayo viṣamo vidhātuṃ\nniḥśeṣamāvaraṇaśaktinivṛttyabhāve |\ndṛgdṛśyayoḥ sphuṭapayojalavadvibhāge\nnaśyettadāvaraṇam ātmani ca svabhāvāt\n\nniḥsaṃśayena bhavati pratibandhaśūnyo\nvikṣepaṇaṃ nahiṃ tadā yadi cenmṛṣārthe ||",
-      "translation": "It is extremely difficult to conquer the projecting power unless the veiling power is perfectly rooted out. And that covering over the Atman naturally vanishes when the subject is perfectly distinguished from the objects, like milk from water. But the victory is undoubtedly (complete and) free from obstacles when there is no oscillation of the mind due to the unreal sense-objects.",
-      "gloss": [],
+      "deva": "विक्षेपशक्तिविजयो विषमो विधातुं\nनिःशेषमावरणशक्तिनिवृत्त्यभावे ।\nदृग्दृश्ययोः स्फुटपयोजलवद्विभागे\nनश्येत्तदावरणम् आत्मनि च स्वभावात्\n\nनिःसंशयेन भवति प्रतिबन्धशून्यो\nविक्षेपणं न हि तदा यदि चेन्मृषार्थे ॥",
+      "iast": "vikṣepa-śakti-vijayo viṣamo vidhātuṃ\nniḥśeṣam āvaraṇa-śakti-nivṛtty-abhāve |\ndṛg-dṛśyayoḥ sphuṭa-payo-jalavat-vibhāge\nnaśyet tad-āvaraṇam ātmani ca svabhāvāt ||\nniḥsaṃśayena bhavati pratibandha-śūnyo\nvikṣepaṇaṃ na hi tadā yadi cen mṛṣārthe ||",
+      "translation": "Conquering the projecting power is difficult until the veiling power has been completely removed. When seer and seen are clearly distinguished, like milk and water, that veil over the Self disappears by its nature. Then projection is surely free of obstruction, if the object is known to be unreal.",
+      "gloss": [
+        {
+          "sa": "विक्षेप",
+          "en": "projection"
+        },
+        {
+          "sa": "शक्ति",
+          "en": "power"
+        },
+        {
+          "sa": "विजयः",
+          "en": "conquest"
+        },
+        {
+          "sa": "विषमः",
+          "en": "difficult"
+        },
+        {
+          "sa": "विधातुम्",
+          "en": "to accomplish"
+        },
+        {
+          "sa": "निःशेषम्",
+          "en": "completely"
+        },
+        {
+          "sa": "आवरण",
+          "en": "veiling"
+        },
+        {
+          "sa": "शक्ति",
+          "en": "power"
+        },
+        {
+          "sa": "निवृत्ति",
+          "en": "removal"
+        },
+        {
+          "sa": "अभावे",
+          "en": "in the absence of"
+        },
+        {
+          "sa": "दृक्",
+          "en": "seer"
+        },
+        {
+          "sa": "दृश्ययोः",
+          "en": "of the seen"
+        },
+        {
+          "sa": "स्फुट",
+          "en": "clearly"
+        },
+        {
+          "sa": "पयः",
+          "en": "milk"
+        },
+        {
+          "sa": "जलवत्",
+          "en": "like water"
+        },
+        {
+          "sa": "विभागे",
+          "en": "in the distinction"
+        },
+        {
+          "sa": "नश्येत्",
+          "en": "disappears"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "आवरणम्",
+          "en": "veil"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "over the Self"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्वभावात्",
+          "en": "by its nature"
+        },
+        {
+          "sa": "निःसंशयेन",
+          "en": "without doubt; surely"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "प्रतिबन्ध",
+          "en": "obstruction"
+        },
+        {
+          "sa": "शून्यः",
+          "en": "free from"
+        },
+        {
+          "sa": "विक्षेपणम्",
+          "en": "projection"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "चेत्",
+          "en": "indeed"
+        },
+        {
+          "sa": "मृषा",
+          "en": "unreal"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "in the object"
+        }
+      ],
       "sourceNumbers": [
         344
-      ]
+      ],
+      "editionTranslation": "It is extremely difficult to conquer the projecting power unless the veiling power is perfectly rooted out. And that covering over the Atman naturally vanishes when the subject is perfectly distinguished from the objects, like milk from water. But the victory is undoubtedly (complete and) free from obstacles when there is no oscillation of the mind due to the unreal sense-objects."
     },
     {
       "id": "vivekachudamani-345",
@@ -29569,6 +30031,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 320–324; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 325–329; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 330–334; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 335–339; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 335–339; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 340–344; preserved prior translations as editionTranslation. Corrected Sanskrit/IAST spacing in verses 342 and 344."
   ]
 }
