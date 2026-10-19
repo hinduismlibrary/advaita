@@ -5,8 +5,8 @@ import json
 from urllib.request import Request, urlopen
 
 ROOT=Path(__file__).resolve().parents[3]
-DATA=ROOT/'assets/data/bhagavatam-sridhara-wfw-canto11-ch22-verses01-61.json'
-READER=ROOT/'assets/js/bhagavatam-sridhara-reader.js'
+DATA=ROOT/'site/assets/data/bhagavatam-sridhara-wfw-canto11-ch22-verses01-61.json'
+READER=ROOT/'site/assets/js/bhagavatam-sridhara-reader.js'
 PIN='100560de6c9f68c2875097d40a2012a84c784179'
 ROOT_URL='https://raw.githubusercontent.com/vishvAsa/purANam_vaiShNavam/'+PIN+'/bhAgavatam/'
 

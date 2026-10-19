@@ -4,7 +4,8 @@ from pathlib import Path
 import re
 import sys
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
+SITE = ROOT / 'site'
 THEME_VERSION = "20261019-unified-theme-4"
 LOADER = re.compile(
     r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=20261019-unified-theme-4["']""",
@@ -15,8 +16,8 @@ BODY = re.compile(r"<body\b", re.IGNORECASE)
 
 missing = []
 checked = 0
-for path in ROOT.rglob("*.html"):
-    relative = path.relative_to(ROOT).as_posix()
+for path in SITE.rglob("*.html"):
+    relative = path.relative_to(SITE).as_posix()
     if relative.startswith("assets/templates/"):
         continue
     source = path.read_text(encoding="utf-8", errors="replace")

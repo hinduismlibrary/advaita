@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - .github/workflows/install-shaiva-all-layout.yml
-      - assets/js/shaiva-repair-all.js
+      - site/assets/js/shaiva-repair-all.js
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,11 +19,11 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import re
-          js=Path('assets/js/shaiva-repair-all.js')
+          js=Path('site/assets/js/shaiva-repair-all.js')
           source=js.read_text(encoding='utf-8')
           source=source.replace('if(saCount<12||enCount<45)return;', 'if(enCount<45||!(saCount>=70||(saCount>=25&&/[॥।]/.test(raw))))return;')
           js.write_text(source,encoding='utf-8')
-          html_path=Path('articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html')
+          html_path=Path('site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html')
           html=html_path.read_text(encoding='utf-8')
           assert 'id="source-document"' in html
           assert 'article-reader-paged.js' in html
@@ -38,11 +38,11 @@ jobs:
           html_path.write_text(html,encoding='utf-8')
           print('Validated selective full-article mixed-script reflow')
           PY
-          node --check assets/js/shaiva-repair-all.js
-          if ! git diff --quiet -- assets/js/shaiva-repair-all.js articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html; then
+          node --check site/assets/js/shaiva-repair-all.js
+          if ! git diff --quiet -- site/assets/js/shaiva-repair-all.js site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add assets/js/shaiva-repair-all.js articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+            git add site/assets/js/shaiva-repair-all.js site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
             git commit -m 'Refine Sanskrit passage detection and refresh manuscript reader'
             git push
           fi

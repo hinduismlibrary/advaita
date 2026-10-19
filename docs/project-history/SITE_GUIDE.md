@@ -4,7 +4,7 @@
 
 **Purpose:** This is the repository-wide handoff contract for any document the owner supplies for publication or repair, including PDF, DOCX, ODT, Markdown, HTML, text, scans, manuscripts, Sanskrit/English editions, and existing web articles. **Read this entire guide before working on an uploaded document.** It is a procedure, not a claim that every existing article has already passed inspection.
 
-**Priority:** Explicit instructions for the particular document take precedence over defaults here. This handbook governs document/article ingestion, recovery, formatting, and quality assurance. Existing corpus-specific rules remain in `.github/docs/GITA_COMPLETION.md`, `.github/docs/BHAGAVATAM_COMPLETION.md`, and `.github/docs/VISHNU_PURANA_COMPLETION.md`; consult them when working in those corpora. Never transplant a Gītā verse renderer or a commentary policy onto an independent essay without checking its structure.
+**Priority:** Explicit instructions for the particular document take precedence over defaults here. This handbook governs document/article ingestion, recovery, formatting, and quality assurance. Existing corpus-specific rules remain in `docs/project-history/GITA_COMPLETION.md`, `docs/project-history/BHAGAVATAM_COMPLETION.md`, and `docs/project-history/VISHNU_PURANA_COMPLETION.md`; consult them when working in those corpora. Never transplant a Gītā verse renderer or a commentary policy onto an independent essay without checking its structure.
 
 **Core rule:** Preserve the actual source and make its *content and structure* readable. Making a broken paragraph smaller, splitting text by script, or passing a deployment check is **not** the same as repairing a document. No claim of “fully fixed,” “exact,” or “word-for-word verified” is permitted until the checks in §13 have passed for the whole source.
 
@@ -28,7 +28,7 @@
 
 ### Intake record (create one per document)
 
-Create `.github/maintenance/audit/documents/<slug>.md` or an equivalent clearly located record, and update it while working. Do not label a source verified merely because it has been uploaded.
+Create `docs/audits/documents/<slug>.md` or an equivalent clearly located record, and update it while working. Do not label a source verified merely because it has been uploaded.
 
 ```yaml
 slug: example-slug

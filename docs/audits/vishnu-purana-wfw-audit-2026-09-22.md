@@ -552,7 +552,7 @@ Added a root-Devanāgarī control to every no-commentary verse. All 28 cards now
 
 ## Whole-corpus route and text anomaly audit — 2026-09-26
 
-The latest scan at parent commit `e93d5f89e30b63eabbe87973c94f58eea6a79d88` covers 126 routes and 6,400 verse cards. Complete per-route ID lists and transliteration comparisons are in `.github/maintenance/audit/vishnu-purana-route-audit-2026-09-26.json`.
+The latest scan at parent commit `e93d5f89e30b63eabbe87973c94f58eea6a79d88` covers 126 routes and 6,400 verse cards. Complete per-route ID lists and transliteration comparisons are in `docs/audits/vishnu-purana-route-audit-2026-09-26.json`.
 
 - 3,827 cards have a nonempty main-text WFW control; 2,573 controls are missing (Book 4: 1,293; Book 5: 846; Book 6: 434). No empty WFW controls were found.
 - 2,909 cards lack Śrīdhara Sanskrit. 516 have no commentary section, while 2,899 carry an explicit “No commentary.” state.

@@ -68,7 +68,7 @@ Batch checks and report only meaningful findings to keep the loop fast. If a wit
 | 6 | 498 | 64 | 434 |
 | **Total** | **6,400** | **3,565** | **2,835** |
 
-These are the 2026-09-22 full-corpus audit totals with the verified 6.8 release added: 64 main WFW articles. They do not certify the remaining verses or imply that the whole Purāṇa is finished. The chapter-level audit in `.github/maintenance/audit/vishnu-purana-wfw-audit-2026-09-22.md` records the baseline and this incremental update.
+These are the 2026-09-22 full-corpus audit totals with the verified 6.8 release added: 64 main WFW articles. They do not certify the remaining verses or imply that the whole Purāṇa is finished. The chapter-level audit in `docs/audits/vishnu-purana-wfw-audit-2026-09-22.md` records the baseline and this incremental update.
 
 | Current release | Verified chapter state |
 |---|---|
@@ -628,7 +628,7 @@ Validation: 28 controls of each type; 26 Śrīdhara labels and WFW panels; balan
 
 ## Whole-corpus case audit and correction batch — 2026-09-26
 
-The scan covers all 126 chapter pages at parent commit `e93d5f89e30b63eabbe87973c94f58eea6a79d88`. Every flagged verse ID and transliteration comparison is in `.github/maintenance/audit/vishnu-purana-route-audit-2026-09-26.json`. This section supersedes earlier whole-site totals where they differ.
+The scan covers all 126 chapter pages at parent commit `e93d5f89e30b63eabbe87973c94f58eea6a79d88`. Every flagged verse ID and transliteration comparison is in `docs/audits/vishnu-purana-route-audit-2026-09-26.json`. This section supersedes earlier whole-site totals where they differ.
 
 | Book | Verses | WFW controls | Missing WFW | Missing Śrīdhara Sanskrit | IAST alignment flags | Routes matching Chapter 1 styles |
 |---|---:|---:|---:|---:|---:|---:|
