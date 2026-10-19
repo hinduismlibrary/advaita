@@ -6,9 +6,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / 'site'
-THEME_VERSION = "20261019-unified-theme-4"
+SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1")
 LOADER = re.compile(
-    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=20261019-unified-theme-4["']""",
+    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:20261019-unified-theme-4|20261020-on-site-search-1)["']""",
     re.IGNORECASE,
 )
 HTML_DOC = re.compile(r"<html\b", re.IGNORECASE)
@@ -29,9 +29,9 @@ for path in SITE.rglob("*.html"):
         missing.append(relative)
 
 if missing:
-    print(f"{len(missing)} of {checked} page documents lack the shared chrome at version {THEME_VERSION}:")
+    print(f"{len(missing)} of {checked} page documents lack the shared chrome at supported cache versions {SUPPORTED_THEME_VERSIONS}:")
     for relative in missing:
         print(f" - {relative}")
     sys.exit(1)
 
-print(f"All {checked} full HTML pages load the shared chrome at version {THEME_VERSION}.")
+print(f"All {checked} full HTML pages load a supported shared chrome asset.")
