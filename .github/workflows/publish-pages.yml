@@ -30,6 +30,10 @@ jobs:
             read -r status conclusion <<< "$state"
             if [ "$status" = completed ]; then
               if [ "$conclusion" = success ]; then exit 0; fi
+              if [ "$conclusion" = cancelled ]; then
+                echo 'Branch Pages build was superseded; continuing with this commit’s static deployment.'
+                exit 0
+              fi
               echo "Branch Pages deployment ended with conclusion: ${conclusion:-unknown}" >&2
               exit 1
             fi
