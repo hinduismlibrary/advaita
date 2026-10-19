@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 329
+      "end": 334
     },
-    "note": "Source verses 1–329 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 330 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
+    "note": "Source verses 1–334 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 335 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
   },
   "units": [
     {
@@ -25751,60 +25751,494 @@
       "number": "330",
       "label": "Verse 330",
       "deva": "यदा कदा वापि विपश्चिदेष\nब्रह्मण्य् अनन्तेऽप्य् अणुमात्रभेदम् ।\nपश्यत्यथामुष्य भयं तदैव\nयद्वीक्षितं भिन्नतया प्रमादात् ॥",
-      "iast": "yadā kadā vāpi vipaścideṣa\nbrahmaṇy anante'py aṇumātrabhedam |\npaśyatyathāmuṣya bhayaṃ tadaiva\nyadvīkṣitaṃ bhinnatayā pramādāt ||",
-      "translation": "Whenever the wise man sees the least difference in the infinite Brahman, at once that which he sees as different through mistake, becomes a source of terror to him.",
-      "gloss": [],
+      "iast": "yadā kadā vāpi vipaścid eṣa\nbrahmaṇy anante 'py aṇumātra-bhedam |\npaśyaty athāmuṣya bhayaṃ tadaiva\nyad vīkṣitaṃ bhinnatayā pramādāt ||",
+      "translation": "Whenever a wise person sees even the slightest difference in infinite Brahman, fear arises for that person at once from what was seen as different through heedlessness.",
+      "gloss": [
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "कदा",
+          "en": "at any time"
+        },
+        {
+          "sa": "वा",
+          "en": "or; indeed"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "विपश्चित्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "अनन्ते",
+          "en": "infinite"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अणु",
+          "en": "atom"
+        },
+        {
+          "sa": "मात्र",
+          "en": "sized; only"
+        },
+        {
+          "sa": "भेदम्",
+          "en": "difference"
+        },
+        {
+          "sa": "पश्यति",
+          "en": "sees"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "अमुष्य",
+          "en": "for that person"
+        },
+        {
+          "sa": "भयम्",
+          "en": "fear"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "एव",
+          "en": "at once; indeed"
+        },
+        {
+          "sa": "यत्",
+          "en": "that which"
+        },
+        {
+          "sa": "वीक्षितम्",
+          "en": "was seen"
+        },
+        {
+          "sa": "भिन्नतया",
+          "en": "as distinct"
+        },
+        {
+          "sa": "प्रमादात्",
+          "en": "through heedlessness"
+        }
+      ],
       "sourceNumbers": [
         330
-      ]
+      ],
+      "editionTranslation": "Whenever the wise man sees the least difference in the infinite Brahman, at once that which he sees as different through mistake, becomes a source of terror to him."
     },
     {
       "id": "vivekachudamani-331",
       "number": "331",
       "label": "Verse 331",
       "deva": "श्रुतिस्मृतिन्यायशतैर् निषिद्धे\nदृश्येऽत्र यः स्वात्ममतिं करोति ।\nउपैति दुःखोपरि दुःखजातं\nनिषिद्धकर्ता स मलिम्लुचो यथा ॥",
-      "iast": "śrutismṛtinyāyaśatair niṣiddhe\ndṛśye'tra yaḥ svātmamatiṃ karoti |\nupaiti duḥkhopari duḥkhajātaṃ\nniṣiddhakartā sa malimluco yathā ||",
-      "translation": "He who identifies himself with the objective universe which has been denied by hundreds of Shrutis, Smritis and reasonings, experiences misery after misery, like a thief, for he does something forbidden.",
-      "gloss": [],
+      "iast": "śruti-smṛti-nyāya-śatair niṣiddhe\ndṛśye 'tra yaḥ svātmamatiṃ karoti |\nupaiti duḥkhopari duḥkha-jātaṃ\nniṣiddha-kartā sa malimlucaḥ yathā ||",
+      "translation": "Whoever takes as the Self the visible world here, denied by hundreds of scriptural texts, traditional teachings, and reasonings, meets suffering upon suffering, like a thief who does what is forbidden.",
+      "gloss": [
+        {
+          "sa": "श्रुति",
+          "en": "revealed scripture"
+        },
+        {
+          "sa": "स्मृति",
+          "en": "traditional teaching"
+        },
+        {
+          "sa": "न्याय",
+          "en": "reasoning"
+        },
+        {
+          "sa": "शतैः",
+          "en": "by hundreds"
+        },
+        {
+          "sa": "निषिद्धे",
+          "en": "denied; forbidden"
+        },
+        {
+          "sa": "दृश्ये",
+          "en": "in the visible; seen world"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "मतिम्",
+          "en": "notion"
+        },
+        {
+          "sa": "करोति",
+          "en": "makes; takes"
+        },
+        {
+          "sa": "उपैति",
+          "en": "reaches; meets"
+        },
+        {
+          "sa": "दुःख",
+          "en": "suffering"
+        },
+        {
+          "sa": "उपरि",
+          "en": "upon; on top of"
+        },
+        {
+          "sa": "दुःखजातम्",
+          "en": "a mass of suffering"
+        },
+        {
+          "sa": "निषिद्धकर्ता",
+          "en": "one who does what is forbidden"
+        },
+        {
+          "sa": "सः",
+          "en": "that one"
+        },
+        {
+          "sa": "मलिम्लुचः",
+          "en": "thief"
+        },
+        {
+          "sa": "यथा",
+          "en": "like"
+        }
+      ],
       "sourceNumbers": [
         331
-      ]
+      ],
+      "editionTranslation": "He who identifies himself with the objective universe which has been denied by hundreds of Shrutis, Smritis and reasonings, experiences misery after misery, like a thief, for he does something forbidden."
     },
     {
       "id": "vivekachudamani-332",
       "number": "332",
       "label": "Verse 332",
       "deva": "सत्याभिसंधानरतो विमुक्तो\nमहत्त्वमात्मीयमुपैति नित्यम् ।\nमिथ्याभिसन्धानरतस्तु नश्येद्\nदृष्टं तदेतद्यदचौरचौरयोः ॥",
-      "iast": "satyābhisaṃdhānarato vimukto\nmahattvamātmīyamupaiti nityam |\nmithyābhisandhānaratastu naśyed\ndṛṣṭaṃ tadetadyadacauracaurayoḥ ||",
-      "translation": "He who has devoted himself to meditation on the Reality (Brahman) and is free from Nescience, attains to the eternal glory of the Atman. But he who dwells on the unreal (the universe) is destroyed. That this is so is evidenced in the case of one who is not a thief and one who is a thief.",
-      "gloss": [],
+      "iast": "satya-abhisandhāna-rato vimukto\nmahattvam ātmīyam upaiti nityam |\nmithyābhisandhāna-ratas tu naśyed\ndṛṣṭaṃ tad etad yad acaura-caurayoḥ ||",
+      "translation": "One devoted to truth and free [from ignorance] continually attains one's own greatness; but one devoted to falsehood perishes. This is seen in the case of the non-thief and the thief.",
+      "gloss": [
+        {
+          "sa": "सत्य",
+          "en": "truth; the Real"
+        },
+        {
+          "sa": "अभिसन्धान",
+          "en": "intention; commitment"
+        },
+        {
+          "sa": "रतः",
+          "en": "devoted"
+        },
+        {
+          "sa": "विमुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "महत्त्वम्",
+          "en": "greatness"
+        },
+        {
+          "sa": "आत्मीयम्",
+          "en": "one's own"
+        },
+        {
+          "sa": "उपैति",
+          "en": "attains"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always; continually"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "false; unreal"
+        },
+        {
+          "sa": "अभिसन्धान",
+          "en": "intention; commitment"
+        },
+        {
+          "sa": "रतः",
+          "en": "devoted"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "नश्येत्",
+          "en": "perishes"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "seen"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "यत्",
+          "en": "as; that"
+        },
+        {
+          "sa": "अचौर",
+          "en": "non-thief"
+        },
+        {
+          "sa": "चौरयोः",
+          "en": "of the two: non-thief and thief"
+        }
+      ],
       "sourceNumbers": [
         332
-      ]
+      ],
+      "editionTranslation": "He who has devoted himself to meditation on the Reality (Brahman) and is free from Nescience, attains to the eternal glory of the Atman. But he who dwells on the unreal (the universe) is destroyed. That this is so is evidenced in the case of one who is not a thief and one who is a thief."
     },
     {
       "id": "vivekachudamani-333",
       "number": "333",
       "label": "Verse 333",
       "deva": "यतिरसदनुसन्धिं बन्धहेतुं विहाय\nस्वयमयमहमस्मीत्य् आत्मदृष्ट्यैव तिष्ठेत् ।\nसुखयति ननु निष्ठा ब्रह्मणि स्वानुभूत्या\nहरति परमविद्याकार्यदुःखं प्रतीतम् ॥",
-      "iast": "yatirasadanusandhiṃ bandhahetuṃ vihāya\nsvayamayamahamasmīty ātmadṛṣṭyaiva tiṣṭhet |\nsukhayati nanu niṣṭhā brahmaṇi svānubhūtyā\nharati paramavidyākāryaduḥkhaṃ pratītam ||",
-      "translation": "The Sannyasin should give up dwelling on the unreal, which causes bondage, and should always fix his thoughts on the Atman as \"I myself am This\". For the steadfastness in Brahman through the realisation of one’s identity with It gives rise to bliss and thoroughly removes the misery born of nescience, which one experiences (in the ignorant state).",
-      "gloss": [],
+      "iast": "yatir asad-anusandhiṃ bandha-hetuṃ vihāya\nsvayam ayam aham asmīty ātma-dṛṣṭyaiva tiṣṭhet |\nsukhayati nanu niṣṭhā brahmaṇi svānubhūtyā\nharati paramavidyā-kārya-duḥkhaṃ pratītam ||",
+      "translation": "The renunciate should leave inquiry into the unreal, the cause of bondage, and remain with the vision of the Self alone: “I myself am this.” Steadfastness in Brahman through direct experience brings happiness and removes the experienced suffering produced by ignorance.",
+      "gloss": [
+        {
+          "sa": "यतिः",
+          "en": "renunciate"
+        },
+        {
+          "sa": "असत्",
+          "en": "unreal"
+        },
+        {
+          "sa": "अनुसन्धिम्",
+          "en": "inquiry; dwelling on"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "हेतुम्",
+          "en": "cause"
+        },
+        {
+          "sa": "विहाय",
+          "en": "having left"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "am"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "दृष्ट्या",
+          "en": "by the vision"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "तिष्ठेत्",
+          "en": "should remain"
+        },
+        {
+          "sa": "सुखयति",
+          "en": "brings happiness"
+        },
+        {
+          "sa": "ननु",
+          "en": "indeed"
+        },
+        {
+          "sa": "निष्ठा",
+          "en": "steadfastness"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "अनुभूत्या",
+          "en": "through experience"
+        },
+        {
+          "sa": "हरति",
+          "en": "removes"
+        },
+        {
+          "sa": "परम",
+          "en": "supreme"
+        },
+        {
+          "sa": "विद्या",
+          "en": "knowledge; ignorance (avidyā in context)"
+        },
+        {
+          "sa": "कार्य",
+          "en": "produced effect"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "प्रतीतम्",
+          "en": "experienced"
+        }
+      ],
       "sourceNumbers": [
         333
-      ]
+      ],
+      "editionTranslation": "The Sannyasin should give up dwelling on the unreal, which causes bondage, and should always fix his thoughts on the Atman as \"I myself am This\". For the steadfastness in Brahman through the realisation of one’s identity with It gives rise to bliss and thoroughly removes the misery born of nescience, which one experiences (in the ignorant state)."
     },
     {
       "id": "vivekachudamani-334",
       "number": "334",
       "label": "Verse 334",
       "deva": "बाह्यानुसन्धिः परिवर्धयेत्फलं\nदुर्वासनाम् एव ततस्ततोऽधिकाम् ।\nज्ञात्वा विवेकैः परिहृत्य बाह्यं\nस्वात्मानुसन्धिं विदधीत नित्यम् ॥",
-      "iast": "bāhyānusandhiḥ parivardhayetphalaṃ\ndurvāsanām eva tatastato'dhikām |\njñātvā vivekaiḥ parihṛtya bāhyaṃ\nsvātmānusandhiṃ vidadhīta nityam ||",
-      "translation": "The dwelling on external objects will only intensify its fruits, viz. furthering evil propensities, which grow worse and worse. Knowing this through discrimination, one should avoid external objects and constantly apply oneself to meditation on the Atman.",
-      "gloss": [],
+      "iast": "bāhyānusandhiḥ parivardhayet phalaṃ\ndurvāsanām eva tatas tato 'dhikām |\njñātvā vivekaiḥ parihṛtya bāhyaṃ\nsvātmānusandhiṃ vidadhīta nityam ||",
+      "translation": "Dwelling on external things increases their fruit: harmful latent tendencies, more and more. Knowing this through discernment, one should turn away from externals and continually pursue inquiry into one's own Self.",
+      "gloss": [
+        {
+          "sa": "बाह्य",
+          "en": "external"
+        },
+        {
+          "sa": "अनुसन्धिः",
+          "en": "dwelling; contemplation"
+        },
+        {
+          "sa": "परिवर्धयेत्",
+          "en": "increases; makes grow"
+        },
+        {
+          "sa": "फलम्",
+          "en": "fruit; result"
+        },
+        {
+          "sa": "दुर्वासना",
+          "en": "harmful latent tendency"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed; only"
+        },
+        {
+          "sa": "ततः",
+          "en": "from there; then"
+        },
+        {
+          "sa": "ततः",
+          "en": "further"
+        },
+        {
+          "sa": "अधिकाम्",
+          "en": "greater; more"
+        },
+        {
+          "sa": "ज्ञात्वा",
+          "en": "having understood"
+        },
+        {
+          "sa": "विवेकैः",
+          "en": "through discernment"
+        },
+        {
+          "sa": "परिहृत्य",
+          "en": "having rejected; turned away from"
+        },
+        {
+          "sa": "बाह्यम्",
+          "en": "the external"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनुसन्धिम्",
+          "en": "inquiry; contemplation"
+        },
+        {
+          "sa": "विदधीत",
+          "en": "one should undertake"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always; continually"
+        }
+      ],
       "sourceNumbers": [
         334
-      ]
+      ],
+      "editionTranslation": "The dwelling on external objects will only intensify its fruits, viz. furthering evil propensities, which grow worse and worse. Knowing this through discrimination, one should avoid external objects and constantly apply oneself to meditation on the Atman."
     },
     {
       "id": "vivekachudamani-335",
@@ -28743,6 +29177,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 310–314; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 315–319; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 320–324; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 325–329; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 325–329; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 330–334; preserved prior translations as editionTranslation."
   ]
 }
