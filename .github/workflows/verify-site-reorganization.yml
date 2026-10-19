@@ -43,3 +43,26 @@ jobs:
           node --check docs/assets/js/article-reader-paged.js
           node --check docs/assets/js/shaiva-complete-reader.js
           echo "PASS: 3 active reader scripts. Existing syntax problems in unrelated scripts are tracked separately."
+      - name: Build preview Pages output using Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site-preview
+      - name: Verify built Pages routes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree
+          from urllib.parse import unquote,urlsplit
+          root=Path('_site-preview')
+          urls=[x.text for x in ElementTree.parse('docs/sitemap.xml').iter() if x.tag.endswith('loc') and x.text]
+          missing=[]
+          for u in urls:
+              p=unquote(urlsplit(u).path).removeprefix('/advaita/').strip('/')
+              options=[root/p,root/p/'index.html',root/(p+'.html')] if p else [root/'index.html']
+              if not any(x.is_file() for x in options): missing.append(u)
+          assert not missing, f'Pages build omitted listed URLs: {missing[:20]}'
+          for a in ('index.html','404.html','favicon.svg','sitemap.xml'):
+              assert (root/a).is_file(), f'Pages build missing {a}'
+          print(f'PASS: Jekyll build keeps all {len(urls)} sitemap routes and root resources')
+          PY
