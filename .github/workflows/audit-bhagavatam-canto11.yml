@@ -12,9 +12,14 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -66,9 +71,9 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/docs/BHAGAVATAM_COMPLETION.md articles/srimad-bhagavatam-canto-11-sridhara-svami/index.html
+          git add ../.github/docs/BHAGAVATAM_COMPLETION.md articles/srimad-bhagavatam-canto-11-sridhara-svami/index.html
           git add assets/data/bhagavatam-sridhara-wfw-canto11-ch11-verses01-49.json assets/data/bhagavatam-sridhara-wfw-canto11-ch12-verses01-24.json assets/data/bhagavatam-sridhara-wfw-canto11-ch31-verses01-28.json
-          git add .github/maintenance/audit/canto11/automated-summary.md .github/maintenance/audit/canto11/automated-summary.json .github/maintenance/audit/canto11/automated-verse-map.csv
+          git add ../.github/maintenance/audit/canto11/automated-summary.md ../.github/maintenance/audit/canto11/automated-summary.json ../.github/maintenance/audit/canto11/automated-verse-map.csv
           if ! git diff --cached --quiet; then
             git commit -m 'Correct verified Canto 11 commentary errors and retract completion claim'
             git push

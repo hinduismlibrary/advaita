@@ -1,27 +1,33 @@
 name: Validate full-scroll reader assets
 on:
   push:
+    branches: [main]
     paths:
       - .github/workflows/repair-other-document-pages.yml
-      - assets/js/article-reader-paged.js
-      - assets/js/shaiva-complete-reader.js
-      - assets/data/shaiva-manuscript.b64
-      - assets/css/varna-vicara-paged.css
-      - assets/css/article-reader-template.css
-      - articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
-      - articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
-      - articles/a-shashtric-lens-of-varna-part-one/index.html
-      - articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
-      - articles/hinduism-on-women/index.html
-      - articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - docs/assets/js/article-reader-paged.js
+      - docs/assets/js/shaiva-complete-reader.js
+      - docs/assets/data/shaiva-manuscript.b64
+      - docs/assets/css/varna-vicara-paged.css
+      - docs/assets/css/article-reader-template.css
+      - docs/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - docs/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
+      - docs/articles/a-shashtric-lens-of-varna-part-one/index.html
+      - docs/articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
+      - docs/articles/hinduism-on-women/index.html
+      - docs/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
+
       - name: Validate complete continuous readers
         run: |
           node --check assets/js/article-reader-paged.js

@@ -1,6 +1,7 @@
 name: Audit Shaiva source layout
 on:
   push:
+    branches: [main]
     paths:
       - .github/workflows/shaiva-source-layout-audit.yml
   workflow_dispatch:
@@ -9,8 +10,13 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4      - name: Make maintenance scripts accessible
+        run: ln -s ../.github .github
+
       - name: Export structured source and inspect layout-risk passages
         run: |
           mkdir -p /tmp/shaiva-structure
