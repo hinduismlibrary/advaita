@@ -433,7 +433,7 @@ async function start(root){
   const readerScript=Array.from(document.scripts).find(s=>s.src&&/\/assets\/js\/shankara-reader\.js(?:\?|$)/.test(s.src));
   const dataUrl=readerScript?new URL("../data/shankara/"+encodeURIComponent(id)+".json",readerScript.src):new URL("/advaita/assets/data/shankara/"+encodeURIComponent(id)+".json",location.origin);
   dataUrl.searchParams.set("v",READER_DATA_VERSION);
-  const res=await fetch(dataUrl.href,{cache:"no-store"});
+  const res=await fetch(dataUrl.href);
   if(!res.ok)throw new Error("Work data unavailable");
   const data=await res.json();
   if(!complete(data)||data.id!==id)throw new Error("Incomplete text data");
