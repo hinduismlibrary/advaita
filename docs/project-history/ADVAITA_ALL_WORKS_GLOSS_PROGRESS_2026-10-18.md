@@ -32,7 +32,7 @@ All 16 works with at least 20 items link to a contents/group navigation (Bhajago
 | Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
 | Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
 | Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
-| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 253/566 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 258/566 |
 | Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
 | Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
 | Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
@@ -53,7 +53,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
 2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
-3. **Vivekacūḍāmaṇi** — 253/566 data units have glosses, covering source verses 1–264; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
+3. **Vivekacūḍāmaṇi** — 258/566 data units have glosses, covering source verses 1–269; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
 4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
 5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
 
@@ -93,6 +93,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 - [GRETIL, Vivekacūḍāmaṇi Sanskrit text](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm), verses 21–155.
 - [GRETIL, Vivekacūḍāmaṇi Sanskrit text](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm), verses 260–264; [Shlokam, text and word meanings for verses 260–264](https://www.shlokam.org/text/vivekachudamani.htm). The literal English was aligned to the Sanskrit; verse 262's word gloss resolves the contextual sandhi as भ्रमात् (“through delusion”).
+- [GRETIL, Vivekacūḍāmaṇi Sanskrit text](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm), verses 265–269; [Shlokam, text and word meanings](https://www.shlokam.org/text/vivekachudamani.htm), verses 265–269. The translations were written against the Sanskrit, including the king-in-an-army comparison, the being/non-being distinction, and the imagery of the cave of the body.
 - [Swami Madhavananda, 1921 translation, verses 21–40](https://www.wisdomlib.org/hinduism/book/vivekachudamani/d/doc144469.html), with linked following verse pages.
 - [Proofread 1921 Advaita Ashrama scans: pages 21](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/21), [23](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/23), [24](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/24), and [25](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/25) check selected readings through verse 40; pages [27](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/27), [28](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/28), and [29](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/29) check verses 44–51; page [32](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/32) checks verses 57–58; page [33](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/33) checks verses 59–61; [34](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/34) checks 62–64; [35](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/35) checks 65–66; and [36](https://en.wikisource.org/wiki/Page:Vivekachudamani.djvu/36) checks 67–69. Verse 32 `prājñaṃ`, verse 37 `ahetunā anyān api`, verse 40 `kiñcit`, and verse 47 `bodhavahniḥ / बोधवह्निः` follow the proofread reading where GRETIL's unproofread transcription differs. Verse 47 `bodhavahniḥ / बोधवह्निः` and verse 50 `pāvitaṃ / पावितं` follow pages 28 and 29.
 - [Vedic Tithi, Vivekacūḍāmaṇi text and transliteration](https://vedictithi.com/scriptures/viveka-chudamani) confirms verse 128's `आभारूपम्` and `भान्तम्`, verse 143's `दिननाथे / झञ्झा`, and verse 145's `स्कन्धोऽसवः` readings.
@@ -186,4 +187,5 @@ The prior log stopped at verses 111–115 even though later source commits were 
 - **23:33 UTC — Correction:** Fixed the verse 250 gloss spelling for *apratarkya* and removed a duplicated consonant in verse 251’s *tatsatyam*. Commit: [0b31a634](https://github.com/krishnavyasmuni/advaita/commit/0b31a6346fb7db2902aacf516d1cb9e821eb52e2).
 - **23:34 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 255–259. Added five literal translations and Devanāgarī-backed word glosses; retained the previous 1921 English readings in editionTranslation. Commit: [f953cca4](https://github.com/krishnavyasmuni/advaita/commit/f953cca4d82076c272a9ee64d6e4ff25f251b91b).
 - **23:37 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 260–264. Added five literal translations and Devanāgarī-backed word glosses, preserving the previous 1921 readings in editionTranslation. Verified the Sanskrit and numbering against GRETIL; verse 262’s gloss reflects the contextual “through delusion” sense of the sandhied bhramān nāma reading. Commit: [ecb16a6e](https://github.com/krishnavyasmuni/advaita/commit/ecb16a6e4515f99923d4d006b8cbdf7a35f18599).
-- **Active batch:** Vivekacūḍāmaṇi, source verses 265–269.
+- **23:38 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 265–269. Added five literal translations and Devanāgarī-backed word glosses, preserving the prior 1921 readings in editionTranslation. Corrected the English for verse 266 to match sat-asat (“being and non-being”) and glossed verse 267’s sandhied प्रयत्नान् as प्रयत्नात् (“through effort”). Commit: [9282da3c](https://github.com/krishnavyasmuni/advaita/commit/9282da3cd9751eb4718e353fdea55fba2ec01a8e).
+- **Active batch:** Vivekacūḍāmaṇi, source verses 270–274.
