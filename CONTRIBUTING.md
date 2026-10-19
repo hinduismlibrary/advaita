@@ -1,13 +1,19 @@
 # Contributing and publishing
 
 ## Site files
-The published website lives under `docs/`. Keep its existing HTML filenames and relative asset paths intact; URLs under `/advaita/articles/`, `/advaita/pages/`, and `/advaita/books/` must continue to work.
+The published website lives under `docs/` in the organized tree. Preserve original HTML filenames, relative asset references and published paths. Old URLs under `/advaita/articles/`, `/advaita/pages/`, and `/advaita/books/` must continue to work.
 
-Use `docs/puranas/` to browse each Purāṇa by parvan, book, or canto. These folders are source navigation guides. The existing readers remain in `docs/articles/` because moving them would break bookmarks, script references, and URLs.
+Use `docs/puranas/` to browse each Purāṇa by traditional parvan, book or canto. Canonical chapter HTML stays in `docs/articles/` because these locations correspond to long-established public URLs.
 
-## Safe publishing cutover
-Before merging this preview, change **GitHub Settings → Pages → Build and deployment → Deploy from a branch → main → /docs** at the coordinated cutover. The current site is built from the repository root.
+## Required staged Pages cutover — do not merge this preview directly
+The **current live source is `main /`**, while the organized tree requires **`main /docs`**. Switching the Pages source immediately is not sufficient: GitHub may not offer `/docs` while that folder is absent from `main`.
 
-A Pages-source switch requires repository administration permission. Never merge the docs-only tree while the source is still `main /`. The workflow files in `.github/workflows/` currently reference paths from the old root; update and validate maintenance workflows before using those write actions with the new layout.
+1. Save a recovery bundle of all current repository refs **outside the repo**.
+2. On `main`, first **copy** the new `docs/` tree into place **without removing** the old root `index.html`, `assets/`, `articles/`, `books/`, `pages/` or other published paths. Verify the still-root-based site builds and deploys successfully. This is a temporary staging step, not the final layout.
+3. In **GitHub Settings → Pages → Build and deployment**, select **Deploy from a branch → main → /docs**, and verify the deployed site and old bookmarked routes. This setting requires administration permission.
+4. Only **after** the `/docs` deployment succeeds, complete the cleanup that removes the duplicated old root site files. The final root will have exactly five entries, with original site content still available inside `docs/`.
+5. Verify all sitemap routes, representative `?section=` and fragment-navigation requests, active JS/CSS/data assets, downloads, favicon, 404 behavior and mobile views.
 
-After cutover, verify all sitemap routes, example `?section=` chapter requests, article navigation, scripts, styles, fonts, downloads, and 404 pages. Preserve data-driven and external URLs.
+Existing maintenance workflows are adapted for the new source-relative directory but must still be exercised as appropriate before enabling any automated writeback. A successful source-only Jekyll build is not a substitute for an actual deployed-site test.
+
+Avoid deleting scripts, assets, duplicate-looking HTML routes or data without proving that the current readers do not request them.
