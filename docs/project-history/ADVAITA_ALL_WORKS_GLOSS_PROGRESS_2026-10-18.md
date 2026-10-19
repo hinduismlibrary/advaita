@@ -32,7 +32,7 @@ All 16 works with at least 20 items link to a contents/group navigation (Bhajago
 | Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
 | Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
 | Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
-| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 243/566 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 248/566 |
 | Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
 | Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
 | Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
@@ -53,7 +53,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
 2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
-3. **Vivekacūḍāmaṇi** — 243/566 data units have glosses, covering source verses 1–254; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
+3. **Vivekacūḍāmaṇi** — 248/566 data units have glosses, covering source verses 1–259; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
 4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
 5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
 
@@ -180,9 +180,10 @@ The prior log stopped at verses 111–115 even though later source commits were 
 - **23:27 UTC — Editorial correction:** Clarified the sky-quality example and restored verse 235’s four-line layout. Commit: [c86dd36b](https://github.com/krishnavyasmuni/advaita/commit/c86dd36b9dd398b8806f0839a8fe71a209eeee6b).
 
 - **23:29 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 239–244. Added five complete reader units (241–242 remain paired), with literal English and Devanāgarī-backed glosses; normalized the transliteration and word divisions around “That” and “you.” Commit: [0f07df35](https://github.com/krishnavyasmuni/advaita/commit/0f07df35f57775e8342c70538de88febb9800d95).
-- **Active batch:** Vivekacūḍāmaṇi, source verses 255–259.
+- **Active batch:** Vivekacūḍāmaṇi, source verses 260–264.
 
 - **23:31 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 245–249. Added four complete reader units (248–249 remain paired), with literal English and Devanāgarī-backed word glosses. Commit: [fdd5a82e](https://github.com/krishnavyasmuni/advaita/commit/fdd5a82e7728cd52b28a584f623f6c68987d65ce).
 - **23:32 UTC — Transliteration cleanup:** Replaced Devanāgarī danda and avagraha marks with Latin IAST punctuation in all 523 entries that contained them. Verification found no Devanāgarī characters remaining in any IAST field. Commit: [e3a43ef7](https://github.com/krishnavyasmuni/advaita/commit/e3a43ef78ad05c2ec8b2ed46efd8292be4616267).
 - **23:33 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 250–254. Added five complete reader units, preserving prior 1921 translations, with literal English and Devanāgarī-backed glosses. Verse 250 is a single source-numbered extended stanza. Commit: [801ac05f](https://github.com/krishnavyasmuni/advaita/commit/801ac05fc98cf6a4920e69ff1b41b88a205c0e23).
 - **23:33 UTC — Correction:** Fixed the verse 250 gloss spelling for *apratarkya* and removed a duplicated consonant in verse 251’s *tatsatyam*. Commit: [0b31a634](https://github.com/krishnavyasmuni/advaita/commit/0b31a6346fb7db2902aacf516d1cb9e821eb52e2).
+- **23:34 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 255–259. Added five literal translations and Devanāgarī-backed word glosses; retained the previous 1921 English readings in editionTranslation. Commit: [f953cca4](https://github.com/krishnavyasmuni/advaita/commit/f953cca4d82076c272a9ee64d6e4ff25f251b91b).
