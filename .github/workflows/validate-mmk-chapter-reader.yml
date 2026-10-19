@@ -1,0 +1,19 @@
+name: Validate MMK Chapter 1 reader
+on:
+  push:
+    paths:
+      - .github/workflows/validate-mmk-chapter-reader.yml
+      - tools/scripts/site-checks/verify-mmk-chapter-reader.py
+      - site/articles/mulamadhyamakakarika-with-chandrakirti/**
+      - site/assets/css/mmk-reader.css
+      - site/assets/js/mmk-reader-toc.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate continuous Chapter 1 reader
+        run: python3 tools/scripts/site-checks/verify-mmk-chapter-reader.py

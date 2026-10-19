@@ -16,4 +16,41 @@
  .mmk-index-passages{margin-left:8px}
 }
 
-.mmk-content .mmk-verse .gita-translation.mmk-word-gloss{max-width:840px;margin:0 auto 12px!important;text-align:left!important;font:400 14px/1.8 Merriweather,Georgia,serif;overflow-wrap:anywhere}
+/* Continuous Chapter 1 reader and scroll-following contents */
+.mmk-full-scroll-reader{padding-bottom:54px!important}
+.mmk-full-scroll-reader .gita-hero{padding-bottom:20px}
+.mmk-reader-grid{display:grid;grid-template-columns:minmax(150px,182px) minmax(0,1fr);gap:clamp(20px,3vw,34px);align-items:start;max-width:100%;margin:0 auto}
+.mmk-reader-toc{position:sticky;top:82px;align-self:start;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px);overflow:auto;overscroll-behavior:contain;padding:10px 10px 12px 0;border-right:1px solid var(--gita-line);scrollbar-width:thin}
+.mmk-reader-toc h2{margin:0 0 10px;color:var(--gita-teal);font:500 19px/1.25 Vollkorn,Georgia,serif}
+.mmk-reader-toc__links ol{display:grid;gap:3px;margin:0;padding:0;list-style:none}
+.mmk-reader-toc__links a{display:block;padding:7px 9px;border-left:3px solid transparent;border-radius:0 4px 4px 0;color:#514a43;font:400 12px/1.35 Merriweather,Georgia,serif;text-decoration:none;transition:background-color .15s ease,color .15s ease}
+.mmk-reader-toc__links a:hover{background:#eeece7;color:#594469;text-decoration:none}
+.mmk-reader-toc__links a[aria-current="location"]{border-left-color:#72577e;background:#f0eaf3;color:#594069;font-weight:700}
+.mmk-reader-toc__links a:focus-visible{outline:3px solid #7ab8bb;outline-offset:2px}
+.mmk-reader-main{min-width:0}
+.mmk-reader-section{scroll-margin-top:112px}
+.mmk-reader-main>.mmk-reader-note{margin:4px 0 26px;padding:12px 14px;border-left:2px solid #9aa9a9;background:#f1efeb;color:#655e57;font:400 12px/1.65 Merriweather,Georgia,serif}
+.mmk-reader-note p{margin:0 0 8px!important}
+.mmk-reader-note p:last-child{margin-bottom:0!important}
+.mmk-reader-note a{color:#5d4c68;text-decoration:underline}
+.mmk-reader-section--introduction .mmk-introduction-en{max-width:none;margin:24px 0 36px}
+.mmk-reader-section--verse{padding-top:26px;border-top:1px solid #dedbd6}
+.mmk-reader-section--verse+.mmk-reader-section--verse{margin-top:34px}
+.mmk-reader-section--verse .mmk-commentary-unit{max-width:none;margin:18px 0 28px}
+.mmk-reader-section--verse .mmk-sanskrit-original{max-width:none;margin:16px 0 28px}
+.mmk-full-scroll-reader .mmk-page-nav{max-width:none}
+.mmk-skip-link{position:absolute;z-index:30;left:14px;top:8px;transform:translateY(-160%);padding:8px 12px;border:2px solid #72577e;border-radius:4px;background:#fff;color:#594069;font:600 13px Merriweather,Georgia,serif}
+.mmk-skip-link:focus{transform:translateY(0)}
+@media(max-width:850px){
+ .mmk-reader-grid{display:block}
+ .mmk-reader-toc{position:sticky;z-index:5;top:68px;max-height:none;margin:0 -14px 22px;padding:8px 14px 9px;border-right:0;border-bottom:1px solid var(--gita-line);background:#f7f6f4}
+ .mmk-reader-toc h2{margin:0 0 5px;font-size:15px}
+ .mmk-reader-toc__links ol{display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;padding:1px 1px 4px;scrollbar-width:thin}
+ .mmk-reader-toc__links li{flex:0 0 auto}
+ .mmk-reader-toc__links a{min-height:34px;padding:8px 10px;border:1px solid transparent;border-left-width:1px;border-radius:999px;white-space:nowrap}
+ .mmk-reader-toc__links a[aria-current="location"]{border-color:#ad99b8;background:#f0eaf3}
+ .mmk-reader-section{scroll-margin-top:148px}
+ .mmk-reader-main>.mmk-reader-note{font-size:11.5px}
+ .mmk-reader-section--verse{padding-top:22px}
+}
+@media(prefers-reduced-motion:reduce){.mmk-reader-toc__links a{transition:none}}
