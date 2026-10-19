@@ -32,7 +32,7 @@ All 16 works with at least 20 items link to a contents/group navigation (Bhajago
 | Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
 | Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
 | Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
-| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 327/566 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 332/566 |
 | Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
 | Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
 | Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
@@ -53,7 +53,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
 2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
-3. **Vivekacūḍāmaṇi** — 327/566 data units have glosses, covering source verses 1–339; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
+3. **Vivekacūḍāmaṇi** — 332/566 data units have glosses, covering source verses 1–344; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
 4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
 5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
 
@@ -208,4 +208,5 @@ The prior log stopped at verses 111–115 even though later source commits were 
 - **23:53 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 325–329. Added five literal translations and Devanāgarī-backed word glosses, preserving prior English as `editionTranslation`; checked Sanskrit and vocabulary against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [c8d5c953](https://github.com/krishnavyasmuni/advaita/commit/c8d5c953bffe760bcb1d0fcca783dbaf555ff3b9).
 - **23:54 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 330–334. Added five literal translations and Devanāgarī-backed word glosses, preserving prior English as `editionTranslation`; checked the Sanskrit and key terms against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [809781c1](https://github.com/krishnavyasmuni/advaita/commit/809781c16770f155a21cc09f002f012ee0d8de2c).
 - **23:55 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 335–339. Added five literal translations and Devanāgarī-backed word glosses, retaining earlier English as `editionTranslation`; checked the readings against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [6f756fe0](https://github.com/krishnavyasmuni/advaita/commit/6f756fe0b1d7edd82d4a20fc0c5b8b00b5fc2b6d).
-- **Active batch:** Vivekacūḍāmaṇi, source verses 340–344.
+- **23:56 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 340–344. Added five literal translations and Devanāgarī-backed word glosses; corrected the IAST/Sanskrit form in verse 342 to कर्तुं न शक्यः and separated न हि in verse 344. Checked source wording and glosses against [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm) and [Stotrams](https://stotrams.com/stotra/viveka-chudamani/english). Data commit: [de576a6d](https://github.com/krishnavyasmuni/advaita/commit/de576a6dc34a7e3f190202fbba80286b058942a7).
+- **Active batch:** Vivekacūḍāmaṇi, source verses 345–349.
