@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 309
+      "end": 314
     },
-    "note": "Source verses 1–309 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 310 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, and 248–249."
+    "note": "Source verses 1–314 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 315 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, and 248–249."
   },
   "units": [
     {
@@ -24228,60 +24228,370 @@
       "number": "310",
       "label": "Verse 310",
       "deva": "निगृह्य शत्रोरहमोऽवकाशः\nक्वचिन् न देयो विषयानुचिन्तया ।\nस एव संजीवनहेतुरस्य\nप्रक्षीणजम्बीरतरोर् इवाम्बु ॥",
-      "iast": "nigṛhya śatrorahamo'vakāśaḥ\nkvacin na deyo viṣayānucintayā |\nsa eva saṃjīvanaheturasya\nprakṣīṇajambīrataror ivāmbu ||",
-      "translation": "Overpowering this enemy, egoism, not a moment’s respite should be given to it by thinking on the sense-objects. That is verily the cause of its coming back to life, like water to a citron tree that has almost dried up.",
-      "gloss": [],
+      "iast": "nigṛhya śatror ahamo 'vakāśaḥ\nkvacin na deyo viṣayānucintayā |\nsa eva saṃjīvana-hetur asya\nprakṣīṇa-jambīra-taroḥ ivāmbu ||",
+      "translation": "After subduing the enemy, ego, never give it an opening through dwelling on sense-objects. That alone revives it, like water revives an almost withered lemon tree.",
+      "gloss": [
+        {
+          "sa": "निगृह्य",
+          "en": "having subdued"
+        },
+        {
+          "sa": "शत्रोः",
+          "en": "of the enemy"
+        },
+        {
+          "sa": "अहमः",
+          "en": "of ego"
+        },
+        {
+          "sa": "अवकाशः",
+          "en": "opening; opportunity"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "ever; at any time"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "देयः",
+          "en": "to be given"
+        },
+        {
+          "sa": "विषय",
+          "en": "sense-objects"
+        },
+        {
+          "sa": "अनुचिन्तया",
+          "en": "by dwelling on; contemplating"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "संजीवन",
+          "en": "revival"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "cause"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "प्रक्षीण",
+          "en": "nearly withered"
+        },
+        {
+          "sa": "जम्बीर",
+          "en": "lemon; citron"
+        },
+        {
+          "sa": "तरोः",
+          "en": "of the tree"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "अम्बु",
+          "en": "water"
+        }
+      ],
       "sourceNumbers": [
         310
-      ]
+      ],
+      "editionTranslation": "Overpowering this enemy, egoism, not a moment’s respite should be given to it by thinking on the sense-objects. That is verily the cause of its coming back to life, like water to a citron tree that has almost dried up."
     },
     {
       "id": "vivekachudamani-311",
       "number": "311",
       "label": "Verse 311",
       "deva": "देहात्मना संस्थित एव कामी\nविलक्षणः कामयिता कथं स्यात् ।\nअतोऽर्थसन्धानपरत्वम् एव\nभेदप्रसक्त्या भवबन्धहेतुः ॥",
-      "iast": "dehātmanā saṃsthita eva kāmī\nvilakṣaṇaḥ kāmayitā kathaṃ syāt |\nato'rthasandhānaparatvam eva\nbhedaprasaktyā bhavabandhahetuḥ ||",
-      "translation": "He alone who has identified himself with the body is greedy after sense-pleasures. How can one, devoid of the body-idea, be greedy (like him) ? Hence the tendency to think on the sense-objects is verily the cause of the bondage of transmigration, giving rise to an idea of distinction or duality.",
-      "gloss": [],
+      "iast": "dehātmanā saṃsthita eva kāmī\nvilakṣaṇaḥ kāmayitā kathaṃ syāt |\nato 'rtha-sandhāna-paratvam eva\nbheda-prasaktyā bhava-bandha-hetuḥ ||",
+      "translation": "Only one established in the body as the Self is a desirer of sense-objects. How could one who is distinct from the body be a desirer? Therefore, fixation on pursuing objects, through attachment to duality, is the cause of bondage in worldly existence.",
+      "gloss": [
+        {
+          "sa": "देहात्मना",
+          "en": "with the body as the Self"
+        },
+        {
+          "sa": "संस्थितः",
+          "en": "established"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed; alone"
+        },
+        {
+          "sa": "कामी",
+          "en": "desirer"
+        },
+        {
+          "sa": "विलक्षणः",
+          "en": "distinct; different"
+        },
+        {
+          "sa": "कामयिता",
+          "en": "one who desires"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "could be"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "objects; aims"
+        },
+        {
+          "sa": "सन्धान",
+          "en": "pursuit"
+        },
+        {
+          "sa": "परत्वम्",
+          "en": "devotion; being intent on"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "भेद",
+          "en": "duality; difference"
+        },
+        {
+          "sa": "प्रसक्त्या",
+          "en": "through attachment"
+        },
+        {
+          "sa": "भव",
+          "en": "worldly existence"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "cause"
+        }
+      ],
       "sourceNumbers": [
         311
-      ]
+      ],
+      "editionTranslation": "He alone who has identified himself with the body is greedy after sense-pleasures. How can one, devoid of the body-idea, be greedy (like him) ? Hence the tendency to think on the sense-objects is verily the cause of the bondage of transmigration, giving rise to an idea of distinction or duality."
     },
     {
       "id": "vivekachudamani-312",
       "number": "312",
       "label": "Verse 312",
       "deva": "कार्यप्रवर्धनाद्बीजप्रवृद्धिः परिदृश्यते ।\nकार्यनाशाद्बीजनाशस्तस्मात्कार्यं निरोधयेत् ॥",
-      "iast": "kāryapravardhanādbījapravṛddhiḥ paridṛśyate |\nkāryanāśādbījanāśastasmātkāryaṃ nirodhayet ||",
-      "translation": "When the effects are developed, the seed also is observed to be such, and when the effects are destroyed, the seed also is seen to be destroyed. Therefore one must subdue the effects.",
-      "gloss": [],
+      "iast": "kārya-pravardhanād bīja-pravṛddhiḥ paridṛśyate |\nkārya-nāśād bīja-nāśas tasmāt kāryaṃ nirodhayet ||",
+      "translation": "Growth of the effect is seen to bring growth of the seed; when the effect is destroyed, the seed is destroyed. Therefore, one should restrain the effect.",
+      "gloss": [
+        {
+          "sa": "कार्य",
+          "en": "effect"
+        },
+        {
+          "sa": "प्रवर्धनात्",
+          "en": "from growth"
+        },
+        {
+          "sa": "बीज",
+          "en": "seed"
+        },
+        {
+          "sa": "प्रवृद्धिः",
+          "en": "increase; growth"
+        },
+        {
+          "sa": "परिदृश्यते",
+          "en": "is observed"
+        },
+        {
+          "sa": "कार्य",
+          "en": "effect"
+        },
+        {
+          "sa": "नाशात्",
+          "en": "from destruction"
+        },
+        {
+          "sa": "बीज",
+          "en": "seed"
+        },
+        {
+          "sa": "नाशः",
+          "en": "destruction"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "कार्यम्",
+          "en": "the effect"
+        },
+        {
+          "sa": "निरोधयेत्",
+          "en": "one should restrain"
+        }
+      ],
       "sourceNumbers": [
         312
-      ]
+      ],
+      "editionTranslation": "When the effects are developed, the seed also is observed to be such, and when the effects are destroyed, the seed also is seen to be destroyed. Therefore one must subdue the effects."
     },
     {
       "id": "vivekachudamani-313",
       "number": "313",
       "label": "Verse 313",
       "deva": "वासनावृद्धितः कार्यं कार्यवृद्ध्या च वासना ।\nवर्धते सर्वथा पुंसः संसारो न निवर्तते ॥",
-      "iast": "vāsanāvṛddhitaḥ kāryaṃ kāryavṛddhyā ca vāsanā |\nvardhate sarvathā puṃsaḥ saṃsāro na nivartate ||",
-      "translation": "Through the increase of desires selfish work increases, and when there is an increase of selfish work, there is an increase of desire also. And man’s transmigration is never at an end.",
-      "gloss": [],
+      "iast": "vāsanā-vṛddhitaḥ kāryaṃ kārya-vṛddhyā ca vāsanā |\nvardhate sarvathā puṃsaḥ saṃsāro na nivartate ||",
+      "translation": "From the growth of latent tendencies, action grows; and through the growth of action, latent tendencies grow. Thus a person's saṃsāra grows in every way and does not cease.",
+      "gloss": [
+        {
+          "sa": "वासना",
+          "en": "latent tendency"
+        },
+        {
+          "sa": "वृद्धितः",
+          "en": "from growth"
+        },
+        {
+          "sa": "कार्यम्",
+          "en": "action; effect"
+        },
+        {
+          "sa": "कार्य",
+          "en": "action"
+        },
+        {
+          "sa": "वृद्ध्या",
+          "en": "through growth"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वासना",
+          "en": "latent tendency"
+        },
+        {
+          "sa": "वर्धते",
+          "en": "grows"
+        },
+        {
+          "sa": "सर्वथा",
+          "en": "in every way"
+        },
+        {
+          "sa": "पुंसः",
+          "en": "of a person"
+        },
+        {
+          "sa": "संसारः",
+          "en": "saṃsāra; worldly existence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "निवर्तते",
+          "en": "ceases"
+        }
+      ],
       "sourceNumbers": [
         313
-      ]
+      ],
+      "editionTranslation": "Through the increase of desires selfish work increases, and when there is an increase of selfish work, there is an increase of desire also. And man’s transmigration is never at an end."
     },
     {
       "id": "vivekachudamani-314",
       "number": "314",
       "label": "Verse 314",
       "deva": "संसारबन्धविच्छित्त्यै तद् द्वयं प्रदहेद्यतिः ।\nवासनावृद्धिरेताभ्यां चिन्तया क्रियया बहिः ॥",
-      "iast": "saṃsārabandhavicchittyai tad dvayaṃ pradahedyatiḥ |\nvāsanāvṛddhiretābhyāṃ cintayā kriyayā bahiḥ ||",
-      "translation": "For the sake of breaking the chain of transmigration, the Sannyasin should burn to ashes those two; for thinking of the sense-objects and doing selfish acts lead to an increase of desires.",
-      "gloss": [],
+      "iast": "saṃsāra-bandha-vicchittyai tad dvayaṃ pradahed yatiḥ |\nvāsanā-vṛddhir etābhyāṃ cintayā kriyayā bahiḥ ||",
+      "translation": "To cut the bondage of saṃsāra, the renunciate should burn those two: mental dwelling and outward action, by which latent tendencies grow.",
+      "gloss": [
+        {
+          "sa": "संसार",
+          "en": "saṃsāra; worldly existence"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "विच्छित्त्यै",
+          "en": "for cutting; breaking"
+        },
+        {
+          "sa": "तत्",
+          "en": "those"
+        },
+        {
+          "sa": "द्वयम्",
+          "en": "two"
+        },
+        {
+          "sa": "प्रदहेत्",
+          "en": "should burn"
+        },
+        {
+          "sa": "यतिः",
+          "en": "renunciate; ascetic"
+        },
+        {
+          "sa": "वासना",
+          "en": "latent tendency"
+        },
+        {
+          "sa": "वृद्धिः",
+          "en": "growth"
+        },
+        {
+          "sa": "एताभ्याम्",
+          "en": "by these two"
+        },
+        {
+          "sa": "चिन्तया",
+          "en": "by thinking; mental dwelling"
+        },
+        {
+          "sa": "क्रियया",
+          "en": "by action"
+        },
+        {
+          "sa": "बहिः",
+          "en": "outwardly; external"
+        }
+      ],
       "sourceNumbers": [
         314
-      ]
+      ],
+      "editionTranslation": "For the sake of breaking the chain of transmigration, the Sannyasin should burn to ashes those two; for thinking of the sense-objects and doing selfish acts lead to an increase of desires."
     },
     {
       "id": "vivekachudamani-315",
@@ -27445,6 +27755,7 @@
   ],
   "changes": [
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 300–304; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 305–309; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 305–309; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 310–314; preserved prior translations as editionTranslation."
   ]
 }
