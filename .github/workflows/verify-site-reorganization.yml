@@ -1,0 +1,42 @@
+name: Verify docs site organization
+on:
+  push:
+    branches: [site-organization-preview]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify published paths and required assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.parse import urlsplit, unquote
+          from xml.etree import ElementTree
+          import re
+          root=Path('docs')
+          assert all((root/name).exists() for name in ('index.html','404.html','favicon.svg','sitemap.xml','articles','books','pages','assets','contact','puranas'))
+          urls=[node.text for node in ElementTree.parse(root/'sitemap.xml').iter() if node.tag.endswith('loc') and node.text]
+          missing=[]
+          for url in urls:
+              path=unquote(urlsplit(url).path).removeprefix('/advaita/').strip('/')
+              choices=[root/path,root/path/'index.html',root/(path+'.html')] if path else [root/'index.html']
+              if not any(x.is_file() for x in choices): missing.append(url)
+          assert not missing, f'Missing sitemap URLs: {missing[:20]}'
+          html=(root/'index.html').read_text()
+          linked=re.findall(r'(?:href|src)\s*=\s*["\']([^"\']+)["\']',html)
+          problems=[]
+          for link in linked:
+              if link.startswith(('#','https:','http:','//','mailto:','tel:','data:')): continue
+              path=urlsplit(link).path.removeprefix('/advaita/').strip('/')
+              target=root/path
+              if not (target.is_file() or (target/'index.html').is_file() or (root/(path+'.html')).is_file()): problems.append(link)
+          assert not problems, f'Missing local links on homepage: {problems}'
+          print(f'PASS: {len(urls)} sitemap URLs, {len(linked)} homepage references')
+          PY
+      - name: Check JavaScript syntax
+        run: |
+          find docs/assets/js -type f -name '*.js' -print0 | xargs -0 -n 1 node --check
