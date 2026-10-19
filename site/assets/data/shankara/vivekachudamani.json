@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 314
+      "end": 319
     },
-    "note": "Source verses 1–314 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 315 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, and 248–249."
+    "note": "Source verses 1–319 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 320 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
   },
   "units": [
     {
@@ -24598,37 +24598,287 @@
       "number": "315–316",
       "label": "Verses 315–316",
       "deva": "ताभ्यां प्रवर्धमाना सा सूते संसृतिम् आत्मनः ।\nत्रयाणां च क्षयोपायः सर्वावस्थासु सर्वदा ॥\n\nसर्वत्र सर्वतः सर्वब्रह्ममात्रावलोकनैः ।\nसद्भाववासनादार्ढ्यात्तत्त्रयं लयमश्नुते ॥",
-      "iast": "tābhyāṃ pravardhamānā sā sūte saṃsṛtim ātmanaḥ |\ntrayāṇāṃ ca kṣayopāyaḥ sarvāvasthāsu sarvadā ||\n\nsarvatra sarvataḥ sarvabrahmamātrāvalokanaiḥ |\nsadbhāvavāsanādārḍhyāttattrayaṃ layamaśnute ||",
-      "translation": "Augmented by these two, desires produce one’s transmigration. The way to destroy these three, however, lies in looking upon everything, under all circumstances, always, everywhere and in all respects, as Brahman and Brahman alone. Through the strengthening of the longing to be one with Brahman, those three are annihilated.",
-      "gloss": [],
+      "iast": "tābhyāṃ pravardhamānā sā sūte saṃsṛtim ātmanaḥ |\ntrayāṇāṃ ca kṣayopāyaḥ sarvāvasthāsu sarvadā ||\n\nsarvatra sarvataḥ sarvabrahmamātrāvalokanaiḥ |\nsadbhāvavāsanādārḍhyāt tat trayaṃ layam aśnute ||",
+      "translation": "Growing through those two, the latent tendency gives rise to a person's saṃsāra. The way to end the three [tendency, thought, and action] at all times and in every state is to see everything, everywhere, as Brahman alone; by strengthening the disposition toward true Being, that triad dissolves.",
+      "gloss": [
+        {
+          "sa": "ताभ्याम्",
+          "en": "by those two"
+        },
+        {
+          "sa": "प्रवर्धमाना",
+          "en": "growing; increasing"
+        },
+        {
+          "sa": "सा",
+          "en": "that; she (the tendency)"
+        },
+        {
+          "sa": "सूते",
+          "en": "gives rise to"
+        },
+        {
+          "sa": "संसृतिम्",
+          "en": "transmigration; saṃsāra"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the person; of oneself"
+        },
+        {
+          "sa": "त्रयाणाम्",
+          "en": "of the three"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "क्षय",
+          "en": "destruction"
+        },
+        {
+          "sa": "उपायः",
+          "en": "means; method"
+        },
+        {
+          "sa": "सर्वावस्थासु",
+          "en": "in all states"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "सर्वत्र",
+          "en": "everywhere"
+        },
+        {
+          "sa": "सर्वतः",
+          "en": "in every way; from all sides"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone; only"
+        },
+        {
+          "sa": "अवलोकनैः",
+          "en": "by seeing; by vision"
+        },
+        {
+          "sa": "सद्",
+          "en": "true Being; the Real"
+        },
+        {
+          "sa": "भाव",
+          "en": "being; nature"
+        },
+        {
+          "sa": "वासना",
+          "en": "disposition; tendency"
+        },
+        {
+          "sa": "दार्ढ्यात्",
+          "en": "from strengthening; firmness"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "त्रयम्",
+          "en": "triad"
+        },
+        {
+          "sa": "लयम्",
+          "en": "dissolution"
+        },
+        {
+          "sa": "अश्नुते",
+          "en": "reaches; attains"
+        }
+      ],
       "sourceNumbers": [
         315,
         316
-      ]
+      ],
+      "editionTranslation": "Augmented by these two, desires produce one’s transmigration. The way to destroy these three, however, lies in looking upon everything, under all circumstances, always, everywhere and in all respects, as Brahman and Brahman alone. Through the strengthening of the longing to be one with Brahman, those three are annihilated."
     },
     {
       "id": "vivekachudamani-317",
       "number": "317",
       "label": "Verse 317",
       "deva": "क्रियानाशे भवेच्चिन्तानाशोऽस्माद्वासनाक्षयः ।\nवासनाप्रक्षयो मोक्षः सा जीवन्मुक्तिरिष्यते ॥",
-      "iast": "kriyānāśe bhaveccintānāśo'smādvāsanākṣayaḥ |\nvāsanāprakṣayo mokṣaḥ sā jīvanmuktiriṣyate ||",
-      "translation": "With the cessation of selfish action the brooding on the sense-objects is stopped, which is followed by the destruction of desires. The destruction of desires is Liberation, and this is considered as Liberation-in-life",
-      "gloss": [],
+      "iast": "kriyānāśe bhavec cintānāśo 'smād vāsanākṣayaḥ |\nvāsanāprakṣayo mokṣaḥ sā jīvanmuktir iṣyate ||",
+      "translation": "When action ceases, thought ceases; from this comes the exhaustion of latent tendencies. The complete exhaustion of latent tendencies is liberation, and that is called liberation while living.",
+      "gloss": [
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "नाशे",
+          "en": "when cessation; at the destruction"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "there arises"
+        },
+        {
+          "sa": "चिन्ता",
+          "en": "thought; brooding"
+        },
+        {
+          "sa": "नाशः",
+          "en": "cessation"
+        },
+        {
+          "sa": "अस्मात्",
+          "en": "from this"
+        },
+        {
+          "sa": "वासना",
+          "en": "latent tendency"
+        },
+        {
+          "sa": "क्षयः",
+          "en": "exhaustion"
+        },
+        {
+          "sa": "वासना",
+          "en": "latent tendencies"
+        },
+        {
+          "sa": "प्रक्षयः",
+          "en": "complete exhaustion"
+        },
+        {
+          "sa": "मोक्षः",
+          "en": "liberation"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "जीवन्मुक्तिः",
+          "en": "liberation while living"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         317
-      ]
+      ],
+      "editionTranslation": "With the cessation of selfish action the brooding on the sense-objects is stopped, which is followed by the destruction of desires. The destruction of desires is Liberation, and this is considered as Liberation-in-life"
     },
     {
       "id": "vivekachudamani-318",
       "number": "318",
       "label": "Verse 318",
       "deva": "सद्वासनास्फूर्तिविजृम्भणे सति\nह्यसौ विलीनाप्यहमादिवासना ।\nअतिप्रकृष्टाप्यरुणप्रभायां\nविलीयते साधु यथा तमिस्रा ॥",
-      "iast": "sadvāsanāsphūrtivijṛmbhaṇe sati\nhyasau vilīnāpyahamādivāsanā |\natiprakṛṣṭāpyaruṇaprabhāyāṃ\nvilīyate sādhu yathā tamisrā ||",
-      "translation": "When the desire for realising Brahman has a marked manifestation, the egoistic desires readily vanish, as the most intense darkness effectively vanishes before the glow of the rising sun.",
-      "gloss": [],
+      "iast": "sad-vāsanā-sphūrti-vijṛmbhaṇe sati\nhy asau vilīnā api ahamādi-vāsanā |\nati-prakṛṣṭā api aruṇa-prabhāyāṃ\nvilīyate sādhu yathā tamisrā ||",
+      "translation": "When the disposition toward the Real strongly manifests, even deep-rooted tendencies of “I” and the rest dissolve completely, just as darkness dissolves in the glow of dawn.",
+      "gloss": [
+        {
+          "sa": "सत्",
+          "en": "Being; the Real"
+        },
+        {
+          "sa": "वासना",
+          "en": "disposition; tendency"
+        },
+        {
+          "sa": "स्फूर्ति",
+          "en": "manifestation"
+        },
+        {
+          "sa": "विजृम्भणे",
+          "en": "in the unfolding; expansion"
+        },
+        {
+          "sa": "सति",
+          "en": "when"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "असौ",
+          "en": "this; that"
+        },
+        {
+          "sa": "विलीना",
+          "en": "dissolved"
+        },
+        {
+          "sa": "अपि",
+          "en": "even; although"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest; beginning with"
+        },
+        {
+          "sa": "वासना",
+          "en": "tendency"
+        },
+        {
+          "sa": "अति",
+          "en": "very; exceedingly"
+        },
+        {
+          "sa": "प्रकृष्टा",
+          "en": "deep-rooted; intense"
+        },
+        {
+          "sa": "अपि",
+          "en": "even; although"
+        },
+        {
+          "sa": "अरुण",
+          "en": "dawn"
+        },
+        {
+          "sa": "प्रभायाम्",
+          "en": "in the light"
+        },
+        {
+          "sa": "विलीयते",
+          "en": "dissolves"
+        },
+        {
+          "sa": "साधु",
+          "en": "completely; well"
+        },
+        {
+          "sa": "यथा",
+          "en": "as; just as"
+        },
+        {
+          "sa": "तमिस्रा",
+          "en": "darkness"
+        }
+      ],
       "sourceNumbers": [
         318
-      ]
+      ],
+      "editionTranslation": "When the desire for realising Brahman has a marked manifestation, the egoistic desires readily vanish, as the most intense darkness effectively vanishes before the glow of the rising sun."
     },
     {
       "id": "vivekachudamani-319",
@@ -24636,11 +24886,101 @@
       "label": "Verse 319",
       "deva": "तमस्तमःकार्यमनर्थजालं\nन दृश्यते सत्युदिते दिनेशे ।\nतथाद्वयानन्दरसानुभूतौ\nन वास्ति बन्धो न च दुःखगन्धः ॥",
       "iast": "tamastamaḥkāryamanarthajālaṃ\nna dṛśyate satyudite dineśe |\ntathādvayānandarasānubhūtau\nna vāsti bandho na ca duḥkhagandhaḥ ||",
-      "translation": "Darkness and the numerous evils that attend on it are not noticed when the sun rises. Similarly, on the realisation of the Bliss Absolute, there is neither bondage nor the least trace of misery.",
-      "gloss": [],
+      "translation": "Darkness and its web of harm are not seen once the sun has risen. Likewise, in the experience of nondual bliss, there is no bondage and not even a trace of suffering.",
+      "gloss": [
+        {
+          "sa": "तमः",
+          "en": "darkness"
+        },
+        {
+          "sa": "तमःकार्य",
+          "en": "the effect of darkness"
+        },
+        {
+          "sa": "अनर्थ",
+          "en": "trouble; harm"
+        },
+        {
+          "sa": "जालम्",
+          "en": "web; mass"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "सति",
+          "en": "when"
+        },
+        {
+          "sa": "उदिते",
+          "en": "risen"
+        },
+        {
+          "sa": "दिनेशे",
+          "en": "the sun"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "अद्वय",
+          "en": "nondual"
+        },
+        {
+          "sa": "आनन्द",
+          "en": "bliss"
+        },
+        {
+          "sa": "रस",
+          "en": "essence"
+        },
+        {
+          "sa": "अनुभूतौ",
+          "en": "in the experience"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वा",
+          "en": "even; at all"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "बन्धः",
+          "en": "bondage"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दुःख",
+          "en": "suffering"
+        },
+        {
+          "sa": "गन्धः",
+          "en": "trace; hint"
+        }
+      ],
       "sourceNumbers": [
         319
-      ]
+      ],
+      "editionTranslation": "Darkness and the numerous evils that attend on it are not noticed when the sun rises. Similarly, on the realisation of the Bliss Absolute, there is neither bondage nor the least trace of misery."
     },
     {
       "id": "vivekachudamani-320",
@@ -27756,6 +28096,7 @@
   "changes": [
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 300–304; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 305–309; preserved prior translations as editionTranslation. Corrected IAST spacing in verses 296–297.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 310–314; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 310–314; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 315–319; preserved prior translations as editionTranslation."
   ]
 }
