@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 355
+      "end": 360
     },
-    "note": "Source verses 1–355 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 356 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–360 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 361 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -28222,60 +28222,454 @@
       "number": "356",
       "label": "Verse 356",
       "deva": "समाहिता ये प्रविलाप्य बाह्यं\nश्रोत्रादि चेतः स्वमहं चिदात्मनि ।\nत एव मुक्ता भवपाशबन्धैः\nनान्ये तु पारोक्ष्यकथाभिधायिनः ॥",
-      "iast": "samāhitā ye pravilāpya bāhyaṃ\nśrotrādi cetaḥ svamahaṃ cidātmani |\nta eva muktā bhavapāśabandhaiḥ\nnānye tu pārokṣyakathābhidhāyinaḥ ||",
-      "translation": "Those alone are free from the bondage of transmigration who, attaining Samadhi, have merged the objective world, the sense-organs, the mind, nay, the very ego, in the Atman, the Knowledge Absolute – and none else, who but dabble in second-hand talks.",
-      "gloss": [],
+      "iast": "samāhitā ye pravilāpya bāhyaṃ\nśrotrādi cetaḥ svaṃ aham cidātmani |\nta eva muktā bhava-pāśa-bandhaiḥ\nnānye tu pārokṣya-kathābhidhāyinaḥ ||",
+      "translation": "Only those who, absorbed, dissolve the external, the ear and other senses, the mind, and their own ego into the Self of consciousness are freed from the bonds of saṃsāra; not others who speak only of indirect knowledge.",
+      "gloss": [
+        {
+          "sa": "समाहिताः",
+          "en": "absorbed; concentrated"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "प्रविलाप्य",
+          "en": "having dissolved; merged"
+        },
+        {
+          "sa": "बाह्यम्",
+          "en": "the external"
+        },
+        {
+          "sa": "श्रोत्र",
+          "en": "ear"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the other senses"
+        },
+        {
+          "sa": "चेतः",
+          "en": "mind"
+        },
+        {
+          "sa": "स्वम्",
+          "en": "one's own"
+        },
+        {
+          "sa": "अहम्",
+          "en": "ego; I"
+        },
+        {
+          "sa": "चित्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "ते",
+          "en": "those"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "मुक्ताः",
+          "en": "liberated"
+        },
+        {
+          "sa": "भव",
+          "en": "worldly existence"
+        },
+        {
+          "sa": "पाश",
+          "en": "fetters"
+        },
+        {
+          "sa": "बन्धैः",
+          "en": "from bonds"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्ये",
+          "en": "others"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "पारोक्ष्य",
+          "en": "indirect"
+        },
+        {
+          "sa": "कथा",
+          "en": "talk"
+        },
+        {
+          "sa": "अभिधायिनः",
+          "en": "speakers"
+        }
+      ],
       "sourceNumbers": [
         356
-      ]
+      ],
+      "editionTranslation": "Those alone are free from the bondage of transmigration who, attaining Samadhi, have merged the objective world, the sense-organs, the mind, nay, the very ego, in the Atman, the Knowledge Absolute – and none else, who but dabble in second-hand talks."
     },
     {
       "id": "vivekachudamani-357",
       "number": "357",
       "label": "Verse 357",
       "deva": "उपाधिभेदात्स्वयम् एव भिद्यते\nचोपाध्यपोहे स्वयम् एव केवलः ।\nतस्मादुपाधेर्विलयाय विद्वान्\nवसेत्सदाकल्पसमाधिनिष्ठया ॥",
-      "iast": "upādhibhedātsvayam eva bhidyate\ncopādhyapohe svayam eva kevalaḥ |\ntasmādupādhervilayāya vidvān\nvasetsadākalpasamādhiniṣṭhayā ||",
-      "translation": "Through the diversity of the supervening conditions (Upadhis), a man is apt to think of himself as also full of diversity; but with the removal of these he is again his own Self, the immutable. Therefore the wise man should ever devote himself to the practice of Nirvikalpa Samadhi, for the dissolution of the Upadhis.",
-      "gloss": [],
+      "iast": "upādhi-bhedāt svayam eva bhidyate\nca upādhi-apohe svayam eva kevalaḥ |\ntasmād upādher vilayāya vidvān\nvaset sadā akalpa-samādhi-niṣṭhayā ||",
+      "translation": "Because of differences in limiting adjuncts, [the Self] appears divided by itself; when the adjuncts are removed, it is itself alone. Therefore, to dissolve the adjuncts, the wise person should remain steadily established in non-conceptual samādhi.",
+      "gloss": [
+        {
+          "sa": "उपाधि",
+          "en": "limiting adjunct"
+        },
+        {
+          "sa": "भेदात्",
+          "en": "because of difference"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "भिद्यते",
+          "en": "appears divided"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उपाधि",
+          "en": "limiting adjunct"
+        },
+        {
+          "sa": "अपोहे",
+          "en": "upon removal"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "केवलः",
+          "en": "remaining alone"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "उपाधेः",
+          "en": "of the limiting adjunct"
+        },
+        {
+          "sa": "विलयाय",
+          "en": "for dissolution"
+        },
+        {
+          "sa": "विद्वान्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "वसेत्",
+          "en": "should abide"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "अकल्प",
+          "en": "without thought-constructs"
+        },
+        {
+          "sa": "समाधि",
+          "en": "samādhi"
+        },
+        {
+          "sa": "निष्ठया",
+          "en": "with steadfastness"
+        }
+      ],
       "sourceNumbers": [
         357
-      ]
+      ],
+      "editionTranslation": "Through the diversity of the supervening conditions (Upadhis), a man is apt to think of himself as also full of diversity; but with the removal of these he is again his own Self, the immutable. Therefore the wise man should ever devote himself to the practice of Nirvikalpa Samadhi, for the dissolution of the Upadhis."
     },
     {
       "id": "vivekachudamani-358",
       "number": "358",
       "label": "Verse 358",
       "deva": "सति सक्तो नरो याति सद्भावं ह्येकनिष्ठया ।\nकीटको भ्रमरं ध्यायन् भ्रमरत्वाय कल्पते ॥",
-      "iast": "sati sakto naro yāti sadbhāvaṃ hyekaniṣṭhayā |\nkīṭako bhramaraṃ dhyāyan bhramaratvāya kalpate ||",
-      "translation": "The man who is attached to the Real becomes Real, through his one-pointed devotion. Just as the cockroach thinking intently on the Bhramara is transformed into a Bhramara.",
-      "gloss": [],
+      "iast": "sati sakto naro yāti sadbhāvaṃ hy eka-niṣṭhayā |\nkīṭako bhramaraṃ dhyāyan bhramaratvāya kalpate ||",
+      "translation": "A person attached to Being reaches the state of Being through one-pointed steadfastness, just as a worm, meditating on a bee, is transformed into bee-nature.",
+      "gloss": [
+        {
+          "sa": "सति",
+          "en": "in Being; in the Real"
+        },
+        {
+          "sa": "सक्तः",
+          "en": "attached"
+        },
+        {
+          "sa": "नरः",
+          "en": "person"
+        },
+        {
+          "sa": "याति",
+          "en": "reaches"
+        },
+        {
+          "sa": "सद्भावम्",
+          "en": "the state of Being"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "एक",
+          "en": "one"
+        },
+        {
+          "sa": "निष्ठया",
+          "en": "through steadfastness"
+        },
+        {
+          "sa": "कीटकः",
+          "en": "worm; insect"
+        },
+        {
+          "sa": "भ्रमरम्",
+          "en": "bee"
+        },
+        {
+          "sa": "ध्यायन्",
+          "en": "meditating"
+        },
+        {
+          "sa": "भ्रमरत्वाय",
+          "en": "toward bee-nature"
+        },
+        {
+          "sa": "कल्पते",
+          "en": "is transformed; becomes fit"
+        }
+      ],
       "sourceNumbers": [
         358
-      ]
+      ],
+      "editionTranslation": "The man who is attached to the Real becomes Real, through his one-pointed devotion. Just as the cockroach thinking intently on the Bhramara is transformed into a Bhramara."
     },
     {
       "id": "vivekachudamani-359",
       "number": "359",
       "label": "Verse 359",
       "deva": "क्रियान्तरासक्तिमपास्य कीटको\nध्यायन्नलित्वं ह्यलिभावमृच्छति ।\nतथैव योगी परमात्मतत्त्वं\nध्यात्वा समायाति तदेकनिष्ठया ॥",
-      "iast": "kriyāntarāsaktimapāsya kīṭako\ndhyāyannalitvaṃ hyalibhāvamṛcchati |\ntathaiva yogī paramātmatattvaṃ\ndhyātvā samāyāti tadekaniṣṭhayā ||",
-      "translation": "Just as the cockroach, giving up the attachment to all other actions, thinks intently on the Bhramara and becomes transformed into that worm, exactly in the same manner the Yogi, meditating on the truth of the Paramatman, attains to It through his one-pointed devotion to that.",
-      "gloss": [],
+      "iast": "kriyāntarāsaktim apāsya kīṭako\ndhyāyan alitvaṃ hy ali-bhāvam ṛcchati |\ntathaiva yogī paramātma-tattvaṃ\ndhyātvā samāyāti tad-eka-niṣṭhayā ||",
+      "translation": "Letting go of attachment to other activities, the worm, meditating on the bee, indeed reaches the state of a bee. In the same way, the yogin reaches the truth of the Supreme Self by meditating on it with one-pointed steadfastness.",
+      "gloss": [
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "अन्तर",
+          "en": "other"
+        },
+        {
+          "sa": "आसक्तिम्",
+          "en": "attachment"
+        },
+        {
+          "sa": "अपास्य",
+          "en": "having left"
+        },
+        {
+          "sa": "कीटकः",
+          "en": "worm; insect"
+        },
+        {
+          "sa": "ध्यायन्",
+          "en": "meditating"
+        },
+        {
+          "sa": "अलित्वम्",
+          "en": "bee-nature"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अलि",
+          "en": "bee"
+        },
+        {
+          "sa": "भावम्",
+          "en": "nature"
+        },
+        {
+          "sa": "ऋच्छति",
+          "en": "reaches"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "योगी",
+          "en": "yogin"
+        },
+        {
+          "sa": "परमात्म",
+          "en": "Supreme Self"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth; reality"
+        },
+        {
+          "sa": "ध्यात्वा",
+          "en": "having meditated"
+        },
+        {
+          "sa": "समायाति",
+          "en": "attains"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "एक",
+          "en": "one"
+        },
+        {
+          "sa": "निष्ठया",
+          "en": "through steadfastness"
+        }
+      ],
       "sourceNumbers": [
         359
-      ]
+      ],
+      "editionTranslation": "Just as the cockroach, giving up the attachment to all other actions, thinks intently on the Bhramara and becomes transformed into that worm, exactly in the same manner the Yogi, meditating on the truth of the Paramatman, attains to It through his one-pointed devotion to that."
     },
     {
       "id": "vivekachudamani-360",
       "number": "360",
       "label": "Verse 360",
-      "deva": "अतीव सूक्ष्मं परमात्मतत्त्वं\nन स्थूलदृष्ट्या प्रतिपत्तुमर्हति ।\nसमाधिनात्यन्तसुसूक्ष्मवृत्या\nज्ञातव्यमार्यैर् अतिशुद्धबुद्धिभिः ॥",
-      "iast": "atīva sūkṣmaṃ paramātmatattvaṃ\nna sthūladṛṣṭyā pratipattumarhati |\nsamādhinātyantasusūkṣmavṛtyā\njñātavyamāryair atiśuddhabuddhibhiḥ ||",
-      "translation": "The truth of the Paramatman is extremely subtle, and cannot be reached by the gross outgoing tendency of the mind. It is only accessible to noble souls with perfectly pure minds, by means of Samadhi brought on by an extraordinary fineness of the mental state.",
-      "gloss": [],
+      "deva": "अतीव सूक्ष्मं परमात्मतत्त्वं\nन स्थूलदृष्ट्या प्रतिपत्तुमर्हति ।\nसमाधिनात्यन्तसुसूक्ष्मवृत्त्या\nज्ञातव्यमार्यैर् अतिशुद्धबुद्धिभिः ॥",
+      "iast": "atīva sūkṣmaṃ paramātma-tattvaṃ\nna sthūla-dṛṣṭyā pratipattum arhati |\nsamādhinā atyanta-su-sūkṣma-vṛttyā\njñātavyam āryair atiśuddha-buddhibhiḥ ||",
+      "translation": "The truth of the Supreme Self is exceedingly subtle and cannot be grasped by gross perception. It is to be known through samādhi by noble people of exceptionally pure intellect, with a very subtle mental movement.",
+      "gloss": [
+        {
+          "sa": "अतीव",
+          "en": "exceedingly"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "परमात्म",
+          "en": "Supreme Self"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth; reality"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्थूल",
+          "en": "gross"
+        },
+        {
+          "sa": "दृष्ट्या",
+          "en": "by perception"
+        },
+        {
+          "sa": "प्रतिपत्तुम्",
+          "en": "to grasp; comprehend"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is able"
+        },
+        {
+          "sa": "समाधिना",
+          "en": "through samādhi"
+        },
+        {
+          "sa": "अत्यन्त",
+          "en": "exceedingly"
+        },
+        {
+          "sa": "सु",
+          "en": "very"
+        },
+        {
+          "sa": "सूक्ष्म",
+          "en": "subtle"
+        },
+        {
+          "sa": "वृत्त्या",
+          "en": "by a mental movement; mode"
+        },
+        {
+          "sa": "ज्ञातव्यम्",
+          "en": "is to be known"
+        },
+        {
+          "sa": "आर्यैः",
+          "en": "by noble people"
+        },
+        {
+          "sa": "अति",
+          "en": "exceptionally"
+        },
+        {
+          "sa": "शुद्ध",
+          "en": "pure"
+        },
+        {
+          "sa": "बुद्धिभिः",
+          "en": "by intellects; those with intellects"
+        }
+      ],
       "sourceNumbers": [
         360
-      ]
+      ],
+      "editionTranslation": "The truth of the Paramatman is extremely subtle, and cannot be reached by the gross outgoing tendency of the mind. It is only accessible to noble souls with perfectly pure minds, by means of Samadhi brought on by an extraordinary fineness of the mental state."
     },
     {
       "id": "vivekachudamani-361",
@@ -30918,6 +31312,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 335–339; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 340–344; preserved prior translations as editionTranslation. Corrected Sanskrit/IAST spacing in verses 342 and 344.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 345–350; verses 349–350 share one reader unit. Preserved prior translations as editionTranslation and corrected verse 346's Sanskrit vahniḥ spelling.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 351–355; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 351–355; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 356–360; preserved prior translations as editionTranslation. Corrected verse 360's Sanskrit spelling to वृत्त्या."
   ]
 }
