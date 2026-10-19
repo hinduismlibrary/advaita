@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 344
+      "end": 350
     },
-    "note": "Source verses 1–344 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 345 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, and 315–316."
+    "note": "Source verses 1–350 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 351 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -27217,61 +27217,519 @@
       "number": "345",
       "label": "Verse 345",
       "deva": "सम्यग्विवेकः स्फुटबोधजन्यो\nविभज्य दृग्दृश्यपदार्थतत्त्वम् ।\nछिनत्ति मायाकृतमोहबन्धं\nयस्माद्विमुक्तस्तु पुनर्न संसृतिः ॥",
-      "iast": "samyagvivekaḥ sphuṭabodhajanyo\nvibhajya dṛgdṛśyapadārthatattvam |\nchinatti māyākṛtamohabandhaṃ\nyasmādvimuktastu punarna saṃsṛtiḥ ||",
-      "translation": "Perfect discrimination brought on by direct realisation distinguishes the true nature of the subject from that of the object, and breaks the bond of delusion created by Maya; and there is no more transmigration for one who has been freed from this.",
-      "gloss": [],
+      "iast": "samyag-vivekaḥ sphuṭa-bodha-janyaḥ\nvibhajya dṛg-dṛśya-padārtha-tattvam |\nchinatti māyā-kṛta-moha-bandhaṃ\nyasmād vimuktas tu punar na saṃsṛtiḥ ||",
+      "translation": "Clear discrimination, born of direct understanding, distinguishes the true nature of the seer and the seen, and cuts the bond of delusion made by māyā. Once freed from it, one does not return to saṃsāra.",
+      "gloss": [
+        {
+          "sa": "सम्यक्",
+          "en": "rightly; clearly"
+        },
+        {
+          "sa": "विवेकः",
+          "en": "discrimination"
+        },
+        {
+          "sa": "स्फुट",
+          "en": "clear; direct"
+        },
+        {
+          "sa": "बोध",
+          "en": "understanding"
+        },
+        {
+          "sa": "जन्यः",
+          "en": "born of"
+        },
+        {
+          "sa": "विभज्य",
+          "en": "having distinguished"
+        },
+        {
+          "sa": "दृक्",
+          "en": "seer"
+        },
+        {
+          "sa": "दृश्य",
+          "en": "seen"
+        },
+        {
+          "sa": "पदार्थ",
+          "en": "things; objects"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "true nature"
+        },
+        {
+          "sa": "छिनत्ति",
+          "en": "cuts; breaks"
+        },
+        {
+          "sa": "माया",
+          "en": "māyā"
+        },
+        {
+          "sa": "कृत",
+          "en": "made"
+        },
+        {
+          "sa": "मोह",
+          "en": "delusion"
+        },
+        {
+          "sa": "बन्धम्",
+          "en": "bond"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "from which"
+        },
+        {
+          "sa": "विमुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed; then"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "संसृतिः",
+          "en": "saṃsāra"
+        }
+      ],
       "sourceNumbers": [
         345
-      ]
+      ],
+      "editionTranslation": "Perfect discrimination brought on by direct realisation distinguishes the true nature of the subject from that of the object, and breaks the bond of delusion created by Maya; and there is no more transmigration for one who has been freed from this."
     },
     {
       "id": "vivekachudamani-346",
       "number": "346",
       "label": "Verse 346",
-      "deva": "परावरैकत्वविवेकवन्हिः\nदहत्यविद्यागहनं ह्यशेषम् ।\nकिं स्यात्पुनः संसरणस्य बीजं\nअद्वैतभावं समुपेयुषोऽस्य ॥",
-      "iast": "parāvaraikatvavivekavanhiḥ\ndahatyavidyāgahanaṃ hyaśeṣam |\nkiṃ syātpunaḥ saṃsaraṇasya bījaṃ\nadvaitabhāvaṃ samupeyuṣo'sya ||",
-      "translation": "The knowledge of the identity of the Jiva and Brahman entirely consumes the impenetrable forest of Avidya or Nescience. For one who has realised the state of Oneness, is there any seed left for future transmigration ?",
-      "gloss": [],
+      "deva": "परावरैकत्वविवेकवह्निः\nदहत्यविद्यागहनं ह्यशेषम् ।\nकिं स्यात्पुनः संसरणस्य बीजं\nअद्वैतभावं समुपेयुषोऽस्य ॥",
+      "iast": "parāvaraikatva-viveka-vahniḥ\ndahaty avidyā-gahanaṃ hy aśeṣam |\nkiṃ syāt punaḥ saṃsaraṇasya bījaṃ\nadvaita-bhāvaṃ samupeyuṣo 'sya ||",
+      "translation": "The fire of discernment of the oneness of the higher and lower burns the dense forest of ignorance completely. For one who has attained nonduality, what seed of transmigration could remain?",
+      "gloss": [
+        {
+          "sa": "पर",
+          "en": "higher"
+        },
+        {
+          "sa": "अवर",
+          "en": "lower"
+        },
+        {
+          "sa": "ऐकत्व",
+          "en": "oneness"
+        },
+        {
+          "sa": "विवेक",
+          "en": "discernment"
+        },
+        {
+          "sa": "वह्निः",
+          "en": "fire"
+        },
+        {
+          "sa": "दहति",
+          "en": "burns"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "गहनम्",
+          "en": "dense forest"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अशेषम्",
+          "en": "completely; without remainder"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "could there be"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "संसरणस्य",
+          "en": "of transmigration"
+        },
+        {
+          "sa": "बीजम्",
+          "en": "seed"
+        },
+        {
+          "sa": "अद्वैत",
+          "en": "nonduality"
+        },
+        {
+          "sa": "भावम्",
+          "en": "state"
+        },
+        {
+          "sa": "समुपेयुषः",
+          "en": "for one who has attained"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this; for this one"
+        }
+      ],
       "sourceNumbers": [
         346
-      ]
+      ],
+      "editionTranslation": "The knowledge of the identity of the Jiva and Brahman entirely consumes the impenetrable forest of Avidya or Nescience. For one who has realised the state of Oneness, is there any seed left for future transmigration ?"
     },
     {
       "id": "vivekachudamani-347",
       "number": "347",
       "label": "Verse 347",
       "deva": "आवरणस्य निवृत्तिर्भवति हि सम्यक्पदार्थदर्शनतः ।\nमिथ्याज्ञानविनाशस्तद्विक्षेपजनितदुःखनिवृत्तिः ॥",
-      "iast": "āvaraṇasya nivṛttirbhavati hi samyakpadārthadarśanataḥ |\nmithyājñānavināśastadvikṣepajanitaduḥkhanivṛttiḥ ||",
-      "translation": "The veil that hides Truth vanishes only when the Reality is fully realised. (Thence follow) the destruction of false knowledge and the cessation of misery brought about by its distracting influence.",
-      "gloss": [],
+      "iast": "āvaraṇasya nivṛttir bhavati hi samyak-padārtha-darśanataḥ |\nmithyā-jñāna-vināśas tad-vikṣepa-janita-duḥkha-nivṛttiḥ ||",
+      "translation": "The veil is indeed removed through clear seeing of reality. From this follows the destruction of false knowledge and the cessation of suffering produced by its projection.",
+      "gloss": [
+        {
+          "sa": "आवरणस्य",
+          "en": "of the veil"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "removal"
+        },
+        {
+          "sa": "भवति",
+          "en": "occurs"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "rightly; clearly"
+        },
+        {
+          "sa": "पदार्थ",
+          "en": "reality; thing"
+        },
+        {
+          "sa": "दर्शनतः",
+          "en": "through seeing"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "false"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "विनाशः",
+          "en": "destruction"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "विक्षेप",
+          "en": "projection"
+        },
+        {
+          "sa": "जनित",
+          "en": "produced"
+        },
+        {
+          "sa": "दुःख",
+          "en": "suffering"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation"
+        }
+      ],
       "sourceNumbers": [
         347
-      ]
+      ],
+      "editionTranslation": "The veil that hides Truth vanishes only when the Reality is fully realised. (Thence follow) the destruction of false knowledge and the cessation of misery brought about by its distracting influence."
     },
     {
       "id": "vivekachudamani-348",
       "number": "348",
       "label": "Verse 348",
       "deva": "एतत्त्रितयं दृष्टं सम्यग्रज्जुस्वरूपविज्ञानात् ।\nतस्माद्वस्तुसतत्त्वं ज्ञातव्यं बन्धमुक्तये विदुषा ॥",
-      "iast": "etattritayaṃ dṛṣṭaṃ samyagrajjusvarūpavijñānāt |\ntasmādvastusatattvaṃ jñātavyaṃ bandhamuktaye viduṣā ||",
-      "translation": "These three are observed in the case of a rope when its real nature is fully known. Therefore the wise man should know the real nature of things for the breaking of his bonds.",
-      "gloss": [],
+      "iast": "etat-tritayaṃ dṛṣṭaṃ samyag-rajju-svarūpa-vijñānāt |\ntasmād vastu-satattvaṃ jñātavyaṃ bandha-muktaye viduṣā ||",
+      "translation": "This triad is seen when the true nature of a rope is rightly known. Therefore, to be free from bondage, the wise person should know the true reality of things.",
+      "gloss": [
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "त्रितयम्",
+          "en": "triad"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "is seen"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "rightly"
+        },
+        {
+          "sa": "रज्जु",
+          "en": "rope"
+        },
+        {
+          "sa": "स्वरूप",
+          "en": "true nature"
+        },
+        {
+          "sa": "विज्ञानात्",
+          "en": "from knowing"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality; thing"
+        },
+        {
+          "sa": "सतत्त्वम्",
+          "en": "true essence"
+        },
+        {
+          "sa": "ज्ञातव्यम्",
+          "en": "should be known"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "मुक्तये",
+          "en": "for liberation"
+        },
+        {
+          "sa": "विदुषा",
+          "en": "by the wise person"
+        }
+      ],
       "sourceNumbers": [
         348
-      ]
+      ],
+      "editionTranslation": "These three are observed in the case of a rope when its real nature is fully known. Therefore the wise man should know the real nature of things for the breaking of his bonds."
     },
     {
       "id": "vivekachudamani-349",
       "number": "349–350",
       "label": "Verses 349–350",
       "deva": "अयोऽग्नियोगाद् इव सत्समन्वयान्\nमात्रादिरूपेण विजृम्भते धीः ।\nतत्कार्यमेतद्द्वितयं यतो मृषा\nदृष्टं भ्रमस्वप्नमनोरथेषु ॥\n\nततो विकाराः प्रकृतेरहंमुखा\nदेहावसाना विषयाश्च सर्वे ।\nक्षणेऽन्यथाभावितया ह्यमीषाम्\nअसत्त्वमात्मा तु कदापि नान्यथा ॥",
-      "iast": "ayo'gniyogād iva satsamanvayān\nmātrādirūpeṇa vijṛmbhate dhīḥ |\ntatkāryametaddvitayaṃ yato mṛṣā\ndṛṣṭaṃ bhramasvapnamanoratheṣu ||\n\ntato vikārāḥ prakṛterahaṃmukhā\ndehāvasānā viṣayāśca sarve |\nkṣaṇe'nyathābhāvitayā hyamīṣām\nasattvamātmā tu kadāpi nānyathā ||",
-      "translation": "Like iron manifesting as sparks through contact with fire, the Buddhi manifests itself as knower and known through the inherence of Brahman. As these two (knower and known), the effects of the Buddhi, are observed to be unreal in the case of delusion, dream and fancy, similarly, the modifications of the Prakriti, from egoism down to the body and all sense-objects are also unreal. Their unreality is verily due to their being subject to change every moment. But the Atman never changes.",
-      "gloss": [],
+      "iast": "ayo 'gni-yogād iva sat-samanvayān\nmātrādi-rūpeṇa vijṛmbhate dhīḥ |\ntat-kāryam etad dvitayaṃ yato mṛṣā\ndṛṣṭaṃ bhrama-svapna-manoratheṣu ||\n\ntato vikārāḥ prakṛter ahaṃ-mukhā\ndehāvasānā viṣayāś ca sarve |\nkṣaṇe 'nyathābhāvitayā hy amīṣām\nasattvam ātmā tu kadāpi nānyathā ||",
+      "translation": "Like iron glowing through contact with fire, the intellect manifests in the form of subtle elements and the rest through association with Being. This pair, its product, is false, as seen in delusion, dream, and imagination. From this, the modifications of prakṛti—from ego to body—and all objects are unreal, since they change from moment to moment; the Self, however, never changes.",
+      "gloss": [
+        {
+          "sa": "अयः",
+          "en": "iron"
+        },
+        {
+          "sa": "अग्नि",
+          "en": "fire"
+        },
+        {
+          "sa": "योगात्",
+          "en": "from contact"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "सत्",
+          "en": "Being; existence"
+        },
+        {
+          "sa": "समन्वयात्",
+          "en": "through association"
+        },
+        {
+          "sa": "मात्र",
+          "en": "subtle element"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "रूपेण",
+          "en": "in the form"
+        },
+        {
+          "sa": "विजृम्भते",
+          "en": "manifests; expands"
+        },
+        {
+          "sa": "धीः",
+          "en": "intellect"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "कार्यम्",
+          "en": "product"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "द्वितयम्",
+          "en": "pair"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "मृषा",
+          "en": "false; unreal"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "is seen"
+        },
+        {
+          "sa": "भ्रम",
+          "en": "delusion"
+        },
+        {
+          "sa": "स्वप्न",
+          "en": "dream"
+        },
+        {
+          "sa": "मनोरथ",
+          "en": "imagination; fancy"
+        },
+        {
+          "sa": "एषु",
+          "en": "in"
+        },
+        {
+          "sa": "ततः",
+          "en": "from this"
+        },
+        {
+          "sa": "विकाराः",
+          "en": "modifications"
+        },
+        {
+          "sa": "प्रकृतेः",
+          "en": "of prakṛti"
+        },
+        {
+          "sa": "अहम्",
+          "en": "ego; I"
+        },
+        {
+          "sa": "मुखाः",
+          "en": "beginning with"
+        },
+        {
+          "sa": "देह",
+          "en": "body"
+        },
+        {
+          "sa": "अवसानाः",
+          "en": "ending with"
+        },
+        {
+          "sa": "विषयाः",
+          "en": "objects"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सर्वे",
+          "en": "all"
+        },
+        {
+          "sa": "क्षणे",
+          "en": "at each moment"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise; differently"
+        },
+        {
+          "sa": "भावितया",
+          "en": "because they become"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अमीषाम्",
+          "en": "of these"
+        },
+        {
+          "sa": "असत्त्वम्",
+          "en": "unreality"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "कदापि",
+          "en": "ever; at any time"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise; changed"
+        }
+      ],
       "sourceNumbers": [
         349,
         350
-      ]
+      ],
+      "editionTranslation": "Like iron manifesting as sparks through contact with fire, the Buddhi manifests itself as knower and known through the inherence of Brahman. As these two (knower and known), the effects of the Buddhi, are observed to be unreal in the case of delusion, dream and fancy, similarly, the modifications of the Prakriti, from egoism down to the body and all sense-objects are also unreal. Their unreality is verily due to their being subject to change every moment. But the Atman never changes."
     },
     {
       "id": "vivekachudamani-351",
@@ -30032,6 +30490,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 325–329; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 330–334; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 335–339; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 340–344; preserved prior translations as editionTranslation. Corrected Sanskrit/IAST spacing in verses 342 and 344."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 340–344; preserved prior translations as editionTranslation. Corrected Sanskrit/IAST spacing in verses 342 and 344.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 345–350; verses 349–350 share one reader unit. Preserved prior translations as editionTranslation and corrected verse 346's Sanskrit vahniḥ spelling."
   ]
 }
