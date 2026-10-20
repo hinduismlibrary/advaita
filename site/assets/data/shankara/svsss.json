@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 520
+      "to": 540
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–520 (505 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–540 (525 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -34607,8 +34607,41 @@
       "number": "521",
       "label": "Verse 521",
       "deva": "मूढा अश्रुत-वेदान्ताः स्वयं पण्डित-मानिनः।\nईश-प्रसाद-रहिताः सद्-गुरोश्च बहिर्-मुखाः॥",
-      "translation": "I shall now tell you how those ignorant persons, who have not studied the Vedas, who imagine that they are very learned, who are devoid of the grace of God, who are at the same time averse to being instructed in the Vedānta by the wise, keep on disputing about the nature of the Ātman.",
-      "gloss": [],
+      "translation": "Fools who have not heard Vedānta, who regard themselves as learned, lack the Lord’s grace, and turn away from a true teacher.",
+      "gloss": [
+        {
+          "sa": "मूढाः",
+          "en": "fools"
+        },
+        {
+          "sa": "अश्रुत-वेदान्ताः",
+          "en": "who have not heard Vedānta"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "themselves"
+        },
+        {
+          "sa": "पण्डित-मानिनः",
+          "en": "regarding themselves as learned"
+        },
+        {
+          "sa": "ईश-प्रसाद-रहिताः",
+          "en": "lacking the Lord’s grace"
+        },
+        {
+          "sa": "सत्-गुरोः",
+          "en": "from a true teacher"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "बहिर्-मुखाः",
+          "en": "turned away"
+        }
+      ],
       "sourceNumbers": [
         521
       ],
@@ -34620,14 +34653,63 @@
       "chapter": 3,
       "number": "522",
       "label": "Verse 522",
-      "deva": "अत्यन्त-पामरः कश्चित् पुत्र आत्मेति मन्यते॥",
-      "translation": "The doctrine that the son is the Self Some of them indulge in vain disputation, without being any the wiser for it. The most foolish among them are those persons who identify the Ātman with something external to themselves. One such view is that one’s own son is one’s Ātman.",
-      "gloss": [],
+      "deva": "विवदन्ति प्रकारं तं शृणु वक्ष्यामि सादरम्।\nअत्यन्त-पामरः कश्चित् पुत्र आत्मेति मन्यते॥",
+      "translation": "Listen respectfully as I explain the kinds of views they dispute: some utterly foolish person thinks that the son is the Self.",
+      "gloss": [
+        {
+          "sa": "विवदन्ति",
+          "en": "they dispute"
+        },
+        {
+          "sa": "प्रकारम्",
+          "en": "the kind"
+        },
+        {
+          "sa": "तम्",
+          "en": "that"
+        },
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        },
+        {
+          "sa": "वक्ष्यामि",
+          "en": "I will explain"
+        },
+        {
+          "sa": "सादरम्",
+          "en": "respectfully"
+        },
+        {
+          "sa": "अत्यन्त-पामरः",
+          "en": "utterly foolish"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "some person"
+        },
+        {
+          "sa": "पुत्रः",
+          "en": "the son"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "मन्यते",
+          "en": "thinks"
+        }
+      ],
       "sourceNumbers": [
         522
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "atyanta-pāmaraḥ kaścit putra ātmeti manyate||"
+      "iast": "vivadanti prakāraṃ taṃ śṛṇu vakṣyāmi sādaram|\natyanta-pāmaraḥ kaścit putra ātmeti manyate||"
     },
     {
       "id": "svsss-3-0523",
@@ -34635,8 +34717,69 @@
       "number": "523",
       "label": "Verse 523",
       "deva": "आत्मनीव स्व-पुत्रेऽपि प्रबल-प्रीति-दर्शनात्।\nपुत्रे तु पुष्टे पुष्टोऽहं नष्टे नष्टोऽहम् इत्यतः॥",
-      "translation": "It is out of the strength of one’s parental affection that a man says, ‘I am prosperous’, when his son prospers; and conversely cries out ‘I am undone’, when he happens to lose his son.",
-      "gloss": [],
+      "translation": "Seeing strong affection for one’s own son as for oneself, one says, “When my son thrives, I thrive; when he perishes, I perish.”",
+      "gloss": [
+        {
+          "sa": "आत्मनि",
+          "en": "in oneself"
+        },
+        {
+          "sa": "इव",
+          "en": "as"
+        },
+        {
+          "sa": "स्व-पुत्रे",
+          "en": "in one’s own son"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "प्रबल-प्रीति-दर्शनात्",
+          "en": "from seeing strong affection"
+        },
+        {
+          "sa": "पुत्रे",
+          "en": "when the son"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुष्टे",
+          "en": "thriving"
+        },
+        {
+          "sa": "पुष्टः",
+          "en": "thriving"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "नष्टे",
+          "en": "when ruined"
+        },
+        {
+          "sa": "नष्टः",
+          "en": "ruined"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        }
+      ],
       "sourceNumbers": [
         523
       ],
@@ -34649,8 +34792,73 @@
       "number": "524",
       "label": "Verse 524",
       "deva": "अनुभूति-बलाच् चापि युक्तितोऽपि श्रुतेर् अपि।\nआत्मा वै पुत्रनामासीत्येवं च वदति श्रुतिः॥",
-      "translation": "In support of their views they might draw arguments from reason and from Śruti, and even quote the Śruti which says that one’s own son is verily one’s Ātman.",
-      "gloss": [],
+      "translation": "They appeal to experience, reasoning, and scripture; Śruti too says, “The Self was indeed called ‘son.’”",
+      "gloss": [
+        {
+          "sa": "अनुभूति-बलात्",
+          "en": "from the force of experience"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "युक्तितः",
+          "en": "from reasoning"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "from Śruti"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "वै",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुत्र-नाम",
+          "en": "named ‘son’"
+        },
+        {
+          "sa": "आसीत्",
+          "en": "was"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वदति",
+          "en": "says"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "Śruti"
+        }
+      ],
       "sourceNumbers": [
         524
       ],
@@ -34663,8 +34871,57 @@
       "number": "525",
       "label": "Verse 525",
       "deva": "दीपाद् दीपो यथा तद्वत् पितुः पुत्रः प्रजायते।\nपितुर् गुणानां तनये बीजाङ्कुरवद् ईक्षणात्॥",
-      "translation": "Just as a sprout is but the seed continued, and just as a lighted lamp is but a continuation of the light that kindles it, so also, they say, the father and the son are one, for the qualities of the father are seen in the son.",
-      "gloss": [],
+      "translation": "Just as one lamp is born from another lamp, so a son is born from his father; the father’s qualities are seen in the child, as a seed [is seen] in a sprout.",
+      "gloss": [
+        {
+          "sa": "दीपात्",
+          "en": "from a lamp"
+        },
+        {
+          "sa": "दीपः",
+          "en": "a lamp"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in that way"
+        },
+        {
+          "sa": "पितुः",
+          "en": "from the father"
+        },
+        {
+          "sa": "पुत्रः",
+          "en": "a son"
+        },
+        {
+          "sa": "प्रजायते",
+          "en": "is born"
+        },
+        {
+          "sa": "पितुः",
+          "en": "of the father"
+        },
+        {
+          "sa": "गुणानाम्",
+          "en": "the qualities"
+        },
+        {
+          "sa": "तनये",
+          "en": "in the child"
+        },
+        {
+          "sa": "बीज-अङ्कुरवत्",
+          "en": "as [a] seed [in a] sprout"
+        },
+        {
+          "sa": "ईक्षणात्",
+          "en": "from seeing"
+        }
+      ],
       "sourceNumbers": [
         525
       ],
@@ -34676,14 +34933,75 @@
       "chapter": 3,
       "number": "526",
       "label": "Verse 526",
-      "deva": "तन्-मतं दूषयत्यन्यः पुत्र आत्मा कथं त्विति॥",
-      "translation": "The doctrine that the body is the Self One who is ignorant might therefore regard one’s own son as one’s Ātman. Some one else, who may be equally ignorant, might well dispute its validity and ask, ‘How is it possible?’",
-      "gloss": [],
+      "deva": "अतोऽयं पुत्र आत्मेति मन्यते भ्रान्तिमत्तमः।\nतन्-मतं दूषयत्य् अन्यः पुत्र आत्मा कथं त्विति॥",
+      "translation": "Thus a greatly deluded person thinks, “This son is the Self.” Another challenges that view: “How can the son be the Self?”",
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "thus"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "पुत्रः",
+          "en": "son"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "मन्यते",
+          "en": "thinks"
+        },
+        {
+          "sa": "भ्रान्ति-मत्तमः",
+          "en": "a very deluded person"
+        },
+        {
+          "sa": "तत्-मतम्",
+          "en": "that view"
+        },
+        {
+          "sa": "दूषयति",
+          "en": "criticizes"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "पुत्रः",
+          "en": "the son"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ],
       "sourceNumbers": [
         526
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "tan-mataṃ dūṣayatyanyaḥ putra ātmā kathaṃ tviti||"
+      "iast": "ato’yaṃ putra ātmeti manyate bhrāntimattamaḥ|\ntan-mataṃ dūṣayaty anyaḥ putra ātmā kathaṃ tv iti||"
     },
     {
       "id": "svsss-3-0527",
@@ -34691,8 +35009,53 @@
       "number": "527",
       "label": "Verse 527",
       "deva": "प्रीति-मात्रात् कथं पुत्र आत्मा भवितुम् अर्हति।\nअन्यत्रापीक्ष्यते प्रीतिः क्षेत्र-पात्र-धनादिषु॥",
-      "translation": "The only link between father and son is the bond of love. But the bond of love unites us with many other things, such as the property we possess, the utensils we make use of, and the wealth that we own.",
-      "gloss": [],
+      "translation": "How can the son be the Self merely because of affection? Affection is seen for other things too, such as fields, vessels, and wealth.",
+      "gloss": [
+        {
+          "sa": "प्रीति-मात्रात्",
+          "en": "merely from affection"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "पुत्रः",
+          "en": "the son"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "भवितुम्",
+          "en": "to become"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is fit"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere; for other things"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "ईक्ष्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "प्रीतिः",
+          "en": "affection"
+        },
+        {
+          "sa": "क्षेत्र-पात्र-धन-आदिषु",
+          "en": "for fields, vessels, wealth, and the like"
+        }
+      ],
       "sourceNumbers": [
         527
       ],
@@ -34705,8 +35068,61 @@
       "number": "528",
       "label": "Verse 528",
       "deva": "पुत्राद् विशिष्टा देहेऽस्मिन् प्राणिनां प्रीतिर् इष्यते।\nप्रदीप्ते भवने पुत्रं त्यक्त्वा जन्तुः पलायते॥",
-      "translation": "Instances are not wanting of people feeling greater attachment to their own physical body, than to the children begotten of themselves. Consequently, if a house should catch fire, a man might leave his children to perish in the flames, and try to save himself physically.",
-      "gloss": [],
+      "translation": "People’s affection for this body is held to be greater than for a son. When a house is burning, a person runs away after abandoning his son.",
+      "gloss": [
+        {
+          "sa": "पुत्रात्",
+          "en": "than a son"
+        },
+        {
+          "sa": "विशिष्टा",
+          "en": "greater"
+        },
+        {
+          "sa": "देहे",
+          "en": "for the body"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "this"
+        },
+        {
+          "sa": "प्राणिनाम्",
+          "en": "of living beings"
+        },
+        {
+          "sa": "प्रीतिः",
+          "en": "affection"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is held"
+        },
+        {
+          "sa": "प्रदीप्ते",
+          "en": "when burning"
+        },
+        {
+          "sa": "भवने",
+          "en": "in a house"
+        },
+        {
+          "sa": "पुत्रम्",
+          "en": "the son"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having abandoned"
+        },
+        {
+          "sa": "जन्तुः",
+          "en": "a person"
+        },
+        {
+          "sa": "पलायते",
+          "en": "runs away"
+        }
+      ],
       "sourceNumbers": [
         528
       ],
@@ -34719,8 +35135,65 @@
       "number": "529",
       "label": "Verse 529",
       "deva": "तं विक्रीणाति देहार्थं प्रतिकूलं निहन्ति च।\nतस्माद् आत्मा तु तनयो न भवेच् च कदाचन॥",
-      "translation": "There are instances of people selling their children in order that they might keep alive. There are also instances of parents killing children when the latter turn hostile. Some therefore say that it is not right that one should regard one’s own son as verily one’s Ātman.",
-      "gloss": [],
+      "translation": "One sells him for the sake of the body, and kills him if he is hostile. Therefore, a son can never be the Self.",
+      "gloss": [
+        {
+          "sa": "तम्",
+          "en": "him"
+        },
+        {
+          "sa": "विक्रीणाति",
+          "en": "sells"
+        },
+        {
+          "sa": "देह-अर्थम्",
+          "en": "for the sake of the body"
+        },
+        {
+          "sa": "प्रतिकूलम्",
+          "en": "if hostile"
+        },
+        {
+          "sa": "निहन्ति",
+          "en": "kills"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "तनयः",
+          "en": "a son"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "can be"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कदाचन",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         529
       ],
@@ -34733,8 +35206,53 @@
       "number": "530",
       "label": "Verse 530",
       "deva": "गुण-रूपादि-सादृश्यं दीपवन् न सुते पितुः।\nअव्यङ्गाज् जायते व्यङ्गः सु-गुणाद् अपि दुर्-गुणः॥",
-      "translation": "There are certain physical characteristics and some mental traits that cannot be inherited; and to that extent, the analogy of the lighted lamp does not hold good. Beautiful parents might give birth to deformed children; and good parents may have wicked sons.",
-      "gloss": [],
+      "translation": "A father and son are not alike in qualities, appearance, and the like as one lamp is like another. A deformed child may be born from an unblemished parent, and a wicked child even from a virtuous parent.",
+      "gloss": [
+        {
+          "sa": "गुण-रूप-आदि-सादृश्यम्",
+          "en": "similarity in qualities, appearance, and the like"
+        },
+        {
+          "sa": "दीपवत्",
+          "en": "like a lamp"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सुते",
+          "en": "in the son"
+        },
+        {
+          "sa": "पितुः",
+          "en": "of the father"
+        },
+        {
+          "sa": "अव्यङ्गात्",
+          "en": "from an unblemished one"
+        },
+        {
+          "sa": "जायते",
+          "en": "is born"
+        },
+        {
+          "sa": "व्यङ्गः",
+          "en": "a deformed one"
+        },
+        {
+          "sa": "सु-गुणात्",
+          "en": "from one of good qualities"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "दुर्-गुणः",
+          "en": "one of bad qualities"
+        }
+      ],
       "sourceNumbers": [
         530
       ],
@@ -34747,8 +35265,61 @@
       "number": "531",
       "label": "Verse 531",
       "deva": "आभास-मात्रास् ताः सर्वा युक्तयोऽप्युक्तयोऽपि च।\nपुत्रस्य पितृवद् गेहे सर्व-कार्येषु वस्तुषु॥",
-      "translation": "It is therefore a fallacy to think that one’s son is one’s Ātman. The father and the son are one, people say, only in relation to their looking after the affairs at home.",
-      "gloss": [],
+      "translation": "All those arguments and statements are mere appearances: that a son is like his father in all the household tasks and things.",
+      "gloss": [
+        {
+          "sa": "आभास-मात्राः",
+          "en": "mere appearances"
+        },
+        {
+          "sa": "ताः",
+          "en": "those"
+        },
+        {
+          "sa": "सर्वाः",
+          "en": "all"
+        },
+        {
+          "sa": "युक्तयः",
+          "en": "arguments"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "उक्तयः",
+          "en": "statements"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "पुत्रस्य",
+          "en": "of the son"
+        },
+        {
+          "sa": "पितृवत्",
+          "en": "like the father"
+        },
+        {
+          "sa": "गेहे",
+          "en": "in the house"
+        },
+        {
+          "sa": "सर्व-कार्येषु",
+          "en": "in all tasks"
+        },
+        {
+          "sa": "वस्तुषु",
+          "en": "and things"
+        }
+      ],
       "sourceNumbers": [
         531
       ],
@@ -34761,8 +35332,61 @@
       "number": "532",
       "label": "Verse 532",
       "deva": "स्वामित्व-द्योतनायास्मिन्न् आत्मत्वम् उपचर्यते।\nश्रुत्या तु मुख्यया वृत्त्या पुत्र आत्मेति नोच्यते॥",
-      "translation": "In this context the expression is figurative, for it indicates the nature of delegated authority. Nowhere is it stated in the Śruti in the literal and direct sense of the term, that the son is the very Ātman of the father.",
-      "gloss": [],
+      "translation": "Selfhood is figuratively attributed to the son to indicate ownership; but Śruti does not say in its primary sense that the son is the Self.",
+      "gloss": [
+        {
+          "sa": "स्वामित्व-द्योतनाय",
+          "en": "to indicate ownership"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "in this case"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "उपचर्यते",
+          "en": "is figuratively applied"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "मुख्यया",
+          "en": "primary"
+        },
+        {
+          "sa": "वृत्त्या",
+          "en": "in the sense"
+        },
+        {
+          "sa": "पुत्रः",
+          "en": "the son"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is said"
+        }
+      ],
       "sourceNumbers": [
         532
       ],
@@ -34775,8 +35399,61 @@
       "number": "533",
       "label": "Verse 533",
       "deva": "औपचारिकम् आत्मत्वं पुत्रे तस्मान् न मुख्यतः।\nअहम्-पद-प्रत्ययार्थो देह एव न चेतरः॥",
-      "translation": "When we say that the father and the sone are one, we mean it in an indirect and complimentary sense. Therefore say some, when one refers to oneself by the term ‘I’, it is always to one’s physical body that one refers and to nothing more.",
-      "gloss": [],
+      "translation": "Therefore, selfhood in the son is figurative, not primary. The referent of the word “I” is the body alone, and nothing else.",
+      "gloss": [
+        {
+          "sa": "औपचारिकम्",
+          "en": "figurative"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "पुत्रे",
+          "en": "in the son"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मुख्यतः",
+          "en": "primarily"
+        },
+        {
+          "sa": "अहम्-पद",
+          "en": "of the word “I”"
+        },
+        {
+          "sa": "प्रत्यय-अर्थः",
+          "en": "the referent"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इतरः",
+          "en": "another"
+        }
+      ],
       "sourceNumbers": [
         533
       ],
@@ -34789,8 +35466,61 @@
       "number": "534",
       "label": "Verse 534",
       "deva": "प्रत्यक्षः सर्व-जन्तूनां देहोऽहम् इति निश्चयः।\nएष पुरुषोऽन्न-रसमय इत्यपि च श्रुतिः॥",
-      "translation": "It is upon the basis of one’s own sense experience that every one is convinced of one’s own existence and therefore when one says, ‘I am’, the reference is always to one’s physical body. Such a view has the support of the Śruti which says, ‘This Being, the Puruṣa, is formed out of the essence of food.’ ((TaitU.2.2.1) (Taittirīya Upaniṣad))",
-      "gloss": [],
+      "translation": "For all living beings, the certainty “I am the body” is directly evident. Śruti also says, “This person is made of the essence of food.”",
+      "gloss": [
+        {
+          "sa": "प्रत्यक्षः",
+          "en": "directly evident"
+        },
+        {
+          "sa": "सर्व-जन्तूनाम्",
+          "en": "for all living beings"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निश्चयः",
+          "en": "certainty"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "person"
+        },
+        {
+          "sa": "अन्न-रस-मयः",
+          "en": "made of the essence of food"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "Śruti"
+        }
+      ],
       "sourceNumbers": [
         534
       ],
@@ -34803,8 +35533,65 @@
       "number": "535",
       "label": "Verse 535",
       "deva": "पुरुषत्वं वदत्यस्य स्वात्मा हि पुरुषस् ततः।\nआत्मायं देह एवेति चार्वाकेण विनिश्चितम्॥",
-      "translation": "Upon the authority of Śruti therefore we may identify the Ātman with the physical body. It is this view that has the support of the Cārvakas who opine that there is no Ātman other than the physical body.",
-      "gloss": [],
+      "translation": "Because Śruti speaks of this personhood and the person is one’s own self, the Cārvāka concludes, “This Self is the body alone.”",
+      "gloss": [
+        {
+          "sa": "पुरुषत्वम्",
+          "en": "personhood"
+        },
+        {
+          "sa": "वदति",
+          "en": "it says"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "स्व-आत्मा",
+          "en": "one’s own self"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "a person"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चार्वाकेण",
+          "en": "by the Cārvāka"
+        },
+        {
+          "sa": "विनिश्चितम्",
+          "en": "is concluded"
+        }
+      ],
       "sourceNumbers": [
         535
       ],
@@ -34817,8 +35604,61 @@
       "number": "536",
       "label": "Verse 536",
       "deva": "तन्-मतं दूषयत्यन्योऽसहमानः पृथग्-जनः।\nदेह आत्मा कथं नु स्यात् पर-तन्त्रो ह्यचेतनः॥",
-      "translation": "The doctrine that the senses are the Self But those who are not willing to accept it, might question its validity. Such person might say, ‘Inasmuch as the physical body is devoid of free will, it cannot be said to be sentient. How then may we say that it is the Ātman?",
-      "gloss": [],
+      "translation": "Another person, unwilling to accept that view, challenges it: “How could the body be the Self, since it is dependent on another and unconscious?”",
+      "gloss": [
+        {
+          "sa": "तत्-मतम्",
+          "en": "that view"
+        },
+        {
+          "sa": "दूषयति",
+          "en": "criticizes"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "असहमाणः",
+          "en": "unwilling to accept"
+        },
+        {
+          "sa": "पृथक्-जनः",
+          "en": "ordinary person"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "नु",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "could be"
+        },
+        {
+          "sa": "पर-तन्त्रः",
+          "en": "dependent on another"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "अचेतनः",
+          "en": "unconscious"
+        }
+      ],
       "sourceNumbers": [
         536
       ],
@@ -34831,8 +35671,57 @@
       "number": "537",
       "label": "Verse 537",
       "deva": "इन्द्रियैश् चाल्यमानोऽयं चेष्टते न स्वतः क्वचित्।\nआश्रयश् चक्षुर्-आदीनां गृहवद् गृह-मेधिनाम्॥",
-      "translation": "The body acts only when it is impelled by the sense organs, and it does not act of its own accord. The body is in relation to the sense organs which animate it, what a house is to the dweller within it.",
-      "gloss": [],
+      "translation": "This body, moved by the senses, never acts by itself. It is a support for the eyes and other senses, as a house is for its residents.",
+      "gloss": [
+        {
+          "sa": "इन्द्रियैः",
+          "en": "by the senses"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आल्यमानः",
+          "en": "being moved"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "चेष्टते",
+          "en": "acts"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "ever"
+        },
+        {
+          "sa": "आश्रयः",
+          "en": "a support"
+        },
+        {
+          "sa": "चक्षुः-आदीनाम्",
+          "en": "for the eyes and the rest"
+        },
+        {
+          "sa": "गृहवत्",
+          "en": "like a house"
+        },
+        {
+          "sa": "गृह-मेधिनाम्",
+          "en": "for householders; residents"
+        }
+      ],
       "sourceNumbers": [
         537
       ],
@@ -34845,8 +35734,45 @@
       "number": "538",
       "label": "Verse 538",
       "deva": "बाल्यादि-नानावस्थावाञ् शुक्ल-शोणित-सम्भवः।\nअतः कदापि देहस्य नात्मत्वम् उपपद्यते॥",
-      "translation": "The physical body is but the outcome of the symbiosis of the germ plasma. It is subject to disease, as well as to the various changes that take place from infancy to youth and on to old age. Therefore it cannot be reasonably maintained that the physical body is the Ātman.",
-      "gloss": [],
+      "translation": "The body has many states beginning with childhood and arises from semen and blood. Therefore, the body’s being the Self is never reasonable.",
+      "gloss": [
+        {
+          "sa": "बाल्य-आदि",
+          "en": "beginning with childhood"
+        },
+        {
+          "sa": "नाना-अवस्था-वान्",
+          "en": "having many states"
+        },
+        {
+          "sa": "शुक्ल-शोणित-सम्भवः",
+          "en": "arising from semen and blood"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "कदापि",
+          "en": "ever"
+        },
+        {
+          "sa": "देहस्य",
+          "en": "of the body"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "being the Self"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "is reasonable"
+        }
+      ],
       "sourceNumbers": [
         538
       ],
@@ -34859,8 +35785,65 @@
       "number": "539",
       "label": "Verse 539",
       "deva": "बधिरोऽहं च काणोऽहं मूक इत्यनुभूतितः।\nइन्द्रियाणि भवन्त्यात्मा येषाम् अस्त्यर्थ-वेदनम्॥",
-      "translation": "A man says, ‘I am deaf’; another says, ‘I am blind’; and a third thinks that he is dumb. All that lies within the scope of sense experience. Inasmuch as such knowledge is based upon the power of cognition, some ask if we may not identify the Ātman with the sense organs.",
-      "gloss": [],
+      "translation": "From experiences such as “I am deaf,” “I am blind,” and “I am mute,” some hold the senses to be the Self, since they cognize objects.",
+      "gloss": [
+        {
+          "sa": "बधिरः",
+          "en": "deaf"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "काणः",
+          "en": "blind; one-eyed"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "मूकः",
+          "en": "mute"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुभूतितः",
+          "en": "from experience"
+        },
+        {
+          "sa": "इन्द्रियाणि",
+          "en": "the senses"
+        },
+        {
+          "sa": "भवन्ति",
+          "en": "become"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "येषाम्",
+          "en": "for those whose"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "अर्थ-वेदनम्",
+          "en": "cognition of objects"
+        }
+      ],
       "sourceNumbers": [
         539
       ],
@@ -34873,8 +35856,61 @@
       "number": "540",
       "label": "Verse 540",
       "deva": "इन्द्रियाणां चेतनत्वं देहे प्राणाः प्रजा-पतिम्।\nएतम् एत्येत्य् ऊचुर् इति श्रुत्यैव प्रतिपाद्यते॥",
-      "translation": "In the Śruti it is said that the senses came to Prajā-pati and said thus and thus. Would it not imply that the senses are endowed with consciousness, and may we not identify the senses with the Ātman? ((ChanU.5.1.6-7) (Chāndogya Upaniṣad))",
-      "gloss": [],
+      "translation": "Śruti itself establishes the senses’ consciousness in the body, saying that the vital powers went to Prajāpati and, having approached him, spoke.",
+      "gloss": [
+        {
+          "sa": "इन्द्रियाणाम्",
+          "en": "of the senses"
+        },
+        {
+          "sa": "चेतनत्वम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "देहे",
+          "en": "in the body"
+        },
+        {
+          "sa": "प्राणाः",
+          "en": "the vital powers"
+        },
+        {
+          "sa": "प्रजा-पतिम्",
+          "en": "to Prajāpati"
+        },
+        {
+          "sa": "एतम्",
+          "en": "this one"
+        },
+        {
+          "sa": "एत्य",
+          "en": "having approached"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ऊचुः",
+          "en": "they said"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "प्रतिपाद्यते",
+          "en": "is established"
+        }
+      ],
       "sourceNumbers": [
         540
       ],
