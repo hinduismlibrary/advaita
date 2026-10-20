@@ -6,11 +6,12 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Ekaślokī** — active. Audit the verse and colophon, add explicit IAST to both reader units, and confirm the one-page layout for this under-20-verse text.
+**Pañcīkaraṇa-prakaraṇa** — active. Audit all seven verses and their translations and glosses, add explicit IAST to every unit, and confirm the one-page layout.
 
 ## Completed
 
 - **Bhajagovindam (Mohamudgara)** — all 31 verses were checked against the cited Sanskrit Documents recension. Rewrote each translation and word gloss, retained explicit IAST, and replaced generic ranges with an opening verse, the Dvādaśamañjarikā (2–13), the Caturdaśamañjarikā (14–27), and a topic-labeled closing group (28–31). No appended verses beyond the 31-verse recension were added.
+- **Ekaślokī** — the verse and colophon were checked against Ambuda’s 1910 edition and a parallel Sanskrit text. Refined the dialogue translation and Devanāgarī gloss, added explicit IAST to both reader units, and confirmed its one-page layout.
 - **Daśaślokī** — all ten verses and the colophon were checked against Ambuda’s 1910 edition and a parallel Sanskrit text. Revised the translations and word glosses for closer grammatical alignment, added explicit IAST to all eleven reader units, and confirmed its one-page layout.
 - **Brahmajñānāvalīmālā** — all 21 verses checked against Ambuda’s 1910 edition, with verse 16’s corrected *sākṣy asmi* reading cross-checked against parallel sources. Added explicit IAST throughout, refined the translations and word glosses, and kept three descriptive contents sections covering verses 1–21.
 - **Hastāmalaka-stotram** — all twelve verses were checked against the Sringeri Bhagavatpadiyam text and its commentary. Refined the translations and expanded the Devanāgarī glosses to account for the words and compound elements; checked the explicit IAST. No separate contents page is needed for this under-20-verse text.
@@ -51,7 +52,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | Complete: all ten verses and colophon audited; every unit has Sanskrit, English, explicit IAST, and word glosses; one-page layout (under 20 verses) |
 | Daśaślokī | 11 | Complete: all ten verses and the colophon have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Dṛg-dṛśya-viveka | 46 | Complete: all 46 verses have Sanskrit, English, explicit IAST, and word glosses; seven named contents sections |
-| Ekaślokī | 2 | Current text: audit the verse and colophon; add explicit IAST to both reader units; one-page layout |
+| Ekaślokī | 2 | Complete: the verse and colophon have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Hastāmalaka-stotram | 12 | Complete: all verses audited; every verse has Sanskrit, English, explicit IAST, and expanded word glosses; one-page layout (under 20 verses) |
 | Kāśīpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
@@ -59,7 +60,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Māyāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Naiṣkarmyasiddhi | 880 of 897 expected reader units | All 423 numbered verses have Sanskrit, English, explicit IAST, and word glosses; four chapters have named contents sections. There are 454 unglossed prose/commentary units and 17 expected reader units are absent; these are not counted as missing verse glosses. |
 | Nirvāṇaṣaṭkam | 7 | Complete: all six verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
-| Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
+| Pañcīkaraṇa-prakaraṇa | 7 | Current text: audit all verses, translations, and word glosses; add explicit IAST; one-page layout |
 | Viṣṇu Ṣaṭpadī Stotram | 8 | Complete: all seven verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Glosses present; add explicit IAST |
