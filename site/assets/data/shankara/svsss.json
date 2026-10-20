@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–65.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–75.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 65
+      "to": 75
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–65 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–75 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -4721,13 +4721,79 @@
       "number": "66",
       "label": "Verse 66",
       "deva": "भोग्ये नरः काम-जयेच्छुर् एतां\nसुखत्व-बुद्धिं विषये निहन्यात्।\nयावत् सुखत्व-भ्रम-धीः पदार्थे\nतावन् न जेतुं प्रभवेद्धि कामम्॥",
-      "translation": "And let him who is intent upon the conquest of desire give up the feeling of pleasureableness which is associated with such objects for where there is the feeling of pleasureableness, lust cannot be conquered.",
-      "gloss": [],
+      "translation": "One who wishes to conquer desire should remove from an object the notion that it is pleasant. As long as the deluded idea that an object brings pleasure remains, one cannot conquer desire.",
+      "gloss": [
+        {
+          "sa": "भोग्ये",
+          "en": "in an object of enjoyment"
+        },
+        {
+          "sa": "नरः",
+          "en": "a person"
+        },
+        {
+          "sa": "काम-जयेच्छुः",
+          "en": "wishing to conquer desire"
+        },
+        {
+          "sa": "एताम्",
+          "en": "this"
+        },
+        {
+          "sa": "सुखत्व-बुद्धिम्",
+          "en": "notion of pleasantness"
+        },
+        {
+          "sa": "विषये",
+          "en": "in the object"
+        },
+        {
+          "sa": "निहन्यात्",
+          "en": "should destroy"
+        },
+        {
+          "sa": "यावत्",
+          "en": "as long as"
+        },
+        {
+          "sa": "सुखत्व-भ्रम-धीः",
+          "en": "the deluded idea of pleasure"
+        },
+        {
+          "sa": "पदार्थे",
+          "en": "in an object"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so long"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "जेतुम्",
+          "en": "to conquer"
+        },
+        {
+          "sa": "प्रभवेत्",
+          "en": "is able"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "कामम्",
+          "en": "desire"
+        }
+      ],
       "sourceNumbers": [
         66
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "bhogye naraḥ kāma-jayecchur etāṃ\nsukhatva-buddhiṃ viṣaye nihanyāt|\nyāvat sukhatva-bhrama-dhīḥ padārthe\ntāvan na jetuṃ prabhaveddhi kāmam||"
+      "iast": "bhogye naraḥ kāma-jayecchur etāṃ\nsukhatva-buddhiṃ viṣaye nihanyāt|\nyāvat sukhatva-bhrama-dhīḥ padārthe\ntāvan na jetuṃ prabhaveddhi kāmam||",
+      "editionTranslation": "And let him who is intent upon the conquest of desire give up the feeling of pleasureableness which is associated with such objects for where there is the feeling of pleasureableness, lust cannot be conquered."
     },
     {
       "id": "svsss-1-0067",
@@ -4735,13 +4801,55 @@
       "number": "67",
       "label": "Verse 67",
       "deva": "सङ्कल्पानुदये हेतुर् यथा-भूतार्थ-दर्शनम्।\nअनर्थ-चिन्तनं चाभ्यां नावकाशोऽस्य विद्यते॥",
-      "translation": "But where, as a result of right knowledge in relation to things and as a result of reflection, one becomes aware of the harm that results, there does not arise the idea that a given object is attractive. Where both these factors are present, the very idea of attractiveness withers away for lack of opportunity.",
-      "gloss": [],
+      "translation": "Seeing things as they are and reflecting on their harm prevent the thought of wanting them from arising; these two leave it no opening.",
+      "gloss": [
+        {
+          "sa": "सङ्कल्प-अनुदये",
+          "en": "for the non-arising of thought"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "the cause"
+        },
+        {
+          "sa": "यथा-भूत-अर्थ-दर्शनम्",
+          "en": "seeing things as they are"
+        },
+        {
+          "sa": "अनर्थ-चिन्तनम्",
+          "en": "reflection on harm"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आभ्याम्",
+          "en": "by these two"
+        },
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "अवकाशः",
+          "en": "opening"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for it"
+        },
+        {
+          "sa": "विद्यते",
+          "en": "exists"
+        }
+      ],
       "sourceNumbers": [
         67
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "saṅkalpānudaye hetur yathā-bhūtārtha-darśanam|\nanartha-cintanaṃ cābhyāṃ nāvakāśo’sya vidyate||"
+      "iast": "saṅkalpānudaye hetur yathā-bhūtārtha-darśanam|\nanartha-cintanaṃ cābhyāṃ nāvakāśo’sya vidyate||",
+      "editionTranslation": "But where, as a result of right knowledge in relation to things and as a result of reflection, one becomes aware of the harm that results, there does not arise the idea that a given object is attractive. Where both these factors are present, the very idea of attractiveness withers away for lack of opportunity."
     },
     {
       "id": "svsss-1-0068",
@@ -4749,13 +4857,67 @@
       "number": "68",
       "label": "Verse 68",
       "deva": "रत्ने यदि शिला-बुद्धिर् जायते वा भयं ततः।\nसमीचीनत्व-धीर् नैति नोपादेयत्व-धीर् अपि॥",
-      "translation": "Thus when one knows that a precious stone is only a piece of stone, or feels a sense of fear towards it, one would not wish to possess it or feel that it is worth having.",
-      "gloss": [],
+      "translation": "If a jewel is thought to be only a stone, or if it causes fear, the thought that it is desirable does not arise, nor does the thought that it should be acquired.",
+      "gloss": [
+        {
+          "sa": "रत्ने",
+          "en": "in a jewel"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "शिला-बुद्धिः",
+          "en": "the thought that it is a stone"
+        },
+        {
+          "sa": "जायते",
+          "en": "arises"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "भयम्",
+          "en": "fear"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "समीचीनत्व-धीः",
+          "en": "the thought that it is desirable"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एति",
+          "en": "arises"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपादेयत्व-धीः",
+          "en": "the thought that it should be acquired"
+        },
+        {
+          "sa": "अपि",
+          "en": "either"
+        }
+      ],
       "sourceNumbers": [
         68
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ratne yadi śilā-buddhir jāyate vā bhayaṃ tataḥ|\nsamīcīnatva-dhīr naiti nopādeyatva-dhīr api||"
+      "iast": "ratne yadi śilā-buddhir jāyate vā bhayaṃ tataḥ|\nsamīcīnatva-dhīr naiti nopādeyatva-dhīr api||",
+      "editionTranslation": "Thus when one knows that a precious stone is only a piece of stone, or feels a sense of fear towards it, one would not wish to possess it or feel that it is worth having."
     },
     {
       "id": "svsss-1-0069",
@@ -4763,13 +4925,59 @@
       "number": "69",
       "label": "Verse 69",
       "deva": "यथार्थ-दर्शनं वस्तुन्यनर्थस्यापि चिन्तनम्।\nसङ्कल्पस्यापि कामस्य तद् वधोपाय इष्यते॥",
-      "translation": "Therefore the conquest of desire becomes possible only when one becomes aware of the evil consequences that flow from the objects of desire as a result of right knowledge.",
-      "gloss": [],
+      "translation": "Seeing an object as it is and reflecting on its harm are held to be the means of destroying both the conception and desire.",
+      "gloss": [
+        {
+          "sa": "यथा-अर्थ-दर्शनम्",
+          "en": "seeing an object as it is"
+        },
+        {
+          "sa": "वस्तुनि",
+          "en": "in an object"
+        },
+        {
+          "sa": "अनर्थस्य",
+          "en": "of harm"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "चिन्तनम्",
+          "en": "reflection"
+        },
+        {
+          "sa": "सङ्कल्पस्य",
+          "en": "of conception"
+        },
+        {
+          "sa": "अपि",
+          "en": "as well"
+        },
+        {
+          "sa": "कामस्य",
+          "en": "of desire"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "वध-उपायः",
+          "en": "the means of destroying"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is held"
+        }
+      ],
       "sourceNumbers": [
         69
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yathārtha-darśanaṃ vastunyanarthasyāpi cintanam|\nsaṅkalpasyāpi kāmasya tad vadhopāya iṣyate||"
+      "iast": "yathārtha-darśanaṃ vastunyanarthasyāpi cintanam|\nsaṅkalpasyāpi kāmasya tad vadhopāya iṣyate||",
+      "editionTranslation": "Therefore the conquest of desire becomes possible only when one becomes aware of the evil consequences that flow from the objects of desire as a result of right knowledge."
     },
     {
       "id": "svsss-1-0070",
@@ -4777,13 +4985,67 @@
       "number": "70",
       "label": "Verse 70",
       "deva": "धनं भय-निबन्धनं सतत-दुःख-संवर्धनं\nप्रचण्डतरकर्दनं स्फुटित-बन्धु-संवर्धनम्।\nविशिष्ट-गुण-बाधनं कृपण-धी-समाराधनं\nन मुक्ति-गति-साधनं भवति नापि हृच्-छोधनम्॥",
-      "translation": "Non-covetousness Fear, ever-increasing sorrow, self-glorification, discord among friends – all these are the evil consequences that flow from wealth. It is also a hindrance to the practice of virtue. Although the miser worships wealth, it is not conducive either to salvation or to self-purification.",
-      "gloss": [],
+      "translation": "Wealth is a source of fear, steadily increases sorrow, causes severe distress, increases ruptures among relatives, hinders noble qualities, and is worshipped by the miserly mind. It is neither a means to liberation nor a purifier of the heart.",
+      "gloss": [
+        {
+          "sa": "धनम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "भय-निबन्धनम्",
+          "en": "a source of fear"
+        },
+        {
+          "sa": "सतत-दुःख-संवर्धनम्",
+          "en": "steadily increasing sorrow"
+        },
+        {
+          "sa": "प्रचण्डतर-कर्दनम्",
+          "en": "severe torment"
+        },
+        {
+          "sa": "स्फुटित-बन्धु-संवर्धनम्",
+          "en": "increasing ruptures among relatives"
+        },
+        {
+          "sa": "विशिष्ट-गुण-बाधनम्",
+          "en": "hindering noble qualities"
+        },
+        {
+          "sa": "कृपण-धी-समाराधनम्",
+          "en": "worshipped by the miserly mind"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मुक्ति-गति-साधनम्",
+          "en": "a means to liberation"
+        },
+        {
+          "sa": "भवति",
+          "en": "is"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "हृत्-शोधनम्",
+          "en": "a purifier of the heart"
+        }
+      ],
       "sourceNumbers": [
         70
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dhanaṃ bhaya-nibandhanaṃ satata-duḥkha-saṃvardhanaṃ\npracaṇḍatarakardanaṃ sphuṭita-bandhu-saṃvardhanam|\nviśiṣṭa-guṇa-bādhanaṃ kṛpaṇa-dhī-samārādhanaṃ\nna mukti-gati-sādhanaṃ bhavati nāpi hṛc-chodhanam||"
+      "iast": "dhanaṃ bhaya-nibandhanaṃ satata-duḥkha-saṃvardhanaṃ\npracaṇḍatarakardanaṃ sphuṭita-bandhu-saṃvardhanam|\nviśiṣṭa-guṇa-bādhanaṃ kṛpaṇa-dhī-samārādhanaṃ\nna mukti-gati-sādhanaṃ bhavati nāpi hṛc-chodhanam||",
+      "editionTranslation": "Non-covetousness Fear, ever-increasing sorrow, self-glorification, discord among friends – all these are the evil consequences that flow from wealth. It is also a hindrance to the practice of virtue. Although the miser worships wealth, it is not conducive either to salvation or to self-purification."
     },
     {
       "id": "svsss-1-0071",
@@ -4791,13 +5053,87 @@
       "number": "71",
       "label": "Verse 71",
       "deva": "राज्ञो भयं चोर-भयं प्रमादाद्\nभयं तथा ज्ञाति-भयं च वस्तुतः।\nधनं भय-ग्रस्तम् अनर्थ-मूलं\nयतः सतां नैव सुखाय कल्पते॥",
-      "translation": "Wealth makes a person feel afraid of kings and thieves. It makes one suspicious of one’s own kinsmen also. It makes one suspect oneself also, lest one should be careless. Inasmuch as wealth is ever attended with fear, it is always a source of discord. The virtuous never hope to find any happiness in it.",
-      "gloss": [],
+      "translation": "Wealth brings fear of kings and thieves, fear through carelessness, and fear of one’s own kin. It is beset by fear and is the root of harm; therefore it does not bring happiness even to the good.",
+      "gloss": [
+        {
+          "sa": "राज्ञः",
+          "en": "of kings"
+        },
+        {
+          "sa": "भयम्",
+          "en": "fear"
+        },
+        {
+          "sa": "चोर-भयम्",
+          "en": "fear of thieves"
+        },
+        {
+          "sa": "प्रमादात्",
+          "en": "from carelessness"
+        },
+        {
+          "sa": "भयम्",
+          "en": "fear"
+        },
+        {
+          "sa": "तथा",
+          "en": "and"
+        },
+        {
+          "sa": "ज्ञाति-भयम्",
+          "en": "fear of one’s kin"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "वस्तुतः",
+          "en": "in fact"
+        },
+        {
+          "sa": "धनम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "भय-ग्रस्तम्",
+          "en": "beset by fear"
+        },
+        {
+          "sa": "अनर्थ-मूलम्",
+          "en": "the root of harm"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "सताम्",
+          "en": "for the good"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सुखाय",
+          "en": "for happiness"
+        },
+        {
+          "sa": "कल्पते",
+          "en": "is suitable"
+        }
+      ],
       "sourceNumbers": [
         71
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "rājño bhayaṃ cora-bhayaṃ pramādād\nbhayaṃ tathā jñāti-bhayaṃ ca vastutaḥ|\ndhanaṃ bhaya-grastam anartha-mūlaṃ\nyataḥ satāṃ naiva sukhāya kalpate||"
+      "iast": "rājño bhayaṃ cora-bhayaṃ pramādād\nbhayaṃ tathā jñāti-bhayaṃ ca vastutaḥ|\ndhanaṃ bhaya-grastam anartha-mūlaṃ\nyataḥ satāṃ naiva sukhāya kalpate||",
+      "editionTranslation": "Wealth makes a person feel afraid of kings and thieves. It makes one suspicious of one’s own kinsmen also. It makes one suspect oneself also, lest one should be careless. Inasmuch as wealth is ever attended with fear, it is always a source of discord. The virtuous never hope to find any happiness in it."
     },
     {
       "id": "svsss-1-0072",
@@ -4805,13 +5141,75 @@
       "number": "72",
       "label": "Verse 72",
       "deva": "आर्जने रक्षणे दाने व्यये वापि च वस्तुतः।\nदुःखम् एव सदा नॄणां न धनं सुख-साधनम्॥",
-      "translation": "Wealth is ever a source of grief, both when it is being earned, and when it is preserved; it is also a source of grief, whether it is spent or given as a gift. None has ever found it to be a source of bliss.",
-      "gloss": [],
+      "translation": "In earning, protecting, giving, or spending, wealth is always a source of sorrow for people; it is not a means of happiness.",
+      "gloss": [
+        {
+          "sa": "आर्जने",
+          "en": "in earning"
+        },
+        {
+          "sa": "रक्षणे",
+          "en": "in protecting"
+        },
+        {
+          "sa": "दाने",
+          "en": "in giving"
+        },
+        {
+          "sa": "व्यये",
+          "en": "in spending"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "indeed"
+        },
+        {
+          "sa": "वस्तुतः",
+          "en": "in fact"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "sorrow"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "नॄणाम्",
+          "en": "for people"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "धनम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "सुख-साधनम्",
+          "en": "a means of happiness"
+        }
+      ],
       "sourceNumbers": [
         72
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ārjane rakṣaṇe dāne vyaye vāpi ca vastutaḥ|\nduḥkham eva sadā nṝṇāṃ na dhanaṃ sukha-sādhanam||"
+      "iast": "ārjane rakṣaṇe dāne vyaye vāpi ca vastutaḥ|\nduḥkham eva sadā nṝṇāṃ na dhanaṃ sukha-sādhanam||",
+      "editionTranslation": "Wealth is ever a source of grief, both when it is being earned, and when it is preserved; it is also a source of grief, whether it is spent or given as a gift. None has ever found it to be a source of bliss."
     },
     {
       "id": "svsss-1-0073",
@@ -4819,13 +5217,63 @@
       "number": "73",
       "label": "Verse 73",
       "deva": "सताम् अपि पदार्थस्य लाभाल् लोभः प्रवर्धते।\nविवेको लुप्यते लोभात् तस्मिंल् लुप्ते विनश्यति॥",
-      "translation": "Even the virtuous become greedy when they begin to acquire wealth. One who is greedy becomes incapable of discriminating between good and evil, and one who lacks discrimination is destroyed.",
-      "gloss": [],
+      "translation": "Even good people grow greedy when they gain possessions. Greed erases discernment; when discernment is lost, a person perishes.",
+      "gloss": [
+        {
+          "sa": "सताम्",
+          "en": "of the good"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "पदार्थस्य",
+          "en": "of possessions"
+        },
+        {
+          "sa": "लाभात्",
+          "en": "from acquisition"
+        },
+        {
+          "sa": "लोभः",
+          "en": "greed"
+        },
+        {
+          "sa": "प्रवर्धते",
+          "en": "grows"
+        },
+        {
+          "sa": "विवेकः",
+          "en": "discernment"
+        },
+        {
+          "sa": "लुप्यते",
+          "en": "is lost"
+        },
+        {
+          "sa": "लोभात्",
+          "en": "through greed"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "when that"
+        },
+        {
+          "sa": "लुप्ते",
+          "en": "is lost"
+        },
+        {
+          "sa": "विनश्यति",
+          "en": "one perishes"
+        }
+      ],
       "sourceNumbers": [
         73
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "satām api padārthasya lābhāl lobhaḥ pravardhate|\nviveko lupyate lobhāt tasmiṃl lupte vinaśyati||"
+      "iast": "satām api padārthasya lābhāl lobhaḥ pravardhate|\nviveko lupyate lobhāt tasmiṃl lupte vinaśyati||",
+      "editionTranslation": "Even the virtuous become greedy when they begin to acquire wealth. One who is greedy becomes incapable of discriminating between good and evil, and one who lacks discrimination is destroyed."
     },
     {
       "id": "svsss-1-0074",
@@ -4833,13 +5281,67 @@
       "number": "74",
       "label": "Verse 74",
       "deva": "दहत्य् अलाभे निःस्वत्वं लाभे लोभो दहत्य् अमुम्।\nतस्मात् सन्तापकं वित्तं कस्य सौख्यं प्रयच्छति॥",
-      "translation": "The person who is not rich is victimised by poverty; but the rich is victimised by greed. In either case, as no one ever feels happy with it, wealth is always a source of sorrow.",
-      "gloss": [],
+      "translation": "Poverty burns a person when wealth is absent; when wealth is gained, greed burns that person. Therefore, to whom does wealth bring happiness when it causes distress?",
+      "gloss": [
+        {
+          "sa": "दहति",
+          "en": "burns"
+        },
+        {
+          "sa": "अलाभे",
+          "en": "when there is no wealth"
+        },
+        {
+          "sa": "निःस्वत्वम्",
+          "en": "poverty"
+        },
+        {
+          "sa": "लाभे",
+          "en": "when there is gain"
+        },
+        {
+          "sa": "लोभः",
+          "en": "greed"
+        },
+        {
+          "sa": "दहति",
+          "en": "burns"
+        },
+        {
+          "sa": "अमुम्",
+          "en": "that person"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "सन्तापकम्",
+          "en": "distressing"
+        },
+        {
+          "sa": "वित्तम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "कस्य",
+          "en": "for whom"
+        },
+        {
+          "sa": "सौख्यम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "प्रयच्छति",
+          "en": "does it give"
+        }
+      ],
       "sourceNumbers": [
         74
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dahaty alābhe niḥsvatvaṃ lābhe lobho dahaty amum|\ntasmāt santāpakaṃ vittaṃ kasya saukhyaṃ prayacchati||"
+      "iast": "dahaty alābhe niḥsvatvaṃ lābhe lobho dahaty amum|\ntasmāt santāpakaṃ vittaṃ kasya saukhyaṃ prayacchati||",
+      "editionTranslation": "The person who is not rich is victimised by poverty; but the rich is victimised by greed. In either case, as no one ever feels happy with it, wealth is always a source of sorrow."
     },
     {
       "id": "svsss-1-0075",
@@ -4847,13 +5349,71 @@
       "number": "75",
       "label": "Verse 75",
       "deva": "भोगेन मत्तता जन्तोर् दानेन पुनर्-उद्भवः।\nवृथैवोभयथा वित्तं नास्त्येव गतिर् अन्यथा॥",
-      "translation": "There are some who become intoxicated with the possession of wealth. Even if wealth should be given in charity, it is the cause of people being reborn. Therefore, there is no escape from pain.",
-      "gloss": [],
+      "translation": "Through enjoyment, a person becomes intoxicated; through giving, there is birth again. Either way, wealth is futile; there is no other escape.",
+      "gloss": [
+        {
+          "sa": "भोगेन",
+          "en": "through enjoyment"
+        },
+        {
+          "sa": "मत्तता",
+          "en": "intoxication"
+        },
+        {
+          "sa": "जन्तोः",
+          "en": "for a living being"
+        },
+        {
+          "sa": "दानेन",
+          "en": "through giving"
+        },
+        {
+          "sa": "पुनर्-उद्भवः",
+          "en": "birth again"
+        },
+        {
+          "sa": "वृथा",
+          "en": "in vain"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "उभयथा",
+          "en": "in either way"
+        },
+        {
+          "sa": "वित्तम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "गतिः",
+          "en": "an escape"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        }
+      ],
       "sourceNumbers": [
         75
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "bhogena mattatā jantor dānena punar-udbhavaḥ|\nvṛthaivobhayathā vittaṃ nāstyeva gatir anyathā||"
+      "iast": "bhogena mattatā jantor dānena punar-udbhavaḥ|\nvṛthaivobhayathā vittaṃ nāstyeva gatir anyathā||",
+      "editionTranslation": "There are some who become intoxicated with the possession of wealth. Even if wealth should be given in charity, it is the cause of people being reborn. Therefore, there is no escape from pain."
     },
     {
       "id": "svsss-1-0076",
