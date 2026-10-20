@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Ātmavidyāvilāsa** — next. 66 reader units; all four fields are present, but the descriptive contents page needs review.
+**Brahmasiddhi** — next. 231 source-marked passages; translation/gloss coverage and the long-work contents need a full audit.
 
 ## Completed
 
@@ -15,6 +15,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 - **Dṛg-dṛśya-viveka** — all 46 verses have Sanskrit, English, explicit IAST, and word glosses. Added seven named contents sections covering verses 1–46; expanded verses 1–5 glosses to include every word.
 - **Ātmabodha** — all 68 verses and the colophon have Sanskrit, English, explicit IAST, and non-empty word glosses. Added seven named contents sections covering verses 1–68.
 - **Aparokṣānubhūti** — all 144 verses and the colophon have Sanskrit, English, explicit IAST, and non-empty word glosses. Added ten named contents sections covering verses 1–144.
+- **Ātmavidyāvilāsa** — all 65 numbered verses and the opening invocation have Sanskrit, English, IAST, and word glosses; three named topic sections cover verses 1–65.
 
 The transliteration-button spacing correction and reader cache/version updates were completed earlier in the same workstream.
 
@@ -26,9 +27,9 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Advaitapañcaratnam | 6 | All four fields present |
 | Aparokṣānubhūti | 145 | Complete: all 144 verses and colophon have Sanskrit, English, IAST, and glosses; ten named contents sections |
 | Ātmabodha | 69 | Complete: all 68 verses and colophon have Sanskrit, English, IAST, and glosses; seven named contents sections |
-| Ātmavidyāvilāsa | 66 | All four fields present; review descriptive contents sections |
+| Ātmavidyāvilāsa | 66 | Complete: all numbered verses and invocation have Sanskrit, English, IAST, and glosses; three named topic sections |
 | Bhajagovindam | 31 | All four fields present; review named contents sections |
-| Brahmasiddhi | 231 | Only 1 passage has a word gloss; 230 remain |
+| Brahmasiddhi | 231 | Active: audit all fields; only 1 passage currently has a word gloss; 230 remain; create contents sections |
 | Brahmajñānāvalīmālā | 21 | Glosses present; add explicit IAST; review contents |
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | All four fields present |
 | Daśaślokī | 11 | Glosses present; add explicit IAST |
