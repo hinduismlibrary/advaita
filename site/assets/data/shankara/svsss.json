@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150. Literal English translations and Devanāgarī word glosses now cover verses 1.151–1.160."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150. Literal English translations and Devanāgarī word glosses now cover verses 1.151–1.160. Literal English translations and Devanāgarī word glosses now cover verses 1.161–1.170."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–160.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–170.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 160
+      "to": 170
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–160 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–170 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -11159,13 +11159,59 @@
       "number": "161",
       "label": "Verse 161",
       "deva": "सावयवस्य क्षीरादेर् वस्तुनः परिणामिनः।\nयेन केन विकारित्वं स्यान् नो निष्कर्म-वस्तुनः॥",
-      "translation": "All objects which are compounds, such as milk for instance, may be acted upon by other objects and are liable to change. But Brahman is not a compound of parts and action affects it not. What external object can modify its nature?",
-      "gloss": [],
+      "translation": "A composite, changeable object such as milk can be altered by one thing or another; the actionless reality cannot.",
+      "gloss": [
+        {
+          "sa": "सावयवस्य",
+          "en": "of what has parts"
+        },
+        {
+          "sa": "क्षीर-आदेः",
+          "en": "of milk and the like"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "of an object"
+        },
+        {
+          "sa": "परिणामिनः",
+          "en": "that is subject to change"
+        },
+        {
+          "sa": "येन",
+          "en": "by which"
+        },
+        {
+          "sa": "केन",
+          "en": "whatever"
+        },
+        {
+          "sa": "विकारित्वम्",
+          "en": "changeability"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उ",
+          "en": "indeed"
+        },
+        {
+          "sa": "निष्कर्म-वस्तुनः",
+          "en": "of the actionless reality"
+        }
+      ],
       "sourceNumbers": [
         161
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sāvayavasya kṣīrāder vastunaḥ pariṇāminaḥ|\nyena kena vikāritvaṃ syān no niṣkarma-vastunaḥ||"
+      "iast": "sāvayavasya kṣīrāder vastunaḥ pariṇāminaḥ|\nyena kena vikāritvaṃ syān no niṣkarma-vastunaḥ||",
+      "editionTranslation": "All objects which are compounds, such as milk for instance, may be acted upon by other objects and are liable to change. But Brahman is not a compound of parts and action affects it not. What external object can modify its nature?"
     },
     {
       "id": "svsss-1-0162",
@@ -11173,13 +11219,55 @@
       "number": "162",
       "label": "Verse 162",
       "deva": "निष्कलं निष्क्रियं शान्तं निरवद्यं निरञ्जनम्।\nइत्येव वस्तुनस् तत्त्वं श्रुति-युक्ति-व्यवस्थितम्॥",
-      "translation": "Brahman is ever tranquil, faultless, free from impurity, devoid of parts, and actionless. The Śruti proclaims that such is the nature of the ultimate Reality, and reason approves it.",
-      "gloss": [],
+      "translation": "“Without parts, actionless, peaceful, faultless, stainless”—this indeed is the nature of reality, established by scripture and reasoning.",
+      "gloss": [
+        {
+          "sa": "निष्कलम्",
+          "en": "without parts"
+        },
+        {
+          "sa": "निष्क्रियम्",
+          "en": "actionless"
+        },
+        {
+          "sa": "शान्तम्",
+          "en": "peaceful"
+        },
+        {
+          "sa": "निरवद्यम्",
+          "en": "faultless"
+        },
+        {
+          "sa": "निरञ्जनम्",
+          "en": "stainless"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "of reality"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "the nature"
+        },
+        {
+          "sa": "श्रुति-युक्ति-व्यवस्थितम्",
+          "en": "established by scripture and reasoning"
+        }
+      ],
       "sourceNumbers": [
         162
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "niṣkalaṃ niṣkriyaṃ śāntaṃ niravadyaṃ nirañjanam|\nityeva vastunas tattvaṃ śruti-yukti-vyavasthitam||"
+      "iast": "niṣkalaṃ niṣkriyaṃ śāntaṃ niravadyaṃ nirañjanam|\nityeva vastunas tattvaṃ śruti-yukti-vyavasthitam||",
+      "editionTranslation": "Brahman is ever tranquil, faultless, free from impurity, devoid of parts, and actionless. The Śruti proclaims that such is the nature of the ultimate Reality, and reason approves it."
     },
     {
       "id": "svsss-1-0163",
@@ -11187,13 +11275,67 @@
       "number": "163",
       "label": "Verse 163",
       "deva": "तस्मान् न कर्म-साध्यत्वं ब्रह्मणोऽस्ति कुतश्चन।\nकर्म-साध्यं त्वनित्यं हि ब्रह्म नित्यं सना-तनम्॥",
-      "translation": "It therefore follows that we cannot gain Brahman as product of any kind of activity. Moreover, what is gained by action lasts only for a while, whereas Brahman is eternal and is self-existent.",
-      "gloss": [],
+      "translation": "Therefore Brahman is in no way something produced by action. What is produced by action is impermanent, whereas Brahman is eternal and everlasting.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कर्म-साध्यत्वम्",
+          "en": "being produced by action"
+        },
+        {
+          "sa": "ब्रह्मणः",
+          "en": "of Brahman"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "कुतश्चन",
+          "en": "in any way"
+        },
+        {
+          "sa": "कर्म-साध्यम्",
+          "en": "produced by action"
+        },
+        {
+          "sa": "तु",
+          "en": "whereas"
+        },
+        {
+          "sa": "अनित्यम्",
+          "en": "impermanent"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सनातनम्",
+          "en": "everlasting"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "eternal"
+        }
+      ],
       "sourceNumbers": [
         163
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tasmān na karma-sādhyatvaṃ brahmaṇo’sti kutaścana|\nkarma-sādhyaṃ tvanityaṃ hi brahma nityaṃ sanā-tanam||"
+      "iast": "tasmān na karma-sādhyatvaṃ brahmaṇo’sti kutaścana|\nkarma-sādhyaṃ tvanityaṃ hi brahma nityaṃ sanā-tanam||",
+      "editionTranslation": "It therefore follows that we cannot gain Brahman as product of any kind of activity. Moreover, what is gained by action lasts only for a while, whereas Brahman is eternal and is self-existent."
     },
     {
       "id": "svsss-1-0164",
@@ -11201,13 +11343,67 @@
       "number": "164",
       "label": "Verse 164",
       "deva": "देहादिः क्षीयते लोको यथैवं कर्मणा चितः।\nतथैवामुष्मिको लोकः सञ्चितः पुण्य-कर्मणा॥",
-      "translation": "Our physical bodies as well as the various objects of enjoyment are the outcome of whatever action we have performed in our previous lives; and the body falls according to the law of causation. Similarly in the world to come also, whatever may be achieved by means of meritorious action must necessarily come to an end.",
-      "gloss": [],
+      "translation": "As the world of the body and the like, formed through action, perishes, so too the otherworldly realm accumulated through meritorious action perishes.",
+      "gloss": [
+        {
+          "sa": "देह-आदिः",
+          "en": "the body and the like"
+        },
+        {
+          "sa": "क्षीयते",
+          "en": "perishes"
+        },
+        {
+          "sa": "लोकः",
+          "en": "world"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "कर्मणा",
+          "en": "through action"
+        },
+        {
+          "sa": "चितः",
+          "en": "formed; accumulated"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "आमुष्मिकः",
+          "en": "belonging to the other world"
+        },
+        {
+          "sa": "लोकः",
+          "en": "world"
+        },
+        {
+          "sa": "सञ्चितः",
+          "en": "accumulated"
+        },
+        {
+          "sa": "पुण्य-कर्मणा",
+          "en": "through meritorious action"
+        }
+      ],
       "sourceNumbers": [
         164
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dehādiḥ kṣīyate loko yathaivaṃ karmaṇā citaḥ|\ntathaivāmuṣmiko lokaḥ sañcitaḥ puṇya-karmaṇā||"
+      "iast": "dehādiḥ kṣīyate loko yathaivaṃ karmaṇā citaḥ|\ntathaivāmuṣmiko lokaḥ sañcitaḥ puṇya-karmaṇā||",
+      "editionTranslation": "Our physical bodies as well as the various objects of enjoyment are the outcome of whatever action we have performed in our previous lives; and the body falls according to the law of causation. Similarly in the world to come also, whatever may be achieved by means of meritorious action must necessarily come to an end."
     },
     {
       "id": "svsss-1-0165",
@@ -11215,13 +11411,63 @@
       "number": "165",
       "label": "Verse 165",
       "deva": "कृतकत्वम् अनित्यत्वे हेतुर् जागर्ति सर्वदा।\nतस्माद् अनित्ये स्वर्गादौ पण्डितः को नु मुह्यति॥",
-      "translation": "That which is achieved by means of action cannot be eternal, for such is the law. Therefore even the happiness of svarga (heaven) can last only for a while. Would any wise person covet it?",
-      "gloss": [],
+      "translation": "The fact of being made is always an evident reason for impermanence. So what wise person would be deluded by heaven and the like, which are impermanent?",
+      "gloss": [
+        {
+          "sa": "कृतकत्वम्",
+          "en": "being made"
+        },
+        {
+          "sa": "अनित्यत्वे",
+          "en": "for impermanence"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "a reason"
+        },
+        {
+          "sa": "जागर्ति",
+          "en": "is evident"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अनित्ये",
+          "en": "in what is impermanent"
+        },
+        {
+          "sa": "स्वर्ग-आदौ",
+          "en": "heaven and the like"
+        },
+        {
+          "sa": "पण्डितः",
+          "en": "a wise person"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "नु",
+          "en": "indeed"
+        },
+        {
+          "sa": "मुह्यति",
+          "en": "is deluded"
+        }
+      ],
       "sourceNumbers": [
         165
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kṛtakatvam anityatve hetur jāgarti sarvadā|\ntasmād anitye svargādau paṇḍitaḥ ko nu muhyati||"
+      "iast": "kṛtakatvam anityatve hetur jāgarti sarvadā|\ntasmād anitye svargādau paṇḍitaḥ ko nu muhyati||",
+      "editionTranslation": "That which is achieved by means of action cannot be eternal, for such is the law. Therefore even the happiness of svarga (heaven) can last only for a while. Would any wise person covet it?"
     },
     {
       "id": "svsss-1-0166",
@@ -11229,13 +11475,63 @@
       "number": "166",
       "label": "Verse 166",
       "deva": "जगद्-धेतोस् तु नित्यत्वं सर्वेषाम् अपि सम्मतम्।\nजगद्धेतुत्वम् अस्यैव वावदीति श्रुतिर् मुहुः॥",
-      "translation": "But that which is the cause of the universe must needs be eternal; upon that all are agreed. And it is reiterated in the Śruti that Brahman is the cause of the universe.",
-      "gloss": [],
+      "translation": "All agree that the cause of the universe is eternal; scripture repeatedly declares that Brahman alone is the cause of the universe.",
+      "gloss": [
+        {
+          "sa": "जगत्-हेतोः",
+          "en": "of the cause of the universe"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "नित्यत्वम्",
+          "en": "eternality"
+        },
+        {
+          "sa": "सर्वेषाम्",
+          "en": "of all"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सम्मतम्",
+          "en": "is agreed"
+        },
+        {
+          "sa": "जगत्-हेतुत्वम्",
+          "en": "being the cause of the universe"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "वावदीति",
+          "en": "declares emphatically"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "मुहुः",
+          "en": "repeatedly"
+        }
+      ],
       "sourceNumbers": [
         166
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "jagad-dhetos tu nityatvaṃ sarveṣām api sammatam|\njagaddhetutvam asyaiva vāvadīti śrutir muhuḥ||"
+      "iast": "jagad-dhetos tu nityatvaṃ sarveṣām api sammatam|\njagaddhetutvam asyaiva vāvadīti śrutir muhuḥ||",
+      "editionTranslation": "But that which is the cause of the universe must needs be eternal; upon that all are agreed. And it is reiterated in the Śruti that Brahman is the cause of the universe."
     },
     {
       "id": "svsss-1-0167",
@@ -11243,13 +11539,75 @@
       "number": "167",
       "label": "Verse 167",
       "deva": "ऐतदात्म्यम् इदं सर्वं तत् सत्यम् इति च श्रुतिः।\nअस्यैव नित्यतां ब्रूते जगद्धेतोः सतः स्फुटम्॥",
-      "translation": "The Śruti says, “All this is ensouled by Being. Being alone is real.” The Śruti thus explicitly asserts that this ultimate Being, the cause of the universe is eternal. ((ChanU.6.8.7) (Chāndogya Upaniṣad))",
-      "gloss": [],
+      "translation": "Scripture says, “All this has That as its Self; That is real.” It clearly teaches the eternality of this Being, the cause of the universe.",
+      "gloss": [
+        {
+          "sa": "ऐतद्-आत्म्यम्",
+          "en": "having That as its Self"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "सत्यम्",
+          "en": "real"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "नित्यताम्",
+          "en": "eternality"
+        },
+        {
+          "sa": "ब्रूते",
+          "en": "states"
+        },
+        {
+          "sa": "जगत्-हेतोः",
+          "en": "of the cause of the universe"
+        },
+        {
+          "sa": "सतः",
+          "en": "of Being"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        }
+      ],
       "sourceNumbers": [
         167
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "aitadātmyam idaṃ sarvaṃ tat satyam iti ca śrutiḥ|\nasyaiva nityatāṃ brūte jagaddhetoḥ sataḥ sphuṭam||"
+      "iast": "aitadātmyam idaṃ sarvaṃ tat satyam iti ca śrutiḥ|\nasyaiva nityatāṃ brūte jagaddhetoḥ sataḥ sphuṭam||",
+      "editionTranslation": "The Śruti says, “All this is ensouled by Being. Being alone is real.” The Śruti thus explicitly asserts that this ultimate Being, the cause of the universe is eternal. ((ChanU.6.8.7) (Chāndogya Upaniṣad))"
     },
     {
       "id": "svsss-1-0168",
@@ -11257,13 +11615,67 @@
       "number": "168",
       "label": "Verse 168",
       "deva": "न कर्मणा न प्रजया धनेनेति स्वयं श्रुतिः।\nकर्मणो मोक्ष-हेतुत्वं साक्षाद् एव निषेधति॥",
-      "translation": "Consequently when the Śruti declares, ‘nor by action, nor by begetting children, nor by acquiring wealth’ may Brahman be attained, it explicitly refutes the view that liberation may be attained by means of action.",
-      "gloss": [],
+      "translation": "Scripture itself directly denies that action is a cause of liberation when it says, “Not by action, not by offspring, not by wealth.”",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कर्मणा",
+          "en": "by action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रजया",
+          "en": "by offspring"
+        },
+        {
+          "sa": "धनेन",
+          "en": "by wealth"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "कर्मणः",
+          "en": "of action"
+        },
+        {
+          "sa": "मोक्ष-हेतुत्वम्",
+          "en": "being a cause of liberation"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "निषेधति",
+          "en": "denies"
+        }
+      ],
       "sourceNumbers": [
         168
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "na karmaṇā na prajayā dhaneneti svayaṃ śrutiḥ|\nkarmaṇo mokṣa-hetutvaṃ sākṣād eva niṣedhati||"
+      "iast": "na karmaṇā na prajayā dhaneneti svayaṃ śrutiḥ|\nkarmaṇo mokṣa-hetutvaṃ sākṣād eva niṣedhati||",
+      "editionTranslation": "Consequently when the Śruti declares, ‘nor by action, nor by begetting children, nor by acquiring wealth’ may Brahman be attained, it explicitly refutes the view that liberation may be attained by means of action."
     },
     {
       "id": "svsss-1-0169",
@@ -11271,13 +11683,115 @@
       "number": "169",
       "label": "Verse 169",
       "deva": "प्रत्यग्-ब्रह्म-विचार-पूर्वम् उभयोर् एकत्व-बोधाद् विना\nकैवल्यं पुरुषस्य सिध्यति पर-ब्रह्मात्मता-लक्षणम्।\nन स्नानैर् अपि कीर्तनैर् अपि जपैर् नो कृच्छ्र-चान्द्रायणैर्\nनो वाप्य् अध्वर-यज्ञ-दान-निगमैर् नो मन्त्र-तन्त्रैर् अपि॥",
-      "translation": "Liberation, consisting of the utter identity with Brahman, is unattainable except through the comprehension of the unity of the Ātman and Brahman, through a process of rational enquiry into the two. It is not to be attained by bathing in sacred streams, chanting holy hymns, reciting sacred formulas or by means of hard penances such as kṛccra and cāndrāyaṇa, or by means of sacrifices, charity, scriptures and sacred syllables, and other approved actions.",
-      "gloss": [],
+      "translation": "A person’s liberation, whose nature is identity with supreme Brahman, is attained only through understanding the unity of the inward Self and Brahman, preceded by inquiry into both—not through baths, hymns, recitations, severe vows such as kṛcchra and cāndrāyaṇa, sacrifices, offerings, Vedic texts, mantras, or ritual manuals.",
+      "gloss": [
+        {
+          "sa": "प्रत्यग्-ब्रह्म-विचार-पूर्वम्",
+          "en": "preceded by inquiry into the inward Self and Brahman"
+        },
+        {
+          "sa": "उभयोः",
+          "en": "of both"
+        },
+        {
+          "sa": "एकत्व-बोधात्",
+          "en": "from understanding their unity"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "कैवल्यम्",
+          "en": "liberation"
+        },
+        {
+          "sa": "पुरुषस्य",
+          "en": "of a person"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        },
+        {
+          "sa": "पर-ब्रह्म-आत्मता-लक्षणम्",
+          "en": "characterized by identity with supreme Brahman"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्नानैः",
+          "en": "by baths"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "कीर्तनैः",
+          "en": "by hymns; chanting"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "जपैः",
+          "en": "by recitations"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उ",
+          "en": "indeed"
+        },
+        {
+          "sa": "कृच्छ्र-चान्द्रायणैः",
+          "en": "by kṛcchra and cāndrāyaṇa austerities"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अध्वर-यज्ञ-दान-निगमैः",
+          "en": "by sacrifices, offerings, and Vedic texts"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उ",
+          "en": "indeed"
+        },
+        {
+          "sa": "मन्त्र-तन्त्रैः",
+          "en": "by mantras and ritual manuals"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        }
+      ],
       "sourceNumbers": [
         169
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "pratyag-brahma-vicāra-pūrvam ubhayor ekatva-bodhād vinā\nkaivalyaṃ puruṣasya sidhyati para-brahmātmatā-lakṣaṇam|\nna snānair api kīrtanair api japair no kṛcchra-cāndrāyaṇair\nno vāpy adhvara-yajña-dāna-nigamair no mantra-tantrair api||"
+      "iast": "pratyag-brahma-vicāra-pūrvam ubhayor ekatva-bodhād vinā\nkaivalyaṃ puruṣasya sidhyati para-brahmātmatā-lakṣaṇam|\nna snānair api kīrtanair api japair no kṛcchra-cāndrāyaṇair\nno vāpy adhvara-yajña-dāna-nigamair no mantra-tantrair api||",
+      "editionTranslation": "Liberation, consisting of the utter identity with Brahman, is unattainable except through the comprehension of the unity of the Ātman and Brahman, through a process of rational enquiry into the two. It is not to be attained by bathing in sacred streams, chanting holy hymns, reciting sacred formulas or by means of hard penances such as kṛccra and cāndrāyaṇa, or by means of sacrifices, charity, scriptures and sacred syllables, and other approved actions."
     },
     {
       "id": "svsss-1-0170",
@@ -11285,13 +11799,55 @@
       "number": "170",
       "label": "Verse 170",
       "deva": "ज्ञानाद् एव तु कैवल्यम् इति श्रुत्या निगद्यते।\nज्ञानस्य मुक्ति-हेतुत्वम् अन्य-व्यावृत्ति-पूर्वकम्॥",
-      "translation": "This is why the Śruti says, ‘By knowledge alone doth one attain liberation.’ By proclaiming the unique nature of knowledge the Śruti negates all other means.",
-      "gloss": [],
+      "translation": "Scripture says, “Liberation is attained by knowledge alone,” and declares knowledge to be the cause of freedom after excluding all other means.",
+      "gloss": [
+        {
+          "sa": "ज्ञानात्",
+          "en": "through knowledge"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "कैवल्यम्",
+          "en": "liberation"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by scripture"
+        },
+        {
+          "sa": "निगद्यते",
+          "en": "is declared"
+        },
+        {
+          "sa": "ज्ञानस्य",
+          "en": "of knowledge"
+        },
+        {
+          "sa": "मुक्ति-हेतुत्वम्",
+          "en": "being a cause of liberation"
+        },
+        {
+          "sa": "अन्य-व्यावृत्ति-पूर्वकम्",
+          "en": "with other means excluded"
+        }
+      ],
       "sourceNumbers": [
         170
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "jñānād eva tu kaivalyam iti śrutyā nigadyate|\njñānasya mukti-hetutvam anya-vyāvṛtti-pūrvakam||"
+      "iast": "jñānād eva tu kaivalyam iti śrutyā nigadyate|\njñānasya mukti-hetutvam anya-vyāvṛtti-pūrvakam||",
+      "editionTranslation": "This is why the Śruti says, ‘By knowledge alone doth one attain liberation.’ By proclaiming the unique nature of knowledge the Śruti negates all other means."
     },
     {
       "id": "svsss-1-0171",
@@ -22803,5 +23359,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–160 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–170 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
 }
