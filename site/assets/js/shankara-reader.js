@@ -92,8 +92,7 @@ function chapterOf(unit,id){
 function contentsHTML(units,id){
  const groups=[];
  units.forEach((unit,index)=>{
-  const chapter=chapterOf(unit,id);
-  const section=String(unit.sectionTitle||"").trim();
+  const chapter=chapterOf(unit,id),section=String(unit.sectionTitle||"").trim();
   const key=section?"section:"+section:chapter?"chapter:"+chapter:"all";
   let group=groups[groups.length-1];
   if(!group||group.key!==key){
@@ -109,21 +108,22 @@ function contentsHTML(units,id){
  });
  const links=(items)=>{
   if(items.length<=20)return items.map(({unit,index})=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label||("Verse "+(unit.number||index+1)))+'</a></li>').join("");
-  const size=items.length>200?50:items.length>100?25:10;
-  const rows=[];
+  const size=items.length>200?50:items.length>100?25:10,rows=[];
   for(let i=0;i<items.length;i+=size){
    const part=items.slice(i,i+size),first=part[0],last=part[part.length-1];
    const start=first.unit.number||String(first.index+1),finish=last.unit.number||String(last.index+1);
-   const type=first.unit.label&&/^Page/i.test(first.unit.label)?"Pages":"Verses";
+   const type=first.unit.label&&/^Page/i.test(first.unit.label)?"Pages":first.unit.label&&/^Passage/i.test(first.unit.label)?"Passages":"Verses";
    rows.push('<li><a href="#'+esc(first.unit.id)+'">'+esc(type+" "+start+"–"+finish)+'</a></li>');
   }
   return rows.join("");
  };
  if(units.length<=20)return '<ol>'+links(units.map((unit,index)=>({unit,index})))+'</ol>';
+ const descriptive=units.every(unit=>unit.label&&!/^(?:(?:chapter\s+\S+\s*[·:–-]\s*)?)(?:verses?|passages?|sections?|pages?|entries?)\s+\S+$/i.test(unit.label));
+ if(descriptive)return '<ol>'+units.map(unit=>'<li><a href="#'+esc(unit.id)+'">'+esc(unit.label)+'</a></li>').join("")+'</ol>';
  if(groups.length===1&&groups[0].key==="all")return '<ol>'+links(groups[0].items)+'</ol>';
  return '<ol>'+groups.map(group=>{
-  const first=group.items[0].unit;
-  const title=group.title||("Verses "+(first.number||group.items[0].index+1)+"–"+(group.items[group.items.length-1].unit.number||group.items[group.items.length-1].index+1));
+  const first=group.items[0].unit,tail=group.items[group.items.length-1];
+  const title=group.title||("Verses "+(first.number||group.items[0].index+1)+"–"+(tail.unit.number||tail.index+1));
   return '<li><a href="#'+esc(first.id)+'">'+esc(title)+'</a><ol>'+links(group.items)+'</ol></li>';
  }).join("")+'</ol>';
 }
