@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 445
+      "end": 450
     },
-    "note": "Source verses 1–445 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 446 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–450 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 451 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -34370,60 +34370,298 @@
       "number": "446",
       "label": "Verse 446",
       "deva": "सुखाद्यनुभवो यावत्तावत्प्रारब्धमिष्यते ।\nफलोदयः क्रियापूर्वो निष्क्रियो न हि कुत्रचित् ॥",
-      "iast": "sukhādyanubhavo yāvattāvatprārabdhamiṣyate |\nphalodayaḥ kriyāpūrvo niṣkriyo na hi kutracit ||",
-      "translation": "Prarabdha work is acknowledged to persist so long as there is the perception of happiness and the like. Every result is preceded by an action, and nowhere is it seen to accrue independently of action.",
-      "gloss": [],
+      "iast": "sukhādy-anubhavo yāvat tāvat prārabdham iṣyate |\nphalodayaḥ kriyā-pūrvo niṣkriyo na hi kutracit ||",
+      "translation": "For as long as pleasure and similar things are experienced, prārabdha is held to last. The arising of a result is preceded by action; nothing happens anywhere without action.",
+      "gloss": [
+        {
+          "sa": "सुख-आदि-अनुभवः",
+          "en": "experience of pleasure and the like"
+        },
+        {
+          "sa": "यावत्",
+          "en": "for as long as"
+        },
+        {
+          "sa": "तावत्",
+          "en": "for that long"
+        },
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha; karma already begun"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is held; is accepted"
+        },
+        {
+          "sa": "फल-उदयः",
+          "en": "the arising of a result"
+        },
+        {
+          "sa": "क्रिया-पूर्वः",
+          "en": "preceded by action"
+        },
+        {
+          "sa": "निष्क्रियः",
+          "en": "without action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "कुत्रचित्",
+          "en": "anywhere"
+        }
+      ],
       "sourceNumbers": [
         446
-      ]
+      ],
+      "editionTranslation": "Prarabdha work is acknowledged to persist so long as there is the perception of happiness and the like. Every result is preceded by an action, and nowhere is it seen to accrue independently of action."
     },
     {
       "id": "vivekachudamani-447",
       "number": "447",
       "label": "Verse 447",
       "deva": "अहं ब्रह्मेति विज्ञानात् कल्पकोटिशतार्जितम् ।\nसञ्चितं विलयं याति प्रबोधात्स्वप्नकर्मवत् ॥",
-      "iast": "ahaṃ brahmeti vijñānāt kalpakoṭiśatārjitam |\nsañcitaṃ vilayaṃ yāti prabodhātsvapnakarmavat ||",
-      "translation": "Through the realisation of one’s identity with Brahman, all the accumulated actions of a hundred crore of cycles come to nought, like the actions of dream-state on awakening.",
-      "gloss": [],
+      "iast": "ahaṃ brahmeti vijñānāt kalpa-koṭi-śatārjitam |\nsañcitaṃ vilayaṃ yāti prabodhāt svapna-karma-vat ||",
+      "translation": "Through the realization “I am Brahman,” accumulated karma acquired over a hundred crores of cosmic ages dissolves, like dream-action upon awakening.",
+      "gloss": [
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; that"
+        },
+        {
+          "sa": "विज्ञानात्",
+          "en": "through the realization; from the knowledge"
+        },
+        {
+          "sa": "कल्प-कोटि-शत-अर्जितम्",
+          "en": "acquired over a hundred crores of cosmic ages"
+        },
+        {
+          "sa": "सञ्चितम्",
+          "en": "accumulated karma"
+        },
+        {
+          "sa": "विलयम्",
+          "en": "to dissolution"
+        },
+        {
+          "sa": "याति",
+          "en": "goes; passes"
+        },
+        {
+          "sa": "प्रबोधात्",
+          "en": "upon awakening"
+        },
+        {
+          "sa": "स्वप्न-कर्म-वत्",
+          "en": "like dream-action"
+        }
+      ],
       "sourceNumbers": [
         447
-      ]
+      ],
+      "editionTranslation": "Through the realisation of one’s identity with Brahman, all the accumulated actions of a hundred crore of cycles come to nought, like the actions of dream-state on awakening."
     },
     {
       "id": "vivekachudamani-448",
       "number": "448",
       "label": "Verse 448",
       "deva": "यत्कृतं स्वप्नवेलायां पुण्यं वा पापम् उल्बणम् ।\nसुप्तोत्थितस्य किं तत् स्यात् स्वर्गाय नरकाय वा ॥",
-      "iast": "yatkṛtaṃ svapnavelāyāṃ puṇyaṃ vā pāpam ulbaṇam |\nsuptotthitasya kiṃ tat syāt svargāya narakāya vā ||",
-      "translation": "Can the good actions or dreadful sins that a man fancies himself doing in the dream-state, lead him to heaven or hell after he has awakened from sleep ?",
-      "gloss": [],
+      "iast": "yat kṛtaṃ svapna-velāyāṃ puṇyaṃ vā pāpam ulbaṇam |\nsuptotthitasya kiṃ tat syāt svargāya narakāya vā ||",
+      "translation": "Whatever was done during a dream—whether merit or dreadful sin—what could it bring to one who has awakened: heaven or hell?",
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "कृतम्",
+          "en": "was done"
+        },
+        {
+          "sa": "स्वप्न-वेलायाम्",
+          "en": "during dream-time"
+        },
+        {
+          "sa": "पुण्यम्",
+          "en": "merit; a meritorious act"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "पापम्",
+          "en": "sin; a sinful act"
+        },
+        {
+          "sa": "उल्बणम्",
+          "en": "dreadful; terrible"
+        },
+        {
+          "sa": "सुप्त-उत्थितस्य",
+          "en": "for one who has awakened from sleep"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "स्वर्गाय",
+          "en": "for heaven"
+        },
+        {
+          "sa": "नरकाय",
+          "en": "for hell"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        }
+      ],
       "sourceNumbers": [
         448
-      ]
+      ],
+      "editionTranslation": "Can the good actions or dreadful sins that a man fancies himself doing in the dream-state, lead him to heaven or hell after he has awakened from sleep ?"
     },
     {
       "id": "vivekachudamani-449",
       "number": "449",
       "label": "Verse 449",
       "deva": "स्वम् असङ्गम् उदासीनं परिज्ञाय नभो यथा ।\nन श्लिष्यति च यत् किंचित् कदाचिद् भाविकर्मभिः ॥",
-      "iast": "svam asaṅgam udāsīnaṃ parijñāya nabho yathā |\nna śliṣyati ca yat kiṃcit kadācid bhāvikarmabhiḥ ||",
-      "translation": "Realising the Atman, which is unattached and indifferent like the sky, the aspirant is never touched in the least by actions yet to be done.",
-      "gloss": [],
+      "iast": "svam asaṅgam udāsīnaṃ parijñāya nabho yathā |\nna śliṣyati ca yat kiṃcit kadācid bhāvi-karmabhiḥ ||",
+      "translation": "Having fully known one's own Self as unattached and uninvolved, like the sky, one is never in any way tainted by future actions.",
+      "gloss": [
+        {
+          "sa": "स्वम्",
+          "en": "oneself; one's own Self"
+        },
+        {
+          "sa": "असङ्गम्",
+          "en": "unattached"
+        },
+        {
+          "sa": "उदासीनम्",
+          "en": "uninvolved; indifferent"
+        },
+        {
+          "sa": "परिज्ञाय",
+          "en": "having fully known"
+        },
+        {
+          "sa": "नभः",
+          "en": "the sky; space"
+        },
+        {
+          "sa": "यथा",
+          "en": "like"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "श्लिष्यति",
+          "en": "is tainted; clings"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यत् किञ्चित्",
+          "en": "anything at all; in any way"
+        },
+        {
+          "sa": "कदाचित्",
+          "en": "ever"
+        },
+        {
+          "sa": "भावि-कर्मभिः",
+          "en": "by future actions"
+        }
+      ],
       "sourceNumbers": [
         449
-      ]
+      ],
+      "editionTranslation": "Realising the Atman, which is unattached and indifferent like the sky, the aspirant is never touched in the least by actions yet to be done."
     },
     {
       "id": "vivekachudamani-450",
       "number": "450",
       "label": "Verse 450",
       "deva": "न नभो घटयोगेन सुरागन्धेन लिप्यते ।\nतथात्मोपाधियोगेन तद्धर्मैर् नैव लिप्यते ॥",
-      "iast": "na nabho ghaṭayogena surāgandhena lipyate |\ntathātmopādhiyogena taddharmair naiva lipyate ||",
-      "translation": "The sky is not affected by the smell of liquor merely through its connection with the jar; similarly, the Atman is not, through Its connection with the limitations, affected by the properties thereof.",
-      "gloss": [],
+      "iast": "na nabho ghaṭa-yogena surā-gandhena lipyate |\ntathātmopādhi-yogena tad-dharmair naiva lipyate ||",
+      "translation": "The sky is not stained by liquor-smell through its association with a jar. In the same way, the Self is not at all stained by the properties of its limiting adjuncts through association with them.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नभः",
+          "en": "the sky; space"
+        },
+        {
+          "sa": "घट-योगेन",
+          "en": "through association with a jar"
+        },
+        {
+          "sa": "सुरा-गन्धेन",
+          "en": "by the smell of liquor"
+        },
+        {
+          "sa": "लिप्यते",
+          "en": "is stained; is tainted"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "आत्म-उपाधि-योगेन",
+          "en": "through the Self's association with limiting adjuncts"
+        },
+        {
+          "sa": "तद्-धर्मैः",
+          "en": "by their properties"
+        },
+        {
+          "sa": "न एव",
+          "en": "not at all"
+        },
+        {
+          "sa": "लिप्यते",
+          "en": "is stained; is tainted"
+        }
+      ],
       "sourceNumbers": [
         450
-      ]
+      ],
+      "editionTranslation": "The sky is not affected by the smell of liquor merely through its connection with the jar; similarly, the Atman is not, through Its connection with the limitations, affected by the properties thereof."
     },
     {
       "id": "vivekachudamani-451",
@@ -36011,6 +36249,7 @@
     "Normalized verse 432's IAST sandhi to atītān-anusandhānam and verse 435's compound boundary to āsvādāsakta.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 436–440; preserved prior translations as editionTranslation. Corrected verse 436's malformed word boundary and verse 439's vijāniti to the grammatically supported vijānāti reading.",
     "Clarified verse 438's dual bhavataḥ: neither of the two notions arises.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 441–445; preserved prior translations as editionTranslation. Kept verse 442's saṃsṛti as worldly wandering/transmigration and rendered verse 445's phala-darśana as observation of results."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 441–445; preserved prior translations as editionTranslation. Kept verse 442's saṃsṛti as worldly wandering/transmigration and rendered verse 445's phala-darśana as observation of results.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 446–450; preserved prior translations as editionTranslation. Kept verse 446’s action-before-result reasoning and rendered the hundred-crore kalpa compound in verse 447 explicitly."
   ]
 }
