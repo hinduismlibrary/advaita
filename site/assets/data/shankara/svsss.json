@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–105.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–125.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 105
+      "to": 125
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–105 of Adhyāya 1 (verses 17–18, 44–45, and 91–92 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–125 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -7675,13 +7675,47 @@
       "number": "106",
       "label": "Verse 106",
       "deva": "सत्यं निर्ममता स्थैर्यम् अभिमान-विसर्जनम्।\nईश्वर-ध्यान-परता ब्रह्मविद्भिः सह स्थितिः॥",
-      "translation": "Truthfulness (satya), non-attachment (nirmamatā), the cultivation of the steadiness (sthairya) of mind which is born as a result of conviction in the Śāstras, the absence of egoism (abhimāna-visarjana), faith in divine contemplation (dhyāna), and the love (sthiti) of holy company are also essential.",
-      "gloss": [],
+      "translation": "Truthfulness, freedom from possessiveness, steadiness, relinquishing conceit, devotion to contemplation of the Lord, and association with knowers of Brahman [are also means to serenity].",
+      "gloss": [
+        {
+          "sa": "सत्यम्",
+          "en": "truthfulness"
+        },
+        {
+          "sa": "निर्ममता",
+          "en": "freedom from possessiveness"
+        },
+        {
+          "sa": "स्थैर्यम्",
+          "en": "steadiness"
+        },
+        {
+          "sa": "अभिमान-विसर्जनम्",
+          "en": "relinquishing conceit"
+        },
+        {
+          "sa": "ईश्वर-ध्यान-परता",
+          "en": "devotion to contemplation of the Lord"
+        },
+        {
+          "sa": "ब्रह्मविद्भिः",
+          "en": "with knowers of Brahman"
+        },
+        {
+          "sa": "सह",
+          "en": "with"
+        },
+        {
+          "sa": "स्थितिः",
+          "en": "association; abiding"
+        }
+      ],
       "sourceNumbers": [
         106
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "satyaṃ nirmamatā sthairyam abhimāna-visarjanam|\nīśvara-dhyāna-paratā brahmavidbhiḥ saha sthitiḥ||"
+      "iast": "satyaṃ nirmamatā sthairyam abhimāna-visarjanam|\nīśvara-dhyāna-paratā brahmavidbhiḥ saha sthitiḥ||",
+      "editionTranslation": "Truthfulness (satya), non-attachment (nirmamatā), the cultivation of the steadiness (sthairya) of mind which is born as a result of conviction in the Śāstras, the absence of egoism (abhimāna-visarjana), faith in divine contemplation (dhyāna), and the love (sthiti) of holy company are also essential."
     },
     {
       "id": "svsss-1-0107",
@@ -7689,13 +7723,43 @@
       "number": "107",
       "label": "Verse 107",
       "deva": "ज्ञान-शास्त्रैक-परता समता सुख-दुःखयोः।\nमानानासक्तिर् एकान्त-शीलता च मुमुक्षुता॥",
-      "translation": "Add to it a devout study (eka-paratā) of the Jñāna Śāstras, the attitude of looking upon prosperity and adversity with equanimity (samatā), the absence of the hankering after public honour (māna-anāsakti), the love of solitude (ekānta-śīlatā), and the intense desire for liberation (mumukṣutā).",
-      "gloss": [],
+      "translation": "Exclusive devotion to the texts of knowledge, evenness in pleasure and pain, freedom from attachment to honor, a habit of solitude, and longing for liberation [are also means].",
+      "gloss": [
+        {
+          "sa": "ज्ञान-शास्त्रैक-परता",
+          "en": "exclusive devotion to the texts of knowledge"
+        },
+        {
+          "sa": "समता",
+          "en": "evenness"
+        },
+        {
+          "sa": "सुख-दुःखयोः",
+          "en": "in pleasure and pain"
+        },
+        {
+          "sa": "मानानासक्तिः",
+          "en": "freedom from attachment to honor"
+        },
+        {
+          "sa": "एकान्त-शीलता",
+          "en": "habit of solitude"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मुमुक्षुता",
+          "en": "desire for liberation"
+        }
+      ],
       "sourceNumbers": [
         107
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "jñāna-śāstraika-paratā samatā sukha-duḥkhayoḥ|\nmānānāsaktir ekānta-śīlatā ca mumukṣutā||"
+      "iast": "jñāna-śāstraika-paratā samatā sukha-duḥkhayoḥ|\nmānānāsaktir ekānta-śīlatā ca mumukṣutā||",
+      "editionTranslation": "Add to it a devout study (eka-paratā) of the Jñāna Śāstras, the attitude of looking upon prosperity and adversity with equanimity (samatā), the absence of the hankering after public honour (māna-anāsakti), the love of solitude (ekānta-śīlatā), and the intense desire for liberation (mumukṣutā)."
     },
     {
       "id": "svsss-1-0108",
@@ -7703,13 +7767,59 @@
       "number": "108",
       "label": "Verse 108",
       "deva": "यस्यैतद् विद्यते सर्वं तस्य चित्तं प्रसीदति।\nन त्वेतद् धर्म-शून्यस्य प्रकारान्तर-कोटिभिः॥",
-      "translation": "One who is endowed in full measure with all these noble qualities attains peace. But where these essential qualities are lacking, even millions of other qualities are of little value.",
-      "gloss": [],
+      "translation": "For one who has all these, the mind becomes serene. But for one lacking these qualities, [serenity] is not attained even through crores of other means.",
+      "gloss": [
+        {
+          "sa": "यस्य",
+          "en": "of whom; for one who"
+        },
+        {
+          "sa": "एतद्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "विद्यते",
+          "en": "is present; exists"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that person"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "प्रसीदति",
+          "en": "becomes clear; serene"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "एतद्-धर्म-शून्यस्य",
+          "en": "for one lacking these qualities"
+        },
+        {
+          "sa": "प्रकारान्तर-कोटिभिः",
+          "en": "even through crores of other kinds"
+        }
+      ],
       "sourceNumbers": [
         108
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yasyaitad vidyate sarvaṃ tasya cittaṃ prasīdati|\nna tvetad dharma-śūnyasya prakārāntara-koṭibhiḥ||"
+      "iast": "yasyaitad vidyate sarvaṃ tasya cittaṃ prasīdati|\nna tvetad dharma-śūnyasya prakārāntara-koṭibhiḥ||",
+      "editionTranslation": "One who is endowed in full measure with all these noble qualities attains peace. But where these essential qualities are lacking, even millions of other qualities are of little value."
     },
     {
       "id": "svsss-1-0109",
@@ -7717,14 +7827,88 @@
       "number": "109–110",
       "label": "Verses 109–110",
       "deva": "स्मरणं दर्शनं स्त्रीणां गुण-कर्मानुकीर्तनम्।\nसमीचीनत्व-धीस् तासु प्रीतिः सम्भाषणं मिथः॥\nसह-वासश्च संसर्गोऽष्टधा मैथुनं विदुः।\nएतद्-विलक्षणं ब्रह्म-चर्यं चित्त-प्रसादकम्॥",
-      "translation": "Brahma-carya At first a man begins to think of women. He then sees them, praises their qualities and deeds. He fancies them beautiful, loves them and talks to them in private. Thus he comes to live and move with them. In this way a man longes for himself the eightfold fetters of life. But it is only by shunning all this that Brahma-carya may be attained. It is only by this means that it is possible to attain tranquility of mind.",
-      "gloss": [],
+      "translation": "Remembering women, seeing them, praising their qualities and actions, thinking them desirable, affection for them, private conversation, living together, and close association—these are known as eightfold sexual involvement. Brahmacarya, distinct from these, brings clarity to the mind.",
+      "gloss": [
+        {
+          "sa": "स्मरणम्",
+          "en": "remembering"
+        },
+        {
+          "sa": "दर्शनम्",
+          "en": "seeing"
+        },
+        {
+          "sa": "स्त्रीणाम्",
+          "en": "of women"
+        },
+        {
+          "sa": "गुण-कर्म-अनुकीर्तनम्",
+          "en": "praising their qualities and actions"
+        },
+        {
+          "sa": "समीचीनत्व-धीः",
+          "en": "the idea that they are desirable"
+        },
+        {
+          "sa": "तासु",
+          "en": "toward them"
+        },
+        {
+          "sa": "प्रीतिः",
+          "en": "affection"
+        },
+        {
+          "sa": "सम्भाषणम्",
+          "en": "conversation"
+        },
+        {
+          "sa": "मिथः",
+          "en": "with one another"
+        },
+        {
+          "sa": "सह-वासः",
+          "en": "living together"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "संसर्गः",
+          "en": "close association"
+        },
+        {
+          "sa": "अष्टधा",
+          "en": "eightfold"
+        },
+        {
+          "sa": "मैथुनम्",
+          "en": "sexual union; sexual involvement"
+        },
+        {
+          "sa": "विदुः",
+          "en": "they know; they call"
+        },
+        {
+          "sa": "एतद्-विलक्षणम्",
+          "en": "distinct from this"
+        },
+        {
+          "sa": "ब्रह्म-चर्यम्",
+          "en": "brahmacarya; disciplined restraint"
+        },
+        {
+          "sa": "चित्त-प्रसादकम्",
+          "en": "bringing clarity to the mind"
+        }
+      ],
       "sourceNumbers": [
         109,
         110
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "smaraṇaṃ darśanaṃ strīṇāṃ guṇa-karmānukīrtanam|\nsamīcīnatva-dhīs tāsu prītiḥ sambhāṣaṇaṃ mithaḥ||\nsaha-vāsaśca saṃsargo’ṣṭadhā maithunaṃ viduḥ|\netad-vilakṣaṇaṃ brahma-caryaṃ citta-prasādakam||"
+      "iast": "smaraṇaṃ darśanaṃ strīṇāṃ guṇa-karmānukīrtanam|\nsamīcīnatva-dhīs tāsu prītiḥ sambhāṣaṇaṃ mithaḥ||\nsaha-vāsaśca saṃsargo’ṣṭadhā maithunaṃ viduḥ|\netad-vilakṣaṇaṃ brahma-caryaṃ citta-prasādakam||",
+      "editionTranslation": "Brahma-carya At first a man begins to think of women. He then sees them, praises their qualities and deeds. He fancies them beautiful, loves them and talks to them in private. Thus he comes to live and move with them. In this way a man longes for himself the eightfold fetters of life. But it is only by shunning all this that Brahma-carya may be attained. It is only by this means that it is possible to attain tranquility of mind."
     },
     {
       "id": "svsss-1-0111",
@@ -7732,13 +7916,47 @@
       "number": "111",
       "label": "Verse 111",
       "deva": "अहिंसा वाङ्मनःकायैः प्राणिमात्रा-प्रपीडनम्।\nस्वात्मवत् सर्व-भूतेषु कायेन मनसा गिरा॥",
-      "translation": "Non-injury Next comes the quality of non-injury. It does not mean merely abstaining from inflicting pain upon other living beings, either in thought, expression or action; it also includes regarding all beings as oneself in thought, word, and deed.",
-      "gloss": [],
+      "translation": "Non-injury is [refraining from] harming any living being through speech, mind, or body, and regarding all beings as one's own self through body, mind, and speech.",
+      "gloss": [
+        {
+          "sa": "अहिंसा",
+          "en": "non-injury"
+        },
+        {
+          "sa": "वाङ्मनःकायैः",
+          "en": "through speech, mind, and body"
+        },
+        {
+          "sa": "प्राणिमात्र-प्रपीडनम्",
+          "en": "harming any living being"
+        },
+        {
+          "sa": "स्वात्मवत्",
+          "en": "like one's own self"
+        },
+        {
+          "sa": "सर्व-भूतेषु",
+          "en": "in all beings"
+        },
+        {
+          "sa": "कायेन",
+          "en": "by the body"
+        },
+        {
+          "sa": "मनसा",
+          "en": "by the mind"
+        },
+        {
+          "sa": "गिरा",
+          "en": "by speech"
+        }
+      ],
       "sourceNumbers": [
         111
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ahiṃsā vāṅmanaḥkāyaiḥ prāṇimātrā-prapīḍanam|\nsvātmavat sarva-bhūteṣu kāyena manasā girā||"
+      "iast": "ahiṃsā vāṅmanaḥkāyaiḥ prāṇimātrā-prapīḍanam|\nsvātmavat sarva-bhūteṣu kāyena manasā girā||",
+      "editionTranslation": "Non-injury Next comes the quality of non-injury. It does not mean merely abstaining from inflicting pain upon other living beings, either in thought, expression or action; it also includes regarding all beings as oneself in thought, word, and deed."
     },
     {
       "id": "svsss-1-0112",
@@ -7746,13 +7964,55 @@
       "number": "112",
       "label": "Verse 112",
       "deva": "अनुकम्पा दया सैव प्रोक्ता वेदान्त-वेदिभिः।\nकरण-त्रितयेष्वेक-रूपतावक्रता मता॥",
-      "translation": "Compassion and guilelessness Compassion means kindness, so say the knowers of Vedānta. Similarly the quality of straightforwardness implies the co-ordination of thought, expression, and action, as revealed in one’s day to day conduct.",
-      "gloss": [],
+      "translation": "Compassion is the kindness named by knowers of Vedānta. Straightforwardness is considered consistency among the three instruments: body, speech, and mind.",
+      "gloss": [
+        {
+          "sa": "अनुकम्पा",
+          "en": "compassion"
+        },
+        {
+          "sa": "दया",
+          "en": "kindness"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रोक्ता",
+          "en": "is called"
+        },
+        {
+          "sa": "वेदान्त-वेदिभिः",
+          "en": "by knowers of Vedānta"
+        },
+        {
+          "sa": "करण-त्रितयेषु",
+          "en": "among the three instruments"
+        },
+        {
+          "sa": "एक-रूपता",
+          "en": "consistency; sameness"
+        },
+        {
+          "sa": "अवक्रता",
+          "en": "straightforwardness"
+        },
+        {
+          "sa": "मता",
+          "en": "is considered"
+        }
+      ],
       "sourceNumbers": [
         112
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "anukampā dayā saiva proktā vedānta-vedibhiḥ|\nkaraṇa-tritayeṣveka-rūpatāvakratā matā||"
+      "iast": "anukampā dayā saiva proktā vedānta-vedibhiḥ|\nkaraṇa-tritayeṣveka-rūpatāvakratā matā||",
+      "editionTranslation": "Compassion and guilelessness Compassion means kindness, so say the knowers of Vedānta. Similarly the quality of straightforwardness implies the co-ordination of thought, expression, and action, as revealed in one’s day to day conduct."
     },
     {
       "id": "svsss-1-0113",
@@ -7760,13 +8020,59 @@
       "number": "113",
       "label": "Verse 113",
       "deva": "ब्रह्मादि-स्थावरान्तेषु वैराग्यं विषयेष्व् अनु।\nयथैव काकविष्ठायां वैराग्यं तद्धि निर्मलम्॥",
-      "translation": "Dispassion Dispassion means the total absence of desire towards all the objects of enjoyment. Where there is dispassion, even the office of Hiraṇya-garbha is considered to be of little worth.",
-      "gloss": [],
+      "translation": "Dispassion toward objects ranging from Brahmā to immovable things, like one's dispassion toward crow dung—that indeed is pure dispassion.",
+      "gloss": [
+        {
+          "sa": "ब्रह्मादि-स्थावरान्तेषु",
+          "en": "among objects ranging from Brahmā to immovable things"
+        },
+        {
+          "sa": "वैराग्यम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "विषयेषु",
+          "en": "toward objects"
+        },
+        {
+          "sa": "अनु",
+          "en": "in relation to; toward"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "एव",
+          "en": "just"
+        },
+        {
+          "sa": "काक-विष्ठायाम्",
+          "en": "toward crow dung"
+        },
+        {
+          "sa": "वैराग्यम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "निर्मलम्",
+          "en": "pure"
+        }
+      ],
       "sourceNumbers": [
         113
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "brahmādi-sthāvarānteṣu vairāgyaṃ viṣayeṣv anu|\nyathaiva kākaviṣṭhāyāṃ vairāgyaṃ taddhi nirmalam||"
+      "iast": "brahmādi-sthāvarānteṣu vairāgyaṃ viṣayeṣv anu|\nyathaiva kākaviṣṭhāyāṃ vairāgyaṃ taddhi nirmalam||",
+      "editionTranslation": "Dispassion Dispassion means the total absence of desire towards all the objects of enjoyment. Where there is dispassion, even the office of Hiraṇya-garbha is considered to be of little worth."
     },
     {
       "id": "svsss-1-0114",
@@ -7774,14 +8080,108 @@
       "number": "114–115",
       "label": "Verses 114–115",
       "deva": "बाह्यम् आभ्यन्तरं चेति द्विविधं शौचम् उच्यते।\nमृज्-जलाभ्यां कृतं शौचं बाह्यं शारीरकं स्मृतम्॥\nअज्ञान-दूरी-करणं मानसं शौचम् आन्तरम्।\nअन्तः-शौचे स्थिते सम्यग् बाह्यं नावश्यकं नृणाम्॥",
-      "translation": "Cleanliness Cleanliness is of two kinds, external and internal. External cleanliness is attained by the use of earth and water. Internal cleanliness or purity is attained only by means of the removal of ignorance. Where there is inner purity, mere external cleanliness becomes less significant.",
-      "gloss": [],
+      "translation": "Purity is said to be twofold: external and internal. Cleanliness performed with earth and water is regarded as external, bodily cleanliness. Removing ignorance is internal mental purity. When inner purity is fully established, external cleanliness is unnecessary for people.",
+      "gloss": [
+        {
+          "sa": "बाह्यम्",
+          "en": "external"
+        },
+        {
+          "sa": "आभ्यन्तरम्",
+          "en": "internal"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "द्विविधम्",
+          "en": "twofold"
+        },
+        {
+          "sa": "शौचम्",
+          "en": "purity; cleanliness"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is said"
+        },
+        {
+          "sa": "मृज्-जलाभ्याम्",
+          "en": "with earth and water"
+        },
+        {
+          "sa": "कृतम्",
+          "en": "done; produced"
+        },
+        {
+          "sa": "शौचम्",
+          "en": "cleanliness"
+        },
+        {
+          "sa": "बाह्यम्",
+          "en": "external"
+        },
+        {
+          "sa": "शारीरकम्",
+          "en": "bodily"
+        },
+        {
+          "sa": "स्मृतम्",
+          "en": "is regarded"
+        },
+        {
+          "sa": "अज्ञान-दूरी-करणम्",
+          "en": "removing ignorance"
+        },
+        {
+          "sa": "मानसम्",
+          "en": "mental"
+        },
+        {
+          "sa": "शौचम्",
+          "en": "purity; cleanliness"
+        },
+        {
+          "sa": "आन्तरम्",
+          "en": "internal"
+        },
+        {
+          "sa": "अन्तः-शौचे",
+          "en": "when inner purity"
+        },
+        {
+          "sa": "स्थिते",
+          "en": "is established"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "fully; properly"
+        },
+        {
+          "sa": "बाह्यम्",
+          "en": "external cleanliness"
+        },
+        {
+          "sa": "नावश्यकम्",
+          "en": "is not necessary"
+        },
+        {
+          "sa": "नृणाम्",
+          "en": "for people"
+        }
+      ],
       "sourceNumbers": [
         114,
         115
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "bāhyam ābhyantaraṃ ceti dvividhaṃ śaucam ucyate|\nmṛj-jalābhyāṃ kṛtaṃ śaucaṃ bāhyaṃ śārīrakaṃ smṛtam||\najñāna-dūrī-karaṇaṃ mānasaṃ śaucam āntaram|\nantaḥ-śauce sthite samyag bāhyaṃ nāvaśyakaṃ nṛṇām||"
+      "iast": "bāhyam ābhyantaraṃ ceti dvividhaṃ śaucam ucyate|\nmṛj-jalābhyāṃ kṛtaṃ śaucaṃ bāhyaṃ śārīrakaṃ smṛtam||\najñāna-dūrī-karaṇaṃ mānasaṃ śaucam āntaram|\nantaḥ-śauce sthite samyag bāhyaṃ nāvaśyakaṃ nṛṇām||",
+      "editionTranslation": "Cleanliness Cleanliness is of two kinds, external and internal. External cleanliness is attained by the use of earth and water. Internal cleanliness or purity is attained only by means of the removal of ignorance. Where there is inner purity, mere external cleanliness becomes less significant."
     },
     {
       "id": "svsss-1-0116",
@@ -7789,97 +8189,405 @@
       "number": "116",
       "label": "Verse 116",
       "deva": "ध्यान-पूजादिकं लोके द्रष्टर्य् एव करोति यः।\nपारमार्थिक-धी-हीनः स दम्भाचार उच्यते॥",
-      "translation": "Humility To pray too much in public place, or to indulge in elaborate ritualistic worship where many are gathered, with out having true knowledge, is mere vanity and ostentation.",
-      "gloss": [],
+      "translation": "Whoever performs meditation, worship, and the like in public before onlookers, while lacking insight into ultimate reality, is called one whose conduct is pretentious.",
+      "gloss": [
+        {
+          "sa": "ध्यान-पूजादिकम्",
+          "en": "meditation, worship, and the like"
+        },
+        {
+          "sa": "लोके",
+          "en": "in public; in the world"
+        },
+        {
+          "sa": "द्रष्टरि",
+          "en": "when onlookers are present"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "करोति",
+          "en": "performs"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "पारमार्थिक-धी-हीनः",
+          "en": "lacking insight into ultimate reality"
+        },
+        {
+          "sa": "सः",
+          "en": "that person"
+        },
+        {
+          "sa": "दम्भाचारः",
+          "en": "one whose conduct is pretentious"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         116
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dhyāna-pūjādikaṃ loke draṣṭary eva karoti yaḥ|\npāramārthika-dhī-hīnaḥ sa dambhācāra ucyate||"
+      "iast": "dhyāna-pūjādikaṃ loke draṣṭary eva karoti yaḥ|\npāramārthika-dhī-hīnaḥ sa dambhācāra ucyate||",
+      "editionTranslation": "Humility To pray too much in public place, or to indulge in elaborate ritualistic worship where many are gathered, with out having true knowledge, is mere vanity and ostentation."
     },
     {
       "id": "svsss-1-0117",
       "chapter": 1,
       "number": "117",
       "label": "Verse 117",
-      "deva": "यत् स्वेन दृष्टं सम्यक् च श्रुतं तस्यैव भाषणम्॥",
-      "translation": "The wise distinguish the absence of this to be humility. Truthfulness As for truthfulness, it implies nothing more than saying what has been clearly seen or correctly heard by oneself.",
-      "gloss": [],
+      "deva": "पुंसस् तथानाचरणम् अदम्भित्वं विदुर् बुधाः।\nयत् स्वेन दृष्टं सम्यक् च श्रुतं तस्यैव भाषणम्॥",
+      "translation": "The wise call a person's not acting in that way freedom from pretence. Truthfulness is saying only what one has clearly seen and correctly heard.",
+      "gloss": [
+        {
+          "sa": "पुंसः",
+          "en": "of a person"
+        },
+        {
+          "sa": "तथा",
+          "en": "in that way"
+        },
+        {
+          "sa": "अनाचरणम्",
+          "en": "not doing; nonperformance"
+        },
+        {
+          "sa": "अदम्भित्वम्",
+          "en": "freedom from pretence"
+        },
+        {
+          "sa": "विदुः",
+          "en": "they know; call"
+        },
+        {
+          "sa": "बुधाः",
+          "en": "the wise"
+        },
+        {
+          "sa": "यत्",
+          "en": "what"
+        },
+        {
+          "sa": "स्वेन",
+          "en": "by oneself"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "seen"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "clearly; correctly"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "श्रुतम्",
+          "en": "heard"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "भाषणम्",
+          "en": "speaking; statement"
+        }
+      ],
       "sourceNumbers": [
         117
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yat svena dṛṣṭaṃ samyak ca śrutaṃ tasyaiva bhāṣaṇam||"
+      "iast": "puṃsas tathānācaraṇam adambhitvaṃ vidur budhāḥ|\nyat svena dṛṣṭaṃ samyak ca śrutaṃ tasyaiva bhāṣaṇam||",
+      "editionTranslation": "The wise distinguish the absence of this to be humility. Truthfulness As for truthfulness, it implies nothing more than saying what has been clearly seen or correctly heard by oneself.",
+      "sourceNote": "The missing opening pāda has been restored from the cited A.K. Aruna edition."
     },
     {
       "id": "svsss-1-0118",
       "chapter": 1,
       "number": "118",
       "label": "Verse 118",
-      "deva": "देहादिषु स्वकीयत्व-दृढ-बुद्धि-विसर्जनम्॥",
-      "translation": "To say that Brahman is real is an example of truth speaking. Non-attachment Next, one should give up the idea of ‘I and mine’ in relation to one’s physical body and the like, for, that is the essence of non-attachment.",
-      "gloss": [],
+      "deva": "सत्यम् इत्युच्यते ब्रह्म सत्यम् इत्यभिभाषणम्।\nदेहादिषु स्वकीयत्व-दृढ-बुद्धि-विसर्जनम्॥",
+      "translation": "Saying “Brahman is real” is called speaking truth. Relinquishing the firm notion of ownership regarding the body and the like [is non-attachment].",
+      "gloss": [
+        {
+          "sa": "सत्यम्",
+          "en": "true"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is said"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "सत्यम्",
+          "en": "real"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अभिभाषणम्",
+          "en": "saying; declaration"
+        },
+        {
+          "sa": "देहादिषु",
+          "en": "in the body and the like"
+        },
+        {
+          "sa": "स्वकीयत्व-दृढ-बुद्धि-विसर्जनम्",
+          "en": "relinquishing the firm notion of ownership"
+        }
+      ],
       "sourceNumbers": [
         118
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dehādiṣu svakīyatva-dṛḍha-buddhi-visarjanam||"
+      "iast": "satyam ity ucyate brahma satyam ity abhibhāṣaṇam|\ndehādiṣu svakīyatva-dṛḍha-buddhi-visarjanam||",
+      "editionTranslation": "To say that Brahman is real is an example of truth speaking. Non-attachment Next, one should give up the idea of ‘I and mine’ in relation to one’s physical body and the like, for, that is the essence of non-attachment.",
+      "sourceNote": "The missing opening pāda has been restored from the cited A.K. Aruna edition."
     },
     {
       "id": "svsss-1-0119",
       "chapter": 1,
       "number": "119",
       "label": "Verse 119",
-      "deva": "गुरु-वेदान्त-वचनैर् निश्चितार्थे दृढ-स्थितिः॥",
-      "translation": "That is why the wise regard non-attachment as a means to liberation. Steadiness As to what it is that constitutes steadiness, it is said that it implies an unswerving devotion to what the Guru says and what the Vedānta teaches.",
-      "gloss": [],
+      "deva": "निर्ममत्वं स्मृतं येन कैवल्यं लभते बुधः।\nगुरु-वेदान्त-वचनैर् निश्चितार्थे दृढ-स्थितिः॥",
+      "translation": "Freedom from possessiveness, by which the wise person attains liberation, is so called. Steadiness is firm abiding in the meaning ascertained through the teacher's and Vedānta's words.",
+      "gloss": [
+        {
+          "sa": "निर्ममत्वम्",
+          "en": "freedom from possessiveness"
+        },
+        {
+          "sa": "स्मृतम्",
+          "en": "is considered"
+        },
+        {
+          "sa": "येन",
+          "en": "by which"
+        },
+        {
+          "sa": "कैवल्यम्",
+          "en": "liberation; aloneness"
+        },
+        {
+          "sa": "लभते",
+          "en": "attains"
+        },
+        {
+          "sa": "बुधः",
+          "en": "the wise person"
+        },
+        {
+          "sa": "गुरु-वेदान्त-वचनैः",
+          "en": "through the words of the teacher and Vedānta"
+        },
+        {
+          "sa": "निश्चित-अर्थे",
+          "en": "in the ascertained meaning"
+        },
+        {
+          "sa": "दृढ-स्थितिः",
+          "en": "firm abiding"
+        }
+      ],
       "sourceNumbers": [
         119
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "guru-vedānta-vacanair niścitārthe dṛḍha-sthitiḥ||"
+      "iast": "nirmamatvaṃ smṛtaṃ yena kaivalyaṃ labhate budhaḥ|\nguru-vedānta-vacanair niścitārthe dṛḍha-sthitiḥ||",
+      "editionTranslation": "That is why the wise regard non-attachment as a means to liberation. Steadiness As to what it is that constitutes steadiness, it is said that it implies an unswerving devotion to what the Guru says and what the Vedānta teaches.",
+      "sourceNote": "The missing opening pāda has been restored from the cited A.K. Aruna edition."
     },
     {
       "id": "svsss-1-0120",
       "chapter": 1,
       "number": "120",
       "label": "Verse 120",
-      "deva": "विद्यैश्वर्य-तपो-रूप-कुल-वर्णाश्रमादिभिः॥",
-      "translation": "It is the one-pointedness of the mind that is called steadiness: it does not mean remaining motionless physically. Absence of egoism The next quality is that one should give up all self-conceit. Whether it be due to one’s book learning, wealth, the practice of spiritual austerity or having good looks, a noble lineage and a high station in life…",
-      "gloss": [],
+      "deva": "तद्-एक-वृत्त्या तत् स्थैर्यं नैश्चल्यं न तु वर्ष्मणः।\nविद्यैश्वर्य-तपो-रूप-कुल-वर्णाश्रमादिभिः॥",
+      "translation": "Steadiness is abiding in that single mental mode; it is not bodily immobility. [Conceit may arise] through learning, wealth, austerity, appearance, family, social class, life stage, and the like.",
+      "gloss": [
+        {
+          "sa": "तद्-एक-वृत्त्या",
+          "en": "with that single mental movement"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "स्थैर्यम्",
+          "en": "steadiness"
+        },
+        {
+          "sa": "नैश्चल्यम्",
+          "en": "immobility"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "वर्ष्मणः",
+          "en": "of the body"
+        },
+        {
+          "sa": "विद्या-ऐश्वर्य-तपः-रूप-कुल-वर्ण-आश्रम-आदिभिः",
+          "en": "through learning, wealth, austerity, appearance, family, social class, life stage, and the like"
+        }
+      ],
       "sourceNumbers": [
         120
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "vidyaiśvarya-tapo-rūpa-kula-varṇāśramādibhiḥ||"
+      "iast": "tad-eka-vṛttyā tat sthairyaṃ naiścalyaṃ na tu varṣmaṇaḥ|\nvidyaiśvarya-tapo-rūpa-kula-varṇāśramādibhiḥ||",
+      "editionTranslation": "It is the one-pointedness of the mind that is called steadiness: it does not mean remaining motionless physically. Absence of egoism The next quality is that one should give up all self-conceit. Whether it be due to one’s book learning, wealth, the practice of spiritual austerity or having good looks, a noble lineage and a high station in life…",
+      "sourceNote": "The missing opening pāda has been restored from the cited A.K. Aruna edition."
     },
     {
       "id": "svsss-1-0121",
       "chapter": 1,
       "number": "121",
       "label": "Verse 121",
-      "deva": "त्रिभिश्च करणैः सम्यग् हित्वा वैषयिकीं क्रियाम्॥",
-      "translation": "The absence of egoism means the giving up of all pride. Contemplation on the Lord After abandoning all such egoism which is born of extraneous factors with the senses restrained from the pursuit of external objects, one should unify the faculties of body, mind and intellect.",
-      "gloss": [],
+      "deva": "सञ्जाताहङ्कृति-त्यागस् त्वभिमान-विसर्जनम्।\nत्रिभिश्च करणैः सम्यग् हित्वा वैषयिकीं क्रियाम्॥",
+      "translation": "Giving up the conceit arising from these is relinquishing pride. Having properly abandoned sense-directed activity through the three instruments [body, speech, and mind]…",
+      "gloss": [
+        {
+          "sa": "सञ्जात-अहङ्कृति-त्यागः",
+          "en": "giving up the conceit that has arisen"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "अभिमान-विसर्जनम्",
+          "en": "is relinquishing pride"
+        },
+        {
+          "sa": "त्रिभिः",
+          "en": "through the three"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "करणैः",
+          "en": "instruments"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "properly"
+        },
+        {
+          "sa": "हित्वा",
+          "en": "having abandoned"
+        },
+        {
+          "sa": "वैषयिकीम्",
+          "en": "sense-directed"
+        },
+        {
+          "sa": "क्रियाम्",
+          "en": "activity"
+        }
+      ],
       "sourceNumbers": [
         121
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tribhiśca karaṇaiḥ samyag hitvā vaiṣayikīṃ kriyām||"
+      "iast": "sañjātāhaṅkṛti-tyāgas tv abhimāna-visarjanam|\ntribhiśca karaṇaiḥ samyag hitvā vaiṣayikīṃ kriyām||",
+      "editionTranslation": "The absence of egoism means the giving up of all pride. Contemplation on the Lord After abandoning all such egoism which is born of extraneous factors with the senses restrained from the pursuit of external objects, one should unify the faculties of body, mind and intellect.",
+      "sourceNote": "The missing opening pāda has been restored from the cited A.K. Aruna edition."
     },
     {
       "id": "svsss-1-0122",
       "chapter": 1,
       "number": "122",
       "label": "Verse 122",
-      "deva": "छायेव सर्वदा वासो ब्रह्मविद्भिः सह स्थितिः॥",
-      "translation": "To direct one’s co-ordinated faculties to the contemplation of the Ātman, the Self within, is to contemplate on the Lord. Seeking the society of the knowers of Brahman To seek the society of the knowers of Brahman, and to follow them constantly as a shadow is to seek the company of the holy.",
-      "gloss": [],
+      "deva": "स्वात्मैक-चिन्तनं यत् तद् ईश्वर-ध्यानम् ईरितम्।\nछायेव सर्वदा वासो ब्रह्मविद्भिः सह स्थितिः॥",
+      "translation": "What is contemplation solely on one's own Self is called contemplation of the Lord. Remaining always with knowers of Brahman, like a shadow, is association with them.",
+      "gloss": [
+        {
+          "sa": "स्वात्म-एक-चिन्तनम्",
+          "en": "contemplation solely on one's own Self"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "ईश्वर-ध्यानम्",
+          "en": "contemplation of the Lord"
+        },
+        {
+          "sa": "ईरितम्",
+          "en": "is called"
+        },
+        {
+          "sa": "छाया-इव",
+          "en": "like a shadow"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "वासः",
+          "en": "dwelling"
+        },
+        {
+          "sa": "ब्रह्मविद्भिः",
+          "en": "with knowers of Brahman"
+        },
+        {
+          "sa": "सह",
+          "en": "with"
+        },
+        {
+          "sa": "स्थितिः",
+          "en": "association; abiding"
+        }
+      ],
       "sourceNumbers": [
         122
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "chāyeva sarvadā vāso brahmavidbhiḥ saha sthitiḥ||"
+      "iast": "svātmaika-cintanaṃ yat tad īśvara-dhyānam īritam|\nchāyeva sarvadā vāso brahmavidbhiḥ saha sthitiḥ||",
+      "editionTranslation": "To direct one’s co-ordinated faculties to the contemplation of the Ātman, the Self within, is to contemplate on the Lord. Seeking the society of the knowers of Brahman To seek the society of the knowers of Brahman, and to follow them constantly as a shadow is to seek the company of the holy.",
+      "sourceNote": "The missing opening pāda has been restored from the cited A.K. Aruna edition."
     },
     {
       "id": "svsss-1-0123",
@@ -7887,13 +8595,63 @@
       "number": "123",
       "label": "Verse 123",
       "deva": "यद् यद् उक्तं ज्ञान-शास्त्रे श्रवणादि-कमेषु यः।\nनिरतः कर्म-धी-हीनः ज्ञान-निष्ठः स एव हि॥",
-      "translation": "Devotion to the knowledge To give up the idea that one is oneself the doer, and to be ever engaged in pursuing the teaching of the jñāna-śāstras is known as devotion to the knowledge of Brahman.",
-      "gloss": [],
+      "translation": "Whoever is devoted to whatever the knowledge-text teaches about listening and the other practices, and is free from the notion of being an agent, is indeed established in knowledge.",
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "यत्",
+          "en": "that which"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "is taught"
+        },
+        {
+          "sa": "ज्ञान-शास्त्रे",
+          "en": "in the knowledge-text"
+        },
+        {
+          "sa": "श्रवण-आदि-कमेषु",
+          "en": "in listening and the other practices"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "निरतः",
+          "en": "is devoted"
+        },
+        {
+          "sa": "कर्म-धी-हीनः",
+          "en": "free from the notion of being an agent"
+        },
+        {
+          "sa": "ज्ञान-निष्ठः",
+          "en": "established in knowledge"
+        },
+        {
+          "sa": "सः",
+          "en": "that person"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        }
+      ],
       "sourceNumbers": [
         123
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yad yad uktaṃ jñāna-śāstre śravaṇādi-kameṣu yaḥ|\nnirataḥ karma-dhī-hīnaḥ jñāna-niṣṭhaḥ sa eva hi||"
+      "iast": "yad yad uktaṃ jñāna-śāstre śravaṇādi-kameṣu yaḥ|\nnirataḥ karma-dhī-hīnaḥ jñāna-niṣṭhaḥ sa eva hi||",
+      "editionTranslation": "Devotion to the knowledge To give up the idea that one is oneself the doer, and to be ever engaged in pursuing the teaching of the jñāna-śāstras is known as devotion to the knowledge of Brahman."
     },
     {
       "id": "svsss-1-0124",
@@ -7901,13 +8659,43 @@
       "number": "124",
       "label": "Verse 124",
       "deva": "धन-कान्ता-ज्वरादीनां प्राप्त-काले सुखादिभिः।\nविकार-हीनतैव स्यात् सुख-दुःख-समानता॥",
-      "translation": "Equanimity Not to rejoice at acquiring wealth or woman and not to grieve when ill-health such as fever afflicts a person, but to be ever constant and un-affected in mind is known as equanimity.",
-      "gloss": [],
+      "translation": "When wealth, a beloved woman, fever, and the like occur, remaining unaltered through pleasure and the like is equanimity toward pleasure and pain.",
+      "gloss": [
+        {
+          "sa": "धन-कान्ता-ज्वर-आदीनाम्",
+          "en": "of wealth, a beloved woman, fever, and the like"
+        },
+        {
+          "sa": "प्राप्त-काले",
+          "en": "when they occur"
+        },
+        {
+          "sa": "सुख-आदिभिः",
+          "en": "through pleasure and the like"
+        },
+        {
+          "sa": "विकार-हीनता",
+          "en": "freedom from alteration"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "सुख-दुःख-समानता",
+          "en": "equanimity toward pleasure and pain"
+        }
+      ],
       "sourceNumbers": [
         124
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dhana-kāntā-jvarādīnāṃ prāpta-kāle sukhādibhiḥ|\nvikāra-hīnataiva syāt sukha-duḥkha-samānatā||"
+      "iast": "dhana-kāntā-jvarādīnāṃ prāpta-kāle sukhādibhiḥ|\nvikāra-hīnataiva syāt sukha-duḥkha-samānatā||",
+      "editionTranslation": "Equanimity Not to rejoice at acquiring wealth or woman and not to grieve when ill-health such as fever afflicts a person, but to be ever constant and un-affected in mind is known as equanimity."
     },
     {
       "id": "svsss-1-0125",
@@ -7915,13 +8703,63 @@
       "number": "125",
       "label": "Verse 125",
       "deva": "श्रेष्ठं पूज्यं विदित्वा मां मानयन्तु जना भुवि।\nइत्यासक्त्या विहीनत्वं मानानासक्तिर् उच्यते॥",
-      "translation": "Absence of self-glorification To regard public opinion with indifference, and not to think too highly of oneself, either on account of one’s birth, social status or public honour, is regarded as the absence of self-glorification.",
-      "gloss": [],
+      "translation": "Not being attached to the thought, “May people on earth honor me, knowing me to be excellent and worthy of reverence,” is called freedom from attachment to honor.",
+      "gloss": [
+        {
+          "sa": "श्रेष्ठम्",
+          "en": "excellent"
+        },
+        {
+          "sa": "पूज्यम्",
+          "en": "worthy of honor"
+        },
+        {
+          "sa": "विदित्वा",
+          "en": "knowing"
+        },
+        {
+          "sa": "माम्",
+          "en": "me"
+        },
+        {
+          "sa": "मानयन्तु",
+          "en": "may they honor"
+        },
+        {
+          "sa": "जनाः",
+          "en": "people"
+        },
+        {
+          "sa": "भुवि",
+          "en": "on earth"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; thinking"
+        },
+        {
+          "sa": "आसक्त्या",
+          "en": "from attachment"
+        },
+        {
+          "sa": "विहीनत्वम्",
+          "en": "freedom"
+        },
+        {
+          "sa": "मानानासक्तिः",
+          "en": "non-attachment to honor"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         125
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śreṣṭhaṃ pūjyaṃ viditvā māṃ mānayantu janā bhuvi|\nityāsaktyā vihīnatvaṃ mānānāsaktir ucyate||"
+      "iast": "śreṣṭhaṃ pūjyaṃ viditvā māṃ mānayantu janā bhuvi|\nityāsaktyā vihīnatvaṃ mānānāsaktir ucyate||",
+      "editionTranslation": "Absence of self-glorification To regard public opinion with indifference, and not to think too highly of oneself, either on account of one’s birth, social status or public honour, is regarded as the absence of self-glorification."
     },
     {
       "id": "svsss-1-0126",
@@ -20063,5 +20901,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–105 of 1,006; verses 17–18, 44–45, and 91–92 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–125 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
 }
