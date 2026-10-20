@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 390
+      "end": 395
     },
-    "note": "Source verses 1–390 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 391 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–395 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 396 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -30821,11 +30821,121 @@
       "label": "Verse 391",
       "deva": "सदेवेदं सर्वं जगदवगतं वाङ्मनसयोः\nसतोऽन्यन्नास्त्य् एव प्रकृतिपरसीम्नि स्थितवतः ।\nपृथक् किं मृत्स्नायाः कलशघटकुम्भाद्यवगतं\nवदत्येष भ्रान्तस्त्वमहमिति मायामदिरया ॥",
       "iast": "sadevedaṃ sarvaṃ jagadavagataṃ vāṅmanasayoḥ\nsato'nyannāsty eva prakṛtiparasīmni sthitavataḥ |\npṛthak kiṃ mṛtsnāyāḥ kalaśaghaṭakumbhādyavagataṃ\nvadatyeṣa bhrāntastvamahamiti māyāmadirayā ||",
-      "translation": "All this universe known through speech and mind is nothing but Brahman; there is nothing besides Brahman, which exists beyond the utmost range of the Prakriti. Are the pitcher, jug, jar, etc., known to be distinct from the clay of which they are composed ? It is the deluded man who talks of \"thou\" and \"I\", as an effect of the wine of Maya.",
-      "gloss": [],
+      "translation": "All this world, known through speech and mind, is Existence alone. For one established beyond Nature’s limit, nothing at all is other than Existence. Are jars, pots, pitchers, and the like known to be separate from clay? The deluded one, intoxicated by Māyā’s wine, says, “you” and “I.”",
+      "gloss": [
+        {
+          "sa": "सत्",
+          "en": "Existence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "whole"
+        },
+        {
+          "sa": "जगत्",
+          "en": "world"
+        },
+        {
+          "sa": "अवगतम्",
+          "en": "known"
+        },
+        {
+          "sa": "वाक्",
+          "en": "speech"
+        },
+        {
+          "sa": "मनसयोः",
+          "en": "and mind"
+        },
+        {
+          "sa": "सतः",
+          "en": "than Existence"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "एव",
+          "en": "at all"
+        },
+        {
+          "sa": "प्रकृति-पर-सीम्नि",
+          "en": "beyond Nature’s limit"
+        },
+        {
+          "sa": "स्थितवतः",
+          "en": "for one established"
+        },
+        {
+          "sa": "पृथक्",
+          "en": "separate"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "मृत्स्नायाः",
+          "en": "from clay"
+        },
+        {
+          "sa": "कलश-घट-कुम्भ-आदि",
+          "en": "jar, pot, pitcher, and the like"
+        },
+        {
+          "sa": "अवगतम्",
+          "en": "known"
+        },
+        {
+          "sa": "वदति",
+          "en": "says"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "भ्रान्तः",
+          "en": "deluded one"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "you"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "माया-मदिरया",
+          "en": "intoxicated by Māyā’s wine"
+        }
+      ],
       "sourceNumbers": [
         391
-      ]
+      ],
+      "editionTranslation": "All this universe known through speech and mind is nothing but Brahman; there is nothing besides Brahman, which exists beyond the utmost range of the Prakriti. Are the pitcher, jug, jar, etc., known to be distinct from the clay of which they are composed ? It is the deluded man who talks of \"thou\" and \"I\", as an effect of the wine of Maya."
     },
     {
       "id": "vivekachudamani-392",
@@ -30833,23 +30943,123 @@
       "label": "Verse 392",
       "deva": "क्रियासमभिहारेण यत्र नान्यदिति श्रुतिः ।\nब्रवीति द्वैतराहित्यं मिथ्याध्यासनिवृत्तये ॥",
       "iast": "kriyāsamabhihāreṇa yatra nānyaditi śrutiḥ |\nbravīti dvaitarāhityaṃ mithyādhyāsanivṛttaye ||",
-      "translation": "The Shruti, in the passage, \"Where one sees nothing else\", etc., declares by an accumulation of verbs the absence of duality, in order to remove the false superimpositions.",
-      "gloss": [],
+      "translation": "Through a repeated series of verbs such as “where there is nothing else,” scripture declares the absence of duality in order to remove false superimposition.",
+      "gloss": [
+        {
+          "sa": "क्रिया-समभिहारेण",
+          "en": "through a repeated series of verbs"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "ब्रवीति",
+          "en": "declares"
+        },
+        {
+          "sa": "द्वैत-राहित्यम्",
+          "en": "the absence of duality"
+        },
+        {
+          "sa": "मिथ्या-अध्यास-निवृत्तये",
+          "en": "for the removal of false superimposition"
+        }
+      ],
       "sourceNumbers": [
         392
-      ]
+      ],
+      "editionTranslation": "The Shruti, in the passage, \"Where one sees nothing else\", etc., declares by an accumulation of verbs the absence of duality, in order to remove the false superimpositions."
     },
     {
       "id": "vivekachudamani-393",
       "number": "393",
       "label": "Verse 393",
-      "deva": "आकाशवन्निर्मलनिर्विकल्पं\nस्वयं परं ब्रह्म किमस्ति बोध्यम् ॥",
-      "iast": "ākāśavannirmalanirvikalpaṃ\nsvayaṃ paraṃ brahma kimasti bodhyam ||",
-      "translation": "The Supreme Brahman is, like the sky, pure, absolute, infinite, motionless and changeless, devoid of interior or exterior, the One Existence, without a second, and is one’s own Self. Is there any other object of knowledge ?",
-      "gloss": [],
+      "deva": "आकाशवन्निर्मलनिर्विकल्पं\nनिःसीमनिःस्पन्दननिर्विकारम् ।\nअन्तर्बहिःशून्यमनन्यमद्वयं\nस्वयं परं ब्रह्म किमस्ति बोध्यम् ॥",
+      "iast": "ākāśavan nirmala-nirvikalpaṃ\nniḥsīma-niḥspandana-nirvikāram |\nantarbahiḥśūnyam ananyam advayaṃ\nsvayaṃ paraṃ brahma kim asti bodhyam ||",
+      "translation": "Like space, [Brahman is] pure and free from thought-constructs, limitless, motionless, changeless, empty of inside and outside, without another, nondual—the Self itself, the Supreme Brahman. Is there anything else to be known?",
+      "gloss": [
+        {
+          "sa": "आकाशवत्",
+          "en": "like space"
+        },
+        {
+          "sa": "निर्मल",
+          "en": "pure"
+        },
+        {
+          "sa": "निर्विकल्पम्",
+          "en": "free from thought-constructs"
+        },
+        {
+          "sa": "निःसीम",
+          "en": "limitless"
+        },
+        {
+          "sa": "निःस्पन्दन",
+          "en": "motionless"
+        },
+        {
+          "sa": "निर्विकारम्",
+          "en": "changeless"
+        },
+        {
+          "sa": "अन्तः-बहिः-शून्यम्",
+          "en": "empty of inside and outside"
+        },
+        {
+          "sa": "अनन्यम्",
+          "en": "without another"
+        },
+        {
+          "sa": "अद्वयम्",
+          "en": "nondual"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "परम्",
+          "en": "Supreme"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is there"
+        },
+        {
+          "sa": "बोध्यम्",
+          "en": "to be known"
+        }
+      ],
       "sourceNumbers": [
         393
-      ]
+      ],
+      "editionTranslation": "The Supreme Brahman is, like the sky, pure, absolute, infinite, motionless and changeless, devoid of interior or exterior, the One Existence, without a second, and is one’s own Self. Is there any other object of knowledge ?"
     },
     {
       "id": "vivekachudamani-394",
@@ -30857,11 +31067,133 @@
       "label": "Verse 394",
       "deva": "वक्तव्यं किमु विद्यतेऽत्र बहुधा ब्रह्मैव जीवः स्वयं\nब्रह्मैतज्जगदाततं नु सकलं ब्रह्माद्वितीयं श्रुतिः ।\nब्रह्मैवाहमिति प्रबुद्धमतयः संत्यक्तबाह्याः स्फुटं\nब्रह्मीभूय वसन्ति सन्ततचिदानन्दात्मनैतद्ध्रुवम् ॥",
       "iast": "vaktavyaṃ kimu vidyate'tra bahudhā brahmaiva jīvaḥ svayaṃ\nbrahmaitajjagadātataṃ nu sakalaṃ brahmādvitīyaṃ śrutiḥ |\nbrahmaivāhamiti prabuddhamatayaḥ saṃtyaktabāhyāḥ sphuṭaṃ\nbrahmībhūya vasanti santatacidānandātmanaitaddhruvam ||",
-      "translation": "What is the use of dilating on this subject ? The Jiva is no other than Brahman; this whole extended universe is Brahman Itself; the Shruti inculcates the Brahman without a second; and it is an indubitable fact that people of enlightened minds who know their identity with Brahman and have given up their connection with the objective world, live palpably unifold with Brahman as Eternal Knowledge and Bliss.",
-      "gloss": [],
+      "translation": "What more is there to say here at length? The individual self is Brahman alone; this entire, extended universe is Brahman, indeed all of it; scripture says Brahman is nondual. Those of awakened understanding, knowing “I am Brahman alone” and having clearly renounced external things, abide as Brahman, with continuous consciousness and bliss as their nature. This is certain.",
+      "gloss": [
+        {
+          "sa": "वक्तव्यम्",
+          "en": "to be said"
+        },
+        {
+          "sa": "किमु",
+          "en": "what indeed"
+        },
+        {
+          "sa": "विद्यते",
+          "en": "is there"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "बहुधा",
+          "en": "at length; in many ways"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "जीवः",
+          "en": "the individual self"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "जगत्",
+          "en": "world"
+        },
+        {
+          "sa": "आतम्",
+          "en": "extended; pervaded"
+        },
+        {
+          "sa": "नु",
+          "en": "indeed"
+        },
+        {
+          "sa": "सकलम्",
+          "en": "all"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "अद्वितीयम्",
+          "en": "without a second"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रबुद्ध-मतयः",
+          "en": "those of awakened understanding"
+        },
+        {
+          "sa": "संत्यक्त-बाह्याः",
+          "en": "having renounced external things"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "ब्रह्मीभूय",
+          "en": "having become Brahman"
+        },
+        {
+          "sa": "वसन्ति",
+          "en": "they abide"
+        },
+        {
+          "sa": "सन्तत-चित्-आनन्द-आत्मना",
+          "en": "with continuous consciousness and bliss as their nature"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "ध्रुवम्",
+          "en": "is certain"
+        }
+      ],
       "sourceNumbers": [
         394
-      ]
+      ],
+      "editionTranslation": "What is the use of dilating on this subject ? The Jiva is no other than Brahman; this whole extended universe is Brahman Itself; the Shruti inculcates the Brahman without a second; and it is an indubitable fact that people of enlightened minds who know their identity with Brahman and have given up their connection with the objective world, live palpably unifold with Brahman as Eternal Knowledge and Bliss."
     },
     {
       "id": "vivekachudamani-395",
@@ -30869,11 +31201,85 @@
       "label": "Verse 395",
       "deva": "जहि मलमयकोशेऽहंधियोत्थापिताशां\nप्रसभमनिलकल्पे लिङ्गदेहेऽपि पश्चात् ।\nनिगमगदितकीर्तिं नित्यमानन्दमूर्तिं\nस्वयमिति परिचीय ब्रह्मरूपेण तिष्ठ ॥",
       "iast": "jahi malamayakośe'haṃdhiyotthāpitāśāṃ\nprasabhamanilakalpe liṅgadehe'pi paścāt |\nnigamagaditakīrtiṃ nityamānandamūrtiṃ\nsvayamiti paricīya brahmarūpeṇa tiṣṭha ||",
-      "translation": "(First) destroy the hopes raised by egoism in this filthy gross body, then do the same forcibly with the air-like subtle body; and realising Brahman, the embodiment of eternal Bliss – whose glories the Scriptures proclaim – as thy own Self, live as Brahman.",
-      "gloss": [],
+      "translation": "Destroy the desire raised by egoic thought in the impurity-filled sheath; then forcibly destroy it also in the subtle body, which is like wind. Recognize as your own Self the eternal embodiment of bliss whose glory the Vedas proclaim, and abide as Brahman.",
+      "gloss": [
+        {
+          "sa": "जहि",
+          "en": "destroy"
+        },
+        {
+          "sa": "मलमय-कोशे",
+          "en": "in the impurity-filled sheath"
+        },
+        {
+          "sa": "अहम्-धिया",
+          "en": "by egoic thought"
+        },
+        {
+          "sa": "उत्थापिताम्",
+          "en": "raised"
+        },
+        {
+          "sa": "आशाम्",
+          "en": "desire"
+        },
+        {
+          "sa": "प्रसभम्",
+          "en": "forcibly"
+        },
+        {
+          "sa": "अनिल-कल्पे",
+          "en": "like wind"
+        },
+        {
+          "sa": "लिङ्ग-देहे",
+          "en": "in the subtle body"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "afterward"
+        },
+        {
+          "sa": "निगम-गदित-कीर्तिम्",
+          "en": "whose glory the Vedas proclaim"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "eternal"
+        },
+        {
+          "sa": "आनन्द-मूर्तिम्",
+          "en": "embodiment of bliss"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "परिचीय",
+          "en": "having recognized"
+        },
+        {
+          "sa": "ब्रह्म-रूपेण",
+          "en": "as Brahman"
+        },
+        {
+          "sa": "तिष्ठ",
+          "en": "abide"
+        }
+      ],
       "sourceNumbers": [
         395
-      ]
+      ],
+      "editionTranslation": "(First) destroy the hopes raised by egoism in this filthy gross body, then do the same forcibly with the air-like subtle body; and realising Brahman, the embodiment of eternal Bliss – whose glories the Scriptures proclaim – as thy own Self, live as Brahman."
     },
     {
       "id": "vivekachudamani-396",
@@ -33105,6 +33511,7 @@
     "Refined Vivekacūḍāmaṇi verses 376 and 378 so the English keeps the maiden-of-liberation image and renders bhṛśam as 'greatly; much.'",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 381–385; preserved prior translations as editionTranslation.",
     "Aligned the translations and prepositions in Vivekacūḍāmaṇi verses 382–385 more closely with the locative and instrumental forms in the Sanskrit.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 386–390; preserved prior translations as editionTranslation. Added pad separation in verse 387's IAST to make dṛṣṭā hi tattvam visible."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 386–390; preserved prior translations as editionTranslation. Added pad separation in verse 387's IAST to make dṛṣṭā hi tattvam visible.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 391–395; preserved prior translations as editionTranslation. Restored the two missing middle pādas of verse 393 from the checked Sanskrit witness."
   ]
 }
