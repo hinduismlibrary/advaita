@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Naiṣkarmyasiddhi** — active. The reader has 880 units against 897 expected source verses; 454 units lack a word gloss, and 17 numbered source verses are absent. IAST is present. First audit the source sequence and restore missing verses, then fill the gloss gaps and record completed ranges.
+**Sarvavedāntasiddhāntasārasaṅgraha** — active. All 986 reader units have Sanskrit, English, and explicit IAST; its five named contents sections are in place. The first 35 of 1,006 source verses now have Devanāgarī word glosses (34 glossed reader units because verses 17–18 share one card). Continue with verse 1.36 and record each completed range.
 
 ## Completed
 
@@ -42,11 +42,11 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
 | Manīṣāpañcakam | 6 | All four fields present |
 | Māyāpañcakam | 6 | All four fields present |
-| Naiṣkarmyasiddhi | 880 of 897 expected | 454 units lack word glosses; 17 numbered units are absent from the reader; IAST is present |
+| Naiṣkarmyasiddhi | 880 of 897 expected reader units | All 423 numbered verses have Sanskrit, English, explicit IAST, and word glosses; four chapters have named contents sections. There are 454 unglossed prose/commentary units and 17 expected reader units are absent; these are not counted as missing verse glosses. |
 | Nirvāṇaṣaṭkam | 7 | All four fields present |
 | Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
 | Viṣṇu Ṣaṭpadī Stotram | 8 | All four fields present |
-| Sarvavedāntasiddhāntasārasaṅgraha | 986 | Opening units 1–27 have glosses; 960 remain; add explicit IAST; five-part contents already exist |
+| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses cover verses 1–35 (34 units); verses 1.36–5.1006 remain. |
 | Upadeśapañcakam | 5 | Glosses present; add explicit IAST |
 | Upadeśasāhasrī | 787 | All four fields present |
 | Vedāntasāra | 71 | Glosses present; add explicit IAST; review named contents |
