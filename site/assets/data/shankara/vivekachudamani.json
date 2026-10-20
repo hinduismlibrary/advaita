@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 470
+      "end": 475
     },
-    "note": "Source verses 1–470 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 471 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–475 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 476 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -36066,60 +36066,390 @@
       "number": "471",
       "label": "Verse 471",
       "deva": "निरस्तरागा विनिरस्तभोगाः\nशान्ताः सुदान्ता यतयो महान्तः ।\nविज्ञाय तत्त्वं परमेतदन्ते\nप्राप्ताः परां निर्वृतिम् आत्मयोगात् ॥",
-      "iast": "nirastarāgā vinirastabhogāḥ\nśāntāḥ sudāntā yatayo mahāntaḥ |\nvijñāya tattvaṃ parametadante\nprāptāḥ parāṃ nirvṛtim ātmayogāt ||",
-      "translation": "High-souled Sannyasins who have got rid of all attachment and discarded all sense-enjoyments, and who are serene and perfectly restrained, realise this Supreme Truth and at the end attain the Supreme Bliss through their Self-realisation.",
-      "gloss": [],
+      "iast": "nirasta-rāgā vinirasta-bhogāḥ\nśāntāḥ sudāntā yatayo mahāntaḥ |\nvijñāya tattvaṃ param etad ante\nprāptāḥ parāṃ nirvṛtim ātma-yogāt ||",
+      "translation": "The great renunciants, rid of attachment and sense-enjoyments, peaceful and thoroughly restrained, realize this highest truth and at the end attain supreme freedom through union with the Self.",
+      "gloss": [
+        {
+          "sa": "निरस्त-रागाः",
+          "en": "those who have cast off attachment"
+        },
+        {
+          "sa": "विनिरस्त-भोगाः",
+          "en": "those who have completely given up sense-enjoyments"
+        },
+        {
+          "sa": "शान्ताः",
+          "en": "peaceful; calm"
+        },
+        {
+          "sa": "सुदान्ताः",
+          "en": "thoroughly restrained"
+        },
+        {
+          "sa": "यतयः",
+          "en": "renunciants; ascetics"
+        },
+        {
+          "sa": "महान्तः",
+          "en": "great; noble"
+        },
+        {
+          "sa": "विज्ञाय",
+          "en": "having realized; having known"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "the truth; reality"
+        },
+        {
+          "sa": "परम्",
+          "en": "highest; supreme"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अन्ते",
+          "en": "at the end; finally"
+        },
+        {
+          "sa": "प्राप्ताः",
+          "en": "having attained"
+        },
+        {
+          "sa": "पराम्",
+          "en": "supreme"
+        },
+        {
+          "sa": "निर्वृतिम्",
+          "en": "freedom; peace"
+        },
+        {
+          "sa": "आत्म-योगात्",
+          "en": "through union with the Self"
+        }
+      ],
       "sourceNumbers": [
         471
-      ]
+      ],
+      "editionTranslation": "High-souled Sannyasins who have got rid of all attachment and discarded all sense-enjoyments, and who are serene and perfectly restrained, realise this Supreme Truth and at the end attain the Supreme Bliss through their Self-realisation."
     },
     {
       "id": "vivekachudamani-472",
       "number": "472",
       "label": "Verse 472",
       "deva": "भवानपीदं परतत्त्वम् आत्मनः\nस्वरूपमानन्दघनं विचार्य ।\nविधूय मोहं स्वमनःप्रकल्पितं\nमुक्तः कृतार्थो भवतु प्रबुद्धः ॥",
-      "iast": "bhavānapīdaṃ paratattvam ātmanaḥ\nsvarūpamānandaghanaṃ vicārya |\nvidhūya mohaṃ svamanaḥprakalpitaṃ\nmuktaḥ kṛtārtho bhavatu prabuddhaḥ ||",
-      "translation": "Thou, too, discriminate this Supreme Truth, the real nature of the Self, which is Bliss undiluted, and shaking off thy delusion created by thy own mind, be free and illumined, and attain the consummation of thy life.",
-      "gloss": [],
+      "iast": "bhavān api idam para-tattvam ātmanaḥ svarūpam ānanda-ghanam vicārya |\nvidhūya mohaṃ sva-manaḥ-prakalpitam muktaḥ kṛtārthaḥ bhavatu prabuddhaḥ ||",
+      "translation": "You too, after reflecting on this highest truth—the bliss-full true nature of the Self—and shaking off the delusion imagined by your own mind, may you become liberated, fulfilled, and awake.",
+      "gloss": [
+        {
+          "sa": "भवान्",
+          "en": "you"
+        },
+        {
+          "sa": "अपि",
+          "en": "too; also"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "पर-तत्त्वम्",
+          "en": "highest truth; supreme reality"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "स्वरूपम्",
+          "en": "true nature; own form"
+        },
+        {
+          "sa": "आनन्द-घनम्",
+          "en": "fullness; mass of bliss"
+        },
+        {
+          "sa": "विचार्य",
+          "en": "having reflected on; having examined"
+        },
+        {
+          "sa": "विधूय",
+          "en": "having shaken off"
+        },
+        {
+          "sa": "मोहम्",
+          "en": "delusion"
+        },
+        {
+          "sa": "स्व-मनः-प्रकल्पितम्",
+          "en": "imagined by your own mind"
+        },
+        {
+          "sa": "मुक्तः",
+          "en": "liberated; free"
+        },
+        {
+          "sa": "कृत-अर्थः",
+          "en": "fulfilled; having achieved one's purpose"
+        },
+        {
+          "sa": "भवतु",
+          "en": "may you become"
+        },
+        {
+          "sa": "प्रबुद्धः",
+          "en": "awake; enlightened"
+        }
+      ],
       "sourceNumbers": [
         472
-      ]
+      ],
+      "editionTranslation": "Thou, too, discriminate this Supreme Truth, the real nature of the Self, which is Bliss undiluted, and shaking off thy delusion created by thy own mind, be free and illumined, and attain the consummation of thy life."
     },
     {
       "id": "vivekachudamani-473",
       "number": "473",
       "label": "Verse 473",
       "deva": "समाधिना साधुविनिश्चलात्मना\nपश्यात्मतत्त्वं स्फुटबोधचक्षुषा ।\nनिःसंशयं सम्यगवेक्षितश्चेच्\nछ्रुतः पदार्थो न पुनर्विकल्प्यते ॥",
-      "iast": "samādhinā sādhuviniścalātmanā\npaśyātmatattvaṃ sphuṭabodhacakṣuṣā |\nniḥsaṃśayaṃ samyagavekṣitaścec\nchrutaḥ padārtho na punarvikalpyate ||",
-      "translation": "Through the Samadhi in which the mind has been perfectly stilled, visualise the Truth of the Self with the eye of clear realisation. If the meaning of the (Scriptural) words heard from the Guru is perfectly and indubitably discerned, then it can lead to no more doubt.",
-      "gloss": [],
+      "iast": "samādhinā sādhu-viniścala-ātmanā\npaśya ātma-tattvaṃ sphuṭa-bodha-cakṣuṣā |\nniḥsaṃśayaṃ samyak avekṣitaḥ cet\nśrutaḥ padārthaḥ na punaḥ vikalpyate ||",
+      "translation": "With the mind made steady in samādhi, see the truth of the Self with the eye of clear understanding. If what has been heard is examined properly and without doubt, it is not subject to further doubt.",
+      "gloss": [
+        {
+          "sa": "समाधिना",
+          "en": "through samādhi; meditative absorption"
+        },
+        {
+          "sa": "साधु",
+          "en": "well; firmly"
+        },
+        {
+          "sa": "विनिश्चल-आत्मना",
+          "en": "with a thoroughly steady mind"
+        },
+        {
+          "sa": "पश्य",
+          "en": "see"
+        },
+        {
+          "sa": "आत्म-तत्त्वम्",
+          "en": "the truth of the Self"
+        },
+        {
+          "sa": "स्फुट-बोध-चक्षुषा",
+          "en": "with the eye of clear understanding"
+        },
+        {
+          "sa": "निःसंशयम्",
+          "en": "without doubt"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "properly; rightly"
+        },
+        {
+          "sa": "अवेक्षितः",
+          "en": "examined; clearly seen"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "श्रुतः",
+          "en": "heard"
+        },
+        {
+          "sa": "पदार्थः",
+          "en": "the meaning; sense"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again; further"
+        },
+        {
+          "sa": "विकल्प्यते",
+          "en": "is doubted; is conceived as uncertain"
+        }
+      ],
       "sourceNumbers": [
         473
-      ]
+      ],
+      "editionTranslation": "Through the Samadhi in which the mind has been perfectly stilled, visualise the Truth of the Self with the eye of clear realisation. If the meaning of the (Scriptural) words heard from the Guru is perfectly and indubitably discerned, then it can lead to no more doubt."
     },
     {
       "id": "vivekachudamani-474",
       "number": "474",
       "label": "Verse 474",
       "deva": "स्वस्याविद्याबन्धसंबन्धमोक्षात्\nसत्यज्ञानानन्दरूपात्मलब्धौ ।\nशास्त्रं युक्तिर्देशिकोक्तिः प्रमाणं\nचान्तःसिद्धा स्वानुभूतिः प्रमाणम् ॥",
-      "iast": "svasyāvidyābandhasaṃbandhamokṣāt\nsatyajñānānandarūpātmalabdhau |\nśāstraṃ yuktirdeśikoktiḥ pramāṇaṃ\ncāntaḥsiddhā svānubhūtiḥ pramāṇam ||",
-      "translation": "In the realisation of the Atman, the Existence-Knowledge-Bliss Absolute, through the breaking of one’s connection with the bondage of Avidya or ignorance, the Scriptures, reasoning and the words of the Guru are the proofs, while one’s own experience earned by concentrating the mind is another proof.",
-      "gloss": [],
+      "iast": "svasya avidyā-bandha-saṃbandha-mokṣāt\nsatya-jñāna-ānanda-rūpa-ātma-labdhau |\nśāstraṃ yuktiḥ deśika-uktiḥ pramāṇaṃ\nca antaḥ-siddhā sva-anubhūtiḥ pramāṇam ||",
+      "translation": "For release from one's bondage to ignorance and attainment of the Self—whose nature is truth, knowledge, and bliss—scripture, reasoning, and the teacher's words are valid means; one's own direct inner experience is also a valid means.",
+      "gloss": [
+        {
+          "sa": "स्वस्य",
+          "en": "of oneself; one's own"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "बन्ध",
+          "en": "bondage"
+        },
+        {
+          "sa": "सम्बन्ध",
+          "en": "connection; tie"
+        },
+        {
+          "sa": "मोक्षात्",
+          "en": "from release; through liberation"
+        },
+        {
+          "sa": "सत्य",
+          "en": "truth; reality"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "आनन्द",
+          "en": "bliss"
+        },
+        {
+          "sa": "रूप",
+          "en": "whose nature is"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "लब्धौ",
+          "en": "in attaining; upon attainment"
+        },
+        {
+          "sa": "शास्त्रम्",
+          "en": "scripture"
+        },
+        {
+          "sa": "युक्तिः",
+          "en": "reasoning"
+        },
+        {
+          "sa": "देशिक-उक्तिः",
+          "en": "the teacher's words"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a valid means of knowledge; evidence"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अन्तः-सिद्धा",
+          "en": "established inwardly; directly realized"
+        },
+        {
+          "sa": "स्व-अनुभूतिः",
+          "en": "one's own experience"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a valid means of knowledge; evidence"
+        }
+      ],
       "sourceNumbers": [
         474
-      ]
+      ],
+      "editionTranslation": "In the realisation of the Atman, the Existence-Knowledge-Bliss Absolute, through the breaking of one’s connection with the bondage of Avidya or ignorance, the Scriptures, reasoning and the words of the Guru are the proofs, while one’s own experience earned by concentrating the mind is another proof."
     },
     {
       "id": "vivekachudamani-475",
       "number": "475",
       "label": "Verse 475",
       "deva": "बन्धो मोक्षश्च तृप्तिश्च चिन्तारोग्यक्षुदादयः ।\nस्वेनैव वेद्या यज्ज्ञानं परेषामानुमानिकम् ॥",
-      "iast": "bandho mokṣaśca tṛptiśca cintārogyakṣudādayaḥ |\nsvenaiva vedyā yajjñānaṃ pareṣāmānumānikam ||",
-      "translation": "Bondage, liberation, satisfaction, anxiety, recovery from illness, hunger and other such things are known only to the man concerned, and knowledge of these to others is a mere inference.",
-      "gloss": [],
+      "iast": "bandhaḥ mokṣaḥ ca tṛptiḥ ca cintā-ārogya-kṣut-ādayaḥ |\nsvena eva vedyāḥ yat jñānaṃ pareṣām ānumānikam ||",
+      "translation": "Bondage, liberation, contentment, worry, health, hunger, and the like are known by oneself alone; for others, knowledge of them is only by inference.",
+      "gloss": [
+        {
+          "sa": "बन्धः",
+          "en": "bondage"
+        },
+        {
+          "sa": "मोक्षः",
+          "en": "liberation"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तृप्तिः",
+          "en": "contentment; satisfaction"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "चिन्ता",
+          "en": "worry; anxiety"
+        },
+        {
+          "sa": "आरोग्य",
+          "en": "health"
+        },
+        {
+          "sa": "क्षुत्",
+          "en": "hunger"
+        },
+        {
+          "sa": "आदयः",
+          "en": "and the rest; and the like"
+        },
+        {
+          "sa": "स्वेन",
+          "en": "by oneself"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "वेद्याः",
+          "en": "are known; are to be known"
+        },
+        {
+          "sa": "यत्",
+          "en": "which; that"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "परेषाम्",
+          "en": "for others"
+        },
+        {
+          "sa": "आनुमानिकम्",
+          "en": "inferential; known by inference"
+        }
+      ],
       "sourceNumbers": [
         475
-      ]
+      ],
+      "editionTranslation": "Bondage, liberation, satisfaction, anxiety, recovery from illness, hunger and other such things are known only to the man concerned, and knowledge of these to others is a mere inference."
     },
     {
       "id": "vivekachudamani-476",
@@ -37424,6 +37754,7 @@
     "Refined verse 451's word-by-word reading to distinguish jñānodayāt (at the arising of knowledge) from jñānāt (through knowledge).",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 456–460; preserved prior translations as editionTranslation. Reparsed verse 458's n-anādeḥ as 'for the beginningless Self' and translated verse 457's prāśana-mocana as eating and bodily elimination.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 461–465; verses 462–463 share one reader unit and are both fully glossed. Corrected verse 465's IAST sadghanaṃ to match सद्घनं.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 466–470, including the repeated nonduality refrain in every verse. Corrected verse 470's duplicated and misleading prior English and normalized the IAST compounds in verses 466 and 470."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 466–470, including the repeated nonduality refrain in every verse. Corrected verse 470's duplicated and misleading prior English and normalized the IAST compounds in verses 466 and 470.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 471–475; preserved prior translations as editionTranslation. Clarified verse 474's two attainment phrases and the distinction in verse 475 between first-person knowledge and others' inference."
   ]
 }
