@@ -2,9 +2,9 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 1237,
+  "expectedUnits": 1217,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit source and original English translation for all 1237 reader units. The full text has 423 numbered verses across four chapters. Verses 1.1–1.60, 1.100, 3.114, 3.123, and 4.43 now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 359 numbered verses and prose commentary still need separate gloss work.",
+  "coverage": "Complete Sanskrit source and original English translation for all 1217 reader units. The full text has 423 numbered verses across four chapters. Verses 1.1–1.80, 1.100, 3.114, 3.123, and 4.43 now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 339 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-SA 4.0",
     "attribution": "Wikisource contributors; Intellexus project.",
     "url": "https://sa.wikisource.org/wiki/नैष्कर्म्यसिद्धिः",
-    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. Verses 1.1–1.60 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Verse 1.32 follows the revised 1925 reading यच्चापरिहृतं. Verse 1.57 follows the vipro reading, and verse 1.60 normalizes अध्यारोप्य."
+    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. Verses 1.1–1.80 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Verse 1.32 follows the revised 1925 reading यच्चापरिहृतं. Verses 1.57 and 1.71 follow alternate readings noted in the Alston and Acyuta Grantha Māla editions; verse 1.60 normalizes अध्यारेाप्य."
   },
   "units": [
     {
@@ -4627,26 +4627,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0191",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 191",
-      "label": "Text 191",
-      "deva": "स्थाणोः सतत्त्वविज्ञानं यथा नाङ्गं पलायते ।",
-      "iast": "sthāṇoḥ satattvavijñānaṃ yathā nāṅgaṃ palāyate |",
-      "translation": "Knowing the true nature of a post is not an auxiliary to running away;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0192",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.61",
       "label": "Verse 1.61",
-      "deva": "आत्मनस्तत्त्वविज्ञानं तद्वन्नाङ्गं क्रियाविधौ ॥ ६१॥",
-      "iast": "ātmanastattvavijñānaṃ tadvannāṅgaṃ kriyāvidhau || 61||",
-      "translation": "likewise, knowledge of the Self’s true nature is not an auxiliary to an injunction to act.",
-      "gloss": [],
+      "deva": "स्थाणोः सतत्त्वविज्ञानं यथा नाङ्गं पलायते । आत्मनस्तत्त्वविज्ञानं तद्वन्नाङ्गं क्रियाविधौ ॥ ६१॥",
+      "iast": "sthāṇoḥ satattvavijñānaṃ yathā nāṅgaṃ palāyate | ātmanastattvavijñānaṃ tadvannāṅgaṃ kriyāvidhau || 61||",
+      "translation": "Just as knowing the true nature of a post is no part of running away, knowledge of the Self’s true nature is no part of an injunction to act.",
+      "gloss": [
+        {
+          "sa": "स्थाणोः",
+          "en": "of a post; tree stump"
+        },
+        {
+          "sa": "सतत्त्व-विज्ञानम्",
+          "en": "knowledge of its true nature"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अङ्गम्",
+          "en": "a part; an auxiliary"
+        },
+        {
+          "sa": "पलायते",
+          "en": "of running away"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "तत्त्व-विज्ञानम्",
+          "en": "knowledge of the true nature"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अङ्गम्",
+          "en": "a part; an auxiliary"
+        },
+        {
+          "sa": "क्रिया-विधौ",
+          "en": "in an injunction to act"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-61"
       ]
@@ -4663,26 +4701,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0194",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 194",
-      "label": "Text 194",
-      "deva": "यद्धि यस्यानुरोधेन स्वभावमनुवर्तते ।",
-      "iast": "yaddhi yasyānurodhena svabhāvamanuvartate |",
-      "translation": "whatever follows another thing in accordance with its nature",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0195",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.62",
       "label": "Verse 1.62",
-      "deva": "तत्तस्य गुणभूतं स्यान्न प्रधानाद्गुणो यतः ॥ ६२॥",
-      "iast": "tattasya guṇabhūtaṃ syānna pradhānādguṇo yataḥ || 62||",
-      "translation": "is subordinate to it; an auxiliary cannot be the principal.",
-      "gloss": [],
+      "deva": "यद्धि यस्यानुरोधेन स्वभावमनुवर्तते । तत्तस्य गुणभूतं स्यान्न प्रधानाद्गुणो यतः ॥ ६२॥",
+      "iast": "yaddhi yasyānurodhena svabhāvamanuvartate | tattasya guṇabhūtaṃ syānna pradhānādguṇo yataḥ || 62||",
+      "translation": "Whatever follows another’s nature in accordance with it is subordinate to that thing, because an attribute is never separate from what is primary.",
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed; for"
+        },
+        {
+          "sa": "यस्य",
+          "en": "of which; of another"
+        },
+        {
+          "sa": "अनुरोधेन",
+          "en": "in accordance with"
+        },
+        {
+          "sa": "स्वभावम्",
+          "en": "its nature"
+        },
+        {
+          "sa": "अनुवर्तते",
+          "en": "follows"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "गुण-भूतम्",
+          "en": "subordinate; serving as an attribute"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रधानात्",
+          "en": "from what is primary"
+        },
+        {
+          "sa": "गुणः",
+          "en": "an attribute"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-62"
       ]
@@ -4699,40 +4783,59 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0197",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 197",
-      "label": "Text 197",
-      "deva": "कर्मप्रकरणाकाङ्क्षिज्ञानं कर्मगुणो भवेत् ।",
-      "iast": "karmaprakaraṇākāṅkṣijñānaṃ karmaguṇo bhavet |",
-      "translation": "knowledge that depends on a ritual context becomes an accessory of ritual action;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0198",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.63",
       "label": "Verse 1.63",
-      "deva": "यद्धि प्रकरणे यस्य तत्तदङ्गं प्रचक्षते ॥ ६३॥",
-      "iast": "yaddhi prakaraṇe yasya tattadaṅgaṃ pracakṣate || 63||",
-      "translation": "what belongs to a ritual context is called one of its limbs.",
-      "gloss": [],
+      "deva": "कर्मप्रकरणाकाङ्क्षिज्ञानं कर्मगुणो भवेत् । यद्धि प्रकरणे यस्य तत्तदङ्गं प्रचक्षते ॥ ६३॥",
+      "iast": "karmaprakaraṇākāṅkṣijñānaṃ karmaguṇo bhavet | yaddhi prakaraṇe yasya tattadaṅgaṃ pracakṣate || 63||",
+      "translation": "Knowledge that depends on a ritual context becomes an auxiliary of ritual action; whatever belongs to a context is called one of its limbs.",
+      "gloss": [
+        {
+          "sa": "कर्म-प्रकरण-आकाङ्क्षि-ज्ञानम्",
+          "en": "knowledge that depends on a ritual context"
+        },
+        {
+          "sa": "कर्म-गुणः",
+          "en": "an auxiliary of action"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would become"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed; for"
+        },
+        {
+          "sa": "प्रकरणे",
+          "en": "in a context"
+        },
+        {
+          "sa": "यस्य",
+          "en": "of which"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तत्-अङ्गम्",
+          "en": "a limb of that"
+        },
+        {
+          "sa": "प्रचक्षते",
+          "en": "they call"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-63"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0199",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 199",
-      "label": "Text 199",
-      "deva": "स्वरूपलाभमात्रेण यत्त्वविद्यां निहन्ति नः ।",
-      "iast": "svarūpalābhamātreṇa yattvavidyāṃ nihanti naḥ |",
-      "translation": "But knowledge, which destroys our ignorance merely by its own arising,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0200",
@@ -4740,10 +4843,71 @@
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.64",
       "label": "Verse 1.64",
-      "deva": "न तदङ्गं प्रधानं वा ज्ञानं स्यात्कर्मणः क्वचित् ॥ ६४॥",
-      "iast": "na tadaṅgaṃ pradhānaṃ vā jñānaṃ syātkarmaṇaḥ kvacit || 64||",
-      "translation": "can never be either an auxiliary or a principal part of action.",
-      "gloss": [],
+      "deva": "स्वरूपलाभमात्रेण यत्त्वविद्यां निहन्ति नः । न तदङ्गं प्रधानं वा ज्ञानं स्यात्कर्मणः क्वचित् ॥ ६४॥",
+      "iast": "svarūpalābhamātreṇa yattvavidyāṃ nihanti naḥ | na tadaṅgaṃ pradhānaṃ vā jñānaṃ syātkarmaṇaḥ kvacit || 64||",
+      "translation": "But knowledge, which destroys our ignorance through the mere recognition of the true nature [of the Self], can nowhere be either an auxiliary or the principal part of action.",
+      "gloss": [
+        {
+          "sa": "स्वरूप-लाभ-मात्रेण",
+          "en": "through the mere recognition of one’s true nature"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अविद्याम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "निहन्ति",
+          "en": "destroys"
+        },
+        {
+          "sa": "नः",
+          "en": "our"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अङ्गम्",
+          "en": "an auxiliary; limb"
+        },
+        {
+          "sa": "प्रधानम्",
+          "en": "the principal"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "could be"
+        },
+        {
+          "sa": "कर्मणः",
+          "en": "of action"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "anywhere; ever"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-64"
       ]
@@ -4771,26 +4935,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0203",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 203",
-      "label": "Text 203",
-      "deva": "अज्ञानमनिराकुर्वज्ज्ञानमेव न सिध्यति ।",
-      "iast": "ajñānamanirākurvajjñānameva na sidhyati |",
-      "translation": "knowledge cannot be established while ignorance remains unremoved;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0204",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.65",
       "label": "Verse 1.65",
-      "deva": "विपन्नकारकग्रामं ज्ञानं कर्म न ढौकते ॥ ६५॥",
-      "iast": "vipannakārakagrāmaṃ jñānaṃ karma na ḍhaukate || 65||",
-      "translation": "action, with its whole apparatus of agent and instruments, does not reach knowledge.",
-      "gloss": [],
+      "deva": "अज्ञानमनिराकुर्वज्ज्ञानमेव न सिध्यति । विपन्नकारकग्रामं ज्ञानं कर्म न ढौकते ॥ ६५॥",
+      "iast": "ajñānamanirākurvajjñānameva na sidhyati | vipannakārakagrāmaṃ jñānaṃ karma na ḍhaukate || 65||",
+      "translation": "Knowledge that does not remove ignorance is not established as knowledge at all; action cannot reach knowledge that has dissolved the whole set of agent and instrumental factors.",
+      "gloss": [
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अनिराकुर्वत्",
+          "en": "not removing"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        },
+        {
+          "sa": "विपन्न-कारक-ग्रामम्",
+          "en": "whose whole set of action-factors has been dissolved"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ढौकते",
+          "en": "reaches; approaches"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-65"
       ]
@@ -4807,26 +5005,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0206",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 206",
-      "label": "Text 206",
-      "deva": "हेतुस्वरूपकार्याणि प्रकाशतमसोरिव ।",
-      "iast": "hetusvarūpakāryāṇi prakāśatamasoriva |",
-      "translation": "Their causes, natures, and effects are opposed, like light and darkness;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0207",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.66",
       "label": "Verse 1.66",
-      "deva": "विरोधीनि ततो नास्ति साङ्गत्यं ज्ञानकर्मणोः ॥ ६६॥",
-      "iast": "virodhīni tato nāsti sāṅgatyaṃ jñānakarmaṇoḥ || 66||",
-      "translation": "therefore knowledge and action cannot go together.",
-      "gloss": [],
+      "deva": "हेतुस्वरूपकार्याणि प्रकाशतमसोरिव । विरोधीनि ततो नास्ति साङ्गत्यं ज्ञानकर्मणोः ॥ ६६॥",
+      "iast": "hetusvarūpakāryāṇi prakāśatamasoriva | virodhīni tato nāsti sāṅgatyaṃ jñānakarmaṇoḥ || 66||",
+      "translation": "The causes, nature, and effects of knowledge and action are opposed, like light and darkness; therefore, the two cannot be joined.",
+      "gloss": [
+        {
+          "sa": "हेतु",
+          "en": "cause"
+        },
+        {
+          "sa": "स्वरूप",
+          "en": "nature"
+        },
+        {
+          "sa": "कार्याणि",
+          "en": "effects"
+        },
+        {
+          "sa": "प्रकाश-तमसोः",
+          "en": "of light and darkness"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "विरोधीनि",
+          "en": "opposed"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "साङ्गत्यम्",
+          "en": "a joining; compatibility"
+        },
+        {
+          "sa": "ज्ञान-कर्मणोः",
+          "en": "of knowledge and action"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-66"
       ]
@@ -4854,26 +5086,56 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0210",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 210",
-      "label": "Text 210",
-      "deva": "सकृत्प्रवृत्त्या मृद्नाति क्रियाकारकरूपभृत् ।",
-      "iast": "sakṛtpravṛttyā mṛdnāti kriyākārakarūpabhṛt |",
-      "translation": "Knowledge arising from scripture crushes ignorance at a single stroke, though it appears in the form of an act and its agent;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0211",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.67",
       "label": "Verse 1.67",
-      "deva": "अज्ञानमागमज्ञानं साङ्गत्यं नास्त्यतोऽनयोः ॥ ६७॥",
-      "iast": "ajñānamāgamajñānaṃ sāṅgatyaṃ nāstyato'nayoḥ || 67||",
-      "translation": "therefore scriptural knowledge and action cannot be joined.",
-      "gloss": [],
+      "deva": "सकृत्प्रवृत्त्या मृद्नाति क्रियाकारकरूपभृत् । अज्ञानमागमज्ञानं साङ्गत्यं नास्त्यतोऽनयोः ॥ ६७॥",
+      "iast": "sakṛtpravṛttyā mṛdnāti kriyākārakarūpabhṛt | ajñānamāgamajñānaṃ sāṅgatyaṃ nāstyato'nayoḥ || 67||",
+      "translation": "Scriptural knowledge, though appearing in the form of an act and its factors, crushes ignorance at a single stroke; therefore knowledge and action cannot be joined.",
+      "gloss": [
+        {
+          "sa": "सकृत्-प्रवृत्त्या",
+          "en": "through a single arising"
+        },
+        {
+          "sa": "मृद्नाति",
+          "en": "crushes; destroys"
+        },
+        {
+          "sa": "क्रिया-कारक-रूप-भृत्",
+          "en": "appearing in the form of an act and its factors"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "आगम-ज्ञानम्",
+          "en": "scriptural knowledge"
+        },
+        {
+          "sa": "साङ्गत्यम्",
+          "en": "a joining; compatibility"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अनयोः",
+          "en": "of these two"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-67"
       ]
@@ -4890,26 +5152,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0213",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 213",
-      "label": "Text 213",
-      "deva": "अनुत्सारितनानात्वं ब्रह्म यस्यापि वादिनः ।",
-      "iast": "anutsāritanānātvaṃ brahma yasyāpi vādinaḥ |",
-      "translation": "Even for a proponent whose Brahman has not been freed from multiplicity,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0214",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.68",
       "label": "Verse 1.68",
-      "deva": "तन्मतेनापि दुस्साध्यो ज्ञानकर्मसमुच्चयः ॥ ६८॥",
-      "iast": "tanmatenāpi dussādhyo jñānakarmasamuccayaḥ || 68||",
-      "translation": "the combination of knowledge and action is difficult to establish on his own view.",
-      "gloss": [],
+      "deva": "अनुत्सारितनानात्वं ब्रह्म यस्यापि वादिनः । तन्मतेनापि दुस्साध्यो ज्ञानकर्मसमुच्चयः ॥ ६८॥",
+      "iast": "anutsāritanānātvaṃ brahma yasyāpi vādinaḥ | tanmatenāpi dussādhyo jñānakarmasamuccayaḥ || 68||",
+      "translation": "Even for a proponent whose Brahman has not been freed from multiplicity, the combination of knowledge and action is difficult to establish on that view.",
+      "gloss": [
+        {
+          "sa": "अनुत्सारित-नानात्वम्",
+          "en": "whose multiplicity has not been removed"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "यस्य",
+          "en": "of whom"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "वादिनः",
+          "en": "of a proponent"
+        },
+        {
+          "sa": "तत्-मतेन",
+          "en": "on that view"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "दुस्साध्यः",
+          "en": "difficult to establish"
+        },
+        {
+          "sa": "ज्ञान-कर्म-समुच्चयः",
+          "en": "the combination of knowledge and action"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-68"
       ]
@@ -4926,26 +5214,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0216",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 216",
-      "label": "Text 216",
-      "deva": "ब्रह्मात्मा वा भवेत्तस्य यदि वानात्मरूपकम् ।",
-      "iast": "brahmātmā vā bhavettasya yadi vānātmarūpakam |",
-      "translation": "For him, Brahman may be the Self, or it may have the nature of not-Self;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0217",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.69",
       "label": "Verse 1.69",
-      "deva": "आत्मानाप्तिर्भवेन्मोहादितरस्याप्यनात्मनः ॥ ६९॥",
-      "iast": "ātmānāptirbhavenmohāditarasyāpyanātmanaḥ || 69||",
-      "translation": "in the latter case, because of delusion, the Self would not be attained, nor would the other, not-Self, be the Self.",
-      "gloss": [],
+      "deva": "ब्रह्मात्मा वा भवेत्तस्य यदि वानात्मरूपकम् । आत्मानाप्तिर्भवेन्मोहादितरस्याप्यनात्मनः ॥ ६९॥",
+      "iast": "brahmātmā vā bhavettasya yadi vānātmarūpakam | ātmānāptirbhavenmohāditarasyāpyanātmanaḥ || 69||",
+      "translation": "For him, Brahman may be either the Self or something of the nature of not-Self. If it is the Self, delusion would explain its seeming non-attainment; if it is other, it remains not-Self.",
+      "gloss": [
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "may be"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for him"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अनात्म-रूपकम्",
+          "en": "of the nature of not-Self"
+        },
+        {
+          "sa": "आत्म-अनाप्तिः",
+          "en": "non-attainment of the Self"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would occur"
+        },
+        {
+          "sa": "मोहात्",
+          "en": "through delusion"
+        },
+        {
+          "sa": "इतरस्य",
+          "en": "of the other"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अनात्मनः",
+          "en": "which is not-Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-69"
       ]
@@ -4962,26 +5296,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0219",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 219",
-      "label": "Text 219",
-      "deva": "मोहापिधानभङ्गाय नैव कर्माणि कारणम् ।",
-      "iast": "mohāpidhānabhaṅgāya naiva karmāṇi kāraṇam |",
-      "translation": "action is not the means to break the veil of delusion;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0220",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.70",
       "label": "Verse 1.70",
-      "deva": "ज्ञानेनैव फलावाप्तेस्तत्र कर्म निरर्थकम् ॥ ७०॥",
-      "iast": "jñānenaiva phalāvāptestatra karma nirarthakam || 70||",
-      "translation": "knowledge alone brings the result, and action there is pointless.",
-      "gloss": [],
+      "deva": "मोहापिधानभङ्गाय नैव कर्माणि कारणम् । ज्ञानेनैव फलावाप्तेस्तत्र कर्म निरर्थकम् ॥ ७०॥",
+      "iast": "mohāpidhānabhaṅgāya naiva karmāṇi kāraṇam | jñānenaiva phalāvāptestatra karma nirarthakam || 70||",
+      "translation": "Action is not the means for breaking the veil of delusion; since the result is attained through knowledge alone, action is pointless in that case.",
+      "gloss": [
+        {
+          "sa": "मोह-अपिधान-भङ्गाय",
+          "en": "for breaking the veil of delusion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "कर्माणि",
+          "en": "actions"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the means; cause"
+        },
+        {
+          "sa": "ज्ञानेन",
+          "en": "through knowledge"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "फल-अवाप्तेः",
+          "en": "because the result is attained"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "निरर्थकम्",
+          "en": "pointless"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-70"
       ]
@@ -5009,26 +5377,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0223",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 223",
-      "label": "Text 223",
-      "deva": "अन्यस्यान्यात्मताप्राप्तौ न क्वचिद्धेतुसंभवः ।",
-      "iast": "anyasyānyātmatāprāptau na kvaciddhetusaṃbhavaḥ |",
-      "translation": "there can be no cause by which one thing becomes the Self of another;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0224",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.71",
       "label": "Verse 1.71",
-      "deva": "तस्मिन् सत्यपि नो नष्टः परात्मानं प्रपद्यते ॥ ७१॥",
-      "iast": "tasmin satyapi no naṣṭaḥ parātmānaṃ prapadyate || 71||",
-      "translation": "even when that other thing exists, it is not destroyed, nor does the Self attain another Self.",
-      "gloss": [],
+      "deva": "अन्यस्यान्यात्मताप्राप्तौ न क्वचिद्धेतुसंभवः । तस्मिन् सत्यपि नो नष्टः परात्मानं प्रपद्यते ॥ ७१॥",
+      "iast": "anyasyānyātmatāprāptau na kvaciddhetusaṃbhavaḥ | tasmin satyapi no naṣṭaḥ parātmānaṃ prapadyate || 71||",
+      "translation": "There is no possible cause by which one thing can become the Self of another. Even if such a cause existed, one could not attain the other Self without being destroyed.",
+      "gloss": [
+        {
+          "sa": "अन्यस्य",
+          "en": "of one thing; another"
+        },
+        {
+          "sa": "अन्य-आत्मता-प्राप्तौ",
+          "en": "in becoming the Self of another"
+        },
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "anywhere"
+        },
+        {
+          "sa": "हेतु-सम्भवः",
+          "en": "possibility of a cause"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "when that [cause]"
+        },
+        {
+          "sa": "सति",
+          "en": "is present"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "न",
+          "en": "not; without"
+        },
+        {
+          "sa": "नष्टः",
+          "en": "destroyed"
+        },
+        {
+          "sa": "पर-आत्मानम्",
+          "en": "the other; supreme Self"
+        },
+        {
+          "sa": "प्रपद्यते",
+          "en": "attains"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-71"
       ]
@@ -5045,26 +5451,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0226",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 226",
-      "label": "Text 226",
-      "deva": "परमात्मानुकूलेन ज्ञानाभ्यासेन दुःखिनः ।",
-      "iast": "paramātmānukūlena jñānābhyāsena duḥkhinaḥ |",
-      "translation": "Even dualists who suffer could be freed through the practice of knowledge that accords with the Supreme Self,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0227",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.72",
       "label": "Verse 1.72",
-      "deva": "द्वैतिनोऽपि प्रमुच्येरन्न परात्मविरोधिना ॥ ७२॥",
-      "iast": "dvaitino'pi pramucyeranna parātmavirodhinā || 72||",
-      "translation": "but not through action that opposes the Supreme Self.",
-      "gloss": [],
+      "deva": "परमात्मानुकूलेन ज्ञानाभ्यासेन दुःखिनः । द्वैतिनोऽपि प्रमुच्येरन्न परात्मविरोधिना ॥ ७२॥",
+      "iast": "paramātmānukūlena jñānābhyāsena duḥkhinaḥ | dvaitino'pi pramucyeranna parātmavirodhinā || 72||",
+      "translation": "Even suffering dualists could be liberated through practice of knowledge that accords with the Supreme Self, but not through what opposes it.",
+      "gloss": [
+        {
+          "sa": "परम-आत्म-अनुकूलेन",
+          "en": "in accord with the Supreme Self"
+        },
+        {
+          "sa": "ज्ञान-अभ्यासेन",
+          "en": "through practice of knowledge"
+        },
+        {
+          "sa": "दुःखिनः",
+          "en": "the suffering"
+        },
+        {
+          "sa": "द्वैतिनः",
+          "en": "dualists"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "प्रमुच्येरन्",
+          "en": "could be liberated"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पर-आत्म-विरोधिना",
+          "en": "by what opposes the Supreme Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-72"
       ]
@@ -5081,26 +5509,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0229",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 229",
-      "label": "Text 229",
-      "deva": "समस्तव्यस्तभूतस्य ब्रह्मण्येवावतिष्ठतः ।",
-      "iast": "samastavyastabhūtasya brahmaṇyevāvatiṣṭhataḥ |",
-      "translation": "For one who abides in Brahman, seeing all beings as both distinct and not distinct,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0230",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.73",
       "label": "Verse 1.73",
-      "deva": "ब्रूत कर्मणि को हेतुः सर्वानन्यत्वदर्शिनः ॥ ७३॥",
-      "iast": "brūta karmaṇi ko hetuḥ sarvānanyatvadarśinaḥ || 73||",
-      "translation": "what could prompt action for one who sees that nothing is other than the Self?",
-      "gloss": [],
+      "deva": "समस्तव्यस्तभूतस्य ब्रह्मण्येवावतिष्ठतः । ब्रूत कर्मणि को हेतुः सर्वानन्यत्वदर्शिनः ॥ ७३॥",
+      "iast": "samastavyastabhūtasya brahmaṇyevāvatiṣṭhataḥ | brūta karmaṇi ko hetuḥ sarvānanyatvadarśinaḥ || 73||",
+      "translation": "For one who abides in Brahman as the whole and its parts, seeing nothing as other, tell me: what could prompt action?",
+      "gloss": [
+        {
+          "sa": "समस्त-व्यस्त-भूतस्य",
+          "en": "of one who has become the whole and its separate parts"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अवतिष्ठतः",
+          "en": "of one who abides"
+        },
+        {
+          "sa": "ब्रूत",
+          "en": "tell [me]"
+        },
+        {
+          "sa": "कर्मणि",
+          "en": "for action"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "cause; motive"
+        },
+        {
+          "sa": "सर्व-अनन्यत्व-दर्शिनः",
+          "en": "for one who sees that all is non-other"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-73"
       ]
@@ -5117,26 +5571,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0232",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 232",
-      "label": "Text 232",
-      "deva": "सर्वजात्यादिमत्त्वेऽस्य नितरां हेतसंभवः ।",
-      "iast": "sarvajātyādimattve'sya nitarāṃ hetasaṃbhavaḥ |",
-      "translation": "If this [Self] possessed every caste and other attribute, there would be abundant cause for action;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0233",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.74",
       "label": "Verse 1.74",
-      "deva": "विशेषं ह्यनुपादाय कर्म नैव प्रवर्तते ॥ ७४॥",
-      "iast": "viśeṣaṃ hyanupādāya karma naiva pravartate || 74||",
-      "translation": "for action never proceeds without taking a distinction as its basis.",
-      "gloss": [],
+      "deva": "सर्वजात्यादिमत्त्वेऽस्य नितरां हेतुसम्भवः । विशेषं ह्यनुपादाय कर्म नैव प्रवर्तते ॥ ७४॥",
+      "iast": "sarvajātyādimattve'sya nitarāṃ hetusambhavaḥ | viśeṣaṃ hyanupādāya karma naiva pravartate || 74||",
+      "translation": "If this Self possessed every distinction, such as caste and the rest, there would be many grounds for action; for action never proceeds without relying on a particular distinction.",
+      "gloss": [
+        {
+          "sa": "सर्व-जाति-आदि-मत्त्वे",
+          "en": "if it possessed every caste and the rest"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this [Self]"
+        },
+        {
+          "sa": "नितराम्",
+          "en": "abundantly; greatly"
+        },
+        {
+          "sa": "हेतु-सम्भवः",
+          "en": "grounds would arise"
+        },
+        {
+          "sa": "विशेषम्",
+          "en": "a particular distinction"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "अनुपादाय",
+          "en": "without taking up; relying on"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रवर्तते",
+          "en": "proceeds"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-74"
       ]
@@ -5153,26 +5641,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0235",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 235",
-      "label": "Text 235",
-      "deva": "न चाध्यात्माभिमानोऽपि विदुषोऽस्त्यासुरत्वतः ।",
-      "iast": "na cādhyātmābhimāno'pi viduṣo'styāsuratvataḥ |",
-      "translation": "the knower has no identification with the body and the rest; such identification is demonic.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0236",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.75",
       "label": "Verse 1.75",
-      "deva": "विदुषोऽप्यासुरश्चेत्स्यान्निष्फलं ब्रह्मदर्शनम् ॥ ७५॥",
-      "iast": "viduṣo'pyāsuraścetsyānniṣphalaṃ brahmadarśanam || 75||",
-      "translation": "If even the knower were demonic in this way, the vision of Brahman would be fruitless.",
-      "gloss": [],
+      "deva": "न चाध्यात्माभिमानोऽपि विदुषोऽस्त्यासुरत्वतः । विदुषोऽप्यासुरश्चेत्स्यान्निष्फलं ब्रह्मदर्शनम् ॥ ७५॥",
+      "iast": "na cādhyātmābhimāno'pi viduṣo'styāsuratvataḥ | viduṣo'pyāsuraścetsyānniṣphalaṃ brahmadarśanam || 75||",
+      "translation": "The knower has no identification with the inner person, since such identification is demonic. If even the knower were demonic, the vision of Brahman would be fruitless.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अध्यात्म-अभिमानः",
+          "en": "identification with the inner person; body-mind"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "विदुषः",
+          "en": "of the knower"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "आसुरत्वतः",
+          "en": "because it is demonic"
+        },
+        {
+          "sa": "विदुषः",
+          "en": "of the knower"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "आसुरः",
+          "en": "demonic"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "were"
+        },
+        {
+          "sa": "निष्फलम्",
+          "en": "fruitless"
+        },
+        {
+          "sa": "ब्रह्म-दर्शनम्",
+          "en": "the vision of Brahman"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-75"
       ]
@@ -5189,26 +5723,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0238",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 238",
-      "label": "Text 238",
-      "deva": "अथाध्यात्मं पुनर्यायादाश्रितो मूढतां भवेत् ।",
-      "iast": "athādhyātmaṃ punaryāyādāśrito mūḍhatāṃ bhavet |",
-      "translation": "“If he should turn again toward the inner Self, he would become deluded.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0239",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.76",
       "label": "Verse 1.76",
-      "deva": "स करोत्येव कर्माणि को ह्यज्ञं विनिवारयेत् ॥ ७६॥",
-      "iast": "sa karotyeva karmāṇi ko hyajñaṃ vinivārayet || 76||",
-      "translation": "He will go on performing actions; for who can restrain an ignorant person?”",
-      "gloss": [],
+      "deva": "अथाध्यात्मं पुनर्यायादाश्रितो मूढतां भवेत् । स करोत्येव कर्माणि को ह्यज्ञं विनिवारयेत् ॥ ७६॥",
+      "iast": "athādhyātmaṃ punaryāyādāśrito mūḍhatāṃ bhavet | sa karotyeva karmāṇi ko hyajñaṃ vinivārayet || 76||",
+      "translation": "“If he were to turn again toward the inner self, he would become deluded. He would then keep acting; for who can restrain an ignorant person?”",
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "then; if"
+        },
+        {
+          "sa": "अध्यात्मम्",
+          "en": "toward the inner self"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "यायात्",
+          "en": "he were to go"
+        },
+        {
+          "sa": "आश्रितः",
+          "en": "having resorted to"
+        },
+        {
+          "sa": "मूढताम्",
+          "en": "delusion"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "he would become"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "करोति",
+          "en": "does"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "कर्माणि",
+          "en": "actions"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed; for"
+        },
+        {
+          "sa": "अज्ञम्",
+          "en": "an ignorant person"
+        },
+        {
+          "sa": "विनिवारयेत्",
+          "en": "could restrain"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-76"
       ]
@@ -5225,26 +5809,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0241",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 241",
-      "label": "Text 241",
-      "deva": "सामान्येतररूपाभ्यां कर्मात्मैवास्य योगिनः ।",
-      "iast": "sāmānyetararūpābhyāṃ karmātmaivāsya yoginaḥ |",
-      "translation": "For this yogin, the Self itself is action, in a general way and in a distinctive way;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0242",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.77",
       "label": "Verse 1.77",
-      "deva": "निश्श्वासोच्छ्वासवत्तस्मान्न नियोगमपेक्षते । ॥ ७७॥",
-      "iast": "niśśvāsocchvāsavattasmānna niyogamapekṣate | || 77||",
-      "translation": "therefore it needs no injunction, just as breathing in and out needs none.",
-      "gloss": [],
+      "deva": "सामान्येतररूपाभ्यां कर्मात्मैवास्य योगिनः । निश्श्वासोच्छ्वासवत्तस्मान्न नियोगमपेक्षते ॥ ७७॥",
+      "iast": "sāmānyetararūpābhyāṃ karmātmaivāsya yoginaḥ | niśśvāsocchvāsavattasmānna niyogamapekṣate || 77||",
+      "translation": "For this yogin, action is the Self in both its general and particular forms; therefore, like breathing in and out, it requires no injunction.",
+      "gloss": [
+        {
+          "sa": "सामान्य-इतर-रूपाभ्याम्",
+          "en": "in general and particular forms"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self; one’s nature"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "योगिनः",
+          "en": "yogin"
+        },
+        {
+          "sa": "निःश्वास-उच्छ्वास-वत्",
+          "en": "like breathing in and out"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नियोगम्",
+          "en": "an injunction"
+        },
+        {
+          "sa": "अपेक्षते",
+          "en": "depends on; requires"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-77"
       ]
@@ -5261,26 +5879,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0244",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 244",
-      "label": "Text 244",
-      "deva": "भिन्नाभिन्नं विशेषैश्चेद्दुःखि स्याद्ब्रह्म ते ध्रुवम् ।",
-      "iast": "bhinnābhinnaṃ viśeṣaiścedduḥkhi syādbrahma te dhruvam |",
-      "translation": "If your Brahman is both different and non-different in its particular aspects, it will surely be subject to suffering;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0245",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.78",
       "label": "Verse 1.78",
-      "deva": "अशेषदुःखिता च स्यादहो प्रज्ञात्मवादिनाम् ॥ ७८॥",
-      "iast": "aśeṣaduḥkhitā ca syādaho prajñātmavādinām || 78||",
-      "translation": "indeed, it would be subject to every kind of suffering—an astonishing doctrine for those who claim the Self is pure consciousness.",
-      "gloss": [],
+      "deva": "भिन्नाभिन्नं विशेषैश्चेद्दुःखि स्याद्ब्रह्म ते ध्रुवम् । अशेषदुःखिता च स्यादहो प्रज्ञात्मवादिनाम् ॥ ७८॥",
+      "iast": "bhinnābhinnaṃ viśeṣaiścedduḥkhi syādbrahma te dhruvam | aśeṣaduḥkhitā ca syādaho prajñātmavādinām || 78||",
+      "translation": "If Brahman is both different and non-different in its attributes, your Brahman would surely be subject to suffering; indeed, all suffering would belong to those who claim consciousness as the Self—how astonishing!",
+      "gloss": [
+        {
+          "sa": "भिन्न-अभिन्नम्",
+          "en": "both different and non-different"
+        },
+        {
+          "sa": "विशेषैः",
+          "en": "in its attributes; particular features"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "दुःखि",
+          "en": "subject to suffering"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "ते",
+          "en": "your"
+        },
+        {
+          "sa": "ध्रुवम्",
+          "en": "surely"
+        },
+        {
+          "sa": "अशेष-दुःखिता",
+          "en": "complete suffering"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अहो",
+          "en": "how astonishing"
+        },
+        {
+          "sa": "प्रज्ञा-आत्म-वादिनाम्",
+          "en": "for those who hold consciousness to be the Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-78"
       ]
@@ -5297,26 +5957,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0247",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 247",
-      "label": "Text 247",
-      "deva": "तमोऽङ्गत्वं यथा भानोरग्नेश्शीताङ्गता यथा ।",
-      "iast": "tamo'ṅgatvaṃ yathā bhānoragneśśītāṅgatā yathā |",
-      "translation": "Just as darkness cannot be an attribute of the sun, nor coldness an attribute of fire,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0248",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.79",
       "label": "Verse 1.79",
-      "deva": "वारिणश्चोष्णता यद्वज्ज्ञानस्यैवं क्रियाङ्गता ॥ ७९॥",
-      "iast": "vāriṇaścoṣṇatā yadvajjñānasyaivaṃ kriyāṅgatā || 79||",
-      "translation": "nor heat an attribute of water, so action cannot be an attribute of knowledge.",
-      "gloss": [],
+      "deva": "तमोऽङ्गत्वं यथा भानोरग्नेश्शीताङ्गता यथा । वारिणश्चोष्णता यद्वज्ज्ञानस्यैवं क्रियाङ्गता ॥ ७९॥",
+      "iast": "tamo'ṅgatvaṃ yathā bhānoragneśśītāṅgatā yathā | vāriṇaścoṣṇatā yadvajjñānasyaivaṃ kriyāṅgatā || 79||",
+      "translation": "Just as darkness cannot be a part of the sun, coldness a part of fire, or heat a part of water, action cannot be a part of knowledge.",
+      "gloss": [
+        {
+          "sa": "तमः",
+          "en": "darkness"
+        },
+        {
+          "sa": "अङ्गत्वम्",
+          "en": "being a part"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "भानोः",
+          "en": "of the sun"
+        },
+        {
+          "sa": "अग्नेः",
+          "en": "of fire"
+        },
+        {
+          "sa": "शीत-अङ्गता",
+          "en": "being cold; coldness"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "वारिणः",
+          "en": "of water"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उष्णता",
+          "en": "heat"
+        },
+        {
+          "sa": "यद्वत्",
+          "en": "just as"
+        },
+        {
+          "sa": "ज्ञानस्य",
+          "en": "of knowledge"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "क्रिया-अङ्गता",
+          "en": "action’s being a part"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-79"
       ]
@@ -5333,26 +6039,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0250",
-      "chapter": 1,
-      "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
-      "number": "1 · 250",
-      "label": "Text 250",
-      "deva": "\"मुक्तेः क्रियाभिः सिद्धत्वात् \" इत्याद्यनुचितं बहु ।",
-      "iast": "\"mukteḥ kriyābhiḥ siddhatvāt \" ityādyanucitaṃ bahu |",
-      "translation": "Much of what you said—beginning with “liberation is accomplished by actions”—",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0251",
       "chapter": 1,
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1.80",
       "label": "Verse 1.80",
-      "deva": "यदभाणि तदन्याय्यं यथा तदधुनोच्यते ॥ ८०॥",
-      "iast": "yadabhāṇi tadanyāyyaṃ yathā tadadhunocyate || 80||",
-      "translation": "was unreasonable. I shall now explain why.",
-      "gloss": [],
+      "deva": "“मुक्तेः क्रियाभिः सिद्धत्वात्” इत्याद्यनुचितं बहु । यदभाणि तदन्याय्यं यथा तदधुनोच्यते ॥ ८०॥",
+      "iast": "“mukteḥ kriyābhiḥ siddhatvāt” ityādyanucitaṃ bahu | yadabhāṇi tadanyāyyaṃ yathā tadadhunocyate || 80||",
+      "translation": "Much of what you said, beginning with “liberation is accomplished by actions,” was unreasonable; I shall now explain why.",
+      "gloss": [
+        {
+          "sa": "मुक्तेः",
+          "en": "of liberation"
+        },
+        {
+          "sa": "क्रियाभिः",
+          "en": "by actions"
+        },
+        {
+          "sa": "सिद्धत्वात्",
+          "en": "because of being accomplished"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; the claim"
+        },
+        {
+          "sa": "आदि",
+          "en": "beginning with"
+        },
+        {
+          "sa": "अनुचितम्",
+          "en": "unreasonable"
+        },
+        {
+          "sa": "बहु",
+          "en": "much"
+        },
+        {
+          "sa": "यत्",
+          "en": "what"
+        },
+        {
+          "sa": "अभाणि",
+          "en": "was said"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अन्याय्यम्",
+          "en": "unjustified; unreasonable"
+        },
+        {
+          "sa": "यथा",
+          "en": "how"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अधुना",
+          "en": "now"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is explained"
+        }
+      ],
       "sourceNumbers": [
         "chapter-1-verse-80"
       ]
@@ -18121,13 +18877,33 @@
       "1.58",
       "1.59",
       "1.60",
+      "1.61",
+      "1.62",
+      "1.63",
+      "1.64",
+      "1.65",
+      "1.66",
+      "1.67",
+      "1.68",
+      "1.69",
+      "1.70",
+      "1.71",
+      "1.72",
+      "1.73",
+      "1.74",
+      "1.75",
+      "1.76",
+      "1.77",
+      "1.78",
+      "1.79",
+      "1.80",
       "1.100",
       "3.114",
       "3.123",
       "4.43"
     ],
     "partialUnits": [],
-    "note": "Verses 1.1–1.60, 1.100, 3.114, 3.123, and 4.43 have complete glosses. The remaining 359 numbered verses and prose commentary passages still need separate glosses."
+    "note": "Verses 1.1–1.80, 1.100, 3.114, 3.123, and 4.43 have complete glosses. The remaining 339 numbered verses and prose commentary passages still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; original literal readings and token-by-token glosses for texts 1.2–1.4."
 }
