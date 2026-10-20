@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 525
+      "end": 530
     },
-    "note": "Source verses 1–525 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 526 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–530 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 531 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -38829,11 +38829,33 @@
       "label": "Verse 526",
       "deva": "तूष्णीमवस्था परमोपशान्तिः\nबुद्धेरसत्कल्पविकल्पहेतोः ।\nब्रह्मात्मन ब्रह्मविदो महात्मनो\nयत्राद्वयानन्दसुखं निरन्तरम् ॥",
       "iast": "tūṣṇīmavasthā paramopaśāntiḥ\nbuddherasatkalpavikalpahetoḥ |\nbrahmātmana brahmavido mahātmano\nyatrādvayānandasukhaṃ nirantaram ||",
-      "translation": "To the sage who has realised Brahman, the mind, which is the cause of unreal fancies, becomes perfectly tranquil. This verily is his state of quietude, in which, identified with Brahman, he has constant enjoyment of the Bliss Absolute, the One without a second.",
-      "gloss": [],
+      "translation": "For the great soul who knows Brahman and is identified with Brahman, the mind—the cause of unreal imaginings—becomes quiet. This is the state of supreme peace, where the bliss of nonduality is uninterrupted.",
+      "gloss": [
+        {
+          "sa": "तूष्णीम् अवस्था",
+          "en": "the state of silence (tūṣṇīm: silent, quiescent | avasthā: state)"
+        },
+        {
+          "sa": "परम-उपशान्तिः",
+          "en": "supreme tranquility (parama: supreme | upaśāntiḥ: deep peace, tranquility)"
+        },
+        {
+          "sa": "बुद्धेः असत्-कल्प-विकल्प-हेतोः",
+          "en": "of the mind, the cause of unreal thought-constructions (buddheḥ: of the intellect | asat: unreal | kalpa: conception | vikalpa: differentiating thought, mental construction | hetoḥ: cause)"
+        },
+        {
+          "sa": "ब्रह्म-आत्मनः ब्रह्म-विदः महा-आत्मनः",
+          "en": "of the great soul whose Self is Brahman and who knows Brahman (brahma: Brahman | ātmanaḥ: whose Self | brahmavidaḥ: of the knower of Brahman | mahā: great | ātmanaḥ: of the soul)"
+        },
+        {
+          "sa": "यत्र अद्वय-आनन्द-सुखम् निरन्तरम्",
+          "en": "where the bliss of nonduality is uninterrupted (yatra: where | advaya: nondual | ānanda: bliss | sukham: happiness, bliss | nirantaram: constantly, without interruption)"
+        }
+      ],
       "sourceNumbers": [
         526
-      ]
+      ],
+      "editionTranslation": "To the sage who has realised Brahman, the mind, which is the cause of unreal fancies, becomes perfectly tranquil. This verily is his state of quietude, in which, identified with Brahman, he has constant enjoyment of the Bliss Absolute, the One without a second."
     },
     {
       "id": "vivekachudamani-527",
@@ -38841,35 +38863,101 @@
       "label": "Verse 527",
       "deva": "नास्ति निर्वासनान्मौनात्परं सुखकृदुत्तमम् ।\nविज्ञातात्मस्वरूपस्य स्वानन्दरसपायिनः ॥",
       "iast": "nāsti nirvāsanānmaunātparaṃ sukhakṛduttamam |\nvijñātātmasvarūpasya svānandarasapāyinaḥ ||",
-      "translation": "To the man who has realised his own nature, and drinks the undiluted Bliss of the Self, there is nothing more exhilarating than the quietude that comes of a state of desirelessness.",
-      "gloss": [],
+      "translation": "For one who has realized the Self’s true nature and tastes its bliss, there is no higher source of happiness than quietude free from latent desires.",
+      "gloss": [
+        {
+          "sa": "न अस्ति",
+          "en": "there is not (na: not | asti: there is)"
+        },
+        {
+          "sa": "निर्वासनात् मौनात्",
+          "en": "than quietude free from latent desires (nirvāsanāt: than freedom from latent tendencies | maunāt: than silence, quietude)"
+        },
+        {
+          "sa": "परम् सुख-कृत् उत्तमम्",
+          "en": "a higher, best source of happiness (param: higher, supreme | sukha: happiness | kṛt: making, producing | uttamam: highest, best)"
+        },
+        {
+          "sa": "विज्ञात-आत्म-स्वरूपस्य",
+          "en": "for one who has realized the Self’s true nature (vijñāta: realized, known | ātma: Self | svarūpasya: of the true nature)"
+        },
+        {
+          "sa": "स्व-आनन्द-रस-पायिनः",
+          "en": "for one who drinks the essence of the Self’s own bliss (sva: one’s own | ānanda: bliss | rasa: essence, taste | pāyinaḥ: of one who drinks)"
+        }
+      ],
       "sourceNumbers": [
         527
-      ]
+      ],
+      "editionTranslation": "To the man who has realised his own nature, and drinks the undiluted Bliss of the Self, there is nothing more exhilarating than the quietude that comes of a state of desirelessness."
     },
     {
       "id": "vivekachudamani-528",
       "number": "528",
       "label": "Verse 528",
-      "deva": "गच्छंस्तिष्ठन्नुपविशञ्छयानो वान्यथापि वा ।\nयथेच्छया वेसेद्विद्वानात्नारामः सदा मुनिः ॥",
-      "iast": "gacchaṃstiṣṭhannupaviśañchayāno vānyathāpi vā |\nyathecchayā vesedvidvānātnārāmaḥ sadā muniḥ ||",
-      "translation": "The illumined sage, whose only pleasure is in the Self, ever lives at ease, whether going or staying, sitting or lying, or in any other condition.",
-      "gloss": [],
+      "deva": "गच्छंस्तिष्ठन्नुपविशञ्छयानो वा\nअन्यथापि वा यथेच्छया\nवसेद् विद्वानात्मारामः सदा मुनिः ॥",
+      "iast": "gacchaṃstiṣṭhannupaviśañchayāno vā\nanyathāpi vā yathecchayā\nvased vidvān ātmārāmaḥ sadā muniḥ ||",
+      "translation": "The wise sage, always delighting in the Self, may live as he wishes—going, standing, sitting, lying down, or in any other way.",
+      "gloss": [
+        {
+          "sa": "गच्छन् तिष्ठन् उपविशन् शयानः",
+          "en": "going, standing, sitting, lying down (gacchan: going | tiṣṭhan: standing | upaviśan: sitting | śayānaḥ: lying down)"
+        },
+        {
+          "sa": "वा अन्यथा अपि वा",
+          "en": "or in any other way (vā: or | anyathā: otherwise | api: also | vā: or)"
+        },
+        {
+          "sa": "यथा-इच्छया",
+          "en": "as one wishes (yathā: as | icchayā: by one’s wish)"
+        },
+        {
+          "sa": "वसेत् विद्वान्",
+          "en": "the wise one may live (vaset: may live, dwell | vidvān: the wise one)"
+        },
+        {
+          "sa": "आत्म-आरामः सदा मुनिः",
+          "en": "the sage, always delighting in the Self (ātman: Self | ārāmaḥ: delighting in | sadā: always | muniḥ: sage)"
+        }
+      ],
       "sourceNumbers": [
         528
-      ]
+      ],
+      "editionTranslation": "The illumined sage, whose only pleasure is in the Self, ever lives at ease, whether going or staying, sitting or lying, or in any other condition."
     },
     {
       "id": "vivekachudamani-529",
       "number": "529",
       "label": "Verse 529",
-      "deva": "न देशकालासनदिग्यमादि-\nलक्ष्याद्यपेक्षाप्रतिबद्धवृत्तेः ।\nसंसिद्धतत्त्वस्य महात्मनोऽस्ति\nस्ववेदने का नियमाद्यवस्था ॥",
-      "iast": "na deśakālāsanadigyamādi-\nlakṣyādyapekṣāpratibaddhavṛtteḥ |\nsaṃsiddhatattvasya mahātmano'sti\nsvavedane kā niyamādyavasthā ||",
-      "translation": "The noble soul who has perfectly realised the Truth, and whose mind-functions meet with no obstruction, no more depends upon conditions of place, time, posture, direction, moral disciplines, objects of meditation and so forth. What regulative conditions can there be in knowing one’s own Self ?",
-      "gloss": [],
+      "deva": "न देशकालासनदिग्यमादि-\nलक्ष्याद्यपेक्षाऽप्रतिबद्धवृत्तेः ।\nसंसिद्धतत्त्वस्य महात्मनोऽस्ति\nस्ववेदने का नियमाद्यवस्था ॥",
+      "iast": "na deśakālāsanadigyamādi-\nlakṣyādyapekṣā'pratibaddhavṛtteḥ |\nsaṃsiddhatattvasya mahātmano'sti\nsvavedane kā niyamādyavasthā ||",
+      "translation": "For the great soul who has fully realized truth and whose mind is unobstructed by dependence on place, time, posture, direction, disciplines, meditation objects, and so on, what conditions or rules are there for knowing the Self?",
+      "gloss": [
+        {
+          "sa": "न देश-काल-आसन-दिक्-यम-आदि",
+          "en": "not on place, time, posture, direction, restraint, and so on (na: not | deśa: place | kāla: time | āsana: posture | dik: direction | yama: restraint, ethical discipline | ādi: and so on)"
+        },
+        {
+          "sa": "लक्ष्य-आदि-अपेक्षा-अप्रतिबद्ध-वृत्तेः",
+          "en": "whose mental activity is unobstructed by dependence on meditation objects and the like (lakṣya: object of meditation | ādi: and so on | apekṣā: dependence | a-pratibaddha: unbound, unobstructed | vṛtteḥ: of the mental activity)"
+        },
+        {
+          "sa": "संसिद्ध-तत्त्वस्य महात्मनः",
+          "en": "of the great soul who has fully realized truth (saṃsiddha: fully realized | tattvasya: of truth, reality | mahātmanaḥ: of the great soul)"
+        },
+        {
+          "sa": "अस्ति स्व-वेदने",
+          "en": "is there, for knowing the Self (asti: is | sva: Self, one’s own | vedane: in knowing)"
+        },
+        {
+          "sa": "का नियम-आदि-अवस्था",
+          "en": "what condition or rule could there be? (kā: what | niyama: rule, prescribed discipline | ādi: and so on | avasthā: condition)"
+        }
+      ],
       "sourceNumbers": [
         529
-      ]
+      ],
+      "editionTranslation": "The noble soul who has perfectly realised the Truth, and whose mind-functions meet with no obstruction, no more depends upon conditions of place, time, posture, direction, moral disciplines, objects of meditation and so forth. What regulative conditions can there be in knowing one’s own Self ?"
     },
     {
       "id": "vivekachudamani-530",
@@ -38877,11 +38965,33 @@
       "label": "Verse 530",
       "deva": "घटोऽयमिति विज्ञातुं नियमः कोऽन्ववेक्षते ।\nविना प्रमाणसुष्ठुत्वं यस्मिन् सति पदार्थधीः ॥",
       "iast": "ghaṭo'yamiti vijñātuṃ niyamaḥ ko'nvavekṣate |\nvinā pramāṇasuṣṭhutvaṃ yasmin sati padārthadhīḥ ||",
-      "translation": "To know that this is a jar, what condition, forsooth, is necessary except that the means of knowledge be free from defect, which alone ensures a cognition of the object ?",
-      "gloss": [],
+      "translation": "To know “this is a pot,” what rule should one look for beyond the soundness of the means of knowledge, when the cognition of an object arises in its presence?",
+      "gloss": [
+        {
+          "sa": "घटः अयम् इति",
+          "en": "“this is a pot,” thus (ghaṭaḥ: pot | ayam: this | iti: thus)"
+        },
+        {
+          "sa": "विज्ञातुम्",
+          "en": "to know, recognize"
+        },
+        {
+          "sa": "नियमः कः अन्ववेक्षते",
+          "en": "what rule does one look for? (niyamaḥ: rule, condition | kaḥ: what | anvavekṣate: examines, looks for)"
+        },
+        {
+          "sa": "विना प्रमाण-सुष्ठुत्वम्",
+          "en": "apart from the soundness of the means of knowledge (vinā: without, apart from | pramāṇa: means of knowledge | suṣṭhutvam: soundness, proper functioning)"
+        },
+        {
+          "sa": "यस्मिन् सति पदार्थ-धीः",
+          "en": "when that is present, cognition of the object (yasmin: when/in which | sati: being present | padārtha: object | dhīḥ: cognition, understanding)"
+        }
+      ],
       "sourceNumbers": [
         530
-      ]
+      ],
+      "editionTranslation": "To know that this is a jar, what condition, forsooth, is necessary except that the means of knowledge be free from defect, which alone ensures a cognition of the object ?"
     },
     {
       "id": "vivekachudamani-531",
@@ -39537,6 +39647,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 506–510, preserving prior English as editionTranslation. Corrected verse 506's vahni spelling and clarified verse 510's khalatva as wickedness.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 511–515, preserving prior English as editionTranslation. Restored the missing anusvāra in verse 512's viśvaṃ.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 516–520, preserving prior English as editionTranslation. Corrected verse 516's akhaṇḍa reading and standardized ahaṅkāra in 518.",
-    "Logged and completed Vivekacūḍāmaṇi verses 521–525 with original literal English translations and Devanāgarī-backed word-for-word glosses, preserving prior English as editionTranslation."
+    "Logged and completed Vivekacūḍāmaṇi verses 521–525 with original literal English translations and Devanāgarī-backed word-for-word glosses, preserving prior English as editionTranslation.",
+    "Logged and completed Vivekacūḍāmaṇi verses 526–530 with literal translations and complete word-for-word glosses; corrected the Sanskrit/transliteration of verses 526, 528, and 529."
   ]
 }
