@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 535
+      "end": 540
     },
-    "note": "Source verses 1–535 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 536 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–540 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 541 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -39197,11 +39197,41 @@
       "label": "Verse 536",
       "deva": "न खिद्यते नो विषयैः प्रमोदते\nन सज्जते नापि विरज्यते च ।\nस्वस्मिन्सदा क्रीडति नन्दति स्वयं\nनिरन्तरानन्दरसेन तृप्तः ॥",
       "iast": "na khidyate no viṣayaiḥ pramodate\nna sajjate nāpi virajyate ca |\nsvasminsadā krīḍati nandati svayaṃ\nnirantarānandarasena tṛptaḥ ||",
-      "translation": "Satisfied with undiluted, constant Bliss, he is neither grieved nor elated by sense-objects, is neither attached nor averse to them, but always disports with the Self and takes pleasure therein.",
-      "gloss": [],
+      "translation": "Content with the uninterrupted essence of bliss, he does not grieve over or delight in sense-objects, does not cling to them or turn away from them; he always sports in the Self and rejoices by himself.",
+      "gloss": [
+        {
+          "sa": "न खिद्यते",
+          "en": "does not grieve or suffer (na: not | khidyate: grieves, suffers)"
+        },
+        {
+          "sa": "न उ विषयैः प्रमोदते",
+          "en": "nor rejoices in sense-objects (na u: nor | viṣayaiḥ: in, through sense-objects | pramodate: rejoices)"
+        },
+        {
+          "sa": "न सज्जते",
+          "en": "does not become attached (na: not | sajjate: becomes attached)"
+        },
+        {
+          "sa": "न अपि विरज्यते च",
+          "en": "nor does he turn away from them (na: not | api: also, either | virajyate: becomes dispassionate, turns away | ca: and)"
+        },
+        {
+          "sa": "स्वस्मिन् सदा क्रीडति",
+          "en": "he always sports in the Self (svasmin: in oneself, in the Self | sadā: always | krīḍati: plays, sports)"
+        },
+        {
+          "sa": "नन्दति स्वयम्",
+          "en": "he rejoices by himself (nandati: rejoices | svayam: himself, by himself)"
+        },
+        {
+          "sa": "निरन्तर-आनन्द-रस-ेन तृप्तः",
+          "en": "satisfied with the uninterrupted essence of bliss (nirantara: uninterrupted | ānanda: bliss | rasena: with the essence, taste | tṛptaḥ: satisfied)"
+        }
+      ],
       "sourceNumbers": [
         536
-      ]
+      ],
+      "editionTranslation": "Satisfied with undiluted, constant Bliss, he is neither grieved nor elated by sense-objects, is neither attached nor averse to them, but always disports with the Self and takes pleasure therein."
     },
     {
       "id": "vivekachudamani-537",
@@ -39209,11 +39239,33 @@
       "label": "Verse 537",
       "deva": "क्षुधां देहव्यथां त्यक्त्वा बालः क्रीडति वस्तुनिः ।\nतथैव विद्वान् रमते निर्ममो निरहं सुखी ॥",
       "iast": "kṣudhāṃ dehavyathāṃ tyaktvā bālaḥ krīḍati vastuniḥ |\ntathaiva vidvān ramate nirmamo nirahaṃ sukhī ||",
-      "translation": "A child plays with its toys forgetting hunger and bodily pains; exactly so does the man of realisation take pleasure in the Reality, without ideas of \"I\" or \"mine\", and is happy.",
-      "gloss": [],
+      "translation": "A child, setting aside hunger and bodily pain, plays with objects; in the same way, the wise one delights, free from possessiveness and ego, and is happy.",
+      "gloss": [
+        {
+          "sa": "क्षुधाम् देह-व्यथाम्",
+          "en": "hunger and bodily pain (kṣudhām: hunger | deha: body | vyathām: pain, affliction)"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having set aside; leaving behind"
+        },
+        {
+          "sa": "बालः क्रीडति वस्तुनिः (पाठभेदः: वस्तुनि)",
+          "en": "a child plays with objects (bālaḥ: child | krīḍati: plays | vastuniḥ: in/with objects; another reading is vastuni, the locative “in objects”)"
+        },
+        {
+          "sa": "तथा एव विद्वान् रमते",
+          "en": "in the same way, the wise one delights (tathā: in that way | eva: just, indeed | vidvān: wise person | ramate: delights)"
+        },
+        {
+          "sa": "निर्ममः निरहम् सुखी",
+          "en": "free from possessiveness and ego, happy (nirmamaḥ: without “mine-ness,” not possessive | niraham: without “I-ness,” without ego | sukhī: happy)"
+        }
+      ],
       "sourceNumbers": [
         537
-      ]
+      ],
+      "editionTranslation": "A child plays with its toys forgetting hunger and bodily pains; exactly so does the man of realisation take pleasure in the Reality, without ideas of \"I\" or \"mine\", and is happy."
     },
     {
       "id": "vivekachudamani-538",
@@ -39221,11 +39273,49 @@
       "label": "Verse 538",
       "deva": "चिन्ताशून्यमदैन्यभैक्षमशनं पानं सरिद्वारिषु\nस्वातन्त्र्येण निरङ्कुशा स्थितिरभीर्निद्रा श्मशाने वने ।\nवस्त्रं क्षालनशोषणादिरहितं दिग्वास्तु शय्या मही\nसंचारो निगमान्तवीथिषु विदां क्रीडा परे ब्रह्मणि ॥",
       "iast": "cintāśūnyamadainyabhaikṣamaśanaṃ pānaṃ saridvāriṣu\nsvātantryeṇa niraṅkuśā sthitirabhīrnidrā śmaśāne vane |\nvastraṃ kṣālanaśoṣaṇādirahitaṃ digvāstu śayyā mahī\nsaṃcāro nigamāntavīthiṣu vidāṃ krīḍā pare brahmaṇi ||",
-      "translation": "Men of realisation have their food without anxiety or humiliation by begging, and their drink from the water of rivers; they live freely and independently, and sleep without fear in cremation grounds or forests; their clothing may be the quarters themselves, which need no washing and drying, or any bark etc., the earth is their bed; they roam in the avenue of the Vedanta; while their pastime is in the Supreme Brahman.",
-      "gloss": [],
+      "translation": "The wise live without anxiety or humiliation on alms for food and river-water for drink; freely and without restraint, they sleep without fear in cremation grounds or forests. The directions are their clothing, the earth their bed; they wander the paths of Vedānta, and their play is in supreme Brahman.",
+      "gloss": [
+        {
+          "sa": "चिन्ता-शून्यम् अदैन्य-भैक्षम् अशनम्",
+          "en": "food consisting of alms, without anxiety or humiliation (cintā: anxiety | śūnyam: free from | adainya: without humiliation, not servile | bhaikṣam: alms | aśanam: food, eating)"
+        },
+        {
+          "sa": "पानम् सरित्-वारिषु",
+          "en": "drink from river waters (pānam: drink | sarit: river | vāriṣu: in the waters)"
+        },
+        {
+          "sa": "स्वातन्त्र्येण निरङ्कुशा स्थितिः",
+          "en": "a free, unrestrained way of living (svātantryeṇa: with independence | niraṅkuśā: unrestrained | sthitiḥ: dwelling, way of life)"
+        },
+        {
+          "sa": "अभीः निद्रा श्मशाने वने",
+          "en": "fearless sleep in a cremation ground or forest (abhīḥ: fearless | nidrā: sleep | śmaśāne: in a cremation ground | vane: in a forest)"
+        },
+        {
+          "sa": "वस्त्रम् क्षालन-शोषण-आदि-रहितम्",
+          "en": "clothing requiring no washing, drying, and so on (vastram: clothing | kṣālana: washing | śoṣaṇa: drying | ādi: and so on | rahitam: free from, without)"
+        },
+        {
+          "sa": "दिक् वास्तु",
+          "en": "the directions as a dwelling (dik: direction, quarter | vāstu: dwelling)"
+        },
+        {
+          "sa": "शय्या मही",
+          "en": "the earth as a bed (śayyā: bed | mahī: earth)"
+        },
+        {
+          "sa": "सञ्चारः निगमान्त-वीथिषु",
+          "en": "wandering in the paths of Vedānta (sañcāraḥ: wandering | nigamānta: Vedānta, end of the Vedas | vīthiṣu: in the paths, avenues)"
+        },
+        {
+          "sa": "विदाम् क्रीडा परे ब्रह्मणि",
+          "en": "the wise person's play is in supreme Brahman (vidām: of the wise | krīḍā: play, delight | pare: supreme | brahmaṇi: in Brahman)"
+        }
+      ],
       "sourceNumbers": [
         538
-      ]
+      ],
+      "editionTranslation": "Men of realisation have their food without anxiety or humiliation by begging, and their drink from the water of rivers; they live freely and independently, and sleep without fear in cremation grounds or forests; their clothing may be the quarters themselves, which need no washing and drying, or any bark etc., the earth is their bed; they roam in the avenue of the Vedanta; while their pastime is in the Supreme Brahman."
     },
     {
       "id": "vivekachudamani-539",
@@ -39233,11 +39323,33 @@
       "label": "Verse 539",
       "deva": "विमानमालम्ब्य शरीरमेतद्\nभुनक्त्यशेषान्विषयानुपस्थितान् ।\nपरेच्छया बालवद् आत्मवेत्ता\nयोऽव्यक्तलिङ्गोऽननुषक्तबाह्यः ॥",
       "iast": "vimānamālambya śarīrametad\nbhunaktyaśeṣānviṣayānupasthitān |\nparecchayā bālavad ātmavettā\nyo'vyaktaliṅgo'nanuṣaktabāhyaḥ ||",
-      "translation": "The knower of the Atman, who wears no outward mark and is unattached to external things, rests on this body without identification, and experiences all sorts of sense-objects as they come, through others’ wish, like a child.",
-      "gloss": [],
+      "translation": "The knower of the Self, without distinct outward marks and unattached to external things, relies on this body as a vehicle. Like a child, he experiences all sense-objects that come to him, according to another’s wish.",
+      "gloss": [
+        {
+          "sa": "विमानम् आलम्ब्य शरीरम् एतत्",
+          "en": "relying on this body as a vehicle (vimānam: vehicle, chariot | ālambya: relying on, taking support from | śarīram: body | etat: this)"
+        },
+        {
+          "sa": "भुनक्ति अशेषान् विषयान् उपस्थितान्",
+          "en": "he experiences all the sense-objects that come to him (bhunakti: enjoys, experiences | aśeṣān: all, without remainder | viṣayān: sense-objects | upasthitān: presented, come near)"
+        },
+        {
+          "sa": "परेच्छया बालवत्",
+          "en": "according to another’s wish, like a child (para: another | icchayā: by the wish | bālavat: like a child)"
+        },
+        {
+          "sa": "आत्मवेत्ता यः",
+          "en": "the one who knows the Self (ātmavettā: knower of the Self | yaḥ: who)"
+        },
+        {
+          "sa": "अव्यक्त-लिङ्गः अननुषक्त-बाह्यः",
+          "en": "without distinct outward marks and unattached to external things (avyakta: indistinct, unmanifest | liṅgaḥ: sign, mark | ananuṣakta: unattached | bāhyaḥ: external things)"
+        }
+      ],
       "sourceNumbers": [
         539
-      ]
+      ],
+      "editionTranslation": "The knower of the Atman, who wears no outward mark and is unattached to external things, rests on this body without identification, and experiences all sorts of sense-objects as they come, through others’ wish, like a child."
     },
     {
       "id": "vivekachudamani-540",
@@ -39245,11 +39357,29 @@
       "label": "Verse 540",
       "deva": "दिगम्बरो वापि च साम्बरो वा\nत्वगम्बरो वापि चिदम्बरस्थः ।\nउन्मत्तवद्वापि च बालवद्वा\nपिशाचवद्वापि चरत्यवन्याम् ॥",
       "iast": "digambaro vāpi ca sāmbaro vā\ntvagambaro vāpi cidambarasthaḥ |\nunmattavadvāpi ca bālavadvā\npiśācavadvāpi caratyavanyām ||",
-      "translation": "Established in the ethereal plane of Absolute Knowledge, he wanders in the world, sometimes like a madman, sometimes like a child and at other times like a ghoul, having no other clothes on his person except the quarters, or sometimes wearing clothes, or perhaps skins at other times.",
-      "gloss": [],
+      "translation": "Abiding in the open expanse of consciousness, he wanders the earth—sometimes sky-clad, sometimes clothed, sometimes wearing a skin; sometimes like a madman, a child, or a spirit.",
+      "gloss": [
+        {
+          "sa": "दिक्-अम्बरः वा अपि च साम्बरः वा",
+          "en": "whether sky-clad or clothed (dik: directions | ambaraḥ: garment, clothed | vā: or | api: even | ca: and | sāmbaraḥ: wearing clothes | vā: or)"
+        },
+        {
+          "sa": "त्वक्-अम्बरः वा अपि चिदम्बर-स्थः",
+          "en": "or wearing a skin, abiding in consciousness’s open expanse (tvac: skin | ambaraḥ: garment | vā: or | api: even | cid: consciousness | ambara: sky, open space | sthaḥ: abiding in)"
+        },
+        {
+          "sa": "उन्मत्तवत् वा अपि च बालवत् वा",
+          "en": "or like a madman or a child (unmattavat: like a madman | vā: or | api: even | ca: and | bālavat: like a child | vā: or)"
+        },
+        {
+          "sa": "पिशाचवत् वा अपि चरति अवन्याम्",
+          "en": "or like a spirit, he wanders the earth (piśācavat: like a spirit | vā: or | api: even | carati: wanders | avanyām: on the earth, in the world)"
+        }
+      ],
       "sourceNumbers": [
         540
-      ]
+      ],
+      "editionTranslation": "Established in the ethereal plane of Absolute Knowledge, he wanders in the world, sometimes like a madman, sometimes like a child and at other times like a ghoul, having no other clothes on his person except the quarters, or sometimes wearing clothes, or perhaps skins at other times."
     },
     {
       "id": "vivekachudamani-541",
@@ -39787,6 +39917,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 516–520, preserving prior English as editionTranslation. Corrected verse 516's akhaṇḍa reading and standardized ahaṅkāra in 518.",
     "Logged and completed Vivekacūḍāmaṇi verses 521–525 with original literal English translations and Devanāgarī-backed word-for-word glosses, preserving prior English as editionTranslation.",
     "Logged and completed Vivekacūḍāmaṇi verses 526–530 with literal translations and complete word-for-word glosses; corrected the Sanskrit/transliteration of verses 526, 528, and 529.",
-    "Logged and completed Vivekacūḍāmaṇi verses 531–535 with literal English translations and complete Devanāgarī-backed word-for-word glosses."
+    "Logged and completed Vivekacūḍāmaṇi verses 531–535 with literal English translations and complete Devanāgarī-backed word-for-word glosses.",
+    "Logged and completed Vivekacūḍāmaṇi verses 536–540 with literal English translations and complete Devanāgarī-backed word-for-word glosses; recorded the textual variant for verse 537's vastuniḥ/vastuni reading."
   ]
 }
