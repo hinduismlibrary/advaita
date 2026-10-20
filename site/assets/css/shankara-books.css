@@ -275,3 +275,10 @@
 .shankara-content .shankara-study-button-row{gap:0!important}
 .shankara-content .shankara-transliteration-panel{margin:0!important;padding:0!important}
 .shankara-content .shankara-transliteration-panel .shankara-iast{margin:0!important;padding:0!important}
+
+/* Keep the transliteration control flush with its row and prevent a blank panel gap. */
+.shankara-content .shankara-study-controls .shankara-study-button-row{gap:0!important;column-gap:0!important;row-gap:0!important;margin:0!important;padding:0!important}
+.shankara-content .shankara-study-controls .shankara-study-button{margin:0!important}
+.shankara-content .shankara-study-controls>.shankara-study-panel{margin:0!important;padding:0!important}
+.shankara-content .shankara-study-controls>.shankara-transliteration-panel{margin-block-start:0!important}
+.shankara-content .shankara-transliteration-panel .shankara-iast{margin:0!important;padding:0!important}
