@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 385
+      "end": 390
     },
-    "note": "Source verses 1–385 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 386 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–390 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 391 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -30411,23 +30411,147 @@
       "label": "Verse 386",
       "deva": "ब्रह्मादिस्तम्बपर्यन्ता मृषामात्रा उपाधयः ।\nततः पूर्णं स्वमात्मानं पश्येदेकात्मना स्थितम् ॥",
       "iast": "brahmādistambaparyantā mṛṣāmātrā upādhayaḥ |\ntataḥ pūrṇaṃ svamātmānaṃ paśyedekātmanā sthitam ||",
-      "translation": "The limiting adjuncts from Brahma down to a clump of grass are all wholly unreal. Therefore one should realise one’s own Infinite Self as the only Principle.",
-      "gloss": [],
+      "translation": "From Brahmā down to a blade of grass, the limiting adjuncts are nothing but unreal. Therefore one should see one’s own complete Self as established in the one Self.",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-आदि-स्तम्ब-पर्यन्ताः",
+          "en": "extending from Brahmā down to a blade of grass"
+        },
+        {
+          "sa": "मृषा-मात्राः",
+          "en": "nothing but unreal"
+        },
+        {
+          "sa": "उपाधयः",
+          "en": "limiting adjuncts"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "पूर्णम्",
+          "en": "complete"
+        },
+        {
+          "sa": "स्वम्",
+          "en": "one’s own"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "Self"
+        },
+        {
+          "sa": "पश्येत्",
+          "en": "one should see"
+        },
+        {
+          "sa": "एकात्मना",
+          "en": "as the one Self"
+        },
+        {
+          "sa": "स्थितम्",
+          "en": "established"
+        }
+      ],
       "sourceNumbers": [
         386
-      ]
+      ],
+      "editionTranslation": "The limiting adjuncts from Brahma down to a clump of grass are all wholly unreal. Therefore one should realise one’s own Infinite Self as the only Principle."
     },
     {
       "id": "vivekachudamani-387",
       "number": "387",
       "label": "Verse 387",
       "deva": "यत्र भ्रान्त्या कल्पितं तद्विवेके\nतत्तन्मात्रं नैव तस्माद्विभिन्नम् ।\nभ्रान्तेर्नाशे भाति दृष्टाहितत्त्वं\nरज्जुस्तद्वद्विश्वम् आत्मस्वरूपम् ॥",
-      "iast": "yatra bhrāntyā kalpitaṃ tadviveke\ntattanmātraṃ naiva tasmādvibhinnam |\nbhrānternāśe bhāti dṛṣṭāhitattvaṃ\nrajjustadvadviśvam ātmasvarūpam ||",
-      "translation": "That in which something is imagined to exist through error, is, when rightly discriminated, that thing itself, and not distinct from it. When the error is gone, the reality about the snake falsely perceived becomes the rope. Similarly the universe is in reality the Atman.",
-      "gloss": [],
+      "iast": "yatra bhrāntyā kalpitaṃ tad viveke\ntat-tan-mātraṃ naiva tasmād vibhinnam |\nbhrānter nāśe bhāti dṛṣṭā hi tattvaṃ\nrajjuḥ tadvat viśvam ātmasvarūpam ||",
+      "translation": "Whatever is imagined through delusion in something is, upon discrimination, only that itself and not at all different from it. When delusion is destroyed, the truth that was seen shines forth, as with a rope; likewise, the universe is the very nature of the Self.",
+      "gloss": [
+        {
+          "sa": "यत्र",
+          "en": "where; in whatever"
+        },
+        {
+          "sa": "भ्रान्त्या",
+          "en": "through delusion"
+        },
+        {
+          "sa": "कल्पितम्",
+          "en": "imagined"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "विवेके",
+          "en": "upon discrimination"
+        },
+        {
+          "sa": "तत्-तत्-मात्रम्",
+          "en": "only that itself"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "at all"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "from it"
+        },
+        {
+          "sa": "विभिन्नम्",
+          "en": "different"
+        },
+        {
+          "sa": "भ्रान्तेः",
+          "en": "of delusion"
+        },
+        {
+          "sa": "नाशे",
+          "en": "upon destruction"
+        },
+        {
+          "sa": "भाति",
+          "en": "shines forth"
+        },
+        {
+          "sa": "दृष्टा",
+          "en": "the seen"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth; reality"
+        },
+        {
+          "sa": "रज्जुः",
+          "en": "the rope"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "विश्वम्",
+          "en": "the universe"
+        },
+        {
+          "sa": "आत्म-स्वरूपम्",
+          "en": "the nature of the Self"
+        }
+      ],
       "sourceNumbers": [
         387
-      ]
+      ],
+      "editionTranslation": "That in which something is imagined to exist through error, is, when rightly discriminated, that thing itself, and not distinct from it. When the error is gone, the reality about the snake falsely perceived becomes the rope. Similarly the universe is in reality the Atman."
     },
     {
       "id": "vivekachudamani-388",
@@ -30435,11 +30559,77 @@
       "label": "Verse 388",
       "deva": "स्वयं ब्रह्मा स्वयं विष्णुः स्वयमिन्द्रः स्वयं शिवः ।\nस्वयं विश्वमिदं सर्वं स्वस्मादन्यन् न किंचन ॥",
       "iast": "svayaṃ brahmā svayaṃ viṣṇuḥ svayamindraḥ svayaṃ śivaḥ |\nsvayaṃ viśvamidaṃ sarvaṃ svasmādanyan na kiṃcana ||",
-      "translation": "The Self is Brahma, the Self is Vishnu, the Self is Indra, the Self is Shiva; the Self is all this universe. Nothing exists except the Self.",
-      "gloss": [],
+      "translation": "The Self itself is Brahmā, Viṣṇu, Indra, and Śiva; the Self itself is this whole universe. Nothing whatsoever is other than the Self.",
+      "gloss": [
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "ब्रह्मा",
+          "en": "Brahmā"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "विष्णुः",
+          "en": "Viṣṇu"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "इन्द्रः",
+          "en": "Indra"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "शिवः",
+          "en": "Śiva"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "विश्वम्",
+          "en": "the universe"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "whole"
+        },
+        {
+          "sa": "स्वस्मात्",
+          "en": "than the Self"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "किञ्चन",
+          "en": "at all"
+        }
+      ],
       "sourceNumbers": [
         388
-      ]
+      ],
+      "editionTranslation": "The Self is Brahma, the Self is Vishnu, the Self is Indra, the Self is Shiva; the Self is all this universe. Nothing exists except the Self."
     },
     {
       "id": "vivekachudamani-389",
@@ -30447,11 +30637,105 @@
       "label": "Verse 389",
       "deva": "अन्तः स्वयं चापि बहिः स्वयं च\nस्वयं पुरस्तात् स्वयम् एव पश्चात् ।\nस्वयं ह्यावाच्यां स्वयमप्युदीच्यां\nतथोपरिष्टात्स्वयमप्यधस्तात् ॥",
       "iast": "antaḥ svayaṃ cāpi bahiḥ svayaṃ ca\nsvayaṃ purastāt svayam eva paścāt |\nsvayaṃ hyāvācyāṃ svayamapyudīcyāṃ\ntathopariṣṭātsvayamapyadhastāt ||",
-      "translation": "The Self is within, and the Self is without; the Self is before and the Self is behind; the Self is in the south, and the Self is in the north; the Self likewise is above as also below.",
-      "gloss": [],
+      "translation": "The Self itself is within and without, in front and behind, in the south and also in the north; likewise, the Self itself is above and below.",
+      "gloss": [
+        {
+          "sa": "अन्तः",
+          "en": "within"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "बहिः",
+          "en": "without"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "पुरस्तात्",
+          "en": "in front"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "behind"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आवाच्याम्",
+          "en": "in the south"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "उदीच्याम्",
+          "en": "in the north"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "उपरिष्टात्",
+          "en": "above"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "the Self itself"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अधस्तात्",
+          "en": "below"
+        }
+      ],
       "sourceNumbers": [
         389
-      ]
+      ],
+      "editionTranslation": "The Self is within, and the Self is without; the Self is before and the Self is behind; the Self is in the south, and the Self is in the north; the Self likewise is above as also below."
     },
     {
       "id": "vivekachudamani-390",
@@ -30459,11 +30743,77 @@
       "label": "Verse 390",
       "deva": "तरङ्गफेनभ्रमबुद्बुदादि\nसर्वं स्वरूपेण जलं यथा तथा ।\nचिद् एव देहाद्यहमन्तमेतत्\nसर्वं चिद् एवैकरसं विशुद्धम् ॥",
       "iast": "taraṅgaphenabhramabudbudādi\nsarvaṃ svarūpeṇa jalaṃ yathā tathā |\ncid eva dehādyahamantametat\nsarvaṃ cid evaikarasaṃ viśuddham ||",
-      "translation": "As the wave, the foam, the whirlpool, the bubble, etc., are all in essence but water, similarly the Chit (Knowledge Absolute) is all this, from the body up to egoism. Everything is verily the Chit, homogeneous and pure.",
-      "gloss": [],
+      "translation": "Just as waves, foam, whirlpools, bubbles, and the like are, in essence, water, so too all this, from the body up to the ego, is consciousness alone. Everything is consciousness alone, of one essence and pure.",
+      "gloss": [
+        {
+          "sa": "तरङ्ग-फेन-भ्रम-बुद्बुद-आदि",
+          "en": "waves, foam, whirlpools, bubbles, and the like"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "स्वरूपेण",
+          "en": "in essence"
+        },
+        {
+          "sa": "जलम्",
+          "en": "water"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so too"
+        },
+        {
+          "sa": "चित्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "देह-आदि",
+          "en": "the body and the rest"
+        },
+        {
+          "sa": "अहम्-अन्तम्",
+          "en": "up to the ego"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "चित्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "एक-रसम्",
+          "en": "of one essence"
+        },
+        {
+          "sa": "विशुद्धम्",
+          "en": "pure"
+        }
+      ],
       "sourceNumbers": [
         390
-      ]
+      ],
+      "editionTranslation": "As the wave, the foam, the whirlpool, the bubble, etc., are all in essence but water, similarly the Chit (Knowledge Absolute) is all this, from the body up to egoism. Everything is verily the Chit, homogeneous and pure."
     },
     {
       "id": "vivekachudamani-391",
@@ -32754,6 +33104,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 376–380; preserved prior translations as editionTranslation. Used the locative vijñānakośe reading in verse 380, also recorded as a variant in the checked word-by-word witness.",
     "Refined Vivekacūḍāmaṇi verses 376 and 378 so the English keeps the maiden-of-liberation image and renders bhṛśam as 'greatly; much.'",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 381–385; preserved prior translations as editionTranslation.",
-    "Aligned the translations and prepositions in Vivekacūḍāmaṇi verses 382–385 more closely with the locative and instrumental forms in the Sanskrit."
+    "Aligned the translations and prepositions in Vivekacūḍāmaṇi verses 382–385 more closely with the locative and instrumental forms in the Sanskrit.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 386–390; preserved prior translations as editionTranslation. Added pad separation in verse 387's IAST to make dṛṣṭā hi tattvam visible."
   ]
 }
