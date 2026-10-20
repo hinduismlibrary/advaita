@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 475
+      "end": 480
     },
-    "note": "Source verses 1–475 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 476 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–480 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 481 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -36456,60 +36456,302 @@
       "number": "476",
       "label": "Verse 476",
       "deva": "तटस्थिता बोधयन्ति गुरवः श्रुतयो यथा ।\nप्रज्ञयैव तरेद्विद्वानीश्वरानुगृहीतया ॥",
-      "iast": "taṭasthitā bodhayanti guravaḥ śrutayo yathā |\nprajñayaiva taredvidvānīśvarānugṛhītayā ||",
-      "translation": "The Gurus as well as the Shrutis instruct the disciple, standing aloof; while the man of realisation crosses (Avidya) through Illumination alone, backed by the grace of God.",
-      "gloss": [],
+      "iast": "taṭa-sthitā bodhayanti guravaḥ śrutayo yathā |\nprajñayā eva taret vidvān īśvara-anugṛhītayā ||",
+      "translation": "As if standing on the bank, teachers and scriptures instruct; the wise person must cross by insight alone, granted by the Lord.",
+      "gloss": [
+        {
+          "sa": "तट-स्थिताः",
+          "en": "standing on the bank"
+        },
+        {
+          "sa": "बोधयन्ति",
+          "en": "they teach; make known"
+        },
+        {
+          "sa": "गुरवः",
+          "en": "the teachers"
+        },
+        {
+          "sa": "श्रुतयः",
+          "en": "the scriptures"
+        },
+        {
+          "sa": "यथा",
+          "en": "as; just as"
+        },
+        {
+          "sa": "प्रज्ञया",
+          "en": "by insight; by wisdom"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "तरेत्",
+          "en": "should cross"
+        },
+        {
+          "sa": "विद्वान्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "ईश्वर-अनुगृहीतया",
+          "en": "granted by the Lord; blessed by God"
+        }
+      ],
       "sourceNumbers": [
         476
-      ]
+      ],
+      "editionTranslation": "The Gurus as well as the Shrutis instruct the disciple, standing aloof; while the man of realisation crosses (Avidya) through Illumination alone, backed by the grace of God."
     },
     {
       "id": "vivekachudamani-477",
       "number": "477",
       "label": "Verse 477",
       "deva": "स्वानुभूत्या स्वयं ज्ञात्वा स्वमात्मानमखण्डितम् ।\nसंसिद्धः संमुखं तिष्ठेन्निर्विकल्पात्मनात्मनि ॥",
-      "iast": "svānubhūtyā svayaṃ jñātvā svamātmānamakhaṇḍitam |\nsaṃsiddhaḥ saṃmukhaṃ tiṣṭhennirvikalpātmanātmani ||",
-      "translation": "Himself knowing his indivisible Self through his own realisation and thus becoming perfect, a man should stand face to face with the Atman, with his mind free from dualistic ideas.",
-      "gloss": [],
+      "iast": "sva-anubhūtyā svayaṃ jñātvā svam ātmānam akhaṇḍitam |\nsaṃsiddhaḥ sammukhaṃ tiṣṭhet nirvikalpa-ātmanā ātmani ||",
+      "translation": "Having known one's own indivisible Self through one's own direct experience, the perfected person should remain facing the Self with a mind free of distinctions.",
+      "gloss": [
+        {
+          "sa": "स्व-अनुभूत्या",
+          "en": "through one's own experience"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself; by oneself"
+        },
+        {
+          "sa": "ज्ञात्वा",
+          "en": "having known"
+        },
+        {
+          "sa": "स्वम्",
+          "en": "one's own"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "अखण्डितम्",
+          "en": "indivisible; undivided"
+        },
+        {
+          "sa": "संसिद्धः",
+          "en": "perfected; fully accomplished"
+        },
+        {
+          "sa": "सम्मुखम्",
+          "en": "facing directly; face to face"
+        },
+        {
+          "sa": "तिष्ठेत्",
+          "en": "should remain; should abide"
+        },
+        {
+          "sa": "निर्विकल्प-आत्मना",
+          "en": "with a mind free of distinctions"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        }
+      ],
       "sourceNumbers": [
         477
-      ]
+      ],
+      "editionTranslation": "Himself knowing his indivisible Self through his own realisation and thus becoming perfect, a man should stand face to face with the Atman, with his mind free from dualistic ideas."
     },
     {
       "id": "vivekachudamani-478",
       "number": "478",
       "label": "Verse 478",
       "deva": "वेदान्तसिद्धान्तनिरुक्तिरेषा\nब्रह्मैव जीवः सकलं जगच्च ।\nअखण्डरूपस्थितिर् एव मोक्षो\nब्रह्माद्वितीये श्रुतयः प्रमाणम् ॥",
-      "iast": "vedāntasiddhāntaniruktireṣā\nbrahmaiva jīvaḥ sakalaṃ jagacca |\nakhaṇḍarūpasthitir eva mokṣo\nbrahmādvitīye śrutayaḥ pramāṇam ||",
-      "translation": "The verdict of all discussions on the Vedanta is that the Jiva and the whole universe are nothing but Brahman, and that liberation means abiding in Brahman, the indivisible Entity. While the Shrutis themselves are authority (for the statement) that Brahman is One without a second.",
-      "gloss": [],
+      "iast": "vedānta-siddhānta-niruktiḥ eṣā\nbrahma eva jīvaḥ sakalaṃ jagat ca |\nakhaṇḍa-rūpa-sthitiḥ eva mokṣaḥ\nbrahma-advitīye śrutayaḥ pramāṇam ||",
+      "translation": "This is the declaration of Vedānta's conclusion: Brahman alone is the individual self and the whole world; liberation is abiding in the indivisible nature. The scriptures are the authority for nondual Brahman.",
+      "gloss": [
+        {
+          "sa": "वेदान्त-सिद्धान्त-निरुक्तिः",
+          "en": "the declaration of Vedānta's conclusion"
+        },
+        {
+          "sa": "एषा",
+          "en": "this"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "एव",
+          "en": "alone; indeed"
+        },
+        {
+          "sa": "जीवः",
+          "en": "the individual self"
+        },
+        {
+          "sa": "सकलम्",
+          "en": "the whole; entire"
+        },
+        {
+          "sa": "जगत्",
+          "en": "world; universe"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अखण्ड-रूप-स्थितिः",
+          "en": "abiding in the indivisible nature"
+        },
+        {
+          "sa": "एव",
+          "en": "alone; indeed"
+        },
+        {
+          "sa": "मोक्षः",
+          "en": "liberation"
+        },
+        {
+          "sa": "ब्रह्म-अद्वितीये",
+          "en": "in Brahman without a second"
+        },
+        {
+          "sa": "श्रुतयः",
+          "en": "the scriptures"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "authority; valid evidence"
+        }
+      ],
       "sourceNumbers": [
         478
-      ]
+      ],
+      "editionTranslation": "The verdict of all discussions on the Vedanta is that the Jiva and the whole universe are nothing but Brahman, and that liberation means abiding in Brahman, the indivisible Entity. While the Shrutis themselves are authority (for the statement) that Brahman is One without a second."
     },
     {
       "id": "vivekachudamani-479",
       "number": "479",
       "label": "Verse 479",
-      "deva": "इति गुरुवचनाच्छ्रुतिप्रमाणात्\nपरमवगम्य सतत्त्वम् आत्मयुक्त्या ।\nप्रशमितकरणः समाहितात्मा\nक्वचिदचलाकृतिर् आत्मनिष्ठतोऽभूत् ॥",
-      "iast": "iti guruvacanācchrutipramāṇāt\nparamavagamya satattvam ātmayuktyā |\npraśamitakaraṇaḥ samāhitātmā\nkvacidacalākṛtir ātmaniṣṭhato'bhūt ||",
-      "translation": "Realising, at a blessed moment, the Supreme Truth through the above instructions of the Guru, the authority of the Scriptures and his own reasoning, with his senses quieted and the mind concentrated, (the disciple) became immovable in form and perfectly established in the Atman.",
-      "gloss": [],
+      "deva": "इति गुरुवचनाच्छ्रुतिप्रमाणात्\nपरमवगम्य सतत्त्वम् आत्मयुक्त्या ।\nप्रशमितकरणः समाहितात्मा\nक्वचिदचलाकृतिरात्मनिष्ठितोऽभूत् ॥",
+      "iast": "iti guru-vacanāt śruti-pramāṇāt\nparam avagamya sat-tattvam ātma-yuktyā |\npraśamita-karaṇaḥ samāhita-ātmā\nkvacit acala-ākṛtiḥ ātma-niṣṭhitaḥ abhūt ||",
+      "translation": "Thus, having understood the supreme truth of Being through the Guru's words, scripture's authority, and reasoning about the Self, he became—his senses quieted and mind concentrated—motionless and established in the Self.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "गुरु-वचनात्",
+          "en": "from the Guru's words"
+        },
+        {
+          "sa": "श्रुति-प्रमाणात्",
+          "en": "from scripture's authority"
+        },
+        {
+          "sa": "परम्",
+          "en": "supreme"
+        },
+        {
+          "sa": "अवगम्य",
+          "en": "having understood"
+        },
+        {
+          "sa": "सत्-तत्त्वम्",
+          "en": "the truth of Being; ultimate reality"
+        },
+        {
+          "sa": "आत्म-युक्त्या",
+          "en": "through reasoning about the Self"
+        },
+        {
+          "sa": "प्रशमित-करणः",
+          "en": "with the senses and faculties quieted"
+        },
+        {
+          "sa": "समाहित-आत्मा",
+          "en": "with the mind concentrated"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "at some point"
+        },
+        {
+          "sa": "अचल-आकृतिः",
+          "en": "motionless in form; still"
+        },
+        {
+          "sa": "आत्म-निष्ठितः",
+          "en": "established in the Self"
+        },
+        {
+          "sa": "अभूत्",
+          "en": "became"
+        }
+      ],
       "sourceNumbers": [
         479
-      ]
+      ],
+      "editionTranslation": "Realising, at a blessed moment, the Supreme Truth through the above instructions of the Guru, the authority of the Scriptures and his own reasoning, with his senses quieted and the mind concentrated, (the disciple) became immovable in form and perfectly established in the Atman."
     },
     {
       "id": "vivekachudamani-480",
       "number": "480",
       "label": "Verse 480",
       "deva": "किंचित् कालं समाधाय परे ब्रह्मणि मानसम् ।\nउत्थाय परमानन्दादिदं वचनमब्रवीत् ॥",
-      "iast": "kiṃcit kālaṃ samādhāya pare brahmaṇi mānasam |\nutthāya paramānandādidaṃ vacanamabravīt ||",
-      "translation": "Concentrating the mind for some time on the Supreme Brahman, he rose, and out of supreme bliss spoke as follows.",
-      "gloss": [],
+      "iast": "kiñcit-kālam samādhāya pare brahmaṇi mānasam |\nutthāya parama-ānandāt idam vacanam abravīt ||",
+      "translation": "Having fixed his mind on supreme Brahman for some time, he rose and, from supreme bliss, spoke these words.",
+      "gloss": [
+        {
+          "sa": "किञ्चित्-कालम्",
+          "en": "for some time"
+        },
+        {
+          "sa": "समाधाय",
+          "en": "having fixed; concentrated"
+        },
+        {
+          "sa": "परे",
+          "en": "in the supreme"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "Brahman"
+        },
+        {
+          "sa": "मानसम्",
+          "en": "the mind"
+        },
+        {
+          "sa": "उत्थाय",
+          "en": "having risen"
+        },
+        {
+          "sa": "परम-आनन्दात्",
+          "en": "from supreme bliss"
+        },
+        {
+          "sa": "इदम्",
+          "en": "these"
+        },
+        {
+          "sa": "वचनम्",
+          "en": "words"
+        },
+        {
+          "sa": "अब्रवीत्",
+          "en": "he spoke"
+        }
+      ],
       "sourceNumbers": [
         480
-      ]
+      ],
+      "editionTranslation": "Concentrating the mind for some time on the Supreme Brahman, he rose, and out of supreme bliss spoke as follows."
     },
     {
       "id": "vivekachudamani-481",
@@ -37755,6 +37997,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 456–460; preserved prior translations as editionTranslation. Reparsed verse 458's n-anādeḥ as 'for the beginningless Self' and translated verse 457's prāśana-mocana as eating and bodily elimination.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 461–465; verses 462–463 share one reader unit and are both fully glossed. Corrected verse 465's IAST sadghanaṃ to match सद्घनं.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 466–470, including the repeated nonduality refrain in every verse. Corrected verse 470's duplicated and misleading prior English and normalized the IAST compounds in verses 466 and 470.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 471–475; preserved prior translations as editionTranslation. Clarified verse 474's two attainment phrases and the distinction in verse 475 between first-person knowledge and others' inference."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 471–475; preserved prior translations as editionTranslation. Clarified verse 474's two attainment phrases and the distinction in verse 475 between first-person knowledge and others' inference.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 476–480; preserved prior translations as editionTranslation. Corrected verse 479's final form to आत्मनिष्ठितः (ātma-niṣṭhitaḥ), supported by the parallel reading, and normalized its IAST word boundaries."
   ]
 }
