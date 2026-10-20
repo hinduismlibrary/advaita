@@ -85,6 +85,7 @@ h1{margin:0;color:var(--teal);font:500 clamp(34px,5vw,48px)/1.1 Vollkorn,Georgia
   var authorNode=document.getElementById("work-author");
   var completeLink=document.getElementById("complete-link");
   var panchadasiTitles={1:"Tattva-viveka",2:"Pañca-mahā-bhūta-viveka",3:"Pañca-kośa-viveka",4:"Dvaita-viveka",5:"Mahā-vākya",6:"Citra-dīpa",7:"Tṛpti-dīpa",8:"Kūṭastha-dīpa",9:"Dhyāna-dīpa",10:"Nāṭa-dīpa",11:"Brahmānanda",12:"Ātmānanda",13:"Advaitānanda",14:"Vidyānanda",15:"Viṣayānanda"};
+  var svsssTitles={1:"The Topic of this Study and the Successful Student",2:"Identifying Only with Ultimate Reality",3:"Otherwise Mis-identifying with Untruth",4:"You are Only that Ultimate Reality",5:"Assimilating this Knowledge"};
   function showError(message,readerUrl){
     sectionsNode.replaceChildren();
     var box=document.createElement("p");
@@ -137,13 +138,15 @@ h1{margin:0;color:var(--teal);font:500 clamp(34px,5vw,48px)/1.1 Vollkorn,Georgia
     var grouped=[];
     units.forEach(function(unit,index){
       var chapter=unitChapter(unit);
-      var title=unit.sectionTitle||(chapter?(work==="panchadasi"&&panchadasiTitles[chapter]?"Chapter "+chapter+": "+panchadasiTitles[chapter]:"Chapter "+chapter):"");
+      var title=unit.sectionTitle||(chapter?(work==="panchadasi"&&panchadasiTitles[chapter]?"Chapter "+chapter+": "+panchadasiTitles[chapter]:work==="svsss"&&svsssTitles[chapter]?"Part "+chapter+": "+svsssTitles[chapter]:"Chapter "+chapter):"");
       if(!title)return;
       var prior=grouped[grouped.length-1];
       if(!prior||prior.title!==title)grouped.push({title:title,hash:unit.id,count:0,index:index});
       grouped[grouped.length-1].count++;
     });
     if(grouped.length>1)return grouped.map(function(group){return {label:group.title,hash:group.hash};});
+    var descriptiveLabels=units.every(function(unit){return unit.label&&!/^(?:(?:chapter\s+\S+\s*[·:–-]\s*)?)(?:verses?|passages?|sections?|pages?|entries?)\s+\S+$/i.test(unit.label);});
+    if(descriptiveLabels)return units.map(function(unit){return {label:unit.label,hash:unit.id};});
     if(units.length<=20&&units.some(function(unit){return unit.label&&!/^verse\s+\S+$/i.test(unit.label);})){
       return units.map(function(unit,index){return {label:unit.label||("Section "+(index+1)),hash:unit.id};});
     }
@@ -153,10 +156,10 @@ h1{margin:0;color:var(--teal);font:500 clamp(34px,5vw,48px)/1.1 Vollkorn,Georgia
     var units=Array.isArray(data&&data.units)?data.units:[];
     if(units.length<=20)return units.map(function(unit,index){return {label:unit.label||("Entry "+(index+1)),hash:unit.id};});
     var result=[];
-    for(var i=0;i<units.length;i+=20){
-      var part=units.slice(i,i+20);
+    for(var i=0;i<units.length;i+=10){
+      var part=units.slice(i,i+10);
       var numbers=part.flatMap(function(unit){return Array.isArray(unit.sourceNumbers)?unit.sourceNumbers:[unit.number];}).filter(function(value){return value!==undefined&&value!==null;});
-      var start=numbers[0]||part[0].number||String(i+1),end=numbers[numbers.length-1]||part[part.length-1].number||String(Math.min(i+20,units.length));
+      var start=numbers[0]||part[0].number||String(i+1),end=numbers[numbers.length-1]||part[part.length-1].number||String(Math.min(i+10,units.length));
       var firstLabel=String(part[0].label||"");
       var kind=/page/i.test(firstLabel)?"Pages":/passage/i.test(firstLabel)?"Passages":/section/i.test(firstLabel)?"Sections":"Verses";
       result.push({label:kind+" "+start+"–"+end,hash:part[0].id});
