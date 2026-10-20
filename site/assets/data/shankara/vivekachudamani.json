@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 365
+      "end": 370
     },
-    "note": "Source verses 1–365 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 366 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–370 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 371 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -28987,11 +28987,57 @@
       "label": "Verse 366",
       "deva": "अतः समाधत्स्व यतेन्द्रियः सन्\nनिरन्तरं शान्तमनाः प्रतीचि ।\nविध्वंसय ध्वान्तमनाद्यविद्यया\nकृतं सदेकत्वविलोकनेन ॥",
       "iast": "ataḥ samādhatsva yatendriyaḥ san\nnirantaraṃ śāntamanāḥ pratīci |\nvidhvaṃsaya dhvāntamanādyavidyayā\nkṛtaṃ sadekatvavilokanena ||",
-      "translation": "Hence with the mind calm and the senses controlled always drown the mind in the Supreme Self that is within, and through the realisation of thy identity with that Reality destroy the darkness created by Nescience, which is without beginning.",
-      "gloss": [],
+      "translation": "Therefore, with the senses controlled and the mind always peaceful, concentrate on the inner Self. Destroy the darkness created by beginningless ignorance by seeing the oneness of Existence.",
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "समाधत्स्व",
+          "en": "concentrate; steady the mind"
+        },
+        {
+          "sa": "यत-इन्द्रियः",
+          "en": "with the senses controlled"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "निरन्तरम्",
+          "en": "continuously"
+        },
+        {
+          "sa": "शान्त-मनाः",
+          "en": "with a peaceful mind"
+        },
+        {
+          "sa": "प्रतीचि",
+          "en": "toward the inner Self"
+        },
+        {
+          "sa": "विध्वंसय",
+          "en": "destroy"
+        },
+        {
+          "sa": "ध्वान्तम्",
+          "en": "the darkness"
+        },
+        {
+          "sa": "अनादि-अविद्यया-कृतम्",
+          "en": "created by beginningless ignorance"
+        },
+        {
+          "sa": "सत्-एकत्व-विलोकनेन",
+          "en": "by seeing oneness with Existence"
+        }
+      ],
       "sourceNumbers": [
         366
-      ]
+      ],
+      "editionTranslation": "Hence with the mind calm and the senses controlled always drown the mind in the Supreme Self that is within, and through the realisation of thy identity with that Reality destroy the darkness created by Nescience, which is without beginning."
     },
     {
       "id": "vivekachudamani-367",
@@ -28999,23 +29045,163 @@
       "label": "Verse 367",
       "deva": "योगस्य प्रथमद्वारं वाङ्निरोधोऽपरिग्रहः ।\nनिराशा च निरीहा च नित्यमेकान्तशीलता ॥",
       "iast": "yogasya prathamadvāraṃ vāṅnirodho'parigrahaḥ |\nnirāśā ca nirīhā ca nityamekāntaśīlatā ||",
-      "translation": "The first steps to Yoga are control of speech, non-receiving of gifts, entertaining of no expectations, freedom from activity, and always living in a retired place.",
-      "gloss": [],
+      "translation": "The first gate of yoga is restraint of speech and non-possessiveness, freedom from expectation and striving, and a constant disposition toward solitude.",
+      "gloss": [
+        {
+          "sa": "योगस्य",
+          "en": "of yoga"
+        },
+        {
+          "sa": "प्रथम-द्वारम्",
+          "en": "the first gate"
+        },
+        {
+          "sa": "वाक्-निरोधः",
+          "en": "restraint of speech"
+        },
+        {
+          "sa": "अपरिग्रहः",
+          "en": "non-possessiveness"
+        },
+        {
+          "sa": "निराशा",
+          "en": "freedom from expectation"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "निरीहा",
+          "en": "without striving"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always"
+        },
+        {
+          "sa": "एकान्त-शीलता",
+          "en": "a disposition toward solitude"
+        }
+      ],
       "sourceNumbers": [
         367
-      ]
+      ],
+      "editionTranslation": "The first steps to Yoga are control of speech, non-receiving of gifts, entertaining of no expectations, freedom from activity, and always living in a retired place."
     },
     {
       "id": "vivekachudamani-368",
       "number": "368",
       "label": "Verse 368",
-      "deva": "एकान्तस्थितिरिन्द्रियोपरमणे हेनुर्दमश्चेतसः\nसंरोधे करणं शमेन विलयं यायादहंवासना ।\nतेनानन्दरसानुभूतिरचला ब्राह्मी सदा योगिनः\nतस्माच्चित्तनिरोध एव सततं कार्यः प्रयत्नो मुनेः ॥",
-      "iast": "ekāntasthitirindriyoparamaṇe henurdamaścetasaḥ\nsaṃrodhe karaṇaṃ śamena vilayaṃ yāyādahaṃvāsanā |\ntenānandarasānubhūtiracalā brāhmī sadā yoginaḥ\ntasmāccittanirodha eva satataṃ kāryaḥ prayatno muneḥ ||",
-      "translation": "Living in a retired place serves to control the sense-organs, control of the senses helps to control the mind, through control of the mind egoism is destroyed; and this again gives the Yogi an unbroken realisation of the Bliss of Brahman. Therefore the man of reflection should always strive only to control the mind.",
-      "gloss": [],
+      "deva": "एकान्तस्थितिरिन्द्रियोपरमणे हेतुर् दमश्चेतसः\nसंरोधे करणं शमेन विलयं यायादहंवासना ।\nतेनानन्दरसानुभूतिरचला ब्राह्मी सदा योगिनः\nतस्माच्चित्तनिरोध एव सततं कार्यः प्रयत्नो मुनेः ॥",
+      "iast": "ekāntasthitirindriyoparamaṇe hetur damaś cetasaḥ\nsaṃrodhe karaṇaṃ śamena vilayaṃ yāyād ahaṃvāsanā |\ntenānandarasānubhūtiracalā brāhmī sadā yoginaḥ\ntasmāc cittanirodha eva satataṃ kāryaḥ prayatno muneḥ ||",
+      "translation": "Abiding in solitude is a cause of sense-withdrawal; self-restraint is the means for restraining the mind. Through tranquility the ego-tendency should dissolve; thereby the yogi always has an unshaken experience of the essence of Brahman-bliss. Therefore, the sage should continually strive for restraint of mind alone.",
+      "gloss": [
+        {
+          "sa": "एकान्त-स्थितिः",
+          "en": "abiding in solitude"
+        },
+        {
+          "sa": "इन्द्रिय-उपरमणे",
+          "en": "for the withdrawal of the senses"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "the cause"
+        },
+        {
+          "sa": "दमः",
+          "en": "self-restraint"
+        },
+        {
+          "sa": "चेतसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "संरोधे",
+          "en": "in restraining"
+        },
+        {
+          "sa": "करणम्",
+          "en": "the means"
+        },
+        {
+          "sa": "शमेन",
+          "en": "through tranquility"
+        },
+        {
+          "sa": "विलयम्",
+          "en": "into dissolution"
+        },
+        {
+          "sa": "यायात्",
+          "en": "should go"
+        },
+        {
+          "sa": "अहं-वासना",
+          "en": "the ego-tendency"
+        },
+        {
+          "sa": "तेन",
+          "en": "thereby"
+        },
+        {
+          "sa": "आनन्द-रस-अनुभूतिः",
+          "en": "experience of the essence of bliss"
+        },
+        {
+          "sa": "अचला",
+          "en": "unshaken"
+        },
+        {
+          "sa": "ब्राह्मी",
+          "en": "of Brahman"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "योगिनः",
+          "en": "for the yogi"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "चित्त-निरोधः",
+          "en": "restraint of the mind"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "सततम्",
+          "en": "continually"
+        },
+        {
+          "sa": "कार्यः",
+          "en": "to be done"
+        },
+        {
+          "sa": "प्रयत्नः",
+          "en": "the effort"
+        },
+        {
+          "sa": "मुनेः",
+          "en": "of the sage"
+        }
+      ],
       "sourceNumbers": [
         368
-      ]
+      ],
+      "editionTranslation": "Living in a retired place serves to control the sense-organs, control of the senses helps to control the mind, through control of the mind egoism is destroyed; and this again gives the Yogi an unbroken realisation of the Bliss of Brahman. Therefore the man of reflection should always strive only to control the mind."
     },
     {
       "id": "vivekachudamani-369",
@@ -29023,23 +29209,131 @@
       "label": "Verse 369",
       "deva": "वाचं नियच्छात्मनि तं नियच्छ\nबुद्धौ धियं यच्छ च बुद्धिसाक्षिणि ।\nतं चापि पूर्णात्मनि निर्विकल्पे\nविलाप्य शान्तिं परमां भजस्व ॥",
       "iast": "vācaṃ niyacchātmani taṃ niyaccha\nbuddhau dhiyaṃ yaccha ca buddhisākṣiṇi |\ntaṃ cāpi pūrṇātmani nirvikalpe\nvilāpya śāntiṃ paramāṃ bhajasva ||",
-      "translation": "Restrain speech in the Manas, and restrain Manas in the Buddhi; this again restrain in the witness of Buddhi, and merging that also in the Infinite Absolute Self, attain to supreme Peace.",
-      "gloss": [],
+      "translation": "Restrain speech in the mind; restrain that [mind] in the intellect; restrain the intellect in the witness of the intellect. Having dissolved that too in the complete, thought-free Self, seek supreme peace.",
+      "gloss": [
+        {
+          "sa": "वाचम्",
+          "en": "speech"
+        },
+        {
+          "sa": "नियच्छ",
+          "en": "restrain"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the inner self; here, the mind"
+        },
+        {
+          "sa": "तम्",
+          "en": "that [mind]"
+        },
+        {
+          "sa": "नियच्छ",
+          "en": "restrain"
+        },
+        {
+          "sa": "बुद्धौ",
+          "en": "in the intellect"
+        },
+        {
+          "sa": "धियम्",
+          "en": "the intellect"
+        },
+        {
+          "sa": "यच्छ",
+          "en": "restrain"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "बुद्धि-साक्षिणि",
+          "en": "in the witness of the intellect"
+        },
+        {
+          "sa": "तम्",
+          "en": "that [intellect]"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पूर्णात्मनि",
+          "en": "in the complete Self"
+        },
+        {
+          "sa": "निर्विकल्पे",
+          "en": "free from thought-constructs"
+        },
+        {
+          "sa": "विलाप्य",
+          "en": "having dissolved"
+        },
+        {
+          "sa": "शान्तिम्",
+          "en": "peace"
+        },
+        {
+          "sa": "परमाम्",
+          "en": "supreme"
+        },
+        {
+          "sa": "भजस्व",
+          "en": "seek"
+        }
+      ],
       "sourceNumbers": [
         369
-      ]
+      ],
+      "editionTranslation": "Restrain speech in the Manas, and restrain Manas in the Buddhi; this again restrain in the witness of Buddhi, and merging that also in the Infinite Absolute Self, attain to supreme Peace."
     },
     {
       "id": "vivekachudamani-370",
       "number": "370",
       "label": "Verse 370",
-      "deva": "देहप्राणेन्द्रियमनोबुद्ध्यादिभिरुपाधिभिः ।\nयैर् यैर् वृत्तेःसमायोगस्ततद्भावोऽस्य योगिनः ॥",
-      "iast": "dehaprāṇendriyamanobuddhyādibhirupādhibhiḥ |\nyair yair vṛtteḥsamāyogastatadbhāvo'sya yoginaḥ ||",
-      "translation": "The body, Pranas, organs, manas, Buddhi and the rest – with whichsoever of these supervening adjuncts the mind is associated, the Yogi is transformed, as it were, into that.",
-      "gloss": [],
+      "deva": "देहप्राणेन्द्रियमनोबुद्ध्यादिभिरुपाधिभिः ।\nयैर् यैर् वृत्तेः समायोगस्तत्तद्भावोऽस्य योगिनः ॥",
+      "iast": "dehaprāṇendriyamanobuddhyādibhirupādhibhiḥ |\nyair yair vṛtteḥ samāyogastattadbhāvo 'sya yoginaḥ ||",
+      "translation": "With whichever limiting adjuncts—the body, vital breath, senses, mind, intellect, and the rest—the mind’s mode is associated, the yogi takes on that corresponding state.",
+      "gloss": [
+        {
+          "sa": "देह-प्राण-इन्द्रिय-मनस्-बुद्धि-आदि-उपाधिभिः",
+          "en": "with limiting adjuncts such as body, vital breath, senses, mind, intellect, and the rest"
+        },
+        {
+          "sa": "यैः यैः",
+          "en": "with whichever"
+        },
+        {
+          "sa": "वृत्तेः",
+          "en": "of the mind’s mode"
+        },
+        {
+          "sa": "समायोगः",
+          "en": "association"
+        },
+        {
+          "sa": "तत्-तत्-भावः",
+          "en": "that corresponding state"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "योगिनः",
+          "en": "yogi"
+        }
+      ],
       "sourceNumbers": [
         370
-      ]
+      ],
+      "editionTranslation": "The body, Pranas, organs, manas, Buddhi and the rest – with whichsoever of these supervening adjuncts the mind is associated, the Yogi is transformed, as it were, into that."
     },
     {
       "id": "vivekachudamani-371",
@@ -31564,6 +31858,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 345–350; verses 349–350 share one reader unit. Preserved prior translations as editionTranslation and corrected verse 346's Sanskrit vahniḥ spelling.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 351–355; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 356–360; preserved prior translations as editionTranslation. Corrected verse 360's Sanskrit spelling to वृत्त्या.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 361–365; preserved prior translations as editionTranslation. Corrected verse 364's Devanāgarī and IAST spelling to nididhyāsaṃ."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 361–365; preserved prior translations as editionTranslation. Corrected verse 364's Devanāgarī and IAST spelling to nididhyāsaṃ.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 366–370; preserved prior translations as editionTranslation. Corrected verse 368's hetuḥ and verse 370's tat-tad-bhāva spelling."
   ]
 }
