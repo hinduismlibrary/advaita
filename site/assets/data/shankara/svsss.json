@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 960
+      "to": 970
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–960 (940 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, 390–391, 910–912, 913–914, 921–922, and 926–927). Remaining verses still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–970 (950 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, 390–391, 910–912, 913–914, 921–922, and 926–927). Remaining verses still need glosses."
   },
   "units": [
     {
@@ -63641,8 +63641,41 @@
       "number": "961",
       "label": "Verse 961",
       "deva": "पश्यन्ति स्वप्नवल् लोकं तुर्य-भूमि-सुयोगतः।\nपञ्चमीं भूमिम् आरुह्य सुषुप्ति-पद-नामिकाम्॥",
-      "translation": "When the yogī rises to the fifth plane of consciousness it is as though he has entered the stage of deep sleep. All the special traits of the yogī vanish, and he remains absorbed in non-duality.",
-      "gloss": [],
+      "translation": "Through excellent union with the turya stage, one sees the world as if in a dream. Having ascended to the fifth stage, named the state of deep sleep…",
+      "gloss": [
+        [
+          "पश्यन्ति",
+          "they see"
+        ],
+        [
+          "स्वप्न-वत्",
+          "like a dream"
+        ],
+        [
+          "लोकम्",
+          "the world"
+        ],
+        [
+          "तुर्य-भूमि-सुयोगतः",
+          "through excellent union with the turya stage"
+        ],
+        [
+          "पञ्चमीम्",
+          "the fifth"
+        ],
+        [
+          "भूमिम्",
+          "stage"
+        ],
+        [
+          "आरुह्य",
+          "having ascended"
+        ],
+        [
+          "सुषुप्ति-पद-नामिकाम्",
+          "named the state of deep sleep"
+        ]
+      ],
       "sourceNumbers": [
         961
       ],
@@ -63655,8 +63688,45 @@
       "number": "962",
       "label": "Verse 962",
       "deva": "शान्ताशेष-विशेषांशस् तिष्ठेद् अद्वैत-मात्रके।\nअन्तर्-मुखतया नित्यं षष्ठीं भूमिम् उपाश्रितः॥",
-      "translation": "On rising to the sixth plane of consciousness the mind of the yogī is ever turned inward, and to all appearance it looks as though out of fatigue he has fallen into the stage of deep sleep.",
-      "gloss": [],
+      "translation": "Having reached the sixth stage, one remains constantly turned inward, with all particular distinctions quieted, abiding in nonduality alone.",
+      "gloss": [
+        [
+          "शान्त-अशेष-विशेष-अंशः",
+          "with all particular distinctions quieted"
+        ],
+        [
+          "अशेष-विशेष-अंशः",
+          "all particular distinctions"
+        ],
+        [
+          "तिष्ठेत्",
+          "one should remain"
+        ],
+        [
+          "अद्वैत-मात्रके",
+          "in nonduality alone"
+        ],
+        [
+          "अन्तर्-मुखतया",
+          "with an inward-facing orientation"
+        ],
+        [
+          "नित्यम्",
+          "always"
+        ],
+        [
+          "षष्ठीम्",
+          "the sixth"
+        ],
+        [
+          "भूमिम्",
+          "stage"
+        ],
+        [
+          "उपाश्रितः",
+          "having resorted to"
+        ]
+      ],
       "sourceNumbers": [
         962
       ],
@@ -63669,8 +63739,49 @@
       "number": "963",
       "label": "Verse 963",
       "deva": "परिश्रान्ततया गाढ-निद्रालुर् इव लक्ष्यते।\nकुर्वन्न् अभ्यासम् एतस्यां भूम्यां सम्यग् विवासनः॥",
-      "translation": "As a result of constant practice in the sixth place, the best among the yogīs becomes completely freed from all desires, and he gradually ascends to the seventh plane of consciousness. This is the turya or the transcendent.",
-      "gloss": [],
+      "translation": "Though appearing exhausted, like one longing for deep sleep, the foremost yogi practices in this stage and becomes fully free of latent impressions…",
+      "gloss": [
+        [
+          "परिश्रान्ततया",
+          "as if exhausted"
+        ],
+        [
+          "गाढ-निद्रालुः",
+          "longing for deep sleep"
+        ],
+        [
+          "इव",
+          "like"
+        ],
+        [
+          "लक्ष्यते",
+          "appears"
+        ],
+        [
+          "कुर्वन्",
+          "practicing"
+        ],
+        [
+          "अभ्यासम्",
+          "practice"
+        ],
+        [
+          "एतस्याम्",
+          "in this"
+        ],
+        [
+          "भूम्याम्",
+          "stage"
+        ],
+        [
+          "सम्यक्",
+          "fully, thoroughly"
+        ],
+        [
+          "विवासनः",
+          "free of latent impressions"
+        ]
+      ],
       "sourceNumbers": [
         963
       ],
@@ -63682,14 +63793,55 @@
       "chapter": 5,
       "number": "964",
       "label": "Verse 964",
-      "deva": "विदेह-मुक्तिर् एवात्र तुर्यातीत-दशोच्यते॥",
-      "translation": "Videha-mukti Even beyond the state of turya is the state of videha-mukti.",
-      "gloss": [],
+      "deva": "तुर्यावस्थां सप्तभूमिं क्रमात् प्राप्नोति योगिराट्।\nविदेहमुक्तिरेवात्र तुर्यातीतदशोच्यते॥",
+      "translation": "The foremost yogi gradually reaches the seventh stage, the state of turya. Here, liberation beyond the body is called the state beyond turya.",
+      "gloss": [
+        [
+          "तुर्य-अवस्थाम्",
+          "the state of turya"
+        ],
+        [
+          "सप्त-भूमिम्",
+          "the seventh stage"
+        ],
+        [
+          "क्रमात्",
+          "in sequence, gradually"
+        ],
+        [
+          "प्राप्नोति",
+          "reaches"
+        ],
+        [
+          "योगि-राट्",
+          "the foremost yogi"
+        ],
+        [
+          "विदेह-मुक्तिः",
+          "liberation beyond the body"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "अत्र",
+          "here"
+        ],
+        [
+          "तुर्य-अतीत-दशा",
+          "the state beyond turya"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         964
       ],
       "sectionTitle": "Assimilating this Knowledge",
-      "iast": "videha-muktir evātra turyātīta-daśocyate||"
+      "iast": "turyāvasthāṃ saptabhūmiṃ kramāt prāpnoti yogirāṭ|\nvidehamuktir evātra turyātīta-daśocyate||"
     },
     {
       "id": "svsss-5-0965",
@@ -63697,8 +63849,77 @@
       "number": "965",
       "label": "Verse 965",
       "deva": "यत्र नासन् न सच् चापि नाहं नाप्यनहङ्-कृतिः।\nकेवलं क्षीण-मनन आस्तेऽद्वैतेऽतिनिर्भयः॥",
-      "translation": "In that state there is neither existence nor non-existence. There is neither the ego nor the non-ego. The yogī then becomes totally devoid of fear, and rising free of all intellectual ideations, remains in absolute non-duality.",
-      "gloss": [],
+      "translation": "Where there is neither non-being nor being, neither “I” nor even the absence of “I,” one abides alone, with thought exhausted, utterly fearless in nonduality.",
+      "gloss": [
+        [
+          "यत्र",
+          "where"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "असत्",
+          "non-being"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "सत्",
+          "being"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अहम्",
+          "“I,” ego"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "अनहङ्कृतिः",
+          "absence of ego"
+        ],
+        [
+          "केवलम्",
+          "alone"
+        ],
+        [
+          "क्षीण-मननः",
+          "one whose thought has ended"
+        ],
+        [
+          "आस्ते",
+          "abides"
+        ],
+        [
+          "अद्वैते",
+          "in nonduality"
+        ],
+        [
+          "अति-निर्भयः",
+          "utterly fearless"
+        ]
+      ],
       "sourceNumbers": [
         965
       ],
@@ -63711,8 +63932,65 @@
       "number": "966",
       "label": "Verse 966",
       "deva": "अन्तः-शून्यो बहिः-शून्यः शून्य-कुम्भ इवाम्बरे।\nअन्तः-पूर्णो बहिः-पूर्णः पूर्ण-कुम्भ इवार्णवे॥",
-      "translation": "His state may be likened to that of an empty pot set in empty space, so that there is nothing but emptiness within and without; or to a full vessel set in the full ocean, so that there is nothing but fullness inside and out.",
-      "gloss": [],
+      "translation": "Empty within and empty without, like an empty pot in space; full within and full without, like a full pot in the ocean.",
+      "gloss": [
+        [
+          "अन्तः",
+          "within"
+        ],
+        [
+          "शून्यः",
+          "empty"
+        ],
+        [
+          "बहिः",
+          "without"
+        ],
+        [
+          "शून्यः",
+          "empty"
+        ],
+        [
+          "शून्य-कुम्भः",
+          "an empty pot"
+        ],
+        [
+          "इव",
+          "like"
+        ],
+        [
+          "अम्बरे",
+          "in space"
+        ],
+        [
+          "अन्तः",
+          "within"
+        ],
+        [
+          "पूर्णः",
+          "full"
+        ],
+        [
+          "बहिः",
+          "without"
+        ],
+        [
+          "पूर्णः",
+          "full"
+        ],
+        [
+          "पूर्ण-कुम्भः",
+          "a full pot"
+        ],
+        [
+          "इव",
+          "like"
+        ],
+        [
+          "अर्णवे",
+          "in the ocean"
+        ]
+      ],
       "sourceNumbers": [
         966
       ],
@@ -63725,8 +64003,61 @@
       "number": "967",
       "label": "Verse 967",
       "deva": "यथा-स्थितम् इदं सर्वं व्यवहारवतोऽपि च।\nअस्तं गतं स्थितं व्योम स जीवन्-मुक्त उच्यते॥",
-      "translation": "Although the jīvan-mukta is apparently engaged in the various activities of life as usual he is not affected by them. In his view the vast space around and the universe with it have ceased to be. Of such a person it is said that he is liberated in life.",
-      "gloss": [],
+      "translation": "Even while engaged in practical dealings, for him the world as it stands has vanished; only space remains. Such a person is called liberated while living.",
+      "gloss": [
+        [
+          "यथा-स्थितम्",
+          "as it stands"
+        ],
+        [
+          "इदम्",
+          "this"
+        ],
+        [
+          "सर्वम्",
+          "all"
+        ],
+        [
+          "व्यवहारवतः",
+          "for one engaged in practical dealings"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "अस्तम्",
+          "set, vanished"
+        ],
+        [
+          "गतम्",
+          "gone"
+        ],
+        [
+          "स्थितम्",
+          "remaining, standing"
+        ],
+        [
+          "व्योम",
+          "space, sky"
+        ],
+        [
+          "सः",
+          "that person"
+        ],
+        [
+          "जीवन्-मुक्तः",
+          "liberated while living"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         967
       ],
@@ -63739,8 +64070,57 @@
       "number": "968",
       "label": "Verse 968",
       "deva": "नोदेति नास्तम् आयाति सुख-दुःखे मनः-प्रभा।\nयथा-प्राप्त-स्थितिर् यस्य स जीवन्-मुक्त उच्यते॥",
-      "translation": "That person in whose mind the feelings of pleasure and pain neither well up into a crest nor fall into a trough, and whose life is in harmony with circumstances, is indeed liberated in life.",
-      "gloss": [],
+      "translation": "For one whose mind's light neither rises nor sets amid pleasure and pain, and who remains as circumstances bring, that person is called liberated while living.",
+      "gloss": [
+        [
+          "न",
+          "not"
+        ],
+        [
+          "उदेति",
+          "rises"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अस्तम्",
+          "to setting"
+        ],
+        [
+          "आयाति",
+          "comes"
+        ],
+        [
+          "सुख-दुःखे",
+          "amid pleasure and pain"
+        ],
+        [
+          "मनः-प्रभा",
+          "the mind's light"
+        ],
+        [
+          "यथा-प्राप्त-स्थितिः",
+          "one whose state is as it comes"
+        ],
+        [
+          "यस्य",
+          "whose"
+        ],
+        [
+          "सः",
+          "that person"
+        ],
+        [
+          "जीवन्-मुक्तः",
+          "liberated while living"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         968
       ],
@@ -63752,14 +64132,67 @@
       "chapter": 5,
       "number": "969",
       "label": "Verse 969",
-      "deva": "यो जागर्त्ति सुषुप्ति-स्थो यस्य जाग्रन् न विद्यते।\nयस्य निर्वासनो बोधः स जीवन्-मुक्त उच्यते॥",
-      "translation": "That person who is awake in the spirit, even when he is laid asleep in the flesh and who has no other waking state as such, and who is free from all residual desires, is indeed said to be liberated in life.",
-      "gloss": [],
+      "deva": "यो जागर्ति सुषुप्ति-स्थो यस्य जाग्रन्न विद्यते।\nयस्य निर्वासनो बोधः स जीवन्-मुक्त उच्यते॥",
+      "translation": "One who is awake while established in deep sleep, for whom waking is absent, and whose awareness is free of latent impressions is called liberated while living.",
+      "gloss": [
+        [
+          "यः",
+          "one who"
+        ],
+        [
+          "जागर्ति",
+          "is awake"
+        ],
+        [
+          "सुषुप्ति-स्थः",
+          "established in deep sleep"
+        ],
+        [
+          "यस्य",
+          "for whom"
+        ],
+        [
+          "जाग्रत्",
+          "waking"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "विद्यते",
+          "exists"
+        ],
+        [
+          "यस्य",
+          "whose"
+        ],
+        [
+          "निर्वासनः",
+          "free of latent impressions"
+        ],
+        [
+          "बोधः",
+          "awareness"
+        ],
+        [
+          "सः",
+          "that person"
+        ],
+        [
+          "जीवन्-मुक्तः",
+          "liberated while living"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         969
       ],
       "sectionTitle": "Assimilating this Knowledge",
-      "iast": "yo jāgartti suṣupti-stho yasya jāgran na vidyate|\nyasya nirvāsano bodhaḥ sa jīvan-mukta ucyate||"
+      "iast": "yo jāgarti suṣupti-stho yasya jāgran na vidyate|\nyasya nirvāsano bodhaḥ sa jīvan-mukta ucyate||"
     },
     {
       "id": "svsss-5-0970",
@@ -63767,8 +64200,53 @@
       "number": "970",
       "label": "Verse 970",
       "deva": "राग-द्वेष-भयादीनाम् अनुरूपं चरन्न् अपि।\nयोऽन्तर् व्योमवद् अत्यच्छः स जीवन्-मुक्त उच्यते॥",
-      "translation": "That person whose heart is as pure as space, even though his actions seem to be in conformity (like us) with the ordinary feelings of likes and dislikes, as well as, of fear and the like, is indeed liberated in life.",
-      "gloss": [],
+      "translation": "Though acting in ways that accord with attraction, aversion, fear, and the like, one who is inwardly clear as space is called liberated while living.",
+      "gloss": [
+        [
+          "राग-द्वेष-भय-आदीनाम्",
+          "of attraction, aversion, fear, and the like"
+        ],
+        [
+          "अनुरूपम्",
+          "in accordance with"
+        ],
+        [
+          "चरन्",
+          "acting, moving"
+        ],
+        [
+          "अपि",
+          "even though"
+        ],
+        [
+          "यः",
+          "one who"
+        ],
+        [
+          "अन्तर्",
+          "within"
+        ],
+        [
+          "व्योम-वत्",
+          "like space"
+        ],
+        [
+          "अति-अच्छः",
+          "utterly clear"
+        ],
+        [
+          "सः",
+          "that person"
+        ],
+        [
+          "जीवन्-मुक्तः",
+          "liberated while living"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         970
       ],
@@ -64280,5 +64758,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units, and all units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–960 (940 reader units); verses 961–1,006 remain."
+  "coverage": "The complete source and English translation include all 986 reader units, and all units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–970 (950 reader units); verses 971–1,006 remain."
 }
