@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 500
+      "end": 505
     },
-    "note": "Source verses 1–500 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 501 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–505 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 506 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -37651,11 +37651,45 @@
       "label": "Verse 501",
       "deva": "उपाधिरायाति स एव गच्छति\nस एव कर्माणि करोति भुङ्क्ते ।\nस एव जीर्यन् म्रियते सदाहं\nकुलाद्रिवन्निश्चल एव संस्थितः ॥",
       "iast": "upādhirāyāti sa eva gacchati\nsa eva karmāṇi karoti bhuṅkte |\nsa eva jīryan mriyate sadāhaṃ\nkulādrivanniścala eva saṃsthitaḥ ||",
-      "translation": "It is the Upadhi (superimposed attribute) that comes, and it is that alone which goes; that, again, performs actions and experiences (their fruits), that alone decays and dies, whereas I ever remain firm like the Kula mountain.",
-      "gloss": [],
+      "translation": "The limiting adjunct comes and goes; it alone performs actions and experiences their results. It alone grows old and dies, while I remain ever firm and motionless like Mount Kula.",
+      "gloss": [
+        {
+          "sa": "उपाधिः आयाति",
+          "en": "the limiting adjunct comes (upādhiḥ: limiting adjunct | āyāti: comes)"
+        },
+        {
+          "sa": "सः एव गच्छति",
+          "en": "it alone goes (saḥ: it | eva: alone | gacchati: goes)"
+        },
+        {
+          "sa": "सः एव कर्माणि करोति",
+          "en": "it alone performs actions (saḥ: it | eva: alone | karmāṇi: actions | karoti: performs)"
+        },
+        {
+          "sa": "भुङ्क्ते",
+          "en": "experiences; enjoys"
+        },
+        {
+          "sa": "सः एव जीर्यन् म्रियते",
+          "en": "it alone grows old and dies (saḥ: it | eva: alone | jīryan: growing old | mriyate: dies)"
+        },
+        {
+          "sa": "सदा अहम्",
+          "en": "while I remain ever (sadā: always | aham: I)"
+        },
+        {
+          "sa": "कुल-अद्रि-वत्",
+          "en": "like Mount Kula (kula: Kula | adri: mountain | vat: like)"
+        },
+        {
+          "sa": "निश्चलः एव संस्थितः",
+          "en": "established, indeed motionless (niścalaḥ: motionless | eva: indeed | saṃsthitaḥ: established)"
+        }
+      ],
       "sourceNumbers": [
         501
-      ]
+      ],
+      "editionTranslation": "It is the Upadhi (superimposed attribute) that comes, and it is that alone which goes; that, again, performs actions and experiences (their fruits), that alone decays and dies, whereas I ever remain firm like the Kula mountain."
     },
     {
       "id": "vivekachudamani-502",
@@ -37663,11 +37697,49 @@
       "label": "Verse 502",
       "deva": "न मे प्रवृत्तिर्न च मे निवृत्तिः\nसदैकरूपस्य निरंशकस्य ।\nएकात्मको यो निविडो निरन्तरो\nव्योमेव पूर्णः स कथं नु चेष्टते ॥",
       "iast": "na me pravṛttirna ca me nivṛttiḥ\nsadaikarūpasya niraṃśakasya |\nekātmako yo niviḍo nirantaro\nvyomeva pūrṇaḥ sa kathaṃ nu ceṣṭate ||",
-      "translation": "For me who am always the same and devoid of parts, there is neither engaging in work nor cessation from it. How can that which is One, concentrated, without break and infinite like the sky, ever strive ?",
-      "gloss": [],
+      "translation": "I have neither activity nor cessation of activity, for I am ever of one nature and without parts. How, then, could the One whose nature is singular, compact, unbroken, and full like the sky act?",
+      "gloss": [
+        {
+          "sa": "न मे प्रवृत्तिः",
+          "en": "I have no activity (na: not | me: for me | pravṛttiḥ: activity)"
+        },
+        {
+          "sa": "न च मे निवृत्तिः",
+          "en": "nor do I have cessation (na: not | ca: and | me: for me | nivṛttiḥ: cessation)"
+        },
+        {
+          "sa": "सदा-एक-रूपस्य",
+          "en": "of one who is ever of one nature (sadā: always | eka: one | rūpasya: of nature)"
+        },
+        {
+          "sa": "निरंशकस्य",
+          "en": "of one who is without parts (niraṃśakasya: without parts)"
+        },
+        {
+          "sa": "एक-आत्मकः",
+          "en": "of one essence or nature (eka: one | ātmakaḥ: of the nature)"
+        },
+        {
+          "sa": "यः निविडः",
+          "en": "who is compact (yaḥ: who | niviḍaḥ: compact)"
+        },
+        {
+          "sa": "निरन्तरः",
+          "en": "unbroken; without interval"
+        },
+        {
+          "sa": "व्योम इव पूर्णः",
+          "en": "full like the sky (vyoma: sky | iva: like | pūrṇaḥ: full)"
+        },
+        {
+          "sa": "सः कथं नु चेष्टते",
+          "en": "how, then, could that One act? (saḥ: that one | katham: how | nu: then | ceṣṭate: acts)"
+        }
+      ],
       "sourceNumbers": [
         502
-      ]
+      ],
+      "editionTranslation": "For me who am always the same and devoid of parts, there is neither engaging in work nor cessation from it. How can that which is One, concentrated, without break and infinite like the sky, ever strive ?"
     },
     {
       "id": "vivekachudamani-503",
@@ -37675,11 +37747,57 @@
       "label": "Verse 503",
       "deva": "पुण्यानि पापानि निरिन्द्रियस्य\nनिश्चेतसो निर्विकृतेर्निराकृतेः ।\nकुतो ममाखण्डसुखानुभूतेः\nब्रूते ह्यनन्वागतमित्य् अपि श्रुतिः ॥",
       "iast": "puṇyāni pāpāni nirindriyasya\nniścetaso nirvikṛternirākṛteḥ |\nkuto mamākhaṇḍasukhānubhūteḥ\nbrūte hyananvāgatamity api śrutiḥ ||",
-      "translation": "How can there be merits and demerits for me, who am without organs, without mind, changeless, and formless – who am the realisation of Bliss Absolute ? The Shruti also mentions this in the passage \"Not touched\", etc.",
-      "gloss": [],
+      "translation": "How could merit or demerit belong to me—the one without senses or mind, changeless and formless, whose experience is unbroken bliss? The Śruti too says that the Self is “untouched.”",
+      "gloss": [
+        {
+          "sa": "पुण्यानि पापानि",
+          "en": "merits and demerits (puṇyāni: merits | pāpāni: demerits, sins)"
+        },
+        {
+          "sa": "निरिन्द्रियस्य",
+          "en": "of the one without senses (nir: without | indriyasya: senses)"
+        },
+        {
+          "sa": "निश्चेतसः",
+          "en": "of the one without mind (niḥ: without | cetasaḥ: mind)"
+        },
+        {
+          "sa": "निर्विकृतेः",
+          "en": "of the changeless one (nir: without | vikṛteḥ: change, modification)"
+        },
+        {
+          "sa": "निराकृतेः",
+          "en": "of the formless one (nir: without | ākṛteḥ: form)"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how; whence"
+        },
+        {
+          "sa": "मम",
+          "en": "of me; to me"
+        },
+        {
+          "sa": "अखण्ड-सुख-अनुभूतेः",
+          "en": "of me, whose experience is unbroken bliss (akhaṇḍa: unbroken | sukha: bliss | anubhūteḥ: of experience)"
+        },
+        {
+          "sa": "ब्रूते हि",
+          "en": "indeed says (brūte: says | hi: indeed)"
+        },
+        {
+          "sa": "अनन्वागतम्",
+          "en": "untouched; unaffected"
+        },
+        {
+          "sa": "इति अपि श्रुतिः",
+          "en": "thus also the Śruti (iti: thus | api: also | śrutiḥ: scripture)"
+        }
+      ],
       "sourceNumbers": [
         503
-      ]
+      ],
+      "editionTranslation": "How can there be merits and demerits for me, who am without organs, without mind, changeless, and formless – who am the realisation of Bliss Absolute ? The Shruti also mentions this in the passage \"Not touched\", etc."
     },
     {
       "id": "vivekachudamani-504",
@@ -37687,11 +37805,41 @@
       "label": "Verse 504",
       "deva": "छायया स्पृष्टमुष्णं वा शीतं वा सुष्ठु दुःष्ठु वा ।\nन स्पृशत्य् एव यत् किंचित् पुरुषं तद्विलक्षणम् ॥",
       "iast": "chāyayā spṛṣṭamuṣṇaṃ vā śītaṃ vā suṣṭhu duḥṣṭhu vā |\nna spṛśaty eva yat kiṃcit puruṣaṃ tadvilakṣaṇam ||",
-      "translation": "If heat or cold, or good or evil, happens to touch the shadow of a man’s body, it affects not in the least the man himself, who is distinct from the shadow.",
-      "gloss": [],
+      "translation": "Whatever touches a shadow—heat or cold, good or bad—does not touch the person at all, for the person is distinct from the shadow.",
+      "gloss": [
+        {
+          "sa": "छायया स्पृष्टम्",
+          "en": "touched by a shadow (chāyayā: by a shadow | spṛṣṭam: touched)"
+        },
+        {
+          "sa": "उष्णम् वा",
+          "en": "heat, or (uṣṇam: heat | vā: or)"
+        },
+        {
+          "sa": "शीतम् वा",
+          "en": "cold, or (śītam: cold | vā: or)"
+        },
+        {
+          "sa": "सुष्ठु दुष्ठु वा",
+          "en": "good or bad (suṣṭhu: good | duṣṭhu: bad | vā: or)"
+        },
+        {
+          "sa": "न स्पृशति एव",
+          "en": "does not touch at all (na: not | spṛśati: touches | eva: at all)"
+        },
+        {
+          "sa": "यत् किञ्चित्",
+          "en": "whatever (yat: which | kiñcit: anything)"
+        },
+        {
+          "sa": "पुरुषम् तद्-विलक्षणम्",
+          "en": "the person, distinct from that (puruṣam: person, Self | tad: from that | vilakṣaṇam: distinct)"
+        }
+      ],
       "sourceNumbers": [
         504
-      ]
+      ],
+      "editionTranslation": "If heat or cold, or good or evil, happens to touch the shadow of a man’s body, it affects not in the least the man himself, who is distinct from the shadow."
     },
     {
       "id": "vivekachudamani-505",
@@ -37699,11 +37847,49 @@
       "label": "Verse 505",
       "deva": "न साक्षिणं साक्ष्यधर्माः संस्पृशन्ति विलक्षणम् ।\nअविकारमुदासीनं गृहधर्माः प्रदीपवत् ॥",
       "iast": "na sākṣiṇaṃ sākṣyadharmāḥ saṃspṛśanti vilakṣaṇam |\navikāramudāsīnaṃ gṛhadharmāḥ pradīpavat ||",
-      "translation": "The properties of things observed do not affect the Witness, which is distinct from the, changeless and indifferent – as the properties of a room (do not affect) the lamp (that illumines it).",
-      "gloss": [],
+      "translation": "The qualities of what is witnessed do not touch the witness, who is distinct from them, changeless, and standing apart—just as the qualities of a house do not touch the lamp within it.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "साक्षिणम्",
+          "en": "the witness"
+        },
+        {
+          "sa": "साक्ष्य-धर्माः",
+          "en": "the qualities of what is witnessed (sākṣya: witnessed | dharmāḥ: qualities)"
+        },
+        {
+          "sa": "संस्पृशन्ति",
+          "en": "touch"
+        },
+        {
+          "sa": "विलक्षणम्",
+          "en": "distinct; different"
+        },
+        {
+          "sa": "अविकारम्",
+          "en": "changeless"
+        },
+        {
+          "sa": "उदासीनम्",
+          "en": "standing apart; detached"
+        },
+        {
+          "sa": "गृह-धर्माः",
+          "en": "the qualities of a house (gṛha: house | dharmāḥ: qualities)"
+        },
+        {
+          "sa": "प्रदीप-वत्",
+          "en": "like a lamp (pradīpa: lamp | vat: like)"
+        }
+      ],
       "sourceNumbers": [
         505
-      ]
+      ],
+      "editionTranslation": "The properties of things observed do not affect the Witness, which is distinct from the, changeless and indifferent – as the properties of a room (do not affect) the lamp (that illumines it)."
     },
     {
       "id": "vivekachudamani-506",
@@ -38654,6 +38840,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 481–485, preserving the former English as editionTranslation. Rendered the hailstone/ocean image in 482 and the disciple’s direct questions in 483–485.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 486–490, preserving the former English as editionTranslation. Clarified verse 488's pūrṇa as complete and verse 490's pure-awareness wording.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 491–495, preserving previous translations as editionTranslation. Clarified verse 492's repeated negation and verse 494's “I” and “mine” terms; made the experience/experienced pair explicit in 495.",
-    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 496–500, preserving previous English as editionTranslation. Corrected the Sanskrit/transliteration in 497 (sthūla and verse-end compound), 498 (ārdrīkaroti), and 500 (jāgrat)."
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 496–500, preserving previous English as editionTranslation. Corrected the Sanskrit/transliteration in 497 (sthūla and verse-end compound), 498 (ārdrīkaroti), and 500 (jāgrat).",
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 501–505, preserving prior English as editionTranslation. Clarified the limiting adjunct, the states of experience, and the lamp/house comparison."
   ]
 }
