@@ -46,15 +46,15 @@
     "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150. Literal English translations and Devanāgarī word glosses now cover verses 1.151–1.160. Literal English translations and Devanāgarī word glosses now cover verses 1.161–1.170. Literal English translations and Devanāgarī word glosses now cover verses 1.171–1.180. Literal English translations and Devanāgarī word glosses now cover verses 1.181–1.190. Literal English translations and Devanāgarī word glosses now cover verses 1.191–1.200. Literal English translations and Devanāgarī word glosses now cover verses 1.201–1.210. Literal English translations and Devanāgarī word glosses now cover verses 1.211–1.220. Literal English translations and Devanāgarī word glosses now cover verses 1.221–1.230. Literal English translations and Devanāgarī word glosses now cover verses 1.231–1.240. Corrected the clear debt-word typo in verse 1.244 from र्ण/rṇa to ऋण/ṛṇa. Literal English translations and Devanāgarī word glosses now cover verses 1.241–1.250. Corrected the clear seeker-word typo in verse 1.253 from जिझासोः/jijhāsoḥ to जिज्ञासोः/jijñāsoḥ. Literal English translations and Devanāgarī word glosses now cover verses 1.251–1.260. Removed the stray underscore in verse 1.267’s Sanskrit and IAST. Literal English translations and Devanāgarī word glosses now cover verses 1.261–1.270. Literal English translations and Devanāgarī word glosses now cover verses 1.271–1.280. Corrected the clear स्वरूपम् spelling error in verse 1.289 to स्वरूपम्/svarūpam. Literal English translations and Devanāgarī word glosses now cover verses 1.281–1.290. Literal English translations and Devanāgarī word glosses now cover verses 1.291–1.300. Literal English translations and Devanāgarī word glosses now cover verses 1.301–1.310. Clarified the referent in the literal translation of verse 1.304 as Brahman. Standardized the clear सत्त्व/sattva spelling in verse 1.318. Literal English translations and Devanāgarī word glosses now cover verses 1.311–1.320."
   },
   "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–320.",
-  "wordGlossComplete": false,
+  "wordGlossComplete": true,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 980
+      "to": 1006
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–980 (960 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, 390–391, 910–912, 913–914, 921–922, and 926–927). Remaining verses still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover all 1,006 source verses (986 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, 390–391, 910–912, 913–914, 921–922, and 926–927)."
   },
   "units": [
     {
@@ -64933,8 +64933,45 @@
       "number": "981",
       "label": "Verse 981",
       "deva": "विज्ञानं विज्ञान-विदां मलानां च मलात्मकम्।\nपुरुषः साङ्ख्य-दृष्टीनाम् ईश्वरो योग-वादिनाम्॥",
-      "translation": "It is knowledge, for the upholders of the doctrine of knowledge, is dirt no bigger than the body for some Jaina mendicants, it is the Puruṣa for the Sāṅkhya school and it is Īśvara, for the followers of Yoga doctrine.",
-      "gloss": [],
+      "translation": "For those who hold consciousness to be ultimate, it is consciousness; for those who take impurity (mala) as a principle, it is of the nature of impurity; for Sāṅkhya thinkers it is Puruṣa, and for Yoga teachers it is Īśvara.",
+      "gloss": [
+        [
+          "विज्ञानम्",
+          "consciousness, knowledge"
+        ],
+        [
+          "विज्ञान-विदाम्",
+          "for those who know or teach consciousness"
+        ],
+        [
+          "मलानाम्",
+          "for those who take impurity (mala) as a principle"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "मल-आत्मकम्",
+          "of the nature of impurity"
+        ],
+        [
+          "पुरुषः",
+          "Puruṣa"
+        ],
+        [
+          "साङ्ख्य-दृष्टीनाम्",
+          "for the Sāṅkhya thinkers"
+        ],
+        [
+          "ईश्वरः",
+          "Īśvara"
+        ],
+        [
+          "योग-वादिनाम्",
+          "for the Yoga teachers"
+        ]
+      ],
       "sourceNumbers": [
         981
       ],
@@ -64947,8 +64984,77 @@
       "number": "982",
       "label": "Verse 982",
       "deva": "शिवः शैवागम-स्थानां कालः कालैक-वादिनाम्।\nयत् सर्व-शास्त्र-सिद्धान्तं यत् सर्व-हृदयानुगम्।\nयत् सर्वं सर्वगं वस्तु तत् तत्त्वं तद् असौ स्थितः॥",
-      "translation": "It is Śiva for the followers of Śaiva āgama. It is Kāla or time for the astrologers who consider time to be supreme. But all the Śāstras agree upon this that it is the Supreme Truth, which enters the heart of all, is in all and all pervading. It is that Supreme Reality that the liberated one is established.",
-      "gloss": [],
+      "translation": "For followers of Śaiva scripture, it is Śiva; for those who hold time alone supreme, it is Kāla. The reality in which he is established is the conclusion of all scriptures, reaches every heart, and is all-pervading.",
+      "gloss": [
+        [
+          "शिवः",
+          "Śiva"
+        ],
+        [
+          "शैव-आगम-स्थानाम्",
+          "for followers of Śaiva scripture"
+        ],
+        [
+          "कालः",
+          "Kāla, time"
+        ],
+        [
+          "काल-एक-वादिनाम्",
+          "for those who hold time alone as supreme"
+        ],
+        [
+          "यत्",
+          "which"
+        ],
+        [
+          "सर्व-शास्त्र-सिद्धान्तम्",
+          "the conclusion of all scriptures"
+        ],
+        [
+          "यत्",
+          "which"
+        ],
+        [
+          "सर्व-हृदय-अनुगम्",
+          "reaches every heart"
+        ],
+        [
+          "यत्",
+          "which"
+        ],
+        [
+          "सर्वम्",
+          "all"
+        ],
+        [
+          "सर्व-गम्",
+          "pervading"
+        ],
+        [
+          "वस्तु",
+          "reality, thing"
+        ],
+        [
+          "तत्",
+          "that"
+        ],
+        [
+          "तत्त्वम्",
+          "reality"
+        ],
+        [
+          "तत्",
+          "in that"
+        ],
+        [
+          "असौ",
+          "this one"
+        ],
+        [
+          "स्थितः",
+          "is established"
+        ]
+      ],
       "sourceNumbers": [
         982
       ],
@@ -64961,8 +65067,85 @@
       "number": "983",
       "label": "Verse 983",
       "deva": "ब्रह्मैवाहं चिद् एवाहम् एवं वापि न चिन्त्यते।\nचिन्-मात्रेणेव यस् तिष्ठेद् विदेहो मुक्त एव सः॥",
-      "translation": "One who is free from such thoughts as ‘I am Brahman’ and ‘I am knowledge alone’ is established in pure consciousness only and is undoubtedly liberated in life.",
-      "gloss": [],
+      "translation": "One who does not think “I am Brahman,” “I am consciousness,” or anything of the kind, and abides as pure consciousness alone is indeed liberated beyond the body.",
+      "gloss": [
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "अहम्",
+          "I"
+        ],
+        [
+          "चित्",
+          "consciousness"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "अहम्",
+          "I"
+        ],
+        [
+          "एवम्",
+          "thus, in this way"
+        ],
+        [
+          "वा",
+          "or"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "चिन्त्यते",
+          "is thought"
+        ],
+        [
+          "चिन्-मात्रेण",
+          "as pure consciousness alone"
+        ],
+        [
+          "इव",
+          "as, alone"
+        ],
+        [
+          "यः",
+          "whoever"
+        ],
+        [
+          "तिष्ठेत्",
+          "abides"
+        ],
+        [
+          "विदेहः",
+          "bodiless"
+        ],
+        [
+          "मुक्तः",
+          "liberated"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "सः",
+          "that one"
+        ]
+      ],
       "sourceNumbers": [
         983
       ],
@@ -64975,8 +65158,61 @@
       "number": "984",
       "label": "Verse 984",
       "deva": "यस्य प्रपञ्च-भानं न ब्रह्माकारम् अपीह न।\nअतीतातीत-भावो यो विदेहो मुक्त एव सः॥",
-      "translation": "One who has gone beyond the reach of the mind, to whom the world does not exist, to whom Brahman is not an object of knowledge, and who has cast off all the vāsanās or past impressions is liberated, and is undoubtedly free from body consciousness.",
-      "gloss": [],
+      "translation": "For whom neither the appearance of the manifold nor even a Brahman-shaped appearance exists here, whose nature is beyond the beyond, that one is indeed liberated beyond the body.",
+      "gloss": [
+        [
+          "यस्य",
+          "for whom"
+        ],
+        [
+          "प्रपञ्च-भानम्",
+          "the appearance of the manifold"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "ब्रह्म-आकारम्",
+          "the form of Brahman"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "इह",
+          "here"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अतीत-अतीत-भावः",
+          "whose state is beyond the beyond"
+        ],
+        [
+          "यः",
+          "who"
+        ],
+        [
+          "विदेहः",
+          "bodiless"
+        ],
+        [
+          "मुक्तः",
+          "liberated"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "सः",
+          "that one"
+        ]
+      ],
       "sourceNumbers": [
         984
       ],
@@ -64989,8 +65225,49 @@
       "number": "985",
       "label": "Verse 985",
       "deva": "चित्त-वृत्तेर् अतीतो यश् चित्त-वृत्त्यावभासकः।\nचित्त-वृत्ति-विहीनो यो विदेहो मुक्त एव सः॥",
-      "translation": "One who has gone even beyond the reach of thought, to whom the reflex ideas that thought presents are no longer valid, and who has gained knowledge by direct intuition is indeed liberated, and is free from the consciousness of the body.",
-      "gloss": [],
+      "translation": "One who is beyond the mind's movements, illuminates those movements, and is free from them is indeed liberated beyond the body.",
+      "gloss": [
+        [
+          "चित्त-वृत्तेः",
+          "from the mind's movements"
+        ],
+        [
+          "अतीतः",
+          "beyond"
+        ],
+        [
+          "यः",
+          "who"
+        ],
+        [
+          "चित्त-वृत्ति-अवभासकः",
+          "the illuminator of the mind's movements"
+        ],
+        [
+          "चित्त-वृत्ति-विहीनः",
+          "free from the mind's movements"
+        ],
+        [
+          "यः",
+          "who"
+        ],
+        [
+          "विदेहः",
+          "bodiless"
+        ],
+        [
+          "मुक्तः",
+          "liberated"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "सः",
+          "that one"
+        ]
+      ],
       "sourceNumbers": [
         985
       ],
@@ -65003,8 +65280,49 @@
       "number": "986",
       "label": "Verse 986",
       "deva": "जीवात्मेति परात्मेति सर्व-चिन्ता-विवर्जितः।\nसर्व-सङ्कल्प-हीनात्मा विदेहो मुक्त एव सः॥",
-      "translation": "One who no longer thinks of the individual, the jīvātman as distinct from the Supreme, the Paramātman and who has lost in the consciousness of the Ātman all saṅkalpas or mental resolves, such a one is indeed liberated and is free of the consciousness of the body.",
-      "gloss": [],
+      "translation": "One who is free of all thoughts such as “individual Self” and “supreme Self,” whose self is devoid of every mental resolve, is indeed liberated beyond the body.",
+      "gloss": [
+        [
+          "जीव-आत्मा",
+          "individual Self"
+        ],
+        [
+          "इति",
+          "thus, as"
+        ],
+        [
+          "पर-आत्मा",
+          "supreme Self"
+        ],
+        [
+          "इति",
+          "thus, as"
+        ],
+        [
+          "सर्व-चिन्ता-विवर्जितः",
+          "free of all thoughts"
+        ],
+        [
+          "सर्व-सङ्कल्प-हीन-आत्मा",
+          "whose self is free of every resolve"
+        ],
+        [
+          "विदेहः",
+          "bodiless"
+        ],
+        [
+          "मुक्तः",
+          "liberated"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "सः",
+          "that one"
+        ]
+      ],
       "sourceNumbers": [
         986
       ],
@@ -65017,8 +65335,37 @@
       "number": "987",
       "label": "Verse 987",
       "deva": "ओङ्कार-वाच्य-हीनात्मा सर्व-वाच्य-विवर्जितः।\nअवस्था-त्रय-हीनात्मा विदेहो मुक्त एव सः॥",
-      "translation": "One who has transcended the three levels of consciousness, who has gone beyond all that is connoted by means of words, and who has gone even beyond what is indicated directly by the sacred symbol ‘Om’ is indeed liberated, and is free of the consciousness of the body.",
-      "gloss": [],
+      "translation": "One who is free from what Om denotes, free from everything expressible in words, and free from the three states is indeed liberated beyond the body.",
+      "gloss": [
+        [
+          "ओङ्कार-वाच्य-हीन-आत्मा",
+          "whose self is beyond what Om denotes"
+        ],
+        [
+          "सर्व-वाच्य-विवर्जितः",
+          "free from everything expressible in words"
+        ],
+        [
+          "अवस्था-त्रय-हीन-आत्मा",
+          "whose self is beyond the three states"
+        ],
+        [
+          "विदेहः",
+          "bodiless"
+        ],
+        [
+          "मुक्तः",
+          "liberated"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "सः",
+          "that one"
+        ]
+      ],
       "sourceNumbers": [
         987
       ],
@@ -65031,8 +65378,45 @@
       "number": "988",
       "label": "Verse 988",
       "deva": "अहि-निर्ल्वयनी-सर्प-निर्मोको जीव-वर्जितः।\nवल्मीके पतितस् तिष्ठेत् तं सर्पो नाभिमन्यते॥",
-      "translation": "Just as a snake does not regard as its own the slough which it has cast off, and which lies mouldering on an ant-hill, so also the liberated one does not identify himself with either the gross body of the subtle body. ((BrhUEng.4.4.7) (Bṛhad-Āraṇyaka Upaniṣad))",
-      "gloss": [],
+      "translation": "Just as a snake's lifeless shed skin lies fallen on an anthill and the snake does not claim it as its own…",
+      "gloss": [
+        [
+          "अहि-निर्ल्वयनी-सर्प-निर्मोकः",
+          "a snake's shed skin"
+        ],
+        [
+          "जीव-वर्जितः",
+          "devoid of life"
+        ],
+        [
+          "वल्मीके",
+          "on an anthill"
+        ],
+        [
+          "पतितः",
+          "fallen"
+        ],
+        [
+          "तिष्ठेत्",
+          "lies, remains"
+        ],
+        [
+          "तम्",
+          "it"
+        ],
+        [
+          "सर्पः",
+          "the snake"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अभिमन्यते",
+          "regards as itself"
+        ]
+      ],
       "sourceNumbers": [
         988
       ],
@@ -65045,8 +65429,57 @@
       "number": "989",
       "label": "Verse 989",
       "deva": "एवं स्थूलं च सूक्ष्मं च शरीरं नाभिमन्यते।\nप्रत्यग्-ज्ञान-शिखि-ध्वस्ते मिथ्या-ज्ञाने सहेतुके॥",
-      "translation": "All false ideas have become burnt up in the fire of knowledge. What remains is pure consciousness alone, and the Śruti points it out by the expression ‘Not Such; Nor such’.",
-      "gloss": [],
+      "translation": "Thus he does not identify with the gross or subtle body when false knowledge, together with its cause, has been destroyed by the flame of inward knowledge.",
+      "gloss": [
+        [
+          "एवम्",
+          "thus"
+        ],
+        [
+          "स्थूलम्",
+          "the gross"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "सूक्ष्मम्",
+          "the subtle"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "शरीरम्",
+          "body"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अभिमन्यते",
+          "he identifies with"
+        ],
+        [
+          "प्रत्यग्-ज्ञान-शिखि",
+          "by the flame of inward knowledge"
+        ],
+        [
+          "ध्वस्ते",
+          "when destroyed"
+        ],
+        [
+          "मिथ्या-ज्ञाने",
+          "false knowledge"
+        ],
+        [
+          "स-हेतुके",
+          "together with its cause"
+        ]
+      ],
       "sourceNumbers": [
         989
       ],
@@ -65059,8 +65492,89 @@
       "number": "990",
       "label": "Verse 990",
       "deva": "नेति नेतीत्यरूपत्वाद् अशरीरो भवत्ययम्।\nविश्वश्च तैजसश्चैव प्राज्ञश्चेति च ते त्रयम्॥",
-      "translation": "The Ātman has neither form nor shape. To know that and to identify oneself with the Ātman is to go beyond the state of an embodied being. Thus the attributes of Viśva, Taijasa, and Prājña, along with their adjuncts drop off.",
-      "gloss": [],
+      "translation": "Because this Self is formless, it is spoken of as “not this, not this” and becomes bodiless. The three are Viśva, Taijasa, and Prājña.",
+      "gloss": [
+        [
+          "न",
+          "not"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "इति",
+          "as stated"
+        ],
+        [
+          "अरूपत्वात्",
+          "because of being formless"
+        ],
+        [
+          "अशरीरः",
+          "bodiless"
+        ],
+        [
+          "भवति",
+          "becomes"
+        ],
+        [
+          "अयम्",
+          "this one"
+        ],
+        [
+          "विश्वः",
+          "Viśva"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "तैजसः",
+          "Taijasa"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "प्राज्ञः",
+          "Prājña"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "ते",
+          "those"
+        ],
+        [
+          "त्रयम्",
+          "three"
+        ]
+      ],
       "sourceNumbers": [
         990
       ],
@@ -65073,8 +65587,69 @@
       "number": "991",
       "label": "Verse 991",
       "deva": "विराड् हिरण्य-गर्भश्च ईश्वरश्चेति ते त्रयम्।\nब्रह्माण्डं चैव पिण्डाण्डं लोका भूर्-आदयः क्रमात्॥",
-      "translation": "The knower of the Ātman goes beyond the concepts of Virāṭ, Hiraṇya-garbha and Īśvara, for they too are aspects of the Ātman when taken along with the adjuncts only. To the knower of the Ātman the whole world and its adjuncts merge in the Ātman.",
-      "gloss": [],
+      "translation": "The three are Virāṭ, Hiraṇyagarbha, and Īśvara; correspondingly, the macrocosm, the individual cosmos, and the worlds beginning with Bhūḥ.",
+      "gloss": [
+        [
+          "विराट्",
+          "Virāṭ"
+        ],
+        [
+          "हिरण्य-गर्भः",
+          "Hiraṇyagarbha"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "ईश्वरः",
+          "Īśvara"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ते",
+          "those"
+        ],
+        [
+          "त्रयम्",
+          "three"
+        ],
+        [
+          "ब्रह्म-अण्डम्",
+          "the cosmic egg, macrocosm"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "पिण्ड-अण्डम्",
+          "the individual body-cosmos"
+        ],
+        [
+          "लोकाः",
+          "worlds"
+        ],
+        [
+          "भूः-आदयः",
+          "beginning with Bhūḥ"
+        ],
+        [
+          "क्रमात्",
+          "respectively, in order"
+        ]
+      ],
       "sourceNumbers": [
         991
       ],
@@ -65087,8 +65662,57 @@
       "number": "992",
       "label": "Verse 992",
       "deva": "स्व-स्वोपाधि-लयाद् एव लीयन्ते प्रत्यग्-आत्मनि।\nतूष्णीम् एव ततस् तूष्णीं तूष्णीं सत्यं न किञ्चन॥",
-      "translation": "In this way, when the adjuncts of the Piṇḍāṇḍa and the Brahmāṇḍa, the microcosm and the macrocosm, merge in the Ātman; all that remains is a grand silence. That silence alone is real; and there is nothing else so real as that.",
-      "gloss": [],
+      "translation": "By dissolution of their respective adjuncts, they dissolve into the inner Self. Then: silence, silence, silence—nothing at all is real.",
+      "gloss": [
+        [
+          "स्व-स्व-उपाधि-लयात्",
+          "through dissolution of each one's own adjunct"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "लीयन्ते",
+          "they dissolve"
+        ],
+        [
+          "प्रत्यक्-आत्मनि",
+          "in the inner Self"
+        ],
+        [
+          "तूष्णीम्",
+          "silent"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "ततः",
+          "then"
+        ],
+        [
+          "तूष्णीम्",
+          "silent"
+        ],
+        [
+          "तूष्णीम्",
+          "silent"
+        ],
+        [
+          "सत्यम्",
+          "true, real"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "किञ्चन",
+          "anything"
+        ]
+      ],
       "sourceNumbers": [
         992
       ],
@@ -65101,8 +65725,65 @@
       "number": "993",
       "label": "Verse 993",
       "deva": "काल-भेदो वस्तु-भेदो देश-भेदः स्व-भेदकः।\nकिञ्चिद्-भेदो न तस्यास्ति किञ्चिद् वापि न विद्यते॥",
-      "translation": "All distinctions of time, space, and the nature of things have ceased. Similarly all the distinctions within oneself have also ceased. Where there are no distinctions at all, in reality, there are none to be perceived.",
-      "gloss": [],
+      "translation": "For him there is no distinction of time, of things, of place, or within the self; no distinction whatsoever exists.",
+      "gloss": [
+        [
+          "काल-भेदः",
+          "difference of time"
+        ],
+        [
+          "वस्तु-भेदः",
+          "difference of things"
+        ],
+        [
+          "देश-भेदः",
+          "difference of place"
+        ],
+        [
+          "स्व-भेदकः",
+          "difference within oneself"
+        ],
+        [
+          "किञ्चित्",
+          "any"
+        ],
+        [
+          "भेदः",
+          "distinction"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "तस्य",
+          "for him"
+        ],
+        [
+          "अस्ति",
+          "exists"
+        ],
+        [
+          "किञ्चित्",
+          "anything"
+        ],
+        [
+          "वा",
+          "or"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "विद्यते",
+          "exists"
+        ]
+      ],
       "sourceNumbers": [
         993
       ],
@@ -65115,8 +65796,65 @@
       "number": "994",
       "label": "Verse 994",
       "deva": "जीवेश्वरेति-वाक्ये च वेद-शास्त्रेष्वहं त्विति।\nइदं चैतन्यम् एवेत्यहं चैतन्यम् इत्यपि॥",
-      "translation": "It is true that the Śruti speaks of the Jīva and the Īśvara, but the knower of Brahman goes beyond what is indicated by the mere words of the Śruti. To him even the idea ‘I am the pure consciousness’, ‘The pure consciousness is myself’ does not arise.",
-      "gloss": [],
+      "translation": "The scriptural expressions “jīva” and “Īśvara,” the thought “I,” and even the notions “this is consciousness” and “I am consciousness” do not settle into fixed distinctions…",
+      "gloss": [
+        [
+          "जीव-ईश्वर-इति-वाक्ये",
+          "in expressions such as “jīva” and “Īśvara”"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "वेद-शास्त्रेषु",
+          "in Vedic and scriptural texts"
+        ],
+        [
+          "अहम्",
+          "“I”"
+        ],
+        [
+          "तु",
+          "indeed"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "इदम्",
+          "this"
+        ],
+        [
+          "चैतन्यम्",
+          "consciousness"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "अहम्",
+          "I"
+        ],
+        [
+          "चैतन्यम्",
+          "consciousness"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "अपि",
+          "also, even"
+        ]
+      ],
       "sourceNumbers": [
         994
       ],
@@ -65129,8 +65867,69 @@
       "number": "995",
       "label": "Verse 995",
       "deva": "इति निश्चय-शून्यो यो विदेहो मुक्त एव सः।\nब्रह्मैव विद्यते साक्षाद् वस्तुतोऽवस्तुतोऽपि च॥",
-      "translation": "When the ‘I’ consciousness does not at all arise, the liberated one is undoubtedly devoid of body consciousness. Such a one exists as Brahman, and also otherwise.",
-      "gloss": [],
+      "translation": "Whoever is free from such fixed conclusions is indeed liberated beyond the body; Brahman alone is directly present, whether considered real or unreal.",
+      "gloss": [
+        [
+          "इति",
+          "such, thus"
+        ],
+        [
+          "निश्चय-शून्यः",
+          "free of fixed conclusions"
+        ],
+        [
+          "यः",
+          "whoever"
+        ],
+        [
+          "विदेहः",
+          "bodiless"
+        ],
+        [
+          "मुक्तः",
+          "liberated"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "सः",
+          "that one"
+        ],
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "विद्यते",
+          "exists, is present"
+        ],
+        [
+          "साक्षात्",
+          "directly"
+        ],
+        [
+          "वस्तुतः",
+          "as real, in reality"
+        ],
+        [
+          "अवस्तुतः",
+          "as unreal, not a thing"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "च",
+          "and"
+        ]
+      ],
       "sourceNumbers": [
         995
       ],
@@ -65143,8 +65942,69 @@
       "number": "996",
       "label": "Verse 996",
       "deva": "तद् विद्या-विषयं ब्रह्म सत्य-ज्ञान-सुखात्मकम्।\nशान्तं च तद्-अतीतं च परं ब्रह्म तद् उच्यते॥",
-      "translation": "Brahman is an object of knowledge when Brahman is endowed with the attributes of existence-knowledge-bliss. But the Supreme Brahman is not an object of knowledge, and transcends knowledge. ((TaitU.2.1.1) (English Upaniṣad – Taittiriya))",
-      "gloss": [],
+      "translation": "The Brahman that is an object of knowledge is of the nature of reality, knowledge, and bliss. The peaceful Brahman beyond that is called the Supreme Brahman.",
+      "gloss": [
+        [
+          "तत्",
+          "that"
+        ],
+        [
+          "विद्या-विषयम्",
+          "the object of knowledge"
+        ],
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "सत्य",
+          "reality"
+        ],
+        [
+          "ज्ञान",
+          "knowledge"
+        ],
+        [
+          "सुख",
+          "bliss"
+        ],
+        [
+          "आत्मकम्",
+          "having the nature of"
+        ],
+        [
+          "शान्तम्",
+          "peaceful"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "तद्-अतीतम्",
+          "beyond that"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "परम्",
+          "supreme"
+        ],
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "तत्",
+          "that"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         996
       ],
@@ -65157,8 +66017,69 @@
       "number": "997",
       "label": "Verse 997",
       "deva": "सिद्धान्तोऽध्यात्म-शास्त्राणां सर्वापह्नव एव हि।\nनाविद्यास्तीह नो माया शान्तं ब्रह्मैव तद्-विना॥",
-      "translation": "The siddhānta or the sifted truth in relation to the Adhyātma Śāstra, the knowledge relating to the Ātman, is that Brahman is not an object of knowledge. Consequently, avidyā and Māyā, which are also objects of knowledge have no being. All that is, is the supreme tranquil Brahman.",
-      "gloss": [],
+      "translation": "The settled conclusion of the scriptures on the Self is indeed the negation of all else: here there is no ignorance and no māyā; apart from them, only peaceful Brahman is.",
+      "gloss": [
+        [
+          "सिद्धान्तः",
+          "settled conclusion"
+        ],
+        [
+          "अध्यात्म-शास्त्राणाम्",
+          "of the scriptures on the Self"
+        ],
+        [
+          "सर्व-अपह्नवः",
+          "the negation of everything"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "हि",
+          "certainly"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "अविद्या",
+          "ignorance"
+        ],
+        [
+          "अस्ति",
+          "exists"
+        ],
+        [
+          "इह",
+          "here"
+        ],
+        [
+          "नो",
+          "nor"
+        ],
+        [
+          "माया",
+          "māyā"
+        ],
+        [
+          "शान्तम्",
+          "peaceful"
+        ],
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "तद्-विना",
+          "without them, apart from them"
+        ]
+      ],
       "sourceNumbers": [
         997
       ],
@@ -65171,8 +66092,53 @@
       "number": "998",
       "label": "Verse 998",
       "deva": "प्रियेषु स्वेषु सुकृतम् अप्रियेषु च दुष्कृतम्।\nविसृज्य ध्यान-योगेन ब्रह्माप्येति सनातनम्॥",
-      "translation": "The knower of Brahman thus leaves a legacy of good deeds to those who befriend him, while his evil deeds go to those who think ill. After having realized the eternal Brahman, he becomes one with Brahman in profound meditation. ((BrSEng.3.2.26) (Brahma Sūtras Eng.))",
-      "gloss": [],
+      "translation": "Leaving his good deeds to those dear to him and his bad deeds to those not dear, through the yoga of meditation he reaches eternal Brahman.",
+      "gloss": [
+        [
+          "प्रियेषु",
+          "to those who are dear"
+        ],
+        [
+          "स्वेषु",
+          "his own"
+        ],
+        [
+          "सुकृतम्",
+          "good deed, merit"
+        ],
+        [
+          "अप्रियेषु",
+          "to those who are not dear"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "दुष्कृतम्",
+          "bad deed, demerit"
+        ],
+        [
+          "विसृज्य",
+          "having left, relinquished"
+        ],
+        [
+          "ध्यान-योगेन",
+          "through the yoga of meditation"
+        ],
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "आप्येति",
+          "he reaches"
+        ],
+        [
+          "सनातनम्",
+          "eternal"
+        ]
+      ],
       "sourceNumbers": [
         998
       ],
@@ -65185,8 +66151,53 @@
       "number": "999",
       "label": "Verse 999",
       "deva": "यावद् यावच् च सद्-बुद्धे स्वयं सन्त्यज्यतेऽखिलम्।\nतावत् तावत् परानन्दः परमात्मैव शिष्यते॥",
-      "translation": "O wise one! know that it is by giving up all that which is unreal, that one attains what is real. In this way, one realizes the Supreme Being, and attains the Supreme Bliss. That is what is left over, that is the residual value.",
-      "gloss": [],
+      "translation": "O good-minded one, to the extent that all is let go by oneself, to that same extent supreme bliss—the Supreme Self alone—remains.",
+      "gloss": [
+        [
+          "यावत् यावत्",
+          "to whatever extent"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "सत्-बुद्धे",
+          "O good-minded one"
+        ],
+        [
+          "स्वयम्",
+          "oneself"
+        ],
+        [
+          "सन्त्यज्यते",
+          "is abandoned"
+        ],
+        [
+          "अखिलम्",
+          "all"
+        ],
+        [
+          "तावत् तावत्",
+          "to that same extent"
+        ],
+        [
+          "पर-आनन्दः",
+          "supreme bliss"
+        ],
+        [
+          "परम-आत्मा",
+          "the Supreme Self"
+        ],
+        [
+          "एव",
+          "alone"
+        ],
+        [
+          "शिष्यते",
+          "remains"
+        ]
+      ],
       "sourceNumbers": [
         999
       ],
@@ -65199,8 +66210,57 @@
       "number": "1000",
       "label": "Verse 1000",
       "deva": "यत्र यत्र मृतो ज्ञानी परमाक्षरवित् सदा।\nपरे ब्रह्मणि लीयेत न तस्योत्क्रान्तिर् इष्यते॥",
-      "translation": "At whatever place the knower of the Supreme Brahman may cast off his body, he invariably merges in Brahman. To him there is no going, and no return, in order to assume a fresh body. ((BrSEng.4.1.14) (Brahma Sūtras Eng.))",
-      "gloss": [],
+      "translation": "Wherever a knower of the supreme imperishable dies, he always merges in supreme Brahman; no departure is held to occur for him.",
+      "gloss": [
+        [
+          "यत्र यत्र",
+          "wherever"
+        ],
+        [
+          "मृतः",
+          "having died"
+        ],
+        [
+          "ज्ञानी",
+          "the knower"
+        ],
+        [
+          "परम-अक्षर-वित्",
+          "knower of the supreme imperishable"
+        ],
+        [
+          "सदा",
+          "always"
+        ],
+        [
+          "परे",
+          "in the supreme"
+        ],
+        [
+          "ब्रह्मणि",
+          "in Brahman"
+        ],
+        [
+          "लीयेत",
+          "he merges"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "तस्य",
+          "for him"
+        ],
+        [
+          "उत्क्रान्तिः",
+          "departure"
+        ],
+        [
+          "इष्यते",
+          "is held, is taught"
+        ]
+      ],
       "sourceNumbers": [
         1000
       ],
@@ -65213,8 +66273,61 @@
       "number": "1001",
       "label": "Verse 1001",
       "deva": "यद् यत् स्वाभिमतं वस्तु तत् त्यजन् मोक्षम् अश्नुते।\nअसङ्कल्पेन शस्त्रेण छिन्नं चित्तम् इदं यदा॥",
-      "translation": "By giving up all things that are held dear one attains liberation. Desirelessness is therefore the greatest weapon.",
-      "gloss": [],
+      "translation": "By abandoning each object one holds dear, one attains liberation. When this mind is cut by the weapon of non-conception…",
+      "gloss": [
+        [
+          "यत् यत्",
+          "whatever"
+        ],
+        [
+          "स्व-अभिमतम्",
+          "held dear by oneself"
+        ],
+        [
+          "वस्तु",
+          "object"
+        ],
+        [
+          "तत्",
+          "that"
+        ],
+        [
+          "त्यजन्",
+          "abandoning"
+        ],
+        [
+          "मोक्षम्",
+          "liberation"
+        ],
+        [
+          "अश्नुते",
+          "one attains"
+        ],
+        [
+          "असङ्कल्पेन",
+          "by non-conception, absence of resolve"
+        ],
+        [
+          "शस्त्रेण",
+          "by the weapon"
+        ],
+        [
+          "छिन्नम्",
+          "cut"
+        ],
+        [
+          "चित्तम्",
+          "mind"
+        ],
+        [
+          "इदम्",
+          "this"
+        ],
+        [
+          "यदा",
+          "when"
+        ]
+      ],
       "sourceNumbers": [
         1001
       ],
@@ -65227,8 +66340,61 @@
       "number": "1002",
       "label": "Verse 1002",
       "deva": "सर्वं सर्वगतं शान्तं ब्रह्म सम्पद्यते तदा।\nइति श्रुत्वा गुरोर् वाक्यं शिष्यस् तु छिन्न-संशयः॥",
-      "translation": "It is with that weapon that one cuts asunder all the knots of the heart. One then realizes Brahman, all in all, all-pervading, and tranquil.",
-      "gloss": [],
+      "translation": "…then one becomes Brahman, all, all-pervading, and peaceful. Hearing this word of the Guru, the disciple, his doubts cut away…",
+      "gloss": [
+        [
+          "सर्वम्",
+          "all"
+        ],
+        [
+          "सर्व-गतम्",
+          "all-pervading"
+        ],
+        [
+          "शान्तम्",
+          "peaceful"
+        ],
+        [
+          "ब्रह्म",
+          "Brahman"
+        ],
+        [
+          "सम्पद्यते",
+          "one becomes"
+        ],
+        [
+          "तदा",
+          "then"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "श्रुत्वा",
+          "having heard"
+        ],
+        [
+          "गुरोः",
+          "of the Guru"
+        ],
+        [
+          "वाक्यम्",
+          "the word"
+        ],
+        [
+          "शिष्यः",
+          "the disciple"
+        ],
+        [
+          "तु",
+          "then, and"
+        ],
+        [
+          "छिन्न-संशयः",
+          "with doubt cut away"
+        ]
+      ],
       "sourceNumbers": [
         1002
       ],
@@ -65241,8 +66407,45 @@
       "number": "1003",
       "label": "Verse 1003",
       "deva": "ज्ञात-ज्ञेयः सम्प्रणम्य सद्गुरोश् चरणाम्बुजम्।\nस तेन समनुज्ञातो ययौ निर्मुक्त-बन्धनः॥",
-      "translation": "After having heard all that the Guru had to say, the disciple came to know what he should do. All his doubts were dispelled. He had become free of bondage. He prostrated himself at the lotus feet of the good preceptor. With his permission, he took leave of him.",
-      "gloss": [],
+      "translation": "Having known what is to be known, he bowed at the lotus feet of the true Guru. Given leave by him, the disciple departed, freed from bondage.",
+      "gloss": [
+        [
+          "ज्ञात-ज्ञेयः",
+          "having known what is to be known"
+        ],
+        [
+          "सम्प्रणम्य",
+          "having bowed"
+        ],
+        [
+          "सत्-गुरोः",
+          "of the true Guru"
+        ],
+        [
+          "चरण-अम्बुजम्",
+          "the lotus feet"
+        ],
+        [
+          "सः",
+          "he"
+        ],
+        [
+          "तेन",
+          "by him"
+        ],
+        [
+          "समनुज्ञातः",
+          "given leave, permitted"
+        ],
+        [
+          "ययौ",
+          "departed"
+        ],
+        [
+          "निर्मुक्त-बन्धनः",
+          "freed from bondage"
+        ]
+      ],
       "sourceNumbers": [
         1003
       ],
@@ -65255,8 +66458,45 @@
       "number": "1004",
       "label": "Verse 1004",
       "deva": "गुरुर् एष सदानन्द-सिन्धौ निर्मग्न-मानसः।\nपावयन् वसुधां सर्वां विचचार निरुत्तरः॥",
-      "translation": "As for the Guru, he whose mind was steeped in the bliss of the divine consciousness, he too left the place, in order to roam over the Earth and purity it by his silence.",
-      "gloss": [],
+      "translation": "This Guru, his mind immersed in the ocean of eternal bliss, wandered over the whole earth, sanctifying it, unsurpassed.",
+      "gloss": [
+        [
+          "गुरुः",
+          "the Guru"
+        ],
+        [
+          "एषः",
+          "this"
+        ],
+        [
+          "सदा-आनन्द-सिन्धौ",
+          "in the ocean of eternal bliss"
+        ],
+        [
+          "निर्मग्न-मानसः",
+          "with mind immersed"
+        ],
+        [
+          "पावयन्",
+          "sanctifying"
+        ],
+        [
+          "वसुधाम्",
+          "the earth"
+        ],
+        [
+          "सर्वाम्",
+          "whole"
+        ],
+        [
+          "विचचार",
+          "wandered"
+        ],
+        [
+          "निरुत्तरः",
+          "unsurpassed, without equal"
+        ]
+      ],
       "sourceNumbers": [
         1004
       ],
@@ -65269,8 +66509,41 @@
       "number": "1005",
       "label": "Verse 1005",
       "deva": "इत्याचार्यस्य शिष्यस्य संवादेनात्म-लक्षणम्।\nनिरूपितं मुमुक्षूणां सुख-बोधोपपत्तये॥",
-      "translation": "In this discourse between the Guru and the disciple the real nature of the Ātman has been brought out. It has been set down in order that it might be easily understood by other aspirants after liberation.",
-      "gloss": [],
+      "translation": "Through this dialogue between teacher and disciple, the nature of the Self has been explained for seekers of liberation, so that it may be easily understood.",
+      "gloss": [
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "आचार्यस्य",
+          "of the teacher"
+        ],
+        [
+          "शिष्यस्य",
+          "and the disciple"
+        ],
+        [
+          "संवादेन",
+          "through the dialogue"
+        ],
+        [
+          "आत्म-लक्षणम्",
+          "the nature of the Self"
+        ],
+        [
+          "निरूपितम्",
+          "has been explained"
+        ],
+        [
+          "मुमुक्षूणाम्",
+          "for seekers of liberation"
+        ],
+        [
+          "सुख-बोध-उपपत्तये",
+          "so it may be understood with ease"
+        ]
+      ],
       "sourceNumbers": [
         1005
       ],
@@ -65283,8 +66556,53 @@
       "number": "1006",
       "label": "Verse 1006",
       "deva": "सर्व-वेदान्त-सिद्धान्त-सार-सङ्ग्रह-नामकः।\nग्रन्थोऽयं हृदय-ग्रन्थि-विच्छित्त्यै रचितः सताम्॥",
-      "translation": "This work entitled ‘The Quintessence of Vedānta’ has been specially composed in order that it might help other aspirants after wisdom in dispelling the doubts that might arise in their hearts.",
-      "gloss": [],
+      "translation": "This work, named “Collection of the Essence of Vedānta Conclusions,” was composed for the good, to cut the knot of the heart.",
+      "gloss": [
+        [
+          "सर्व-वेदान्त",
+          "of all Vedānta"
+        ],
+        [
+          "सिद्धान्त",
+          "conclusions"
+        ],
+        [
+          "सार",
+          "essence"
+        ],
+        [
+          "सङ्ग्रह",
+          "collection"
+        ],
+        [
+          "नामकः",
+          "named"
+        ],
+        [
+          "ग्रन्थः",
+          "work"
+        ],
+        [
+          "अयम्",
+          "this"
+        ],
+        [
+          "हृदय-ग्रन्थि",
+          "the knot of the heart"
+        ],
+        [
+          "विच्छित्त्यै",
+          "for cutting, severing"
+        ],
+        [
+          "रचितः",
+          "composed"
+        ],
+        [
+          "सताम्",
+          "for the good, for good people"
+        ]
+      ],
       "sourceNumbers": [
         1006
       ],
@@ -65292,5 +66610,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units, and all units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–980 (960 reader units); verses 981–1,006 remain."
+  "coverage": "The complete source, English translation, IAST, and Devanāgarī word glosses cover all 986 reader units and 1,006 source verses."
 }
