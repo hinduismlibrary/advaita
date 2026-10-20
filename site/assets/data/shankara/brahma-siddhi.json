@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 111 passages; 120 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 116 passages; 115 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 111 passages, including short verse entries through 2.182 and 4.4, 4.6–4.11; 120 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 116 passages, including short verse entries through 2.182, selected Tarka verses, and 4.4, 4.6–4.11; 115 passages still need glosses."
   },
   "units": [
     {
@@ -338,7 +338,132 @@
       "deva": "संश्लेषो हि संसर्गः । ततश्च परस्पररूपावभासः । स चाव्यवधाने युज्यते । न तु स्वाश्रयाभ्यां व्यवधाने । अवयवावयविरूपयोरेकव्यवधाने ऽप्यसंश्लेषः, किमु द्वयव्यवधाने । किं च\n\nव्यवहारे परोपाधौ सर्वा धीर्व्यावहारिकी । अयथार्था यदा भावभेदकल्पस्तदा मुधा",
       "iast": "saṃśleṣo hi saṃsargaḥ / tataśca paraspararūpāvabhāsaḥ / sa cāvyavadhāne yujyate / na tu svāśrayābhyāṃ vyavadhāne / avayavāvayavirūpayorekavyavadhāne 'pyasaṃśleṣaḥ, kimu dvayavyavadhāne /\n\nkiṃ ca\n\nvyavahāre paropādhau sarvā dhīrvyāvahārikī /\nayathārthā yadā bhāvabhedakalpastadā mudhā",
       "translation": "Association is a joining, and from that follows an appearance of reciprocal forms. It is possible when there is no intervening thing, but not when the two objects are separated from their own supports by something between them. Even the form of a part and the form of a whole are not joined when one thing intervenes; how much less when there are two intervening things? Moreover—\n\n“When, in ordinary usage, every cognition depends on an external condition, all practical cognition is inaccurate. If one imagines differences among things, then such usage is pointless.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "संश्लेषः",
+          "en": "joining"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "संसर्गः",
+          "en": "connection"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "परस्पर-रूप-अवभासः",
+          "en": "an appearance of reciprocal forms"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अव्यवधाने",
+          "en": "when nothing intervenes"
+        },
+        {
+          "sa": "युज्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "स्व-आश्रयाभ्याम्",
+          "en": "from their own supports"
+        },
+        {
+          "sa": "व्यवधाने",
+          "en": "when something intervenes"
+        },
+        {
+          "sa": "अवयव-अवयवि-रूपयोः",
+          "en": "between the form of a part and the form of a whole"
+        },
+        {
+          "sa": "एक-व्यवधाने",
+          "en": "when one thing intervenes"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "असंश्लेषः",
+          "en": "no joining"
+        },
+        {
+          "sa": "किम् उ",
+          "en": "how much more"
+        },
+        {
+          "sa": "द्वय-व्यवधाने",
+          "en": "when two things intervene"
+        },
+        {
+          "sa": "किम् च",
+          "en": "moreover"
+        },
+        {
+          "sa": "व्यवहारे",
+          "en": "in ordinary usage"
+        },
+        {
+          "sa": "पर-उपाधौ",
+          "en": "when conditioned by something external"
+        },
+        {
+          "sa": "सर्वा",
+          "en": "every"
+        },
+        {
+          "sa": "धीः",
+          "en": "cognition"
+        },
+        {
+          "sa": "व्यावहारिकी",
+          "en": "practical"
+        },
+        {
+          "sa": "अयथार्था",
+          "en": "inaccurate"
+        },
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "भाव-भेद-कल्पः",
+          "en": "a difference among things is imagined"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "मुधा",
+          "en": "pointless"
+        }
+      ],
       "sourceNumbers": [
         "mbs_1.19"
       ]
@@ -548,7 +673,60 @@
       "deva": "अपि च\n\nप्रत्येकमनुविद्धत्वादभेदेन मृषा मतः । भेदो यथा तरङ्गाणां भेदाद्भेदः कलावतः",
       "iast": "api ca\n\npratyekamanuviddhatvādabhedena mṛṣā mataḥ /\nbhedo yathā taraṅgāṇāṃ bhedādbhedaḥ kalāvataḥ",
       "translation": "Moreover:\n\n“Because each thing is pervaded by non-difference, its difference is held to be false, as with waves. Difference arises from difference, as with the parts of a whole.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रत्येकम्",
+          "en": "each individually"
+        },
+        {
+          "sa": "अनुविद्धत्वात्",
+          "en": "because pervaded"
+        },
+        {
+          "sa": "अभेदेन",
+          "en": "by non-difference"
+        },
+        {
+          "sa": "मृषा",
+          "en": "false"
+        },
+        {
+          "sa": "मतः",
+          "en": "is held"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "तरङ्गाणाम्",
+          "en": "of waves"
+        },
+        {
+          "sa": "भेदात्",
+          "en": "from difference"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "कलावतः",
+          "en": "of a whole made of parts"
+        }
+      ],
       "sourceNumbers": [
         "mbs_1.34"
       ]
@@ -1204,7 +1382,112 @@
       "deva": "नियोगपर्यवसितं वैदिकं वचः, स च प्रमाणान्तरस्यागोचर इत्यनपेक्षत्वम् । साध्यसाधनभावनिष्ठं तु लौकिकं वचः, स प्रमाणान्तरविषय इति सापेक्षता । न शब्दमात्रसामर्थ्यप्रविभागो ऽयमीदृशः । लोकावगतसामर्थ्यः शब्दो वेदे ऽपि बोधकः",
       "iast": "niyogaparyavasitaṃ vaidikaṃ vacaḥ, sa ca pramāṇāntarasyāgocara ityanapekṣatvam / sādhyasādhanabhāvaniṣṭhaṃ tu laukikaṃ vacaḥ, sa pramāṇāntaraviṣaya iti sāpekṣatā /\n\nna śabdamātrasāmarthyapravibhāgo 'yamīdṛśaḥ /\nlokāvagatasāmarthyaḥ śabdo vede 'pi bodhakaḥ",
       "translation": "Vedic statements culminate in an injunction, which is not within the scope of another means of knowledge; therefore they are independent. Ordinary statements, by contrast, concern the relation between means and end, which is within the scope of another means, so they are dependent. But this distinction in power does not belong to words alone. The power of words, established in ordinary usage, also conveys meaning in the Veda.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "नियोग-पर्यवसितम्",
+          "en": "culminating in an injunction"
+        },
+        {
+          "sa": "वैदिकम्",
+          "en": "Vedic"
+        },
+        {
+          "sa": "वचः",
+          "en": "statement"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रमाण-अन्तरस्य",
+          "en": "of another means of knowledge"
+        },
+        {
+          "sa": "अगोचरः",
+          "en": "outside its scope"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनपेक्षत्वम्",
+          "en": "independence"
+        },
+        {
+          "sa": "साध्य-साधन-भाव-निष्ठम्",
+          "en": "grounded in the relation of means and end"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "लौकिकम्",
+          "en": "ordinary"
+        },
+        {
+          "sa": "वचः",
+          "en": "statement"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-विषयः",
+          "en": "within the scope of another means"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सापेक्षता",
+          "en": "dependence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शब्द-मात्र-सामर्थ्य-प्रविभागः",
+          "en": "a distinction based only on the power of words"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "ईदृशः",
+          "en": "of this kind"
+        },
+        {
+          "sa": "लोक-अवगत-सामर्थ्यः",
+          "en": "whose power is known through ordinary usage"
+        },
+        {
+          "sa": "शब्दः",
+          "en": "a word"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "बोधकः",
+          "en": "conveys meaning"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.23"
       ]
@@ -1823,7 +2106,56 @@
       "deva": "नाभावभिन्ना व्यवहृत्तदभावश्च धीपदे । तमोदृष्टिस्तु भूच्छायामालोकाभावमेव वा",
       "iast": "nābhāvabhinnā vyavahṛttadabhāvaśca dhīpade /\ntamodṛṣṭistu bhūcchāyāmālokābhāvameva vā",
       "translation": "Usage and cognition of absence are not different from absence itself. The perception of darkness, however, is merely the sight of a shadow on the earth or of the absence of light.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अभाव-भिन्ना",
+          "en": "different from absence"
+        },
+        {
+          "sa": "व्यवहृत्",
+          "en": "conventional usage"
+        },
+        {
+          "sa": "तत्-अभावः",
+          "en": "its absence"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "धी-पदे",
+          "en": "in the field of cognition"
+        },
+        {
+          "sa": "तमः-दृष्टिः",
+          "en": "perception of darkness"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "भू-छायाम्",
+          "en": "a shadow on the ground"
+        },
+        {
+          "sa": "आलोक-अभावम्",
+          "en": "absence of light"
+        },
+        {
+          "sa": "एव",
+          "en": "merely"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.50"
       ]
@@ -6130,7 +6462,96 @@
       "deva": "सामानाधिकरण्येन बोधाद्रूप्यमिदं मितम् । ऽइदं शुक्लं रजतम्ऽइति सामानाधिकरण्येन प्रतीतेरात्मोपालम्भः परस्मिन्नासज्यते प्रतीतिविरोधः, ज्ञानभेदकल्पनायाः प्रमाणाभावात् । अनाश्वासो ज्ञायमाने ज्ञानेनैवापबाध्यते",
       "iast": "sāmānādhikaraṇyena bodhādrūpyamidaṃ mitam /\n'idaṃ śuklaṃ rajatam'iti sāmānādhikaraṇyena pratīterātmopālambhaḥ parasminnāsajyate pratītivirodhaḥ, jñānabhedakalpanāyāḥ pramāṇābhāvāt /\nanāśvāso jñāyamāne jñānenaivāpabādhyate",
       "translation": "This cognition of a shared property is established through words in the same grammatical case. When one perceives “This is white silver,” applying the same grammatical case gives rise to the appearance of one thing; to impose the Self’s apprehension upon something else contradicts experience, since there is no means of knowledge for imagining two distinct cognitions. Uncertainty in what is being known is removed by cognition itself.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "सामानाधिकरण्येन",
+          "en": "through being in the same grammatical case"
+        },
+        {
+          "sa": "बोधात्",
+          "en": "from cognition"
+        },
+        {
+          "sa": "रूप्यम्",
+          "en": "silver"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "मितम्",
+          "en": "is known"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "शुक्लम्",
+          "en": "white"
+        },
+        {
+          "sa": "रजतम्",
+          "en": "silver"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सामानाधिकरण्येन",
+          "en": "through the same grammatical case"
+        },
+        {
+          "sa": "प्रतीतेः",
+          "en": "from the cognition"
+        },
+        {
+          "sa": "आत्म-उपालम्भः",
+          "en": "the apprehension of identity"
+        },
+        {
+          "sa": "परस्मिन्",
+          "en": "in another"
+        },
+        {
+          "sa": "आसज्यते",
+          "en": "is imposed"
+        },
+        {
+          "sa": "प्रतीति-विरोधः",
+          "en": "a contradiction of experience"
+        },
+        {
+          "sa": "ज्ञान-भेद-कल्पनायाः",
+          "en": "of positing distinct cognitions"
+        },
+        {
+          "sa": "प्रमाण-अभावात्",
+          "en": "because there is no evidence"
+        },
+        {
+          "sa": "अनाश्वासः",
+          "en": "uncertainty"
+        },
+        {
+          "sa": "ज्ञायमाने",
+          "en": "in what is being known"
+        },
+        {
+          "sa": "ज्ञानेन",
+          "en": "by cognition"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अपबाध्यते",
+          "en": "is removed"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.150"
       ]
@@ -8291,17 +8712,21 @@
     "completeUnits": [],
     "completeVerses": [
       "1.1",
+      "1.19",
+      "1.34",
       "2.9",
       "2.11",
       "2.12",
       "2.14",
       "2.18",
       "2.20",
+      "2.23",
       "2.28",
       "2.31",
       "2.38",
       "2.45",
       "2.49",
+      "2.50",
       "2.52",
       "2.54",
       "2.55",
@@ -8369,6 +8794,7 @@
       "2.146",
       "2.147",
       "2.148",
+      "2.150",
       "2.151",
       "2.153",
       "2.154",
@@ -8402,7 +8828,7 @@
       "4.10",
       "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 111 of 231 source-marked passages; 120 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 116 of 231 source-marked passages; 115 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 111 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 116 passages listed in wordGlossCoverage."
 }
