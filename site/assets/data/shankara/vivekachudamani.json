@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 440
+      "end": 445
     },
-    "note": "Source verses 1–440 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 441 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–445 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 446 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -34088,60 +34088,282 @@
       "number": "441",
       "label": "Verse 441",
       "deva": "यत्र प्रविष्टा विषयाः परेरिता\nनदीप्रवाहा इव वारिराशौ ।\nलिनन्ति सन्मात्रतया न विक्रियां\nउत्पादयन्त्येष यतिर्विमुक्तः ॥",
-      "iast": "yatra praviṣṭā viṣayāḥ pareritā\nnadīpravāhā iva vārirāśau |\nlinanti sanmātratayā na vikriyāṃ\nutpādayantyeṣa yatirvimuktaḥ ||",
-      "translation": "The Sannyasin in whom the sense-objects directed by others are engulfed like flowing rivers in the sea and produce no change, owing to his identity with the Existence Absolute, is indeed liberated.",
-      "gloss": [],
+      "iast": "yatra praviṣṭā viṣayāḥ pareritā\nnadī-pravāhā iva vāri-rāśau |\nlinanti san-mātratayā na vikriyāṃ\nutpādayanty eṣa yatir vimuktaḥ ||",
+      "translation": "In whom sense-objects sent in by others merge like river currents in the ocean, producing no change through sheer Being, that renunciate is liberated.",
+      "gloss": [
+        {
+          "sa": "यत्र",
+          "en": "in whom"
+        },
+        {
+          "sa": "प्रविष्टाः",
+          "en": "having entered"
+        },
+        {
+          "sa": "विषयाः",
+          "en": "sense-objects"
+        },
+        {
+          "sa": "परेरिताः",
+          "en": "sent; impelled by others"
+        },
+        {
+          "sa": "नदी-प्रवाहाः",
+          "en": "river currents"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "वारि-राशौ",
+          "en": "in the ocean"
+        },
+        {
+          "sa": "लिनन्ति",
+          "en": "merge; dissolve"
+        },
+        {
+          "sa": "सत्-मात्रतया",
+          "en": "through sheer Being alone"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विक्रियाम्",
+          "en": "a change; modification"
+        },
+        {
+          "sa": "उत्पादयन्ति",
+          "en": "they produce"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "यतिः",
+          "en": "renunciate"
+        },
+        {
+          "sa": "विमुक्तः",
+          "en": "is liberated"
+        }
+      ],
       "sourceNumbers": [
         441
-      ]
+      ],
+      "editionTranslation": "The Sannyasin in whom the sense-objects directed by others are engulfed like flowing rivers in the sea and produce no change, owing to his identity with the Existence Absolute, is indeed liberated."
     },
     {
       "id": "vivekachudamani-442",
       "number": "442",
       "label": "Verse 442",
       "deva": "विज्ञातब्रह्मतत्त्वस्य यथापूर्वं न संसृतिः ।\nअस्ति चेन् न स विज्ञातब्रह्मभावो बहिर्मुखः ॥",
-      "iast": "vijñātabrahmatattvasya yathāpūrvaṃ na saṃsṛtiḥ |\nasti cen na sa vijñātabrahmabhāvo bahirmukhaḥ ||",
-      "translation": "For one who has realised the Truth of Brahman, there is no more attachment to the sense-objects as before: If there is, that man has not realised his identity with Brahman, but is one whose senses are outgoing in their tendency.",
-      "gloss": [],
+      "iast": "vijñāta-brahma-tattvasya yathā-pūrvaṃ na saṃsṛtiḥ |\nasti cen na sa vijñāta-brahma-bhāvo bahir-mukhaḥ ||",
+      "translation": "For one who has realized the truth of Brahman, worldly wandering does not continue as before. If it does, that person has not realized identity with Brahman and remains outward-facing.",
+      "gloss": [
+        {
+          "sa": "विज्ञात-ब्रह्म-तत्त्वस्य",
+          "en": "for one who has realized the truth of Brahman"
+        },
+        {
+          "sa": "यथा-पूर्वम्",
+          "en": "as before"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "संसृतिः",
+          "en": "worldly wandering; transmigration"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सः",
+          "en": "that person"
+        },
+        {
+          "sa": "विज्ञात-ब्रह्म-भावः",
+          "en": "one who has realized identity with Brahman"
+        },
+        {
+          "sa": "बहिर्मुखः",
+          "en": "turned outward"
+        }
+      ],
       "sourceNumbers": [
         442
-      ]
+      ],
+      "editionTranslation": "For one who has realised the Truth of Brahman, there is no more attachment to the sense-objects as before: If there is, that man has not realised his identity with Brahman, but is one whose senses are outgoing in their tendency."
     },
     {
       "id": "vivekachudamani-443",
       "number": "443",
       "label": "Verse 443",
       "deva": "प्राचीनवासनावेगादसौ संसरतीति चेत् ।\nन सदेकत्वविज्ञानान्मन्दी भवति वासना ॥",
-      "iast": "prācīnavāsanāvegādasau saṃsaratīti cet |\nna sadekatvavijñānānmandī bhavati vāsanā ||",
-      "translation": "If it be urged that he is still attached to the sense-objects through the momentum of his old desires, the reply is – no, for desires get weakened through the realisation of one’s identity with Brahman.",
-      "gloss": [],
+      "iast": "prācīna-vāsanā-vegād asau saṃsarati iti cet |\nna sat-ekatva-vijñānān mandī bhavati vāsanā ||",
+      "translation": "If it is said, “This person still wanders because of the force of old latent impressions,” [the answer is] no: through knowledge of oneness with Being, the latent tendency weakens.",
+      "gloss": [
+        {
+          "sa": "प्राचीन-वासनावेगात्",
+          "en": "from the force of old latent impressions"
+        },
+        {
+          "sa": "असौ",
+          "en": "this person"
+        },
+        {
+          "sa": "संसरति",
+          "en": "wanders; transmigrates"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if it is said"
+        },
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "सत्-एकत्व-विज्ञानात्",
+          "en": "through knowledge of oneness with Being"
+        },
+        {
+          "sa": "मन्दी",
+          "en": "weak; weakened"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "वासना",
+          "en": "the latent tendency"
+        }
+      ],
       "sourceNumbers": [
         443
-      ]
+      ],
+      "editionTranslation": "If it be urged that he is still attached to the sense-objects through the momentum of his old desires, the reply is – no, for desires get weakened through the realisation of one’s identity with Brahman."
     },
     {
       "id": "vivekachudamani-444",
       "number": "444",
       "label": "Verse 444",
       "deva": "अत्यन्तकामुकस्यापि वृत्तिः कुण्ठति मातरि ।\nतथैव ब्रह्मणि ज्ञाते पूर्णानन्दे मनीषिणः ॥",
-      "iast": "atyantakāmukasyāpi vṛttiḥ kuṇṭhati mātari |\ntathaiva brahmaṇi jñāte pūrṇānande manīṣiṇaḥ ||",
-      "translation": "The propensities of even a confirmed libertine are checked in the presence of his mother; just so, when Brahman, the Bliss Absolute, has been realised, the man of realisation has no longer any worldly tendency.",
-      "gloss": [],
+      "iast": "atyanta-kāmukasya api vṛttiḥ kuṇṭhati mātari |\ntathā eva brahmaṇi jñāte pūrṇānande manīṣiṇaḥ ||",
+      "translation": "Just as the desire of even a very lustful person is checked in his mother's presence, so the impulse of a wise person is checked when Brahman, full of bliss, is realized.",
+      "gloss": [
+        {
+          "sa": "अत्यन्त-कामुकस्य",
+          "en": "of an intensely lustful person"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "वृत्तिः",
+          "en": "the impulse; inclination"
+        },
+        {
+          "sa": "कुण्ठति",
+          "en": "is blunted; checked"
+        },
+        {
+          "sa": "मातरि",
+          "en": "in the mother's presence"
+        },
+        {
+          "sa": "तथा एव",
+          "en": "just so"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "when Brahman"
+        },
+        {
+          "sa": "ज्ञाते",
+          "en": "is known; realized"
+        },
+        {
+          "sa": "पूर्ण-आनन्दे",
+          "en": "as full of bliss"
+        },
+        {
+          "sa": "मनीषिणः",
+          "en": "of the wise person"
+        }
+      ],
       "sourceNumbers": [
         444
-      ]
+      ],
+      "editionTranslation": "The propensities of even a confirmed libertine are checked in the presence of his mother; just so, when Brahman, the Bliss Absolute, has been realised, the man of realisation has no longer any worldly tendency."
     },
     {
       "id": "vivekachudamani-445",
       "number": "445",
       "label": "Verse 445",
       "deva": "निदिध्यासनशीलस्य बाह्यप्रत्यय ईक्ष्यते ।\nब्रवीति श्रुतिरेतस्य प्रारब्धं फलदर्शनात् ॥",
-      "iast": "nididhyāsanaśīlasya bāhyapratyaya īkṣyate |\nbravīti śrutiretasya prārabdhaṃ phaladarśanāt ||",
-      "translation": "One who is constantly practising meditation is observed to have external perceptions. The Shrutis mention Prarabdha work in the case of such a man, and we can infer this from results actually seen.",
-      "gloss": [],
+      "iast": "nididhyāsana-śīlasya bāhya-pratyaya īkṣyate |\nbravīti śrutir etasya prārabdhaṃ phala-darśanāt ||",
+      "translation": "External perception is seen in one devoted to contemplation; scripture says this is due to that person's prārabdha, as shown by the experience of its results.",
+      "gloss": [
+        {
+          "sa": "निदिध्यासन-शीलस्य",
+          "en": "of one devoted to deep contemplation"
+        },
+        {
+          "sa": "बाह्य-प्रत्ययः",
+          "en": "external perception"
+        },
+        {
+          "sa": "ईक्ष्यते",
+          "en": "is observed"
+        },
+        {
+          "sa": "ब्रवीति",
+          "en": "says"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "of this person"
+        },
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha; already-begun karma"
+        },
+        {
+          "sa": "फल-दर्शनात्",
+          "en": "from seeing its results"
+        }
+      ],
       "sourceNumbers": [
         445
-      ]
+      ],
+      "editionTranslation": "One who is constantly practising meditation is observed to have external perceptions. The Shrutis mention Prarabdha work in the case of such a man, and we can infer this from results actually seen."
     },
     {
       "id": "vivekachudamani-446",
@@ -35788,6 +36010,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 431–435; preserved prior translations as editionTranslation. Kept the literal I/me and mine/not-mine distinction in verse 431 and made the equal-vision constructions in verses 433–434 explicit.",
     "Normalized verse 432's IAST sandhi to atītān-anusandhānam and verse 435's compound boundary to āsvādāsakta.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 436–440; preserved prior translations as editionTranslation. Corrected verse 436's malformed word boundary and verse 439's vijāniti to the grammatically supported vijānāti reading.",
-    "Clarified verse 438's dual bhavataḥ: neither of the two notions arises."
+    "Clarified verse 438's dual bhavataḥ: neither of the two notions arises.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 441–445; preserved prior translations as editionTranslation. Kept verse 442's saṃsṛti as worldly wandering/transmigration and rendered verse 445's phala-darśana as observation of results."
   ]
 }
