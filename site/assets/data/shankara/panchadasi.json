@@ -6,13 +6,13 @@
   "source": {
     "url": "https://www.upasanayoga.org/PancD.htm",
     "edition": "Pañca-Daśī, A.K. Aruna, 2020 version 1.0; translations marked ** are by Swami Swahananda, Sri Ramakrishna Math, Chennai; work by Vidyāraṇya.",
-    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1 and Chapter 2, verses 1–45; other units do not yet have separate glosses.",
+    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–110; other units do not yet have separate glosses.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; text by Vidyāraṇya.",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected."
+    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness."
   },
-  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45.",
+  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110.",
   "units": [
     {
       "id": "panchadasi-1-01",
@@ -19026,80 +19026,588 @@
       "label": "Chapter 6 · Verse 101",
       "number": "6.101",
       "deva": "महतः परम् अव्यक्तम् इति प्रकृतिर् उच्यते।\nश्रुतावसङ्गता तद्वद् असङ्गो हीत्यतिस्फुटा॥",
-      "translation": "(They quote) that prakṛti is called “the (total) unmanifest (a-vyakta, the total causal body, unmanifest to the mind and senses) and is other than (para, superior to) the mahat (the total manifest, the effect of prakṛti),” as mentioned in scripture ( (Kaṭha Upaniṣad)). As well everywhere is clearly mentioned the unattached nature (a-saṅgatā, of the ātman, the puruṣa) such as, “Indeed it is unattached” ( (Bṛhad-Āraṇyaka Upaniṣad)).",
-      "gloss": []
+      "translation": "Scripture says, “Beyond the great [principle] is the unmanifest”; thus [it] is called Prakṛti. Likewise, scripture makes non-attachment very clear with the words, “unattached indeed.”",
+      "gloss": [
+        {
+          "sa": "महतः",
+          "en": "than the great [principle]"
+        },
+        {
+          "sa": "परम्",
+          "en": "beyond"
+        },
+        {
+          "sa": "अव्यक्तम्",
+          "en": "the unmanifest"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the words"
+        },
+        {
+          "sa": "प्रकृतिः",
+          "en": "Prakṛti (primordial nature)"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is said / is called"
+        },
+        {
+          "sa": "श्रुतौ",
+          "en": "in scripture"
+        },
+        {
+          "sa": "असङ्गता",
+          "en": "non-attachment"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "असङ्गः",
+          "en": "unattached"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / “so”"
+        },
+        {
+          "sa": "अति-स्फुटा",
+          "en": "very clear"
+        }
+      ],
+      "iast": "mahataḥ param avyaktam iti prakṛtir ucyate|\nśrutāvasaṅgatā tadvad asaṅgo hītyatisphuṭā||"
     },
     {
       "id": "panchadasi-6-102",
       "label": "Chapter 6 · Verse 102",
       "number": "6.102",
       "deva": "चित्-सन्निधौ प्रवृत्तायाः प्रकृतेर् हि नियामकम्।\nईश्वरं ब्रुवते योगाः स जीवेभ्यः परः श्रुतः॥",
-      "translation": "The Yogins say Īśvara is the inner controller (niyāmaka) of prakṛti, whenever prakṛti is in the presence (sannidhi) of consciousness (cit, of this Īśvara). Also that (Īśvara) is distinct from all jīvas (all individual intellects, (Kaṭha Upaniṣad)).",
-      "gloss": []
+      "translation": "The Yogins call Īśvara the controller of Prakṛti when it acts in the presence of consciousness; scripture says that He is beyond the jīvas.",
+      "gloss": [
+        {
+          "sa": "चित्-सन्निधौ",
+          "en": "in the presence of consciousness"
+        },
+        {
+          "sa": "प्रवृत्तायाः",
+          "en": "when active / acting"
+        },
+        {
+          "sa": "प्रकृतेः",
+          "en": "of Prakṛti"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "नियामकम्",
+          "en": "the controller"
+        },
+        {
+          "sa": "ईश्वरम्",
+          "en": "Īśvara"
+        },
+        {
+          "sa": "ब्रुवते",
+          "en": "they call / say"
+        },
+        {
+          "sa": "योगाः",
+          "en": "the Yogins"
+        },
+        {
+          "sa": "सः",
+          "en": "He"
+        },
+        {
+          "sa": "जीवेभ्यः",
+          "en": "than the jīvas"
+        },
+        {
+          "sa": "परः",
+          "en": "beyond / superior"
+        },
+        {
+          "sa": "श्रुतः",
+          "en": "is heard / is stated in scripture"
+        }
+      ],
+      "iast": "cit-sannidhau pravṛttāyāḥ prakṛter hi niyāmakam|\nīśvaraṃ bruvate yogāḥ sa jīvebhyaḥ paraḥ śrutaḥ||"
     },
     {
       "id": "panchadasi-6-103",
       "label": "Chapter 6 · Verse 103",
       "number": "6.103",
       "deva": "प्रधान-क्षेत्रज्ञ-पतिर् गुणेश इति हि श्रुतिः।\nआरण्यकेऽसंभ्रमेण ह्यन्तर्-याम्युपपादितः॥",
-      "translation": "The scripture says that the Lord of the guṇas is the Lord of pradhāna (i.e., prakṛti) and of the individual knowers (kṣetra-jñas, (Śvetāśvatara Upaniṣad)). In the Bṛhad-āraṇyaka Upaniṣad, “Being the inner controller (antar-yāmin)” is unmistakably imputed (to the self of all, (Bṛhad-Āraṇyaka Upaniṣad)).",
-      "gloss": []
+      "translation": "Scripture indeed says, “[He is] lord of Pradhāna and the knower of the field, lord of the guṇas.” In the Āraṇyaka, the Inner Ruler is clearly established.",
+      "gloss": [
+        {
+          "sa": "प्रधान",
+          "en": "Pradhāna (primordial matter)"
+        },
+        {
+          "sa": "क्षेत्रज्ञ",
+          "en": "the knower of the field"
+        },
+        {
+          "sa": "पतिः",
+          "en": "lord"
+        },
+        {
+          "sa": "गुणेशः",
+          "en": "lord of the guṇas"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with these words"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "आरण्यके",
+          "en": "in the Āraṇyaka"
+        },
+        {
+          "sa": "असंभ्रमेण",
+          "en": "without doubt / unmistakably"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्तर्-यामी",
+          "en": "the Inner Ruler"
+        },
+        {
+          "sa": "उपपादितः",
+          "en": "is established / demonstrated"
+        }
+      ],
+      "iast": "pradhāna-kṣetrajña-patir guṇeśa iti hi śrutiḥ|\nāraṇyake’saṃbhrameṇa hyantar-yāmyupapāditaḥ||"
     },
     {
       "id": "panchadasi-6-104",
       "label": "Chapter 6 · Verse 104",
       "number": "6.104",
       "deva": "अत्रापि कलहायन्ते वादिनः स्वस्व-युक्तिभिः।\nवाक्यान्यपि यथा-प्रज्ञं दार्ढ्यायोदाहरन्ति हि॥",
-      "translation": "In regard to this topic, there are also other philosophers who argue in accordance to their own logic, and with conviction they quote texts according to how they understand.",
-      "gloss": []
+      "translation": "Here too the debaters argue with their respective reasoning. They also cite scriptural passages, according to their understanding, to strengthen their views.",
+      "gloss": [
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "अपि",
+          "en": "also / too"
+        },
+        {
+          "sa": "कलहायन्ते",
+          "en": "they dispute / quarrel"
+        },
+        {
+          "sa": "वादिनः",
+          "en": "the debaters"
+        },
+        {
+          "sa": "स्व-स्व-युक्तिभिः",
+          "en": "with their respective reasoning"
+        },
+        {
+          "sa": "वाक्यानि",
+          "en": "passages / statements"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "यथा-प्रज्ञम्",
+          "en": "according to their understanding"
+        },
+        {
+          "sa": "दार्ढ्याय",
+          "en": "for strengthening"
+        },
+        {
+          "sa": "उदाहरन्ति",
+          "en": "they cite"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        }
+      ],
+      "iast": "atrāpi kalahāyante vādinaḥ svasva-yuktibhiḥ|\nvākyānyapi yathā-prajñaṃ dārḍhyāyodāharanti hi||"
     },
     {
       "id": "panchadasi-6-105",
       "label": "Chapter 6 · Verse 105",
       "number": "6.105",
       "deva": "क्लेश-कर्म-विपाकैस् तद् आशयैर् अप्यसंयुतः।\nपुं-विशेषो भवेद् ईशो जीववत् सोऽप्यसङ्ग-चित्॥",
-      "translation": "The Lord would be the special person (puṃ-viśeṣa) by being untouched “by the afflictions (kleśas) and the fruitions of (its own) karmas and by the storehouses (of anyone’s karma)” ( (Yoga Sūtras)). Yet, like ordinary persons (jīvas), is an unattached consciousness.",
-      "gloss": []
+      "translation": "Īśvara is a special Puruṣa, unconnected with afflictions, actions, their results, and their latent traces. He too, like a jīva, is unattached consciousness.",
+      "gloss": [
+        {
+          "sa": "क्लेश",
+          "en": "afflictions"
+        },
+        {
+          "sa": "कर्म",
+          "en": "actions"
+        },
+        {
+          "sa": "विपाकैः",
+          "en": "with the ripenings / results"
+        },
+        {
+          "sa": "तद्-आशयैः",
+          "en": "with their latent impressions"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "असंयुतः",
+          "en": "unjoined / untouched"
+        },
+        {
+          "sa": "पुम्-विशेषः",
+          "en": "a special Puruṣa"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be / is"
+        },
+        {
+          "sa": "ईशः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "जीव-वत्",
+          "en": "like a jīva"
+        },
+        {
+          "sa": "सः",
+          "en": "He"
+        },
+        {
+          "sa": "अपि",
+          "en": "also / too"
+        },
+        {
+          "sa": "असङ्ग-चित्",
+          "en": "unattached consciousness"
+        }
+      ],
+      "iast": "kleśa-karma-vipākais tad āśayair apyasaṃyutaḥ|\npuṃ-viśeṣo bhaved īśo jīvavat so’pyasaṅga-cit||"
     },
     {
       "id": "panchadasi-6-106",
       "label": "Chapter 6 · Verse 106",
       "number": "6.106",
       "deva": "तथापि पुं-विशेषत्वाद् घटतेऽस्य नियन्तृता।\nअव्यवस्थौ बन्ध-मोक्षावापतेतामिहान्यथा॥",
-      "translation": "That being so, because of being this special person, it happens to have that nature of being the inner controller. Otherwise, it would here fall in (be subject to) a state of bondage or freedom (, yet, being the controller within allows some to remain bound and others to become free).",
-      "gloss": []
+      "translation": "Even so, because He is a special Puruṣa, His role as controller is fitting. Otherwise, bondage and liberation would fall into disorder here.",
+      "gloss": [
+        {
+          "sa": "तथा",
+          "en": "so / thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "even so"
+        },
+        {
+          "sa": "पुम्-विशेषत्वात्",
+          "en": "because of being a special Puruṣa"
+        },
+        {
+          "sa": "घटते",
+          "en": "is fitting / is possible"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of Him / His"
+        },
+        {
+          "sa": "नियन्तृता",
+          "en": "the role of controller"
+        },
+        {
+          "sa": "अव्यवस्थौ",
+          "en": "in disorder"
+        },
+        {
+          "sa": "बन्ध-मोक्षौ",
+          "en": "bondage and liberation"
+        },
+        {
+          "sa": "आपतेताम्",
+          "en": "would fall / would come about"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        }
+      ],
+      "iast": "tathāpi puṃ-viśeṣatvād ghaṭate’sya niyantṛtā|\navyavasthau bandha-mokṣāvāpatetāmihānyathā||"
     },
     {
       "id": "panchadasi-6-107",
       "label": "Chapter 6 · Verse 107",
       "number": "6.107",
       "deva": "भीषाऽस्माद् इत्येवम् आदाव् असङ्गस्य परात्मनः।\nश्रुतं तद्-युक्तम् अप्यस्य क्लेश-कर्माद्यसङ्गमात्॥",
-      "translation": "“Out of fear (bhīṣā, or rather the mandate of their nature, of their role, in this creation) from this” (from the Lord, His order, everything in nature behaves accordingly, within its possibilities, not chaotically, (Taittirīya Upaniṣad)). In this way and in other scriptures, it (the Lord) is shown to have the nature of being unattached yet the Over-Lord (para-ātman). Though connected to them (to their nature as its inner controller), is has no connection to their afflictions and actions.",
-      "gloss": []
+      "translation": "Scripture says, “Out of fear of Him,” and so on, of the unattached Supreme Self. That too is fitting, since He is unconnected with afflictions, actions, and the like.",
+      "gloss": [
+        {
+          "sa": "भीषा",
+          "en": "from fear"
+        },
+        {
+          "sa": "अस्मात्",
+          "en": "of / from Him"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the words"
+        },
+        {
+          "sa": "एवम्-आदौ",
+          "en": "and so on"
+        },
+        {
+          "sa": "असङ्गस्य",
+          "en": "of the unattached"
+        },
+        {
+          "sa": "पर-आत्मनः",
+          "en": "of the Supreme Self"
+        },
+        {
+          "sa": "श्रुतम्",
+          "en": "is heard / is stated in scripture"
+        },
+        {
+          "sa": "तत्-युक्तम्",
+          "en": "that is fitting"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of Him"
+        },
+        {
+          "sa": "क्लेश-कर्म-आदि-असङ्गमात्",
+          "en": "because of non-connection with afflictions, actions, and the like"
+        }
+      ],
+      "iast": "bhīṣā’smād ityevam ādāv asaṅgasya parātmanaḥ|\nśrutaṃ tad-yuktam apyasya kleśa-karmādyasaṅgamāt||"
     },
     {
       "id": "panchadasi-6-108",
       "label": "Chapter 6 · Verse 108",
       "number": "6.108",
       "deva": "जीवानाम् अप्यसङ्गत्वात् क्लेशादिर् न ह्यथापि च।\nविवेकाग्रहतः क्लेश-कर्मादि प्राग् उदीरितम्॥",
-      "translation": "Even though jīvas (by their real nature) are unattached and indeed do not have afflictions, etcetera, still, due to not grasping the distinction (of their consciousness nature from the manifest forms of nature) they (believe they) have afflictions, action, etc. as pointed out before.",
-      "gloss": []
+      "translation": "Jīvas too are unattached, so afflictions and the like do not truly belong to them. Yet because discrimination is not grasped, afflictions, action, and the rest were described earlier [as appearing to belong to them].",
+      "gloss": [
+        {
+          "sa": "जीवानाम्",
+          "en": "of the jīvas"
+        },
+        {
+          "sa": "अपि",
+          "en": "also / too"
+        },
+        {
+          "sa": "असङ्गत्वात्",
+          "en": "because of being unattached"
+        },
+        {
+          "sa": "क्लेश-आदिः",
+          "en": "afflictions and the like"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अथ",
+          "en": "yet / however"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विवेक-अग्रहः",
+          "en": "failure to grasp discrimination"
+        },
+        {
+          "sa": "क्लेश-कर्म-आदि",
+          "en": "afflictions, action, and the rest"
+        },
+        {
+          "sa": "प्राक्",
+          "en": "earlier"
+        },
+        {
+          "sa": "उदीरितम्",
+          "en": "was stated / described"
+        }
+      ],
+      "iast": "jīvānām apyasaṅgatvāt kleśādir na hyathāpi ca|\nvivekāgrahataḥ kleśa-karmādi prāg udīritam||"
     },
     {
       "id": "panchadasi-6-109",
       "label": "Chapter 6 · Verse 109",
       "number": "6.109",
       "deva": "नित्य-ज्ञान-प्रयत्नेच्छा-गुणान् ईशस्य मन्वते।\nअसङ्गस्य नियन्तृत्वम् अयुक्तम् इति तार्किकाः॥",
-      "translation": "The Logicians (Tārkikas) think that the Lord has qualities of eternal knowledge, eternal effort and eternal desire, and they say it is not possible for an unattached (Lord) to be a controlling power.",
-      "gloss": []
+      "translation": "The logicians think that Īśvara has the qualities of eternal knowledge, effort, and desire; they say that being a controller is unfitting for one who is unattached.",
+      "gloss": [
+        {
+          "sa": "नित्य",
+          "en": "eternal"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "प्रयत्न",
+          "en": "effort"
+        },
+        {
+          "sa": "इच्छा",
+          "en": "desire"
+        },
+        {
+          "sa": "गुणान्",
+          "en": "qualities"
+        },
+        {
+          "sa": "ईशस्य",
+          "en": "of Īśvara"
+        },
+        {
+          "sa": "मन्वते",
+          "en": "they think / consider"
+        },
+        {
+          "sa": "असङ्गस्य",
+          "en": "of one who is unattached"
+        },
+        {
+          "sa": "नियन्तृत्वम्",
+          "en": "being a controller"
+        },
+        {
+          "sa": "अयुक्तम्",
+          "en": "unfitting / unreasonable"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तार्किकाः",
+          "en": "the logicians"
+        }
+      ],
+      "iast": "nitya-jñāna-prayatnecchā-guṇān īśasya manvate|\nasaṅgasya niyantṛtvam ayuktam iti tārkikāḥ||"
     },
     {
       "id": "panchadasi-6-110",
       "label": "Chapter 6 · Verse 110",
       "number": "6.110",
       "deva": "पुं-विशेषत्वम् अप्यस्य गुणैर् एव न चान्यथा।\nसत्य-कामः सत्य-सङ्कल्प इत्यादि-श्रुतिर् जगौ॥",
-      "translation": "There is scripture that declares (the Lord) is having true-desire, true-resolve (i.e., whatever it desires is infallibly possible and whatever it determines is infallibly actualized, (Chāndogya Upaniṣad)). Even though it may be a special person, His nature is not otherwise than through those three qualities alone (eternal knowledge, etc., ).",
-      "gloss": []
+      "translation": "His status as a special Puruṣa is due to those qualities alone, and not otherwise. Scripture declares, “true in desire, true in resolve,” and the like.",
+      "gloss": [
+        {
+          "sa": "पुम्-विशेषत्वम्",
+          "en": "the status of a special Puruṣa"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of Him / His"
+        },
+        {
+          "sa": "गुणैः",
+          "en": "by the qualities"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "सत्य-कामः",
+          "en": "true in desire"
+        },
+        {
+          "sa": "सत्य-सङ्कल्पः",
+          "en": "true in resolve"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the words"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "जगौ",
+          "en": "has declared / said"
+        }
+      ],
+      "iast": "puṃ-viśeṣatvam apyasya guṇair eva na cānyathā|\nsatya-kāmaḥ satya-saṅkalpa ityādi-śrutir jagau||"
     },
     {
       "id": "panchadasi-6-111",
