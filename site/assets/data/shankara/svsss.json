@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Verses 1.28–1.35 now have Devanāgarī word-for-word glosses aligned to the Sanskrit."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020); original literal readings and word-for-word glosses for verses 1–27.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–45.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 35
+      "to": 45
     },
-    "note": "Separate Devanāgarī word glosses cover verses 1–35 of Adhyāya 1 (verses 17–18 share one reader card). The remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–45 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -1676,7 +1676,7 @@
       "number": "28",
       "label": "Verse 28",
       "deva": "स्वकीय-विण्मूत्र-विसर्जनं तच्\nचोत्तान-गत्या शयनं तदा यत्।\nबाल-ग्रहाद्याहति-भाक् च शैशवं\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when contemplating one’s ante-natal life, in the midst of one’s own filth and urine, with one’s feet up, or when one contemplates the stage of infancy, when one was subject to the diseases caused by the influence of evil stars?",
+      "translation": "Who would not become dispassionate on considering the discharge of one’s own feces and urine, the face-up posture of lying then, and infancy spent subject to childhood afflictions?",
       "gloss": [
         {
           "sa": "स्वकीय",
@@ -1759,7 +1759,8 @@
         28
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "svakīya-viṇmūtra-visarjanaṃ tac\ncottāna-gatyā śayanaṃ tadā yat|\nbāla-grahādyāhati-bhāk ca śaiśavaṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "svakīya-viṇmūtra-visarjanaṃ tac\ncottāna-gatyā śayanaṃ tadā yat|\nbāla-grahādyāhati-bhāk ca śaiśavaṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when contemplating one’s ante-natal life, in the midst of one’s own filth and urine, with one’s feet up, or when one contemplates the stage of infancy, when one was subject to the diseases caused by the influence of evil stars?"
     },
     {
       "id": "svsss-1-0029",
@@ -1767,7 +1768,7 @@
       "number": "29",
       "label": "Verse 29",
       "deva": "स्वीयैः परैस् ताडनम् अज्ञ-भावम्\nअत्यन्त-चापल्यम् असत्-क्रियां च।\nकुमार-भावे प्रतिषिद्ध-वृत्तिं\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when one recalls how as a child one was beaten by one’s own relations and also by others, and how ignorant one was, how very fickle, addicted to evil ways and to forbidden conduct?",
+      "translation": "Who would not become dispassionate on considering how, in boyhood, one is beaten by one’s own people and by others, is ignorant and extremely fickle, engages in wrong acts, and follows prohibited conduct?",
       "gloss": [
         {
           "sa": "स्वीयैः",
@@ -1834,7 +1835,8 @@
         29
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "svīyaiḥ parais tāḍanam ajña-bhāvam\natyanta-cāpalyam asat-kriyāṃ ca|\nkumāra-bhāve pratiṣiddha-vṛttiṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "svīyaiḥ parais tāḍanam ajña-bhāvam\natyanta-cāpalyam asat-kriyāṃ ca|\nkumāra-bhāve pratiṣiddha-vṛttiṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when one recalls how as a child one was beaten by one’s own relations and also by others, and how ignorant one was, how very fickle, addicted to evil ways and to forbidden conduct?"
     },
     {
       "id": "svsss-1-0030",
@@ -1842,7 +1844,7 @@
       "number": "30",
       "label": "Verse 30",
       "deva": "मदोद्धतिं मान्य-तिरस्कृतिं च\nकामातुरत्वं समयातिलङ्घनम्।\nतां तां युवत्योदित-दुष्ट-चेष्टां\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when one thinks over one’s own arrogance during one’s youth; and how disrespectful one was towards those worthy of honour; or how under the influence of lust one transgressed the established laws of conduct or was given to the vices of youth?",
+      "translation": "Who would not become dispassionate on considering the arrogance of youth, disrespect toward the worthy, being overcome by desire, transgressing proper limits, and wicked conduct prompted by young women?",
       "gloss": [
         {
           "sa": "मद-उद्धतिम्",
@@ -1905,7 +1907,8 @@
         30
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "madoddhatiṃ mānya-tiraskṛtiṃ ca\nkāmāturatvaṃ samayātilaṅghanam|\ntāṃ tāṃ yuvatyodita-duṣṭa-ceṣṭāṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "madoddhatiṃ mānya-tiraskṛtiṃ ca\nkāmāturatvaṃ samayātilaṅghanam|\ntāṃ tāṃ yuvatyodita-duṣṭa-ceṣṭāṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when one thinks over one’s own arrogance during one’s youth; and how disrespectful one was towards those worthy of honour; or how under the influence of lust one transgressed the established laws of conduct or was given to the vices of youth?"
     },
     {
       "id": "svsss-1-0031",
@@ -1913,7 +1916,7 @@
       "number": "31",
       "label": "Verse 31",
       "deva": "विरूपतां सर्व-जनाद् अवज्ञां\nसर्वत्र दैन्यं निज-बुद्धि-हैन्यम्।\nवृद्धत्व-सम्भावित-दुर्दशां तां\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of disgust at the contumely of others, it may be because one is not good looking, or because one has lost one’s command over reason as old age advances?",
+      "translation": "Who would not become dispassionate after considering ugliness, contempt from everyone, misery everywhere, weakness of one’s own judgment, and the wretched condition brought on by old age?",
       "gloss": [
         {
           "sa": "विरूपताम्",
@@ -1984,7 +1987,8 @@
         31
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "virūpatāṃ sarva-janād avajñāṃ\nsarvatra dainyaṃ nija-buddhi-hainyam|\nvṛddhatva-sambhāvita-durdaśāṃ tāṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "virūpatāṃ sarva-janād avajñāṃ\nsarvatra dainyaṃ nija-buddhi-hainyam|\nvṛddhatva-sambhāvita-durdaśāṃ tāṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of disgust at the contumely of others, it may be because one is not good looking, or because one has lost one’s command over reason as old age advances?"
     },
     {
       "id": "svsss-1-0032",
@@ -1992,7 +1996,7 @@
       "number": "32",
       "label": "Verse 32",
       "deva": "पित्तज्वरार्शः-क्षय-गुल्म-शूल-\nश्लेष्मादि-रोगोदित-तीव्र-दुःखम्।\nदुर्गन्धम् अस्वास्थ्यम् अनून-चिन्तां\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of disgust when one sees how life is ever fraught with disease, such as fever, piles, phthisis, enlargement of spleen, colic, and cough? With the advance of old age, ill health sets in, causes the body to emit a bad smell, and troubles the mind with grief.",
+      "translation": "Who would not become dispassionate after considering the intense suffering caused by bilious fever, piles, consumption, abdominal swellings, colic, diseases involving phlegm and the like, foul smell, ill health, and unceasing worry?",
       "gloss": [
         {
           "sa": "पित्त-ज्वर",
@@ -2067,7 +2071,8 @@
         32
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "pittajvarārśaḥ-kṣaya-gulma-śūla-\nśleṣmādi-rogodita-tīvra-duḥkham|\ndurgandham asvāsthyam anūna-cintāṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "pittajvarārśaḥ-kṣaya-gulma-śūla-\nśleṣmādi-rogodita-tīvra-duḥkham|\ndurgandham asvāsthyam anūna-cintāṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of disgust when one sees how life is ever fraught with disease, such as fever, piles, phthisis, enlargement of spleen, colic, and cough? With the advance of old age, ill health sets in, causes the body to emit a bad smell, and troubles the mind with grief."
     },
     {
       "id": "svsss-1-0033",
@@ -2075,7 +2080,7 @@
       "number": "33",
       "label": "Verse 33",
       "deva": "यमावलोकोदित-भीति-कम्प-\nमर्म-व्यथोच्छ्वास-गतीश्च वेदनाम्।\nप्राण-प्रयाणे परिदृश्यमानां\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Then there arises fear; trembling in the body, pain in the vital organs, and there is a gasping for breath, as Yama, the god of death approaches. There is also the experience of an agonizing sense of pain at the moment of death. Would not one who thinks over all this feel a sense of disgust with life?",
+      "translation": "Who would not become dispassionate after considering the fear and trembling brought on at the sight of Yama, pain in the vital parts, gasping breaths, and the pain seen as life departs?",
       "gloss": [
         {
           "sa": "यम-अवलोक",
@@ -2146,7 +2151,8 @@
         33
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yamāvalokodita-bhīti-kampa-\nmarma-vyathocchvāsa-gatīśca vedanām|\nprāṇa-prayāṇe paridṛśyamānāṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "yamāvalokodita-bhīti-kampa-\nmarma-vyathocchvāsa-gatīśca vedanām|\nprāṇa-prayāṇe paridṛśyamānāṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Then there arises fear; trembling in the body, pain in the vital organs, and there is a gasping for breath, as Yama, the god of death approaches. There is also the experience of an agonizing sense of pain at the moment of death. Would not one who thinks over all this feel a sense of disgust with life?"
     },
     {
       "id": "svsss-1-0034",
@@ -2154,7 +2160,7 @@
       "number": "34",
       "label": "Verse 34",
       "deva": "अङ्गार-नद्यां तपने च कुम्भी-\nपाकेऽपि वीच्याम् असि-पत्र-कानने।\nदूतैर् यमस्य क्रियमाण-बाधां\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when one contemplates how the departed suffer under the orders of Yama, it may be in the boiling waters of Aṅgāra-nadī, or in Kumbhī-pāka where one is baked alive, or in Asi-patra-kānana where one is compelled to walk on the blades of swords?",
+      "translation": "Who would not become dispassionate after considering the torment inflicted by Yama’s messengers in Aṅgāra River, Tapana, Kumbhīpāka, Avīci, and the forest of sword-leaves?",
       "gloss": [
         {
           "sa": "अङ्गार-नद्याम्",
@@ -2225,7 +2231,8 @@
         34
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "aṅgāra-nadyāṃ tapane ca kumbhī-\npāke’pi vīcyām asi-patra-kānane|\ndūtair yamasya kriyamāṇa-bādhāṃ\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "aṅgāra-nadyāṃ tapane ca kumbhī-\npāke’pi vīcyām asi-patra-kānane|\ndūtair yamasya kriyamāṇa-bādhāṃ\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when one contemplates how the departed suffer under the orders of Yama, it may be in the boiling waters of Aṅgāra-nadī, or in Kumbhī-pāka where one is baked alive, or in Asi-patra-kānana where one is compelled to walk on the blades of swords?"
     },
     {
       "id": "svsss-1-0035",
@@ -2233,7 +2240,7 @@
       "number": "35",
       "label": "Verse 35",
       "deva": "पुण्य-क्षये पुण्य-कृतो नभः-स्थैर्\nनिपात्यमानान् शिथिली-कृताङ्गान्।\nनक्षत्र-रूपेण दिवश् च्युतांस् तान्\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when, as a result of investigation one finds that whatever stock of merit one might have acquired might be exhausted, and then one would be hurled down from heaven, only to fall below with mangled limbs, like fallen stars which have lost their lustre? ((ChanU.5.10.5) (Chāndogya Upaniṣad))",
+      "translation": "Who would not become dispassionate after considering those who performed meritorious acts, cast down from heaven when their merit is exhausted, their limbs limp, falling like stars from the sky?",
       "gloss": [
         {
           "sa": "पुण्य-क्षये",
@@ -2300,7 +2307,8 @@
         35
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "puṇya-kṣaye puṇya-kṛto nabhaḥ-sthair\nnipātyamānān śithilī-kṛtāṅgān|\nnakṣatra-rūpeṇa divaś cyutāṃs tān\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "puṇya-kṣaye puṇya-kṛto nabhaḥ-sthair\nnipātyamānān śithilī-kṛtāṅgān|\nnakṣatra-rūpeṇa divaś cyutāṃs tān\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when, as a result of investigation one finds that whatever stock of merit one might have acquired might be exhausted, and then one would be hurled down from heaven, only to fall below with mangled limbs, like fallen stars which have lost their lustre? ((ChanU.5.10.5) (Chāndogya Upaniṣad))"
     },
     {
       "id": "svsss-1-0036",
@@ -2308,13 +2316,63 @@
       "number": "36",
       "label": "Verse 36",
       "deva": "वाय्वर्क-वह्नीन्द्र-मुखान् सुरेन्द्रान्\nईशोग्र-भीत्या ग्रथितान्तर्-अङ्गान्।\nविपक्ष-लोकैः परिदूयमानान्\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when one contemplates that not even the mighty Devas such as Vāyu, Āditya, Agni and Indra are exempt either from the fear of the Lord, or from the fear of their enemies? ((TaitU.2.8.1) (Taittirīya Upaniṣad))",
-      "gloss": [],
+      "translation": "Who would not become dispassionate after considering the chief gods—Vāyu, the Sun, Fire, and Indra—bound within by fear of the mighty Lord and tormented by hostile groups?",
+      "gloss": [
+        {
+          "sa": "वायु-अर्क-वह्नि-इन्द्र-मुखान्",
+          "en": "headed by Vāyu, the Sun, Fire, and Indra"
+        },
+        {
+          "sa": "सुरेन्द्रान्",
+          "en": "chief gods"
+        },
+        {
+          "sa": "ईश-उग्र-भीत्या",
+          "en": "from fear of the mighty Lord"
+        },
+        {
+          "sa": "ग्रथित-अन्तर्-अङ्गान्",
+          "en": "bound within"
+        },
+        {
+          "sa": "विपक्ष-लोकैः",
+          "en": "by hostile groups"
+        },
+        {
+          "sa": "परिदूयमानान्",
+          "en": "being tormented"
+        },
+        {
+          "sa": "विचार्य",
+          "en": "having considered"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "वा",
+          "en": "indeed"
+        },
+        {
+          "sa": "विरतिम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "याति",
+          "en": "attains"
+        }
+      ],
       "sourceNumbers": [
         36
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "vāyvarka-vahnīndra-mukhān surendrān\nīśogra-bhītyā grathitāntar-aṅgān|\nvipakṣa-lokaiḥ paridūyamānān\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "vāyvarka-vahnīndra-mukhān surendrān\nīśogra-bhītyā grathitāntar-aṅgān|\nvipakṣa-lokaiḥ paridūyamānān\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when one contemplates that not even the mighty Devas such as Vāyu, Āditya, Agni and Indra are exempt either from the fear of the Lord, or from the fear of their enemies? ((TaitU.2.8.1) (Taittirīya Upaniṣad))"
     },
     {
       "id": "svsss-1-0037",
@@ -2322,13 +2380,87 @@
       "number": "37",
       "label": "Verse 37",
       "deva": "श्रुत्या निरुक्तं सुख-तारतम्यं\nब्रह्मान्तम् आरभ्य मही-महेशम्।\nऔपाधिकं तत् तु न वास्तवं चेद्\nआलोच्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when one contemplates that the graduated scale of happiness beginning with Brahmā and coming down to the mighty rulers of the earth, inasmuch as it is based upon the assumption of a body must necessarily be transient, and therefore not real?",
-      "gloss": [],
+      "translation": "Who would not become dispassionate after considering the gradations of happiness described in scripture, from the mighty lord of earth up to Brahmā, as dependent on limiting adjuncts and therefore not real?",
+      "gloss": [
+        {
+          "sa": "श्रुत्या",
+          "en": "by scripture"
+        },
+        {
+          "sa": "निरुक्तम्",
+          "en": "described"
+        },
+        {
+          "sa": "सुख-तारतम्यम्",
+          "en": "the gradation of happiness"
+        },
+        {
+          "sa": "ब्रह्म-अन्तम्",
+          "en": "up to Brahmā"
+        },
+        {
+          "sa": "आरभ्य",
+          "en": "beginning from"
+        },
+        {
+          "sa": "मही-महेशम्",
+          "en": "the mighty lord of earth"
+        },
+        {
+          "sa": "औपाधिकम्",
+          "en": "dependent on limiting adjuncts"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वास्तवम्",
+          "en": "real"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "आलोच्य",
+          "en": "having considered"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "वा",
+          "en": "indeed"
+        },
+        {
+          "sa": "विरतिम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "याति",
+          "en": "attains"
+        }
+      ],
       "sourceNumbers": [
         37
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śrutyā niruktaṃ sukha-tāratamyaṃ\nbrahmāntam ārabhya mahī-maheśam|\naupādhikaṃ tat tu na vāstavaṃ ced\nālocya ko vā viratiṃ na yāti||"
+      "iast": "śrutyā niruktaṃ sukha-tāratamyaṃ\nbrahmāntam ārabhya mahī-maheśam|\naupādhikaṃ tat tu na vāstavaṃ ced\nālocya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when one contemplates that the graduated scale of happiness beginning with Brahmā and coming down to the mighty rulers of the earth, inasmuch as it is based upon the assumption of a body must necessarily be transient, and therefore not real?"
     },
     {
       "id": "svsss-1-0038",
@@ -2336,27 +2468,184 @@
       "number": "38",
       "label": "Verse 38",
       "deva": "सालोक्य-सामीप्य-सरूपतादि-\nभेदस्तु सत्-कर्म-विशेष-सिद्धः।\nन कर्म-सिद्धस्य तु नित्यतेति\nविचार्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when one realizes that nothing that has been acquired could be eternal, even if one should acquire as the reward of merit the privilege of living in the same region, in close proximity, with and invested in a form similar to that of the Lord? ((MunU.1.2.10) (Muṇḍaka Upaniṣad))",
-      "gloss": [],
+      "translation": "Who would not become dispassionate after considering that differences such as dwelling in the same world as the Lord, being near Him, or having His form are achieved through particular meritorious acts, and that what action achieves is not eternal?",
+      "gloss": [
+        {
+          "sa": "सा-लोक्य",
+          "en": "dwelling in the same world"
+        },
+        {
+          "sa": "सामीप्य",
+          "en": "nearness"
+        },
+        {
+          "sa": "सा-रूपता",
+          "en": "having the same form"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "भेदः",
+          "en": "differences"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "सत्-कर्म-विशेष-सिद्धः",
+          "en": "achieved by particular meritorious acts"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कर्म-सिद्धस्य",
+          "en": "of what is achieved by action"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "नित्यतेति",
+          "en": "that it is eternal"
+        },
+        {
+          "sa": "विचार्य",
+          "en": "having considered"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "वा",
+          "en": "indeed"
+        },
+        {
+          "sa": "विरतिम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "याति",
+          "en": "attains"
+        }
+      ],
       "sourceNumbers": [
         38
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sālokya-sāmīpya-sarūpatādi-\nbhedastu sat-karma-viśeṣa-siddhaḥ|\nna karma-siddhasya tu nityateti\nvicārya ko vā viratiṃ na yāti||"
+      "iast": "sālokya-sāmīpya-sarūpatādi-\nbhedastu sat-karma-viśeṣa-siddhaḥ|\nna karma-siddhasya tu nityateti\nvicārya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when one realizes that nothing that has been acquired could be eternal, even if one should acquire as the reward of merit the privilege of living in the same region, in close proximity, with and invested in a form similar to that of the Lord? ((MunU.1.2.10) (Muṇḍaka Upaniṣad))"
     },
     {
       "id": "svsss-1-0039",
       "chapter": 1,
       "number": "39",
       "label": "Verse 39",
-      "deva": "यत्रास्ति लोके गति-तारतम्यं\nउच्चावचत्वान्वितम् अत्र तत् कृतम्।\nयथेह तद्वत् खलु दुःखम् इस्तीत्य्\nआलोच्य को वा विरतिं न याति॥",
-      "translation": "Who is there who does not feel a sense of revulsion when on examination one finds that wherever there is a gradation of high and low, there must needs be misery also; for it is as true of those regions as here on earth? ((BrhUEng.4.3.33) (Bṛhad-Āraṇyaka Upaniṣad))",
-      "gloss": [],
+      "deva": "यत्रास्ति लोके गति-तारतम्यं\nउच्चावचत्वान्वितम् अत्र तत् कृतम्।\nयथेह तद्वत् खलु दुःखम् अस्तीति\nआलोच्य को वा विरतिं न याति॥",
+      "translation": "Who would not become dispassionate after considering that wherever a world has a hierarchy of higher and lower states, suffering exists there too, just as it does here?",
+      "gloss": [
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "लोके",
+          "en": "in a world"
+        },
+        {
+          "sa": "गति-तारतम्यम्",
+          "en": "a hierarchy of states"
+        },
+        {
+          "sa": "उच्च-अवचत्व-अन्वितम्",
+          "en": "marked by higher and lower"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "कृतम्",
+          "en": "is made"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "खलु",
+          "en": "indeed"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आलोच्य",
+          "en": "having considered"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "वा",
+          "en": "indeed"
+        },
+        {
+          "sa": "विरतिम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "याति",
+          "en": "attains"
+        }
+      ],
       "sourceNumbers": [
         39
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yatrāsti loke gati-tāratamyaṃ\nuccāvacatvānvitam atra tat kṛtam|\nyatheha tadvat khalu duḥkham istīty\nālocya ko vā viratiṃ na yāti||"
+      "iast": "yatrāsti loke gati-tāratamyaṃ\nuccāvacatvānvitam atra tat kṛtam|\nyatheha tadvat khalu duḥkham astīti\nālocya ko vā viratiṃ na yāti||",
+      "editionTranslation": "Who is there who does not feel a sense of revulsion when on examination one finds that wherever there is a gradation of high and low, there must needs be misery also; for it is as true of those regions as here on earth? ((BrhUEng.4.3.33) (Bṛhad-Āraṇyaka Upaniṣad))",
+      "sourceNote": "The source prints इस्तीत्य्; normalized to अस्तीति (“there is”) for grammar and meaning."
     },
     {
       "id": "svsss-1-0040",
@@ -2364,13 +2653,76 @@
       "number": "40",
       "label": "Verse 40",
       "deva": "को नाम लोके पुरुषो विवेकी\nविनश्वरे तुच्छ-सुखे गृहादौ।\nकुर्याद् रतिं नित्यम् अवेक्षमाणो\nवृथैव मोहान् म्रियमाण-जन्तून्॥",
-      "translation": "Which person who is endowed with discrimination would ever seek happiness in such transient objects as one’s abode when one sees day by day how those who are deluded and who pin their faith in these low pleasures pass away and cease to be?",
-      "gloss": [],
+      "translation": "Which discerning person in the world would delight in the fleeting, trivial pleasure of a home and the like while constantly watching deluded beings die in vain?",
+      "gloss": [
+        {
+          "sa": "कः",
+          "en": "which"
+        },
+        {
+          "sa": "नाम",
+          "en": "indeed"
+        },
+        {
+          "sa": "लोके",
+          "en": "in the world"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "person"
+        },
+        {
+          "sa": "विवेकी",
+          "en": "discerning"
+        },
+        {
+          "sa": "विनश्वरे",
+          "en": "in what perishes"
+        },
+        {
+          "sa": "तुच्छ-सुखे",
+          "en": "in trivial pleasure"
+        },
+        {
+          "sa": "गृह-आदौ",
+          "en": "in a home and the like"
+        },
+        {
+          "sa": "कुर्यात्",
+          "en": "would take"
+        },
+        {
+          "sa": "रतिम्",
+          "en": "delight"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "constantly"
+        },
+        {
+          "sa": "अवेक्षमाणः",
+          "en": "while observing"
+        },
+        {
+          "sa": "वृथा एव",
+          "en": "in vain"
+        },
+        {
+          "sa": "मोहान्",
+          "en": "deluded [beings]"
+        },
+        {
+          "sa": "म्रियमाण-जन्तून्",
+          "en": "beings dying"
+        }
+      ],
       "sourceNumbers": [
         40
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ko nāma loke puruṣo vivekī\nvinaśvare tuccha-sukhe gṛhādau|\nkuryād ratiṃ nityam avekṣamāṇo\nvṛthaiva mohān mriyamāṇa-jantūn||"
+      "iast": "ko nāma loke puruṣo vivekī\nvinaśvare tuccha-sukhe gṛhādau|\nkuryād ratiṃ nityam avekṣamāṇo\nvṛthaiva mohān mriyamāṇa-jantūn||",
+      "editionTranslation": "Which person who is endowed with discrimination would ever seek happiness in such transient objects as one’s abode when one sees day by day how those who are deluded and who pin their faith in these low pleasures pass away and cease to be?",
+      "sourceNote": "The verse reads मोहान्; the edition’s Sanskrit prose order has मोहात्. This reader preserves the verse and translates मोहान् as “deluded beings.”"
     },
     {
       "id": "svsss-1-0041",
@@ -2378,27 +2730,156 @@
       "number": "41",
       "label": "Verse 41",
       "deva": "सुखं किम् अस्त्यत्र विचार्यमाणे\nगृहेऽपि वा योषिति वा पदार्थे।\nमायातमोऽन्धीकृत-चक्षुषो ये\nत एव मुह्यन्ति विवेक-शून्याः॥",
-      "translation": "What pleasure is there in the possession of a home or of the company of a young woman? It is only those who are devoid of discrimination, and who become blinded on account of ignorance become deluded.",
-      "gloss": [],
+      "translation": "What pleasure is there in a home, a woman, or any object when examined? Only those whose sight is blinded by māyā’s darkness, and who lack discernment, are deluded.",
+      "gloss": [
+        {
+          "sa": "सुखम्",
+          "en": "pleasure"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is there"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "विचार्यमाणे",
+          "en": "when examined"
+        },
+        {
+          "sa": "गृहे",
+          "en": "in a home"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "योषिति",
+          "en": "in a woman"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "पदार्थे",
+          "en": "in an object"
+        },
+        {
+          "sa": "माया-तमः",
+          "en": "the darkness of māyā"
+        },
+        {
+          "sa": "अन्धीकृत",
+          "en": "blinded"
+        },
+        {
+          "sa": "चक्षुषः",
+          "en": "those whose sight"
+        },
+        {
+          "sa": "ये",
+          "en": "who"
+        },
+        {
+          "sa": "ते",
+          "en": "they"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "मुह्यन्ति",
+          "en": "are deluded"
+        },
+        {
+          "sa": "विवेक-शून्याः",
+          "en": "devoid of discernment"
+        }
+      ],
       "sourceNumbers": [
         41
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sukhaṃ kim astyatra vicāryamāṇe\ngṛhe’pi vā yoṣiti vā padārthe|\nmāyātamo’ndhīkṛta-cakṣuṣo ye\nta eva muhyanti viveka-śūnyāḥ||"
+      "iast": "sukhaṃ kim astyatra vicāryamāṇe\ngṛhe’pi vā yoṣiti vā padārthe|\nmāyātamo’ndhīkṛta-cakṣuṣo ye\nta eva muhyanti viveka-śūnyāḥ||",
+      "editionTranslation": "What pleasure is there in the possession of a home or of the company of a young woman? It is only those who are devoid of discrimination, and who become blinded on account of ignorance become deluded."
     },
     {
       "id": "svsss-1-0042",
       "chapter": 1,
       "number": "42",
       "label": "Verse 42",
-      "deva": "सर्वम् उदुम्बर-फलोपमं भोग्यम्।\nअज्ञानाम् उपभोग्यं न तु\nतज्-ज्ञानां योषिति वा पदार्थे॥",
-      "translation": "The wild fig may seem attractive to look at, but it is only so long as it is not examined closely. It is the same with all other objects of enjoyment; they too seem attractive to the ignorant, though the wise know that they are worthless.",
-      "gloss": [],
+      "deva": "अविचारित-रमणीयं\nसर्वम् उदुम्बर-फलोपमं भोग्यम्।\nअज्ञानाम् उपभोग्यं न तु\nतज्-ज्ञानां योषिति वा पदार्थे॥",
+      "translation": "Everything enjoyable is attractive when unexamined, like an udumbara fruit; the ignorant enjoy it, but the wise do not, whether it is a woman or another object.",
+      "gloss": [
+        {
+          "sa": "अविचारित-रमणीयम्",
+          "en": "attractive when unexamined"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        },
+        {
+          "sa": "उदुम्बर-फल-उपमम्",
+          "en": "like an udumbara fruit"
+        },
+        {
+          "sa": "भोग्यम्",
+          "en": "an object of enjoyment"
+        },
+        {
+          "sa": "अज्ञानाम्",
+          "en": "for the ignorant"
+        },
+        {
+          "sa": "उपभोग्यम्",
+          "en": "to be enjoyed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "तत्-ज्ञानाम्",
+          "en": "for those who know that"
+        },
+        {
+          "sa": "योषिति",
+          "en": "in a woman"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "पदार्थे",
+          "en": "in another object"
+        }
+      ],
       "sourceNumbers": [
         42
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sarvam udumbara-phalopamaṃ bhogyam|\najñānām upabhogyaṃ na tu\ntaj-jñānāṃ yoṣiti vā padārthe||"
+      "iast": "avicārita-ramaṇīyaṃ\nsarvam udumbara-phalopamaṃ bhogyam|\najñānām upabhogyaṃ na tu\ntaj-jñānāṃ yoṣiti vā padārthe||",
+      "editionTranslation": "The wild fig may seem attractive to look at, but it is only so long as it is not examined closely. It is the same with all other objects of enjoyment; they too seem attractive to the ignorant, though the wise know that they are worthless.",
+      "sourceNote": "Restored the opening pāda अविचारित-रमणीयम् from the cited edition, which was missing from the reader text."
     },
     {
       "id": "svsss-1-0043",
@@ -2406,28 +2887,237 @@
       "number": "43",
       "label": "Verse 43",
       "deva": "गतेऽपि तोये सुषिरं कुलीरो\nहातुं ह्यशक्तो म्रियते विमोहात्।\nयथा तथा गेह-सुखानुषक्तो\nविनाशम् आयाति नरो भ्रमेण॥",
-      "translation": "Like the crab that remains in its hole after the water in it has all evaporated, and out of a false sense of attachment perishes, the man who is drawn by the pleasures of the home lingers there and meets his end.",
-      "gloss": [],
+      "translation": "Just as a crab dies from delusion, unable to leave its hole even after the water is gone, so a person attached to the pleasures of home reaches destruction through error.",
+      "gloss": [
+        {
+          "sa": "गते",
+          "en": "when gone"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "तोये",
+          "en": "the water"
+        },
+        {
+          "sa": "सुषिरम्",
+          "en": "the hole"
+        },
+        {
+          "sa": "कुलीरः",
+          "en": "the crab"
+        },
+        {
+          "sa": "हातुम्",
+          "en": "to leave"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अशक्तः",
+          "en": "unable"
+        },
+        {
+          "sa": "म्रियते",
+          "en": "dies"
+        },
+        {
+          "sa": "विमोहात्",
+          "en": "from delusion"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "गेह-सुख-अनुषक्तः",
+          "en": "attached to the pleasures of home"
+        },
+        {
+          "sa": "विनाशम्",
+          "en": "destruction"
+        },
+        {
+          "sa": "आयाति",
+          "en": "reaches"
+        },
+        {
+          "sa": "नरः",
+          "en": "a person"
+        },
+        {
+          "sa": "भ्रमेण",
+          "en": "through error"
+        }
+      ],
       "sourceNumbers": [
         43
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "gate’pi toye suṣiraṃ kulīro\nhātuṃ hyaśakto mriyate vimohāt|\nyathā tathā geha-sukhānuṣakto\nvināśam āyāti naro bhrameṇa||"
+      "iast": "gate’pi toye suṣiraṃ kulīro\nhātuṃ hyaśakto mriyate vimohāt|\nyathā tathā geha-sukhānuṣakto\nvināśam āyāti naro bhrameṇa||",
+      "editionTranslation": "Like the crab that remains in its hole after the water in it has all evaporated, and out of a false sense of attachment perishes, the man who is drawn by the pleasures of the home lingers there and meets his end."
     },
     {
       "id": "svsss-1-0044",
       "chapter": 1,
       "number": "44–45",
       "label": "Verses 44–45",
-      "deva": "कोशक्रिमिस् तन्तुभिर् आत्म-देहम्\nआवेष्ट्य चावेष्ट्य च गुप्तिम् इच्छन्।\nस्वयं विनिर्गन्तुम् अशक्त एव संस्\nततस् तद्-अन्ते म्रियते च लग्नः॥\nयथा तथा पुत्र-कलत्र-मित्र-\nस्नेहानुबन्धैर् ग्रथितो गृहस्थः।\nकदापि वा तान् परिमुच्य गेहाद्\nगन्तुं न शक्तो म्रियते मुधैव॥",
-      "translation": "The silk worm draws the filament from its body, and wraps itself again and again in order to protect itself. Unable to come out of it, it lingers there and dies. The householder also fares in the same way. He becomes bound by the ties of affection, whether it is for his family, or his friends and relations. He then becomes unable to give them up, and perishes in vain.",
-      "gloss": [],
+      "deva": "कोशकृमिः तन्तुभिर् आत्म-देहम्\nआवेष्ट्य चावेष्ट्य च गुप्तिम् इच्छन्।\nस्वयं विनिर्गन्तुम् अशक्त एव संस्\nततस् तद्-अन्ते म्रियते च लग्नः॥\nयथा तथा पुत्र-कलत्र-मित्र-\nस्नेहानुबन्धैर् ग्रथितो गृहस्थः।\nकदापि वा तान् परिमुच्य गेहाद्\nगन्तुं न शक्तो म्रियते मुधैव॥",
+      "translation": "Just as a silk worm wraps its own body in threads again and again, seeking protection, but cannot emerge and dies trapped, so a householder bound by affection for sons, wife, and friends cannot leave them and go from home; he dies in vain.",
+      "gloss": [
+        {
+          "sa": "कोश-कृमिः",
+          "en": "the silk worm"
+        },
+        {
+          "sa": "तन्तुभिः",
+          "en": "with threads"
+        },
+        {
+          "sa": "आत्म-देहम्",
+          "en": "its own body"
+        },
+        {
+          "sa": "आवेष्ट्य",
+          "en": "having wrapped"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आवेष्ट्य",
+          "en": "having wrapped"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "गुप्तिम्",
+          "en": "protection"
+        },
+        {
+          "sa": "इच्छन्",
+          "en": "seeking"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "विनिर्गन्तुम्",
+          "en": "to emerge"
+        },
+        {
+          "sa": "अशक्तः",
+          "en": "unable"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "तद्-अन्ते",
+          "en": "at the end of that"
+        },
+        {
+          "sa": "म्रियते",
+          "en": "dies"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "लग्नः",
+          "en": "trapped"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "पुत्र-कलत्र-मित्र",
+          "en": "sons, wife, and friends"
+        },
+        {
+          "sa": "स्नेह-अनुबन्धैः",
+          "en": "by ties of affection"
+        },
+        {
+          "sa": "ग्रथितः",
+          "en": "bound"
+        },
+        {
+          "sa": "गृहस्थः",
+          "en": "a householder"
+        },
+        {
+          "sa": "कदापि वा",
+          "en": "ever"
+        },
+        {
+          "sa": "तान्",
+          "en": "them"
+        },
+        {
+          "sa": "परिमुच्य",
+          "en": "leaving"
+        },
+        {
+          "sa": "गेहात्",
+          "en": "from the home"
+        },
+        {
+          "sa": "गन्तुम्",
+          "en": "to go"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शक्तः",
+          "en": "able"
+        },
+        {
+          "sa": "म्रियते",
+          "en": "dies"
+        },
+        {
+          "sa": "मुधा एव",
+          "en": "in vain"
+        }
+      ],
       "sourceNumbers": [
         44,
         45
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kośakrimis tantubhir ātma-deham\nāveṣṭya cāveṣṭya ca guptim icchan|\nsvayaṃ vinirgantum aśakta eva saṃs\ntatas tad-ante mriyate ca lagnaḥ||\nyathā tathā putra-kalatra-mitra-\nsnehānubandhair grathito gṛhasthaḥ|\nkadāpi vā tān parimucya gehād\ngantuṃ na śakto mriyate mudhaiva||"
+      "iast": "kośakṛmiḥ tantubhir ātma-deham\nāveṣṭya cāveṣṭya ca guptim icchan|\nsvayaṃ vinirgantum aśakta eva saṃs\ntatas tad-ante mriyate ca lagnaḥ||\nyathā tathā putra-kalatra-mitra-\nsnehānubandhair grathito gṛhasthaḥ|\nkadāpi vā tān parimucya gehād\ngantuṃ na śakto mriyate mudhaiva||",
+      "editionTranslation": "The silk worm draws the filament from its body, and wraps itself again and again in order to protect itself. Unable to come out of it, it lingers there and dies. The householder also fares in the same way. He becomes bound by the ties of affection, whether it is for his family, or his friends and relations. He then becomes unable to give them up, and perishes in vain.",
+      "sourceNote": "Normalized कोशक्रिमिस् to कोशकृमिः, the standard Sanskrit form for “silk worm,” consistent with the edition’s prose order."
     },
     {
       "id": "svsss-1-0046",
