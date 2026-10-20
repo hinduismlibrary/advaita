@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 176 passages; 55 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 177 passages; 54 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 149 passages; 82 passages still need glosses. Full Devanāgarī token-by-token gloss added for passage 1.31, including its cited verse. Full Devanāgarī token-by-token gloss added for passage 2.8. Full Devanāgarī token-by-token gloss added for passage 2.25. Full Devanāgarī token-by-token gloss added for passage 2.35. Full Devanāgarī token-by-token gloss added for passage 2.68. Full Devanāgarī token-by-token gloss added for passage 2.51. Full Devanāgarī token-by-token gloss added for passage 2.115. Full Devanāgarī token-by-token gloss added for passage 2.41. Full Devanāgarī token-by-token gloss added for passage 2.46. Full Devanāgarī token-by-token gloss added for passage 2.53. Full Devanāgarī token-by-token gloss added for passage 2.69. Full Devanāgarī token-by-token gloss added for passage 2.70. Full Devanāgarī token-by-token gloss added for passage 2.2. Full Devanāgarī token-by-token gloss added for passage 2.5. Full Devanāgarī token-by-token gloss added for passage 4.3. Full Devanāgarī token-by-token gloss added for passage 1.20. Full Devanāgarī token-by-token gloss added for passage 2.34. Full Devanāgarī token-by-token gloss added for passage 1.18. Full Devanāgarī token-by-token gloss added for passage 1.32. Full Devanāgarī token-by-token gloss added for passage 2.56. Full Devanāgarī token-by-token gloss added for passage 2.65. Full Devanāgarī token-by-token gloss added for passage 2.174. Full Devanāgarī token-by-token gloss added for passage 4.5. Full Devanāgarī token-by-token gloss added for passage 1.10. Full Devanāgarī token-by-token gloss added for passage 1.33. Full Devanāgarī token-by-token gloss added for passage 2.43. Full Devanāgarī token-by-token gloss added for passage 2.16."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 149 passages; 82 passages still need glosses. Full Devanāgarī token-by-token gloss added for passage 1.31, including its cited verse. Full Devanāgarī token-by-token gloss added for passage 2.8. Full Devanāgarī token-by-token gloss added for passage 2.25. Full Devanāgarī token-by-token gloss added for passage 2.35. Full Devanāgarī token-by-token gloss added for passage 2.68. Full Devanāgarī token-by-token gloss added for passage 2.51. Full Devanāgarī token-by-token gloss added for passage 2.115. Full Devanāgarī token-by-token gloss added for passage 2.41. Full Devanāgarī token-by-token gloss added for passage 2.46. Full Devanāgarī token-by-token gloss added for passage 2.53. Full Devanāgarī token-by-token gloss added for passage 2.69. Full Devanāgarī token-by-token gloss added for passage 2.70. Full Devanāgarī token-by-token gloss added for passage 2.2. Full Devanāgarī token-by-token gloss added for passage 2.5. Full Devanāgarī token-by-token gloss added for passage 4.3. Full Devanāgarī token-by-token gloss added for passage 1.20. Full Devanāgarī token-by-token gloss added for passage 2.34. Full Devanāgarī token-by-token gloss added for passage 1.18. Full Devanāgarī token-by-token gloss added for passage 1.32. Full Devanāgarī token-by-token gloss added for passage 2.56. Full Devanāgarī token-by-token gloss added for passage 2.65. Full Devanāgarī token-by-token gloss added for passage 2.174. Full Devanāgarī token-by-token gloss added for passage 4.5. Full Devanāgarī token-by-token gloss added for passage 1.10. Full Devanāgarī token-by-token gloss added for passage 1.33. Full Devanāgarī token-by-token gloss added for passage 2.43. Full Devanāgarī token-by-token gloss added for passage 2.16. Full Devanāgarī token-by-token gloss added for passage 1.4; the editorial note within the source field is not treated as Sanskrit gloss material."
   },
   "units": [
     {
@@ -128,7 +128,388 @@
       "deva": "यतश्च विशेषप्रत्यस्तमुखेन तन्निरूपणम्, अतो ऽन्यैर्ब्रह्मविद्याभियुक्तैः सामान्यरूपं ब्रह्म निरूपितम् --- ‘स एव महानज आत्मा सत्तालक्षणःऽ; तथा ‘सत्तैव सर्वभेदयोनिः प्रकृतिः पराऽ; इति । यथा सुवर्णतत्त्वं कटकाङ्गुलीयादिविशेषोपसंहारेण निरूप्यमाणं तत्सामान्यमिति । ये वा --- [क्क्स्_38] ‘निर्विशेषं न सामान्यं भवेच्छशविषाणवत्ऽइत्यभावमाहुः, तान् प्रत्युच्यते --- संहृताखिलभेद इति । यदि तावदसामान्यत्वं साध्यते सिद्धसाधनम् । विशेषाणामभावे केषां तत्सामन्यम्? सामन्यं तूक्तं ब्रह्मवादिभिर्विशेषप्रत्यस्तमुखेन निरूपणादुपचारतः । अथाभाव एव साध्यः, विशेषैरेवास्य निर्विशेषैर्व्यभिचार इति । [इति श्रीमन्मण्डनमिश्रविरचितायां ब्रह्मसिद्धौ ब्रह्मकाण्डः समाप्तः । -- एदितिओन्; ओरिगिनल्ल्य् ब्रह्म- अन्द् तर्क-काण्डस् wएरे तोगेथेर्; वचस्पति दोएस् नोत् क्नोw थिस् दिविसिओन्.]\n\n[क्क्स्_39]\n\n[ ॥ तर्ककाण्डः ॥ ]\n\nननु प्रत्यक्षादिभिर्व्यावृत्तानां भावस्वभावानामवगमान्नैकस्मिन्नद्वये शब्दः प्रमाणम्, प्रत्यक्षादिविरोधात्, ग्रावप्लवनाद्यर्थवचोवत् । उच्यते ---\n\nआहुर्विधातृ प्रत्यक्षं न निषेद्धृ विपश्चितः । नैकत्व आगमस्तेन प्रत्यक्षेण विरुध्यते",
       "iast": "yataśca viśeṣapratyastamukhena tannirūpaṇam, ato 'nyairbrahmavidyābhiyuktaiḥ sāmānyarūpaṃ brahma nirūpitam --- ‘sa eva mahānaja ātmā sattālakṣaṇaḥ'; tathā ‘sattaiva sarvabhedayoniḥ prakṛtiḥ parā'; iti / yathā suvarṇatattvaṃ kaṭakāṅgulīyādiviśeṣopasaṃhāreṇa nirūpyamāṇaṃ tatsāmānyamiti / ye vā --- [kks_38] ‘nirviśeṣaṃ na sāmānyaṃ bhavecchaśaviṣāṇavat'ityabhāvamāhuḥ, tān pratyucyate --- saṃhṛtākhilabheda iti / yadi tāvadasāmānyatvaṃ sādhyate siddhasādhanam / viśeṣāṇāmabhāve keṣāṃ tatsāmanyam? sāmanyaṃ tūktaṃ brahmavādibhirviśeṣapratyastamukhena nirūpaṇādupacārataḥ / athābhāva eva sādhyaḥ, viśeṣairevāsya nirviśeṣairvyabhicāra iti /\n\n[iti śrīmanmaṇḍanamiśraviracitāyāṃ brahmasiddhau brahmakāṇḍaḥ samāptaḥ / -- edition; originally brahma- and tarka-kāṇḍas were together; vacaspati does not know this division.]\n\n[kks_39]\n\n[//tarkakāṇḍaḥ //]\n\nnanu pratyakṣādibhirvyāvṛttānāṃ bhāvasvabhāvānāmavagamānnaikasminnadvaye śabdaḥ pramāṇam, pratyakṣādivirodhāt, grāvaplavanādyarthavacovat / ucyate ---\n\nāhurvidhātṛ pratyakṣaṃ na niṣeddhṛ vipaścitaḥ /\nnaikatva āgamastena pratyakṣeṇa virudhyate",
       "translation": "Since Brahman is described by turning away from every particular feature, other thinkers devoted to the knowledge of Brahman have described it in a general form: “That great, unborn Self is existence itself,” and “Existence alone, the supreme source of nature, is the source of every distinction.” This is like describing the nature of gold, after setting aside the particular forms of bracelets, rings, and the like, as their common substance.\n\nThis also answers those who say, “What has no distinguishing features cannot be a general property; it would be like a hare’s horn,” and thus assert sheer nonexistence. Brahman is said to be “that in which all distinctions have been gathered up.” If the claim to be established is simply that it is not a general property, that is already established: without particular things, what could it be general to? But those who speak of Brahman do describe it figuratively as a general reality, by turning away from particular features. If instead sheer nonexistence is what is to be established, then it is contradicted by the particular things themselves, which are not nonexistent.\n\n[Here the Brahma section of the Brahmasiddhi, composed by the revered Maṇḍana Miśra, concludes. The editor notes: the Brahma and Logic sections were originally together; Vācaspati does not appear to know of this division.]\n\n## Logic Section\n\nSomeone may object: when real things are known as excluded by perception and other means of knowledge, words cannot be a means of knowledge about a single nondual reality, since this conflicts with perception, like a statement about stones floating. We reply:\n\n“The learned say that perception affirms, not denies. Therefore scripture does not conflict with perception when it teaches unity.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "यतः",
+          "en": "since"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विशेष-प्रत्यस्त-मुखेन",
+          "en": "by turning away from particular features"
+        },
+        {
+          "sa": "तत्-निरूपणम्",
+          "en": "its description"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अन्यैः",
+          "en": "by other"
+        },
+        {
+          "sa": "ब्रह्म-विद्या-अभियुक्तैः",
+          "en": "thinkers devoted to knowledge of Brahman"
+        },
+        {
+          "sa": "सामान्य-रूपम्",
+          "en": "in a general form"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "निरूपितम्",
+          "en": "has been described"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "महान्",
+          "en": "great"
+        },
+        {
+          "sa": "अजः",
+          "en": "unborn"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "सत्ता-लक्षणः",
+          "en": "characterized by existence"
+        },
+        {
+          "sa": "तथा",
+          "en": "and"
+        },
+        {
+          "sa": "सत्ता",
+          "en": "existence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "सर्व-भेद-योनिḥ",
+          "en": "the source of every distinction"
+        },
+        {
+          "sa": "प्रकृतिः",
+          "en": "nature"
+        },
+        {
+          "sa": "परा",
+          "en": "supreme"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "सुवर्ण-तत्त्वम्",
+          "en": "the nature of gold"
+        },
+        {
+          "sa": "कटक-अङ्गुलीय-आदि-विशेष-उपसंहारेण",
+          "en": "by setting aside particular forms such as bracelets and rings"
+        },
+        {
+          "sa": "निरूप्यमाणम्",
+          "en": "being described"
+        },
+        {
+          "sa": "तत्-सामान्यम्",
+          "en": "as their common substance"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "निर्विशेषम्",
+          "en": "what has no distinguishing feature"
+        },
+        {
+          "sa": "न",
+          "en": "cannot"
+        },
+        {
+          "sa": "सामान्यम्",
+          "en": "be a general property"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "be"
+        },
+        {
+          "sa": "शश-विषाण-वत्",
+          "en": "like a hare's horn"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अभावम्",
+          "en": "nonexistence"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they assert"
+        },
+        {
+          "sa": "तान्",
+          "en": "to them"
+        },
+        {
+          "sa": "प्रति",
+          "en": "in reply"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is said"
+        },
+        {
+          "sa": "संहृत-अखिल-भेदः",
+          "en": "that in which all distinctions have been gathered away"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "तावत्",
+          "en": "for the moment"
+        },
+        {
+          "sa": "असामान्यत्वम्",
+          "en": "not being a general property"
+        },
+        {
+          "sa": "साध्यते",
+          "en": "is to be established"
+        },
+        {
+          "sa": "सिद्ध-साधनम्",
+          "en": "that is already established"
+        },
+        {
+          "sa": "विशेषाणाम्",
+          "en": "of particular things"
+        },
+        {
+          "sa": "अभावे",
+          "en": "in the absence"
+        },
+        {
+          "sa": "केषाम्",
+          "en": "of what things"
+        },
+        {
+          "sa": "तत्-सामान्यम्",
+          "en": "would that be a general property"
+        },
+        {
+          "sa": "सामान्यम्",
+          "en": "a general reality"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "is described"
+        },
+        {
+          "sa": "ब्रह्म-वादिभिः",
+          "en": "by those who teach Brahman"
+        },
+        {
+          "sa": "विशेष-प्रत्यस्त-मुखेन",
+          "en": "by turning away from particular features"
+        },
+        {
+          "sa": "निरूपणात्",
+          "en": "because it is described"
+        },
+        {
+          "sa": "उपचारतः",
+          "en": "figuratively"
+        },
+        {
+          "sa": "अथ",
+          "en": "but if"
+        },
+        {
+          "sa": "अभावः",
+          "en": "nonexistence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "साध्यः",
+          "en": "is to be established"
+        },
+        {
+          "sa": "विशेषैः",
+          "en": "by particular things"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "निर्विशेषैः",
+          "en": "without distinguishing features"
+        },
+        {
+          "sa": "व्यभिचारः",
+          "en": "there is contradiction"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ननु",
+          "en": "one might object"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदिभिः",
+          "en": "by perception and the other means of knowledge"
+        },
+        {
+          "sa": "व्यावृत्तानाम्",
+          "en": "distinguished from one another"
+        },
+        {
+          "sa": "भाव-स्वभावानाम्",
+          "en": "of the natures of existing things"
+        },
+        {
+          "sa": "अवगमात्",
+          "en": "because they are understood"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एकस्मिन्",
+          "en": "about one"
+        },
+        {
+          "sa": "अद्वये",
+          "en": "nondual reality"
+        },
+        {
+          "sa": "शब्दः",
+          "en": "words"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a means of knowledge"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदि-विरोधात्",
+          "en": "because it conflicts with perception and the like"
+        },
+        {
+          "sa": "ग्राव-प्लवन-आदि-अर्थ-वचः-वत्",
+          "en": "like a statement about stones floating"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the reply is"
+        },
+        {
+          "sa": "आहुः",
+          "en": "the learned say"
+        },
+        {
+          "sa": "विधातृ",
+          "en": "affirming"
+        },
+        {
+          "sa": "प्रत्यक्षम्",
+          "en": "perception"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "निषेद्धृ",
+          "en": "denying"
+        },
+        {
+          "sa": "विपश्चितः",
+          "en": "the learned"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एकत्वे",
+          "en": "when teaching unity"
+        },
+        {
+          "sa": "आगमः",
+          "en": "scripture"
+        },
+        {
+          "sa": "तेन",
+          "en": "by that"
+        },
+        {
+          "sa": "प्रत्यक्षेण",
+          "en": "perception"
+        },
+        {
+          "sa": "विरुध्यते",
+          "en": "is contradicted"
+        }
+      ],
       "sourceNumbers": [
         "mbs_1.4"
       ]
@@ -26136,6 +26517,7 @@
     "completeUnits": [],
     "completeVerses": [
       "1.1",
+      "1.4",
       "1.10",
       "1.17",
       "1.18",
@@ -26312,7 +26694,7 @@
       "4.10",
       "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 176 of 231 source-marked passages; 55 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 177 of 231 source-marked passages; 54 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 176 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 177 passages listed in wordGlossCoverage."
 }
