@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 415
+      "end": 420
     },
-    "note": "Source verses 1–415 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 416 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–420 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 421 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -32593,61 +32593,311 @@
       "id": "vivekachudamani-416",
       "number": "416",
       "label": "Verse 416",
-      "deva": "प्रारब्धसूत्रग्रथितं शरीरं\nप्रयातु वा तिष्ठतु गोर् इव स्रक् ।\nन तत्पुनः पश्यति तत्त्ववेत्ता-\n(आ)नन्दात्मनि ब्रह्मणि लीनवृत्तिः ॥",
-      "iast": "prārabdhasūtragrathitaṃ śarīraṃ\nprayātu vā tiṣṭhatu gor iva srak |\nna tatpunaḥ paśyati tattvavettā-\n(ā)nandātmani brahmaṇi līnavṛttiḥ ||",
-      "translation": "The knower of Truth does no more care whether this body, spun out by the threads of Prarabdha work, falls or remains – like the garland on a cow – for his mind-functions are at rest in the Brahman, the Essence of Bliss.",
-      "gloss": [],
+      "deva": "प्रारब्धसूत्रग्रथितं शरीरं\nप्रयातु वा तिष्ठतु गोरिव स्रक् ।\nन तत् पुनः पश्यति तत्त्ववेत्ता आनन्दात्मनि\nब्रह्मणि लीनवृत्तिः ॥",
+      "iast": "prārabdha-sūtra-grathitaṃ śarīraṃ\nprayātu vā tiṣṭhatu gor iva srak |\nna tat punaḥ paśyati tattva-vettā ānanda-ātmani\nbrahmaṇi līna-vṛttiḥ ||",
+      "translation": "The body, woven from the threads of prārabdha, may depart or remain, like a garland on a cow. The knower of Truth, whose mind is absorbed in Brahman, the Self of Bliss, no longer regards it.",
+      "gloss": [
+        {
+          "sa": "प्रारब्ध-सूत्र-ग्रथितम्",
+          "en": "woven from the threads of already-begun karma"
+        },
+        {
+          "sa": "शरीरम्",
+          "en": "the body"
+        },
+        {
+          "sa": "प्रयातु",
+          "en": "let it depart"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "तिष्ठतु",
+          "en": "let it remain"
+        },
+        {
+          "sa": "गोः",
+          "en": "of a cow"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "स्रक्",
+          "en": "a garland"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "पश्यति",
+          "en": "regards; sees"
+        },
+        {
+          "sa": "तत्त्व-वेत्ता",
+          "en": "the knower of Truth"
+        },
+        {
+          "sa": "आनन्द-आत्मनि",
+          "en": "in the Self of Bliss"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "लीन-वृत्तिः",
+          "en": "whose mental activity is absorbed"
+        }
+      ],
       "sourceNumbers": [
         416
-      ]
+      ],
+      "editionTranslation": "The knower of Truth does no more care whether this body, spun out by the threads of Prarabdha work, falls or remains – like the garland on a cow – for his mind-functions are at rest in the Brahman, the Essence of Bliss."
     },
     {
       "id": "vivekachudamani-417",
       "number": "417",
       "label": "Verse 417",
-      "deva": "अखण्डानन्दमात्मानं विज्ञाय स्वस्वरूपतः ।\nकिमिच्छन् कस्य वा हेतोर् देहं पुष्णाति तत्त्ववित् ॥",
-      "iast": "akhaṇḍānandamātmānaṃ vijñāya svasvarūpataḥ |\nkimicchan kasya vā hetor dehaṃ puṣṇāti tattvavit ||",
-      "translation": "Realising the Atman, the Infinite Bliss, as his very Self, with what object, or for whom, should the knower of Truth cherish the body.",
-      "gloss": [],
+      "deva": "अखण्डानन्दमात्मानं विज्ञाय स्वस्वरूपतः ।\nकिमिच्छन् कस्य वा हेतुर्देहं पुष्णाति तत्त्ववित् ॥",
+      "iast": "akhaṇḍānandam ātmānaṃ vijñāya sva-svarūpataḥ |\nkim icchan kasya vā hetor dehaṃ puṣṇāti tattvavit ||",
+      "translation": "Having known the Self as his own nature, undivided Bliss, what could the knower of Truth desire, and for whose sake would he nourish the body?",
+      "gloss": [
+        {
+          "sa": "अखण्ड-आनन्दम्",
+          "en": "undivided bliss"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "विज्ञाय",
+          "en": "having known"
+        },
+        {
+          "sa": "स्व-स्वरूपतः",
+          "en": "as one's own nature"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "इच्छन्",
+          "en": "desiring"
+        },
+        {
+          "sa": "कस्य वा",
+          "en": "or for whose"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "sake; reason"
+        },
+        {
+          "sa": "देहम्",
+          "en": "the body"
+        },
+        {
+          "sa": "पुष्णाति",
+          "en": "nourishes; maintains"
+        },
+        {
+          "sa": "तत्त्व-वित्",
+          "en": "the knower of Truth"
+        }
+      ],
       "sourceNumbers": [
         417
-      ]
+      ],
+      "editionTranslation": "Realising the Atman, the Infinite Bliss, as his very Self, with what object, or for whom, should the knower of Truth cherish the body."
     },
     {
       "id": "vivekachudamani-418",
       "number": "418",
       "label": "Verse 418",
       "deva": "संसिद्धस्य फलं त्वेतज्जीवन्मुक्तस्य योगिनः ।\nबहिरन्तः सदानन्दरसास्वादनम् आत्मनि ॥",
-      "iast": "saṃsiddhasya phalaṃ tvetajjīvanmuktasya yoginaḥ |\nbahirantaḥ sadānandarasāsvādanam ātmani ||",
-      "translation": "The Yogi who has attained perfection and is liberated-in-life gets this as result – he enjoys eternal Bliss in his mind, internally as well as externally.",
-      "gloss": [],
+      "iast": "saṃsiddhasya phalaṃ tu etaj jīvan-muktasya yoginaḥ |\nbahir-antaḥ sad-ānanda-rasa-āsvādanam ātmani ||",
+      "translation": "For the perfected yogi who is liberated while living, this is the fruit: tasting within and without the ever-present essence of bliss in the Self.",
+      "gloss": [
+        {
+          "sa": "संसिद्धस्य",
+          "en": "of the perfected one"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the fruit"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "जीवन्मुक्तस्य",
+          "en": "of one liberated while living"
+        },
+        {
+          "sa": "योगिनः",
+          "en": "of the yogi"
+        },
+        {
+          "sa": "बहिः",
+          "en": "outside; externally"
+        },
+        {
+          "sa": "अन्तः",
+          "en": "inside; internally"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "आनन्द-रस-आस्वादनम्",
+          "en": "tasting the essence of bliss"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        }
+      ],
       "sourceNumbers": [
         418
-      ]
+      ],
+      "editionTranslation": "The Yogi who has attained perfection and is liberated-in-life gets this as result – he enjoys eternal Bliss in his mind, internally as well as externally."
     },
     {
       "id": "vivekachudamani-419",
       "number": "419",
       "label": "Verse 419",
       "deva": "वैराग्यस्य फलं बोधो बोधस्योपरतिः फलम् ।\nस्वानन्दानुभवाच्छान्तिरेषैवोपरतेः फलम् ॥",
-      "iast": "vairāgyasya phalaṃ bodho bodhasyoparatiḥ phalam |\nsvānandānubhavācchāntireṣaivoparateḥ phalam ||",
-      "translation": "The result of dispassion is knowledge, that of Knowledge is withdrawal from sense-pleasures, which leads to the experience of the Bliss of the Self, whence follows Peace.",
-      "gloss": [],
+      "iast": "vairāgyasya phalaṃ bodho bodhasyoparatiḥ phalam |\nsvānandānubhavāc chāntir eṣaivoparateḥ phalam ||",
+      "translation": "The fruit of dispassion is knowledge; the fruit of knowledge is withdrawal. Peace comes from experiencing one's own bliss: that alone is the fruit of withdrawal.",
+      "gloss": [
+        {
+          "sa": "वैराग्यस्य",
+          "en": "of dispassion"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the fruit"
+        },
+        {
+          "sa": "बोधः",
+          "en": "knowledge"
+        },
+        {
+          "sa": "बोधस्य",
+          "en": "of knowledge"
+        },
+        {
+          "sa": "उपरतिः",
+          "en": "withdrawal; cessation"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the fruit"
+        },
+        {
+          "sa": "स्व-आनन्द-अनुभवात्",
+          "en": "from experiencing one's own bliss"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "peace"
+        },
+        {
+          "sa": "एषा एव",
+          "en": "this alone"
+        },
+        {
+          "sa": "उपरतेः",
+          "en": "of withdrawal"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the fruit"
+        }
+      ],
       "sourceNumbers": [
         419
-      ]
+      ],
+      "editionTranslation": "The result of dispassion is knowledge, that of Knowledge is withdrawal from sense-pleasures, which leads to the experience of the Bliss of the Self, whence follows Peace."
     },
     {
       "id": "vivekachudamani-420",
       "number": "420",
       "label": "Verse 420",
-      "deva": "यद्य् उत्तरोत्तराभावः पूर्वपूर्वन्तु निष्फलम् ।\nनिवृत्तिः परमा तृप्तिरानन्दोऽनुपमः स्वतः ॥",
-      "iast": "yady uttarottarābhāvaḥ pūrvapūrvantu niṣphalam |\nnivṛttiḥ paramā tṛptirānando'nupamaḥ svataḥ ||",
-      "translation": "If there is an absence of the succeeding stages, the preceding ones are futile. (When the series is perfect) the cessation of the objective world, extreme satisfaction, and matchless bliss follow as a matter of course.",
-      "gloss": [],
+      "deva": "यद्युत्तरोत्तराभावः पूर्वपूर्वं तु निष्फलम् ।\nनिवृत्तिः परमा तृप्तिरानन्दोऽनुपमः स्वतः ॥",
+      "iast": "yady uttarottarābhāvaḥ pūrva-pūrvaṃ tu niṣphalam |\nnivṛttiḥ paramā tṛptir ānando 'nupamaḥ svataḥ ||",
+      "translation": "If each later stage is absent, each earlier stage is fruitless. Withdrawal, supreme contentment, and incomparable bliss come naturally.",
+      "gloss": [
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "उत्तर-उत्तर-अभावः",
+          "en": "the absence of each successive stage"
+        },
+        {
+          "sa": "पूर्व-पूर्वम्",
+          "en": "each preceding stage"
+        },
+        {
+          "sa": "तु",
+          "en": "then"
+        },
+        {
+          "sa": "निष्फलम्",
+          "en": "fruitless"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "withdrawal"
+        },
+        {
+          "sa": "परमा",
+          "en": "supreme"
+        },
+        {
+          "sa": "तृप्तिः",
+          "en": "contentment"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "bliss"
+        },
+        {
+          "sa": "अनुपमः",
+          "en": "incomparable"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "of itself; naturally"
+        }
+      ],
       "sourceNumbers": [
         420
-      ]
+      ],
+      "editionTranslation": "If there is an absence of the succeeding stages, the preceding ones are futile. (When the series is perfect) the cessation of the objective world, extreme satisfaction, and matchless bliss follow as a matter of course."
     },
     {
       "id": "vivekachudamani-421",
@@ -34586,6 +34836,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 401–405; preserved prior translations as editionTranslation.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 406–410; preserved prior translations as editionTranslation. Corrected verse 406's paṇḍitaiḥ sandhi in Sanskrit and IAST, and documented the astābhāva reading in verse 410 alongside the common bhāsavastu variant.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 411–415; preserved prior translations as editionTranslation. Corrected verse 413's word boundary to paridṛśyamānam ābhāsarūpeṇa, verse 414's typo palpate to kalpate, and verse 415's vahnau spelling.",
-    "Aligned verse 413's gloss with the source form संधत्त (saṃdhatta), and split verse 414's न एषः so each word has its own gloss."
+    "Aligned verse 413's gloss with the source form संधत्त (saṃdhatta), and split verse 414's न एषः so each word has its own gloss.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 416–420; preserved prior translations as editionTranslation. Normalized the explicit word boundary in verse 416's tattva-vettā ānanda-ātmani, corrected verse 417's hetor dehaṃ spacing, and clarified the progression language in verses 419–420."
   ]
 }
