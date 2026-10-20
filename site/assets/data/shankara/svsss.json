@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150. Literal English translations and Devanāgarī word glosses now cover verses 1.151–1.160. Literal English translations and Devanāgarī word glosses now cover verses 1.161–1.170."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150. Literal English translations and Devanāgarī word glosses now cover verses 1.151–1.160. Literal English translations and Devanāgarī word glosses now cover verses 1.161–1.170. Literal English translations and Devanāgarī word glosses now cover verses 1.171–1.180."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–170.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–180.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 170
+      "to": 180
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–170 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–180 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -11855,13 +11855,47 @@
       "number": "171",
       "label": "Verse 171",
       "deva": "विवेकिनो विरक्तस्य ब्रह्म-नित्यत्व-वेदिनः।\nतद्-भावेच्छोर् अनित्यार्थे तत्-सामग्र्ये कुतोऽरतिः॥",
-      "translation": "Is it ever possible that a man of discrimination who knows that Brahman is eternal, who desires to be Brahman, and is indifferent to all else, would have any longing for perishable objects or seek the means to acquire them?",
-      "gloss": [],
+      "translation": "How could there be disinterest in impermanent aims and the means for them for a discerning, dispassionate person who knows Brahman’s eternality and wishes to become that?",
+      "gloss": [
+        {
+          "sa": "विवेकिनः",
+          "en": "of a discerning person"
+        },
+        {
+          "sa": "विरक्तस्य",
+          "en": "of a dispassionate person"
+        },
+        {
+          "sa": "ब्रह्म-नित्यत्व-वेदिनः",
+          "en": "who knows Brahman’s eternality"
+        },
+        {
+          "sa": "तद्-भाव-इच्छोः",
+          "en": "who desires to become that"
+        },
+        {
+          "sa": "अनित्यार्थे",
+          "en": "in impermanent aims"
+        },
+        {
+          "sa": "तत्-सामग्र्ये",
+          "en": "in their means"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how; whence"
+        },
+        {
+          "sa": "अरतिः",
+          "en": "disinterest; aversion"
+        }
+      ],
       "sourceNumbers": [
         171
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "vivekino viraktasya brahma-nityatva-vedinaḥ|\ntad-bhāvecchor anityārthe tat-sāmagrye kuto’ratiḥ||"
+      "iast": "vivekino viraktasya brahma-nityatva-vedinaḥ|\ntad-bhāvecchor anityārthe tat-sāmagrye kuto’ratiḥ||",
+      "editionTranslation": "Is it ever possible that a man of discrimination who knows that Brahman is eternal, who desires to be Brahman, and is indifferent to all else, would have any longing for perishable objects or seek the means to acquire them?"
     },
     {
       "id": "svsss-1-0172",
@@ -11869,13 +11903,63 @@
       "number": "172",
       "label": "Verse 172",
       "deva": "तस्माद् अनित्ये स्वर्गादौ साधनत्वेन चोदितम्।\nनित्यं नैमित्तिकं चापि सर्वं कर्म ससाधनम्॥",
-      "translation": "A seeker after liberation who is desirous of being Brahman must needs give up all rituals, both those that should be observed daily, and those that are performed on special occasions, as well as those that are performed in order to attain reward in heaven.",
-      "gloss": [],
+      "translation": "Therefore all action—daily and occasional, with its means—is prescribed as a means toward impermanent heaven and the like.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अनित्ये",
+          "en": "toward what is impermanent"
+        },
+        {
+          "sa": "स्वर्ग-आदौ",
+          "en": "heaven and the like"
+        },
+        {
+          "sa": "साधनत्वेन",
+          "en": "as a means"
+        },
+        {
+          "sa": "चोदितम्",
+          "en": "is prescribed"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "daily; obligatory"
+        },
+        {
+          "sa": "नैमित्तिकम्",
+          "en": "occasional"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "स-साधनम्",
+          "en": "together with its means"
+        }
+      ],
       "sourceNumbers": [
         172
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tasmād anitye svargādau sādhanatvena coditam|\nnityaṃ naimittikaṃ cāpi sarvaṃ karma sasādhanam||"
+      "iast": "tasmād anitye svargādau sādhanatvena coditam|\nnityaṃ naimittikaṃ cāpi sarvaṃ karma sasādhanam||",
+      "editionTranslation": "A seeker after liberation who is desirous of being Brahman must needs give up all rituals, both those that should be observed daily, and those that are performed on special occasions, as well as those that are performed in order to attain reward in heaven."
     },
     {
       "id": "svsss-1-0173",
@@ -11883,13 +11967,63 @@
       "number": "173",
       "label": "Verse 173",
       "deva": "मुमुक्षुणा परित्याज्यं ब्रह्म-भावम् अभीप्सुना।\nमुमुक्षोर् अपि कर्मास्तु श्रवणं चापि साधनम्॥",
-      "translation": "There are some who opine that the earnest aspirant after liberation should continue the performance of action, and observe the prescribed rituals, while pursuing one’s quest after Brahman as taught in the Vedas.",
-      "gloss": [],
+      "translation": "For the seeker who longs for the state of Brahman, [action is] to be relinquished; yet let action and listening also be means for the seeker of liberation.",
+      "gloss": [
+        {
+          "sa": "मुमुक्षुणा",
+          "en": "by a seeker of liberation"
+        },
+        {
+          "sa": "परित्याज्यम्",
+          "en": "to be relinquished"
+        },
+        {
+          "sa": "ब्रह्म-भावम्",
+          "en": "the state of Brahman"
+        },
+        {
+          "sa": "अभीप्सुना",
+          "en": "by one who desires"
+        },
+        {
+          "sa": "मुमुक्षोः",
+          "en": "for a seeker of liberation"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "अस्तु",
+          "en": "let it be"
+        },
+        {
+          "sa": "श्रवणम्",
+          "en": "listening"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "साधनम्",
+          "en": "a means"
+        }
+      ],
       "sourceNumbers": [
         173
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "mumukṣuṇā parityājyaṃ brahma-bhāvam abhīpsunā|\nmumukṣor api karmāstu śravaṇaṃ cāpi sādhanam||"
+      "iast": "mumukṣuṇā parityājyaṃ brahma-bhāvam abhīpsunā|\nmumukṣor api karmāstu śravaṇaṃ cāpi sādhanam||",
+      "editionTranslation": "There are some who opine that the earnest aspirant after liberation should continue the performance of action, and observe the prescribed rituals, while pursuing one’s quest after Brahman as taught in the Vedas."
     },
     {
       "id": "svsss-1-0174",
@@ -11897,13 +12031,51 @@
       "number": "174",
       "label": "Verse 174",
       "deva": "हस्तवद् द्वयम् एतस्य स्वकार्यं साधयिष्यति।\nयथा विजृम्भते दीपो ऋजू-करण-कर्मणा॥",
-      "translation": "Such combination is compared to the complementary function of the two hands which are essential for action. They say that by such conjunction knowledge shines the brighter, like a (oil) lamp that has been trimmed.",
-      "gloss": [],
+      "translation": "The two [action and knowledge] will accomplish this person’s purpose, like a lamp shines when its wick is straightened.",
+      "gloss": [
+        {
+          "sa": "हस्तवत्",
+          "en": "like hands"
+        },
+        {
+          "sa": "द्वयम्",
+          "en": "the pair; both"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "of this person"
+        },
+        {
+          "sa": "स्व-कार्यम्",
+          "en": "its proper purpose"
+        },
+        {
+          "sa": "साधयिष्यति",
+          "en": "will accomplish"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "विजृम्भते",
+          "en": "shines; expands"
+        },
+        {
+          "sa": "दीपः",
+          "en": "a lamp"
+        },
+        {
+          "sa": "ऋजु-करण-कर्मणा",
+          "en": "through the act of straightening"
+        }
+      ],
       "sourceNumbers": [
         174
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "hastavad dvayam etasya svakāryaṃ sādhayiṣyati|\nyathā vijṛmbhate dīpo ṛjū-karaṇa-karmaṇā||"
+      "iast": "hastavad dvayam etasya svakāryaṃ sādhayiṣyati|\nyathā vijṛmbhate dīpo ṛjū-karaṇa-karmaṇā||",
+      "editionTranslation": "Such combination is compared to the complementary function of the two hands which are essential for action. They say that by such conjunction knowledge shines the brighter, like a (oil) lamp that has been trimmed."
     },
     {
       "id": "svsss-1-0175",
@@ -11911,13 +12083,59 @@
       "number": "175",
       "label": "Verse 175",
       "deva": "तथा श्रवण-जो बोधः पुंसो विहित-कर्मणा।\nअतः सापेक्षितं ज्ञानम् अथवापि समुच्चयम्॥",
-      "translation": "Some of the knowers of Brahman say that knowledge forms an aspect of the performance of rituals; there are others who put them on a par and who consider that the combination of knowledge and action constitutes the most efficacious means of attaining liberation.",
-      "gloss": [],
+      "translation": "Likewise, [they argue,] insight born from listening in a person depends on prescribed action. Therefore knowledge is dependent [on action], or [knowledge and action] are combined.",
+      "gloss": [
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "श्रवण-जः",
+          "en": "born from listening"
+        },
+        {
+          "sa": "बोधः",
+          "en": "insight"
+        },
+        {
+          "sa": "पुंसः",
+          "en": "in a person"
+        },
+        {
+          "sa": "विहित-कर्मणा",
+          "en": "through prescribed action"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "सापेक्षितम्",
+          "en": "dependent"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "अथवा",
+          "en": "or"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "समुच्चयम्",
+          "en": "combination"
+        }
+      ],
       "sourceNumbers": [
         175
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tathā śravaṇa-jo bodhaḥ puṃso vihita-karmaṇā|\nataḥ sāpekṣitaṃ jñānam athavāpi samuccayam||"
+      "iast": "tathā śravaṇa-jo bodhaḥ puṃso vihita-karmaṇā|\nataḥ sāpekṣitaṃ jñānam athavāpi samuccayam||",
+      "editionTranslation": "Some of the knowers of Brahman say that knowledge forms an aspect of the performance of rituals; there are others who put them on a par and who consider that the combination of knowledge and action constitutes the most efficacious means of attaining liberation."
     },
     {
       "id": "svsss-1-0176",
@@ -11925,13 +12143,55 @@
       "number": "176",
       "label": "Verse 176",
       "deva": "मोक्षस्य साधनम् इति वदन्ति ब्रह्म-वादिनः।\nमुमुक्षोर् युज्यते त्यागः कथं विहित-कर्मणः॥",
-      "translation": "Such Brahma-vādins therefore ask the question: “How is it possible for an aspirant after liberation to abandon the prescribed rituals?”",
-      "gloss": [],
+      "translation": "The proponents of Brahman say, “Action is a means to liberation.” How, then, is relinquishing prescribed action fitting for a seeker of liberation?",
+      "gloss": [
+        {
+          "sa": "मोक्षस्य",
+          "en": "of liberation"
+        },
+        {
+          "sa": "साधनम्",
+          "en": "a means"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "वदन्ति",
+          "en": "they say"
+        },
+        {
+          "sa": "ब्रह्म-वादिनः",
+          "en": "proponents of Brahman"
+        },
+        {
+          "sa": "मुमुक्षोः",
+          "en": "for a seeker of liberation"
+        },
+        {
+          "sa": "युज्यते",
+          "en": "is fitting"
+        },
+        {
+          "sa": "त्यागः",
+          "en": "relinquishment"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "विहित-कर्मणः",
+          "en": "of prescribed action"
+        }
+      ],
       "sourceNumbers": [
         176
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "mokṣasya sādhanam iti vadanti brahma-vādinaḥ|\nmumukṣor yujyate tyāgaḥ kathaṃ vihita-karmaṇaḥ||"
+      "iast": "mokṣasya sādhanam iti vadanti brahma-vādinaḥ|\nmumukṣor yujyate tyāgaḥ kathaṃ vihita-karmaṇaḥ||",
+      "editionTranslation": "Such Brahma-vādins therefore ask the question: “How is it possible for an aspirant after liberation to abandon the prescribed rituals?”"
     },
     {
       "id": "svsss-1-0177",
@@ -11939,13 +12199,67 @@
       "number": "177",
       "label": "Verse 177",
       "deva": "इति शङ्का न कर्तव्या मूढवत् पण्डितोत्तमैः।\nकर्मणः फलम् अन्यत् तु श्रवणस्य फलं पृथक्॥",
-      "translation": "Let not the wise entertain any such unwise doubts. The benefit to be gained by the performance of rituals is one thing; the benefit to be attained by the study of Vedānta is altogether different.",
-      "gloss": [],
+      "translation": "The best of the wise should not raise such a doubt as fools do. The result of action is one thing, but the result of listening is distinct.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus; such"
+        },
+        {
+          "sa": "शङ्का",
+          "en": "doubt"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कर्तव्या",
+          "en": "should be made"
+        },
+        {
+          "sa": "मूढवत्",
+          "en": "like fools"
+        },
+        {
+          "sa": "पण्डितोत्तमैः",
+          "en": "by the best of the wise"
+        },
+        {
+          "sa": "कर्मणः",
+          "en": "of action"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "different"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "श्रवणस्य",
+          "en": "of listening"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "पृथक्",
+          "en": "distinct"
+        }
+      ],
       "sourceNumbers": [
         177
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "iti śaṅkā na kartavyā mūḍhavat paṇḍitottamaiḥ|\nkarmaṇaḥ phalam anyat tu śravaṇasya phalaṃ pṛthak||"
+      "iast": "iti śaṅkā na kartavyā mūḍhavat paṇḍitottamaiḥ|\nkarmaṇaḥ phalam anyat tu śravaṇasya phalaṃ pṛthak||",
+      "editionTranslation": "Let not the wise entertain any such unwise doubts. The benefit to be gained by the performance of rituals is one thing; the benefit to be attained by the study of Vedānta is altogether different."
     },
     {
       "id": "svsss-1-0178",
@@ -11953,13 +12267,63 @@
       "number": "178",
       "label": "Verse 178",
       "deva": "वैलक्षण्यं च सामग्र्योश् चोभयत्राधिकारिणोः।\nकामी कर्मण्यधिकृतो निष्कामी श्रवणे मतः॥",
-      "translation": "Both as regards the aim, and means to be employed, there is considerable difference between them. One who has desires performs the prescribed rituals; but one who has no desires studies Vedānta.",
-      "gloss": [],
+      "translation": "The qualifications and required means differ in the two cases: the desirous person is qualified for action, while the desireless person is considered qualified for listening.",
+      "gloss": [
+        {
+          "sa": "वैलक्षण्यं",
+          "en": "difference"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सामग्र्योः",
+          "en": "in the required means"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उभयत्र",
+          "en": "in both cases"
+        },
+        {
+          "sa": "अधिकारिणोः",
+          "en": "of the qualified persons"
+        },
+        {
+          "sa": "कामी",
+          "en": "the desirous person"
+        },
+        {
+          "sa": "कर्मणि",
+          "en": "for action"
+        },
+        {
+          "sa": "अधिकृतः",
+          "en": "is qualified"
+        },
+        {
+          "sa": "निष्कामी",
+          "en": "the desireless person"
+        },
+        {
+          "sa": "श्रवणे",
+          "en": "for listening"
+        },
+        {
+          "sa": "मतः",
+          "en": "is considered"
+        }
+      ],
       "sourceNumbers": [
         178
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "vailakṣaṇyaṃ ca sāmagryoś cobhayatrādhikāriṇoḥ|\nkāmī karmaṇyadhikṛto niṣkāmī śravaṇe mataḥ||"
+      "iast": "vailakṣaṇyaṃ ca sāmagryoś cobhayatrādhikāriṇoḥ|\nkāmī karmaṇyadhikṛto niṣkāmī śravaṇe mataḥ||",
+      "editionTranslation": "Both as regards the aim, and means to be employed, there is considerable difference between them. One who has desires performs the prescribed rituals; but one who has no desires studies Vedānta."
     },
     {
       "id": "svsss-1-0179",
@@ -11967,13 +12331,59 @@
       "number": "179",
       "label": "Verse 179",
       "deva": "अर्थी समर्थ इत्यादि लक्षणं कर्मिणो मतम्।\nपरीक्ष्य लोकान् इत्यादि लक्षणं मोक्ष-काङ्क्षिणः॥",
-      "translation": "A man who has the requisite qualification, such as physical strength and the desire for reward in heaven is free to perform the prescribed rituals. But he who is solely intent upon the pursuit of liberation gets disgusted after examining the benefits to be derived by the performance of rituals.",
-      "gloss": [],
+      "translation": "A person who desires results, is capable, and so on is considered qualified for action. “Having examined the worlds,” and so on, describes the one who longs for liberation.",
+      "gloss": [
+        {
+          "sa": "अर्थी",
+          "en": "one who desires a result"
+        },
+        {
+          "sa": "समर्थः",
+          "en": "capable"
+        },
+        {
+          "sa": "इति-आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "the characteristic"
+        },
+        {
+          "sa": "कर्मिणः",
+          "en": "of one who performs action"
+        },
+        {
+          "sa": "मतम्",
+          "en": "is considered"
+        },
+        {
+          "sa": "परीक्ष्य",
+          "en": "having examined"
+        },
+        {
+          "sa": "लोकान्",
+          "en": "the worlds"
+        },
+        {
+          "sa": "इति-आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "the characteristic"
+        },
+        {
+          "sa": "मोक्ष-काङ्क्षिणः",
+          "en": "of one longing for liberation"
+        }
+      ],
       "sourceNumbers": [
         179
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "arthī samartha ityādi lakṣaṇaṃ karmiṇo matam|\nparīkṣya lokān ityādi lakṣaṇaṃ mokṣa-kāṅkṣiṇaḥ||"
+      "iast": "arthī samartha ityādi lakṣaṇaṃ karmiṇo matam|\nparīkṣya lokān ityādi lakṣaṇaṃ mokṣa-kāṅkṣiṇaḥ||",
+      "editionTranslation": "A man who has the requisite qualification, such as physical strength and the desire for reward in heaven is free to perform the prescribed rituals. But he who is solely intent upon the pursuit of liberation gets disgusted after examining the benefits to be derived by the performance of rituals."
     },
     {
       "id": "svsss-1-0180",
@@ -11981,13 +12391,55 @@
       "number": "180",
       "label": "Verse 180",
       "deva": "मोक्षाधिकारी संन्यासी गृहस्थः किल कर्मणि।\nकर्मणः साधनं भार्या स्रुक्-स्रुवादि-परिग्रहः॥",
-      "translation": "It is the all-renouncing monk who seeks liberation. It is the householder with a wife and the requisite utensils for sacrifice that performs rituals. ((MunU.1.2.12) (Muṇḍaka Upaniṣad))",
-      "gloss": [],
+      "translation": "The renunciant is qualified for liberation; the householder, indeed, for action. A wife and the possession of ladles, spoons, and the like are means for action.",
+      "gloss": [
+        {
+          "sa": "मोक्ष-अधिकारी",
+          "en": "qualified for liberation"
+        },
+        {
+          "sa": "संन्यासी",
+          "en": "the renunciant"
+        },
+        {
+          "sa": "गृहस्थः",
+          "en": "the householder"
+        },
+        {
+          "sa": "किल",
+          "en": "indeed"
+        },
+        {
+          "sa": "कर्मणि",
+          "en": "for action"
+        },
+        {
+          "sa": "कर्मणः",
+          "en": "for action"
+        },
+        {
+          "sa": "साधनम्",
+          "en": "a means"
+        },
+        {
+          "sa": "भार्या",
+          "en": "a wife"
+        },
+        {
+          "sa": "स्रुक्-स्रुव-आदि",
+          "en": "ladles, spoons, and the like"
+        },
+        {
+          "sa": "परिग्रहः",
+          "en": "possession"
+        }
+      ],
       "sourceNumbers": [
         180
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "mokṣādhikārī saṃnyāsī gṛhasthaḥ kila karmaṇi|\nkarmaṇaḥ sādhanaṃ bhāryā sruk-sruvādi-parigrahaḥ||"
+      "iast": "mokṣādhikārī saṃnyāsī gṛhasthaḥ kila karmaṇi|\nkarmaṇaḥ sādhanaṃ bhāryā sruk-sruvādi-parigrahaḥ||",
+      "editionTranslation": "It is the all-renouncing monk who seeks liberation. It is the householder with a wife and the requisite utensils for sacrifice that performs rituals. ((MunU.1.2.12) (Muṇḍaka Upaniṣad))"
     },
     {
       "id": "svsss-1-0181",
@@ -23359,5 +23811,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–170 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–180 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
 }
