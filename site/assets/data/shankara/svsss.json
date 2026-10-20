@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 380
+      "to": 391
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–380 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, and 377–378 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–391 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -25837,8 +25837,57 @@
       "number": "381",
       "label": "Verse 381",
       "deva": "एते प्राणादयः पञ्च पञ्च-कर्मेन्द्रियैः सह।\nभवेत् प्राणमयः कोशः स्थूलो येनैव चेष्टते॥",
-      "translation": "The five vital airs and the organs of action taken together as a unit constitute and aggregate known as the prāṇamaya kośa, or the sheath of the vital airs. It is by this kośa that the physical body is animated. ((TaitU.2.3.1) (Taittirīya Upaniṣad))",
-      "gloss": [],
+      "translation": "These five vital winds together with the five organs of action form the prāṇamaya sheath; through it alone the gross body acts.",
+      "gloss": [
+        {
+          "sa": "एते",
+          "en": "these"
+        },
+        {
+          "sa": "प्राण-आदयः",
+          "en": "beginning with prāṇa"
+        },
+        {
+          "sa": "पञ्च",
+          "en": "five"
+        },
+        {
+          "sa": "पञ्च-कर्मेन्द्रियैः",
+          "en": "with the five organs of action"
+        },
+        {
+          "sa": "सह",
+          "en": "together"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "becomes"
+        },
+        {
+          "sa": "प्राणमयः",
+          "en": "made of vital winds"
+        },
+        {
+          "sa": "कोशः",
+          "en": "sheath"
+        },
+        {
+          "sa": "स्थूलः",
+          "en": "the gross body"
+        },
+        {
+          "sa": "येन",
+          "en": "by which"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "चेष्टते",
+          "en": "acts"
+        }
+      ],
       "sourceNumbers": [
         381
       ],
@@ -25851,8 +25900,65 @@
       "number": "382",
       "label": "Verse 382",
       "deva": "यद् यन् निष्पाद्यते कर्म पुण्यं वा पापम् एव वा।\nवाग्-आदिभिश्च वपुषा तत् प्राणमय-कर्तृकम्॥",
-      "translation": "Whatever action is performed, whether it is meritorious or sinful, whether it is done by the organ of speech or by any other organ, all that is done only because of the presence of the prāṇamaya kośa.",
-      "gloss": [],
+      "translation": "Whatever action is carried out, whether meritorious or sinful, through speech and the other organs and through the body, is done by the prāṇamaya sheath.",
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "निष्पाद्यते",
+          "en": "is carried out"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "पुण्यम्",
+          "en": "meritorious"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "पापम्",
+          "en": "sinful"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "वाक्-आदिभिः",
+          "en": "through speech and the rest"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वपुषा",
+          "en": "through the body"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "प्राणमय-कर्तृकम्",
+          "en": "done by the prāṇamaya sheath"
+        }
+      ],
       "sourceNumbers": [
         382
       ],
@@ -25865,8 +25971,61 @@
       "number": "383",
       "label": "Verse 383",
       "deva": "वायुनोच्चालितो वृक्षो नाना-रूपेण चेष्टते।\nतस्मिन् विनिश्चले सोऽपि निश्चलः स्याद् यथा तथा॥",
-      "translation": "Under the stress of a storm the trees become galvanized into activity and are wind-tossed and they assume diverse shapes. But as soon as calm sets in, they become motionless. Such is the case with the physical body too.",
-      "gloss": [],
+      "translation": "As a tree set in motion by the wind moves in many ways, and becomes still when the wind becomes still, so does the body.",
+      "gloss": [
+        {
+          "sa": "वायुना",
+          "en": "by the wind"
+        },
+        {
+          "sa": "उच्चालितः",
+          "en": "set in motion"
+        },
+        {
+          "sa": "वृक्षः",
+          "en": "a tree"
+        },
+        {
+          "sa": "नाना-रूपेण",
+          "en": "in many ways"
+        },
+        {
+          "sa": "चेष्टते",
+          "en": "moves"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "when that"
+        },
+        {
+          "sa": "विनिश्चले",
+          "en": "is quite still"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "निश्चलः",
+          "en": "still"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "becomes"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        }
+      ],
       "sourceNumbers": [
         383
       ],
@@ -25879,8 +26038,37 @@
       "number": "384",
       "label": "Verse 384",
       "deva": "प्राण-कर्मेन्द्रियैर् देहः प्रेर्यमाणः प्रवर्तते।\nनाना-क्रियासु सर्वत्र विहिताविहितादिषु॥",
-      "translation": "The physical body acts and moves when animated by the prāṇa or the karmendriyas. Then it is that the body takes part in various kinds of activities, that are enjoined and are prohibited.",
-      "gloss": [],
+      "translation": "Impelled by the vital winds and organs of action, the body functions in many activities, including those that are prescribed and prohibited.",
+      "gloss": [
+        {
+          "sa": "प्राण-कर्मेन्द्रियैः",
+          "en": "by the vital winds and organs of action"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "प्रेर्यमाणः",
+          "en": "being impelled"
+        },
+        {
+          "sa": "प्रवर्तते",
+          "en": "functions"
+        },
+        {
+          "sa": "नाना-क्रियासु",
+          "en": "in many activities"
+        },
+        {
+          "sa": "सर्वत्र",
+          "en": "everywhere"
+        },
+        {
+          "sa": "विहित-अविहित-आदिषु",
+          "en": "including prescribed and prohibited ones"
+        }
+      ],
       "sourceNumbers": [
         384
       ],
@@ -25893,8 +26081,53 @@
       "number": "385",
       "label": "Verse 385",
       "deva": "कोश-त्रयं मिलित्वैतद् वपुः स्यात् सूक्ष्मम् आत्मनः।\nअतिसूक्ष्मतया लीनस्यात्मनो गमकत्वतः॥",
-      "translation": "The subtle body permeates all the three sheaths. It is therefore called the liṅga śarīra, for it is a liṅga or a sign indicating that what is subtler than it, is the Ātman within.",
-      "gloss": [],
+      "translation": "The three sheaths together form this subtle body of the Self; because the Self is extremely subtle and concealed, this body serves as its indicator.",
+      "gloss": [
+        {
+          "sa": "कोश-त्रयम्",
+          "en": "the three sheaths"
+        },
+        {
+          "sa": "मिलित्वा",
+          "en": "having combined"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "वपुः",
+          "en": "body"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "becomes"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "अति-सूक्ष्मतया",
+          "en": "because of extreme subtlety"
+        },
+        {
+          "sa": "लीनस्य",
+          "en": "of what is concealed"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "गमकत्वतः",
+          "en": "because it is an indicator"
+        }
+      ],
       "sourceNumbers": [
         385
       ],
@@ -25907,8 +26140,129 @@
       "number": "386–388",
       "label": "Verses 386–388",
       "deva": "लिङ्गम् इत्युच्यते स्थूलापेक्षया सूक्ष्मम् इष्यते।\nसर्वं लिङ्ग-वपुर्-जातम् एक-धी-विषयत्वतः॥\nसमष्टिः स्यात् तरु-गणः सामान्येन वनं यथा।\nएतत् समष्ट्युपहितं चैतन्यं स-फलं जगुः॥\nहिरण्य-गर्भः सूत्रात्मा प्राण इत्यपि पण्डिताः।\nहिरण्मये बुद्धि-गर्भे प्रचकास्ति हिरण्यवत्॥",
-      "translation": "The liṅga śarīra is called the subtle body because it is subtler than the gross physical body. That is why all else become objects of cognition by the liṅga śarīra. Just as the term ‘forest’ is a collective name for the trees when taken in the aggregate, the term ‘subtle body’ is a collective name for the vital, the mental and the conscious (i.e. knowledge) sheaths when they are taken together as a unit. This subtle body in turn becomes the object of knowledge for Hiraṇya-garbha. When it is taken in the aggregate, and when it is endowed with the subtle body as its adjunct, the consciousness that animates it is known variously as Hiraṇya-garbha, sūtrātman and prāṇa.",
-      "gloss": [],
+      "translation": "The liṅga is considered subtle in relation to the gross body. The totality of subtle bodies is one object of cognition. Just as a collection of trees is generally called a forest, their totality is called the collective. The wise say that consciousness conditioned by this collective is accompanied by its effects. They call it Hiraṇyagarbha, Sūtrātman, and Prāṇa; it shines like gold in the golden interior of the intellect.",
+      "gloss": [
+        {
+          "sa": "लिङ्गम्",
+          "en": "the subtle body"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        },
+        {
+          "sa": "स्थूल-अपेक्षया",
+          "en": "in relation to the gross"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is considered"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "the whole"
+        },
+        {
+          "sa": "लिङ्ग-वपुः-जातम्",
+          "en": "the group of subtle bodies"
+        },
+        {
+          "sa": "एक-धी-विषयत्वतः",
+          "en": "because it is one object of cognition"
+        },
+        {
+          "sa": "समष्टिः",
+          "en": "the collective"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "is"
+        },
+        {
+          "sa": "तरु-गणः",
+          "en": "a group of trees"
+        },
+        {
+          "sa": "सामान्येन",
+          "en": "generally"
+        },
+        {
+          "sa": "वनम्",
+          "en": "a forest"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "समष्टि-उपहितम्",
+          "en": "conditioned by the collective"
+        },
+        {
+          "sa": "चैतन्यम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "स-फलम्",
+          "en": "accompanied by its effects"
+        },
+        {
+          "sa": "जगुः",
+          "en": "they say"
+        },
+        {
+          "sa": "हिरण्य-गर्भः",
+          "en": "Hiraṇyagarbha"
+        },
+        {
+          "sa": "सूत्र-आत्मा",
+          "en": "Sūtrātman"
+        },
+        {
+          "sa": "प्राणः",
+          "en": "Prāṇa"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पण्डिताः",
+          "en": "the wise"
+        },
+        {
+          "sa": "हिरण्मये",
+          "en": "golden"
+        },
+        {
+          "sa": "बुद्धि-गर्भे",
+          "en": "in the interior of the intellect"
+        },
+        {
+          "sa": "प्रचकास्ति",
+          "en": "shines"
+        },
+        {
+          "sa": "हिरण्यवत्",
+          "en": "like gold"
+        }
+      ],
       "sourceNumbers": [
         386,
         387,
@@ -25923,8 +26277,69 @@
       "number": "389",
       "label": "Verse 389",
       "deva": "हिरण्य-गर्भ इत्यस्य व्यपदेशस् ततो मतः।\nसमस्त-लिङ्ग-देहेषु सूत्रवन् मणि-पङ्क्तिषु।\nव्याप्य स्थितत्वात् सूत्रात्मा प्राणनात् प्राण उच्यते॥",
-      "translation": "It is known as Hiraṇya-garbha, because in this form the light of knowledge like burnished gold, illumines the dark recesses of the mind. It is also known as sūtrātman because it forms a link between the various subtle bodies, and permeates them and it runs through them all like a thread on which row of gems is strung. It is also known as prāṇa for in the form of the vital breath it animates and sustains all life.",
-      "gloss": [],
+      "translation": "It is therefore called Hiraṇyagarbha. Because it pervades and abides in all subtle bodies like a thread through a row of gems, it is Sūtrātman; because it breathes, it is called Prāṇa.",
+      "gloss": [
+        {
+          "sa": "हिरण्य-गर्भ",
+          "en": "Hiraṇyagarbha"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "व्यपदेशः",
+          "en": "the designation"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "मतः",
+          "en": "is considered"
+        },
+        {
+          "sa": "समस्त-लिङ्ग-देहेषु",
+          "en": "in all subtle bodies"
+        },
+        {
+          "sa": "सूत्र-वत्",
+          "en": "like a thread"
+        },
+        {
+          "sa": "मणि-पङ्क्तिषु",
+          "en": "in rows of gems"
+        },
+        {
+          "sa": "व्याप्य",
+          "en": "pervading"
+        },
+        {
+          "sa": "स्थितत्वात्",
+          "en": "because it abides"
+        },
+        {
+          "sa": "सूत्रात्मा",
+          "en": "Sūtrātman"
+        },
+        {
+          "sa": "प्राणनात्",
+          "en": "because it breathes"
+        },
+        {
+          "sa": "प्राणः",
+          "en": "Prāṇa"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         389
       ],
@@ -25937,8 +26352,81 @@
       "number": "390–391",
       "label": "Verses 390–391",
       "deva": "नैक-धी-विषयत्वेन लिङ्गं व्यष्टिर् भवत्यथ।\nय एतद् व्यष्ट्युपहितं चिद्-आभास-समन्वितम्॥\nचैतन्यं तैजस इति निगदन्ति मनीषिणः।\nतेजोमयान्तःकरणोपाधित्वेनैष तैजसः॥",
-      "translation": "When the subtle bodies are considered as the objects of knowledge, they are regarded not as one but many. The light of knowledge becomes refracted and becomes distorted when it makes itself manifest through the medium of the individual upādhis or adjuncts. The consciousness which is reflected through the medium of the individual subtle bodies is known as taijasa. It has the antaḥ-karaṇa as its adjunct and it makes itself manifest through it, even though it does not make known any external object.",
-      "gloss": [],
+      "translation": "Because it is not the object of a single cognition, the subtle body becomes individual. The wise call the consciousness conditioned by this individual aspect and joined with reflected consciousness Taijasa. Because its adjunct is an inner organ made of tejas, it is Taijasa.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एक-धी-विषयत्वेन",
+          "en": "as one object of cognition"
+        },
+        {
+          "sa": "लिङ्गम्",
+          "en": "the subtle body"
+        },
+        {
+          "sa": "व्यष्टिः",
+          "en": "the individual aspect"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "व्यष्टि-उपहितम्",
+          "en": "conditioned by the individual"
+        },
+        {
+          "sa": "चित्-आभास-समन्वितम्",
+          "en": "joined with reflected consciousness"
+        },
+        {
+          "sa": "चैतन्यम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "तैजसः",
+          "en": "Taijasa"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निगदन्ति",
+          "en": "they call"
+        },
+        {
+          "sa": "मनीषिणः",
+          "en": "the wise"
+        },
+        {
+          "sa": "तेजस्-मय-अन्तःकरण-उपाधित्वेन",
+          "en": "because its adjunct is an inner organ made of tejas"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "तैजसः",
+          "en": "Taijasa"
+        }
+      ],
       "sourceNumbers": [
         390,
         391
