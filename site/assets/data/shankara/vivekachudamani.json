@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 450
+      "end": 455
     },
-    "note": "Source verses 1–450 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 451 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–455 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 456 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -34667,61 +34667,378 @@
       "id": "vivekachudamani-451",
       "number": "451",
       "label": "Verse 451",
-      "deva": "ज्ञानोदयात्पुरारब्धं कर्मज्ञानान् न नश्यति ।\nअदत्वा स्वफलं लक्ष्यमुद्दिश्योत्सृष्टबाणवत् ॥",
-      "iast": "jñānodayātpurārabdhaṃ karmajñānān na naśyati |\nadatvā svaphalaṃ lakṣyamuddiśyotsṛṣṭabāṇavat ||",
-      "translation": "The work which has fashioned this body prior to the dawning of knowledge, is not destroyed by that knowledge without yielding its fruits, like the arrow shot at an object.",
-      "gloss": [],
+      "deva": "ज्ञानोदयात् पुरारब्धं कर्म ज्ञानान्न नश्यति ।\nअदत्त्वा स्वफलं लक्ष्यम् उद्दिश्योत्सृष्टबाणवत् ॥",
+      "iast": "jñānodayāt purārabdhaṃ karma jñānān na naśyati |\nadatvā svaphalaṃ lakṣyam uddiśya utsṛṣṭa-bāṇa-vat ||",
+      "translation": "Karma begun before knowledge dawns is not destroyed by knowledge before it yields its own fruit, like an arrow released toward a target.",
+      "gloss": [
+        {
+          "sa": "ज्ञान-उदयात्",
+          "en": "before the arising of knowledge"
+        },
+        {
+          "sa": "पुरा-आरब्धम्",
+          "en": "begun earlier; already underway"
+        },
+        {
+          "sa": "कर्म",
+          "en": "karma; action"
+        },
+        {
+          "sa": "ज्ञानात्",
+          "en": "by knowledge"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नश्यति",
+          "en": "is destroyed; perishes"
+        },
+        {
+          "sa": "अदत्त्वा",
+          "en": "without giving"
+        },
+        {
+          "sa": "स्व-फलम्",
+          "en": "its own result"
+        },
+        {
+          "sa": "लक्ष्यम्",
+          "en": "the target"
+        },
+        {
+          "sa": "उद्दिश्य",
+          "en": "aiming toward"
+        },
+        {
+          "sa": "उत्सृष्ट-बाण-वत्",
+          "en": "like an arrow that has been released"
+        }
+      ],
       "sourceNumbers": [
         451
-      ]
+      ],
+      "editionTranslation": "The work which has fashioned this body prior to the dawning of knowledge, is not destroyed by that knowledge without yielding its fruits, like the arrow shot at an object."
     },
     {
       "id": "vivekachudamani-452",
       "number": "452",
       "label": "Verse 452",
-      "deva": "व्याघ्रबुद्ध्या विनिर्मुक्तो बाणः पश्चात्तु गोमतौ ।\nन तिष्ठति छिनत्य् एव लक्ष्यं वेगेन निर्भरम् ॥",
-      "iast": "vyāghrabuddhyā vinirmukto bāṇaḥ paścāttu gomatau |\nna tiṣṭhati chinaty eva lakṣyaṃ vegena nirbharam ||",
-      "translation": "The arrow which is shot at an object with the idea that it is a tiger, does not, when that object is perceived to be a cow, check itself, but pierces the object with full force.",
-      "gloss": [],
+      "deva": "व्याघ्रबुद्ध्या विनिर्मुक्तो बाणः पश्चात्तु गोमतौ ।\nन तिष्ठति छिनत्त्येव लक्ष्यं वेगेन निर्भरम् ॥",
+      "iast": "vyāghra-buddhyā vinirmukto bāṇaḥ paścāt tu go-matau |\nna tiṣṭhati chinatti eva lakṣyaṃ vegena nirbharam ||",
+      "translation": "An arrow released with the idea that its target is a tiger does not stop when the target is later recognized as a cow; it cuts through the target with full force.",
+      "gloss": [
+        {
+          "sa": "व्याघ्र-बुद्ध्या",
+          "en": "with the idea that it is a tiger"
+        },
+        {
+          "sa": "विनिर्मुक्तः",
+          "en": "released; let go"
+        },
+        {
+          "sa": "बाणः",
+          "en": "the arrow"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "afterward"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "गो-मतौ",
+          "en": "when it is thought to be a cow"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "stops; remains"
+        },
+        {
+          "sa": "छिनत्ति",
+          "en": "cuts; pierces"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed; just"
+        },
+        {
+          "sa": "लक्ष्यम्",
+          "en": "the target"
+        },
+        {
+          "sa": "वेगेन",
+          "en": "with force"
+        },
+        {
+          "sa": "निर्भरम्",
+          "en": "fully; with full force"
+        }
+      ],
       "sourceNumbers": [
         452
-      ]
+      ],
+      "editionTranslation": "The arrow which is shot at an object with the idea that it is a tiger, does not, when that object is perceived to be a cow, check itself, but pierces the object with full force."
     },
     {
       "id": "vivekachudamani-453",
       "number": "453",
       "label": "Verse 453",
-      "deva": "प्राब्धं बलवत्तरं खलु विदां भोगेन तस्य क्षयः\nसम्यग्ज्ञानहुताशनेन विलयः प्राक्षंचितागामिनाम् ।\nब्रह्मात्मैक्यमवेक्ष्य तन्मयतया ये सर्वदा संस्थिताः\nतेषां तत्त्रितयं नहि क्वचिद् अपि ब्रह्मैव ते निर्गुणम् ॥",
-      "iast": "prābdhaṃ balavattaraṃ khalu vidāṃ bhogena tasya kṣayaḥ\nsamyagjñānahutāśanena vilayaḥ prākṣaṃcitāgāminām |\nbrahmātmaikyamavekṣya tanmayatayā ye sarvadā saṃsthitāḥ\nteṣāṃ tattritayaṃ nahi kvacid api brahmaiva te nirguṇam ||",
-      "translation": "Prarabdha work is certainly very strong for the man of realisation, and is spent only by the actual experience of its fruit; while the actions previously accumulated and those yet to come are destroyed by the fire of perfect knowledge. But none of the three at all affects those who, realising their identity with Brahman, are always living absorbed in that idea. They are verily the transcendent Brahman.",
-      "gloss": [],
+      "deva": "प्रारब्धं बलवत्तरं खलु विदां भोगेन तस्य क्षयः ।\nसम्यग्ज्ञानहुताशनेन विलयः प्राक्सञ्चितागामिनाम् ।\nब्रह्मात्मैक्यमवेक्ष्य तन्मयतया ये सर्वदा संस्थिताः ।\nतेषां तत्त्रितयं न हि क्वचिदपि ब्रह्मैव ते निर्गुणम् ॥",
+      "iast": "prārabdhaṃ balavattaraṃ khalu vidāṃ bhogena tasya kṣayaḥ |\nsamyagjñāna-hutāśanena vilayaḥ prāk sañcitāgāminām |\nbrahmātmaikyam avekṣya tanmayatayā ye sarvadā saṃsthitāḥ |\nteṣāṃ tat-tritayaṃ na hi kvacid api brahmaiva te nirguṇam ||",
+      "translation": "Prārabdha is indeed very strong, even for knowers; it is exhausted through experience. Previously accumulated and future karma dissolve in the fire of right knowledge. But for those who, having realized the oneness of Brahman and the Self, remain always absorbed in That, the triad does not exist anywhere at all; they themselves are indeed attributeless Brahman.",
+      "gloss": [
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha; karma already begun"
+        },
+        {
+          "sa": "बलवत्तरम्",
+          "en": "very strong"
+        },
+        {
+          "sa": "खलु",
+          "en": "indeed"
+        },
+        {
+          "sa": "विदाम्",
+          "en": "for the knowers; for the wise"
+        },
+        {
+          "sa": "भोगेन",
+          "en": "through experience"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it; its"
+        },
+        {
+          "sa": "क्षयः",
+          "en": "exhaustion; ending"
+        },
+        {
+          "sa": "सम्यक्-ज्ञान-हुताशनेन",
+          "en": "by the fire of right knowledge"
+        },
+        {
+          "sa": "विलयः",
+          "en": "dissolution"
+        },
+        {
+          "sa": "प्राक्-सञ्चित-आगामिनाम्",
+          "en": "of previously accumulated and future [karmas]"
+        },
+        {
+          "sa": "ब्रह्म-आत्म-ऐक्यम्",
+          "en": "the oneness of Brahman and the Self"
+        },
+        {
+          "sa": "अवेक्ष्य",
+          "en": "having realized; having seen"
+        },
+        {
+          "sa": "तन्मयतया",
+          "en": "through absorption in That"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "संस्थिताः",
+          "en": "are established"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "for them; of them"
+        },
+        {
+          "sa": "तत्-त्रितयम्",
+          "en": "that triad [of karmas]"
+        },
+        {
+          "sa": "न हि",
+          "en": "indeed not; not at all"
+        },
+        {
+          "sa": "क्वचित् अपि",
+          "en": "anywhere at all"
+        },
+        {
+          "sa": "ब्रह्म एव",
+          "en": "Brahman indeed; Brahman alone"
+        },
+        {
+          "sa": "ते",
+          "en": "they"
+        },
+        {
+          "sa": "निर्गुणम्",
+          "en": "attributeless; beyond the guṇas"
+        }
+      ],
       "sourceNumbers": [
         453
-      ]
+      ],
+      "editionTranslation": "Prarabdha work is certainly very strong for the man of realisation, and is spent only by the actual experience of its fruit; while the actions previously accumulated and those yet to come are destroyed by the fire of perfect knowledge. But none of the three at all affects those who, realising their identity with Brahman, are always living absorbed in that idea. They are verily the transcendent Brahman."
     },
     {
       "id": "vivekachudamani-454",
       "number": "454",
       "label": "Verse 454",
-      "deva": "उपाधितादात्म्यविहीनकेवल-\nब्रह्मात्मनैवात्मनि तिष्ठतो मुनेः ।\nप्रारब्धसद्भावकथा न युक्ता\nस्वप्नार्थसंबन्धकथेव जाग्रतः ॥",
-      "iast": "upādhitādātmyavihīnakevala-\nbrahmātmanaivātmani tiṣṭhato muneḥ |\nprārabdhasadbhāvakathā na yuktā\nsvapnārthasaṃbandhakatheva jāgrataḥ ||",
-      "translation": "For the sage who lives in his own Self as Brahman, the One without a second, devoid of identification with the limiting adjuncts, the question of the existence of Prarabdha work is meaningless, like the question of a man who has awakened from sleep having any connection with the objects seen in the dream-state.",
-      "gloss": [],
+      "iast": "upādhi-tādātmya-vihīna-kevala-\nbrahmātmanā eva ātmani tiṣṭhato muneḥ |\nprārabdha-sadbhāva-kathā na yuktā\nsvapnārtha-saṃbandha-kathā iva jāgrataḥ ||",
+      "translation": "For the sage who abides in the Self as pure Brahman alone, free from identification with limiting adjuncts, talk of prārabdha's existence is unfitting—like talk, by someone awake, of a connection with dream-objects.",
+      "gloss": [
+        {
+          "sa": "उपाधि",
+          "en": "limiting adjunct"
+        },
+        {
+          "sa": "तादात्म्य",
+          "en": "identification; being one with"
+        },
+        {
+          "sa": "विहीन",
+          "en": "free from; devoid of"
+        },
+        {
+          "sa": "केवल",
+          "en": "alone; pure"
+        },
+        {
+          "sa": "ब्रह्म-आत्मना",
+          "en": "as Brahman-Self"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "तिष्ठतः",
+          "en": "of one abiding"
+        },
+        {
+          "sa": "मुनेः",
+          "en": "of the sage"
+        },
+        {
+          "sa": "प्रारब्ध-सद्भाव-कथा",
+          "en": "talk of prārabdha's existence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "युक्ता",
+          "en": "fitting; reasonable"
+        },
+        {
+          "sa": "स्वप्न-अर्थ-संबन्ध-कथा",
+          "en": "talk of a connection with dream-objects"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "जाग्रतः",
+          "en": "of someone awake"
+        }
+      ],
       "sourceNumbers": [
         454
-      ]
+      ],
+      "editionTranslation": "For the sage who lives in his own Self as Brahman, the One without a second, devoid of identification with the limiting adjuncts, the question of the existence of Prarabdha work is meaningless, like the question of a man who has awakened from sleep having any connection with the objects seen in the dream-state."
     },
     {
       "id": "vivekachudamani-455",
       "number": "455",
       "label": "Verse 455",
-      "deva": "न हि प्रबुद्धः प्रतिभासदेहे\nदेहोपयोगिन्य् अपि च प्रपञ्चे ।\nकरोत्यहन्तां ममतानिदन्तां\nकिन्तु स्वयं तिष्ठति जागरेण ॥",
-      "iast": "na hi prabuddhaḥ pratibhāsadehe\ndehopayoginy api ca prapañce |\nkarotyahantāṃ mamatānidantāṃ\nkintu svayaṃ tiṣṭhati jāgareṇa ||",
-      "translation": "The man who has awakened from sleep never has any idea of \"I\" or \"mine\" with regard to his dream-body and the dream-objects that ministered to that body, but lives quite awake, as his own Self.",
-      "gloss": [],
+      "deva": "न हि प्रबुद्धः प्रतिभासदेहे\nदेहोपयोगिन्यपि च प्रपञ्चे ।\nकरोत्यहन्तां ममतामिदन्तां\nकिन्तु स्वयं तिष्ठति जागरेण ॥",
+      "iast": "na hi prabuddhaḥ pratibhāsa-dehe\ndeha-upayogini api ca prapañce |\nkaroti ahaṃtāṃ mamatāṃ idantāṃ\nkintu svayaṃ tiṣṭhati jāgareṇa ||",
+      "translation": "An awakened person forms no sense of “I,” “mine,” or “this” in relation to the apparent body or even the world that serves the body; rather, he remains awake as his own Self.",
+      "gloss": [
+        {
+          "sa": "न हि",
+          "en": "indeed not"
+        },
+        {
+          "sa": "प्रबुद्धः",
+          "en": "the awakened person"
+        },
+        {
+          "sa": "प्रतिभास-देहे",
+          "en": "in the apparent; dreamlike body"
+        },
+        {
+          "sa": "देह-उपयोगिनि",
+          "en": "serving the body; useful to the body"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रपञ्चे",
+          "en": "in the world"
+        },
+        {
+          "sa": "करोति",
+          "en": "forms; makes"
+        },
+        {
+          "sa": "अहन्ताम्",
+          "en": "I-ness; the sense of “I”"
+        },
+        {
+          "sa": "ममताम्",
+          "en": "mine-ness; the sense of “mine”"
+        },
+        {
+          "sa": "इदन्ताम्",
+          "en": "this-ness; the sense of “this”"
+        },
+        {
+          "sa": "किन्तु",
+          "en": "rather"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "himself; as his own Self"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "remains; stands"
+        },
+        {
+          "sa": "जागरेण",
+          "en": "awake; in wakefulness"
+        }
+      ],
       "sourceNumbers": [
         455
-      ]
+      ],
+      "editionTranslation": "The man who has awakened from sleep never has any idea of \"I\" or \"mine\" with regard to his dream-body and the dream-objects that ministered to that body, but lives quite awake, as his own Self."
     },
     {
       "id": "vivekachudamani-456",
@@ -36250,6 +36567,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 436–440; preserved prior translations as editionTranslation. Corrected verse 436's malformed word boundary and verse 439's vijāniti to the grammatically supported vijānāti reading.",
     "Clarified verse 438's dual bhavataḥ: neither of the two notions arises.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 441–445; preserved prior translations as editionTranslation. Kept verse 442's saṃsṛti as worldly wandering/transmigration and rendered verse 445's phala-darśana as observation of results.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 446–450; preserved prior translations as editionTranslation. Kept verse 446’s action-before-result reasoning and rendered the hundred-crore kalpa compound in verse 447 explicitly."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 446–450; preserved prior translations as editionTranslation. Kept verse 446’s action-before-result reasoning and rendered the hundred-crore kalpa compound in verse 447 explicitly.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 451–455; preserved prior translations as editionTranslation. Corrected verse 452's छिनत्ति (chinatti), verse 453's damaged प्रारब्धं and प्राक्सञ्चितागामिनाम् readings against convergent text witnesses, and verse 455's ममतामिदन्ताम् sequence of 'mine-ness' and 'this-ness'."
   ]
 }
