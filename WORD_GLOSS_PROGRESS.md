@@ -6,10 +6,11 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Hastāmalaka-stotram** — active. Twelve verses, so the text remains on one page without a separate contents page. Audit the source text, translation, explicit IAST, and every word gloss.
+**Bhajagovindam (Mohamudgara)** — active. Thirty-one verses require a contents page; review the three descriptive verse ranges and audit every verse, IAST line, translation, and word gloss.
 
 ## Completed
 
+- **Hastāmalaka-stotram** — all twelve verses were checked against the Sringeri Bhagavatpadiyam text and its commentary. Refined the translations and expanded the Devanāgarī glosses to account for the words and compound elements; checked the explicit IAST. No separate contents page is needed for this under-20-verse text.
 - **Śrī Dakṣiṇāmūrtyaṣṭakam** — all ten verses and the colophon were checked against Ambuda’s 1910 edition, with a parallel-text cross-check. Rewrote translations for closer grammatical alignment and expanded each Devanāgarī gloss to account for the Sanskrit words and compound elements; verified every unit has explicit IAST. No separate contents page is needed for this under-20-verse text.
 - **Viṣṇu Ṣaṭpadī Stotram** — all seven verses and the colophon were checked against Ambuda’s 1910 edition and the Sanskrit text in Stotra Nidhi. Refined the compound translation in verse 2, clarified verse 4’s rhetorical question, and parsed verse 5’s *avata* as the imperative “protect.” All eight reader units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Nirvāṇaṣaṭkam** — all six verses and the colophon were checked against Ambuda’s 1910 edition. Rebuilt glosses to represent the repeated negatives and conjunctions throughout the refrain, and refined the literal wording of verse 6’s non-attachment/liberation/bondage list. All seven verse-and-colophon units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
@@ -41,14 +42,14 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Aparokṣānubhūti | 145 | Complete: all 144 verses and colophon have Sanskrit, English, IAST, and glosses; ten named contents sections |
 | Ātmabodha | 69 | Complete: all 68 verses and colophon have Sanskrit, English, IAST, and glosses; seven named contents sections |
 | Ātmavidyāvilāsa | 66 | Complete: all numbered verses and invocation have Sanskrit, English, IAST, and glosses; three named topic sections |
-| Bhajagovindam | 31 | All four fields present; review named contents sections |
+| Bhajagovindam | 31 | Current text: audit every verse and verify descriptive contents sections 1–10, 11–20, and 21–31 |
 | Brahmasiddhi | 231 | Complete: all passages have Sanskrit, English, explicit IAST, and a Devanāgarī word gloss; four named contents sections include topic descriptions. Passage 1.2 now has 5,231 gloss entries for 3,441 Sanskrit tokens with no unmapped tokens. At 2.161, retained GRETIL’s भावात् reading and noted a witness variant. |
 | Brahmajñānāvalīmālā | 21 | Glosses present; add explicit IAST; review contents |
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | Complete: all ten verses and colophon audited; every unit has Sanskrit, English, explicit IAST, and word glosses; one-page layout (under 20 verses) |
 | Daśaślokī | 11 | Glosses present; add explicit IAST |
 | Dṛg-dṛśya-viveka | 46 | Complete: all 46 verses have Sanskrit, English, explicit IAST, and word glosses; seven named contents sections |
 | Ekaślokī | 2 | Glosses present; add explicit IAST |
-| Hastāmalaka-stotram | 12 | Current text: audit all verses against the source; one-page layout (under 20 verses) |
+| Hastāmalaka-stotram | 12 | Complete: all verses audited; every verse has Sanskrit, English, explicit IAST, and expanded word glosses; one-page layout (under 20 verses) |
 | Kāśīpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
 | Manīṣāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
