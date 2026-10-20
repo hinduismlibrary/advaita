@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 104 passages; 127 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 111 passages; 120 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 104 passages, including short verse entries through 2.182; 127 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 111 passages, including short verse entries through 2.182 and 4.4, 4.6–4.11; 120 passages still need glosses."
   },
   "units": [
     {
@@ -7813,7 +7813,40 @@
       "deva": "प्रविलीनप्रपञ्चेन तद्रूपेण न गोचरः । मानान्तरस्येति मतमाम्नायैकनिबन्धनम्",
       "iast": "pravilīnaprapañcena tadrūpeṇa na gocaraḥ /\nmānāntarasyeti matamāmnāyaikanibandhanam",
       "translation": "In that form, with the manifold world dissolved, it is not within the scope of another means of knowledge. Therefore it is held to depend solely on scripture.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रविलीन-प्रपञ्चेन",
+          "en": "with the manifold world dissolved"
+        },
+        {
+          "sa": "तत्-रूपेण",
+          "en": "in that form"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "गोचरः",
+          "en": "within the scope"
+        },
+        {
+          "sa": "मान-अन्तरस्य",
+          "en": "of another means of knowledge"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "मतम्",
+          "en": "it is held"
+        },
+        {
+          "sa": "आम्नाय-एक-निबन्धनम्",
+          "en": "based solely on scripture"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.4"
       ]
@@ -7841,7 +7874,108 @@
       "deva": "(उपेक्षामपि हि फलं प्रमाणस्य प्रचक्षते) । (अनेन श्लोकार्धेनात्र भवितव्यमित्यभ्यूहः; परं तु मातृकासु न दृश्यते । --- एदितोर्)\nअपि चाज्ञानतः शोकी दुःखी जीवः प्रकाशते",
       "iast": "(upekṣāmapi hi phalaṃ pramāṇasya pracakṣate) / (anena ślokārdhenātra bhavitavyamityabhyūhaḥ; paraṃ tu mātṛkāsu na dṛśyate / --- editor)\napi cājñānataḥ śokī duḥkhī jīvaḥ prakāśate",
       "translation": "(For some also state that disregard is a result of a means of knowledge. The editor conjectures that this half-verse should occur here, but it is not found in the manuscripts.)\n\nMoreover, the embodied self, ignorant and sorrowful, appears as one who suffers.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "उपेक्षाम्",
+          "en": "indifference"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "फलम्",
+          "en": "a result"
+        },
+        {
+          "sa": "प्रमाणस्य",
+          "en": "of a means of knowledge"
+        },
+        {
+          "sa": "प्रचक्षते",
+          "en": "they declare"
+        },
+        {
+          "sa": "अनेन",
+          "en": "by this"
+        },
+        {
+          "sa": "श्लोक-अर्धेन",
+          "en": "half-verse"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "भवितव्यम्",
+          "en": "should be present"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अभ्यूहः",
+          "en": "a conjecture"
+        },
+        {
+          "sa": "परम्",
+          "en": "but"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "मातृकासु",
+          "en": "in the manuscripts"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "एडिटोर्",
+          "en": "editor"
+        },
+        {
+          "sa": "अपि",
+          "en": "moreover"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अज्ञानतः",
+          "en": "through ignorance"
+        },
+        {
+          "sa": "शोकी",
+          "en": "sorrowful"
+        },
+        {
+          "sa": "दुःखी",
+          "en": "suffering"
+        },
+        {
+          "sa": "जीवः",
+          "en": "the embodied self"
+        },
+        {
+          "sa": "प्रकाशते",
+          "en": "appears"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.6"
       ]
@@ -7855,7 +7989,52 @@
       "deva": "तन्निवृत्तिश्च विज्ञानं पुरुषार्थः स्वयं मतम् । कस्मिंश्चिदर्थे विज्ञाते कुतूहलवतां नृणाम्",
       "iast": "tannivṛttiśca vijñānaṃ puruṣārthaḥ svayaṃ matam /\nkasmiṃścidarthe vijñāte kutūhalavatāṃ nṛṇām",
       "translation": "The cessation of that [ignorance] is cognition, which is itself held to be a human good. When people are curious about something and come to know it…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तत्-निवृत्तिः",
+          "en": "the cessation of that"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "पुरुष-अर्थः",
+          "en": "a human good"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "मतम्",
+          "en": "is held"
+        },
+        {
+          "sa": "कस्मिंश्चित्",
+          "en": "about some"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "thing"
+        },
+        {
+          "sa": "विज्ञाते",
+          "en": "when known"
+        },
+        {
+          "sa": "कुतूहलवताम्",
+          "en": "of curious"
+        },
+        {
+          "sa": "नृणाम्",
+          "en": "people"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.7"
       ]
@@ -7869,7 +8048,44 @@
       "deva": "आकुलानां ज्ञानजन्म पुरुषार्थत्वसंमतम् । अक्षादौ च यथारूपनिष्ठे नापुरुषार्थता",
       "iast": "ākulānāṃ jñānajanma puruṣārthatvasaṃmatam /\nakṣādau ca yathārūpaniṣṭhe nāpuruṣārthatā",
       "translation": "Knowledge that arises for those who are perplexed is accepted as a human good. Cognition centered on the senses and the like is not without purpose.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "आकुलानाम्",
+          "en": "of those who are perplexed"
+        },
+        {
+          "sa": "ज्ञान-जन्म",
+          "en": "the arising of knowledge"
+        },
+        {
+          "sa": "पुरुष-अर्थत्व-सम्मतम्",
+          "en": "is accepted as a human good"
+        },
+        {
+          "sa": "अक्ष-आदौ",
+          "en": "in the senses and the like"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "रूप-निष्ठे",
+          "en": "centered on an object"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपुरुष-अर्थता",
+          "en": "without human purpose"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.8"
       ]
@@ -7883,7 +8099,60 @@
       "deva": "न च प्रवृत्तिनिष्ठत्वं तथास्मिन् केन वार्यते । ज्ञेयस्य पुरुषार्थत्वं तत्र चेदत्र तत्समम्",
       "iast": "na ca pravṛttiniṣṭhatvaṃ tathāsmin kena vāryate /\njñeyasya puruṣārthatvaṃ tatra cedatra tatsamam",
       "translation": "And what prevents this sentence from being directed toward action as well? If what is to be known is a human good there, the same applies here.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रवृत्ति-निष्ठत्वम्",
+          "en": "being directed toward action"
+        },
+        {
+          "sa": "तथा",
+          "en": "in that way"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "in this"
+        },
+        {
+          "sa": "केन",
+          "en": "by whom"
+        },
+        {
+          "sa": "वार्यते",
+          "en": "is prevented"
+        },
+        {
+          "sa": "ज्ञेयस्य",
+          "en": "of what is to be known"
+        },
+        {
+          "sa": "पुरुष-अर्थत्वम्",
+          "en": "being a human good"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "तत्-समम्",
+          "en": "the same"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.9"
       ]
@@ -7897,7 +8166,52 @@
       "deva": "पुरुषार्थः स्वयं ब्रह्म प्रशान्तं विजरादिकम् । अतस्तत्त्वमसीत्येवमनुशिष्याय शिष्यते",
       "iast": "puruṣārthaḥ svayaṃ brahma praśāntaṃ vijarādikam /\natastattvamasītyevamanuśiṣyāya śiṣyate",
       "translation": "Brahman itself is the human good: utterly peaceful, ageless, and so forth. Therefore the teacher instructs the student only with “You are that.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "पुरुष-अर्थः",
+          "en": "a human good"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "प्रशान्तम्",
+          "en": "utterly peaceful"
+        },
+        {
+          "sa": "विजर-आदिकम्",
+          "en": "ageless and the like"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "तत्-त्वम्-असि",
+          "en": "you are that"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "अनुशिष्याय",
+          "en": "to the student"
+        },
+        {
+          "sa": "शिष्यते",
+          "en": "is taught"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.10"
       ]
@@ -7911,7 +8225,48 @@
       "deva": "परप्रवृत्तेरङ्गत्वं प्रत्यक्षादेर्मतं यदि । अत्रापि साक्षात्करणप्रवृत्तावङ्गतेष्यताम्",
       "iast": "parapravṛtteraṅgatvaṃ pratyakṣādermataṃ yadi /\natrāpi sākṣātkaraṇapravṛttāvaṅgateṣyatām",
       "translation": "If perception and the other means of knowledge are held to be components of another person’s action, then here too they should be accepted as components of the activity that leads to direct realization.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "पर-प्रवृत्तेः",
+          "en": "of another person's action"
+        },
+        {
+          "sa": "अङ्गत्वम्",
+          "en": "being a component"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदेः",
+          "en": "of perception and the other means"
+        },
+        {
+          "sa": "मतम्",
+          "en": "is held"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "साक्षात्-करण-प्रवृत्तौ",
+          "en": "in the activity leading to direct realization"
+        },
+        {
+          "sa": "अङ्गता",
+          "en": "being a component"
+        },
+        {
+          "sa": "इष्यताम्",
+          "en": "should be accepted"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.11"
       ]
@@ -8038,9 +8393,16 @@
       "2.178",
       "2.179",
       "2.181",
-      "2.182"
+      "2.182",
+      "4.4",
+      "4.6",
+      "4.7",
+      "4.8",
+      "4.9",
+      "4.10",
+      "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 104 of 231 source-marked passages; 127 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 111 of 231 source-marked passages; 120 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 104 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 111 passages listed in wordGlossCoverage."
 }
