@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 320
+      "to": 330
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–320 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, and 319–320 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–330 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, and 325–326 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -22019,8 +22019,57 @@
       "number": "321",
       "label": "Verse 321",
       "deva": "अस्य व्यष्टिर् अहङ्कार-कारणत्वेन कारणम्।\nवपुस् तत्राभिमान्यात्मा प्राज्ञ इत्युच्यते बुधैः॥",
-      "translation": "In its individual aspect, it is this ‘I’-consciousness, that constitutes the causal body of avidyā. By identification with it the inner Self regards itself as the illuminator of it. The wise say that it is then known as ‘Prājña’.",
-      "gloss": [],
+      "translation": "Its individual aspect is the cause of ego. The Self that identifies with that causal body is called Prājña by the wise.",
+      "gloss": [
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "व्यष्टिः",
+          "en": "the individual aspect"
+        },
+        {
+          "sa": "अहङ्कार-कारणत्वेन",
+          "en": "as the cause of ego"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "वपुः",
+          "en": "body"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there; with that"
+        },
+        {
+          "sa": "अभिमानी",
+          "en": "identified"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "प्राज्ञः",
+          "en": "Prājña"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        },
+        {
+          "sa": "बुधैः",
+          "en": "by the wise"
+        }
+      ],
       "sourceNumbers": [
         321
       ],
@@ -22033,8 +22082,45 @@
       "number": "322",
       "label": "Verse 322",
       "deva": "प्राज्ञत्वम् अस्यैकाज्ञान-भासकत्वेन सम्मतम्।\nव्यष्टेर् निकृष्टत्वेनास्य नानेकाज्ञान-भासकम्॥",
-      "translation": "It is known as ‘prājña’ because it illumines the sheath of avidyā in relation to each individual self. But Prājña is incapable of lifting the collective aspect of avidyā.",
-      "gloss": [],
+      "translation": "It is accepted as Prājña because it illumines one ignorance. Since the individual aspect is limited, it does not illumine many ignorances.",
+      "gloss": [
+        {
+          "sa": "प्राज्ञत्वम्",
+          "en": "the state of being Prājña"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "एक-अज्ञान-भासकत्वेन",
+          "en": "because it illumines one ignorance"
+        },
+        {
+          "sa": "सम्मतम्",
+          "en": "is accepted"
+        },
+        {
+          "sa": "व्यष्टेः",
+          "en": "of the individual aspect"
+        },
+        {
+          "sa": "निकृष्टत्वेन",
+          "en": "because of its limitation"
+        },
+        {
+          "sa": "अस्य",
+          "en": "this"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अनेक-अज्ञान-भासकम्",
+          "en": "the illuminator of many ignorances"
+        }
+      ],
       "sourceNumbers": [
         322
       ],
@@ -22047,8 +22133,45 @@
       "number": "323",
       "label": "Verse 323",
       "deva": "स्व-रूपाच्छादकत्वेनाप्यानन्द-प्रचुरत्वतः।\nकारणं वपुर् आनन्दमयः कोश इतीर्यते॥",
-      "translation": "The causal body of Prājña is also known as the ānandamaya-kośa for it envelops Prājña like a kośa or sheath, and at the same time it is also characterised by ānanda or plenitude of bliss.",
-      "gloss": [],
+      "translation": "Because it conceals its own nature and is abundant in bliss, the causal body is called the blissful sheath.",
+      "gloss": [
+        {
+          "sa": "स्व-रूप-आच्छादकत्वेन",
+          "en": "because it conceals its own nature"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "आनन्द-प्रचुरत्वतः",
+          "en": "because of abundance of bliss"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "causal"
+        },
+        {
+          "sa": "वपुः",
+          "en": "body"
+        },
+        {
+          "sa": "आनन्दमयः",
+          "en": "made of bliss"
+        },
+        {
+          "sa": "कोशः",
+          "en": "sheath"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ईर्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         323
       ],
@@ -22061,8 +22184,69 @@
       "number": "324",
       "label": "Verse 324",
       "deva": "अस्यावस्था सुषुप्तिः स्याद् यत्रानन्दः प्रकृष्यते।\nएषोऽहं सुखम् अस्वाप्सं न तु किञ्चिद् अवेदिषम्॥",
-      "translation": "The stage of deep sleep is its abode. It is in that stage that the blissful nature of Prājña is specially made manifest. That is why on waking up one is merely aware that one has slept well, and that one knew nothing.",
-      "gloss": [],
+      "translation": "Its state is deep sleep, in which bliss is prominent. [One recalls:] “I slept happily; I knew nothing.”",
+      "gloss": [
+        {
+          "sa": "अस्य",
+          "en": "its"
+        },
+        {
+          "sa": "अवस्था",
+          "en": "state"
+        },
+        {
+          "sa": "सुषुप्तिः",
+          "en": "deep sleep"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "is"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "bliss"
+        },
+        {
+          "sa": "प्रकृष्यते",
+          "en": "is intensified"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happily"
+        },
+        {
+          "sa": "अस्वाप्सम्",
+          "en": "I slept"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "अवेदिषम्",
+          "en": "I knew"
+        }
+      ],
       "sourceNumbers": [
         324
       ],
@@ -22075,8 +22259,97 @@
       "number": "325–326",
       "label": "Verses 325–326",
       "deva": "इत्यानन्द-समुत्कर्षः प्रबुद्धेषु प्रदृश्यते।\nसमष्टेर् अपि च व्यष्टेर् उभयोर् वन-वृक्षवत्॥\nअभेद एव नो भेदो जात्येकत्वेन वस्तुतः।\nअभेद एव ज्ञातव्यस् तथेश-प्राज्ञयोर् अपि॥",
-      "translation": "Prājña is compact of bliss, for such is the immediate experience of every one upon waking up. It has been said that what the trees are in relation to the forest, that the individual is in relation to the group. Therefore, in the stage of deep sleep, the individual aspect of avidyā does not materially differ from its collective aspect. That is why Īśvara and Prājña should not be regarded as altogether different; for, there is no real difference between them.",
-      "gloss": [],
+      "translation": "Thus the fullness of bliss is seen in those who awaken. The collective and individual aspects are both like a forest and its trees. In reality, because they are of one kind, there is no difference; likewise, Īśvara and Prājña are to be understood as non-different.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आनन्द-समुत्कर्षः",
+          "en": "the fullness of bliss"
+        },
+        {
+          "sa": "प्रबुद्धेषु",
+          "en": "in those who have awakened"
+        },
+        {
+          "sa": "प्रदृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "समष्टेः",
+          "en": "of the collective whole"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "व्यष्टेः",
+          "en": "of the individual aspect"
+        },
+        {
+          "sa": "उभयोः",
+          "en": "of both"
+        },
+        {
+          "sa": "वन-वृक्ष-वत्",
+          "en": "like a forest and its trees"
+        },
+        {
+          "sa": "अभेदः",
+          "en": "non-difference"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "नो",
+          "en": "no"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "जाति-एकत्वेन",
+          "en": "because of oneness of kind"
+        },
+        {
+          "sa": "वस्तुतः",
+          "en": "in reality"
+        },
+        {
+          "sa": "अभेदः",
+          "en": "non-difference"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "ज्ञातव्यः",
+          "en": "is to be understood"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "ईश-प्राज्ञयोः",
+          "en": "between Īśvara and Prājña"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        }
+      ],
       "sourceNumbers": [
         325,
         326
@@ -22090,8 +22363,53 @@
       "number": "327",
       "label": "Verse 327",
       "deva": "सत्युपाध्योर् अभिन्नत्वे क्व भेदस् तद्-विशिष्टयोः।\nएकी-भावे तरङ्गाब्ध्योः को भेदः प्रतिबिम्बयोः॥",
-      "translation": "Inasmuch as avidyā in its collective aspect is not different from avidyā in its individual aspect, what difference can there be between Īśvara and Prājña? When the waves and the sea are one, what difference can we find in their reflections?",
-      "gloss": [],
+      "translation": "When the two adjuncts are non-different, what difference is there between the two things qualified by them? When waves and the ocean are one, what difference is there between their reflections?",
+      "gloss": [
+        {
+          "sa": "सति",
+          "en": "when there is"
+        },
+        {
+          "sa": "उपाध्योः",
+          "en": "of the two adjuncts"
+        },
+        {
+          "sa": "अभिन्नत्वे",
+          "en": "in non-difference"
+        },
+        {
+          "sa": "क्व",
+          "en": "where"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "तद्-विशिष्टयोः",
+          "en": "between those qualified by them"
+        },
+        {
+          "sa": "एकी-भावे",
+          "en": "when united"
+        },
+        {
+          "sa": "तरङ्ग-अब्ध्योः",
+          "en": "of waves and the ocean"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "प्रतिबिम्बयोः",
+          "en": "between the two reflections"
+        }
+      ],
       "sourceNumbers": [
         327
       ],
@@ -22104,8 +22422,53 @@
       "number": "328",
       "label": "Verse 328",
       "deva": "अज्ञान-तद्-अवच्छिन्नाभासयोर् उभयोर् अपि।\nआधारं शुद्ध-चैतन्यं यत् तत् तुर्यम् इतीर्यते॥",
-      "translation": "Both avidyā and its reflection have pure consciousness as their basis. In relation to the other three levels of consciousness, that pure consciousness is known as the fourth (turya) or the transcendent. ((ManU.12) (Māṇḍūkya Upaniṣad))",
-      "gloss": [],
+      "translation": "That pure consciousness which is the basis of both ignorance and the reflection delimited by it is called the Fourth (turya).",
+      "gloss": [
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "तद्-अवच्छिन्न-आभासयोः",
+          "en": "of the reflection delimited by it"
+        },
+        {
+          "sa": "उभयोः",
+          "en": "of both"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "आधारम्",
+          "en": "the basis"
+        },
+        {
+          "sa": "शुद्ध-चैतन्यम्",
+          "en": "pure consciousness"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तुर्यम्",
+          "en": "the Fourth (turya)"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ईर्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         328
       ],
@@ -22118,8 +22481,57 @@
       "number": "329",
       "label": "Verse 329",
       "deva": "एतद् एवाविविक्तं सद् उपाधिभ्यां च तद्-गुणैः।\nमहा-वाक्यस्य वाच्यार्थो विविक्तं लक्ष्य इष्यते॥",
-      "translation": "Creation of the universe When Brahman is not regarded as being apart from its adjuncts and attributes, the mahāvākya ‘All this is Brahman’ directly reveals Brahman. When the upādhis or adjuncts are eliminated, the same mahāvākya reveals Brahman indirectly. ((ChanU.3.14.1) (Chāndogya Upaniṣad))",
-      "gloss": [],
+      "translation": "This same Reality, when undifferentiated from the two adjuncts and their qualities, is the direct meaning of the great statement. When distinguished from them, it is understood as the implied meaning.",
+      "gloss": [
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अविविक्तम्",
+          "en": "undifferentiated"
+        },
+        {
+          "sa": "सत्",
+          "en": "Reality"
+        },
+        {
+          "sa": "उपाधिभ्याम्",
+          "en": "from the two adjuncts"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तद्-गुणैः",
+          "en": "from their qualities"
+        },
+        {
+          "sa": "महा-वाक्यस्य",
+          "en": "of the great statement"
+        },
+        {
+          "sa": "वाच्य-अर्थः",
+          "en": "the direct meaning"
+        },
+        {
+          "sa": "विविक्तम्",
+          "en": "distinguished"
+        },
+        {
+          "sa": "लक्ष्यः",
+          "en": "the implied meaning"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is understood"
+        }
+      ],
       "sourceNumbers": [
         329
       ],
@@ -22132,8 +22544,41 @@
       "number": "330",
       "label": "Verse 330",
       "deva": "अनन्त-शक्ति-सम्पन्नो मायोपाधिक ईश्वरः।\nईक्षा-मात्रेण सृजति विश्वम् एतच् चराचरम्॥",
-      "translation": "As Īśvara is endowed with limitless power, the Lord projects, in conjunction with His adjunct, Māyā, the whole universe comprising of both the sentient and the non-sentient.",
-      "gloss": [],
+      "translation": "Īśvara, endowed with limitless power and having Māyā as his adjunct, creates this moving and unmoving universe by mere seeing.",
+      "gloss": [
+        {
+          "sa": "अनन्त-शक्ति-सम्पन्नः",
+          "en": "endowed with limitless power"
+        },
+        {
+          "sa": "माया-उपाधिकः",
+          "en": "having Māyā as an adjunct"
+        },
+        {
+          "sa": "ईश्वरः",
+          "en": "Īśvara"
+        },
+        {
+          "sa": "ईक्षा-मात्रेण",
+          "en": "by mere seeing"
+        },
+        {
+          "sa": "सृजति",
+          "en": "creates"
+        },
+        {
+          "sa": "विश्वम्",
+          "en": "the universe"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "चर-अचरम्",
+          "en": "moving and unmoving"
+        }
+      ],
       "sourceNumbers": [
         330
       ],
