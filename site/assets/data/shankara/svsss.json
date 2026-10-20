@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 620
+      "to": 660
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–620 (605 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–660 (645 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -43143,8 +43143,57 @@
       "number": "641",
       "label": "Verse 641",
       "deva": "स वस्तु-धर्मो नो यस्मान् मनस्येवोपलभ्यते।\nवस्तु-धर्मस्य मनसि कथं स्याद् उपलम्भनम्॥",
-      "translation": "But if happiness were really inherent in external objects, and constitutes their property, how is it that the mind comes to feel it when it is certain that happiness is a mental feeling?",
-      "gloss": [],
+      "translation": "Since it is perceived only in the mind, it is not a property of an object. How could an object’s property be perceived in the mind?",
+      "gloss": [
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "वस्तु-धर्मः",
+          "en": "a property of an object"
+        },
+        {
+          "sa": "नो",
+          "en": "not"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "since"
+        },
+        {
+          "sa": "मनसि",
+          "en": "in the mind"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "उपलभ्यते",
+          "en": "is perceived"
+        },
+        {
+          "sa": "वस्तु-धर्मस्य",
+          "en": "of an object’s property"
+        },
+        {
+          "sa": "मनसि",
+          "en": "in the mind"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "could be"
+        },
+        {
+          "sa": "उपलम्भनम्",
+          "en": "perception"
+        }
+      ],
       "sourceNumbers": [
         641
       ],
@@ -43157,8 +43206,61 @@
       "number": "642",
       "label": "Verse 642",
       "deva": "अन्यत्र त्वन्य-धर्माणाम् उपलम्भो न दृश्यते।\nतस्मान् न वस्तु-धर्मोऽयम् आनन्दस् तु कदाचन॥",
-      "translation": "There are no instances of the property of any one object being found in some other objects other than itself. Happiness therefore cannot be the inherent quality of external objects.",
-      "gloss": [],
+      "translation": "The properties of one thing are not seen elsewhere. Therefore, this bliss is never a property of an object.",
+      "gloss": [
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्य-धर्माणाम्",
+          "en": "of the properties of other things"
+        },
+        {
+          "sa": "उपलम्भः",
+          "en": "perception"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वस्तु-धर्मः",
+          "en": "a property of an object"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "bliss"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "कदाचन",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         642
       ],
@@ -43171,8 +43273,73 @@
       "number": "643",
       "label": "Verse 643",
       "deva": "नाप्येष धर्मो मनसोऽसत्यर्थे तद्-अदर्शनात्।\nअसति व्यञ्जके व्यङ्ग्यं नोदेतीति न मन्यताम्॥",
-      "translation": "Nor can it be said that happiness is an attribute of the mind, because, in the absence of the given object, happiness is not perceived by the mind. Nor would it be right to say that happiness is not perceived by the mind only because there is no object to make it manifest.",
-      "gloss": [],
+      "translation": "Nor is this happiness a property of the mind, since it is not seen when the object is absent. Do not think that what is to be manifested fails to arise when the manifestor is absent.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "धर्मः",
+          "en": "property"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "असति",
+          "en": "when absent"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "the object"
+        },
+        {
+          "sa": "तत्-अदर्शनात्",
+          "en": "because it is not seen"
+        },
+        {
+          "sa": "असति",
+          "en": "when absent"
+        },
+        {
+          "sa": "व्यञ्जके",
+          "en": "the manifestor"
+        },
+        {
+          "sa": "व्यङ्ग्यम्",
+          "en": "what is to be manifested"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उदेति",
+          "en": "arises"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मन्यताम्",
+          "en": "let it be thought"
+        }
+      ],
       "sourceNumbers": [
         643
       ],
@@ -43185,8 +43352,77 @@
       "number": "644",
       "label": "Verse 644",
       "deva": "सत्यर्थेऽपि च नोदेति ह्यानन्दस् तूक्त-लक्षणः।\nसत्यपि व्यञ्जके व्यङ्ग्यानुदयो नैव सम्मतः॥",
-      "translation": "It may so happen that even though the desired object is present, its presence may not yield happiness. Therefore we cannot accept the view that even though there is a manifester, that which is to be made manifest by it may be found wanting.",
-      "gloss": [],
+      "translation": "Even when the object is present, the happiness just described does not arise. The absence of what is to be manifested is not accepted when the manifestor is present.",
+      "gloss": [
+        {
+          "sa": "सति",
+          "en": "when present"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "the object"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उदेति",
+          "en": "arises"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "happiness"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "उक्त-लक्षणः",
+          "en": "of the stated kind"
+        },
+        {
+          "sa": "सति",
+          "en": "when present"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "व्यञ्जके",
+          "en": "the manifestor"
+        },
+        {
+          "sa": "व्यङ्ग्य-अनुदयः",
+          "en": "the non-arising of what is to be manifested"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सम्मतः",
+          "en": "is accepted"
+        }
+      ],
       "sourceNumbers": [
         644
       ],
@@ -43199,8 +43435,53 @@
       "number": "645",
       "label": "Verse 645",
       "deva": "दुरदृष्टादिकं नात्र प्रतिबन्धः प्रकल्प्यताम्।\nप्रियस्य वस्तुनो लाभे दुरदृष्टं न सिध्यति॥",
-      "translation": "Nor is it necessary to presume that as the result of some misfortune or as the result of past evil deeds, happiness is wanting. When the desired object is already in one’s possession no such obstacles could arise.",
-      "gloss": [],
+      "translation": "Do not suppose that bad fortune and the like are an obstacle here. When a desired object is obtained, bad fortune is not established.",
+      "gloss": [
+        {
+          "sa": "दुरदृष्ट-आदिकम्",
+          "en": "bad fortune and the like"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "प्रतिबन्धः",
+          "en": "an obstacle"
+        },
+        {
+          "sa": "प्रकल्प्यताम्",
+          "en": "should be supposed"
+        },
+        {
+          "sa": "प्रियस्य",
+          "en": "of the desired"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "object"
+        },
+        {
+          "sa": "लाभे",
+          "en": "when obtained"
+        },
+        {
+          "sa": "दुरदृष्टम्",
+          "en": "bad fortune"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        }
+      ],
       "sourceNumbers": [
         645
       ],
@@ -43213,8 +43494,69 @@
       "number": "646",
       "label": "Verse 646",
       "deva": "तस्मान् न मानसो धर्मो निर्गुणत्वान् न चात्मनः।\nकिं तु पुण्यस्य सांनिध्याद् इष्टस्यापि च वस्तुनः॥",
-      "translation": "It therefore follows that happiness is not a property of the mind. Nor can we say that happiness is a property of the Ātman, for it is said that the Ātman is nirguṇa, or devoid of all attributes. It is as the result of past meritorious deeds that people obtain the particular objects of their desire.",
-      "gloss": [],
+      "translation": "Therefore happiness is not a property of the mind, nor of the Self, because the Self is without qualities. Rather, it arises from the presence of merit and of the desired object.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मानसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "धर्मः",
+          "en": "a property"
+        },
+        {
+          "sa": "निर्गुणत्वात्",
+          "en": "because it is without qualities"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "किम्-तु",
+          "en": "rather"
+        },
+        {
+          "sa": "पुण्यस्य",
+          "en": "of merit"
+        },
+        {
+          "sa": "सांनिध्यात्",
+          "en": "from the presence"
+        },
+        {
+          "sa": "इष्टस्य",
+          "en": "of the desired"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "object"
+        }
+      ],
       "sourceNumbers": [
         646
       ],
@@ -43227,8 +43569,57 @@
       "number": "647",
       "label": "Verse 647",
       "deva": "सत्त्व-प्रधाने चित्तेऽस्मिंस् त्वात्मैव प्रतिबिम्बति।\nआनन्द-लक्षणः स्वच्छे पयसीव सुधा-करः॥",
-      "translation": "Through that particular object, the pure mind catches the reflex of the happiness that is inherent, that which constitutes the Ātman. It is perceived by the mind, like the moon light that is seen in a calm sheet of water.",
-      "gloss": [],
+      "translation": "In this mind, where sattva predominates, the Self itself is reflected, marked by bliss, like the moon in clear water.",
+      "gloss": [
+        {
+          "sa": "सत्त्व-प्रधानॆ",
+          "en": "where sattva predominates"
+        },
+        {
+          "sa": "चित्ते",
+          "en": "in the mind"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "this"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "प्रतिबिम्बति",
+          "en": "is reflected"
+        },
+        {
+          "sa": "आनन्द-लक्षणः",
+          "en": "marked by bliss"
+        },
+        {
+          "sa": "स्वच्छे",
+          "en": "clear"
+        },
+        {
+          "sa": "पयसि",
+          "en": "in water"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "सुधा-करः",
+          "en": "the moon"
+        }
+      ],
       "sourceNumbers": [
         647
       ],
@@ -43241,8 +43632,53 @@
       "number": "648",
       "label": "Verse 648",
       "deva": "सोऽयम् आभास आनन्दश् चित्ते यः प्रतिबिम्बितः।\nपुण्योत्कर्षापकर्षाभ्यां भवत्युच्चावचः स्वयम्॥",
-      "translation": "That reflex happiness which the mind perceives has also its gradations. If there should be an abundance of merit, the resultant happiness is of a high order; but if the merit should be meagre, the happiness that follows is also meagre.",
-      "gloss": [],
+      "translation": "This apparent bliss is the bliss reflected in the mind. By the increase or decrease of merit, it becomes greater or lesser.",
+      "gloss": [
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "आभासः",
+          "en": "appearance"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "bliss"
+        },
+        {
+          "sa": "चित्ते",
+          "en": "in the mind"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "प्रतिबिम्बितः",
+          "en": "is reflected"
+        },
+        {
+          "sa": "पुण्य-उत्कर्ष-अपकर्षाभ्याम्",
+          "en": "through the increase or decrease of merit"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "उच्च-अवचः",
+          "en": "greater or lesser"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        }
+      ],
       "sourceNumbers": [
         648
       ],
@@ -43255,8 +43691,53 @@
       "number": "649",
       "label": "Verse 649",
       "deva": "सार्व-भौमादि-ब्रह्मान्तं श्रुत्या यः प्रतिपादितः।\nस क्षयिष्णुः सातिशयः प्रक्षीणे कारणे लयम्॥",
-      "translation": "There are gradations of happiness, beginning with that which is felt by the great rulers of the earth, and ending with that which is felt by Hiraṇya-garbha. That is what the Śruti says. But all such happiness is liable to decay. Moreover there are other kinds of happiness which excel them by far.",
-      "gloss": [],
+      "translation": "The bliss described in Śruti from the universal ruler up to Brahmā is perishable and graded; when its cause is exhausted, it dissolves.",
+      "gloss": [
+        {
+          "sa": "सार्व-भौम-आदि",
+          "en": "beginning with a universal ruler"
+        },
+        {
+          "sa": "ब्रह्म-अन्तम्",
+          "en": "ending with Brahmā"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "प्रतिपादितः",
+          "en": "is described"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "क्षयिष्णुः",
+          "en": "perishable"
+        },
+        {
+          "sa": "स-अतिशयः",
+          "en": "graded; with degrees"
+        },
+        {
+          "sa": "प्रक्षीणे",
+          "en": "when exhausted"
+        },
+        {
+          "sa": "कारणे",
+          "en": "the cause"
+        },
+        {
+          "sa": "लयम्",
+          "en": "dissolution"
+        }
+      ],
       "sourceNumbers": [
         649
       ],
@@ -43269,8 +43750,53 @@
       "number": "650",
       "label": "Verse 650",
       "deva": "यात्येष विषयानन्दो यस् तु पुण्यैक-साधनः।\nये तु वैषयिकानन्दं भुञ्जते पुण्य-कारिणः॥",
-      "translation": "Whatever happiness is felt by the possession of external objects comes as the result of merit acquired. With the enjoyment of such happiness the merit that produced it also becomes exhausted, the quantum of happiness becomes less, and finally comes to an end.",
-      "gloss": [],
+      "translation": "This object-based bliss, which depends solely on merit, passes away. Those who enjoy sense-based bliss are people who have performed meritorious acts.",
+      "gloss": [
+        {
+          "sa": "याति",
+          "en": "passes away"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "विषय-आनन्दः",
+          "en": "object-based bliss"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुण्य-एक-साधनः",
+          "en": "dependent solely on merit"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "वैषयिक-आनन्दम्",
+          "en": "sense-based bliss"
+        },
+        {
+          "sa": "भुञ्जते",
+          "en": "enjoy"
+        },
+        {
+          "sa": "पुण्य-कारिणः",
+          "en": "those who perform meritorious acts"
+        }
+      ],
       "sourceNumbers": [
         650
       ],
@@ -43283,8 +43809,49 @@
       "number": "651",
       "label": "Verse 651",
       "deva": "दुःखं च भोग-कालेऽपि तेषाम् अन्ते महत्तरम्।\nसुखं विषय-सम्पृक्तं विष-सम्पृक्त-भक्तवत्॥",
-      "translation": "The happiness that is thus felt is always mingled with sorrow. There is sorrow at the time of enjoyment, and there is greater sorrow when the enjoyment comes to an end. All such external happiness might be aptly compared to food mingled with a little poison.",
-      "gloss": [],
+      "translation": "For them there is suffering even during enjoyment, and greater suffering at its end. Happiness mixed with sense objects is like food mixed with poison.",
+      "gloss": [
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "भोग-काले",
+          "en": "at the time of enjoyment"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "for them"
+        },
+        {
+          "sa": "अन्ते",
+          "en": "at the end"
+        },
+        {
+          "sa": "महत्तरम्",
+          "en": "greater"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "विषय-सम्पृक्तम्",
+          "en": "mixed with sense objects"
+        },
+        {
+          "sa": "विष-सम्पृक्त-भक्तवत्",
+          "en": "like food mixed with poison"
+        }
+      ],
       "sourceNumbers": [
         651
       ],
@@ -43297,8 +43864,49 @@
       "number": "652",
       "label": "Verse 652",
       "deva": "भोग-कालेऽपि भोगान्ते दुःखम् एव प्रयच्छति।\nसुखम् उच्चावचत्वेन क्षयिष्णुत्व-भयेन च॥",
-      "translation": "The happiness that is derived from external objects is always coupled with pain, both at the time of enjoyment and when the happiness comes to an end. That is due, in part to the fact that some one is happier still, and in part due to the fact that all such happiness would one day finally come to an end.",
-      "gloss": [],
+      "translation": "Even during enjoyment and at its end, it gives only suffering. Happiness is subject to greater and lesser degrees and to the fear of perishing.",
+      "gloss": [
+        {
+          "sa": "भोग-काले",
+          "en": "during enjoyment"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "भोग-अन्ते",
+          "en": "at the end of enjoyment"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "प्रयच्छति",
+          "en": "it gives"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "उच्च-अवचत्वेन",
+          "en": "because of greater and lesser degrees"
+        },
+        {
+          "sa": "क्षयिष्णुत्व-भयेन",
+          "en": "because of the fear of perishing"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        }
+      ],
       "sourceNumbers": [
         652
       ],
@@ -43311,8 +43919,41 @@
       "number": "653",
       "label": "Verse 653",
       "deva": "भोग-काले भवेन् नॄणां ब्रह्मादि-पद-भागिनाम्।\nराज-स्थान-प्रविष्टानां तारतम्यं मतं यथा॥",
-      "translation": "Just as there are grades of happiness among those who are allowed to enter the presence of a king, so also there are degrees of happiness right up to the position of Hiraṇya-garbha, even during the period of enjoyment.",
-      "gloss": [],
+      "translation": "At the time of enjoyment, people occupying ranks from Brahmā onward have different degrees of happiness, just as those admitted to a king’s court have different ranks.",
+      "gloss": [
+        {
+          "sa": "भोग-काले",
+          "en": "at the time of enjoyment"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "there are"
+        },
+        {
+          "sa": "नॄणाम्",
+          "en": "for people"
+        },
+        {
+          "sa": "ब्रह्म-आदि-पद-भागिनाम्",
+          "en": "who occupy ranks beginning with Brahmā"
+        },
+        {
+          "sa": "राज-स्थान-प्रविष्टानाम्",
+          "en": "of those admitted to a royal court"
+        },
+        {
+          "sa": "तारतम्यम्",
+          "en": "gradation"
+        },
+        {
+          "sa": "मतम्",
+          "en": "is held"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        }
+      ],
       "sourceNumbers": [
         653
       ],
@@ -43325,8 +43966,53 @@
       "number": "654",
       "label": "Verse 654",
       "deva": "तथैव दुःखं जन्तूनां ब्रह्मादि-पद-भागिनाम्।\nन काङ्क्षणीयं विदुषा तस्माद् वैषयिकं सुखम्॥",
-      "translation": "The same law holds good in relation to human sorrow also. The wise man would do well to desist from the pursuit of external happiness, even though it be as Hiraṇya-garbha, or in any other high position.",
-      "gloss": [],
+      "translation": "Likewise, there is suffering for beings who occupy ranks from Brahmā onward. Therefore the wise should not desire sense-based happiness.",
+      "gloss": [
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "जन्तूनाम्",
+          "en": "for beings"
+        },
+        {
+          "sa": "ब्रह्म-आदि-पद-भागिनाम्",
+          "en": "who occupy ranks beginning with Brahmā"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "काङ्क्षणीयम्",
+          "en": "should be desired"
+        },
+        {
+          "sa": "विदुषा",
+          "en": "by the wise"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "वैषयिकम्",
+          "en": "sense-based"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happiness"
+        }
+      ],
       "sourceNumbers": [
         654
       ],
@@ -43339,8 +44025,57 @@
       "number": "655",
       "label": "Verse 655",
       "deva": "यो बिम्ब-भूत आनन्दः स आत्मानन्द-लक्षणः।\nशाश्वतो निर्द्वयः पूर्णो नित्य एकोऽपि निर्भयः॥",
-      "translation": "The happiness which the mind seems to feel in the possession of external objects is really the inherent happiness of the Ātman. The Ātman is bliss itself and the bliss of the Ātman lasts for ever. There is nothing like unto it because it is full, eternal, unique, and free from fear.",
-      "gloss": [],
+      "translation": "The original bliss is the nature of the Self’s bliss: eternal, nondual, full, enduring, one, and fearless.",
+      "gloss": [
+        {
+          "sa": "यः",
+          "en": "that which"
+        },
+        {
+          "sa": "बिम्ब-भूतः",
+          "en": "serving as the original"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "bliss"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "आत्म-आनन्द-लक्षणः",
+          "en": "the nature of the Self’s bliss"
+        },
+        {
+          "sa": "शाश्वतः",
+          "en": "eternal"
+        },
+        {
+          "sa": "निर्द्वयः",
+          "en": "nondual"
+        },
+        {
+          "sa": "पूर्णः",
+          "en": "full"
+        },
+        {
+          "sa": "नित्यः",
+          "en": "constant; eternal"
+        },
+        {
+          "sa": "एकः",
+          "en": "one"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "निर्भयः",
+          "en": "fearless"
+        }
+      ],
       "sourceNumbers": [
         655
       ],
@@ -43353,8 +44088,49 @@
       "number": "656",
       "label": "Verse 656",
       "deva": "लक्ष्यते प्रतिबिम्बेनाभासानन्देन बिम्बवत्।\nप्रतिबिम्बो बिम्ब-मूलो विना बिम्बं न सिध्यति॥",
-      "translation": "In the absence of the original, there can be no reflection. The reflex happiness that the mind perceives has its original in the happiness of the Ātman. All that the mind does is to make it manifest.",
-      "gloss": [],
+      "translation": "The original is indicated by the reflected, apparent bliss. A reflection has the original as its source; without an original, no reflection is established.",
+      "gloss": [
+        {
+          "sa": "लक्ष्यते",
+          "en": "is indicated"
+        },
+        {
+          "sa": "प्रतिबिम्बेन",
+          "en": "by the reflection"
+        },
+        {
+          "sa": "आभास-आनन्देन",
+          "en": "by apparent bliss"
+        },
+        {
+          "sa": "बिम्बवत्",
+          "en": "like an original"
+        },
+        {
+          "sa": "प्रतिबिम्बः",
+          "en": "a reflection"
+        },
+        {
+          "sa": "बिम्ब-मूलः",
+          "en": "has the original as its source"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "बिम्बम्",
+          "en": "an original"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        }
+      ],
       "sourceNumbers": [
         656
       ],
@@ -43367,8 +44143,57 @@
       "number": "657",
       "label": "Verse 657",
       "deva": "यत् ततो बिम्ब आनन्दः प्रतिबिम्बेन लक्ष्यते।\nयुक्त्यैव पण्डित-जनैर् न कदाप्यनुभूयते॥",
-      "translation": "That original happiness whose reflex is caught by the mind does not come within the ken of sense experience, or of inferential logic, or of book learning. ((KathU.1.2.9) (Kaṭha Upaniṣad))",
-      "gloss": [],
+      "translation": "The original bliss, which is indicated through reflected bliss, is never directly experienced by learned people through reasoning alone.",
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that"
+        },
+        {
+          "sa": "बिम्बः",
+          "en": "the original"
+        },
+        {
+          "sa": "आनन्दः",
+          "en": "bliss"
+        },
+        {
+          "sa": "प्रतिबिम्बेन",
+          "en": "through the reflection"
+        },
+        {
+          "sa": "लक्ष्यते",
+          "en": "is indicated"
+        },
+        {
+          "sa": "युक्त्या",
+          "en": "through reasoning"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "पण्डित-जनैः",
+          "en": "by learned people"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कदापि",
+          "en": "ever"
+        },
+        {
+          "sa": "अनुभूयते",
+          "en": "is experienced"
+        }
+      ],
       "sourceNumbers": [
         657
       ],
@@ -43381,8 +44206,53 @@
       "number": "658",
       "label": "Verse 658",
       "deva": "अविद्या-कार्य-करण-सङ्घातेषु पुरोदितः।\nआत्मा जाग्रत्यपि स्वप्ने न भवत्येष गोचरः॥",
-      "translation": "The Ātman is known immediately, and is ever present. It is prior to everybody. And yet, on account of our ignorance, and on account of the combination of the body and the senses, we do not know it either in the waking stage or in the dream stage.",
-      "gloss": [],
+      "translation": "Though previously mentioned among the aggregates of instruments produced by ignorance, the Self is not an object in waking or in dream.",
+      "gloss": [
+        {
+          "sa": "अविद्या-कार्य",
+          "en": "produced by ignorance"
+        },
+        {
+          "sa": "करण-सङ्घातेषु",
+          "en": "among aggregates of instruments"
+        },
+        {
+          "sa": "पुरः-उदितः",
+          "en": "mentioned before"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "जाग्रति",
+          "en": "in waking"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "स्वप्ने",
+          "en": "in dream"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "गोचरः",
+          "en": "an object of perception"
+        }
+      ],
       "sourceNumbers": [
         658
       ],
@@ -43395,8 +44265,53 @@
       "number": "659",
       "label": "Verse 659",
       "deva": "स्थूलस्यापि च सूक्ष्मस्य दुःख-रूपस्य वर्ष्मणः।\nलये सुषुप्तौ स्फुरति प्रत्यग् आनन्द-लक्षणः॥",
-      "translation": "When in the stage of deep sleep the body consciousness becomes lost, the sorrow that is felt either in the gross world while awake, or in the subtle world while dreaming alike ceases to be; and it is then that the bliss which is inherent in pure consciousness reveals itself.",
-      "gloss": [],
+      "translation": "When the gross and subtle bodies, whose nature is suffering, dissolve in deep sleep, the inward Self marked by bliss shines.",
+      "gloss": [
+        {
+          "sa": "स्थूलस्य",
+          "en": "of the gross"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सूक्ष्मस्य",
+          "en": "of the subtle"
+        },
+        {
+          "sa": "दुःख-रूपस्य",
+          "en": "whose nature is suffering"
+        },
+        {
+          "sa": "वर्ष्मणः",
+          "en": "body"
+        },
+        {
+          "sa": "लये",
+          "en": "when dissolved"
+        },
+        {
+          "sa": "सुषुप्तौ",
+          "en": "in deep sleep"
+        },
+        {
+          "sa": "स्फुरति",
+          "en": "shines"
+        },
+        {
+          "sa": "प्रत्यक्",
+          "en": "inward"
+        },
+        {
+          "sa": "आनन्द-लक्षणः",
+          "en": "marked by bliss"
+        }
+      ],
       "sourceNumbers": [
         659
       ],
@@ -43409,8 +44324,65 @@
       "number": "660",
       "label": "Verse 660",
       "deva": "न ह्यत्र विषयः कश्चिन् नापि बुद्ध्यादि किञ्चन।\nआत्मैव केवलानन्द-मात्रस् तिष्ठति निर्द्वयः॥",
-      "translation": "That is why in the stage of deep sleep there are no objects of knowledge and there is no mind to comprehend them. All that remains then is the one Ātman, non-dual, compact of bliss, pure and undiluted.",
-      "gloss": [],
+      "translation": "There is no object here, nor anything such as the intellect. The Self alone remains, pure bliss, nondual.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "विषयः",
+          "en": "an object"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "any"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "बुद्धि-आदि",
+          "en": "the intellect and the rest"
+        },
+        {
+          "sa": "किञ्चन",
+          "en": "anything"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "केवल-आनन्द-मात्रः",
+          "en": "nothing but pure bliss"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "remains"
+        },
+        {
+          "sa": "निर्द्वयः",
+          "en": "nondual"
+        }
+      ],
       "sourceNumbers": [
         660
       ],
