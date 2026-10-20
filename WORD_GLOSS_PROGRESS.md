@@ -6,12 +6,13 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Dṛg-dṛśya-viveka** — 46 verses. The source file already has Sanskrit, English, and a word gloss for all 46 units. Remaining work: store explicit IAST and replace the generic range-only contents fallback with named ranges that describe each topic.
+**Ātmabodha** — next. 69 reader units (including the opening invocation); glosses are present, but explicit IAST is missing. Add IAST and review its contents page.
 
 ## Completed
 
 - **Pañcadaśī** — all 15 chapters; 1,564 display units cover 1,570 source verses. Every unit has Sanskrit, English, explicit IAST, and a word gloss. Chapter 14 paired verses 21–22 and 40–41 are retained as paired entries; source coverage includes verses 1–65. Chapter 15 covers verses 1–35. Chapter 1–5 IAST fallback values were stored explicitly.
 - **Tattvabodha** — 44 sections. All sections have Sanskrit, English, IAST, and word glosses. Its section labels already give descriptive contents links.
+- **Dṛg-dṛśya-viveka** — all 46 verses have Sanskrit, English, explicit IAST, and word glosses. Added seven named contents sections covering verses 1–46; expanded verses 1–5 glosses to include every word.
 
 The transliteration-button spacing correction and reader cache/version updates were completed earlier in the same workstream.
 
