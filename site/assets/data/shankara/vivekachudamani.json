@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 550
+      "end": 555
     },
-    "note": "Source verses 1–550 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 551 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–555 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 556 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -39727,23 +39727,63 @@
       "label": "Verse 551",
       "deva": "प्रारब्धकर्मपरिकल्पितवासनाभिः\nसंसारिवच्चरति भुक्तिषु मुक्तदेहः ।\nसिद्धः स्वयं वसति साक्षिवदत्र तूष्णीं\nचक्रस्य मूलम् इव कल्पविकल्पशून्यः ॥",
       "iast": "prārabdhakarmaparikalpitavāsanābhiḥ\nsaṃsārivaccarati bhuktiṣu muktadehaḥ |\nsiddhaḥ svayaṃ vasati sākṣivadatra tūṣṇīṃ\ncakrasya mūlam iva kalpavikalpaśūnyaḥ ||",
-      "translation": "The man of realisation, bereft of the body-idea, moves amid sense-enjoyments like a man subject to transmigration, through desires engendered by the Prarabdha work. He himself, however, lives unmoved in the body, like a witness, free from mental oscillations, like the pivot of the potter’s wheel.",
-      "gloss": [],
+      "translation": "Tendencies shaped by karma already set in motion make the liberated sage move through experiences like a worldly person. Yet he himself, perfected, dwells here quietly like a witness, free from mental constructions, like the hub of a wheel.",
+      "gloss": [
+        {
+          "sa": "प्रारब्ध-कर्म-परिकल्पित-वासनाभिः",
+          "en": "by latent tendencies shaped by karma already set in motion (prārabdha: begun, already bearing fruit | karma: action, karma | parikalpita: shaped, formed | vāsanābhiḥ: by latent tendencies)"
+        },
+        {
+          "sa": "संसारिवत् चरति भुक्तिषु मुक्तदेहः",
+          "en": "the liberated sage moves through experiences like a worldly person (saṃsārivat: like one in worldly existence | carati: moves, wanders | bhuktiṣu: among experiences, enjoyments | mukta-dehaḥ: liberated while embodied)"
+        },
+        {
+          "sa": "सिद्धः स्वयम् वसति साक्षिवत् अत्र तूष्णीम्",
+          "en": "the perfected one himself dwells here quietly like a witness (siddhaḥ: perfected, realized | svayam: himself | vasati: dwells | sākṣivat: like a witness | atra: here | tūṣṇīm: quietly, silently)"
+        },
+        {
+          "sa": "चक्रस्य मूलम् इव कल्प-विकल्प-शून्यः",
+          "en": "like a wheel’s hub, free from thought and mental construction (cakrasya: of a wheel | mūlam: base, hub | iva: like | kalpa: thought, conception | vikalpa: alternative construction | śūnyaḥ: free from, devoid of)"
+        }
+      ],
       "sourceNumbers": [
         551
-      ]
+      ],
+      "editionTranslation": "The man of realisation, bereft of the body-idea, moves amid sense-enjoyments like a man subject to transmigration, through desires engendered by the Prarabdha work. He himself, however, lives unmoved in the body, like a witness, free from mental oscillations, like the pivot of the potter’s wheel."
     },
     {
       "id": "vivekachudamani-552",
       "number": "552",
       "label": "Verse 552",
-      "deva": "नैवेन्द्रियाणि विषयेषु नियुङ्क्त एष\nनैवापयुङ्क्त उप्दर्शनलक्षणस्थः ।\nनैव क्रियाफलमपीषदवेक्षते स\nस्वानन्दसान्द्ररसपानसुमत्तचित्तः ॥",
-      "iast": "naivendriyāṇi viṣayeṣu niyuṅkta eṣa\nnaivāpayuṅkta updarśanalakṣaṇasthaḥ |\nnaiva kriyāphalamapīṣadavekṣate sa\nsvānandasāndrarasapānasumattacittaḥ ||",
-      "translation": "He neither directs the sense-organs to their objects nor detaches them from these, but stays like an unconcerned spectator. And he has not the least regard for the fruits of actions, his mind being thoroughly inebriated with drinking the undiluted elixir of the Bliss of the Atman.",
-      "gloss": [],
+      "deva": "नैवेन्द्रियाणि विषयेषु नियुङ्क्त एष\nनैवापयुङ्क्त उपदर्शनलक्षणस्थः ।\nनैव क्रियाफलमपीषदवेक्षते स\nस्वानन्दसान्द्ररसपानसुमत्तचित्तः ॥",
+      "iast": "naivendriyāṇi viṣayeṣu niyuṅkta eṣa\nnaivāpayuṅkta upadarśanalakṣaṇasthaḥ |\nnaiva kriyāphalamapīṣadavekṣate sa\nsvānandasāndrarasapānasumattacittaḥ ||",
+      "translation": "He neither directs the senses toward their objects nor withdraws them. Established in the nature of witnessing, he does not even slightly regard the fruit of action; his mind is intoxicated with drinking the dense essence of the Self’s bliss.",
+      "gloss": [
+        {
+          "sa": "न एव इन्द्रियाणि विषयेषु नियुङ्क्ते एषः",
+          "en": "this one does not direct the senses toward objects (na eva: not | indriyāṇi: the senses | viṣayeṣu: toward sense-objects | niyuṅkte: directs, engages | eṣaḥ: this one)"
+        },
+        {
+          "sa": "न एव अपयुङ्क्ते",
+          "en": "nor does he withdraw them (na eva: not | apayuṅkte: withdraws, disengages)"
+        },
+        {
+          "sa": "उपदर्शन-लक्षण-स्थः",
+          "en": "established in the nature of witnessing (upadarśana: witnessing | lakṣaṇa: characteristic, nature | sthaḥ: established in)"
+        },
+        {
+          "sa": "न एव क्रिया-फलम् अपि ईषत् अवेक्षते सः",
+          "en": "he does not even slightly regard the fruit of action (na eva: not at all | kriyā: action | phalam: fruit | api: even | īṣat: slightly | avekṣate: regards | saḥ: he)"
+        },
+        {
+          "sa": "स्व-आनन्द-सान्द्र-रस-पान-सुमत्त-चित्तः",
+          "en": "his mind intoxicated by drinking the dense essence of the Self’s bliss (sva: one’s own | ānanda: bliss | sāndra: dense, concentrated | rasa: essence, nectar | pāna: drinking | sumatta: intoxicated | cittaḥ: mind)"
+        }
+      ],
       "sourceNumbers": [
         552
-      ]
+      ],
+      "editionTranslation": "He neither directs the sense-organs to their objects nor detaches them from these, but stays like an unconcerned spectator. And he has not the least regard for the fruits of actions, his mind being thoroughly inebriated with drinking the undiluted elixir of the Bliss of the Atman."
     },
     {
       "id": "vivekachudamani-553",
@@ -39751,11 +39791,37 @@
       "label": "Verse 553",
       "deva": "लक्ष्यालक्ष्यगतिं त्यक्त्वा यस् तिष्ठेत् केवलात्मना ।\nशिव एव स्वयं साक्षादयं ब्रह्मविदुत्तमः ॥",
       "iast": "lakṣyālakṣyagatiṃ tyaktvā yas tiṣṭhet kevalātmanā |\nśiva eva svayaṃ sākṣādayaṃ brahmaviduttamaḥ ||",
-      "translation": "He who, giving up all considerations of the fitness or otherwise of objects of meditation, lives as the Absolute Atman, is verily Shiva Himself, and he is the best among the knowers of Brahman.",
-      "gloss": [],
+      "translation": "Having abandoned concern for what is and is not an object of contemplation, whoever remains as the pure Self alone is Śiva himself—the foremost knower of Brahman.",
+      "gloss": [
+        {
+          "sa": "लक्ष्य-अलक्ष्य-गतिम्",
+          "en": "the range of what is and is not an object of contemplation (lakṣya: object or aim | alakṣya: non-object, what is not an aim | gatim: course, range)"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having abandoned"
+        },
+        {
+          "sa": "यः तिष्ठेत्",
+          "en": "whoever remains (yaḥ: whoever | tiṣṭhet: may remain, abides)"
+        },
+        {
+          "sa": "केवल-आत्मना",
+          "en": "as the pure Self alone (kevala: alone, pure | ātmanā: as the Self)"
+        },
+        {
+          "sa": "शिवः एव स्वयम् साक्षात्",
+          "en": "is Śiva himself directly (śivaḥ: Śiva | eva: indeed | svayam: himself | sākṣāt: directly)"
+        },
+        {
+          "sa": "अयम् ब्रह्मविद्-उत्तमः",
+          "en": "this foremost knower of Brahman (ayam: this one | brahmavid: knower of Brahman | uttamaḥ: foremost, best)"
+        }
+      ],
       "sourceNumbers": [
         553
-      ]
+      ],
+      "editionTranslation": "He who, giving up all considerations of the fitness or otherwise of objects of meditation, lives as the Absolute Atman, is verily Shiva Himself, and he is the best among the knowers of Brahman."
     },
     {
       "id": "vivekachudamani-554",
@@ -39763,23 +39829,71 @@
       "label": "Verse 554",
       "deva": "जीवन्न् एव सदा मुक्तः कृतार्थो ब्रह्मवित्तमः ।\nउपाधिनाशाद्ब्रह्मैव सन् ब्रह्माप्येति निर्द्वयम् ॥",
       "iast": "jīvann eva sadā muktaḥ kṛtārtho brahmavittamaḥ |\nupādhināśādbrahmaiva san brahmāpyeti nirdvayam ||",
-      "translation": "Through the destruction of limitations, the perfect knower of Brahman is merged in the One Brahman without a second – which he had been all along – becomes very free even while living, and attains the goal of his life.",
-      "gloss": [],
+      "translation": "Ever liberated while living, his purpose fulfilled, the supreme knower of Brahman, having become Brahman alone through the destruction of limiting adjuncts, attains Brahman without a second.",
+      "gloss": [
+        {
+          "sa": "जीवन् एव सदा मुक्तः",
+          "en": "always liberated, even while living (jīvan: living | eva: indeed, even | sadā: always | muktaḥ: liberated)"
+        },
+        {
+          "sa": "कृतार्थः ब्रह्मवित्तमः",
+          "en": "his purpose fulfilled, the supreme knower of Brahman (kṛta: accomplished | arthaḥ: purpose | brahmavit: knower of Brahman | tamaḥ: highest, supreme)"
+        },
+        {
+          "sa": "उपाधि-नाशात्",
+          "en": "through the destruction of limiting adjuncts (upādhi: limiting adjunct | nāśāt: from destruction)"
+        },
+        {
+          "sa": "ब्रह्म एव सन्",
+          "en": "being Brahman alone (brahma: Brahman | eva: alone | san: being)"
+        },
+        {
+          "sa": "ब्रह्म आप्येति निर्द्वयम्",
+          "en": "attains Brahman without a second (brahma: Brahman | āpyeti: reaches, attains | nirdvayam: nondual, without a second)"
+        }
+      ],
       "sourceNumbers": [
         554
-      ]
+      ],
+      "editionTranslation": "Through the destruction of limitations, the perfect knower of Brahman is merged in the One Brahman without a second – which he had been all along – becomes very free even while living, and attains the goal of his life."
     },
     {
       "id": "vivekachudamani-555",
       "number": "555",
       "label": "Verse 555",
-      "deva": "शैलूषो वेषसद्भावा- भावयोश् च यथा पुमान् ।\nतथैव ब्रह्मविच् छ्रेष्ठः सदा ब्रह्मैव नापरः ॥",
-      "iast": "śailūṣo veṣasadbhāvā- bhāvayoś ca yathā pumān |\ntathaiva brahmavic chreṣṭhaḥ sadā brahmaiva nāparaḥ ||",
-      "translation": "As an actor, when he puts on the dress of his role, or when he does not, is always a man, so the perfect knower of Brahman is always Brahman and nothing else.",
-      "gloss": [],
+      "deva": "शैलूषो वेषसद्भावाभावयोश्च यथा पुमान् ।\nतथैव ब्रह्मविच्छ्रेष्ठः सदा ब्रह्मैव नापरः ॥",
+      "iast": "śailūṣo veṣasadbhāvābhāvayoś ca yathā pumān |\ntathaiva brahmavicchreṣṭhaḥ sadā brahmaiva nāparaḥ ||",
+      "translation": "Just as a person remains a person whether a performer’s costume is present or absent, so the foremost knower of Brahman is always Brahman alone and nothing else.",
+      "gloss": [
+        {
+          "sa": "शैलूषः",
+          "en": "an actor, stage performer"
+        },
+        {
+          "sa": "वेष-सद्भाव-अभावयोः च",
+          "en": "and in the presence and absence of a costume (veṣa: costume | sadbhāva: presence | abhāvayoḥ: in the two absences or states of absence/presence | ca: and)"
+        },
+        {
+          "sa": "यथा पुमान्",
+          "en": "just as a person (yathā: just as | pumān: a person, man)"
+        },
+        {
+          "sa": "तथा एव",
+          "en": "in the same way"
+        },
+        {
+          "sa": "ब्रह्मविद्-श्रेष्ठः",
+          "en": "the foremost knower of Brahman (brahmavid: knower of Brahman | śreṣṭhaḥ: best, foremost)"
+        },
+        {
+          "sa": "सदा ब्रह्म एव न अपरः",
+          "en": "always Brahman alone, not another (sadā: always | brahma: Brahman | eva: alone | na: not | aparaḥ: another)"
+        }
+      ],
       "sourceNumbers": [
         555
-      ]
+      ],
+      "editionTranslation": "As an actor, when he puts on the dress of his role, or when he does not, is always a man, so the perfect knower of Brahman is always Brahman and nothing else."
     },
     {
       "id": "vivekachudamani-556",
@@ -40142,6 +40256,7 @@
     "Corrected the Devanāgarī segmentation of rasa + instrumental ending in verse 536’s gloss (rasena).",
     "Logged and completed Vivekacūḍāmaṇi verses 541–545 with literal English translations and complete Devanāgarī-backed word-for-word glosses.",
     "Corrected the Devanāgarī vowel in the verse 545 gloss for priyāpriye.",
-    "Logged and completed Vivekacūḍāmaṇi verses 546–550 with literal English translations and complete Devanāgarī-backed word-for-word glosses; corrected verse 550’s srotasā reading."
+    "Logged and completed Vivekacūḍāmaṇi verses 546–550 with literal English translations and complete Devanāgarī-backed word-for-word glosses; corrected verse 550’s srotasā reading.",
+    "Logged and completed Vivekacūḍāmaṇi verses 551–555 with literal English translations and complete Devanāgarī-backed word-for-word glosses; corrected verse 552's upadarśana spelling and normalized verse 555's compound breaks."
   ]
 }
