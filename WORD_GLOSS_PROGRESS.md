@@ -6,10 +6,11 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Nirvāṇaṣaṭkam** — active. Six verses and a short colophon; this text is under 20 verses, so it reads on one page without a separate contents page. Audit the source text, translation, explicit IAST, and every word gloss.
+**Viṣṇu Ṣaṭpadī Stotram** — active. Seven verses and a short colophon; this text is under 20 verses, so it reads on one page without a separate contents page. Audit the source text, translation, explicit IAST, and every word gloss.
 
 ## Completed
 
+- **Nirvāṇaṣaṭkam** — all six verses and the colophon were checked against Ambuda’s 1910 edition. Rebuilt glosses to represent the repeated negatives and conjunctions throughout the refrain, and refined the literal wording of verse 6’s non-attachment/liberation/bondage list. All seven verse-and-colophon units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Yatipañcakam** — all five verses and the colophon were checked against Ambuda’s 1910 edition and parallel recensions. Tightened translations and word glosses, parsed verse 3’s *nāntam* as “no end,” and added the omitted *khalu* (“indeed”) glosses in verses 2 and 5. All six reader units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Māyāpañcakam** — all five verses and the colophon were checked against Ambuda’s 1910 edition and the parallel Sanskrit text. Tightened word-level glosses and translations, including the meaning of *varṇa* as social class in verse 4; confirmed the fivefold refrain. All six reader units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Manīṣāpañcakam** — all five verses and the colophon were audited. Revised translations and glosses for closer word-level alignment, restored the missing *saḥ* (“that person”) in verse 5, and checked verse 3’s *vimṛśatā* and *bhāvi ca* readings against the SanskritDocuments parallel text. All six reader units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
@@ -51,9 +52,9 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Manīṣāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Māyāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Naiṣkarmyasiddhi | 880 of 897 expected reader units | All 423 numbered verses have Sanskrit, English, explicit IAST, and word glosses; four chapters have named contents sections. There are 454 unglossed prose/commentary units and 17 expected reader units are absent; these are not counted as missing verse glosses. |
-| Nirvāṇaṣaṭkam | 7 | Current text: audit six verses and colophon against source; one-page layout (under 20 verses) |
+| Nirvāṇaṣaṭkam | 7 | Complete: all six verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
-| Viṣṇu Ṣaṭpadī Stotram | 8 | All four fields present |
+| Viṣṇu Ṣaṭpadī Stotram | 8 | Current text: audit seven verses and colophon against source; one-page layout (under 20 verses) |
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Glosses present; add explicit IAST |
 | Upadeśasāhasrī | 787 | All four fields present |
