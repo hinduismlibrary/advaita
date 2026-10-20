@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 20 passages; 211 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 42 passages; 189 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are provided for passages 1.1, 2.9, 2.11–2.12, 2.14, 2.18, 2.20, 2.28, 2.31, 2.38, 2.45, 2.49, 2.52, 2.54–2.55, 2.58, 2.60, and 2.62–2.64; 211 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 42 passages, including all short verses covered in the opening Niyoga argument; 189 passages still need glosses."
   },
   "units": [
     {
@@ -2481,7 +2481,40 @@
       "deva": "पदार्था विध्यधीनात्मसंश्लेषा इतरत्र तु । पदानां रचना तत्र विवक्षापरिपूर्तये",
       "iast": "padārthā vidhyadhīnātmasaṃśleṣā itaratra tu /\npadānāṃ racanā tatra vivakṣāparipūrtaye",
       "translation": "In one case, word-meanings are joined because of an injunction; in another, the arrangement of words serves to fulfil the speaker’s intention.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "पदार्थाः",
+          "en": "word-meanings"
+        },
+        {
+          "sa": "विधि-अधीन-आत्म-संश्लेषाः",
+          "en": "joined to one another through an injunction"
+        },
+        {
+          "sa": "इतरत्र",
+          "en": "in the other case"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "पदानाम्",
+          "en": "of the words"
+        },
+        {
+          "sa": "रचना",
+          "en": "the arrangement"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "विवक्षा-परिपूर्तये",
+          "en": "to fulfil the speaker's intention"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.71"
       ]
@@ -2495,7 +2528,48 @@
       "deva": "प्रमाणान्तरगम्ये ऽर्थे विवक्षा च व्यवस्थिता । विध्यर्थसिद्धये वेदे तदभावे त्वसंगतेः",
       "iast": "pramāṇāntaragamye 'rthe vivakṣā ca vyavasthitā /\nvidhyarthasiddhaye vede tadabhāve tvasaṃgateḥ",
       "translation": "An intention concerning an object known by another means of knowledge is established. But in the Veda, without an injunction, there would be no connection.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रमाण-अन्तर-गम्ये",
+          "en": "accessible through another means of knowledge"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "with respect to an object"
+        },
+        {
+          "sa": "विवक्षा",
+          "en": "the intention to express"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "व्यवस्थिता",
+          "en": "is established"
+        },
+        {
+          "sa": "विधि-अर्थ-सिद्धये",
+          "en": "for establishing the meaning of an injunction"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "तत्-अभावे",
+          "en": "when that is absent"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "असंगतेः",
+          "en": "because of incoherence"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.72"
       ]
@@ -2523,7 +2597,44 @@
       "deva": "विधिर्निर्विषयस्तुल्यमिदमन्यपदोदिते । विशिष्टार्थावगत्यान्यपदार्थो ऽपि प्रयुज्यते",
       "iast": "vidhirnirviṣayastulyamidamanyapadodite /\nviśiṣṭārthāvagatyānyapadārtho 'pi prayujyate",
       "translation": "The injunction would be just as objectless as the other words. The other words too are used because one understands their qualified meaning.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "निर्विषयः",
+          "en": "without an object"
+        },
+        {
+          "sa": "तुल्यम्",
+          "en": "equally"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अन्य-पद-उदिते",
+          "en": "when conveyed by the other words"
+        },
+        {
+          "sa": "विशिष्ट-अर्थ-अवगत्या",
+          "en": "through understanding the qualified meaning"
+        },
+        {
+          "sa": "अन्य-पदार्थः",
+          "en": "the meanings of the other words"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "प्रयुज्यते",
+          "en": "are used"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.74"
       ]
@@ -2537,7 +2648,68 @@
       "deva": "अर्थवत्त्वे प्रमाभावादस्त्वसौ चेदनर्थकः । विधिर्नैवं कस्य हेतोरथ स्यादपरं पदम्",
       "iast": "arthavattve pramābhāvādastvasau cedanarthakaḥ /\nvidhirnaivaṃ kasya hetoratha syādaparaṃ padam",
       "translation": "If that word is meaningless because it is not a means of knowledge, then the injunction too would be meaningless. Why should another word be accepted?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अर्थवत्त्वे",
+          "en": "if it is meaningful"
+        },
+        {
+          "sa": "प्रमा-अभावात्",
+          "en": "because it is not a means of valid knowledge"
+        },
+        {
+          "sa": "अस्तु",
+          "en": "let it be"
+        },
+        {
+          "sa": "असौ",
+          "en": "that"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अनर्थकः",
+          "en": "meaningless"
+        },
+        {
+          "sa": "विधिः",
+          "en": "the injunction"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "कस्य",
+          "en": "for what"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "reason"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अपरम्",
+          "en": "another"
+        },
+        {
+          "sa": "पदम्",
+          "en": "word"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.75"
       ]
@@ -2551,7 +2723,48 @@
       "deva": "प्रमाणान्तरसिद्धे ऽर्थे प्रयोगि न विधायकम् । [क्क्स्_103] तदर्थो ऽनन्यगम्यो हि मीयमानः समाक्षिपेत्",
       "iast": "pramāṇāntarasiddhe 'rthe prayogi na vidhāyakam /\n[kks_103] tadartho 'nanyagamyo hi mīyamānaḥ samākṣipet",
       "translation": "An injunction is not used for an object already established by another means of knowledge. For its meaning, not accessible by any other means, is understood and thereby prompts the novel object.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रमाण-अन्तर-सिद्धे",
+          "en": "established by another means of knowledge"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "with respect to an object"
+        },
+        {
+          "sa": "प्रयोगि",
+          "en": "used"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विधायकम्",
+          "en": "as an injunction"
+        },
+        {
+          "sa": "तत्-अर्थः",
+          "en": "its meaning"
+        },
+        {
+          "sa": "अनन्य-गम्यः",
+          "en": "inaccessible by any other means"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "मीयमानः",
+          "en": "being understood"
+        },
+        {
+          "sa": "समाक्षिपेत्",
+          "en": "would prompt or elicit"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.76"
       ]
@@ -2565,7 +2778,40 @@
       "deva": "विषयं न यथासिद्धपदार्थस्त्वनुवादभाक् । अव्युत्पन्नप्रवृत्तिः स्यात्संबन्धज्ञाननिह्नवे",
       "iast": "viṣayaṃ na yathāsiddhapadārthastvanuvādabhāk /\navyutpannapravṛttiḥ syātsaṃbandhajñānanihnave",
       "translation": "The object is not the thing established as it truly is; that would merely be a restatement. If the learned relation between word and meaning were denied, an untrained person would act [upon hearing the sentence].",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विषयम्",
+          "en": "the object"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "यथा-सिद्ध-पदार्थः",
+          "en": "an object already established as it is"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अनुवाद-भाक्",
+          "en": "is subject to restatement"
+        },
+        {
+          "sa": "अव्युत्पन्न-प्रवृत्तिः",
+          "en": "the action of an untrained person"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would occur"
+        },
+        {
+          "sa": "सम्बन्ध-ज्ञान-निह्नवे",
+          "en": "if knowledge of the relation were denied"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.77"
       ]
@@ -2593,7 +2839,56 @@
       "deva": "नान्योन्यसंश्रयावद्यं न स्वयं प्रमिते हि सः । परेण शब्दावगते तत्प्रवृत्त्या च सूचिते",
       "iast": "nānyonyasaṃśrayāvadyaṃ na svayaṃ pramite hi saḥ /\npareṇa śabdāvagate tatpravṛttyā ca sūcite",
       "translation": "There is no fault of mutual dependence, since it is not understood by itself. It is known from another person’s words, and that person’s action makes the meaning evident.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "अन्योन्य-संश्रय-अवद्यम्",
+          "en": "fault of mutual dependence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "by itself"
+        },
+        {
+          "sa": "प्रमिते",
+          "en": "is understood"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "परेण",
+          "en": "by another person"
+        },
+        {
+          "sa": "शब्द-अवगते",
+          "en": "understood from words"
+        },
+        {
+          "sa": "तत्-प्रवृत्त्या",
+          "en": "by that person's action"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सूचिते",
+          "en": "made evident"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.79"
       ]
@@ -2621,7 +2916,48 @@
       "deva": "तस्यापि शब्दपूर्वत्वादनुमानैकगोचरः । कस्मान्न शब्दबोधो ऽपि ह्यनुमानपुरस्सरः",
       "iast": "tasyāpi śabdapūrvatvādanumānaikagocaraḥ /\nkasmānna śabdabodho 'pi hyanumānapurassaraḥ",
       "translation": "That too begins from words and is accessible only through inference. Why, then, should cognition from words not also be preceded by inference?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "शब्द-पूर्वत्वात्",
+          "en": "because it is preceded by a word"
+        },
+        {
+          "sa": "अनुमान-एक-गोचरः",
+          "en": "accessible only through inference"
+        },
+        {
+          "sa": "कस्मात्",
+          "en": "why"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शब्द-बोधः",
+          "en": "cognition from a word"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनुमान-पुरस्सरः",
+          "en": "preceded by inference"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.81"
       ]
@@ -2635,7 +2971,56 @@
       "deva": "नेदंप्रथमता लभ्या बीजाङ्कुरवदेतयोः । शब्दाद्बोद्धुश्चानुमानं सर्वस्यैव पुरः स्थितम्",
       "iast": "nedaṃprathamatā labhyā bījāṅkuravadetayoḥ /\nśabdādboddhuścānumānaṃ sarvasyaiva puraḥ sthitam",
       "translation": "There is no first beginning to these two, just as with seed and sprout. The inference from a word to its meaning and to the listener’s understanding is present before every case.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इदम्-प्रथमता",
+          "en": "a first beginning"
+        },
+        {
+          "sa": "लभ्या",
+          "en": "is found"
+        },
+        {
+          "sa": "बीज-अङ्कुर-वत्",
+          "en": "as with seed and sprout"
+        },
+        {
+          "sa": "एतयोः",
+          "en": "of these two"
+        },
+        {
+          "sa": "शब्दात्",
+          "en": "from a word"
+        },
+        {
+          "sa": "बोद्धुः",
+          "en": "of the listener"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनुमानम्",
+          "en": "inference"
+        },
+        {
+          "sa": "सर्वस्य",
+          "en": "of every case"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुरः-स्थितम्",
+          "en": "stands first"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.82"
       ]
@@ -2649,7 +3034,52 @@
       "deva": "पदार्थान्तरवत्तेन तस्य शब्दोनुवादकः । अनुमानाद्बुध्यमानः शब्दाद्बुद्धं न बुध्यते",
       "iast": "padārthāntaravattena tasya śabdonuvādakaḥ /\nanumānādbudhyamānaḥ śabdādbuddhaṃ na budhyate",
       "translation": "Because an object is established by another means, the word merely restates it. What is learned by inference is not newly learned from the word.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "पदार्थ-अन्तर-वत्",
+          "en": "like an object established by another means"
+        },
+        {
+          "sa": "तेन",
+          "en": "therefore"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "शब्दः",
+          "en": "the word"
+        },
+        {
+          "sa": "अनुवादकः",
+          "en": "a restatement"
+        },
+        {
+          "sa": "अनुमानात्",
+          "en": "from inference"
+        },
+        {
+          "sa": "बुध्यमानः",
+          "en": "being understood"
+        },
+        {
+          "sa": "शब्दात्",
+          "en": "from the word"
+        },
+        {
+          "sa": "बुद्धम्",
+          "en": "what is already understood"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "बुध्यते",
+          "en": "is newly understood"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.83"
       ]
@@ -2663,7 +3093,44 @@
       "deva": "प्रतिपत्त्रन्तेरे बोधो नान्यबोधानुवादकृत् । प्रवृत्तिहेतुमात्रं च शब्दार्थः स्यादलौकिकः",
       "iast": "pratipattrantere bodho nānyabodhānuvādakṛt /\npravṛttihetumātraṃ ca śabdārthaḥ syādalaukikaḥ",
       "translation": "Understanding occurs at the end of the listener; it is not produced by restating another person’s knowledge. The meaning of a word might simply be an extraordinary cause of action.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रतिपत्तृ-अन्तरे",
+          "en": "in another listener"
+        },
+        {
+          "sa": "बोधः",
+          "en": "understanding"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्य-बोध-अनुवाद-कृत्",
+          "en": "produced by restating another person's understanding"
+        },
+        {
+          "sa": "प्रवृत्ति-हेतु-मात्रम्",
+          "en": "merely a cause of action"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "शब्द-अर्थः",
+          "en": "the meaning of a word"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अलौकिकः",
+          "en": "extraordinary"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.84"
       ]
@@ -2719,7 +3186,56 @@
       "deva": "लौकिके ऽपूर्वसंसर्गः श्रोतुरस्त्यविधावपि । फलसाधनशक्तौ चेछब्दस्तत्र न दूष्यति",
       "iast": "laukike 'pūrvasaṃsargaḥ śroturastyavidhāvapi /\nphalasādhanaśaktau cechabdastatra na dūṣyati",
       "translation": "Even without an injunction, ordinary speech produces a novel relation for the listener. If a word has the power to bring about an effect, there is no defect.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "लौकिके",
+          "en": "in ordinary speech"
+        },
+        {
+          "sa": "अपूर्‍व-संसर्गः",
+          "en": "a new connection"
+        },
+        {
+          "sa": "श्रोतुः",
+          "en": "for the listener"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "अविधौ",
+          "en": "even without an injunction"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "फल-साधन-शक्तौ",
+          "en": "if there is power to produce a result"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "शब्दः",
+          "en": "a word"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दूष्यति",
+          "en": "is defective"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.88"
       ]
@@ -2733,7 +3249,40 @@
       "deva": "पदार्थान्तरतुल्यत्वाद्विध्याकाङ्क्षानिबन्धनः । न संसर्गः पदार्थानां स्वशब्दैस्तु प्रकाशिताः",
       "iast": "padārthāntaratulyatvādvidhyākāṅkṣānibandhanaḥ /\nna saṃsargaḥ padārthānāṃ svaśabdaistu prakāśitāḥ",
       "translation": "Because it is comparable to other word-meanings, the relation among the meanings does not depend on an injunction; their own words make them known.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "पदार्थ-अन्तर-तुल्यत्वात्",
+          "en": "because it is comparable to other word-meanings"
+        },
+        {
+          "sa": "विधि-आकाङ्क्षा-निबन्धनः",
+          "en": "dependent on the expectation of an injunction"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "संसर्गः",
+          "en": "the connection"
+        },
+        {
+          "sa": "पदार्थानाम्",
+          "en": "among the word-meanings"
+        },
+        {
+          "sa": "स्व-शब्दैः",
+          "en": "by their own words"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "प्रकाशिताः",
+          "en": "are made known"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.89"
       ]
@@ -2747,7 +3296,36 @@
       "deva": "संबन्धयोग्यरूपेण तस्मात्संसर्गभागिनः । विशिष्टार्थप्रयुक्ता हि समभिव्याहृतिर्जने",
       "iast": "saṃbandhayogyarūpeṇa tasmātsaṃsargabhāginaḥ /\nviśiṣṭārthaprayuktā hi samabhivyāhṛtirjane",
       "translation": "Therefore words participate in a relation through a form fit for connection. In ordinary usage, their combination is prompted by a qualified meaning.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "सम्बन्ध-योग्य-रूपेण",
+          "en": "in a form fit for connection"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "संसर्ग-भागिनः",
+          "en": "participating in a connection"
+        },
+        {
+          "sa": "विशिष्ट-अर्थ-प्रयुक्ताः",
+          "en": "prompted by a qualified meaning"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सम-अभिव्याहृतिः",
+          "en": "the combination of words"
+        },
+        {
+          "sa": "जने",
+          "en": "among people"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.90"
       ]
@@ -2775,7 +3353,48 @@
       "deva": "न प्रवृत्तिनिवृत्तिभ्यामन्यद्वाक्यप्रयोजनम् । प्रतिपत्तिविधौ तुल्यं यदि सैव प्रयोजनम्",
       "iast": "na pravṛttinivṛttibhyāmanyadvākyaprayojanam /\npratipattividhau tulyaṃ yadi saiva prayojanam",
       "translation": "A sentence has no purpose other than prompting action or restraint. If that is the purpose, an injunction to understand has the same [defect].",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रवृत्ति-निवृत्तिभ्याम्",
+          "en": "apart from prompting action and restraining it"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "another"
+        },
+        {
+          "sa": "वाक्य-प्रयोजनम्",
+          "en": "purpose of a sentence"
+        },
+        {
+          "sa": "प्रतिपत्ति-विधौ",
+          "en": "in an injunction to understand"
+        },
+        {
+          "sa": "तुल्यम्",
+          "en": "the same"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "प्रयोजनम्",
+          "en": "is the purpose"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.92"
       ]
@@ -2789,7 +3408,40 @@
       "deva": "समानमेत्तदर्थं च समर्पयति चेदयम् । प्रज्ञाक्रियोपासनाधिकारसिद्धिव्यपेक्षितम्",
       "iast": "samānamettadarthaṃ ca samarpayati cedayam /\nprajñākriyopāsanādhikārasiddhivyapekṣitam",
       "translation": "The same point applies: [a sentence] presents what is required for an injunction assigning a duty to cultivate insight, perform mental practice, or meditate.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "समानम्",
+          "en": "the same"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "point"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "समर्पयति",
+          "en": "presents"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this (sentence)"
+        },
+        {
+          "sa": "प्रज्ञा-क्रिया-उपासना-अधिकार-सिद्धि-व्यपेक्षितम्",
+          "en": "what is required to establish a duty to cultivate insight, mental practice, or meditation"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.93"
       ]
@@ -2803,7 +3455,60 @@
       "deva": "हन्त तर्हि स्वरुपे तन्न वचः पर्यवसति । [क्क्स्_113] तुल्यमेतत्समाप्तं च वाक्यं वाक्यान्तरानुगम्",
       "iast": "hanta tarhi svarupe tanna vacaḥ paryavasati /\n[kks_113] tulyametatsamāptaṃ ca vākyaṃ vākyāntarānugam",
       "translation": "Then the sentence does not culminate in the thing’s own nature. The same argument applies here: a sentence whose meaning is complete joins with another sentence.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "हन्त",
+          "en": "well then"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "in that case"
+        },
+        {
+          "sa": "स्व-रूपे",
+          "en": "in its own nature"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वचः",
+          "en": "the statement"
+        },
+        {
+          "sa": "पर्यवसति",
+          "en": "culminates"
+        },
+        {
+          "sa": "तुल्यम्",
+          "en": "the same"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "समाप्तम्",
+          "en": "completed"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "a sentence"
+        },
+        {
+          "sa": "वाक्य-अन्तर-अनुगम्",
+          "en": "connected with another sentence"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.94"
       ]
@@ -2817,7 +3522,48 @@
       "deva": "नियोगानुप्रवेशो ऽस्ति तवद्यदि वृथान्यथा । तत्त्वावबोधविध्यंशस्तावदेवं समुद्धृतः",
       "iast": "niyogānupraveśo 'sti tavadyadi vṛthānyathā /\ntattvāvabodhavidhyaṃśastāvadevaṃ samuddhṛtaḥ",
       "translation": "If it participates in an injunction, otherwise it would be pointless. The part that enjoins understanding of truth has thus been set aside.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "नियोग-अनुप्रवेशः",
+          "en": "participation in an injunction"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "तावत्",
+          "en": "to that extent"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "वृथा",
+          "en": "useless"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "तत्त्व-अवबोध-विधि-अंशः",
+          "en": "the part enjoining understanding of truth"
+        },
+        {
+          "sa": "तावत्",
+          "en": "then"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "समुद्धृतः",
+          "en": "has been set aside"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.95"
       ]
@@ -2845,7 +3591,44 @@
       "deva": "अधिकारात्प्रवृत्तिश्च मता कर्माधिकारवत् । [क्क्स्_114] अज्ञानज्ञापनमतो ऽथाप्रवृत्तप्रवर्तनम्",
       "iast": "adhikārātpravṛttiśca matā karmādhikāravat /\n[kks_114] ajñānajñāpanamato 'thāpravṛttapravartanam",
       "translation": "Action is held to arise from eligibility, just as eligibility for ritual action does. Thus it is said that [an injunction] makes the unknown known and prompts one who has not acted.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अधिकारात्",
+          "en": "from eligibility"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "action"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मता",
+          "en": "is held"
+        },
+        {
+          "sa": "कर्म-अधिकार-वत्",
+          "en": "as in eligibility for ritual action"
+        },
+        {
+          "sa": "अज्ञान-ज्ञापनम्",
+          "en": "making the unknown known"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "अप्रवृत्त-प्रवर्तनम्",
+          "en": "prompting one who has not acted"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.97"
       ]
@@ -2859,7 +3642,60 @@
       "deva": "विधिमाचक्षते धीरा इत्येतदपि तादृशम् । कर्मस्वरूपावगमस्तत्र नेष्टं विधेः फलम्",
       "iast": "vidhimācakṣate dhīrā ityetadapi tādṛśam /\nkarmasvarūpāvagamastatra neṣṭaṃ vidheḥ phalam",
       "translation": "The learned say that this too is an injunction of that kind. But the result of the injunction is not the understanding of the form of ritual action.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विधिम्",
+          "en": "an injunction"
+        },
+        {
+          "sa": "आचक्षते",
+          "en": "explain"
+        },
+        {
+          "sa": "धीराः",
+          "en": "the wise"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "तादृशम्",
+          "en": "of that kind"
+        },
+        {
+          "sa": "कर्म-स्वरूप-अवगमः",
+          "en": "understanding the nature of ritual action"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इष्टम्",
+          "en": "desired"
+        },
+        {
+          "sa": "विधेः",
+          "en": "of the injunction"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the result"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.98"
       ]
@@ -2873,7 +3709,52 @@
       "deva": "किं तु कार्यव्यपेक्षस्य फलवाक्येन संगतिः । इहाधिकारसंबन्धो यस्य तन्न विधीयते",
       "iast": "kiṃ tu kāryavyapekṣasya phalavākyena saṃgatiḥ /\nihādhikārasaṃbandho yasya tanna vidhīyate",
       "translation": "Rather, the result is its connection with an injunction concerning what is to be done. What is connected with an assigned ritual duty is not prescribed here.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "किम्",
+          "en": "rather"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "कार्य-व्यपेक्षस्य",
+          "en": "of what depends on what is to be done"
+        },
+        {
+          "sa": "फल-वाक्येन",
+          "en": "by a sentence stating the result"
+        },
+        {
+          "sa": "संगतिः",
+          "en": "the connection"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "अधिकार-संबन्धः",
+          "en": "relation to an assigned duty"
+        },
+        {
+          "sa": "यस्य",
+          "en": "of which"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विधीयते",
+          "en": "is enjoined"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.99"
       ]
@@ -2887,7 +3768,44 @@
       "deva": "तत्त्वं तत्त्वावबोधस्य नाधिकारप्रवेशिता । न हि व्रीह्यादिविषयं प्रत्यक्षमधिकारभाक्",
       "iast": "tattvaṃ tattvāvabodhasya nādhikārapraveśitā /\nna hi vrīhyādiviṣayaṃ pratyakṣamadhikārabhāk",
       "translation": "Truth is not something that enters into an injunction assigning the act of knowing truth. Perception of rice grains and the like does not participate in a ritual duty.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth"
+        },
+        {
+          "sa": "तत्त्व-अवबोधस्य",
+          "en": "of understanding truth"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अधिकार-प्रवेशिता",
+          "en": "inclusion in an assigned duty"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "व्रीहि-आदि-विषयम्",
+          "en": "concerning rice and the like"
+        },
+        {
+          "sa": "प्रत्यक्षम्",
+          "en": "perception"
+        },
+        {
+          "sa": "अधिकार-भाक्",
+          "en": "a participant in an assigned duty"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.100"
       ]
@@ -4246,9 +5164,31 @@
       "2.60",
       "2.62",
       "2.63",
-      "2.64"
+      "2.64",
+      "2.71",
+      "2.72",
+      "2.74",
+      "2.75",
+      "2.76",
+      "2.77",
+      "2.79",
+      "2.81",
+      "2.82",
+      "2.83",
+      "2.84",
+      "2.88",
+      "2.89",
+      "2.90",
+      "2.92",
+      "2.93",
+      "2.94",
+      "2.95",
+      "2.97",
+      "2.98",
+      "2.99",
+      "2.100"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 20 of 231 source-marked passages; 211 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 42 of 231 source-marked passages; 189 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 20 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 42 passages listed in wordGlossCoverage."
 }
