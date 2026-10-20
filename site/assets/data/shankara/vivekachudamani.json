@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 430
+      "end": 435
     },
-    "note": "Source verses 1–430 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 431 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–435 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 436 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -33588,60 +33588,234 @@
       "number": "431",
       "label": "Verse 431",
       "deva": "वर्तमानेऽपि देहेऽस्मिञ्छायावदनुवर्तिनि ।\nअहन्ताममताभावो जीवन्मुक्तस्य लक्षणम् ॥",
-      "iast": "vartamāne'pi dehe'smiñchāyāvadanuvartini |\nahantāmamatābhāvo jīvanmuktasya lakṣaṇam ||",
-      "translation": "The absence of the ideas of \"I\" and \"mine\" even in this existing body which follows as a shadow, is a characteristic of one liberated-in-life.",
-      "gloss": [],
+      "iast": "vartamāne 'pi dehe 'smin chāyā-vad anuvartini |\nahantā-mamatā-abhāvo jīvan-muktasya lakṣaṇam ||",
+      "translation": "Even in this present body, which continues like a shadow, the absence of the notions “I” and “mine” is a mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "वर्तमाने",
+          "en": "present; existing"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "देहे",
+          "en": "in the body"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "in this"
+        },
+        {
+          "sa": "छाया-वत्",
+          "en": "like a shadow"
+        },
+        {
+          "sa": "अनुवर्तिनि",
+          "en": "continuing; following"
+        },
+        {
+          "sa": "अहन्ता",
+          "en": "I-ness"
+        },
+        {
+          "sa": "ममता",
+          "en": "mine-ness; possessiveness"
+        },
+        {
+          "sa": "अभावः",
+          "en": "absence"
+        },
+        {
+          "sa": "जीवन्मुक्तस्य",
+          "en": "of one liberated while living"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "a mark"
+        }
+      ],
       "sourceNumbers": [
         431
-      ]
+      ],
+      "editionTranslation": "The absence of the ideas of \"I\" and \"mine\" even in this existing body which follows as a shadow, is a characteristic of one liberated-in-life."
     },
     {
       "id": "vivekachudamani-432",
       "number": "432",
       "label": "Verse 432",
       "deva": "अतीताननुसन्धानं भविष्यदविचारणम् ।\nऔदासीन्यम् अपि प्राप्तं जीवन्मुक्तस्य लक्षणम् ॥",
-      "iast": "atītānanusandhānaṃ bhaviṣyadavicāraṇam |\naudāsīnyam api prāptaṃ jīvanmuktasya lakṣaṇam ||",
-      "translation": "Not dwelling on enjoyments of the past, taking no thought for the future and looking with indifference upon the present, are characteristics of one liberated-in-life.",
-      "gloss": [],
+      "iast": "atīta-an-anusandhānaṃ bhaviṣyat-avicāraṇam |\naudāsīnyam api prāptaṃ jīvan-muktasya lakṣaṇam ||",
+      "translation": "Not dwelling on the past, not pondering the future, and attaining even-mindedness are marks of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "अतीत-अननुसन्धानम्",
+          "en": "not dwelling on the past"
+        },
+        {
+          "sa": "भविष्यत्-अविचारणम्",
+          "en": "not pondering the future"
+        },
+        {
+          "sa": "औदासीन्यम्",
+          "en": "even-mindedness; indifference"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "प्राप्तम्",
+          "en": "attained"
+        },
+        {
+          "sa": "जीवन्मुक्तस्य",
+          "en": "of one liberated while living"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "a mark"
+        }
+      ],
       "sourceNumbers": [
         432
-      ]
+      ],
+      "editionTranslation": "Not dwelling on enjoyments of the past, taking no thought for the future and looking with indifference upon the present, are characteristics of one liberated-in-life."
     },
     {
       "id": "vivekachudamani-433",
       "number": "433",
       "label": "Verse 433",
-      "deva": "गुणदोषविशिष्टेऽस्मिन्स्वभावेन विलक्षणे ।\nसर्वत्र समदर्शित्वं जीवन्मुक्तस्य लक्षणम् ॥",
-      "iast": "guṇadoṣaviśiṣṭe'sminsvabhāvena vilakṣaṇe |\nsarvatra samadarśitvaṃ jīvanmuktasya lakṣaṇam ||",
-      "translation": "Looking everywhere with an eye of equality in this world, full of elements possessing merits and demerits, and distinct by nature from one another, is a characteristic of one liberated-in-life.",
-      "gloss": [],
+      "deva": "गुणदोषविशिष्टेऽस्मिन् स्वभावेन विलक्षणे ।\nसर्वत्र समदर्शित्वं जीवन्मुक्तस्य लक्षणम् ॥",
+      "iast": "guṇa-doṣa-viśiṣṭe 'smin svabhāvena vilakṣaṇe |\nsarvatra sama-darśitvaṃ jīvan-muktasya lakṣaṇam ||",
+      "translation": "In this world, characterized by qualities and faults and diverse by nature, equal vision everywhere is a mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "गुण-दोष-विशिष्टे",
+          "en": "characterized by qualities and faults"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "in this"
+        },
+        {
+          "sa": "स्वभावेन",
+          "en": "by nature"
+        },
+        {
+          "sa": "विलक्षणे",
+          "en": "diverse; distinct"
+        },
+        {
+          "sa": "सर्वत्र",
+          "en": "everywhere"
+        },
+        {
+          "sa": "सम-दर्शित्वम्",
+          "en": "equal vision"
+        },
+        {
+          "sa": "जीवन्मुक्तस्य",
+          "en": "of one liberated while living"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "a mark"
+        }
+      ],
       "sourceNumbers": [
         433
-      ]
+      ],
+      "editionTranslation": "Looking everywhere with an eye of equality in this world, full of elements possessing merits and demerits, and distinct by nature from one another, is a characteristic of one liberated-in-life."
     },
     {
       "id": "vivekachudamani-434",
       "number": "434",
       "label": "Verse 434",
       "deva": "इष्टानिष्टार्थसम्प्राप्तौ समदर्शितयात्मनि ।\nउभयत्राविकारित्वं जीवन्मुक्तस्य लक्षणम् ॥",
-      "iast": "iṣṭāniṣṭārthasamprāptau samadarśitayātmani |\nubhayatrāvikāritvaṃ jīvanmuktasya lakṣaṇam ||",
-      "translation": "When things pleasant or painful present themselves, to remain unruffled in mind in both cases, through the sameness of attitude, is a characteristic of one liberated-in-life.",
-      "gloss": [],
+      "iast": "iṣṭāniṣṭārtha-samprāptau sama-darśitayā ātmani |\nubhayatrāvikāritvaṃ jīvan-muktasya lakṣaṇam ||",
+      "translation": "When desirable or undesirable things come one's way, remaining unchanged in both situations through equal vision in the Self is a mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "इष्ट-अनिष्ट-अर्थ-सम्प्राप्तौ",
+          "en": "when desired or undesired things are encountered"
+        },
+        {
+          "sa": "सम-दर्शितया",
+          "en": "through equal vision"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "उभयत्र",
+          "en": "in both situations"
+        },
+        {
+          "sa": "अविकारित्वम्",
+          "en": "the state of being unchanged"
+        },
+        {
+          "sa": "जीवन्मुक्तस्य",
+          "en": "of one liberated while living"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "a mark"
+        }
+      ],
       "sourceNumbers": [
         434
-      ]
+      ],
+      "editionTranslation": "When things pleasant or painful present themselves, to remain unruffled in mind in both cases, through the sameness of attitude, is a characteristic of one liberated-in-life."
     },
     {
       "id": "vivekachudamani-435",
       "number": "435",
       "label": "Verse 435",
       "deva": "ब्रह्मानन्दरसास्वादासक्तचित्ततया यतेः ।\nअन्तर्बहिरविज्ञानं जीवन्मुक्तस्य लक्षणम् ॥",
-      "iast": "brahmānandarasāsvādāsaktacittatayā yateḥ |\nantarbahiravijñānaṃ jīvanmuktasya lakṣaṇam ||",
-      "translation": "The absence of all ideas of interior or exterior in the case of a Sannyasin, owing to his mind being engrossed in tasting the bliss of Brahman, is a characteristic of one liberated-in-life.",
-      "gloss": [],
+      "iast": "brahmānanda-rasa-āsvāda-āsakta-cittatayā yateḥ |\nantar-bahir-avijñānaṃ jīvan-muktasya lakṣaṇam ||",
+      "translation": "For a renunciate, not perceiving an inside and an outside because the mind is absorbed in tasting the essence of Brahman's bliss is a mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-आनन्द-रस-आस्वाद",
+          "en": "the tasting of the essence of Brahman's bliss"
+        },
+        {
+          "sa": "आसक्त-चित्ततया",
+          "en": "because the mind is absorbed"
+        },
+        {
+          "sa": "यतेः",
+          "en": "of the renunciate"
+        },
+        {
+          "sa": "अन्तः",
+          "en": "inside"
+        },
+        {
+          "sa": "बहिः",
+          "en": "outside"
+        },
+        {
+          "sa": "अविज्ञानम्",
+          "en": "non-perception; absence of awareness"
+        },
+        {
+          "sa": "जीवन्मुक्तस्य",
+          "en": "of one liberated while living"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "a mark"
+        }
+      ],
       "sourceNumbers": [
         435
-      ]
+      ],
+      "editionTranslation": "The absence of all ideas of interior or exterior in the case of a Sannyasin, owing to his mind being engrossed in tasting the bliss of Brahman, is a characteristic of one liberated-in-life."
     },
     {
       "id": "vivekachudamani-436",
@@ -35404,6 +35578,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 416–420; preserved prior translations as editionTranslation. Normalized the explicit word boundary in verse 416's tattva-vettā ānanda-ātmani, corrected verse 417's hetor dehaṃ spacing, and clarified the progression language in verses 419–420.",
     "Corrected verse 416's Devanāgarī gloss to तत्त्व-वेत्ता and aligned verse 418's IAST segmentation to bahir antaḥ sadā ānanda-rasa-āsvādanam.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 421–425; preserved prior translations as editionTranslation. Corrected verse 424's vairāgyasya spelling and removed non-text editorial breaks from verse 421; aligned verse 425's long compound boundaries for transliteration.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 426–430; preserved prior translations as editionTranslation. Normalized verse 427's editorial line break and aligned its translation to the oneness-cognition terms; rendered the mental-state language in verses 428–430 literally."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 426–430; preserved prior translations as editionTranslation. Normalized verse 427's editorial line break and aligned its translation to the oneness-cognition terms; rendered the mental-state language in verses 428–430 literally.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 431–435; preserved prior translations as editionTranslation. Kept the literal I/me and mine/not-mine distinction in verse 431 and made the equal-vision constructions in verses 433–434 explicit."
   ]
 }
