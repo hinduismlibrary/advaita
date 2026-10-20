@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–140.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–150.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 140
+      "to": 150
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–140 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–150 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -9839,13 +9839,67 @@
       "number": "141",
       "label": "Verse 141",
       "deva": "ब्रह्म-चर्यम् अहिंसा च साधूनाम् अप्यगर्हणम्। (अपि चार्हणम्)\nपराक्षे-पादि-सहनं तितिक्षोर् एव सिध्यति॥",
-      "translation": "Only that person who is endowed with fortitude can be successful in the practice of brahma-carya and ahiṃsā. He alone knows how to honour those who are worthy of reverence, and he alone knows how to endure the reproach of the others.",
-      "gloss": [],
+      "translation": "Only a person of fortitude succeeds in brahmacarya and non-injury, in not disparaging the virtuous (or, by an alternate reading, honoring them), and in enduring insults and the like.",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-चर्यम्",
+          "en": "brahmacarya; disciplined restraint"
+        },
+        {
+          "sa": "अहिंसा",
+          "en": "non-injury"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "साधूनाम्",
+          "en": "of virtuous people"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अगर्हणम्",
+          "en": "not disparaging"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अर्हणम्",
+          "en": "honoring; showing respect"
+        },
+        {
+          "sa": "पराक्षेप-आदि-सहनम्",
+          "en": "enduring reproach and the like"
+        },
+        {
+          "sa": "तितिक्षोः",
+          "en": "of a person of fortitude"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is accomplished"
+        }
+      ],
       "sourceNumbers": [
         141
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "brahma-caryam ahiṃsā ca sādhūnām apyagarhaṇam| (api cārhaṇam)\nparākṣe-pādi-sahanaṃ titikṣor eva sidhyati||"
+      "iast": "brahma-caryam ahiṃsā ca sādhūnām apyagarhaṇam| (api cārhaṇam)\nparākṣe-pādi-sahanaṃ titikṣor eva sidhyati||",
+      "editionTranslation": "Only that person who is endowed with fortitude can be successful in the practice of brahma-carya and ahiṃsā. He alone knows how to honour those who are worthy of reverence, and he alone knows how to endure the reproach of the others."
     },
     {
       "id": "svsss-1-0142",
@@ -9853,13 +9907,59 @@
       "number": "142",
       "label": "Verse 142",
       "deva": "साधनेष्वपि सर्वेषु तितिक्षोत्तम-साधनम्।\nयत्र विघ्नाः पलायन्ते दैविका अपि भौतिकाः॥",
-      "translation": "Of all the means available for spiritual liberation fortitude is the noblest. Where there is fortitude, all the obstacles both terrestrial and super-terrestrial vanish before it.",
-      "gloss": [],
+      "translation": "Among all disciplines, fortitude is the highest means, through which even divine and earthly obstacles flee.",
+      "gloss": [
+        {
+          "sa": "साधनेषु",
+          "en": "among the means"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सर्वेषु",
+          "en": "all"
+        },
+        {
+          "sa": "तितिक्षा",
+          "en": "fortitude"
+        },
+        {
+          "sa": "उत्तम-साधनम्",
+          "en": "the highest means"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where; through which"
+        },
+        {
+          "sa": "विघ्नाः",
+          "en": "obstacles"
+        },
+        {
+          "sa": "पलायन्ते",
+          "en": "flee"
+        },
+        {
+          "sa": "दैविकाः",
+          "en": "divine"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "भौतिकाः",
+          "en": "earthly; material"
+        }
+      ],
       "sourceNumbers": [
         142
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sādhaneṣvapi sarveṣu titikṣottama-sādhanam|\nyatra vighnāḥ palāyante daivikā api bhautikāḥ||"
+      "iast": "sādhaneṣvapi sarveṣu titikṣottama-sādhanam|\nyatra vighnāḥ palāyante daivikā api bhautikāḥ||",
+      "editionTranslation": "Of all the means available for spiritual liberation fortitude is the noblest. Where there is fortitude, all the obstacles both terrestrial and super-terrestrial vanish before it."
     },
     {
       "id": "svsss-1-0143",
@@ -9867,13 +9967,55 @@
       "number": "143",
       "label": "Verse 143",
       "deva": "तितिक्षोर् एव विघ्नेभ्यस् त्वनिवर्तित-चेतसः।\nसिध्यन्ति सिद्धयः सर्वा अणिमाद्याः समृद्धयः॥",
-      "translation": "It is only he who is endowed with fortitude and who does not turn away from life’s supreme goal of liberation, whatever obstacles may intervene, that attains all the super natural powers such as aṇimā and the like.",
-      "gloss": [],
+      "translation": "All attainments and powers, beginning with aṇimā, arise for the person of fortitude whose mind does not turn back from obstacles.",
+      "gloss": [
+        {
+          "sa": "तितिक्षोः",
+          "en": "for a person of fortitude"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "विघ्नेभ्यः",
+          "en": "from obstacles"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "अनिवर्तित-चेतसः",
+          "en": "whose mind does not turn back"
+        },
+        {
+          "sa": "सिध्यन्ति",
+          "en": "are attained"
+        },
+        {
+          "sa": "सिद्धयः",
+          "en": "powers; accomplishments"
+        },
+        {
+          "sa": "सर्वाः",
+          "en": "all"
+        },
+        {
+          "sa": "अणिम-आद्याः",
+          "en": "beginning with aṇimā"
+        },
+        {
+          "sa": "समृद्धयः",
+          "en": "attainments"
+        }
+      ],
       "sourceNumbers": [
         143
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "titikṣor eva vighnebhyas tvanivartita-cetasaḥ|\nsidhyanti siddhayaḥ sarvā aṇimādyāḥ samṛddhayaḥ||"
+      "iast": "titikṣor eva vighnebhyas tvanivartita-cetasaḥ|\nsidhyanti siddhayaḥ sarvā aṇimādyāḥ samṛddhayaḥ||",
+      "editionTranslation": "It is only he who is endowed with fortitude and who does not turn away from life’s supreme goal of liberation, whatever obstacles may intervene, that attains all the super natural powers such as aṇimā and the like."
     },
     {
       "id": "svsss-1-0144",
@@ -9881,13 +10023,71 @@
       "number": "144",
       "label": "Verse 144",
       "deva": "तस्मान् मुमुक्षोर् अधिका तितिक्षा\nसम्पादनीयेप्सित-कार्य-सिद्ध्यै।\nतीव्रा मुमुक्षा च महत्य् उपेक्षा\nचोभे तितिक्षा-सहकारि-कारणम्॥",
-      "translation": "Therefore the aspirant after liberation should attain fortitude in full measure. This attainment is facilitated by the earnest desire for liberation and by intense dispassion.",
-      "gloss": [],
+      "translation": "Therefore, for the seeker of liberation, great fortitude should be cultivated to accomplish the desired aim. Intense longing for liberation and great dispassion are both supports for fortitude.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "मुमुक्षोः",
+          "en": "for the seeker of liberation"
+        },
+        {
+          "sa": "अधिका",
+          "en": "greater; abundant"
+        },
+        {
+          "sa": "तितिक्षा",
+          "en": "fortitude"
+        },
+        {
+          "sa": "सम्पादनीया",
+          "en": "should be cultivated"
+        },
+        {
+          "sa": "ईप्सित-कार्य-सिद्ध्यै",
+          "en": "for accomplishing the desired aim"
+        },
+        {
+          "sa": "तीव्रा",
+          "en": "intense"
+        },
+        {
+          "sa": "मुमुक्षा",
+          "en": "longing for liberation"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "महती",
+          "en": "great"
+        },
+        {
+          "sa": "उपेक्षा",
+          "en": "dispassion"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उभे",
+          "en": "both"
+        },
+        {
+          "sa": "तितिक्षा-सहकारि-कारणम्",
+          "en": "supporting causes for fortitude"
+        }
+      ],
       "sourceNumbers": [
         144
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tasmān mumukṣor adhikā titikṣā\nsampādanīyepsita-kārya-siddhyai|\ntīvrā mumukṣā ca mahaty upekṣā\ncobhe titikṣā-sahakāri-kāraṇam||"
+      "iast": "tasmān mumukṣor adhikā titikṣā\nsampādanīyepsita-kārya-siddhyai|\ntīvrā mumukṣā ca mahaty upekṣā\ncobhe titikṣā-sahakāri-kāraṇam||",
+      "editionTranslation": "Therefore the aspirant after liberation should attain fortitude in full measure. This attainment is facilitated by the earnest desire for liberation and by intense dispassion."
     },
     {
       "id": "svsss-1-0145",
@@ -9895,13 +10095,107 @@
       "number": "145",
       "label": "Verse 145",
       "deva": "तत्तत्-काल-समागतामयततेः शान्त्यै प्रवृत्तो यदि\nस्यात् तत्तत्-परिहारकौषध-रतस् तच्-चिन्तने तत्-परः।\nतद् भिक्षुः श्रवणादि-धर्म-रहितो भूत्वा मृतश् चेत्ततः\nकिं सिद्धं फलम् आप्नुयाद् उभयथा भ्रष्टो भवेत् स्वार्थतः॥",
-      "translation": "Of what avail is it if a sannyāsin should abandon his sva-dharma, that of harkening to the Vedas, and waste his time in worrying himself over the various ailments to which his body may be subject, and in gathering medicines to cure them? Such a person loses both here and hereafter.",
-      "gloss": [],
+      "translation": "If a mendicant becomes intent on relief from the mass of ailments arriving at their respective times, devoted to medicines that remove each one and absorbed in thinking about them, then—if he dies after becoming devoid of disciplines such as listening—what result has he gained? In either case, he has fallen away from his own aim.",
+      "gloss": [
+        {
+          "sa": "तत्-तत्-काल-समागत-आमय-ततेः",
+          "en": "of the mass of ailments arriving at their respective times"
+        },
+        {
+          "sa": "शान्त्यै",
+          "en": "for relief"
+        },
+        {
+          "sa": "प्रवृत्तः",
+          "en": "engaged"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "he should be"
+        },
+        {
+          "sa": "तत्-तत्-परिहार-औषध-रतः",
+          "en": "devoted to medicines for removing each"
+        },
+        {
+          "sa": "तत्-चिन्तने",
+          "en": "in thinking about them"
+        },
+        {
+          "sa": "तत्-परः",
+          "en": "intent on that"
+        },
+        {
+          "sa": "तत्",
+          "en": "then"
+        },
+        {
+          "sa": "भिक्षुः",
+          "en": "the mendicant"
+        },
+        {
+          "sa": "श्रवण-आदि-धर्म-रहितः",
+          "en": "devoid of disciplines beginning with listening"
+        },
+        {
+          "sa": "भूत्वा",
+          "en": "having become"
+        },
+        {
+          "sa": "मृतः",
+          "en": "dead"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "सिद्धम्",
+          "en": "accomplished"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "आप्नुयात्",
+          "en": "would he obtain"
+        },
+        {
+          "sa": "उभयथा",
+          "en": "in either way"
+        },
+        {
+          "sa": "भ्रष्टः",
+          "en": "fallen away"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be"
+        },
+        {
+          "sa": "स्वार्थतः",
+          "en": "from his own aim"
+        }
+      ],
       "sourceNumbers": [
         145
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tattat-kāla-samāgatāmayatateḥ śāntyai pravṛtto yadi\nsyāt tattat-parihārakauṣadha-ratas tac-cintane tat-paraḥ|\ntad bhikṣuḥ śravaṇādi-dharma-rahito bhūtvā mṛtaś cettataḥ\nkiṃ siddhaṃ phalam āpnuyād ubhayathā bhraṣṭo bhavet svārthataḥ||"
+      "iast": "tattat-kāla-samāgatāmayatateḥ śāntyai pravṛtto yadi\nsyāt tattat-parihārakauṣadha-ratas tac-cintane tat-paraḥ|\ntad bhikṣuḥ śravaṇādi-dharma-rahito bhūtvā mṛtaś cettataḥ\nkiṃ siddhaṃ phalam āpnuyād ubhayathā bhraṣṭo bhavet svārthataḥ||",
+      "editionTranslation": "Of what avail is it if a sannyāsin should abandon his sva-dharma, that of harkening to the Vedas, and waste his time in worrying himself over the various ailments to which his body may be subject, and in gathering medicines to cure them? Such a person loses both here and hereafter."
     },
     {
       "id": "svsss-1-0146",
@@ -9909,13 +10203,59 @@
       "number": "146",
       "label": "Verse 146",
       "deva": "योगम् अभ्यस्यतो भिक्षोर् योगाच्चलित-चेतसः।\nप्राप्य पुण्य-कृतांल् लोकान् इत्यादि प्राह केशवः॥",
-      "translation": "But the sannyāsin who strives after communion with Brahman, even if he should deviate from his resolve attains the regions of the blessed, as the Lord Keśava proclaims.",
-      "gloss": [],
+      "translation": "Keśava says, “The mendicant who practises yoga, whose mind has slipped from yoga, after reaching the worlds of the meritorious…” and so on.",
+      "gloss": [
+        {
+          "sa": "योगम्",
+          "en": "yoga"
+        },
+        {
+          "sa": "अभ्यस्यतः",
+          "en": "of one practising"
+        },
+        {
+          "sa": "भिक्षोः",
+          "en": "of the mendicant"
+        },
+        {
+          "sa": "योगात्",
+          "en": "from yoga"
+        },
+        {
+          "sa": "चलित-चेतसः",
+          "en": "whose mind has slipped"
+        },
+        {
+          "sa": "प्राप्य",
+          "en": "having reached"
+        },
+        {
+          "sa": "पुण्य-कृताम्",
+          "en": "of those who have done merit"
+        },
+        {
+          "sa": "लोकान्",
+          "en": "worlds"
+        },
+        {
+          "sa": "इति-आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "प्राह",
+          "en": "said"
+        },
+        {
+          "sa": "केशवः",
+          "en": "Keśava"
+        }
+      ],
       "sourceNumbers": [
         146
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yogam abhyasyato bhikṣor yogāccalita-cetasaḥ|\nprāpya puṇya-kṛtāṃl lokān ityādi prāha keśavaḥ||"
+      "iast": "yogam abhyasyato bhikṣor yogāccalita-cetasaḥ|\nprāpya puṇya-kṛtāṃl lokān ityādi prāha keśavaḥ||",
+      "editionTranslation": "But the sannyāsin who strives after communion with Brahman, even if he should deviate from his resolve attains the regions of the blessed, as the Lord Keśava proclaims."
     },
     {
       "id": "svsss-1-0147",
@@ -9923,13 +10263,67 @@
       "number": "147",
       "label": "Verse 147",
       "deva": "न तु कृत्वैव संन्यासं तूष्णीम् एव मृतस्य हि।\nपुण्य-लोक-गतिं ब्रूते भगवान् न्यास-मात्रतः॥",
-      "translation": "But the Lord does not say that merely by virtue of one’s formal sannyāsa, any one who does nothing else might attain after his death those happy regions that are reserved for the blessed. ((BhG.6.37) (Bhagavad Gītā), (.41) (Bhagavad Gītā))",
-      "gloss": [],
+      "translation": "But the Blessed Lord does not say that one who has merely taken renunciation and then died quietly obtains a world of merit through renunciation alone.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "कृत्वा",
+          "en": "having done; taken"
+        },
+        {
+          "sa": "एव",
+          "en": "merely"
+        },
+        {
+          "sa": "संन्यासम्",
+          "en": "renunciation"
+        },
+        {
+          "sa": "तूष्णीम्",
+          "en": "silently; without further practice"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "मृतस्य",
+          "en": "of one who has died"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुण्य-लोक-गतिम्",
+          "en": "attainment of a meritorious world"
+        },
+        {
+          "sa": "ब्रूते",
+          "en": "says"
+        },
+        {
+          "sa": "भगवान्",
+          "en": "the Blessed Lord"
+        },
+        {
+          "sa": "न्यास-मात्रतः",
+          "en": "from renunciation alone"
+        }
+      ],
       "sourceNumbers": [
         147
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "na tu kṛtvaiva saṃnyāsaṃ tūṣṇīm eva mṛtasya hi|\npuṇya-loka-gatiṃ brūte bhagavān nyāsa-mātrataḥ||"
+      "iast": "na tu kṛtvaiva saṃnyāsaṃ tūṣṇīm eva mṛtasya hi|\npuṇya-loka-gatiṃ brūte bhagavān nyāsa-mātrataḥ||",
+      "editionTranslation": "But the Lord does not say that merely by virtue of one’s formal sannyāsa, any one who does nothing else might attain after his death those happy regions that are reserved for the blessed. ((BhG.6.37) (Bhagavad Gītā), (.41) (Bhagavad Gītā))"
     },
     {
       "id": "svsss-1-0148",
@@ -9937,13 +10331,59 @@
       "number": "148",
       "label": "Verse 148",
       "deva": "न च संन्यसनाद् एव सिद्धिं समधिगच्छति।\nइत्यनुष्ठेय-सन्त्यागात् सिद्ध्यभावम् उवाच च॥",
-      "translation": "In fact the Lord says, “By mere sannyāsa he does not (completely) attain the goal (of sannyāsa)” implying thereby that by abandoning one’s duties, one misses the goal. ((BhG.3.4) (Bhagavad Gītā))",
-      "gloss": [],
+      "translation": "He also said, “One does not attain success through renunciation alone,” thereby stating that success does not come from abandoning the duties that must be performed.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "संन्यसनात्",
+          "en": "through renunciation"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "सिद्धिम्",
+          "en": "success"
+        },
+        {
+          "sa": "समधिगच्छति",
+          "en": "one attains"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुष्ठेय-सन्त्यागात्",
+          "en": "from abandoning what should be performed"
+        },
+        {
+          "sa": "सिद्धि-अभावम्",
+          "en": "absence of success"
+        },
+        {
+          "sa": "उवाच",
+          "en": "he said"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        }
+      ],
       "sourceNumbers": [
         148
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "na ca saṃnyasanād eva siddhiṃ samadhigacchati|\nityanuṣṭheya-santyāgāt siddhyabhāvam uvāca ca||"
+      "iast": "na ca saṃnyasanād eva siddhiṃ samadhigacchati|\nityanuṣṭheya-santyāgāt siddhyabhāvam uvāca ca||",
+      "editionTranslation": "In fact the Lord says, “By mere sannyāsa he does not (completely) attain the goal (of sannyāsa)” implying thereby that by abandoning one’s duties, one misses the goal. ((BhG.3.4) (Bhagavad Gītā))"
     },
     {
       "id": "svsss-1-0149",
@@ -9951,13 +10391,55 @@
       "number": "149",
       "label": "Verse 149",
       "deva": "तस्मात् तितिक्षया सोढ्वा तत्तद्-दुःखम् उपागतम्।\nकुर्याच् छक्त्यनुरूपेण श्रवणादि शनैः शनैः॥",
-      "translation": "It is therefore imperative that by the practice of fortitude one should conquer such sorrow as falls to one’s lot. One should then step by step direct one’s attention to such disciplines as listening to the Śruti according to the measure of one’s ability.",
-      "gloss": [],
+      "translation": "Therefore, having endured through fortitude whatever particular suffering has come, one should gradually undertake listening and the other practices, according to one’s capacity.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "तितिक्षया",
+          "en": "through fortitude"
+        },
+        {
+          "sa": "सोढ्वा",
+          "en": "having endured"
+        },
+        {
+          "sa": "तत्-तत्-दुःखम्",
+          "en": "that particular suffering"
+        },
+        {
+          "sa": "उपागतम्",
+          "en": "which has come"
+        },
+        {
+          "sa": "कुर्यात्",
+          "en": "one should do"
+        },
+        {
+          "sa": "शक्ति-अनुरूपेण",
+          "en": "according to one’s capacity"
+        },
+        {
+          "sa": "श्रवण-आदि",
+          "en": "listening and the other practices"
+        },
+        {
+          "sa": "शनैः",
+          "en": "gradually"
+        },
+        {
+          "sa": "शनैः",
+          "en": "gradually"
+        }
+      ],
       "sourceNumbers": [
         149
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tasmāt titikṣayā soḍhvā tattad-duḥkham upāgatam|\nkuryāc chaktyanurūpeṇa śravaṇādi śanaiḥ śanaiḥ||"
+      "iast": "tasmāt titikṣayā soḍhvā tattad-duḥkham upāgatam|\nkuryāc chaktyanurūpeṇa śravaṇādi śanaiḥ śanaiḥ||",
+      "editionTranslation": "It is therefore imperative that by the practice of fortitude one should conquer such sorrow as falls to one’s lot. One should then step by step direct one’s attention to such disciplines as listening to the Śruti according to the measure of one’s ability."
     },
     {
       "id": "svsss-1-0150",
@@ -9965,13 +10447,51 @@
       "number": "150",
       "label": "Verse 150",
       "deva": "प्रयोजनं तितिक्षायाः साधितायाः प्रयत्नतः।\nप्राप्त-दुःखासहिष्णुत्वे न किञ्चिदपि दृश्यते॥",
-      "translation": "What is the use of acquiring fortitude with great effort, if one could not endure such affliction as falls to one’s lot?",
-      "gloss": [],
+      "translation": "If one cannot endure the suffering that has come, no purpose at all is seen in the fortitude cultivated through effort.",
+      "gloss": [
+        {
+          "sa": "प्रयोजनम्",
+          "en": "purpose"
+        },
+        {
+          "sa": "तितिक्षायाः",
+          "en": "of fortitude"
+        },
+        {
+          "sa": "साधितायाः",
+          "en": "cultivated"
+        },
+        {
+          "sa": "प्रयत्नतः",
+          "en": "through effort"
+        },
+        {
+          "sa": "प्राप्त-दुःख-असहिष्णुत्वे",
+          "en": "when unable to endure suffering that has come"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "अपि",
+          "en": "at all"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         150
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "prayojanaṃ titikṣāyāḥ sādhitāyāḥ prayatnataḥ|\nprāpta-duḥkhāsahiṣṇutve na kiñcidapi dṛśyate||"
+      "iast": "prayojanaṃ titikṣāyāḥ sādhitāyāḥ prayatnataḥ|\nprāpta-duḥkhāsahiṣṇutve na kiñcidapi dṛśyate||",
+      "editionTranslation": "What is the use of acquiring fortitude with great effort, if one could not endure such affliction as falls to one’s lot?"
     },
     {
       "id": "svsss-1-0151",
@@ -21763,5 +22283,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–140 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–150 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
 }
