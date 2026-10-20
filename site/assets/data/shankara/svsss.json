@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 470
+      "to": 480
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–470 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–480 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -31073,7 +31073,7 @@
       "chapter": 3,
       "number": "466",
       "label": "Verse 466",
-      "deva": "वात-कल्पित-नैल्यम् व्योम किं मलिनायते।\nशिष्यः—प्रत्यगात्मन्यविषयेऽनात्माध्यासः कथं प्रभो॥",
+      "deva": "वात-कल्पित-नैल्येन व्योम किं मलिनायते।\nप्रत्यगात्मन्यविषयेऽनात्माध्यासः कथं प्रभो॥",
       "translation": "Does the sky become stained by blueness imagined by the wind? [The disciple asks:] How can not-Self be superimposed on the inner Self, which is not an object, O Lord?",
       "gloss": [
         {
@@ -31117,7 +31117,7 @@
         466
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "vāta-kalpita-nailyena vyoma kiṃ malināyate|\nśiṣya: pratyag-ātmany-aviṣaye anātma-adhyāsaḥ kathaṃ prabho||"
+      "iast": "vātakalpita-nailyena vyoma kiṃ malināyate|\npratyagātmany aviṣaye’nātmādhyāsaḥ kathaṃ prabho||"
     },
     {
       "id": "svsss-3-0467",
@@ -31361,8 +31361,65 @@
       "number": "471",
       "label": "Verse 471",
       "deva": "उपाधि-योग उभयोः सम एवेश-जीवयोः।\nजीवस्यैव कथं बन्धो नेश्वरस्यास्ति तत् कथम्॥",
-      "translation": "We have seen that both Īśvara and the jīva have the same adjuncts in common. How does it then happen that the jīva alone becomes bound, but not Īśvara?",
-      "gloss": [],
+      "translation": "The association with adjuncts is the same for both Īśvara and the jīva. Why, then, is the jīva alone bound and not Īśvara?",
+      "gloss": [
+        {
+          "sa": "उपाधि-योगः",
+          "en": "association with an adjunct"
+        },
+        {
+          "sa": "उभयोः",
+          "en": "of both"
+        },
+        {
+          "sa": "समः",
+          "en": "the same"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "ईश-जीवयोः",
+          "en": "for Īśvara and the jīva"
+        },
+        {
+          "sa": "जीवस्य",
+          "en": "of the jīva"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "बन्धः",
+          "en": "bondage"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ईश्वरस्य",
+          "en": "for Īśvara"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is"
+        },
+        {
+          "sa": "तत्",
+          "en": "then"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        }
+      ],
       "sourceNumbers": [
         471
       ],
@@ -31375,8 +31432,45 @@
       "number": "472",
       "label": "Verse 472",
       "deva": "एतत् सर्वं दया-दृष्ट्या करामलकवत् स्फुटम्।\nप्रतिपादय सर्वज्ञ श्रीगुरो करुणा-निधे॥",
-      "translation": "May it please you, Revered Sir, to make all this as clear to me as the myrobalan fruit that is placed in the palm of one’s hand and, out of your abounding grace, to explain it to me fully.",
-      "gloss": [],
+      "translation": "O all-knowing revered teacher, ocean of compassion, explain all this clearly through your compassionate vision, as plainly as a myrobalan in the palm.",
+      "gloss": [
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "दया-दृष्ट्या",
+          "en": "with a compassionate gaze"
+        },
+        {
+          "sa": "कर-आमलक-वत्",
+          "en": "like a myrobalan in the palm"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "प्रतिपादय",
+          "en": "explain"
+        },
+        {
+          "sa": "सर्वज्ञ",
+          "en": "O all-knowing one"
+        },
+        {
+          "sa": "श्री-गुरो",
+          "en": "O revered teacher"
+        },
+        {
+          "sa": "करुणा-निधे",
+          "en": "O ocean of compassion"
+        }
+      ],
       "sourceNumbers": [
         472
       ],
@@ -31388,14 +31482,63 @@
       "chapter": 3,
       "number": "473",
       "label": "Verse 473",
-      "deva": "न सावयव एकस्य नात्मा विषय इष्यते।\nअस्यास्मत्-प्रत्ययार्थत्वाद् अपरोक्षाच् च सर्वशः॥",
-      "translation": "The spiritual guide says: The Ātman is not a compound of parts and whole. At no time does it become an object of knowledge, even though, every one refers to it by the term ‘I’ or the self; for it is without a second and is known immediately within oneself.",
-      "gloss": [],
+      "deva": "न तावद् अयम् एकान्तेन आत्माविषय इष्यते।\nअस्यास्मत्-प्रत्ययार्थत्वाद् अपरोक्षाच् च सर्वशः॥",
+      "translation": "The Self is not held to be entirely unobjectifiable: it is directly evident in every way because it is the referent of the thought “I.”",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तावत्",
+          "en": "indeed"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "एकान्तेन",
+          "en": "entirely"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अविषयः",
+          "en": "not an object"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is held"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "अस्मत्-प्रत्यय-अर्थत्वात्",
+          "en": "because it is the meaning of the thought “I”"
+        },
+        {
+          "sa": "अपरोक्षात्",
+          "en": "because it is directly evident"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सर्वशः",
+          "en": "in every way"
+        }
+      ],
       "sourceNumbers": [
         473
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "na sāvayava ekasya nātmā viṣaya iṣyate|\nasyāsmat-pratyayārthatvād aparokṣāc ca sarvaśaḥ||"
+      "iast": "na tāvad ayam ekāntena ātmāviṣaya iṣyate|\nasyāsmat-pratyayārthatvād aparokṣāc ca sarvaśaḥ||"
     },
     {
       "id": "svsss-3-0474",
@@ -31403,8 +31546,77 @@
       "number": "474",
       "label": "Verse 474",
       "deva": "प्रसिद्धिर् आत्मनोऽस्त्येव न कस्यापि च दृश्यते।\nप्रत्ययो नाहम् अस्मीति न ह्यस्ति प्रत्यग्-आत्मनि॥",
-      "translation": "The existence of the Ātman is a fact of experience. No one ever thinks, ‘I do not exist.’ Therefore no one ever doubts the existence of the innermost Ātman.",
-      "gloss": [],
+      "translation": "The Self is manifestly evident; no one has the thought “I do not exist,” for such a thought does not arise in the inner Self.",
+      "gloss": [
+        {
+          "sa": "प्रसिद्धिः",
+          "en": "manifest evidence"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कस्यापि",
+          "en": "of anyone"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "प्रत्ययः",
+          "en": "a thought"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "exist"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "प्रत्यग्-आत्मनि",
+          "en": "in the inner Self"
+        }
+      ],
       "sourceNumbers": [
         474
       ],
@@ -31416,14 +31628,67 @@
       "chapter": 3,
       "number": "475",
       "label": "Verse 475",
-      "deva": "न कस्यापि स्व-सद्-भावे प्रमाणम् अभिकाङ्क्ष्यते।\nप्रमाणानां च प्रामाण्यं यन्-मूलं किं तु बोधयेत्॥",
-      "translation": "That is why no one ever demands a proof for one’s own existence. The existence of pure consciousness is therefore an axiom of knowledge; for upon that is based all other proofs.",
-      "gloss": [],
+      "deva": "न कस्यापि स्व-सद्-भावे प्रमाणम् अभिकाङ्क्ष्यते।\nप्रमाणानां च प्रामाण्यं यन्-मूलं किं नु बोधयेत्॥",
+      "translation": "No one asks for proof of their own existence; what could establish the validity of the means of knowledge, whose very basis is the Self?",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कस्यापि",
+          "en": "of anyone"
+        },
+        {
+          "sa": "स्व-सद्-भावे",
+          "en": "in one’s own existence"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "proof"
+        },
+        {
+          "sa": "अभिकाङ्क्ष्यते",
+          "en": "is sought"
+        },
+        {
+          "sa": "प्रमाणानाम्",
+          "en": "of the means of knowledge"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रामाण्यम्",
+          "en": "validity"
+        },
+        {
+          "sa": "यत्",
+          "en": "whose"
+        },
+        {
+          "sa": "मूलम्",
+          "en": "basis"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "नु",
+          "en": "then"
+        },
+        {
+          "sa": "बोधयेत्",
+          "en": "could establish"
+        }
+      ],
       "sourceNumbers": [
         475
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "na kasyāpi sva-sad-bhāve pramāṇam abhikāṅkṣyate|\npramāṇānāṃ ca prāmāṇyaṃ yan-mūlaṃ kiṃ tu bodhayet||"
+      "iast": "na kasyāpi sva-sad-bhāve pramāṇam abhikāṅkṣyate|\npramāṇānāṃ ca prāmāṇyaṃ yan-mūlaṃ kiṃ nu bodhayet||"
     },
     {
       "id": "svsss-3-0476",
@@ -31431,8 +31696,57 @@
       "number": "476",
       "label": "Verse 476",
       "deva": "माया-कार्यैस् तिरो-भूतो नैष आत्मानुभूयते।\nमेघ-वृन्दैर् यथा भानुस् तथायम् अहम्-आदिभिः॥",
-      "translation": "Like the sun that lies hidden behind a cluster of cloud formations, the Ātman lies veiled by its own ego. All that is the effect of Māyā. That is the reason why we do not know the Ātman as an object of knowledge.",
-      "gloss": [],
+      "translation": "This Self is not recognized because it is concealed by the effects of Māyā, just as the sun is hidden by clusters of clouds and the Self by “I” and the like.",
+      "gloss": [
+        {
+          "sa": "माया-कार्यैः",
+          "en": "by the effects of Māyā"
+        },
+        {
+          "sa": "तिरो-भूतः",
+          "en": "concealed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "अनुभूयते",
+          "en": "is experienced"
+        },
+        {
+          "sa": "मेघ-वृन्दैः",
+          "en": "by clusters of clouds"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "भानुः",
+          "en": "the sun"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अहम्-आदिभिः",
+          "en": "by “I” and the rest"
+        }
+      ],
       "sourceNumbers": [
         476
       ],
@@ -31445,8 +31759,65 @@
       "number": "477",
       "label": "Verse 477",
       "deva": "पुरः-स्थ एव विषये वस्तुन्यध्यस्यताम् इति।\nनियमो न कृतः सद्भिर् भ्रान्तिर् एवात्र कारणम्॥",
-      "translation": "No wise man has ever laid down a law that superimposition must necessarily deal only with known objects, which are perceptible to the senses. It is enough if there is delusive knowledge, or mistaken identify, for it to operate.",
-      "gloss": [],
+      "translation": "The wise set no rule that superimposition occurs only on an object standing directly before one; here, error alone is the cause.",
+      "gloss": [
+        {
+          "sa": "पुरः-स्थे",
+          "en": "standing before"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "विषये",
+          "en": "on an object"
+        },
+        {
+          "sa": "वस्तुनि",
+          "en": "on a thing"
+        },
+        {
+          "sa": "अध्यस्यताम्",
+          "en": "for superimposition to occur"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "नियमः",
+          "en": "a rule"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कृतः",
+          "en": "is made"
+        },
+        {
+          "sa": "सद्भिः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "भ्रान्तिः",
+          "en": "error"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the cause"
+        }
+      ],
       "sourceNumbers": [
         477
       ],
@@ -31459,8 +31830,57 @@
       "number": "478",
       "label": "Verse 478",
       "deva": "दृग्-आद्यविषये व्योम्नि नीलतादि यथाबुधाः।\nअध्यस्यन्ति तथैवास्मिन्न् आत्मन्यपि मति-भ्रमात्॥",
-      "translation": "The sky (i.e. space) for example is not an object of perception, but people, out of their ignorance, imagine that the sky is blue. Such is the case with the Ātman also. In both these instances, the delusion of the intellect is the only cause.",
-      "gloss": [],
+      "translation": "Just as ignorant people superimpose blueness and the like on the sky, which is not an object of sight and the rest, so too they superimpose [qualities] on this Self through error of mind.",
+      "gloss": [
+        {
+          "sa": "दृक्-आदि-अविषये",
+          "en": "not an object of sight and the rest"
+        },
+        {
+          "sa": "व्योमनि",
+          "en": "in the sky"
+        },
+        {
+          "sa": "नीलता-आदि",
+          "en": "blueness and the like"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "अबुधाः",
+          "en": "ignorant people"
+        },
+        {
+          "sa": "अध्यस्यन्ति",
+          "en": "superimpose"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "on this"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "Self"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "मति-भ्रमात्",
+          "en": "through error of mind"
+        }
+      ],
       "sourceNumbers": [
         478
       ],
@@ -31473,8 +31893,61 @@
       "number": "479",
       "label": "Verse 479",
       "deva": "अनात्मन्यात्मताध्यासे न सादृश्यम् अपेक्षते।\nपीतोऽयं शङ्ख इत्यादौ सादृश्यं किम् अपेक्षितम्॥",
-      "translation": "It is not necessary to have identical attributes between any two given objects for the law of superimposition to operate, for what is there that is in common between a jaundiced vision and a conch shell that the latter should seem to be yellow in colour?",
-      "gloss": [],
+      "translation": "Superimposing Selfhood on the not-Self does not require resemblance. What resemblance is required when one says, “This conch is yellow”?",
+      "gloss": [
+        {
+          "sa": "अनात्मनि",
+          "en": "on the not-Self"
+        },
+        {
+          "sa": "आत्मता-अध्यासे",
+          "en": "in superimposing Selfhood"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सादृश्यम्",
+          "en": "resemblance"
+        },
+        {
+          "sa": "अपेक्षते",
+          "en": "is required"
+        },
+        {
+          "sa": "पीतः",
+          "en": "yellow"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "शङ्खः",
+          "en": "conch"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आदौ",
+          "en": "in such cases"
+        },
+        {
+          "sa": "सादृश्यम्",
+          "en": "resemblance"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "अपेक्षितम्",
+          "en": "is required"
+        }
+      ],
       "sourceNumbers": [
         479
       ],
@@ -31487,8 +31960,53 @@
       "number": "480",
       "label": "Verse 480",
       "deva": "निरुपाधि-भ्रमेष्वस्मिन् नैवापेक्षा प्रदृश्यते।\nसोपाधिष्वेव तद् दृष्टं रज्जु-सर्प-भ्रमादिषु॥",
-      "translation": "In the absence of the limiting conditions, there is no need for similarity as a preliminary condition for the law of superimposition to operate. It is only in those instances where there are limiting conditions, as in the case of the rope being mistaken for a snake, that there should be similarity in order that superimposition might take place.",
-      "gloss": [],
+      "translation": "In this kind of error without a limiting adjunct, resemblance is not required; it is observed only in errors with an adjunct, such as mistaking a rope for a snake.",
+      "gloss": [
+        {
+          "sa": "निरुपाधि-भ्रमेषु",
+          "en": "in errors without a limiting adjunct"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "in this"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अपेक्षा",
+          "en": "requirement"
+        },
+        {
+          "sa": "प्रदृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "सोपाधिषु",
+          "en": "in those with an adjunct"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "is observed"
+        },
+        {
+          "sa": "रज्जु-सर्प-भ्रम-आदिषु",
+          "en": "in errors such as mistaking a rope for a snake"
+        }
+      ],
       "sourceNumbers": [
         480
       ],
