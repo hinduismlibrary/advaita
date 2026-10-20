@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 560
+      "end": 565
     },
-    "note": "Source verses 1–560 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 561 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–565 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 566 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -40071,11 +40071,33 @@
       "label": "Verse 561",
       "deva": "प्रज्ञानघन इत्य् आत्मलक्षणं सत्यसूचकम् ।\nअनूद्यौपाधिकस्यैव कथयन्ति विनाशनम् ॥",
       "iast": "prajñānaghana ity ātmalakṣaṇaṃ satyasūcakam |\nanūdyaupādhikasyaiva kathayanti vināśanam ||",
-      "translation": "The Shrutis, by setting forth the real nature of the Atman in the words, \"The Embodiment of Knowledge\" etc., which indicate Its Reality, speak of the destruction of the apparent limitations merely.",
-      "gloss": [],
+      "translation": "By repeating phrases such as “a mass of consciousness,” a characteristic of the Self that points to Reality, the scriptures speak only of the destruction of what is due to limiting adjuncts.",
+      "gloss": [
+        {
+          "sa": "प्रज्ञान-घनः इति",
+          "en": "“a mass of consciousness,” thus (prajñāna: consciousness | ghanaḥ: mass, fullness | iti: thus, “as”)"
+        },
+        {
+          "sa": "आत्म-लक्षणम् सत्य-सूचकम्",
+          "en": "a characteristic of the Self, indicating Reality (ātma: Self | lakṣaṇam: characteristic, mark | satya: truth, Reality | sūcakam: indicating)"
+        },
+        {
+          "sa": "अनूद्य",
+          "en": "having repeated, restated"
+        },
+        {
+          "sa": "औपाधिकस्य एव",
+          "en": "of what is due to limiting adjuncts alone (aupādhikasya: of what is caused by adjuncts | eva: only)"
+        },
+        {
+          "sa": "कथयन्ति विनाशनम्",
+          "en": "they declare the destruction (kathayanti: they declare | vināśanam: destruction)"
+        }
+      ],
       "sourceNumbers": [
         561
-      ]
+      ],
+      "editionTranslation": "The Shrutis, by setting forth the real nature of the Atman in the words, \"The Embodiment of Knowledge\" etc., which indicate Its Reality, speak of the destruction of the apparent limitations merely."
     },
     {
       "id": "vivekachudamani-562",
@@ -40083,11 +40105,29 @@
       "label": "Verse 562",
       "deva": "अविनाशी वा अरेऽयमात्मेति श्रुतिर् आत्मनः ।\nप्रब्रवीत्यविनाशित्वं विनश्यत्सु विकारिषु ॥",
       "iast": "avināśī vā are'yamātmeti śrutir ātmanaḥ |\nprabravītyavināśitvaṃ vinaśyatsu vikāriṣu ||",
-      "translation": "The Shruti passage, \"Verily is this Atman immortal, my dear\", mentions the immortality of the Atman in the midst of things perishable and subject to modification.",
-      "gloss": [],
+      "translation": "The scriptural statement “Indeed, dear one, this Self is imperishable” declares the Self’s imperishability amid perishing, changing things.",
+      "gloss": [
+        {
+          "sa": "अविनाशी वा अरे अयम् आत्मा इति",
+          "en": "“Indeed, dear one, this Self is imperishable” (avināśī: imperishable | vā: indeed | are: O dear one | ayam: this | ātmā: Self | iti: thus, “that”)"
+        },
+        {
+          "sa": "श्रुतिः आत्मनः",
+          "en": "the scripture, concerning the Self (śrutiḥ: scripture | ātmanaḥ: of the Self)"
+        },
+        {
+          "sa": "प्रब्रवीति अविनाशित्वम्",
+          "en": "declares imperishability (prabravīti: declares | avināśitvam: imperishability)"
+        },
+        {
+          "sa": "विनश्यत्सु विकारिषु",
+          "en": "among perishing, changing things (vinaśyatsu: among things perishing | vikāriṣu: among things subject to change)"
+        }
+      ],
       "sourceNumbers": [
         562
-      ]
+      ],
+      "editionTranslation": "The Shruti passage, \"Verily is this Atman immortal, my dear\", mentions the immortality of the Atman in the midst of things perishable and subject to modification."
     },
     {
       "id": "vivekachudamani-563",
@@ -40095,11 +40135,37 @@
       "label": "Verse 563",
       "deva": "पाषाणवृक्षतृणधान्यकडङ्कराद्या\nदग्धा भवन्ति हि मृद् एव यथा तथैव ।\nदेहेन्द्रियासुमन आदि समस्तदृश्यं\nज्ञानाग्निदग्धमुपयाति परात्मभावम् ॥",
       "iast": "pāṣāṇavṛkṣatṛṇadhānyakaḍaṅkarādyā\ndagdhā bhavanti hi mṛd eva yathā tathaiva |\ndehendriyāsumana ādi samastadṛśyaṃ\njñānāgnidagdhamupayāti parātmabhāvam ||",
-      "translation": "Just as a stone, a tree, grass, paddy, husk, etc., when burnt, are reduced to earth (ashes) only, even so the whole objective universe comprising the body, organs, Pranas, Manas and so forth, are, when burnt by the fire of realisation, reduced to the Supreme Self.",
-      "gloss": [],
+      "translation": "Just as stones, trees, grass, grain, chaff, and the like become only earth when burned, so the entire visible world—body, senses, vital breath, mind, and the rest—burned by the fire of knowledge, reaches the state of the Supreme Self.",
+      "gloss": [
+        {
+          "sa": "पाषाण-वृक्ष-तृण-धान्य-कडङ्कर-आद्याः",
+          "en": "stones, trees, grass, grain, chaff, and the like (pāṣāṇa: stone | vṛkṣa: tree | tṛṇa: grass | dhānya: grain | kaḍaṅkara: chaff, husk | ādyāḥ: and the rest)"
+        },
+        {
+          "sa": "दग्धाः भवन्ति हि मृद् एव",
+          "en": "when burned, indeed become earth alone (dagdhāḥ: burned | bhavanti: become | hi: indeed | mṛd: earth, soil | eva: alone)"
+        },
+        {
+          "sa": "यथा तथा एव",
+          "en": "just as, so also (yathā: just as | tathā: so | eva: also)"
+        },
+        {
+          "sa": "देह-इन्द्रिय-असु-मनः-आदि समस्त-दृश्यम्",
+          "en": "the entire visible world, body, senses, vital breath, mind, and the rest (deha: body | indriya: senses | asu: vital breath | manaḥ: mind | ādi: and the rest | samasta: entire | dṛśyam: visible, seen)"
+        },
+        {
+          "sa": "ज्ञान-अग्नि-दग्धम्",
+          "en": "burned by the fire of knowledge (jñāna: knowledge | agni: fire | dagdham: burned)"
+        },
+        {
+          "sa": "उपयाति पर-आत्म-भावम्",
+          "en": "reaches the state of the Supreme Self (upayāti: reaches | para: supreme | ātma: Self | bhāvam: state, nature)"
+        }
+      ],
       "sourceNumbers": [
         563
-      ]
+      ],
+      "editionTranslation": "Just as a stone, a tree, grass, paddy, husk, etc., when burnt, are reduced to earth (ashes) only, even so the whole objective universe comprising the body, organs, Pranas, Manas and so forth, are, when burnt by the fire of realisation, reduced to the Supreme Self."
     },
     {
       "id": "vivekachudamani-564",
@@ -40107,11 +40173,37 @@
       "label": "Verse 564",
       "deva": "विलक्षणं यथा ध्वान्तं लीयते भानुतेजसि ।\nतथैव सकलं दृश्यं ब्रह्मणि प्रविलीयते ॥",
       "iast": "vilakṣaṇaṃ yathā dhvāntaṃ līyate bhānutejasi |\ntathaiva sakalaṃ dṛśyaṃ brahmaṇi pravilīyate ||",
-      "translation": "As darkness, which is distinct (from sunshine), vanishes in the sun’s radiance, so the whole objective universe dissolves in Brahman.",
-      "gloss": [],
+      "translation": "Just as distinct darkness dissolves in the sun’s radiance, so the entire visible world dissolves completely in Brahman.",
+      "gloss": [
+        {
+          "sa": "विलक्षणम्",
+          "en": "distinct, different"
+        },
+        {
+          "sa": "यथा ध्वान्तम्",
+          "en": "just as darkness (yathā: just as | dhvāntam: darkness)"
+        },
+        {
+          "sa": "लीयते भानु-तेजसि",
+          "en": "dissolves in the sun’s radiance (līyate: dissolves | bhānu: sun | tejasi: in the radiance, light)"
+        },
+        {
+          "sa": "तथा एव",
+          "en": "in the same way (tathā: so | eva: indeed)"
+        },
+        {
+          "sa": "सकलम् दृश्यम्",
+          "en": "the entire visible world (sakalam: entire | dṛśyam: visible, seen)"
+        },
+        {
+          "sa": "ब्रह्मणि प्रविलीयते",
+          "en": "dissolves completely in Brahman (brahmaṇi: in Brahman | pravilīyate: dissolves completely)"
+        }
+      ],
       "sourceNumbers": [
         564
-      ]
+      ],
+      "editionTranslation": "As darkness, which is distinct (from sunshine), vanishes in the sun’s radiance, so the whole objective universe dissolves in Brahman."
     },
     {
       "id": "vivekachudamani-565",
@@ -40119,11 +40211,33 @@
       "label": "Verse 565",
       "deva": "घटे नष्टे यथा व्योम व्योमैव भवति स्फुटम् ।\nतथैवोपाधिविलये ब्रह्मैव ब्रह्मवित्स्वयम् ॥",
       "iast": "ghaṭe naṣṭe yathā vyoma vyomaiva bhavati sphuṭam |\ntathaivopādhivilaye brahmaiva brahmavitsvayam ||",
-      "translation": "As, when a jar is broken, the space enclosed by it becomes palpably the limitless space, so when the apparent limitations are destroyed, the knower of Brahman verily becomes Brahman Itself.",
-      "gloss": [],
+      "translation": "When a pot is broken, the space within is plainly just space; likewise, when limiting adjuncts dissolve, the knower of Brahman himself is Brahman alone.",
+      "gloss": [
+        {
+          "sa": "घटे नष्टे",
+          "en": "when the pot is destroyed (ghaṭe: in the pot | naṣṭe: destroyed, broken)"
+        },
+        {
+          "sa": "यथा व्योम",
+          "en": "just as space (yathā: just as | vyoma: space)"
+        },
+        {
+          "sa": "व्योम एव भवति स्फुटम्",
+          "en": "plainly becomes space alone (vyoma: space | eva: alone | bhavati: becomes | sphuṭam: clearly, plainly)"
+        },
+        {
+          "sa": "तथा एव उपाधि-विलये",
+          "en": "likewise, when limiting adjuncts dissolve (tathā: so | eva: indeed | upādhi: limiting adjunct | vilaye: when dissolved)"
+        },
+        {
+          "sa": "ब्रह्म एव ब्रह्मवित् स्वयम्",
+          "en": "the knower of Brahman himself is Brahman alone (brahma: Brahman | eva: alone | brahmavit: knower of Brahman | svayam: himself)"
+        }
+      ],
       "sourceNumbers": [
         565
-      ]
+      ],
+      "editionTranslation": "As, when a jar is broken, the space enclosed by it becomes palpably the limitless space, so when the apparent limitations are destroyed, the knower of Brahman verily becomes Brahman Itself."
     },
     {
       "id": "vivekachudamani-566",
@@ -40370,6 +40484,7 @@
     "Logged and completed Vivekacūḍāmaṇi verses 551–555 with literal English translations and complete Devanāgarī-backed word-for-word glosses; corrected verse 552's upadarśana spelling and normalized verse 555's compound breaks.",
     "Clarified verse 555's gloss: the costume is present or absent (sadbhāva/abhāva).",
     "Logged and completed Vivekacūḍāmaṇi verses 556–560 with literal English translations and complete Devanāgarī-backed word-for-word glosses.",
-    "Corrected verse 556 gloss grouping so taroḥ modifies parṇam (leaf of a tree) and vapuḥ is the body that falls."
+    "Corrected verse 556 gloss grouping so taroḥ modifies parṇam (leaf of a tree) and vapuḥ is the body that falls.",
+    "Logged and completed Vivekacūḍāmaṇi verses 561–565 with literal English translations and complete Devanāgarī-backed word-for-word glosses."
   ]
 }
