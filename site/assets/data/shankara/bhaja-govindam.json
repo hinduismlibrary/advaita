@@ -8,7 +8,7 @@
     "edition": "Sanskrit Documents, 31-verse Bhaja Govindam recension",
     "digitalText": "Sanskrit transcription; lexical word meanings consulted for cross-check",
     "crossCheck": "Common 31-verse recension; later appended verses excluded",
-    "changes": " This text has no traditional chapter divisions in the cited recension, so its contents navigation now uses three descriptive ranges covering verses 1–10, 11–20, and 21–31."
+    "changes": "Replaced generic ranges with four descriptive contents links: the opening verse, the traditional Dvādaśamañjarikā (verses 2–13), the Caturdaśamañjarikā (verses 14–27), and the closing verses (28–31). Audited every verse’s Sanskrit, explicit IAST, English translation, and Devanāgarī word gloss against the cited 31-verse recension."
   },
   "translationCredit": "Original English translation and word-for-word gloss.",
   "units": [
@@ -17,27 +17,27 @@
       "label": "Verse 1",
       "number": "1",
       "deva": "भज गोविन्दं भज गोविन्दं\nगोविन्दं भज मूढमते ।\nसम्प्राप्ते सन्निहिते काले\nनहि नहि रक्षति डुकृङ्करणे ॥ १॥",
-      "translation": "Worship Govinda, worship Govinda; worship Govinda, O foolish mind! When the time has arrived and is close at hand, no, no—the ḍukṛñkaraṇa grammar formula does not protect you.",
+      "translation": "Worship Govinda, worship Govinda; worship Govinda, O foolish mind! When the appointed time has arrived and is close at hand, no, no—the ḍukṛñkaraṇa grammar formula will not protect you.",
       "gloss": [
         {
           "sa": "भज",
           "en": "worship"
         },
         {
-          "sa": "गोविन्दं",
-          "en": "Govinda (object)"
+          "sa": "गोविन्दम्",
+          "en": "Govinda"
         },
         {
           "sa": "भज",
           "en": "worship"
         },
         {
-          "sa": "गोविन्दं",
-          "en": "Govinda (object)"
+          "sa": "गोविन्दम्",
+          "en": "Govinda"
         },
         {
-          "sa": "गोविन्दं",
-          "en": "Govinda (object)"
+          "sa": "गोविन्दम्",
+          "en": "Govinda"
         },
         {
           "sa": "भज",
@@ -49,27 +49,35 @@
         },
         {
           "sa": "सम्प्राप्ते",
-          "en": "when arrived"
+          "en": "when it has arrived"
         },
         {
           "sa": "सन्निहिते",
-          "en": "near, at hand"
+          "en": "close at hand"
         },
         {
           "sa": "काले",
           "en": "at the time"
         },
         {
-          "sa": "नहि",
-          "en": "no, not"
+          "sa": "न",
+          "en": "not"
         },
         {
-          "sa": "नहि",
-          "en": "no, not"
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
         },
         {
           "sa": "रक्षति",
-          "en": "protects, saves"
+          "en": "protects"
         },
         {
           "sa": "डुकृङ्करणे",
@@ -85,11 +93,11 @@
       "label": "Verse 2",
       "number": "2",
       "deva": "मूढ जहीहि धनागमतृष्णां\nकुरु सद्बुद्धिं मनसि वितृष्णाम् ।\nयल्लभसे निजकर्मोपात्तं\nवित्तं तेन विनोदय चित्तम् ॥ २॥",
-      "translation": "Fool, give up the thirst for accumulating wealth. Cultivate right understanding and freedom from craving in the mind. Be content with the wealth gained through your own actions.",
+      "translation": "Fool, abandon the thirst for acquiring wealth. Cultivate good understanding and freedom from craving in your mind. Whatever wealth you gain through your own actions, use it to make your mind content.",
       "gloss": [
         {
           "sa": "मूढ",
-          "en": "O fool!"
+          "en": "O fool"
         },
         {
           "sa": "जहीहि",
@@ -104,39 +112,51 @@
           "en": "acquisition"
         },
         {
-          "sa": "तृष्णां",
-          "en": "craving, thirst"
+          "sa": "तृष्णाम्",
+          "en": "thirst, craving"
         },
         {
           "sa": "कुरु",
-          "en": "cultivate, make"
+          "en": "cultivate"
         },
         {
-          "sa": "सद्बुद्धिं",
-          "en": "right understanding"
+          "sa": "सत्",
+          "en": "good"
+        },
+        {
+          "sa": "बुद्धिम्",
+          "en": "understanding"
         },
         {
           "sa": "मनसि",
           "en": "in the mind"
         },
         {
-          "sa": "वितृष्णां",
+          "sa": "वितृष्णाम्",
           "en": "freedom from craving"
         },
         {
-          "sa": "यल्लभसे",
-          "en": "whatever you obtain"
+          "sa": "यत्",
+          "en": "whatever"
         },
         {
-          "sa": "निजकर्म",
-          "en": "your own actions"
+          "sa": "लभसे",
+          "en": "you obtain"
         },
         {
-          "sa": "उपात्त",
-          "en": "obtained, earned"
+          "sa": "निज",
+          "en": "one’s own"
         },
         {
-          "sa": "वित्तं",
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "उपात्तम्",
+          "en": "obtained"
+        },
+        {
+          "sa": "वित्तम्",
           "en": "wealth"
         },
         {
@@ -145,10 +165,10 @@
         },
         {
           "sa": "विनोदय",
-          "en": "make content"
+          "en": "make content, gladden"
         },
         {
-          "sa": "चित्तं",
+          "sa": "चित्तम्",
           "en": "the mind"
         }
       ],
@@ -161,42 +181,66 @@
       "label": "Verse 3",
       "number": "3",
       "deva": "नारीस्तनभरनाभीदेशं\nदृष्ट्वा मा गा मोहावेशम् ।\nएतन्मांसवसादिविकारं\nमनसि विचिन्तय वारं वारम् ॥ ३॥",
-      "translation": "On seeing a woman's breasts and navel, do not fall into the grip of delusion. Reflect again and again that these are transformations of flesh, fat, and the like.",
+      "translation": "On seeing a woman’s breasts and navel region, do not fall under the spell of delusion. Reflect again and again in the mind: this is a transformation of flesh, fat, and the like.",
       "gloss": [
         {
           "sa": "नारी",
           "en": "woman"
         },
         {
-          "sa": "स्तनभर",
-          "en": "full breasts"
+          "sa": "स्तन",
+          "en": "breast"
         },
         {
-          "sa": "नाभीदेशं",
-          "en": "the navel region"
+          "sa": "भर",
+          "en": "fullness, mass"
+        },
+        {
+          "sa": "नाभी",
+          "en": "navel"
+        },
+        {
+          "sa": "देशम्",
+          "en": "region"
         },
         {
           "sa": "दृष्ट्वा",
           "en": "having seen"
         },
         {
-          "sa": "मा गा",
-          "en": "do not go"
+          "sa": "मा",
+          "en": "do not"
         },
         {
-          "sa": "मोहावेशं",
-          "en": "the grip of delusion"
+          "sa": "गाः",
+          "en": "go, fall"
+        },
+        {
+          "sa": "मोह",
+          "en": "delusion"
+        },
+        {
+          "sa": "आवेशम्",
+          "en": "grip, possession"
         },
         {
           "sa": "एतत्",
           "en": "this"
         },
         {
-          "sa": "मांसवसादि",
-          "en": "flesh, fat, and the like"
+          "sa": "मांस",
+          "en": "flesh"
         },
         {
-          "sa": "विकारं",
+          "sa": "वसा",
+          "en": "fat"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "विकारम्",
           "en": "transformation"
         },
         {
@@ -205,14 +249,14 @@
         },
         {
           "sa": "विचिन्तय",
-          "en": "reflect, consider"
+          "en": "reflect"
         },
         {
-          "sa": "वारं",
+          "sa": "वारम्",
           "en": "again"
         },
         {
-          "sa": "वारं",
+          "sa": "वारम्",
           "en": "again"
         }
       ],
@@ -225,35 +269,55 @@
       "label": "Verse 4",
       "number": "4",
       "deva": "नलिनीदलगतजलमतितरलं\nतद्वज्जीवितमतिशयचपलम् ।\nविद्धि व्याध्यभिमानग्रस्तं\nलोकं शोकहतं च समस्तम् ॥ ४॥",
-      "translation": "Life is as fleeting as water on a lotus leaf. Know that the whole world is seized by illness and conceit, and struck by sorrow.",
+      "translation": "Water lying on a lotus leaf is very unstable; so too is life exceedingly fragile. Know that the entire world is seized by disease and conceit, and struck by sorrow.",
       "gloss": [
         {
-          "sa": "नलिनीदलगत",
-          "en": "lying on a lotus petal"
+          "sa": "नलिनी",
+          "en": "lotus"
         },
         {
-          "sa": "जलं",
+          "sa": "दल",
+          "en": "leaf, petal"
+        },
+        {
+          "sa": "गत",
+          "en": "lying on"
+        },
+        {
+          "sa": "जलम्",
           "en": "water"
         },
         {
-          "sa": "अतितरलं",
-          "en": "extremely unstable"
+          "sa": "अति",
+          "en": "very"
         },
         {
-          "sa": "तद्वत्",
-          "en": "like that"
+          "sa": "तरलम्",
+          "en": "unstable"
         },
         {
-          "sa": "जीवितं",
+          "sa": "तद्",
+          "en": "that"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "जीवितम्",
           "en": "life"
         },
         {
-          "sa": "अतिशय",
+          "sa": "अति",
           "en": "exceedingly"
         },
         {
-          "sa": "चपलं",
-          "en": "fickle, fleeting"
+          "sa": "शय",
+          "en": "degree"
+        },
+        {
+          "sa": "चपलम्",
+          "en": "fleeting, unstable"
         },
         {
           "sa": "विद्धि",
@@ -268,23 +332,27 @@
           "en": "conceit, pride"
         },
         {
-          "sa": "ग्रस्तं",
-          "en": "seized, afflicted"
+          "sa": "ग्रस्तम्",
+          "en": "seized"
         },
         {
-          "sa": "लोकं",
+          "sa": "लोकम्",
           "en": "the world"
         },
         {
-          "sa": "शोकहतं",
-          "en": "struck by sorrow"
+          "sa": "शोक",
+          "en": "sorrow"
+        },
+        {
+          "sa": "हतम्",
+          "en": "struck"
         },
         {
           "sa": "च",
           "en": "and"
         },
         {
-          "sa": "समस्तं",
+          "sa": "समस्तम्",
           "en": "the whole"
         }
       ],
@@ -297,7 +365,7 @@
       "label": "Verse 5",
       "number": "5",
       "deva": "यावद्वित्तोपार्जनसक्त-\nस्तावन्निजपरिवारो रक्तः ।\nपश्चाज्जीवति जर्जरदेहे\nवार्तां कोऽपि न पृच्छति गेहे ॥ ५॥",
-      "translation": "While you are intent on earning wealth, your family is attached to you. When you go on living in a worn-out body, no one at home asks after you.",
+      "translation": "So long as you are intent on earning wealth, your own family is attached to you. Later, when you live on in a worn-out body, no one at home asks after you.",
       "gloss": [
         {
           "sa": "यावत्",
@@ -309,15 +377,15 @@
         },
         {
           "sa": "उपार्जन",
-          "en": "earning, acquisition"
+          "en": "earning"
         },
         {
           "sa": "सक्तः",
-          "en": "intent, absorbed"
+          "en": "attached, intent"
         },
         {
           "sa": "तावत्",
-          "en": "so long, until then"
+          "en": "for that long"
         },
         {
           "sa": "निज",
@@ -337,7 +405,7 @@
         },
         {
           "sa": "जीवति",
-          "en": "while living"
+          "en": "you live"
         },
         {
           "sa": "जर्जर",
@@ -348,12 +416,16 @@
           "en": "in the body"
         },
         {
-          "sa": "वार्तां",
-          "en": "news of, inquiry about"
+          "sa": "वार्ताम्",
+          "en": "news, inquiry"
         },
         {
-          "sa": "कोऽपि",
-          "en": "anyone"
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
         },
         {
           "sa": "न",
@@ -361,7 +433,7 @@
         },
         {
           "sa": "पृच्छति",
-          "en": "asks, inquires"
+          "en": "asks"
         },
         {
           "sa": "गेहे",
@@ -377,11 +449,11 @@
       "label": "Verse 6",
       "number": "6",
       "deva": "यावत्पवनो निवसति देहे\nतावत्पृच्छति कुशलं गेहे ।\nगतवति वायौ देहापाये\nभार्या बिभ्यति तस्मिन्काये ॥ ६॥",
-      "translation": "While breath remains in the body, the household asks about your welfare. When the breath has gone and the body has fallen, even your wife fears that body.",
+      "translation": "As long as breath dwells in the body, those at home ask about your welfare. When the breath has gone and the body has fallen, the wife fears that body.",
       "gloss": [
         {
           "sa": "यावत्",
-          "en": "so long as"
+          "en": "as long as"
         },
         {
           "sa": "पवनः",
@@ -397,14 +469,14 @@
         },
         {
           "sa": "तावत्",
-          "en": "until then"
+          "en": "for that long"
         },
         {
           "sa": "पृच्छति",
           "en": "asks"
         },
         {
-          "sa": "कुशलं",
+          "sa": "कुशलम्",
           "en": "welfare"
         },
         {
@@ -413,15 +485,19 @@
         },
         {
           "sa": "गतवति",
-          "en": "when gone"
+          "en": "when it has gone"
         },
         {
           "sa": "वायौ",
-          "en": "air"
+          "en": "the breath, air"
         },
         {
-          "sa": "देहापाये",
-          "en": "at the body's collapse"
+          "sa": "देह",
+          "en": "body"
+        },
+        {
+          "sa": "अपाये",
+          "en": "at its fall, collapse"
         },
         {
           "sa": "भार्या",
@@ -433,7 +509,7 @@
         },
         {
           "sa": "तस्मिन्",
-          "en": "in that"
+          "en": "that"
         },
         {
           "sa": "काये",
@@ -449,7 +525,7 @@
       "label": "Verse 7",
       "number": "7",
       "deva": "बालस्तावत्क्रीडासक्तः\nतरुणस्तावत्तरुणीसक्तः ।\nवृद्धस्तावच्चिन्तासक्तः\nपरमे ब्रह्मणि कोऽपि न सक्तः ॥ ७॥",
-      "translation": "A child is absorbed in play, a young person in a young woman, an old person in worries; hardly anyone is absorbed in supreme Brahman.",
+      "translation": "A child is absorbed in play; a young person is absorbed in a young woman; an old person is absorbed in worry. No one, it seems, is absorbed in supreme Brahman.",
       "gloss": [
         {
           "sa": "बालः",
@@ -457,7 +533,7 @@
         },
         {
           "sa": "तावत्",
-          "en": "till then"
+          "en": "then"
         },
         {
           "sa": "क्रीडा",
@@ -465,7 +541,7 @@
         },
         {
           "sa": "सक्तः",
-          "en": "absorbed, attached"
+          "en": "attached, absorbed"
         },
         {
           "sa": "तरुणः",
@@ -473,7 +549,7 @@
         },
         {
           "sa": "तावत्",
-          "en": "till then"
+          "en": "then"
         },
         {
           "sa": "तरुणी",
@@ -481,7 +557,7 @@
         },
         {
           "sa": "सक्तः",
-          "en": "absorbed, attached"
+          "en": "attached, absorbed"
         },
         {
           "sa": "वृद्धः",
@@ -489,7 +565,7 @@
         },
         {
           "sa": "तावत्",
-          "en": "till then"
+          "en": "then"
         },
         {
           "sa": "चिन्ता",
@@ -497,7 +573,7 @@
         },
         {
           "sa": "सक्तः",
-          "en": "absorbed, attached"
+          "en": "attached, absorbed"
         },
         {
           "sa": "परमे",
@@ -508,8 +584,12 @@
           "en": "in Brahman"
         },
         {
-          "sa": "कोऽपि",
+          "sa": "कः",
           "en": "anyone"
+        },
+        {
+          "sa": "अपि",
+          "en": "at all"
         },
         {
           "sa": "न",
@@ -517,7 +597,7 @@
         },
         {
           "sa": "सक्तः",
-          "en": "absorbed, attached"
+          "en": "attached, absorbed"
         }
       ],
       "chapter": 1,
@@ -529,19 +609,27 @@
       "label": "Verse 8",
       "number": "8",
       "deva": "का ते कान्ता कस्ते पुत्रः\nसंसारोऽयमतीव विचित्रः ।\nकस्य त्वं कः कुत आयात-\nस्तत्त्वं चिन्तय तदिह भ्रातः ॥ ८॥",
-      "translation": "Who is your wife? Who is your son? This worldly life is indeed strange. Whose are you? Who are you? From where have you come? Brother, reflect here on the truth.",
+      "translation": "Who is your wife? Who is your son? This worldly life is so strange. Who do you belong to? Who are you? From where have you come? Brother, reflect on the truth here.",
       "gloss": [
         {
-          "sa": "का ते",
-          "en": "who is your"
+          "sa": "का",
+          "en": "who"
+        },
+        {
+          "sa": "ते",
+          "en": "your"
         },
         {
           "sa": "कान्ता",
-          "en": "wife"
+          "en": "beloved, wife"
         },
         {
-          "sa": "कस्ते",
-          "en": "who is your"
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "ते",
+          "en": "your"
         },
         {
           "sa": "पुत्रः",
@@ -549,15 +637,15 @@
         },
         {
           "sa": "संसारः",
-          "en": "worldly life"
+          "en": "worldly existence"
         },
         {
-          "sa": "अयं",
+          "sa": "अयम्",
           "en": "this"
         },
         {
           "sa": "अतीव",
-          "en": "very, indeed"
+          "en": "very"
         },
         {
           "sa": "विचित्रः",
@@ -568,7 +656,7 @@
           "en": "whose"
         },
         {
-          "sa": "त्वं",
+          "sa": "त्वम्",
           "en": "you"
         },
         {
@@ -577,23 +665,27 @@
         },
         {
           "sa": "कुतः",
-          "en": "whence"
+          "en": "from where"
         },
         {
           "sa": "आयातः",
-          "en": "have you come"
+          "en": "you have come"
         },
         {
-          "sa": "तत्त्वं",
-          "en": "the truth"
+          "sa": "तत्त्वम्",
+          "en": "truth"
         },
         {
           "sa": "चिन्तय",
           "en": "reflect on"
         },
         {
-          "sa": "तदिह",
-          "en": "here, that"
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
         },
         {
           "sa": "भ्रातः",
@@ -609,18 +701,30 @@
       "label": "Verse 9",
       "number": "9",
       "deva": "सत्सङ्गत्वे निस्सङ्गत्वं\nनिस्सङ्गत्वे निर्मोहत्वम् ।\nनिर्मोहत्वे निश्चलतत्त्वं\nनिश्चलतत्त्वे जीवन्मुक्तिः ॥ ९॥",
-      "translation": "From the company of the good comes nonattachment; from nonattachment, freedom from delusion; from freedom from delusion, steadiness in truth; from steadiness in truth, liberation while living.",
+      "translation": "From association with the good comes nonattachment; from nonattachment, freedom from delusion; from freedom from delusion, steadiness in truth; from steadiness in truth, liberation while living.",
       "gloss": [
         {
-          "sa": "सत्सङ्गत्वे",
-          "en": "through the company of the good"
+          "sa": "सत्",
+          "en": "the good"
         },
         {
-          "sa": "निस्सङ्गत्वं",
-          "en": "nonattachment"
+          "sa": "सङ्गत्वे",
+          "en": "through association"
         },
         {
-          "sa": "निस्सङ्गत्वे",
+          "sa": "निस्",
+          "en": "without"
+        },
+        {
+          "sa": "सङ्गत्वम्",
+          "en": "attachment"
+        },
+        {
+          "sa": "निस्",
+          "en": "without"
+        },
+        {
+          "sa": "सङ्गत्वे",
           "en": "in nonattachment"
         },
         {
@@ -632,16 +736,24 @@
           "en": "in freedom from delusion"
         },
         {
-          "sa": "निश्चलतत्त्वं",
-          "en": "steadfastness in truth"
+          "sa": "निश्चल",
+          "en": "steady"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth"
         },
         {
           "sa": "निश्चलतत्त्वे",
-          "en": "in steadfastness in truth"
+          "en": "in steadiness in truth"
         },
         {
-          "sa": "जीवन्मुक्तिः",
-          "en": "liberation while living"
+          "sa": "जीवन्",
+          "en": "while living"
+        },
+        {
+          "sa": "मुक्तिः",
+          "en": "liberation"
         }
       ],
       "chapter": 1,
@@ -653,19 +765,27 @@
       "label": "Verse 10",
       "number": "10",
       "deva": "वयसि गते कः कामविकारः\nशुष्के नीरे कः कासारः ।\nक्षीणे वित्ते कः परिवारः\nज्ञाते तत्त्वे कः संसारः ॥ १०॥",
-      "translation": "When youth has passed, what is sensual desire? When the water is dry, what is a lake? When wealth is gone, where is one's family? When truth is known, where is worldly existence?",
+      "translation": "When youth has passed, what sexual desire remains? When the water is dry, what lake remains? When wealth is depleted, what family remains? When truth is known, what worldly existence remains?",
       "gloss": [
         {
-          "sa": "वयसि गते",
-          "en": "when youth has passed"
+          "sa": "वयसि",
+          "en": "in youth, age"
+        },
+        {
+          "sa": "गते",
+          "en": "when gone"
         },
         {
           "sa": "कः",
-          "en": "what purpose?"
+          "en": "what"
         },
         {
-          "sa": "कामविकारः",
-          "en": "sensual desire"
+          "sa": "काम",
+          "en": "desire"
+        },
+        {
+          "sa": "विकारः",
+          "en": "urge, change"
         },
         {
           "sa": "शुष्के",
@@ -677,15 +797,15 @@
         },
         {
           "sa": "कः",
-          "en": "what purpose?"
+          "en": "what"
         },
         {
           "sa": "कासारः",
-          "en": "a lake"
+          "en": "lake"
         },
         {
           "sa": "क्षीणे",
-          "en": "when diminished"
+          "en": "when depleted"
         },
         {
           "sa": "वित्ते",
@@ -693,7 +813,7 @@
         },
         {
           "sa": "कः",
-          "en": "what purpose?"
+          "en": "what"
         },
         {
           "sa": "परिवारः",
@@ -705,11 +825,11 @@
         },
         {
           "sa": "तत्त्वे",
-          "en": "the truth"
+          "en": "truth"
         },
         {
           "sa": "कः",
-          "en": "what purpose?"
+          "en": "what"
         },
         {
           "sa": "संसारः",
@@ -725,7 +845,7 @@
       "label": "Verse 11",
       "number": "11",
       "deva": "मा कुरु धनजनयौवनगर्वं\nहरति निमेषात्कालः सर्वम् ।\nमायामयमिदमखिलं हित्वा\nब्रह्मपदं त्वं प्रविश विदित्वा ॥ ११॥",
-      "translation": "Do not take pride in wealth, family, or youth; time destroys them all in a moment. Leaving this whole world made of māyā, enter the state of Brahman through knowledge.",
+      "translation": "Do not be proud of wealth, family, or youth; time takes it all away in an instant. Leave behind this whole thing made of māyā; knowing the state of Brahman, enter it.",
       "gloss": [
         {
           "sa": "मा",
@@ -748,7 +868,7 @@
           "en": "youth"
         },
         {
-          "sa": "गर्वं",
+          "sa": "गर्वम्",
           "en": "pride"
         },
         {
@@ -757,42 +877,46 @@
         },
         {
           "sa": "निमेषात्",
-          "en": "in a moment"
+          "en": "in a blink"
         },
         {
           "sa": "कालः",
           "en": "time"
         },
         {
-          "sa": "सर्वं",
+          "sa": "सर्वम्",
           "en": "all"
         },
         {
           "sa": "माया",
-          "en": "delusion"
+          "en": "māyā"
         },
         {
-          "sa": "मयं",
+          "sa": "मयम्",
           "en": "made of"
         },
         {
-          "sa": "इदं",
+          "sa": "इदम्",
           "en": "this"
         },
         {
-          "sa": "अखिलं",
-          "en": "the whole"
+          "sa": "अखिलम्",
+          "en": "entire"
         },
         {
           "sa": "हित्वा",
-          "en": "leaving aside"
+          "en": "having left behind"
         },
         {
-          "sa": "ब्रह्मपदं",
-          "en": "the state of Brahman"
+          "sa": "ब्रह्म",
+          "en": "Brahman"
         },
         {
-          "sa": "त्वं",
+          "sa": "पदम्",
+          "en": "state"
+        },
+        {
+          "sa": "त्वम्",
           "en": "you"
         },
         {
@@ -813,14 +937,18 @@
       "label": "Verse 12",
       "number": "12",
       "deva": "दिनयामिन्यौ सायं प्रातः\nशिशिरवसन्तौ पुनरायातः ।\nकालः क्रीडति गच्छत्यायु-\nस्तदपि न मुञ्चत्याशावायुः ॥ १२॥",
-      "translation": "Day and night, evening and morning, winter and spring return. Time plays on and life passes, yet the wind of desire does not leave.",
+      "translation": "Day and night, evening and morning, winter and spring come around again. Time plays on and life passes; even then, the wind of desire does not let go.",
       "gloss": [
         {
-          "sa": "दिनयामिन्यौ",
-          "en": "day and night"
+          "sa": "दिन",
+          "en": "day"
         },
         {
-          "sa": "सायं",
+          "sa": "यामिन्यौ",
+          "en": "and night"
+        },
+        {
+          "sa": "सायम्",
           "en": "evening"
         },
         {
@@ -833,7 +961,7 @@
         },
         {
           "sa": "वसन्तौ",
-          "en": "spring"
+          "en": "and spring"
         },
         {
           "sa": "पुनः",
@@ -841,7 +969,7 @@
         },
         {
           "sa": "आयातः",
-          "en": "return"
+          "en": "come, return"
         },
         {
           "sa": "कालः",
@@ -860,8 +988,12 @@
           "en": "life"
         },
         {
-          "sa": "तदपि",
-          "en": "even then"
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
         },
         {
           "sa": "न",
@@ -869,15 +1001,15 @@
         },
         {
           "sa": "मुञ्चति",
-          "en": "releases"
+          "en": "releases, lets go"
         },
         {
           "sa": "आशा",
-          "en": "desire"
+          "en": "desire, hope"
         },
         {
           "sa": "वायुः",
-          "en": "air"
+          "en": "wind"
         }
       ],
       "chapter": 2,
@@ -889,63 +1021,87 @@
       "label": "Verse 13",
       "number": "13",
       "deva": "का ते कान्ता धनगतचिन्ता\nवातुल किं तव नास्ति नियन्ता ।\nत्रिजगति सज्जनसङ्गतिरेका\nभवति भवार्णवतरणे नौका ॥ १३॥",
-      "translation": "Why this worry about wealth and your wife? Restless one, have you no guide? In the three worlds, the company of the good alone is the boat for crossing the ocean of becoming.",
+      "translation": "What is your beloved, what is your worry about wealth? O restless one, do you have no guide? In the three worlds, the company of good people alone becomes the boat for crossing the ocean of worldly existence.",
       "gloss": [
         {
-          "sa": "का ते",
-          "en": "why your"
+          "sa": "का",
+          "en": "what"
+        },
+        {
+          "sa": "ते",
+          "en": "your"
         },
         {
           "sa": "कान्ता",
-          "en": "wife"
+          "en": "beloved, wife"
         },
         {
           "sa": "धन",
           "en": "wealth"
         },
         {
-          "sa": "गतचिन्ता",
-          "en": "worry about"
+          "sa": "गत",
+          "en": "directed toward"
+        },
+        {
+          "sa": "चिन्ता",
+          "en": "concern"
         },
         {
           "sa": "वातुल",
           "en": "O restless one"
         },
         {
-          "sa": "किं",
-          "en": "what, do you have?"
+          "sa": "किम्",
+          "en": "what"
         },
         {
           "sa": "तव",
           "en": "for you"
         },
         {
-          "sa": "नास्ति",
-          "en": "is there not"
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
         },
         {
           "sa": "नियन्ता",
-          "en": "a guide"
+          "en": "guide, controller"
         },
         {
-          "sa": "त्रिजगति",
-          "en": "in the three worlds"
+          "sa": "त्रि",
+          "en": "three"
+        },
+        {
+          "sa": "जगति",
+          "en": "worlds"
         },
         {
           "sa": "सज्जन",
-          "en": "the good"
+          "en": "good people"
         },
         {
-          "sa": "संगतिरेका",
-          "en": "company one"
+          "sa": "सङ्गति",
+          "en": "company"
+        },
+        {
+          "sa": "एका",
+          "en": "alone, one"
         },
         {
           "sa": "भवति",
           "en": "becomes"
         },
         {
-          "sa": "भवार्णव",
-          "en": "the ocean of becoming"
+          "sa": "भव",
+          "en": "worldly becoming"
+        },
+        {
+          "sa": "अर्णव",
+          "en": "ocean"
         },
         {
           "sa": "तरणे",
@@ -953,7 +1109,7 @@
         },
         {
           "sa": "नौका",
-          "en": "a boat"
+          "en": "boat"
         }
       ],
       "chapter": 2,
@@ -965,7 +1121,7 @@
       "label": "Verse 14",
       "number": "14",
       "deva": "जटिलो मुण्डी लुञ्छितकेशः\nकाषायाम्बरबहुकृतवेषः ।\nपश्यन्नपि च न पश्यति मूढो\nह्युदरनिमित्तं बहुकृतवेषः ॥ १४॥",
-      "translation": "One with matted hair, one shaven, another with hair plucked out, wearing many ochre disguises—though seeing, the deluded one does not see, taking on these appearances for the sake of the belly.",
+      "translation": "One has matted hair, another a shaved head, another hair plucked out; wearing ochre garments, one adopts many guises. Though he sees, the deluded one does not see; he takes on many guises for the sake of his belly.",
       "gloss": [
         {
           "sa": "जटिलः",
@@ -976,48 +1132,80 @@
           "en": "one with a shaved head"
         },
         {
-          "sa": "लुञ्छितकेश",
-          "en": "one with plucked hair"
+          "sa": "लुञ्छित",
+          "en": "plucked"
+        },
+        {
+          "sa": "केशः",
+          "en": "hair"
         },
         {
           "sa": "काषाय",
-          "en": "ochre robe"
+          "en": "ochre"
         },
         {
           "sa": "अम्बर",
           "en": "garment"
         },
         {
-          "sa": "बहुकृत",
-          "en": "many, varied"
+          "sa": "बहु",
+          "en": "many"
+        },
+        {
+          "sa": "कृत",
+          "en": "made, adopted"
         },
         {
           "sa": "वेषः",
-          "en": "disguises, appearances"
+          "en": "guise"
         },
         {
-          "sa": "पश्यन्नपि",
-          "en": "even while seeing"
+          "sa": "पश्यन्",
+          "en": "seeing"
         },
         {
-          "sa": "च न",
-          "en": "and does not"
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
         },
         {
           "sa": "पश्यति",
-          "en": "see"
+          "en": "sees"
         },
         {
           "sa": "मूढः",
           "en": "the deluded one"
         },
         {
-          "sa": "उदरनिमित्तं",
-          "en": "for the sake of livelihood"
+          "sa": "हि",
+          "en": "indeed, for"
         },
         {
-          "sa": "बहुकृतवेषः",
-          "en": "one who takes many disguises"
+          "sa": "उदर",
+          "en": "belly"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "for the sake of"
+        },
+        {
+          "sa": "बहु",
+          "en": "many"
+        },
+        {
+          "sa": "कृत",
+          "en": "adopted"
+        },
+        {
+          "sa": "वेषः",
+          "en": "disguises"
         }
       ],
       "chapter": 2,
@@ -1029,35 +1217,39 @@
       "label": "Verse 15",
       "number": "15",
       "deva": "अङ्गं गलितं पलितं मुण्डं\nदशनविहीनं जातं तुण्डम् ।\nवृद्धो याति गृहीत्वा दण्डं\nतदपि न मुञ्चत्याशापिण्डम् ॥ १५॥",
-      "translation": "The body weakens, the hair turns gray and the head bald, the mouth becomes toothless; an old person walks with a staff, yet still does not abandon the bundle of hopes.",
+      "translation": "The body has withered, the hair turned gray, the head become bald, and the mouth become toothless. An old person walks holding a staff, yet still does not abandon the bundle of hopes.",
       "gloss": [
         {
-          "sa": "अङ्गं",
-          "en": "the body"
+          "sa": "अङ्गम्",
+          "en": "limb, body"
         },
         {
-          "sa": "गलितं",
-          "en": "weakened"
+          "sa": "गलितम्",
+          "en": "withering"
         },
         {
-          "sa": "पलितं",
+          "sa": "पलितम्",
           "en": "gray-haired"
         },
         {
-          "sa": "मुण्डं",
+          "sa": "मुण्डम्",
           "en": "bald"
         },
         {
-          "sa": "दशनविहीनं",
-          "en": "without teeth"
+          "sa": "दशन",
+          "en": "teeth"
         },
         {
-          "sa": "जातं",
+          "sa": "विहीनम्",
+          "en": "without"
+        },
+        {
+          "sa": "जातम्",
           "en": "has become"
         },
         {
-          "sa": "तुण्डं",
-          "en": "the mouth"
+          "sa": "तुण्डम्",
+          "en": "mouth"
         },
         {
           "sa": "वृद्धः",
@@ -1065,19 +1257,23 @@
         },
         {
           "sa": "याति",
-          "en": "goes"
+          "en": "goes, walks"
         },
         {
           "sa": "गृहीत्वा",
           "en": "holding"
         },
         {
-          "sa": "दण्डं",
+          "sa": "दण्डम्",
           "en": "a staff"
         },
         {
-          "sa": "तदपि",
-          "en": "even then"
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
         },
         {
           "sa": "न",
@@ -1085,11 +1281,15 @@
         },
         {
           "sa": "मुञ्चति",
-          "en": "gives up"
+          "en": "abandons"
         },
         {
-          "sa": "आशापिण्डं",
-          "en": "the bundle of hopes"
+          "sa": "आशा",
+          "en": "hope"
+        },
+        {
+          "sa": "पिण्डम्",
+          "en": "bundle, mass"
         }
       ],
       "chapter": 2,
@@ -1101,7 +1301,7 @@
       "label": "Verse 16",
       "number": "16",
       "deva": "अग्रे वह्निः पृष्ठे भानुः\nरात्रौ चुबुकसमर्पितजानुः ।\nकरतलभिक्षस्तरुतलवास-\nस्तदपि न मुञ्चत्याशापाशः ॥ १६॥",
-      "translation": "With fire in front and sun behind, knees drawn up to the chin at night, alms in the palm, dwelling beneath a tree—even then the snare of hope is not released.",
+      "translation": "Fire in front, sun behind; at night the knees drawn up to the chin; alms in the palm, dwelling beneath a tree—yet even then the noose of desire does not let go.",
       "gloss": [
         {
           "sa": "अग्रे",
@@ -1112,28 +1312,56 @@
           "en": "fire"
         },
         {
-          "sa": "पृष्ठे भानुः",
-          "en": "the sun behind"
+          "sa": "पृष्ठे",
+          "en": "behind"
+        },
+        {
+          "sa": "भानुः",
+          "en": "sun"
         },
         {
           "sa": "रात्रौ",
           "en": "at night"
         },
         {
-          "sa": "चुबुकसमर्पितजानुः",
-          "en": "with knees drawn up to the chin"
+          "sa": "चुबुक",
+          "en": "chin"
         },
         {
-          "sa": "करतलभिक्षः",
-          "en": "living on alms in the palm"
+          "sa": "समर्पित",
+          "en": "placed against"
         },
         {
-          "sa": "तरुतलवासः",
-          "en": "dwelling beneath a tree"
+          "sa": "जानुः",
+          "en": "knees"
         },
         {
-          "sa": "तदपि",
-          "en": "even then"
+          "sa": "करतल",
+          "en": "palm of the hand"
+        },
+        {
+          "sa": "भिक्षः",
+          "en": "begging, alms"
+        },
+        {
+          "sa": "तरु",
+          "en": "tree"
+        },
+        {
+          "sa": "तल",
+          "en": "foot, base"
+        },
+        {
+          "sa": "वासः",
+          "en": "dwelling"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
         },
         {
           "sa": "न",
@@ -1141,15 +1369,15 @@
         },
         {
           "sa": "मुञ्चति",
-          "en": "releases"
+          "en": "lets go"
         },
         {
           "sa": "आशा",
-          "en": "hope"
+          "en": "desire, hope"
         },
         {
-          "sa": "पाशं",
-          "en": "the snare"
+          "sa": "पाशः",
+          "en": "noose, snare"
         }
       ],
       "chapter": 2,
@@ -1161,26 +1389,30 @@
       "label": "Verse 17",
       "number": "17",
       "deva": "कुरुते गङ्गासागरगमनं\nव्रतपरिपालनमथवा दानम् ।\nज्ञानविहीनः सर्वमतेन\nमुक्तिं न भजति जन्मशतेन ॥ १७॥",
-      "translation": "One may travel to Gaṅgāsāgara, keep vows, or give gifts; without knowledge, liberation is not attained even after a hundred births.",
+      "translation": "One may make the pilgrimage to Gaṅgāsāgara, keep vows, or give alms. But, lacking knowledge, one does not attain liberation even in a hundred births, by any account.",
       "gloss": [
         {
           "sa": "कुरुते",
-          "en": "one undertakes"
+          "en": "undertakes"
         },
         {
-          "sa": "गङ्गासागर",
-          "en": "Gaṅgāsāgara pilgrimage"
+          "sa": "गङ्गा",
+          "en": "the Ganges"
         },
         {
-          "sa": "गमनं",
-          "en": "going"
+          "sa": "सागर",
+          "en": "the ocean"
+        },
+        {
+          "sa": "गमनम्",
+          "en": "going, pilgrimage"
         },
         {
           "sa": "व्रत",
-          "en": "vows"
+          "en": "vow"
         },
         {
-          "sa": "परिपालनं",
+          "sa": "परिपालनम्",
           "en": "observance"
         },
         {
@@ -1188,19 +1420,27 @@
           "en": "or"
         },
         {
-          "sa": "दानं",
+          "sa": "दानम्",
           "en": "giving, charity"
         },
         {
-          "sa": "ज्ञानविहीनः",
-          "en": "devoid of knowledge"
+          "sa": "ज्ञान",
+          "en": "knowledge"
         },
         {
-          "sa": "सर्वमतेन",
-          "en": "by every account"
+          "sa": "विहीनः",
+          "en": "devoid of"
         },
         {
-          "sa": "मुक्तिं",
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "मतेन",
+          "en": "by accounts, opinions"
+        },
+        {
+          "sa": "मुक्तिम्",
           "en": "liberation"
         },
         {
@@ -1229,11 +1469,15 @@
       "label": "Verse 18",
       "number": "18",
       "deva": "सुरमंदिरतरुमूलनिवासः\nशय्या भूतलमजिनं वासः ।\nसर्वपरिग्रहभोगत्यागः\nकस्य सुखं न करोति विरागः ॥ १८॥",
-      "translation": "Living in a temple or at a tree's root, earth for a bed and a deerskin for clothing, giving up possessions and enjoyments—what happiness does dispassion not bring?",
+      "translation": "Dwelling in a temple or at the foot of a tree, the earth for a bed and a deerskin for clothing, giving up all possessions and pleasures—what happiness does dispassion not bring?",
       "gloss": [
         {
-          "sa": "सुरमन्दिर",
-          "en": "a temple"
+          "sa": "सुर",
+          "en": "of the gods"
+        },
+        {
+          "sa": "मन्दिर",
+          "en": "temple"
         },
         {
           "sa": "तरु",
@@ -1249,14 +1493,14 @@
         },
         {
           "sa": "शय्या",
-          "en": "a bed"
+          "en": "bed"
         },
         {
-          "sa": "भूतलं",
-          "en": "the earth"
+          "sa": "भूतलम्",
+          "en": "the ground"
         },
         {
-          "sa": "अजिनं",
+          "sa": "अजिनम्",
           "en": "deerskin"
         },
         {
@@ -1264,19 +1508,27 @@
           "en": "clothing"
         },
         {
-          "sa": "सर्वपरिग्रह",
-          "en": "all possessions"
+          "sa": "सर्व",
+          "en": "all"
         },
         {
-          "sa": "भोगत्यागः",
-          "en": "renunciation of pleasures"
+          "sa": "परिग्रह",
+          "en": "possessions"
+        },
+        {
+          "sa": "भोग",
+          "en": "pleasures"
+        },
+        {
+          "sa": "त्यागः",
+          "en": "renunciation"
         },
         {
           "sa": "कस्य",
           "en": "for whom"
         },
         {
-          "sa": "सुखं",
+          "sa": "सुखम्",
           "en": "happiness"
         },
         {
@@ -1285,7 +1537,7 @@
         },
         {
           "sa": "करोति",
-          "en": "does it bring"
+          "en": "brings"
         },
         {
           "sa": "विरागः",
@@ -1301,26 +1553,38 @@
       "label": "Verse 19",
       "number": "19",
       "deva": "योगरतो वा भोगरतो वा\nसङ्गरतो वा सङ्गविहीनः ।\nयस्य ब्रह्मणि रमते चित्तं\nनन्दति नन्दति नन्दत्येव ॥ १९॥",
-      "translation": "Whether delighting in yoga or in pleasure, attached or free of attachment, the one whose mind delights in Brahman rejoices, rejoices, indeed rejoices.",
+      "translation": "Whether delighting in yoga or in pleasure, attached or free from attachment, the one whose mind delights in Brahman rejoices, rejoices, indeed rejoices.",
       "gloss": [
         {
-          "sa": "योगरतः",
-          "en": "delighting in yoga"
+          "sa": "योग",
+          "en": "yoga"
+        },
+        {
+          "sa": "रतः",
+          "en": "delighting"
         },
         {
           "sa": "वा",
           "en": "or"
         },
         {
-          "sa": "भोगरतः",
-          "en": "delighting in pleasure"
+          "sa": "भोग",
+          "en": "pleasure"
+        },
+        {
+          "sa": "रतः",
+          "en": "delighting"
         },
         {
           "sa": "वा",
           "en": "or"
         },
         {
-          "sa": "सङ्गरतः",
+          "sa": "सङ्ग",
+          "en": "attachment"
+        },
+        {
+          "sa": "रतः",
           "en": "attached"
         },
         {
@@ -1328,8 +1592,12 @@
           "en": "or"
         },
         {
-          "sa": "सङ्गविहीनः",
-          "en": "free from attachment"
+          "sa": "सङ्ग",
+          "en": "attachment"
+        },
+        {
+          "sa": "विहीनः",
+          "en": "free from"
         },
         {
           "sa": "यस्य",
@@ -1344,7 +1612,7 @@
           "en": "delights"
         },
         {
-          "sa": "चित्तं",
+          "sa": "चित्तम्",
           "en": "mind"
         },
         {
@@ -1352,8 +1620,16 @@
           "en": "rejoices"
         },
         {
-          "sa": "नन्दत्येव",
-          "en": "rejoices indeed"
+          "sa": "नन्दति",
+          "en": "rejoices"
+        },
+        {
+          "sa": "नन्दति",
+          "en": "rejoices"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
         }
       ],
       "chapter": 2,
@@ -1365,11 +1641,15 @@
       "label": "Verse 20",
       "number": "20",
       "deva": "भगवद्गीता किञ्चिदधीता\nगङ्गाजललवकणिका पीता ।\nसकृदपि येन मुरारिसमर्चा\nक्रियते तस्य यमेन न चर्चा ॥ २०॥",
-      "translation": "Whoever has studied even a little of the Bhagavad Gītā, drunk even a tiny drop of Gaṅgā water, and worshipped Murāri even once has no discussion with Yama.",
+      "translation": "Whoever studies even a little of the Bhagavad Gītā, drinks a tiny drop of Ganges water, and worships Murāri even once has no discussion with Yama.",
       "gloss": [
         {
-          "sa": "भगवद्गीता",
-          "en": "Bhagavad Gītā"
+          "sa": "भगवत्",
+          "en": "the Lord"
+        },
+        {
+          "sa": "गीता",
+          "en": "the Gītā"
         },
         {
           "sa": "किञ्चित्",
@@ -1380,16 +1660,20 @@
           "en": "studied"
         },
         {
-          "sa": "गङ्गाजल",
-          "en": "water of the Ganges"
+          "sa": "गङ्गा",
+          "en": "the Ganges"
+        },
+        {
+          "sa": "जल",
+          "en": "water"
         },
         {
           "sa": "लव",
-          "en": "a small drop"
+          "en": "drop"
         },
         {
           "sa": "कणिका",
-          "en": "a tiny particle"
+          "en": "tiny particle"
         },
         {
           "sa": "पीता",
@@ -1413,7 +1697,7 @@
         },
         {
           "sa": "समर्चा",
-          "en": "worship, honoring"
+          "en": "worship"
         },
         {
           "sa": "क्रियते",
@@ -1429,7 +1713,7 @@
         },
         {
           "sa": "न",
-          "en": "no, not"
+          "en": "not"
         },
         {
           "sa": "चर्चा",
@@ -1445,55 +1729,75 @@
       "label": "Verse 21",
       "number": "21",
       "deva": "पुनरपि जननं पुनरपि मरणं\nपुनरपि जननीजठरे शयनम् ।\nइह संसारे बहुदुस्तारे\nकृपयाऽपारे पाहि मुरारे ॥ २१॥",
-      "translation": "Birth again, death again, lying again in the mother's womb! In this world, so hard to cross, protect me by your boundless compassion, O Murāri.",
+      "translation": "Birth again, death again, lying again in the mother’s womb! In this worldly existence, so hard to cross, protect me by your boundless compassion, O Murāri.",
       "gloss": [
         {
-          "sa": "पुनरपि",
+          "sa": "पुनः",
           "en": "again"
         },
         {
-          "sa": "जननं",
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "जननम्",
           "en": "birth"
         },
         {
-          "sa": "पुनरपि",
+          "sa": "पुनः",
           "en": "again"
         },
         {
-          "sa": "मरणं",
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "मरणम्",
           "en": "death"
         },
         {
-          "sa": "पुनरपि",
+          "sa": "पुनः",
           "en": "again"
         },
         {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
           "sa": "जननी",
-          "en": "the mother"
+          "en": "mother"
         },
         {
           "sa": "जठरे",
           "en": "in the womb"
         },
         {
-          "sa": "शयनं",
+          "sa": "शयनम्",
           "en": "lying"
         },
         {
           "sa": "इह",
-          "en": "here, in this world"
+          "en": "here"
         },
         {
           "sa": "संसारे",
           "en": "in worldly existence"
         },
         {
-          "sa": "बहुदुस्तारे",
-          "en": "so difficult to cross"
+          "sa": "बहु",
+          "en": "very"
         },
         {
-          "sa": "कृपयाऽपारे",
-          "en": "by boundless compassion"
+          "sa": "दुस्तारे",
+          "en": "difficult to cross"
+        },
+        {
+          "sa": "कृपया",
+          "en": "by compassion"
+        },
+        {
+          "sa": "अपारे",
+          "en": "boundless"
         },
         {
           "sa": "पाहि",
@@ -1513,23 +1817,31 @@
       "label": "Verse 22",
       "number": "22",
       "deva": "रथ्याचर्पटविरचितकन्थः\nपुण्यापुण्यविवर्जितपन्थः ।\nयोगी योगनियोजितचित्तो\nरमते बालोन्मत्तवदेव ॥ २२॥",
-      "translation": "With a garment stitched from rags found on the road, following a path beyond merit and demerit, the yogin whose mind is absorbed in yoga delights like a child or a mad person.",
+      "translation": "The yogin wears a garment stitched from rags found on the road and walks a path free from merit and demerit; with the mind focused on yoga, that yogin delights just like a child or a mad person.",
       "gloss": [
         {
-          "sa": "रथ्याचर्पट",
-          "en": "discarded road-rags"
+          "sa": "रथ्या",
+          "en": "road"
+        },
+        {
+          "sa": "चर्पट",
+          "en": "rags"
         },
         {
           "sa": "विरचित",
-          "en": "made from"
+          "en": "made, stitched"
         },
         {
           "sa": "कन्थः",
-          "en": "a patchwork garment"
+          "en": "patchwork garment"
         },
         {
-          "sa": "पुण्यापुण्य",
-          "en": "merit and demerit"
+          "sa": "पुण्य",
+          "en": "merit"
+        },
+        {
+          "sa": "अपुण्य",
+          "en": "demerit"
         },
         {
           "sa": "विवर्जित",
@@ -1541,11 +1853,15 @@
         },
         {
           "sa": "योगी",
-          "en": "the yogin"
+          "en": "yogin"
         },
         {
-          "sa": "योगनियोजित",
-          "en": "absorbed in yoga"
+          "sa": "योग",
+          "en": "yoga"
+        },
+        {
+          "sa": "नियोजित",
+          "en": "focused, engaged"
         },
         {
           "sa": "चित्तः",
@@ -1556,8 +1872,20 @@
           "en": "delights"
         },
         {
-          "sa": "बालोन्मत्तवदेव",
-          "en": "like a child or a mad person"
+          "sa": "बाल",
+          "en": "child"
+        },
+        {
+          "sa": "उन्मत्त",
+          "en": "mad person"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
         }
       ],
       "chapter": 3,
@@ -1569,14 +1897,14 @@
       "label": "Verse 23",
       "number": "23",
       "deva": "कस्त्वं कोऽहं कुत आयातः\nका मे जननी को मे तातः ।\nइति परिभावय सर्वमसारम्\nविश्वं त्यक्त्वा स्वप्नविचारम् ॥ २३॥",
-      "translation": "Who are you? Who am I? From where have I come? Who is my mother? Who is my father? Reflect thus; leaving the insubstantial world behind, see it as a dream.",
+      "translation": "Who are you? Who am I? From where have I come? Who is my mother? Who is my father? Reflect on this: the whole world is without essence. Leave it behind and regard it as a dream.",
       "gloss": [
         {
           "sa": "कः",
           "en": "who"
         },
         {
-          "sa": "त्वं",
+          "sa": "त्वम्",
           "en": "you"
         },
         {
@@ -1584,16 +1912,16 @@
           "en": "who"
         },
         {
-          "sa": "अहं",
+          "sa": "अहम्",
           "en": "I"
         },
         {
           "sa": "कुतः",
-          "en": "whence"
+          "en": "from where"
         },
         {
           "sa": "आयातः",
-          "en": "have I come"
+          "en": "I have come"
         },
         {
           "sa": "का",
@@ -1625,31 +1953,31 @@
         },
         {
           "sa": "परिभावय",
-          "en": "reflect, contemplate"
+          "en": "reflect deeply"
         },
         {
-          "sa": "सर्वं",
-          "en": "the entire"
+          "sa": "सर्वम्",
+          "en": "all"
         },
         {
-          "sa": "असारं",
+          "sa": "असारम्",
           "en": "without essence"
         },
         {
-          "sa": "विश्वं",
+          "sa": "विश्वम्",
           "en": "the world"
         },
         {
           "sa": "त्यक्त्वा",
-          "en": "having left aside"
+          "en": "having left behind"
         },
         {
           "sa": "स्वप्न",
           "en": "dream"
         },
         {
-          "sa": "विचारं",
-          "en": "inquiry, reflection"
+          "sa": "विचारम्",
+          "en": "consideration, regard"
         }
       ],
       "chapter": 3,
@@ -1661,7 +1989,7 @@
       "label": "Verse 24",
       "number": "24",
       "deva": "त्वयि मयि चान्यत्रैको विष्णु-\nर्व्यर्थं कुप्यसि मय्यसहिष्णुः ।\nभव समचित्तः सर्वत्र त्वं\nवाञ्छस्यचिराद्यदि विष्णुत्वम् ॥ २४॥",
-      "translation": "The one Viṣṇu is in you, in me, and elsewhere. You grow angry at me in vain because you are intolerant. Be even-minded everywhere if you wish soon to attain the state of Viṣṇu.",
+      "translation": "The one Viṣṇu is in you, in me, and elsewhere. You are intolerant and grow angry with me in vain. Be even-minded everywhere if you wish soon to attain the state of Viṣṇu.",
       "gloss": [
         {
           "sa": "त्वयि",
@@ -1672,15 +2000,23 @@
           "en": "in me"
         },
         {
-          "sa": "चान्यत्रैक",
-          "en": "and in any other place only one"
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "एकः",
+          "en": "one"
         },
         {
           "sa": "विष्णुः",
           "en": "Viṣṇu"
         },
         {
-          "sa": "व्यर्थं",
+          "sa": "व्यर्थम्",
           "en": "in vain"
         },
         {
@@ -1689,7 +2025,7 @@
         },
         {
           "sa": "मयि",
-          "en": "at me"
+          "en": "with me"
         },
         {
           "sa": "असहिष्णुः",
@@ -1708,15 +2044,15 @@
           "en": "everywhere"
         },
         {
-          "sa": "त्वं",
+          "sa": "त्वम्",
           "en": "you"
         },
         {
           "sa": "वाञ्छसि",
-          "en": "you wish"
+          "en": "wish"
         },
         {
-          "sa": "अचिराद्",
+          "sa": "अचिरात्",
           "en": "soon"
         },
         {
@@ -1724,7 +2060,7 @@
           "en": "if"
         },
         {
-          "sa": "विष्णुत्वं",
+          "sa": "विष्णुत्वम्",
           "en": "the state of Viṣṇu"
         }
       ],
@@ -1737,7 +2073,7 @@
       "label": "Verse 25",
       "number": "25",
       "deva": "शत्रौ मित्रे पुत्रे बन्धौ\nमा कुरु यत्नं विग्रहसन्धौ ।\nसर्वस्मिन्नपि पश्यात्मानं\nसर्वत्रोत्सृज भेदाज्ञानम् ॥ २५॥",
-      "translation": "Make no effort to quarrel or make peace with enemy or friend, son or relative. See the Self in all and everywhere give up the ignorance that sees difference.",
+      "translation": "Make no effort for conflict or reconciliation with enemy, friend, son, or relative. See the Self in everything and everywhere give up the ignorance that sees difference.",
       "gloss": [
         {
           "sa": "शत्रौ",
@@ -1764,20 +2100,32 @@
           "en": "make"
         },
         {
-          "sa": "यत्नं",
-          "en": "an effort"
+          "sa": "यत्नम्",
+          "en": "effort"
         },
         {
-          "sa": "विग्रहसन्धौ",
-          "en": "for conflict or reconciliation"
+          "sa": "विग्रह",
+          "en": "conflict"
         },
         {
-          "sa": "सर्वस्मिन्नपि",
-          "en": "in all"
+          "sa": "सन्धौ",
+          "en": "or reconciliation"
         },
         {
-          "sa": "पश्यात्मानं",
-          "en": "see the Self"
+          "sa": "सर्वस्मिन्",
+          "en": "in everything"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पश्य",
+          "en": "see"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
         },
         {
           "sa": "सर्वत्र",
@@ -1788,8 +2136,12 @@
           "en": "give up"
         },
         {
-          "sa": "भेदाज्ञानं",
-          "en": "ignorance of difference"
+          "sa": "भेद",
+          "en": "difference"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
         }
       ],
       "chapter": 3,
@@ -1801,22 +2153,22 @@
       "label": "Verse 26",
       "number": "26",
       "deva": "कामं क्रोधं लोभं मोहं\nत्यक्त्वाऽऽत्मानं भावय कोऽहम् ।\nआत्मज्ञानविहीना मूढा-\nस्ते पच्यन्ते नरकनिगूढाः ॥ २६॥",
-      "translation": "Giving up desire, anger, greed, and delusion, contemplate the Self: “Who am I?” Fools without Self-knowledge are tormented in hidden hells.",
+      "translation": "Give up desire, anger, greed, and delusion; contemplate the Self by asking, “Who am I?” Fools deprived of Self-knowledge are tormented, sunk in hell.",
       "gloss": [
         {
-          "sa": "कामं",
+          "sa": "कामम्",
           "en": "desire"
         },
         {
-          "sa": "क्रोधं",
+          "sa": "क्रोधम्",
           "en": "anger"
         },
         {
-          "sa": "लोभं",
+          "sa": "लोभम्",
           "en": "greed"
         },
         {
-          "sa": "मोहं",
+          "sa": "मोहम्",
           "en": "delusion"
         },
         {
@@ -1824,7 +2176,7 @@
           "en": "having given up"
         },
         {
-          "sa": "आत्मानं",
+          "sa": "आत्मानम्",
           "en": "the Self"
         },
         {
@@ -1832,16 +2184,24 @@
           "en": "contemplate"
         },
         {
-          "sa": "कोऽहम्",
-          "en": "“Who am I?”"
+          "sa": "कः",
+          "en": "who"
         },
         {
-          "sa": "आत्मज्ञान",
-          "en": "Self-knowledge"
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
         },
         {
           "sa": "विहीनाः",
-          "en": "without, deprived of"
+          "en": "deprived of"
         },
         {
           "sa": "मूढाः",
@@ -1856,8 +2216,12 @@
           "en": "are tormented"
         },
         {
-          "sa": "नरकनिगूढाः",
-          "en": "hidden in hell"
+          "sa": "नरक",
+          "en": "hell"
+        },
+        {
+          "sa": "निगूढाः",
+          "en": "hidden deep"
         }
       ],
       "chapter": 3,
@@ -1869,7 +2233,7 @@
       "label": "Verse 27",
       "number": "27",
       "deva": "गेयं गीतानामसहस्रं\nध्येयं श्रीपतिरूपमजस्रम् ।\nनेयं सज्जनसङ्गे चित्तं\nदेयं दीनजनाय च वित्तम् ॥ २७॥",
-      "translation": "Sing the Gītā and the thousand names; constantly contemplate the form of the Lord of Śrī. Lead the mind to the company of the good, and give wealth to the poor.",
+      "translation": "Sing the Gītā and the thousand names; constantly contemplate the form of the Lord of Śrī. Lead the mind into the company of the good, and give wealth to the poor.",
       "gloss": [
         {
           "sa": "गेयम्",
@@ -1880,28 +2244,40 @@
           "en": "the Gītā"
         },
         {
-          "sa": "नामसहस्रम्",
-          "en": "the thousand names"
+          "sa": "नाम",
+          "en": "name"
+        },
+        {
+          "sa": "सहस्रम्",
+          "en": "a thousand"
         },
         {
           "sa": "ध्येयम्",
           "en": "to be contemplated"
         },
         {
-          "sa": "श्रीपति-रूपम्",
-          "en": "the form of the Lord of Śrī"
+          "sa": "श्रीपति",
+          "en": "the Lord of Śrī"
+        },
+        {
+          "sa": "रूपम्",
+          "en": "form"
         },
         {
           "sa": "अजस्रम्",
-          "en": "constantly, without ceasing"
+          "en": "constantly"
         },
         {
           "sa": "नेयम्",
           "en": "to be led"
         },
         {
-          "sa": "सज्जन-सङ्गे",
-          "en": "in the company of good people"
+          "sa": "सज्जन",
+          "en": "good people"
+        },
+        {
+          "sa": "सङ्गे",
+          "en": "in the company"
         },
         {
           "sa": "चित्तम्",
@@ -1912,8 +2288,8 @@
           "en": "to be given"
         },
         {
-          "sa": "दीन-जनाय",
-          "en": "to the poor person"
+          "sa": "दीनजनाय",
+          "en": "to the poor"
         },
         {
           "sa": "च",
@@ -1933,7 +2309,7 @@
       "label": "Verse 28",
       "number": "28",
       "deva": "सुखतः क्रियते रामाभोगः\nपश्चाद्धन्त शरीरे रोगः ।\nयद्यपि लोके मरणं शरणं\nतदपि न मुञ्चति पापाचरणम् ॥ २८॥",
-      "translation": "For pleasure, one engages in sexual enjoyment; later—alas—the body becomes diseased. Although death is the final refuge in this world, one still does not give up sinful conduct.",
+      "translation": "For pleasure, one engages in sexual enjoyment; afterward, alas, disease comes to the body. Although death is the final end in this world, one still does not give up sinful conduct.",
       "gloss": [
         {
           "sa": "सुखतः",
@@ -1941,22 +2317,30 @@
         },
         {
           "sa": "क्रियते",
-          "en": "one pursues"
+          "en": "is done, pursued"
         },
         {
-          "sa": "रामाभोग",
-          "en": "sensual enjoyment"
+          "sa": "रामा",
+          "en": "woman, beloved"
         },
         {
-          "sa": "पश्चाद्धन्त",
-          "en": "afterward, alas"
+          "sa": "आभोगः",
+          "en": "enjoyment"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "afterward"
+        },
+        {
+          "sa": "हन्त",
+          "en": "alas"
         },
         {
           "sa": "शरीरे",
           "en": "in the body"
         },
         {
-          "sa": "रोग",
+          "sa": "रोगः",
           "en": "disease"
         },
         {
@@ -1968,16 +2352,20 @@
           "en": "in the world"
         },
         {
-          "sa": "मरण",
+          "sa": "मरणम्",
           "en": "death"
         },
         {
-          "sa": "शरणं",
-          "en": "the refuge, final recourse"
+          "sa": "शरणम्",
+          "en": "refuge, final end"
         },
         {
-          "sa": "तदपि",
-          "en": "even then"
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
         },
         {
           "sa": "न",
@@ -1988,8 +2376,12 @@
           "en": "gives up"
         },
         {
-          "sa": "पापाचरणं",
-          "en": "sinful conduct"
+          "sa": "पाप",
+          "en": "sinful"
+        },
+        {
+          "sa": "आचरणम्",
+          "en": "conduct"
         }
       ],
       "chapter": 3,
@@ -2001,14 +2393,14 @@
       "label": "Verse 29",
       "number": "29",
       "deva": "अर्थमनर्थं भावय नित्यं\nनास्तिततः सुखलेशः सत्यम् ।\nपुत्रादपि धनभाजां भीतिः\nसर्वत्रैषा विहिता रीतिः ॥ २९॥",
-      "translation": "Always reflect that wealth brings misfortune; truly, it contains not the least happiness. The wealthy fear even their own sons; this is the way everywhere.",
+      "translation": "Reflect always that wealth is misfortune; truly, there is not the slightest happiness from it. The wealthy fear even their sons; this pattern is seen everywhere.",
       "gloss": [
         {
-          "sa": "अर्थं",
+          "sa": "अर्थम्",
           "en": "wealth"
         },
         {
-          "sa": "अनर्थं",
+          "sa": "अनर्थम्",
           "en": "misfortune, harm"
         },
         {
@@ -2016,7 +2408,7 @@
           "en": "reflect"
         },
         {
-          "sa": "नित्यं",
+          "sa": "नित्यम्",
           "en": "always"
         },
         {
@@ -2025,30 +2417,38 @@
         },
         {
           "sa": "अस्ति",
-          "en": "is"
+          "en": "there is"
         },
         {
           "sa": "ततः",
           "en": "from it"
         },
         {
-          "sa": "सुखलेशः",
-          "en": "the least happiness"
+          "sa": "सुख",
+          "en": "happiness"
         },
         {
-          "sa": "सत्यं",
-          "en": "Truth"
+          "sa": "लेशः",
+          "en": "a trace"
         },
         {
-          "sa": "पुत्रादपि",
-          "en": "even from one's son"
+          "sa": "सत्यम्",
+          "en": "truly"
+        },
+        {
+          "sa": "पुत्रात्",
+          "en": "from a son"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
         },
         {
           "sa": "धन",
           "en": "wealth"
         },
         {
-          "sa": "भाजां",
+          "sa": "भाजाम्",
           "en": "of those who possess"
         },
         {
@@ -2081,39 +2481,47 @@
       "label": "Verse 30",
       "number": "30",
       "deva": "प्राणायामं प्रत्याहारं\nनित्यानित्य विवेकविचारम् ।\nजाप्यसमेतसमाधिविधानं\nकुर्ववधानं महदवधानम् ॥ ३०॥",
-      "translation": "Practice breath control, withdrawal of the senses, inquiry distinguishing the eternal from the transient, recitation, and meditation—with attention, great attention.",
+      "translation": "Practice breath control, withdrawal of the senses, and inquiry that distinguishes the eternal from the non-eternal. Practice samādhi together with mantra recitation; do this attentively—very attentively.",
       "gloss": [
         {
-          "sa": "प्राणायामं",
+          "sa": "प्राणायामम्",
           "en": "breath control"
         },
         {
-          "sa": "प्रत्याहारं",
+          "sa": "प्रत्याहारम्",
           "en": "withdrawal of the senses"
         },
         {
-          "sa": "नित्य-अनित्य",
-          "en": "eternal and non-eternal"
+          "sa": "नित्य",
+          "en": "eternal"
+        },
+        {
+          "sa": "अनित्य",
+          "en": "non-eternal"
         },
         {
           "sa": "विवेक",
-          "en": "discrimination"
+          "en": "discernment"
         },
         {
           "sa": "विचारम्",
-          "en": "inquiry, reflection"
+          "en": "inquiry"
         },
         {
           "sa": "जाप्य",
-          "en": "mantra recitation"
+          "en": "recitation"
         },
         {
           "sa": "समेत",
           "en": "together with"
         },
         {
-          "sa": "समाधि-विधानम्",
-          "en": "the practice of meditation"
+          "sa": "समाधि",
+          "en": "samādhi"
+        },
+        {
+          "sa": "विधानम्",
+          "en": "practice"
         },
         {
           "sa": "कुरु",
@@ -2124,8 +2532,12 @@
           "en": "attention"
         },
         {
-          "sa": "महत्-अवधानम्",
-          "en": "great attention"
+          "sa": "महत्",
+          "en": "great"
+        },
+        {
+          "sa": "अवधानम्",
+          "en": "attention"
         }
       ],
       "chapter": 3,
@@ -2137,11 +2549,19 @@
       "label": "Verse 31",
       "number": "31",
       "deva": "गुरुचरणाम्बुजनिर्भरभक्तः\nसंसारादचिराद्भव मुक्तः ।\nसेन्द्रियमानसनियमादेवं\nद्रक्ष्यसि निजहृदयस्थं देवम् ॥ ३१॥",
-      "translation": "With deep devotion to the lotus feet of the guru, be free from worldly existence before long. Through this discipline of the senses and mind, you will see the Lord dwelling in your own heart.",
+      "translation": "With deep devotion to the lotus feet of the guru, be free from worldly existence before long. Through such discipline of the senses and mind, you will see the Lord dwelling in your own heart.",
       "gloss": [
         {
-          "sa": "गुरु-चरण-अम्बुज",
-          "en": "the lotus feet of the teacher"
+          "sa": "गुरु",
+          "en": "teacher"
+        },
+        {
+          "sa": "चरण",
+          "en": "feet"
+        },
+        {
+          "sa": "अम्बुज",
+          "en": "lotus"
         },
         {
           "sa": "निर्भर",
@@ -2157,7 +2577,7 @@
         },
         {
           "sa": "अचिरात्",
-          "en": "before long, soon"
+          "en": "before long"
         },
         {
           "sa": "भव",
@@ -2165,15 +2585,27 @@
         },
         {
           "sa": "मुक्तः",
-          "en": "free"
+          "en": "free, liberated"
         },
         {
-          "sa": "सेन्द्रिय-मानस-नियमात्",
-          "en": "through restraint of the senses and mind"
+          "sa": "स",
+          "en": "with"
+        },
+        {
+          "sa": "इन्द्रिय",
+          "en": "senses"
+        },
+        {
+          "sa": "मानस",
+          "en": "mind"
+        },
+        {
+          "sa": "नियमात्",
+          "en": "through discipline"
         },
         {
           "sa": "एवम्",
-          "en": "in this way"
+          "en": "thus"
         },
         {
           "sa": "द्रक्ष्यसि",
@@ -2184,7 +2616,7 @@
           "en": "one’s own"
         },
         {
-          "sa": "हृदय-स्थम्",
+          "sa": "हृदयस्थम्",
           "en": "dwelling in the heart"
         },
         {
@@ -2199,21 +2631,27 @@
   ],
   "sections": [
     {
-      "id": 1,
-      "title": "Verses 1–10 · Impermanence, worldly attachments, and good company",
+      "id": "opening",
+      "title": "Opening Verse · The call to worship Govinda (1)",
       "startVerse": 1,
-      "endVerse": 10
+      "endVerse": 1
     },
     {
-      "id": 2,
-      "title": "Verses 11–20 · Dispassion, knowledge, and disciplined practice",
-      "startVerse": 11,
-      "endVerse": 20
+      "id": "dvadasa-manjari",
+      "title": "Dvādaśamañjarikā · Twelve verses on impermanence, detachment, and knowledge (2–13)",
+      "startVerse": 2,
+      "endVerse": 13
     },
     {
-      "id": 3,
-      "title": "Verses 21–31 · Saṃsāra, seeing the Self in all, and devotion to Govinda",
-      "startVerse": 21,
+      "id": "chaturdasha-manjari",
+      "title": "Caturdaśamañjarikā · Fourteen disciple verses on renunciation and self-inquiry (14–27)",
+      "startVerse": 14,
+      "endVerse": 27
+    },
+    {
+      "id": "closing",
+      "title": "Closing Verses · Mortality, practice, and devotion (28–31)",
+      "startVerse": 28,
       "endVerse": 31
     }
   ],
@@ -2224,6 +2662,6 @@
       "start": 1,
       "end": 31
     },
-    "note": "All 31 verses have Sanskrit, English translations, generated IAST transliteration, and Devanāgarī-backed word-for-word glosses."
+    "note": "All 31 verses have Sanskrit, English translation, explicit IAST, and Devanāgarī-backed word-for-word glosses."
   }
 }
