@@ -2,7 +2,7 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 1001,
+  "expectedUnits": 981,
   "translationAvailable": true,
   "coverage": "Complete Sanskrit source and original English translation for all 1019 reader units. All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, and verses 3.1–3.60, plus 3.114, 3.123, and 4.43, now show complete shlokas, IAST, translations, and word-by-word glosses; the remaining 141 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
@@ -22539,26 +22539,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0944",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 269",
-      "label": "Text 269",
-      "deva": "प्रत्यक्षादिविरुद्धं चेद्वाक्यमर्थं वदेत्क्वचित् ।",
-      "iast": "pratyakṣādiviruddhaṃ cedvākyamarthaṃ vadetkvacit |",
-      "translation": "“If a sentence were to state something contrary to perception or the other means of knowledge,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0945",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.81",
       "label": "Verse 3.81",
-      "deva": "स्यात्तु तद्दृष्टिविध्यर्थं योषाग्निवदसंशयम् ॥ ८१॥",
-      "iast": "syāttu taddṛṣṭividhyarthaṃ yoṣāgnivadasaṃśayam || 81||",
-      "translation": "it could certainly be intended as an injunction for a ritual vision, as in the teachings about a woman and fire.”",
-      "gloss": [],
+      "deva": "प्रत्यक्षादिविरुद्धं चेद्वाक्यमर्थं वदेत्क्वचित् ।\nस्यात्तु तद्दृष्टिविध्यर्थं योषाग्निवदसंशयम् ॥ ८१॥",
+      "iast": "pratyakṣādiviruddhaṃ cedvākyamarthaṃ vadetkvacit |\nsyāttu taddṛṣṭividhyarthaṃ yoṣāgnivadasaṃśayam || 81||",
+      "translation": "If any sentence were to state something contrary to perception or another means of knowledge, it would surely be intended as a figurative contemplation instruction, like “a woman is fire.”",
+      "gloss": [
+        {
+          "sa": "प्रत्यक्ष-आदि-विरुद्धम्",
+          "en": "contrary to perception and the rest"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "a sentence"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "a meaning"
+        },
+        {
+          "sa": "वदेत्",
+          "en": "were to state"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "in some case"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "it would be"
+        },
+        {
+          "sa": "तु",
+          "en": "however; indeed"
+        },
+        {
+          "sa": "तत्",
+          "en": "that [sentence]"
+        },
+        {
+          "sa": "दृष्टि-विधि-अर्थम्",
+          "en": "for the purpose of an instruction to contemplate one thing as another"
+        },
+        {
+          "sa": "योषा-अग्नि-वत्",
+          "en": "like “a woman is fire”"
+        },
+        {
+          "sa": "असंशयम्",
+          "en": "without doubt"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-81"
       ]
@@ -22575,26 +22613,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0947",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 272",
-      "label": "Text 272",
-      "deva": "वस्त्वेकनिष्ठं वाक्यं चेन्न तस्य स्यात्क्रियार्थता ।",
-      "iast": "vastvekaniṣṭhaṃ vākyaṃ cenna tasya syātkriyārthatā |",
-      "translation": "“If a sentence is wholly concerned with an existing reality, it cannot have action as its purpose;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0948",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.82",
       "label": "Verse 3.82",
-      "deva": "वस्तुनो ह्येकरूपत्वाद्विकल्पस्याप्यसंभवः ॥ ८२॥",
-      "iast": "vastuno hyekarūpatvādvikalpasyāpyasaṃbhavaḥ || 82||",
-      "translation": "for reality has one nature, and therefore no alternative to be chosen among.”",
-      "gloss": [],
+      "deva": "वस्त्वेकनिष्ठं वाक्यं चेन्न तस्य स्यात्क्रियार्थता ।\nवस्तुनो ह्येकरूपत्वाद्विकल्पस्याप्यसंभवः ॥ ८२॥",
+      "iast": "vastvekaniṣṭhaṃ vākyaṃ cenna tasya syātkriyārthatā |\nvastuno hyekarūpatvādvikalpasyāpyasaṃbhavaḥ || 82||",
+      "translation": "A sentence concerned solely with an existing reality cannot have action as its purpose; reality has one nature and allows no alternatives.",
+      "gloss": [
+        {
+          "sa": "वस्तु-एक-निष्ठम्",
+          "en": "focused solely on an existing reality"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "a sentence"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it; its"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "क्रिया-अर्थता",
+          "en": "having action as its purpose"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "of reality"
+        },
+        {
+          "sa": "हि",
+          "en": "for; indeed"
+        },
+        {
+          "sa": "एक-रूपत्वात्",
+          "en": "because it has one nature"
+        },
+        {
+          "sa": "विकल्पस्य",
+          "en": "of alternatives"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "असंभवः",
+          "en": "impossibility"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-82"
       ]
@@ -22622,26 +22702,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0951",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 276",
-      "label": "Text 276",
-      "deva": "अपूर्वाधिगमं कुर्वत्प्रमाणं स्यान्न चेन्न तत् ।",
-      "iast": "apūrvādhigamaṃ kurvatpramāṇaṃ syānna cenna tat |",
-      "translation": "“A means of knowledge must disclose what was not previously known; if it does not, it is not a means of knowledge.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0952",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.83",
       "label": "Verse 3.83",
-      "deva": "न विरोधस्ततो युक्तो विभिन्नार्थावबोधिनोः ॥ ८३॥",
-      "iast": "na virodhastato yukto vibhinnārthāvabodhinoḥ || 83||",
-      "translation": "So there can be no reasonable conflict between two means that reveal different things.”",
-      "gloss": [],
+      "deva": "अपूर्वाधिगमं कुर्वत्प्रमाणं स्यान्न चेन्न तत् ।\nन विरोधस्ततो युक्तो विभिन्नार्थावबोधिनोः ॥ ८३॥",
+      "iast": "apūrvādhigamaṃ kurvatpramāṇaṃ syānna cenna tat |\nna virodhastato yukto vibhinnārthāvabodhinoḥ || 83||",
+      "translation": "A means of knowledge must reveal something not previously known; otherwise it is not such a means. So two means that reveal different things cannot reasonably conflict.",
+      "gloss": [
+        {
+          "sa": "अपूर्व-अधिगमम्",
+          "en": "knowledge of what was not known before"
+        },
+        {
+          "sa": "कुर्वत्",
+          "en": "producing"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a valid means of knowledge"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्",
+          "en": "that [is a valid means]"
+        },
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "विरोधः",
+          "en": "conflict"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore; from that"
+        },
+        {
+          "sa": "युक्तः",
+          "en": "reasonable"
+        },
+        {
+          "sa": "विभिन्न-अर्थ-अवबोधिनोः",
+          "en": "between two that reveal different meanings"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-83"
       ]
@@ -22658,26 +22780,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0954",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 279",
-      "label": "Text 279",
-      "deva": "नायं शब्दः कुतो यस्माद्रूपं पश्यामि चक्षुषा ।",
-      "iast": "nāyaṃ śabdaḥ kuto yasmādrūpaṃ paśyāmi cakṣuṣā |",
-      "translation": "“This is not a sound—how could it be? I see a form with my eyes.”",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0955",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.84",
       "label": "Verse 3.84",
-      "deva": "इति यद्वत्तथैवायं विरोधोऽक्षजवाक्ययोः ॥ ८४॥",
-      "iast": "iti yadvattathaivāyaṃ virodho'kṣajavākyayoḥ || 84||",
-      "translation": "In the same way, that would be a supposed conflict between a verbal teaching and what is seen by the senses.",
-      "gloss": [],
+      "deva": "नायं शब्दः कुतो यस्माद्रूपं पश्यामि चक्षुषा ।\nइति यद्वत्तथैवायं विरोधोऽक्षजवाक्ययोः ॥ ८४॥",
+      "iast": "nāyaṃ śabdaḥ kuto yasmādrūpaṃ paśyāmi cakṣuṣā |\niti yadvattathaivāyaṃ virodho'kṣajavākyayoḥ || 84||",
+      "translation": "It would be like saying, “That is not a sound—why? Because I see a form with my eyes.” Such is the supposed conflict between sense-perception and scripture.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "शब्दः",
+          "en": "sound"
+        },
+        {
+          "sa": "कुतः",
+          "en": "why"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "रूपम्",
+          "en": "a form"
+        },
+        {
+          "sa": "पश्यामि",
+          "en": "I see"
+        },
+        {
+          "sa": "चक्षुषा",
+          "en": "with the eye"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; “…”"
+        },
+        {
+          "sa": "यद्वत्",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "विरोधः",
+          "en": "conflict"
+        },
+        {
+          "sa": "अक्षज-वाक्ययोः",
+          "en": "between sense-born perception and a verbal text"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-84"
       ]
@@ -22705,26 +22877,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0958",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 283",
-      "label": "Text 283",
-      "deva": "प्रत्यक्षं चेन्न शाब्दं स्याच्छाब्दं चेदक्षजं कथम् ।",
-      "iast": "pratyakṣaṃ cenna śābdaṃ syācchābdaṃ cedakṣajaṃ katham |",
-      "translation": "“If it is perceptual, it is not verbal knowledge; if verbal, how can it be perceptual?",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0959",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.85",
       "label": "Verse 3.85",
-      "deva": "प्रत्यक्षाभासः प्रत्यक्षे ह्यागमाभास आगमे ॥ ८५॥",
-      "iast": "pratyakṣābhāsaḥ pratyakṣe hyāgamābhāsa āgame || 85||",
-      "translation": "A false appearance of perception is corrected by perception; a false scriptural appearance by scripture.”",
-      "gloss": [],
+      "deva": "प्रत्यक्षं चेन्न शाब्दं स्याच्छाब्दं चेदक्षजं कथम् ।\nप्रत्यक्षाभासः प्रत्यक्षे ह्यागमाभास आगमे ॥ ८५॥",
+      "iast": "pratyakṣaṃ cenna śābdaṃ syācchābdaṃ cedakṣajaṃ katham |\npratyakṣābhāsaḥ pratyakṣe hyāgamābhāsa āgame || 85||",
+      "translation": "If it is perceptual, it is not verbal; if verbal, how can it be sense-born? A false appearance of perception belongs to perception, and a false appearance of revelation belongs to scripture.",
+      "gloss": [
+        {
+          "sa": "प्रत्यक्षम्",
+          "en": "perception"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शाब्दम्",
+          "en": "verbal [knowledge]"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "शाब्दम्",
+          "en": "verbal [knowledge]"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अक्षजम्",
+          "en": "sense-born"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "प्रत्यक्ष-आभासः",
+          "en": "a semblance of perception"
+        },
+        {
+          "sa": "प्रत्यक्षे",
+          "en": "in perception"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आगम-आभासः",
+          "en": "a semblance of revelation"
+        },
+        {
+          "sa": "आगमे",
+          "en": "in scripture"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-85"
       ]
@@ -22741,26 +22959,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0961",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 286",
-      "label": "Text 286",
-      "deva": "स्वमहिम्ना प्रमाणानि कुर्वन्त्यर्थावबोधनम् ।",
-      "iast": "svamahimnā pramāṇāni kurvantyarthāvabodhanam |",
-      "translation": "“Each means of knowledge reveals its subject by its own power;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0962",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.86",
       "label": "Verse 3.86",
-      "deva": "इतरेतरसाचिव्ये प्रामाण्यं नेष्यते स्वतः ॥ ८६॥",
-      "iast": "itaretarasācivye prāmāṇyaṃ neṣyate svataḥ || 86||",
-      "translation": "we do not hold that its authority depends on the help of the others.”",
-      "gloss": [],
+      "deva": "स्वमहिम्ना प्रमाणानि कुर्वन्त्यर्थावबोधनम् ।\nइतरेतरसाचिव्ये प्रामाण्यं नेष्यते स्वतः ॥ ८६॥",
+      "iast": "svamahimnā pramāṇāni kurvantyarthāvabodhanam |\nitaretarasācivye prāmāṇyaṃ neṣyate svataḥ || 86||",
+      "translation": "Each means of knowledge reveals its object by its own power; its validity is not held to depend on help from the others.",
+      "gloss": [
+        {
+          "sa": "स्व-महिम्ना",
+          "en": "by its own power"
+        },
+        {
+          "sa": "प्रमाणानि",
+          "en": "means of valid knowledge"
+        },
+        {
+          "sa": "कुर्वन्ति",
+          "en": "produce"
+        },
+        {
+          "sa": "अर्थ-अवबोधनम्",
+          "en": "understanding of an object"
+        },
+        {
+          "sa": "इतरेतर-साचिव्ये",
+          "en": "through mutual assistance"
+        },
+        {
+          "sa": "प्रामाण्यम्",
+          "en": "validity"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is accepted"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "as intrinsic; by itself"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-86"
       ]
@@ -22777,26 +23021,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0964",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 289",
-      "label": "Text 289",
-      "deva": "दुःखितावगतिश्चेत्स्यान्न प्रमीयेत सात्मवत् ।",
-      "iast": "duḥkhitāvagatiścetsyānna pramīyeta sātmavat |",
-      "translation": "“If awareness itself were established as suffering, it would not be established as the Self;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0965",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.87",
       "label": "Verse 3.87",
-      "deva": "कर्मण्येव प्रमा न्याय्या न तु कर्तर्यपि क्वचित् ॥ ८७॥",
-      "iast": "karmaṇyeva pramā nyāyyā na tu kartaryapi kvacit || 87||",
-      "translation": "valid knowledge properly concerns an action or object, never the agent as such.”",
-      "gloss": [],
+      "deva": "दुःखितावगतिश्चेत्स्यान्न प्रमीयेत सात्मवत् ।\nकर्मण्येव प्रमा न्याय्या न तु कर्तर्यपि क्वचित् ॥ ८७॥",
+      "iast": "duḥkhitāvagatiścetsyānna pramīyeta sātmavat |\nkarmaṇyeva pramā nyāyyā na tu kartaryapi kvacit || 87||",
+      "translation": "If suffering belonged to awareness itself, it could not be established as an object of valid knowledge, just as the Self is not known as an object. Valid cognition properly concerns an object, never the knower.",
+      "gloss": [
+        {
+          "sa": "दुःखित-अवगतौ",
+          "en": "in awareness of suffering"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "were"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रमीयेत",
+          "en": "would be established by valid knowledge"
+        },
+        {
+          "sa": "स-आत्म-वत्",
+          "en": "like the Self [as knower]"
+        },
+        {
+          "sa": "कर्मणि",
+          "en": "with regard to an object"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "प्रमा",
+          "en": "valid cognition"
+        },
+        {
+          "sa": "न्याय्या",
+          "en": "proper; fitting"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "कर्तरि",
+          "en": "with regard to the agent; knower"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-87"
       ]
@@ -22813,26 +23107,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0967",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 292",
-      "label": "Text 292",
-      "deva": "प्रमाणबद्धमूलत्वाद्दुःखित्वं केन वार्यते ।",
-      "iast": "pramāṇabaddhamūlatvādduḥkhitvaṃ kena vāryate |",
-      "translation": "“If suffering is rooted in a means of knowledge, what can remove it?",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0968",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.88",
       "label": "Verse 3.88",
-      "deva": "अग्न्युष्णवन्निवृत्तिश्चेन्नैरात्म्यं ह्येति सौगतम् ॥ ८८॥",
-      "iast": "agnyuṣṇavannivṛttiścennairātmyaṃ hyeti saugatam || 88||",
-      "translation": "If it cannot be removed, the Buddhists’ doctrine of no-Self follows, as heat follows from fire.”",
-      "gloss": [],
+      "deva": "प्रमाणबद्धमूलत्वाद्दुःखित्वं केन वार्यते ।\nअग्न्युष्णवन्निवृत्तिश्चेन्नैरात्म्यं ह्येति सौगतम् ॥ ८८॥",
+      "iast": "pramāṇabaddhamūlatvādduḥkhitvaṃ kena vāryate |\nagnyuṣṇavannivṛttiścennairātmyaṃ hyeti saugatam || 88||",
+      "translation": "If suffering is rooted in a valid means of knowledge, who could remove it? If it could be ended, one would arrive at the Buddhist doctrine of no-Self—as though heat could be separated from fire.",
+      "gloss": [
+        {
+          "sa": "प्रमाण-बद्ध-मूलत्वात्",
+          "en": "because its root is tied to a valid means of knowledge"
+        },
+        {
+          "sa": "दुःखित्वम्",
+          "en": "the state of suffering"
+        },
+        {
+          "sa": "केन",
+          "en": "by whom; by what"
+        },
+        {
+          "sa": "वार्यते",
+          "en": "is prevented"
+        },
+        {
+          "sa": "अग्नि-उष्ण-वत्",
+          "en": "like the heat of fire"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation; removal"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "नैरात्म्यम्",
+          "en": "the doctrine of no-Self"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "एति",
+          "en": "reaches; arrives at"
+        },
+        {
+          "sa": "सौगतम्",
+          "en": "the Buddhist [position]"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-88"
       ]
@@ -22849,26 +23177,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0970",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 295",
-      "label": "Text 295",
-      "deva": "निराकुर्यात्प्रसंख्यानं दुःखित्वं चेत्स्वनुष्ठितम् ।",
-      "iast": "nirākuryātprasaṃkhyānaṃ duḥkhitvaṃ cetsvanuṣṭhitam |",
-      "translation": "“If properly undertaken contemplation removes suffering,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0971",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.89",
       "label": "Verse 3.89",
-      "deva": "प्रत्यक्षादिविरुद्धत्वात्कथमुत्पादयेत्प्रमाम् ॥ ८९॥",
-      "iast": "pratyakṣādiviruddhatvātkathamutpādayetpramām || 89||",
-      "translation": "how could it produce valid knowledge when that knowledge conflicts with perception and the other means?”",
-      "gloss": [],
+      "deva": "निराकुर्यात्प्रसंख्यानं दुःखित्वं चेत्स्वनुष्ठितम् ।\nप्रत्यक्षादिविरुद्धत्वात्कथमुत्पादयेत्प्रमाम् ॥ ८९॥",
+      "iast": "nirākuryātprasaṃkhyānaṃ duḥkhitvaṃ cetsvanuṣṭhitam |\npratyakṣādiviruddhatvātkathamutpādayetpramām || 89||",
+      "translation": "If properly practiced contemplation were to remove suffering, how could it produce valid knowledge when that knowledge conflicts with perception and the other means?",
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "but; now"
+        },
+        {
+          "sa": "मतम्",
+          "en": "the view"
+        },
+        {
+          "sa": "निराकुर्यात्",
+          "en": "would remove"
+        },
+        {
+          "sa": "प्रसंख्यानम्",
+          "en": "contemplation; repeated reflection"
+        },
+        {
+          "sa": "दुःखित्वम्",
+          "en": "the state of suffering"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "सु-अनुष्ठितम्",
+          "en": "properly practiced"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदि-विरुद्धत्वात्",
+          "en": "because it conflicts with perception and the rest"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "उत्पादयेत्",
+          "en": "would produce"
+        },
+        {
+          "sa": "प्रमाम्",
+          "en": "valid knowledge"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-89"
       ]
@@ -22896,40 +23258,71 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0974",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 299",
-      "label": "Text 299",
-      "deva": "अभ्यासोपचयाद्बुद्धेर्यत्स्यादैकाग्र्यमेव तत् ।",
-      "iast": "abhyāsopacayādbuddheryatsyādaikāgryameva tat |",
-      "translation": "“What grows through repeated practice of thought",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0975",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.90",
       "label": "Verse 3.90",
-      "deva": "न हि प्रमाणान्यभ्यासात्कुर्वन्त्यर्थावबोधनम् ॥ ९०॥",
-      "iast": "na hi pramāṇānyabhyāsātkurvantyarthāvabodhanam || 90||",
-      "translation": "is only one-pointedness of mind; means of knowledge do not reveal their object through repetition.”",
-      "gloss": [],
+      "deva": "अभ्यासोपचयाद्बुद्धेर्यत्स्यादैकाग्र्यमेव तत् ।\nन हि प्रमाणान्यभ्यासात्कुर्वन्त्यर्थावबोधनम् ॥ ९०॥",
+      "iast": "abhyāsopacayādbuddheryatsyādaikāgryameva tat |\nna hi pramāṇānyabhyāsātkurvantyarthāvabodhanam || 90||",
+      "translation": "Whatever grows in the mind through repeated practice is only one-pointedness; means of knowledge do not reveal their objects through repetition.",
+      "gloss": [
+        {
+          "sa": "अभ्यास-उपचयात्",
+          "en": "through increase by practice"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may arise"
+        },
+        {
+          "sa": "ऐकाग्र्यम्",
+          "en": "one-pointedness"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रमाणानि",
+          "en": "means of valid knowledge"
+        },
+        {
+          "sa": "अभ्यासात्",
+          "en": "through repetition"
+        },
+        {
+          "sa": "कुर्वन्ति",
+          "en": "produce"
+        },
+        {
+          "sa": "अर्थ-अवबोधनम्",
+          "en": "understanding of an object"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-90"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0976",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 301",
-      "label": "Text 301",
-      "deva": "अभ्यासोपचिता कृत्स्नं भावना चेन्निवर्तयेत् ।",
-      "iast": "abhyāsopacitā kṛtsnaṃ bhāvanā cennivartayet |",
-      "translation": "“If a mental exercise strengthened by practice could remove everything,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0977",
@@ -22937,10 +23330,59 @@
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.91",
       "label": "Verse 3.91",
-      "deva": "नैकान्तिकी निवृत्तिरस्स्याद्भावनाजं हि तत्फलम् ॥ ९१॥",
-      "iast": "naikāntikī nivṛttirassyādbhāvanājaṃ hi tatphalam || 91||",
-      "translation": "its removal would not be certain, for its result is produced by mental exercise.”",
-      "gloss": [],
+      "deva": "अभ्यासोपचिता कृत्स्नं भावना चेन्निवर्तयेत् ।\nनैकान्तिकी निवृत्तिरस्स्याद्भावनाजं हि तत्फलम् ॥ ९१॥",
+      "iast": "abhyāsopacitā kṛtsnaṃ bhāvanā cennivartayet |\nnaikāntikī nivṛttirassyādbhāvanājaṃ hi tatphalam || 91||",
+      "translation": "If an entire mental cultivation built up by practice could remove [bondage], its cessation would not be final, since that result would itself be produced by cultivation.",
+      "gloss": [
+        {
+          "sa": "अभ्यास-उपचिता",
+          "en": "built up through practice"
+        },
+        {
+          "sa": "कृत्स्नम्",
+          "en": "the whole; entire"
+        },
+        {
+          "sa": "भावना",
+          "en": "mental cultivation; contemplation"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "निवर्तयेत्",
+          "en": "would remove"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ऐकान्तिकी",
+          "en": "complete; final"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "भावना-जम्",
+          "en": "born of mental cultivation"
+        },
+        {
+          "sa": "हि",
+          "en": "because"
+        },
+        {
+          "sa": "तत्-फलम्",
+          "en": "that result"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-91"
       ]
@@ -22957,26 +23399,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0979",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 304",
-      "label": "Text 304",
-      "deva": "दुःखस्मीत्यपि चेद्ध्वस्ता कल्पकोट्युपबृंहिता ।",
-      "iast": "duḥkhasmītyapi ceddhvastā kalpakoṭyupabṛṃhitā |",
-      "translation": "“If the idea ‘I am suffering,’ reinforced for millions of ages, were destroyed,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0980",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.92",
       "label": "Verse 3.92",
-      "deva": "स्वल्पीयोऽभ्यासजास्थास्न्वी भावनेत्यत्र का प्रमा ॥ ९२॥",
-      "iast": "svalpīyo'bhyāsajāsthāsnvī bhāvanetyatra kā pramā || 92||",
-      "translation": "what proof is there that a much weaker, practice-born conviction would remain firm?”",
-      "gloss": [],
+      "deva": "दुःखस्मीत्यपि चेद्ध्वस्ता कल्पकोट्युपबृंहिता ।\nस्वल्पीयोऽभ्यासजास्थास्न्वी भावनेत्यत्र का प्रमा ॥ ९२॥",
+      "iast": "duḥkhasmītyapi ceddhvastā kalpakoṭyupabṛṃhitā |\nsvalpīyo'bhyāsajāsthāsnvī bhāvanetyatra kā pramā || 92||",
+      "translation": "If the thought “I am suffering,” strengthened over millions of ages, were destroyed, what proof is there that a much weaker conviction born of practice would remain firm?",
+      "gloss": [
+        {
+          "sa": "दुःख-अस्मि-इति",
+          "en": "“I am suffering”"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "ध्वस्ता",
+          "en": "destroyed"
+        },
+        {
+          "sa": "कल्प-कोटि-उपबृंहिता",
+          "en": "strengthened over millions of ages"
+        },
+        {
+          "sa": "स्वल्पीयः",
+          "en": "much smaller; weaker"
+        },
+        {
+          "sa": "अभ्यास-ज",
+          "en": "born of practice"
+        },
+        {
+          "sa": "स्थास्न्वी",
+          "en": "lasting; firm"
+        },
+        {
+          "sa": "भावना",
+          "en": "mental conviction"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "का",
+          "en": "what"
+        },
+        {
+          "sa": "प्रमा",
+          "en": "proof; valid knowledge"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-92"
       ]
@@ -23015,26 +23499,84 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0984",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 309",
-      "label": "Text 309",
-      "deva": "भावनाजं फलं यत्स्याद्यच्च स्यात्कर्मणः फलम् ।",
-      "iast": "bhāvanājaṃ phalaṃ yatsyādyacca syātkarmaṇaḥ phalam |",
-      "translation": "“The result produced by mental exercise, and the result produced by action,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0985",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.93",
       "label": "Verse 3.93",
-      "deva": "न तत्स्थास्न्विति मन्तव्यं द्रविडेष्विव सङ्गतम् ॥ ९३॥",
-      "iast": "na tatsthāsnviti mantavyaṃ draviḍeṣviva saṅgatam || 93||",
-      "translation": "should not be thought lasting; their connection is like that of things in the Drāviḍa country.”",
-      "gloss": [],
+      "deva": "भावनाजं फलं यत्स्याद्यच्च स्यात्कर्मणः फलम् ।\nन तत्स्थास्न्विति मन्तव्यं द्रविडेष्विव सङ्गतम् ॥ ९३॥",
+      "iast": "bhāvanājaṃ phalaṃ yatsyādyacca syātkarmaṇaḥ phalam |\nna tatsthāsnviti mantavyaṃ draviḍeṣviva saṅgatam || 93||",
+      "translation": "Neither the result of contemplation nor the result of action should be considered lasting; the verse compares both to an association in Drāviḍa, proverbial here for its impermanence.",
+      "gloss": [
+        {
+          "sa": "भावना-जम्",
+          "en": "born of contemplation"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may be"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may be"
+        },
+        {
+          "sa": "कर्मणः",
+          "en": "of action"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "स्थास्नु",
+          "en": "lasting; firm"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "मन्तव्यम्",
+          "en": "should be considered"
+        },
+        {
+          "sa": "द्रविडेषु",
+          "en": "among the people of Drāviḍa"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "सङ्गतम्",
+          "en": "association; relationship"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-93"
       ]
@@ -23062,26 +23604,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0988",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 313",
-      "label": "Text 313",
-      "deva": "निर्दुःखित्वं स्वतस्सिद्धं प्रत्यक्षादेश्च दुःखिता ।",
-      "iast": "nirduḥkhitvaṃ svatassiddhaṃ pratyakṣādeśca duḥkhitā |",
-      "translation": "“Freedom from suffering is established by itself, while perception and the like report suffering;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0989",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.94",
       "label": "Verse 3.94",
-      "deva": "को ह्यात्मानमनादृत्य विश्वसेद्बाह्यमानतः ॥ ९४॥",
-      "iast": "ko hyātmānamanādṛtya viśvasedbāhyamānataḥ || 94||",
-      "translation": "who would trust an outward means of knowledge while disregarding the Self?”",
-      "gloss": [],
+      "deva": "निर्दुःखित्वं स्वतस्सिद्धं प्रत्यक्षादेश्च दुःखिता ।\nको ह्यात्मानमनादृत्य विश्वसेद्बाह्यमानतः ॥ ९४॥",
+      "iast": "nirduḥkhitvaṃ svatassiddhaṃ pratyakṣādeśca duḥkhitā |\nko hyātmānamanādṛtya viśvasedbāhyamānataḥ || 94||",
+      "translation": "Freedom from suffering is established by the Self itself, while perception and the other means report suffering. Who would disregard the Self and trust an external means of knowledge?",
+      "gloss": [
+        {
+          "sa": "निर्दुःखित्वम्",
+          "en": "freedom from suffering"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "सिद्धम्",
+          "en": "established"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदेः",
+          "en": "from perception and the rest"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दुःखिता",
+          "en": "suffering"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "अनादृत्य",
+          "en": "disregarding"
+        },
+        {
+          "sa": "विश्वसेत्",
+          "en": "would trust"
+        },
+        {
+          "sa": "बाह्य-मानतः",
+          "en": "an external means of knowledge"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-94"
       ]
@@ -23098,26 +23678,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0991",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 316",
-      "label": "Text 316",
-      "deva": "अपि प्रत्यक्षबाधेन प्रवृत्तिः प्रत्यगात्मनि ।",
-      "iast": "api pratyakṣabādhena pravṛttiḥ pratyagātmani |",
-      "translation": "“Even when one proceeds in the face of perception’s obstruction, the turn toward the inward Self",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0992",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.95",
       "label": "Verse 3.95",
-      "deva": "\"पराञ्चि खानि\" त्येतस्माद्वचसो गम्यते श्रुतेः ॥ ९५॥",
-      "iast": "\"parāñci khāni\" tyetasmādvacaso gamyate śruteḥ || 95||",
-      "translation": "is understood from scripture’s statement that the sense openings are directed outward.”",
-      "gloss": [],
+      "deva": "अपि प्रत्यक्षबाधेन प्रवृत्तिः प्रत्यगात्मनि ।\n\"पराञ्चि खानि\" त्येतस्माद्वचसो गम्यते श्रुतेः ॥ ९५॥",
+      "iast": "api pratyakṣabādhena pravṛttiḥ pratyagātmani |\n\"parāñci khāni\" tyetasmādvacaso gamyate śruteḥ || 95||",
+      "translation": "Even when one must overcome perception’s outward pull, one turns toward the inward Self; scripture teaches this in the statement “the sense openings face outward.”",
+      "gloss": [
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "प्रत्यक्ष-बाधेन",
+          "en": "despite the obstruction of perception"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "the turning; movement"
+        },
+        {
+          "sa": "प्रत्यगात्मनि",
+          "en": "toward the inward Self"
+        },
+        {
+          "sa": "पराञ्चि",
+          "en": "outward-facing"
+        },
+        {
+          "sa": "खानि",
+          "en": "the sense openings"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एतस्मात्",
+          "en": "from this"
+        },
+        {
+          "sa": "वचसः",
+          "en": "statement"
+        },
+        {
+          "sa": "गम्यते",
+          "en": "is understood"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "of scripture"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-95"
       ]
@@ -23145,26 +23759,56 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0995",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 320",
-      "label": "Text 320",
-      "deva": "प्रमां चेज्जनयेद्वाक्यं प्रत्यक्षादिविरोधिनीम् ।",
-      "iast": "pramāṃ cejjanayedvākyaṃ pratyakṣādivirodhinīm |",
-      "translation": "“If a sentence should produce knowledge that conflicts with perception and the other means of knowledge…”",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0996",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.96",
       "label": "Verse 3.96",
-      "deva": "गौणीं प्रत्यक्षतां ब्रूयान्मुख्यार्थासंभवाद्बुधः ॥ ९६॥",
-      "iast": "gauṇīṃ pratyakṣatāṃ brūyānmukhyārthāsaṃbhavādbudhaḥ || 96||",
-      "translation": "“The wise would therefore call its directness figurative, since a literal meaning is impossible.”",
-      "gloss": [],
+      "deva": "प्रमां चेज्जनयेद्वाक्यं प्रत्यक्षादिविरोधिनीम् ।\nगौणीं प्रत्यक्षतां ब्रूयान्मुख्यार्थासंभवाद्बुधः ॥ ९६॥",
+      "iast": "pramāṃ cejjanayedvākyaṃ pratyakṣādivirodhinīm |\ngauṇīṃ pratyakṣatāṃ brūyānmukhyārthāsaṃbhavādbudhaḥ || 96||",
+      "translation": "If a sentence produced valid knowledge contrary to perception and the other means, the wise would treat that perception as figurative, since its literal meaning cannot stand.",
+      "gloss": [
+        {
+          "sa": "प्रमाम्",
+          "en": "valid knowledge"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "जनयेत्",
+          "en": "were to produce"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "a sentence"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदि-विरोधिनीम्",
+          "en": "contrary to perception and the rest"
+        },
+        {
+          "sa": "गौणीम्",
+          "en": "secondary; figurative"
+        },
+        {
+          "sa": "प्रत्यक्षताम्",
+          "en": "perceptual status; perception"
+        },
+        {
+          "sa": "ब्रूयात्",
+          "en": "would call"
+        },
+        {
+          "sa": "मुख्य-अर्थ-असंभवात्",
+          "en": "because the literal meaning is impossible"
+        },
+        {
+          "sa": "बुधः",
+          "en": "the wise person"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-96"
       ]
@@ -23181,26 +23825,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0998",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 323",
-      "label": "Text 323",
-      "deva": "अग्निस्सम्यगधीतेऽसौ जहासोच्चैश्च मञ्चकः ।",
-      "iast": "agnissamyagadhīte'sau jahāsoccaiśca mañcakaḥ |",
-      "translation": "“The fire was properly studied, and the bed laughed aloud.”",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0999",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.97",
       "label": "Verse 3.97",
-      "deva": "यथा तद्वदहंवृत्त्या लक्ष्यतेऽनर्हयापि सः ॥ ९७॥",
-      "iast": "yathā tadvadahaṃvṛttyā lakṣyate'narhayāpi saḥ || 97||",
-      "translation": "In the same way, that Self is indicated by the unsuitable “I”-thought.",
-      "gloss": [],
+      "deva": "अग्निस्सम्यगधीतेऽसौ जहासोच्चैश्च मञ्चकः ।\nयथा तद्वदहंवृत्त्या लक्ष्यतेऽनर्हयापि सः ॥ ९७॥",
+      "iast": "agnissamyagadhīte'sau jahāsoccaiśca mañcakaḥ |\nyathā tadvadahaṃvṛttyā lakṣyate'narhayāpi saḥ || 97||",
+      "translation": "Just as people say figuratively “the fire recites well” or “the platform laughed aloud,” the Self is indicated, though imperfectly, by the “I”-thought.",
+      "gloss": [
+        {
+          "sa": "अग्निः",
+          "en": "fire"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "well; correctly"
+        },
+        {
+          "sa": "अधीते",
+          "en": "studies; recites"
+        },
+        {
+          "sa": "असौ",
+          "en": "that one; this person"
+        },
+        {
+          "sa": "जहास",
+          "en": "laughed"
+        },
+        {
+          "sa": "उच्चैः",
+          "en": "aloud"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मञ्चकः",
+          "en": "a platform; gallery"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तत्-वत्",
+          "en": "in that way"
+        },
+        {
+          "sa": "अहम्-वृत्त्या",
+          "en": "by the “I”-thought"
+        },
+        {
+          "sa": "लक्ष्यते",
+          "en": "is indicated"
+        },
+        {
+          "sa": "अनर्हया",
+          "en": "by an unsuitable; inadequate [means]"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सः",
+          "en": "that [Self]"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-97"
       ]
@@ -23217,26 +23911,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1001",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 326",
-      "label": "Text 326",
-      "deva": "त्वमित्यतद्विहायान्यन्न वर्तात्मावबोधते ।",
-      "iast": "tvamityatadvihāyānyanna vartātmāvabodhate |",
-      "translation": "“Apart from the meaning of ‘thou,’ once what is not-Self has been set aside, the Self does not become known;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1002",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.98",
       "label": "Verse 3.98",
-      "deva": "समस्तीह त्वमर्थोऽपि गुणलेशेन वर्तते ॥ ९८॥",
-      "iast": "samastīha tvamartho'pi guṇaleśena vartate || 98||",
-      "translation": "even the meaning of ‘thou’ operates here only through a trace of its attributes.”",
-      "gloss": [],
+      "deva": "त्वमित्यतद्विहायान्यन्न वर्तात्मावबोधते ।\nसमस्तीह त्वमर्थोऽपि गुणलेशेन वर्तते ॥ ९८॥",
+      "iast": "tvamityatadvihāyānyanna vartātmāvabodhate |\nsamastīha tvamartho'pi guṇaleśena vartate || 98||",
+      "translation": "Apart from the word “thou,” there is no other way here to know the Self; even the meaning of “thou” operates only through a trace of an attribute.",
+      "gloss": [
+        {
+          "sa": "त्वम्-इति",
+          "en": "“thou”"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this [word]"
+        },
+        {
+          "sa": "विहाय",
+          "en": "apart from; having set aside"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "another [means]"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वर्त्म",
+          "en": "path; way"
+        },
+        {
+          "sa": "आत्म-अवबोधने",
+          "en": "for knowing the Self"
+        },
+        {
+          "sa": "समस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "त्वम्-अर्थः",
+          "en": "the meaning of “thou”"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "गुण-लेशेन",
+          "en": "through a trace of an attribute"
+        },
+        {
+          "sa": "वर्तते",
+          "en": "operates"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-98"
       ]
@@ -23253,26 +23989,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1004",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 329",
-      "label": "Text 329",
-      "deva": "व्योम्नि धूमतुषाराभ्रमलिनानीव दुर्धियः ।",
-      "iast": "vyomni dhūmatuṣārābhramalinānīva durdhiyaḥ |",
-      "translation": "“Fools imagine, in the sky, stains of smoke, frost and clouds;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1005",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.99",
       "label": "Verse 3.99",
-      "deva": "कल्पयेयुस्तथा मूढाः संसारं प्रत्यगात्मनि ॥ ९९॥",
-      "iast": "kalpayeyustathā mūḍhāḥ saṃsāraṃ pratyagātmani || 99||",
-      "translation": "in the same way they imagine the world of bondage in the innermost Self.”",
-      "gloss": [],
+      "deva": "व्योम्नि धूमतुषाराभ्रमलिनानीव दुर्धियः ।\nकल्पयेयुस्तथा मूढाः संसारं प्रत्यगात्मनि ॥ ९९॥",
+      "iast": "vyomni dhūmatuṣārābhramalinānīva durdhiyaḥ |\nkalpayeyustathā mūḍhāḥ saṃsāraṃ pratyagātmani || 99||",
+      "translation": "Just as foolish people imagine smoke, mist, and clouds to stain the sky, the deluded imagine the cycle of worldly bondage in the inward Self.",
+      "gloss": [
+        {
+          "sa": "व्योम्नि",
+          "en": "in the sky"
+        },
+        {
+          "sa": "धूम",
+          "en": "smoke"
+        },
+        {
+          "sa": "तुषार",
+          "en": "mist; frost"
+        },
+        {
+          "sa": "अभ्र",
+          "en": "cloud"
+        },
+        {
+          "sa": "मलिनानि",
+          "en": "stains; impurities"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "दुर्-धियः",
+          "en": "the foolish"
+        },
+        {
+          "sa": "कल्पयेयुः",
+          "en": "would imagine"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "मूढाः",
+          "en": "the deluded"
+        },
+        {
+          "sa": "संसारम्",
+          "en": "worldly bondage; transmigration"
+        },
+        {
+          "sa": "प्रत्यगात्मनि",
+          "en": "in the inward Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-99"
       ]
@@ -23289,26 +24063,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1007",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 332",
-      "label": "Text 332",
-      "deva": "चिन्निभेयमहंवृत्तिः प्रतीचीवात्मनोऽन्यतः ।",
-      "iast": "cinnibheyamahaṃvṛttiḥ pratīcīvātmano'nyataḥ |",
-      "translation": "“This ‘I’-thought reflects awareness and turns inward, unlike the other thoughts;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1008",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.100",
       "label": "Verse 3.100",
-      "deva": "पूर्वोक्तेभ्यश्च हेतुभ्यस्तस्मादाअत्मानयोच्यते ॥ १००॥",
-      "iast": "pūrvoktebhyaśca hetubhyastasmādāatmānayocyate || 100||",
-      "translation": "for the reasons already given, the Self is therefore taught through it.”",
-      "gloss": [],
+      "deva": "चिन्निभेयमहंवृत्तिः प्रतीचीवात्मनोऽन्यतः ।\nपूर्वोक्तेभ्यश्च हेतुभ्यस्तस्मादाअत्मानयोच्यते ॥ १००॥",
+      "iast": "cinnibheyamahaṃvṛttiḥ pratīcīvātmano'nyataḥ |\npūrvoktebhyaśca hetubhyastasmādātmānayocyate || 100||",
+      "translation": "The “I”-thought resembles awareness and, like the inward Self, lies deeper than other thoughts. For these and the reasons already given, the Self is indicated by this “I”-thought.",
+      "gloss": [
+        {
+          "sa": "चित्",
+          "en": "consciousness; awareness"
+        },
+        {
+          "sa": "निभा",
+          "en": "resembling"
+        },
+        {
+          "sa": "इयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अहम्-वृत्तिः",
+          "en": "the “I”-thought"
+        },
+        {
+          "sa": "प्रतीची-इव",
+          "en": "like the inward [Self]"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "अन्यतः",
+          "en": "than the others; more inward"
+        },
+        {
+          "sa": "पूर्व-उक्तेभ्यः",
+          "en": "from those stated before"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "हेतुभ्यः",
+          "en": "reasons"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अनया",
+          "en": "by this [feminine, the “I”-thought]"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is indicated; is spoken of"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-100"
       ]
@@ -27249,12 +28069,32 @@
       "3.78",
       "3.79",
       "3.80",
+      "3.81",
+      "3.82",
+      "3.83",
+      "3.84",
+      "3.85",
+      "3.86",
+      "3.87",
+      "3.88",
+      "3.89",
+      "3.90",
+      "3.91",
+      "3.92",
+      "3.93",
+      "3.94",
+      "3.95",
+      "3.96",
+      "3.97",
+      "3.98",
+      "3.99",
+      "3.100",
       "3.114",
       "3.123",
       "4.43"
     ],
     "partialUnits": [],
-    "note": "All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, and verses 3.1–3.80, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 121 numbered verses and prose commentary still need separate glosses."
+    "note": "All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, and verses 3.1–3.100, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 101 numbered verses and prose commentary still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
