@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 42 passages; 189 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 67 passages; 164 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 42 passages, including all short verses covered in the opening Niyoga argument; 189 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 67 passages, including short verse entries through 2.135; 164 passages still need glosses."
   },
   "units": [
     {
@@ -3833,7 +3833,48 @@
       "deva": "न हि भिन्नार्थसंसर्गरूपवाक्यार्थधीपदम् । आत्मतत्त्वं निष्प्रपञ्चमित्येतदपि पेलवम्",
       "iast": "na hi bhinnārthasaṃsargarūpavākyārthadhīpadam /\nātmatattvaṃ niṣprapañcamityetadapi pelavam",
       "translation": "It is weak to say that the meaning of a sentence is a cognition of the relation among distinct objects, and yet that the nature of the Self is free from all manifestation.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "भिन्न-अर्थ-संसर्ग-रूप",
+          "en": "having the form of a relation among distinct meanings"
+        },
+        {
+          "sa": "वाक्य-अर्थ-धी-पदम्",
+          "en": "the basis for cognition of a sentence's meaning"
+        },
+        {
+          "sa": "आत्म-तत्त्वम्",
+          "en": "the truth of the Self"
+        },
+        {
+          "sa": "निष्प्रपञ्चम्",
+          "en": "free of the manifest world"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पेलवम्",
+          "en": "is weak"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.102"
       ]
@@ -3847,7 +3888,48 @@
       "deva": "अद्वयात्मप्रकाशो ऽसावनवच्छेदविभ्रमः । स्वात्मस्थितिः सुप्रशान्ता फलं तन्न विधेः पदम्",
       "iast": "advayātmaprakāśo 'sāvanavacchedavibhramaḥ /\nsvātmasthitiḥ supraśāntā phalaṃ tanna vidheḥ padam",
       "translation": "That is the shining forth of the nondual Self, the illusion of limitation having ended. Its fruit is abiding in one’s own Self, utterly at peace; it is not the purpose of an injunction.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अद्वय-आत्म-प्रकाशः",
+          "en": "the shining forth of the nondual Self"
+        },
+        {
+          "sa": "असौ",
+          "en": "that"
+        },
+        {
+          "sa": "अनवच्छेद-विभ्रमः",
+          "en": "the illusion of limitation"
+        },
+        {
+          "sa": "स्व-आत्म-स्थितिः",
+          "en": "abiding in one's own Self"
+        },
+        {
+          "sa": "सुप्रशान्ता",
+          "en": "utterly peaceful"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the result"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विधेः",
+          "en": "of an injunction"
+        },
+        {
+          "sa": "पदम्",
+          "en": "the purpose"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.103"
       ]
@@ -3861,7 +3943,44 @@
       "deva": "तत्साधनावबोधे हि विधातृव्यापृतिर्मता । अपेक्षितोपायतैव विधिरिष्टो मनीषिभिः",
       "iast": "tatsādhanāvabodhe hi vidhātṛvyāpṛtirmatā /\napekṣitopāyataiva vidhiriṣṭo manīṣibhiḥ",
       "translation": "An injunction is understood to operate by teaching the means to the end. The learned accept as an injunction the teaching of a means that is needed for what is desired.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तत्-साधन-अवबोधे",
+          "en": "in understanding the means to that"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "विधातृ-व्यापृतिः",
+          "en": "the operation of an injunction"
+        },
+        {
+          "sa": "मता",
+          "en": "is held"
+        },
+        {
+          "sa": "अपेक्षित-उपायता",
+          "en": "being a needed means"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "इष्टः",
+          "en": "is accepted"
+        },
+        {
+          "sa": "मनीषिभिः",
+          "en": "by the wise"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.104"
       ]
@@ -3889,7 +4008,56 @@
       "deva": "अविद्यास्तमयो मोक्षः सा संसार उदाहृता । विद्यैव चाद्वया शान्ता तदस्तमय उच्यते",
       "iast": "avidyāstamayo mokṣaḥ sā saṃsāra udāhṛtā /\nvidyaiva cādvayā śāntā tadastamaya ucyate",
       "translation": "The setting of ignorance is liberation; that [ignorance] is called bondage. Knowledge alone is nondual and peaceful, and its setting is called release.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अविद्या-अस्तमयः",
+          "en": "the setting of ignorance"
+        },
+        {
+          "sa": "मोक्षः",
+          "en": "is liberation"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "संसारः",
+          "en": "is bondage"
+        },
+        {
+          "sa": "उदाहृता",
+          "en": "is called"
+        },
+        {
+          "sa": "विद्या",
+          "en": "knowledge"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अद्वया",
+          "en": "nondual"
+        },
+        {
+          "sa": "शान्ता",
+          "en": "peaceful"
+        },
+        {
+          "sa": "तत्-अस्तमयः",
+          "en": "its setting"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.106"
       ]
@@ -3931,7 +4099,52 @@
       "deva": "धीविशेषप्ररूपाय नासिद्धो विषयः क्षमः । [क्क्स्_135] विधिर्नारूपितपदो धीमात्रं न विधीयते",
       "iast": "dhīviśeṣaprarūpāya nāsiddho viṣayaḥ kṣamaḥ /[kks_135] vidhirnārūpitapado dhīmātraṃ na vidhīyate",
       "translation": "An object that has not been established cannot support the specification of a particular cognition. An injunction does not prescribe mere cognition without words that describe its object.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "धी-विशेष-प्ररूपाय",
+          "en": "for specifying a particular cognition"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "असिद्धः",
+          "en": "unestablished"
+        },
+        {
+          "sa": "विषयः",
+          "en": "an object"
+        },
+        {
+          "sa": "क्षमः",
+          "en": "is capable"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अरूपित-पदः",
+          "en": "without a word that describes it"
+        },
+        {
+          "sa": "धी-मात्रम्",
+          "en": "mere cognition"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विधीयते",
+          "en": "is prescribed"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.109"
       ]
@@ -3959,7 +4172,44 @@
       "deva": "विनियोगादधिगतिर्यास्या ज्ञानक्रियार्थता । अतत्परा न प्रमाणं सार्थवादोत्थबुद्धिवत्",
       "iast": "viniyogādadhigatiryāsyā jñānakriyārthatā /\natatparā na pramāṇaṃ sārthavādotthabuddhivat",
       "translation": "If knowledge is understood as an action because of its connection with an injunction, and the sentence serves another purpose, it is not a valid means of knowledge, like cognition arising from an explanatory passage.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विनियोगात्",
+          "en": "because of its connection with an injunction"
+        },
+        {
+          "sa": "अधिगतिः",
+          "en": "understanding"
+        },
+        {
+          "sa": "या",
+          "en": "which"
+        },
+        {
+          "sa": "अस्याः",
+          "en": "of it"
+        },
+        {
+          "sa": "ज्ञान-क्रिया-अर्थता",
+          "en": "the status of knowledge as an action"
+        },
+        {
+          "sa": "अतत्-परा",
+          "en": "serving another purpose"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a valid means of knowledge"
+        },
+        {
+          "sa": "स-अर्थ-वाद-उत्थ-बुद्धि-वत्",
+          "en": "like cognition arising from an explanatory statement"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.111"
       ]
@@ -3973,7 +4223,56 @@
       "deva": "विधिः क्रियागोचरत्वान्न द्रव्ये व्यापृतिक्षमः । सत्तान्वयात्तु तत्सिद्धिः प्रत्युतेति स दुष्यति",
       "iast": "vidhiḥ kriyāgocaratvānna dravye vyāpṛtikṣamaḥ /\nsattānvayāttu tatsiddhiḥ pratyuteti sa duṣyati",
       "translation": "Because an injunction concerns action, it cannot operate upon a substance. The substance is established through its connection with existence; therefore this argument fails.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "क्रिया-गोचरत्वात्",
+          "en": "because its domain is action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "द्रव्ये",
+          "en": "upon a substance"
+        },
+        {
+          "sa": "व्यापृति-क्षमः",
+          "en": "capable of operating"
+        },
+        {
+          "sa": "सत्ता-अन्वयात्",
+          "en": "through connection with existence"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "तत्-सिद्धिः",
+          "en": "its establishment"
+        },
+        {
+          "sa": "प्रत्युत",
+          "en": "rather, in turn"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सः",
+          "en": "that argument"
+        },
+        {
+          "sa": "दुष्यति",
+          "en": "fails"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.112"
       ]
@@ -3987,7 +4286,44 @@
       "deva": "विशिष्टान्यक्रियाबोधः प्रमाणं न विशेषणे । प्रतिपत्तिर्विशिष्टापि विषयस्य नियोगतः",
       "iast": "viśiṣṭānyakriyābodhaḥ pramāṇaṃ na viśeṣaṇe /\npratipattirviśiṣṭāpi viṣayasya niyogataḥ",
       "translation": "An action described as qualified by something else is evidence for the action, not for its qualification. Even cognition of a qualified object is directed by an injunction.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विशिष्ट-अन्य-क्रिया-बोधः",
+          "en": "cognition of an action qualified by something else"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "is valid knowledge"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विशेषणे",
+          "en": "of the qualification"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "cognition"
+        },
+        {
+          "sa": "विशिष्टा",
+          "en": "qualified"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "विषयस्य",
+          "en": "of the object"
+        },
+        {
+          "sa": "नियोगतः",
+          "en": "through an injunction"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.113"
       ]
@@ -4029,7 +4365,52 @@
       "deva": "रजते सा प्रवृत्तिश्चेन्न तस्यासंनिधानतः । असंनिधानाबोधाच्चेत्प्रवृत्तिनियमः कुतः",
       "iast": "rajate sā pravṛttiścenna tasyāsaṃnidhānataḥ /\nasaṃnidhānābodhāccetpravṛttiniyamaḥ kutaḥ",
       "translation": "If the action toward silver did not occur because silver was not present, then how could awareness of its absence be the cause of action?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "रजते",
+          "en": "toward silver"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "action"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "असंनिधानतः",
+          "en": "because of its absence"
+        },
+        {
+          "sa": "असंनिधान-अबोधात्",
+          "en": "from not knowing its absence"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "प्रवृत्ति-नियमः",
+          "en": "the regularity of action"
+        },
+        {
+          "sa": "कुतः",
+          "en": "whence"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.116"
       ]
@@ -4043,7 +4424,48 @@
       "deva": "प्रवर्तते यत्तत्रैव तत्तत्संनिधिकारितम् । अन्यत्र भेदग्रहणाद्विवेकाग्रहणात्तथा",
       "iast": "pravartate yattatraiva tattatsaṃnidhikāritam /\nanyatra bhedagrahaṇādvivekāgrahaṇāttathā",
       "translation": "The action occurs precisely where the object is present. Elsewhere one recognizes a difference, but here one fails to discern it.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रवर्तते",
+          "en": "one acts"
+        },
+        {
+          "sa": "यत्",
+          "en": "what"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "एव",
+          "en": "just"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तत्-संनिधि-कारितम्",
+          "en": "is caused by that object's presence"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "भेद-ग्रहणात्",
+          "en": "because a difference is recognized"
+        },
+        {
+          "sa": "विवेक-अग्रहणात्",
+          "en": "because discernment is not made"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.117"
       ]
@@ -4057,7 +4479,40 @@
       "deva": "प्रवृत्तिभेदः सादृश्याद्विवेकाग्रहणं यदि । अदृष्टेषु प्रवर्तेत लोष्टादिष्वविवेकतः",
       "iast": "pravṛttibhedaḥ sādṛśyādvivekāgrahaṇaṃ yadi /\nadṛṣṭeṣu pravarteta loṣṭādiṣvavivekataḥ",
       "translation": "If the difference in action arises from similarity and failure to discern, then one would act toward unseen objects such as clods, because one does not distinguish them.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रवृत्ति-भेदः",
+          "en": "a difference in action"
+        },
+        {
+          "sa": "सादृश्यात्",
+          "en": "because of similarity"
+        },
+        {
+          "sa": "विवेक-अग्रहणम्",
+          "en": "failure to discern"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "अदृष्टेषु",
+          "en": "toward unseen things"
+        },
+        {
+          "sa": "प्रवर्तेत",
+          "en": "one would act"
+        },
+        {
+          "sa": "लोष्ट-आदिषु",
+          "en": "toward clods and the like"
+        },
+        {
+          "sa": "अविवेकतः",
+          "en": "through failure to distinguish"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.118"
       ]
@@ -4071,7 +4526,60 @@
       "deva": "न तत्र यदि तद्बुद्धिः शुक्तिकाशकले ऽपि न । अथास्ति विपरीतार्था ख्यातिर्निह्नूयते कथम्",
       "iast": "na tatra yadi tadbuddhiḥ śuktikāśakale 'pi na /\nathāsti viparītārthā khyātirnihnūyate katham",
       "translation": "If that cognition is not present in the shell-fragment either, then it would be denied there as well. But if there is a cognition of the object in an inverted form, how can it be denied?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "तत्-बुद्धिः",
+          "en": "that cognition"
+        },
+        {
+          "sa": "शुक्तिका-शकले",
+          "en": "in a shell fragment"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अथ",
+          "en": "but if"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "it exists"
+        },
+        {
+          "sa": "विपरीत-अर्था",
+          "en": "having an inverted object"
+        },
+        {
+          "sa": "ख्यातिः",
+          "en": "the appearance"
+        },
+        {
+          "sa": "निह्नूयते",
+          "en": "is denied"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.119"
       ]
@@ -4085,7 +4593,52 @@
       "deva": "अदृष्टत्वादप्रवृत्तिः शुक्तिकाशकले समा । दृष्टं तद्येन रूपेण तत्प्रवृत्तेरकारणम्",
       "iast": "adṛṣṭatvādapravṛttiḥ śuktikāśakale samā /\ndṛṣṭaṃ tadyena rūpeṇa tatpravṛtterakāraṇam",
       "translation": "Failure to act because an object has not been seen is the same in the case of the shell-fragment; that by which it was seen is not a cause for acting toward it.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अदृष्टत्वात्",
+          "en": "because it is unseen"
+        },
+        {
+          "sa": "अप्रवृत्तिः",
+          "en": "absence of action"
+        },
+        {
+          "sa": "शुक्तिका-शकले",
+          "en": "in the shell fragment"
+        },
+        {
+          "sa": "समा",
+          "en": "is the same"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "what is seen"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "येन",
+          "en": "by which"
+        },
+        {
+          "sa": "रूपेण",
+          "en": "in the form"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "प्रवृत्तेः",
+          "en": "of action"
+        },
+        {
+          "sa": "अकारणम्",
+          "en": "is not a cause"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.120"
       ]
@@ -4099,7 +4652,48 @@
       "deva": "दृष्टस्मृताविवेकाच्चेदिदमत्र परीक्ष्यताम् । तत्त्वबोधादथातत्त्वाबोधाद्रजतवेदनात्",
       "iast": "dṛṣṭasmṛtāvivekāccedidamatra parīkṣyatām /\ntattvabodhādathātattvābodhādrajatavedanāt",
       "translation": "If this is said to arise from failure to distinguish what is seen from what is remembered, let this be examined: does knowledge of truth or mistaken knowledge give rise to the cognition “silver”?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "दृष्ट-स्मृतौ",
+          "en": "between what is seen and what is remembered"
+        },
+        {
+          "sa": "अविवेकात्",
+          "en": "because of failure to distinguish"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "परीक्ष्यताम्",
+          "en": "let it be examined"
+        },
+        {
+          "sa": "तत्त्व-बोधात्",
+          "en": "from knowledge of truth"
+        },
+        {
+          "sa": "अथ",
+          "en": "or"
+        },
+        {
+          "sa": "अतत्त्व-अबोधात्",
+          "en": "from mistaken knowledge"
+        },
+        {
+          "sa": "रजत-वेदनात्",
+          "en": "from cognition of silver"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.121"
       ]
@@ -4113,7 +4707,52 @@
       "deva": "दृष्टे प्रवृत्तिः पूर्वस्मिन्विपरीतार्थता मतेः । न दृष्टादृष्टयोर्भेदः परस्मिन्नोपयोगिनी",
       "iast": "dṛṣṭe pravṛttiḥ pūrvasminviparītārthatā mateḥ /\nna dṛṣṭādṛṣṭayorbhedaḥ parasminnopayoginī",
       "translation": "In the first case, action follows from what is directly seen, while cognition takes the opposite form. There is no difference between what is seen and unseen that would be useful in the other case.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "दृष्टे",
+          "en": "in what is seen"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "action"
+        },
+        {
+          "sa": "पूर्वस्मिन्",
+          "en": "in the first case"
+        },
+        {
+          "sa": "विपरीत-अर्थता",
+          "en": "having the opposite form"
+        },
+        {
+          "sa": "मतेः",
+          "en": "of cognition"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृष्ट-अदृष्टयोः",
+          "en": "between what is seen and unseen"
+        },
+        {
+          "sa": "भेदः",
+          "en": "a difference"
+        },
+        {
+          "sa": "परस्मिन्",
+          "en": "in the other case"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपयोगिनी",
+          "en": "useful"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.122"
       ]
@@ -4127,7 +4766,52 @@
       "deva": "स्वयोगदर्शने ते हि समारोपोपयोगिनी । नादृष्टे ऽसंप्रयुक्ते वा चाक्षुषः स्याद्विपर्ययः",
       "iast": "svayogadarśane te hi samāropopayoginī /\nnādṛṣṭe 'saṃprayukte vā cākṣuṣaḥ syādviparyayaḥ",
       "translation": "For error depends on superimposition in those cases where one sees the alignment [of the senses with an object]. A visual error cannot arise when the object has not been seen or is not in sensory contact.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "स्व-योग-दर्शने",
+          "en": "when their conjunction is seen"
+        },
+        {
+          "sa": "ते",
+          "en": "they"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "समारोप-उपयोगिनी",
+          "en": "useful for superimposition"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अदृष्टे",
+          "en": "in what is unseen"
+        },
+        {
+          "sa": "असंप्रयुक्ते",
+          "en": "or not in sensory contact"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "चाक्षुषः",
+          "en": "visual"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would arise"
+        },
+        {
+          "sa": "विपर्ययः",
+          "en": "an error"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.123"
       ]
@@ -4155,7 +4839,48 @@
       "deva": "विपर्ययो ऽन्यं स्मरतो न च संशयदर्शनात् । स्मृतद्वयाविवेकोत्थं संशयं यदि मन्यते",
       "iast": "viparyayo 'nyaṃ smarato na ca saṃśayadarśanāt /\nsmṛtadvayāvivekotthaṃ saṃśayaṃ yadi manyate",
       "translation": "There is no error from remembering something else, since doubt is also observed. If one holds that doubt arises from failing to distinguish two remembered things…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "विपर्ययः",
+          "en": "error"
+        },
+        {
+          "sa": "अन्यम्",
+          "en": "another thing"
+        },
+        {
+          "sa": "स्मरतः",
+          "en": "for one remembering"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "संशय-दर्शनात्",
+          "en": "because doubt is also observed"
+        },
+        {
+          "sa": "स्मृत-द्वय-अविवेक-उत्थम्",
+          "en": "arising from failure to distinguish two memories"
+        },
+        {
+          "sa": "संशयम्",
+          "en": "doubt"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "मन्यते",
+          "en": "one holds"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.125"
       ]
@@ -4169,7 +4894,60 @@
       "deva": "तन्नोभयोरपि यतः स्मृतौ दृष्टो विपर्ययः । विशेषज्ञानतो ऽध्यक्षे स्मृतं यदि विविच्यते",
       "iast": "tannobhayorapi yataḥ smṛtau dṛṣṭo viparyayaḥ /\nviśeṣajñānato 'dhyakṣe smṛtaṃ yadi vivicyate",
       "translation": "No, because error is observed in both cases. If what is remembered is distinguished from what is directly perceived through knowledge of a particular feature…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तत्",
+          "en": "no, that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उभयोः",
+          "en": "in both"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "स्मृतौ",
+          "en": "in memory"
+        },
+        {
+          "sa": "दृष्टः",
+          "en": "is seen"
+        },
+        {
+          "sa": "विपर्ययः",
+          "en": "error"
+        },
+        {
+          "sa": "विशेष-ज्ञानतः",
+          "en": "through knowledge of a distinguishing feature"
+        },
+        {
+          "sa": "अध्यक्षे",
+          "en": "in direct perception"
+        },
+        {
+          "sa": "स्मृतम्",
+          "en": "what is remembered"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "विविच्यते",
+          "en": "is distinguished"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.126"
       ]
@@ -4183,7 +4961,64 @@
       "deva": "न स्वज्ञानादसत्यस्मिन्द्विस्मृतौ कथमेकधीः । एकत्वमेव स्मरतः प्राग्रूपं शशिनि स्फुटम्",
       "iast": "na svajñānādasatyasmindvismṛtau kathamekadhīḥ /\nekatvameva smarataḥ prāgrūpaṃ śaśini sphuṭam",
       "translation": "If the object is unreal, how could one cognition arise from two memories without distinguishing them by their own cognitions? The moon’s earlier form appears clearly to one who remembers only its unity.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्व-ज्ञानात्",
+          "en": "by its own cognition"
+        },
+        {
+          "sa": "असति",
+          "en": "if it is nonexistent"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "this"
+        },
+        {
+          "sa": "द्वि-स्मृतौ",
+          "en": "in two memories"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "एका",
+          "en": "one"
+        },
+        {
+          "sa": "धीः",
+          "en": "cognition"
+        },
+        {
+          "sa": "एकत्वम्",
+          "en": "oneness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "स्मरतः",
+          "en": "for one remembering"
+        },
+        {
+          "sa": "प्राक्-रूपम्",
+          "en": "the earlier form"
+        },
+        {
+          "sa": "शशिनि",
+          "en": "of the moon"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.127"
       ]
@@ -4197,7 +5032,40 @@
       "deva": "तिमिरादिप्रदोषेण कथं ते द्वित्वविभ्रमः । पिपासतश्च सलिलं शुक्तिकाहितचेतसः",
       "iast": "timirādipradoṣeṇa kathaṃ te dvitvavibhramaḥ /\npipāsataśca salilaṃ śuktikāhitacetasaḥ",
       "translation": "How could the illusion of seeing two moons be caused by a defect such as eye disease? And why would a thirsty person whose mind is fixed on a shell see water?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तिमिर-आदि-प्रदोषेण",
+          "en": "through a defect such as eye disease"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "ते",
+          "en": "that"
+        },
+        {
+          "sa": "द्वित्व-विभ्रमः",
+          "en": "illusion of doubleness"
+        },
+        {
+          "sa": "पिपासतḥ",
+          "en": "of a thirsty person"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सलिलम्",
+          "en": "water"
+        },
+        {
+          "sa": "शुक्तिका-आहित-चेतसः",
+          "en": "for one whose mind is fixed on a shell"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.128"
       ]
@@ -4225,7 +5093,64 @@
       "deva": "श्वेते पीतभ्रमो दृष्टो मधुरे तिक्तविभ्रमः । किञ्चित्सादृश्यतो हि स्यान्न कश्चित्तत्र न भ्रमः",
       "iast": "śvete pītabhramo dṛṣṭo madhure tiktavibhramaḥ /\nkiñcitsādṛśyato hi syānna kaścittatra na bhramaḥ",
       "translation": "One sees the illusion of yellow in something white and of bitterness in something sweet. If these arose from some degree of similarity, nothing would be free from error.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "श्वेते",
+          "en": "in a white thing"
+        },
+        {
+          "sa": "पीत-भ्रमः",
+          "en": "the illusion of yellow"
+        },
+        {
+          "sa": "दृष्टः",
+          "en": "is seen"
+        },
+        {
+          "sa": "मधुरे",
+          "en": "in a sweet thing"
+        },
+        {
+          "sa": "तिक्त-विभ्रमः",
+          "en": "the illusion of bitterness"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "some"
+        },
+        {
+          "sa": "सादृश्यतः",
+          "en": "because of similarity"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would arise"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भ्रमः",
+          "en": "free from error"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.130"
       ]
@@ -4239,7 +5164,52 @@
       "deva": "तस्मादिन्द्रियदोषाणां सामर्थ्यस्य विभागतः । भ्रमेषु नियमो दोषादग्रहे न भ्रमे यमः",
       "iast": "tasmādindriyadoṣāṇāṃ sāmarthyasya vibhāgataḥ /\nbhrameṣu niyamo doṣādagrahe na bhrame yamaḥ",
       "translation": "Therefore errors occur in determinate ways because the defects in the senses differ in power. But where there is mere non-apprehension, a defect does not determine a regular error.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "इन्द्रिय-दोषाणाम्",
+          "en": "of the defects of the senses"
+        },
+        {
+          "sa": "सामर्थ्यस्य",
+          "en": "of their powers"
+        },
+        {
+          "sa": "विभागतः",
+          "en": "because they differ"
+        },
+        {
+          "sa": "भ्रमेषु",
+          "en": "among errors"
+        },
+        {
+          "sa": "नियमः",
+          "en": "regularity"
+        },
+        {
+          "sa": "दोषात्",
+          "en": "from a defect"
+        },
+        {
+          "sa": "अग्रहे",
+          "en": "in mere non-apprehension"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भ्रमः",
+          "en": "error"
+        },
+        {
+          "sa": "यमः",
+          "en": "a rule or restraint"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.131"
       ]
@@ -4267,7 +5237,56 @@
       "deva": "अनेकदेशाधिगतं विविक्तं न पुनस्ततः । स्मृतिरित्यपि विज्ञानं स्मृतेरन्यदुदाहृतम्",
       "iast": "anekadeśādhigataṃ viviktaṃ na punastataḥ /\nsmṛtirityapi vijñānaṃ smṛteranyadudāhṛtam",
       "translation": "It is known in many places and is distinct; yet this cognition is not memory. Memory has been described as something different.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अनेक-देश-अधिगतम्",
+          "en": "known in many places"
+        },
+        {
+          "sa": "विविक्तम्",
+          "en": "distinct"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पुनः",
+          "en": "however"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that"
+        },
+        {
+          "sa": "स्मृतिः",
+          "en": "memory"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "स्मृतेः",
+          "en": "from memory"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "different"
+        },
+        {
+          "sa": "उदाहृतम्",
+          "en": "is described"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.133"
       ]
@@ -4281,7 +5300,56 @@
       "deva": "न च मानफलाद्भिन्नात्तत्सिद्ध्यति फलादृते । सति स्मृतिविवेके च प्रत्यभिज्ञानविभ्रमः",
       "iast": "na ca mānaphalādbhinnāttatsiddhyati phalādṛte /\nsati smṛtiviveke ca pratyabhijñānavibhramaḥ",
       "translation": "That is not established by a result distinct from the means of knowledge; without the result it cannot be established. And even when memory is distinguished, the illusion of recognition remains.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मान-फलात्",
+          "en": "from the result of a means of knowledge"
+        },
+        {
+          "sa": "भिन्नात्",
+          "en": "separate"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "सिद्ध्यति",
+          "en": "is established"
+        },
+        {
+          "sa": "फलात्",
+          "en": "from the result"
+        },
+        {
+          "sa": "ऋते",
+          "en": "apart"
+        },
+        {
+          "sa": "सति",
+          "en": "when there is"
+        },
+        {
+          "sa": "स्मृति-विवेके",
+          "en": "distinction from memory"
+        },
+        {
+          "sa": "च",
+          "en": "even"
+        },
+        {
+          "sa": "प्रत्यभिज्ञान-विभ्रमः",
+          "en": "the error of recognition"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.134"
       ]
@@ -4295,7 +5363,44 @@
       "deva": "अथानसंनिहितो व्यर्थो वेद्यः संनिधिमत्तया । अविविक्तस्मृतेरेवं विपरीतार्थता भवेत्",
       "iast": "athānasaṃnihito vyartho vedyaḥ saṃnidhimattayā /\naviviktasmṛterevaṃ viparītārthatā bhavet",
       "translation": "Otherwise, an object not actually present would be pointless, even though it appears present. In the same way, memory not distinguished from perception would lead to a mistaken cognition.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "otherwise"
+        },
+        {
+          "sa": "अन-संनिहितः",
+          "en": "not present"
+        },
+        {
+          "sa": "व्यर्थः",
+          "en": "pointless"
+        },
+        {
+          "sa": "वेद्यः",
+          "en": "the object to be known"
+        },
+        {
+          "sa": "संनिधिमत्तया",
+          "en": "as though present"
+        },
+        {
+          "sa": "अविविक्त-स्मृतेः",
+          "en": "from memory not distinguished"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "विपरीत-अर्थता",
+          "en": "misapprehension"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would arise"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.135"
       ]
@@ -5186,9 +6291,34 @@
       "2.97",
       "2.98",
       "2.99",
-      "2.100"
+      "2.100",
+      "2.102",
+      "2.103",
+      "2.104",
+      "2.106",
+      "2.109",
+      "2.111",
+      "2.112",
+      "2.113",
+      "2.116",
+      "2.117",
+      "2.118",
+      "2.119",
+      "2.120",
+      "2.121",
+      "2.122",
+      "2.123",
+      "2.125",
+      "2.126",
+      "2.127",
+      "2.128",
+      "2.130",
+      "2.131",
+      "2.133",
+      "2.134",
+      "2.135"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 42 of 231 source-marked passages; 189 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 67 of 231 source-marked passages; 164 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 42 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 67 passages listed in wordGlossCoverage."
 }
