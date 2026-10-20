@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–95.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–105.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 95
+      "to": 105
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–95 of Adhyāya 1 (verses 17–18, 44–45, and 91–92 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–105 of Adhyāya 1 (verses 17–18, 44–45, and 91–92 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -7083,13 +7083,59 @@
       "number": "96",
       "label": "Verse 96",
       "deva": "उत्तमो मध्यमश्चैव जघन्य इति च त्रिधा।\nनिरूपितो विपश्चिद्भिः तत्तल्-लक्षण-वेदिभिः॥",
-      "translation": "Those who are entitled to speak of it say that there are three kinds of tranquility. They classify it into three categories: the best, that which is middling, and that which is of poor quality.",
-      "gloss": [],
+      "translation": "The wise who know the marks of each kind describe tranquillity as threefold: highest, middle, and lowest.",
+      "gloss": [
+        {
+          "sa": "उत्तमः",
+          "en": "the best"
+        },
+        {
+          "sa": "मध्यमः",
+          "en": "the middle"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "जघन्यः",
+          "en": "the lowest"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "त्रिधा",
+          "en": "in three ways"
+        },
+        {
+          "sa": "निरूपितः",
+          "en": "described"
+        },
+        {
+          "sa": "विपश्चिद्भिः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "तत्-तल्-लक्षण-वेदिभिः",
+          "en": "by those who know each one’s mark"
+        }
+      ],
       "sourceNumbers": [
         96
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "uttamo madhyamaścaiva jaghanya iti ca tridhā|\nnirūpito vipaścidbhiḥ tattal-lakṣaṇa-vedibhiḥ||"
+      "iast": "uttamo madhyamaścaiva jaghanya iti ca tridhā|\nnirūpito vipaścidbhiḥ tattal-lakṣaṇa-vedibhiḥ||",
+      "editionTranslation": "Those who are entitled to speak of it say that there are three kinds of tranquility. They classify it into three categories: the best, that which is middling, and that which is of poor quality."
     },
     {
       "id": "svsss-1-0097",
@@ -7097,13 +7143,51 @@
       "number": "97",
       "label": "Verse 97",
       "deva": "स्व-विकारं परित्यज्य वस्तुमात्रतया स्थितिः।\nमनसः सोत्तमा शान्तिर् ब्रह्म-निर्वाण-लक्षणा॥",
-      "translation": "That state of mind which enjoys the nature of the supreme Reality, and which lies beyond the mind and its modifications, is regarded as the highest form of tranquility. It partakes of the nature of the bliss of Brahman.",
-      "gloss": [],
+      "translation": "When the mind abandons its own modifications and abides as mere reality, that is the highest tranquillity, marked by liberation in Brahman.",
+      "gloss": [
+        {
+          "sa": "स्व-विकारम्",
+          "en": "its own modifications"
+        },
+        {
+          "sa": "परित्यज्य",
+          "en": "having abandoned"
+        },
+        {
+          "sa": "वस्तु-मात्रतया",
+          "en": "as mere reality"
+        },
+        {
+          "sa": "स्थितिः",
+          "en": "abiding"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "उत्तमा",
+          "en": "highest"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "tranquillity"
+        },
+        {
+          "sa": "ब्रह्म-निर्वाण-लक्षणा",
+          "en": "characterized by liberation in Brahman"
+        }
+      ],
       "sourceNumbers": [
         97
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sva-vikāraṃ parityajya vastumātratayā sthitiḥ|\nmanasaḥ sottamā śāntir brahma-nirvāṇa-lakṣaṇā||"
+      "iast": "sva-vikāraṃ parityajya vastumātratayā sthitiḥ|\nmanasaḥ sottamā śāntir brahma-nirvāṇa-lakṣaṇā||",
+      "editionTranslation": "That state of mind which enjoys the nature of the supreme Reality, and which lies beyond the mind and its modifications, is regarded as the highest form of tranquility. It partakes of the nature of the bliss of Brahman."
     },
     {
       "id": "svsss-1-0098",
@@ -7111,13 +7195,43 @@
       "number": "98",
       "label": "Verse 98",
       "deva": "प्रत्यक्-प्रत्यय-सन्तान-प्रवाह-करणं धियः।\nयद् एषा मध्यमा शान्तिः शुद्ध-सत्त्वैक-लक्षणा॥",
-      "translation": "The continuous series of the modifications of the mind, directed in spite of distractions towards the pure consciousness of the Absolute is regarded as tranquility of the middling order.",
-      "gloss": [],
+      "translation": "The continuous flow of inward-directed thoughts in the mind is the middle tranquillity, marked solely by pure sattva.",
+      "gloss": [
+        {
+          "sa": "प्रत्यक्-प्रत्यय-सन्तान-प्रवाह-करणम्",
+          "en": "producing a continuous flow of inward-directed thoughts"
+        },
+        {
+          "sa": "धियः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "यत्",
+          "en": "that which"
+        },
+        {
+          "sa": "एषा",
+          "en": "this"
+        },
+        {
+          "sa": "मध्यमा",
+          "en": "middle"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "tranquillity"
+        },
+        {
+          "sa": "शुद्ध-सत्त्व-एक-लक्षणा",
+          "en": "marked solely by pure sattva"
+        }
+      ],
       "sourceNumbers": [
         98
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "pratyak-pratyaya-santāna-pravāha-karaṇaṃ dhiyaḥ|\nyad eṣā madhyamā śāntiḥ śuddha-sattvaika-lakṣaṇā||"
+      "iast": "pratyak-pratyaya-santāna-pravāha-karaṇaṃ dhiyaḥ|\nyad eṣā madhyamā śāntiḥ śuddha-sattvaika-lakṣaṇā||",
+      "editionTranslation": "The continuous series of the modifications of the mind, directed in spite of distractions towards the pure consciousness of the Absolute is regarded as tranquility of the middling order."
     },
     {
       "id": "svsss-1-0099",
@@ -7125,13 +7239,47 @@
       "number": "99",
       "label": "Verse 99",
       "deva": "विषय-व्यापृतिं त्यक्त्वा श्रवणैक-मन-स्थितिः।\nमनसश्चेतरा शान्तिर् मिश्र-सत्त्वैक-लक्षणा॥",
-      "translation": "To the lowest category belongs that aspect of tranquility, which consists of sattva which is some what mixed with the other qualities. At that stage, the mind’s inclination towards the objects of the senses is given up, and the mind is devoted to the learning of the Śruti.",
-      "gloss": [],
+      "translation": "Giving up engagement with sense objects and fixing the mind solely on listening to scripture is another tranquillity, marked by mixed sattva.",
+      "gloss": [
+        {
+          "sa": "विषय-व्यापृतिम्",
+          "en": "engagement with sense objects"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having given up"
+        },
+        {
+          "sa": "श्रवण-एक-मन-स्थितिः",
+          "en": "the mind fixed solely on listening"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इतरा",
+          "en": "another"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "tranquillity"
+        },
+        {
+          "sa": "मिश्र-सत्त्व-एक-लक्षणा",
+          "en": "marked by mixed sattva alone"
+        }
+      ],
       "sourceNumbers": [
         99
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "viṣaya-vyāpṛtiṃ tyaktvā śravaṇaika-mana-sthitiḥ|\nmanasaścetarā śāntir miśra-sattvaika-lakṣaṇā||"
+      "iast": "viṣaya-vyāpṛtiṃ tyaktvā śravaṇaika-mana-sthitiḥ|\nmanasaścetarā śāntir miśra-sattvaika-lakṣaṇā||",
+      "editionTranslation": "To the lowest category belongs that aspect of tranquility, which consists of sattva which is some what mixed with the other qualities. At that stage, the mind’s inclination towards the objects of the senses is given up, and the mind is devoted to the learning of the Śruti."
     },
     {
       "id": "svsss-1-0100",
@@ -7139,13 +7287,55 @@
       "number": "100",
       "label": "Verse 100",
       "deva": "प्राच्योदीच्याङ्ग-सद्-भावे शमः सिध्यति नान्यथा।\nतीव्रा विरक्तिः प्राच्याङ्गम् उदीच्याङ्गं दमादयः॥",
-      "translation": "Tranquility may be realized only when its auxiliaries are present. Its prior auxiliary is intense dispassion. Its posterior auxiliary consists in the control of the senses and the like. In the absence of these, tranquility cannot be realized.",
-      "gloss": [],
+      "translation": "Tranquillity is attained only when its prior and later supports are present. Intense dispassion is the prior support; sense-restraint and the like are the later supports.",
+      "gloss": [
+        {
+          "sa": "प्राच्य-उदीच्य-अङ्ग-सद्-भावे",
+          "en": "when the prior and later supports are present"
+        },
+        {
+          "sa": "शमः",
+          "en": "tranquillity"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "तीव्रा",
+          "en": "intense"
+        },
+        {
+          "sa": "विरक्तिः",
+          "en": "dispassion"
+        },
+        {
+          "sa": "प्राच्य-अङ्गम्",
+          "en": "the prior support"
+        },
+        {
+          "sa": "उदीच्य-अङ्गम्",
+          "en": "the later support"
+        },
+        {
+          "sa": "दम-आदयः",
+          "en": "sense-restraint and the like"
+        }
+      ],
       "sourceNumbers": [
         100
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "prācyodīcyāṅga-sad-bhāve śamaḥ sidhyati nānyathā|\ntīvrā viraktiḥ prācyāṅgam udīcyāṅgaṃ damādayaḥ||"
+      "iast": "prācyodīcyāṅga-sad-bhāve śamaḥ sidhyati nānyathā|\ntīvrā viraktiḥ prācyāṅgam udīcyāṅgaṃ damādayaḥ||",
+      "editionTranslation": "Tranquility may be realized only when its auxiliaries are present. Its prior auxiliary is intense dispassion. Its posterior auxiliary consists in the control of the senses and the like. In the absence of these, tranquility cannot be realized."
     },
     {
       "id": "svsss-1-0101",
@@ -7153,13 +7343,87 @@
       "number": "101",
       "label": "Verse 101",
       "deva": "कामः क्रोधश्च लोभश्च मदो मोहश्च मत्सरः।\nन जिताः षडिमे येन तस्य शान्तिर् न सिध्यति॥",
-      "translation": "Unless one conquers the six passions, such as lust, wrath, greed, pride, delusion and jealousy none can attain peace.",
-      "gloss": [],
+      "translation": "For one who has not conquered these six—desire, anger, greed, pride, delusion, and envy—peace is not attained.",
+      "gloss": [
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "क्रोधः",
+          "en": "anger"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "लोभः",
+          "en": "greed"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मदः",
+          "en": "pride"
+        },
+        {
+          "sa": "मोहः",
+          "en": "delusion"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मत्सरः",
+          "en": "envy"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "जिताः",
+          "en": "conquered"
+        },
+        {
+          "sa": "षट्",
+          "en": "six"
+        },
+        {
+          "sa": "इमे",
+          "en": "these"
+        },
+        {
+          "sa": "येन",
+          "en": "by whom"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for that person"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "peace"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        }
+      ],
       "sourceNumbers": [
         101
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāmaḥ krodhaśca lobhaśca mado mohaśca matsaraḥ|\nna jitāḥ ṣaḍime yena tasya śāntir na sidhyati||"
+      "iast": "kāmaḥ krodhaśca lobhaśca mado mohaśca matsaraḥ|\nna jitāḥ ṣaḍime yena tasya śāntir na sidhyati||",
+      "editionTranslation": "Unless one conquers the six passions, such as lust, wrath, greed, pride, delusion and jealousy none can attain peace."
     },
     {
       "id": "svsss-1-0102",
@@ -7167,13 +7431,59 @@
       "number": "102",
       "label": "Verse 102",
       "deva": "शब्दादि-विषयेभ्यो यो विषवन् न निवर्तते।\nतीव्र-मोक्षेच्छया भिक्षोस् तस्य शान्तिर् न सिध्यति॥",
-      "translation": "Unless one shuns like poison the pleasures of the senses, none can attain peace. It is not enough if there is merely an ardent desire for peace.",
-      "gloss": [],
+      "translation": "A mendicant who does not turn away from sense objects beginning with sound as though they were poison does not attain peace, even with an intense desire for liberation.",
+      "gloss": [
+        {
+          "sa": "शब्द-आदि-विषयेभ्यः",
+          "en": "from sense objects beginning with sound"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "विषवत्",
+          "en": "like poison"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "निवर्तते",
+          "en": "turns away"
+        },
+        {
+          "sa": "तीव्र-मोक्ष-इच्छया",
+          "en": "with intense desire for liberation"
+        },
+        {
+          "sa": "भिक्षोः",
+          "en": "for a mendicant"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for that person"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "peace"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        }
+      ],
       "sourceNumbers": [
         102
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śabdādi-viṣayebhyo yo viṣavan na nivartate|\ntīvra-mokṣecchayā bhikṣos tasya śāntir na sidhyati||"
+      "iast": "śabdādi-viṣayebhyo yo viṣavan na nivartate|\ntīvra-mokṣecchayā bhikṣos tasya śāntir na sidhyati||",
+      "editionTranslation": "Unless one shuns like poison the pleasures of the senses, none can attain peace. It is not enough if there is merely an ardent desire for peace."
     },
     {
       "id": "svsss-1-0103",
@@ -7181,13 +7491,75 @@
       "number": "103",
       "label": "Verse 103",
       "deva": "येन नाराधितो देवो यस्य नो गुर्वनुग्रहः।\nन वश्यं हृदयं यस्य तस्य शान्तिर् न सिध्यति॥",
-      "translation": "One who does not participate in divine service, who does not have the grace of the Guru, and whose feelings are not under restraint, cannot attain peace.",
-      "gloss": [],
+      "translation": "One who has not worshipped the Lord, has no guru’s grace, and whose heart is not controlled does not attain peace.",
+      "gloss": [
+        {
+          "sa": "येन",
+          "en": "by whom"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आराधितः",
+          "en": "worshipped"
+        },
+        {
+          "sa": "देवः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "यस्य",
+          "en": "for whom"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "गुरु-अनुग्रहः",
+          "en": "the guru’s grace"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वश्यम्",
+          "en": "controlled"
+        },
+        {
+          "sa": "हृदयम्",
+          "en": "the heart"
+        },
+        {
+          "sa": "यस्य",
+          "en": "of whom"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for that person"
+        },
+        {
+          "sa": "शान्तिः",
+          "en": "peace"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        }
+      ],
       "sourceNumbers": [
         103
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yena nārādhito devo yasya no gurvanugrahaḥ|\nna vaśyaṃ hṛdayaṃ yasya tasya śāntir na sidhyati||"
+      "iast": "yena nārādhito devo yasya no gurvanugrahaḥ|\nna vaśyaṃ hṛdayaṃ yasya tasya śāntir na sidhyati||",
+      "editionTranslation": "One who does not participate in divine service, who does not have the grace of the Guru, and whose feelings are not under restraint, cannot attain peace."
     },
     {
       "id": "svsss-1-0104",
@@ -7195,13 +7567,51 @@
       "number": "104",
       "label": "Verse 104",
       "deva": "मनः-प्रसाद-सिद्ध्यर्थं साधनं श्रूयतां बुधैः।\nमनः-प्रसादो यत्-सत्त्वे यद-भावे न सिध्यति॥",
-      "translation": "Serenity Let him who is wise listen and understand what factors are essential in order to attain serenity (prasāda) of mind; how serenity is attained when these factors are present and how in their absence it is not attained.",
-      "gloss": [],
+      "translation": "Wise people, listen to the means for attaining serenity of mind: when these are present, serenity arises; without them, it is not attained.",
+      "gloss": [
+        {
+          "sa": "मनः-प्रसाद-सिद्धि-अर्थम्",
+          "en": "for attaining serenity of mind"
+        },
+        {
+          "sa": "साधनम्",
+          "en": "the means"
+        },
+        {
+          "sa": "श्रूयताम्",
+          "en": "let it be heard"
+        },
+        {
+          "sa": "बुधैः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "मनः-प्रसादः",
+          "en": "serenity of mind"
+        },
+        {
+          "sa": "यत्-सत्त्वे",
+          "en": "when these are present"
+        },
+        {
+          "sa": "यद्-अभावे",
+          "en": "when these are absent"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        }
+      ],
       "sourceNumbers": [
         104
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "manaḥ-prasāda-siddhyarthaṃ sādhanaṃ śrūyatāṃ budhaiḥ|\nmanaḥ-prasādo yat-sattve yada-bhāve na sidhyati||"
+      "iast": "manaḥ-prasāda-siddhyarthaṃ sādhanaṃ śrūyatāṃ budhaiḥ|\nmanaḥ-prasādo yat-sattve yada-bhāve na sidhyati||",
+      "editionTranslation": "Serenity Let him who is wise listen and understand what factors are essential in order to attain serenity (prasāda) of mind; how serenity is attained when these factors are present and how in their absence it is not attained."
     },
     {
       "id": "svsss-1-0105",
@@ -7209,13 +7619,55 @@
       "number": "105",
       "label": "Verse 105",
       "deva": "ब्रह्म-चर्यम् अहिंसा च दया भूतेष्ववक्रता।\nविषयेष्वतिवैतृष्ण्यं शौचं दम्भ-विवर्जनम्॥",
-      "translation": "It is by the practice of Brahma-carya, non-injury (ahiṃsā), sympathy (dayā), guilelessness (avikratā), intense dispassion (vaitṛṣṇya) towards all the objects of sense-pleasure, and by the practice of purity (śauca) and humility (dambha-vivarjana) that serenity is attained.",
-      "gloss": [],
+      "translation": "Brahmacarya, nonviolence, compassion toward living beings, straightforwardness, freedom from craving for sense objects, purity, and absence of pretence [are the means].",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-चर्यम्",
+          "en": "Brahmacarya, disciplined restraint"
+        },
+        {
+          "sa": "अहिंसा",
+          "en": "nonviolence"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दया",
+          "en": "compassion"
+        },
+        {
+          "sa": "भूतेषु",
+          "en": "toward living beings"
+        },
+        {
+          "sa": "अवक्रता",
+          "en": "straightforwardness"
+        },
+        {
+          "sa": "विषयेषु",
+          "en": "toward sense objects"
+        },
+        {
+          "sa": "अति-वैतृष्ण्यम्",
+          "en": "freedom from craving"
+        },
+        {
+          "sa": "शौचम्",
+          "en": "purity"
+        },
+        {
+          "sa": "दम्भ-विवर्जनम्",
+          "en": "absence of pretence"
+        }
+      ],
       "sourceNumbers": [
         105
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "brahma-caryam ahiṃsā ca dayā bhūteṣvavakratā|\nviṣayeṣvativaitṛṣṇyaṃ śaucaṃ dambha-vivarjanam||"
+      "iast": "brahma-caryam ahiṃsā ca dayā bhūteṣvavakratā|\nviṣayeṣvativaitṛṣṇyaṃ śaucaṃ dambha-vivarjanam||",
+      "editionTranslation": "It is by the practice of Brahma-carya, non-injury (ahiṃsā), sympathy (dayā), guilelessness (avikratā), intense dispassion (vaitṛṣṇya) towards all the objects of sense-pleasure, and by the practice of purity (śauca) and humility (dambha-vivarjana) that serenity is attained."
     },
     {
       "id": "svsss-1-0106",
@@ -19611,5 +20063,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–95 of 1,006; verses 17–18, 44–45, and 91–92 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–105 of 1,006; verses 17–18, 44–45, and 91–92 share reader cards. Later verses and prose passages still need glosses."
 }
