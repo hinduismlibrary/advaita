@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 490
+      "end": 495
     },
-    "note": "Source verses 1–490 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 491 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–495 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 496 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -37191,11 +37191,45 @@
       "label": "Verse 491",
       "deva": "द्रष्टुः श्रोतुर्वक्तुः कर्तुर्भोक्तुर्विभिन्न एवाहम् ।\nनित्यनिरन्तरनिष्क्रियनिःसीमासङ्गपूर्णबोधात्मा ॥",
       "iast": "draṣṭuḥ śroturvaktuḥ karturbhokturvibhinna evāham |\nnityanirantaraniṣkriyaniḥsīmāsaṅgapūrṇabodhātmā ||",
-      "translation": "I am indeed different from the seer, listener, speaker, doer and experiencer; I am the essence of Knowledge, eternal, without any break, beyond activity, limitless, unattached and infinite.",
-      "gloss": [],
+      "translation": "I am indeed distinct from the seer, hearer, speaker, doer, and experiencer. I am the Self of complete awareness: eternal, unbroken, actionless, limitless, and unattached.",
+      "gloss": [
+        {
+          "sa": "द्रष्टुः",
+          "en": "of the seer"
+        },
+        {
+          "sa": "श्रोतुः",
+          "en": "of the hearer"
+        },
+        {
+          "sa": "वक्तुः",
+          "en": "of the speaker"
+        },
+        {
+          "sa": "कर्तुः",
+          "en": "of the doer"
+        },
+        {
+          "sa": "भोक्तुः",
+          "en": "of the experiencer"
+        },
+        {
+          "sa": "विभिन्नः एव अहम्",
+          "en": "I am indeed distinct (vibhinnaḥ: distinct | eva: indeed | aham: I)"
+        },
+        {
+          "sa": "नित्य-निरन्तर-निष्क्रिय",
+          "en": "eternal, uninterrupted, actionless (nitya: eternal | nirantara: uninterrupted | niṣkriya: actionless)"
+        },
+        {
+          "sa": "निःसीम-असङ्ग-पूर्ण-बोध-आत्मा",
+          "en": "the Self of limitless, unattached, complete awareness (niḥsīma: limitless | asaṅga: unattached | pūrṇa: complete | bodha: awareness | ātmā: Self)"
+        }
+      ],
       "sourceNumbers": [
         491
-      ]
+      ],
+      "editionTranslation": "I am indeed different from the seer, listener, speaker, doer and experiencer; I am the essence of Knowledge, eternal, without any break, beyond activity, limitless, unattached and infinite."
     },
     {
       "id": "vivekachudamani-492",
@@ -37203,11 +37237,41 @@
       "label": "Verse 492",
       "deva": "नाहमिदं नाहमदोऽप्य् उभयोर् अवभासकं परं शुद्धम् ।\nबाह्याभ्यन्तरशून्यं पूर्णं ब्रह्माद्वितीयमेवाहम् ॥",
       "iast": "nāhamidaṃ nāhamado'py ubhayor avabhāsakaṃ paraṃ śuddham |\nbāhyābhyantaraśūnyaṃ pūrṇaṃ brahmādvitīyamevāham ||",
-      "translation": "I am neither, this nor that, but the Supreme, the illuminer of both; I am indeed Brahman, the One without a second, pure, devoid of interior or exterior and infinite.",
-      "gloss": [],
+      "translation": "I am not this; I am not that either. I am the pure Supreme, the light by which both appear. I am complete Brahman without a second, with no outside or inside.",
+      "gloss": [
+        {
+          "sa": "न अहम् इदम्",
+          "en": "I am not this (na: not | aham: I | idam: this)"
+        },
+        {
+          "sa": "न अहम् अदः अपि",
+          "en": "I am not that either (na: not | aham: I | adaḥ: that | api: also, either)"
+        },
+        {
+          "sa": "उभयोः अवभासकम्",
+          "en": "the illuminator of both (ubhayoḥ: of both | avabhāsakam: illuminator)"
+        },
+        {
+          "sa": "परम् शुद्धम्",
+          "en": "the Supreme, pure (param: Supreme | śuddham: pure)"
+        },
+        {
+          "sa": "बाह्य-अभ्यन्तर-शून्यम्",
+          "en": "devoid of outside and inside (bāhya: external | abhyantara: internal | śūnyam: devoid)"
+        },
+        {
+          "sa": "पूर्णम् ब्रह्म",
+          "en": "complete Brahman (pūrṇam: complete | brahma: Brahman)"
+        },
+        {
+          "sa": "अद्वितीयम् एव अहम्",
+          "en": "I am indeed without a second (advitīyam: without a second | eva: indeed | aham: I)"
+        }
+      ],
       "sourceNumbers": [
         492
-      ]
+      ],
+      "editionTranslation": "I am neither, this nor that, but the Supreme, the illuminer of both; I am indeed Brahman, the One without a second, pure, devoid of interior or exterior and infinite."
     },
     {
       "id": "vivekachudamani-493",
@@ -37215,11 +37279,45 @@
       "label": "Verse 493",
       "deva": "निरुपममनादितत्त्वं त्वमहमिदमद इति कल्पनादूरम् ।\nनित्यानन्दैकरसं सत्यं ब्रह्माद्वितीयमेवाहम् ॥",
       "iast": "nirupamamanāditattvaṃ tvamahamidamada iti kalpanādūram |\nnityānandaikarasaṃ satyaṃ brahmādvitīyamevāham ||",
-      "translation": "I am indeed Brahman, the One without a second, matchless, the Reality that has no beginning, beyond such imagination as thou or I, or this or that, the Essence of Eternal Bliss, the Truth.",
-      "gloss": [],
+      "translation": "I alone am the nondual Brahman: incomparable, the beginningless Reality, beyond the ideas “you,” “I,” “this,” or “that”; the truth, whose nature is one essence of eternal bliss.",
+      "gloss": [
+        {
+          "sa": "निरुपमम्",
+          "en": "incomparable (nirupamam: without comparison)"
+        },
+        {
+          "sa": "अनादि-तत्त्वम्",
+          "en": "the beginningless Reality (anādi: beginningless | tattvam: reality)"
+        },
+        {
+          "sa": "त्वम्-अहम्-इदम्-अदः",
+          "en": "you, I, this, that (tvam: you | aham: I | idam: this | adaḥ: that)"
+        },
+        {
+          "sa": "इति कल्पना-दूरम्",
+          "en": "far beyond such ideas (iti: thus | kalpanā: idea, imagination | dūram: far)"
+        },
+        {
+          "sa": "नित्य-आनन्द-एक-रसम्",
+          "en": "of the one essence of eternal bliss (nitya: eternal | ānanda: bliss | eka: one | rasam: essence, nature)"
+        },
+        {
+          "sa": "सत्यम्",
+          "en": "the truth"
+        },
+        {
+          "sa": "ब्रह्म अद्वितीयम्",
+          "en": "Brahman without a second (brahma: Brahman | advitīyam: without a second)"
+        },
+        {
+          "sa": "एव अहम्",
+          "en": "I alone am (eva: indeed | aham: I)"
+        }
+      ],
       "sourceNumbers": [
         493
-      ]
+      ],
+      "editionTranslation": "I am indeed Brahman, the One without a second, matchless, the Reality that has no beginning, beyond such imagination as thou or I, or this or that, the Essence of Eternal Bliss, the Truth."
     },
     {
       "id": "vivekachudamani-494",
@@ -37227,11 +37325,49 @@
       "label": "Verse 494",
       "deva": "नारायणोऽहं नरकान्तकोऽहं\nपुरान्तकोऽहं पुरुषोऽहम् ईशः ।\nअखण्डबोधोऽहम् अशेषसाक्षी\nनिरीश्वरोऽहं निरहं च निर्ममः ॥",
       "iast": "nārāyaṇo'haṃ narakāntako'haṃ\npurāntako'haṃ puruṣo'ham īśaḥ |\nakhaṇḍabodho'ham aśeṣasākṣī\nnirīśvaro'haṃ nirahaṃ ca nirmamaḥ ||",
-      "translation": "I am Narayana, the slayer of Naraka; I am the destroyer of Tripura, the Supreme Being, the Ruler; I am knowledge Absolute, the Witness of everything; I have no other Ruler but myself, I am devoid of the ideas of \"I’ and \"mine\".",
-      "gloss": [],
+      "translation": "I am Nārāyaṇa, the destroyer of Naraka; I am the destroyer of the cities [Tripura], the Supreme Person and Lord. I am undivided awareness, the witness of all. I have no lord above me; I am free from the notions “I” and “mine.”",
+      "gloss": [
+        {
+          "sa": "नारायणः अहम्",
+          "en": "I am Nārāyaṇa (nārāyaṇaḥ: Nārāyaṇa | aham: I)"
+        },
+        {
+          "sa": "नरक-अन्तकः अहम्",
+          "en": "I am the destroyer of Naraka (naraka: Naraka | antakaḥ: destroyer | aham: I)"
+        },
+        {
+          "sa": "पुर-अन्तकः अहम्",
+          "en": "I am the destroyer of the cities [Tripura] (pura: city | antakaḥ: destroyer | aham: I)"
+        },
+        {
+          "sa": "पुरुषः अहम् ईशः",
+          "en": "I am the Supreme Person, the Lord (puruṣaḥ: person | aham: I | īśaḥ: Lord)"
+        },
+        {
+          "sa": "अखण्ड-बोधः अहम्",
+          "en": "I am undivided awareness (akhaṇḍa: undivided | bodhaḥ: awareness | aham: I)"
+        },
+        {
+          "sa": "अशेष-साक्षी",
+          "en": "the witness of all without exception (aśeṣa: without remainder | sākṣī: witness)"
+        },
+        {
+          "sa": "निरीश्वरः अहम्",
+          "en": "I have no lord above me (nirīśvaraḥ: without a lord | aham: I)"
+        },
+        {
+          "sa": "निरहम् च",
+          "en": "free of “I”-ness, and (niraham: without ego | ca: and)"
+        },
+        {
+          "sa": "निर्ममः",
+          "en": "free of “mine”-ness"
+        }
+      ],
       "sourceNumbers": [
         494
-      ]
+      ],
+      "editionTranslation": "I am Narayana, the slayer of Naraka; I am the destroyer of Tripura, the Supreme Being, the Ruler; I am knowledge Absolute, the Witness of everything; I have no other Ruler but myself, I am devoid of the ideas of \"I’ and \"mine\"."
     },
     {
       "id": "vivekachudamani-495",
@@ -37239,11 +37375,53 @@
       "label": "Verse 495",
       "deva": "सर्वेषु भूतेष्व् अहम् एव संस्थितो\nज्ञानात्मनान्तर्बहिराश्रयः सन् ।\nभोक्ता च भोग्यं स्वयम् एव सर्वं\nयद्यत्पृथग्दृष्टमिदन्तया पुरा ॥",
       "iast": "sarveṣu bhūteṣv aham eva saṃsthito\njñānātmanāntarbahirāśrayaḥ san |\nbhoktā ca bhogyaṃ svayam eva sarvaṃ\nyadyatpṛthagdṛṣṭamidantayā purā ||",
-      "translation": "I alone reside as knowledge in all beings, being their internal and external support. I myself am the experiencer and all that is experienced – whatever I looked upon as \"this\" or the not-Self previously.",
-      "gloss": [],
+      "translation": "I alone abide in all beings as awareness itself, their support within and without. I myself am both the experiencer and what is experienced—all that I once saw as separate, as “this.”",
+      "gloss": [
+        {
+          "sa": "सर्वेषु भूतेषु",
+          "en": "in all beings (sarveṣu: in all | bhūteṣu: beings)"
+        },
+        {
+          "sa": "अहम् एव संस्थितः",
+          "en": "I alone abide (aham: I | eva: alone | saṃsthitaḥ: established, abiding)"
+        },
+        {
+          "sa": "ज्ञान-आत्मना",
+          "en": "as the Self of awareness (jñāna: awareness | ātmanā: as the Self)"
+        },
+        {
+          "sa": "अन्तः-बहिः-आश्रयः",
+          "en": "the support within and without (antaḥ: within | bahiḥ: without | āśrayaḥ: support)"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "भोक्ता च भोग्यम्",
+          "en": "the experiencer and what is experienced (bhoktā: experiencer | ca: and | bhogyam: what is experienced)"
+        },
+        {
+          "sa": "स्वयम् एव सर्वम्",
+          "en": "I myself am all (svayam: myself | eva: indeed | sarvam: all)"
+        },
+        {
+          "sa": "यद् यत्",
+          "en": "whatever (yad yat: whatever)"
+        },
+        {
+          "sa": "पृथक् दृष्टम्",
+          "en": "was seen as separate (pṛthak: separately | dṛṣṭam: seen)"
+        },
+        {
+          "sa": "इदन्तया पुरा",
+          "en": "as “this,” before (idantayā: as this | purā: formerly)"
+        }
+      ],
       "sourceNumbers": [
         495
-      ]
+      ],
+      "editionTranslation": "I alone reside as knowledge in all beings, being their internal and external support. I myself am the experiencer and all that is experienced – whatever I looked upon as \"this\" or the not-Self previously."
     },
     {
       "id": "vivekachudamani-496",
@@ -38312,6 +38490,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 471–475; preserved prior translations as editionTranslation. Clarified verse 474's two attainment phrases and the distinction in verse 475 between first-person knowledge and others' inference.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 476–480; preserved prior translations as editionTranslation. Corrected verse 479's final form to आत्मनिष्ठितः (ātma-niṣṭhitaḥ), supported by the parallel reading, and normalized its IAST word boundaries.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 481–485, preserving the former English as editionTranslation. Rendered the hailstone/ocean image in 482 and the disciple’s direct questions in 483–485.",
-    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 486–490, preserving the former English as editionTranslation. Clarified verse 488's pūrṇa as complete and verse 490's pure-awareness wording."
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 486–490, preserving the former English as editionTranslation. Clarified verse 488's pūrṇa as complete and verse 490's pure-awareness wording.",
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 491–495, preserving previous translations as editionTranslation. Clarified verse 492's repeated negation and verse 494's “I” and “mine” terms; made the experience/experienced pair explicit in 495."
   ]
 }
