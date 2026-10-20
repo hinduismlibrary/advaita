@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–45.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–55.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 45
+      "to": 55
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–45 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–55 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -3125,13 +3125,75 @@
       "number": "46",
       "label": "Verse 46",
       "deva": "कारागृहस्यास्य च को विशेषः\nप्रदृश्यते साधु विचार्यमाणे।\nमुक्तेः प्रतीपत्वम् इहापि पुंसः\nकान्ता-सुखाभ्युत्थित-मोह-पाशैः॥",
-      "translation": "If one should examine properly, what difference is there between one’s home and a prison house? If one should be bound by one’s desire, and if one should remain in one’s home, out of attachment to it, even that is a kind of bondage and it becomes a hindrance to the attainment of liberation.",
-      "gloss": [],
+      "translation": "On proper examination, what difference is there between this home and a prison? Here too, the bonds of delusion arising from pleasure with a beloved person turn one away from liberation.",
+      "gloss": [
+        {
+          "sa": "कारागृहस्य",
+          "en": "of a prison"
+        },
+        {
+          "sa": "अस्य",
+          "en": "this"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "विशेषः",
+          "en": "difference"
+        },
+        {
+          "sa": "प्रदृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "साधु",
+          "en": "properly"
+        },
+        {
+          "sa": "विचार्यमाणे",
+          "en": "when examined"
+        },
+        {
+          "sa": "मुक्तेः",
+          "en": "from liberation"
+        },
+        {
+          "sa": "प्रतीपत्वम्",
+          "en": "opposition"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पुंसः",
+          "en": "for a person"
+        },
+        {
+          "sa": "कान्ता-सुख-अभ्युत्थित",
+          "en": "arising from the beloved’s pleasure"
+        },
+        {
+          "sa": "मोह-पाशैः",
+          "en": "by bonds of delusion"
+        }
+      ],
       "sourceNumbers": [
         46
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kārāgṛhasyāsya ca ko viśeṣaḥ\npradṛśyate sādhu vicāryamāṇe|\nmukteḥ pratīpatvam ihāpi puṃsaḥ\nkāntā-sukhābhyutthita-moha-pāśaiḥ||"
+      "iast": "kārāgṛhasyāsya ca ko viśeṣaḥ\npradṛśyate sādhu vicāryamāṇe|\nmukteḥ pratīpatvam ihāpi puṃsaḥ\nkāntā-sukhābhyutthita-moha-pāśaiḥ||",
+      "editionTranslation": "If one should examine properly, what difference is there between one’s home and a prison house? If one should be bound by one’s desire, and if one should remain in one’s home, out of attachment to it, even that is a kind of bondage and it becomes a hindrance to the attainment of liberation."
     },
     {
       "id": "svsss-1-0047",
@@ -3139,13 +3201,59 @@
       "number": "47",
       "label": "Verse 47",
       "deva": "गृह-स्पृहा पाद-निबद्ध-शृङ्खला\nकान्ता-सुताशा पटु-कण्ठ-पाशः।\nशीर्षे पतद्भूर्यशनिर् हि साक्षात्\nप्राणान्त-हेतुः प्रबला धनाशा॥",
-      "translation": "The ties which bind a man to his house are like the chains round his feet. The affection that he feels for his wife and children is like a halter round his neck. Inordinate desire for wealth is like the fall of a heavy thunderbolt that brings about one’s death.",
-      "gloss": [],
+      "translation": "Longing for a home is a chain bound to the feet; desire for a wife and children is a tight noose around the neck. Powerful desire for wealth is a heavy thunderbolt falling on the head, directly causing the end of life.",
+      "gloss": [
+        {
+          "sa": "गृह-स्पृहा",
+          "en": "longing for a home"
+        },
+        {
+          "sa": "पाद-निबद्ध-शृङ्खला",
+          "en": "a chain bound to the feet"
+        },
+        {
+          "sa": "कान्ता-सुत-आशा",
+          "en": "desire for wife and children"
+        },
+        {
+          "sa": "पटु-कण्ठ-पाशः",
+          "en": "a tight noose around the neck"
+        },
+        {
+          "sa": "शीर्षे",
+          "en": "on the head"
+        },
+        {
+          "sa": "पतत्-भूरि-अशनिः",
+          "en": "a heavy thunderbolt falling"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "प्राण-अन्त-हेतुः",
+          "en": "the cause of life’s end"
+        },
+        {
+          "sa": "प्रबला",
+          "en": "powerful"
+        },
+        {
+          "sa": "धन-आशा",
+          "en": "desire for wealth"
+        }
+      ],
       "sourceNumbers": [
         47
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "gṛha-spṛhā pāda-nibaddha-śṛṅkhalā\nkāntā-sutāśā paṭu-kaṇṭha-pāśaḥ|\nśīrṣe patadbhūryaśanir hi sākṣāt\nprāṇānta-hetuḥ prabalā dhanāśā||"
+      "iast": "gṛha-spṛhā pāda-nibaddha-śṛṅkhalā\nkāntā-sutāśā paṭu-kaṇṭha-pāśaḥ|\nśīrṣe patadbhūryaśanir hi sākṣāt\nprāṇānta-hetuḥ prabalā dhanāśā||",
+      "editionTranslation": "The ties which bind a man to his house are like the chains round his feet. The affection that he feels for his wife and children is like a halter round his neck. Inordinate desire for wealth is like the fall of a heavy thunderbolt that brings about one’s death."
     },
     {
       "id": "svsss-1-0048",
@@ -3153,13 +3261,87 @@
       "number": "48",
       "label": "Verse 48",
       "deva": "आशा-पाश-शतेन पाशित-पदो नोत्थातुम् एव क्षमः\nकाम-क्रोध-मदादिभिः प्रतिभटैः संरक्ष्यमाणोऽनिशम्।\nसंमोहावरणेन गोपनवतः संसार-कारागृहान्\nनिर्गन्तुं त्रि-विधेषणा-पर-वशः कः शक्नुयाद् रागिषु॥",
-      "translation": "Discerning the problem of desire If one should be bound by hundreds of false hopes as though they are so many fetters, and if one should be unable to stand, and if one should be always under the surveillance of enemy soldiers, the representatives of lust, anger and arrogance, and in addition to it if one should be the victim of the three kinds of desire, is it ever possible that such a person could ever come out a free man from the prison house of the world encircled and entrenched as it is by delusion?",
-      "gloss": [],
+      "translation": "Among those attached, who could leave the prison-houses of saṃsāra, covered by delusion, when his feet are bound by hundreds of hope-fetters, he cannot even rise, is constantly hemmed in by adversaries such as desire, anger, and pride, and is controlled by the threefold desire?",
+      "gloss": [
+        {
+          "sa": "रागिषु",
+          "en": "among the attached"
+        },
+        {
+          "sa": "आशा-पाश-शतेन",
+          "en": "by hundreds of hope-fetters"
+        },
+        {
+          "sa": "पाशित-पदः",
+          "en": "with the feet bound"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उत्थातुम्",
+          "en": "to rise"
+        },
+        {
+          "sa": "एव",
+          "en": "even"
+        },
+        {
+          "sa": "क्षमः",
+          "en": "able"
+        },
+        {
+          "sa": "काम-क्रोध-मद-आदिभिः",
+          "en": "by desire, anger, pride, and the like"
+        },
+        {
+          "sa": "प्रतिभटैः",
+          "en": "by adversaries"
+        },
+        {
+          "sa": "संरक्ष्यमाणः",
+          "en": "being hemmed in"
+        },
+        {
+          "sa": "अनिशम्",
+          "en": "constantly"
+        },
+        {
+          "sa": "संमोह-आवरणेन",
+          "en": "by the covering of delusion"
+        },
+        {
+          "sa": "गोपनवतः",
+          "en": "being concealed"
+        },
+        {
+          "sa": "संसार-कारागृहान्",
+          "en": "the prison-houses of saṃsāra"
+        },
+        {
+          "sa": "निर्गन्तुम्",
+          "en": "to leave"
+        },
+        {
+          "sa": "त्रि-विध-एषणा-पर-वशः",
+          "en": "controlled by the threefold desire"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "शक्नुयात्",
+          "en": "could"
+        }
+      ],
       "sourceNumbers": [
         48
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "āśā-pāśa-śatena pāśita-pado notthātum eva kṣamaḥ\nkāma-krodha-madādibhiḥ pratibhaṭaiḥ saṃrakṣyamāṇo’niśam|\nsaṃmohāvaraṇena gopanavataḥ saṃsāra-kārāgṛhān\nnirgantuṃ tri-vidheṣaṇā-para-vaśaḥ kaḥ śaknuyād rāgiṣu||"
+      "iast": "āśā-pāśa-śatena pāśita-pado notthātum eva kṣamaḥ\nkāma-krodha-madādibhiḥ pratibhaṭaiḥ saṃrakṣyamāṇo’niśam|\nsaṃmohāvaraṇena gopanavataḥ saṃsāra-kārāgṛhān\nnirgantuṃ tri-vidheṣaṇā-para-vaśaḥ kaḥ śaknuyād rāgiṣu||",
+      "editionTranslation": "Discerning the problem of desire If one should be bound by hundreds of false hopes as though they are so many fetters, and if one should be unable to stand, and if one should be always under the surveillance of enemy soldiers, the representatives of lust, anger and arrogance, and in addition to it if one should be the victim of the three kinds of desire, is it ever possible that such a person could ever come out a free man from the prison house of the world encircled and entrenched as it is by delusion?"
     },
     {
       "id": "svsss-1-0049",
@@ -3167,13 +3349,71 @@
       "number": "49",
       "label": "Verse 49",
       "deva": "कामान्धकारेण निरुद्ध-दृष्टिर्\nमुह्यत्य् असत्य् अप्य् अबला-स्वरूपे।\nन ह्यन्ध-दृष्टेर् असतः सतो वा\nसुखत्व-दुःखत्व-विचारणास्ति॥",
-      "translation": "If one should become blinded by lust, even the picture of a woman, unreal as it is, is enough to cause delusion. One who is deprived of one’s judgement becomes incapable of discrimination, and becomes unable to find out how far one’s pleasure and pain are real, or are otherwise.",
-      "gloss": [],
+      "translation": "With sight blocked by the darkness of desire, one is deluded even by a woman’s unreal form. A person with blinded sight does not consider whether something is real or unreal, pleasure or pain.",
+      "gloss": [
+        {
+          "sa": "काम-अन्धकारेण",
+          "en": "by the darkness of desire"
+        },
+        {
+          "sa": "निरुद्ध-दृष्टिः",
+          "en": "with sight blocked"
+        },
+        {
+          "sa": "मुह्यति",
+          "en": "is deluded"
+        },
+        {
+          "sa": "असति",
+          "en": "in what is unreal"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अबला-स्वरूपे",
+          "en": "in a woman’s form"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्ध-दृष्टेः",
+          "en": "for one with blinded sight"
+        },
+        {
+          "sa": "असतः",
+          "en": "of the unreal"
+        },
+        {
+          "sa": "सतः",
+          "en": "of the real"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "सुखत्व-दुःखत्व-विचारणा",
+          "en": "consideration of pleasure and pain"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        }
+      ],
       "sourceNumbers": [
         49
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāmāndhakāreṇa niruddha-dṛṣṭir\nmuhyaty asaty apy abalā-svarūpe|\nna hyandha-dṛṣṭer asataḥ sato vā\nsukhatva-duḥkhatva-vicāraṇāsti||"
+      "iast": "kāmāndhakāreṇa niruddha-dṛṣṭir\nmuhyaty asaty apy abalā-svarūpe|\nna hyandha-dṛṣṭer asataḥ sato vā\nsukhatva-duḥkhatva-vicāraṇāsti||",
+      "editionTranslation": "If one should become blinded by lust, even the picture of a woman, unreal as it is, is enough to cause delusion. One who is deprived of one’s judgement becomes incapable of discrimination, and becomes unable to find out how far one’s pleasure and pain are real, or are otherwise."
     },
     {
       "id": "svsss-1-0050",
@@ -3181,13 +3421,119 @@
       "number": "50",
       "label": "Verse 50",
       "deva": "श्लेष्मोद्गारि मुखं स्रवन्मलवती नासाश्रुमल् लोचनं\nस्वेद-स्रावि मलाभिपूर्णम् अभितो दुर्गन्ध-दुष्टं वपुः।\nअन्यद् वक्तुम् अशक्यम् एव मनसा मन्तुं क्वचिन् नार्हति\nस्त्री-रूपं कथम् ईदृशं सुमनसां पात्रीभवेन् नेत्रयोः॥",
-      "translation": "Is there any wise man who would ever feel attracted at the spectacle of one whose mouth, nose and eyes are exuding phlegm, filth and tears, whose body is full of perspiration and hides many other shortcomings, too numerous to be mentioned, only because it happens to be a woman’s (i.e. an opposite sex) body?",
-      "gloss": [],
+      "translation": "The mouth emits phlegm, the nose drains filth, and the eyes shed tears; the body streams sweat, is full of filth, and stinks all over. Other faults are too many to speak of or even conceive. How could such a woman’s form be worthy of the eyes of the wise?",
+      "gloss": [
+        {
+          "sa": "श्लेष्म-उद्गारि",
+          "en": "emitting phlegm"
+        },
+        {
+          "sa": "मुखम्",
+          "en": "the mouth"
+        },
+        {
+          "sa": "स्रवत्-मल-वती",
+          "en": "flowing with discharge"
+        },
+        {
+          "sa": "नासा",
+          "en": "the nose"
+        },
+        {
+          "sa": "अश्रुमत्",
+          "en": "tearful"
+        },
+        {
+          "sa": "लोचनम्",
+          "en": "the eye"
+        },
+        {
+          "sa": "स्वेद-स्रावि",
+          "en": "streaming sweat"
+        },
+        {
+          "sa": "मल-अभि-पूरणम्",
+          "en": "filled throughout with filth"
+        },
+        {
+          "sa": "अभितः",
+          "en": "all over"
+        },
+        {
+          "sa": "दुर्गन्ध-दुष्टम्",
+          "en": "spoiled by foul smell"
+        },
+        {
+          "sa": "वपुः",
+          "en": "the body"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "other [faults]"
+        },
+        {
+          "sa": "वक्तुम्",
+          "en": "to speak"
+        },
+        {
+          "sa": "अशक्यम्",
+          "en": "impossible"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "मनसा",
+          "en": "with the mind"
+        },
+        {
+          "sa": "मन्तुम्",
+          "en": "to conceive"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "at all"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is fit"
+        },
+        {
+          "sa": "स्त्री-रूपम्",
+          "en": "a woman’s form"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "ईदृशम्",
+          "en": "such"
+        },
+        {
+          "sa": "सुमनसाम्",
+          "en": "for the wise"
+        },
+        {
+          "sa": "पात्रीभवेत्",
+          "en": "could be worthy"
+        },
+        {
+          "sa": "नेत्रयोः",
+          "en": "of the eyes"
+        }
+      ],
       "sourceNumbers": [
         50
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śleṣmodgāri mukhaṃ sravanmalavatī nāsāśrumal locanaṃ\nsveda-srāvi malābhipūrṇam abhito durgandha-duṣṭaṃ vapuḥ|\nanyad vaktum aśakyam eva manasā mantuṃ kvacin nārhati\nstrī-rūpaṃ katham īdṛśaṃ sumanasāṃ pātrībhaven netrayoḥ||"
+      "iast": "śleṣmodgāri mukhaṃ sravanmalavatī nāsāśrumal locanaṃ\nsveda-srāvi malābhipūrṇam abhito durgandha-duṣṭaṃ vapuḥ|\nanyad vaktum aśakyam eva manasā mantuṃ kvacin nārhati\nstrī-rūpaṃ katham īdṛśaṃ sumanasāṃ pātrībhaven netrayoḥ||",
+      "editionTranslation": "Is there any wise man who would ever feel attracted at the spectacle of one whose mouth, nose and eyes are exuding phlegm, filth and tears, whose body is full of perspiration and hides many other shortcomings, too numerous to be mentioned, only because it happens to be a woman’s (i.e. an opposite sex) body?"
     },
     {
       "id": "svsss-1-0051",
@@ -3195,13 +3541,75 @@
       "number": "51",
       "label": "Verse 51",
       "deva": "दूराद् अवेक्ष्याग्नि-शिखां पतङ्गो\nरम्यत्व-बुद्ध्या विनिपत्य नश्यति\nयथा तथा नष्ट-दृग् एष सूक्ष्मं\nकथं निरीक्षेत विमुक्ति-मार्गम्॥",
-      "translation": "Just as moths are drawn from afar at the sight of a flame, and attracted by it they fall in it and perish, so also the man who is under the spelt of delusion falls a victim to it; for he becomes incapable of perceiving the subtle path to salvation.",
-      "gloss": [],
+      "translation": "Just as a moth sees a flame from afar, falls into it thinking it beautiful, and perishes, so how could this person, blinded to what is subtle, perceive the path to liberation?",
+      "gloss": [
+        {
+          "sa": "दूरात्",
+          "en": "from afar"
+        },
+        {
+          "sa": "अवेक्ष्य",
+          "en": "having seen"
+        },
+        {
+          "sa": "अग्नि-शिखाम्",
+          "en": "the flame-tip"
+        },
+        {
+          "sa": "पतङ्गः",
+          "en": "a moth"
+        },
+        {
+          "sa": "रम्यत्व-बुद्ध्या",
+          "en": "thinking it beautiful"
+        },
+        {
+          "sa": "विनिपत्य",
+          "en": "falling into it"
+        },
+        {
+          "sa": "नश्यति",
+          "en": "perishes"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "नष्ट-दृक्",
+          "en": "one whose sight is lost"
+        },
+        {
+          "sa": "एषः",
+          "en": "this person"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "the subtle"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "निरीक्षेत",
+          "en": "could perceive"
+        },
+        {
+          "sa": "विमुक्ति-मार्गम्",
+          "en": "the path to liberation"
+        }
+      ],
       "sourceNumbers": [
         51
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dūrād avekṣyāgni-śikhāṃ pataṅgo\nramyatva-buddhyā vinipatya naśyati\nyathā tathā naṣṭa-dṛg eṣa sūkṣmaṃ\nkathaṃ nirīkṣeta vimukti-mārgam||"
+      "iast": "dūrād avekṣyāgni-śikhāṃ pataṅgo\nramyatva-buddhyā vinipatya naśyati\nyathā tathā naṣṭa-dṛg eṣa sūkṣmaṃ\nkathaṃ nirīkṣeta vimukti-mārgam||",
+      "editionTranslation": "Just as moths are drawn from afar at the sight of a flame, and attracted by it they fall in it and perish, so also the man who is under the spelt of delusion falls a victim to it; for he becomes incapable of perceiving the subtle path to salvation."
     },
     {
       "id": "svsss-1-0052",
@@ -3209,13 +3617,75 @@
       "number": "52",
       "label": "Verse 52",
       "deva": "कामेन कान्तां परिगृह्य तद्वज्\nजनोऽप्ययं नश्यति नष्ट-दृष्टिः।\nमांसास्थि-मज्जा-मल-मूत्र-पात्रं\nस्त्रियं स्वयं रम्यतयैव पश्यति॥",
-      "translation": "Although woman’s body is but an assemblage of flesh, fat and bones, that man who is lured by lust regards it as the abode of beauty. Such a man loses his insight and is destroyed.",
-      "gloss": [],
+      "translation": "Driven by desire, a person takes a beloved woman and perishes in the same way, his discernment lost; he himself sees as beautiful a woman who is only a vessel of flesh, bone, marrow, filth, and urine.",
+      "gloss": [
+        {
+          "sa": "कामेन",
+          "en": "by desire"
+        },
+        {
+          "sa": "कान्ताम्",
+          "en": "the beloved woman"
+        },
+        {
+          "sa": "परिगृह्य",
+          "en": "having taken"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "जनः",
+          "en": "a person"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "नश्यति",
+          "en": "perishes"
+        },
+        {
+          "sa": "नष्ट-दृष्टिः",
+          "en": "with discernment lost"
+        },
+        {
+          "sa": "मांस-अस्थि-मज्जा-मल-मूत्र-पात्रम्",
+          "en": "a vessel of flesh, bone, marrow, filth, and urine"
+        },
+        {
+          "sa": "स्त्रियम्",
+          "en": "a woman"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "रम्यतया",
+          "en": "as beautiful"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "पश्यति",
+          "en": "sees"
+        }
+      ],
       "sourceNumbers": [
         52
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāmena kāntāṃ parigṛhya tadvaj\njano’pyayaṃ naśyati naṣṭa-dṛṣṭiḥ|\nmāṃsāsthi-majjā-mala-mūtra-pātraṃ\nstriyaṃ svayaṃ ramyatayaiva paśyati||"
+      "iast": "kāmena kāntāṃ parigṛhya tadvaj\njano’pyayaṃ naśyati naṣṭa-dṛṣṭiḥ|\nmāṃsāsthi-majjā-mala-mūtra-pātraṃ\nstriyaṃ svayaṃ ramyatayaiva paśyati||",
+      "editionTranslation": "Although woman’s body is but an assemblage of flesh, fat and bones, that man who is lured by lust regards it as the abode of beauty. Such a man loses his insight and is destroyed."
     },
     {
       "id": "svsss-1-0053",
@@ -3223,13 +3693,63 @@
       "number": "53",
       "label": "Verse 53",
       "deva": "काम एव यमः साक्षात् कान्ता वैतरणी नदी।\nविवेकिनां मुमुक्षूणां निलयस् तु यमालयः॥",
-      "translation": "There is therefore no death other than lust; nor is there any river of hell, Vaitaraṇī, other than woman. Let the wise aspirant after liberation look upon his home as though it were the receptacle of death.",
-      "gloss": [],
+      "translation": "For discerning seekers of liberation, desire itself is Yama; the beloved woman is the river Vaitaraṇī; the dwelling, indeed, is Yama’s abode.",
+      "gloss": [
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "यमः",
+          "en": "Yama, death"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "कान्ता",
+          "en": "the beloved woman"
+        },
+        {
+          "sa": "वैतरणी",
+          "en": "Vaitaraṇī"
+        },
+        {
+          "sa": "नदी",
+          "en": "the river"
+        },
+        {
+          "sa": "विवेकिनाम्",
+          "en": "for discerning people"
+        },
+        {
+          "sa": "मुमुक्षूणाम्",
+          "en": "for seekers of liberation"
+        },
+        {
+          "sa": "निलयः",
+          "en": "the dwelling"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "यम-आलयः",
+          "en": "Yama’s abode"
+        }
+      ],
       "sourceNumbers": [
         53
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāma eva yamaḥ sākṣāt kāntā vaitaraṇī nadī|\nvivekināṃ mumukṣūṇāṃ nilayas tu yamālayaḥ||"
+      "iast": "kāma eva yamaḥ sākṣāt kāntā vaitaraṇī nadī|\nvivekināṃ mumukṣūṇāṃ nilayas tu yamālayaḥ||",
+      "editionTranslation": "There is therefore no death other than lust; nor is there any river of hell, Vaitaraṇī, other than woman. Let the wise aspirant after liberation look upon his home as though it were the receptacle of death."
     },
     {
       "id": "svsss-1-0054",
@@ -3237,13 +3757,79 @@
       "number": "54",
       "label": "Verse 54",
       "deva": "यमालये वापि गृहेऽपि नो नृणां\nताप-त्रय-क्लेश-निवृत्तिर् अस्ति।\nकिञ्चित् समालोक्य तु तद्-विरामं\nसुखात्मना पश्यति मूढ-लोकः॥",
-      "translation": "No one can ever escape suffering pain as a result of the three-fold ills of life either in the abode of Yama, or in one’s own home. The man who is deluded imagines that the brief interval between two successive periods of pain is full of bliss.",
-      "gloss": [],
+      "translation": "Neither in Yama’s abode nor at home do people find relief from the distress of the threefold suffering. The deluded person sees a brief pause in that suffering as happiness.",
+      "gloss": [
+        {
+          "sa": "यम-आलये",
+          "en": "in Yama’s abode"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "गृहे",
+          "en": "in a home"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नृणाम्",
+          "en": "for people"
+        },
+        {
+          "sa": "ताप-त्रय-क्लेश-निवृत्तिः",
+          "en": "relief from the distress of the threefold suffering"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "some"
+        },
+        {
+          "sa": "समालोक्य",
+          "en": "having observed"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "तद्-विरामम्",
+          "en": "a pause in that"
+        },
+        {
+          "sa": "सुख-आत्मना",
+          "en": "as happiness"
+        },
+        {
+          "sa": "पश्यति",
+          "en": "sees"
+        },
+        {
+          "sa": "मूढ-लोकः",
+          "en": "the deluded person"
+        }
+      ],
       "sourceNumbers": [
         54
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yamālaye vāpi gṛhe’pi no nṛṇāṃ\ntāpa-traya-kleśa-nivṛttir asti|\nkiñcit samālokya tu tad-virāmaṃ\nsukhātmanā paśyati mūḍha-lokaḥ||"
+      "iast": "yamālaye vāpi gṛhe’pi no nṛṇāṃ\ntāpa-traya-kleśa-nivṛttir asti|\nkiñcit samālokya tu tad-virāmaṃ\nsukhātmanā paśyati mūḍha-lokaḥ||",
+      "editionTranslation": "No one can ever escape suffering pain as a result of the three-fold ills of life either in the abode of Yama, or in one’s own home. The man who is deluded imagines that the brief interval between two successive periods of pain is full of bliss."
     },
     {
       "id": "svsss-1-0055",
@@ -3251,13 +3837,95 @@
       "number": "55",
       "label": "Verse 55",
       "deva": "यमस्य कामस्य च तारतम्यं\nविचार्यमाणे महद् अस्ति लोके।\nहितं करोत्यस्य यमोऽप्रियः सन्\nकामस् त्वनर्थं कुरुते प्रियः सन्॥",
-      "translation": "If he should exercise right judgement, he will see how vast is the difference between Yama, the god of death, and lust, which is the death of life. Even though Yama is forbidding in appearance, he is beneficent; but lust lures man and destroys him utterly.",
-      "gloss": [],
+      "translation": "On examination, there is a great difference between Yama and desire: though unwelcome, Yama does what is beneficial for a person; desire, though pleasant, causes harm.",
+      "gloss": [
+        {
+          "sa": "यमस्य",
+          "en": "of Yama"
+        },
+        {
+          "sa": "कामस्य",
+          "en": "of desire"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तारतम्यम्",
+          "en": "the difference"
+        },
+        {
+          "sa": "विचार्यमाणे",
+          "en": "when examined"
+        },
+        {
+          "sa": "महत्",
+          "en": "great"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "लोके",
+          "en": "in the world"
+        },
+        {
+          "sa": "हितम्",
+          "en": "what is beneficial"
+        },
+        {
+          "sa": "करोति",
+          "en": "does"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for a person"
+        },
+        {
+          "sa": "यमः",
+          "en": "Yama"
+        },
+        {
+          "sa": "अप्रियः",
+          "en": "unwelcome"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अनर्थम्",
+          "en": "harm"
+        },
+        {
+          "sa": "कुरुते",
+          "en": "causes"
+        },
+        {
+          "sa": "प्रियः",
+          "en": "pleasant"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        }
+      ],
       "sourceNumbers": [
         55
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yamasya kāmasya ca tāratamyaṃ\nvicāryamāṇe mahad asti loke|\nhitaṃ karotyasya yamo’priyaḥ san\nkāmas tvanarthaṃ kurute priyaḥ san||"
+      "iast": "yamasya kāmasya ca tāratamyaṃ\nvicāryamāṇe mahad asti loke|\nhitaṃ karotyasya yamo’priyaḥ san\nkāmas tvanarthaṃ kurute priyaḥ san||",
+      "editionTranslation": "If he should exercise right judgement, he will see how vast is the difference between Yama, the god of death, and lust, which is the death of life. Even though Yama is forbidding in appearance, he is beneficent; but lust lures man and destroys him utterly."
     },
     {
       "id": "svsss-1-0056",
