@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–125.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–140.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 125
+      "to": 140
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–125 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–140 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -8080,7 +8080,7 @@
       "number": "114–115",
       "label": "Verses 114–115",
       "deva": "बाह्यम् आभ्यन्तरं चेति द्विविधं शौचम् उच्यते।\nमृज्-जलाभ्यां कृतं शौचं बाह्यं शारीरकं स्मृतम्॥\nअज्ञान-दूरी-करणं मानसं शौचम् आन्तरम्।\nअन्तः-शौचे स्थिते सम्यग् बाह्यं नावश्यकं नृणाम्॥",
-      "translation": "Purity is said to be twofold: external and internal. Cleanliness performed with earth and water is regarded as external, bodily cleanliness. Removing ignorance is internal mental purity. When inner purity is fully established, external cleanliness is unnecessary for people.",
+      "translation": "Purity is said to be twofold: external and internal. Cleanliness performed with earth and water is regarded as external, bodily cleanliness.",
       "gloss": [
         {
           "sa": "बाह्यम्",
@@ -8767,13 +8767,75 @@
       "number": "126",
       "label": "Verse 126",
       "deva": "सच्-चिन्तनस्य सम्बाधो विघ्नोऽयं निर्जने ततः।\nस्थेयम् इत्येक एवास्ति चेत् सैवैकान्त-शीलता॥",
-      "translation": "Love of solitude After having realized that a crowded place is the least conducive to the practice of contemplation, to resort to a sequestered place, in order to meditate upon the Lord is known as the love of solitude.",
-      "gloss": [],
+      "translation": "This crowding obstructs contemplation of reality; therefore one should remain in a secluded place. If one recognizes, “I should stay alone,” that indeed is the habit of solitude.",
+      "gloss": [
+        {
+          "sa": "सच्-चिन्तनस्य",
+          "en": "of contemplation of reality"
+        },
+        {
+          "sa": "सम्बाधः",
+          "en": "crowding"
+        },
+        {
+          "sa": "विघ्नः",
+          "en": "an obstacle"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "निर्जने",
+          "en": "in a secluded place"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "स्थेयम्",
+          "en": "one should remain"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एकः",
+          "en": "alone"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "एकान्त-शीलता",
+          "en": "the habit of solitude"
+        }
+      ],
       "sourceNumbers": [
         126
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sac-cintanasya sambādho vighno’yaṃ nirjane tataḥ|\nstheyam ityeka evāsti cet saivaikānta-śīlatā||"
+      "iast": "sac-cintanasya sambādho vighno’yaṃ nirjane tataḥ|\nstheyam ityeka evāsti cet saivaikānta-śīlatā||",
+      "editionTranslation": "Love of solitude After having realized that a crowded place is the least conducive to the practice of contemplation, to resort to a sequestered place, in order to meditate upon the Lord is known as the love of solitude."
     },
     {
       "id": "svsss-1-0127",
@@ -8781,13 +8843,63 @@
       "number": "127",
       "label": "Verse 127",
       "deva": "संसार-बन्ध-निर्मुक्तिः कदा झटिति मे भवेत्।\nइति या सुदृढा बुद्धिर् ईरिता सा मुमुक्षुता॥",
-      "translation": "Desirous of liberation The strong feeling to end as early as possible one’s bondage to the world is the characteristic feature of one who desires liberation.",
-      "gloss": [],
+      "translation": "“When will I be quickly freed from the bond of saṃsāra?”—this firm thought is declared to be the desire for liberation.",
+      "gloss": [
+        {
+          "sa": "संसार-बन्ध-निर्मुक्तिः",
+          "en": "release from the bond of saṃsāra"
+        },
+        {
+          "sa": "कदा",
+          "en": "when"
+        },
+        {
+          "sa": "झटिति",
+          "en": "quickly"
+        },
+        {
+          "sa": "मे",
+          "en": "for me"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "may it be"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "या",
+          "en": "which"
+        },
+        {
+          "sa": "सुदृढा",
+          "en": "very firm"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "thought"
+        },
+        {
+          "sa": "ईरिता",
+          "en": "is declared"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "मुमुक्षुता",
+          "en": "desire for liberation"
+        }
+      ],
       "sourceNumbers": [
         127
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "saṃsāra-bandha-nirmuktiḥ kadā jhaṭiti me bhavet|\niti yā sudṛḍhā buddhir īritā sā mumukṣutā||"
+      "iast": "saṃsāra-bandha-nirmuktiḥ kadā jhaṭiti me bhavet|\niti yā sudṛḍhā buddhir īritā sā mumukṣutā||",
+      "editionTranslation": "Desirous of liberation The strong feeling to end as early as possible one’s bondage to the world is the characteristic feature of one who desires liberation."
     },
     {
       "id": "svsss-1-0128",
@@ -8795,13 +8907,51 @@
       "number": "128",
       "label": "Verse 128",
       "deva": "ब्रह्म-चर्यादिभिर् धर्मैर् बुद्धेर् दोष-निवृत्तये।\nदण्डनं दम इत्याहुर् दम-शब्दार्थ-कोविदाः॥",
-      "translation": "Restraint of the senses It is by the practice of continence and other virtues that the intellect becomes purified. That is why the wise say that ‘dama’ or the restraint of the senses is like a rod to check erring.",
-      "gloss": [],
+      "translation": "The knowers of the meaning of the word dama call the disciplining of the intellect, to remove its faults through brahmacarya and other disciplines, “dama” (restraint).",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-चर्यादिभिः",
+          "en": "through brahmacarya and the like"
+        },
+        {
+          "sa": "धर्मैः",
+          "en": "disciplines"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "दोष-निवृत्तये",
+          "en": "for removing faults"
+        },
+        {
+          "sa": "दण्डनम्",
+          "en": "disciplining"
+        },
+        {
+          "sa": "दमः",
+          "en": "restraint"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they call"
+        },
+        {
+          "sa": "दम-शब्दार्थ-कोविदाः",
+          "en": "those skilled in the meaning of the word dama"
+        }
+      ],
       "sourceNumbers": [
         128
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "brahma-caryādibhir dharmair buddher doṣa-nivṛttaye|\ndaṇḍanaṃ dama ityāhur dama-śabdārtha-kovidāḥ||"
+      "iast": "brahma-caryādibhir dharmair buddher doṣa-nivṛttaye|\ndaṇḍanaṃ dama ityāhur dama-śabdārtha-kovidāḥ||",
+      "editionTranslation": "Restraint of the senses It is by the practice of continence and other virtues that the intellect becomes purified. That is why the wise say that ‘dama’ or the restraint of the senses is like a rod to check erring."
     },
     {
       "id": "svsss-1-0129",
@@ -8809,13 +8959,47 @@
       "number": "129",
       "label": "Verse 129",
       "deva": "तत्तद्-वृत्ति-निरोधेन बाह्येन्द्रिय-विनिग्रहः।\nयोगिनो दम इत्याहुर् मनसः शान्ति-साधनम्॥",
-      "translation": "The yogīs say that ‘dama’ or the restraint of the senses is a means to the control of the mind. They consider that it is conducive to the attainment of tranquility.",
-      "gloss": [],
+      "translation": "Yogis call the restraint of the external senses, by stopping their respective activities, “dama”; it is a means for the mind’s peace.",
+      "gloss": [
+        {
+          "sa": "तत्-तत्-वृत्ति-निरोधेन",
+          "en": "by stopping each respective activity"
+        },
+        {
+          "sa": "बाह्येन्द्रिय-विनिग्रहः",
+          "en": "restraint of the external senses"
+        },
+        {
+          "sa": "योगिनः",
+          "en": "yogis"
+        },
+        {
+          "sa": "दमः",
+          "en": "restraint"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they call"
+        },
+        {
+          "sa": "मनसः",
+          "en": "for the mind"
+        },
+        {
+          "sa": "शान्ति-साधनम्",
+          "en": "a means of peace"
+        }
+      ],
       "sourceNumbers": [
         129
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tattad-vṛtti-nirodhena bāhyendriya-vinigrahaḥ|\nyogino dama ityāhur manasaḥ śānti-sādhanam||"
+      "iast": "tattad-vṛtti-nirodhena bāhyendriya-vinigrahaḥ|\nyogino dama ityāhur manasaḥ śānti-sādhanam||",
+      "editionTranslation": "The yogīs say that ‘dama’ or the restraint of the senses is a means to the control of the mind. They consider that it is conducive to the attainment of tranquility."
     },
     {
       "id": "svsss-1-0130",
@@ -8823,13 +9007,59 @@
       "number": "130",
       "label": "Verse 130",
       "deva": "इन्द्रियेष्विन्द्रियार्थेषु प्रवृत्तेषु यदृच्छया।\nअनुधावति तान्येव मनो वायुम् इवानलः॥",
-      "translation": "When the senses pursue the objects of desire however unintentionally, that pursuit acts upon the mind like a wind that fans a flame.",
-      "gloss": [],
+      "translation": "When the senses happen to be engaged with their objects, the mind pursues those very objects, like fire driven by wind.",
+      "gloss": [
+        {
+          "sa": "इन्द्रियेषु",
+          "en": "when the senses"
+        },
+        {
+          "sa": "इन्द्रिय-अर्थेषु",
+          "en": "with sense objects"
+        },
+        {
+          "sa": "प्रवृत्तेषु",
+          "en": "are engaged"
+        },
+        {
+          "sa": "यदृच्छया",
+          "en": "by chance"
+        },
+        {
+          "sa": "अनुधावति",
+          "en": "pursues"
+        },
+        {
+          "sa": "तानि",
+          "en": "those"
+        },
+        {
+          "sa": "एव",
+          "en": "very"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "वायुम्",
+          "en": "wind"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "अनलः",
+          "en": "fire"
+        }
+      ],
       "sourceNumbers": [
         130
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "indriyeṣvindriyārtheṣu pravṛtteṣu yadṛcchayā|\nanudhāvati tānyeva mano vāyum ivānalaḥ||"
+      "iast": "indriyeṣvindriyārtheṣu pravṛtteṣu yadṛcchayā|\nanudhāvati tānyeva mano vāyum ivānalaḥ||",
+      "editionTranslation": "When the senses pursue the objects of desire however unintentionally, that pursuit acts upon the mind like a wind that fans a flame."
     },
     {
       "id": "svsss-1-0131",
@@ -8837,13 +9067,59 @@
       "number": "131",
       "label": "Verse 131",
       "deva": "इन्द्रियेषु निरुद्धेषु त्यक्त्वा वेगं मनः स्वयम्।\nसत्त्व-भावम् उपादत्ते प्रसादस् तेन जायते॥",
-      "translation": "But where the senses are held under restraint, the mind ceases to be agitated. The mind then regains its pure nature and attains tranquility. It is only when the mind is serene that liberation may be attained. It cannot be attained otherwise.",
-      "gloss": [],
+      "translation": "When the senses are restrained, the mind itself gives up its impulses and takes on a lucid quality; from that, serenity arises.",
+      "gloss": [
+        {
+          "sa": "इन्द्रियेषु",
+          "en": "when the senses"
+        },
+        {
+          "sa": "निरुद्धेषु",
+          "en": "are restrained"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having given up"
+        },
+        {
+          "sa": "वेगम्",
+          "en": "impulse"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "सत्त्व-भावम्",
+          "en": "a lucid quality"
+        },
+        {
+          "sa": "उपादत्ते",
+          "en": "takes on"
+        },
+        {
+          "sa": "प्रसादः",
+          "en": "serenity"
+        },
+        {
+          "sa": "तेन",
+          "en": "from that"
+        },
+        {
+          "sa": "जायते",
+          "en": "arises"
+        }
+      ],
       "sourceNumbers": [
         131
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "indriyeṣu niruddheṣu tyaktvā vegaṃ manaḥ svayam|\nsattva-bhāvam upādatte prasādas tena jāyate||"
+      "iast": "indriyeṣu niruddheṣu tyaktvā vegaṃ manaḥ svayam|\nsattva-bhāvam upādatte prasādas tena jāyate||",
+      "editionTranslation": "But where the senses are held under restraint, the mind ceases to be agitated. The mind then regains its pure nature and attains tranquility. It is only when the mind is serene that liberation may be attained. It cannot be attained otherwise."
     },
     {
       "id": "svsss-1-0132",
@@ -8851,13 +9127,95 @@
       "number": "132",
       "label": "Verse 132",
       "deva": "प्रसन्ने सति चित्तेऽस्य मुक्तिः सिध्यति नान्यथा।\nमनः-प्रसादस्य निदानम् एव\nनिरोधनं यत् सकलेन्द्रियाणाम्।\nबाह्येन्द्रिये साधु निरुध्यमाने\nबाह्यार्थ-भोगो मनसो वियुज्यते॥",
-      "translation": "Serenity comes only as a result of the control of the senses. Where self-control is firm-based, the desire for the objects of enjoyment does not arise.",
-      "gloss": [],
+      "translation": "When the mind is clear, liberation is attained; it is not attained otherwise. The restraint of all the senses is indeed the cause of mental serenity. When the external senses are properly restrained, enjoyment of external objects is separated from the mind.",
+      "gloss": [
+        {
+          "sa": "प्रसन्ने",
+          "en": "when clear"
+        },
+        {
+          "sa": "सति",
+          "en": "being"
+        },
+        {
+          "sa": "चित्ते",
+          "en": "the mind"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for this person"
+        },
+        {
+          "sa": "मुक्तिः",
+          "en": "liberation"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is attained"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "मनः-प्रसादस्य",
+          "en": "of mental serenity"
+        },
+        {
+          "sa": "निदानम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "निरोधः",
+          "en": "restraint"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "सकल-इन्द्रियाणाम्",
+          "en": "of all the senses"
+        },
+        {
+          "sa": "बाह्येन्द्रिये",
+          "en": "when the external senses"
+        },
+        {
+          "sa": "साधु",
+          "en": "properly"
+        },
+        {
+          "sa": "निरुध्यमाने",
+          "en": "are restrained"
+        },
+        {
+          "sa": "बाह्य-अर्थ-भोगः",
+          "en": "enjoyment of external objects"
+        },
+        {
+          "sa": "मनसः",
+          "en": "from the mind"
+        },
+        {
+          "sa": "वियुज्यते",
+          "en": "is separated"
+        }
+      ],
       "sourceNumbers": [
         132
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "prasanne sati citte’sya muktiḥ sidhyati nānyathā|\nmanaḥ-prasādasya nidānam eva\nnirodhanaṃ yat sakalendriyāṇām|\nbāhyendriye sādhu nirudhyamāne\nbāhyārtha-bhogo manaso viyujyate||"
+      "iast": "prasanne sati citte’sya muktiḥ sidhyati nānyathā|\nmanaḥ-prasādasya nidānam eva\nnirodhanaṃ yat sakalendriyāṇām|\nbāhyendriye sādhu nirudhyamāne\nbāhyārtha-bhogo manaso viyujyate||",
+      "editionTranslation": "Serenity comes only as a result of the control of the senses. Where self-control is firm-based, the desire for the objects of enjoyment does not arise."
     },
     {
       "id": "svsss-1-0133",
@@ -8865,13 +9223,71 @@
       "number": "133",
       "label": "Verse 133",
       "deva": "तेन स्व-दौष्ट्यं परिमुच्य चित्तं\nशनैः शनैः शान्तिम् उपाददाति।\nचित्तस्य बाह्यार्थ-विमोक्षम् एव\nमोक्षं विदुर् मोक्षण-लक्षण-ज्ञाः॥",
-      "translation": "In this way, the purified mind freed from all inherent defects attains step by step the peace supreme. Those who are entitled to speak of it say that mokṣa or liberation is nothing more than freeing the mind from all that sullies it.",
-      "gloss": [],
+      "translation": "By that, the mind, giving up its own faults, gradually attains peace. Those who know the mark of liberation call precisely the mind’s release from external objects “liberation.”",
+      "gloss": [
+        {
+          "sa": "तेन",
+          "en": "by that"
+        },
+        {
+          "sa": "स्व-दौष्ट्यम्",
+          "en": "its own faults"
+        },
+        {
+          "sa": "परिमुच्य",
+          "en": "having given up"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "the mind"
+        },
+        {
+          "sa": "शनैः",
+          "en": "gradually"
+        },
+        {
+          "sa": "शनैः",
+          "en": "gradually"
+        },
+        {
+          "sa": "शान्तिम्",
+          "en": "peace"
+        },
+        {
+          "sa": "उपाददाति",
+          "en": "attains"
+        },
+        {
+          "sa": "चित्तस्य",
+          "en": "of the mind"
+        },
+        {
+          "sa": "बाह्य-अर्थ-विमोक्षम्",
+          "en": "release from external objects"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "मोक्षम्",
+          "en": "liberation"
+        },
+        {
+          "sa": "विदुः",
+          "en": "they know; call"
+        },
+        {
+          "sa": "मोक्षण-लक्षण-ज्ञाः",
+          "en": "those who know the nature of liberation"
+        }
+      ],
       "sourceNumbers": [
         133
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tena sva-dauṣṭyaṃ parimucya cittaṃ\nśanaiḥ śanaiḥ śāntim upādadāti|\ncittasya bāhyārtha-vimokṣam eva\nmokṣaṃ vidur mokṣaṇa-lakṣaṇa-jñāḥ||"
+      "iast": "tena sva-dauṣṭyaṃ parimucya cittaṃ\nśanaiḥ śanaiḥ śāntim upādadāti|\ncittasya bāhyārtha-vimokṣam eva\nmokṣaṃ vidur mokṣaṇa-lakṣaṇa-jñāḥ||",
+      "editionTranslation": "In this way, the purified mind freed from all inherent defects attains step by step the peace supreme. Those who are entitled to speak of it say that mokṣa or liberation is nothing more than freeing the mind from all that sullies it."
     },
     {
       "id": "svsss-1-0134",
@@ -8879,13 +9295,75 @@
       "number": "134",
       "label": "Verse 134",
       "deva": "दमं विना साधु मनः-प्रसाद-\nहेतुं न विद्मः सुकरं मुमुक्षोः।\nदमेन चित्तं निज-दोष-जातं\nविसृज्य शान्तिं समुपैति शीघ्रम्॥",
-      "translation": "By no other means may the seeker after liberation attain peace of mind. When all the defects of the mind have been overcome by the practice of self-restraint, peace follows before long.",
-      "gloss": [],
+      "translation": "We know of no easy, proper means for a seeker’s mental serenity without restraint. Through restraint, the mind gives up its own faults and soon attains peace.",
+      "gloss": [
+        {
+          "sa": "दमम्",
+          "en": "restraint"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "साधु",
+          "en": "proper"
+        },
+        {
+          "sa": "मनः-प्रसाद-हेतुम्",
+          "en": "a cause of mental serenity"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विद्मः",
+          "en": "we know"
+        },
+        {
+          "sa": "सुकरम्",
+          "en": "easy"
+        },
+        {
+          "sa": "मुमुक्षोः",
+          "en": "for a seeker of liberation"
+        },
+        {
+          "sa": "दमेन",
+          "en": "through restraint"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "the mind"
+        },
+        {
+          "sa": "निज-दोष-जातम्",
+          "en": "its own collection of faults"
+        },
+        {
+          "sa": "विसृज्य",
+          "en": "having cast off"
+        },
+        {
+          "sa": "शान्तिम्",
+          "en": "peace"
+        },
+        {
+          "sa": "समुपैति",
+          "en": "attains"
+        },
+        {
+          "sa": "शीघ्रम्",
+          "en": "quickly"
+        }
+      ],
       "sourceNumbers": [
         134
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "damaṃ vinā sādhu manaḥ-prasāda-\nhetuṃ na vidmaḥ sukaraṃ mumukṣoḥ|\ndamena cittaṃ nija-doṣa-jātaṃ\nvisṛjya śāntiṃ samupaiti śīghram||"
+      "iast": "damaṃ vinā sādhu manaḥ-prasāda-\nhetuṃ na vidmaḥ sukaraṃ mumukṣoḥ|\ndamena cittaṃ nija-doṣa-jātaṃ\nvisṛjya śāntiṃ samupaiti śīghram||",
+      "editionTranslation": "By no other means may the seeker after liberation attain peace of mind. When all the defects of the mind have been overcome by the practice of self-restraint, peace follows before long."
     },
     {
       "id": "svsss-1-0135",
@@ -8893,27 +9371,179 @@
       "number": "135",
       "label": "Verse 135",
       "deva": "प्राणायामाद् भवति मनसो निश्चलत्वं प्रसादो\nयस्याप्यस्य प्रतिनियत-दिग्-देश-कालाद्यवेक्ष्य।\nसम्यग्-दृष्ट्या क्वचिद् अपि तया नो दमो हन्यते तत्\nकुर्याद् धीमान् दमम् अनलसश् चित्त-शान्त्यै प्रयत्नात्॥",
-      "translation": "This peace of mind is also attained by the practice of prāṇāyāma. But it should be practised in conformity with the Śāstras, and subject to time, place and causality. By means of it, not only are the senses held under restraint, but true insight is also attained. Under no circumstances is such insight destroyed. Let the wise practice self-restraint untiringly and with zeal, in order to attain peace.",
-      "gloss": [],
+      "translation": "Through breath control, steadiness and clarity of mind arise for one who attends to fixed direction, place, time, and the like. Such practice does not undermine right discernment or restraint. The wise should diligently practise restraint to quiet the mind.",
+      "gloss": [
+        {
+          "sa": "प्राणायामात्",
+          "en": "through breath control"
+        },
+        {
+          "sa": "भवति",
+          "en": "arises"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "निश्चलत्वम्",
+          "en": "steadiness"
+        },
+        {
+          "sa": "प्रसादः",
+          "en": "clarity; serenity"
+        },
+        {
+          "sa": "यस्य",
+          "en": "for whom"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अस्य",
+          "en": "this person"
+        },
+        {
+          "sa": "प्रतिनियत-दिक्-देश-काल-आदि",
+          "en": "fixed direction, place, time, and the like"
+        },
+        {
+          "sa": "अवेक्ष्य",
+          "en": "taking into account"
+        },
+        {
+          "sa": "सम्यक्-दृष्ट्या",
+          "en": "through right discernment"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "anywhere"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "तया",
+          "en": "by it"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उ",
+          "en": "indeed"
+        },
+        {
+          "sa": "दमः",
+          "en": "restraint"
+        },
+        {
+          "sa": "हन्यते",
+          "en": "is harmed"
+        },
+        {
+          "sa": "तत्",
+          "en": "therefore; that"
+        },
+        {
+          "sa": "कुर्यात्",
+          "en": "should practise"
+        },
+        {
+          "sa": "धीमान्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "दमम्",
+          "en": "restraint"
+        },
+        {
+          "sa": "अनलसः",
+          "en": "untiringly"
+        },
+        {
+          "sa": "चित्त-शान्त्यै",
+          "en": "for the mind’s peace"
+        },
+        {
+          "sa": "प्रयत्नात्",
+          "en": "with effort"
+        }
+      ],
       "sourceNumbers": [
         135
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "prāṇāyāmād bhavati manaso niścalatvaṃ prasādo\nyasyāpyasya pratiniyata-dig-deśa-kālādyavekṣya|\nsamyag-dṛṣṭyā kvacid api tayā no damo hanyate tat\nkuryād dhīmān damam analasaś citta-śāntyai prayatnāt||"
+      "iast": "prāṇāyāmād bhavati manaso niścalatvaṃ prasādo\nyasyāpyasya pratiniyata-dig-deśa-kālādyavekṣya|\nsamyag-dṛṣṭyā kvacid api tayā no damo hanyate tat\nkuryād dhīmān damam analasaś citta-śāntyai prayatnāt||",
+      "editionTranslation": "This peace of mind is also attained by the practice of prāṇāyāma. But it should be practised in conformity with the Śāstras, and subject to time, place and causality. By means of it, not only are the senses held under restraint, but true insight is also attained. Under no circumstances is such insight destroyed. Let the wise practice self-restraint untiringly and with zeal, in order to attain peace."
     },
     {
       "id": "svsss-1-0136",
       "chapter": 1,
       "number": "136",
       "label": "Verse 136",
-      "deva": "सर्वेन्द्रियाणां गति-निग्रहेण\nभोग्येषु दोषाद्यवमर्शनेन।\nईश-प्रसादाच् च गुरोः प्रसादाच्\nछान्तिं समायात्य् अचिरेण चित्तम्॥",
-      "translation": "By checking the flow of the senses, by knowing the inherent defects in the objects of enjoyment, by the grace of Īśvara and the guru, the mind attains serenity before long.",
-      "gloss": [],
+      "deva": "सर्वेन्द्रियाणां गति-निग्रहेण\nभोग्येषु दोषाद्यवमर्शनेन।\nईश-प्रसादाच् च गुरोः प्रसादाच्\nशान्तिं समायात्य् अचिरेण चित्तम्॥",
+      "translation": "By restraining the movement of all the senses, reflecting on the faults and the like in objects of enjoyment, and through the grace of the Lord and the guru, the mind soon attains peace.",
+      "gloss": [
+        {
+          "sa": "सर्व-इन्द्रियाणाम्",
+          "en": "of all the senses"
+        },
+        {
+          "sa": "गति-निग्रहेण",
+          "en": "by restraining their movement"
+        },
+        {
+          "sa": "भोग्येषु",
+          "en": "in objects of enjoyment"
+        },
+        {
+          "sa": "दोष-आदि-अवमर्शनेन",
+          "en": "by reflecting on faults and the like"
+        },
+        {
+          "sa": "ईश-प्रसादात्",
+          "en": "through the Lord’s grace"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "गुरोः",
+          "en": "of the guru"
+        },
+        {
+          "sa": "प्रसादात्",
+          "en": "through the grace"
+        },
+        {
+          "sa": "शान्तिम्",
+          "en": "peace"
+        },
+        {
+          "sa": "समायाति",
+          "en": "attains"
+        },
+        {
+          "sa": "अचिरेण",
+          "en": "before long"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "the mind"
+        }
+      ],
       "sourceNumbers": [
         136
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sarvendriyāṇāṃ gati-nigraheṇa\nbhogyeṣu doṣādyavamarśanena|\nīśa-prasādāc ca guroḥ prasādāc\nchāntiṃ samāyāty acireṇa cittam||"
+      "iast": "sarvendriyāṇāṃ gati-nigraheṇa\nbhogyeṣu doṣādyavamarśanena|\nīśa-prasādāc ca guroḥ prasādāc\nśāntiṃ samāyāty acireṇa cittam||",
+      "editionTranslation": "By checking the flow of the senses, by knowing the inherent defects in the objects of enjoyment, by the grace of Īśvara and the guru, the mind attains serenity before long."
     },
     {
       "id": "svsss-1-0137",
@@ -8921,13 +9551,59 @@
       "number": "137",
       "label": "Verse 137",
       "deva": "आध्यात्मिकादि यद् दुःखं प्राप्तं प्रारब्ध-वेगतः।\nअचिन्तया तत्-सहनं तितिक्षेति निगद्यते॥",
-      "translation": "Fortitude It is the result of one’s past actions now bearing fruit that one is called upon to suffer the threefold ills of life. To endure them uncomplainingly and without taking them to heart is indeed fortitude.",
-      "gloss": [],
+      "translation": "Whatever suffering of the adhyātmika kind and the like comes through the force of prārabdha, enduring it without brooding is called fortitude.",
+      "gloss": [
+        {
+          "sa": "आध्यात्मिक-आदि",
+          "en": "of the adhyātmika kind and the like"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "प्राप्तम्",
+          "en": "has come"
+        },
+        {
+          "sa": "प्रारब्ध-वेगतः",
+          "en": "through the force of prārabdha"
+        },
+        {
+          "sa": "अचिन्तया",
+          "en": "without brooding"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "सहनम्",
+          "en": "enduring"
+        },
+        {
+          "sa": "तितिक्षा",
+          "en": "fortitude"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निगद्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         137
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ādhyātmikādi yad duḥkhaṃ prāptaṃ prārabdha-vegataḥ|\nacintayā tat-sahanaṃ titikṣeti nigadyate||"
+      "iast": "ādhyātmikādi yad duḥkhaṃ prāptaṃ prārabdha-vegataḥ|\nacintayā tat-sahanaṃ titikṣeti nigadyate||",
+      "editionTranslation": "Fortitude It is the result of one’s past actions now bearing fruit that one is called upon to suffer the threefold ills of life. To endure them uncomplainingly and without taking them to heart is indeed fortitude."
     },
     {
       "id": "svsss-1-0138",
@@ -8935,13 +9611,91 @@
       "number": "138",
       "label": "Verse 138",
       "deva": "रक्षा तितिक्षा-सदृशी मुमुक्षोर्\nन विद्यतेऽसौ पविना न भिद्यते।\nयाम् एव धीराः कवचीव विघ्नान्\nसर्वांस् तृणी-कृत्य जयन्ति मायाम्॥",
-      "translation": "To the seeker after liberation there is no armour stronger than fortitude. No thunderbolt can cleave it. Like a well-armed hero who overcomes all obstacles, he who is protected by fortitude overcomes Māyā, the veil that hides reality.",
-      "gloss": [],
+      "translation": "For a seeker of liberation, no protection like fortitude exists; it is not split by a thunderbolt. Wearing it like armor, the wise overcome every obstacle and conquer māyā, treating them as straw.",
+      "gloss": [
+        {
+          "sa": "रक्षा",
+          "en": "protection"
+        },
+        {
+          "sa": "तितिक्षा-सदृशी",
+          "en": "like fortitude"
+        },
+        {
+          "sa": "मुमुक्षोः",
+          "en": "for a seeker of liberation"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विद्यते",
+          "en": "exists"
+        },
+        {
+          "sa": "असौ",
+          "en": "that"
+        },
+        {
+          "sa": "पविना",
+          "en": "by a thunderbolt"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भिद्यते",
+          "en": "is split"
+        },
+        {
+          "sa": "याम्",
+          "en": "which"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "धीराः",
+          "en": "the wise"
+        },
+        {
+          "sa": "कवची",
+          "en": "wearing armor"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "विघ्नान्",
+          "en": "obstacles"
+        },
+        {
+          "sa": "सर्वान्",
+          "en": "all"
+        },
+        {
+          "sa": "तृणी-कृत्य",
+          "en": "making [them] straw"
+        },
+        {
+          "sa": "जयन्ति",
+          "en": "they overcome"
+        },
+        {
+          "sa": "मायाम्",
+          "en": "māyā"
+        }
+      ],
       "sourceNumbers": [
         138
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "rakṣā titikṣā-sadṛśī mumukṣor\nna vidyate’sau pavinā na bhidyate|\nyām eva dhīrāḥ kavacīva vighnān\nsarvāṃs tṛṇī-kṛtya jayanti māyām||"
+      "iast": "rakṣā titikṣā-sadṛśī mumukṣor\nna vidyate’sau pavinā na bhidyate|\nyām eva dhīrāḥ kavacīva vighnān\nsarvāṃs tṛṇī-kṛtya jayanti māyām||",
+      "editionTranslation": "To the seeker after liberation there is no armour stronger than fortitude. No thunderbolt can cleave it. Like a well-armed hero who overcomes all obstacles, he who is protected by fortitude overcomes Māyā, the veil that hides reality."
     },
     {
       "id": "svsss-1-0139",
@@ -8949,13 +9703,67 @@
       "number": "139",
       "label": "Verse 139",
       "deva": "क्षमावताम् एव हि योग-सिद्धिः\nस्वाराज्य-लक्ष्मी-सुख-भोग-सिद्धिः।\nक्षमा-विहीना निपतन्ति विघ्नैर्\nवातैर् हताः पर्णचया इव द्रुमात्॥",
-      "translation": "Only those who are endowed with fortitude may attain the goal of yoga. They alone enjoy the freedom and joy of Self-realization. Others who lack fortitude are overpowered by obstacles; they drift about like withered leaves before the wind. ((ChanU.7.25.2) (Chāndogya Upaniṣad))",
-      "gloss": [],
+      "translation": "For those who have forbearance alone come success in yoga and attainment of the joy of self-sovereignty. Those without forbearance fall through obstacles like heaps of leaves struck by winds from a tree.",
+      "gloss": [
+        {
+          "sa": "क्षमावताम्",
+          "en": "of those who have forbearance"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "योग-सिद्धिः",
+          "en": "success in yoga"
+        },
+        {
+          "sa": "स्वाराज्य-लक्ष्मी-सुख-भोग-सिद्धिः",
+          "en": "attainment of the joy of self-sovereignty"
+        },
+        {
+          "sa": "क्षमा-विहीनाः",
+          "en": "those without forbearance"
+        },
+        {
+          "sa": "निपतन्ति",
+          "en": "fall"
+        },
+        {
+          "sa": "विघ्नैः",
+          "en": "through obstacles"
+        },
+        {
+          "sa": "वातैः",
+          "en": "by winds"
+        },
+        {
+          "sa": "हताः",
+          "en": "struck"
+        },
+        {
+          "sa": "पर्ण-चयाः",
+          "en": "heaps of leaves"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "द्रुमात्",
+          "en": "from a tree"
+        }
+      ],
       "sourceNumbers": [
         139
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kṣamāvatām eva hi yoga-siddhiḥ\nsvārājya-lakṣmī-sukha-bhoga-siddhiḥ|\nkṣamā-vihīnā nipatanti vighnair\nvātair hatāḥ parṇacayā iva drumāt||"
+      "iast": "kṣamāvatām eva hi yoga-siddhiḥ\nsvārājya-lakṣmī-sukha-bhoga-siddhiḥ|\nkṣamā-vihīnā nipatanti vighnair\nvātair hatāḥ parṇacayā iva drumāt||",
+      "editionTranslation": "Only those who are endowed with fortitude may attain the goal of yoga. They alone enjoy the freedom and joy of Self-realization. Others who lack fortitude are overpowered by obstacles; they drift about like withered leaves before the wind. ((ChanU.7.25.2) (Chāndogya Upaniṣad))"
     },
     {
       "id": "svsss-1-0140",
@@ -8963,13 +9771,67 @@
       "number": "140",
       "label": "Verse 140",
       "deva": "तितिक्षया तपो दानं यज्ञस् तीर्थं व्रतं श्रुतम्।\nभूतिः स्वर्गोऽपवर्गश्च प्राप्यते तत्-तदर्थिभिः॥",
-      "translation": "Whether it be the practice of tapasya, the offering of gifts, the performance of sacrifices, or going on pilgrimages to holy places and sacred streams, or the attainment of wealth, well-being and spiritual liberation, all that may be attained only by means of fortitude.",
-      "gloss": [],
+      "translation": "Through fortitude, those who seek each respective goal attain austerity, giving, sacrifice, pilgrimage, vows, sacred learning, prosperity, heaven, and liberation.",
+      "gloss": [
+        {
+          "sa": "तितिक्षया",
+          "en": "through fortitude"
+        },
+        {
+          "sa": "तपः",
+          "en": "austerity"
+        },
+        {
+          "sa": "दानम्",
+          "en": "giving"
+        },
+        {
+          "sa": "यज्ञः",
+          "en": "sacrifice"
+        },
+        {
+          "sa": "तीर्थम्",
+          "en": "pilgrimage"
+        },
+        {
+          "sa": "व्रतम्",
+          "en": "vow"
+        },
+        {
+          "sa": "श्रुतम्",
+          "en": "sacred learning"
+        },
+        {
+          "sa": "भूतिः",
+          "en": "prosperity"
+        },
+        {
+          "sa": "स्वर्गः",
+          "en": "heaven"
+        },
+        {
+          "sa": "अपवर्गः",
+          "en": "liberation"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्राप्यते",
+          "en": "is attained"
+        },
+        {
+          "sa": "तत्-तत्-अर्थिभिः",
+          "en": "by those seeking each respective goal"
+        }
+      ],
       "sourceNumbers": [
         140
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "titikṣayā tapo dānaṃ yajñas tīrthaṃ vrataṃ śrutam|\nbhūtiḥ svargo’pavargaśca prāpyate tat-tadarthibhiḥ||"
+      "iast": "titikṣayā tapo dānaṃ yajñas tīrthaṃ vrataṃ śrutam|\nbhūtiḥ svargo’pavargaśca prāpyate tat-tadarthibhiḥ||",
+      "editionTranslation": "Whether it be the practice of tapasya, the offering of gifts, the performance of sacrifices, or going on pilgrimages to holy places and sacred streams, or the attainment of wealth, well-being and spiritual liberation, all that may be attained only by means of fortitude."
     },
     {
       "id": "svsss-1-0141",
@@ -20901,5 +21763,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–125 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–140 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
 }
