@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 410
+      "to": 420
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–410 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–420 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -27521,8 +27521,53 @@
       "number": "411",
       "label": "Verse 411",
       "deva": "एतैश् चतुर्भिर् गन्धेन सह पञ्च-गुणा मही।\nआकाशांशतया श्रोत्रं शब्दं गृह्णाति तद्-गुणम्॥",
-      "translation": "The earth is endowed with all the qualities. And in addition to these four qualities, it is also endowed with the quality of smell. As sound is the quality of space, the ear perceives sound because the ear is constituted of space.",
-      "gloss": [],
+      "translation": "Earth has five qualities: these four together with smell. The ear, being constituted by a portion of space, receives sound, the quality of space.",
+      "gloss": [
+        {
+          "sa": "एतैः",
+          "en": "with these"
+        },
+        {
+          "sa": "चतुर्भिः",
+          "en": "four"
+        },
+        {
+          "sa": "गन्धेन",
+          "en": "with smell"
+        },
+        {
+          "sa": "सह",
+          "en": "together"
+        },
+        {
+          "sa": "पञ्च-गुणा",
+          "en": "having five qualities"
+        },
+        {
+          "sa": "मही",
+          "en": "earth"
+        },
+        {
+          "sa": "आकाश-अंशतया",
+          "en": "because of a portion of space"
+        },
+        {
+          "sa": "श्रोत्रम्",
+          "en": "the ear"
+        },
+        {
+          "sa": "शब्दम्",
+          "en": "sound"
+        },
+        {
+          "sa": "गृह्णाति",
+          "en": "receives"
+        },
+        {
+          "sa": "तद्-गुणम्",
+          "en": "its quality"
+        }
+      ],
       "sourceNumbers": [
         411
       ],
@@ -27534,28 +27579,110 @@
       "chapter": 2,
       "number": "412",
       "label": "Verse 412",
-      "deva": "त्वङ् मारुतांशकतया स्पर्शं गृह्णाति तद्-गुणम्।\nतेजोंशकतया चक्षू -रूपं गृह्णाति तद्-गुणम्॥",
-      "translation": "Out of the air, the skin is formed, and therefore it is endowed with the quality of touch. Similarly as the eye is constituted of fire, it has the capacity of perceiving form. That is because form is the quality of fire.",
-      "gloss": [],
+      "deva": "त्वङ् मारुतांशकतया स्पर्शं गृह्णाति तद्-गुणम्।\nतेजोंशकतया चक्षू रूपं गृह्णाति तद्-गुणम्॥",
+      "translation": "The skin, being constituted by a portion of air, receives touch, its quality. The eye, being constituted by a portion of fire, receives form, its quality.",
+      "gloss": [
+        {
+          "sa": "त्वक्",
+          "en": "the skin"
+        },
+        {
+          "sa": "मारुत-अंशकतया",
+          "en": "because of a portion of air"
+        },
+        {
+          "sa": "स्पर्शम्",
+          "en": "touch"
+        },
+        {
+          "sa": "गृह्णाति",
+          "en": "receives"
+        },
+        {
+          "sa": "तद्-गुणम्",
+          "en": "its quality"
+        },
+        {
+          "sa": "तेजः-अंशकतया",
+          "en": "because of a portion of fire"
+        },
+        {
+          "sa": "चक्षुः",
+          "en": "the eye"
+        },
+        {
+          "sa": "रूपम्",
+          "en": "form"
+        },
+        {
+          "sa": "गृह्णाति",
+          "en": "receives"
+        },
+        {
+          "sa": "तद्-गुणम्",
+          "en": "its quality"
+        }
+      ],
       "sourceNumbers": [
         412
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "tvaṅ mārutāṃśakatayā sparśaṃ gṛhṇāti tad-guṇam|\ntejoṃśakatayā cakṣū -rūpaṃ gṛhṇāti tad-guṇam||"
+      "iast": "tvaṅ mārutāṃśakatayā sparśaṃ gṛhṇāti tad-guṇam|\ntejoṃśakatayā cakṣū rūpaṃ gṛhṇāti tad-guṇam||"
     },
     {
       "id": "svsss-2-0413",
       "chapter": 2,
       "number": "413",
       "label": "Verse 413",
-      "deva": "अबंशकतया जिह्वा रसं गृह्णाति तद्-गुणम्।\nभूम्यंशकतया घ्राणं गन्धं गृह्णाति तद्-गुणम्॥",
-      "translation": "As water enters the composition of the tongue, the tongue is naturally endowed with the characteristic guṇa of water, sapidity. As the earth is the constituent element of the nose, it is naturally invested with the quality of smell, which is an attribute of the earth.",
-      "gloss": [],
+      "deva": "अपांशकतया जिह्वा रसं गृह्णाति तद्-गुणम्।\nभूम्यंशकतया घ्राणं गन्धं गृह्णाति तद्-गुणम्॥",
+      "translation": "The tongue, being constituted by a portion of water, receives taste, its quality. The nose, being constituted by a portion of earth, receives smell, its quality.",
+      "gloss": [
+        {
+          "sa": "अप-अंशकतया",
+          "en": "because of a portion of water"
+        },
+        {
+          "sa": "जिह्वा",
+          "en": "the tongue"
+        },
+        {
+          "sa": "रसम्",
+          "en": "taste"
+        },
+        {
+          "sa": "गृह्णाति",
+          "en": "receives"
+        },
+        {
+          "sa": "तद्-गुणम्",
+          "en": "its quality"
+        },
+        {
+          "sa": "भूमि-अंशकतया",
+          "en": "because of a portion of earth"
+        },
+        {
+          "sa": "घ्राणम्",
+          "en": "the nose"
+        },
+        {
+          "sa": "गन्धम्",
+          "en": "smell"
+        },
+        {
+          "sa": "गृह्णाति",
+          "en": "receives"
+        },
+        {
+          "sa": "तद्-गुणम्",
+          "en": "its quality"
+        }
+      ],
       "sourceNumbers": [
         413
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "abaṃśakatayā jihvā rasaṃ gṛhṇāti tad-guṇam|\nbhūmyaṃśakatayā ghrāṇaṃ gandhaṃ gṛhṇāti tad-guṇam||"
+      "iast": "apāṃśakatayā jihvā rasaṃ gṛhṇāti tad-guṇam|\nbhūmyaṃśakatayā ghrāṇaṃ gandhaṃ gṛhṇāti tad-guṇam||"
     },
     {
       "id": "svsss-2-0414",
@@ -27563,8 +27690,37 @@
       "number": "414",
       "label": "Verse 414",
       "deva": "करोति खांशकतया वाक् शब्दोच्चारण-क्रियाम्।\nवाय्वंशकतया पादौ गमनादि-क्रिया-परौ॥",
-      "translation": "In the same way as the organ of speech is impelled by the guṇa of ākāśa, that of sound, it expresses itself in words; and impelled by air, of which they are constituted the feet move.",
-      "gloss": [],
+      "translation": "Because it is constituted by a portion of space, speech performs the action of pronouncing sounds. Because they are constituted by a portion of air, the feet are engaged in walking and related actions.",
+      "gloss": [
+        {
+          "sa": "करोति",
+          "en": "performs"
+        },
+        {
+          "sa": "ख-अंशकतया",
+          "en": "because of a portion of space"
+        },
+        {
+          "sa": "वाक्",
+          "en": "speech"
+        },
+        {
+          "sa": "शब्द-उच्चारण-क्रियाम्",
+          "en": "the action of pronouncing sounds"
+        },
+        {
+          "sa": "वाय्वंशकतया",
+          "en": "because of a portion of air"
+        },
+        {
+          "sa": "पादौ",
+          "en": "the feet"
+        },
+        {
+          "sa": "गमन-आदि-क्रिया-परौ",
+          "en": "engaged in walking and related actions"
+        }
+      ],
       "sourceNumbers": [
         414
       ],
@@ -27577,8 +27733,33 @@
       "number": "415",
       "label": "Verse 415",
       "deva": "तेजोंशकतया पाणी वह्न्याद्यर्चन-तत्-परौ।\nजलांशकतयोपस्थो रेतो-मूत्र-विसर्ग-कृत्॥",
-      "translation": "As the hands are constituted of fire, they engage themselves in the worship of Agni and the other gods. As water is the constituent element of the organ of generation, it secrets the seminal fluid and passes urine.",
-      "gloss": [],
+      "translation": "Because they are constituted by a portion of fire, the hands are devoted to worship of fire and the rest. Because it is constituted by a portion of water, the organ of generation releases semen and urine.",
+      "gloss": [
+        {
+          "sa": "तेजः-अंशकतया",
+          "en": "because of a portion of fire"
+        },
+        {
+          "sa": "पाणी",
+          "en": "the hands"
+        },
+        {
+          "sa": "वह्नि-आदि-अर्चन-तत्-परौ",
+          "en": "devoted to worship of fire and the rest"
+        },
+        {
+          "sa": "जल-अंशकतया",
+          "en": "because of a portion of water"
+        },
+        {
+          "sa": "उपस्थः",
+          "en": "the organ of generation"
+        },
+        {
+          "sa": "रेतस्-मूत्र-विसर्ग-कृत्",
+          "en": "causing the release of semen and urine"
+        }
+      ],
       "sourceNumbers": [
         415
       ],
@@ -27590,14 +27771,67 @@
       "chapter": 2,
       "number": "416",
       "label": "Verse 416",
-      "deva": "श्रोत्रस्य दैवतं दिक् स्यात् त्वचो वायुर् दृशो रविः॥",
-      "translation": "The anus has earth as its constituent element. That is why it is the means of excreting hard matter. The presiding deities of the senses The presiding deity of the ear is Dik or space. The presiding deity of touch is Vāyu, and that of the eye is the Sun.",
-      "gloss": [],
+      "deva": "भूम्यंशकतया पायुः कठिनं मलम् उत्सृजेत्।\nश्रोत्रस्य दैवतं दिक् स्यात् त्वचो वायुर् दृशो रविः॥",
+      "translation": "Because it is constituted by a portion of earth, the anus expels solid waste. The presiding deity of the ear is a direction; that of the skin is Vāyu, and that of the eye is the Sun.",
+      "gloss": [
+        {
+          "sa": "भूमि-अंशकतया",
+          "en": "because of a portion of earth"
+        },
+        {
+          "sa": "पायुः",
+          "en": "the anus"
+        },
+        {
+          "sa": "कठिनम्",
+          "en": "solid"
+        },
+        {
+          "sa": "मलम्",
+          "en": "waste"
+        },
+        {
+          "sa": "उत्सृजेत्",
+          "en": "expels"
+        },
+        {
+          "sa": "श्रोत्रस्य",
+          "en": "of the ear"
+        },
+        {
+          "sa": "दैवतम्",
+          "en": "the presiding deity"
+        },
+        {
+          "sa": "दिक्",
+          "en": "a direction"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "is"
+        },
+        {
+          "sa": "त्वचः",
+          "en": "of the skin"
+        },
+        {
+          "sa": "वायुः",
+          "en": "Vāyu"
+        },
+        {
+          "sa": "दृशः",
+          "en": "of the eye"
+        },
+        {
+          "sa": "रविः",
+          "en": "the Sun"
+        }
+      ],
       "sourceNumbers": [
         416
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "śrotrasya daivataṃ dik syāt tvaco vāyur dṛśo raviḥ||"
+      "iast": "bhūmyaṃśakatayā pāyuḥ kaṭhinaṃ malam utsṛjet|\nśrotrasya daivataṃ dik syāt tvaco vāyur dṛśo raviḥ||"
     },
     {
       "id": "svsss-2-0417",
@@ -27605,8 +27839,65 @@
       "number": "417",
       "label": "Verse 417",
       "deva": "जिह्वाया वरुणो दैवं घ्राणस्य त्वश्विनाव् उभौ।\nवाचोऽग्निर् हस्तयोर् इन्द्रः पादयोस् तु त्रि-विक्रमः॥",
-      "translation": "Over the organ of taste Varuṇa presides, and over the organ of smell preside the twin Aśvins. Over speech Agni presides, and over the hands Indra presides. The presiding deity of the feet is Viṣṇu, who as Trivikrama measured the whole universe in three paces.",
-      "gloss": [],
+      "translation": "Varuṇa is the deity of the tongue, and the two Aśvins of the nose. Agni presides over speech, Indra over the hands, and Trivikrama over the feet.",
+      "gloss": [
+        {
+          "sa": "जिह्वायाः",
+          "en": "of the tongue"
+        },
+        {
+          "sa": "वरुणः",
+          "en": "Varuṇa"
+        },
+        {
+          "sa": "दैवम्",
+          "en": "the deity"
+        },
+        {
+          "sa": "घ्राणस्य",
+          "en": "of the nose"
+        },
+        {
+          "sa": "तु",
+          "en": "and"
+        },
+        {
+          "sa": "अश्विनौ",
+          "en": "the two Aśvins"
+        },
+        {
+          "sa": "उभौ",
+          "en": "both"
+        },
+        {
+          "sa": "वाचः",
+          "en": "of speech"
+        },
+        {
+          "sa": "अग्निः",
+          "en": "Agni"
+        },
+        {
+          "sa": "हस्तयोः",
+          "en": "of the hands"
+        },
+        {
+          "sa": "इन्द्रः",
+          "en": "Indra"
+        },
+        {
+          "sa": "पादयोः",
+          "en": "of the feet"
+        },
+        {
+          "sa": "तु",
+          "en": "and"
+        },
+        {
+          "sa": "त्रि-विक्रमः",
+          "en": "Trivikrama"
+        }
+      ],
       "sourceNumbers": [
         417
       ],
@@ -27619,8 +27910,57 @@
       "number": "418",
       "label": "Verse 418",
       "deva": "पायोर् मृत्युर् उपस्थस्य त्वधिदैवं प्रजा-पतिः।\nमनसो दैवतं चन्द्रो बुद्धेर् दैवं बृहस्-पतिः॥",
-      "translation": "The presiding deity of the anus is Mṛtyu, Death. The presiding deity of organ of generation is Prajā-pati. Over the mind the Moon presides, and over the intellect presides Bṛhas-pati, the spiritual guide of the shining ones.",
-      "gloss": [],
+      "translation": "Mṛtyu presides over the anus, and Prajāpati over the organ of generation. The Moon is the deity of the mind, and Bṛhaspati of the intellect.",
+      "gloss": [
+        {
+          "sa": "पायोः",
+          "en": "of the anus"
+        },
+        {
+          "sa": "मृत्युः",
+          "en": "Mṛtyu"
+        },
+        {
+          "sa": "उपस्थस्य",
+          "en": "of the organ of generation"
+        },
+        {
+          "sa": "तु",
+          "en": "and"
+        },
+        {
+          "sa": "अधिदैवम्",
+          "en": "the presiding deity"
+        },
+        {
+          "sa": "प्रजा-पतिः",
+          "en": "Prajāpati"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "दैवतम्",
+          "en": "the deity"
+        },
+        {
+          "sa": "चन्द्रः",
+          "en": "the Moon"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "दैवम्",
+          "en": "the deity"
+        },
+        {
+          "sa": "बृहस्पतिः",
+          "en": "Bṛhaspati"
+        }
+      ],
       "sourceNumbers": [
         418
       ],
@@ -27633,8 +27973,49 @@
       "number": "419",
       "label": "Verse 419",
       "deva": "रुद्रस् त्वहङ्-कृतेर् दैवं क्षेत्र-ज्ञश् चित्त-दैवतम्।\nदिगाद्या देवताः सर्वाः खादि-सत्त्वांश-सम्भवाः॥",
-      "translation": "The deity who presides over the ego is Rudra, the god of destruction. He who presides over the citta or the thinking principle is the Kṣetrajña, the knower of the individual self. Right down from Dik or space, the various presiding deities represent the element of purity or sattva present in the primal elements such as space.",
-      "gloss": [],
+      "translation": "Rudra is the deity of ego, and the knower of the field is the deity of memory. All deities beginning with the directions arise from the sattva portions of the elements beginning with space.",
+      "gloss": [
+        {
+          "sa": "रुद्रः",
+          "en": "Rudra"
+        },
+        {
+          "sa": "तु",
+          "en": "and"
+        },
+        {
+          "sa": "अहङ्कृतेः",
+          "en": "of ego"
+        },
+        {
+          "sa": "दैवम्",
+          "en": "the deity"
+        },
+        {
+          "sa": "क्षेत्र-ज्ञः",
+          "en": "the knower of the field"
+        },
+        {
+          "sa": "चित्त-दैवतम्",
+          "en": "the deity of memory"
+        },
+        {
+          "sa": "दिक्-आद्याः",
+          "en": "beginning with the directions"
+        },
+        {
+          "sa": "देवताः",
+          "en": "deities"
+        },
+        {
+          "sa": "सर्वाः",
+          "en": "all"
+        },
+        {
+          "sa": "ख-आदि-सत्त्व-अंश-सम्भवाः",
+          "en": "arising from sattva portions of the elements beginning with space"
+        }
+      ],
       "sourceNumbers": [
         419
       ],
@@ -27647,8 +28028,37 @@
       "number": "420",
       "label": "Verse 420",
       "deva": "संमिता इन्द्रिय-स्थानेष्विन्द्रियाणां समन्ततः।\nनिगृह्णन्त्यनुगृह्णन्ति प्राणि-कर्मानुरूपतः॥",
-      "translation": "These presiding deities avail themselves of the various sensory organs to hinder or to help one’s progress. All that depends upon the nature of one’s past actions.",
-      "gloss": [],
+      "translation": "Present at the locations of the senses, the deities restrain or assist the senses in accordance with the actions of living beings.",
+      "gloss": [
+        {
+          "sa": "संमिताः",
+          "en": "present"
+        },
+        {
+          "sa": "इन्द्रिय-स्थानेषु",
+          "en": "at the locations of the senses"
+        },
+        {
+          "sa": "इन्द्रियाणाम्",
+          "en": "of the senses"
+        },
+        {
+          "sa": "समन्ततः",
+          "en": "all around"
+        },
+        {
+          "sa": "निगृह्णन्ति",
+          "en": "restrain"
+        },
+        {
+          "sa": "अनुगृह्णन्ति",
+          "en": "assist"
+        },
+        {
+          "sa": "प्राणि-कर्म-अनुरूपतः",
+          "en": "in accordance with the actions of living beings"
+        }
+      ],
       "sourceNumbers": [
         420
       ],
