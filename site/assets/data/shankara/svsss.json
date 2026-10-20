@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 560
+      "to": 580
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–560 (545 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–580 (565 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -37295,8 +37295,69 @@
       "number": "561",
       "label": "Verse 561",
       "deva": "विज्ञानमयाद् अन्यं त्वानन्दमयं परं तथात्मानम्।\nअन्योऽन्तर आत्मानन्दमय इति वदति वेदोऽपि॥",
-      "translation": "Moreover, the Vedas categorically declare that there is something other than the sheath of consciousness (vijñānamaya), and that is the sheath of bliss, the ānandamaya kośa. Some say that it is with this sheath that the Vedas tend to identify the Ātman. ((TaitU.2.5.1) (Taittirīya Upaniṣad))",
-      "gloss": [],
+      "translation": "The Veda also says that another inner Self, distinct from the vijñānamaya, is the supreme Self made of bliss.",
+      "gloss": [
+        {
+          "sa": "विज्ञानमयात्",
+          "en": "than the vijñānamaya"
+        },
+        {
+          "sa": "अन्यम्",
+          "en": "another"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "आनन्दमयम्",
+          "en": "made of bliss"
+        },
+        {
+          "sa": "परम्",
+          "en": "supreme"
+        },
+        {
+          "sa": "तथा",
+          "en": "and thus"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "अन्तरः",
+          "en": "inner"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "आनन्दमयः",
+          "en": "made of bliss"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "वदति",
+          "en": "says"
+        },
+        {
+          "sa": "वेदः",
+          "en": "the Veda"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        }
+      ],
       "sourceNumbers": [
         561
       ],
@@ -37309,8 +37370,41 @@
       "number": "562",
       "label": "Verse 562",
       "deva": "दुःख-प्रत्यय-शून्यत्वाद् आनन्दमयता मता।\nअज्ञाने सकलं सुप्तौ बुद्ध्यादि प्रविलीयते॥",
-      "translation": "This sheath is called the ānandamaya kośa, for it is exempt from the burden of sorrow. We see how in the stage of deep sleep there is a complete cessation of pain. At this level of consciousness, the intellect lies submerged in Māyā and ceases to function.",
-      "gloss": [],
+      "translation": "Because the awareness of suffering is absent, it is considered made of bliss. In sleep, everything—intellect and the rest—dissolves into ignorance.",
+      "gloss": [
+        {
+          "sa": "दुःख-प्रत्यय-शून्यत्वात्",
+          "en": "because awareness of suffering is absent"
+        },
+        {
+          "sa": "आनन्दमयता",
+          "en": "the state of being made of bliss"
+        },
+        {
+          "sa": "मता",
+          "en": "is considered"
+        },
+        {
+          "sa": "अज्ञाने",
+          "en": "into ignorance"
+        },
+        {
+          "sa": "सकलम्",
+          "en": "everything"
+        },
+        {
+          "sa": "सुप्तौ",
+          "en": "in sleep"
+        },
+        {
+          "sa": "बुद्धि-आदि",
+          "en": "the intellect and the rest"
+        },
+        {
+          "sa": "प्रविलीयते",
+          "en": "dissolves"
+        }
+      ],
       "sourceNumbers": [
         562
       ],
@@ -37322,14 +37416,67 @@
       "chapter": 3,
       "number": "563",
       "label": "Verse 563",
-      "deva": "दुःखिनोऽपि सुषुप्तौ त्वानन्दमयता ततः।\nसुप्तौ किञ्चिन् न जानामीत्यनुभूतिश्च दृश्यते॥",
-      "translation": "Even that person who is miserable has only to fall asleep and enter the stage of deep sleep, to feel that he is steeped in bliss. And when he emerges from the stage of deep sleep, he is conscious of the fact that he has slept well, and was not aware of anything; and this lies within the experience of all.",
-      "gloss": [],
+      "deva": "दुःखिनोऽपि सुषुप्त्यादाव् आनन्दमयता ततः।\nसुप्तौ किञ्चिन् न जानामीत्यनुभूतिश् च दृश्यते॥",
+      "translation": "Therefore, even a suffering person has the nature of bliss in deep sleep and the like; the experience “I knew nothing in sleep” is also observed.",
+      "gloss": [
+        {
+          "sa": "दुःखिनः",
+          "en": "of a suffering person"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सुषुप्ति-आदौ",
+          "en": "in deep sleep and the like"
+        },
+        {
+          "sa": "आनन्दमयता",
+          "en": "the nature of bliss"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "सुप्तौ",
+          "en": "in sleep"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "जानामि",
+          "en": "I know"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुभूतिः",
+          "en": "the experience"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         563
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "duḥkhino’pi suṣuptau tvānandamayatā tataḥ|\nsuptau kiñcin na jānāmītyanubhūtiśca dṛśyate||"
+      "iast": "duḥkhino’pi suṣuptyādāv ānandamayatā tataḥ|\nsuptau kiñcin na jānāmītyanubhūtiś ca dṛśyate||"
     },
     {
       "id": "svsss-3-0564",
@@ -37337,8 +37484,61 @@
       "number": "564",
       "label": "Verse 564",
       "deva": "यत एवम् अतो युक्ता ह्यज्ञानस्यात्मता ध्रुवम्।\nइति तन्-निश्चयं भाट्टा दूषयन्ति स्व-युक्तिभिः॥",
-      "translation": "Even this view stands refuted by the followers of Kumārila Bhaṭṭa. They point out that if bliss were merely the absence of sorrow, it would follow that ignorance is the attribute of the Ātman; but any such conclusion would be unwarranted either by logic or by reason.",
-      "gloss": [],
+      "translation": "Since this is so, it would surely be reasonable to conclude that ignorance is the Self. The Bhāṭṭas refute that conclusion with their own reasoning.",
+      "gloss": [
+        {
+          "sa": "यतः",
+          "en": "since"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "युक्ता",
+          "en": "reasonable"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अज्ञानस्य",
+          "en": "of ignorance"
+        },
+        {
+          "sa": "आत्मता",
+          "en": "selfhood"
+        },
+        {
+          "sa": "ध्रुवम्",
+          "en": "certainly"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्-निश्चयम्",
+          "en": "that conclusion"
+        },
+        {
+          "sa": "भाट्टाः",
+          "en": "the Bhāṭṭas"
+        },
+        {
+          "sa": "दूषयन्ति",
+          "en": "refute"
+        },
+        {
+          "sa": "स्व-युक्तिभिः",
+          "en": "with their own reasoning"
+        }
+      ],
       "sourceNumbers": [
         564
       ],
@@ -37350,14 +37550,111 @@
       "chapter": 3,
       "number": "565",
       "label": "Verse 565",
-      "deva": "ज्ञानाज्ञानात्म-वादः\nकथम् अज्ञानम् एवात्मा ज्ञानं चाप्युपलभ्यते।\nज्ञानाभावे कथं विद्युर् अज्ञोऽहम् इति चाज्ञताम्।\nअस्वाप्सं सुखम् एवाहं न जानाम्यत्र किञ्चन॥",
-      "translation": "The doctrine that knowledge and ignorance are the Self They therefore ask, ‘How can we say that ignorance is an attribute of the Ātman, and how does the Ātman come to know that it is ignorant? Again by what agency does one come to recognize, soon after waking up, that one knew nothing, and had only the awareness of sound sleep?’",
-      "gloss": [],
+      "deva": "कथम् अज्ञानम् एवात्मा ज्ञानं चाप्युपलभ्यते।\nज्ञानाभावे कथं विद्युर् अज्ञोऽहम् इति चाज्ञताम्।\nअस्वाप्सं सुखम् एवाहं न जानाम्यत्र किञ्चन॥",
+      "translation": "How can ignorance itself be the Self, when knowledge is also perceived? Without knowledge, how would one know the state of ignorance by saying “I am ignorant”? One also says, “I slept happily; I knew nothing here.”",
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "उपलभ्यते",
+          "en": "is perceived"
+        },
+        {
+          "sa": "ज्ञान-अभावे",
+          "en": "in the absence of knowledge"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "विद्युः",
+          "en": "would one know"
+        },
+        {
+          "sa": "अज्ञः",
+          "en": "ignorant"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अज्ञताम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अस्वाप्सम्",
+          "en": "I slept"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happily"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "जानामि",
+          "en": "I know"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "किञ्चन",
+          "en": "anything"
+        }
+      ],
       "sourceNumbers": [
         565
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "jñānājñānātma-vādaḥ\nkatham ajñānam evātmā jñānaṃ cāpyupalabhyate|\njñānābhāve kathaṃ vidyur ajño’ham iti cājñatām|\nasvāpsaṃ sukham evāhaṃ na jānāmyatra kiñcana||"
+      "iast": "katham ajñānam evātmā jñānaṃ cāpyupalabhyate|\njñānābhāve kathaṃ vidyur ajño’ham iti cājñatām|\nasvāpsaṃ sukham evāhaṃ na jānāmyatra kiñcana||"
     },
     {
       "id": "svsss-3-0566",
@@ -37365,8 +37662,57 @@
       "number": "566",
       "label": "Verse 566",
       "deva": "इत्यज्ञानम् अपि ज्ञानं प्रबुद्धेषु प्रदृश्यते।\nप्रज्ञान-घन एवानन्दमय इत्यपि श्रुतिः॥",
-      "translation": "Without granting the presence of consciousness at all the levels, it is not possible to say, when emerging out of deep sleep that one had slept well, and was not aware of anything. That is why, they say, the Śruti asserts that the Ātman is compact of knowledge and of bliss. ((ManU.5) (Māṇḍūkya Upaniṣad))",
-      "gloss": [],
+      "translation": "Thus, even ignorance is perceived as knowledge by those who have awakened. Śruti also says, “The blissful Self is indeed a mass of consciousness.”",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "प्रबुद्धेषु",
+          "en": "in those who have awakened"
+        },
+        {
+          "sa": "प्रदृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "प्रज्ञान-घनः",
+          "en": "a mass of consciousness"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "आनन्दमयः",
+          "en": "the blissful one"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "Śruti"
+        }
+      ],
       "sourceNumbers": [
         566
       ],
@@ -37379,13 +37725,62 @@
       "number": "567",
       "label": "Verse 567",
       "deva": "प्रब्रवीत्य् उभयात्मत्वम् आत्मनः स्वयम् एव सा।\nआत्मातश् चिज्-जड-तनुः खद्योत इव सम्मतः॥",
-      "translation": "In the opinion of some, knowledge and ignorance are both the characteristics of the Ātman; the Ātman, they say, is like a fire-fly, sometimes shedding light, and at other times hiding itself in darkness.",
-      "gloss": [],
+      "translation": "Śruti itself declares the Self’s twofold nature; therefore the Self is accepted as having a conscious and inert form, like a firefly.",
+      "gloss": [
+        {
+          "sa": "प्रब्रवीति",
+          "en": "declares"
+        },
+        {
+          "sa": "उभय-आत्मत्वम्",
+          "en": "a twofold nature"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सा",
+          "en": "it"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "चित्-जड-तनुः",
+          "en": "having a conscious and inert form"
+        },
+        {
+          "sa": "खद्योतः",
+          "en": "a firefly"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "सम्मतः",
+          "en": "is accepted"
+        }
+      ],
       "sourceNumbers": [
         567
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "prabravīty ubhayātmatvam ātmanaḥ svayam eva sā|\nātmātaś cij-jaḍa-tanuḥ khadyota iva sammataḥ||"
+      "iast": "prabravīty ubhayātmatvam ātmanaḥ svayam eva sā|\nātmā ataś cit-jaḍa-tanuḥ khadyota iva sammataḥ||"
     },
     {
       "id": "svsss-3-0568",
@@ -37393,8 +37788,49 @@
       "number": "568",
       "label": "Verse 568",
       "deva": "न केवलाज्ञानमयो घट-कुड्यादिवज् जडः।\nइति निश्चयम् एतेषां दूषयत्यपरो जडः॥",
-      "translation": "The doctrine that the void is the Self Another ignorant person, who too may be in the dark, might possibly refute even this view. He might say, ‘Such a conclusion reduces the Ātman to the level of what is not sentient, and brings it on a level with such objects as pots and pans’.",
-      "gloss": [],
+      "translation": "Another dull disputant refutes their conclusion that the Self is not merely made of ignorance and inert like a pot, a wall, and the like.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "केवल-अज्ञान-मयः",
+          "en": "made only of ignorance"
+        },
+        {
+          "sa": "घट-कुड्य-आदि-वत्",
+          "en": "like a pot, wall, and the rest"
+        },
+        {
+          "sa": "जडः",
+          "en": "inert"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निश्चयम्",
+          "en": "the conclusion"
+        },
+        {
+          "sa": "एतेषाम्",
+          "en": "of these people"
+        },
+        {
+          "sa": "दूषयति",
+          "en": "refutes"
+        },
+        {
+          "sa": "अपरः",
+          "en": "another"
+        },
+        {
+          "sa": "जडः",
+          "en": "dull person"
+        }
+      ],
       "sourceNumbers": [
         568
       ],
@@ -37407,8 +37843,49 @@
       "number": "569",
       "label": "Verse 569",
       "deva": "ज्ञानाज्ञानमयस् त्वात्मा कथं भवितुम् अर्हति।\nपरस्-पर-विरुद्धत्वात् तेजस्-तिमिरवत् तयोः॥",
-      "translation": "It is not possible to give a satisfactory explanation as to how both knowledge and ignorance could co-exist, inasmuch as the one is the very negation of the other.",
-      "gloss": [],
+      "translation": "How could the Self be made of both knowledge and ignorance, since the two are mutually opposed like light and darkness?",
+      "gloss": [
+        {
+          "sa": "ज्ञान-अज्ञान-मयः",
+          "en": "made of knowledge and ignorance"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "भवितुम्",
+          "en": "to become"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is fit"
+        },
+        {
+          "sa": "परस्पर-विरुद्धत्वात्",
+          "en": "because of being mutually opposed"
+        },
+        {
+          "sa": "तेजः",
+          "en": "light"
+        },
+        {
+          "sa": "तिमिरवत्",
+          "en": "like darkness"
+        },
+        {
+          "sa": "तयोः",
+          "en": "of the two"
+        }
+      ],
       "sourceNumbers": [
         569
       ],
@@ -37421,8 +37898,49 @@
       "number": "570",
       "label": "Verse 570",
       "deva": "सामानाधिकरण्यं वा संयोगो वा समाश्रयः।\nतमः-प्रकाशवज् ज्ञानाज्ञानयोर् न हि सिध्यति॥",
-      "translation": "In the absence of a common ground, there can be no union between them. Nor is there anything other than these, upon which both of them may be dependent. Just as we cannot have light and darkness simultaneously, so also we cannot have knowledge and ignorance at the same time.",
-      "gloss": [],
+      "translation": "A common substratum, conjunction, or shared support is not established for knowledge and ignorance, just as it is not for darkness and light.",
+      "gloss": [
+        {
+          "sa": "सामानाधिकरण्यम्",
+          "en": "a common substratum"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "संयोगः",
+          "en": "conjunction"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "समाश्रयः",
+          "en": "a shared support"
+        },
+        {
+          "sa": "तमः-प्रकाशवत्",
+          "en": "as with darkness and light"
+        },
+        {
+          "sa": "ज्ञान-अज्ञानयोः",
+          "en": "for knowledge and ignorance"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        }
+      ],
       "sourceNumbers": [
         570
       ],
@@ -37435,8 +37953,69 @@
       "number": "571",
       "label": "Verse 571",
       "deva": "अज्ञानम् अपि विज्ञानं बुद्धिर् वापि च तद्-गुणाः।\nसुषुप्तौ नोपलभ्यन्ते यत् किञ्चिद् अपि वापरम्॥",
-      "translation": "In the stage of deep sleep we do not perceive anything whatever. At that level of consciousness, there is neither ignorance nor knowledge; there is neither the intellect nor any of its characteristics; there is neither the knower nor the known.",
-      "gloss": [],
+      "translation": "In deep sleep, ignorance, consciousness, intellect, its qualities, and anything else whatsoever are not perceived.",
+      "gloss": [
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "intellect"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तत्-गुणाः",
+          "en": "its qualities"
+        },
+        {
+          "sa": "सुषुप्तौ",
+          "en": "in deep sleep"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपलभ्यन्ते",
+          "en": "are perceived"
+        },
+        {
+          "sa": "यत्-किञ्चित्",
+          "en": "anything whatsoever"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपरम्",
+          "en": "anything else"
+        }
+      ],
       "sourceNumbers": [
         571
       ],
@@ -37448,14 +38027,83 @@
       "chapter": 3,
       "number": "572",
       "label": "Verse 572",
-      "deva": "मात्रादि-लक्षणं किं नु शून्यम् एवोपलभ्यते।\nसुषुप्तौ नान्यद् अस्त्येव नाहम् अप्यासम् इत्यनु॥",
-      "translation": "The only characteristic of deep sleep is the consciousness of the void. “Neither I, nor any of these things ever existed” that is all that persists, and is remembered afterwards.",
-      "gloss": [],
+      "deva": "मात्रादि-लक्षणं किं तु शून्यमेवोपलभ्यते।\nसुषुप्तौ नान्यद् अस्त्येव नाहम् अप्यासम् इत्यनु॥",
+      "translation": "But what is marked by the measures and the like? Only emptiness is perceived. In deep sleep nothing else exists at all; afterward one says, “I too was not.”",
+      "gloss": [
+        {
+          "sa": "मात्रा-आदि-लक्षणम्",
+          "en": "marked by measure and the like"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "उपलभ्यते",
+          "en": "is perceived"
+        },
+        {
+          "sa": "सुषुप्तौ",
+          "en": "in deep sleep"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "आसम्",
+          "en": "was"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनु",
+          "en": "afterward"
+        }
+      ],
       "sourceNumbers": [
         572
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "mātrādi-lakṣaṇaṃ kiṃ nu śūnyam evopalabhyate|\nsuṣuptau nānyad astyeva nāham apyāsam ityanu||"
+      "iast": "mātrādi-lakṣaṇaṃ kiṃ tu śūnyam evopalabhyate|\nsuṣuptau nānyad astyeva nāham apy āsam ity anu||"
     },
     {
       "id": "svsss-3-0573",
@@ -37463,8 +38111,57 @@
       "number": "573",
       "label": "Verse 573",
       "deva": "सुप्तोत्थित-जनैः सर्वैः शून्यम् एवानुस्मर्यते।\nयत् ततः शून्यम् एवात्मा न ज्ञानाज्ञान-लक्षणः॥",
-      "translation": "Such being the experience of all, when waking up from the stage of deep sleep, might it not follow that there is nothing else other than the void, or śūnya, with which to identify the Ātman? If that were true, it would follow that the Ātman is not a compound of knowledge and ignorance as has been stated.",
-      "gloss": [],
+      "translation": "Everyone who awakens from sleep remembers only emptiness. Therefore, they say, the Self is emptiness alone, not characterized by knowledge or ignorance.",
+      "gloss": [
+        {
+          "sa": "सुप्त-उत्थित-जनैः",
+          "en": "by people awakened from sleep"
+        },
+        {
+          "sa": "सर्वैः",
+          "en": "by all"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अनुस्मर्यते",
+          "en": "is remembered"
+        },
+        {
+          "sa": "यत्",
+          "en": "since"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ज्ञान-अज्ञान-लक्षणः",
+          "en": "characterized by knowledge and ignorance"
+        }
+      ],
       "sourceNumbers": [
         573
       ],
@@ -37477,8 +38174,73 @@
       "number": "574",
       "label": "Verse 574",
       "deva": "वेदेनाप्यसद् एवेदम् अग्र आसीद् इति स्फुटम्।\nनिरुच्यते यतस् तस्माच् छून्यस्यैवात्मता मता॥",
-      "translation": "The Vedānta states explicitly, ‘In the beginning, all this was non-sentient (asat)’. Would it not imply that in the opinion of the Śruti, the Ātman is śūnya? ((ChanU.6.2.1) (Chāndogya Upaniṣad))",
-      "gloss": [],
+      "translation": "The Veda clearly says, “In the beginning, all this was non-being.” Therefore, they hold that selfhood belongs to emptiness alone.",
+      "gloss": [
+        {
+          "sa": "वेदेन",
+          "en": "by the Veda"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "असत्",
+          "en": "non-being"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अग्रे",
+          "en": "in the beginning"
+        },
+        {
+          "sa": "आसीत्",
+          "en": "was"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "निरुच्यते",
+          "en": "is stated"
+        },
+        {
+          "sa": "यतः",
+          "en": "since"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "शून्यस्य",
+          "en": "of emptiness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मता",
+          "en": "selfhood"
+        },
+        {
+          "sa": "मता",
+          "en": "is held"
+        }
+      ],
       "sourceNumbers": [
         574
       ],
@@ -37491,8 +38253,69 @@
       "number": "575",
       "label": "Verse 575",
       "deva": "असन्न् एव घटः पूर्वं जायमानः प्रदृश्यते।\nन हि कुम्भः पुरैवान्तः स्थित्वोदेति बहिर्-मुखः॥",
-      "translation": "For instance, let us take a jar. In the beginning it was non-existent. It came into existence, as soon as it was made. We cannot say that the jar was there potentially in the beginning, and later on it merely became manifest; for any such view is contrary to experience.",
-      "gloss": [],
+      "translation": "A pot, when it comes into being, is seen as previously non-existent. For a pot does not rise outward after having already existed inside.",
+      "gloss": [
+        {
+          "sa": "असत्",
+          "en": "non-existent"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "घटः",
+          "en": "a pot"
+        },
+        {
+          "sa": "पूर्वम्",
+          "en": "before"
+        },
+        {
+          "sa": "जायमानः",
+          "en": "coming into being"
+        },
+        {
+          "sa": "प्रदृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "कुम्भः",
+          "en": "a pot"
+        },
+        {
+          "sa": "पुरा",
+          "en": "previously"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्तः",
+          "en": "inside"
+        },
+        {
+          "sa": "स्थित्वा",
+          "en": "having stood"
+        },
+        {
+          "sa": "उदेति",
+          "en": "rises"
+        },
+        {
+          "sa": "बहिर्-मुखः",
+          "en": "outward-facing; outward"
+        }
+      ],
       "sourceNumbers": [
         575
       ],
@@ -37505,8 +38328,61 @@
       "number": "576",
       "label": "Verse 576",
       "deva": "यत् तस्माद् असतः सर्वं सद् इदं समजायत।\nततः सर्वात्मना शून्यस्यैवात्मत्वं समर्हति॥",
-      "translation": "Some therefore say that existence came out of nonexistence, and consequently, from whatever point at view we might look at it, we must necessarily accept the view that it is only the void or śūnya that should be called the Ātman.",
-      "gloss": [],
+      "translation": "Since all this existent [world] arose from non-being, they conclude that selfhood must belong entirely to emptiness.",
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "since"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "असतः",
+          "en": "from non-being"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "सत्",
+          "en": "existent"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "समजायत",
+          "en": "arose"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "सर्वात्मना",
+          "en": "entirely"
+        },
+        {
+          "sa": "शून्यस्य",
+          "en": "of emptiness"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "समर्हति",
+          "en": "is fitting"
+        }
+      ],
       "sourceNumbers": [
         576
       ],
@@ -37519,8 +38395,49 @@
       "number": "577",
       "label": "Verse 577",
       "deva": "इत्येवं पण्डितं-मन्यैः परस्-पर-विरोधिभिः।\nतत्-तन्-मतानुरूपाल्प-श्रुति-युक्त्यनुभूतिभिः॥",
-      "translation": "So far, we have seen how the self-styled scholars have been mutually contradicting one another. We also see now every school of thought selects a particular statement from the Śruti, and draws support by appealing to a fragmentary experience.",
-      "gloss": [],
+      "translation": "Thus self-styled scholars, contradicting one another, rely on scant passages of scripture, reasoning, and experience that fit each particular doctrine.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "पण्डितम्-मन्यैः",
+          "en": "by those who regard themselves as learned"
+        },
+        {
+          "sa": "परस्पर-विरोधिभिः",
+          "en": "by those contradicting one another"
+        },
+        {
+          "sa": "तत्-तत्",
+          "en": "each particular"
+        },
+        {
+          "sa": "मत-अनुरूप",
+          "en": "suited to a doctrine"
+        },
+        {
+          "sa": "अल्प",
+          "en": "scant"
+        },
+        {
+          "sa": "श्रुति",
+          "en": "scripture"
+        },
+        {
+          "sa": "युक्ति",
+          "en": "reasoning"
+        },
+        {
+          "sa": "अनुभूतिभिः",
+          "en": "and experiences"
+        }
+      ],
       "sourceNumbers": [
         577
       ],
@@ -37533,8 +38450,53 @@
       "number": "578",
       "label": "Verse 578",
       "deva": "निर्णीत-मत-जातानि खण्डितान्येव पण्डितैः।\nश्रुतिभिश् चाप्यनुभवैर् बाधकैः प्रतिवादिनाम्॥",
-      "translation": "The opinion advanced by any one school of thought is to turn rejected by all the other schools. They too appeal to the Śruti, and lean for support upon other aspects of experience.",
-      "gloss": [],
+      "translation": "The doctrines that have been settled are indeed refuted by learned people, using Śruti and experiences that counter the disputants.",
+      "gloss": [
+        {
+          "sa": "निर्णीत",
+          "en": "settled"
+        },
+        {
+          "sa": "मत-जातानि",
+          "en": "sets of doctrines"
+        },
+        {
+          "sa": "खण्डितानि",
+          "en": "refuted"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "पण्डितैः",
+          "en": "by learned people"
+        },
+        {
+          "sa": "श्रुतिभिः",
+          "en": "by Śruti passages"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अनुभवैः",
+          "en": "by experiences"
+        },
+        {
+          "sa": "बाधकैः",
+          "en": "that contradict"
+        },
+        {
+          "sa": "प्रतिवादिनाम्",
+          "en": "the disputants"
+        }
+      ],
       "sourceNumbers": [
         578
       ],
@@ -37547,8 +38509,45 @@
       "number": "579",
       "label": "Verse 579",
       "deva": "यतस् तस्मात् तु पुत्रादेः शून्यान्तस्य विशेषतः।\nसुसाधितम् अनात्मत्वं श्रुति-युक्त्यनुभूतिभिः॥",
-      "translation": "In this way, many different views have been advanced. But not one of them has stood the test of criticism. All these views, beginning with one’s son as one’s Ātman, and ending with śūnya as the Ātman, have been controverted, one after the other. They do not have the support of the Śruti, or of reason, or of experience. ((KathU.2.3.7-8) (Kaṭha Upaniṣad))",
-      "gloss": [],
+      "translation": "Therefore, the non-Selfhood of everything from the son and the like up to emptiness is well established by Śruti, reasoning, and experience.",
+      "gloss": [
+        {
+          "sa": "यतः",
+          "en": "since"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "पुत्र-आदेः",
+          "en": "of the son and the like"
+        },
+        {
+          "sa": "शून्य-अन्तस्य",
+          "en": "ending with emptiness"
+        },
+        {
+          "sa": "विशेषतः",
+          "en": "in particular"
+        },
+        {
+          "sa": "सु-साधितम्",
+          "en": "well established"
+        },
+        {
+          "sa": "अनात्मत्वम्",
+          "en": "non-Selfhood"
+        },
+        {
+          "sa": "श्रुति-युक्ति-अनुभूतिभिः",
+          "en": "by Śruti, reasoning, and experience"
+        }
+      ],
       "sourceNumbers": [
         579
       ],
@@ -37561,8 +38560,65 @@
       "number": "580",
       "label": "Verse 580",
       "deva": "न हि प्रमाणान्तर-बाधितस्य\nयाथार्थ्यम् अङ्गी-क्रियते महद्भिः।\nपुत्रादि-शून्यान्तम् अनात्म-तत्त्वम्\nइत्येव विस्पष्टम् अतः सुजातम्॥",
-      "translation": "The wise and the learned do not accept any conclusion except those that have the support of the means of valid knowledge. That is why all these views beginning with one’s son and ending with śūnya have been rejected as not being the Ātman.",
-      "gloss": [],
+      "translation": "The learned do not accept as real what is contradicted by another means of valid knowledge. Thus it is clear that everything from the son through emptiness is the nature of non-Self.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-बाधितस्य",
+          "en": "of what is contradicted by another means of valid knowledge"
+        },
+        {
+          "sa": "याथार्थ्यम्",
+          "en": "reality"
+        },
+        {
+          "sa": "अङ्गी-क्रियते",
+          "en": "is accepted"
+        },
+        {
+          "sa": "महद्भिः",
+          "en": "by the learned"
+        },
+        {
+          "sa": "पुत्र-आदि",
+          "en": "beginning with the son"
+        },
+        {
+          "sa": "शून्य-अन्तम्",
+          "en": "ending with emptiness"
+        },
+        {
+          "sa": "अनात्म-तत्त्वम्",
+          "en": "the principle of non-Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "विस्पष्टम्",
+          "en": "very clear"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "सुजातम्",
+          "en": "well established"
+        }
+      ],
       "sourceNumbers": [
         580
       ],
