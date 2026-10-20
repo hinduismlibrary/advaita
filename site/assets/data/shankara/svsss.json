@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card. Literal English translations and Devanāgarī word glosses now cover verses 1.96–1.105. Literal English translations and Devanāgarī word glosses now cover verses 1.106–1.125, including the combined 1.109–1.110 and 1.114–1.115 cards. Restored missing opening pādas in verses 1.117–1.122 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.126–1.140. Corrected the evident शान्तिं spelling error in verse 1.136. Literal English translations and Devanāgarī word glosses now cover verses 1.141–1.150. Literal English translations and Devanāgarī word glosses now cover verses 1.151–1.160."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–150.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–160.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 150
+      "to": 160
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–150 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–160 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -10499,13 +10499,63 @@
       "number": "151",
       "label": "Verse 151",
       "deva": "साधनत्वेन दृष्टानां सर्वेषाम् अपि कर्मणाम्।\nविधिना यः परित्यागः स संन्यासः सतां मतः॥",
-      "translation": "Renunciation In the opinion of the wise, renunciation means the abandonment in proper form of all actions, which are enjoined as means to earthly and heavenly happiness.",
-      "gloss": [],
+      "translation": "The wise regard as renunciation the prescribed relinquishment of all actions that are regarded as means.",
+      "gloss": [
+        {
+          "sa": "साधनत्वेन",
+          "en": "as means"
+        },
+        {
+          "sa": "दृष्टानाम्",
+          "en": "regarded"
+        },
+        {
+          "sa": "सर्वेषाम्",
+          "en": "all"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "कर्मणाम्",
+          "en": "of actions"
+        },
+        {
+          "sa": "विधिना",
+          "en": "according to rule"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "परित्यागः",
+          "en": "relinquishment"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "संन्यासः",
+          "en": "renunciation"
+        },
+        {
+          "sa": "सताम्",
+          "en": "of the wise"
+        },
+        {
+          "sa": "मतः",
+          "en": "is regarded"
+        }
+      ],
       "sourceNumbers": [
         151
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sādhanatvena dṛṣṭānāṃ sarveṣām api karmaṇām|\nvidhinā yaḥ parityāgaḥ sa saṃnyāsaḥ satāṃ mataḥ||"
+      "iast": "sādhanatvena dṛṣṭānāṃ sarveṣām api karmaṇām|\nvidhinā yaḥ parityāgaḥ sa saṃnyāsaḥ satāṃ mataḥ||",
+      "editionTranslation": "Renunciation In the opinion of the wise, renunciation means the abandonment in proper form of all actions, which are enjoined as means to earthly and heavenly happiness."
     },
     {
       "id": "svsss-1-0152",
@@ -10513,13 +10563,67 @@
       "number": "152",
       "label": "Verse 152",
       "deva": "उपरमयति कर्माणीत्युपरति-शब्देन कथ्यते न्यासः।\nन्यासेन हि सर्वेषां श्रुत्या प्रोक्तो विकर्मणां त्यागः॥",
-      "translation": "The word ‘uparati’ means cessation of action. It signifies renunciation. By implication, this includes the renunciation of evil actions also, according to the Śruti.",
-      "gloss": [],
+      "translation": "The word “withdrawal” (uparati) means causing actions to cease; through renunciation, scripture indeed teaches the relinquishment of all forbidden actions.",
+      "gloss": [
+        {
+          "sa": "उपरमयति",
+          "en": "causes to cease"
+        },
+        {
+          "sa": "कर्माणि",
+          "en": "actions"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उपरति-शब्देन",
+          "en": "by the word uparati"
+        },
+        {
+          "sa": "कथ्यते",
+          "en": "is called"
+        },
+        {
+          "sa": "न्यासः",
+          "en": "renunciation"
+        },
+        {
+          "sa": "न्यासेन",
+          "en": "through renunciation"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सर्वेषाम्",
+          "en": "of all"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by scripture"
+        },
+        {
+          "sa": "प्रोक्तः",
+          "en": "is taught"
+        },
+        {
+          "sa": "विकर्मणाम्",
+          "en": "of forbidden actions"
+        },
+        {
+          "sa": "त्यागः",
+          "en": "relinquishment"
+        }
+      ],
       "sourceNumbers": [
         152
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "uparamayati karmāṇītyuparati-śabdena kathyate nyāsaḥ|\nnyāsena hi sarveṣāṃ śrutyā prokto vikarmaṇāṃ tyāgaḥ||"
+      "iast": "uparamayati karmāṇītyuparati-śabdena kathyate nyāsaḥ|\nnyāsena hi sarveṣāṃ śrutyā prokto vikarmaṇāṃ tyāgaḥ||",
+      "editionTranslation": "The word ‘uparati’ means cessation of action. It signifies renunciation. By implication, this includes the renunciation of evil actions also, according to the Śruti."
     },
     {
       "id": "svsss-1-0153",
@@ -10527,13 +10631,55 @@
       "number": "153",
       "label": "Verse 153",
       "deva": "कर्मणा साध्यमानस्यानित्यत्वं श्रूयते यतः।\nकर्मणानेन किं नित्य-फलेप्सोः परमार्थिनः॥",
-      "translation": "The Śruti points out that all things that are achieved by means of action are transitory. Such being the case, of what avail are actions to one who is devoted to the highest truth, and who seeks the eternal good? ((MunU.1.2.11) (Muṇḍaka Upaniṣad))",
-      "gloss": [],
+      "translation": "Because impermanence is heard of what is accomplished by action, what use is this action to a seeker of the highest truth who desires an eternal result?",
+      "gloss": [
+        {
+          "sa": "कर्मणा",
+          "en": "by action"
+        },
+        {
+          "sa": "साध्यमानस्य",
+          "en": "of what is being accomplished"
+        },
+        {
+          "sa": "अनित्यत्वम्",
+          "en": "impermanence"
+        },
+        {
+          "sa": "श्रूयते",
+          "en": "is heard; is taught"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "कर्मणा",
+          "en": "by action"
+        },
+        {
+          "sa": "अनेन",
+          "en": "this"
+        },
+        {
+          "sa": "किम्",
+          "en": "what use"
+        },
+        {
+          "sa": "नित्य-फल-ईप्सोः",
+          "en": "for one seeking an eternal result"
+        },
+        {
+          "sa": "परमार्थिनः",
+          "en": "for a seeker of the highest truth"
+        }
+      ],
       "sourceNumbers": [
         153
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "karmaṇā sādhyamānasyānityatvaṃ śrūyate yataḥ|\nkarmaṇānena kiṃ nitya-phalepsoḥ paramārthinaḥ||"
+      "iast": "karmaṇā sādhyamānasyānityatvaṃ śrūyate yataḥ|\nkarmaṇānena kiṃ nitya-phalepsoḥ paramārthinaḥ||",
+      "editionTranslation": "The Śruti points out that all things that are achieved by means of action are transitory. Such being the case, of what avail are actions to one who is devoted to the highest truth, and who seeks the eternal good? ((MunU.1.2.11) (Muṇḍaka Upaniṣad))"
     },
     {
       "id": "svsss-1-0154",
@@ -10541,13 +10687,63 @@
       "number": "154",
       "label": "Verse 154",
       "deva": "उत्पाद्यम् आप्यं संस्कार्यं विकार्यं परिगण्यते।\nचतुर्विधं कर्म-साध्यं फलं नान्यद् इतः परम्॥",
-      "translation": "By means of action one might produce something new, (make) perfect something already existing, change the shape of things, or reach a goal. There is nothing else that is possible.",
-      "gloss": [],
+      "translation": "A result produced by action is counted as fourfold: something to be produced, attained, purified, or transformed. There is nothing beyond these kinds.",
+      "gloss": [
+        {
+          "sa": "उत्पाद्यम्",
+          "en": "to be produced"
+        },
+        {
+          "sa": "आप्यम्",
+          "en": "to be attained"
+        },
+        {
+          "sa": "संस्कार्यम्",
+          "en": "to be purified"
+        },
+        {
+          "sa": "विकार्यम्",
+          "en": "to be transformed"
+        },
+        {
+          "sa": "परिगण्यते",
+          "en": "is counted"
+        },
+        {
+          "sa": "चतुर्विधम्",
+          "en": "fourfold"
+        },
+        {
+          "sa": "कर्म-साध्यम्",
+          "en": "achieved through action"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "इतः",
+          "en": "from this"
+        },
+        {
+          "sa": "परम्",
+          "en": "beyond"
+        }
+      ],
       "sourceNumbers": [
         154
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "utpādyam āpyaṃ saṃskāryaṃ vikāryaṃ parigaṇyate|\ncaturvidhaṃ karma-sādhyaṃ phalaṃ nānyad itaḥ param||"
+      "iast": "utpādyam āpyaṃ saṃskāryaṃ vikāryaṃ parigaṇyate|\ncaturvidhaṃ karma-sādhyaṃ phalaṃ nānyad itaḥ param||",
+      "editionTranslation": "By means of action one might produce something new, (make) perfect something already existing, change the shape of things, or reach a goal. There is nothing else that is possible."
     },
     {
       "id": "svsss-1-0155",
@@ -10555,13 +10751,59 @@
       "number": "155",
       "label": "Verse 155",
       "deva": "नैतद्-अन्यतरं ब्रह्म कदा भवितुम् अर्हति।\nस्वतः-सिद्धं सर्वदाप्तं शुद्धं निर्मलम् अक्रियम्॥",
-      "translation": "As for Brahman, it is self-existent. It is ever attained, eternally pure, devoid of taint, and subject to no modification. That is why Brahman cannot be realized by means of action.",
-      "gloss": [],
+      "translation": "Brahman can never be any one of these [four results of action], because it is self-established, always attained, pure, stainless, and actionless.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एतद्-अन्यतरम्",
+          "en": "any one of these"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "कदा",
+          "en": "ever"
+        },
+        {
+          "sa": "भवितुम्",
+          "en": "to become"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is able"
+        },
+        {
+          "sa": "स्वतः-सिद्धम्",
+          "en": "self-established"
+        },
+        {
+          "sa": "सर्वदा-आप्तम्",
+          "en": "always attained"
+        },
+        {
+          "sa": "शुद्धम्",
+          "en": "pure"
+        },
+        {
+          "sa": "निर्मलम्",
+          "en": "stainless"
+        },
+        {
+          "sa": "अक्रियम्",
+          "en": "actionless"
+        }
+      ],
       "sourceNumbers": [
         155
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "naitad-anyataraṃ brahma kadā bhavitum arhati|\nsvataḥ-siddhaṃ sarvadāptaṃ śuddhaṃ nirmalam akriyam||"
+      "iast": "naitad-anyataraṃ brahma kadā bhavitum arhati|\nsvataḥ-siddhaṃ sarvadāptaṃ śuddhaṃ nirmalam akriyam||",
+      "editionTranslation": "As for Brahman, it is self-existent. It is ever attained, eternally pure, devoid of taint, and subject to no modification. That is why Brahman cannot be realized by means of action."
     },
     {
       "id": "svsss-1-0156",
@@ -10569,13 +10811,79 @@
       "number": "156",
       "label": "Verse 156",
       "deva": "न चास्य कश्चिज् जनितेत्य् आगमेन निषिध्यते।\nकारणं ब्रह्म तत् तस्माद् ब्रह्म नोत्पाद्यम् इष्यते॥",
-      "translation": "The Āgama-Śāstras say that Brahman is self-existent. ‘It has no origin’. It is not caused by anything else; and therefore it cannot be the product of any kind of activity. ((SvetU.1.9) (Śvetāśvatara Upaniṣad))",
-      "gloss": [],
+      "translation": "Scripture denies that Brahman has any originator. Brahman is the cause; therefore Brahman is not regarded as something produced.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "anyone"
+        },
+        {
+          "sa": "जनिता",
+          "en": "a producer; originator"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आगमेन",
+          "en": "by scripture"
+        },
+        {
+          "sa": "निषिध्यते",
+          "en": "is denied"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उत्पाद्यम्",
+          "en": "to be produced"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is considered"
+        }
+      ],
       "sourceNumbers": [
         156
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "na cāsya kaścij janitety āgamena niṣidhyate|\nkāraṇaṃ brahma tat tasmād brahma notpādyam iṣyate||"
+      "iast": "na cāsya kaścij janitety āgamena niṣidhyate|\nkāraṇaṃ brahma tat tasmād brahma notpādyam iṣyate||",
+      "editionTranslation": "The Āgama-Śāstras say that Brahman is self-existent. ‘It has no origin’. It is not caused by anything else; and therefore it cannot be the product of any kind of activity. ((SvetU.1.9) (Śvetāśvatara Upaniṣad))"
     },
     {
       "id": "svsss-1-0157",
@@ -10583,13 +10891,75 @@
       "number": "157",
       "label": "Verse 157",
       "deva": "आप्त्राप्ययोस् तु भेदश् चेद् आप्त्रा चाप्यम् अवाप्यते।\nआप्तृ-स्वरूपम् एवैतद् ब्रह्म नाप्यं कदाचन॥",
-      "translation": "We may reach a goal only when the goal is outside us, and is other than ourselves. But Brahman is not other than ourselves. It is our inmost Self. Therefore Brahman is not something to be attained afresh.",
-      "gloss": [],
+      "translation": "If the attainer and what is attained were different, the attainer could attain the object. But this Brahman is the very nature of the attainer; it is never something to be attained.",
+      "gloss": [
+        {
+          "sa": "आप्तृ-आप्ययोः",
+          "en": "of attainer and attainable"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "आप्त्रा",
+          "en": "by the attainer"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आप्यम्",
+          "en": "the attainable"
+        },
+        {
+          "sa": "अवाप्यते",
+          "en": "is attained"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "आप्तृ-स्वरूपम्",
+          "en": "the nature of the attainer"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "आप्यम्",
+          "en": "something to be attained"
+        },
+        {
+          "sa": "कदाचन",
+          "en": "ever"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        }
+      ],
       "sourceNumbers": [
         157
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "āptrāpyayos tu bhedaś ced āptrā cāpyam avāpyate|\nāptṛ-svarūpam evaitad brahma nāpyaṃ kadācana||"
+      "iast": "āptrāpyayos tu bhedaś ced āptrā cāpyam avāpyate|\nāptṛ-svarūpam evaitad brahma nāpyaṃ kadācana||",
+      "editionTranslation": "We may reach a goal only when the goal is outside us, and is other than ourselves. But Brahman is not other than ourselves. It is our inmost Self. Therefore Brahman is not something to be attained afresh."
     },
     {
       "id": "svsss-1-0158",
@@ -10597,13 +10967,63 @@
       "number": "158",
       "label": "Verse 158",
       "deva": "मलिनस्यैव संस्कारो दर्पणादेर् इहेष्यते।\nव्योमवन् नित्य-शुद्धस्य ब्रह्मणो नैव संस्क्रिया॥",
-      "translation": "An external object, such as a dust-laden mirror, lends itself to being cleansed. But Brahman is as pure as the sky. How can that which is perfect be made more perfect?",
-      "gloss": [],
+      "translation": "Here, purification is intended only for something impure, such as a mirror. No purification applies to Brahman, which is eternally pure like space.",
+      "gloss": [
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "मलिनस्य",
+          "en": "of what is impure"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "संस्कारः",
+          "en": "purification"
+        },
+        {
+          "sa": "दर्पण-आदेः",
+          "en": "of a mirror and the like"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is intended"
+        },
+        {
+          "sa": "व्योमवत्",
+          "en": "like space"
+        },
+        {
+          "sa": "नित्य-शुद्धस्य",
+          "en": "of the eternally pure"
+        },
+        {
+          "sa": "ब्रह्मणः",
+          "en": "of Brahman"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "संस्क्रिया",
+          "en": "purification"
+        }
+      ],
       "sourceNumbers": [
         158
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "malinasyaiva saṃskāro darpaṇāder iheṣyate|\nvyomavan nitya-śuddhasya brahmaṇo naiva saṃskriyā||"
+      "iast": "malinasyaiva saṃskāro darpaṇāder iheṣyate|\nvyomavan nitya-śuddhasya brahmaṇo naiva saṃskriyā||",
+      "editionTranslation": "An external object, such as a dust-laden mirror, lends itself to being cleansed. But Brahman is as pure as the sky. How can that which is perfect be made more perfect?"
     },
     {
       "id": "svsss-1-0159",
@@ -10611,13 +11031,59 @@
       "number": "159",
       "label": "Verse 159",
       "deva": "केन दुष्टेन युज्येत वस्तु निर्मलम् अक्रियम्।\nयद्-योगाद् आगतं दोषं संस्कारो विनिवर्तयेत्॥",
-      "translation": "Brahman is devoid of stain, and participates in no kind of activity. By what means can it come into contact with evil, be tainted by it, or become subject to purification by means of action?",
-      "gloss": [],
+      "translation": "How could a stainless, actionless reality be joined to any impurity, so that purification might remove a defect that came from that connection?",
+      "gloss": [
+        {
+          "sa": "केन",
+          "en": "with what"
+        },
+        {
+          "sa": "दुष्टेन",
+          "en": "impurity"
+        },
+        {
+          "sa": "युज्येत",
+          "en": "could it be joined"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "निर्मलम्",
+          "en": "stainless"
+        },
+        {
+          "sa": "अक्रियम्",
+          "en": "actionless"
+        },
+        {
+          "sa": "यत्-योगात्",
+          "en": "from whose association"
+        },
+        {
+          "sa": "आगतम्",
+          "en": "that has arisen"
+        },
+        {
+          "sa": "दोषम्",
+          "en": "a defect"
+        },
+        {
+          "sa": "संस्कारः",
+          "en": "purification"
+        },
+        {
+          "sa": "विनिवर्तयेत्",
+          "en": "would remove"
+        }
+      ],
       "sourceNumbers": [
         159
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kena duṣṭena yujyeta vastu nirmalam akriyam|\nyad-yogād āgataṃ doṣaṃ saṃskāro vinivartayet||"
+      "iast": "kena duṣṭena yujyeta vastu nirmalam akriyam|\nyad-yogād āgataṃ doṣaṃ saṃskāro vinivartayet||",
+      "editionTranslation": "Brahman is devoid of stain, and participates in no kind of activity. By what means can it come into contact with evil, be tainted by it, or become subject to purification by means of action?"
     },
     {
       "id": "svsss-1-0160",
@@ -10625,13 +11091,67 @@
       "number": "160",
       "label": "Verse 160",
       "deva": "निर्गुणस्य गुणाधानम् अपि नैवोपपद्यते।\nकेवलो निर्गुणश् चेति नैर्गुण्यं श्रूयते यतः॥",
-      "translation": "In the words of the Śruti, Brahman is devoid of attributes: ‘Kevalo nirguṇaśca.’ Such being the case, it is not possible to confer upon it any new attributes. ((SvetU.6.11) (Śvetāśvatara Upaniṣad))",
-      "gloss": [],
+      "translation": "Because scripture repeatedly teaches that Brahman is alone and without qualities, it is not reasonable to add qualities to what is qualityless.",
+      "gloss": [
+        {
+          "sa": "निर्गुणस्य",
+          "en": "to the qualityless"
+        },
+        {
+          "sa": "गुण-आधानम्",
+          "en": "adding qualities"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "is reasonable"
+        },
+        {
+          "sa": "केवलः",
+          "en": "alone"
+        },
+        {
+          "sa": "निर्गुणः",
+          "en": "without qualities"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "नैर्गुण्यम्",
+          "en": "qualitylessness"
+        },
+        {
+          "sa": "श्रूयते",
+          "en": "is taught in scripture"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ],
       "sourceNumbers": [
         160
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "nirguṇasya guṇādhānam api naivopapadyate|\nkevalo nirguṇaś ceti nairguṇyaṃ śrūyate yataḥ||"
+      "iast": "nirguṇasya guṇādhānam api naivopapadyate|\nkevalo nirguṇaś ceti nairguṇyaṃ śrūyate yataḥ||",
+      "editionTranslation": "In the words of the Śruti, Brahman is devoid of attributes: ‘Kevalo nirguṇaśca.’ Such being the case, it is not possible to confer upon it any new attributes. ((SvetU.6.11) (Śvetāśvatara Upaniṣad))"
     },
     {
       "id": "svsss-1-0161",
@@ -22283,5 +22803,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–150 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–160 of 1,006; verses 17–18, 44–45, 91–92, 109–110, and 114–115 share reader cards. Later verses and prose passages still need glosses."
 }
