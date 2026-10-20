@@ -2,7 +2,7 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 917,
+  "expectedUnits": 897,
   "translationAvailable": true,
   "coverage": "Complete Sanskrit source and original English translation for all 1019 reader units. All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, and verses 3.1–3.60, plus 3.114, 3.123, and 4.43, now show complete shlokas, IAST, translations, and word-by-word glosses; the remaining 141 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
@@ -28971,40 +28971,67 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1199",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 114",
-      "label": "Text 114",
-      "deva": "\"कार्यकारणबद्धौ ताविष्येते विश्वतैजसौ ।",
-      "iast": "\"kāryakāraṇabaddhau tāviṣyete viśvataijasau |",
-      "translation": "“The waking person and the dreamer are held to effects and causes;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1200",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.41",
       "label": "Verse 4.41",
-      "deva": "प्राज्ञः कारणबद्धस्तु द्वौ तौ तुर्ये न सिध्यतः \" ॥ ४१॥",
-      "iast": "prājñaḥ kāraṇabaddhastu dvau tau turye na sidhyataḥ \" || 41||",
-      "translation": "the sleeper is held to causes, but neither is established in the Fourth.”",
-      "gloss": [],
+      "deva": "\"कार्यकारणबद्धौ ताविष्येते विश्वतैजसौ ।\nप्राज्ञः कारणबद्धस्तु द्वौ तौ तुर्ये न सिध्यतः \" ॥ ४१॥",
+      "iast": "\"kāryakāraṇabaddhau tāviṣyete viśvataijasau |\nprājñaḥ kāraṇabaddhastu dvau tau turye na sidhyataḥ \" || 41||",
+      "translation": "Viśva and Taijasa are held to be bound to both effect and cause; Prājña, however, is bound to cause alone. Neither of those two is established in Turīya.",
+      "gloss": [
+        {
+          "sa": "कार्य-कारण-बद्धौ",
+          "en": "bound to effect and cause"
+        },
+        {
+          "sa": "तौ",
+          "en": "those two"
+        },
+        {
+          "sa": "इष्येते",
+          "en": "are held; regarded"
+        },
+        {
+          "sa": "विश्व-तैजसौ",
+          "en": "Viśva and Taijasa"
+        },
+        {
+          "sa": "प्राज्ञः",
+          "en": "Prājña; the deep-sleep state"
+        },
+        {
+          "sa": "कारण-बद्धः",
+          "en": "bound to cause"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "द्वौ",
+          "en": "both; the two"
+        },
+        {
+          "sa": "तौ",
+          "en": "those"
+        },
+        {
+          "sa": "तुर्ये",
+          "en": "in Turīya; the Fourth"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सिध्यतः",
+          "en": "are established"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-41"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1201",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 116",
-      "label": "Text 116",
-      "deva": "\"अन्यथागृहणतः स्वप्नो निद्रा तत्त्वमजानतः ।",
-      "iast": "\"anyathāgṛhaṇataḥ svapno nidrā tattvamajānataḥ |",
-      "translation": "“Dream arises from misapprehension; sleep from not knowing reality.",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1202",
@@ -29012,10 +29039,55 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.42",
       "label": "Verse 4.42",
-      "deva": "विपर्यासे तयोः क्षीणे तुरीयं पदमश्नुते \" ॥ ४२॥",
-      "iast": "viparyāse tayoḥ kṣīṇe turīyaṃ padamaśnute \" || 42||",
-      "translation": "When both errors are ended, one attains the state called the Fourth.”",
-      "gloss": [],
+      "deva": "\"अन्यथागृह्णतः स्वप्नो निद्रा तत्त्वमजानतः ।\nविपर्यासे तयोः क्षीणे तुरीयं पदमश्नुते \" ॥ ४२॥",
+      "iast": "\"anyathāgṛhṇataḥ svapno nidrā tattvamajānataḥ |\nviparyāse tayoḥ kṣīṇe turīyaṃ padamaśnute \" || 42||",
+      "translation": "Dream belongs to one who apprehends reality wrongly; sleep belongs to one who does not know reality. When those two errors are exhausted, one reaches the state called the Fourth.",
+      "gloss": [
+        {
+          "sa": "अन्यथा-गृह्णतः",
+          "en": "of one who apprehends wrongly"
+        },
+        {
+          "sa": "स्वप्नः",
+          "en": "dream"
+        },
+        {
+          "sa": "निद्रा",
+          "en": "sleep"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "reality; truth"
+        },
+        {
+          "sa": "अजानतः",
+          "en": "of one who does not know"
+        },
+        {
+          "sa": "विपर्यासे",
+          "en": "when the errors"
+        },
+        {
+          "sa": "तयोः",
+          "en": "of those two"
+        },
+        {
+          "sa": "क्षीणे",
+          "en": "are exhausted"
+        },
+        {
+          "sa": "तुरीयम्",
+          "en": "the Fourth"
+        },
+        {
+          "sa": "पदम्",
+          "en": "state"
+        },
+        {
+          "sa": "अश्नुते",
+          "en": "one reaches"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-42"
       ]
@@ -29084,26 +29156,64 @@
       ]
     },
     {
-      "id": "naishkarmya-siddhi-1207",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 122",
-      "label": "Text 122",
-      "deva": "एवं गौडैर्द्राविडैर्नः पूज्यैरयमर्थः प्रभाषितः ।",
-      "iast": "evaṃ gauḍairdrāviḍairnaḥ pūjyairayamarthaḥ prabhāṣitaḥ |",
-      "translation": "“In this way our revered teachers of Gauḍa and Drāviḍa have explained the point:",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1208",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.44",
       "label": "Verse 4.44",
-      "deva": "अज्ञानमात्रोपाधिस्सन्नहमादिदृगीश्वरः ॥ ४४॥",
-      "iast": "ajñānamātropādhissannahamādidṛgīśvaraḥ || 44||",
-      "translation": "the Lord, the Seer of ‘I’ and the rest, is conditioned only by ignorance.”",
-      "gloss": [],
+      "deva": "एवं गौडैर्द्राविडैर्नः पूज्यैरयमर्थः प्रभाषितः ।\nअज्ञानमात्रोपाधिस्सन्नहमादिदृगीश्वरः ॥ ४४॥",
+      "iast": "evaṃ gauḍairdrāviḍairnaḥ pūjyairayamarthaḥ prabhāṣitaḥ |\najñānamātropādhissannahamādidṛgīśvaraḥ || 44||",
+      "translation": "Thus our revered teachers of Gauḍa and Drāviḍa proclaimed this point: the Lord, witness of “I” and the rest, has only ignorance as an adjunct.",
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "गौडैः",
+          "en": "by the Gauḍas"
+        },
+        {
+          "sa": "द्राविडैः",
+          "en": "by the Drāviḍas"
+        },
+        {
+          "sa": "नः",
+          "en": "our; for us"
+        },
+        {
+          "sa": "पूज्यैः",
+          "en": "by the revered ones"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "point; meaning"
+        },
+        {
+          "sa": "प्रभाषितः",
+          "en": "was proclaimed"
+        },
+        {
+          "sa": "अज्ञान-मात्र-उपाधिः",
+          "en": "having only ignorance as an adjunct"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "अहम्-आदि-दृक्",
+          "en": "the witness of “I” and the rest"
+        },
+        {
+          "sa": "ईश्वरः",
+          "en": "the Lord"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-44"
       ]
@@ -29120,26 +29230,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1210",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 125",
-      "label": "Text 125",
-      "deva": "इदं ज्ञानमहं ज्ञाता ज्ञेयमेतदिति त्रयम् ।",
-      "iast": "idaṃ jñānamahaṃ jñātā jñeyametaditi trayam |",
-      "translation": "“The triad ‘this is knowledge, I am the knower, this is what is known’—",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1211",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.45",
       "label": "Verse 4.45",
-      "deva": "योऽविकारो विजानाति परागेवास्य तत्तमः ॥ ४५॥",
-      "iast": "yo'vikāro vijānāti parāgevāsya tattamaḥ || 45||",
-      "translation": "the changeless one who knows it is beyond that darkness.”",
-      "gloss": [],
+      "deva": "इदं ज्ञानमहं ज्ञाता ज्ञेयमेतदिति त्रयम् ।\nयोऽविकारो विजानाति परागेवास्य तत्तमः ॥ ४५॥",
+      "iast": "idaṃ jñānamahaṃ jñātā jñeyametaditi trayam |\nyo'vikāro vijānāti parāgevāsya tattamaḥ || 45||",
+      "translation": "The triad “this is knowledge, I am the knower, and this is what is known” is darkness external to the changeless one who knows it.",
+      "gloss": [
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "अविकारः",
+          "en": "changeless"
+        },
+        {
+          "sa": "विजानाति",
+          "en": "knows"
+        },
+        {
+          "sa": "पराक्",
+          "en": "outside; beyond"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of him"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तमः",
+          "en": "darkness"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-45"
       ]
@@ -29156,26 +29288,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1213",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 128",
-      "label": "Text 128",
-      "deva": "रूपप्रकाशयोर्यद्वत्संगतिर्विक्रियावतः ।",
-      "iast": "rūpaprakāśayoryadvatsaṃgatirvikriyāvataḥ |",
-      "translation": "“As form is joined to the changing light that reveals it,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1214",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.46",
       "label": "Verse 4.46",
-      "deva": "सुखदुःखादिसंबन्धश्चित्तस्यैवं विकारिणः ॥ ४६॥",
-      "iast": "sukhaduḥkhādisaṃbandhaścittasyaivaṃ vikāriṇaḥ || 46||",
-      "translation": "so happiness, sorrow and the rest are joined to the changing mind.”",
-      "gloss": [],
+      "deva": "रूपप्रकाशयोर्यद्वत्संगतिर्विक्रियावतः ।\nसुखदुःखादिसंबन्धश्चित्तस्यैवं विकारिणः ॥ ४६॥",
+      "iast": "rūpaprakāśayoryadvatsaṃgatirvikriyāvataḥ |\nsukhaduḥkhādisaṃbandhaścittasyaivaṃ vikāriṇaḥ || 46||",
+      "translation": "As form is associated with its changing illumination, so pleasure, pain, and the rest are associated with the changing mind.",
+      "gloss": [
+        {
+          "sa": "रूप-प्रकाशयोः",
+          "en": "of form and illumination"
+        },
+        {
+          "sa": "यद्वत्",
+          "en": "just as"
+        },
+        {
+          "sa": "संगतिः",
+          "en": "association"
+        },
+        {
+          "sa": "विक्रियावतः",
+          "en": "of what changes"
+        },
+        {
+          "sa": "सुख-दुःख-आदि-संबन्धः",
+          "en": "the connection of pleasure, pain, and the rest"
+        },
+        {
+          "sa": "चित्तस्य",
+          "en": "of the mind"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "विकारिणः",
+          "en": "of the changing"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-46"
       ]
@@ -29192,26 +29346,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1216",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 131",
-      "label": "Text 131",
-      "deva": "संप्रसादेऽविकारित्वादस्तं याते विकारिणि ।",
-      "iast": "saṃprasāde'vikāritvādastaṃ yāte vikāriṇi |",
-      "translation": "“In deep repose, when what changes has subsided, because the Self is changeless,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1217",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.47",
       "label": "Verse 4.47",
-      "deva": "पश्यतो नात्मनः किंचिद्द्वितीयं स्पृशतेऽण्वपि ॥ ४७॥",
-      "iast": "paśyato nātmanaḥ kiṃciddvitīyaṃ spṛśate'ṇvapi || 47||",
-      "translation": "not even the slightest second thing touches the Seer.”",
-      "gloss": [],
+      "deva": "संप्रसादेऽविकारित्वादस्तं याते विकारिणि ।\nपश्यतो नात्मनः किंचिद्द्वितीयं स्पृशतेऽण्वपि ॥ ४७॥",
+      "iast": "saṃprasāde'vikāritvādastaṃ yāte vikāriṇi |\npaśyato nātmanaḥ kiṃciddvitīyaṃ spṛśate'ṇvapi || 47||",
+      "translation": "In deep sleep, when the changing mind has subsided, no second thing touches the seeing Self—not even the slightest thing—because that Self is changeless.",
+      "gloss": [
+        {
+          "sa": "संप्रसादे",
+          "en": "in deep sleep; repose"
+        },
+        {
+          "sa": "अविकारित्वात्",
+          "en": "because of changelessness"
+        },
+        {
+          "sa": "अस्तम्",
+          "en": "to an end; subsided"
+        },
+        {
+          "sa": "याते",
+          "en": "when it has gone"
+        },
+        {
+          "sa": "विकारिणि",
+          "en": "the changing one; mind"
+        },
+        {
+          "sa": "पश्यतः",
+          "en": "of the seeing one"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "किंचित्",
+          "en": "anything"
+        },
+        {
+          "sa": "द्वितीयम्",
+          "en": "second; other"
+        },
+        {
+          "sa": "स्पृशते",
+          "en": "touches"
+        },
+        {
+          "sa": "अणु-अपि",
+          "en": "even the slightest"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-47"
       ]
@@ -29228,40 +29420,67 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1219",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 134",
-      "label": "Text 134",
-      "deva": "यथा प्राज्ञे तथैवायं स्वप्नजागरितान्तयोः ।",
-      "iast": "yathā prājñe tathaivāyaṃ svapnajāgaritāntayoḥ |",
-      "translation": "“As in deep sleep, so too at the ends of dream and waking:",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1220",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.48",
       "label": "Verse 4.48",
-      "deva": "पश्यन्नप्यविकारित्वाद्द्वितीयं न पश्यति ॥ ४८॥",
-      "iast": "paśyannapyavikāritvāddvitīyaṃ na paśyati || 48||",
-      "translation": "though it seems to see, because it is changeless it sees no second thing.”",
-      "gloss": [],
+      "deva": "यथा प्राज्ञे तथैवायं स्वप्नजागरितान्तयोः ।\nपश्यन्नप्यविकारित्वाद्द्वितीयं न पश्यति ॥ ४८॥",
+      "iast": "yathā prājñe tathaivāyaṃ svapnajāgaritāntayoḥ |\npaśyannapyavikāritvāddvitīyaṃ na paśyati || 48||",
+      "translation": "As in deep sleep, so too in dream and waking this Self, though appearing to see, sees no second thing because it is changeless.",
+      "gloss": [
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "प्राज्ञे",
+          "en": "in deep sleep"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "स्वप्न-जागरित-अन्तयोः",
+          "en": "in dream and waking"
+        },
+        {
+          "sa": "पश्यन्",
+          "en": "seeing"
+        },
+        {
+          "sa": "अपि",
+          "en": "even though"
+        },
+        {
+          "sa": "अविकारित्वात्",
+          "en": "because of changelessness"
+        },
+        {
+          "sa": "द्वितीयम्",
+          "en": "a second thing"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पश्यति",
+          "en": "sees"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-48"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1221",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 136",
-      "label": "Text 136",
-      "deva": "एवं ज्ञानवतो नास्ति ममाहंमतिसंश्रयः ।",
-      "iast": "evaṃ jñānavato nāsti mamāhaṃmatisaṃśrayaḥ |",
-      "translation": "“For one who knows, there is no foothold for the thoughts ‘mine’ and ‘I’,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1222",
@@ -29269,10 +29488,55 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.49",
       "label": "Verse 4.49",
-      "deva": "भास्वत्प्रदीपहस्तस्य ह्यन्धकार इवाग्रतः ॥ ४९॥",
-      "iast": "bhāsvatpradīpahastasya hyandhakāra ivāgrataḥ || 49||",
-      "translation": "just as darkness cannot remain before someone holding a shining lamp.”",
-      "gloss": [],
+      "deva": "एवं ज्ञानवतो नास्ति ममाहंमतिसंश्रयः ।\nभास्वत्प्रदीपहस्तस्य ह्यन्धकार इवाग्रतः ॥ ४९॥",
+      "iast": "evaṃ jñānavato nāsti mamāhaṃmatisaṃśrayaḥ |\nbhāsvatpradīpahastasya hyandhakāra ivāgrataḥ || 49||",
+      "translation": "For one who knows in this way, the notions “I” and “mine” have no support, just as darkness cannot remain before someone holding a shining lamp.",
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "ज्ञानवतः",
+          "en": "for one who knows"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "मम-अहम्-मति-संश्रयः",
+          "en": "a basis for the thoughts “mine” and “I”"
+        },
+        {
+          "sa": "भास्वत्",
+          "en": "shining"
+        },
+        {
+          "sa": "प्रदीप-हस्तस्य",
+          "en": "of one holding a lamp"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्धकारः",
+          "en": "darkness"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "अग्रतः",
+          "en": "in front"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-49"
       ]
@@ -29289,51 +29553,67 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1224",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 139",
-      "label": "Text 139",
-      "deva": "आ प्रबोधाद्यथासिद्धिर्द्वैतादन्यस्य वस्तुनः ।",
-      "iast": "ā prabodhādyathāsiddhirdvaitādanyasya vastunaḥ |",
-      "translation": "“Before waking, the existence of any object other than the dream is established only within that dream;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1225",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.50",
       "label": "Verse 4.50",
-      "deva": "बोधादेवमसिद्धत्वं बुद्ध्यादेः प्रत्यगात्मनः ॥ ५०॥",
-      "iast": "bodhādevamasiddhatvaṃ buddhyādeḥ pratyagātmanaḥ || 50||",
-      "translation": "with awakening, the intellect and the rest are likewise not established apart from the Self within.”",
-      "gloss": [],
+      "deva": "आ प्रबोधाद्यथासिद्धिर्द्वैतादन्यस्य वस्तुनः ।\nबोधादेवमसिद्धत्वं बुद्ध्यादेः प्रत्यगात्मनः ॥ ५०॥",
+      "iast": "ā prabodhādyathāsiddhirdvaitādanyasya vastunaḥ |\nbodhādevamasiddhatvaṃ buddhyādeḥ pratyagātmanaḥ || 50||",
+      "translation": "Before awakening, no thing apart from duality is established; likewise, with knowledge, the intellect and the rest are not established apart from the inmost Self.",
+      "gloss": [
+        {
+          "sa": "आ",
+          "en": "up to; before"
+        },
+        {
+          "sa": "प्रबोधात्",
+          "en": "awakening"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "establishment"
+        },
+        {
+          "sa": "द्वैतात्",
+          "en": "apart from duality"
+        },
+        {
+          "sa": "अन्यस्य",
+          "en": "of another; other"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "thing"
+        },
+        {
+          "sa": "बोधात्",
+          "en": "with awakening; knowledge"
+        },
+        {
+          "sa": "एवम्",
+          "en": "likewise"
+        },
+        {
+          "sa": "असिद्धत्वम्",
+          "en": "non-establishment"
+        },
+        {
+          "sa": "बुद्धि-आदेः",
+          "en": "of the intellect and the rest"
+        },
+        {
+          "sa": "प्रत्यक्-आत्मनः",
+          "en": "apart from the inmost Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-50"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1226",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 141",
-      "label": "Text 141",
-      "deva": "स एष विद्वान्हानोपादानशून्यमात्मानमात्मनि पश्यन् ।",
-      "iast": "sa eṣa vidvānhānopādānaśūnyamātmānamātmani paśyan |",
-      "translation": "The wise person, seeing within the Self the Self that is free of taking up and laying down,",
-      "gloss": []
-    },
-    {
-      "id": "naishkarmya-siddhi-1227",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 142",
-      "label": "Text 142",
-      "deva": "सर्वमेवानुजानाति सर्वमेव निषेधति ।",
-      "iast": "sarvamevānujānāti sarvameva niṣedhati |",
-      "translation": "“accepts everything and denies everything;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1228",
@@ -29341,10 +29621,83 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.51",
       "label": "Verse 4.51",
-      "deva": "भेदात्मलाभोऽनुज्ञा स्यान्निषेधोऽतत्स्वभावतः ॥ ५१॥",
-      "iast": "bhedātmalābho'nujñā syānniṣedho'tatsvabhāvataḥ || 51||",
-      "translation": "acceptance is the appearance of a separate form, while denial is knowing that it is not the Self’s nature.”",
-      "gloss": [],
+      "deva": "स एष विद्वान्हानोपादानशून्यमात्मानमात्मनि पश्यन् ।\nसर्वमेवानुजानाति सर्वमेव निषेधति ।\nभेदात्मलाभोऽनुज्ञा स्यान्निषेधोऽतत्स्वभावतः ॥ ५१॥",
+      "iast": "sa eṣa vidvānhānopādānaśūnyamātmānamātmani paśyan |\nsarvamevānujānāti sarvameva niṣedhati |\nbhedātmalābho'nujñā syānniṣedho'tatsvabhāvataḥ || 51||",
+      "translation": "Seeing in the Self the Self that is free from taking up and laying down, the knower accepts everything and also negates it: the appearance of distinctions is acceptance, while denial rests on their not being the Self’s nature.",
+      "gloss": [
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "विद्वान्",
+          "en": "the knower"
+        },
+        {
+          "sa": "हान-उपादान-शून्यम्",
+          "en": "free from rejecting and taking up"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "पश्यन्",
+          "en": "seeing"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनुजानाति",
+          "en": "accepts; allows"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "निषेधति",
+          "en": "negates"
+        },
+        {
+          "sa": "भेद-आत्म-लाभः",
+          "en": "the appearance of separateness"
+        },
+        {
+          "sa": "अनुज्ञा",
+          "en": "acceptance"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "निषेधः",
+          "en": "denial"
+        },
+        {
+          "sa": "अतत्-स्वभावतः",
+          "en": "because it is not of that nature"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-51"
       ]
@@ -29361,26 +29714,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1230",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 145",
-      "label": "Text 145",
-      "deva": "परमाथार्थनिष्ठं यत्सर्ववेदान्तनिश्चितम् ।",
-      "iast": "paramāthārthaniṣṭhaṃ yatsarvavedāntaniścitam |",
-      "translation": "“I have set out the knowledge established by all Vedānta, resting on the highest truth,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1231",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.52",
       "label": "Verse 4.52",
-      "deva": "तमोपनुद्धियां ज्ञानं तदेतत्कथितं मया ॥ ५२॥",
-      "iast": "tamopanuddhiyāṃ jñānaṃ tadetatkathitaṃ mayā || 52||",
-      "translation": "which removes the darkness from the understanding.”",
-      "gloss": [],
+      "deva": "परमाथार्थनिष्ठं यत्सर्ववेदान्तनिश्चितम् ।\nतमोपनुद्धियां ज्ञानं तदेतत्कथितं मया ॥ ५२॥",
+      "iast": "paramāthārthaniṣṭhaṃ yatsarvavedāntaniścitam |\ntamopanuddhiyāṃ jñānaṃ tadetatkathitaṃ mayā || 52||",
+      "translation": "I have declared this knowledge, established by all Vedānta, resting on ultimate reality, and removing the darkness of the mind.",
+      "gloss": [
+        {
+          "sa": "परमार्थ-अर्थ-निष्ठम्",
+          "en": "resting on ultimate reality"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "सर्व-वेदान्त-निश्चितम्",
+          "en": "established by all Vedānta"
+        },
+        {
+          "sa": "तमः-अपनुद्-धियाम्",
+          "en": "removing the darkness of minds"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "कथितम्",
+          "en": "was told; declared"
+        },
+        {
+          "sa": "मया",
+          "en": "by me"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-52"
       ]
@@ -29397,26 +29776,84 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1233",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 148",
-      "label": "Text 148",
-      "deva": "नेहात्मविन्मदन्योऽस्ति न मत्तोऽज्ञोऽस्ति कश्चन ।",
-      "iast": "nehātmavinmadanyo'sti na matto'jño'sti kaścana |",
-      "translation": "“There is no knower of the Self other than me, and no one ignorant apart from me.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1234",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.53",
       "label": "Verse 4.53",
-      "deva": "इत्यजानन्विजानाति यस्स ब्रह्मविदुत्तमः ॥ ५३॥",
-      "iast": "ityajānanvijānāti yassa brahmaviduttamaḥ || 53||",
-      "translation": "Whoever knows this without distinction is the highest knower of Brahman.”",
-      "gloss": [],
+      "deva": "नेहात्मविन्मदन्योऽस्ति न मत्तोऽज्ञोऽस्ति कश्चन ।\nइत्यजानन्विजानाति यस्स ब्रह्मविदुत्तमः ॥ ५३॥",
+      "iast": "nehātmavinmadanyo'sti na matto'jño'sti kaścana |\nityajānanvijānāti yassa brahmaviduttamaḥ || 53||",
+      "translation": "“There is no knower of the Self here other than me, and no ignorant person apart from me.” Whoever understands this is the highest knower of Brahman.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "आत्म-वित्",
+          "en": "knower of the Self"
+        },
+        {
+          "sa": "मत्-अन्यः",
+          "en": "other than me"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मत्तः",
+          "en": "apart from me"
+        },
+        {
+          "sa": "अज्ञः",
+          "en": "an ignorant person"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "कश्चन",
+          "en": "anyone"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अजानन्",
+          "en": "not knowing"
+        },
+        {
+          "sa": "विजानाति",
+          "en": "understands"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "सः",
+          "en": "that one"
+        },
+        {
+          "sa": "ब्रह्म-वित्",
+          "en": "knower of Brahman"
+        },
+        {
+          "sa": "उत्तमः",
+          "en": "highest"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-53"
       ]
@@ -29433,26 +29870,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1236",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 151",
-      "label": "Text 151",
-      "deva": "ज्ञेयाभिन्नमिदं यस्माज्ज्ञेयवस्त्वनुसार्यतः ।",
-      "iast": "jñeyābhinnamidaṃ yasmājjñeyavastvanusāryataḥ |",
-      "translation": "“Because this is not different from what is to be known, and follows the nature of the knowable,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1237",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.54",
       "label": "Verse 4.54",
-      "deva": "न प्रवृत्तिं निवृत्तिं वा कटाक्षेणापि वीक्षते ॥ ५४॥",
-      "iast": "na pravṛttiṃ nivṛttiṃ vā kaṭākṣeṇāpi vīkṣate || 54||",
-      "translation": "it does not even glance toward action or the cessation of action.”",
-      "gloss": [],
+      "deva": "ज्ञेयाभिन्नमिदं यस्माज्ज्ञेयवस्त्वनुसार्यतः ।\nन प्रवृत्तिं निवृत्तिं वा कटाक्षेणापि वीक्षते ॥ ५४॥",
+      "iast": "jñeyābhinnamidaṃ yasmājjñeyavastvanusāryataḥ |\nna pravṛttiṃ nivṛttiṃ vā kaṭākṣeṇāpi vīkṣate || 54||",
+      "translation": "Because this knowledge is not different from what is known and follows the nature of its object, it does not even glance at action or withdrawal.",
+      "gloss": [
+        {
+          "sa": "ज्ञेय-अभिन्नम्",
+          "en": "not different from what is known"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "ज्ञेय-वस्तु-अनुसारि",
+          "en": "following the nature of the knowable"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रवृत्तिम्",
+          "en": "action; engagement"
+        },
+        {
+          "sa": "निवृत्तिम्",
+          "en": "withdrawal; cessation"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "कटाक्षेण",
+          "en": "with a glance"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "वीक्षते",
+          "en": "it regards"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-54"
       ]
@@ -29469,26 +29944,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1239",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 154",
-      "label": "Text 154",
-      "deva": "प्रागात्मबोधाद्बोधोऽयं बाह्यवस्तूपसर्जनः ।",
-      "iast": "prāgātmabodhādbodho'yaṃ bāhyavastūpasarjanaḥ |",
-      "translation": "“Before knowing the Self, awareness takes external things as secondary;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1240",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.55",
       "label": "Verse 4.55",
-      "deva": "प्रध्वस्ताखिलसंसार आत्मैकालम्बनः श्रुतेः ॥ ५५॥",
-      "iast": "pradhvastākhilasaṃsāra ātmaikālambanaḥ śruteḥ || 55||",
-      "translation": "when all worldly bondage is destroyed, scriptural knowledge rests on the Self alone.”",
-      "gloss": [],
+      "deva": "प्रागात्मबोधाद्बोधोऽयं बाह्यवस्तूपसर्जनः ।\nप्रध्वस्ताखिलसंसार आत्मैकालम्बनः श्रुतेः ॥ ५५॥",
+      "iast": "prāgātmabodhādbodho'yaṃ bāhyavastūpasarjanaḥ |\npradhvastākhilasaṃsāra ātmaikālambanaḥ śruteḥ || 55||",
+      "translation": "Before knowledge of the Self, awareness treats external objects as secondary; when all saṃsāra has been destroyed, scriptural knowledge rests on the Self alone.",
+      "gloss": [
+        {
+          "sa": "प्राक्",
+          "en": "before"
+        },
+        {
+          "sa": "आत्म-बोधात्",
+          "en": "knowledge of the Self"
+        },
+        {
+          "sa": "बोधः",
+          "en": "awareness; knowledge"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "बाह्य-वस्तु-उपसर्जनः",
+          "en": "with external things as secondary"
+        },
+        {
+          "sa": "प्रध्वस्त-अखिल-संसारः",
+          "en": "when all saṃsāra has been destroyed"
+        },
+        {
+          "sa": "आत्म-एक-आलम्बनः",
+          "en": "resting on the Self alone"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "of scripture; through scripture"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-55"
       ]
@@ -29505,40 +30002,63 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1242",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 157",
-      "label": "Text 157",
-      "deva": "वास्तवेनैव वृत्तेन निरुणद्धि यतो भवम् ।",
-      "iast": "vāstavenaiva vṛttena niruṇaddhi yato bhavam |",
-      "translation": "“Because true knowledge ends worldly becoming as it actually is,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1243",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.56",
       "label": "Verse 4.56",
-      "deva": "निवृत्तिमपि मृद् नाति सम्यग्बोधः प्रवृत्तिवत् ॥ ५६॥",
-      "iast": "nivṛttimapi mṛd nāti samyagbodhaḥ pravṛttivat || 56||",
-      "translation": "it does not undergo cessation any more than it undergoes action.”",
-      "gloss": [],
+      "deva": "वास्तवेनैव वृत्तेन निरुणद्धि यतो भवम् ।\nनिवृत्तिमपि मृद्नाति सम्यग्बोधः प्रवृत्तिवत् ॥ ५६॥",
+      "iast": "vāstavenaiva vṛttena niruṇaddhi yato bhavam |\nnivṛttimapi mṛdnāti samyagbodhaḥ pravṛttivat || 56||",
+      "translation": "By a true understanding of reality, becoming is brought to an end; right knowledge cancels even withdrawal, just as it cancels action.",
+      "gloss": [
+        {
+          "sa": "वास्तवेन",
+          "en": "by what is real; in truth"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "वृत्तेन",
+          "en": "by a course; understanding"
+        },
+        {
+          "sa": "निरुणद्धि",
+          "en": "restrains; brings to an end"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "भवम्",
+          "en": "worldly becoming"
+        },
+        {
+          "sa": "निवृत्तिम्",
+          "en": "withdrawal; cessation"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "मृद्नाति",
+          "en": "crushes; cancels"
+        },
+        {
+          "sa": "सम्यक्-बोधः",
+          "en": "right knowledge"
+        },
+        {
+          "sa": "प्रवृत्ति-वत्",
+          "en": "as it does action"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-56"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1244",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 159",
-      "label": "Text 159",
-      "deva": "सकृदात्मप्रसूत्यैव निरुणद्ध्यखिलं भवम् ।",
-      "iast": "sakṛdātmaprasūtyaiva niruṇaddhyakhilaṃ bhavam |",
-      "translation": "“The very arising of knowledge of the Self, by itself, puts an end to all worldly becoming;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1245",
@@ -29546,24 +30066,54 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.57",
       "label": "Verse 4.57",
-      "deva": "ध्वान्तमात्रनिरासेन न ततोऽन्यान्यथामतिः ॥ ५७॥",
-      "iast": "dhvāntamātranirāsena na tato'nyānyathāmatiḥ || 57||",
-      "translation": "by removing darkness alone, it leaves no further mistaken notion.”",
-      "gloss": [],
+      "deva": "सकृदात्मप्रसूत्यैव निरुणद्ध्यखिलं भवम् ।\nध्वान्तमात्रनिरासेन न ततोऽन्यान्यथामतिः ॥ ५७॥",
+      "iast": "sakṛdātmaprasūtyaiva niruṇaddhyakhilaṃ bhavam |\ndhvāntamātranirāsena na tato'nyānyathāmatiḥ || 57||",
+      "translation": "The arising of Self-knowledge once and for all ends all becoming; by removing darkness alone, it leaves no further mistaken notion.",
+      "gloss": [
+        {
+          "sa": "सकृत्",
+          "en": "once; at once"
+        },
+        {
+          "sa": "आत्म-प्रसूत्यैव",
+          "en": "by the very arising of the Self"
+        },
+        {
+          "sa": "निरुणद्धि",
+          "en": "ends; restrains"
+        },
+        {
+          "sa": "अखिलम्",
+          "en": "all"
+        },
+        {
+          "sa": "भवम्",
+          "en": "becoming"
+        },
+        {
+          "sa": "ध्वान्त-मात्र-निरासेन",
+          "en": "by removing darkness alone"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that; thereafter"
+        },
+        {
+          "sa": "अन्या",
+          "en": "another"
+        },
+        {
+          "sa": "अन्यथा-मतिः",
+          "en": "mistaken thought"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-57"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1246",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 161",
-      "label": "Text 161",
-      "deva": "देशकालाद्यसंबद्धाद्देशादेर्मोहकार्यतः ।",
-      "iast": "deśakālādyasaṃbaddhāddeśādermohakāryataḥ |",
-      "translation": "“Because the Self is unrelated to place, time and the rest, which are effects of delusion,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1247",
@@ -29571,24 +30121,58 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.58",
       "label": "Verse 4.58",
-      "deva": "नानुत्पन्नमदग्धं वा ज्ञानमज्ञानमस्त्यतः ॥ ५८॥",
-      "iast": "nānutpannamadagdhaṃ vā jñānamajñānamastyataḥ || 58||",
-      "translation": "ignorance cannot be some separate thing that must first arise and then be burned away.”",
-      "gloss": [],
+      "deva": "देशकालाद्यसंबद्धाद्देशादेर्मोहकार्यतः ।\nनानुत्पन्नमदग्धं वा ज्ञानमज्ञानमस्त्यतः ॥ ५८॥",
+      "iast": "deśakālādyasaṃbaddhāddeśādermohakāryataḥ |\nnānutpannamadagdhaṃ vā jñānamajñānamastyataḥ || 58||",
+      "translation": "Because place, time, and the rest are effects of delusion and the Self is unrelated to them, ignorance is not some unarisen or unburned thing that must be dealt with separately.",
+      "gloss": [
+        {
+          "sa": "देश-काल-आदि-असंबद्धात्",
+          "en": "because it is unrelated to place, time, and the rest"
+        },
+        {
+          "sa": "देश-आदेः",
+          "en": "of place and the rest"
+        },
+        {
+          "sa": "मोह-कार्यतः",
+          "en": "which are effects of delusion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अनुत्पन्नम्",
+          "en": "unborn; not yet arisen"
+        },
+        {
+          "sa": "अदग्धम्",
+          "en": "unburned"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-58"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1248",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 163",
-      "label": "Text 163",
-      "deva": "सम्यग्ज्ञानशिखिप्लुष्टमोहतत्कार्यरूपिणः ।",
-      "iast": "samyagjñānaśikhipluṣṭamohatatkāryarūpiṇaḥ |",
-      "translation": "“When the fire of right knowledge has once burned up delusion and all its effects,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1249",
@@ -29596,10 +30180,47 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.59",
       "label": "Verse 4.59",
-      "deva": "सकृन्निवृत्तेर्बाध्यस्य किं कार्यमवशिष्यते ॥ ५९॥",
-      "iast": "sakṛnnivṛtterbādhyasya kiṃ kāryamavaśiṣyate || 59||",
-      "translation": "what further task remains for what has been sublated?”",
-      "gloss": [],
+      "deva": "सम्यग्ज्ञानशिखिप्लुष्टमोहतत्कार्यरूपिणः ।\nसकृन्निवृत्तेर्बाध्यस्य किं कार्यमवशिष्यते ॥ ५९॥",
+      "iast": "samyagjñānaśikhipluṣṭamohatatkāryarūpiṇaḥ |\nsakṛnnivṛtterbādhyasya kiṃ kāryamavaśiṣyate || 59||",
+      "translation": "When delusion and its effects have once been burned by the fire of right knowledge, what task remains for what has been sublated?",
+      "gloss": [
+        {
+          "sa": "सम्यक्-ज्ञान-शिखि-प्लुष्ट",
+          "en": "burned by the fire of right knowledge"
+        },
+        {
+          "sa": "मोह",
+          "en": "delusion"
+        },
+        {
+          "sa": "तत्-कार्य-रूपिणः",
+          "en": "having its effects as their form"
+        },
+        {
+          "sa": "सकृत्",
+          "en": "once; at once"
+        },
+        {
+          "sa": "निवृत्तेः",
+          "en": "of cessation; of what has ceased"
+        },
+        {
+          "sa": "बाध्यस्य",
+          "en": "of what is sublated"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "कार्यम्",
+          "en": "task; work"
+        },
+        {
+          "sa": "अवशिष्यते",
+          "en": "remains"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-59"
       ]
@@ -29616,26 +30237,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1251",
-      "chapter": 4,
-      "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
-      "number": "4 · 166",
-      "label": "Text 166",
-      "deva": "निवृत्तसर्पस्सर्पोत्थं यथा कम्पं न मुञ्चति ।",
-      "iast": "nivṛttasarpassarpotthaṃ yathā kampaṃ na muñcati |",
-      "translation": "“Even after the snake has disappeared, a person may still tremble from the snake he saw;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1252",
       "chapter": 4,
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4.60",
       "label": "Verse 4.60",
-      "deva": "विध्वस्ताखिलमोहोऽपि मोहकार्यं तथात्मवित् ॥ ६०॥",
-      "iast": "vidhvastākhilamoho'pi mohakāryaṃ tathātmavit || 60||",
-      "translation": "so the knower of the Self may retain an effect of delusion, though all delusion is destroyed.”",
-      "gloss": [],
+      "deva": "निवृत्तसर्पस्सर्पोत्थं यथा कम्पं न मुञ्चति ।\nविध्वस्ताखिलमोहोऽपि मोहकार्यं तथात्मवित् ॥ ६०॥",
+      "iast": "nivṛttasarpassarpotthaṃ yathā kampaṃ na muñcati |\nvidhvastākhilamoho'pi mohakāryaṃ tathātmavit || 60||",
+      "translation": "Just as someone may keep trembling from a snake after it has disappeared, so too a knower of the Self may retain an effect of delusion even though all delusion has been destroyed.",
+      "gloss": [
+        {
+          "sa": "निवृत्त-सर्पः",
+          "en": "when the snake has disappeared"
+        },
+        {
+          "sa": "सर्प-उत्थम्",
+          "en": "arising from the snake"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "कम्पम्",
+          "en": "trembling"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मुञ्चति",
+          "en": "lets go; gives up"
+        },
+        {
+          "sa": "विध्वस्त-अखिल-मोहः",
+          "en": "though all delusion has been destroyed"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "मोह-कार्यम्",
+          "en": "an effect of delusion"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "आत्म-वित्",
+          "en": "the knower of the Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-4-verse-60"
       ]
@@ -30611,10 +31266,29 @@
       "4.38",
       "4.39",
       "4.40",
-      "4.43"
+      "4.41",
+      "4.42",
+      "4.43",
+      "4.44",
+      "4.45",
+      "4.46",
+      "4.47",
+      "4.48",
+      "4.49",
+      "4.50",
+      "4.51",
+      "4.52",
+      "4.53",
+      "4.54",
+      "4.55",
+      "4.56",
+      "4.57",
+      "4.58",
+      "4.59",
+      "4.60"
     ],
     "partialUnits": [],
-    "note": "All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, all 126 verses of Adhyāya 3, verses 4.1–4.40, and verse 4.43 have complete glosses. The remaining 37 numbered verses and prose commentary still need separate glosses."
+    "note": "All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, all 126 verses of Adhyāya 3, verses 4.1–4.60, and verse 4.43 have complete glosses. The remaining 17 numbered verses and prose commentary still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
