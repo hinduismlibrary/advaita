@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 520
+      "end": 525
     },
-    "note": "Source verses 1–520 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 521 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–525 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 526 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -38647,11 +38647,53 @@
       "label": "Verse 521",
       "deva": "ब्रह्मप्रत्ययसन्ततिर्जगदतो ब्रह्मैव तत्सर्वतः\nपश्याध्यात्मदृशा प्रशान्तमनसा सर्वास्ववस्थास्व् अपि ।\nरूपादन्यदवेक्षितं किमभितश्चक्षुष्मतां दृश्यते\nतद्वद्ब्रह्मविदः सतः किमपरं बुद्धेर्विहारास्पदम् ॥",
       "iast": "brahmapratyayasantatirjagadato brahmaiva tatsarvataḥ\npaśyādhyātmadṛśā praśāntamanasā sarvāsvavasthāsv api |\nrūpādanyadavekṣitaṃ kimabhitaścakṣuṣmatāṃ dṛśyate\ntadvadbrahmavidaḥ sataḥ kimaparaṃ buddhervihārāspadam ||",
-      "translation": "The universe is an unbroken series of perceptions of Brahman; hence it is in all respects nothing but Brahman. See this with the eye of illumination and a serene mind, under all circumstances. Is one who has eyes ever found to see all around anything else but forms? Similarly, what is there except Brahman to engage the intellect of a man of realisation ?",
-      "gloss": [],
+      "translation": "The world is an unbroken sequence of cognitions of Brahman; therefore it is Brahman alone everywhere. See this with inner vision and a tranquil mind in every state. Do those with sight see anything around them other than forms? Likewise, for one who knows Brahman and is established in Being, what else can serve as a field for the intellect?",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-प्रत्यय-सन्ततिः",
+          "en": "an unbroken stream of cognition of Brahman (brahma: Brahman | pratyaya: cognition, perception | santatiḥ: continuous sequence, stream)"
+        },
+        {
+          "sa": "जगत् अतः",
+          "en": "the world; therefore (jagat: world | ataḥ: therefore)"
+        },
+        {
+          "sa": "ब्रह्म एव तत् सर्वतः",
+          "en": "that is Brahman alone everywhere (brahma: Brahman | eva: alone | tat: that | sarvataḥ: everywhere, in every respect)"
+        },
+        {
+          "sa": "पश्य अध्यात्म-दृशा",
+          "en": "see with inner vision (paśya: see | adhyātma: inward, of the Self | dṛśā: with vision)"
+        },
+        {
+          "sa": "प्रशान्त-मनसा",
+          "en": "with a tranquil mind (praśānta: tranquil | manasā: with the mind)"
+        },
+        {
+          "sa": "सर्वासु अवस्थासु अपि",
+          "en": "in every state, too (sarvāsu: in all | avasthāsu: states | api: even, also)"
+        },
+        {
+          "sa": "रूपात् अन्यत् अवेक्षितम् किम्",
+          "en": "what is seen apart from forms? (rūpāt: apart from form | anyat: anything else | avekṣitam: seen, observed | kim: what?)"
+        },
+        {
+          "sa": "अभितः चक्षुष्मताम् दृश्यते",
+          "en": "is seen all around by those with sight (abhitaḥ: all around | cakṣuṣmatām: of those with eyes | dṛśyate: is seen)"
+        },
+        {
+          "sa": "तद्वत् ब्रह्मविदः सतः",
+          "en": "likewise, for the one who knows Brahman and is established in Being (tadvad: likewise | brahmavidaḥ: of the knower of Brahman | sataḥ: of the one who is, of Being)"
+        },
+        {
+          "sa": "किम् अपरम् बुद्धेः विहार-आस्पदम्",
+          "en": "what else can be a field for the intellect? (kim: what | aparam: else | buddheḥ: for the intellect | vihāra: activity, play | āspadam: place, field)"
+        }
+      ],
       "sourceNumbers": [
         521
-      ]
+      ],
+      "editionTranslation": "The universe is an unbroken series of perceptions of Brahman; hence it is in all respects nothing but Brahman. See this with the eye of illumination and a serene mind, under all circumstances. Is one who has eyes ever found to see all around anything else but forms? Similarly, what is there except Brahman to engage the intellect of a man of realisation ?"
     },
     {
       "id": "vivekachudamani-522",
@@ -38659,11 +38701,29 @@
       "label": "Verse 522",
       "deva": "कस्तां परानन्दरसानुभूति-\nमृत्सृज्य शून्येषु रमेत विद्वान् ।\nचन्द्रे महाल्हादिनि दीप्यमाने\nचित्रेन्दुमालोकयितुं क इच्छेत् ॥",
       "iast": "kastāṃ parānandarasānubhūti-\nmṛtsṛjya śūnyeṣu rameta vidvān |\ncandre mahālhādini dīpyamāne\ncitrendumālokayituṃ ka icchet ||",
-      "translation": "What wise man would discard that enjoyment of Supreme Bliss and revel in things unsubstantial ? When the exceedingly charming moon is shining, who would wish to look at a painted moon ?",
-      "gloss": [],
+      "translation": "Who, being wise, would give up the experience of the taste of supreme bliss and delight in empty things? When the moon, shining and giving great delight, is present, who would want to look at a painted moon?",
+      "gloss": [
+        {
+          "sa": "कः ताम् परमानन्द-रस-अनुभूतिम्",
+          "en": "who would give up that experience of the taste of supreme bliss? (kaḥ: who | tām: that | parama: supreme | ānanda: bliss | rasa: taste, essence | anubhūtim: experience)"
+        },
+        {
+          "sa": "उत्सृज्य शून्येषु रमेत विद्वान्",
+          "en": "having given it up, would a wise person delight in empty things? (utsṛjya: having given up | śūnyeṣu: in empty things | rameta: would delight | vidvān: a wise person)"
+        },
+        {
+          "sa": "चन्द्रे महा-आह्लादिनि दीप्यमाने",
+          "en": "when the moon, greatly delighting, is shining (candre: when the moon | mahā: greatly | āhlādini: giving delight | dīpyamāne: shining)"
+        },
+        {
+          "sa": "चित्रेन्दुम् आलोकयितुम् कः इच्छेत्",
+          "en": "who would wish to look at a painted moon? (citrendum: painted moon | ālokayitum: to look at | kaḥ: who | icchet: would wish)"
+        }
+      ],
       "sourceNumbers": [
         522
-      ]
+      ],
+      "editionTranslation": "What wise man would discard that enjoyment of Supreme Bliss and revel in things unsubstantial ? When the exceedingly charming moon is shining, who would wish to look at a painted moon ?"
     },
     {
       "id": "vivekachudamani-523",
@@ -38671,11 +38731,37 @@
       "label": "Verse 523",
       "deva": "असत्पदार्थानुभवेन किंचिन्\nन ह्यस्ति तृप्तिर्न च दुःखहानिः ।\nतदद्वयानन्दरसानुभूत्या\nतृप्तः सुखं तिष्ठ सदात्मनिष्ठया ॥",
       "iast": "asatpadārthānubhavena kiṃcin\nna hyasti tṛptirna ca duḥkhahāniḥ |\ntadadvayānandarasānubhūtyā\ntṛptaḥ sukhaṃ tiṣṭha sadātmaniṣṭhayā ||",
-      "translation": "From the perception of unreal things there is neither satisfaction nor a cessation of misery. Therefore, being satisfied with the realisation of the Bliss Absolute, the One without a second, live happily in a state of identity with that Reality.",
-      "gloss": [],
+      "translation": "Experience of unreal things gives no satisfaction at all and does not end suffering. Satisfied by experiencing the taste of that nondual bliss, abide happily through steady, constant abidance in the Self.",
+      "gloss": [
+        {
+          "sa": "असत्-पदार्थ-अनुभवेन किञ्चित्",
+          "en": "from experiencing unreal objects, even a little (asat: unreal | padārtha: object, thing | anubhavena: through experience | kiñcit: any, even a little)"
+        },
+        {
+          "sa": "न हि अस्ति तृप्तिः",
+          "en": "there is indeed no satisfaction (na: not | hi: indeed | asti: there is | tṛptiḥ: satisfaction)"
+        },
+        {
+          "sa": "न च दुःख-हानिः",
+          "en": "nor any ending of suffering (na: not | ca: and, nor | duḥkha: suffering | hāniḥ: loss, removal)"
+        },
+        {
+          "sa": "तत् अद्वय-आनन्द-रस-अनुभूत्या",
+          "en": "through experiencing the taste of that nondual bliss (tat: that | advaya: nondual | ānanda: bliss | rasa: taste, essence | anubhūtyā: through experience)"
+        },
+        {
+          "sa": "तृप्तः सुखम् तिष्ठ",
+          "en": "satisfied, abide happily (tṛptaḥ: satisfied | sukham: happily | tiṣṭha: abide, remain)"
+        },
+        {
+          "sa": "सदा आत्म-निष्ठया",
+          "en": "through constant steadfastness in the Self (sadā: always, constant | ātman: Self | niṣṭhayā: through steadfast abidance)"
+        }
+      ],
       "sourceNumbers": [
         523
-      ]
+      ],
+      "editionTranslation": "From the perception of unreal things there is neither satisfaction nor a cessation of misery. Therefore, being satisfied with the realisation of the Bliss Absolute, the One without a second, live happily in a state of identity with that Reality."
     },
     {
       "id": "vivekachudamani-524",
@@ -38683,11 +38769,29 @@
       "label": "Verse 524",
       "deva": "स्वम् एव सर्वथा पश्यन्मन्यमानः स्वमद्वयम् ।\nस्वानन्दमनुभुञ्जानः कालं नय महामते ॥",
       "iast": "svam eva sarvathā paśyanmanyamānaḥ svamadvayam |\nsvānandamanubhuñjānaḥ kālaṃ naya mahāmate ||",
-      "translation": "Beholding the Self alone in all circumstances, thinking of the Self, the One without a second, and enjoying the Bliss of the Self, pass thy time, O noble soul !",
-      "gloss": [],
+      "translation": "See the Self alone in every way; regard your own Self as nondual, and enjoy the bliss of the Self. Spend your time thus, O great-minded one.",
+      "gloss": [
+        {
+          "sa": "स्वम् एव सर्वथा पश्यन्",
+          "en": "seeing the Self alone in every way (svam: one's own Self | eva: alone | sarvathā: in every way | paśyan: seeing)"
+        },
+        {
+          "sa": "मन्यमानः स्वम् अद्वयम्",
+          "en": "regarding one's own Self as nondual (manyamānaḥ: regarding, thinking | svam: one's own Self | advayam: nondual, without a second)"
+        },
+        {
+          "sa": "स्व-आनन्दम् अनुभुञ्जानः",
+          "en": "enjoying the bliss of the Self (sva: one's own | ānandam: bliss | anubhuñjānaḥ: enjoying, experiencing)"
+        },
+        {
+          "sa": "कालम् नय महामते",
+          "en": "spend your time, O great-minded one (kālam: time | naya: spend, pass | mahāmate: O great-minded one)"
+        }
+      ],
       "sourceNumbers": [
         524
-      ]
+      ],
+      "editionTranslation": "Beholding the Self alone in all circumstances, thinking of the Self, the One without a second, and enjoying the Bliss of the Self, pass thy time, O noble soul !"
     },
     {
       "id": "vivekachudamani-525",
@@ -38695,11 +38799,29 @@
       "label": "Verse 525",
       "deva": "अखण्डबोधात्मनि निर्विकल्पे\nविकल्पनं व्योम्नि पुरप्रकल्पनम् ।\nतदद्वयानन्दमयात्मना सदा\nशान्तिं परामेत्य भजस्व मौनम् ॥",
       "iast": "akhaṇḍabodhātmani nirvikalpe\nvikalpanaṃ vyomni puraprakalpanam |\ntadadvayānandamayātmanā sadā\nśāntiṃ parāmetya bhajasva maunam ||",
-      "translation": "Dualistic conceptions in the Atman, the Infinite Knowledge, the Absolute, are like imagining castles in the air. Therefore, always identifying thyself with the Bliss Absolute, the One without a second, and thereby attaining Supreme Peace, remain quiet.",
-      "gloss": [],
+      "translation": "In the Self of undivided awareness, which is free from distinctions, mental constructions are like imagining a city in the sky. Always identify with that Self whose nature is nondual bliss; having attained supreme peace, dwell in silence.",
+      "gloss": [
+        {
+          "sa": "अखण्ड-बोध-आत्मनि निर्विकल्पे",
+          "en": "in the Self of undivided awareness, free from distinctions (akhaṇḍa: undivided | bodha: awareness | ātmani: in the Self | nirvikalpe: free from distinctions or thought-constructs)"
+        },
+        {
+          "sa": "विकल्पनम् व्योम्नि पुर-प्रकल्पनम्",
+          "en": "mental construction is like imagining a city in the sky (vikalpanam: conception, mental construction | vyomni: in the sky | pura: city | prakalpanam: imagining, constructing)"
+        },
+        {
+          "sa": "तत् अद्वय-आनन्द-मय-आत्मना सदा",
+          "en": "always identifying with that Self whose nature is nondual bliss (tat: that | advaya: nondual | ānanda: bliss | maya: consisting of, whose nature is | ātmanā: as the Self, with the Self | sadā: always)"
+        },
+        {
+          "sa": "शान्तिम् पराम् एत्य भजस्व मौनम्",
+          "en": "having attained supreme peace, dwell in silence (śāntim: peace | parām: supreme | etya: having attained | bhajasva: practice, dwell in | maunam: silence)"
+        }
+      ],
       "sourceNumbers": [
         525
-      ]
+      ],
+      "editionTranslation": "Dualistic conceptions in the Atman, the Infinite Knowledge, the Absolute, are like imagining castles in the air. Therefore, always identifying thyself with the Bliss Absolute, the One without a second, and thereby attaining Supreme Peace, remain quiet."
     },
     {
       "id": "vivekachudamani-526",
@@ -39414,6 +39536,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 501–505, preserving prior English as editionTranslation. Clarified the limiting adjunct, the states of experience, and the lamp/house comparison.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 506–510, preserving prior English as editionTranslation. Corrected verse 506's vahni spelling and clarified verse 510's khalatva as wickedness.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 511–515, preserving prior English as editionTranslation. Restored the missing anusvāra in verse 512's viśvaṃ.",
-    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 516–520, preserving prior English as editionTranslation. Corrected verse 516's akhaṇḍa reading and standardized ahaṅkāra in 518."
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 516–520, preserving prior English as editionTranslation. Corrected verse 516's akhaṇḍa reading and standardized ahaṅkāra in 518.",
+    "Logged and completed Vivekacūḍāmaṇi verses 521–525 with original literal English translations and Devanāgarī-backed word-for-word glosses, preserving prior English as editionTranslation."
   ]
 }
