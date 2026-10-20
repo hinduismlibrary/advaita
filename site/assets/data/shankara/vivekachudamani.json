@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 510
+      "end": 515
     },
-    "note": "Source verses 1–510 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 511 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–515 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 516 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -38141,25 +38141,109 @@
       "id": "vivekachudamani-511",
       "number": "511",
       "label": "Verse 511",
-      "deva": "सन्तु विकाराः प्रकृतेर्दशधा शतधा सहस्रधा वापि ।\nकिं मेऽसङ्गचितस्तैर् न घनः क्वचिदम्बरं स्पृशति ॥",
+      "deva": "सन्तु विकाराः प्रकृतेर्दशधा शतधा सहस्रधा वापि ।\nकिं मेऽसङ्गचितस्तैर्न घनः क्वचिदम्बरं स्पृशति ॥",
       "iast": "santu vikārāḥ prakṛterdaśadhā śatadhā sahasradhā vāpi |\nkiṃ me'saṅgacitastair na ghanaḥ kvacidambaraṃ spṛśati ||",
-      "translation": "Let there be changes in the Prakriti in ten, a hundred, or a thousand ways, what have I, the unattached Knowledge Absolute, got to do with them ? Never do the clouds touch the sky !",
-      "gloss": [],
+      "translation": "Let changes in Prakṛti occur tenfold, a hundredfold, or even a thousandfold. What have they to do with me, whose consciousness is unattached? No cloud ever touches the sky.",
+      "gloss": [
+        {
+          "sa": "सन्तु विकाराः",
+          "en": "let there be changes (santu: let there be | vikārāḥ: changes)"
+        },
+        {
+          "sa": "प्रकृतेः",
+          "en": "of Prakṛti"
+        },
+        {
+          "sa": "दशधा",
+          "en": "tenfold; in ten ways"
+        },
+        {
+          "sa": "शतधा",
+          "en": "hundredfold; in a hundred ways"
+        },
+        {
+          "sa": "सहस्रधा वा अपि",
+          "en": "or even thousandfold (sahasradhā: thousandfold | vā: or | api: even)"
+        },
+        {
+          "sa": "किम् मे",
+          "en": "what are they to me? (kim: what | me: to me)"
+        },
+        {
+          "sa": "असङ्ग-चितः",
+          "en": "whose consciousness is unattached (asaṅga: unattached | citaḥ: consciousness)"
+        },
+        {
+          "sa": "तैः",
+          "en": "by them; with those changes"
+        },
+        {
+          "sa": "न घनः क्वचित्",
+          "en": "no cloud ever (na: not | ghanaḥ: cloud | kvacit: ever)"
+        },
+        {
+          "sa": "अम्बरम् स्पृशति",
+          "en": "touches the sky (ambaram: sky | spṛśati: touches)"
+        }
+      ],
       "sourceNumbers": [
         511
-      ]
+      ],
+      "editionTranslation": "Let there be changes in the Prakriti in ten, a hundred, or a thousand ways, what have I, the unattached Knowledge Absolute, got to do with them ? Never do the clouds touch the sky !"
     },
     {
       "id": "vivekachudamani-512",
       "number": "512",
       "label": "Verse 512",
-      "deva": "अव्यक्तादिस्थूलपर्यन्तमेतत्\nविश्व यत्राभासमात्रं प्रतीतम् ।\nव्योमप्रख्यं सूक्ष्ममाद्यन्तहीनं\nब्रह्माद्वैतं यत्तदेवाहमस्मि ॥",
+      "deva": "अव्यक्तादिस्थूलपर्यन्तमेतत्\nविश्वं यत्राभासमात्रं प्रतीतम् ।\nव्योमप्रख्यं सूक्ष्ममाद्यन्तहीनं\nब्रह्माद्वैतं यत्तदेवाहमस्मि ॥",
       "iast": "avyaktādisthūlaparyantametat\nviśva yatrābhāsamātraṃ pratītam |\nvyomaprakhyaṃ sūkṣmamādyantahīnaṃ\nbrahmādvaitaṃ yattadevāhamasmi ||",
-      "translation": "I am verily that Brahman, the One without a second, which is like the sky, subtle, without beginning or end, in which the whole universe from the Undifferentiated down to the gross body, appears merely as a shadow.",
-      "gloss": [],
+      "translation": "I am that nondual Brahman, like space, subtle, without beginning or end, in which this universe—from the unmanifest to the gross—appears as a mere appearance.",
+      "gloss": [
+        {
+          "sa": "अव्यक्त-आदि-स्थूल-पर्यन्तम्",
+          "en": "from the unmanifest up to the gross (avyakta: unmanifest | ādi: beginning, and so on | sthūla: gross | paryantam: up to)"
+        },
+        {
+          "sa": "एतत् विश्वम्",
+          "en": "this universe (etat: this | viśvam: universe)"
+        },
+        {
+          "sa": "यत्र",
+          "en": "in which; where"
+        },
+        {
+          "sa": "आभास-मात्रम्",
+          "en": "mere appearance (ābhāsa: appearance | mātram: merely)"
+        },
+        {
+          "sa": "प्रतीतम्",
+          "en": "is perceived; appears"
+        },
+        {
+          "sa": "व्योम-प्रख्यम्",
+          "en": "resembling space (vyoma: space | prakhyam: resembling)"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "आदि-अन्त-हीनम्",
+          "en": "without beginning or end (ādi: beginning | anta: end | hīnam: without)"
+        },
+        {
+          "sa": "ब्रह्म अद्वैतम्",
+          "en": "nondual Brahman (brahma: Brahman | advaitam: nondual)"
+        },
+        {
+          "sa": "यत् तत् एव अहम् अस्मि",
+          "en": "that indeed I am (yat: which | tat: that | eva: indeed | aham: I | asmi: am)"
+        }
+      ],
       "sourceNumbers": [
         512
-      ]
+      ],
+      "editionTranslation": "I am verily that Brahman, the One without a second, which is like the sky, subtle, without beginning or end, in which the whole universe from the Undifferentiated down to the gross body, appears merely as a shadow."
     },
     {
       "id": "vivekachudamani-513",
@@ -38167,11 +38251,57 @@
       "label": "Verse 513",
       "deva": "सर्वाधारं सर्ववस्तुप्रकाशं\nसर्वाकारं सर्वगं सर्वशून्यम् ।\nनित्यं शुद्धं निश्चलं निर्विकल्पं\nब्रह्माद्वैतं यत्तदेवाहमस्मि ॥",
       "iast": "sarvādhāraṃ sarvavastuprakāśaṃ\nsarvākāraṃ sarvagaṃ sarvaśūnyam |\nnityaṃ śuddhaṃ niścalaṃ nirvikalpaṃ\nbrahmādvaitaṃ yattadevāhamasmi ||",
-      "translation": "I am verily that Brahman, the One without a second, which is the support of all, which illumines all things, which has infinite forms, is omnipresent, devoid of multiplicity, eternal, pure, unmoved and absolute.",
-      "gloss": [],
+      "translation": "I am that nondual Brahman: the support of all, the light of all things, all-formed, all-pervading, yet empty of all; eternal, pure, unmoving, and without distinctions.",
+      "gloss": [
+        {
+          "sa": "सर्व-आधारम्",
+          "en": "the support of all (sarva: all | ādhāram: support)"
+        },
+        {
+          "sa": "सर्व-वस्तु-प्रकाशम्",
+          "en": "the light of all things (sarva: all | vastu: thing | prakāśam: illumination)"
+        },
+        {
+          "sa": "सर्व-आकारम्",
+          "en": "of all forms; all-formed (sarva: all | ākāram: form)"
+        },
+        {
+          "sa": "सर्व-गम्",
+          "en": "all-pervading (sarva: all | gam: going, pervading)"
+        },
+        {
+          "sa": "सर्व-शून्यम्",
+          "en": "empty of all; devoid of all (sarva: all | śūnyam: empty, devoid)"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "eternal"
+        },
+        {
+          "sa": "शुद्धम्",
+          "en": "pure"
+        },
+        {
+          "sa": "निश्चलम्",
+          "en": "unmoving"
+        },
+        {
+          "sa": "निर्विकल्पम्",
+          "en": "without distinctions or mental constructs (nirvikalpam: free from alternatives, distinctions)"
+        },
+        {
+          "sa": "ब्रह्म-अद्वैतम्",
+          "en": "nondual Brahman (brahma: Brahman | advaitam: nondual)"
+        },
+        {
+          "sa": "यत् तत् एव अहम् अस्मि",
+          "en": "that indeed I am (yat: which | tat: that | eva: indeed | aham: I | asmi: am)"
+        }
+      ],
       "sourceNumbers": [
         513
-      ]
+      ],
+      "editionTranslation": "I am verily that Brahman, the One without a second, which is the support of all, which illumines all things, which has infinite forms, is omnipresent, devoid of multiplicity, eternal, pure, unmoved and absolute."
     },
     {
       "id": "vivekachudamani-514",
@@ -38179,11 +38309,41 @@
       "label": "Verse 514",
       "deva": "यत्प्रत्यस्ताशेषमायाविशेषं\nप्रत्यग्रूपं प्रत्ययागम्यमानम् ।\nसत्यज्ञानानन्तमानन्दरूपं\nब्रह्माद्वैतं यत्तदेवाहमस्मि ॥",
       "iast": "yatpratyastāśeṣamāyāviśeṣaṃ\npratyagrūpaṃ pratyayāgamyamānam |\nsatyajñānānantamānandarūpaṃ\nbrahmādvaitaṃ yattadevāhamasmi ||",
-      "translation": "I am verily that Brahman, the One without a second, which transcends the endless differentiations of Maya, which is the inmost essence of all, is beyond the range of consciousness, and which is Truth, Knowledge, Infinity and Bliss Absolute.",
-      "gloss": [],
+      "translation": "I am that nondual Brahman in which every distinction of Māyā is negated, whose nature is the inner Self and which cannot be reached by thought; it is of the nature of truth, knowledge, infinity, and bliss.",
+      "gloss": [
+        {
+          "sa": "यत् प्रत्यस्त-अशेष-माया-विशेषम्",
+          "en": "that in which every distinction of Māyā is negated (yat: that which | pratyasta: cast away, negated | aśeṣa: all | māyā: Māyā | viśeṣam: distinctions)"
+        },
+        {
+          "sa": "प्रत्यग्-रूपम्",
+          "en": "of the nature of the inner Self (pratyag: inward, inner Self | rūpam: nature)"
+        },
+        {
+          "sa": "प्रत्यय-अगम्यमानम्",
+          "en": "unreachable by thought (pratyaya: thought | agamyamānam: not reached)"
+        },
+        {
+          "sa": "सत्य-ज्ञान-अनन्तम्",
+          "en": "truth, knowledge, infinity (satya: truth | jñāna: knowledge | anantam: infinite)"
+        },
+        {
+          "sa": "आनन्द-रूपम्",
+          "en": "of the nature of bliss (ānanda: bliss | rūpam: nature)"
+        },
+        {
+          "sa": "ब्रह्म अद्वैतम्",
+          "en": "nondual Brahman (brahma: Brahman | advaitam: nondual)"
+        },
+        {
+          "sa": "यत् तत् एव अहम् अस्मि",
+          "en": "that indeed I am (yat: which | tat: that | eva: indeed | aham: I | asmi: am)"
+        }
+      ],
       "sourceNumbers": [
         514
-      ]
+      ],
+      "editionTranslation": "I am verily that Brahman, the One without a second, which transcends the endless differentiations of Maya, which is the inmost essence of all, is beyond the range of consciousness, and which is Truth, Knowledge, Infinity and Bliss Absolute."
     },
     {
       "id": "vivekachudamani-515",
@@ -38191,11 +38351,45 @@
       "label": "Verse 515",
       "deva": "निष्क्रियोऽस्म्य् अविकारोऽस्मि\nनिष्कलोऽस्मि निराकृतिः ।\nनिर्विकल्पोऽस्मि नित्योऽस्मि\nनिरालम्बोऽस्मि निर्द्वयः ॥",
       "iast": "niṣkriyo'smy avikāro'smi\nniṣkalo'smi nirākṛtiḥ |\nnirvikalpo'smi nityo'smi\nnirālambo'smi nirdvayaḥ ||",
-      "translation": "I am without activity, changeless, without parts, formless, absolute, eternal, without any other support, the One without a second.",
-      "gloss": [],
+      "translation": "I am actionless, changeless, partless, formless, free from distinctions, eternal, without support, and without a second.",
+      "gloss": [
+        {
+          "sa": "निष्क्रियः अस्मि",
+          "en": "I am actionless (niṣkriyaḥ: without action | asmi: I am)"
+        },
+        {
+          "sa": "अविकारः अस्मि",
+          "en": "I am changeless (avikāraḥ: changeless | asmi: I am)"
+        },
+        {
+          "sa": "निष्कलः अस्मि",
+          "en": "I am partless (niṣkalaḥ: without parts | asmi: I am)"
+        },
+        {
+          "sa": "निराकृतिः",
+          "en": "formless; without form"
+        },
+        {
+          "sa": "निर्विकल्पः अस्मि",
+          "en": "I am free from distinctions or mental constructs (nirvikalpaḥ: without distinctions | asmi: I am)"
+        },
+        {
+          "sa": "नित्यः अस्मि",
+          "en": "I am eternal (nityaḥ: eternal | asmi: I am)"
+        },
+        {
+          "sa": "निरालम्बः अस्मि",
+          "en": "I am without support (nirālambaḥ: without support | asmi: I am)"
+        },
+        {
+          "sa": "निर्द्वयः",
+          "en": "without duality; without a second"
+        }
+      ],
       "sourceNumbers": [
         515
-      ]
+      ],
+      "editionTranslation": "I am without activity, changeless, without parts, formless, absolute, eternal, without any other support, the One without a second."
     },
     {
       "id": "vivekachudamani-516",
@@ -39028,6 +39222,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 491–495, preserving previous translations as editionTranslation. Clarified verse 492's repeated negation and verse 494's “I” and “mine” terms; made the experience/experienced pair explicit in 495.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 496–500, preserving previous English as editionTranslation. Corrected the Sanskrit/transliteration in 497 (sthūla and verse-end compound), 498 (ārdrīkaroti), and 500 (jāgrat).",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 501–505, preserving prior English as editionTranslation. Clarified the limiting adjunct, the states of experience, and the lamp/house comparison.",
-    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 506–510, preserving prior English as editionTranslation. Corrected verse 506's vahni spelling and clarified verse 510's khalatva as wickedness."
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 506–510, preserving prior English as editionTranslation. Corrected verse 506's vahni spelling and clarified verse 510's khalatva as wickedness.",
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 511–515, preserving prior English as editionTranslation. Restored the missing anusvāra in verse 512's viśvaṃ."
   ]
 }
