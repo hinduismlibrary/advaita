@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 460
+      "to": 470
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–460 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–470 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -30695,8 +30695,49 @@
       "number": "461",
       "label": "Verse 461",
       "deva": "अस्मिन्न् आत्मन्यनात्मत्वम् अनात्मन्यात्मतां पुनः।\nविपरीततयाध्यस्य संसरन्ति विमोहतः॥",
-      "translation": "But people superimpose the Ātman upon that which is not Ātman, and conversely they superimpose that which is not Ātman upon the Ātman. That is why, out of erroneous knowledge, they become subject to the bonds of saṃsāra.",
-      "gloss": [],
+      "translation": "Through delusion, people superimpose not-Selfhood on the Self and, conversely, Selfhood on the not-Self; thus they transmigrate.",
+      "gloss": [
+        {
+          "sa": "अस्मिन्",
+          "en": "in this"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "Self"
+        },
+        {
+          "sa": "अनात्मत्वम्",
+          "en": "not-Selfhood"
+        },
+        {
+          "sa": "अनात्मनि",
+          "en": "in the not-Self"
+        },
+        {
+          "sa": "आत्मताम्",
+          "en": "Selfhood"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again; in turn"
+        },
+        {
+          "sa": "विपरीततया",
+          "en": "in reverse"
+        },
+        {
+          "sa": "अध्यस्य",
+          "en": "having superimposed"
+        },
+        {
+          "sa": "संसरन्ति",
+          "en": "they transmigrate"
+        },
+        {
+          "sa": "विमोहतः",
+          "en": "through delusion"
+        }
+      ],
       "sourceNumbers": [
         461
       ],
@@ -30708,14 +30749,111 @@
       "chapter": 2,
       "number": "462",
       "label": "Verse 462",
-      "deva": "भ्रान्त्या मनुष्योऽहम् अहं द्वि-जोऽहं\nतज्-ज्ञोऽहम् अज्ञोऽहम् अतीव पापी।\nभ्रष्टोऽस्मि शिष्टोऽस्मि सुखी च दुःखी-\nत्येवं विमुह्यात्मनि कल्पयन्ति॥",
-      "translation": "It is as a result of such superimposition that wrong ideas come to prevail. It is then that one thinks of oneself to be a human being, a twice-born, and as being wise or not wise. That is why again one considers oneself to be learned and happy or to be a sinner and a fallen being.",
-      "gloss": [],
+      "deva": "भ्रान्त्या मनुष्योऽहम् अहं द्वि-जोऽहम्\nतज्-ज्ञोऽहम् अज्ञोऽहम् अतीव पापी।\nभ्रष्टोऽस्मि शिष्टोऽस्मि सुखी च दुःखी इत्येवं\nविमुह्यात्मनि कल्पयन्ति॥",
+      "translation": "Through delusion, people imagine in the Self, “I am human; I am twice-born; I am learned; I am ignorant; I am very sinful; I am fallen; I am virtuous; I am happy and unhappy.”",
+      "gloss": [
+        {
+          "sa": "भ्रान्त्या",
+          "en": "through delusion"
+        },
+        {
+          "sa": "मनुष्यः",
+          "en": "a human"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "द्वि-जः",
+          "en": "twice-born"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "तत्-ज्ञः",
+          "en": "learned"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अज्ञः",
+          "en": "ignorant"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "अतीव",
+          "en": "very"
+        },
+        {
+          "sa": "पापी",
+          "en": "sinful"
+        },
+        {
+          "sa": "भ्रष्टः",
+          "en": "fallen"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "I am"
+        },
+        {
+          "sa": "शिष्टः",
+          "en": "virtuous; respectable"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "I am"
+        },
+        {
+          "sa": "सुखी",
+          "en": "happy"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दुःखी",
+          "en": "unhappy"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "विमुह्य",
+          "en": "being deluded"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "कल्पयन्ति",
+          "en": "they imagine"
+        }
+      ],
       "sourceNumbers": [
         462
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "bhrāntyā manuṣyo’ham ahaṃ dvi-jo’haṃ\ntaj-jño’ham ajño’ham atīva pāpī|\nbhraṣṭo’smi śiṣṭo’smi sukhī ca duḥkhī-\ntyevaṃ vimuhyātmani kalpayanti||"
+      "iast": "bhrāntyā manuṣyo’ham ahaṃ dvi-jo’ham\ntaj-jño’ham ajño’ham atīva pāpī|\nbhraṣṭo’smi śiṣṭo’smi sukhī ca duḥkhītyevaṃ\nvimuhyātmani kalpayanti||"
     },
     {
       "id": "svsss-2-0463",
@@ -30723,8 +30861,77 @@
       "number": "463",
       "label": "Verse 463",
       "deva": "अनात्मनो जन्म-जरा-मृति-क्षुधा-\nतृष्णासुख-क्लेश-भयादि-धर्मान्।\nविपर्ययेण ह्यतथाविधेऽस्मिन्न्\nआरोपयन्त्यात्मनि बुद्धि-दोषात्॥",
-      "translation": "It is only on account of the defect of the intellect that one wrongly superimposes the ideas of birth, old age and death; of those of thirst, fear, pleasure and pain upon the Ātman. All these are the characteristics of what is not the Ātman. As for the Ātman, its nature is entirely different.",
-      "gloss": [],
+      "translation": "Through a defect of the intellect, they wrongly superimpose on the Self the qualities of the not-Self—birth, old age, death, hunger, thirst, pleasure, distress, fear, and the like—even though the Self is not of that kind.",
+      "gloss": [
+        {
+          "sa": "अनात्मनः",
+          "en": "of the not-Self"
+        },
+        {
+          "sa": "जन्म",
+          "en": "birth"
+        },
+        {
+          "sa": "जरा",
+          "en": "old age"
+        },
+        {
+          "sa": "मृति",
+          "en": "death"
+        },
+        {
+          "sa": "क्षुधा",
+          "en": "hunger"
+        },
+        {
+          "sa": "तृष्णा",
+          "en": "thirst"
+        },
+        {
+          "sa": "सुख",
+          "en": "pleasure"
+        },
+        {
+          "sa": "क्लेश",
+          "en": "distress"
+        },
+        {
+          "sa": "भय-आदि",
+          "en": "fear and the rest"
+        },
+        {
+          "sa": "धर्मान्",
+          "en": "qualities"
+        },
+        {
+          "sa": "विपर्ययेण",
+          "en": "in reverse; wrongly"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अतथा-विधे",
+          "en": "not of that kind"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "on this"
+        },
+        {
+          "sa": "आरोपयन्ति",
+          "en": "they superimpose"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "on the Self"
+        },
+        {
+          "sa": "बुद्धि-दोषात्",
+          "en": "because of a defect of the intellect"
+        }
+      ],
       "sourceNumbers": [
         463
       ],
@@ -30737,8 +30944,65 @@
       "number": "464",
       "label": "Verse 464",
       "deva": "भ्रान्त्या यत्र यद्-अध्यासस् तत्-कृतेन गुणेन वा।\nदोषेणाप्यणु-मात्रेण स न सम्बध्यते क्वचित्॥",
-      "translation": "Inasmuch as all superimposition is due to delusion, all these attributes, whether they be merits or shortcomings, in no way affect the nature of the Ātman, even though they may be superimposed upon the Ātman.",
-      "gloss": [],
+      "translation": "Wherever something is superimposed through error, the underlying thing is never affected by the quality or fault attributed to it, even in the slightest.",
+      "gloss": [
+        {
+          "sa": "भ्रान्त्या",
+          "en": "through error"
+        },
+        {
+          "sa": "यत्र",
+          "en": "wherever"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "अध्यासः",
+          "en": "superimposition"
+        },
+        {
+          "sa": "तत्-कृतेन",
+          "en": "produced by that"
+        },
+        {
+          "sa": "गुणेन",
+          "en": "by a quality"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "दोषेण",
+          "en": "by a fault"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अणु-मात्रेण",
+          "en": "in the slightest"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सम्बध्यते",
+          "en": "is affected"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         464
       ],
@@ -30750,28 +31014,110 @@
       "chapter": 2,
       "number": "465",
       "label": "Verse 465",
-      "deva": "किं मरुन्मृग-तृष्णाम्बु-पूरेणार्द्रत्वम् ऋच्छति।\nदृष्टि-संस्थित-पीतेन शङ्खः पीतायते किमु॥",
-      "translation": "The air, for instance, does not become humid as a result of moisture which seems to emanate from a mirage; nor does a white conch shell turn yellow when seen through a jaundiced vision.",
-      "gloss": [],
+      "deva": "किं मरुर् मृगतृष्णाम्बु-पूरेणार्द्रत्वम् ऋच्छति।\nदृष्टि-संस्थित-पीतेन शङ्खः पीतायते किमु॥",
+      "translation": "Does the desert become wet from a flood of mirage water? Does a conch turn yellow from the yellowness lodged in the eye?",
+      "gloss": [
+        {
+          "sa": "किम्",
+          "en": "does"
+        },
+        {
+          "sa": "मरुः",
+          "en": "the desert"
+        },
+        {
+          "sa": "मृग-तृष्णा",
+          "en": "mirage"
+        },
+        {
+          "sa": "अम्बु",
+          "en": "water"
+        },
+        {
+          "sa": "पूरेण",
+          "en": "from a flood"
+        },
+        {
+          "sa": "आर्द्रत्वम्",
+          "en": "wetness"
+        },
+        {
+          "sa": "ऋच्छति",
+          "en": "attain"
+        },
+        {
+          "sa": "दृष्टि-संस्थित-पीतेन",
+          "en": "from yellowness lodged in the eye"
+        },
+        {
+          "sa": "शङ्खः",
+          "en": "a conch"
+        },
+        {
+          "sa": "पीतायते",
+          "en": "turns yellow"
+        },
+        {
+          "sa": "किमु",
+          "en": "indeed; does it?"
+        }
+      ],
       "sourceNumbers": [
         465
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "kiṃ marunmṛga-tṛṣṇāmbu-pūreṇārdratvam ṛcchati|\ndṛṣṭi-saṃsthita-pītena śaṅkhaḥ pītāyate kimu||"
+      "iast": "kiṃ marur mṛga-tṛṣṇāmbu-pūreṇārdra-tvam ṛcchati|\ndṛṣṭi-saṃsthita-pītena śaṅkhaḥ pītāyate kimu||"
     },
     {
       "id": "svsss-3-0466",
       "chapter": 3,
       "number": "466",
       "label": "Verse 466",
-      "deva": "प्रत्यग्-आत्मन्यविषयेऽनात्माध्यासः कथं प्रभो॥",
-      "translation": "Nor does the sky turn blue merely because a child imagines it to be true. The disciple asks: How is it possible, Revered Sir, for one to superimpose upon the pure consciousness all these attributes which do not, in reality, appertain to it?",
-      "gloss": [],
+      "deva": "वात-कल्पित-नैल्यम् व्योम किं मलिनायते।\nशिष्यः—प्रत्यगात्मन्यविषयेऽनात्माध्यासः कथं प्रभो॥",
+      "translation": "Does the sky become stained by blueness imagined by the wind? [The disciple asks:] How can not-Self be superimposed on the inner Self, which is not an object, O Lord?",
+      "gloss": [
+        {
+          "sa": "वात-कल्पित-नैल्येन",
+          "en": "by blueness imagined by the wind"
+        },
+        {
+          "sa": "व्योम",
+          "en": "the sky"
+        },
+        {
+          "sa": "किम्",
+          "en": "does"
+        },
+        {
+          "sa": "मलिनायते",
+          "en": "become stained"
+        },
+        {
+          "sa": "प्रत्यग्-आत्मनि",
+          "en": "on the inner Self"
+        },
+        {
+          "sa": "अविषये",
+          "en": "which is not an object"
+        },
+        {
+          "sa": "अनात्म-अध्यासः",
+          "en": "superimposition of not-Self"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "प्रभो",
+          "en": "O Lord"
+        }
+      ],
       "sourceNumbers": [
         466
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "pratyag-ātmanyaviṣaye’nātmādhyāsaḥ kathaṃ prabho||"
+      "iast": "vāta-kalpita-nailyena vyoma kiṃ malināyate|\nśiṣya: pratyag-ātmany-aviṣaye anātma-adhyāsaḥ kathaṃ prabho||"
     },
     {
       "id": "svsss-3-0467",
@@ -30779,8 +31125,49 @@
       "number": "467",
       "label": "Verse 467",
       "deva": "पुरो दृष्टे हि विषयेऽध्यस्यन्ति विषयान्तरम्।\nतद् दृष्टं शुक्ति-रज्ज्वादौ सादृश्याद्यनुबन्धतः॥",
-      "translation": "It is only in the case of the direct objects of perception that people superimpose certain attributes upon other objects, by virtue of their seeming similarity. When the mother-of-pearl is mistaken for silver or the rope is mistaken for a snake, it is this principle that operates.",
-      "gloss": [],
+      "translation": "People superimpose one object on another seen before them; this is observed with mother-of-pearl or a rope, based on resemblance and the like.",
+      "gloss": [
+        {
+          "sa": "पुरः",
+          "en": "before"
+        },
+        {
+          "sa": "दृष्टे",
+          "en": "in a seen"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "विषये",
+          "en": "object"
+        },
+        {
+          "sa": "अध्यस्यन्ति",
+          "en": "they superimpose"
+        },
+        {
+          "sa": "विषय-अन्तरम्",
+          "en": "another object"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "is seen"
+        },
+        {
+          "sa": "शुक्ति-रज्जु-आदौ",
+          "en": "in mother-of-pearl, a rope, and the rest"
+        },
+        {
+          "sa": "सादृश्य-आदि-अनुबन्धतः",
+          "en": "because of resemblance and the like"
+        }
+      ],
       "sourceNumbers": [
         467
       ],
@@ -30793,8 +31180,53 @@
       "number": "468",
       "label": "Verse 468",
       "deva": "परत्र पूर्व-दृष्टस्यावभासः स्मृति-लक्षणः।\nअध्यासः स कथं स्वामिन् भवेद् आत्मन्यगोचरे॥",
-      "translation": "Superimposition is nothing more than the qualities of a particular object being imagined as though they are present in something else. These qualities were perceived in a different context and they have remembrance as their basis. But the Ātman is not an object of perception. How is it possible to superimpose upon it the attributes which do not appertain to it?",
-      "gloss": [],
+      "translation": "Superimposition is the appearance in another thing of what was seen before, and is characterized by memory. How can that occur in the Self, which is not an object, O Lord?",
+      "gloss": [
+        {
+          "sa": "परत्र",
+          "en": "in another"
+        },
+        {
+          "sa": "पूर्व-दृष्टस्य",
+          "en": "of what was seen before"
+        },
+        {
+          "sa": "अवभासः",
+          "en": "appearance"
+        },
+        {
+          "sa": "स्मृति-लक्षणः",
+          "en": "characterized by memory"
+        },
+        {
+          "sa": "अध्यासः",
+          "en": "superimposition"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "स्वामिन्",
+          "en": "O Lord"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "could occur"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "अगोचरे",
+          "en": "which is not an object"
+        }
+      ],
       "sourceNumbers": [
         468
       ],
@@ -30807,8 +31239,53 @@
       "number": "469",
       "label": "Verse 469",
       "deva": "नानुभूतः कदाप्यात्माऽननुभूतस्य वस्तुनः।\nसादृश्यं सिध्यति कथम् अनात्मनि विलक्षणे॥",
-      "translation": "It has been said that the Ātman cannot be perceived by the senses. If at no time can the Ātman be an object of knowledge, what can it have in common with external object all of which should be classified as not being the Ātman and how can they have anything in common with the Ātman?",
-      "gloss": [],
+      "translation": "The Self has never been experienced as an object; how could resemblance to an unexperienced thing be established in the distinct not-Self?",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अनुभूतः",
+          "en": "experienced"
+        },
+        {
+          "sa": "कदापि",
+          "en": "ever"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अननुभूतस्य",
+          "en": "of what is unexperienced"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "an object"
+        },
+        {
+          "sa": "सादृश्यम्",
+          "en": "resemblance"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "अनात्मनि",
+          "en": "in the not-Self"
+        },
+        {
+          "sa": "विलक्षणे",
+          "en": "distinct"
+        }
+      ],
       "sourceNumbers": [
         469
       ],
@@ -30821,8 +31298,57 @@
       "number": "470",
       "label": "Verse 470",
       "deva": "अनात्मन्यात्मताध्यासः कथम् एष समागतः।\nनिवृत्तिः कथम् एतस्य केनोपायेन सिध्यति॥",
-      "translation": "How did the superimposition of the Ātman upon the Anātman come to take place? Can it be negated and if so, by what means?",
-      "gloss": [],
+      "translation": "How did this superimposition of Selfhood on the not-Self arise? How can it cease, and by what means can that cessation be achieved?",
+      "gloss": [
+        {
+          "sa": "अनात्मनि",
+          "en": "in the not-Self"
+        },
+        {
+          "sa": "आत्मता",
+          "en": "Selfhood"
+        },
+        {
+          "sa": "अध्यासः",
+          "en": "superimposition"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "समागतः",
+          "en": "arose"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "केन",
+          "en": "by what"
+        },
+        {
+          "sa": "उपायेन",
+          "en": "means"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is achieved"
+        }
+      ],
       "sourceNumbers": [
         470
       ],
