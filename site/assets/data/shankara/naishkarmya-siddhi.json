@@ -2,7 +2,7 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 981,
+  "expectedUnits": 962,
   "translationAvailable": true,
   "coverage": "Complete Sanskrit source and original English translation for all 1019 reader units. All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, and verses 3.1–3.60, plus 3.114, 3.123, and 4.43, now show complete shlokas, IAST, translations, and word-by-word glosses; the remaining 141 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
@@ -24134,26 +24134,68 @@
       ]
     },
     {
-      "id": "naishkarmya-siddhi-1009",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 334",
-      "label": "Text 334",
-      "deva": "वृत्तिभिर्युष्मदर्थाभिर्लक्ष्यते चेद्दृशिः परः ।",
-      "iast": "vṛttibhiryuṣmadarthābhirlakṣyate ceddṛśiḥ paraḥ |",
-      "translation": "“If the supreme Seer were indicated by thoughts whose meanings are ‘you’ and the rest,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1010",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.101",
       "label": "Verse 3.101",
-      "deva": "अनात्मत्वं भवेत्तस्य वितथं च वचः श्रुतेः ॥ १०१॥",
-      "iast": "anātmatvaṃ bhavettasya vitathaṃ ca vacaḥ śruteḥ || 101||",
-      "translation": "the Self would become not-Self, and scripture’s teaching would be false.”",
-      "gloss": [],
+      "deva": "वृत्तिभिर्युष्मदर्थाभिर्लक्ष्यते चेद्दृशिः परः ।\nअनात्मत्वं भवेत्तस्य वितथं च वचः श्रुतेः ॥ १०१॥",
+      "iast": "vṛttibhiryuṣmadarthābhirlakṣyate ceddṛśiḥ paraḥ |\nanātmatvaṃ bhavettasya vitathaṃ ca vacaḥ śruteḥ || 101||",
+      "translation": "If the supreme Witness were indicated through thoughts whose meanings are objects, it would become not-Self, and scripture’s teaching would be false.",
+      "gloss": [
+        {
+          "sa": "वृत्तिभिः",
+          "en": "by mental modifications; thoughts"
+        },
+        {
+          "sa": "युष्मद्-अर्थाभिः",
+          "en": "whose meanings are “you”; objects"
+        },
+        {
+          "sa": "लक्ष्यते",
+          "en": "is indicated"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "दृशिः",
+          "en": "the Seer; Witness"
+        },
+        {
+          "sa": "परः",
+          "en": "supreme"
+        },
+        {
+          "sa": "अनात्मत्वम्",
+          "en": "the state of being not-Self"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would become"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for it; of it"
+        },
+        {
+          "sa": "वितथम्",
+          "en": "false"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वचः",
+          "en": "the statement"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "of scripture"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-101"
       ]
@@ -24170,26 +24212,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1012",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 337",
-      "label": "Text 337",
-      "deva": "अनेन गुणलेशेन ह्यत्यहंकर्तृकर्मया ।",
-      "iast": "anena guṇaleśena hyatyahaṃkartṛkarmayā |",
-      "translation": "“Through this slight trace of attributes, by means of the ‘I’-thought,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1013",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.102",
       "label": "Verse 3.102",
-      "deva": "लक्ष्यतेऽसावहंवृत्त्या नाञ्जसात्राभिधीयते ॥ १०२॥",
-      "iast": "lakṣyate'sāvahaṃvṛttyā nāñjasātrābhidhīyate || 102||",
-      "translation": "the Self is indicated, though it is not directly stated here.”",
-      "gloss": [],
+      "deva": "अनेन गुणलेशेन ह्यत्यहंकर्तृकर्मया ।\nलक्ष्यतेऽसावहंवृत्त्या नाञ्जसात्राभिधीयते ॥ १०२॥",
+      "iast": "anena guṇaleśena hyatyahaṃkartṛkarmayā |\nlakṣyate'sāvahaṃvṛttyā nāñjasātrābhidhīyate || 102||",
+      "translation": "By this slight common quality, the Self is indicated by the “I”-thought, though it is not directly named here.",
+      "gloss": [
+        {
+          "sa": "अनेन",
+          "en": "by this"
+        },
+        {
+          "sa": "गुण-लेशेन",
+          "en": "by a slight trace of a quality"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अति-अहम्-कर्तृ-कर्मया",
+          "en": "by the “I”-thought, which takes the ego as its object"
+        },
+        {
+          "sa": "लक्ष्यते",
+          "en": "is indicated"
+        },
+        {
+          "sa": "असौ",
+          "en": "that [Self]"
+        },
+        {
+          "sa": "अहम्-वृत्त्या",
+          "en": "by the “I”-thought"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अञ्जसा",
+          "en": "directly; plainly"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is named; denoted"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-102"
       ]
@@ -24206,26 +24282,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1015",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 340",
-      "label": "Text 340",
-      "deva": "षष्ठीगुणक्रियाजातिरूढयः शब्दहेतवः ।",
-      "iast": "ṣaṣṭhīguṇakriyājātirūḍhayaḥ śabdahetavaḥ |",
-      "translation": "“Words depend on relation, qualities, action, class and convention;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1016",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.103",
       "label": "Verse 3.103",
-      "deva": "नात्मन्यन्यतमोऽमीषां तेनात्मा नाभिधीयते ॥ १०३॥",
-      "iast": "nātmanyanyatamo'mīṣāṃ tenātmā nābhidhīyate || 103||",
-      "translation": "none of these applies to the Self, and so the Self is not directly denoted.”",
-      "gloss": [],
+      "deva": "षष्ठीगुणक्रियाजातिरूढयः शब्दहेतवः ।\nनात्मन्यन्यतमोऽमीषां तेनात्मा नाभिधीयते ॥ १०३॥",
+      "iast": "ṣaṣṭhīguṇakriyājātirūḍhayaḥ śabdahetavaḥ |\nnātmanyanyatamo'mīṣāṃ tenātmā nābhidhīyate || 103||",
+      "translation": "Words denote through relation, quality, action, class, or convention. None of these applies to the Self, so it cannot be directly named.",
+      "gloss": [
+        {
+          "sa": "षष्ठी",
+          "en": "a genitive relation"
+        },
+        {
+          "sa": "गुण",
+          "en": "quality"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "जाति",
+          "en": "class; universal"
+        },
+        {
+          "sa": "रूढयः",
+          "en": "conventional usages"
+        },
+        {
+          "sa": "शब्द-हेतवः",
+          "en": "the grounds for word-denotation"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "अन्यतमः",
+          "en": "any one"
+        },
+        {
+          "sa": "अमीषाम्",
+          "en": "of these"
+        },
+        {
+          "sa": "तेन",
+          "en": "therefore"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is directly denoted"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-103"
       ]
@@ -24253,26 +24375,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1019",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 344",
-      "label": "Text 344",
-      "deva": "असत्ये वर्त्मनि स्थित्वा निरुपायमुपेयते ।",
-      "iast": "asatye vartmani sthitvā nirupāyamupeyate |",
-      "translation": "“One reaches the goal by first taking a path that is not ultimately real;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1020",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.104",
       "label": "Verse 3.104",
-      "deva": "आत्मत्वकारणाद्विद्मो गुणवृत्त्या विबोधिताः ॥ १०४॥",
-      "iast": "ātmatvakāraṇādvidmo guṇavṛttyā vibodhitāḥ || 104||",
-      "translation": "awakened through an indirect attribute, we know the Self by reason of its being our very Self.”",
-      "gloss": [],
+      "deva": "असत्ये वर्त्मनि स्थित्वा निरुपायमुपेयते ।\nआत्मत्वकारणाद्विद्मो गुणवृत्त्या विबोधिताः ॥ १०४॥",
+      "iast": "asatye vartmani sthitvā nirupāyamupeyate |\nātmatvakāraṇādvidmo guṇavṛttyā vibodhitāḥ || 104||",
+      "translation": "A path that is not ultimately real can lead to what has no other means of access. Awakened through a mere suggestion of a quality, we know the Self because it is our own Self.",
+      "gloss": [
+        {
+          "sa": "असत्ये",
+          "en": "in what is not ultimately real"
+        },
+        {
+          "sa": "वर्त्मनि",
+          "en": "on a path"
+        },
+        {
+          "sa": "स्थित्वा",
+          "en": "having stood; followed"
+        },
+        {
+          "sa": "निरुपायम्",
+          "en": "what has no means [of access]"
+        },
+        {
+          "sa": "उपेयते",
+          "en": "is reached"
+        },
+        {
+          "sa": "आत्मत्व-कारणात्",
+          "en": "because it is the Self"
+        },
+        {
+          "sa": "विद्मः",
+          "en": "we know"
+        },
+        {
+          "sa": "गुण-वृत्त्या",
+          "en": "through an indirect suggestion of a quality"
+        },
+        {
+          "sa": "विबोधिताः",
+          "en": "having been awakened"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-104"
       ]
@@ -24289,40 +24437,63 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1022",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 347",
-      "label": "Text 347",
-      "deva": "शयानाः प्रायशो लोके बोध्यमानाः स्वनामभिः ।",
-      "iast": "śayānāḥ prāyaśo loke bodhyamānāḥ svanāmabhiḥ |",
-      "translation": "“In ordinary life, people who are asleep are addressed by their names",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1023",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.105",
       "label": "Verse 3.105",
-      "deva": "सहसैव प्रबुध्यन्ते यथैवं प्रत्यगात्मनि ॥ १०५॥",
-      "iast": "sahasaiva prabudhyante yathaivaṃ pratyagātmani || 105||",
-      "translation": "and at once awaken; in the same way, one awakens to the inward Self.”",
-      "gloss": [],
+      "deva": "शयानाः प्रायशो लोके बोध्यमानाः स्वनामभिः ।\nसहसैव प्रबुध्यन्ते यथैवं प्रत्यगात्मनि ॥ १०५॥",
+      "iast": "śayānāḥ prāyaśo loke bodhyamānāḥ svanāmabhiḥ |\nsahasaiva prabudhyante yathaivaṃ pratyagātmani || 105||",
+      "translation": "People in ordinary life, when called by their own names while asleep, awaken at once; the same is true of the inward Self.",
+      "gloss": [
+        {
+          "sa": "शयानाः",
+          "en": "sleeping [people]"
+        },
+        {
+          "sa": "प्रायशः",
+          "en": "usually"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary life"
+        },
+        {
+          "sa": "बोध्यमानाः",
+          "en": "being awakened; being addressed"
+        },
+        {
+          "sa": "स्व-नामभिः",
+          "en": "by their own names"
+        },
+        {
+          "sa": "सहसा",
+          "en": "suddenly; at once"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रबुध्यन्ते",
+          "en": "they awaken"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "प्रत्यगात्मनि",
+          "en": "with regard to the inward Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-105"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1024",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 349",
-      "label": "Text 349",
-      "deva": "न हि नाम्नास्ति संबन्धो व्युत्थितस्य शरीरतः ।",
-      "iast": "na hi nāmnāsti saṃbandho vyutthitasya śarīrataḥ |",
-      "translation": "“A name has no relation to the body of the person who wakes;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1025",
@@ -24330,10 +24501,71 @@
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.106",
       "label": "Verse 3.106",
-      "deva": "तथापि बुध्यते तेन यथैवं तत्त्वमित्यतः ॥ १०६॥",
-      "iast": "tathāpi budhyate tena yathaivaṃ tattvamityataḥ || 106||",
-      "translation": "yet through that name the person understands—just so with ‘you are that.’”",
-      "gloss": [],
+      "deva": "न हि नाम्नास्ति संबन्धो व्युत्थितस्य शरीरतः ।\nतथापि बुध्यते तेन यथैवं तत्त्वमित्यतः ॥ १०६॥",
+      "iast": "na hi nāmnāsti saṃbandho vyutthitasya śarīrataḥ |\ntathāpi budhyate tena yathaivaṃ tattvamityataḥ || 106||",
+      "translation": "A name has no direct relation to the body of the person who has awakened, yet it awakens him. Likewise, the words “That thou art” awaken understanding.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "नाम्ना",
+          "en": "with a name"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "संबन्धः",
+          "en": "a relation"
+        },
+        {
+          "sa": "व्युत्थितस्य",
+          "en": "of one who has awakened"
+        },
+        {
+          "sa": "शरीरतः",
+          "en": "with the body"
+        },
+        {
+          "sa": "तथा",
+          "en": "even so"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "बुध्यते",
+          "en": "is understood; awakens"
+        },
+        {
+          "sa": "तेन",
+          "en": "by that"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "तत्-त्वम्-इति",
+          "en": "“That thou art”"
+        },
+        {
+          "sa": "अतः",
+          "en": "thus; from this"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-106"
       ]
@@ -24350,26 +24582,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1027",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 352",
-      "label": "Text 352",
-      "deva": "बोधाबोधौ नभोऽस्पृष्ट्वा कृष्णधीनीडगौ यथा ।",
-      "iast": "bodhābodhau nabho'spṛṣṭvā kṛṣṇadhīnīḍagau yathā |",
-      "translation": "“Awareness and its absence, though lodged in a darkened mind, do not touch space;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1028",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.107",
       "label": "Verse 3.107",
-      "deva": "बाध्येतरात्मकौ स्यातां तथेहात्मनि गम्यताम् ॥ १०७॥",
-      "iast": "bādhyetarātmakau syātāṃ tathehātmani gamyatām || 107||",
-      "translation": "in the same way, understand that in the Self they are subject to sublation and what is not sublated.”",
-      "gloss": [],
+      "deva": "बोधाबोधौ नभोऽस्पृष्ट्वा कृष्णधीनीडगौ यथा ।\nबाध्येतरात्मकौ स्यातां तथेहात्मनि गम्यताम् ॥ १०७॥",
+      "iast": "bodhābodhau nabho'spṛṣṭvā kṛṣṇadhīnīḍagau yathā |\nbādhyetarātmakau syātāṃ tathehātmani gamyatām || 107||",
+      "translation": "Knowledge and ignorance arise in a darkened mind without touching space; understand that, in the same way, one of these is sublated by the other in the Self, without affecting the Self.",
+      "gloss": [
+        {
+          "sa": "बोध-अबोधौ",
+          "en": "knowledge and ignorance"
+        },
+        {
+          "sa": "नभः",
+          "en": "space"
+        },
+        {
+          "sa": "अस्पृष्ट्वा",
+          "en": "without touching"
+        },
+        {
+          "sa": "कृष्ण-धी-नीड-गौ",
+          "en": "dwelling in the nest of a darkened mind"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "बाध्य-इतर-आत्मकौ",
+          "en": "having the nature of what is sublated and what sublates"
+        },
+        {
+          "sa": "स्याताम्",
+          "en": "they are"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "गम्यताम्",
+          "en": "let it be understood"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-107"
       ]
@@ -24386,40 +24652,71 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1030",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 355",
-      "label": "Text 355",
-      "deva": "नासन्नुपायो लोकेऽस्ति परमार्थविनिश्चये ।",
-      "iast": "nāsannupāyo loke'sti paramārthaviniścaye |",
-      "translation": "“There is no unreal means in ordinary life for determining what is ultimately true;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1031",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.108",
       "label": "Verse 3.108",
-      "deva": "नासल्लिङ्गाद्धि बाष्पदेः कश्चिदग्निं प्रपद्यते ॥ १०८॥",
-      "iast": "nāsalliṅgāddhi bāṣpadeḥ kaścidagniṃ prapadyate || 108||",
-      "translation": "no one concludes that there is fire from a false sign such as mist.”",
-      "gloss": [],
+      "deva": "नासन्नुपायो लोकेऽस्ति परमार्थविनिश्चये ।\nनासल्लिङ्गाद्धि बाष्पदेः कश्चिदग्निं प्रपद्यते ॥ १०८॥",
+      "iast": "nāsannupāyo loke'sti paramārthaviniścaye |\nnāsalliṅgāddhi bāṣpadeḥ kaścidagniṃ prapadyate || 108||",
+      "translation": "In ordinary life, an unreal means cannot establish what is ultimately real; no one concludes that there is fire from a false sign such as mist.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "असत्",
+          "en": "unreal; false"
+        },
+        {
+          "sa": "उपायः",
+          "en": "a means"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary life"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "परमार्थ-विनिश्चये",
+          "en": "for determining what is ultimately real"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "असत्-लिङ्गात्",
+          "en": "from a false sign"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "बाष्प-आदेः",
+          "en": "from mist and the like"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "anyone"
+        },
+        {
+          "sa": "अग्निम्",
+          "en": "fire"
+        },
+        {
+          "sa": "प्रपद्यते",
+          "en": "concludes; arrives at"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-108"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-1032",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 357",
-      "label": "Text 357",
-      "deva": "इत्येवं चोदयेद्योऽपि जोषयेत्तं घटादिना ।",
-      "iast": "ityevaṃ codayedyo'pi joṣayettaṃ ghaṭādinā |",
-      "translation": "To anyone who argues this way, one can point to the pot and other familiar examples:",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-1033",
@@ -24427,10 +24724,75 @@
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.109",
       "label": "Verse 3.109",
-      "deva": "सदसद्भ्यां विभक्तोऽसौ पर्यायश्च न चानयोः ॥ १०९॥",
-      "iast": "sadasadbhyāṃ vibhakto'sau paryāyaśca na cānayoḥ || 109||",
-      "translation": "“The pot, in turn, is distinct from both [its cause and the absence of the pot]; the alternatives are not the same.”",
-      "gloss": [],
+      "deva": "इत्येवं चोदयेद्योऽपि जोषयेत्तं घटादिना ।\nसदसद्भ्यां विभक्तोऽसौ पर्यायश्च न चानयोः ॥ १०९॥",
+      "iast": "ityevaṃ codayedyo'pi joṣayettaṃ ghaṭādinā |\nsadasadbhyāṃ vibhakto'sau paryāyaśca na cānayoḥ || 109||",
+      "translation": "Answer anyone who objects this way with the example of a pot: it is distinct from both existence and nonexistence, and does not alternate between them.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "चोदयेत्",
+          "en": "might object"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "जोषयेत्",
+          "en": "one should satisfy; answer"
+        },
+        {
+          "sa": "तम्",
+          "en": "him"
+        },
+        {
+          "sa": "घट-आदिना",
+          "en": "with a pot and the like"
+        },
+        {
+          "sa": "सत्-असद्भ्याम्",
+          "en": "from existence and nonexistence"
+        },
+        {
+          "sa": "विभक्तः",
+          "en": "distinguished; separate"
+        },
+        {
+          "sa": "असौ",
+          "en": "that [pot]"
+        },
+        {
+          "sa": "पर्यायः",
+          "en": "in alternation; successively"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "अनयोः",
+          "en": "of these two"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-109"
       ]
@@ -24458,26 +24820,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1036",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 361",
-      "label": "Text 361",
-      "deva": "अतिदुस्स्थोऽप्रबोधोऽत्र ह्यात्मैवास्य प्रबुद्धता ।",
-      "iast": "atidusstho'prabodho'tra hyātmaivāsya prabuddhatā |",
-      "translation": "“Ignorance is difficult to dislodge; the Self’s awakening is simply the recognition of the Self.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1037",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.110",
       "label": "Verse 3.110",
-      "deva": "निमित्तमात्राव्द्येत्येषा नासाग्रे बदरं यथा ॥ ११०॥",
-      "iast": "nimittamātrāvdyetyeṣā nāsāgre badaraṃ yathā || 110||",
-      "translation": "It comes from a mere occasion, like a berry resting at the tip of the nose.”",
-      "gloss": [],
+      "deva": "अतिदुस्स्थोऽप्रबोधोऽत्र ह्यात्मैवास्य प्रबुद्धता ।\nनिमित्तमात्राद्व्येत्येषा नासाग्रे बदरं यथा ॥ ११०॥",
+      "iast": "atidusstho'prabodho'tra hyātmaivāsya prabuddhatā |\nnimittamātrādvyety eṣā nāsāgre badaraṃ yathā || 110||",
+      "translation": "Ignorance is precariously established: the Self itself is its awakening. It departs at the slightest occasion, like a berry balanced on the tip of the nose.",
+      "gloss": [
+        {
+          "sa": "अति-दुःस्थः",
+          "en": "precarious; poorly established"
+        },
+        {
+          "sa": "अप्रबोधः",
+          "en": "ignorance; lack of awakening"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "प्रबुद्धता",
+          "en": "awakening"
+        },
+        {
+          "sa": "निमित्त-मात्रात्",
+          "en": "from a mere occasion"
+        },
+        {
+          "sa": "व्येति",
+          "en": "departs"
+        },
+        {
+          "sa": "एषा",
+          "en": "this [ignorance]"
+        },
+        {
+          "sa": "नास-अग्रे",
+          "en": "at the tip of the nose"
+        },
+        {
+          "sa": "बदरम्",
+          "en": "a jujube berry"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-110"
       ]
@@ -24494,26 +24902,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1039",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 364",
-      "label": "Text 364",
-      "deva": "अहो धार्ष्ट्यमविद्याया न कश्चिदतिवर्तते ।",
-      "iast": "aho dhārṣṭyamavidyāyā na kaścidativartate |",
-      "translation": "“How bold ignorance is! No one escapes its reach.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1040",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.111",
       "label": "Verse 3.111",
-      "deva": "प्रमाणं वस्त्वनादृत्य परमात्मेव तिष्ठति ॥ १११॥",
-      "iast": "pramāṇaṃ vastvanādṛtya paramātmeva tiṣṭhati || 111||",
-      "translation": "Ignoring the means of knowledge, it stands there as though it were the Supreme Self.”",
-      "gloss": [],
+      "deva": "अहो धार्ष्ट्यमविद्याया न कश्चिदतिवर्तते ।\nप्रमाणं वस्त्वनादृत्य परमात्मेव तिष्ठति ॥ १११॥",
+      "iast": "aho dhārṣṭyamavidyāyā na kaścidativartate |\npramāṇaṃ vastvanādṛtya paramātmeva tiṣṭhati || 111||",
+      "translation": "How brazen ignorance is—no one outdoes it! Disregarding reality and valid means of knowledge, it stands as though it were the Supreme Self.",
+      "gloss": [
+        {
+          "sa": "अहो",
+          "en": "oh!"
+        },
+        {
+          "sa": "धार्ष्ट्यम्",
+          "en": "boldness; audacity"
+        },
+        {
+          "sa": "अविद्यायाः",
+          "en": "of ignorance"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "anyone"
+        },
+        {
+          "sa": "अतिवर्तते",
+          "en": "surpasses"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a valid means of knowledge"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality; the real"
+        },
+        {
+          "sa": "अनादृत्य",
+          "en": "disregarding"
+        },
+        {
+          "sa": "परमात्मा-इव",
+          "en": "as though the Supreme Self"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "it stands"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-111"
       ]
@@ -24530,26 +24972,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1042",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 367",
-      "label": "Text 367",
-      "deva": "ज्ञानं यस्य निजं रूपं क्रियाकारकवर्जितम् ।",
-      "iast": "jñānaṃ yasya nijaṃ rūpaṃ kriyākārakavarjitam |",
-      "translation": "“For the one whose own nature is knowledge, free of action and the factors of action,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1043",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.112",
       "label": "Verse 3.112",
-      "deva": "संभावनाप्यविद्यायास्तत्र स्यात्केन हेतुना ॥ ११२॥",
-      "iast": "saṃbhāvanāpyavidyāyāstatra syātkena hetunā || 112||",
-      "translation": "by what reason could ignorance even be conceived?”",
-      "gloss": [],
+      "deva": "ज्ञानं यस्य निजं रूपं क्रियाकारकवर्जितम् ।\nसंभावनाप्यविद्यायास्तत्र स्यात्केन हेतुना ॥ ११२॥",
+      "iast": "jñānaṃ yasya nijaṃ rūpaṃ kriyākārakavarjitam |\nsaṃbhāvanāpyavidyāyāstatra syātkena hetunā || 112||",
+      "translation": "For the one whose own nature is knowledge, free from action and its factors, by what reason could ignorance even be conceived?",
+      "gloss": [
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "यस्य",
+          "en": "whose"
+        },
+        {
+          "sa": "निजम्",
+          "en": "own"
+        },
+        {
+          "sa": "रूपम्",
+          "en": "nature"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "कारक",
+          "en": "factors of action"
+        },
+        {
+          "sa": "वर्जितम्",
+          "en": "free from"
+        },
+        {
+          "sa": "संभावना",
+          "en": "conception; possibility"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अविद्यायाः",
+          "en": "of ignorance"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there; in it"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "could be"
+        },
+        {
+          "sa": "केन",
+          "en": "by what"
+        },
+        {
+          "sa": "हेतुना",
+          "en": "reason"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-112"
       ]
@@ -24566,26 +25054,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1045",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 370",
-      "label": "Text 370",
-      "deva": "अनुमानादयं भावाव्द्यावृत्तोऽभावमाश्रितः ।",
-      "iast": "anumānādayaṃ bhāvāvdyāvṛtto'bhāvamāśritaḥ |",
-      "translation": "“Through inference this reality is excluded from what exists and assigned to nonexistence;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1046",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.113",
       "label": "Verse 3.113",
-      "deva": "ततोऽप्यस्य निवृत्तिः स्याद्वाक्यादेव बुभुत्सतः ॥ ११३॥",
-      "iast": "tato'pyasya nivṛttiḥ syādvākyādeva bubhutsataḥ || 113||",
-      "translation": "for the seeker, its removal too comes only from the sentence.”",
-      "gloss": [],
+      "deva": "अनुमानादयं भावाव्द्यावृत्तोऽभावमाश्रितः ।\nततोऽप्यस्य निवृत्तिः स्याद्वाक्यादेव बुभुत्सतः ॥ ११३॥",
+      "iast": "anumānādayaṃ bhāvāvdyāvṛtto'bhāvamāśritaḥ |\ntato'pyasya nivṛttiḥ syādvākyādeva bubhutsataḥ || 113||",
+      "translation": "Inference sets this Self apart from what exists empirically and so places it in nonexistence; for the seeker, only the sentence removes this mistaken conclusion.",
+      "gloss": [
+        {
+          "sa": "अनुमानात्",
+          "en": "through inference"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this [Self]"
+        },
+        {
+          "sa": "भावात्",
+          "en": "from what exists"
+        },
+        {
+          "sa": "व्यावृत्तः",
+          "en": "excluded; distinguished"
+        },
+        {
+          "sa": "अभावम्",
+          "en": "nonexistence"
+        },
+        {
+          "sa": "आश्रितः",
+          "en": "resorted to; assigned to"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "removal; cessation"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "from the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "बुभुत्सतः",
+          "en": "for one who seeks to know"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-113"
       ]
@@ -24681,26 +25215,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1049",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 374",
-      "label": "Text 374",
-      "deva": "अविद्यानिद्रया सोऽयं प्रसुप्तो दुर्विवेकया ।",
-      "iast": "avidyānidrayā so'yaṃ prasupto durvivekayā |",
-      "translation": "“This person lies asleep, overcome by the sleep of ignorance, hard to discern;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1050",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.115",
       "label": "Verse 3.115",
-      "deva": "भावाभावव्युदासिन्या श्रुत्यैव प्रतिबोध्यते ॥ ११५॥",
-      "iast": "bhāvābhāvavyudāsinyā śrutyaiva pratibodhyate || 115||",
-      "translation": "only scripture, which removes both existence and nonexistence, can awaken him.”",
-      "gloss": [],
+      "deva": "अविद्यानिद्रया सोऽयं प्रसुप्तो दुर्विवेकया ।\nभावाभावव्युदासिन्या श्रुत्यैव प्रतिबोध्यते ॥ ११५॥",
+      "iast": "avidyānidrayā so'yaṃ prasupto durvivekayā |\nbhāvābhāvavyudāsinyā śrutyaiva pratibodhyate || 115||",
+      "translation": "This person, asleep in the hard-to-discriminate sleep of ignorance, is awakened only by scripture, which sets aside both existence and nonexistence.",
+      "gloss": [
+        {
+          "sa": "अविद्या-निद्रया",
+          "en": "by the sleep of ignorance"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "अयम्",
+          "en": "person"
+        },
+        {
+          "sa": "प्रसुप्तः",
+          "en": "asleep"
+        },
+        {
+          "sa": "दुर्विवेकया",
+          "en": "hard to discern; resistant to discrimination"
+        },
+        {
+          "sa": "भाव-अभाव-व्युदासिन्या",
+          "en": "which excludes both existence and nonexistence"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by scripture"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "प्रतिबोध्यते",
+          "en": "is awakened"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-115"
       ]
@@ -24717,26 +25277,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1052",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 377",
-      "label": "Text 377",
-      "deva": "कुतो अविद्येति चोद्यं स्यान्नैव प्राग्घेत्वसंभवात् ।",
-      "iast": "kuto avidyeti codyaṃ syānnaiva prāgghetvasaṃbhavāt |",
-      "translation": "“Beforehand, the question ‘Whence did ignorance come?’ cannot arise, because its cause is not available;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1053",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.116",
       "label": "Verse 3.116",
-      "deva": "कालत्रयापरिच्छित्तेर्न चोर्ध्वं चोद्यसंभवः ॥ ११६॥",
-      "iast": "kālatrayāparicchitterna cordhvaṃ codyasaṃbhavaḥ || 116||",
-      "translation": "nor can the question arise afterward, since it is not bounded by any of the three times.”",
-      "gloss": [],
+      "deva": "कुतो अविद्येति चोद्यं स्यान्नैव प्राग्घेत्वसंभवात् ।\nकालत्रयापरिच्छित्तेर्न चोर्ध्वं चोद्यसंभवः ॥ ११६॥",
+      "iast": "kuto avidyeti codyaṃ syānnaiva prāgghetvasaṃbhavāt |\nkālatrayāparicchitterna cordhvaṃ codyasaṃbhavaḥ || 116||",
+      "translation": "The question “Where did ignorance come from?” is out of place both before and after realization: before, its cause cannot be established; afterward, ignorance is no longer present in any of the three times.",
+      "gloss": [
+        {
+          "sa": "कुतः",
+          "en": "from where; how"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; “…”"
+        },
+        {
+          "sa": "चोद्यम्",
+          "en": "an objection; question"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "at all"
+        },
+        {
+          "sa": "प्राक्",
+          "en": "before"
+        },
+        {
+          "sa": "हेतु-असंभवात्",
+          "en": "because a cause is unavailable"
+        },
+        {
+          "sa": "काल-त्रय-अपरिच्छित्तेः",
+          "en": "because it is not delimited by the three times"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "ऊर्ध्वम्",
+          "en": "afterward"
+        },
+        {
+          "sa": "चोद्यम्",
+          "en": "the objection"
+        },
+        {
+          "sa": "संभवः",
+          "en": "possibility"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-116"
       ]
@@ -24753,26 +25363,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1055",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 380",
-      "label": "Text 380",
-      "deva": "अद्धातममनादृत्य प्रमाणं सदसीति ये ।",
-      "iast": "addhātamamanādṛtya pramāṇaṃ sadasīti ye |",
-      "translation": "“Those who disregard the true means of knowledge and seek to know ‘you are that’ by other means",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1056",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.117",
       "label": "Verse 3.117",
-      "deva": "बुभुत्सन्तेऽन्यतः कुर्युस्तेऽक्ष्णापि रसवेदनम् ॥ ११७॥",
-      "iast": "bubhutsante'nyataḥ kuryuste'kṣṇāpi rasavedanam || 117||",
-      "translation": "might as well try to taste flavors with their eyes.”",
-      "gloss": [],
+      "deva": "अद्धातममनादृत्य प्रमाणं सदसीति ये ।\nबुभुत्सन्तेऽन्यतः कुर्युस्तेऽक्ष्णापि रसवेदनम् ॥ ११७॥",
+      "iast": "addhātamamanādṛtya pramāṇaṃ sadasīti ye |\nbubhutsante'nyataḥ kuryuste'kṣṇāpi rasavedanam || 117||",
+      "translation": "Those who disregard the truest means of knowledge, the teaching “You are Being,” and seek to know by other means might as well try to taste flavor with their eyes.",
+      "gloss": [
+        {
+          "sa": "अद्धातमम्",
+          "en": "most truly; most reliably"
+        },
+        {
+          "sa": "अनादृत्य",
+          "en": "disregarding"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a valid means of knowledge"
+        },
+        {
+          "sa": "सत्-असि-इति",
+          "en": "“You are Being”"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "बुभुत्सन्ते",
+          "en": "wish to know"
+        },
+        {
+          "sa": "अन्यतः",
+          "en": "by another means"
+        },
+        {
+          "sa": "कुर्युः",
+          "en": "would do"
+        },
+        {
+          "sa": "ते",
+          "en": "they"
+        },
+        {
+          "sa": "अक्ष्णा",
+          "en": "with the eye"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "रस-वेदनम्",
+          "en": "tasting a flavor"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-117"
       ]
@@ -24789,26 +25437,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1058",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 383",
-      "label": "Text 383",
-      "deva": "इदं चेदनृतं ब्रूयात्सत्यामवगतावपि ।",
-      "iast": "idaṃ cedanṛtaṃ brūyātsatyāmavagatāvapi |",
-      "translation": "“If this sentence were false, even when awareness is present,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1059",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.118",
       "label": "Verse 3.118",
-      "deva": "न चान्यत्रापि विश्वासो ह्यवगत्यविशेषतः ॥ ११८॥",
-      "iast": "na cānyatrāpi viśvāso hyavagatyaviśeṣataḥ || 118||",
-      "translation": "there would be no ground for trusting any other sentence either, since they are all alike in yielding awareness.”",
-      "gloss": [],
+      "deva": "इदं चेदनृतं ब्रूयात्सत्यामवगतावपि ।\nन चान्यत्रापि विश्वासो ह्यवगत्यविशेषतः ॥ ११८॥",
+      "iast": "idaṃ cedanṛtaṃ brūyātsatyāmavagatāvapi |\nna cānyatrāpi viśvāso hyavagatyaviśeṣataḥ || 118||",
+      "translation": "If this statement were false even when knowledge had arisen, there would be no reason to trust another source either, since each is alike in producing knowledge.",
+      "gloss": [
+        {
+          "sa": "इदम्",
+          "en": "this [statement]"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अनृतम्",
+          "en": "false"
+        },
+        {
+          "sa": "ब्रूयात्",
+          "en": "were to say"
+        },
+        {
+          "sa": "सत्यम्",
+          "en": "when truth; true"
+        },
+        {
+          "sa": "अवगतौ",
+          "en": "in the arising of knowledge"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere; in another source"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "विश्वासः",
+          "en": "trust; confidence"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "अवगति-अविशेषतः",
+          "en": "because there is no difference in the arising of knowledge"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-118"
       ]
@@ -24825,26 +25519,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1061",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 386",
-      "label": "Text 386",
-      "deva": "न चेदनुभवोऽतः स्यात्पदार्थावगतावपि ।",
-      "iast": "na cedanubhavo'taḥ syātpadārthāvagatāvapi |",
-      "translation": "“If no experience arose even when the word’s meaning was understood,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1062",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.119",
       "label": "Verse 3.119",
-      "deva": "कल्प्यं विध्यन्तरं तत्र न ह्यन्योऽर्थोऽवगम्यते ॥ ११९॥",
-      "iast": "kalpyaṃ vidhyantaraṃ tatra na hyanyo'rtho'vagamyate || 119||",
-      "translation": "one would have to invent a separate injunction; no other meaning is actually understood.”",
-      "gloss": [],
+      "deva": "न चेदनुभवोऽतः स्यात्पदार्थावगतावपि ।\nकल्प्यं विध्यन्तरं तत्र न ह्यन्योऽर्थोऽवगम्यते ॥ ११९॥",
+      "iast": "na cedanubhavo'taḥ syātpadārthāvagatāvapi |\nkalpyaṃ vidhyantaraṃ tatra na hyanyo'rtho'vagamyate || 119||",
+      "translation": "If no experience arose even after the word-meanings were understood, one would have to invent a separate injunction; no other meaning is actually understood here.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अनुभवः",
+          "en": "experience"
+        },
+        {
+          "sa": "अतः",
+          "en": "from this"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would arise"
+        },
+        {
+          "sa": "पद-अर्थ-अवगतौ",
+          "en": "when the meanings of the words are understood"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "कल्प्यम्",
+          "en": "would have to be imagined"
+        },
+        {
+          "sa": "विधि-अन्तरम्",
+          "en": "another injunction"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "अवगम्यते",
+          "en": "is understood"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-119"
       ]
@@ -24872,26 +25616,44 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-1065",
-      "chapter": 3,
-      "sectionTitle": "Adhyāya 3 — The nature of the Self",
-      "number": "3 · 390",
-      "label": "Text 390",
-      "deva": "नामादिभ्यो निराकृत्य त्वमर्थं निष्परिग्रहः ।",
-      "iast": "nāmādibhyo nirākṛtya tvamarthaṃ niṣparigrahaḥ |",
-      "translation": "“Setting aside names and the rest, one should relinquish the meaning of ‘thou,’",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-1066",
       "chapter": 3,
       "sectionTitle": "Adhyāya 3 — The nature of the Self",
       "number": "3.120",
       "label": "Verse 3.120",
-      "deva": "निस्स्पृहो युष्मदर्थेभ्यः शमादिविधिचोदितः ॥ १२०॥",
-      "iast": "nisspṛho yuṣmadarthebhyaḥ śamādividhicoditaḥ || 120||",
-      "translation": "be free of desire for what is other than oneself, and follow the disciplines of calm and the rest.”",
-      "gloss": [],
+      "deva": "नामादिभ्यो निराकृत्य त्वमर्थं निष्परिग्रहः ।\nनिस्स्पृहो युष्मदर्थेभ्यः शमादिविधिचोदितः ॥ १२०॥",
+      "iast": "nāmādibhyo nirākṛtya tvamarthaṃ niṣparigrahaḥ |\nnisspṛho yuṣmadarthebhyaḥ śamādividhicoditaḥ || 120||",
+      "translation": "Having set aside names and the rest from the meaning of “thou,” one is free of possessiveness and desire for objects, guided by disciplines such as calm.",
+      "gloss": [
+        {
+          "sa": "नाम-आदिभ्यः",
+          "en": "from names and the rest"
+        },
+        {
+          "sa": "निराकृत्य",
+          "en": "having set aside"
+        },
+        {
+          "sa": "त्वम्-अर्थम्",
+          "en": "the meaning of “thou”"
+        },
+        {
+          "sa": "निष्परिग्रहः",
+          "en": "free from possessiveness"
+        },
+        {
+          "sa": "निःस्पृहः",
+          "en": "without desire"
+        },
+        {
+          "sa": "युष्मद्-अर्थेभ्यः",
+          "en": "for objectified things; “you”-meanings"
+        },
+        {
+          "sa": "शम-आदि-विधि-चोदितः",
+          "en": "guided by disciplines such as calm"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-120"
       ]
@@ -28089,12 +28851,31 @@
       "3.98",
       "3.99",
       "3.100",
+      "3.101",
+      "3.102",
+      "3.103",
+      "3.104",
+      "3.105",
+      "3.106",
+      "3.107",
+      "3.108",
+      "3.109",
+      "3.110",
+      "3.111",
+      "3.112",
+      "3.113",
       "3.114",
+      "3.115",
+      "3.116",
+      "3.117",
+      "3.118",
+      "3.119",
+      "3.120",
       "3.123",
       "4.43"
     ],
     "partialUnits": [],
-    "note": "All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, and verses 3.1–3.100, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 101 numbered verses and prose commentary still need separate glosses."
+    "note": "All 100 verses of Adhyāya 1, all 119 verses of Adhyāya 2, verses 3.1–3.113 and 3.115–3.123, and verse 4.43 have complete glosses. Verse 3.114 also has a complete gloss. The remaining 82 numbered verses and prose commentary still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
