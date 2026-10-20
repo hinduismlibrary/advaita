@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 480
+      "to": 500
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–480 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–500 (485 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -31959,16 +31959,16 @@
       "chapter": 3,
       "number": "480",
       "label": "Verse 480",
-      "deva": "निरुपाधि-भ्रमेष्वस्मिन् नैवापेक्षा प्रदृश्यते।\nसोपाधिष्वेव तद् दृष्टं रज्जु-सर्प-भ्रमादिषु॥",
-      "translation": "In this kind of error without a limiting adjunct, resemblance is not required; it is observed only in errors with an adjunct, such as mistaking a rope for a snake.",
+      "deva": "निरुपाधि-भ्रमेष्वस्य नैवापेक्षा प्रदृश्यते।\nसोपाधिष्वेव तद् दृष्टं रज्जु-सर्प-भ्रमादिषु॥",
+      "translation": "In errors without a limiting adjunct, no need for similarity is seen. It is found only in errors with adjuncts, such as mistaking a rope for a snake.",
       "gloss": [
         {
           "sa": "निरुपाधि-भ्रमेषु",
           "en": "in errors without a limiting adjunct"
         },
         {
-          "sa": "अस्मिन्",
-          "en": "in this"
+          "sa": "अस्य",
+          "en": "of it (similarity)"
         },
         {
           "sa": "न",
@@ -31988,7 +31988,7 @@
         },
         {
           "sa": "सोपाधिषु",
-          "en": "in those with an adjunct"
+          "en": "in errors with adjuncts"
         },
         {
           "sa": "एव",
@@ -32000,7 +32000,7 @@
         },
         {
           "sa": "दृष्टम्",
-          "en": "is observed"
+          "en": "is seen"
         },
         {
           "sa": "रज्जु-सर्प-भ्रम-आदिषु",
@@ -32011,7 +32011,7 @@
         480
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "nirupādhi-bhrameṣvasmin naivāpekṣā pradṛśyate|\nsopādhiṣveva tad dṛṣṭaṃ rajju-sarpa-bhramādiṣu||"
+      "iast": "nirupādhi-bhrameṣv asya naivāpekṣā pradṛśyate|\nsopādhiṣv eva tad dṛṣṭaṃ rajju-sarpa-bhramādiṣu||"
     },
     {
       "id": "svsss-3-0481",
@@ -32019,8 +32019,53 @@
       "number": "481",
       "label": "Verse 481",
       "deva": "तथापि किञ्चिद् वक्ष्यामि सादृश्यं शृणु तत्-परः।\nअत्यन्त-निर्मलः सूक्ष्म आत्मायम् अतिभास्वरः॥",
-      "translation": "But the absence of limiting conditions does not preclude the possibility of similarity. It has been already stated that the Ātman is pure and is extremely subtle. The Ātman shines by the light of its own consciousness.",
-      "gloss": [],
+      "translation": "Even so, I will say something about the similarity; listen closely. This Self is utterly pure, subtle, and exceedingly luminous.",
+      "gloss": [
+        {
+          "sa": "तथापि",
+          "en": "even so"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "something"
+        },
+        {
+          "sa": "वक्ष्यामि",
+          "en": "I will say"
+        },
+        {
+          "sa": "सादृश्यम्",
+          "en": "similarity"
+        },
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        },
+        {
+          "sa": "तत्-परः",
+          "en": "intent on that; attentive"
+        },
+        {
+          "sa": "अत्यन्त-निर्मलः",
+          "en": "utterly pure"
+        },
+        {
+          "sa": "सूक्ष्मः",
+          "en": "subtle"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अतिभास्वरः",
+          "en": "exceedingly luminous"
+        }
+      ],
       "sourceNumbers": [
         481
       ],
@@ -32033,8 +32078,57 @@
       "number": "482",
       "label": "Verse 482",
       "deva": "बुद्धिस् तथैव सत्त्वात्मा साभासा भास्वरामला।\nसांनिध्याद् आत्मवद् भाति सूर्यवत् स्फटिको यथा॥",
-      "translation": "In as much as the intellect is extremely pure and transparent, it is akin to the Ātman. By virtue of its proximity to the innermost Ātman, it catches the light of the Ātman just as a crystal set in sunlight reflects light.",
-      "gloss": [],
+      "translation": "The intellect too, with the nature of sattva, bears a reflection and is luminous and stainless. By the Self’s nearness it shines like the Self, as a crystal shines like the sun.",
+      "gloss": [
+        {
+          "sa": "बुद्धिः",
+          "en": "the intellect"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सत्त्वात्मा",
+          "en": "having the nature of sattva"
+        },
+        {
+          "sa": "साभासा",
+          "en": "with a reflection"
+        },
+        {
+          "sa": "भास्वर-अमला",
+          "en": "luminous and stainless"
+        },
+        {
+          "sa": "सांनिध्यात्",
+          "en": "by nearness"
+        },
+        {
+          "sa": "आत्मवत्",
+          "en": "like the Self"
+        },
+        {
+          "sa": "भाति",
+          "en": "shines"
+        },
+        {
+          "sa": "सूर्यवत्",
+          "en": "like the sun"
+        },
+        {
+          "sa": "स्फटिकः",
+          "en": "a crystal"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        }
+      ],
       "sourceNumbers": [
         482
       ],
@@ -32046,14 +32140,79 @@
       "chapter": 3,
       "number": "483",
       "label": "Verse 483",
-      "deva": "आत्माभासा ततो बुद्धिर् बुद्ध्याभासं ततो मनः।\nअक्षाणि मन-आभासान्य् अक्षाभासम् इदं वपुः।\nअत एवात्मता-बुद्धिर् देहाक्षादाव् अनात्मनि॥",
-      "translation": "The intellect catches the light of the Ātman. Similarly again, the mind catches the light of the intellect, and the senses in their turn catch the light of the mind. Finally, the physical body comes to feel what is comprehended by the sense organs. That is why one comes to think that the Ātman is constituted out of a combination of the body and the sense organs although in reality such is not the case.",
-      "gloss": [],
+      "deva": "आत्माभासं ततो बुद्धिर् बुद्ध्याभासं ततो मनः।\nअक्षाणि मन-आभासान्य् अक्षाभासम् इदं वपुः।\nअत एवात्मता-बुद्धिर् देहाक्षादाव् अनात्मनि॥",
+      "translation": "The intellect [has] the reflection of the Self; then the mind [has] the reflection of the intellect; the senses [have] reflections of the mind; and this body [has] the reflection of the senses. Hence the idea of being the Self arises in what is not the Self, such as the body and senses.",
+      "gloss": [
+        {
+          "sa": "आत्म-आभासम्",
+          "en": "the reflection of the Self"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "the intellect"
+        },
+        {
+          "sa": "बुद्धि-आभासम्",
+          "en": "the reflection of the intellect"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "अक्षाणि",
+          "en": "the senses"
+        },
+        {
+          "sa": "मन-आभासानि",
+          "en": "reflections of the mind"
+        },
+        {
+          "sa": "अक्ष-आभासम्",
+          "en": "the reflection of the senses"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "वपुः",
+          "en": "body"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मता-बुद्धिः",
+          "en": "the idea of being the Self"
+        },
+        {
+          "sa": "देह-अक्ष-आदौ",
+          "en": "in the body, senses, and so on"
+        },
+        {
+          "sa": "अनात्मनि",
+          "en": "in what is not the Self"
+        }
+      ],
       "sourceNumbers": [
         483
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "ātmābhāsā tato buddhir buddhyābhāsaṃ tato manaḥ|\nakṣāṇi mana-ābhāsāny akṣābhāsam idaṃ vapuḥ|\nata evātmatā-buddhir dehākṣādāv anātmani||"
+      "iast": "ātmābhāsaṃ tato buddhir buddhyābhāsaṃ tato manaḥ|\nakṣāṇi mana-ābhāsāny akṣābhāsam idaṃ vapuḥ|\nata evātmatā-buddhir dehākṣādāv anātmani||"
     },
     {
       "id": "svsss-3-0484",
@@ -32061,8 +32220,49 @@
       "number": "484",
       "label": "Verse 484",
       "deva": "मूढानां प्रतिबिम्बादौ बालानाम् इव दृश्यते।\nसादृश्यं विद्यते बुद्धावात्मनोऽध्यास-कारणम्॥",
-      "translation": "That is why ignorant people mistake the intellect for the Ātman. They superimpose the reflection and the reflector upon that which is reflected. That is why in this respect such people are no better than children. ((PancD.4.11) (Pañca-Daśī))",
-      "gloss": [],
+      "translation": "For the deluded, similarity in a reflection and the like is seen as it is for children. A resemblance is present in the intellect, and it is the cause of superimposing the Self.",
+      "gloss": [
+        {
+          "sa": "मूढानाम्",
+          "en": "for the deluded"
+        },
+        {
+          "sa": "प्रतिबिम्ब-आदौ",
+          "en": "in a reflection and the like"
+        },
+        {
+          "sa": "बालानाम्",
+          "en": "for children"
+        },
+        {
+          "sa": "इव",
+          "en": "as"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "सादृश्यम्",
+          "en": "similarity"
+        },
+        {
+          "sa": "विद्यते",
+          "en": "exists"
+        },
+        {
+          "sa": "बुद्धौ",
+          "en": "in the intellect"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "अध्यास-कारणम्",
+          "en": "the cause of superimposition"
+        }
+      ],
       "sourceNumbers": [
         484
       ],
@@ -32075,8 +32275,61 @@
       "number": "485",
       "label": "Verse 485",
       "deva": "अनात्मन्यहम् इत्येव योऽयम् अध्यास ईरितः।\nस्याद् उत्तरोत्तराध्यासे पूर्व-पूर्वस् तु कारणम्॥",
-      "translation": "The moment something which is other than the Ātman is mistaken for the Ātman, a chain reaction takes place. Every act of superimposition becomes in turn the cause of the next superimposition in the series.",
-      "gloss": [],
+      "translation": "This superimposition, spoken of as “I” in what is not the Self, becomes the cause of each successive superimposition; each earlier one is its cause.",
+      "gloss": [
+        {
+          "sa": "अनात्मनि",
+          "en": "in what is not the Self"
+        },
+        {
+          "sa": "अहम्",
+          "en": "“I”"
+        },
+        {
+          "sa": "इति",
+          "en": "as"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अध्यासः",
+          "en": "superimposition"
+        },
+        {
+          "sa": "ईरितः",
+          "en": "is spoken of"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may be; becomes"
+        },
+        {
+          "sa": "उत्तरोत्तर-अध्यासे",
+          "en": "in each successive superimposition"
+        },
+        {
+          "sa": "पूर्व-पूर्वः",
+          "en": "each earlier one"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the cause"
+        }
+      ],
       "sourceNumbers": [
         485
       ],
@@ -32088,14 +32341,59 @@
       "chapter": 3,
       "number": "486",
       "label": "Verse 486",
-      "deva": "सुप्ति-मूर्छोत्थितेष्वेव दृष्टः संसार-लक्षणः।\nअनादिर् एषाविद्यातः संस्कारोऽपि च तादृशः॥",
-      "translation": "It is only when we wake up from the stage of deep sleep, or from a trance, that we perceive the characteristics of saṃsāra. But it is all the outcome of avidyā and avidyā as such is almost beginningless, for it is without a cause.",
-      "gloss": [],
+      "deva": "सुप्ति-मूर्छोत्थितेष्व् एव दृष्टः संसार-लक्षणः।\nअनादिर् एषाविद्या तत्-संस्कारोऽपि च तादृशः॥",
+      "translation": "The mark of saṃsāra is seen only in those who have awakened from sleep or fainting. This ignorance is beginningless, and its latent impression is likewise beginningless.",
+      "gloss": [
+        {
+          "sa": "सुप्ति-मूर्छा-उत्थितेषु",
+          "en": "in those who have awakened from sleep or fainting"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "दृष्टः",
+          "en": "is seen"
+        },
+        {
+          "sa": "संसार-लक्षणः",
+          "en": "the mark of saṃsāra"
+        },
+        {
+          "sa": "अनादिः",
+          "en": "beginningless"
+        },
+        {
+          "sa": "एषा",
+          "en": "this"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "तत्-संस्कारः",
+          "en": "its latent impression"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तादृशः",
+          "en": "of the same kind"
+        }
+      ],
       "sourceNumbers": [
         486
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "supti-mūrchotthiteṣveva dṛṣṭaḥ saṃsāra-lakṣaṇaḥ|\nanādir eṣāvidyātaḥ saṃskāro’pi ca tādṛśaḥ||"
+      "iast": "supti-mūrchotthiteṣv eva dṛṣṭaḥ saṃsāra-lakṣaṇaḥ|\nanādir eṣāvidyā tat-saṃskāro’pi ca tādṛśaḥ||"
     },
     {
       "id": "svsss-3-0487",
@@ -32103,8 +32401,49 @@
       "number": "487",
       "label": "Verse 487",
       "deva": "अध्यास-बाधागमनस्य कारणं\nशृणु प्रवक्ष्यामि समाहितात्मा।\nयस्माद् इदं प्राप्तम् अनर्थ-जातं\nजन्माप्यय-व्याधि-जरादि-दुःखम्॥",
-      "translation": "I shall now tell you what are the evil consequences that flow from superimposition. I shall also point out to you how superimposition comes to take place. Be calm of mind and listen to me patiently. You will perceive from what source it is that all the ills of life, such as birth, disease, old age and death come to be superimposed upon the Ātman.",
-      "gloss": [],
+      "translation": "Listen with a composed mind: I will explain the cause by which superimposition is brought to an end, from which this mass of misfortune has arisen—suffering from birth, death, disease, old age, and the like.",
+      "gloss": [
+        {
+          "sa": "अध्यास-बाधा-आगमनस्य",
+          "en": "of attaining the sublation of superimposition"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        },
+        {
+          "sa": "प्रवक्ष्यामि",
+          "en": "I will explain"
+        },
+        {
+          "sa": "समाहित-आत्मा",
+          "en": "with a composed mind"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "from which"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "प्राप्तम्",
+          "en": "has arisen"
+        },
+        {
+          "sa": "अनर्थ-जातम्",
+          "en": "a mass of misfortune"
+        },
+        {
+          "sa": "जन्म-अप्यय-व्याधि-जरा-आदि-दुःखम्",
+          "en": "suffering from birth, death, disease, old age, and the like"
+        }
+      ],
       "sourceNumbers": [
         487
       ],
@@ -32117,8 +32456,57 @@
       "number": "488",
       "label": "Verse 488",
       "deva": "आत्मोपाधेर् अविद्याया अस्ति शक्ति-द्वयं महत्।\nविक्षेप आवृतिश् चेति याभ्यां संसार आत्मनः॥",
-      "translation": "We have already stated that avidyā is an adjunct of the Ātman. That adjunct has a two-fold characteristic. It veils the Ātman, and at the same time it projects the Ātman upon what is not the Ātman. That is why the Ātman feels the bonds of mundane existence.",
-      "gloss": [],
+      "translation": "The ignorance that serves as the Self’s limiting adjunct has two great powers: projection and veiling. By these two, the Self has saṃsāra.",
+      "gloss": [
+        {
+          "sa": "आत्म-उपाधेः",
+          "en": "of the Self’s limiting adjunct"
+        },
+        {
+          "sa": "अविद्यायाः",
+          "en": "of ignorance"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "शक्ति-द्वयम्",
+          "en": "a pair of powers"
+        },
+        {
+          "sa": "महत्",
+          "en": "great"
+        },
+        {
+          "sa": "विक्षेपः",
+          "en": "projection"
+        },
+        {
+          "sa": "आवृतिः",
+          "en": "veiling"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "याभ्याम्",
+          "en": "by which two"
+        },
+        {
+          "sa": "संसारः",
+          "en": "saṃsāra"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "for the Self"
+        }
+      ],
       "sourceNumbers": [
         488
       ],
@@ -32131,8 +32519,61 @@
       "number": "489",
       "label": "Verse 489",
       "deva": "आवृतिस् तमसः शक्तिस् तद्ध्यावरण-कारणम्।\nमूलाविद्येति सा प्रोक्ता यया संमोहितं जगत्॥",
-      "translation": "The term ‘mūlāvidyā’ or ignorance at the very root is used in order to designate the world-bewitching power of Māyā. By virtue of its inherent power of tamas, it veils the Ātman from the ken of our minds.",
-      "gloss": [],
+      "translation": "Veiling is the power of tamas; it is the cause of covering. It is called root ignorance, by which the world is utterly deluded.",
+      "gloss": [
+        {
+          "sa": "आवृतिः",
+          "en": "veiling"
+        },
+        {
+          "sa": "तमसः",
+          "en": "of tamas"
+        },
+        {
+          "sa": "शक्तिः",
+          "en": "the power"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आवरण-कारणम्",
+          "en": "the cause of covering"
+        },
+        {
+          "sa": "मूल-अविद्या",
+          "en": "root ignorance"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "प्रोक्ता",
+          "en": "is called"
+        },
+        {
+          "sa": "यया",
+          "en": "by which"
+        },
+        {
+          "sa": "संमोहितम्",
+          "en": "utterly deluded"
+        },
+        {
+          "sa": "जगत्",
+          "en": "the world"
+        }
+      ],
       "sourceNumbers": [
         489
       ],
@@ -32145,8 +32586,77 @@
       "number": "490",
       "label": "Verse 490",
       "deva": "विवेकवान् अप्यतियौक्तिकोऽपि\nश्रुतात्म-तत्त्वोऽपि च पण्डितोऽपि।\nशक्त्या यया संवृत-बोध-दृष्टिर्\nआत्मानम् आत्म-स्थम् इमं न वेद॥",
-      "translation": "However clever one may be, learned in the Śāstras, acute in reasoning, and also having some vague idea of the Ātman, one may not yet be fully aware how deep-seated mūlāvidyā is, and how it has its basis in the Ātman.",
-      "gloss": [],
+      "translation": "Even a discriminating, highly skilled reasoner, learned in the truth of the Self and a scholar, does not know this Self abiding within, because that power has obscured his vision of awareness.",
+      "gloss": [
+        {
+          "sa": "विवेकवान्",
+          "en": "discriminating"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अति-यौक्तिकः",
+          "en": "highly skilled in reasoning"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "श्रुत-आत्म-तत्त्वः",
+          "en": "one who has learned the truth of the Self"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "पण्डितः",
+          "en": "a scholar"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "शक्त्या",
+          "en": "by the power"
+        },
+        {
+          "sa": "यया",
+          "en": "by which"
+        },
+        {
+          "sa": "संवृत-बोध-दृष्टिः",
+          "en": "whose vision of awareness is covered"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "आत्म-स्थम्",
+          "en": "abiding in the Self"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वेद",
+          "en": "knows"
+        }
+      ],
       "sourceNumbers": [
         490
       ],
@@ -32159,8 +32669,77 @@
       "number": "491",
       "label": "Verse 491",
       "deva": "विक्षेप-नाम्नी रजसस् तु शक्तिः\nप्रवृत्ति-हेतुः पुरुषस्य नित्यम्।\nस्थूलादि-लिङ्गान्तम् अशेषम् एतद्\nयया सदात्मन्यसद् एव सूयते॥",
-      "translation": "By virtue of its inherent rajas, or activity, Māyā projects the semblance of the Ātman upon that which is not the Ātman. Thus the only reality, Ātman, is projected upon a number of unreal objects. They include both the gross and the subtle bodies. It is on account of the presence of this rajas quality that people exert themselves.",
-      "gloss": [],
+      "translation": "The power of rajas called projection is always a cause of activity for a person. By it, all this unreal—from the gross body through the subtle body—is produced in the real Self.",
+      "gloss": [
+        {
+          "sa": "विक्षेप-नाम्नी",
+          "en": "named projection"
+        },
+        {
+          "sa": "रजसः",
+          "en": "of rajas"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "शक्तिः",
+          "en": "the power"
+        },
+        {
+          "sa": "प्रवृत्ति-हेतुः",
+          "en": "a cause of activity"
+        },
+        {
+          "sa": "पुरुषस्य",
+          "en": "for a person"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always"
+        },
+        {
+          "sa": "स्थूल-आदि",
+          "en": "beginning with the gross [body]"
+        },
+        {
+          "sa": "लिङ्ग-अन्तम्",
+          "en": "ending with the subtle [body]"
+        },
+        {
+          "sa": "अशेषम्",
+          "en": "without remainder; all"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "यया",
+          "en": "by which"
+        },
+        {
+          "sa": "सत्",
+          "en": "the real"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "असत्",
+          "en": "the unreal"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सूयते",
+          "en": "is produced"
+        }
+      ],
       "sourceNumbers": [
         491
       ],
@@ -32173,8 +32752,65 @@
       "number": "492",
       "label": "Verse 492",
       "deva": "निद्रा यथा पुरुषम् अप्रमत्तं\nसमावृणोतीयम् अपि प्रतीचम्।\nतथावृणोत्यावृति-शक्तिर् अन्तर्\nविक्षेप-शक्तिं परिजृम्भयन्ती॥",
-      "translation": "Just as deep sleep envelops the intellect of one who is vigilant, so also the power of veiling hides the innermost Ātman, who is made manifest in the antaḥ-karaṇa by the power of projection.",
-      "gloss": [],
+      "translation": "Just as sleep envelops an alert person, so the veiling power covers the inward Self, while making the projecting power expand.",
+      "gloss": [
+        {
+          "sa": "निद्रा",
+          "en": "sleep"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "पुरुषम्",
+          "en": "a person"
+        },
+        {
+          "sa": "अप्रमत्तम्",
+          "en": "alert"
+        },
+        {
+          "sa": "समावृणोति",
+          "en": "envelops"
+        },
+        {
+          "sa": "इयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "प्रतीचम्",
+          "en": "the inward Self"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "आवृणोति",
+          "en": "covers"
+        },
+        {
+          "sa": "आवृति-शक्तिः",
+          "en": "the veiling power"
+        },
+        {
+          "sa": "अन्तर्",
+          "en": "within"
+        },
+        {
+          "sa": "विक्षेप-शक्तिम्",
+          "en": "the projecting power"
+        },
+        {
+          "sa": "परिजृम्भयन्ती",
+          "en": "causing to expand"
+        }
+      ],
       "sourceNumbers": [
         492
       ],
@@ -32187,8 +32823,69 @@
       "number": "493",
       "label": "Verse 493",
       "deva": "शक्त्या महत्यावरणाभिधानया\nसमावृते सत्य् अमल-स्वरूपे।\nपुमान् अनात्मन्यहम् एष एवे-\nत्यात्मत्व-बुद्धिं विदधाति मोहात्॥",
-      "translation": "When the pure nature of the Ātman becomes hidden by the veiling power of Māyā, out of the resultant delusion people superimpose the idea of the one Ātman upon all those things that are not the Ātman. In this way everyone says to himself, ‘I am all these, and nothing more’.",
-      "gloss": [],
+      "translation": "When the stainless nature is covered by the great power called veiling, a person, out of delusion, forms the idea “I am this very non-Self.”",
+      "gloss": [
+        {
+          "sa": "शक्त्या",
+          "en": "by the power"
+        },
+        {
+          "sa": "महत्या",
+          "en": "great"
+        },
+        {
+          "sa": "आवरण-अभिधानया",
+          "en": "named veiling"
+        },
+        {
+          "sa": "समावृते",
+          "en": "when covered"
+        },
+        {
+          "sa": "सति",
+          "en": "being"
+        },
+        {
+          "sa": "अमल-स्वरूपे",
+          "en": "the stainless nature"
+        },
+        {
+          "sa": "पुमान्",
+          "en": "a person"
+        },
+        {
+          "sa": "अनात्मनि",
+          "en": "in what is not the Self"
+        },
+        {
+          "sa": "अहम्",
+          "en": "“I”"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आत्मत्व-बुद्धिम्",
+          "en": "the idea of being the Self"
+        },
+        {
+          "sa": "विदधाति",
+          "en": "forms"
+        },
+        {
+          "sa": "मोहात्",
+          "en": "from delusion"
+        }
+      ],
       "sourceNumbers": [
         493
       ],
@@ -32201,8 +32898,73 @@
       "number": "494",
       "label": "Verse 494",
       "deva": "यथा प्रसुप्ति-प्रतिभास-देहे\nस्वात्मत्व-धीर् एष तथा ह्यनात्मनः।\nजन्माप्यय-क्षुद्-भय-तृट्छ्रमादीन्\nआरोपयत्यात्मनि तस्य धर्मान्॥",
-      "translation": "Just as one tends to superimpose the idea of the Ātman upon the physical body, with which one is invested in a dream, in the same way, in the waking state also one superimposes upon the Ātman diverse concepts such as birth and death, hunger and fear, thirst and the capacity to take pains and strive, although in reality none of these attributes are inherent in the Ātman.",
-      "gloss": [],
+      "translation": "Just as this person takes the body appearing in sleep to be his own Self, so he superimposes on the Self the properties of what is not the Self: birth, death, hunger, fear, thirst, fatigue, and the like.",
+      "gloss": [
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "प्रसुप्ति-प्रतिभास-देहे",
+          "en": "in the body appearing in sleep"
+        },
+        {
+          "sa": "स्वात्मत्व-धीः",
+          "en": "the idea that it is one’s own Self"
+        },
+        {
+          "sa": "एषः",
+          "en": "this [person]"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनात्मनः",
+          "en": "of what is not the Self"
+        },
+        {
+          "sa": "जन्म-अप्यय",
+          "en": "birth and death"
+        },
+        {
+          "sa": "क्षुत्",
+          "en": "hunger"
+        },
+        {
+          "sa": "भय",
+          "en": "fear"
+        },
+        {
+          "sa": "तृट्",
+          "en": "thirst"
+        },
+        {
+          "sa": "श्रम-आदीन्",
+          "en": "fatigue and the like"
+        },
+        {
+          "sa": "आरोपयति",
+          "en": "superimposes"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "on the Self"
+        },
+        {
+          "sa": "तस्य",
+          "en": "its"
+        },
+        {
+          "sa": "धर्मान्",
+          "en": "properties"
+        }
+      ],
       "sourceNumbers": [
         494
       ],
@@ -32214,28 +32976,126 @@
       "chapter": 3,
       "number": "495",
       "label": "Verse 495",
-      "deva": "विक्षेप-शक्त्या परिचोद्यमानः\nकरोति कर्माण्युभयात्मकानि।\nभुञ्जान एतत्-फलम् अप्युपात्तं\nपरिभ्रमत्येव भवाम्बु-राशौ॥",
-      "translation": "Thus it is that when one is impelled by the power at projection, one superimposes upon the Ātman various kinds of activities and as a result of it experiences the consequences that flow from them such as good and evil. That is how people wander about lost in the sea of saṃsāra.",
-      "gloss": [],
+      "deva": "विक्षेप-शक्त्या परिचोद्यमानः\nकरोति कर्माण्य् उभयात्मकानि।\nभुञ्जान एतत्-फलम् अप्य् उपात्तं\nपरिभ्रमत्य् एष भवाम्बु-राशौ॥",
+      "translation": "Impelled by the projecting power, this person performs actions of both kinds; experiencing their acquired fruits, he wanders in the ocean of becoming.",
+      "gloss": [
+        {
+          "sa": "विक्षेप-शक्त्या",
+          "en": "by the projecting power"
+        },
+        {
+          "sa": "परिचोद्यमानः",
+          "en": "being impelled"
+        },
+        {
+          "sa": "करोति",
+          "en": "performs"
+        },
+        {
+          "sa": "कर्माणि",
+          "en": "actions"
+        },
+        {
+          "sa": "उभय-आत्मकानि",
+          "en": "of both kinds"
+        },
+        {
+          "sa": "भुञ्जानः",
+          "en": "experiencing"
+        },
+        {
+          "sa": "एतत्-फलम्",
+          "en": "their fruits"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "उपात्तम्",
+          "en": "acquired"
+        },
+        {
+          "sa": "परिभ्रमति",
+          "en": "wanders"
+        },
+        {
+          "sa": "एषः",
+          "en": "this person"
+        },
+        {
+          "sa": "भव-अम्बु-राशौ",
+          "en": "in the ocean of becoming"
+        }
+      ],
       "sourceNumbers": [
         495
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "vikṣepa-śaktyā paricodyamānaḥ\nkaroti karmāṇyubhayātmakāni|\nbhuñjāna etat-phalam apyupāttaṃ\nparibhramatyeva bhavāmbu-rāśau||"
+      "iast": "vikṣepa-śaktyā paricodyamānaḥ\nkaroti karmāṇy ubhayātmakāni|\nbhuñjāna etat-phalam apy upāttaṃ\nparibhramaty eṣa bhavāmbu-rāśau||"
     },
     {
       "id": "svsss-3-0496",
       "chapter": 3,
       "number": "496",
       "label": "Verse 496",
-      "deva": "अध्यास-दोषात् समुपागतोऽयं\nसंसार-बन्धः प्रबल-प्रतीचः।\nयद्-योगतः क्लिश्यति गर्भ-वास-\nजन्माप्यय-क्लेश-भयैर् अजस्रम्॥",
-      "translation": "On account of the evil consequences that flow from such superimposition, one imagines that the Ātman is bound by earth-born ties such as birth and death, or hardship and hunger.",
-      "gloss": [],
+      "deva": "अध्यास-दोषात् समुपागतोऽयम्\nसंसार-बन्धः प्रबलः प्रतीचः।\nयद्-योगतः क्लिश्यति गर्भ-वास-\nजन्माप्यय-क्लेश-भयैर् अजस्रम्॥",
+      "translation": "This powerful bondage of saṃsāra has arisen for the inward Self through the fault of superimposition. Through it, one suffers continually from the pains and fears of life in the womb, birth, death, and the like.",
+      "gloss": [
+        {
+          "sa": "अध्यास-दोषात्",
+          "en": "from the fault of superimposition"
+        },
+        {
+          "sa": "समुपागतः",
+          "en": "has arisen"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "संसार-बन्धः",
+          "en": "bondage of saṃsāra"
+        },
+        {
+          "sa": "प्रबलः",
+          "en": "powerful"
+        },
+        {
+          "sa": "प्रतीचः",
+          "en": "for the inward Self"
+        },
+        {
+          "sa": "यत्-योगतः",
+          "en": "through connection with which"
+        },
+        {
+          "sa": "क्लिश्यति",
+          "en": "suffers"
+        },
+        {
+          "sa": "गर्भ-वास",
+          "en": "life in the womb"
+        },
+        {
+          "sa": "जन्म-अप्यय",
+          "en": "birth and death"
+        },
+        {
+          "sa": "क्लेश-भयैः",
+          "en": "with pains and fears"
+        },
+        {
+          "sa": "अजस्रम्",
+          "en": "continually"
+        }
+      ],
       "sourceNumbers": [
         496
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "adhyāsa-doṣāt samupāgato’yaṃ\nsaṃsāra-bandhaḥ prabala-pratīcaḥ|\nyad-yogataḥ kliśyati garbha-vāsa-\njanmāpyaya-kleśa-bhayair ajasram||"
+      "iast": "adhyāsa-doṣāt samupāgato’yam\nsaṃsāra-bandhaḥ prabalaḥ pratīcaḥ|\nyad-yogataḥ kliśyati garbha-vāsa-\njanmāpyaya-kleśa-bhayair ajasram||"
     },
     {
       "id": "svsss-3-0497",
@@ -32243,8 +33103,49 @@
       "number": "497",
       "label": "Verse 497",
       "deva": "अध्यासो नाम खल्वेष वस्तुनो योऽन्यथा-ग्रहः।\nस्वाभाविक-भ्रान्ति-मूलं संसृतेर् आदि-कारणम्॥",
-      "translation": "It is this mistaken notion of regarding that which is not the Ātman as though it were the Ātman that lies at the basis of all superimposition and it is the origin of all the delusion to which all human beings are subject. It is also the cause of saṃsāra, for it implies the idea of agency and of experiencing the consequence of it.",
-      "gloss": [],
+      "translation": "Superimposition is indeed this: taking a thing to be other than it is. It is the root of natural error and the first cause of transmigration.",
+      "gloss": [
+        {
+          "sa": "अध्यासः",
+          "en": "superimposition"
+        },
+        {
+          "sa": "नाम",
+          "en": "named"
+        },
+        {
+          "sa": "खलु",
+          "en": "indeed"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "of a thing"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "अन्यथा-ग्रहः",
+          "en": "misapprehension; taking otherwise"
+        },
+        {
+          "sa": "स्वाभाविक-भ्रान्ति-मूलम्",
+          "en": "the root of natural error"
+        },
+        {
+          "sa": "संसृतेः",
+          "en": "of transmigration"
+        },
+        {
+          "sa": "आदि-कारणम्",
+          "en": "the first cause"
+        }
+      ],
       "sourceNumbers": [
         497
       ],
@@ -32257,8 +33158,45 @@
       "number": "498",
       "label": "Verse 498",
       "deva": "सर्वानर्थस्य तद् बीजं योऽन्यथा-ग्रह आत्मनः।\nततः संसार-सम्पातः सन्तत-क्लेश-लक्षणः॥",
-      "translation": "It is this superimposition of that which is not the Ātman upon the Ātman which is the cause of all mundane existence. If there were no such thing as superimposition, there would be no saṃsāra.",
-      "gloss": [],
+      "translation": "That misapprehension of the Self is the seed of every misfortune; from it comes entry into saṃsāra, marked by unceasing distress.",
+      "gloss": [
+        {
+          "sa": "सर्व-अनर्थस्य",
+          "en": "of every misfortune"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "बीजम्",
+          "en": "the seed"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "अन्यथा-ग्रहः",
+          "en": "misapprehension; taking otherwise"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that"
+        },
+        {
+          "sa": "संसार-सम्पातः",
+          "en": "entry into saṃsāra"
+        },
+        {
+          "sa": "सन्तत-क्लेश-लक्षणः",
+          "en": "marked by unceasing distress"
+        }
+      ],
       "sourceNumbers": [
         498
       ],
@@ -32271,8 +33209,65 @@
       "number": "499",
       "label": "Verse 499",
       "deva": "अध्यासाद् एव संसारो नष्टेऽध्यासे न दृश्यते।\nतद् एतद् उभयं स्पष्टं पश्य त्वं बद्ध-मुक्तयोः॥",
-      "translation": "The fact is, saṃsāra is entirely dependent upon superimposition for its seeming existence and if there were no superimposition, there would be no saṃsāra. It is this ‘saṃsāra’ that makes all the difference between those who are bound, and those who are free.",
-      "gloss": [],
+      "translation": "Saṃsāra exists only because of superimposition; when superimposition is destroyed, it is no longer seen. See clearly this distinction between the bound and the liberated.",
+      "gloss": [
+        {
+          "sa": "अध्यासात्",
+          "en": "from superimposition"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "संसारः",
+          "en": "saṃsāra"
+        },
+        {
+          "sa": "नष्टे",
+          "en": "when destroyed"
+        },
+        {
+          "sa": "अध्यासे",
+          "en": "superimposition"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "उभयम्",
+          "en": "pair; both"
+        },
+        {
+          "sa": "स्पष्टम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "पश्य",
+          "en": "see"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "you"
+        },
+        {
+          "sa": "बद्ध-मुक्तयोः",
+          "en": "in the bound and liberated"
+        }
+      ],
       "sourceNumbers": [
         499
       ],
@@ -32285,8 +33280,57 @@
       "number": "500",
       "label": "Verse 500",
       "deva": "बद्धं प्रवृत्तितो विद्धि मुक्तं विद्धि निवृत्तितः।\nप्रवृत्तिर् एव संसारो निवृत्तिर् मुक्तिर् इष्यते॥",
-      "translation": "Know for certain that action binds whereas renunciation liberates. The reason for it is that action is itself saṃsāra. Therefore, the renunciation of action is liberation (mukti).",
-      "gloss": [],
+      "translation": "Know the bound one by activity, and the liberated one by withdrawal. Activity itself is saṃsāra; withdrawal is held to be liberation.",
+      "gloss": [
+        {
+          "sa": "बद्धम्",
+          "en": "the bound one"
+        },
+        {
+          "sa": "प्रवृत्तितः",
+          "en": "by activity"
+        },
+        {
+          "sa": "विद्धि",
+          "en": "know"
+        },
+        {
+          "sa": "मुक्तम्",
+          "en": "the liberated one"
+        },
+        {
+          "sa": "विद्धि",
+          "en": "know"
+        },
+        {
+          "sa": "निवृत्तितः",
+          "en": "by withdrawal"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "activity"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "संसारः",
+          "en": "saṃsāra"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "withdrawal"
+        },
+        {
+          "sa": "मुक्तिः",
+          "en": "liberation"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is held to be"
+        }
+      ],
       "sourceNumbers": [
         500
       ],
