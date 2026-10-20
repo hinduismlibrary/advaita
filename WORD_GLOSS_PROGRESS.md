@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Aparokṣānubhūti** — next. 145 reader units; glosses are present, but explicit IAST and descriptive contents headings still need review.
+**Ātmavidyāvilāsa** — next. 66 reader units; all four fields are present, but the descriptive contents page needs review.
 
 ## Completed
 
@@ -14,6 +14,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 - **Tattvabodha** — 44 sections. All sections have Sanskrit, English, IAST, and word glosses. Its section labels already give descriptive contents links.
 - **Dṛg-dṛśya-viveka** — all 46 verses have Sanskrit, English, explicit IAST, and word glosses. Added seven named contents sections covering verses 1–46; expanded verses 1–5 glosses to include every word.
 - **Ātmabodha** — all 68 verses and the colophon have Sanskrit, English, explicit IAST, and non-empty word glosses. Added seven named contents sections covering verses 1–68.
+- **Aparokṣānubhūti** — all 144 verses and the colophon have Sanskrit, English, explicit IAST, and non-empty word glosses. Added ten named contents sections covering verses 1–144.
 
 The transliteration-button spacing correction and reader cache/version updates were completed earlier in the same workstream.
 
@@ -23,9 +24,9 @@ The transliteration-button spacing correction and reader cache/version updates w
 |---|---:|---|
 | Advaitamakaranda | 28 | Glosses present; add explicit IAST and review named contents sections |
 | Advaitapañcaratnam | 6 | All four fields present |
-| Aparokṣānubhūti | 145 | Glosses present; add explicit IAST; review chapter/section contents |
+| Aparokṣānubhūti | 145 | Complete: all 144 verses and colophon have Sanskrit, English, IAST, and glosses; ten named contents sections |
 | Ātmabodha | 69 | Complete: all 68 verses and colophon have Sanskrit, English, IAST, and glosses; seven named contents sections |
-| Ātmavidyāvilāsa | 66 | All four fields present |
+| Ātmavidyāvilāsa | 66 | All four fields present; review descriptive contents sections |
 | Bhajagovindam | 31 | All four fields present; review named contents sections |
 | Brahmasiddhi | 231 | Only 1 passage has a word gloss; 230 remain |
 | Brahmajñānāvalīmālā | 21 | Glosses present; add explicit IAST; review contents |
