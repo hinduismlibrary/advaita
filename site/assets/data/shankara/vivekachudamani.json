@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 395
+      "end": 400
     },
-    "note": "Source verses 1–395 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 396 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–400 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 401 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -31287,23 +31287,179 @@
       "label": "Verse 396",
       "deva": "शवाकारं यावद्भजति मनुजस्तावदशुचिः\nपरेभ्यः स्यात्क्लेशो जननमरणव्याधिनिलयः ।\nयदात्मानं शुद्धं कलयति शिवाकारमचलम्\nतदा तेभ्यो मुक्तो भवति हि तदाह श्रुतिर् अपि ॥",
       "iast": "śavākāraṃ yāvadbhajati manujastāvadaśuciḥ\nparebhyaḥ syātkleśo jananamaraṇavyādhinilayaḥ |\nyadātmānaṃ śuddhaṃ kalayati śivākāramacalam\ntadā tebhyo mukto bhavati hi tadāha śrutir api ||",
-      "translation": "So long as man has any regard for this corpse-like body, he is impure, and suffers from his enemies as also from birth, death and disease; but when he thinks of himself as pure, as the essence of good and immovable, he assuredly becomes free from them; the Shrutis also say this.",
-      "gloss": [],
+      "translation": "As long as a person identifies with the corpse-like body, the person is impure and suffers from others, as well as from birth, death, and disease. When one regards the Self as pure, auspicious in nature, and unmoving, one becomes free from these; scripture too declares this.",
+      "gloss": [
+        {
+          "sa": "शव-आकारम्",
+          "en": "corpse-like in form"
+        },
+        {
+          "sa": "यावत्",
+          "en": "as long as"
+        },
+        {
+          "sa": "भजति",
+          "en": "identifies with"
+        },
+        {
+          "sa": "मनुजः",
+          "en": "a person"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so long"
+        },
+        {
+          "sa": "अशुचिः",
+          "en": "impure"
+        },
+        {
+          "sa": "परेभ्यः",
+          "en": "from others"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "there is; arises"
+        },
+        {
+          "sa": "क्लेशः",
+          "en": "trouble"
+        },
+        {
+          "sa": "जनन-मरण-व्याधि-निलयः",
+          "en": "the abode of birth, death, and disease"
+        },
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "शुद्धम्",
+          "en": "pure"
+        },
+        {
+          "sa": "कलयति",
+          "en": "one regards"
+        },
+        {
+          "sa": "शिव-आकारम्",
+          "en": "auspicious in nature"
+        },
+        {
+          "sa": "अचलम्",
+          "en": "unmoving"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "तेभ्यः",
+          "en": "from these"
+        },
+        {
+          "sa": "मुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "भवति",
+          "en": "one becomes"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "तत्",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "declares"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        }
+      ],
       "sourceNumbers": [
         396
-      ]
+      ],
+      "editionTranslation": "So long as man has any regard for this corpse-like body, he is impure, and suffers from his enemies as also from birth, death and disease; but when he thinks of himself as pure, as the essence of good and immovable, he assuredly becomes free from them; the Shrutis also say this."
     },
     {
       "id": "vivekachudamani-397",
       "number": "397",
       "label": "Verse 397",
-      "deva": "स्वात्मन्यारोपिताशेषाभासर्वस्तुनिरासतः ।\nस्वयम् एव परं ब्रह्म पूर्णमद्वयमक्रियम् ॥",
-      "iast": "svātmanyāropitāśeṣābhāsarvastunirāsataḥ |\nsvayam eva paraṃ brahma pūrṇamadvayamakriyam ||",
-      "translation": "By the elimination of all apparent existences superimposed on the soul, the supreme Brahman, Infinite, the One without a second and beyond action, remains as Itself.",
-      "gloss": [],
+      "deva": "स्वात्मन्यारोपिताशेषाभासवस्तुनिरासतः ।\nस्वयमेव परं ब्रह्म पूर्णमद्वयमक्रियम् ॥",
+      "iast": "svātmany āropitāśeṣābhāsavastu-nirāsataḥ |\nsvayam eva paraṃ brahma pūrṇam advayam akriyam ||",
+      "translation": "By removing all apparent things superimposed on the Self, the Supreme Brahman alone—complete, nondual, and actionless—remains as itself.",
+      "gloss": [
+        {
+          "sa": "स्वात्मनि",
+          "en": "on one's own Self"
+        },
+        {
+          "sa": "आरोपित",
+          "en": "superimposed"
+        },
+        {
+          "sa": "अशेष",
+          "en": "all"
+        },
+        {
+          "sa": "आभास",
+          "en": "appearing"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "things"
+        },
+        {
+          "sa": "निरासतः",
+          "en": "by removing"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "परम्",
+          "en": "Supreme"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "पूर्णम्",
+          "en": "complete"
+        },
+        {
+          "sa": "अद्वयम्",
+          "en": "nondual"
+        },
+        {
+          "sa": "अक्रियम्",
+          "en": "actionless"
+        }
+      ],
       "sourceNumbers": [
         397
-      ]
+      ],
+      "editionTranslation": "By the elimination of all apparent existences superimposed on the soul, the supreme Brahman, Infinite, the One without a second and beyond action, remains as Itself."
     },
     {
       "id": "vivekachudamani-398",
@@ -31311,11 +31467,69 @@
       "label": "Verse 398",
       "deva": "समाहितायां सति चित्तवृत्तौ\nपरात्मनि ब्रह्मणि निर्विकल्पे ।\nन दृश्यते कश्चिदयं विकल्पः\nप्रजल्पमात्रः परिशिष्यते यतः ॥",
       "iast": "samāhitāyāṃ sati cittavṛttau\nparātmani brahmaṇi nirvikalpe |\nna dṛśyate kaścidayaṃ vikalpaḥ\nprajalpamātraḥ pariśiṣyate yataḥ ||",
-      "translation": "When the mind-functions are merged in the Paramatman, the Brahman, the Absolute, none of this phenomenal world is seen, whence it is reduced to mere talk.",
-      "gloss": [],
+      "translation": "When the mind’s activity is absorbed in the Supreme Self, Brahman free from thought-constructs, none of this differentiation is seen; it remains only as idle talk.",
+      "gloss": [
+        {
+          "sa": "समाहितायाम्",
+          "en": "when absorbed"
+        },
+        {
+          "sa": "सति",
+          "en": "when; being"
+        },
+        {
+          "sa": "चित्त-वृत्तौ",
+          "en": "the mind’s activity"
+        },
+        {
+          "sa": "परात्मनि",
+          "en": "in the Supreme Self"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "निर्विकल्पे",
+          "en": "free from thought-constructs"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "any"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "विकल्पः",
+          "en": "differentiation"
+        },
+        {
+          "sa": "प्रजल्प-मात्रः",
+          "en": "only idle talk"
+        },
+        {
+          "sa": "परिशिष्यते",
+          "en": "remains"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ],
       "sourceNumbers": [
         398
-      ]
+      ],
+      "editionTranslation": "When the mind-functions are merged in the Paramatman, the Brahman, the Absolute, none of this phenomenal world is seen, whence it is reduced to mere talk."
     },
     {
       "id": "vivekachudamani-399",
@@ -31323,23 +31537,99 @@
       "label": "Verse 399",
       "deva": "असत्कल्पो विकल्पोऽयं विश्वमित्येकवस्तुनि ।\nनिर्विकारे निराकारे निर्विशेषे भिदा कुतः ॥",
       "iast": "asatkalpo vikalpo'yaṃ viśvamityekavastuni |\nnirvikāre nirākāre nirviśeṣe bhidā kutaḥ ||",
-      "translation": "In the One Entity (Brahman) the conception of the universe is a mere phantom. Whence can there be any diversity in That which is changeless, formless and Absolute ?",
-      "gloss": [],
+      "translation": "This notion, “the universe,” is as good as unreal in the one Reality. How could there be difference in that which is changeless, formless, and without qualities?",
+      "gloss": [
+        {
+          "sa": "असत्-कल्पः",
+          "en": "as good as unreal"
+        },
+        {
+          "sa": "विकल्पः",
+          "en": "notion; differentiation"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "विश्वम्",
+          "en": "the universe"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; called"
+        },
+        {
+          "sa": "एक-वस्तुनि",
+          "en": "in the one Reality"
+        },
+        {
+          "sa": "निर्विकारे",
+          "en": "in the changeless"
+        },
+        {
+          "sa": "निराकारे",
+          "en": "in the formless"
+        },
+        {
+          "sa": "निर्विशेषे",
+          "en": "in the attributeless"
+        },
+        {
+          "sa": "भिदा",
+          "en": "difference"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how; whence"
+        }
+      ],
       "sourceNumbers": [
         399
-      ]
+      ],
+      "editionTranslation": "In the One Entity (Brahman) the conception of the universe is a mere phantom. Whence can there be any diversity in That which is changeless, formless and Absolute ?"
     },
     {
       "id": "vivekachudamani-400",
       "number": "400",
       "label": "Verse 400",
-      "deva": "द्रष्टुदर्शनदृश्यादिभावशून्यैकवस्तुनि ।\nनिर्विकारे निराकारे निर्विशेषे भिदा कुतः ॥",
-      "iast": "draṣṭudarśanadṛśyādibhāvaśūnyaikavastuni |\nnirvikāre nirākāre nirviśeṣe bhidā kutaḥ ||",
-      "translation": "In the One Entity devoid of the concepts of seer, seeing and seen – which is changeless, formless and Absolute – whence can there be any diversity ?",
-      "gloss": [],
+      "deva": "द्रष्टृदर्शनदृश्यादिभावशून्यैकवस्तुनि ।\nनिर्विकारे निराकारे निर्विशेषे भिदा कुतः ॥",
+      "iast": "draṣṭṛdarśanadṛśyādibhāvaśūnyaikavastuni |\nnirvikāre nirākāre nirviśeṣe bhidā kutaḥ ||",
+      "translation": "In the one Reality, free from the distinctions of seer, seeing, seen, and the rest, changeless, formless, and without qualities, where could difference be?",
+      "gloss": [
+        {
+          "sa": "द्रष्टृ-दर्शन-दृश्य-आदि-भाव-शून्य",
+          "en": "free from the distinctions of seer, seeing, seen, and the rest"
+        },
+        {
+          "sa": "एक-वस्तुनि",
+          "en": "in the one Reality"
+        },
+        {
+          "sa": "निर्विकारे",
+          "en": "in the changeless"
+        },
+        {
+          "sa": "निराकारे",
+          "en": "in the formless"
+        },
+        {
+          "sa": "निर्विशेषे",
+          "en": "in the attributeless"
+        },
+        {
+          "sa": "भिदा",
+          "en": "difference"
+        },
+        {
+          "sa": "कुतः",
+          "en": "where; whence"
+        }
+      ],
       "sourceNumbers": [
         400
-      ]
+      ],
+      "editionTranslation": "In the One Entity devoid of the concepts of seer, seeing and seen – which is changeless, formless and Absolute – whence can there be any diversity ?"
     },
     {
       "id": "vivekachudamani-401",
@@ -33513,6 +33803,7 @@
     "Aligned the translations and prepositions in Vivekacūḍāmaṇi verses 382–385 more closely with the locative and instrumental forms in the Sanskrit.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 386–390; preserved prior translations as editionTranslation. Added pad separation in verse 387's IAST to make dṛṣṭā hi tattvam visible.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 391–395; preserved prior translations as editionTranslation. Restored the two missing middle pādas of verse 393 from the checked Sanskrit witness.",
-    "Corrected the Devanāgarī spelling of ātatam in the verse 394 gloss."
+    "Corrected the Devanāgarī spelling of ātatam in the verse 394 gloss.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 396–400; preserved prior translations as editionTranslation. Corrected verse 397's ābhāsavastu spelling and verse 400's draṣṭṛ reading."
   ]
 }
