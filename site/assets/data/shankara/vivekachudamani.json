@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 455
+      "end": 460
     },
-    "note": "Source verses 1–455 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 456 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–460 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 461 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -35045,60 +35045,354 @@
       "number": "456",
       "label": "Verse 456",
       "deva": "न तस्य मिथ्यार्थसमर्थनेच्छा\nन संग्रहस्तज्जगतोऽपि दृष्टः ।\nतत्रानुवृत्तिर्यदि चेन्मृषार्थे\nन निद्रया मुक्त इतीष्यते ध्रुवम् ॥",
-      "iast": "na tasya mithyārthasamarthanecchā\nna saṃgrahastajjagato'pi dṛṣṭaḥ |\ntatrānuvṛttiryadi cenmṛṣārthe\nna nidrayā mukta itīṣyate dhruvam ||",
-      "translation": "He has no desire to substantiate the unreal objects, nor is he seen to maintain that dream-world. If he still clings to those unreal objects, he is emphatically declared to be not yet free from sleep.",
-      "gloss": [],
+      "iast": "na tasya mithyārtha-samarthanecchā\nna saṃgrahas taj-jagato'pi dṛṣṭaḥ |\ntatrānuvṛttir yadi cen mṛṣārthe\nna nidrayā mukta iti iṣyate dhruvam ||",
+      "translation": "He has no wish to justify unreal objects, nor is he seen to hold on to that dream-world. If he continues in unreal things, he is surely considered not to be free from sleep.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for him; of him"
+        },
+        {
+          "sa": "मिथ्या-अर्थ-समर्थन-इच्छा",
+          "en": "a wish to justify unreal objects"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सङ्ग्रहः",
+          "en": "holding; keeping"
+        },
+        {
+          "sa": "तत्-जगतः",
+          "en": "of that world"
+        },
+        {
+          "sa": "अपि",
+          "en": "also; even"
+        },
+        {
+          "sa": "दृष्टः",
+          "en": "is seen"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there; in that"
+        },
+        {
+          "sa": "अनुवृत्तिः",
+          "en": "continuation; persistence"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if indeed"
+        },
+        {
+          "sa": "मृषा-अर्थे",
+          "en": "in unreal things"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "निद्रया",
+          "en": "from sleep"
+        },
+        {
+          "sa": "मुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ईष्यते",
+          "en": "is held; is considered"
+        },
+        {
+          "sa": "ध्रुवम्",
+          "en": "certainly"
+        }
+      ],
       "sourceNumbers": [
         456
-      ]
+      ],
+      "editionTranslation": "He has no desire to substantiate the unreal objects, nor is he seen to maintain that dream-world. If he still clings to those unreal objects, he is emphatically declared to be not yet free from sleep."
     },
     {
       "id": "vivekachudamani-457",
       "number": "457",
       "label": "Verse 457",
       "deva": "तद्वत्परे ब्रह्मणि वर्तमानः\nसदात्मना तिष्ठति नान्यदीक्षते ।\nस्मृतिर्यथा स्वप्नविलोकितार्थे\nतथा विदः प्राशनमोचनादौ ॥",
-      "iast": "tadvatpare brahmaṇi vartamānaḥ\nsadātmanā tiṣṭhati nānyadīkṣate |\nsmṛtiryathā svapnavilokitārthe\ntathā vidaḥ prāśanamocanādau ||",
-      "translation": "Similarly, he who is absorbed in Brahman lives identified with that eternal Reality and beholds nothing else. As one has a memory of the objects seen in a dream, so the man of realisation has a memory of the everyday actions such as eating.",
-      "gloss": [],
+      "iast": "tadvat pare brahmaṇi vartamānaḥ sat-ātmanā tiṣṭhati nānyad īkṣate |\nsmṛtir yathā svapna-vilokita-arthe tathā vidaḥ prāśana-mocana-ādau ||",
+      "translation": "Likewise, abiding in supreme Brahman, one remains as Being itself and sees nothing else. For a knower, memories of eating, bodily elimination, and the like are just like memories of things seen in a dream.",
+      "gloss": [
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "परे",
+          "en": "in the supreme"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "Brahman"
+        },
+        {
+          "sa": "वर्तमानः",
+          "en": "abiding; remaining"
+        },
+        {
+          "sa": "सत्-आत्मना",
+          "en": "as Being itself; as the real Self"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "remains; abides"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "ईक्षते",
+          "en": "sees"
+        },
+        {
+          "sa": "स्मृतिः",
+          "en": "memory"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "स्वप्न-विलोकित-अर्थे",
+          "en": "of things seen in a dream"
+        },
+        {
+          "sa": "तथा",
+          "en": "so; likewise"
+        },
+        {
+          "sa": "विदः",
+          "en": "for the knower"
+        },
+        {
+          "sa": "प्राशन-मोचन-आदौ",
+          "en": "in eating, bodily elimination, and the like"
+        }
+      ],
       "sourceNumbers": [
         457
-      ]
+      ],
+      "editionTranslation": "Similarly, he who is absorbed in Brahman lives identified with that eternal Reality and beholds nothing else. As one has a memory of the objects seen in a dream, so the man of realisation has a memory of the everyday actions such as eating."
     },
     {
       "id": "vivekachudamani-458",
       "number": "458",
       "label": "Verse 458",
-      "deva": "कर्मणा निर्मितो देहः प्रारब्धं तस्य कल्प्यताम् ।\nनानादेर् आत्मनो युक्तं नैवात्मा कर्मनिर्मितः ॥",
-      "iast": "karmaṇā nirmito dehaḥ prārabdhaṃ tasya kalpyatām |\nnānāder ātmano yuktaṃ naivātmā karmanirmitaḥ ||",
-      "translation": "The body has been fashioned by Karma, so one may imagine Prarabdha work with reference to it. But it is not reasonable to attribute the same to the Atman, for the Atman is never the outcome of work.",
-      "gloss": [],
+      "deva": "कर्मणा निर्मितो देहः प्रारब्धं तस्य कल्प्यताम् ।\nनानादेरात्मनो युक्तं नैवात्मा कर्मनिर्मितः ॥",
+      "iast": "karmaṇā nirmito dehaḥ prārabdhaṃ tasya kalpyatām |\nna anādeḥ ātmanaḥ yuktam na eva ātmā karma-nirmitaḥ ||",
+      "translation": "The body is made by karma; let prārabdha be posited for it. But that is not fitting for the beginningless Self, for the Self is not made by karma.",
+      "gloss": [
+        {
+          "sa": "कर्मणा",
+          "en": "by karma; by action"
+        },
+        {
+          "sa": "निर्मितः",
+          "en": "made; formed"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha; karma already begun"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for it; of it"
+        },
+        {
+          "sa": "कल्प्यताम्",
+          "en": "let it be imagined; let it be posited"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अनादेः",
+          "en": "of the beginningless"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "Self"
+        },
+        {
+          "sa": "युक्तम्",
+          "en": "fitting; reasonable"
+        },
+        {
+          "sa": "न एव",
+          "en": "not indeed"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "कर्म-निर्मितः",
+          "en": "made by karma"
+        }
+      ],
       "sourceNumbers": [
         458
-      ]
+      ],
+      "editionTranslation": "The body has been fashioned by Karma, so one may imagine Prarabdha work with reference to it. But it is not reasonable to attribute the same to the Atman, for the Atman is never the outcome of work."
     },
     {
       "id": "vivekachudamani-459",
       "number": "459",
       "label": "Verse 459",
       "deva": "अजो नित्यः शाश्वत इति ब्रूते श्रुतिरमोघवाक् ।\nतद् आत्मना तिष्ठतोऽस्य कुतः प्रारब्धकल्पना ॥",
-      "iast": "ajo nityaḥ śāśvata iti brūte śrutiramoghavāk |\ntad ātmanā tiṣṭhato'sya kutaḥ prārabdhakalpanā ||",
-      "translation": "The Shrutis, whose words are infallible, declare the Atman to be \"birthless, eternal and undecaying\". So, the man who lives identified with That, how can Prarabdha work be attributed ?",
-      "gloss": [],
+      "iast": "ajo nityaḥ śāśvata iti brūte śrutir amogha-vāk |\ntadātmanā tiṣṭhato'sya kutaḥ prārabdha-kalpanā ||",
+      "translation": "Scripture, whose words do not fail, declares: “The Self is unborn, eternal, everlasting.” For this one who abides as that Self, whence could there be any notion of prārabdha?",
+      "gloss": [
+        {
+          "sa": "अजः",
+          "en": "unborn"
+        },
+        {
+          "sa": "नित्यः",
+          "en": "eternal"
+        },
+        {
+          "sa": "शाश्वतः",
+          "en": "everlasting"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ब्रूते",
+          "en": "declares; says"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "अमोघ-वाक्",
+          "en": "whose words do not fail"
+        },
+        {
+          "sa": "तद्-आत्मना",
+          "en": "as that Self"
+        },
+        {
+          "sa": "तिष्ठतः",
+          "en": "of one abiding"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for this one; for him"
+        },
+        {
+          "sa": "कुतः",
+          "en": "whence; how"
+        },
+        {
+          "sa": "प्रारब्ध-कल्पना",
+          "en": "the notion; supposition of prārabdha"
+        }
+      ],
       "sourceNumbers": [
         459
-      ]
+      ],
+      "editionTranslation": "The Shrutis, whose words are infallible, declare the Atman to be \"birthless, eternal and undecaying\". So, the man who lives identified with That, how can Prarabdha work be attributed ?"
     },
     {
       "id": "vivekachudamani-460",
       "number": "460",
       "label": "Verse 460",
       "deva": "प्रारब्धं सिध्यति तदा यदा देहात्मना स्थितिः ।\nदेहात्मभावो नैवेष्टः प्रारब्धं त्यज्यतामतः ॥",
-      "iast": "prārabdhaṃ sidhyati tadā yadā dehātmanā sthitiḥ |\ndehātmabhāvo naiveṣṭaḥ prārabdhaṃ tyajyatāmataḥ ||",
-      "translation": "Prarabdha work can be maintained only so long as one lives identified with the body. But no one admits that the man of realisation ever identifies himself with the body. Hence Prarabdha work should be rejected in his case.",
-      "gloss": [],
+      "iast": "prārabdhaṃ sidhyati tadā yadā dehātmanā sthitiḥ |\ndehātma-bhāvo na eva iṣṭaḥ prārabdhaṃ tyajyatām ataḥ ||",
+      "translation": "Prārabdha holds only when one abides as the body-self. Since body-identification is not accepted, prārabdha should therefore be given up.",
+      "gloss": [
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha; karma already begun"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established; holds"
+        },
+        {
+          "sa": "तदा",
+          "en": "then; only then"
+        },
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "देह-आत्मना",
+          "en": "as the body-self"
+        },
+        {
+          "sa": "स्थितिः",
+          "en": "abiding; being established"
+        },
+        {
+          "sa": "देहात्म-भावः",
+          "en": "body-identification; the sense that the body is the Self"
+        },
+        {
+          "sa": "न एव",
+          "en": "not indeed; not"
+        },
+        {
+          "sa": "इष्टः",
+          "en": "accepted; desired"
+        },
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha"
+        },
+        {
+          "sa": "त्यज्यताम्",
+          "en": "let it be abandoned; should be given up"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        }
+      ],
       "sourceNumbers": [
         460
-      ]
+      ],
+      "editionTranslation": "Prarabdha work can be maintained only so long as one lives identified with the body. But no one admits that the man of realisation ever identifies himself with the body. Hence Prarabdha work should be rejected in his case."
     },
     {
       "id": "vivekachudamani-461",
@@ -36569,6 +36863,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 441–445; preserved prior translations as editionTranslation. Kept verse 442's saṃsṛti as worldly wandering/transmigration and rendered verse 445's phala-darśana as observation of results.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 446–450; preserved prior translations as editionTranslation. Kept verse 446’s action-before-result reasoning and rendered the hundred-crore kalpa compound in verse 447 explicitly.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 451–455; preserved prior translations as editionTranslation. Corrected verse 452's छिनत्ति (chinatti), verse 453's damaged प्रारब्धं and प्राक्सञ्चितागामिनाम् readings against convergent text witnesses, and verse 455's ममतामिदन्ताम् sequence of 'mine-ness' and 'this-ness'.",
-    "Refined verse 451's word-by-word reading to distinguish jñānodayāt (at the arising of knowledge) from jñānāt (through knowledge)."
+    "Refined verse 451's word-by-word reading to distinguish jñānodayāt (at the arising of knowledge) from jñānāt (through knowledge).",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 456–460; preserved prior translations as editionTranslation. Reparsed verse 458's n-anādeḥ as 'for the beginningless Self' and translated verse 457's prāśana-mocana as eating and bodily elimination."
   ]
 }
