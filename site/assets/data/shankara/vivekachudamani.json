@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 410
+      "end": 415
     },
-    "note": "Source verses 1–410 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 411 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–415 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 416 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -32276,60 +32276,314 @@
       "number": "411",
       "label": "Verse 411",
       "deva": "समाहितान्तःकरणः स्वरूपे\nविलोकयात्मानमखण्डवैभवम् ।\nविच्छिन्द्धि बन्धं भवगन्धगन्धितं\nयत्नेन पुंस्त्वं सफलीकुरुष्व ॥",
-      "iast": "samāhitāntaḥkaraṇaḥ svarūpe\nvilokayātmānamakhaṇḍavaibhavam |\nvicchinddhi bandhaṃ bhavagandhagandhitaṃ\nyatnena puṃstvaṃ saphalīkuruṣva ||",
-      "translation": "With the mind restrained in Samadhi, behold in thy self the Atman, of infinite glory, cut off thy bondage strengthened by the impressions of previous births, and carefully attain the consummation of thy birth as a human being.",
-      "gloss": [],
+      "iast": "samāhitāntaḥkaraṇaḥ svarūpe\nvilokayātmānam akhaṇḍa-vaibhavam |\nvicchinddhi bandhaṃ bhava-gandha-gandhitam\nyatnena puṃstvaṃ saphalīkuruṣva ||",
+      "translation": "With your inner instrument composed, behold the Self in its own nature, whose glory is undivided. Cut the bond scented with worldly existence, and through effort make your human birth fruitful.",
+      "gloss": [
+        {
+          "sa": "समाहित-अन्तःकरणः",
+          "en": "with the inner instrument composed"
+        },
+        {
+          "sa": "स्वरूपे",
+          "en": "in its own nature"
+        },
+        {
+          "sa": "विलोकय",
+          "en": "behold"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "अखण्ड-वैभवम्",
+          "en": "whose glory is undivided"
+        },
+        {
+          "sa": "विच्छिन्द्धि",
+          "en": "cut; sever"
+        },
+        {
+          "sa": "बन्धम्",
+          "en": "the bond"
+        },
+        {
+          "sa": "भव-गन्ध-गन्धितम्",
+          "en": "scented with worldly existence"
+        },
+        {
+          "sa": "यत्नेन",
+          "en": "through effort"
+        },
+        {
+          "sa": "पुंस्त्वम्",
+          "en": "human birth"
+        },
+        {
+          "sa": "सफली-कुरुष्व",
+          "en": "make fruitful"
+        }
+      ],
       "sourceNumbers": [
         411
-      ]
+      ],
+      "editionTranslation": "With the mind restrained in Samadhi, behold in thy self the Atman, of infinite glory, cut off thy bondage strengthened by the impressions of previous births, and carefully attain the consummation of thy birth as a human being."
     },
     {
       "id": "vivekachudamani-412",
       "number": "412",
       "label": "Verse 412",
-      "deva": "सर्वोपाधिविनिर्मुक्तं सच्चिदानन्दमद्वयम्।\nभावयात्मानम् आत्मस्थं न भूयः कल्पसेऽध्वने ॥",
-      "iast": "sarvopādhivinirmuktaṃ saccidānandamadvayam|\nbhāvayātmānam ātmasthaṃ na bhūyaḥ kalpase'dhvane ||",
-      "translation": "Meditate on the Atman, which resides in thee, which is devoid of all limiting adjuncts, the Existence-Knowledge-Bliss Absolute, the One without a second, and thou shalt no more come under the round of births and deaths.",
-      "gloss": [],
+      "deva": "सर्वोपाधिविनिर्मुक्तं सच्चिदानन्दमद्वयम् ।\nभावयात्मानम् आत्मस्थं न भूयः कल्पसेऽध्वने ॥",
+      "iast": "sarvopādhi-vinirmuktaṃ sac-cid-ānandam advayam |\nbhāvayātmānam ātmasthaṃ na bhūyaḥ kalpase 'dhvane ||",
+      "translation": "Contemplate the Self, abiding in itself, freed from every limiting adjunct, Being-Consciousness-Bliss, and nondual; you will no longer be set upon the road of becoming.",
+      "gloss": [
+        {
+          "sa": "सर्व-उपाधि-विनिर्मुक्तम्",
+          "en": "freed from every limiting adjunct"
+        },
+        {
+          "sa": "सत्-चित्-आनन्दम्",
+          "en": "Being-Consciousness-Bliss"
+        },
+        {
+          "sa": "अद्वयम्",
+          "en": "nondual; without a second"
+        },
+        {
+          "sa": "भावय",
+          "en": "contemplate"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "आत्मस्थम्",
+          "en": "abiding in the Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भूयः",
+          "en": "again"
+        },
+        {
+          "sa": "कल्पसे",
+          "en": "you are set; you become fit"
+        },
+        {
+          "sa": "अध्वने",
+          "en": "for the road; path"
+        }
+      ],
       "sourceNumbers": [
         412
-      ]
+      ],
+      "editionTranslation": "Meditate on the Atman, which resides in thee, which is devoid of all limiting adjuncts, the Existence-Knowledge-Bliss Absolute, the One without a second, and thou shalt no more come under the round of births and deaths."
     },
     {
       "id": "vivekachudamani-413",
       "number": "413",
       "label": "Verse 413",
-      "deva": "छायेव पुंसः परिदृश्यमान्\nमाभासरूपेण फलानुभूत्या ।\nशरीरमाराच्छववन्निरस्तं\nपुनर्न संधत्त इदं महात्मा ॥",
-      "iast": "chāyeva puṃsaḥ paridṛśyamān\nmābhāsarūpeṇa phalānubhūtyā |\nśarīramārācchavavannirastaṃ\npunarna saṃdhatta idaṃ mahātmā ||",
-      "translation": "After the body has once been cast off to a distance like a corpse, the sage never more attaches himself to it, though it is visible as an appearance, like the shadow of a man, owing to the experience of the effects of past deeds.",
-      "gloss": [],
+      "deva": "छायेव पुंसः परिदृश्यमानम् आभासरूपेण फलानुभूत्या ।\nशरीरमाराच्छववन्निरस्तं पुनर्न संधत्त इदं महात्मा ॥",
+      "iast": "chāyeva puṃsaḥ paridṛśyamānam ābhāsa-rūpeṇa phalānubhūtyā |\nśarīram ārāt śava-vad nirastaṃ punar na saṃdhatta idaṃ mahātmā ||",
+      "translation": "Though, through the experience of its results, this body appears like a person's shadow, the great one does not take it up again after casting it far away like a corpse.",
+      "gloss": [
+        {
+          "sa": "छाया इव",
+          "en": "like a shadow"
+        },
+        {
+          "sa": "पुंसः",
+          "en": "of a person"
+        },
+        {
+          "sa": "परिदृश्यमानम्",
+          "en": "being seen; appearing"
+        },
+        {
+          "sa": "आभास-रूपेण",
+          "en": "in the form of an appearance"
+        },
+        {
+          "sa": "फल-अनुभूत्या",
+          "en": "through the experience of results"
+        },
+        {
+          "sa": "शरीरम्",
+          "en": "the body"
+        },
+        {
+          "sa": "आरात्",
+          "en": "from afar"
+        },
+        {
+          "sa": "शव-वत्",
+          "en": "like a corpse"
+        },
+        {
+          "sa": "निरस्तम्",
+          "en": "cast away"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "संधत्ते",
+          "en": "takes up; attaches to"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "महात्मा",
+          "en": "the great one"
+        }
+      ],
       "sourceNumbers": [
         413
-      ]
+      ],
+      "editionTranslation": "After the body has once been cast off to a distance like a corpse, the sage never more attaches himself to it, though it is visible as an appearance, like the shadow of a man, owing to the experience of the effects of past deeds."
     },
     {
       "id": "vivekachudamani-414",
       "number": "414",
       "label": "Verse 414",
-      "deva": "सततविमलबोधानन्दरूपं समेत्य\nत्यज जडमलरूपोपाधिमेतं सुदूरे ।\nअथ पुनर् अपि नैष स्मर्यतां वान्तवस्तु\nस्मरणविषयभूतं पल्पते कुत्सनाय ॥",
-      "iast": "satatavimalabodhānandarūpaṃ sametya\ntyaja jaḍamalarūpopādhimetaṃ sudūre |\natha punar api naiṣa smaryatāṃ vāntavastu\nsmaraṇaviṣayabhūtaṃ palpate kutsanāya ||",
-      "translation": "Realising the Atman, the eternal, pure Knowledge and Bliss, throw far away this limitation of a body, which is inert and filthy by nature. Then remember it no more, for something that has been vomited excites but disgust when called in memory.",
-      "gloss": [],
+      "deva": "सततविमलबोधानन्दरूपं समेत्य\nत्यज जडमलरूपोपाधिमेतं सुदूरे ।\nअथ पुनरपि नैष स्मर्यतां वान्तवस्तु\nस्मरणविषयभूतं कल्पते कुत्सनाय ॥",
+      "iast": "satata-vimala-bodhānanda-rūpaṃ sametya\ntyaja jaḍa-mala-rūpa-upādhim etaṃ sudūre |\natha punar api naiṣa smaryatāṃ vānta-vastu\nsmaraṇa-viṣaya-bhūtaṃ kalpate kutsanāya ||",
+      "translation": "Having attained the Self whose nature is constant, pure awareness and bliss, abandon far away this limiting adjunct, inert and impure in nature. Do not remember it again: a vomited thing, when made an object of memory, serves only to disgust.",
+      "gloss": [
+        {
+          "sa": "सतत-विमल-बोध-आनन्द-रूपम्",
+          "en": "whose nature is constant, pure awareness and bliss"
+        },
+        {
+          "sa": "समेत्य",
+          "en": "having attained"
+        },
+        {
+          "sa": "त्यज",
+          "en": "abandon"
+        },
+        {
+          "sa": "जड-मल-रूप-उपाधिम्",
+          "en": "the limiting adjunct, inert and impure in nature"
+        },
+        {
+          "sa": "एतम्",
+          "en": "this"
+        },
+        {
+          "sa": "सुदूरे",
+          "en": "far away"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "पुनः अपि",
+          "en": "again; once more"
+        },
+        {
+          "sa": "न एषः",
+          "en": "not this; do not this"
+        },
+        {
+          "sa": "स्मर्यताम्",
+          "en": "let it be remembered"
+        },
+        {
+          "sa": "वान्त-वस्तु",
+          "en": "a vomited thing"
+        },
+        {
+          "sa": "स्मरण-विषय-भूतम्",
+          "en": "becoming an object of memory"
+        },
+        {
+          "sa": "कल्पते",
+          "en": "serves; becomes"
+        },
+        {
+          "sa": "कुत्सनाय",
+          "en": "for disgust"
+        }
+      ],
       "sourceNumbers": [
         414
-      ]
+      ],
+      "editionTranslation": "Realising the Atman, the eternal, pure Knowledge and Bliss, throw far away this limitation of a body, which is inert and filthy by nature. Then remember it no more, for something that has been vomited excites but disgust when called in memory."
     },
     {
       "id": "vivekachudamani-415",
       "number": "415",
       "label": "Verse 415",
-      "deva": "समूलमेतत्परिदाह्य वन्हौ\nसदात्मनि ब्रह्मणि निर्विकल्पे ।\nततः स्वयं नित्यविशुद्धबोधा\nनन्दात्मना तिष्ठति विद्वरिष्ठः ॥",
-      "iast": "samūlametatparidāhya vanhau\nsadātmani brahmaṇi nirvikalpe |\ntataḥ svayaṃ nityaviśuddhabodhā\nnandātmanā tiṣṭhati vidvariṣṭhaḥ ||",
-      "translation": "Burning all this, with its very root, in the fire of Brahman, the Eternal and Absolute Self, the truly wise man thereafter remains alone, as the Atman, the eternal, pure Knowledge and Bliss.",
-      "gloss": [],
+      "deva": "समूलमेतत्परिदाह्य वह्नौ\nसदात्मनि ब्रह्मणि निर्विकल्पे ।\nततः स्वयं नित्यविशुद्धबोधा-\nनन्दात्मना तिष्ठति विद्वरिष्ठः ॥",
+      "iast": "samūlam etat paridāhya vahnau\nsadātmani brahmaṇi nirvikalpe |\ntataḥ svayaṃ nitya-viśuddha-bodhā-\nnandātmanā tiṣṭhati vidvariṣṭhaḥ ||",
+      "translation": "Having burned all this, root and all, in the fire of the Real Self—nondual Brahman—the foremost among the wise then remains as the Self of eternal, pure awareness and bliss.",
+      "gloss": [
+        {
+          "sa": "समूलम्",
+          "en": "along with its root"
+        },
+        {
+          "sa": "एतत्",
+          "en": "all this"
+        },
+        {
+          "sa": "परिदाह्य",
+          "en": "having burned completely"
+        },
+        {
+          "sa": "वह्नौ",
+          "en": "in the fire"
+        },
+        {
+          "sa": "सत्-आत्मनि",
+          "en": "in the Real Self"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "निर्विकल्पे",
+          "en": "free from thought-constructs"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "नित्य-विशुद्ध-बोध-आनन्द-आत्मना",
+          "en": "as the Self of eternal, pure awareness and bliss"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "remains"
+        },
+        {
+          "sa": "विद्वरिष्ठः",
+          "en": "foremost among the wise"
+        }
+      ],
       "sourceNumbers": [
         415
-      ]
+      ],
+      "editionTranslation": "Burning all this, with its very root, in the fire of Brahman, the Eternal and Absolute Self, the truly wise man thereafter remains alone, as the Atman, the eternal, pure Knowledge and Bliss."
     },
     {
       "id": "vivekachudamani-416",
@@ -34326,6 +34580,7 @@
     "Corrected the Devanāgarī spelling of ātatam in the verse 394 gloss.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 396–400; preserved prior translations as editionTranslation. Corrected verse 397's ābhāsavastu spelling and verse 400's draṣṭṛ reading.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 401–405; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 406–410; preserved prior translations as editionTranslation. Corrected verse 406's paṇḍitaiḥ sandhi in Sanskrit and IAST, and documented the astābhāva reading in verse 410 alongside the common bhāsavastu variant."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 406–410; preserved prior translations as editionTranslation. Corrected verse 406's paṇḍitaiḥ sandhi in Sanskrit and IAST, and documented the astābhāva reading in verse 410 alongside the common bhāsavastu variant.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 411–415; preserved prior translations as editionTranslation. Corrected verse 413's word boundary to paridṛśyamānam ābhāsarūpeṇa, verse 414's typo palpate to kalpate, and verse 415's vahnau spelling."
   ]
 }
