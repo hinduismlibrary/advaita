@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 435
+      "end": 440
     },
-    "note": "Source verses 1–435 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 436 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–440 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 441 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -33821,61 +33821,267 @@
       "id": "vivekachudamani-436",
       "number": "436",
       "label": "Verse 436",
-      "deva": "देहेन्द्रियादौ कर्तव्ये ममाहंभाववर्जितः ।\nऔदासीन्येन यस् तिष्ठेत्स जीवन्मुक्तलक्षणः ॥",
-      "iast": "dehendriyādau kartavye mamāhaṃbhāvavarjitaḥ |\naudāsīnyena yas tiṣṭhetsa jīvanmuktalakṣaṇaḥ ||",
-      "translation": "He who lives unconcerned, devoid of all ideas of \"I\" and \"mine\" with regard to the body, organs, etc., as well as to his duties, is known as a man liberated-in-life.",
-      "gloss": [],
+      "deva": "देहेन्द्रियादौ कर्तव्ये ममाहंभाववर्जितः ।\nऔदासीन्येन यस्तिष्ठेत् स जीवन्मुक्तलक्षणः ॥",
+      "iast": "dehendriyādau kartavye mamāhaṃ-bhāva-varjitaḥ |\naudāsīnyena yas tiṣṭhet sa jīvan-mukta-lakṣaṇaḥ ||",
+      "translation": "Whoever remains indifferent in matters concerning the body, senses, and duties, free from the notions “I” and “mine,” bears the mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "देह-इन्द्रिय-आदौ",
+          "en": "in matters concerning body, senses, and the rest"
+        },
+        {
+          "sa": "कर्तव्ये",
+          "en": "in duties; in what must be done"
+        },
+        {
+          "sa": "मम-अहं-भाव-वर्जितः",
+          "en": "free from the notions “mine” and “I”"
+        },
+        {
+          "sa": "औदासीन्येन",
+          "en": "with indifference; evenly"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "तिष्ठेत्",
+          "en": "remains"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "जीवन्मुक्त-लक्षणः",
+          "en": "bearing the mark of one liberated while living"
+        }
+      ],
       "sourceNumbers": [
         436
-      ]
+      ],
+      "editionTranslation": "He who lives unconcerned, devoid of all ideas of \"I\" and \"mine\" with regard to the body, organs, etc., as well as to his duties, is known as a man liberated-in-life."
     },
     {
       "id": "vivekachudamani-437",
       "number": "437",
       "label": "Verse 437",
       "deva": "विज्ञात आत्मनो यस्य ब्रह्मभावः श्रुतेर्बलात् ।\nभवबन्धविनिर्मुक्तः स जीवन्मुक्तलक्षणः ॥",
-      "iast": "vijñāta ātmano yasya brahmabhāvaḥ śruterbalāt |\nbhavabandhavinirmuktaḥ sa jīvanmuktalakṣaṇaḥ ||",
-      "translation": "He who has realised his Brahmanhood aided by the Scriptures, and is free from the bondage of transmigration, is known as a man liberated-in-life.",
-      "gloss": [],
+      "iast": "vijñāta ātmano yasya brahma-bhāvaḥ śruter balāt |\nbhava-bandha-vinirmuktaḥ sa jīvan-mukta-lakṣaṇaḥ ||",
+      "translation": "One whose identity with Brahman has been known through the authority of scripture, and who is fully freed from worldly bondage, bears the mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "विज्ञातः",
+          "en": "has been known; realized"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "यस्य",
+          "en": "by whom; whose"
+        },
+        {
+          "sa": "ब्रह्म-भावः",
+          "en": "identity with Brahman"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "of scripture"
+        },
+        {
+          "sa": "बलात्",
+          "en": "by the strength; authority"
+        },
+        {
+          "sa": "भव-बन्ध-विनिर्मुक्तः",
+          "en": "fully freed from worldly bondage"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "जीवन्मुक्त-लक्षणः",
+          "en": "bearing the mark of one liberated while living"
+        }
+      ],
       "sourceNumbers": [
         437
-      ]
+      ],
+      "editionTranslation": "He who has realised his Brahmanhood aided by the Scriptures, and is free from the bondage of transmigration, is known as a man liberated-in-life."
     },
     {
       "id": "vivekachudamani-438",
       "number": "438",
       "label": "Verse 438",
       "deva": "देहेन्द्रियेष्वहंभाव इदंभावस्तदन्यके ।\nयस्य नो भवतः क्वापि स जीवन्मुक्त इष्यते ॥",
-      "iast": "dehendriyeṣvahaṃbhāva idaṃbhāvastadanyake |\nyasya no bhavataḥ kvāpi sa jīvanmukta iṣyate ||",
-      "translation": "He who never has the idea of \"I\" with regard to the body, organs, etc., nor that of \"it\" in respect of things other than these, is accepted as one liberated-in-life.",
-      "gloss": [],
+      "iast": "dehendriyeṣv ahaṃ-bhāva idaṃ-bhāvas tad-anyake |\nyasya no bhavataḥ kvāpi sa jīvan-mukta iṣyate ||",
+      "translation": "For one person, the notion “I” concerning body and senses, and the notion “this” concerning everything else, never arise anywhere; that person is regarded as liberated while living.",
+      "gloss": [
+        {
+          "sa": "देह-इन्द्रियेषु",
+          "en": "in the body and senses"
+        },
+        {
+          "sa": "अहम्-भावः",
+          "en": "the notion “I”"
+        },
+        {
+          "sa": "इदम्-भावः",
+          "en": "the notion “this”"
+        },
+        {
+          "sa": "तद्-अन्यके",
+          "en": "in what is other than that"
+        },
+        {
+          "sa": "यस्य",
+          "en": "for whom"
+        },
+        {
+          "sa": "नो",
+          "en": "not"
+        },
+        {
+          "sa": "भवतः",
+          "en": "arise"
+        },
+        {
+          "sa": "क्वापि",
+          "en": "anywhere"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "जीवन्मुक्तः",
+          "en": "liberated while living"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is regarded"
+        }
+      ],
       "sourceNumbers": [
         438
-      ]
+      ],
+      "editionTranslation": "He who never has the idea of \"I\" with regard to the body, organs, etc., nor that of \"it\" in respect of things other than these, is accepted as one liberated-in-life."
     },
     {
       "id": "vivekachudamani-439",
       "number": "439",
       "label": "Verse 439",
-      "deva": "न प्रत्यग्ब्रह्मणोर् भेदं कदापि ब्रह्मसर्गयोः ।\nप्रज्ञया यो विजानिति स जीवन्मुक्तलक्षणः ॥",
-      "iast": "na pratyagbrahmaṇor bhedaṃ kadāpi brahmasargayoḥ |\nprajñayā yo vijāniti sa jīvanmuktalakṣaṇaḥ ||",
-      "translation": "He who through his illumination never differentiates the Jiva and Brahman, nor the universe and Brahman, is known as a man liberated-in-life.",
-      "gloss": [],
+      "deva": "न प्रत्यग्ब्रह्मणोर्भेदं कदापि ब्रह्मसर्गयोः ।\nप्रज्ञया यो विजानाति स जीवन्मुक्तलक्षणः ॥",
+      "iast": "na pratyag-brahmaṇor bhedaṃ kadāpi brahma-sargayoḥ |\nprajñayā yo vijānāti sa jīvan-mukta-lakṣaṇaḥ ||",
+      "translation": "Whoever knows through insight that there is never a difference between the inward Self and Brahman, or between Brahman and creation, bears the mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रत्यक्-ब्रह्मणोः",
+          "en": "between the inward Self and Brahman"
+        },
+        {
+          "sa": "भेदम्",
+          "en": "a difference"
+        },
+        {
+          "sa": "कदापि",
+          "en": "ever; at any time"
+        },
+        {
+          "sa": "ब्रह्म-सर्गयोः",
+          "en": "between Brahman and creation"
+        },
+        {
+          "sa": "प्रज्ञया",
+          "en": "through insight"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "विजानाति",
+          "en": "knows"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "जीवन्मुक्त-लक्षणः",
+          "en": "bearing the mark of one liberated while living"
+        }
+      ],
       "sourceNumbers": [
         439
-      ]
+      ],
+      "editionTranslation": "He who through his illumination never differentiates the Jiva and Brahman, nor the universe and Brahman, is known as a man liberated-in-life."
     },
     {
       "id": "vivekachudamani-440",
       "number": "440",
       "label": "Verse 440",
       "deva": "साधुभिः पूज्यमानेऽस्मिन् पीड्यमानेऽपि दुर्जनैः ।\nसमभावो भवेद्यस्य स जीवन्मुक्तलक्षणः ॥",
-      "iast": "sādhubhiḥ pūjyamāne'smin pīḍyamāne'pi durjanaiḥ |\nsamabhāvo bhavedyasya sa jīvanmuktalakṣaṇaḥ ||",
-      "translation": "He who feels just the same when his body is either worshipped by the good or tormented by the wicked, is known as a man liberated-in-life.",
-      "gloss": [],
+      "iast": "sādhubhiḥ pūjyamāne 'smin pīḍyamāne 'pi durjanaiḥ |\nsama-bhāvo bhaved yasya sa jīvan-mukta-lakṣaṇaḥ ||",
+      "translation": "Equanimity when this [body] is honored by good people, and even when it is hurt by the wicked, is a mark of one liberated while living.",
+      "gloss": [
+        {
+          "sa": "साधुभिः",
+          "en": "by good people"
+        },
+        {
+          "sa": "पूज्यमाने",
+          "en": "when honored"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "in this"
+        },
+        {
+          "sa": "पीड्यमाने",
+          "en": "when hurt; tormented"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "दुर्जनैः",
+          "en": "by the wicked"
+        },
+        {
+          "sa": "सम-भावः",
+          "en": "equanimity; an even state"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "exists; is"
+        },
+        {
+          "sa": "यस्य",
+          "en": "in whom"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "जीवन्मुक्त-लक्षणः",
+          "en": "bearing the mark of one liberated while living"
+        }
+      ],
       "sourceNumbers": [
         440
-      ]
+      ],
+      "editionTranslation": "He who feels just the same when his body is either worshipped by the good or tormented by the wicked, is known as a man liberated-in-life."
     },
     {
       "id": "vivekachudamani-441",
@@ -35580,6 +35786,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 421–425; preserved prior translations as editionTranslation. Corrected verse 424's vairāgyasya spelling and removed non-text editorial breaks from verse 421; aligned verse 425's long compound boundaries for transliteration.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 426–430; preserved prior translations as editionTranslation. Normalized verse 427's editorial line break and aligned its translation to the oneness-cognition terms; rendered the mental-state language in verses 428–430 literally.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 431–435; preserved prior translations as editionTranslation. Kept the literal I/me and mine/not-mine distinction in verse 431 and made the equal-vision constructions in verses 433–434 explicit.",
-    "Normalized verse 432's IAST sandhi to atītān-anusandhānam and verse 435's compound boundary to āsvādāsakta."
+    "Normalized verse 432's IAST sandhi to atītān-anusandhānam and verse 435's compound boundary to āsvādāsakta.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 436–440; preserved prior translations as editionTranslation. Corrected verse 436's malformed word boundary and verse 439's vijāniti to the grammatically supported vijānāti reading."
   ]
 }
