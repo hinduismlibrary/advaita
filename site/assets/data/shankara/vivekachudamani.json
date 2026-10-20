@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 420
+      "end": 425
     },
-    "note": "Source verses 1–420 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 421 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–425 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 426 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -32903,61 +32903,375 @@
       "id": "vivekachudamani-421",
       "number": "421",
       "label": "Verse 421",
-      "deva": "दृष्टदुःखेष्वनुद्वेगो विद्यायाः प्रस्तुतं फलम् ।\nयत्कृतं भ्रान्तिवेलायां नाना कर्म जुगुप्सितम्\n\nपश्चान्नरो विवेकेन तत् कथं कर्तुम् अर्हति ॥",
-      "iast": "dṛṣṭaduḥkheṣvanudvego vidyāyāḥ prastutaṃ phalam |\nyatkṛtaṃ bhrāntivelāyāṃ nānā karma jugupsitam\n\npaścānnaro vivekena tat kathaṃ kartum arhati ||",
-      "translation": "Being unruffled by earthly troubles is the result in question of knowledge. How can a man who did various loathsome deeds during the state of delusion, commit the same afterwards, possessed of discrimination ?",
-      "gloss": [],
+      "deva": "दृष्टदुःखेष्वनुद्वेगो विद्यायाः प्रस्तुतं फलम् ।\nयत्कृतं भ्रान्तिवेलायां नाना कर्म जुगुप्सितम् ।\nपश्चान्नरो विवेकेन तत् कथं कर्तुमर्हति ॥",
+      "iast": "dṛṣṭa-duḥkheṣu anudvego vidyāyāḥ prastutaṃ phalam |\nyat kṛtaṃ bhrānti-velāyāṃ nānā karma jugupsitam |\npaścān naro vivekena tat kathaṃ kartum arhati ||",
+      "translation": "Not being shaken by the sorrows one experiences is the stated fruit of knowledge. How could a discerning person later repeat the many shameful acts done in delusion?",
+      "gloss": [
+        {
+          "sa": "दृष्ट-दुःखेषु",
+          "en": "amid the sorrows one sees"
+        },
+        {
+          "sa": "अनुद्वेगः",
+          "en": "non-agitation; not being shaken"
+        },
+        {
+          "sa": "विद्यायाः",
+          "en": "of knowledge"
+        },
+        {
+          "sa": "प्रस्तुतम्",
+          "en": "stated; set forth"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the fruit"
+        },
+        {
+          "sa": "यत्",
+          "en": "which; that which"
+        },
+        {
+          "sa": "कृतम्",
+          "en": "was done"
+        },
+        {
+          "sa": "भ्रान्ति-वेलायाम्",
+          "en": "during delusion"
+        },
+        {
+          "sa": "नाना",
+          "en": "many; various"
+        },
+        {
+          "sa": "कर्म",
+          "en": "acts"
+        },
+        {
+          "sa": "जुगुप्सितम्",
+          "en": "shameful; loathsome"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "afterward"
+        },
+        {
+          "sa": "नरः",
+          "en": "a person"
+        },
+        {
+          "sa": "विवेकेन",
+          "en": "with discernment"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "कर्तुम्",
+          "en": "to do"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "could; is fit"
+        }
+      ],
       "sourceNumbers": [
         421
-      ]
+      ],
+      "editionTranslation": "Being unruffled by earthly troubles is the result in question of knowledge. How can a man who did various loathsome deeds during the state of delusion, commit the same afterwards, possessed of discrimination ?"
     },
     {
       "id": "vivekachudamani-422",
       "number": "422",
       "label": "Verse 422",
-      "deva": "विद्याफलं स्यादसतो निवृत्तिः\nप्रवृत्तिरज्ञानफलं तदीक्षितम् ।\nतज्ज्ञाज्ञयोर् यन्मृगतृष्णिकादौ\nनोचेद्विदां दृष्टफलं किमस्मात् ॥",
-      "iast": "vidyāphalaṃ syādasato nivṛttiḥ\npravṛttirajñānaphalaṃ tadīkṣitam |\ntajjñājñayor yanmṛgatṛṣṇikādau\nnocedvidāṃ dṛṣṭaphalaṃ kimasmāt ||",
-      "translation": "The result of knowledge should be the turning away from unreal things, while attachment to these is the result of ignorance. This is observed in the case of one who knows a mirage and things of that sort, and one who does not. Otherwise, what other tangible result do the knowers of Brahman obtain ?",
-      "gloss": [],
+      "deva": "विद्याफलं स्यादसतो निवृत्तिः\nप्रवृत्तिरज्ञानफलं तदीक्षितम् ।\nतज्ज्ञाज्ञयोर्यन्मृगतृष्णिकादौ\nनोचेद्विदां दृष्टफलं किमस्मात् ॥",
+      "iast": "vidyā-phalaṃ syād asato nivṛttiḥ\npravṛttir ajñāna-phalaṃ tad īkṣitam |\ntaj-jñājñayor yan mṛga-tṛṣṇikādau\nno ced vidāṃ dṛṣṭa-phalaṃ kim asmāt ||",
+      "translation": "The fruit of knowledge should be withdrawal from the unreal; involvement with it is the fruit of ignorance—this is seen in the case of a mirage, between one who knows and one who does not. Otherwise, what visible result is there for the wise from this?",
+      "gloss": [
+        {
+          "sa": "विद्या-फलम्",
+          "en": "the fruit of knowledge"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "should be"
+        },
+        {
+          "sa": "असतः",
+          "en": "from the unreal"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "withdrawal"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "involvement; engagement"
+        },
+        {
+          "sa": "अज्ञान-फलम्",
+          "en": "the fruit of ignorance"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "ईक्षितम्",
+          "en": "is seen"
+        },
+        {
+          "sa": "तत्-ज्ञ-अज्ञयोः",
+          "en": "of the one who knows That and the one who does not"
+        },
+        {
+          "sa": "यत्",
+          "en": "which; as"
+        },
+        {
+          "sa": "मृग-तृष्णिका-आदौ",
+          "en": "in a mirage and the like"
+        },
+        {
+          "sa": "नो चेत्",
+          "en": "if not; otherwise"
+        },
+        {
+          "sa": "विदाम्",
+          "en": "for the wise"
+        },
+        {
+          "sa": "दृष्ट-फलम्",
+          "en": "visible result"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "अस्मात्",
+          "en": "from this"
+        }
+      ],
       "sourceNumbers": [
         422
-      ]
+      ],
+      "editionTranslation": "The result of knowledge should be the turning away from unreal things, while attachment to these is the result of ignorance. This is observed in the case of one who knows a mirage and things of that sort, and one who does not. Otherwise, what other tangible result do the knowers of Brahman obtain ?"
     },
     {
       "id": "vivekachudamani-423",
       "number": "423",
       "label": "Verse 423",
-      "deva": "अज्ञानहृदयग्रन्थेर्विनाशो यद्य् अशेषतः ।\nअनिच्छोर्विषयः किं नु प्रवृत्तेः कारणं स्वतः ॥",
-      "iast": "ajñānahṛdayagranthervināśo yady aśeṣataḥ |\nanicchorviṣayaḥ kiṃ nu pravṛtteḥ kāraṇaṃ svataḥ ||",
-      "translation": "If the heart’s knot of ignorance is totally destroyed, what natural cause can there be for inducing such a man to selfish action, for he is averse to sense-pleasures ?",
-      "gloss": [],
+      "deva": "अज्ञानहृदयग्रन्थेर्विनाशो यद्यशेषतः ।\nअनिच्छोर्विषयः किं नु प्रवृत्तेः कारणं स्वतः ॥",
+      "iast": "ajñāna-hṛdaya-granther vināśo yady aśeṣataḥ |\nanicchor viṣayaḥ kiṃ nu pravṛtteḥ kāraṇaṃ svataḥ ||",
+      "translation": "If the heart's knot of ignorance is completely destroyed, what could naturally prompt action in one who has no desire for sense-objects?",
+      "gloss": [
+        {
+          "sa": "अज्ञान-हृदय-ग्रन्थेः",
+          "en": "of the heart-knot of ignorance"
+        },
+        {
+          "sa": "विनाशः",
+          "en": "destruction"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "अशेषतः",
+          "en": "completely; without remainder"
+        },
+        {
+          "sa": "अनिच्छोः",
+          "en": "of one without desire"
+        },
+        {
+          "sa": "विषयः",
+          "en": "an object; a concern"
+        },
+        {
+          "sa": "किम् नु",
+          "en": "what indeed"
+        },
+        {
+          "sa": "प्रवृत्तेः",
+          "en": "of action; engagement"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "of itself; naturally"
+        }
+      ],
       "sourceNumbers": [
         423
-      ]
+      ],
+      "editionTranslation": "If the heart’s knot of ignorance is totally destroyed, what natural cause can there be for inducing such a man to selfish action, for he is averse to sense-pleasures ?"
     },
     {
       "id": "vivekachudamani-424",
       "number": "424",
       "label": "Verse 424",
-      "deva": "वासनानुदयो भोग्ये वैरागस्य तदावधिः ।\nअहंभावोदयाभावो बोधस्य परमावधिः\n\nलीनवृत्तैर् अनुत्पत्तिर्मर्यादोपरतेस्तु सा ॥",
-      "iast": "vāsanānudayo bhogye vairāgasya tadāvadhiḥ |\nahaṃbhāvodayābhāvo bodhasya paramāvadhiḥ\n\nlīnavṛttair anutpattirmaryādoparatestu sā ||",
-      "translation": "When the sense-objects excite no more desire, then is the culmination of dispassion. The extreme perfection of knowledge is the absence of any impulsion of the egoistic idea. And the limit of self-withdrawal is reached when the mind-functions that have been merged, appear no more.",
-      "gloss": [],
+      "deva": "वासनानुदयो भोग्ये वैराग्यस्य तदावधिः ।\nअहंभावोदयाभावो बोधस्य परमावधिः ।\nलीनवृत्तैरनुत्पत्तिर्मर्यादोपरतेस्तु सा ॥",
+      "iast": "vāsanānudayo bhogye vairāgyasya tad-avadhiḥ |\nahaṃ-bhāvodaya-abhāvo bodhasya paramāvadhiḥ |\nlīna-vṛttair anutpattir maryādoparates tu sā ||",
+      "translation": "When desire no longer arises toward objects of enjoyment, that is the limit of dispassion. The highest limit of knowledge is the absence of the arising of the I-sense. The limit of withdrawal is the non-arising of mental movements that have dissolved.",
+      "gloss": [
+        {
+          "sa": "वासना-अनुदयः",
+          "en": "the non-arising of desire"
+        },
+        {
+          "sa": "भोग्ये",
+          "en": "toward an object of enjoyment"
+        },
+        {
+          "sa": "वैराग्यस्य",
+          "en": "of dispassion"
+        },
+        {
+          "sa": "तत्-अवधिः",
+          "en": "that is the limit"
+        },
+        {
+          "sa": "अहम्-भाव-उदय-अभावः",
+          "en": "the absence of the arising of the I-sense"
+        },
+        {
+          "sa": "बोधस्य",
+          "en": "of knowledge"
+        },
+        {
+          "sa": "परम-अवधिः",
+          "en": "the highest limit"
+        },
+        {
+          "sa": "लीन-वृत्तैः",
+          "en": "with mental movements dissolved"
+        },
+        {
+          "sa": "अनुत्पत्तिः",
+          "en": "non-arising"
+        },
+        {
+          "sa": "मर्यादा",
+          "en": "the boundary"
+        },
+        {
+          "sa": "उपरतेः",
+          "en": "of withdrawal"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        }
+      ],
       "sourceNumbers": [
         424
-      ]
+      ],
+      "editionTranslation": "When the sense-objects excite no more desire, then is the culmination of dispassion. The extreme perfection of knowledge is the absence of any impulsion of the egoistic idea. And the limit of self-withdrawal is reached when the mind-functions that have been merged, appear no more."
     },
     {
       "id": "vivekachudamani-425",
       "number": "425",
       "label": "Verse 425",
-      "deva": "ब्रह्माकारतया सदा स्थिततया निर्मुक्तबाह्यार्थधीर्\nअन्यावेदितभोग्यभोगकलनो निद्रालुवद्बालवत् ।\nस्वप्नालोकितलोकवज्जगदिदं पश्यन् क्वचिल् लब्धधीर्\nआस्ते कश्चिदनन्तपुण्यफलभुग्धन्यः स मान्यो भुवि ॥",
-      "iast": "brahmākāratayā sadā sthitatayā nirmuktabāhyārthadhīr\nanyāveditabhogyabhogakalano nidrāluvadbālavat |\nsvapnālokitalokavajjagadidaṃ paśyan kvacil labdhadhīr\nāste kaścidanantapuṇyaphalabhugdhanyaḥ sa mānyo bhuvi ||",
-      "translation": "Freed from all sense of reality of the external sense-objects on account of his always remaining merged in Brahman; only seeming to enjoy such sense-objects as are offered by others, like one sleepy, or like a child; beholding this world as one seen in dreams, and having cognition of it at chance moments – rare indeed is such a man, the enjoyer of the fruits of endless merit, and he alone is blessed and esteemed on earth.",
-      "gloss": [],
+      "deva": "ब्रह्माकारतया सदा स्थिततया निर्मुक्तबाह्यार्थधीर्\nअन्यावेदितभोग्यभोगकलनो निद्रालुवद्बालवत् ।\nस्वप्नालोकितलोकवज्जगदिदं पश्यन् क्वचिल्लब्धधीर्\nआस्ते कश्चिदनन्तपुण्यफलभुग्धन्यः स मान्यो भुवि ॥",
+      "iast": "brahmākāratayā sadā sthitatayā nirmukta-bāhyārtha-dhīr\nanyāvedita-bhogya-bhoga-kalano nidrālu-vad bāla-vat |\nsvapnālokita-loka-vad jagad idaṃ paśyan kvacil labdha-dhīr\nāste kaścid ananta-puṇya-phala-bhug dhanyaḥ sa mānyo bhuvi ||",
+      "translation": "Rare on earth is the blessed, honored person who remains always established as Brahman, with awareness free from external objects. His experience of enjoying what others offer is like that of someone sleepy or a child; he sees this world as one seen in a dream and is aware of it only now and then, enjoying the fruit of boundless merit.",
+      "gloss": [
+        {
+          "sa": "ब्रह्म-आकारतया",
+          "en": "through being of the nature of Brahman"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "स्थिततया",
+          "en": "through remaining established"
+        },
+        {
+          "sa": "निर्मुक्त-बाह्यार्थ-धीः",
+          "en": "whose awareness is free from external objects"
+        },
+        {
+          "sa": "अन्य-आवेदित-भोग्य-भोग-कलनः",
+          "en": "one whose experience of enjoying what others offer is like that of a sleepy person or child"
+        },
+        {
+          "sa": "निद्रालु-वत्",
+          "en": "like someone sleepy"
+        },
+        {
+          "sa": "बाल-वत्",
+          "en": "like a child"
+        },
+        {
+          "sa": "स्वप्न-आलोकित-लोक-वत्",
+          "en": "like a world seen in a dream"
+        },
+        {
+          "sa": "जगत् इदम्",
+          "en": "this world"
+        },
+        {
+          "sa": "पश्यन्",
+          "en": "seeing"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "sometimes; now and then"
+        },
+        {
+          "sa": "लब्ध-धीः",
+          "en": "whose awareness is gained"
+        },
+        {
+          "sa": "आस्ते",
+          "en": "abides"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "someone"
+        },
+        {
+          "sa": "अनन्त-पुण्य-फल-भुक्",
+          "en": "enjoying the fruit of boundless merit"
+        },
+        {
+          "sa": "धन्यः",
+          "en": "blessed; fortunate"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "मान्यः",
+          "en": "honored; worthy"
+        },
+        {
+          "sa": "भुवि",
+          "en": "on earth"
+        }
+      ],
       "sourceNumbers": [
         425
-      ]
+      ],
+      "editionTranslation": "Freed from all sense of reality of the external sense-objects on account of his always remaining merged in Brahman; only seeming to enjoy such sense-objects as are offered by others, like one sleepy, or like a child; beholding this world as one seen in dreams, and having cognition of it at chance moments – rare indeed is such a man, the enjoyer of the fruits of endless merit, and he alone is blessed and esteemed on earth."
     },
     {
       "id": "vivekachudamani-426",
@@ -34838,6 +35152,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 411–415; preserved prior translations as editionTranslation. Corrected verse 413's word boundary to paridṛśyamānam ābhāsarūpeṇa, verse 414's typo palpate to kalpate, and verse 415's vahnau spelling.",
     "Aligned verse 413's gloss with the source form संधत्त (saṃdhatta), and split verse 414's न एषः so each word has its own gloss.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 416–420; preserved prior translations as editionTranslation. Normalized the explicit word boundary in verse 416's tattva-vettā ānanda-ātmani, corrected verse 417's hetor dehaṃ spacing, and clarified the progression language in verses 419–420.",
-    "Corrected verse 416's Devanāgarī gloss to तत्त्व-वेत्ता and aligned verse 418's IAST segmentation to bahir antaḥ sadā ānanda-rasa-āsvādanam."
+    "Corrected verse 416's Devanāgarī gloss to तत्त्व-वेत्ता and aligned verse 418's IAST segmentation to bahir antaḥ sadā ānanda-rasa-āsvādanam.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 421–425; preserved prior translations as editionTranslation. Corrected verse 424's vairāgyasya spelling and removed non-text editorial breaks from verse 421; aligned verse 425's long compound boundaries for transliteration."
   ]
 }
