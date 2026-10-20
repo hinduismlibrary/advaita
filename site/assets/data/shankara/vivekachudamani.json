@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 515
+      "end": 520
     },
-    "note": "Source verses 1–515 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 516 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–520 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 521 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -38395,13 +38395,43 @@
       "id": "vivekachudamani-516",
       "number": "516",
       "label": "Verse 516",
-      "deva": "सर्वात्मकोऽहं सर्वोऽहं सर्वातीतोऽहम् अद्वयः ।\nकेवलाक्षण्डबोधोऽहम् आनन्दोऽहं निरन्तरः ॥",
-      "iast": "sarvātmako'haṃ sarvo'haṃ sarvātīto'ham advayaḥ |\nkevalākṣaṇḍabodho'ham ānando'haṃ nirantaraḥ ||",
-      "translation": "I am the Universal, I am the All, I am transcendent, the One without a second. I am Absolute and Infinite Knowledge, I am Bliss and indivisible.",
-      "gloss": [],
+      "deva": "सर्वात्मकोऽहं सर्वोऽहं सर्वातीतोऽहम् अद्वयः ।\nकेवलाखण्डबोधोऽहम् आनन्दोऽहं निरन्तरः ॥",
+      "iast": "sarvātmako'haṃ sarvo'haṃ sarvātīto'ham advayaḥ |\nkevalākhaṇḍabodho'ham ānando'haṃ nirantaraḥ ||",
+      "translation": "I am the Self of all; I am all; I am beyond all and nondual. I am pure, undivided awareness; I am bliss, uninterrupted.",
+      "gloss": [
+        {
+          "sa": "सर्व-आत्मकः अहम्",
+          "en": "I am the Self of all (sarva: all | ātmakaḥ: having as Self | aham: I)"
+        },
+        {
+          "sa": "सर्वः अहम्",
+          "en": "I am all; I am everything (sarvaḥ: all, everything | aham: I)"
+        },
+        {
+          "sa": "सर्व-अतीतः अहम्",
+          "en": "I am beyond all (sarva: all | atītaḥ: beyond, transcending | aham: I)"
+        },
+        {
+          "sa": "अद्वयः",
+          "en": "nondual; without a second"
+        },
+        {
+          "sa": "केवल-अखण्ड-बोधः अहम्",
+          "en": "I am pure, undivided awareness (kevala: pure, absolute | akhaṇḍa: undivided | bodhaḥ: awareness | aham: I)"
+        },
+        {
+          "sa": "आनन्दः अहम्",
+          "en": "I am bliss (ānandaḥ: bliss | aham: I)"
+        },
+        {
+          "sa": "निरन्तरः",
+          "en": "uninterrupted; continuous"
+        }
+      ],
       "sourceNumbers": [
         516
-      ]
+      ],
+      "editionTranslation": "I am the Universal, I am the All, I am transcendent, the One without a second. I am Absolute and Infinite Knowledge, I am Bliss and indivisible."
     },
     {
       "id": "vivekachudamani-517",
@@ -38409,23 +38439,107 @@
       "label": "Verse 517",
       "deva": "स्वाराज्यसाम्राज्यविभूतिरेषा\nभवत्कृपाश्रीमहिमप्रसादात् ।\nप्राप्ता मया श्रीगुरवे महात्मने\nनमो नमस्तेऽस्तु पुनर्नमोऽस्तु ॥",
       "iast": "svārājyasāmrājyavibhūtireṣā\nbhavatkṛpāśrīmahimaprasādāt |\nprāptā mayā śrīgurave mahātmane\nnamo namaste'stu punarnamo'stu ||",
-      "translation": "This splendour of the sovereignty of Self-effulgence I have received by virtue of the supreme majesty of thy grace. Salutations to thee, O glorious, noble-minded Teacher, salutations again and again !",
-      "gloss": [],
+      "translation": "This glory of self-sovereignty and empire has been attained by me through the glorious greatness of your grace. Salutations to you, glorious great-souled Guru; again, salutations.",
+      "gloss": [
+        {
+          "sa": "स्वाराज्य-साम्राज्य-विभूतिः एषा",
+          "en": "this glory of self-rule and sovereignty (svārājya: self-rule | sāmrājya: empire, sovereignty | vibhūtiḥ: glory | eṣā: this)"
+        },
+        {
+          "sa": "भवत्-कृपा-श्री-महिम-प्रसादात्",
+          "en": "through the glorious greatness of your grace (bhavat: your | kṛpā: grace | śrī: glory | mahima: greatness | prasādāt: by favor, grace)"
+        },
+        {
+          "sa": "प्राप्ता मया",
+          "en": "attained by me (prāptā: attained | mayā: by me)"
+        },
+        {
+          "sa": "श्री-गुरवे महात्मने",
+          "en": "to the glorious, great-souled Guru (śrī: glorious | gurave: to the Guru | mahātmane: to the great-souled one)"
+        },
+        {
+          "sa": "नमो नमः ते अस्तु",
+          "en": "let salutations be to you (namaḥ: salutation | namaḥ: salutation | te: to you | astu: let there be)"
+        },
+        {
+          "sa": "पुनः नमः अस्तु",
+          "en": "again, let there be salutations (punaḥ: again | namaḥ: salutation | astu: let there be)"
+        }
+      ],
       "sourceNumbers": [
         517
-      ]
+      ],
+      "editionTranslation": "This splendour of the sovereignty of Self-effulgence I have received by virtue of the supreme majesty of thy grace. Salutations to thee, O glorious, noble-minded Teacher, salutations again and again !"
     },
     {
       "id": "vivekachudamani-518",
       "number": "518",
       "label": "Verse 518",
-      "deva": "महास्वप्ने मायाकृतजनिजरामृत्युगहने\nभ्रमन्तं क्लिश्यन्तं बहुलतरतापैर् अनुदिनम् ।\nअहंकारव्याघ्रव्यथितमिममत्यन्तकृपया\nप्रबोध्य प्रस्वापात्परमवितवान्मामसि गुरो ॥",
+      "deva": "महास्वप्ने मायाकृतजनिजरामृत्युगहने\nभ्रमन्तं क्लिश्यन्तं बहुलतरतापैर् अनुदिनम् ।\nअहङ्कारव्याघ्रव्यथितमिममत्यन्तकृपया\nप्रबोध्य प्रस्वापात्परमवितवान्मामसि गुरो ॥",
       "iast": "mahāsvapne māyākṛtajanijarāmṛtyugahane\nbhramantaṃ kliśyantaṃ bahulataratāpair anudinam |\nahaṃkāravyāghravyathitamimamatyantakṛpayā\nprabodhya prasvāpātparamavitavānmāmasi guro ||",
-      "translation": "O Master, thou hast out of sheer grace awakened me from sleep and completely saved me, who was wandering, in an interminable dream, in a forest of birth, decay and death created by illusion, being tormented day after day by countless afflictions, and sorely troubled by the tiger of egoism.",
-      "gloss": [],
+      "translation": "O Guru, by your utmost compassion you awakened and completely saved me from deep sleep: me, who was wandering and suffering day after day in the great dream, the dense forest of birth, old age, and death created by māyā, tormented by the tiger of ego.",
+      "gloss": [
+        {
+          "sa": "महा-स्वप्ने",
+          "en": "in the great dream (mahā: great | svapne: in a dream)"
+        },
+        {
+          "sa": "माया-कृत-जनि-जरा-मृत्यु-गहने",
+          "en": "in the dense forest of birth, old age, and death created by māyā (māyā: māyā | kṛta: created | jani: birth | jarā: old age | mṛtyu: death | gahane: in the dense forest)"
+        },
+        {
+          "sa": "भ्रमन्तम्",
+          "en": "wandering"
+        },
+        {
+          "sa": "क्लिश्यन्तम्",
+          "en": "suffering; being tormented"
+        },
+        {
+          "sa": "बहुल-तर-तापैः",
+          "en": "by many severe afflictions (bahula: many | tara: more, very | tāpaiḥ: by afflictions)"
+        },
+        {
+          "sa": "अनुदिनम्",
+          "en": "day after day"
+        },
+        {
+          "sa": "अहङ्कार-व्याघ्र-व्यथितम्",
+          "en": "tormented by the tiger of ego (ahaṅkāra: ego | vyāghra: tiger | vyathitam: tormented)"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this one; me"
+        },
+        {
+          "sa": "अत्यन्त-कृपया",
+          "en": "through utmost compassion (atyanta: utmost | kṛpayā: through compassion)"
+        },
+        {
+          "sa": "प्रबोध्य",
+          "en": "having awakened"
+        },
+        {
+          "sa": "प्रस्वापात्",
+          "en": "from deep sleep (prasvāpa: deep sleep | -āt: from)"
+        },
+        {
+          "sa": "परम्",
+          "en": "completely; fully"
+        },
+        {
+          "sa": "अवितवान् माम् असि",
+          "en": "you have protected me (avitavān: having protected | mām: me | asi: you are)"
+        },
+        {
+          "sa": "गुरो",
+          "en": "O Guru"
+        }
+      ],
       "sourceNumbers": [
         518
-      ]
+      ],
+      "editionTranslation": "O Master, thou hast out of sheer grace awakened me from sleep and completely saved me, who was wandering, in an interminable dream, in a forest of birth, decay and death created by illusion, being tormented day after day by countless afflictions, and sorely troubled by the tiger of egoism."
     },
     {
       "id": "vivekachudamani-519",
@@ -38433,11 +38547,45 @@
       "label": "Verse 519",
       "deva": "नमस्तस्मै सदैकस्मै कस्मैचिन्महसे नमः ।\nयदेतद्विश्वरूपेण राजते गुरुराज ते ॥",
       "iast": "namastasmai sadaikasmai kasmaicinmahase namaḥ |\nyadetadviśvarūpeṇa rājate gururāja te ||",
-      "translation": "Salutations to thee, O Prince of Teachers, thou unnamable Greatness, that art ever the same and dost manifest thyself as this universe – thee I salute.",
-      "gloss": [],
+      "translation": "Salutations to that ever-one, that indescribable radiance. Salutations to you, O king among teachers, who shines as this universe.",
+      "gloss": [
+        {
+          "sa": "नमः तस्मै",
+          "en": "salutations to that (namaḥ: salutation | tasmai: to that)"
+        },
+        {
+          "sa": "सदा-एकस्मै",
+          "en": "to the ever-one (sadā: always | ekasmai: to the one)"
+        },
+        {
+          "sa": "कस्मैचित् महसे",
+          "en": "to some indescribable radiance (kasmaicit: to some, a certain | mahase: to radiance, splendor)"
+        },
+        {
+          "sa": "नमः",
+          "en": "salutations"
+        },
+        {
+          "sa": "यत् एतत्",
+          "en": "which is this (yat: which | etat: this)"
+        },
+        {
+          "sa": "विश्व-रूपेण",
+          "en": "in the form of the universe (viśva: universe | rūpeṇa: in the form)"
+        },
+        {
+          "sa": "राजते",
+          "en": "shines"
+        },
+        {
+          "sa": "गुरु-राज ते",
+          "en": "to you, O king among teachers (guru: teacher | rāja: king | te: to you)"
+        }
+      ],
       "sourceNumbers": [
         519
-      ]
+      ],
+      "editionTranslation": "Salutations to thee, O Prince of Teachers, thou unnamable Greatness, that art ever the same and dost manifest thyself as this universe – thee I salute."
     },
     {
       "id": "vivekachudamani-520",
@@ -38445,11 +38593,53 @@
       "label": "Verse 520",
       "deva": "इति नतमवलोक्य शिष्यवर्यं\nसमधिगतात्मसुखं प्रबुद्धतत्त्वम् ।\nप्रमुदितहृदयं स देशिकेन्द्रः\nपुनरिदमाह वचः परं महात्मा ॥",
       "iast": "iti natamavalokya śiṣyavaryaṃ\nsamadhigatātmasukhaṃ prabuddhatattvam |\npramuditahṛdayaṃ sa deśikendraḥ\npunaridamāha vacaḥ paraṃ mahātmā ||",
-      "translation": "Seeing the worthy disciple, who had attained the Bliss of the self, realised the Truth and was glad at heart, thus prostrating himself, that noble, ideal Teacher again addressed the following excellent words:",
-      "gloss": [],
+      "translation": "Having seen the excellent disciple bowing, having attained the bliss of the Self, awakened to truth, and joyful at heart, the great-souled master, foremost among teachers, again spoke these noble words.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "नतम् अवलोक्य",
+          "en": "having seen [him] bowing (natam: bowing | avalokya: having seen)"
+        },
+        {
+          "sa": "शिष्य-वर्यम्",
+          "en": "the excellent disciple (śiṣya: disciple | varyam: excellent)"
+        },
+        {
+          "sa": "समधिगत-आत्म-सुखम्",
+          "en": "having attained the bliss of the Self (samadhigata: attained | ātma: Self | sukham: bliss)"
+        },
+        {
+          "sa": "प्रबुद्ध-तत्त्वम्",
+          "en": "awakened to truth (prabuddha: awakened | tattvam: truth)"
+        },
+        {
+          "sa": "प्रमुदित-हृदयम्",
+          "en": "joyful at heart (pramudita: joyful | hṛdayam: heart)"
+        },
+        {
+          "sa": "सः देशिक-इन्द्रः",
+          "en": "that king among teachers (saḥ: that | deśika: teacher | indraḥ: chief, king)"
+        },
+        {
+          "sa": "पुनः इदम् आह",
+          "en": "again spoke these (punaḥ: again | idam: these | āha: spoke)"
+        },
+        {
+          "sa": "वचः परम्",
+          "en": "excellent words (vacaḥ: words | param: excellent, supreme)"
+        },
+        {
+          "sa": "महात्मा",
+          "en": "the great-souled one"
+        }
+      ],
       "sourceNumbers": [
         520
-      ]
+      ],
+      "editionTranslation": "Seeing the worthy disciple, who had attained the Bliss of the self, realised the Truth and was glad at heart, thus prostrating himself, that noble, ideal Teacher again addressed the following excellent words:"
     },
     {
       "id": "vivekachudamani-521",
@@ -39223,6 +39413,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 496–500, preserving previous English as editionTranslation. Corrected the Sanskrit/transliteration in 497 (sthūla and verse-end compound), 498 (ārdrīkaroti), and 500 (jāgrat).",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 501–505, preserving prior English as editionTranslation. Clarified the limiting adjunct, the states of experience, and the lamp/house comparison.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 506–510, preserving prior English as editionTranslation. Corrected verse 506's vahni spelling and clarified verse 510's khalatva as wickedness.",
-    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 511–515, preserving prior English as editionTranslation. Restored the missing anusvāra in verse 512's viśvaṃ."
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 511–515, preserving prior English as editionTranslation. Restored the missing anusvāra in verse 512's viśvaṃ.",
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 516–520, preserving prior English as editionTranslation. Corrected verse 516's akhaṇḍa reading and standardized ahaṅkāra in 518."
   ]
 }
