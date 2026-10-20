@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition. Literal English translations and Devanāgarī word glosses now cover verses 1.86–1.95, including the combined 1.91–1.92 card."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–85.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–95.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 85
+      "to": 95
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–85 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–95 of Adhyāya 1 (verses 17–18, 44–45, and 91–92 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -6350,13 +6350,59 @@
       "number": "86",
       "label": "Verse 86",
       "deva": "येषाम् आशा निराशा स्याद्\nदारापत्य-धनादिषु।\nतेषां सिध्यति नान्येषां\nमोक्षाशाभिमुखी गतिः॥",
-      "translation": "Only those who have their passions stilled, and who crave not for wife, children or wealth, proceed onward on the path of liberation. None else may achieve it.",
-      "gloss": [],
+      "translation": "For those whose longing for wife, children, wealth, and the like has ended, the path toward liberation succeeds; it succeeds for no others.",
+      "gloss": [
+        {
+          "sa": "येषाम्",
+          "en": "for those whose"
+        },
+        {
+          "sa": "आशा",
+          "en": "longing"
+        },
+        {
+          "sa": "निराशा",
+          "en": "has ended"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "is"
+        },
+        {
+          "sa": "दार-अपत्य-धन-आदिषु",
+          "en": "for wife, children, wealth, and the like"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "for them"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "succeeds"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्येषाम्",
+          "en": "for others"
+        },
+        {
+          "sa": "मोक्ष-आशा-अभिमुखी",
+          "en": "turned toward the hope of liberation"
+        },
+        {
+          "sa": "गतिः",
+          "en": "the path"
+        }
+      ],
       "sourceNumbers": [
         86
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yeṣām āśā nirāśā syād\ndārāpatya-dhanādiṣu|\nteṣāṃ sidhyati nānyeṣāṃ\nmokṣāśābhimukhī gatiḥ||"
+      "iast": "yeṣām āśā nirāśā syād\ndārāpatya-dhanādiṣu|\nteṣāṃ sidhyati nānyeṣāṃ\nmokṣāśābhimukhī gatiḥ||",
+      "editionTranslation": "Only those who have their passions stilled, and who crave not for wife, children or wealth, proceed onward on the path of liberation. None else may achieve it."
     },
     {
       "id": "svsss-1-0087",
@@ -6364,13 +6410,83 @@
       "number": "87",
       "label": "Verse 87",
       "deva": "सत्-कर्म-क्षय-पाप्मनां श्रुतिमतां सिद्धात्मनां धीमतां\nनित्यानित्य-पदार्थ-शोधनम् इदं युक्त्या मुहुः कुर्वताम्।\nतस्माद् उत्थ-महाविरक्त्य्-असिमतां मोक्षैक-काङ्क्षावतां\nधन्यानां सुलभं स्त्रियादि-विषयेष्व् आशालताच्छेदनम्॥",
-      "translation": "To those blessed ones whose meritorious deeds have destroyed all sins, who study the Śruti, who make use of the power of reason to discriminate again and again between the eternal and the transient, who are endowed with detachment of a high order as a result of such discrimination, and who are ever intent upon liberation, to those who are self-possessed, and enlightened; it becomes easy to cut off with one stroke of dispassion all the bonds of life.",
-      "gloss": [],
+      "translation": "For the blessed—whose sins are exhausted by good actions, who are versed in scripture and steadfast in Self-knowledge, who repeatedly discern the eternal from the transient through reasoning, who bear the sword of great dispassion born of that inquiry, and whose only desire is liberation—it is easy to cut the creeper of longing for women and other sense objects.",
+      "gloss": [
+        {
+          "sa": "सत्-कर्म-क्षय-पाप्मनाम्",
+          "en": "whose sins are exhausted by good actions"
+        },
+        {
+          "sa": "श्रुति-मताम्",
+          "en": "versed in scripture"
+        },
+        {
+          "sa": "सिद्ध-आत्मनाम्",
+          "en": "steadfast in Self-knowledge"
+        },
+        {
+          "sa": "धीमताम्",
+          "en": "wise"
+        },
+        {
+          "sa": "नित्य-अनित्य-पदार्थ-शोधनम्",
+          "en": "discrimination between the eternal and the transient"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "युक्त्या",
+          "en": "by reasoning"
+        },
+        {
+          "sa": "मुहुः",
+          "en": "repeatedly"
+        },
+        {
+          "sa": "कुर्वताम्",
+          "en": "for those who practice"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "from that"
+        },
+        {
+          "sa": "उत्थ",
+          "en": "arisen"
+        },
+        {
+          "sa": "महा-विरक्ति-असि-मताम्",
+          "en": "bearing the sword of great dispassion"
+        },
+        {
+          "sa": "मोक्ष-एक-काङ्क्षावताम्",
+          "en": "whose only desire is liberation"
+        },
+        {
+          "sa": "धन्यानाम्",
+          "en": "for the blessed"
+        },
+        {
+          "sa": "सुलभम्",
+          "en": "easy"
+        },
+        {
+          "sa": "स्त्री-आदि-विषयेषु",
+          "en": "toward women and other sense objects"
+        },
+        {
+          "sa": "आशा-लता-च्छेदनम्",
+          "en": "cutting the creeper of desire"
+        }
+      ],
       "sourceNumbers": [
         87
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sat-karma-kṣaya-pāpmanāṃ śrutimatāṃ siddhātmanāṃ dhīmatāṃ\nnityānitya-padārtha-śodhanam idaṃ yuktyā muhuḥ kurvatām|\ntasmād uttha-mahāvirakty-asimatāṃ mokṣaika-kāṅkṣāvatāṃ\ndhanyānāṃ sulabhaṃ striyādi-viṣayeṣv āśālatācchedanam||"
+      "iast": "sat-karma-kṣaya-pāpmanāṃ śrutimatāṃ siddhātmanāṃ dhīmatāṃ\nnityānitya-padārtha-śodhanam idaṃ yuktyā muhuḥ kurvatām|\ntasmād uttha-mahāvirakty-asimatāṃ mokṣaika-kāṅkṣāvatāṃ\ndhanyānāṃ sulabhaṃ striyādi-viṣayeṣv āśālatācchedanam||",
+      "editionTranslation": "To those blessed ones whose meritorious deeds have destroyed all sins, who study the Śruti, who make use of the power of reason to discriminate again and again between the eternal and the transient, who are endowed with detachment of a high order as a result of such discrimination, and who are ever intent upon liberation, to those who are self-possessed, and enlightened; it becomes easy to cut off with one stroke of dispassion all the bonds of life."
     },
     {
       "id": "svsss-1-0088",
@@ -6378,13 +6494,95 @@
       "number": "88",
       "label": "Verse 88",
       "deva": "संसार-मृत्योर् बलिनः प्रवेष्टुं\nद्वाराणि तु त्रीणि महान्ति लोके।\nकान्ता च जिह्वा कनकं च तानि\nरुणद्धि यस् तस्य भयं न मृत्योः॥",
-      "translation": "There are three big gateways which lead to the mighty city of saṃsāra. They are lust, greed, and the palate; and all of them lead to death. But he who is not lured by them fears no death.",
-      "gloss": [],
+      "translation": "The great gates to the mighty death of saṃsāra are three: woman, the tongue, and gold. Whoever restrains them has no fear of death.",
+      "gloss": [
+        {
+          "sa": "संसार-मृत्योः",
+          "en": "of saṃsāra’s death"
+        },
+        {
+          "sa": "बलिनः",
+          "en": "the mighty"
+        },
+        {
+          "sa": "प्रवेष्टुम्",
+          "en": "to enter"
+        },
+        {
+          "sa": "द्वाराणि",
+          "en": "the gates"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "त्रीणि",
+          "en": "three"
+        },
+        {
+          "sa": "महान्ति",
+          "en": "great"
+        },
+        {
+          "sa": "लोके",
+          "en": "in the world"
+        },
+        {
+          "sa": "कान्ता",
+          "en": "woman"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "जिह्वा",
+          "en": "the tongue"
+        },
+        {
+          "sa": "कनकम्",
+          "en": "gold"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तानि",
+          "en": "those"
+        },
+        {
+          "sa": "रुणद्धि",
+          "en": "restrains"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "तस्य",
+          "en": "for that person"
+        },
+        {
+          "sa": "भयम्",
+          "en": "fear"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मृत्योः",
+          "en": "of death"
+        }
+      ],
       "sourceNumbers": [
         88
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "saṃsāra-mṛtyor balinaḥ praveṣṭuṃ\ndvārāṇi tu trīṇi mahānti loke|\nkāntā ca jihvā kanakaṃ ca tāni\nruṇaddhi yas tasya bhayaṃ na mṛtyoḥ||"
+      "iast": "saṃsāra-mṛtyor balinaḥ praveṣṭuṃ\ndvārāṇi tu trīṇi mahānti loke|\nkāntā ca jihvā kanakaṃ ca tāni\nruṇaddhi yas tasya bhayaṃ na mṛtyoḥ||",
+      "editionTranslation": "There are three big gateways which lead to the mighty city of saṃsāra. They are lust, greed, and the palate; and all of them lead to death. But he who is not lured by them fears no death."
     },
     {
       "id": "svsss-1-0089",
@@ -6392,13 +6590,139 @@
       "number": "89",
       "label": "Verse 89",
       "deva": "मुक्ति-श्री-नगरस्य दुर्जयतरं द्वारं यद् अस्त्य् आदिमं\nतस्य द्वे अररे धनं च युवती ताभ्यां पिनद्धं दृढम्।\nकामाख्यार्गल-दारुणा बलवता द्वारं तद् एतत् त्रयं\nधीरो यस् तु भिनत्ति सोऽर्हति सुखं भोक्तुं विमुक्ति-श्रियः॥",
-      "translation": "But there is another city, the sacred city of freedom absolute. The entrance to that city is closed by a mighty gateway; woman and wealth constitute the two panels of its doors; while lust is like a mighty crossbar which closes it from within. But the hero fights his way through them. He alone is fit to enjoy the bliss of ultimate liberation.",
-      "gloss": [],
+      "translation": "The first and hardest-to-conquer gate of the city of liberation’s glory has two leaves, wealth and a young woman, firmly fastened together. A terrible, powerful bolt called desire bars that gate. The steadfast person who breaks through this threefold barrier is worthy to enjoy the bliss of liberation.",
+      "gloss": [
+        {
+          "sa": "मुक्ति-श्री-नगरस्य",
+          "en": "of the city of liberation’s glory"
+        },
+        {
+          "sa": "दुर्जयतरम्",
+          "en": "most difficult to conquer"
+        },
+        {
+          "sa": "द्वारम्",
+          "en": "the gate"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "आदिमम्",
+          "en": "the first"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "द्वे",
+          "en": "two"
+        },
+        {
+          "sa": "अररे",
+          "en": "door leaves"
+        },
+        {
+          "sa": "धनम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "युवती",
+          "en": "a young woman"
+        },
+        {
+          "sa": "ताभ्याम्",
+          "en": "by those two"
+        },
+        {
+          "sa": "पिनद्धम्",
+          "en": "fastened"
+        },
+        {
+          "sa": "दृढम्",
+          "en": "firmly"
+        },
+        {
+          "sa": "काम-आख्य-अर्गल",
+          "en": "the bar called desire"
+        },
+        {
+          "sa": "दारुणा",
+          "en": "terrible"
+        },
+        {
+          "sa": "बलवता",
+          "en": "powerful"
+        },
+        {
+          "sa": "द्वारम्",
+          "en": "the gate"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "त्रयम्",
+          "en": "threefold"
+        },
+        {
+          "sa": "धीरः",
+          "en": "the steadfast person"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "भिनत्ति",
+          "en": "breaks"
+        },
+        {
+          "sa": "सः",
+          "en": "that one"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is worthy"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "bliss"
+        },
+        {
+          "sa": "भोक्तुम्",
+          "en": "to enjoy"
+        },
+        {
+          "sa": "विमुक्ति-श्रियः",
+          "en": "of full liberation"
+        }
+      ],
       "sourceNumbers": [
         89
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "mukti-śrī-nagarasya durjayataraṃ dvāraṃ yad asty ādimaṃ\ntasya dve arare dhanaṃ ca yuvatī tābhyāṃ pinaddhaṃ dṛḍham|\nkāmākhyārgala-dāruṇā balavatā dvāraṃ tad etat trayaṃ\ndhīro yas tu bhinatti so’rhati sukhaṃ bhoktuṃ vimukti-śriyaḥ||"
+      "iast": "mukti-śrī-nagarasya durjayataraṃ dvāraṃ yad asty ādimaṃ\ntasya dve arare dhanaṃ ca yuvatī tābhyāṃ pinaddhaṃ dṛḍham|\nkāmākhyārgala-dāruṇā balavatā dvāraṃ tad etat trayaṃ\ndhīro yas tu bhinatti so’rhati sukhaṃ bhoktuṃ vimukti-śriyaḥ||",
+      "editionTranslation": "But there is another city, the sacred city of freedom absolute. The entrance to that city is closed by a mighty gateway; woman and wealth constitute the two panels of its doors; while lust is like a mighty crossbar which closes it from within. But the hero fights his way through them. He alone is fit to enjoy the bliss of ultimate liberation."
     },
     {
       "id": "svsss-1-0090",
@@ -6406,13 +6730,43 @@
       "number": "90",
       "label": "Verse 90",
       "deva": "आरूढस्य विवेकाश्वं तीव्र-वैराग्य-खड्गिनः।\nतितिक्षा-वर्म-युक्तस्य प्रतियोगी न दृश्यते॥",
-      "translation": "To such a hero, the wise person, discrimination is the steed, dispassion the sword, and fortitude an armour of proof; and he fears no enemy.",
-      "gloss": [],
+      "translation": "For one who rides the horse of discernment, bears the sword of intense dispassion, and wears the armor of endurance, no opponent is seen.",
+      "gloss": [
+        {
+          "sa": "आरूढस्य",
+          "en": "for one who has mounted"
+        },
+        {
+          "sa": "विवेक-अश्वम्",
+          "en": "the horse of discernment"
+        },
+        {
+          "sa": "तीव्र-वैराग्य-खड्गिनः",
+          "en": "bearing the sword of intense dispassion"
+        },
+        {
+          "sa": "तितिक्षा-वर्म-युक्तस्य",
+          "en": "equipped with the armor of endurance"
+        },
+        {
+          "sa": "प्रतियोगी",
+          "en": "an opponent"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         90
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ārūḍhasya vivekāśvaṃ tīvra-vairāgya-khaḍginaḥ|\ntitikṣā-varma-yuktasya pratiyogī na dṛśyate||"
+      "iast": "ārūḍhasya vivekāśvaṃ tīvra-vairāgya-khaḍginaḥ|\ntitikṣā-varma-yuktasya pratiyogī na dṛśyate||",
+      "editionTranslation": "To such a hero, the wise person, discrimination is the steed, dispassion the sword, and fortitude an armour of proof; and he fears no enemy."
     },
     {
       "id": "svsss-1-0091",
@@ -6420,14 +6774,120 @@
       "number": "91–92",
       "label": "Verses 91–92",
       "deva": "विवेक-जां तीव्र-विरक्तिम् एव\nमुक्तेर् निदानं निगदन्ति सन्तः।\nतस्माद् विवेकी विरतिं मुमुक्षुः\nसम्पादयेत् तां प्रथमं प्रयत्नात्॥\nपुमान् अजात-निर्वेदो देह-बन्धं जिहासितुम्।\nन हि शक्नोति निर्वेदो बन्ध-भेदो महान् असौ॥",
-      "translation": "Out of discrimination comes dispassionateness and the wise say that dispassion is the root of liberation. The discriminating person who desires liberation should put forth all effort, and acquire dispassion first of all.",
-      "gloss": [],
+      "translation": "The wise declare that intense dispassion born of discernment is the root of liberation. Therefore, a discerning seeker of liberation should first strive to cultivate it. A person in whom dispassion has not arisen cannot abandon bondage to the body; dispassion is the great breaker of bondage.",
+      "gloss": [
+        {
+          "sa": "विवेक-जाम्",
+          "en": "born of discernment"
+        },
+        {
+          "sa": "तीव्र-विरक्तिम्",
+          "en": "intense dispassion"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "मुक्तेः",
+          "en": "of liberation"
+        },
+        {
+          "sa": "निदानम्",
+          "en": "the root"
+        },
+        {
+          "sa": "निगदन्ति",
+          "en": "declare"
+        },
+        {
+          "sa": "सन्तः",
+          "en": "the wise"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "विवेकी",
+          "en": "the discerning person"
+        },
+        {
+          "sa": "विरतिम्",
+          "en": "dispassion"
+        },
+        {
+          "sa": "मुमुक्षुः",
+          "en": "desiring liberation"
+        },
+        {
+          "sa": "सम्पादयेत्",
+          "en": "should cultivate"
+        },
+        {
+          "sa": "ताम्",
+          "en": "that"
+        },
+        {
+          "sa": "प्रथमम्",
+          "en": "first"
+        },
+        {
+          "sa": "प्रयत्नात्",
+          "en": "with effort"
+        },
+        {
+          "sa": "पुमान्",
+          "en": "a person"
+        },
+        {
+          "sa": "अजात-निर्वेदः",
+          "en": "in whom dispassion has not arisen"
+        },
+        {
+          "sa": "देह-बन्धम्",
+          "en": "bondage to the body"
+        },
+        {
+          "sa": "जिहासितुम्",
+          "en": "to abandon"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "शक्नोति",
+          "en": "is able"
+        },
+        {
+          "sa": "निर्वेदः",
+          "en": "dispassion"
+        },
+        {
+          "sa": "बन्ध-भेदः",
+          "en": "the breaker of bondage"
+        },
+        {
+          "sa": "महान्",
+          "en": "great"
+        },
+        {
+          "sa": "असौ",
+          "en": "this"
+        }
+      ],
       "sourceNumbers": [
         91,
         92
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "viveka-jāṃ tīvra-viraktim eva\nmukter nidānaṃ nigadanti santaḥ|\ntasmād vivekī viratiṃ mumukṣuḥ\nsampādayet tāṃ prathamaṃ prayatnāt||\npumān ajāta-nirvedo deha-bandhaṃ jihāsitum|\nna hi śaknoti nirvedo bandha-bhedo mahān asau||"
+      "iast": "viveka-jāṃ tīvra-viraktim eva\nmukter nidānaṃ nigadanti santaḥ|\ntasmād vivekī viratiṃ mumukṣuḥ\nsampādayet tāṃ prathamaṃ prayatnāt||\npumān ajāta-nirvedo deha-bandhaṃ jihāsitum|\nna hi śaknoti nirvedo bandha-bhedo mahān asau||",
+      "editionTranslation": "Out of discrimination comes dispassionateness and the wise say that dispassion is the root of liberation. The discriminating person who desires liberation should put forth all effort, and acquire dispassion first of all."
     },
     {
       "id": "svsss-1-0093",
@@ -6435,13 +6895,59 @@
       "number": "93",
       "label": "Verse 93",
       "deva": "वैराग्य-रहिता एव यमालय इवालये।\nक्लिश्नन्ति त्रिविधैस् तापैर् मोहिता अपि पण्डिताः॥",
-      "translation": "Where there is no dispassion home becomes a hell; it does not exempt even the learned from the threefold ills of life.",
-      "gloss": [],
+      "translation": "Without dispassion, the home is like Yama’s abode; even learned people, deluded, suffer there from the threefold afflictions.",
+      "gloss": [
+        {
+          "sa": "वैराग्य-रहिताः",
+          "en": "without dispassion"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "यम-आलयः",
+          "en": "Yama’s abode"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "आलये",
+          "en": "in a home"
+        },
+        {
+          "sa": "क्लिश्नन्ति",
+          "en": "suffer"
+        },
+        {
+          "sa": "त्रि-विधैः",
+          "en": "from the threefold"
+        },
+        {
+          "sa": "तापैः",
+          "en": "afflictions"
+        },
+        {
+          "sa": "मोहिताः",
+          "en": "deluded"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "पण्डिताः",
+          "en": "the learned"
+        }
+      ],
       "sourceNumbers": [
         93
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "vairāgya-rahitā eva yamālaya ivālaye|\nkliśnanti trividhais tāpair mohitā api paṇḍitāḥ||"
+      "iast": "vairāgya-rahitā eva yamālaya ivālaye|\nkliśnanti trividhais tāpair mohitā api paṇḍitāḥ||",
+      "editionTranslation": "Where there is no dispassion home becomes a hell; it does not exempt even the learned from the threefold ills of life."
     },
     {
       "id": "svsss-1-0094",
@@ -6449,13 +6955,71 @@
       "number": "94",
       "label": "Verse 94",
       "deva": "शमो दमस् तितिक्षोपरतिः श्रद्धा ततः परम्।\nसमाधानम् इति प्रोक्तं षड् एवैते शमादयः॥",
-      "translation": "Śama, etc. Hence it is that tranquillity, the control of the senses, fortitude, renunciation, faith, and concentration of mind are regarded as the six cardinal virtues of life.",
-      "gloss": [],
+      "translation": "Tranquillity, sense-restraint, forbearance, withdrawal, faith, and collectedness are said to be these six, beginning with śama.",
+      "gloss": [
+        {
+          "sa": "शमः",
+          "en": "tranquillity"
+        },
+        {
+          "sa": "दमः",
+          "en": "sense-restraint"
+        },
+        {
+          "sa": "तितिक्षा",
+          "en": "forbearance"
+        },
+        {
+          "sa": "उपरतिः",
+          "en": "withdrawal"
+        },
+        {
+          "sa": "श्रद्धा",
+          "en": "faith"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "परम्",
+          "en": "further"
+        },
+        {
+          "sa": "समाधानम्",
+          "en": "collectedness"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रोक्तम्",
+          "en": "are called"
+        },
+        {
+          "sa": "षट्",
+          "en": "six"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "एते",
+          "en": "these"
+        },
+        {
+          "sa": "शम-आदयः",
+          "en": "beginning with śama"
+        }
+      ],
       "sourceNumbers": [
         94
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śamo damas titikṣoparatiḥ śraddhā tataḥ param|\nsamādhānam iti proktaṃ ṣaḍ evaite śamādayaḥ||"
+      "iast": "śamo damas titikṣoparatiḥ śraddhā tataḥ param|\nsamādhānam iti proktaṃ ṣaḍ evaite śamādayaḥ||",
+      "editionTranslation": "Śama, etc. Hence it is that tranquillity, the control of the senses, fortitude, renunciation, faith, and concentration of mind are regarded as the six cardinal virtues of life."
     },
     {
       "id": "svsss-1-0095",
@@ -6463,13 +7027,55 @@
       "number": "95",
       "label": "Verse 95",
       "deva": "एक-वृत्त्यैव मनसः स्व-लक्ष्ये नियत-स्थितिः।\nशम इत्युच्यते सद्भिः शम-लक्षण-वेदिभिः॥",
-      "translation": "Tranquility The wise, who are entitled to speak of it, say that tranquility (śama) comes as a result of the mind being one-pointed, and being constantly directed to the object of meditation.",
-      "gloss": [],
+      "translation": "The wise who know the definition of śama call it the mind’s steady fixing on its own aim through a single current of thought.",
+      "gloss": [
+        {
+          "sa": "एक-वृत्त्या",
+          "en": "with a single current of thought"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "स्व-लक्ष्ये",
+          "en": "on its own aim"
+        },
+        {
+          "sa": "नियत-स्थितिः",
+          "en": "steady fixing"
+        },
+        {
+          "sa": "शमः",
+          "en": "tranquillity"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        },
+        {
+          "sa": "सद्भिः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "शम-लक्षण-वेदिभिः",
+          "en": "by knowers of śama’s definition"
+        }
+      ],
       "sourceNumbers": [
         95
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "eka-vṛttyaiva manasaḥ sva-lakṣye niyata-sthitiḥ|\nśama ityucyate sadbhiḥ śama-lakṣaṇa-vedibhiḥ||"
+      "iast": "eka-vṛttyaiva manasaḥ sva-lakṣye niyata-sthitiḥ|\nśama ityucyate sadbhiḥ śama-lakṣaṇa-vedibhiḥ||",
+      "editionTranslation": "Tranquility The wise, who are entitled to speak of it, say that tranquility (śama) comes as a result of the mind being one-pointed, and being constantly directed to the object of meditation."
     },
     {
       "id": "svsss-1-0096",
@@ -19005,5 +19611,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 units. Opening verses 1–6 in Part 1 also have simple literal readings and token-by-token glosses. No other units have a separate word-for-word gloss."
+  "coverage": "The complete source and English translation include all 986 reader units. All units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–95 of 1,006; verses 17–18, 44–45, and 91–92 share reader cards. Later verses and prose passages still need glosses."
 }
