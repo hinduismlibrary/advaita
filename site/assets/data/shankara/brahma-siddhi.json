@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 87 passages; 144 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 104 passages; 127 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 87 passages, including short verse entries through 2.160; 144 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 104 passages, including short verse entries through 2.182; 127 passages still need glosses."
   },
   "units": [
     {
@@ -6678,7 +6678,64 @@
       "deva": "ज्ञानं स्वभावाद्द्रव्यार्थं कर्मत्वाच्चात्मनस्तथा । भवत्वेवं तथापीष्टरूपसिद्धिः कुतो मता",
       "iast": "jñānaṃ svabhāvāddravyārthaṃ karmatvāccātmanastathā /\nbhavatvevaṃ tathāpīṣṭarūpasiddhiḥ kuto matā",
       "translation": "Knowledge, by its nature, is directed toward an object, and in its role as an action it is directed toward the Self. Let that be so; how then is the desired nature [of the Self] established?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "स्वभावात्",
+          "en": "by its nature"
+        },
+        {
+          "sa": "द्रव्य-अर्थम्",
+          "en": "directed toward an object"
+        },
+        {
+          "sa": "कर्मत्वात्",
+          "en": "because it functions as an action"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "भवतु",
+          "en": "let it be"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "तथा",
+          "en": "even then"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "इष्ट-रूप-सिद्धिः",
+          "en": "the establishment of the desired nature"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "मता",
+          "en": "is held"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.162"
       ]
@@ -6692,7 +6749,52 @@
       "deva": "शब्दस्तदर्थकार्यत्वे तावज्ञानस्य निष्ठितः । ज्ञानाज्ज्ञेयस्य को ऽन्यो ऽर्थः स्वरूपप्रतिभासनात्",
       "iast": "śabdastadarthakāryatve tāvajñānasya niṣṭhitaḥ /\njñānājjñeyasya ko 'nyo 'rthaḥ svarūpapratibhāsanāt",
       "translation": "A word culminates in knowledge of its object; what further purpose could there be beyond knowledge, when the object’s own nature shines forth?",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "शब्दः",
+          "en": "a word"
+        },
+        {
+          "sa": "तत्-अर्थ-कार्यत्वे",
+          "en": "when its function is to convey that meaning"
+        },
+        {
+          "sa": "तावत्",
+          "en": "to that extent"
+        },
+        {
+          "sa": "ज्ञानस्य",
+          "en": "in cognition"
+        },
+        {
+          "sa": "निष्ठितः",
+          "en": "culminates"
+        },
+        {
+          "sa": "ज्ञानात्",
+          "en": "beyond knowledge"
+        },
+        {
+          "sa": "ज्ञेयस्य",
+          "en": "of what is to be known"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "other"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "purpose"
+        },
+        {
+          "sa": "स्व-रूप-प्रतिभासनात्",
+          "en": "because its own nature shines forth"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.163"
       ]
@@ -6706,7 +6808,48 @@
       "deva": "अदृष्टकल्पना युक्ता न च दृष्टस्य संभवे । [क्क्स्_148] तस्माद्यथा प्रोक्षणादिविधेर्व्रीहिषु गम्यते",
       "iast": "adṛṣṭakalpanā yuktā na ca dṛṣṭasya saṃbhave /\n[kks_148] tasmādyathā prokṣaṇādividhervrīhiṣu gamyate",
       "translation": "It is reasonable to posit an unseen result when no directly visible result can account for it. Thus, from an injunction such as “He sprinkles the rice grains,” one understands…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अदृष्ट-कल्पना",
+          "en": "the positing of an unseen result"
+        },
+        {
+          "sa": "युक्ता",
+          "en": "is reasonable"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दृष्टस्य",
+          "en": "of a visible result"
+        },
+        {
+          "sa": "संभवे",
+          "en": "when possible"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "प्रोक्षण-आदि-विधेः",
+          "en": "from an injunction to sprinkle and the like"
+        },
+        {
+          "sa": "व्रीहिषु",
+          "en": "for the rice grains"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.164"
       ]
@@ -6734,7 +6877,64 @@
       "deva": "ज्ञानं प्रदर्शितं न स्यादन्यथा तद्विधेः फलम् । लयो निवर्त्यो न तथा विक्षेपो हि यथासुखः",
       "iast": "jñānaṃ pradarśitaṃ na syādanyathā tadvidheḥ phalam /\nlayo nivartyo na tathā vikṣepo hi yathāsukhaḥ",
       "translation": "Otherwise, the result of that injunction would not have been demonstrated. Absorption must be overcome; distraction, however, is as pleasurable as one wishes.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "प्रदर्शितम्",
+          "en": "is demonstrated"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "तत्-विधेः",
+          "en": "of that injunction"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the result"
+        },
+        {
+          "sa": "लयः",
+          "en": "absorption"
+        },
+        {
+          "sa": "निवर्त्यः",
+          "en": "must be overcome"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "विक्षेपः",
+          "en": "distraction"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "यथा-सुखः",
+          "en": "as pleasurable as one wishes"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.166"
       ]
@@ -6748,7 +6948,44 @@
       "deva": "[क्क्स्_149] लयविक्षेपभेदश्च न स्यादग्रहमात्रके । नन्वरूपावभासे स्याददृष्टफलकल्पना",
       "iast": "[kks_149] layavikṣepabhedaśca na syādagrahamātrake /\nnanvarūpāvabhāse syādadṛṣṭaphalakalpanā",
       "translation": "If there were merely non-apprehension, there would be no distinction between absorption and distraction. One might object that when no form appears, an unseen result should be posited.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "लय-विक्षेप-भेदः",
+          "en": "the distinction between absorption and distraction"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would exist"
+        },
+        {
+          "sa": "अग्रह-मात्रके",
+          "en": "when there is only non-apprehension"
+        },
+        {
+          "sa": "ननु",
+          "en": "one might object"
+        },
+        {
+          "sa": "अरूप-अवभासे",
+          "en": "when no form appears"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "there would be"
+        },
+        {
+          "sa": "अदृष्ट-फल-कल्पना",
+          "en": "the positing of an unseen result"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.167"
       ]
@@ -6762,7 +6999,56 @@
       "deva": "रूपावभासे दृष्टं तु फलं तत्सिद्धिलक्षणम् । न दृष्टमात्राद् दृष्टार्थं पुरुषार्थानुगं तु तत्",
       "iast": "rūpāvabhāse dṛṣṭaṃ tu phalaṃ tatsiddhilakṣaṇam /\nna dṛṣṭamātrād dṛṣṭārthaṃ puruṣārthānugaṃ tu tat",
       "translation": "A directly visible result is observed in the appearance of a form; that is the mark by which it is established. But not everything directly seen serves a human purpose; it is that [result] which does.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "रूप-अवभासे",
+          "en": "when a form appears"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "visible"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the result"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "सिद्धि-लक्षणम्",
+          "en": "is the mark of its establishment"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृष्ट-मात्रात्",
+          "en": "merely from being seen"
+        },
+        {
+          "sa": "दृष्ट-अर्थम्",
+          "en": "a visible result"
+        },
+        {
+          "sa": "पुरुष-अर्थ-अनुगम्",
+          "en": "serving a human purpose"
+        },
+        {
+          "sa": "तु",
+          "en": "rather"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.168"
       ]
@@ -6776,7 +7062,44 @@
       "deva": "न भिद्यते च तद्भावो रूपारूपावभासयोः । यथा प्रपञ्चशून्यत्वे तत्त्वे ज्ञानावभासिते",
       "iast": "na bhidyate ca tadbhāvo rūpārūpāvabhāsayoḥ /\nyathā prapañcaśūnyatve tattve jñānāvabhāsite",
       "translation": "Its nature does not differ between an appearance with form and one without form, as when truth is illumined by cognition in which the manifold world is absent.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भिद्यते",
+          "en": "differs"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तत्-भावः",
+          "en": "its nature"
+        },
+        {
+          "sa": "रूप-अरूप-अवभासयोः",
+          "en": "between appearances with and without form"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "प्रपञ्च-शून्यत्वे",
+          "en": "when free of the manifold"
+        },
+        {
+          "sa": "तत्त्वे",
+          "en": "in truth"
+        },
+        {
+          "sa": "ज्ञान-अवभासिते",
+          "en": "illumined by knowledge"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.169"
       ]
@@ -6790,7 +7113,52 @@
       "deva": "दुःखकर्मक्लेशहानमतत्त्वे ऽपि तथा भवेत् । एतच्चात्र भवेद्युक्तं प्रत्यक्षाद्यविरोधतः",
       "iast": "duḥkhakarmakleśahānamatattve 'pi tathā bhavet /\netaccātra bhavedyuktaṃ pratyakṣādyavirodhataḥ",
       "translation": "The destruction of suffering, action, and affliction would occur even without knowing the truth. This is reasonable here, since it does not conflict with perception and the other means of knowledge.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "दुःख-कर्म-क्लेश-हानम्",
+          "en": "the ending of suffering, action, and affliction"
+        },
+        {
+          "sa": "अतत्त्वे",
+          "en": "even without knowledge of truth"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would occur"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be"
+        },
+        {
+          "sa": "युक्तम्",
+          "en": "reasonable"
+        },
+        {
+          "sa": "प्रत्यक्ष-आदि-अविरोधतः",
+          "en": "because it does not conflict with perception and the other means of knowledge"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.170"
       ]
@@ -6818,7 +7186,56 @@
       "deva": "नात्मा ज्ञातस्तथा स्याच्चेन्न तद्रूपाविधानतः । प्रमाणान्तरसिद्धत्वे नतरामन्यथा यदि",
       "iast": "nātmā jñātastathā syāccenna tadrūpāvidhānataḥ /\npramāṇāntarasiddhatve natarāmanyathā yadi",
       "translation": "If the Self were not known in that way, it would be because its nature was not taught. If it is established by another means of knowledge, then all the more…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "ज्ञातः",
+          "en": "is known"
+        },
+        {
+          "sa": "तथा",
+          "en": "in that way"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्-रूप-अविधानतः",
+          "en": "because its nature is not stated"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-सिद्धत्वे",
+          "en": "if established by another means of knowledge"
+        },
+        {
+          "sa": "नतराम्",
+          "en": "all the more"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.172"
       ]
@@ -6832,7 +7249,52 @@
       "deva": "शब्दार्पितेन रूपेण तस्य ज्ञानं विधीयते । अतत्त्वेनापि तेनास्य विज्ञानमवकल्पते",
       "iast": "śabdārpitena rūpeṇa tasya jñānaṃ vidhīyate /\natattvenāpi tenāsya vijñānamavakalpate",
       "translation": "Knowledge of the Self in the form presented by the words is prescribed. Through that knowledge, the Self can be apprehended even if the form is not ultimately true.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "शब्द-अर्पितेन",
+          "en": "in the form presented by words"
+        },
+        {
+          "sa": "रूपेण",
+          "en": "in that form"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "विधीयते",
+          "en": "is enjoined"
+        },
+        {
+          "sa": "अतत्त्वेन",
+          "en": "even in a form that is not ultimately real"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "तेन",
+          "en": "through that"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "अवकल्पते",
+          "en": "is possible"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.173"
       ]
@@ -6860,7 +7322,56 @@
       "deva": "तदुपायो न चेज्ज्ञातस्तस्यैवास्तु विधिस्ततः । अवघातादिविधयो नादृष्टस्पर्शवर्जिताः",
       "iast": "tadupāyo na cejjñātastasyaivāstu vidhistataḥ /\navaghātādividhayo nādṛṣṭasparśavarjitāḥ",
       "translation": "If the means to that end is not known, let an injunction prescribe it; injunctions for pounding and the like also involve an unseen result.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "तत्-उपायः",
+          "en": "the means to that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "ज्ञातः",
+          "en": "is known"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अस्तु",
+          "en": "let there be"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "अवघात-आदि-विधयः",
+          "en": "injunctions concerning pounding and the like"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अदृष्ट-स्पर्श-वर्जिताः",
+          "en": "are without an unseen result"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.175"
       ]
@@ -6874,7 +7385,56 @@
       "deva": "अलौकिकमिदं ज्ञानमतो यदि विधीयते । न रूपसिद्धये तावद्यतः कर्तव्यता विधेः",
       "iast": "alaukikamidaṃ jñānamato yadi vidhīyate /\nna rūpasiddhaye tāvadyataḥ kartavyatā vidheḥ",
       "translation": "If this extraordinary knowledge is enjoined, it is not to establish the Self’s nature; an injunction concerns something to be done.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अलौकिकम्",
+          "en": "extraordinary"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "विधीयते",
+          "en": "is enjoined"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "रूप-सिद्धये",
+          "en": "for establishing the nature"
+        },
+        {
+          "sa": "तावत्",
+          "en": "as such"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "कर्तव्यता",
+          "en": "what is to be done"
+        },
+        {
+          "sa": "विधेः",
+          "en": "is the domain of an injunction"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.176"
       ]
@@ -6888,7 +7448,52 @@
       "deva": "कर्तव्यता च दृष्टार्थे दृष्टादेव प्रसिद्ध्यति । अलौकिके ऽर्थरूपे ऽतः शब्देन प्रतिपादिते",
       "iast": "kartavyatā ca dṛṣṭārthe dṛṣṭādeva prasiddhyati /\nalaukike 'rtharūpe 'taḥ śabdena pratipādite",
       "translation": "An obligation concerning something with a directly visible result is established from that result itself. Therefore, when the nature of an extraordinary object is presented by words…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "कर्तव्यता",
+          "en": "what is to be done"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दृष्ट-अर्थे",
+          "en": "with a visible result"
+        },
+        {
+          "sa": "दृष्टात्",
+          "en": "from what is visible"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "प्रसिद्ध्यति",
+          "en": "is established"
+        },
+        {
+          "sa": "अलौकिके",
+          "en": "with an extraordinary"
+        },
+        {
+          "sa": "अर्थ-रूपे",
+          "en": "object's nature"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "शब्देन",
+          "en": "by words"
+        },
+        {
+          "sa": "प्रतिपादिते",
+          "en": "when it is set forth"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.177"
       ]
@@ -6902,7 +7507,56 @@
       "deva": "ज्ञाने ज्ञेयाभ्युपायत्वात्स्वयमेवोन्मुखः पुमान् । तदुपाये त्वविज्ञाते विधिना स प्रवर्त्यताम्",
       "iast": "jñāne jñeyābhyupāyatvātsvayamevonmukhaḥ pumān /\ntadupāye tvavijñāte vidhinā sa pravartyatām",
       "translation": "When knowledge is the means to the known object, a person turns toward it of their own accord; but when the means to that end is unknown, let an injunction prompt them.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "ज्ञाने",
+          "en": "in knowledge"
+        },
+        {
+          "sa": "ज्ञेय-अभ्युपायत्वात्",
+          "en": "because it is a means to what is to be known"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "by oneself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "उन्मुखः",
+          "en": "turning toward"
+        },
+        {
+          "sa": "पुमान्",
+          "en": "a person"
+        },
+        {
+          "sa": "तत्-उपाये",
+          "en": "when the means to that"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "अविज्ञाते",
+          "en": "is unknown"
+        },
+        {
+          "sa": "विधिना",
+          "en": "by an injunction"
+        },
+        {
+          "sa": "सः",
+          "en": "that person"
+        },
+        {
+          "sa": "प्रवर्त्यताम्",
+          "en": "let be prompted to act"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.178"
       ]
@@ -6916,7 +7570,52 @@
       "deva": "नियोगानुप्रवेशो ऽतो विहन्त्येव प्रमाणताम् । भूतर्थ इति नोपास्यो भूतार्थगतिमिच्छता",
       "iast": "niyogānupraveśo 'to vihantyeva pramāṇatām /\nbhūtartha iti nopāsyo bhūtārthagatimicchatā",
       "translation": "Participation in an injunction therefore undermines its validity. One who seeks knowledge of an already existent reality should not contemplate it as something to be accomplished.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "नियोग-अनुप्रवेशः",
+          "en": "participation in an injunction"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "विहन्ति",
+          "en": "destroys"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रमाणताम्",
+          "en": "validity"
+        },
+        {
+          "sa": "भूत-अर्थः",
+          "en": "an already existent reality"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपास्यः",
+          "en": "to be contemplated"
+        },
+        {
+          "sa": "भूत-अर्थ-गतिम्",
+          "en": "knowledge of an existent reality"
+        },
+        {
+          "sa": "इच्छता",
+          "en": "by one who desires"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.179"
       ]
@@ -6944,7 +7643,56 @@
       "deva": "स्वरूपनिष्ठाच्छब्दात्तु प्रमितस्य वचो ऽन्तरात् । उपासनविधानं स्यात्प्राप्तेस्तदपि वा वृथा",
       "iast": "svarūpaniṣṭhācchabdāttu pramitasya vaco 'ntarāt /\nupāsanavidhānaṃ syātprāptestadapi vā vṛthā",
       "translation": "After something has been known from words that focus on its own nature, an injunction to contemplate it may arise from another statement; that too would be pointless, since it has already been attained.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "स्व-रूप-निष्ठात्",
+          "en": "from words focused on its own nature"
+        },
+        {
+          "sa": "शब्दात्",
+          "en": "from a word"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "प्रमितस्य",
+          "en": "of what has been known"
+        },
+        {
+          "sa": "वचः-अन्तरात्",
+          "en": "from another statement"
+        },
+        {
+          "sa": "उपासन-विधानम्",
+          "en": "an injunction to contemplate"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "might arise"
+        },
+        {
+          "sa": "प्राप्तेः",
+          "en": "because it is already attained"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "वृथा",
+          "en": "is pointless"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.181"
       ]
@@ -6958,7 +7706,44 @@
       "deva": "अभ्यासेन प्रत्ययस्य प्रकर्षस्याभिवीक्षणात् । तस्माद्भवत्यकार्ये ऽर्थे वेदान्तानां प्रमाणता",
       "iast": "abhyāsena pratyayasya prakarṣasyābhivīkṣaṇāt /\ntasmādbhavatyakārye 'rthe vedāntānāṃ pramāṇatā",
       "translation": "Because cognition is observed to become stronger through repeated practice, the Upaniṣads are therefore authoritative about an object that is not something to be done.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अभ्यासेन",
+          "en": "through practice"
+        },
+        {
+          "sa": "प्रत्ययस्य",
+          "en": "of cognition"
+        },
+        {
+          "sa": "प्रकर्षस्य",
+          "en": "of its intensification"
+        },
+        {
+          "sa": "अभिवीक्षणात्",
+          "en": "because it is observed"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "भवति",
+          "en": "there is"
+        },
+        {
+          "sa": "अकार्ये-अर्थे",
+          "en": "concerning an object that is not to be produced"
+        },
+        {
+          "sa": "वेदान्तानाम्",
+          "en": "of the Upaniṣads"
+        },
+        {
+          "sa": "प्रमाणता",
+          "en": "authority"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.182"
       ]
@@ -7236,9 +8021,26 @@
       "2.156",
       "2.158",
       "2.159",
-      "2.160"
+      "2.160",
+      "2.162",
+      "2.163",
+      "2.164",
+      "2.166",
+      "2.167",
+      "2.168",
+      "2.169",
+      "2.170",
+      "2.172",
+      "2.173",
+      "2.175",
+      "2.176",
+      "2.177",
+      "2.178",
+      "2.179",
+      "2.181",
+      "2.182"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 87 of 231 source-marked passages; 144 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 104 of 231 source-marked passages; 127 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 87 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 104 passages listed in wordGlossCoverage."
 }
