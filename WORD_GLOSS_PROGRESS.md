@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Brahmasiddhi** — active. All 231 passages have Sanskrit, English, and IAST. Added topic descriptions to the four traditional contents sections and completed glosses for 214 passages, including passages 2.152, 1.13, 2.29, 4.12, 1.36, 1.8, 1.7, 1.21, 2.139, and 2.91; 17 passages still need glosses. Normalized the apparent 1.7 source typo to अर्थविधान. Corrected the 1.13 compound gloss and normalized the apparent typo in 2.29 to दर्शिते. A Devanāgarī-script audit also corrected one stray Latin character in the 1.4 gloss.
+**Brahmasiddhi** — active. All 231 passages have Sanskrit, English, and IAST. Added topic descriptions to the four traditional contents sections and completed glosses for 215 passages, including passages 2.152, 1.13, 2.29, 4.12, 1.36, 1.8, 1.7, 1.21, 2.139, 2.91, and 2.149; 16 passages still need glosses. Normalized the apparent 1.7 source typo to अर्थविधान. Corrected the 1.13 compound gloss and normalized the apparent typo in 2.29 to दर्शिते. A Devanāgarī-script audit also corrected one stray Latin character in the 1.4 gloss.
 
 ## Completed
 
@@ -29,7 +29,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Ātmabodha | 69 | Complete: all 68 verses and colophon have Sanskrit, English, IAST, and glosses; seven named contents sections |
 | Ātmavidyāvilāsa | 66 | Complete: all numbered verses and invocation have Sanskrit, English, IAST, and glosses; three named topic sections |
 | Bhajagovindam | 31 | All four fields present; review named contents sections |
-| Brahmasiddhi | 231 | Active: Sanskrit, English, and IAST complete; four contents sections include topic descriptions; Devanāgarī word glosses for 214 passages, 17 remain. At 2.161, retained GRETIL’s भावात् reading and noted a witness variant. |
+| Brahmasiddhi | 231 | Active: Sanskrit, English, and IAST complete; four contents sections include topic descriptions; Devanāgarī word glosses for 215 passages, 16 remain. At 2.161, retained GRETIL’s भावात् reading and noted a witness variant. |
 | Brahmajñānāvalīmālā | 21 | Glosses present; add explicit IAST; review contents |
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | All four fields present |
 | Daśaślokī | 11 | Glosses present; add explicit IAST |
