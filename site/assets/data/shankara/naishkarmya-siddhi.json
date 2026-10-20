@@ -2,9 +2,9 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 1158,
+  "expectedUnits": 1138,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit source and original English translation for all 1158 reader units. All 100 numbered verses of Adhyāya 1 and verses 2.1–2.40, plus verses 3.114, 3.123, and 4.43, now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 280 numbered verses and prose commentary still need separate gloss work.",
+  "coverage": "Complete Sanskrit source and original English translation for all 1138 reader units. All 100 numbered verses of Adhyāya 1 and verses 2.1–2.60, plus verses 3.114, 3.123, and 4.43, now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 260 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-SA 4.0",
     "attribution": "Wikisource contributors; Intellexus project.",
     "url": "https://sa.wikisource.org/wiki/नैष्कर्म्यसिद्धिः",
-    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. All 100 verses of Adhyāya 1 and verses 2.1–2.40 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Verse 2.5 follows Alston's no-conflict reading, verse 2.20 renders the four-bearer image, and verse 2.37 uses ऋद्धिः (ṛddhiḥ), supported by Alston's transliteration, in place of the source transcription राधिः."
+    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. All 100 verses of Adhyāya 1 and verses 2.1–2.60 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Verse 2.5 follows Alston's no-conflict reading; verse 2.20 renders the four-bearer image; verse 2.37 uses ऋद्धिः (ṛddhiḥ), following Alston's transliteration; and verse 2.59 uses प्राश्निकम् (prāśnikam, “questioner”), supported by Alston and the other listed edition."
   },
   "units": [
     {
@@ -10854,26 +10854,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0445",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 117",
-      "label": "Text 117",
-      "deva": "नालुप्तदृष्टेर्दृश्यत्वं दृश्यत्वे द्रष्टृता कुतः ।",
-      "iast": "nāluptadṛṣṭerdṛśyatvaṃ dṛśyatve draṣṭṛtā kutaḥ |",
-      "translation": "What is uninterrupted seeing cannot be an object; if it were an object, where would its seerhood be?",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0446",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.41",
       "label": "Verse 2.41",
-      "deva": "स्याच्चेद्दृगेकं निर्दृश्यं जगद्वा स्यादसाक्षिकम् ॥ ४१॥",
-      "iast": "syācceddṛgekaṃ nirdṛśyaṃ jagadvā syādasākṣikam || 41||",
-      "translation": "If sight were one and nothing were seen, the world would be without a witness.",
-      "gloss": [],
+      "deva": "नालुप्तदृष्टेर्दृश्यत्वं दृश्यत्वे द्रष्टृता कुतः । स्याच्चेद्दृगेकं निर्दृश्यं जगद्वा स्यादसाक्षिकम् ॥ ४१॥",
+      "iast": "nāluptadṛṣṭerdṛśyatvaṃ dṛśyatve draṣṭṛtā kutaḥ | syācceddṛgekaṃ nirdṛśyaṃ jagadvā syādasākṣikam || 41||",
+      "translation": "The uninterrupted Seer cannot be an object; if it were seen, how could it remain the seer? If sight alone became an object, either it would be the only unseen thing or the world would have no witness.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अलुप्त-दृष्टेः",
+          "en": "of uninterrupted seeing"
+        },
+        {
+          "sa": "दृश्यत्वम्",
+          "en": "being an object of sight"
+        },
+        {
+          "sa": "दृश्यत्वे",
+          "en": "if it were seen"
+        },
+        {
+          "sa": "द्रष्टृता",
+          "en": "seerhood"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how; whence"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "दृक्",
+          "en": "sight; the Seer"
+        },
+        {
+          "sa": "एकम्",
+          "en": "one; alone"
+        },
+        {
+          "sa": "निर्दृश्यम्",
+          "en": "unseen"
+        },
+        {
+          "sa": "जगत्",
+          "en": "the world"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "असाक्षिकम्",
+          "en": "without a witness"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-41"
       ]
@@ -10890,40 +10940,79 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0448",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 120",
-      "label": "Text 120",
-      "deva": "आर्तमन्यद्दृशेः सर्वं \"नेति नेती\"ति चासकृत् ।",
-      "iast": "ārtamanyaddṛśeḥ sarvaṃ \"neti netī\"ti cāsakṛt |",
-      "translation": "“Everything other than the seeing Self is subject to suffering”; and repeatedly, “not this, not this.”",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0449",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.42",
       "label": "Verse 2.42",
-      "deva": "वदन्ती निर्गुणं ब्रह्म कथं श्रुतिरुपेक्ष्यते ॥ ४२॥",
-      "iast": "vadantī nirguṇaṃ brahma kathaṃ śrutirupekṣyate || 42||",
-      "translation": "If scripture teaches that Brahman is without qualities, how can it be ignored?",
-      "gloss": [],
+      "deva": "आर्तमन्यद्दृशेः सर्वं \"नेति नेती\"ति चासकृत् । वदन्ती निर्गुणं ब्रह्म कथं श्रुतिरुपेक्ष्यते ॥ ४२॥",
+      "iast": "ārtamanyaddṛśeḥ sarvaṃ \"neti netī\"ti cāsakṛt | vadantī nirguṇaṃ brahma kathaṃ śrutirupekṣyate || 42||",
+      "translation": "Everything other than the Seer is subject to distress; scripture repeatedly says “not this, not this” and declares Brahman to be without qualities. How could scripture be ignored?",
+      "gloss": [
+        {
+          "sa": "आर्तम्",
+          "en": "afflicted; subject to distress"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "other"
+        },
+        {
+          "sa": "दृशेः",
+          "en": "than the Seer"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        },
+        {
+          "sa": "नेति",
+          "en": "“not this”"
+        },
+        {
+          "sa": "नेति",
+          "en": "“not this”"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "असकृत्",
+          "en": "repeatedly"
+        },
+        {
+          "sa": "वदन्ती",
+          "en": "saying"
+        },
+        {
+          "sa": "निर्गुणम्",
+          "en": "without qualities"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "उपेक्ष्यते",
+          "en": "is ignored"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-42"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0450",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 122",
-      "label": "Text 122",
-      "deva": "\"महाभूतान्यहंकार\" इत्येतत्क्षेत्रमुच्यते ।",
-      "iast": "\"mahābhūtānyahaṃkāra\" ityetatkṣetramucyate |",
-      "translation": "“The great elements and ego”—all this is called the field;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0451",
@@ -10931,10 +11020,59 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.43",
       "label": "Verse 2.43",
-      "deva": "न दृशेर्द्वैतयोगोऽस्ति विश्वेश्वरमतादपि ॥ ४३॥",
-      "iast": "na dṛśerdvaitayogo'sti viśveśvaramatādapi || 43||",
-      "translation": "even according to the view of Viśveśvara, the seer has no relation to duality.",
-      "gloss": [],
+      "deva": "\"महाभूतान्यहंकार\" इत्येतत्क्षेत्रमुच्यते । न दृशेर्द्वैतयोगोऽस्ति विश्वेश्वरमतादपि ॥ ४३॥",
+      "iast": "\"mahābhūtānyahaṃkāra\" ityetatkṣetramucyate | na dṛśerdvaitayogo'sti viśveśvaramatādapi || 43||",
+      "translation": "The great elements and ego are called the “field.” Even according to the Lord of the Universe’s teaching, the Seer has no relation to duality.",
+      "gloss": [
+        {
+          "sa": "महाभूतानि",
+          "en": "the great elements"
+        },
+        {
+          "sa": "अहङ्कारः",
+          "en": "ego-sense"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "क्षेत्रम्",
+          "en": "the field"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृशेः",
+          "en": "for the Seer"
+        },
+        {
+          "sa": "द्वैत-योगः",
+          "en": "connection with duality"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "विश्वेश्वर-मतात्",
+          "en": "according to Viśveśvara’s teaching"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-43"
       ]
@@ -10951,26 +11089,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0453",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 125",
-      "label": "Text 125",
-      "deva": "एवमेतद्धिरुग्ज्ञेयं मिथ्यासिद्धमनात्मकम् ।",
-      "iast": "evametaddhirugjñeyaṃ mithyāsiddhamanātmakam |",
-      "translation": "Thus one should know that this [duality] is falsely established, not-Self,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0454",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.44",
       "label": "Verse 2.44",
-      "deva": "मोहमूलं सुदुर्बोधं द्वैतं युक्तिभिरात्मनः ॥ ४४॥",
-      "iast": "mohamūlaṃ sudurbodhaṃ dvaitaṃ yuktibhirātmanaḥ || 44||",
-      "translation": "rooted in delusion and very hard to understand by reasoning about the Self.",
-      "gloss": [],
+      "deva": "एवमेतद्धिरुग्ज्ञेयं मिथ्यासिद्धमनात्मकम् । मोहमूलं सुदुर्बोधं द्वैतं युक्तिभिरात्मनः ॥ ४४॥",
+      "iast": "evametaddhirugjñeyaṃ mithyāsiddhamanātmakam | mohamūlaṃ sudurbodhaṃ dvaitaṃ yuktibhirātmanaḥ || 44||",
+      "translation": "Thus duality is to be understood as distinct from the Self: it is falsely established, not-Self, rooted in delusion, and very hard to grasp by reasoning.",
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "हिरुक्",
+          "en": "apart; distinct"
+        },
+        {
+          "sa": "ज्ञेयम्",
+          "en": "is to be known"
+        },
+        {
+          "sa": "मिथ्या-सिद्धम्",
+          "en": "falsely established"
+        },
+        {
+          "sa": "अनात्मकम्",
+          "en": "not-Self"
+        },
+        {
+          "sa": "मोहमूलम्",
+          "en": "rooted in delusion"
+        },
+        {
+          "sa": "सुदुर्बोधम्",
+          "en": "very hard to understand"
+        },
+        {
+          "sa": "द्वैतम्",
+          "en": "duality"
+        },
+        {
+          "sa": "युक्तिभिः",
+          "en": "by reasoning"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "as distinct from the Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-44"
       ]
@@ -10987,26 +11159,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0456",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 128",
-      "label": "Text 128",
-      "deva": "न पृथङ्नात्मना सिद्धिरात्मनोऽन्यस्य वस्तुनः ।",
-      "iast": "na pṛthaṅnātmanā siddhirātmano'nyasya vastunaḥ |",
-      "translation": "no object apart from the Self is ever established as a separate reality;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0457",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.45",
       "label": "Verse 2.45",
-      "deva": "आत्मवत्कल्पितस्तस्मादहंकारादिरात्मनि ॥ ४५॥",
-      "iast": "ātmavatkalpitastasmādahaṃkārādirātmani || 45||",
-      "translation": "therefore ego and the rest are imagined in the Self, as though they were the Self.",
-      "gloss": [],
+      "deva": "न पृथङ्नात्मना सिद्धिरात्मनोऽन्यस्य वस्तुनः । आत्मवत्कल्पितस्तस्मादहंकारादिरात्मनि ॥ ४५॥",
+      "iast": "na pṛthaṅnātmanā siddhirātmano'nyasya vastunaḥ | ātmavatkalpitastasmādahaṃkārādirātmani || 45||",
+      "translation": "No separate reality apart from the Self can be established. Therefore ego and the rest are imagined in the Self as though they were the Self.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पृथक्",
+          "en": "separately"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मना",
+          "en": "from the Self"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "establishment"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "from the Self"
+        },
+        {
+          "sa": "अन्यस्य",
+          "en": "of another"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "thing"
+        },
+        {
+          "sa": "आत्मवत्",
+          "en": "as the Self"
+        },
+        {
+          "sa": "कल्पितः",
+          "en": "imagined"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अहङ्कार-आदिः",
+          "en": "ego and the rest"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-45"
       ]
@@ -11023,26 +11237,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0459",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 131",
-      "label": "Text 131",
-      "deva": "दृश्याः शब्दादयः क्लृप्ता द्रष्टृ च ब्रह्म निर्गुणम् ।",
-      "iast": "dṛśyāḥ śabdādayaḥ klṛptā draṣṭṛ ca brahma nirguṇam |",
-      "translation": "Objects such as sound are imagined as seen; the seer is Brahman, without qualities;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0460",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.46",
       "label": "Verse 2.46",
-      "deva": "अहं तदुभयं बिभ्रद्भ्रान्तिमात्मनि यच्छति ॥४६॥",
-      "iast": "ahaṃ tadubhayaṃ bibhradbhrāntimātmani yacchati ||46||",
-      "translation": "I, bearing both, casts delusion upon the Self.",
-      "gloss": [],
+      "deva": "दृश्याः शब्दादयः क्लृप्ता द्रष्टृ च ब्रह्म निर्गुणम् । अहं तदुभयं बिभ्रद्भ्रान्तिमात्मनि यच्छति ॥४६॥",
+      "iast": "dṛśyāḥ śabdādayaḥ klṛptā draṣṭṛ ca brahma nirguṇam | ahaṃ tadubhayaṃ bibhradbhrāntimātmani yacchati ||46||",
+      "translation": "Objects such as sound are imagined; the Seer is qualityless Brahman. The ego, taking up both roles, casts delusion upon the Self.",
+      "gloss": [
+        {
+          "sa": "दृश्याः",
+          "en": "the seen objects"
+        },
+        {
+          "sa": "शब्द-आदयः",
+          "en": "sound and the rest"
+        },
+        {
+          "sa": "क्लृप्ताः",
+          "en": "are imagined"
+        },
+        {
+          "sa": "द्रष्टृ",
+          "en": "the Seer"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "निर्गुणम्",
+          "en": "without qualities"
+        },
+        {
+          "sa": "अहम्",
+          "en": "the ego-“I”"
+        },
+        {
+          "sa": "तत्",
+          "en": "those"
+        },
+        {
+          "sa": "उभयम्",
+          "en": "both"
+        },
+        {
+          "sa": "बिभ्रत्",
+          "en": "bearing; taking up"
+        },
+        {
+          "sa": "भ्रान्तिम्",
+          "en": "delusion"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "upon the Self"
+        },
+        {
+          "sa": "यच्छति",
+          "en": "casts; brings about"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-46"
       ]
@@ -11059,26 +11319,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0462",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 134",
-      "label": "Text 134",
-      "deva": "दृगेका सर्वभूतेषु भाति दृश्यैरनेकवत् ।",
-      "iast": "dṛgekā sarvabhūteṣu bhāti dṛśyairanekavat |",
-      "translation": "One seeing shines in all beings, yet appears as many through the things seen;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0463",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.47",
       "label": "Verse 2.47",
-      "deva": "जलभाजनभेदेन मयूखस्रग्विभेदवत् ॥ ४७॥",
-      "iast": "jalabhājanabhedena mayūkhasragvibhedavat || 47||",
-      "translation": "as [one sun’s] rays appear divided among different vessels of water.",
-      "gloss": [],
+      "deva": "दृगेका सर्वभूतेषु भाति दृश्यैरनेकवत् । जलभाजनभेदेन मयूखस्रग्विभेदवत् ॥ ४७॥",
+      "iast": "dṛgekā sarvabhūteṣu bhāti dṛśyairanekavat | jalabhājanabhedena mayūkhasragvibhedavat || 47||",
+      "translation": "The Seer is one and shines in all beings, yet appears many through the things seen, like a single garland of sunrays seeming divided among separate water vessels.",
+      "gloss": [
+        {
+          "sa": "दृक्",
+          "en": "the Seer"
+        },
+        {
+          "sa": "एका",
+          "en": "one"
+        },
+        {
+          "sa": "सर्व-भूतेषु",
+          "en": "in all beings"
+        },
+        {
+          "sa": "भाति",
+          "en": "shines"
+        },
+        {
+          "sa": "दृश्यैः",
+          "en": "through the seen objects"
+        },
+        {
+          "sa": "अनेकवत्",
+          "en": "as if many"
+        },
+        {
+          "sa": "जल-भाजन-भेदेन",
+          "en": "because of differences among water vessels"
+        },
+        {
+          "sa": "मयूख-स्रक्-विभेदवत्",
+          "en": "like the apparent division of a garland of rays"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-47"
       ]
@@ -11095,40 +11377,55 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0465",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 137",
-      "label": "Text 137",
-      "deva": "मित्रोदासीनशत्रुत्वं यथैकस्यान्यकल्पनात् ।",
-      "iast": "mitrodāsīnaśatrutvaṃ yathaikasyānyakalpanāt |",
-      "translation": "One person is imagined as a friend, a stranger, or an enemy by another;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0466",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.48",
       "label": "Verse 2.48",
-      "deva": "अभिन्नस्य चित्तेस्तद्वद्भेदोऽन्तःकरणाश्रयः ॥ ४८॥",
-      "iast": "abhinnasya cittestadvadbhedo'ntaḥkaraṇāśrayaḥ || 48||",
-      "translation": "so one undivided consciousness appears divided, depending on the inner instrument.",
-      "gloss": [],
+      "deva": "मित्रोदासीनशत्रुत्वं यथैकस्यान्यकल्पनात् । अभिन्नस्य चित्तेस्तद्वद्भेदोऽन्तःकरणाश्रयः ॥ ४८॥",
+      "iast": "mitrodāsīnaśatrutvaṃ yathaikasyānyakalpanāt | abhinnasya cittestadvadbhedo'ntaḥkaraṇāśrayaḥ || 48||",
+      "translation": "Friend, neutral, and enemy are roles one person is given through another’s imagining; likewise, differences in undivided consciousness depend on the inner instrument.",
+      "gloss": [
+        {
+          "sa": "मित्र-उदासीन-शत्रुत्वम्",
+          "en": "friendship, neutrality, and enmity"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "एकस्य",
+          "en": "of one person"
+        },
+        {
+          "sa": "अन्य-कल्पनात्",
+          "en": "from another’s imagining"
+        },
+        {
+          "sa": "अभिन्नस्य",
+          "en": "of the undivided"
+        },
+        {
+          "sa": "चित्तेः",
+          "en": "consciousness"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "अन्तःकरण-आश्रयः",
+          "en": "dependent on the inner instrument"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-48"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0467",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 139",
-      "label": "Text 139",
-      "deva": "अपहारो यथा भानोः सर्वतो जलपात्रकैः ।",
-      "iast": "apahāro yathā bhānoḥ sarvato jalapātrakaiḥ |",
-      "translation": "As the sun appears obscured by vessels of water all around,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0468",
@@ -11136,10 +11433,63 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.49",
       "label": "Verse 2.49",
-      "deva": "तत्क्रियाकृतिदेशाप्तिस्तथा बुद्धिभिरात्मनः ॥ ४९॥",
-      "iast": "tatkriyākṛtideśāptistathā buddhibhirātmanaḥ || 49||",
-      "translation": "so the Self’s action, form, and location are attributed to it by the intellect.",
-      "gloss": [],
+      "deva": "अपहारो यथा भानोः सर्वतो जलपात्रकैः । तत्क्रियाकृतिदेशाप्तिस्तथा बुद्धिभिरात्मनः ॥ ४९॥",
+      "iast": "apahāro yathā bhānoḥ sarvato jalapātrakaiḥ | tatkriyākṛtideśāptistathā buddhibhirātmanaḥ || 49||",
+      "translation": "Just as the sun is appropriated by many water vessels and made to seem to take on their actions, forms, and locations, so the intellects appropriate the Self in the same way.",
+      "gloss": [
+        {
+          "sa": "अपहारः",
+          "en": "appropriation; taking over"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "भानोः",
+          "en": "of the sun"
+        },
+        {
+          "sa": "सर्वतः",
+          "en": "on every side"
+        },
+        {
+          "sa": "जल-पात्रकैः",
+          "en": "by water vessels"
+        },
+        {
+          "sa": "तत्",
+          "en": "their"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "actions"
+        },
+        {
+          "sa": "कृति",
+          "en": "forms"
+        },
+        {
+          "sa": "देश",
+          "en": "locations"
+        },
+        {
+          "sa": "आप्तिः",
+          "en": "attainment; taking on"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "बुद्धिभिः",
+          "en": "by intellects"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-49"
       ]
@@ -11156,26 +11506,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0470",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 142",
-      "label": "Text 142",
-      "deva": "कल्पितानामवस्तुत्वात्स्यादेकत्रापि संभवः ।",
-      "iast": "kalpitānāmavastutvātsyādekatrāpi saṃbhavaḥ |",
-      "translation": "but since they are imagined and unreal, they may appear in one place,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0471",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.50",
       "label": "Verse 2.50",
-      "deva": "कमनीयाशुचिः स्वाद्वीत्येकस्यामिव योषिति ॥ ५०॥",
-      "iast": "kamanīyāśuciḥ svādvītyekasyāmiva yoṣiti || 50||",
-      "translation": "as one woman may be thought desirable, impure, or delicious.",
-      "gloss": [],
+      "deva": "कल्पितानामवस्तुत्वात्स्यादेकत्रापि संभवः । कमनीयाशुचिः स्वाद्वीत्येकस्यामिव योषिति ॥ ५०॥",
+      "iast": "kalpitānāmavastutvātsyādekatrāpi saṃbhavaḥ | kamanīyāśuciḥ svādvītyekasyāmiva yoṣiti || 50||",
+      "translation": "Since imagined things are unreal, conflicting qualities may appear together, as the same woman may seem desirable, impure, or delicious.",
+      "gloss": [
+        {
+          "sa": "कल्पितानाम्",
+          "en": "of imagined things"
+        },
+        {
+          "sa": "अवस्तुत्वात्",
+          "en": "because they are unreal"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may occur"
+        },
+        {
+          "sa": "एकत्र",
+          "en": "in one place"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "संभवः",
+          "en": "coexistence"
+        },
+        {
+          "sa": "कमनीया",
+          "en": "desirable"
+        },
+        {
+          "sa": "अशुचिः",
+          "en": "impure"
+        },
+        {
+          "sa": "स्वादु",
+          "en": "tasty"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एकस्याम्",
+          "en": "in one"
+        },
+        {
+          "sa": "इव",
+          "en": "as"
+        },
+        {
+          "sa": "योषिति",
+          "en": "woman"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-50"
       ]
@@ -11192,26 +11584,56 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0473",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 145",
-      "label": "Text 145",
-      "deva": "अभूताभिनिवेशेन स्वात्मानं वञ्चयत्ययम् ।",
-      "iast": "abhūtābhiniveśena svātmānaṃ vañcayatyayam |",
-      "translation": "Through clinging to something unreal, a person deceives himself,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0474",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.51",
       "label": "Verse 2.51",
-      "deva": "असत्यपि द्वितीयेऽर्थे सोमशर्मपिता यथा ॥ ५१॥",
-      "iast": "asatyapi dvitīye'rthe somaśarmapitā yathā || 51||",
-      "translation": "even when no second object exists, as in the story of Somaśarman’s father.",
-      "gloss": [],
+      "deva": "अभूताभिनिवेशेन स्वात्मानं वञ्चयत्ययम् । असत्यपि द्वितीयेऽर्थे सोमशर्मपिता यथा ॥ ५१॥",
+      "iast": "abhūtābhiniveśena svātmānaṃ vañcayatyayam | asatyapi dvitīye'rthe somaśarmapitā yathā || 51||",
+      "translation": "Through attachment to what is unreal, a person deceives himself, like Somaśarman’s father, even though no second thing exists.",
+      "gloss": [
+        {
+          "sa": "अभूत-अभिनिवेशेन",
+          "en": "through fixation on what is unreal"
+        },
+        {
+          "sa": "स्व-आत्मानम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "वञ्चयति",
+          "en": "deceives"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this person"
+        },
+        {
+          "sa": "असति",
+          "en": "when it does not exist"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "द्वितीये",
+          "en": "a second"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "thing"
+        },
+        {
+          "sa": "सोमशर्म-पिता",
+          "en": "Somaśarman’s father"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-51"
       ]
@@ -11228,26 +11650,56 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0476",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 148",
-      "label": "Text 148",
-      "deva": "सुभ्रूः सुनासा सुमुखी सुनेत्रा चारुहासिनी ।",
-      "iast": "subhrūḥ sunāsā sumukhī sunetrā cāruhāsinī |",
-      "translation": "“beautiful-browed, fine-nosed, lovely-faced, beautiful-eyed, with a charming smile”—",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0477",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.52",
       "label": "Verse 2.52",
-      "deva": "कल्पनामात्रसंमोहाद्रामेत्यालिङ्गतेऽशुचिम् ॥ ५२॥",
-      "iast": "kalpanāmātrasaṃmohādrāmetyāliṅgate'śucim || 52||",
-      "translation": "deluded by mere imagination, he embraces an impure woman, calling her Rāmā.",
-      "gloss": [],
+      "deva": "सुभ्रूः सुनासा सुमुखी सुनेत्रा चारुहासिनी । कल्पनामात्रसंमोहाद्रामेत्यालिङ्गतेऽशुचिम् ॥ ५२॥",
+      "iast": "subhrūḥ sunāsā sumukhī sunetrā cāruhāsinī | kalpanāmātrasaṃmohādrāmetyāliṅgate'śucim || 52||",
+      "translation": "Imagining her as fine-browed, lovely-nosed, beautiful-faced, bright-eyed, and smiling, he embraces the impure woman as “Rāmā,” deluded by imagination alone.",
+      "gloss": [
+        {
+          "sa": "सु-भ्रूः",
+          "en": "fine-browed"
+        },
+        {
+          "sa": "सु-नासा",
+          "en": "lovely-nosed"
+        },
+        {
+          "sa": "सु-मुखी",
+          "en": "beautiful-faced"
+        },
+        {
+          "sa": "सु-नेत्रा",
+          "en": "bright-eyed"
+        },
+        {
+          "sa": "चारु-हासिनी",
+          "en": "with a charming smile"
+        },
+        {
+          "sa": "कल्पना-मात्र-संमोहात्",
+          "en": "deluded by imagination alone"
+        },
+        {
+          "sa": "राम",
+          "en": "“Rāmā”; a lovely woman"
+        },
+        {
+          "sa": "इति",
+          "en": "as"
+        },
+        {
+          "sa": "आलिङ्गते",
+          "en": "he embraces"
+        },
+        {
+          "sa": "अशुचिम्",
+          "en": "the impure woman"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-52"
       ]
@@ -11264,26 +11716,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0479",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 151",
-      "label": "Text 151",
-      "deva": "दृश्यानुरक्तं तद्द्रष्टृ दृश्यं द्रष्ट्रनुरञ्जितम् ।",
-      "iast": "dṛśyānuraktaṃ taddraṣṭṛ dṛśyaṃ draṣṭranurañjitam |",
-      "translation": "The seer is colored by attachment to what is seen, and what is seen is colored by the seer;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0480",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.53",
       "label": "Verse 2.53",
-      "deva": "अहंवृत्त्योहयं रक्तं तन्नाशेऽद्वैततात्मनः ॥ ५३॥",
-      "iast": "ahaṃvṛttyohayaṃ raktaṃ tannāśe'dvaitatātmanaḥ || 53||",
-      "translation": "both are attached through the ego-thought; when it ceases, the Self is non-dual.",
-      "gloss": [],
+      "deva": "दृश्यानुरक्तं तद्द्रष्टृ दृश्यं द्रष्ट्रनुरञ्जितम् । अहंवृत्त्योहयं रक्तं तन्नाशेऽद्वैततात्मनः ॥ ५३॥",
+      "iast": "dṛśyānuraktaṃ taddraṣṭṛ dṛśyaṃ draṣṭranurañjitam | ahaṃvṛttyohayaṃ raktaṃ tannāśe'dvaitatātmanaḥ || 53||",
+      "translation": "The seer is colored by what is seen, and what is seen is colored by the seer; the ego-thought colors them both. When it ceases, the Self is non-dual.",
+      "gloss": [
+        {
+          "sa": "दृश्य-अनुरक्तम्",
+          "en": "colored by the seen"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "द्रष्टृ",
+          "en": "the seer"
+        },
+        {
+          "sa": "दृश्यम्",
+          "en": "the seen"
+        },
+        {
+          "sa": "द्रष्ट्र-अनुरञ्जितम्",
+          "en": "colored by the seer"
+        },
+        {
+          "sa": "अहम्-वृत्त्या",
+          "en": "by the ego-thought"
+        },
+        {
+          "sa": "उभयम्",
+          "en": "both"
+        },
+        {
+          "sa": "रक्तम्",
+          "en": "colored; affected"
+        },
+        {
+          "sa": "तत्-नाशे",
+          "en": "when that ceases"
+        },
+        {
+          "sa": "अद्वैतता",
+          "en": "non-duality"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-53"
       ]
@@ -11300,40 +11786,67 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0482",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 154",
-      "label": "Text 154",
-      "deva": "नाज्ञासिषमिति प्राह सुषुप्तादुत्थितोऽपि हि ।",
-      "iast": "nājñāsiṣamiti prāha suṣuptādutthito'pi hi |",
-      "translation": "Even one who has risen from deep sleep says, “I did not know”;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0483",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.54",
       "label": "Verse 2.54",
-      "deva": "अयोदाहादिवत्तेन लक्षणं परमात्मनः ॥ ५४॥",
-      "iast": "ayodāhādivattena lakṣaṇaṃ paramātmanaḥ || 54||",
-      "translation": "through that [memory], the Supreme Self is indicated, as in the case of heated iron and the like.",
-      "gloss": [],
+      "deva": "नाज्ञासिषमिति प्राह सुषुप्तादुत्थितोऽपि हि । अयोदाहादिवत्तेन लक्षणं परमात्मनः ॥ ५४॥",
+      "iast": "nājñāsiṣamiti prāha suṣuptādutthito'pi hi | ayodāhādivattena lakṣaṇaṃ paramātmanaḥ || 54||",
+      "translation": "One who has risen from deep sleep says, “I knew nothing.” That “I” indirectly indicates the Supreme Self, as when one says that iron burns.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अज्ञासिषम्",
+          "en": "I knew"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्राह",
+          "en": "says"
+        },
+        {
+          "sa": "सुषुप्तात्",
+          "en": "from deep sleep"
+        },
+        {
+          "sa": "उत्थितः",
+          "en": "having risen"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अयः-दाह-आदि-वत्",
+          "en": "as in the case of iron burning and the like"
+        },
+        {
+          "sa": "तेन",
+          "en": "through that"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "indirect indication"
+        },
+        {
+          "sa": "परम-आत्मनः",
+          "en": "of the Supreme Self"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-54"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0484",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 156",
-      "label": "Text 156",
-      "deva": "प्रत्यक्त्वादतिसूक्ष्मत्वादात्मदृष्ट्यनुशीलनात् ।",
-      "iast": "pratyaktvādatisūkṣmatvādātmadṛṣṭyanuśīlanāt |",
-      "translation": "Because the Self is inward, exceedingly subtle, and known through sustained inquiry,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0485",
@@ -11341,24 +11854,54 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.55",
       "label": "Verse 2.55",
-      "deva": "अतो वृत्तीर्विहायान्या ह्यहंवृत्त्योपलक्षते ॥ ५५॥",
-      "iast": "ato vṛttīrvihāyānyā hyahaṃvṛttyopalakṣate || 55||",
-      "translation": "it is indicated by the “I”-thought after other mental modes have been set aside.",
-      "gloss": [],
+      "deva": "प्रत्यक्त्वादतिसूक्ष्मत्वादात्मदृष्ट्यनुशीलनात् । अतो वृत्तीर्विहायान्या ह्यहंवृत्त्योपलक्षते ॥ ५५॥",
+      "iast": "pratyaktvādatisūkṣmatvādātmadṛṣṭyanuśīlanāt | ato vṛttīrvihāyānyā hyahaṃvṛttyopalakṣate || 55||",
+      "translation": "Because the Self is inward, exceedingly subtle, and the focus of sustained inquiry, it is indicated through the “I”-thought after the other mental modes are set aside.",
+      "gloss": [
+        {
+          "sa": "प्रत्यक्त्वात्",
+          "en": "because of inwardness"
+        },
+        {
+          "sa": "अति-सूक्ष्मत्वात्",
+          "en": "because of extreme subtlety"
+        },
+        {
+          "sa": "आत्म-दृष्टि-अनुशीलनात्",
+          "en": "because of sustained attention to the Self"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "वृत्तीः",
+          "en": "mental modes"
+        },
+        {
+          "sa": "विहाय",
+          "en": "having set aside"
+        },
+        {
+          "sa": "अन्याः",
+          "en": "the other"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अहम्-वृत्त्या",
+          "en": "through the “I”-thought"
+        },
+        {
+          "sa": "उपलक्षते",
+          "en": "is indicated"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-55"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0486",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 158",
-      "label": "Text 158",
-      "deva": "आत्मना चाविनाभावमथवा विलयं व्रजेत् ।",
-      "iast": "ātmanā cāvinābhāvamathavā vilayaṃ vrajet |",
-      "translation": "Or it is inseparable from the Self, or it dissolves into it;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0487",
@@ -11366,10 +11909,67 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.56",
       "label": "Verse 2.56",
-      "deva": "न तु पक्षान्तरं यायादतश्चाहंधियोच्यते ॥ ५६॥",
-      "iast": "na tu pakṣāntaraṃ yāyādataścāhaṃdhiyocyate || 56||",
-      "translation": "it does not fall into another category; therefore it is spoken of through the “I”-cognition.",
-      "gloss": [],
+      "deva": "आत्मना चाविनाभावमथवा विलयं व्रजेत् । न तु पक्षान्तरं यायादतश्चाहंधियोच्यते ॥ ५६॥",
+      "iast": "ātmanā cāvinābhāvamathavā vilayaṃ vrajet | na tu pakṣāntaraṃ yāyādataścāhaṃdhiyocyate || 56||",
+      "translation": "The ego-thought either remains inseparable from the Self or dissolves into it; it has no third possibility. Therefore the Self may also be referred to through the “I”-thought.",
+      "gloss": [
+        {
+          "sa": "आत्मना",
+          "en": "with the Self"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अविनाभावम्",
+          "en": "inseparability"
+        },
+        {
+          "sa": "अथवा",
+          "en": "or"
+        },
+        {
+          "sa": "विलयम्",
+          "en": "dissolution"
+        },
+        {
+          "sa": "व्रजेत्",
+          "en": "it would reach"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "पक्ष-अन्तरम्",
+          "en": "another possibility"
+        },
+        {
+          "sa": "यायात्",
+          "en": "it would go"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "अहम्-धिया",
+          "en": "through the “I”-thought"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is spoken of"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-56"
       ]
@@ -11386,26 +11986,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0489",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 161",
-      "label": "Text 161",
-      "deva": "नामादिभ्यः परो भूमा निष्कलोऽकारकोऽक्रियः ।",
-      "iast": "nāmādibhyaḥ paro bhūmā niṣkalo'kārako'kriyaḥ |",
-      "translation": "Beyond name and the rest is the highest, partless, non-agent, actionless reality;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0490",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.57",
       "label": "Verse 2.57",
-      "deva": "स एवात्मवतामात्मा स्वतस्सिद्धः स एव नः ॥ ५७॥",
-      "iast": "sa evātmavatāmātmā svatassiddhaḥ sa eva naḥ || 57||",
-      "translation": "that alone is the Self of those who know the Self; it is self-established, and it is ours.",
-      "gloss": [],
+      "deva": "नामादिभ्यः परो भूमा निष्कलोऽकारकोऽक्रियः । स एवात्मवतामात्मा स्वतस्सिद्धः स एव नः ॥ ५७॥",
+      "iast": "nāmādibhyaḥ paro bhūmā niṣkalo'kārako'kriyaḥ | sa evātmavatāmātmā svatassiddhaḥ sa eva naḥ || 57||",
+      "translation": "Beyond names and the rest is the Infinite: partless, not an agent, and actionless. That alone is the Self of the Self-realized, self-established; that is the Self we teach.",
+      "gloss": [
+        {
+          "sa": "नाम-आदिभ्यः",
+          "en": "beyond names and the rest"
+        },
+        {
+          "sa": "परः",
+          "en": "beyond"
+        },
+        {
+          "sa": "भूमā",
+          "en": "the Infinite"
+        },
+        {
+          "sa": "निष्कलः",
+          "en": "partless"
+        },
+        {
+          "sa": "अकारकः",
+          "en": "not an agent"
+        },
+        {
+          "sa": "अक्रियः",
+          "en": "actionless"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मवताम्",
+          "en": "of the Self-realized"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "सिद्धः",
+          "en": "established"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "नः",
+          "en": "for us; our teaching"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-57"
       ]
@@ -11433,26 +12083,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0493",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 165",
-      "label": "Text 165",
-      "deva": "एष सर्वधियां नृत्तमविलुप्तैकदर्शनः ।",
-      "iast": "eṣa sarvadhiyāṃ nṛttamaviluptaikadarśanaḥ |",
-      "translation": "This one, whose single vision never ceases, beholds the dance of all intellects;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0494",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.58",
       "label": "Verse 2.58",
-      "deva": "वीक्षतेऽवीक्षमाणोऽपि निमिषत्तद्ध्रुवोऽध्रुवम् ॥ ५८॥",
-      "iast": "vīkṣate'vīkṣamāṇo'pi nimiṣattaddhruvo'dhruvam || 58||",
-      "translation": "even while not seeing, it sees what is steady and what is fleeting, through the blinking of the eye.",
-      "gloss": [],
+      "deva": "एष सर्वधियां नृत्तमविलुप्तैकदर्शनः । वीक्षतेऽवीक्षमाणोऽपि निमिषत्तद्ध्रुवोऽध्रुवम् ॥ ५८॥",
+      "iast": "eṣa sarvadhiyāṃ nṛttamaviluptaikadarśanaḥ | vīkṣate'vīkṣamāṇo'pi nimiṣattaddhruvo'dhruvam || 58||",
+      "translation": "The Self, the one unbroken witness, beholds the dance of all minds; without itself acting, it sees what is constant and what changes, as if through a blink.",
+      "gloss": [
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "सर्व-धियाम्",
+          "en": "of all intellects"
+        },
+        {
+          "sa": "नृत्तम्",
+          "en": "the dance"
+        },
+        {
+          "sa": "अविलुप्त-एक-दर्शनः",
+          "en": "whose single seeing is unbroken"
+        },
+        {
+          "sa": "वीक्षते",
+          "en": "beholds"
+        },
+        {
+          "sa": "अवीक्षमाणः",
+          "en": "while not acting as a looker"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "निमिषत्",
+          "en": "as if blinking"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "ध्रुवः",
+          "en": "the constant"
+        },
+        {
+          "sa": "अध्रुवम्",
+          "en": "the changing"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-58"
       ]
@@ -11480,26 +12164,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0497",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 169",
-      "label": "Text 169",
-      "deva": "इमं प्राशिकमुद्दिश्य तर्कज्वरभृशातुराः ।",
-      "iast": "imaṃ prāśikamuddiśya tarkajvarabhṛśāturāḥ |",
-      "translation": "Addressing this noble person,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0498",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.59",
       "label": "Verse 2.59",
-      "deva": "त्वाच्छिरस्कवचोजालैर्मोहयन्तीतरेतरम् ॥ ५९॥",
-      "iast": "tvācchiraskavacojālairmohayantītaretaram || 59||",
-      "translation": "“Those grievously afflicted by the fever of argument bewilder one another with a web of words for armor.”",
-      "gloss": [],
+      "deva": "इमं प्राशिकमुद्दिश्य तर्कज्वरभृशातुराः । त्वाच्छिरस्कवचोजालैर्मोहयन्तीतरेतरम् ॥ ५९॥",
+      "iast": "imaṃ prāśnikamuddiśya tarkajvarabhṛśāturāḥ | tvācchiraskavacojālairmohayantītaretaram || 59||",
+      "translation": "The questioner is addressed: debaters, grievously afflicted by the fever of logic, bewilder one another with a web of words used as armor.",
+      "gloss": [
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "प्राश्निकम्",
+          "en": "the questioner"
+        },
+        {
+          "sa": "उद्दिश्य",
+          "en": "addressing"
+        },
+        {
+          "sa": "तर्क-ज्वर",
+          "en": "the fever of reasoning"
+        },
+        {
+          "sa": "भृश-आतुराः",
+          "en": "severely afflicted"
+        },
+        {
+          "sa": "त्वच्-शिरस्क-वचः-जालैः",
+          "en": "with a web of words as protective covering"
+        },
+        {
+          "sa": "मोहयन्ति",
+          "en": "they bewilder"
+        },
+        {
+          "sa": "इतरेतरम्",
+          "en": "one another"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-59"
       ]
@@ -11516,26 +12222,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0500",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 172",
-      "label": "Text 172",
-      "deva": "\"वर्षातपाभ्यां किं व्योम्नश्चर्मण्येव तयोः फलम् ।",
-      "iast": "\"varṣātapābhyāṃ kiṃ vyomnaścarmaṇyeva tayoḥ phalam |",
-      "translation": "“What do rain and sunlight do to space? Their effects fall only on leather.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0501",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.60",
       "label": "Verse 2.60",
-      "deva": "चर्मोपमश्चेत्सोऽनित्यः खतुल्यश्चेदसत्समः \" ॥ ६०॥",
-      "iast": "carmopamaścetso'nityaḥ khatulyaścedasatsamaḥ \" || 60||",
-      "translation": "If the Self is like leather, it is impermanent; if like space, it is unreal.”",
-      "gloss": [],
+      "deva": "\"वर्षातपाभ्यां किं व्योम्नश्चर्मण्येव तयोः फलम् । चर्मोपमश्चेत्सोऽनित्यः खतुल्यश्चेदसत्समः \" ॥ ६०॥",
+      "iast": "\"varṣātapābhyāṃ kiṃ vyomnaścarmaṇyeva tayoḥ phalam | carmopamaścetso'nityaḥ khatulyaścedasatsamaḥ \" || 60||",
+      "translation": "What effect do rain and sunlight have on the sky? Their effect is only on leather. If the Self were like leather, it would be impermanent; if like the sky, it would be unreal.",
+      "gloss": [
+        {
+          "sa": "वर्षा-आतपाभ्याम्",
+          "en": "from rain and sunlight"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "व्योम्नः",
+          "en": "on the sky"
+        },
+        {
+          "sa": "चर्मणि",
+          "en": "on leather"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "तयोः",
+          "en": "of those two"
+        },
+        {
+          "sa": "फलम्",
+          "en": "effect"
+        },
+        {
+          "sa": "चर्म-उपमः",
+          "en": "like leather"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "अनित्यः",
+          "en": "impermanent"
+        },
+        {
+          "sa": "ख-तुल्यः",
+          "en": "like the sky"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "असत्-समः",
+          "en": "like the unreal"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-60"
       ]
@@ -21371,12 +22123,32 @@
       "2.38",
       "2.39",
       "2.40",
+      "2.41",
+      "2.42",
+      "2.43",
+      "2.44",
+      "2.45",
+      "2.46",
+      "2.47",
+      "2.48",
+      "2.49",
+      "2.50",
+      "2.51",
+      "2.52",
+      "2.53",
+      "2.54",
+      "2.55",
+      "2.56",
+      "2.57",
+      "2.58",
+      "2.59",
+      "2.60",
       "3.114",
       "3.123",
       "4.43"
     ],
     "partialUnits": [],
-    "note": "All 100 verses of Adhyāya 1 and verses 2.1–2.40, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 280 numbered verses and prose commentary still need separate glosses."
+    "note": "All 100 verses of Adhyāya 1 and verses 2.1–2.60, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 260 numbered verses and prose commentary still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; original literal readings and token-by-token glosses for texts 1.2–1.4."
 }
