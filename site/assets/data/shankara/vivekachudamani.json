@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 540
+      "end": 545
     },
-    "note": "Source verses 1–540 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 541 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–545 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 546 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -39387,11 +39387,33 @@
       "label": "Verse 541",
       "deva": "कामान्निष्कामरूपी संश्चरत्येकचारो मुनिः ।\nस्वात्मनैव सदा तुष्टः स्वयं सर्वात्मना स्थितः ॥",
       "iast": "kāmānniṣkāmarūpī saṃścaratyekacāro muniḥ |\nsvātmanaiva sadā tuṣṭaḥ svayaṃ sarvātmanā sthitaḥ ||",
-      "translation": "The sage, living alone, enjoys the sense-objects, being the very embodiment of desirelessness – always satisfied with his own Self, and himself present at the All.",
-      "gloss": [],
+      "translation": "The sage wanders alone among desires, desireless in nature. Always content in the Self alone, he himself abides as the Self of all.",
+      "gloss": [
+        {
+          "sa": "कामान् निष्काम-रूपी",
+          "en": "among desires, of desireless nature (kāmān: desires, objects of desire | niṣkāma: desireless | rūpī: having the nature or form of)"
+        },
+        {
+          "sa": "संश्चरति एकचारः मुनिः",
+          "en": "the sage wanders as a solitary wanderer (saṃścarati: moves about, wanders | ekacāraḥ: moving alone | muniḥ: sage)"
+        },
+        {
+          "sa": "स्व-आत्मना एव",
+          "en": "through the Self alone (sva: one's own | ātmanā: by, through the Self | eva: alone)"
+        },
+        {
+          "sa": "सदा तुष्टः",
+          "en": "always content (sadā: always | tuṣṭaḥ: content, satisfied)"
+        },
+        {
+          "sa": "स्वयम् सर्व-आत्मना स्थितः",
+          "en": "he himself abides as the Self of all (svayam: himself | sarva: all | ātmanā: as the Self | sthitaḥ: established, abiding)"
+        }
+      ],
       "sourceNumbers": [
         541
-      ]
+      ],
+      "editionTranslation": "The sage, living alone, enjoys the sense-objects, being the very embodiment of desirelessness – always satisfied with his own Self, and himself present at the All."
     },
     {
       "id": "vivekachudamani-542",
@@ -39399,11 +39421,41 @@
       "label": "Verse 542",
       "deva": "क्वचिन्मूढो विद्वान् क्वचिद् अपि महाराजविभवः\nक्वचिद्भ्रान्तः सौम्यः क्वचिदजगराचारकलितः ।\nक्वचित्पात्रीभूतः क्वचिदवमतः क्वाप्यविदितः\nचरत्य् एवं प्राज्ञः सततपरमानन्दसुखितः ॥",
       "iast": "kvacinmūḍho vidvān kvacid api mahārājavibhavaḥ\nkvacidbhrāntaḥ saumyaḥ kvacidajagarācārakalitaḥ |\nkvacitpātrībhūtaḥ kvacidavamataḥ kvāpyaviditaḥ\ncaraty evaṃ prājñaḥ satataparamānandasukhitaḥ ||",
-      "translation": "Sometimes a fool, sometimes a sage, sometimes possessed of regal splendour; sometimes wandering, sometimes behaving like a motionless python, sometimes wearing a benignant expression; sometimes honoured, sometimes insulted, sometimes unknown – thus lives the man of realisation, ever happy with Supreme Bliss.",
-      "gloss": [],
+      "translation": "Sometimes appearing foolish, sometimes wise, sometimes with a great king’s splendor; sometimes bewildered, sometimes gentle, sometimes behaving like a python; sometimes honored, sometimes despised, sometimes unknown—thus moves the wise one, always happy in supreme bliss.",
+      "gloss": [
+        {
+          "sa": "क्वचित् मूढः विद्वान्",
+          "en": "sometimes foolish, sometimes wise (kvacit: sometimes | mūḍhaḥ: foolish | vidvān: wise, learned)"
+        },
+        {
+          "sa": "क्वचित् अपि महा-राज-विभवः",
+          "en": "sometimes with the splendor of a great king (kvacit: sometimes | api: also | mahā: great | rāja: king | vibhavaḥ: splendor, wealth)"
+        },
+        {
+          "sa": "क्वचित् भ्रान्तः सौम्यः",
+          "en": "sometimes bewildered, sometimes gentle (kvacit: sometimes | bhrāntaḥ: bewildered, wandering | saumyaḥ: gentle, gracious)"
+        },
+        {
+          "sa": "क्वचित् अजगर-आचार-कलितः",
+          "en": "sometimes behaving like a python (kvacit: sometimes | ajagara: python | ācāra: conduct | kalitaḥ: having, adopting)"
+        },
+        {
+          "sa": "क्वचित् पात्री-भूतः क्वचित् अवमतः क्वा अपि अविदितः",
+          "en": "sometimes honored, sometimes despised, sometimes unknown (pātrībhūtaḥ: become worthy of honor | avamataḥ: despised | kva: somewhere | api: even | aviditaḥ: unknown)"
+        },
+        {
+          "sa": "चरति एवम् प्राज्ञः",
+          "en": "thus the wise one moves about (carati: moves, wanders | evam: thus | prājñaḥ: wise one)"
+        },
+        {
+          "sa": "सतत-परम-आनन्द-सुखितः",
+          "en": "always happy in supreme bliss (satata: always | parama: supreme | ānanda: bliss | sukhitaḥ: happy)"
+        }
+      ],
       "sourceNumbers": [
         542
-      ]
+      ],
+      "editionTranslation": "Sometimes a fool, sometimes a sage, sometimes possessed of regal splendour; sometimes wandering, sometimes behaving like a motionless python, sometimes wearing a benignant expression; sometimes honoured, sometimes insulted, sometimes unknown – thus lives the man of realisation, ever happy with Supreme Bliss."
     },
     {
       "id": "vivekachudamani-543",
@@ -39411,11 +39463,37 @@
       "label": "Verse 543",
       "deva": "निर्धनोऽपि सदा तुष्टोऽप्य् असहायो महाबलः ।\nनित्यतृप्तोऽप्य् अभुञ्जानोऽप्य् असमः समदर्शनः ॥",
       "iast": "nirdhano'pi sadā tuṣṭo'py asahāyo mahābalaḥ |\nnityatṛpto'py abhuñjāno'py asamaḥ samadarśanaḥ ||",
-      "translation": "Though without riches, yet ever content; though helpless, yet very powerful, though not enjoying the sense-objects, yet eternally satisfied; though without an exemplar, yet looking upon all with an eye of equality.",
-      "gloss": [],
+      "translation": "Though poor, he is always content; though without support, he is very strong. Though not partaking, he is ever satisfied; unequalled, he sees all equally.",
+      "gloss": [
+        {
+          "sa": "निर्धनः अपि",
+          "en": "though without wealth (nirdhanaḥ: without wealth | api: even, though)"
+        },
+        {
+          "sa": "सदा तुष्टः",
+          "en": "always content (sadā: always | tuṣṭaḥ: content)"
+        },
+        {
+          "sa": "अपि असहायः महाबलः",
+          "en": "though unsupported, very strong (api: though | asahāyaḥ: without support or help | mahā: great | balaḥ: strength)"
+        },
+        {
+          "sa": "नित्य-तृप्तः अपि",
+          "en": "though always satisfied (nitya: always | tṛptaḥ: satisfied | api: though)"
+        },
+        {
+          "sa": "अभुञ्जानः अपि",
+          "en": "though not partaking or enjoying (abhuñjānaḥ: not enjoying, not partaking | api: though)"
+        },
+        {
+          "sa": "असमः सम-दर्शनः",
+          "en": "unequalled, seeing all equally (asamaḥ: without an equal | sama: equal | darśanaḥ: seeing, vision)"
+        }
+      ],
       "sourceNumbers": [
         543
-      ]
+      ],
+      "editionTranslation": "Though without riches, yet ever content; though helpless, yet very powerful, though not enjoying the sense-objects, yet eternally satisfied; though without an exemplar, yet looking upon all with an eye of equality."
     },
     {
       "id": "vivekachudamani-544",
@@ -39423,11 +39501,29 @@
       "label": "Verse 544",
       "deva": "अपि कुर्वन्नकुर्वाणश्चाभोक्ता फलभोग्य् अपि ।\nशरीर्यप्यशरीर्येष परिच्छिन्नोऽपि सर्वगः ॥",
       "iast": "api kurvannakurvāṇaścābhoktā phalabhogy api |\nśarīryapyaśarīryeṣa paricchinno'pi sarvagaḥ ||",
-      "translation": "Though doing, yet inactive; though experiencing fruits of past actions, yet untouched by them; though possessed of a body, yet without identification with it; though limited, yet omnipresent is he.",
-      "gloss": [],
+      "translation": "Though acting, he does not act; though not the enjoyer, he still experiences the fruits. Though embodied, this one is bodiless; though limited, he is all-pervading.",
+      "gloss": [
+        {
+          "sa": "अपि कुर्वन् अकुर्वाणः च",
+          "en": "though acting, and yet not acting (api: though | kurvan: acting | akurvāṇaḥ: not acting | ca: and)"
+        },
+        {
+          "sa": "अभोक्ता फल-भोगी अपि",
+          "en": "not the enjoyer, though still experiencing the fruits (abhoktā: non-enjoyer | phala: fruit | bhogī: one who experiences or enjoys | api: though; the verse writes the sandhied form phalabhogy api)"
+        },
+        {
+          "sa": "शरीरी अपि अशरीरी एषः",
+          "en": "though embodied, this one is bodiless (śarīrī: embodied | api: though | aśarīrī: bodiless | eṣaḥ: this one)"
+        },
+        {
+          "sa": "परिच्छिन्नः अपि सर्वगः",
+          "en": "though limited, all-pervading (paricchinnaḥ: limited, bounded | api: though | sarvagaḥ: present everywhere, all-pervading)"
+        }
+      ],
       "sourceNumbers": [
         544
-      ]
+      ],
+      "editionTranslation": "Though doing, yet inactive; though experiencing fruits of past actions, yet untouched by them; though possessed of a body, yet without identification with it; though limited, yet omnipresent is he."
     },
     {
       "id": "vivekachudamani-545",
@@ -39435,11 +39531,29 @@
       "label": "Verse 545",
       "deva": "अशरीरं सदा सन्तमिमं ब्रह्मविदं क्वचित् ।\nप्रियाप्रिये न स्पृशतस्तथैव च शुभाशुभे ॥",
       "iast": "aśarīraṃ sadā santamimaṃ brahmavidaṃ kvacit |\npriyāpriye na spṛśatastathaiva ca śubhāśubhe ||",
-      "translation": "Neither pleasure nor pain, nor good nor evil, ever touches this knower of Brahman, who always lives without the body-idea.",
-      "gloss": [],
+      "translation": "At no time do pleasant and unpleasant things touch this knower of Brahman, who always abides bodiless; likewise, good and evil do not touch him.",
+      "gloss": [
+        {
+          "sa": "अशरीरम् सदा सन्तम्",
+          "en": "always existing bodiless (aśarīram: bodiless | sadā: always | santam: existing, abiding)"
+        },
+        {
+          "sa": "इमम् ब्रह्मविदम् क्वचित्",
+          "en": "this knower of Brahman, ever (imam: this | brahmavidam: knower of Brahman | kvacit: ever, at any time)"
+        },
+        {
+          "sa": "प्रिय-अप्रियॆ न स्पृशतः",
+          "en": "pleasant and unpleasant things do not touch (priya: pleasant | apriye: unpleasant | na: not | spṛśataḥ: they two touch)"
+        },
+        {
+          "sa": "तथा एव च शुभ-अशुभे",
+          "en": "and likewise, good and evil (tathā: thus | eva: indeed | ca: and | śubha: good, auspicious | aśubhe: bad, inauspicious)"
+        }
+      ],
       "sourceNumbers": [
         545
-      ]
+      ],
+      "editionTranslation": "Neither pleasure nor pain, nor good nor evil, ever touches this knower of Brahman, who always lives without the body-idea."
     },
     {
       "id": "vivekachudamani-546",
@@ -39919,6 +40033,7 @@
     "Logged and completed Vivekacūḍāmaṇi verses 526–530 with literal translations and complete word-for-word glosses; corrected the Sanskrit/transliteration of verses 526, 528, and 529.",
     "Logged and completed Vivekacūḍāmaṇi verses 531–535 with literal English translations and complete Devanāgarī-backed word-for-word glosses.",
     "Logged and completed Vivekacūḍāmaṇi verses 536–540 with literal English translations and complete Devanāgarī-backed word-for-word glosses; recorded the textual variant for verse 537's vastuniḥ/vastuni reading.",
-    "Corrected the Devanāgarī segmentation of rasa + instrumental ending in verse 536’s gloss (rasena)."
+    "Corrected the Devanāgarī segmentation of rasa + instrumental ending in verse 536’s gloss (rasena).",
+    "Logged and completed Vivekacūḍāmaṇi verses 541–545 with literal English translations and complete Devanāgarī-backed word-for-word glosses."
   ]
 }
