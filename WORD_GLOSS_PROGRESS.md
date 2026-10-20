@@ -6,11 +6,12 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Daśaślokī** — active. Audit all ten verses and the colophon, add explicit IAST to every reader unit, and confirm the one-page layout for this under-20-verse text.
+**Ekaślokī** — active. Audit the verse and colophon, add explicit IAST to both reader units, and confirm the one-page layout for this under-20-verse text.
 
 ## Completed
 
 - **Bhajagovindam (Mohamudgara)** — all 31 verses were checked against the cited Sanskrit Documents recension. Rewrote each translation and word gloss, retained explicit IAST, and replaced generic ranges with an opening verse, the Dvādaśamañjarikā (2–13), the Caturdaśamañjarikā (14–27), and a topic-labeled closing group (28–31). No appended verses beyond the 31-verse recension were added.
+- **Daśaślokī** — all ten verses and the colophon were checked against Ambuda’s 1910 edition and a parallel Sanskrit text. Revised the translations and word glosses for closer grammatical alignment, added explicit IAST to all eleven reader units, and confirmed its one-page layout.
 - **Brahmajñānāvalīmālā** — all 21 verses checked against Ambuda’s 1910 edition, with verse 16’s corrected *sākṣy asmi* reading cross-checked against parallel sources. Added explicit IAST throughout, refined the translations and word glosses, and kept three descriptive contents sections covering verses 1–21.
 - **Hastāmalaka-stotram** — all twelve verses were checked against the Sringeri Bhagavatpadiyam text and its commentary. Refined the translations and expanded the Devanāgarī glosses to account for the words and compound elements; checked the explicit IAST. No separate contents page is needed for this under-20-verse text.
 - **Śrī Dakṣiṇāmūrtyaṣṭakam** — all ten verses and the colophon were checked against Ambuda’s 1910 edition, with a parallel-text cross-check. Rewrote translations for closer grammatical alignment and expanded each Devanāgarī gloss to account for the Sanskrit words and compound elements; verified every unit has explicit IAST. No separate contents page is needed for this under-20-verse text.
@@ -48,9 +49,9 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Brahmasiddhi | 231 | Complete: all passages have Sanskrit, English, explicit IAST, and a Devanāgarī word gloss; four named contents sections include topic descriptions. Passage 1.2 now has 5,231 gloss entries for 3,441 Sanskrit tokens with no unmapped tokens. At 2.161, retained GRETIL’s भावात् reading and noted a witness variant. |
 | Brahmajñānāvalīmālā | 21 | Complete: all verses have Sanskrit, reviewed English, explicit IAST, and expanded Devanāgarī word glosses; three descriptive contents sections |
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | Complete: all ten verses and colophon audited; every unit has Sanskrit, English, explicit IAST, and word glosses; one-page layout (under 20 verses) |
-| Daśaślokī | 11 | Current text: audit translations and word glosses, add explicit IAST to each verse and the colophon; one-page layout |
+| Daśaślokī | 11 | Complete: all ten verses and the colophon have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Dṛg-dṛśya-viveka | 46 | Complete: all 46 verses have Sanskrit, English, explicit IAST, and word glosses; seven named contents sections |
-| Ekaślokī | 2 | Glosses present; add explicit IAST |
+| Ekaślokī | 2 | Current text: audit the verse and colophon; add explicit IAST to both reader units; one-page layout |
 | Hastāmalaka-stotram | 12 | Complete: all verses audited; every verse has Sanskrit, English, explicit IAST, and expanded word glosses; one-page layout (under 20 verses) |
 | Kāśīpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
