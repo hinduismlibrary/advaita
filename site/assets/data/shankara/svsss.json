@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 360
+      "to": 370
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–360 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, and 336–337 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–370 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, and 336–337 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -24583,8 +24583,65 @@
       "number": "361",
       "label": "Verse 361",
       "deva": "ततो मुमुक्षुर् भव-बन्ध-मुक्त्यै\nरजस्-तमोभ्यां च तदीय-कार्यैः।\nवियोज्य चित्तं परिशुद्ध-सत्त्वं\nप्रियं प्रयत्नेन सदैव कुर्यात्॥",
-      "translation": "In order to attain liberation, a spiritual aspirant should free his mind from bondage to rajas and tamas and their evil consequences. Let the aspirant keep his mind pure, so that it may be favourable to the achievement of progress.",
-      "gloss": [],
+      "translation": "Therefore, one seeking release from worldly bondage should free the mind from rajas, tamas, and their effects, and should always work to make it purely sattvic and pleasing.",
+      "gloss": [
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "मुमुक्षुः",
+          "en": "one seeking liberation"
+        },
+        {
+          "sa": "भव-बन्ध-मुक्त्यै",
+          "en": "for release from worldly bondage"
+        },
+        {
+          "sa": "रजस्-तमोभ्याम्",
+          "en": "from rajas and tamas"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तदीय-कार्यैः",
+          "en": "from their effects"
+        },
+        {
+          "sa": "वियोज्य",
+          "en": "having separated"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "the mind"
+        },
+        {
+          "sa": "परिशुद्ध-सत्त्वम्",
+          "en": "pure in sattva"
+        },
+        {
+          "sa": "प्रियम्",
+          "en": "pleasing"
+        },
+        {
+          "sa": "प्रयत्नेन",
+          "en": "with effort"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "कुर्यात्",
+          "en": "should make"
+        }
+      ],
       "sourceNumbers": [
         361
       ],
@@ -24596,14 +24653,115 @@
       "chapter": 2,
       "number": "362",
       "label": "Verse 362",
-      "deva": "गर्भ-वास-जनि-प्रणाशन-जरा-व्याध्यादिषु प्राणिनां यद्\nदुःखं परिदृश्यते च नरके तच् चिन्तयित्वा मुहुः।\nदोषान् एव विलोक्य सर्व-विषयेष्वाशां विमुच्याभितश्\nचित्त-ग्रन्थि-विमोचनाय सुमतिः सत्त्वं समालम्बनात्॥",
-      "translation": "By cogitating over the various ills of life, beginning with the ante-natal stage down to old age and death, and by thinking how life is subject to disease here and to hell hereafter, he who is wise should renounce all desires. Let him be established in sattva, so that he might cut in twain all the knots of heart.",
-      "gloss": [],
+      "deva": "गर्भ-वास-जनि-प्रणाशन-जरा-व्याध्यादिषु प्राणिनां यद्\nदुःखं परिदृश्यते च नरके तच् चिन्तयित्वा मुहुः।\nदोषान् एव विलोक्य सर्व-विषयेष्वाशां विमुच्याभितः\nचित्त-ग्रन्थि-विमोचनाय सुमतिः सत्त्वं समालम्बताम्॥",
+      "translation": "Having repeatedly contemplated the suffering of beings in the womb, at birth, in death, old age, disease, and the like, and in hell, and having seen the faults of all objects, the wise person should give up desire for them and take to sattva to loosen the knot of the mind.",
+      "gloss": [
+        {
+          "sa": "गर्भ-वास",
+          "en": "dwelling in the womb"
+        },
+        {
+          "sa": "जनि",
+          "en": "birth"
+        },
+        {
+          "sa": "प्रणाशन",
+          "en": "death"
+        },
+        {
+          "sa": "जरा",
+          "en": "old age"
+        },
+        {
+          "sa": "व्याधि-आदिषु",
+          "en": "in disease and the like"
+        },
+        {
+          "sa": "प्राणिनाम्",
+          "en": "of living beings"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "परिदृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "नरके",
+          "en": "in hell"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "चिन्तयित्वा",
+          "en": "having contemplated"
+        },
+        {
+          "sa": "मुहुः",
+          "en": "repeatedly"
+        },
+        {
+          "sa": "दोषान्",
+          "en": "faults"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "विलोक्य",
+          "en": "having seen"
+        },
+        {
+          "sa": "सर्व-विषयेषु",
+          "en": "in all objects"
+        },
+        {
+          "sa": "आशाम्",
+          "en": "desire"
+        },
+        {
+          "sa": "विमुच्य",
+          "en": "having relinquished"
+        },
+        {
+          "sa": "अभितः",
+          "en": "entirely"
+        },
+        {
+          "sa": "चित्त-ग्रन्थि-विमोचनाय",
+          "en": "to loosen the knot of the mind"
+        },
+        {
+          "sa": "सुमतिः",
+          "en": "the wise person"
+        },
+        {
+          "sa": "सत्त्वम्",
+          "en": "sattva"
+        },
+        {
+          "sa": "समालम्बताम्",
+          "en": "should take to"
+        }
+      ],
       "sourceNumbers": [
         362
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "garbha-vāsa-jani-praṇāśana-jarā-vyādhyādiṣu prāṇināṃ yad\nduḥkhaṃ paridṛśyate ca narake tac cintayitvā muhuḥ|\ndoṣān eva vilokya sarva-viṣayeṣvāśāṃ vimucyābhitaś\ncitta-granthi-vimocanāya sumatiḥ sattvaṃ samālambanāt||"
+      "iast": "garbha-vāsa-jani-praṇāśana-jarā-vyādhyādiṣu prāṇināṃ yad\nduḥkhaṃ paridṛśyate ca narake tac cintayitvā muhuḥ|\ndoṣān eva vilokya sarva-viṣayeṣvāśāṃ vimucyābhitaḥ\ncitta-granthi-vimocanāya sumatiḥ sattvaṃ samālambatām||"
     },
     {
       "id": "svsss-2-0363",
@@ -24611,8 +24769,57 @@
       "number": "363",
       "label": "Verse 363",
       "deva": "यमेषु निरतो यस् तु नियमेषु च यत्नतः।\nविवेकिनस् तस्य चित्तं प्रसादम् अधिगच्छति॥",
-      "translation": "Tranquility of mind Where the mind is endowed with discrimination, where there is the observance of yama and niyama, it is there that the mind attains tranquility (citta-prasāda).",
-      "gloss": [],
+      "translation": "The mind of the discerning person who is devoted to the yamas and diligently observes the niyamas attains clarity.",
+      "gloss": [
+        {
+          "sa": "यमेषु",
+          "en": "in the restraints (yamas)"
+        },
+        {
+          "sa": "निरतः",
+          "en": "devoted"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "नियमेषु",
+          "en": "in the observances (niyamas)"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यत्नतः",
+          "en": "diligently"
+        },
+        {
+          "sa": "विवेकिनः",
+          "en": "of the discerning person"
+        },
+        {
+          "sa": "तस्य",
+          "en": "his"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "प्रसादम्",
+          "en": "clarity"
+        },
+        {
+          "sa": "अधिगच्छति",
+          "en": "attains"
+        }
+      ],
       "sourceNumbers": [
         363
       ],
@@ -24625,8 +24832,53 @@
       "number": "364",
       "label": "Verse 364",
       "deva": "आसुरीं सम्पदं त्यक्त्वा भजेद् यो दैव-सम्पदम्।\nमोक्षैक-काङ्क्षया नित्यं तस्य चित्तं प्रसीदति॥",
-      "translation": "Where the divine virtues are practised, where the demoniac vices are eschewed, where the attainment of liberation is the sole aim, it is there that the mind attains tranquility. ((BhG.16.1-4) (Bhagavad Gītā))",
-      "gloss": [],
+      "translation": "The mind of one who abandons demonic qualities, cultivates divine qualities, and always longs only for liberation becomes clear.",
+      "gloss": [
+        {
+          "sa": "आसुरीम्",
+          "en": "demonic"
+        },
+        {
+          "sa": "सम्पदम्",
+          "en": "qualities"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having abandoned"
+        },
+        {
+          "sa": "भजेत्",
+          "en": "should cultivate"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "दैव-सम्पदम्",
+          "en": "divine qualities"
+        },
+        {
+          "sa": "मोक्ष-एक-काङ्क्षया",
+          "en": "with liberation as the sole desire"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always"
+        },
+        {
+          "sa": "तस्य",
+          "en": "his"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "प्रसीदति",
+          "en": "becomes clear"
+        }
+      ],
       "sourceNumbers": [
         364
       ],
@@ -24639,8 +24891,53 @@
       "number": "365",
       "label": "Verse 365",
       "deva": "पर-द्रव्य-पर-द्रोह-पर-निन्दा-पर-स्त्रियः।\nनालम्बते मनो यस्य तस्य चित्तं प्रसीदति॥",
-      "translation": "Where there is no coveting of the wealth of others, where there is neither deception nor calumny, where all lustful thoughts have been laid aside, it is there that the mind attains tranquility.",
-      "gloss": [],
+      "translation": "The mind of one who does not dwell on others’ property, harm to others, slander of others, or other men’s wives becomes clear.",
+      "gloss": [
+        {
+          "sa": "पर-द्रव्य",
+          "en": "another’s property"
+        },
+        {
+          "sa": "पर-द्रोह",
+          "en": "harm to others"
+        },
+        {
+          "sa": "पर-निन्दा",
+          "en": "slander of others"
+        },
+        {
+          "sa": "पर-स्त्रियः",
+          "en": "other men’s wives"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आलम्बते",
+          "en": "takes up; dwells on"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "यस्य",
+          "en": "of whom"
+        },
+        {
+          "sa": "तस्य",
+          "en": "his"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "प्रसीदति",
+          "en": "becomes clear"
+        }
+      ],
       "sourceNumbers": [
         365
       ],
@@ -24653,8 +24950,53 @@
       "number": "366",
       "label": "Verse 366",
       "deva": "आत्मवत् सर्व-भूतेषु यः समत्वेन पश्यति।\nसुखं दुःखं विवेकेन तस्य चित्तं प्रसीदति॥",
-      "translation": "Where there is discrimination, where the joys and the sorrows of other people are felt as though they were one’s own, it is there that the mind attains tranquility. ((BhG.6.32) (Bhagavad Gītā))",
-      "gloss": [],
+      "translation": "The mind of one who, with discernment, sees the happiness and suffering of all beings as their own becomes clear.",
+      "gloss": [
+        {
+          "sa": "आत्म-वत्",
+          "en": "as one’s own"
+        },
+        {
+          "sa": "सर्व-भूतेषु",
+          "en": "in all beings"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "समत्वेन",
+          "en": "equally"
+        },
+        {
+          "sa": "पश्यति",
+          "en": "sees"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "suffering"
+        },
+        {
+          "sa": "विवेकेन",
+          "en": "with discernment"
+        },
+        {
+          "sa": "तस्य",
+          "en": "his"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "प्रसीदति",
+          "en": "becomes clear"
+        }
+      ],
       "sourceNumbers": [
         366
       ],
@@ -24667,8 +25009,61 @@
       "number": "367",
       "label": "Verse 367",
       "deva": "अत्यन्तं श्रद्धया भक्त्या गुरुम् ईश्वरम् आत्मनि।\nयो भजत्य् अनिशं क्षान्तस् तस्य चित्तं प्रसीदति॥",
-      "translation": "That forgiving person who with supreme earnestness and devotion meditates upon the guru and upon the Lord in his own heart attains tranquility of mind.",
-      "gloss": [],
+      "translation": "The mind of the patient person who constantly worships the teacher and Īśvara within, with great faith and devotion, becomes clear.",
+      "gloss": [
+        {
+          "sa": "अत्यन्तम्",
+          "en": "greatly"
+        },
+        {
+          "sa": "श्रद्धया",
+          "en": "with faith"
+        },
+        {
+          "sa": "भक्त्या",
+          "en": "with devotion"
+        },
+        {
+          "sa": "गुरुम्",
+          "en": "the teacher"
+        },
+        {
+          "sa": "ईश्वरम्",
+          "en": "Īśvara"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "within the Self"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "भजति",
+          "en": "worships"
+        },
+        {
+          "sa": "अनिशम्",
+          "en": "constantly"
+        },
+        {
+          "sa": "क्षान्तः",
+          "en": "patient"
+        },
+        {
+          "sa": "तस्य",
+          "en": "his"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "mind"
+        },
+        {
+          "sa": "प्रसीदति",
+          "en": "becomes clear"
+        }
+      ],
       "sourceNumbers": [
         367
       ],
@@ -24681,8 +25076,49 @@
       "number": "368",
       "label": "Verse 368",
       "deva": "शिष्टान्नम् ईश्-आर्चनम् आर्य-सेवां\nतीर्थाटनं स्वाश्रम-धर्म-निष्ठाम्।\nयमानुषक्तिं नियमानुवृत्तिं\nचित्त-प्रसादाय वदन्ति तज्-ज्ञाः॥",
-      "translation": "By partaking of the food left over after a sacrifice has been performed, by worshipping Īśvara and by serving the venerable, by going on pilgrimage to holy places, by performing one’s duties according to one’s station in life, as well as by the practice of self control and the observance of religious austerity, one attains tranquility of mind. In the opinion of those who are learned, all these qualities are said to create a favourable environment.",
-      "gloss": [],
+      "translation": "The wise say that leftover food, worship of Īśvara, service to the noble, pilgrimage, steadfastness in the duties of one’s stage of life, commitment to the restraints, and observance of the disciplines bring clarity to the mind.",
+      "gloss": [
+        {
+          "sa": "शिष्ट-अन्नम्",
+          "en": "leftover food"
+        },
+        {
+          "sa": "ईश-अर्चनम्",
+          "en": "worship of Īśvara"
+        },
+        {
+          "sa": "आर्य-सेवाम्",
+          "en": "service to the noble"
+        },
+        {
+          "sa": "तीर्थ-आटनम्",
+          "en": "pilgrimage"
+        },
+        {
+          "sa": "स्व-आश्रम-धर्म-निष्ठाम्",
+          "en": "steadfastness in one’s stage-of-life duties"
+        },
+        {
+          "sa": "यम-अनुषक्तिम्",
+          "en": "commitment to the restraints"
+        },
+        {
+          "sa": "नियम-अनुवृत्तिम्",
+          "en": "observance of the disciplines"
+        },
+        {
+          "sa": "चित्त-प्रसादाय",
+          "en": "for clarity of mind"
+        },
+        {
+          "sa": "वदन्ति",
+          "en": "they say"
+        },
+        {
+          "sa": "तद्-ज्ञाः",
+          "en": "the wise"
+        }
+      ],
       "sourceNumbers": [
         368
       ],
@@ -24695,8 +25131,49 @@
       "number": "369",
       "label": "Verse 369",
       "deva": "कट्वाम्ल-लवणात्युष्ण-\nतीक्ष्ण-रूक्ष-विधायिनाम्।\nत्यागः सत्त्वाय कल्पते॥",
-      "translation": "Favourable environment for sattva thought That food which is too bitter, saltish or sour should be eschewed. So too food which is over-pungent, hot, and causing irritation, or has turned stale and became putrid. By avoiding such food purity is developed.",
-      "gloss": [],
+      "translation": "Avoiding what is bitter, sour, salty, excessively hot, pungent, and dry supports sattva.",
+      "gloss": [
+        {
+          "sa": "कटु",
+          "en": "bitter"
+        },
+        {
+          "sa": "अम्ल",
+          "en": "sour"
+        },
+        {
+          "sa": "लवण",
+          "en": "salty"
+        },
+        {
+          "sa": "अति-उष्ण",
+          "en": "excessively hot"
+        },
+        {
+          "sa": "तीक्ष्ण",
+          "en": "pungent"
+        },
+        {
+          "sa": "रूक्ष",
+          "en": "dry"
+        },
+        {
+          "sa": "विधायिनाम्",
+          "en": "of things having these qualities"
+        },
+        {
+          "sa": "त्यागः",
+          "en": "avoidance"
+        },
+        {
+          "sa": "सत्त्वाय",
+          "en": "for sattva"
+        },
+        {
+          "sa": "कल्पते",
+          "en": "is conducive"
+        }
+      ],
       "sourceNumbers": [
         369
       ],
@@ -24709,8 +25186,45 @@
       "number": "370",
       "label": "Verse 370",
       "deva": "श्रुत्या सत्त्व-पुराणानां\nसेवया सत्त्व-वस्तुनः।\nअनुवृत्त्या च साधूनां\nसत्त्व-वृत्तिः प्रजायते॥",
-      "translation": "By listening to such Purāṇas as are of an elevating character, by making use of only those things that are pure, and by strict adherence to the path ordained by the wise, an environment which is favourable to the attainment of purity is created.",
-      "gloss": [],
+      "translation": "Through hearing the Vedas and sattvic Purāṇas, through association with sattvic things, and by following good people, a sattvic disposition arises.",
+      "gloss": [
+        {
+          "sa": "श्रुत्या",
+          "en": "through the Veda; through hearing"
+        },
+        {
+          "sa": "सत्त्व-पुराणानाम्",
+          "en": "of sattvic Purāṇas"
+        },
+        {
+          "sa": "सेवया",
+          "en": "through association"
+        },
+        {
+          "sa": "सत्त्व-वस्तुनः",
+          "en": "with sattvic things"
+        },
+        {
+          "sa": "अनुवृत्त्या",
+          "en": "by following"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "साधूनाम्",
+          "en": "good people"
+        },
+        {
+          "sa": "सत्त्व-वृत्तिः",
+          "en": "a sattvic disposition"
+        },
+        {
+          "sa": "प्रजायते",
+          "en": "arises"
+        }
+      ],
       "sourceNumbers": [
         370
       ],
