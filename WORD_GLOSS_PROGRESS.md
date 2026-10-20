@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Brahmasiddhi** — active. All 231 passages have Sanskrit, English, and IAST. Added topic descriptions to the four traditional contents sections and completed glosses for 184 passages, including short verse entries through 2.182 and 63 additional prose passages; 47 passages still need glosses.
+**Brahmasiddhi** — active. All 231 passages have Sanskrit, English, and IAST. Added topic descriptions to the four traditional contents sections and completed glosses for 184 passages, including short verse entries through 2.182 and 63 additional prose passages; 47 passages still need glosses. A Devanāgarī-script audit also corrected one stray Latin character in the 1.4 gloss.
 
 ## Completed
 
