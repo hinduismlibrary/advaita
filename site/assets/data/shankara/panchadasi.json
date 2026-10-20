@@ -6,13 +6,13 @@
   "source": {
     "url": "https://www.upasanayoga.org/PancD.htm",
     "edition": "Pañca-Daśī, A.K. Aruna, 2020 version 1.0; translations marked ** are by Swami Swahananda, Sri Ramakrishna Math, Chennai; work by Vidyāraṇya.",
-    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses cover Chapters 1–5 and Chapter 6, verses 1–190; Chapter 6, verses 191–290, and Chapters 7–15 still need separate glosses.",
+    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses cover Chapters 1–5 and Chapter 6, verses 1–200; Chapter 6, verses 201–290, and Chapters 7–15 still need separate glosses.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; text by Vidyāraṇya.",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words. Chapter 6 verses 121–130 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 131–140 now have concise literal English readings and Devanāgarī word-by-word glosses. Verse 6.133 is normalized to आत्मानं against a second text witness. Chapter 6 verses 141–150 now have concise literal English readings and Devanāgarī word-by-word glosses. The missing opening pādas of 6.147 are restored against the source text. Chapter 6 verses 151–160 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 161–170 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 171–180 now have concise literal English readings, explicit IAST, and Devanāgarī word-by-word glosses. Chapter 6 verses 181–190 now have concise literal English readings, explicit IAST, and Devanāgarī word-by-word glosses."
+    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words. Chapter 6 verses 121–130 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 131–140 now have concise literal English readings and Devanāgarī word-by-word glosses. Verse 6.133 is normalized to आत्मानं against a second text witness. Chapter 6 verses 141–150 now have concise literal English readings and Devanāgarī word-by-word glosses. The missing opening pādas of 6.147 are restored against the source text. Chapter 6 verses 151–160 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 161–170 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 171–180 now have concise literal English readings, explicit IAST, and Devanāgarī word-by-word glosses. Chapter 6 verses 181–190 now have concise literal English readings, explicit IAST, and Devanāgarī word-by-word glosses. Chapter 6 verses 191–200 now have concise literal English readings, explicit IAST, and Devanāgarī word-by-word glosses."
   },
-  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapters 1–5 and Chapter 6, verses 1–190.",
+  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapters 1–5 and Chapter 6, verses 1–200.",
   "units": [
     {
       "id": "panchadasi-1-01",
@@ -24226,80 +24226,548 @@
       "label": "Chapter 6 · Verse 191",
       "number": "6.191",
       "deva": "सत्यं ज्ञानम् अनन्तं यद् ब्रह्म तस्मात् समुत्थिताः।\nखं वाय्वग्नि-जलोर्व्योषद्ध्यन्न-देहा इति श्रुतिः॥",
-      "translation": "The scripture says “satyaṃ jñānam anantaṃ brahma” (reality, knowledge or consciousness, unlimited is brahman, the ultimate). From that arose space, air, fire, water and earth (the five elements, i.e., their subtle natures that gain these names via our sense perceptions), and from that plants, food and our bodies ( (Taittirīya Upaniṣad)).",
-      "gloss": []
+      "translation": "The Śruti says: “That which is truth, knowledge, and limitless is Brahman.” From it arose space, air, fire, water, earth, plants, food, and bodies.",
+      "gloss": [
+        {
+          "sa": "सत्यम्",
+          "en": "truth / reality"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge / consciousness"
+        },
+        {
+          "sa": "अनन्तम्",
+          "en": "limitless"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "from that"
+        },
+        {
+          "sa": "समुत्थिताः",
+          "en": "arose"
+        },
+        {
+          "sa": "खम्",
+          "en": "space"
+        },
+        {
+          "sa": "वायु",
+          "en": "air"
+        },
+        {
+          "sa": "अग्नि",
+          "en": "fire"
+        },
+        {
+          "sa": "जल",
+          "en": "water"
+        },
+        {
+          "sa": "ऊर्वी",
+          "en": "earth"
+        },
+        {
+          "sa": "ओषधि",
+          "en": "plants / herbs"
+        },
+        {
+          "sa": "अन्न",
+          "en": "food"
+        },
+        {
+          "sa": "देहाः",
+          "en": "bodies"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "the Śruti says"
+        }
+      ],
+      "iast": "satyaṃ jñānam anantaṃ yad brahma tasmāt samutthitāḥ|\nkhaṃ vāyvagni-jalorvyoṣaddhyanna-dehā iti śrutiḥ||"
     },
     {
       "id": "panchadasi-6-192",
       "label": "Chapter 6 · Verse 192",
       "number": "6.192",
       "deva": "आपात-दृष्टितस् तत्र ब्रह्मणो भाति हेतुता।\nहेतोश् च सत्यता तस्माद् अन्योन्याध्यास इष्यते॥",
-      "translation": "At first glance towards this (scripture), brahman appears to have the nature of being a cause (of these things). From that reality being given to causality, it must be understood this is a (temporary) mutual imposition (anyonya-adhyāsa, of brahman being given the description of causality belonging to the Lord, and the Lord being given the reality of brahman, at the initial stage of this teaching beginning in the second adhyāya, chapter of Taittirīya Upaniṣad).",
-      "gloss": []
+      "translation": "At first glance, in that passage, Brahman appears to be a cause, and the cause appears real. Therefore, mutual superimposition is understood.",
+      "gloss": [
+        {
+          "sa": "आपात-दृष्टितः",
+          "en": "at first glance"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there / in that passage"
+        },
+        {
+          "sa": "ब्रह्मणः",
+          "en": "of Brahman"
+        },
+        {
+          "sa": "भाति",
+          "en": "appears"
+        },
+        {
+          "sa": "हेतुता",
+          "en": "causal status"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "of the cause"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सत्यता",
+          "en": "reality / truth"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अन्योन्याध्यासः",
+          "en": "mutual superimposition"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is understood / accepted"
+        }
+      ],
+      "iast": "āpāta-dṛṣṭitas tatra brahmaṇo bhāti hetutā|\nhetoś ca satyatā tasmād anyonyādhyāsa iṣyate||"
     },
     {
       "id": "panchadasi-6-193",
       "label": "Chapter 6 · Verse 193",
       "number": "6.193",
       "deva": "अन्योन्याध्यास-रूपोऽसावन्न-लिप्त-पटो यथा।\nघट्टितेनैकताम् एति तद्वद् भ्रान्त्यैकतां गतः॥",
-      "translation": "This mutual imposition is like the canvas (stiffened) by applying food-starch (required for the painting to occur, ). By that application they (the canvas and food-starch, brahman and Īśvara) become (as though) one. In that way here occurs the illusion of oneness (between brahman and the Lord).",
-      "gloss": []
+      "translation": "This mutual superimposition is like cloth treated with rice paste: by being stiffened, the two seem to become one. Likewise, through error, [Brahman and Īśvara] are taken as one.",
+      "gloss": [
+        {
+          "sa": "अन्योन्याध्यास-रूपः",
+          "en": "having the form of mutual superimposition"
+        },
+        {
+          "sa": "असौ",
+          "en": "this"
+        },
+        {
+          "sa": "अन्न-लिप्त-पटः",
+          "en": "cloth coated with rice paste"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "घट्टितेन",
+          "en": "by being stiffened / treated"
+        },
+        {
+          "sa": "एकताम्",
+          "en": "oneness"
+        },
+        {
+          "sa": "एति",
+          "en": "reaches"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "भ्रान्त्या",
+          "en": "through error"
+        },
+        {
+          "sa": "एकताम्",
+          "en": "oneness"
+        },
+        {
+          "sa": "गतः",
+          "en": "has reached / become"
+        }
+      ],
+      "iast": "anyonyādhyāsa-rūpo’sāvanna-lipta-paṭo yathā|\nghaṭṭitenaikatām eti tadvad bhrāntyaikatāṃ gataḥ||"
     },
     {
       "id": "panchadasi-6-194",
       "label": "Chapter 6 · Verse 194",
       "number": "6.194",
       "deva": "मेघाकाश-महा-काशौ विविच्येते न पामरैः।\nतद्वद् ब्रह्मेशयोर् ऐक्यं पश्यन्त्यापात-दर्शिनः॥",
-      "translation": "As simple people (pāmaras) may determine the vast sky has become the space limited to the cloud-bank (one has to envision a complete cloud cover across the sky in this illustration, ), similarly, those who have an initial understanding (āpāta-darśins) perceive an identity between brahman (reality) and the Lord (whoever the creator is).",
-      "gloss": []
+      "translation": "Ordinary people do not distinguish the space in a cloud from the vast space. Likewise, those who see only at first glance perceive identity between Brahman and the Lord.",
+      "gloss": [
+        {
+          "sa": "मेघ-आकाश",
+          "en": "space in a cloud"
+        },
+        {
+          "sa": "महा-आकाशौ",
+          "en": "and the vast space"
+        },
+        {
+          "sa": "विविच्येते",
+          "en": "are distinguished"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पामरैः",
+          "en": "by ordinary / unlearned people"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "ब्रह्म-ईशयोः",
+          "en": "between Brahman and the Lord"
+        },
+        {
+          "sa": "ऐक्यम्",
+          "en": "identity"
+        },
+        {
+          "sa": "पश्यन्ति",
+          "en": "they see"
+        },
+        {
+          "sa": "आपात-दर्शिनः",
+          "en": "those who see at first glance"
+        }
+      ],
+      "iast": "meghākāśa-mahā-kāśau vivicyete na pāmaraiḥ|\ntadvad brahmeśayor aikyaṃ paśyantyāpāta-darśinaḥ||"
     },
     {
       "id": "panchadasi-6-195",
       "label": "Chapter 6 · Verse 195",
       "number": "6.195",
       "deva": "उपक्रमादिभिर् लिङ्गैस् तात्पर्यस्य विचारणात्।\nअसङ्गं ब्रह्म मायावी सृजत्येष महेश्वरः॥",
-      "translation": "By analysis (vicāraṇa) of the intension (tāt-parya, of the whole of this section of Taittirīya Upaniṣad scripture) through the textual indications (liṅgas) of how the text begins and ends (upakrama, upakrama-upasaṃhāra), etcetera (and the other five liṅgas: abhāyasa, what is repeated; apūrvatā, what is original; phala, what is the benefit; artha-vāda, what is praised; and upapatti, what are the familiar examples), then this Ultimate Lord possesses māyā and thus (appears) to create, while brahman has no connection (a-saṅga, to that).",
-      "gloss": []
+      "translation": "By examining the purport through textual indicators such as the opening, one understands: Brahman is unattached; this Great Lord, the wielder of Māyā, creates.",
+      "gloss": [
+        {
+          "sa": "उपक्रम-आदिभिः",
+          "en": "through the opening and other indicators"
+        },
+        {
+          "sa": "लिङ्गैः",
+          "en": "textual signs / indicators"
+        },
+        {
+          "sa": "तात्पर्यस्य",
+          "en": "of the purport"
+        },
+        {
+          "sa": "विचारणात्",
+          "en": "from examining"
+        },
+        {
+          "sa": "असङ्गम्",
+          "en": "unattached"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "मायावी",
+          "en": "the wielder of Māyā"
+        },
+        {
+          "sa": "सृजति",
+          "en": "creates"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "महेश्वरः",
+          "en": "the Great Lord"
+        }
+      ],
+      "iast": "upakramādibhir liṅgais tātparyasya vicāraṇāt|\nasaṅgaṃ brahma māyāvī sṛjatyeṣa maheśvaraḥ||"
     },
     {
       "id": "panchadasi-6-196",
       "label": "Chapter 6 · Verse 196",
       "number": "6.196",
       "deva": "सत्यं ज्ञानम् अनन्तं चेत्युपक्रम्योपसंहृतम्।\nयतो वाचो निवर्तन्त इत्यसङ्गत्व-निर्णयः॥",
-      "translation": "This (part, the intended topic, of the scriptural text) begins (upakramya) with, “Reality, knowledge, unlimited is brahman,” and ends (upasaṃhāra) with, “yato vāco nivartante, from which (brahman) speech (words) fall short, (Taittirīya Upaniṣad)). By this is determined (nirṇaya) the a-saṅgatva (unconnectedness, of brahman from anything that words can convey).",
-      "gloss": []
+      "translation": "Having begun with “truth, knowledge, limitless,” the passage concludes with “from which speech turns back.” Thus Brahman’s non-attachment is established.",
+      "gloss": [
+        {
+          "sa": "सत्यम्",
+          "en": "truth"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "अनन्तम्",
+          "en": "limitless"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उपक्रम्य",
+          "en": "having begun"
+        },
+        {
+          "sa": "उपसंहृतम्",
+          "en": "is concluded"
+        },
+        {
+          "sa": "यतः",
+          "en": "from which"
+        },
+        {
+          "sa": "वाचः",
+          "en": "words / speech"
+        },
+        {
+          "sa": "निवर्तन्ते",
+          "en": "turn back"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "असङ्गत्व-निर्णयः",
+          "en": "determination of non-attachment"
+        }
+      ],
+      "iast": "satyaṃ jñānam anantaṃ cetyupakramyopasaṃhṛtam|\nyato vāco nivartanta ityasaṅgatva-nirṇayaḥ||"
     },
     {
       "id": "panchadasi-6-197",
       "label": "Chapter 6 · Verse 197",
       "number": "6.197",
       "deva": "मायी सृजति विश्वं सन्निरुद्धस् तत्र मायया।\nअन्य इत्यपरा ब्रूते श्रुतिस् तेनेश्वरः सृजेत्॥",
-      "translation": "Another scripture says, “The māyin (the one who wields māyā) creates all this” ( (Śvetāśvatara Upaniṣad)), whereas the other (anya) there (within the creation, the jīva) is completely confined (sanniruddha, bound) by māyā (by ignorance of māyā’s unreality, ). Because of that, the Lord alone would be the creator.",
-      "gloss": []
+      "translation": "Another Śruti says, “The wielder of Māyā creates the universe”; the other one there is bound by Māyā. Therefore, the Lord is the creator.",
+      "gloss": [
+        {
+          "sa": "मायी",
+          "en": "the wielder of Māyā"
+        },
+        {
+          "sa": "सृजति",
+          "en": "creates"
+        },
+        {
+          "sa": "विश्वम्",
+          "en": "the universe"
+        },
+        {
+          "sa": "सन्निरुद्धः",
+          "en": "fully bound / confined"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "मायया",
+          "en": "by Māyā"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "the other one"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपरा",
+          "en": "another"
+        },
+        {
+          "sa": "ब्रूते",
+          "en": "says"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "the Śruti"
+        },
+        {
+          "sa": "तेन",
+          "en": "therefore"
+        },
+        {
+          "sa": "ईश्वरः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "सृजेत्",
+          "en": "creates / would create"
+        }
+      ],
+      "iast": "māyī sṛjati viśvaṃ sanniruddhas tatra māyayā|\nanya ityaparā brūte śrutis teneśvaraḥ sṛjet||"
     },
     {
       "id": "panchadasi-6-198",
       "label": "Chapter 6 · Verse 198",
       "number": "6.198",
       "deva": "आनन्दमय ईशोऽयं बहु स्याम् इत्यवैक्षत।\nहिरण्य-गर्भ-रूपोऽभूत् सुप्तिः स्वप्नो यथा भवेत्॥",
-      "translation": "This Lord, who is connected to the ānanda-maya (the location of joy, experienced without distraction in deep sleep), envisioned, “May I be many” ( (Chāndogya Upaniṣad)), and becomes (called) Hiraṇya-garbha (the shinning womb). As though being deep asleep, it starts to dream (svapna, here still like a dream, since Hiraṇya-garbha is the total subtle manifestation, not yet physicalized as the perceptible elements).",
-      "gloss": []
+      "translation": "This blissful Lord thought, “May I become many”; He became Hiraṇyagarbha, as deep sleep becomes a dream.",
+      "gloss": [
+        {
+          "sa": "आनन्दमयः",
+          "en": "full of bliss"
+        },
+        {
+          "sa": "ईशः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "बहु",
+          "en": "many"
+        },
+        {
+          "sa": "स्याम्",
+          "en": "may I become"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अवैक्षत",
+          "en": "looked / contemplated"
+        },
+        {
+          "sa": "हिरण्यगर्भ-रूपः",
+          "en": "in the form of Hiraṇyagarbha"
+        },
+        {
+          "sa": "अभूत्",
+          "en": "became"
+        },
+        {
+          "sa": "सुप्तिः",
+          "en": "deep sleep"
+        },
+        {
+          "sa": "स्वप्नः",
+          "en": "a dream"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "comes to be"
+        }
+      ],
+      "iast": "ānandamaya īśo’yaṃ bahu syām ityavaikṣata|\nhiraṇya-garbha-rūpo’bhūt suptiḥ svapno yathā bhavet||"
     },
     {
       "id": "panchadasi-6-199",
       "label": "Chapter 6 · Verse 199",
       "number": "6.199",
       "deva": "क्रमेण युग-पद् वैषा सृष्टिर् ज्ञेया यथा-श्रुति।\nद्वि-विध-श्रुति-सद्भावाद् द्वि-विध-स्वप्न-दर्शनात्॥",
-      "translation": "According to each scripture, this creation is known as either sequentially (e.g., first space, then air, etc., (Taittirīya Upaniṣad)) or instantaneous (i.e., no sequence is indicated, (Aitareya Upaniṣad)), since the coming to be of a creation can be in either of two ways, like we see in a dream both appearances (as an orderly, slow build up, or as spontaneous).",
-      "gloss": []
+      "translation": "According to the Śruti, this creation is to be understood as occurring either in sequence or all at once, since scripture speaks in two ways and two kinds of dreams are seen.",
+      "gloss": [
+        {
+          "sa": "क्रमेण",
+          "en": "in sequence"
+        },
+        {
+          "sa": "युगपत्",
+          "en": "all at once"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "एषा",
+          "en": "this"
+        },
+        {
+          "sa": "सृष्टिः",
+          "en": "creation"
+        },
+        {
+          "sa": "ज्ञेया",
+          "en": "is to be understood"
+        },
+        {
+          "sa": "यथा-श्रुति",
+          "en": "according to the Śruti"
+        },
+        {
+          "sa": "द्वि-विध-श्रुति-सद्भावात्",
+          "en": "because two kinds of scriptural statements exist"
+        },
+        {
+          "sa": "द्वि-विध-स्वप्न-दर्शनात्",
+          "en": "because two kinds of dreams are seen"
+        }
+      ],
+      "iast": "krameṇa yuga-pad vaiṣā sṛṣṭir jñeyā yathā-śruti|\ndvi-vidha-śruti-sadbhāvād dvi-vidha-svapna-darśanāt||"
     },
     {
       "id": "panchadasi-6-200",
       "label": "Chapter 6 · Verse 200",
       "number": "6.200",
       "deva": "सूत्रात्मा सूक्ष्म-देहाख्यः सर्व-जीव-घनात्मकः।\nसर्वाहंमान-धारित्वात् क्रिया-ज्ञानादि-शक्तिमान्॥",
-      "translation": "Sūtra-ātman (the thread of all, Hiraṇya-garbha, ) is also called the total subtle body, including the collection of all jīvas (as though strung on sūtra-ātman), and has the power to act, think etc., because it supports all I’s (therefore for everyone and itself, ‘I act’, ‘I know’).",
-      "gloss": []
+      "translation": "Sūtrātman, called the subtle body, is the aggregate of all living beings. Because it bears all the “I” notions, it has the powers of action, knowledge, and so on.",
+      "gloss": [
+        {
+          "sa": "सूत्रात्मा",
+          "en": "Sūtrātman"
+        },
+        {
+          "sa": "सूक्ष्म-देह-आख्यः",
+          "en": "called the subtle body"
+        },
+        {
+          "sa": "सर्व-जीव-घनात्मकः",
+          "en": "whose nature is the aggregate of all living beings"
+        },
+        {
+          "sa": "सर्व-अहंमान-धारित्वात्",
+          "en": "because it bears all the “I” notions"
+        },
+        {
+          "sa": "क्रिया-ज्ञान-आदि-शक्तिमान्",
+          "en": "possessing the powers of action, knowledge, and so on"
+        }
+      ],
+      "iast": "sūtrātmā sūkṣma-dehākhyaḥ sarva-jīva-ghanātmakaḥ|\nsarvāhaṃmāna-dhāritvāt kriyā-jñānādi-śaktimān||"
     },
     {
       "id": "panchadasi-6-201",
@@ -32876,9 +33344,9 @@
       {
         "chapter": 6,
         "from": 1,
-        "to": 190
+        "to": 200
       }
     ],
-    "note": "Word-for-word glosses cover every unit in Chapters 1–5: Chapter 1 verses 1–65, Chapter 2 verses 1–109, Chapter 3 verses 1–43, Chapter 4 verses 1–69, and Chapter 5 verses 1–8; plus Chapter 6 verses 1–190. Chapter 6 verses 191–290 and Chapters 7–15 still need separate glosses."
+    "note": "Word-for-word glosses cover every unit in Chapters 1–5: Chapter 1 verses 1–65, Chapter 2 verses 1–109, Chapter 3 verses 1–43, Chapter 4 verses 1–69, and Chapter 5 verses 1–8; plus Chapter 6 verses 1–200. Chapter 6 verses 201–290 and Chapters 7–15 still need separate glosses."
   }
 }
