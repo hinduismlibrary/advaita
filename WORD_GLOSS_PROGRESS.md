@@ -6,12 +6,12 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Upadeśasāhasrī** — active. I.1.1–I.1.26 and I.2.1–I.6.6 have been checked against GRETIL’s Mayeda-based text and Arsha Bodha chapter translations; the next range is I.7.1–I.8.6. Continue auditing translations and glosses across the remaining verse units.
+**Upadeśasāhasrī** — active. I.1.1–I.1.26 and I.2.1–I.8.6 have been checked against GRETIL’s Mayeda-based text and Arsha Bodha chapter translations; the next range is I.9.1–I.10.14. Continue auditing translations and glosses across the remaining verse units.
 
 ## Completed
 
 - **Bhajagovindam (Mohamudgara)** — all 31 verses were checked against the cited Sanskrit Documents recension. Rewrote each translation and word gloss, retained explicit IAST, and replaced generic ranges with an opening verse, the Dvādaśamañjarikā (2–13), the Caturdaśamañjarikā (14–27), and a topic-labeled closing group (28–31). No appended verses beyond the 31-verse recension were added.
-- **Upadeśasāhasrī** — audit in progress: checked verses I.1.1–I.1.26 and I.2.1–I.6.6 against GRETIL’s Mayeda-based text and Arsha Bodha’s chapter translations. Corrected the mirage analogy and action/knowledge comparison in I.1.14 and I.1.22–23; refined I.1.19 and I.2.1–I.2.2; corrected the compound gloss at I.4.3, normalized I.4.5’s clear *ātmany eva* reading, clarified I.5.5, and corrected I.6.5 *citraguḥ* (“owner of variegated cattle”). All 787 entries have Sanskrit, English, IAST, and a word gloss; semantic review remains active.
+- **Upadeśasāhasrī** — audit in progress: checked verses I.1.1–I.1.26 and I.2.1–I.8.6 against GRETIL’s Mayeda-based text and Arsha Bodha’s chapter translations. Corrected the mirage analogy and action/knowledge comparison in I.1.14 and I.1.22–23; refined I.1.19 and I.2.1–I.2.2; corrected the compound gloss at I.4.3, normalized I.4.5’s clear *ātmany eva* reading, clarified I.5.5, corrected I.6.5 *citraguḥ* (“owner of variegated cattle”), restored “by Me” in I.7.1, corrected I.7.6’s “absence of the Supreme,” and clarified the I.7.4 and I.8.1–I.8.6 translations. All 787 entries have Sanskrit, English, IAST, and a word gloss; semantic review remains active.
 - **Upadeśapañcakam (Sādhanapañcakam)** — all five verses were checked against the Śṛṅgeri Advaita Śāradā text and a parallel recension. Reviewed the 40 instructions and their glosses, tightened several literal renderings, added explicit IAST to all five, and confirmed one-page layout.
 - **Pañcīkaraṇa-prakaraṇa** — all seven numbered prose sections were checked against the source transcription and a parallel text; the appended Pañcīkaraṇa-vārttika remains excluded. Added explicit IAST, normalized the verse 5 word break and verse 6’s apparent “aham eva” typo, and refined glosses and translations for the causal body, samādhi, and scriptural declarations. No contents page is needed for this under-20-unit text.
 - **Ekaślokī** — the verse and colophon were checked against Ambuda’s 1910 edition and a parallel Sanskrit text. Refined the dialogue translation and Devanāgarī gloss, added explicit IAST to both reader units, and confirmed its one-page layout.
@@ -67,7 +67,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Viṣṇu Ṣaṭpadī Stotram | 8 | Complete: all seven verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
-| Upadeśasāhasrī | 787 | Active: all 787 entries now have Sanskrit, English, IAST, and a Devanāgarī word gloss; audited I.1.1–I.1.26 and I.2.1–I.6.6; continue semantic review from I.7.1 |
+| Upadeśasāhasrī | 787 | Active: all 787 entries now have Sanskrit, English, IAST, and a Devanāgarī word gloss; audited I.1.1–I.1.26 and I.2.1–I.8.6; continue semantic review from I.9.1 |
 | Vedāntasāra | 71 | Glosses present; add explicit IAST; review named contents |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
