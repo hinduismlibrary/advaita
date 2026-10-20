@@ -2,9 +2,9 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 1198,
+  "expectedUnits": 1178,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit source and original English translation for all 1198 reader units. All 100 numbered verses of Adhyāya 1, plus verses 3.114, 3.123, and 4.43, now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 320 numbered verses and prose commentary still need separate gloss work.",
+  "coverage": "Complete Sanskrit source and original English translation for all 1178 reader units. All 100 numbered verses of Adhyāya 1 and verses 2.1–2.20, plus verses 3.114, 3.123, and 4.43, now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 300 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-SA 4.0",
     "attribution": "Wikisource contributors; Intellexus project.",
     "url": "https://sa.wikisource.org/wiki/नैष्कर्म्यसिद्धिः",
-    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. All 100 verses of Adhyāya 1 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Verses 1.57 and 1.71 follow alternate readings in Alston; 1.83 corrects गभ्यते to गम्यते; 1.85 corrects a damaged opening reading against Alston's transliteration; 1.92 clarifies कर्तृत्वम् as agency; verse 1.60 normalizes अध्यारीप्य to अध्यारोप्य."
+    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. All 100 verses of Adhyāya 1 and verses 2.1–2.20 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Verse 2.5 follows Alston's reading that the sentence does not conflict with the listed referents; verse 2.20 renders the four-bearer image."
   },
   "units": [
     {
@@ -7807,26 +7807,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0332",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 4",
-      "label": "Text 4",
-      "deva": "श्रावितो वेत्ति वाक्यार्थं नचेत्तत्त्वमसीत्यतः ।",
-      "iast": "śrāvito vetti vākyārthaṃ nacettattvamasītyataḥ |",
-      "translation": "If a listener does not understand the meaning of the sentence “That thou art,”",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0333",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.1",
       "label": "Verse 2.1",
-      "deva": "त्वंपदार्थानभिज्ञत्वादतस्तत्प्रक्रियोच्यते ॥ १॥",
-      "iast": "tvaṃpadārthānabhijñatvādatastatprakriyocyate || 1||",
-      "translation": "it is because the meaning of “thou” is not understood; that meaning is therefore explained.",
-      "gloss": [],
+      "deva": "श्रावितो वेत्ति वाक्यार्थं नचेत्तत्त्वमसीत्यतः । त्वंपदार्थानभिज्ञत्वादतस्तत्प्रक्रियोच्यते ॥ १॥",
+      "iast": "śrāvito vetti vākyārthaṃ nacettattvamasītyataḥ | tvaṃpadārthānabhijñatvādatastatprakriyocyate || 1||",
+      "translation": "If someone who has heard “That thou art” does not understand the sentence’s meaning, it is because the meaning of “thou” is not understood; that meaning is therefore explained.",
+      "gloss": [
+        {
+          "sa": "श्रावितः",
+          "en": "having been taught; having heard"
+        },
+        {
+          "sa": "वेत्ति",
+          "en": "understands"
+        },
+        {
+          "sa": "वाक्य-अर्थम्",
+          "en": "the meaning of the sentence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "तत्त्वम्-असि",
+          "en": "“That thou art”"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; the words"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "त्वम्-पद-अर्थ",
+          "en": "the meaning of the word “thou”"
+        },
+        {
+          "sa": "अनभिज्ञत्वात्",
+          "en": "because of not understanding"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "तत्-प्रक्रिया",
+          "en": "its explanation"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is explained"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-1"
       ]
@@ -7843,26 +7885,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0335",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 7",
-      "label": "Text 7",
-      "deva": "कृत्स्नानात्मनिवृत्तौ च कश्चिदाप्नोति निर्वृतिम् ।",
-      "iast": "kṛtsnānātmanivṛttau ca kaścidāpnoti nirvṛtim |",
-      "translation": "One person gains peace by excluding the whole not-Self;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0336",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.2",
       "label": "Verse 2.2",
-      "deva": "श्रुतवाक्यस्मृतेश्चान्यः स्मार्यते च वचोऽपरः ॥ २॥",
-      "iast": "śrutavākyasmṛteścānyaḥ smāryate ca vaco'paraḥ || 2||",
-      "translation": "another recalls it from a sentence he has heard, while yet another is reminded by another person’s words.",
-      "gloss": [],
+      "deva": "कृत्स्नानात्मनिवृत्तौ च कश्चिदाप्नोति निर्वृतिम् । श्रुतवाक्यस्मृतेश्चान्यः स्मार्यते च वचोऽपरः ॥ २॥",
+      "iast": "kṛtsnānātmanivṛttau ca kaścidāpnoti nirvṛtim | śrutavākyasmṛteścānyaḥ smāryate ca vaco'paraḥ || 2||",
+      "translation": "One person reaches peace when the whole not-Self falls away; another recalls a sentence previously heard, and a third is reminded by someone else’s words.",
+      "gloss": [
+        {
+          "sa": "कृत्स्न-अनात्म-निवृत्तौ",
+          "en": "when the whole not-Self has fallen away"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "someone"
+        },
+        {
+          "sa": "आप्नोति",
+          "en": "reaches"
+        },
+        {
+          "sa": "निर्वृतिम्",
+          "en": "peace; release"
+        },
+        {
+          "sa": "श्रुत-वाक्य-स्मृतेः",
+          "en": "from memory of a sentence heard"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "स्मार्यते",
+          "en": "is reminded"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वचः",
+          "en": "by words"
+        },
+        {
+          "sa": "अपरः",
+          "en": "a third person"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-2"
       ]
@@ -7879,26 +7959,56 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0338",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 10",
-      "label": "Text 10",
-      "deva": "वाक्यश्रवणमात्राच्च पिशाचकवदाप्नुयात् ।",
-      "iast": "vākyaśravaṇamātrācca piśācakavadāpnuyāt |",
-      "translation": "One might attain the meaning from hearing a sentence alone, like a spirit;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0339",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.3",
       "label": "Verse 2.3",
-      "deva": "त्रिषु यादृच्छिकी सिद्धिः स्मार्यमाणे तु निश्चिता ॥ ३॥",
-      "iast": "triṣu yādṛcchikī siddhiḥ smāryamāṇe tu niścitā || 3||",
-      "translation": "among these three, success may be accidental, while in the one who is reminded it is certain.",
-      "gloss": [],
+      "deva": "वाक्यश्रवणमात्राच्च पिशाचकवदाप्नुयात् । त्रिषु यादृच्छिकी सिद्धिः स्मार्यमाणे तु निश्चिता ॥ ३॥",
+      "iast": "vākyaśravaṇamātrācca piśācakavadāpnuyāt | triṣu yādṛcchikī siddhiḥ smāryamāṇe tu niścitā || 3||",
+      "translation": "Someone may reach the meaning merely by hearing the sentence, like a goblin; among these three, success is accidental, while it is certain for the person who is reminded.",
+      "gloss": [
+        {
+          "sa": "वाक्य-श्रवण-मात्रात्",
+          "en": "merely from hearing a sentence"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "पिशाचक-वत्",
+          "en": "like a goblin"
+        },
+        {
+          "sa": "आप्नुयात्",
+          "en": "one may reach"
+        },
+        {
+          "sa": "त्रिषु",
+          "en": "among the three"
+        },
+        {
+          "sa": "यादृच्छिकी",
+          "en": "accidental"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "success; realization"
+        },
+        {
+          "sa": "स्मार्यमाणे",
+          "en": "for the one being reminded"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "निश्चितः",
+          "en": "certain"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-3"
       ]
@@ -7915,26 +8025,80 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0341",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 13",
-      "label": "Text 13",
-      "deva": "सर्वोऽयं महिमा ज्ञेयो वाक्यस्यैव यथोदितः ।",
-      "iast": "sarvo'yaṃ mahimā jñeyo vākyasyaiva yathoditaḥ |",
-      "translation": "All this power belongs to the sentence alone, exactly as has been stated;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0342",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.4",
       "label": "Verse 2.4",
-      "deva": "वाक्यार्थं न ह्यृते वाक्यात्कश्चिज्जानाति तत्त्वतः ॥ ४॥",
-      "iast": "vākyārthaṃ na hyṛte vākyātkaścijjānāti tattvataḥ || 4||",
-      "translation": "no one truly knows the meaning of a sentence apart from the sentence.",
-      "gloss": [],
+      "deva": "सर्वोऽयं महिमा ज्ञेयो वाक्यस्यैव यथोदितः । वाक्यार्थं न ह्यृते वाक्यात्कश्चिज्जानाति तत्त्वतः ॥ ४॥",
+      "iast": "sarvo'yaṃ mahimā jñeyo vākyasyaiva yathoditaḥ | vākyārthaṃ na hyṛte vākyātkaścijjānāti tattvataḥ || 4||",
+      "translation": "All this power belongs to the sentence alone, as stated: no one truly knows the sentence’s meaning apart from the sentence.",
+      "gloss": [
+        {
+          "sa": "सर्वः",
+          "en": "all"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "महिमा",
+          "en": "power; efficacy"
+        },
+        {
+          "sa": "ज्ञेयः",
+          "en": "is to be understood"
+        },
+        {
+          "sa": "वाक्यस्य",
+          "en": "of the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उदितः",
+          "en": "stated"
+        },
+        {
+          "sa": "वाक्य-अर्थम्",
+          "en": "the meaning of a sentence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "ऋते",
+          "en": "apart from"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "the sentence"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "anyone"
+        },
+        {
+          "sa": "जानाति",
+          "en": "knows"
+        },
+        {
+          "sa": "तत्त्वतः",
+          "en": "truly; in reality"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-4"
       ]
@@ -7951,40 +8115,83 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0344",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 16",
-      "label": "Text 16",
-      "deva": "नाहंग्राह्ये न तद्धीने न प्रत्यङ्नापि दुःखिनि ।",
-      "iast": "nāhaṃgrāhye na taddhīne na pratyaṅnāpi duḥkhini |",
-      "translation": "“Not grasped as ‘I,’ not dependent on that [ego], not inward, nor subject to suffering”—",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0345",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.5",
       "label": "Verse 2.5",
-      "deva": "विरोधः सदसीत्यस्माद्वाक्याभिज्ञस्य जायते ॥ ५॥",
-      "iast": "virodhaḥ sadasītyasmādvākyābhijñasya jāyate || 5||",
-      "translation": "for one who understands sentences, there is no contradiction in the statement “That thou art.”",
-      "gloss": [],
+      "deva": "नाहंग्राह्ये न तद्धीने न प्रत्यङ्नापि दुःखिनि । विरोधः सदसीत्यस्माद्वाक्याभिज्ञस्य जायते ॥ ५॥",
+      "iast": "nāhaṃgrāhye na taddhīne na pratyaṅ nāpi duḥkhini | virodhaḥ sadasītyasmādvākyābhijñasya jāyate || 5||",
+      "translation": "For someone who understands “That thou art,” the text does not conflict with what is grasped as “I,” what depends on that “I,” the inward Self, or the sufferer.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अहम्-ग्राह्ये",
+          "en": "with what is grasped as “I”"
+        },
+        {
+          "sa": "न",
+          "en": "nor"
+        },
+        {
+          "sa": "तत्-हीने",
+          "en": "with what depends on that “I”"
+        },
+        {
+          "sa": "न",
+          "en": "nor"
+        },
+        {
+          "sa": "प्रत्यङ्",
+          "en": "with the inward Self"
+        },
+        {
+          "sa": "न",
+          "en": "nor"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "दुःखिनि",
+          "en": "with the sufferer"
+        },
+        {
+          "sa": "विरोधः",
+          "en": "contradiction"
+        },
+        {
+          "sa": "सत्",
+          "en": "the Real"
+        },
+        {
+          "sa": "असि",
+          "en": "you are"
+        },
+        {
+          "sa": "इति",
+          "en": "“thus”"
+        },
+        {
+          "sa": "अस्मात्",
+          "en": "from this"
+        },
+        {
+          "sa": "वाक्य-अभिज्ञस्य",
+          "en": "for one who understands the sentence"
+        },
+        {
+          "sa": "जायते",
+          "en": "arises"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-5"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0346",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 18",
-      "label": "Text 18",
-      "deva": "नाविरक्तस्य संसारान्निविवृत्सा ततो भवेत् ।",
-      "iast": "nāviraktasya saṃsārānnivivṛtsā tato bhavet |",
-      "translation": "One who is not dispassionate toward saṃsāra does not develop a desire to withdraw from it;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0347",
@@ -7992,24 +8199,58 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.6",
       "label": "Verse 2.6",
-      "deva": "न चानिवृत्ततृष्णस्य पुरुषस्य मुमुक्षुता ॥ ६॥",
-      "iast": "na cānivṛttatṛṣṇasya puruṣasya mumukṣutā || 6||",
-      "translation": "nor does a person whose thirst for objects remains become a seeker of liberation.",
-      "gloss": [],
+      "deva": "नाविरक्तस्य संसारान्निविवृत्सा ततो भवेत् । न चानिवृत्ततृष्णस्य पुरुषस्य मुमुक्षुता ॥ ६॥",
+      "iast": "nāviraktasya saṃsārānnivivṛtsā tato bhavet | na cānivṛttatṛṣṇasya puruṣasya mumukṣutā || 6||",
+      "translation": "A person who is not dispassionate toward saṃsāra cannot wish to withdraw from it; nor can someone whose thirst for objects remains become a seeker of liberation.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अविरक्तस्य",
+          "en": "for one who is not dispassionate"
+        },
+        {
+          "sa": "संसारात्",
+          "en": "from saṃsāra"
+        },
+        {
+          "sa": "निविवृत्सा",
+          "en": "the wish to withdraw"
+        },
+        {
+          "sa": "ततः",
+          "en": "from it"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would arise"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनिवृत्त-तृष्णस्य",
+          "en": "for one whose thirst has not ceased"
+        },
+        {
+          "sa": "पुरुषस्य",
+          "en": "of a person"
+        },
+        {
+          "sa": "मुमुक्षुता",
+          "en": "desire for liberation"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-6"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0348",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 20",
-      "label": "Text 20",
-      "deva": "न चामुमुक्षोरस्तीह गुरुपादोपसर्पणम् ।",
-      "iast": "na cāmumukṣorastīha gurupādopasarpaṇam |",
-      "translation": "One who does not seek liberation does not approach the feet of a teacher;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0349",
@@ -8017,24 +8258,62 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.7",
       "label": "Verse 2.7",
-      "deva": "न विना गुरुसंबन्धं वाक्यस्य श्रवणं भवेत् ॥ ७॥",
-      "iast": "na vinā gurusaṃbandhaṃ vākyasya śravaṇaṃ bhavet || 7||",
-      "translation": "without a relationship with a teacher, the sentence is not heard.",
-      "gloss": [],
+      "deva": "न चामुमुक्षोरस्तीह गुरुपादोपसर्पणम् । न विना गुरुसंबन्धं वाक्यस्य श्रवणं भवेत् ॥ ७॥",
+      "iast": "na cāmumukṣorastīha gurupādopasarpaṇam | na vinā gurusaṃbandhaṃ vākyasya śravaṇaṃ bhavet || 7||",
+      "translation": "One who does not seek liberation does not approach a teacher; and without a relationship with a teacher, there can be no hearing of the sentence.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अमुमुक्षोः",
+          "en": "for one who does not seek liberation"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "गुरु-पाद-उपसर्पणम्",
+          "en": "approaching the teacher’s feet"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "गुरु-सम्बन्धम्",
+          "en": "a relationship with a teacher"
+        },
+        {
+          "sa": "वाक्यस्य",
+          "en": "of the sentence"
+        },
+        {
+          "sa": "श्रवणम्",
+          "en": "hearing"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "can occur"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-7"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0350",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 22",
-      "label": "Text 22",
-      "deva": "तथा पदपदाथौ च न स्तो वाक्यमृते क्वचित् ।",
-      "iast": "tathā padapadāthau ca na sto vākyamṛte kvacit |",
-      "translation": "Likewise, words and their meanings do not stand apart from a sentence;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0351",
@@ -8042,24 +8321,70 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.8",
       "label": "Verse 2.8",
-      "deva": "अन्वयव्यतिरेकौ च तावृते स्तां कैमाश्रयौ ॥ ८॥",
-      "iast": "anvayavyatirekau ca tāvṛte stāṃ kaimāśrayau || 8||",
-      "translation": "and without them, what could support agreement and exclusion?",
-      "gloss": [],
+      "deva": "तथा पदपदाथौ च न स्तो वाक्यमृते क्वचित् । अन्वयव्यतिरेकौ च तावृते स्तां कैमाश्रयौ ॥ ८॥",
+      "iast": "tathā padapadāthau ca na sto vākyamṛte kvacit | anvayavyatirekau ca tāvṛte stāṃ kaimāśrayau || 8||",
+      "translation": "Words and their meanings do not stand apart from a sentence; without them, what could provide a basis for agreement and exclusion?",
+      "gloss": [
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "पद-पदार्थौ",
+          "en": "a word and its meaning"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्तः",
+          "en": "exist; stand"
+        },
+        {
+          "sa": "वाक्यम्-ऋते",
+          "en": "apart from a sentence"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "anywhere"
+        },
+        {
+          "sa": "अन्वय-व्यतिरेकौ",
+          "en": "agreement and exclusion"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तौ",
+          "en": "those two"
+        },
+        {
+          "sa": "ऋते",
+          "en": "without"
+        },
+        {
+          "sa": "स्ताम्",
+          "en": "would exist"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "आश्रयौ",
+          "en": "as their basis; support"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-8"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0352",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 24",
-      "label": "Text 24",
-      "deva": "अन्वयव्यतिरेकाभ्यां विना वाक्यार्थबोधनम् ।",
-      "iast": "anvayavyatirekābhyāṃ vinā vākyārthabodhanam |",
-      "translation": "Without agreement and exclusion, the meaning of a sentence cannot be understood;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0353",
@@ -8067,24 +8392,54 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.9",
       "label": "Verse 2.9",
-      "deva": "न स्यात्तेन विनाज्ञानप्रहाणं नोपपद्यते ॥ ९॥",
-      "iast": "na syāttena vinājñānaprahāṇaṃ nopapadyate || 9||",
-      "translation": "without that understanding, the removal of ignorance cannot occur.",
-      "gloss": [],
+      "deva": "अन्वयव्यतिरेकाभ्यां विना वाक्यार्थबोधनम् । न स्यात्तेन विनाज्ञानप्रहाणं नोपपद्यते ॥ ९॥",
+      "iast": "anvayavyatirekābhyāṃ vinā vākyārthabodhanam | na syāttena vinājñānaprahāṇaṃ nopapadyate || 9||",
+      "translation": "Without agreement and exclusion, the meaning of a sentence would not be understood; without that understanding, the removal of ignorance is impossible.",
+      "gloss": [
+        {
+          "sa": "अन्वय-व्यतिरेकाभ्याम्",
+          "en": "through agreement and exclusion"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "वाक्य-अर्थ-बोधनम्",
+          "en": "understanding the meaning of a sentence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would occur"
+        },
+        {
+          "sa": "तेन",
+          "en": "without that"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "अज्ञान-प्रहाणम्",
+          "en": "removal of ignorance"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "is possible"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-9"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0354",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 26",
-      "label": "Text 26",
-      "deva": "विनाज्ञानप्रहाणेन पुरुषार्थः सुदुर्लभः ।",
-      "iast": "vinājñānaprahāṇena puruṣārthaḥ sudurlabhaḥ |",
-      "translation": "Without the removal of ignorance, the human end is exceedingly hard to attain;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0355",
@@ -8092,24 +8447,50 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.10",
       "label": "Verse 2.10",
-      "deva": "तस्माद्यथोक्तसिद्ध्यर्थं परो ग्रन्थोऽवतार्यते ॥ १०॥",
-      "iast": "tasmādyathoktasiddhyarthaṃ paro grantho'vatāryate || 10||",
-      "translation": "therefore the following text is introduced to establish the realization just described.",
-      "gloss": [],
+      "deva": "विनाज्ञानप्रहाणेन पुरुषार्थः सुदुर्लभः । तस्माद्यथोक्तसिद्ध्यर्थं परो ग्रन्थोऽवतार्यते ॥ १०॥",
+      "iast": "vinājñānaprahāṇena puruṣārthaḥ sudurlabhaḥ | tasmādyathoktasiddhyarthaṃ paro grantho'vatāryate || 10||",
+      "translation": "Without removing ignorance, the human goal is exceedingly difficult to attain; therefore, the next section is introduced to establish the realization just described.",
+      "gloss": [
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "अज्ञान-प्रहाणेन",
+          "en": "removal of ignorance"
+        },
+        {
+          "sa": "पुरुष-अर्थः",
+          "en": "the human goal"
+        },
+        {
+          "sa": "सु-दुर्लभः",
+          "en": "exceedingly difficult to attain"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "यथा-उक्त-सिद्धि-अर्थम्",
+          "en": "to establish the realization just described"
+        },
+        {
+          "sa": "परः",
+          "en": "the next"
+        },
+        {
+          "sa": "ग्रन्थः",
+          "en": "section; text"
+        },
+        {
+          "sa": "अवतार्यते",
+          "en": "is introduced"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-10"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0356",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 28",
-      "label": "Text 28",
-      "deva": "वर्चस्कं त्वन्नकार्यत्वाद्यथा नात्मेति गम्यते ।",
-      "iast": "varcaskaṃ tvannakāryatvādyathā nātmeti gamyate |",
-      "translation": "Excrement is known to be not-Self because it is produced from food;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0357",
@@ -8117,10 +8498,75 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.11",
       "label": "Verse 2.11",
-      "deva": "तद्भागः सेन्द्रियो देहस्तद्वत्किमिति नेक्ष्यते ॥ ११॥",
-      "iast": "tadbhāgaḥ sendriyo dehastadvatkimiti nekṣyate || 11||",
-      "translation": "why is the body, with its sense-organs, not seen in the same way as one part of that food?",
-      "gloss": [],
+      "deva": "वर्चस्कं त्वन्नकार्यत्वाद्यथा नात्मेति गम्यते । तद्भागः सेन्द्रियो देहस्तद्वत्किमिति नेक्ष्यते ॥ ११॥",
+      "iast": "varcaskaṃ tvannakāryatvādyathā nātmeti gamyate | tadbhāgaḥ sendriyo dehastadvatkimiti nekṣyate || 11||",
+      "translation": "Excrement is understood as not-Self because it is produced from food. The body, with its sense-organs, is likewise part of that food; why is it not seen the same way?",
+      "gloss": [
+        {
+          "sa": "वर्चस्कम्",
+          "en": "excrement"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "अन्न-कार्यत्वात्",
+          "en": "because it is produced from food"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "गम्यते",
+          "en": "is understood"
+        },
+        {
+          "sa": "तद्-भागः",
+          "en": "a part of that"
+        },
+        {
+          "sa": "स-इन्द्रियः",
+          "en": "with its sense-organs"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "किम्",
+          "en": "why"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ईक्ष्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-11"
       ]
@@ -8137,26 +8583,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0359",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 31",
-      "label": "Text 31",
-      "deva": "प्रागनात्मैव जग्धं सदात्मतामेत्यविद्यया ।",
-      "iast": "prāganātmaiva jagdhaṃ sadātmatāmetyavidyayā |",
-      "translation": "The world, which was not-Self from the beginning, is taken by ignorance to be the Self;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0360",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.12",
       "label": "Verse 2.12",
-      "deva": "स्रगालेपनवद्देहं तस्मात्पश्येद्विविक्तधीः ॥ १२॥",
-      "iast": "sragālepanavaddehaṃ tasmātpaśyedviviktadhīḥ || 12||",
-      "translation": "therefore the discerning person should see the body as distinct, like a garland or ointment.",
-      "gloss": [],
+      "deva": "प्रागनात्मैव जग्धं सदात्मतामेत्यविद्यया । स्रगालेपनवद्देहं तस्मात्पश्येद्विविक्तधीः ॥ १२॥",
+      "iast": "prāganātmaiva jagdhaṃ sadātmatāmetyavidyayā | sragālepanavaddehaṃ tasmātpaśyedviviktadhīḥ || 12||",
+      "translation": "Food is manifestly not-Self before it is eaten, yet through ignorance it seems to become the Self. Therefore the discerning person should see the body as distinct, like a garland or ointment.",
+      "gloss": [
+        {
+          "sa": "प्राक्",
+          "en": "before"
+        },
+        {
+          "sa": "अनात्मा",
+          "en": "not-Self"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "जग्धम्",
+          "en": "what is eaten; food"
+        },
+        {
+          "sa": "सत्",
+          "en": "being"
+        },
+        {
+          "sa": "आत्मताम्",
+          "en": "the state of being Self"
+        },
+        {
+          "sa": "एति",
+          "en": "reaches; appears to become"
+        },
+        {
+          "sa": "अविद्यया",
+          "en": "through ignorance"
+        },
+        {
+          "sa": "स्रक्-आलेपन-वत्",
+          "en": "like a garland or ointment"
+        },
+        {
+          "sa": "देहम्",
+          "en": "the body"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "पश्येत्",
+          "en": "one should see"
+        },
+        {
+          "sa": "विविक्त-धीः",
+          "en": "the discerning person"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-12"
       ]
@@ -8173,40 +8661,79 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0362",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 34",
-      "label": "Text 34",
-      "deva": "मन्यसे तावदस्मीति यावदस्मान्न नीयसे ।",
-      "iast": "manyase tāvadasmīti yāvadasmānna nīyase |",
-      "translation": "You think, “I am this,” only so long as you have not been carried away from here;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0363",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.13",
       "label": "Verse 2.13",
-      "deva": "श्वभिः क्रोडीकृते देहे नैवं त्वमभिमंस्यसे ॥ १३॥",
-      "iast": "śvabhiḥ kroḍīkṛte dehe naivaṃ tvamabhimaṃsyase || 13||",
-      "translation": "when dogs have seized the body, you will no longer think, “I am this.”",
-      "gloss": [],
+      "deva": "मन्यसे तावदस्मीति यावदस्मान्न नीयसे । श्वभिः क्रोडीकृते देहे नैवं त्वमभिमंस्यसे ॥ १३॥",
+      "iast": "manyase tāvadasmīti yāvadasmānna nīyase | śvabhiḥ kroḍīkṛte dehe naivaṃ tvamabhimaṃsyase || 13||",
+      "translation": "You think “I am this” only as long as you have not been separated from the body; when dogs have seized it, you will no longer think “I am this.”",
+      "gloss": [
+        {
+          "sa": "मन्यसे",
+          "en": "you think"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so long"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "“I am”"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "यावत्",
+          "en": "as long as"
+        },
+        {
+          "sa": "अस्मात्",
+          "en": "from this"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नीयसे",
+          "en": "you are carried away; separated"
+        },
+        {
+          "sa": "श्वभिः",
+          "en": "by dogs"
+        },
+        {
+          "sa": "क्रोडी-कृते",
+          "en": "when seized; fought over"
+        },
+        {
+          "sa": "देहे",
+          "en": "the body"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "you"
+        },
+        {
+          "sa": "अभिमंस्यसे",
+          "en": "will think of yourself"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-13"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0364",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 36",
-      "label": "Text 36",
-      "deva": "शिर आक्रम्य पादेन भर्त्सयत्यपरान् शुनः ।",
-      "iast": "śira ākramya pādena bhartsayatyaparān śunaḥ |",
-      "translation": "One dog steps on its head and drives the other dogs away;",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0365",
@@ -8214,10 +8741,67 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.14",
       "label": "Verse 2.14",
-      "deva": "दृष्ट्वा साधारणं देहं कस्मात्सक्तोऽसि तत्र भोः ॥ १४॥",
-      "iast": "dṛṣṭvā sādhāraṇaṃ dehaṃ kasmātsakto'si tatra bhoḥ || 14||",
-      "translation": "seeing that the body is common to all, why are you attached to it, friend?",
-      "gloss": [],
+      "deva": "शिर आक्रम्य पादेन भर्त्सयत्यपरान् शुनः । दृष्ट्वा साधारणं देहं कस्मात्सक्तोऽसि तत्र भोः ॥ १४॥",
+      "iast": "śira ākramya pādena bhartsayatyaparān śunaḥ | dṛṣṭvā sādhāraṇaṃ dehaṃ kasmātsakto'si tatra bhoḥ || 14||",
+      "translation": "One dog steps on the body’s head and snarls at the other dogs. Seeing that the body is common to all, why are you attached to it, friend?",
+      "gloss": [
+        {
+          "sa": "शिरः",
+          "en": "the head"
+        },
+        {
+          "sa": "आक्रम्य",
+          "en": "having stepped on"
+        },
+        {
+          "sa": "पादेन",
+          "en": "with a foot"
+        },
+        {
+          "sa": "भर्त्सयति",
+          "en": "threatens; snarls at"
+        },
+        {
+          "sa": "अपरान्",
+          "en": "the other"
+        },
+        {
+          "sa": "शुनः",
+          "en": "dogs"
+        },
+        {
+          "sa": "दृष्ट्वा",
+          "en": "seeing"
+        },
+        {
+          "sa": "साधारणम्",
+          "en": "common; shared"
+        },
+        {
+          "sa": "देहम्",
+          "en": "the body"
+        },
+        {
+          "sa": "कस्मात्",
+          "en": "why"
+        },
+        {
+          "sa": "सक्तः",
+          "en": "attached"
+        },
+        {
+          "sa": "असि",
+          "en": "are you"
+        },
+        {
+          "sa": "तत्र",
+          "en": "to it"
+        },
+        {
+          "sa": "भोः",
+          "en": "friend; sir"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-14"
       ]
@@ -8234,26 +8818,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0367",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 39",
-      "label": "Text 39",
-      "deva": "बुसव्रीहिपलालांशैर्बीजमेकं त्रिधा यथा ।",
-      "iast": "busavrīhipalālāṃśairbījamekaṃ tridhā yathā |",
-      "translation": "Just as one seed is divided into three parts: husk, grain, and chaff,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0368",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.15",
       "label": "Verse 2.15",
-      "deva": "बुद्धिमांसपुरीषांशैरन्नं तद्वदवस्थितम् ॥ १५॥",
-      "iast": "buddhimāṃsapurīṣāṃśairannaṃ tadvadavasthitam || 15||",
-      "translation": "so food is divided into intellect, flesh, and excrement.",
-      "gloss": [],
+      "deva": "बुसव्रीहिपलालांशैर्बीजमेकं त्रिधा यथा । बुद्धिमांसपुरीषांशैरन्नं तद्वदवस्थितम् ॥ १५॥",
+      "iast": "busavrīhipalālāṃśairbījamekaṃ tridhā yathā | buddhimāṃsapurīṣāṃśairannaṃ tadvadavasthitam || 15||",
+      "translation": "Just as one seed separates into husk, grain, and straw, so food is present in the forms of intellect, flesh, and excrement.",
+      "gloss": [
+        {
+          "sa": "बुस-व्रीहि-पलाल-अंशैः",
+          "en": "in the parts called husk, grain, and straw"
+        },
+        {
+          "sa": "बीजम्",
+          "en": "seed"
+        },
+        {
+          "sa": "एकम्",
+          "en": "one"
+        },
+        {
+          "sa": "त्रिधा",
+          "en": "threefold"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "बुद्धि-मांस-पुरीष-अंशैः",
+          "en": "in the parts called intellect, flesh, and excrement"
+        },
+        {
+          "sa": "अन्नम्",
+          "en": "food"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "अवस्थितम्",
+          "en": "is present; exists"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-15"
       ]
@@ -8270,40 +8880,71 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0370",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 42",
-      "label": "Text 42",
-      "deva": "वर्चस्के संपरित्यक्ते दोषतश्चावधारिते ।",
-      "iast": "varcaske saṃparityakte doṣataścāvadhārite |",
-      "translation": "When excrement has been discarded and recognized as impure,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0371",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.16",
       "label": "Verse 2.16",
-      "deva": "यदि दोषं वदेत्तस्मै किं तत्रोच्चरितुर्भवेत् ॥ १६॥",
-      "iast": "yadi doṣaṃ vadettasmai kiṃ tatroccariturbhavet || 16||",
-      "translation": "what fault could there be for the person who spoke of its impurity?",
-      "gloss": [],
+      "deva": "वर्चस्के संपरित्यक्ते दोषतश्चावधारिते । यदि दोषं वदेत्तस्मै किं तत्रोच्चरितुर्भवेत् ॥ १६॥",
+      "iast": "varcaske saṃparityakte doṣataścāvadhārite | yadi doṣaṃ vadettasmai kiṃ tatroccariturbhavet || 16||",
+      "translation": "When excrement has been discarded and recognized as impure, what fault is there in someone who says it is impure?",
+      "gloss": [
+        {
+          "sa": "वर्चस्के",
+          "en": "when excrement"
+        },
+        {
+          "sa": "सम्परित्यक्ते",
+          "en": "has been discarded"
+        },
+        {
+          "sa": "दोषतः",
+          "en": "as impure; as defective"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अवधारिते",
+          "en": "has been recognized"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "दोषम्",
+          "en": "impurity; fault"
+        },
+        {
+          "sa": "वदेत्",
+          "en": "one says"
+        },
+        {
+          "sa": "तस्मै",
+          "en": "about it"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "उच्चरितुः",
+          "en": "for the one who utters it"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "could there be"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-16"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0372",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 44",
-      "label": "Text 44",
-      "deva": "तद्वत्सूक्ष्मे तथा स्थूले देहे त्यक्ते विवेकतः ।",
-      "iast": "tadvatsūkṣme tathā sthūle dehe tyakte vivekataḥ |",
-      "translation": "Likewise, when the subtle and gross bodies have been discarded through discernment,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0373",
@@ -8311,10 +8952,71 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.17",
       "label": "Verse 2.17",
-      "deva": "यदि दोषं वदेत्ताभ्यां किं तत्र विदुषो भवेत् ॥ १७॥",
-      "iast": "yadi doṣaṃ vadettābhyāṃ kiṃ tatra viduṣo bhavet || 17||",
-      "translation": "what fault in them could affect the knower?",
-      "gloss": [],
+      "deva": "तद्वत्सूक्ष्मे तथा स्थूले देहे त्यक्ते विवेकतः । यदि दोषं वदेत्ताभ्यां किं तत्र विदुषो भवेत् ॥ १७॥",
+      "iast": "tadvatsūkṣme tathā sthūle dehe tyakte vivekataḥ | yadi doṣaṃ vadettābhyāṃ kiṃ tatra viduṣo bhavet || 17||",
+      "translation": "Likewise, when the subtle and gross bodies have been discarded through discernment, what fault in them could affect the knower?",
+      "gloss": [
+        {
+          "sa": "तद्वत्",
+          "en": "likewise"
+        },
+        {
+          "sa": "सूक्ष्मे",
+          "en": "the subtle"
+        },
+        {
+          "sa": "तथा",
+          "en": "and"
+        },
+        {
+          "sa": "स्थूले",
+          "en": "the gross"
+        },
+        {
+          "sa": "देहे",
+          "en": "bodies"
+        },
+        {
+          "sa": "त्यक्ते",
+          "en": "when discarded"
+        },
+        {
+          "sa": "विवेकतः",
+          "en": "through discernment"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "दोषम्",
+          "en": "a fault"
+        },
+        {
+          "sa": "वदेत्",
+          "en": "one says"
+        },
+        {
+          "sa": "ताभ्याम्",
+          "en": "in those two"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "विदुषः",
+          "en": "for the knower"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "could there be"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-17"
       ]
@@ -8342,26 +9044,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0376",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 48",
-      "label": "Text 48",
-      "deva": "रिपौ बन्धौ स्वदेहे च समैकात्म्यं प्रपश्यतः ।",
-      "iast": "ripau bandhau svadehe ca samaikātmyaṃ prapaśyataḥ |",
-      "translation": "For one who sees equal oneness in an enemy, a friend, and one’s own body,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0377",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.18",
       "label": "Verse 2.18",
-      "deva": "विवेकिनः कुतः कोपः स्वदेहावयवेश्विव ॥ १८॥",
-      "iast": "vivekinaḥ kutaḥ kopaḥ svadehāvayaveśviva || 18||",
-      "translation": "where could anger arise in the discerning person, any more than toward the limbs of one’s own body?",
-      "gloss": [],
+      "deva": "रिपौ बन्धौ स्वदेहे च समैकात्म्यं प्रपश्यतः । विवेकिनः कुतः कोपः स्वदेहावयवेश्विव ॥ १८॥",
+      "iast": "ripau bandhau svadehe ca samaikātmyaṃ prapaśyataḥ | vivekinaḥ kutaḥ kopaḥ svadehāvayaveśviva || 18||",
+      "translation": "For the discerning person who sees the same Self in an enemy, a relative, and one’s own body, how could anger arise, any more than toward one’s own limbs?",
+      "gloss": [
+        {
+          "sa": "रिपौ",
+          "en": "in an enemy"
+        },
+        {
+          "sa": "बन्धौ",
+          "en": "in a relative; friend"
+        },
+        {
+          "sa": "स्व-देहे",
+          "en": "in one’s own body"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सम-एक-आत्म्यम्",
+          "en": "the same one Self"
+        },
+        {
+          "sa": "प्रपश्यतः",
+          "en": "for one who sees"
+        },
+        {
+          "sa": "विवेकिनः",
+          "en": "of the discerning person"
+        },
+        {
+          "sa": "कुतः",
+          "en": "whence; how"
+        },
+        {
+          "sa": "कोपः",
+          "en": "anger"
+        },
+        {
+          "sa": "स्व-देह-अवयवेषु",
+          "en": "toward the parts of one’s own body"
+        },
+        {
+          "sa": "इव",
+          "en": "as; like"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-18"
       ]
@@ -8378,26 +9114,76 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0379",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 51",
-      "label": "Text 51",
-      "deva": "घटादिवच्च दृश्यत्वात्तैरेव करणैर्दृशेः ।",
-      "iast": "ghaṭādivacca dṛśyatvāttaireva karaṇairdṛśeḥ |",
-      "translation": "they are seen, like a pot, by the very instruments that reveal them;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0380",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.19",
       "label": "Verse 2.19",
-      "deva": "स्वप्ने चानन्वयाज्ज्ञयो देहोऽनात्मेति सूरिभिः ॥ १९॥",
-      "iast": "svapne cānanvayājjñayo deho'nātmeti sūribhiḥ || 19||",
-      "translation": "and because they are not continuous with the Self in a dream, the wise know that the body is not-Self.",
-      "gloss": [],
+      "deva": "घटादिवच्च दृश्यत्वात्तैरेव करणैर्दृशेः । स्वप्ने चानन्वयाज्ज्ञयो देहोऽनात्मेति सूरिभिः ॥ १९॥",
+      "iast": "ghaṭādivacca dṛśyatvāttaireva karaṇairdṛśeḥ | svapne cānanvayājjñayo deho'nātmeti sūribhiḥ || 19||",
+      "translation": "The wise know the body is not-Self because it is an object, like a pot, to those same senses, and because body-consciousness is not continuous in dreams.",
+      "gloss": [
+        {
+          "sa": "घट-आदिवत्",
+          "en": "like a pot and the like"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दृश्यत्वात्",
+          "en": "because it is seen; an object"
+        },
+        {
+          "sa": "तैः",
+          "en": "by those"
+        },
+        {
+          "sa": "एव",
+          "en": "same"
+        },
+        {
+          "sa": "करणैः",
+          "en": "instruments; senses"
+        },
+        {
+          "sa": "दृशेः",
+          "en": "of the seer"
+        },
+        {
+          "sa": "स्वप्ने",
+          "en": "in a dream"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनन्वयात्",
+          "en": "because of non-continuity"
+        },
+        {
+          "sa": "ज्ञेयः",
+          "en": "is to be known"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "अनात्मा",
+          "en": "not-Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सूरिभिः",
+          "en": "by the wise"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-19"
       ]
@@ -8414,26 +9200,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0382",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 54",
-      "label": "Text 54",
-      "deva": "चतुर्भिरुह्यते यत्तत्सर्वशक्त्या शरीरकम् ।",
-      "iast": "caturbhiruhyate yattatsarvaśaktyā śarīrakam |",
-      "translation": "The body is supported by the four elements through all their power;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0383",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.20",
       "label": "Verse 2.20",
-      "deva": "तूलायते तदेवाहंधियाघ्रातमचेतसाम् ॥ २०॥",
-      "iast": "tūlāyate tadevāhaṃdhiyāghrātamacetasām || 20||",
-      "translation": "ignorant people, however, take that very body—light as cotton—to be “I,” through the thought of ego.",
-      "gloss": [],
+      "deva": "चतुर्भिरुह्यते यत्तत्सर्वशक्त्या शरीरकम् । तूलायते तदेवाहंधियाघ्रातमचेतसाम् ॥ २०॥",
+      "iast": "caturbhiruhyate yattatsarvaśaktyā śarīrakam | tūlāyate tadevāhaṃdhiyāghrātamacetasām || 20||",
+      "translation": "The body that four bearers lift with all their strength becomes light as cotton to a fool who identifies it as “I.”",
+      "gloss": [
+        {
+          "sa": "चतुर्भिः",
+          "en": "by four [bearers]"
+        },
+        {
+          "sa": "उह्यते",
+          "en": "is carried"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "सर्व-शक्त्या",
+          "en": "with all their strength"
+        },
+        {
+          "sa": "शरीरकम्",
+          "en": "the body"
+        },
+        {
+          "sa": "तूल-आयते",
+          "en": "becomes light as cotton"
+        },
+        {
+          "sa": "तत्",
+          "en": "that same"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अहम्-धिया",
+          "en": "through the thought “I”"
+        },
+        {
+          "sa": "आघ्रातम्",
+          "en": "taken possession of; claimed"
+        },
+        {
+          "sa": "अचेतसाम्",
+          "en": "of the unwise"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-20"
       ]
@@ -19647,12 +20471,32 @@
       "1.98",
       "1.99",
       "1.100",
+      "2.1",
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6",
+      "2.7",
+      "2.8",
+      "2.9",
+      "2.10",
+      "2.11",
+      "2.12",
+      "2.13",
+      "2.14",
+      "2.15",
+      "2.16",
+      "2.17",
+      "2.18",
+      "2.19",
+      "2.20",
       "3.114",
       "3.123",
       "4.43"
     ],
     "partialUnits": [],
-    "note": "All 100 verses of Adhyāya 1, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 320 numbered verses and prose commentary passages still need separate glosses."
+    "note": "All 100 verses of Adhyāya 1 and verses 2.1–2.20, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 300 numbered verses and prose commentary passages still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; original literal readings and token-by-token glosses for texts 1.2–1.4."
 }
