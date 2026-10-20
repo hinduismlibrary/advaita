@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Brahmasiddhi** — active. All 231 passages have Sanskrit, English, and IAST. Added topic descriptions to the four traditional contents sections and completed glosses for 230 passages, including passages 2.152, 1.13, 2.29, 4.12, 1.36, 1.8, 1.7, 1.21, 2.139, 2.91, 2.149, 1.12, 2.73, 1.14, 2.183, 1.15, 2.171, 1.9, 2.40, 2.105, 1.11, 2.85, 2.108, 1.5, and 2.107; passage 1.2 still needs a gloss. Passage 2.107 has 1,317 gloss entries, including clear sandhi splits; passage 1.3 now has 2,595 gloss entries and no unmapped tokens. Corrected the cited Kaṭha reading to प्रमुच्यन्ते (pramucyante), normalized clear source typos, and restored clipped avagraha spacing. Next passage in progress: 1.2. Normalized an apparent GRETIL typo in 1.11, nivarcanīyatve, to निर्वचनीयत्वे (nirvacanīyatve). Normalized an apparent typo in 2.108, देहपातवधिं, to देहपातावधिं (dehapātāvadhiṃ), following GRETIL. Normalized the apparent grammatical typo अविद्यासंस्कार्स्य to अविद्यासंस्कारस्य in passage 1.5 and removed a corrupted editorial witness note from its displayed text. Corrected the clear typo तर्थि to तर्हि in passage 1.9. Normalized the apparent 1.7 source typo to अर्थविधान. Corrected the 1.13 compound gloss and normalized the apparent typo in 2.29 to दर्शिते. A Devanāgarī-script audit also corrected one stray Latin character in the 1.4 gloss.
+**Naiṣkarmyasiddhi** — active. The reader has 880 units against 897 expected source verses; 454 units lack a word gloss, and 17 numbered source verses are absent. IAST is present. First audit the source sequence and restore missing verses, then fill the gloss gaps and record completed ranges.
 
 ## Completed
 
@@ -16,6 +16,8 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 - **Ātmabodha** — all 68 verses and the colophon have Sanskrit, English, explicit IAST, and non-empty word glosses. Added seven named contents sections covering verses 1–68.
 - **Aparokṣānubhūti** — all 144 verses and the colophon have Sanskrit, English, explicit IAST, and non-empty word glosses. Added ten named contents sections covering verses 1–144.
 - **Ātmavidyāvilāsa** — all 65 numbered verses and the opening invocation have Sanskrit, English, IAST, and word glosses; three named topic sections cover verses 1–65.
+- **Brahmasiddhi** — all 231 passages have Sanskrit, English, explicit IAST, and Devanāgarī word glosses; all four traditional contents sections have topic descriptions. Passage 1.2 has 5,231 gloss entries covering 3,441 Sanskrit tokens. Its source text was cleaned for an editorial marker split and spelling issues; the reading tattvagrahaṇātmikayā was emended from the source's tattvāgrahaṇātmikayā on contextual grounds.
+- **Māṇḍūkyakārikā** — all 215 verses have Sanskrit, English, explicit IAST, and non-empty Devanāgarī word glosses. The four traditional chapter links now name their topic as well as their prakaraṇa.
 
 The transliteration-button spacing correction and reader cache/version updates were completed earlier in the same workstream.
 
@@ -29,7 +31,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Ātmabodha | 69 | Complete: all 68 verses and colophon have Sanskrit, English, IAST, and glosses; seven named contents sections |
 | Ātmavidyāvilāsa | 66 | Complete: all numbered verses and invocation have Sanskrit, English, IAST, and glosses; three named topic sections |
 | Bhajagovindam | 31 | All four fields present; review named contents sections |
-| Brahmasiddhi | 231 | Active: Sanskrit, English, and IAST complete; four contents sections include topic descriptions; Devanāgarī word glosses for 230 passages, with 1.2 remaining. Passage 2.107 has 1,317 gloss entries and 1.3 has 2,595; clear sandhi forms are split. At 2.161, retained GRETIL’s भावात् reading and noted a witness variant. |
+| Brahmasiddhi | 231 | Complete: all passages have Sanskrit, English, explicit IAST, and a Devanāgarī word gloss; four named contents sections include topic descriptions. Passage 1.2 now has 5,231 gloss entries for 3,441 Sanskrit tokens with no unmapped tokens. At 2.161, retained GRETIL’s भावात् reading and noted a witness variant. |
 | Brahmajñānāvalīmālā | 21 | Glosses present; add explicit IAST; review contents |
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | All four fields present |
 | Daśaślokī | 11 | Glosses present; add explicit IAST |
@@ -37,7 +39,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Ekaślokī | 2 | Glosses present; add explicit IAST |
 | Hastāmalaka-stotram | 12 | All four fields present |
 | Kāśīpañcakam | 6 | All four fields present |
-| Māṇḍūkyakārikā | 215 | Add word glosses for all verses and explicit IAST; review four-chapter contents |
+| Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
 | Manīṣāpañcakam | 6 | All four fields present |
 | Māyāpañcakam | 6 | All four fields present |
 | Naiṣkarmyasiddhi | 880 of 897 expected | 454 units lack word glosses; 17 numbered units are absent from the reader; IAST is present |
