@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 495
+      "end": 500
     },
-    "note": "Source verses 1–495 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 496 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–500 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 501 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -37429,23 +37429,95 @@
       "label": "Verse 496",
       "deva": "मय्यखण्डसुखाम्भोधौ बहुधा विश्ववीचयः ।\nउत्पद्यन्ते विलीयन्ते मायामारुतविभ्रमात् ॥",
       "iast": "mayyakhaṇḍasukhāmbhodhau bahudhā viśvavīcayaḥ |\nutpadyante vilīyante māyāmārutavibhramāt ||",
-      "translation": "In me, the ocean of Infinite Bliss, the waves of the universe are created and destroyed by the playing of the wind of Maya.",
-      "gloss": [],
+      "translation": "In me, the ocean of undivided bliss, the waves of the universe arise in many ways and dissolve, stirred by the wind of māyā.",
+      "gloss": [
+        {
+          "sa": "मयि",
+          "en": "in me"
+        },
+        {
+          "sa": "अखण्ड-सुख-अम्भोधौ",
+          "en": "in the ocean of unbroken bliss (akhaṇḍa: unbroken | sukha: bliss | ambhodhau: in the ocean)"
+        },
+        {
+          "sa": "बहुधा",
+          "en": "in many ways"
+        },
+        {
+          "sa": "विश्व-वीचयः",
+          "en": "the waves of the universe (viśva: universe | vīcayaḥ: waves)"
+        },
+        {
+          "sa": "उत्पद्यन्ते",
+          "en": "arise"
+        },
+        {
+          "sa": "विलीयन्ते",
+          "en": "dissolve"
+        },
+        {
+          "sa": "माया-मारुत-विभ्रमात्",
+          "en": "from the stirring of māyā’s wind (māyā: illusion | māruta: wind | vibhrama: movement, agitation | -āt: from)"
+        }
+      ],
       "sourceNumbers": [
         496
-      ]
+      ],
+      "editionTranslation": "In me, the ocean of Infinite Bliss, the waves of the universe are created and destroyed by the playing of the wind of Maya."
     },
     {
       "id": "vivekachudamani-497",
       "number": "497",
       "label": "Verse 497",
-      "deva": "स्थुलादिभावा मयि कल्पिता भ्रमाद्\nआरोपितानुस्फुरणेन लोकैः ।\nकाले यथा कल्पकवत्सराय-\nणर्त्वादयो निष्कलनिर्विकल्पे ॥",
-      "iast": "sthulādibhāvā mayi kalpitā bhramād\nāropitānusphuraṇena lokaiḥ |\nkāle yathā kalpakavatsarāya-\nṇartvādayo niṣkalanirvikalpe ||",
-      "translation": "Such ideas as gross (or subtle) are erroneously imagined in me by people through the manifestation of things superimposed – just as in the indivisible and absolute time, cycles, years, half-years, seasons, etc., are imagined.",
-      "gloss": [],
+      "deva": "स्थूलादिभावा मयि कल्पिता भ्रमाद्\nआरोपितानुस्फुरणेन लोकैः ।\nकाले यथा कल्पकवत्सरायणर्त्वादयो\nनिष्कलनिर्विकल्पे ॥",
+      "iast": "sthūlādi-bhāvā mayi kalpitā bhramād\nāropitānusphuraṇena lokaiḥ |\nkāle yathā kalpaka-vatsara-ayana-ṛtu-ādayo\nniṣkala-nirvikalpe ||",
+      "translation": "People, through delusion and the continued appearance of what they superimpose, imagine gross and other states in me, just as world-ages, years, half-years, seasons, and the like are imagined in time, which is partless and free of distinctions.",
+      "gloss": [
+        {
+          "sa": "स्थूल-आदि-भावाः",
+          "en": "gross and other states (sthūla: gross | ādi: and so on | bhāvāḥ: states)"
+        },
+        {
+          "sa": "मयि",
+          "en": "in me"
+        },
+        {
+          "sa": "कल्पिताः",
+          "en": "are imagined"
+        },
+        {
+          "sa": "भ्रमात्",
+          "en": "through delusion"
+        },
+        {
+          "sa": "आरोपित-अनुस्फुरणेन",
+          "en": "through the continued appearance of what is superimposed (āropita: superimposed | anusphuraṇa: continued appearance | -ena: through)"
+        },
+        {
+          "sa": "लोकैः",
+          "en": "by people"
+        },
+        {
+          "sa": "काले",
+          "en": "in time"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "कल्पक-वत्सर-अयन-ऋतु-आदयः",
+          "en": "world-ages, years, half-years, seasons, and so on (kalpaka: world-age | vatsara: year | ayana: half-year | ṛtu: season | ādayaḥ: and so on)"
+        },
+        {
+          "sa": "निष्कल-निर्विकल्पे",
+          "en": "in the partless, distinction-free (niṣkala: partless | nirvikalpa: free from distinctions)"
+        }
+      ],
       "sourceNumbers": [
         497
-      ]
+      ],
+      "editionTranslation": "Such ideas as gross (or subtle) are erroneously imagined in me by people through the manifestation of things superimposed – just as in the indivisible and absolute time, cycles, years, half-years, seasons, etc., are imagined."
     },
     {
       "id": "vivekachudamani-498",
@@ -37453,11 +37525,45 @@
       "label": "Verse 498",
       "deva": "आरोपितं नाश्रयदूषकं भवेत्\nकदापि मूढैर् अतिदोषदूषितैः ।\nनार्द्रिकरोत्यूषरभूमिभागं\nमरीचिकावारि महाप्रवाहः ॥",
       "iast": "āropitaṃ nāśrayadūṣakaṃ bhavet\nkadāpi mūḍhair atidoṣadūṣitaiḥ |\nnārdrikarotyūṣarabhūmibhāgaṃ\nmarīcikāvāri mahāpravāhaḥ ||",
-      "translation": "That which is superimposed by the grossly ignorant fools can never taint the substratum: The great rush of waters observed in a mirage never wets the desert tracts.",
-      "gloss": [],
+      "translation": "What deluded people, deeply tainted by error, superimpose can never taint the substratum. A great flood of mirage-water never wets a patch of barren ground.",
+      "gloss": [
+        {
+          "sa": "आरोपितम्",
+          "en": "what is superimposed"
+        },
+        {
+          "sa": "न आश्रय-दूषकम्",
+          "en": "does not taint the substratum (na: not | āśraya: substratum, basis | dūṣakam: contaminating)"
+        },
+        {
+          "sa": "भवेत् कदापि",
+          "en": "can ever become (bhavet: become | kadāpi: ever)"
+        },
+        {
+          "sa": "मूढैः अति-दोष-दूषितैः",
+          "en": "by the deeply deluded, tainted by many faults (mūḍhaiḥ: by the deluded | ati: greatly | doṣa: fault | dūṣitaiḥ: tainted)"
+        },
+        {
+          "sa": "न आर्द्रीकरोति",
+          "en": "does not moisten (na: not | ārdrīkaroti: makes wet)"
+        },
+        {
+          "sa": "ऊषर-भूमि-भागम्",
+          "en": "a patch of barren ground (ūṣara: barren | bhūmi: ground | bhāgam: portion)"
+        },
+        {
+          "sa": "मरीचिका-वारि",
+          "en": "mirage-water (marīcikā: mirage | vāri: water)"
+        },
+        {
+          "sa": "महा-प्रवाहः",
+          "en": "a great flood or stream (mahā: great | pravāhaḥ: flow)"
+        }
+      ],
       "sourceNumbers": [
         498
-      ]
+      ],
+      "editionTranslation": "That which is superimposed by the grossly ignorant fools can never taint the substratum: The great rush of waters observed in a mirage never wets the desert tracts."
     },
     {
       "id": "vivekachudamani-499",
@@ -37465,23 +37571,79 @@
       "label": "Verse 499",
       "deva": "आकाशवल्लेपविदूरगोऽहं\nआदित्यवद्भास्यविलक्षणोऽहम् ।\nअहार्यवन्नित्यविनिश्चलोऽहं\nअम्भोधिवत्पारविवर्जितोऽहम् ॥",
       "iast": "ākāśavallepavidūrago'haṃ\nādityavadbhāsyavilakṣaṇo'ham |\nahāryavannityaviniścalo'haṃ\nambhodhivatpāravivarjito'ham ||",
-      "translation": "I am beyond contamination like the sky; I am distinct from things illumined, like the sun; I am always motionless like the mountain; I am limitless like the ocean.",
-      "gloss": [],
+      "translation": "Like space, I am far from any stain; like the sun, I am distinct from what is illumined. Like an immovable mountain, I am ever steady; like the ocean, I have no shore.",
+      "gloss": [
+        {
+          "sa": "आकाश-वत्",
+          "en": "like space (ākāśa: space | vat: like)"
+        },
+        {
+          "sa": "लेप-विदूर-गः अहम्",
+          "en": "I am far from stain (lepa: stain | vidūra: far | gaḥ: gone | aham: I)"
+        },
+        {
+          "sa": "आदित्य-वत्",
+          "en": "like the sun (āditya: sun | vat: like)"
+        },
+        {
+          "sa": "भास्य-विलक्षणः अहम्",
+          "en": "I am distinct from what is illumined (bhāsya: what is illumined | vilakṣaṇaḥ: distinct | aham: I)"
+        },
+        {
+          "sa": "अहार्य-वत्",
+          "en": "like the immovable [mountain] (ahārya: not to be moved | vat: like)"
+        },
+        {
+          "sa": "नित्य-विनिश्चलः अहम्",
+          "en": "I am ever motionless (nitya: always | viniścalaḥ: motionless | aham: I)"
+        },
+        {
+          "sa": "अम्भोधि-वत्",
+          "en": "like the ocean (ambhodhi: ocean | vat: like)"
+        },
+        {
+          "sa": "पार-विवर्जितः अहम्",
+          "en": "I am without a shore or limit (pāra: shore, limit | vivarjitaḥ: devoid | aham: I)"
+        }
+      ],
       "sourceNumbers": [
         499
-      ]
+      ],
+      "editionTranslation": "I am beyond contamination like the sky; I am distinct from things illumined, like the sun; I am always motionless like the mountain; I am limitless like the ocean."
     },
     {
       "id": "vivekachudamani-500",
       "number": "500",
       "label": "Verse 500",
-      "deva": "न मे देहेन संबन्धो मेघेनेव विहायसः ।\nअतः कुतो मे तद्धर्मा जाक्रत्स्वप्नसुषुप्तयः ॥",
-      "iast": "na me dehena saṃbandho megheneva vihāyasaḥ |\nataḥ kuto me taddharmā jākratsvapnasuṣuptayaḥ ||",
-      "translation": "I have no connection with the body, as the sky with clouds; so how can the states of wakefulness, dream and profound sleep, which are attributes of the body, affect me ?",
-      "gloss": [],
+      "deva": "न मे देहेन संबन्धो मेघेनेव विहायसः ।\nअतः कुतो मे तद्धर्मा जाग्रत्स्वप्नसुषुप्तयः ॥",
+      "iast": "na me dehena saṃbandho megheneva vihāyasaḥ |\nataḥ kuto me taddharmā jāgrat-svapnasuṣuptayaḥ ||",
+      "translation": "I have no connection with the body, just as the sky has none with clouds. Therefore, how can the waking, dream, and deep-sleep states—its properties—belong to me?",
+      "gloss": [
+        {
+          "sa": "न मे देहेन सम्बन्धः",
+          "en": "I have no connection with the body (na: not | me: of me | dehena: with the body | sambandhaḥ: connection)"
+        },
+        {
+          "sa": "मेघेन इव विहायसः",
+          "en": "as [there is none] between a cloud and the sky (meghena: with a cloud | iva: like | vihāyasaḥ: of the sky)"
+        },
+        {
+          "sa": "अतः कुतः मे",
+          "en": "therefore, how can [they belong] to me? (ataḥ: therefore | kutaḥ: how | me: to me)"
+        },
+        {
+          "sa": "तद्-धर्माः",
+          "en": "its properties or states (tad: its | dharmāḥ: properties, states)"
+        },
+        {
+          "sa": "जाग्रत्-स्वप्न-सुषुप्तयः",
+          "en": "the waking, dream, and deep-sleep states (jāgrat: waking | svapna: dream | suṣuptayaḥ: deep sleeps)"
+        }
+      ],
       "sourceNumbers": [
         500
-      ]
+      ],
+      "editionTranslation": "I have no connection with the body, as the sky with clouds; so how can the states of wakefulness, dream and profound sleep, which are attributes of the body, affect me ?"
     },
     {
       "id": "vivekachudamani-501",
@@ -38491,6 +38653,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 476–480; preserved prior translations as editionTranslation. Corrected verse 479's final form to आत्मनिष्ठितः (ātma-niṣṭhitaḥ), supported by the parallel reading, and normalized its IAST word boundaries.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 481–485, preserving the former English as editionTranslation. Rendered the hailstone/ocean image in 482 and the disciple’s direct questions in 483–485.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 486–490, preserving the former English as editionTranslation. Clarified verse 488's pūrṇa as complete and verse 490's pure-awareness wording.",
-    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 491–495, preserving previous translations as editionTranslation. Clarified verse 492's repeated negation and verse 494's “I” and “mine” terms; made the experience/experienced pair explicit in 495."
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 491–495, preserving previous translations as editionTranslation. Clarified verse 492's repeated negation and verse 494's “I” and “mine” terms; made the experience/experienced pair explicit in 495.",
+    "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 496–500, preserving previous English as editionTranslation. Corrected the Sanskrit/transliteration in 497 (sthūla and verse-end compound), 498 (ārdrīkaroti), and 500 (jāgrat)."
   ]
 }
