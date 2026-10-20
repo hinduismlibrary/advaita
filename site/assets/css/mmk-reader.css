@@ -71,3 +71,8 @@
 @media(prefers-reduced-motion:reduce){.mmk-reader-toc__links a{transition:none}}
 .mmk-reader-note{margin:4px 0 26px;padding:12px 14px;border-left:2px solid #9aa9a9;background:#f1efeb;color:#655e57;font:400 12px/1.65 Merriweather,Georgia,serif}
 .mmk-reader-note strong{color:#514a43}
+
+
+/* Root Sanskrit verse text on the MMK verse pages. */
+.mmk-content .mmk-root-sanskrit{max-width:840px;margin:17px auto 14px;color:#3c362e;font:400 18px/1.8 "Noto Serif",Georgia,serif;text-align:center;overflow-wrap:anywhere}
+@media(max-width:700px){.mmk-content .mmk-root-sanskrit{font-size:16px;line-height:1.7}}

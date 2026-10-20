@@ -1,13 +1,11 @@
-name: Validate MMK Chapter 1 verse pages
+name: Validate MMK verse pages
 on:
   push:
     paths:
       - .github/workflows/validate-mmk-chapter-reader.yml
       - tools/scripts/site-checks/verify-mmk-chapter-reader.py
       - site/articles/mulamadhyamakakarika-with-chandrakirti/**
-      - site/articles/mulamadhyamakakarika-with-chandrakirti/chapter-1.html
       - site/assets/css/mmk-reader.css
-      - site/assets/js/mmk-reader-toc.js
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate chapter hub and per-verse pages
+      - name: Validate all 27 chapters and 448 verse pages
         run: python3 tools/scripts/site-checks/verify-mmk-chapter-reader.py
