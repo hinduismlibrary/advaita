@@ -32,7 +32,7 @@ All 16 works with at least 20 items link to a contents/group navigation (Bhajago
 | Ātmavidyāvilāsa | 65 verses | 66 | 66/66 | 66/66 | 66/66 |
 | Brahmasiddhi | 231 passages | 231 | 231/231 | 231/231 | 1/231 |
 | Naiṣkarmyasiddhi | 423 verses | 1300 | 1300/1300 | 1300/1300 | 3/1300 |
-| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 471/566 |
+| Vivekacūḍāmaṇi | 580 verses | 566 | 566/566 | 566/566 | 476/566 |
 | Upadeśasāhasrī | 675 verses | 787 | 787/787 | 787/787 | 787/787 |
 | Sarvavedāntasiddhāntasārasaṅgraha | 1,006 verses | 986 | 986/986 | 986/986 | 26/986 |
 | Pañcadaśī | 1,570 verses | 1564 | 1564/1564 | 1564/1564 | 394/1564 |
@@ -53,7 +53,7 @@ The word-for-word notices in the current reader are therefore expected on entrie
 
 1. **Brahmasiddhi** — 1/231 data units have a gloss. Most units are prose passages, some very long; segment passages into usable clauses before adding glosses.  
 2. **Naiṣkarmyasiddhi** — 3/1,300 data units have glosses. The index reports 423 verses; reconcile the 1,300 stored source units with the verse/ prose structure before declaring completion.  
-3. **Vivekacūḍāmaṇi** — 471/566 data units have glosses, covering source verses 1–485; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
+3. **Vivekacūḍāmaṇi** — 476/566 data units have glosses, covering source verses 1–490; adjacent source verses are grouped in some reader units; source declares 580 verses and some English units span adjacent verses.  
 4. **SVSSS** — 26/986 data units have glosses; source declares 1,006 verses.  
 5. **Pañcadaśī** — 394/1,564 data units have glosses; source declares 1,570 verses.
 
@@ -237,4 +237,5 @@ The prior log stopped at verses 111–115 even though later source commits were 
 - **2026-10-20 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 471–475. Added literal English and full Devanāgarī-backed glosses; retained prior translations as `editionTranslation`. Normalized verse 473's IAST padaccheda, and clarified verse 474's liberation/attainment construction and verse 475's direct knowledge versus inference. Checked against [Stotrams' verse text and word meanings](https://stotrams.com/stotra/viveka-chudamani?depth=3) and [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm). Data commit: [f5d5140d](https://github.com/krishnavyasmuni/advaita/commit/f5d5140dc111b5977faee8a460ec2e25438e3613).  
 - **2026-10-20 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 476–480. Added literal English and full Devanāgarī-backed glosses; preserved prior English as `editionTranslation`. Corrected 479's final compound to `ātmaniṣṭhitaḥ` (“established in the Self”), matching the parallel reading. Checked the text and word meanings against [Stotrams, verses 476–480](https://stotrams.com/stotra/viveka-chudamani?depth=3) and [GRETIL](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/vivcud_u.htm). Data commit: [6dc2c780](https://github.com/krishnavyasmuni/advaita/commit/6dc2c780596ca4b357328b82ac4700d2101f364a).  
 - **2026-10-20 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 481–485. Added five original literal translations and complete Devanāgarī-backed gloss lists, preserving the prior English as `editionTranslation`. Checked verse text and lexical breakdown against [Stotrams, verses 481–485](https://stotrams.com/stotra/viveka-chudamani?depth=3) and the source text/translation at [Shlokam](https://shlokam.org/text/vivekachudamani.htm). Data commit: [95bf948c](https://github.com/krishnavyasmuni/advaita/commit/95bf948cfab26017a94793c6f8aaf90e3b533493).  
-- **Active batch:** Vivekacūḍāmaṇi, source verses 486–490.
+- **2026-10-20 UTC — Completed batch:** Vivekacūḍāmaṇi source verses 486–490. Added literal translations and complete Devanāgarī-backed glosses, retaining previous English as `editionTranslation`. Refined the statements of attainment and identity, including `pūrṇaḥ` as “complete” and `śuddha-bodha` as “pure awareness.” Checked each verse and its word meanings against [Stotrams, verses 486–490](https://stotrams.com/stotra/viveka-chudamani?depth=3) and [Shlokam](https://shlokam.org/text/vivekachudamani.htm). Data commit: [84ef498b](https://github.com/krishnavyasmuni/advaita/commit/84ef498b0a257cf4aaa71da61d3b9132e65b0e34).  
+- **Active batch:** Vivekacūḍāmaṇi, source verses 491–495.
