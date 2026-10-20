@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 350
+      "to": 360
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–350 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, and 336–337 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–360 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, and 336–337 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -23749,8 +23749,45 @@
       "number": "351",
       "label": "Verse 351",
       "deva": "विज्ञानमय-कोशोऽयम् इति विद्वद्भिर् उच्यते।\nअयं महान् अहङ्कार-वृत्तिमान् कर्तृ-लक्षणः॥",
-      "translation": "In its aggregate aspect, this sheath of knowledge is known as the manifest aspect of the Absolute (Mahat). It forms the sheath of pure consciousness. When it is endowed with consciousness, it is the agent of the creation of the cosmos. It is also the sustainer of the world of birth and death. ((KathU.2.3.7) (Kaṭha Upaniṣad))",
-      "gloss": [],
+      "translation": "This is called the sheath of knowledge by the wise. This great principle, endowed with the function of ego, is characterized by agency.",
+      "gloss": [
+        {
+          "sa": "विज्ञानमय-कोशः",
+          "en": "the sheath of knowledge"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विद्वद्भिः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "महान्",
+          "en": "the great principle"
+        },
+        {
+          "sa": "अहङ्कार-वृत्तिमान्",
+          "en": "endowed with the function of ego"
+        },
+        {
+          "sa": "कर्तृ-लक्षणः",
+          "en": "characterized by agency"
+        }
+      ],
       "sourceNumbers": [
         351
       ],
@@ -23763,8 +23800,89 @@
       "number": "352",
       "label": "Verse 352",
       "deva": "अहं ममेत्येव सदाभिमानं\nदेहेन्द्रियादौ कुरुते गृहादौ।\nजीवाभिमानः पुरुषोऽयम् एव\nकर्ता च भोक्ता च सुखी च दुःखी॥",
-      "translation": "One who is conscious of one’s physical body and the place in which one lives, and who refers to them as ‘I’ and ‘mine’ is said to be a jīva or an embodied being. One is then the agent of action, and the experiencer of the resultant pleasure and pain.",
-      "gloss": [],
+      "translation": "This person, identified as a jīva, always thinks “I” and “mine” of the body, senses, and the like, and of the home and the like. He alone is the doer and experiencer, happy and unhappy.",
+      "gloss": [
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "मम",
+          "en": "mine"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "अभिमानम्",
+          "en": "the identification"
+        },
+        {
+          "sa": "देह-इन्द्रिय-आदौ",
+          "en": "in the body, senses, and the like"
+        },
+        {
+          "sa": "कुरुते",
+          "en": "makes"
+        },
+        {
+          "sa": "गृह-आदौ",
+          "en": "in the home and the like"
+        },
+        {
+          "sa": "जीव-अभिमानः",
+          "en": "identified as a jīva"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "person"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "कर्ता",
+          "en": "the doer"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "भोक्ता",
+          "en": "the experiencer"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सुखी",
+          "en": "happy"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दुःखी",
+          "en": "unhappy"
+        }
+      ],
       "sourceNumbers": [
         352
       ],
@@ -23777,8 +23895,77 @@
       "number": "353",
       "label": "Verse 353",
       "deva": "स्व-वासना-प्रेरित एव नित्यं\nकरोति कर्मोभय-लक्षणं च।\nभुङ्क्ते तद्-उत्पन्न-फलं विशिष्टं\nसुखं च दुःखं च परत्र चात्र॥",
-      "translation": "Impelled by one’s own inherent tendencies, the embodied being takes part in various kinds of activities. Some of these are wise, and the others are not. As a result one enjoys pleasure, or suffers pain both in this world and in the next.",
-      "gloss": [],
+      "translation": "Always impelled by his own latent tendencies, he performs both kinds of action and experiences their particular results, pleasure and pain, here and elsewhere.",
+      "gloss": [
+        {
+          "sa": "स्व-वासना-प्रेरितः",
+          "en": "impelled by his own latent tendencies"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "always"
+        },
+        {
+          "sa": "करोति",
+          "en": "performs"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "उभय-लक्षणम्",
+          "en": "of both kinds"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "भुङ्क्ते",
+          "en": "experiences"
+        },
+        {
+          "sa": "तत्-उत्पन्न-फलम्",
+          "en": "the result produced by that"
+        },
+        {
+          "sa": "विशिष्टम्",
+          "en": "particular"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "pleasure"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "pain"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "परत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        }
+      ],
       "sourceNumbers": [
         353
       ],
@@ -23791,8 +23978,41 @@
       "number": "354",
       "label": "Verse 354",
       "deva": "नाना-योनि-सहस्रेषु जायमानो मुहुर् मुहुः।\nम्रियमाणो भ्रमत्येष जीवः संसार-मण्डले॥",
-      "translation": "It is in this way that the embodied being becomes lost in the cyclic changes of repeated births and deaths, and revolves within the narrow confines of saṃsāra.",
-      "gloss": [],
+      "translation": "Born and dying again and again among thousands of different wombs, this jīva wanders in the round of saṃsāra.",
+      "gloss": [
+        {
+          "sa": "नाना-योनि-सहस्रेषु",
+          "en": "among thousands of different wombs"
+        },
+        {
+          "sa": "जायमानः",
+          "en": "being born"
+        },
+        {
+          "sa": "मुहुः-मुहुः",
+          "en": "again and again"
+        },
+        {
+          "sa": "म्रियमाणः",
+          "en": "dying"
+        },
+        {
+          "sa": "भ्रमति",
+          "en": "wanders"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "जीवः",
+          "en": "jīva"
+        },
+        {
+          "sa": "संसार-मण्डले",
+          "en": "in the round of saṃsāra"
+        }
+      ],
       "sourceNumbers": [
         354
       ],
@@ -23805,8 +24025,57 @@
       "number": "355",
       "label": "Verse 355",
       "deva": "मनो मनोमयः कोशो भवेज् ज्ञानेन्द्रियैः सह।\nप्राचुर्यं मनसो यत्र दृश्यतेऽसौ मनोमयः॥",
-      "translation": "The sheath of the mind When the manas is considered in conjunction with the five jñānendriyas and is regarded as one unit, it is regarded as the manomaya kośa. The reason for it is that it is compact of, and permeated by, the qualities of the mind.",
-      "gloss": [],
+      "translation": "The mind together with the organs of knowledge forms the sheath of mind; where the mind predominates, that is called the manomaya sheath.",
+      "gloss": [
+        {
+          "sa": "मनः",
+          "en": "mind"
+        },
+        {
+          "sa": "मनोमयः",
+          "en": "made of mind"
+        },
+        {
+          "sa": "कोशः",
+          "en": "sheath"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "becomes"
+        },
+        {
+          "sa": "ज्ञानेन्द्रियैः",
+          "en": "with the organs of knowledge"
+        },
+        {
+          "sa": "सह",
+          "en": "together"
+        },
+        {
+          "sa": "प्राचुर्यम्",
+          "en": "abundance"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "असौ",
+          "en": "that"
+        },
+        {
+          "sa": "मनोमयः",
+          "en": "the manomaya sheath"
+        }
+      ],
       "sourceNumbers": [
         355
       ],
@@ -23818,14 +24087,91 @@
       "chapter": 2,
       "number": "356",
       "label": "Verse 356",
-      "deva": "चिन्ता-विषाद् अहर्षाद्याः कामाद्या अस्य वृत्तयः।\nमनुते मनसैवैष फलं कामयते बहिः।\nयतते कुरुते भुङ्क्ते तन् मनः सर्व-कारणम्॥",
-      "translation": "It is as a result of the functioning of the mind, that one feels anxiety and dejection, joy and desire. It is by the instrumental agency of the mind that one seeks in the external world, the benefit of all that one strives for. The mind is therefore the cause of both work and enjoyment.",
-      "gloss": [],
+      "deva": "चिन्ता-विषाद-हर्षाद्याः कामाद्याः अस्य वृत्तयः।\nमनुते मनसैव एषः फलं कामयते बहिः।\nयतते कुरुते भुङ्क्ते तन् मनः सर्व-कारणम्॥",
+      "translation": "Worry, grief, joy, desire, and the like are its functions. This person thinks about a result with the mind, desires outwardly, strives, acts, and experiences; thus the mind is the cause of all these.",
+      "gloss": [
+        {
+          "sa": "चिन्ता",
+          "en": "worry"
+        },
+        {
+          "sa": "विषाद",
+          "en": "grief"
+        },
+        {
+          "sa": "हर्ष-आद्याः",
+          "en": "joy and the like"
+        },
+        {
+          "sa": "काम-आद्याः",
+          "en": "desire and the like"
+        },
+        {
+          "sa": "अस्य",
+          "en": "its"
+        },
+        {
+          "sa": "वृत्तयः",
+          "en": "functions"
+        },
+        {
+          "sa": "मनुते",
+          "en": "thinks"
+        },
+        {
+          "sa": "मनसा",
+          "en": "with the mind"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "एषः",
+          "en": "this person"
+        },
+        {
+          "sa": "फलम्",
+          "en": "a result"
+        },
+        {
+          "sa": "कामयते",
+          "en": "desires"
+        },
+        {
+          "sa": "बहिः",
+          "en": "outwardly"
+        },
+        {
+          "sa": "यतते",
+          "en": "strives"
+        },
+        {
+          "sa": "कुरुते",
+          "en": "acts"
+        },
+        {
+          "sa": "भुङ्क्ते",
+          "en": "experiences"
+        },
+        {
+          "sa": "तत्",
+          "en": "therefore"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "सर्व-कारणम्",
+          "en": "the cause of all"
+        }
+      ],
       "sourceNumbers": [
         356
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "cintā-viṣād aharṣādyāḥ kāmādyā asya vṛttayaḥ|\nmanute manasaivaiṣa phalaṃ kāmayate bahiḥ|\nyatate kurute bhuṅkte tan manaḥ sarva-kāraṇam||"
+      "iast": "cintā-viṣāda-harṣādyāḥ kāmādyā asya vṛttayaḥ|\nmanute manasaiva eṣaḥ phalaṃ kāmayate bahiḥ|\nyatate kurute bhuṅkte tan manaḥ sarva-kāraṇam||"
     },
     {
       "id": "svsss-2-0357",
@@ -23833,8 +24179,97 @@
       "number": "357",
       "label": "Verse 357",
       "deva": "मनो ह्यमुष्य प्रवणस्य हेतुर्\nअन्तर् बहिश् चार्थम् अनेन वेत्ति।\nशृणोति जिघ्रत्य् अमुनैव चेक्षते\nवक्ति स्पृशत्य् अत्ति करोति सर्वम्॥",
-      "translation": "It is by means of the mind that one is drawn towards the world of external objects, or knows all that take place either within oneself, or outside. It is, by means of the mind that one smells, sees, speaks, touches, eats and acts.",
-      "gloss": [],
+      "translation": "The mind is indeed the cause of this person’s inclinations. Through it one knows objects within and without; through it alone one hears, smells, sees, speaks, touches, eats, and does everything.",
+      "gloss": [
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अमुष्य",
+          "en": "of this person"
+        },
+        {
+          "sa": "प्रवणस्य",
+          "en": "of the inclination"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "the cause"
+        },
+        {
+          "sa": "अन्तः",
+          "en": "within"
+        },
+        {
+          "sa": "बहिः",
+          "en": "outside"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "an object"
+        },
+        {
+          "sa": "अनेन",
+          "en": "by this"
+        },
+        {
+          "sa": "वेत्ति",
+          "en": "knows"
+        },
+        {
+          "sa": "शृणोति",
+          "en": "hears"
+        },
+        {
+          "sa": "जिघ्रति",
+          "en": "smells"
+        },
+        {
+          "sa": "अमुना",
+          "en": "by this"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "ईक्षते",
+          "en": "sees"
+        },
+        {
+          "sa": "वक्ति",
+          "en": "speaks"
+        },
+        {
+          "sa": "स्पृशति",
+          "en": "touches"
+        },
+        {
+          "sa": "अत्ति",
+          "en": "eats"
+        },
+        {
+          "sa": "करोति",
+          "en": "does"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        }
+      ],
       "sourceNumbers": [
         357
       ],
@@ -23847,8 +24282,97 @@
       "number": "358",
       "label": "Verse 358",
       "deva": "बन्धश्च मोक्षो मनसैव पुंसाम्\nअर्थोऽप्यनर्थोऽप्यमुनैव सिध्यति।\nशुद्धेन मोक्षो मलिनेन बन्धो\nविवेकतोऽर्थोऽप्यविवेकतोऽन्यः॥",
-      "translation": "Bondage and liberation are alike of the mind; so too are good and evil. A pure mind is the cause of liberation, but an impure mind is the cause of bondage. What is good comes out of discrimination, and out of the lack of discrimination comes evil.",
-      "gloss": [],
+      "translation": "For people, bondage and liberation, and benefit and harm, are brought about by the mind alone. Through a pure mind comes liberation; through a tainted one, bondage. Through discernment comes what is worthwhile; without discernment, the opposite.",
+      "gloss": [
+        {
+          "sa": "बन्धः",
+          "en": "bondage"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मोक्षः",
+          "en": "liberation"
+        },
+        {
+          "sa": "मनसा",
+          "en": "by the mind"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "पुंसाम्",
+          "en": "for people"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "benefit"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अनर्थः",
+          "en": "harm"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अमुना",
+          "en": "by this"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is brought about"
+        },
+        {
+          "sa": "शुद्धेन",
+          "en": "through a pure one"
+        },
+        {
+          "sa": "मोक्षः",
+          "en": "liberation"
+        },
+        {
+          "sa": "मलिनेन",
+          "en": "through a tainted one"
+        },
+        {
+          "sa": "बन्धः",
+          "en": "bondage"
+        },
+        {
+          "sa": "विवेकतः",
+          "en": "through discernment"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "what is worthwhile"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अविवेकतः",
+          "en": "through lack of discernment"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "the opposite"
+        }
+      ],
       "sourceNumbers": [
         358
       ],
@@ -23861,8 +24385,97 @@
       "number": "359",
       "label": "Verse 359",
       "deva": "रजस्-तमोभ्यां मलिनं त्वशुद्धम्\nअज्ञान-जं सत्त्व-गुणेन रिक्तम्।\nमनस् तमो-दोष-समन्वितत्वाज्\nजडत्व-मोहालसता-प्रमादैः।\nतिरस्-कृतं सन् न तु वेत्ति वास्तवं\nपदार्थ-तत्त्वं ह्युपलभ्यमानम्॥",
-      "translation": "The mind experiences objects, but if it were under the influence of rajas and of tamas, it may not comprehend them aright. That is because when the mind is deprived of sattva; it becomes subject to dullness and delusion, as well as to idleness and carelessness.",
-      "gloss": [],
+      "translation": "Impure, born of ignorance, stained by rajas and tamas, and lacking sattva, the mind, overpowered by tamas’s faults—dullness, delusion, laziness, and heedlessness—does not know the actual truth of an object even when it is perceived.",
+      "gloss": [
+        {
+          "sa": "रजस्-तमोभ्याम्",
+          "en": "by rajas and tamas"
+        },
+        {
+          "sa": "मलिनम्",
+          "en": "stained"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अशुद्धम्",
+          "en": "impure"
+        },
+        {
+          "sa": "अज्ञान-जम्",
+          "en": "born of ignorance"
+        },
+        {
+          "sa": "सत्त्व-गुणेन",
+          "en": "of the quality sattva"
+        },
+        {
+          "sa": "रिक्तम्",
+          "en": "devoid"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "तमः-दोष-समन्वितत्वात्",
+          "en": "because it is endowed with tamas’s faults"
+        },
+        {
+          "sa": "जडत्व",
+          "en": "dullness"
+        },
+        {
+          "sa": "मोह",
+          "en": "delusion"
+        },
+        {
+          "sa": "आलस्यता",
+          "en": "laziness"
+        },
+        {
+          "sa": "प्रमादैः",
+          "en": "and heedlessness"
+        },
+        {
+          "sa": "तिरस्कृतम्",
+          "en": "overpowered"
+        },
+        {
+          "sa": "सत्",
+          "en": "being"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "वेत्ति",
+          "en": "knows"
+        },
+        {
+          "sa": "वास्तवम्",
+          "en": "the actual"
+        },
+        {
+          "sa": "पदार्थ-तत्त्वम्",
+          "en": "truth of an object"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "उपलभ्यमानम्",
+          "en": "even when perceived"
+        }
+      ],
       "sourceNumbers": [
         359
       ],
@@ -23875,8 +24488,89 @@
       "number": "360",
       "label": "Verse 360",
       "deva": "रजो-दोषैर् युक्तं यदि भवति विक्षेपक-गुणैः\nप्रतीपैः कामाद्यैर् अनिशम् अभिभूतं व्यथयति।\nकथञ्चित् सूक्ष्मार्थावगतिमद् अपि भ्राम्यति\nभृशं मनो दीपो यद्वत् प्रबल-मरुता ध्वस्त-महिमा॥",
-      "translation": "When it becomes tainted by the activities that are born of desire, the individual self loses its freedom, and becomes distracted and distressed. The self then becomes enfeebled, like a lamp that is blown about by strong wind. When the self loses vigour, even though at times it is possessed of the power to comprehend what is subtle, it struggles ceaselessly in vain.",
-      "gloss": [],
+      "translation": "If joined with the faults of rajas and constantly overcome by opposing, distracting qualities such as desire, the mind causes distress. Even if it somehow grasps subtle things, it wanders greatly, like a lamp whose brightness is ruined by a strong wind.",
+      "gloss": [
+        {
+          "sa": "रजः-दोषैः",
+          "en": "with the faults of rajas"
+        },
+        {
+          "sa": "युक्तम्",
+          "en": "joined"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "भवति",
+          "en": "it becomes"
+        },
+        {
+          "sa": "विक्षेपक-गुणैः",
+          "en": "with distracting qualities"
+        },
+        {
+          "sa": "प्रतीपैः",
+          "en": "opposing"
+        },
+        {
+          "sa": "काम-आद्यैः",
+          "en": "desire and the like"
+        },
+        {
+          "sa": "अनिशम्",
+          "en": "constantly"
+        },
+        {
+          "sa": "अभिभूतम्",
+          "en": "overcome"
+        },
+        {
+          "sa": "व्यथयति",
+          "en": "causes distress"
+        },
+        {
+          "sa": "कथञ्चित्",
+          "en": "somehow"
+        },
+        {
+          "sa": "सूक्ष्म-अर्थ-अवगति-मत्",
+          "en": "having grasp of subtle objects"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "भ्राम्यति",
+          "en": "wanders"
+        },
+        {
+          "sa": "भृशम्",
+          "en": "greatly"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "दीपः",
+          "en": "a lamp"
+        },
+        {
+          "sa": "यद्वत्",
+          "en": "just as"
+        },
+        {
+          "sa": "प्रबल-मरुता",
+          "en": "by a strong wind"
+        },
+        {
+          "sa": "ध्वस्त-महिमा",
+          "en": "whose brightness is destroyed"
+        }
+      ],
       "sourceNumbers": [
         360
       ],
