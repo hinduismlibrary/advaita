@@ -2,9 +2,9 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 1098,
+  "expectedUnits": 1079,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit source and original English translation for all 1098 reader units. All 100 verses of Adhyāya 1 and verses 2.1–2.100, plus verses 3.114, 3.123, and 4.43, now show complete shlokas, transliteration, translation, and word-by-word glosses; the remaining 220 numbered verses and prose commentary still need separate gloss work.",
+  "coverage": "Complete Sanskrit source and original English translation for all 1079 reader units. All 100 verses of Adhyāya 1 and verses 2.1–2.119, plus verses 3.114, 3.123, and 4.43, now show complete shlokas, IAST, translations, and word-by-word glosses; the remaining 201 numbered verses and prose commentary still need separate gloss work.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-SA 4.0",
     "attribution": "Wikisource contributors; Intellexus project.",
     "url": "https://sa.wikisource.org/wiki/नैष्कर्म्यसिद्धिः",
-    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. All 100 verses of Adhyāya 1 and verses 2.1–2.80 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Corrections include the Alston-supported readings ऋद्धिः (ṛddhiḥ) at 2.37 and प्राश्निकम् (prāśnikam, “questioner”) at 2.59; 2.49 and 2.64 follow their analogies to appropriation by water vessels and the jewel's unchanged light. Verses 2.81–2.100 now have complete shloka text, IAST, translations, and Devanāgarī word-by-word glosses. The corrupted first line of 2.88 is repaired to चण्डालबुद्धेर्यद्द्रष्टृ, supported by Alston’s transliteration; 2.100 is normalized to घटाच्चार्थाद्. The prose explanation preceding 2.99 is retained in its own unit."
+    "changes": "Complete source body arranged as a local reader, preserving all four chapter boundaries. IAST is converted to Devanāgarī in the reader, and the source's final colophon is retained. Original English translations are included throughout. All 100 verses of Adhyāya 1 and verses 2.1–2.80 now have complete shloka text, IAST, meaning-aligned translations, and word-by-word glosses; four formerly split or missing entries (1.100, 3.114, 3.123, 4.43) have also been restored. Prose commentary passages still need separate lexical glosses. Corrections include the Alston-supported readings ऋद्धिः (ṛddhiḥ) at 2.37 and प्राश्निकम् (prāśnikam, “questioner”) at 2.59; 2.49 and 2.64 follow their analogies to appropriation by water vessels and the jewel's unchanged light. Verses 2.81–2.100 now have complete shloka text, IAST, translations, and Devanāgarī word-by-word glosses. The corrupted first line of 2.88 is repaired to चण्डालबुद्धेर्यद्द्रष्टृ, supported by Alston’s transliteration; 2.100 is normalized to घटाच्चार्थाद्. The prose explanation preceding 2.99 is retained in its own unit. Verses 2.101–2.119 now have complete shloka text, IAST, translations, and Devanāgarī word-by-word glosses. The translation of 2.114 identifies ṣaṣṭha-gocara as non-perception, the sixth means of knowledge."
   },
   "units": [
     {
@@ -15198,40 +15198,63 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0621",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 293",
-      "label": "Text 293",
-      "deva": "अभ्रयानं यथा मोहाच्छशभृत्यध्यवस्यति ।",
-      "iast": "abhrayānaṃ yathā mohācchaśabhṛtyadhyavasyati |",
-      "translation": "Just as, through delusion, one thinks the moon is moving with the clouds,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0622",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.101",
       "label": "Verse 2.101",
-      "deva": "सुखित्वादीन्धियो धर्मांस्तद्वदात्मनि मन्यते ॥ १०१ ॥",
-      "iast": "sukhitvādīndhiyo dharmāṃstadvadātmani manyate || 101 ||",
-      "translation": "so one regards qualities of the intellect, such as happiness, as belonging to the Self.",
-      "gloss": [],
+      "deva": "अभ्रयानं यथा मोहाच्छशभृत्यध्यवस्यति । सुखित्वादीन् धियो धर्मांस्तद्वदात्मनि मन्यते ॥ १०१॥",
+      "iast": "abhrayānaṃ yathā mohācchaśabhṛtyadhyavasyati | sukhitvādīndhiyo dharmāṃstadvadātmani manyate || 101||",
+      "translation": "Just as, through delusion, someone thinks the moon moves along with the clouds, so one regards qualities of the intellect—happiness and the like—as belonging to the Self.",
+      "gloss": [
+        {
+          "sa": "अभ्र-यानम्",
+          "en": "movement of clouds"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "मोहात्",
+          "en": "through delusion"
+        },
+        {
+          "sa": "शशभृत्",
+          "en": "the moon; “hare-bearer”"
+        },
+        {
+          "sa": "अध्यवस्यति",
+          "en": "takes to be; supposes"
+        },
+        {
+          "sa": "सुखित्व-आदीन्",
+          "en": "happiness and the like"
+        },
+        {
+          "sa": "धियः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "धर्मान्",
+          "en": "qualities"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "मन्यते",
+          "en": "one regards"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-101"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0623",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 295",
-      "label": "Text 295",
-      "deva": "दग्धृत्वं च यथा वह्नेरयसो मन्यते कुधीः ।",
-      "iast": "dagdhṛtvaṃ ca yathā vahnerayaso manyate kudhīḥ |",
-      "translation": "Just as an ignorant person thinks the power to burn belongs to iron, though it belongs to fire,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0624",
@@ -15239,10 +15262,63 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.102",
       "label": "Verse 2.102",
-      "deva": "चैतन्यं तद्वदात्मीयं मोहात्कर्तरि मन्यते ॥ १०२॥",
-      "iast": "caitanyaṃ tadvadātmīyaṃ mohātkartari manyate || 102||",
-      "translation": "so, through delusion, one thinks that consciousness belonging to the Self belongs to the agent.",
-      "gloss": [],
+      "deva": "दग्धृत्वं च यथा वह्नेरयसो मन्यते कुधीः । चैतन्यं तद्वदात्मीयं मोहात्कर्तरि मन्यते ॥ १०२॥",
+      "iast": "dagdhṛtvaṃ ca yathā vahnerayaso manyate kudhīḥ | caitanyaṃ tadvadātmīyaṃ mohātkartari manyate || 102||",
+      "translation": "Just as an unwise person thinks the power to burn belongs to iron, though it belongs to fire, so through delusion one thinks the Self’s consciousness belongs to the doer.",
+      "gloss": [
+        {
+          "sa": "दग्धृत्वम्",
+          "en": "the power to burn"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "वह्नेः",
+          "en": "of fire"
+        },
+        {
+          "sa": "अयसः",
+          "en": "of iron"
+        },
+        {
+          "sa": "मन्यते",
+          "en": "one thinks"
+        },
+        {
+          "sa": "कु-धीः",
+          "en": "a person of poor understanding"
+        },
+        {
+          "sa": "चैतन्यम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "आत्मीयम्",
+          "en": "belonging to the Self"
+        },
+        {
+          "sa": "मोहात्",
+          "en": "through delusion"
+        },
+        {
+          "sa": "कर्तरि",
+          "en": "in the doer; agent"
+        },
+        {
+          "sa": "मन्यते",
+          "en": "one thinks"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-102"
       ]
@@ -15259,26 +15335,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0626",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 298",
-      "label": "Text 298",
-      "deva": "दुःखराशेर्विचित्रस्य सेयं भ्रान्तिश्चिरन्तनी ।",
-      "iast": "duḥkharāśervicitrasya seyaṃ bhrāntiścirantanī |",
-      "translation": "This ancient delusion, source of a manifold mass of suffering,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0627",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.103",
       "label": "Verse 2.103",
-      "deva": "मूलं संसारवृक्षस्य तद्बाधस्तत्त्वदर्शनात् ॥ १०३॥",
-      "iast": "mūlaṃ saṃsāravṛkṣasya tadbādhastattvadarśanāt || 103||",
-      "translation": "is the root of the tree of saṃsāra; it is removed by seeing reality.",
-      "gloss": [],
+      "deva": "दुःखराशेर्विचित्रस्य सेयं भ्रान्तिश्चिरन्तनी । मूलं संसारवृक्षस्य तद्बाधस्तत्त्वदर्शनात् ॥ १०३॥",
+      "iast": "duḥkharāśervicitrasya seyaṃ bhrāntiścirantanī | mūlaṃ saṃsāravṛkṣasya tadbādhastattvadarśanāt || 103||",
+      "translation": "This ancient delusion is the root of the manifold mass of suffering and of the tree of saṃsāra; it is removed by seeing reality.",
+      "gloss": [
+        {
+          "sa": "दुःख-राशेः",
+          "en": "of the mass of suffering"
+        },
+        {
+          "sa": "विचित्रस्य",
+          "en": "manifold; varied"
+        },
+        {
+          "sa": "सा इयम्",
+          "en": "that; this"
+        },
+        {
+          "sa": "भ्रान्तिः",
+          "en": "delusion"
+        },
+        {
+          "sa": "चिरन्तनी",
+          "en": "ancient"
+        },
+        {
+          "sa": "मूलम्",
+          "en": "root"
+        },
+        {
+          "sa": "संसार-वृक्षस्य",
+          "en": "of the tree of saṃsāra"
+        },
+        {
+          "sa": "तत्-बाधः",
+          "en": "its sublation; removal"
+        },
+        {
+          "sa": "तत्त्व-दर्शनात्",
+          "en": "through seeing reality"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-103"
       ]
@@ -15295,26 +15397,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0629",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 301",
-      "label": "Text 301",
-      "deva": "अप्रमोत्थं प्रमोत्थेन ज्ञानं ज्ञानेन बाध्यते ।",
-      "iast": "apramotthaṃ pramotthena jñānaṃ jñānena bādhyate |",
-      "translation": "knowledge arising from a valid cognition sublates cognition born of error,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0630",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.104",
       "label": "Verse 2.104",
-      "deva": "अहिरज्ज्वादिवद्बाधो देहाद्यात्ममतेस्तथा ॥ १०४॥",
-      "iast": "ahirajjvādivadbādho dehādyātmamatestathā || 104||",
-      "translation": "as the knowledge “rope” sublates the notion that the body and the rest are the Self.",
-      "gloss": [],
+      "deva": "अप्रमोत्थं प्रमोत्थेन ज्ञानं ज्ञानेन बाध्यते । अहिरज्ज्वादिवद्बाधो देहाद्यात्ममतेस्तथा ॥ १०४॥",
+      "iast": "apramotthaṃ pramotthena jñānaṃ jñānena bādhyate | ahirajjvādivadbādho dehādyātmamatestathā || 104||",
+      "translation": "Knowledge arising from invalid cognition is sublated by knowledge arising from valid cognition. Likewise, the view that the body and the rest are the Self is sublated, as with a snake mistaken for a rope.",
+      "gloss": [
+        {
+          "sa": "अप्रम-उत्थम्",
+          "en": "arising from invalid cognition"
+        },
+        {
+          "sa": "प्रम-उत्थेन",
+          "en": "by what arises from valid cognition"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "ज्ञानेन",
+          "en": "by knowledge"
+        },
+        {
+          "sa": "बाध्यते",
+          "en": "is sublated"
+        },
+        {
+          "sa": "अहि-रज्जु-आदि-वत्",
+          "en": "as with a snake, rope, and the like"
+        },
+        {
+          "sa": "बाधः",
+          "en": "sublation"
+        },
+        {
+          "sa": "देह-आदि-आत्म-मतेः",
+          "en": "of the view that the body and the rest are the Self"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-104"
       ]
@@ -15331,26 +15459,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0632",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 304",
-      "label": "Text 304",
-      "deva": "अविद्यानाशमात्रं तु फलमित्युपचर्यते ।",
-      "iast": "avidyānāśamātraṃ tu phalamityupacaryate |",
-      "translation": "The mere destruction of ignorance is figuratively called its result.",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0633",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.105",
       "label": "Verse 2.105",
-      "deva": "नाज्ञातज्ञापनं न्याय्यमवगत्येकरूपतः ॥ १०५॥",
-      "iast": "nājñātajñāpanaṃ nyāyyamavagatyekarūpataḥ || 105||",
-      "translation": "It is not reasonable to say that knowledge reveals something unknown, since awareness is of one nature.",
-      "gloss": [],
+      "deva": "अविद्यानाशमात्रं तु फलमित्युपचर्यते । नाज्ञातज्ञापनं न्याय्यमवगत्येकरूपतः ॥ १०५॥",
+      "iast": "avidyānāśamātraṃ tu phalamityupacaryate | nājñātajñāpanaṃ nyāyyamavagatyekarūpataḥ || 105||",
+      "translation": "The “result” is spoken of as merely the destruction of ignorance. It is not right to say that something previously unknown is made known, since awareness has a single nature.",
+      "gloss": [
+        {
+          "sa": "अविद्या-नाश-मात्रम्",
+          "en": "mere destruction of ignorance"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result; fruit"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उपचर्यते",
+          "en": "is figuratively called"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अज्ञात-ज्ञापनम्",
+          "en": "making known what was unknown"
+        },
+        {
+          "sa": "न्याय्यम्",
+          "en": "reasonable; proper"
+        },
+        {
+          "sa": "अवगति-एक-रूपतः",
+          "en": "because awareness has a single nature"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-105"
       ]
@@ -15367,26 +15521,52 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0635",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 307",
-      "label": "Text 307",
-      "deva": "न विदन्त्यात्मनः सत्तां द्रष्टृदर्शनगोचराः ।",
-      "iast": "na vidantyātmanaḥ sattāṃ draṣṭṛdarśanagocarāḥ |",
-      "translation": "they do not know the Self’s existence as an object, an act of knowing, or a knower;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0636",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.106",
       "label": "Verse 2.106",
-      "deva": "न चान्योन्यमतोऽमीषां ज्ञेयत्वं भिन्नसाधनम् ॥ १०६॥",
-      "iast": "na cānyonyamato'mīṣāṃ jñeyatvaṃ bhinnasādhanam || 106||",
-      "translation": "nor can they know one another through some separate means.",
-      "gloss": [],
+      "deva": "न विदन्त्यात्मनः सत्तां द्रष्टृदर्शनगोचराः । न चान्योन्यमतोऽमीषां ज्ञेयत्वं भिन्नसाधनम् ॥ १०६॥",
+      "iast": "na vidantyātmanaḥ sattāṃ draṣṭṛdarśanagocarāḥ | na cānyonyamato'mīṣāṃ jñeyatvaṃ bhinnasādhanam || 106||",
+      "translation": "The knower, the act of knowing, and the known do not reveal the Self’s existence; nor can they establish one another. Each is knowable only through a means distinct from itself.",
+      "gloss": [
+        {
+          "sa": "न विदन्ति",
+          "en": "do not know; do not reveal"
+        },
+        {
+          "sa": "आत्मनः सत्ताम्",
+          "en": "the existence of the Self"
+        },
+        {
+          "sa": "द्रष्टृ-दर्शन-गोचराः",
+          "en": "within the range of knower and knowing"
+        },
+        {
+          "sa": "न च",
+          "en": "nor"
+        },
+        {
+          "sa": "अन्योन्यम्",
+          "en": "one another"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अमीषाम्",
+          "en": "of these"
+        },
+        {
+          "sa": "ज्ञेयत्वम्",
+          "en": "being knowable"
+        },
+        {
+          "sa": "भिन्न-साधनम्",
+          "en": "by a distinct means"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-106"
       ]
@@ -15403,26 +15583,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0638",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 310",
-      "label": "Text 310",
-      "deva": "बाह्य आकारवान् ग्राह्यो ग्रहणं निश्चयादिमत् ।",
-      "iast": "bāhya ākāravān grāhyo grahaṇaṃ niścayādimat |",
-      "translation": "An external object is grasped as having a form; cognition is marked by certainty and the like;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0639",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.107",
       "label": "Verse 2.107",
-      "deva": "अन्वय्यहमिति ज्ञेयः साक्षी त्वात्मा ध्रुवः सदा ॥ १०७॥",
-      "iast": "anvayyahamiti jñeyaḥ sākṣī tvātmā dhruvaḥ sadā || 107||",
-      "translation": "the witness is known continuously as “I,” and the Self is always constant.",
-      "gloss": [],
+      "deva": "बाह्य आकारवान् ग्राह्यो ग्रहणं निश्चयादिमत् । अन्वय्यहमिति ज्ञेयः साक्षी त्वात्मा ध्रुवः सदा ॥ १०७॥",
+      "iast": "bāhya ākāravān grāhyo grahaṇaṃ niścayādimat | anvayyahamiti jñeyaḥ sākṣī tvātmā dhruvaḥ sadā || 107||",
+      "translation": "The known is external and has form; cognition has certainty and the like; the “I” that continues through experience is the knower. But the Witness is the Self, constant forever.",
+      "gloss": [
+        {
+          "sa": "बाह्य",
+          "en": "external"
+        },
+        {
+          "sa": "आकार-वान्",
+          "en": "having form"
+        },
+        {
+          "sa": "ग्राह्यः",
+          "en": "the object to be known"
+        },
+        {
+          "sa": "ग्रहणम्",
+          "en": "cognition; knowing"
+        },
+        {
+          "sa": "निश्चय-आदि-मत्",
+          "en": "having certainty and the like"
+        },
+        {
+          "sa": "अन्वयि",
+          "en": "continuous; accompanying"
+        },
+        {
+          "sa": "अहम् इति",
+          "en": "as “I”"
+        },
+        {
+          "sa": "ज्ञेयः",
+          "en": "to be known"
+        },
+        {
+          "sa": "साक्षी",
+          "en": "the Witness"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "ध्रुवः",
+          "en": "constant"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-107"
       ]
@@ -15439,26 +15661,40 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0641",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 313",
-      "label": "Text 313",
-      "deva": "ग्राहकग्रहणग्राह्यविभागे योऽविभागवान् ।",
-      "iast": "grāhakagrahaṇagrāhyavibhāge yo'vibhāgavān |",
-      "translation": "Amid the divisions of knower, knowing, and known, the undivided one",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0642",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.108",
       "label": "Verse 2.108",
-      "deva": "हानोपादानयोस्साक्षी हानोपादानवर्जितः ॥ १०८॥",
-      "iast": "hānopādānayossākṣī hānopādānavarjitaḥ || 108||",
-      "translation": "witnesses both acceptance and rejection, while itself free of either.",
-      "gloss": [],
+      "deva": "ग्राहकग्रहणग्राह्यविभागे योऽविभागवान् । हानोपादानयोस्साक्षी हानोपादानवर्जितः ॥ १०८॥",
+      "iast": "grāhakagrahaṇagrāhyavibhāge yo'vibhāgavān | hānopādānayossākṣī hānopādānavarjitaḥ || 108||",
+      "translation": "Amid the division into perceiver, perceiving, and perceived, the Self remains undivided: witness of loss and gain, yet free of both.",
+      "gloss": [
+        {
+          "sa": "ग्राहक-ग्रहण-ग्राह्य-विभागे",
+          "en": "in the division into perceiver, perceiving, and perceived"
+        },
+        {
+          "sa": "यः",
+          "en": "who; that which"
+        },
+        {
+          "sa": "अविभाग-वान्",
+          "en": "undivided"
+        },
+        {
+          "sa": "हान-उपादानयोः",
+          "en": "of loss and gain; rejection and acceptance"
+        },
+        {
+          "sa": "साक्षी",
+          "en": "witness"
+        },
+        {
+          "sa": "हान-उपादान-वर्जितः",
+          "en": "free of loss and gain"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-108"
       ]
@@ -15475,26 +15711,68 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0644",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 316",
-      "label": "Text 316",
-      "deva": "स्वसाधन स्वयं नष्टो न नाशं वेत्त्यभावतः ।",
-      "iast": "svasādhana svayaṃ naṣṭo na nāśaṃ vettyabhāvataḥ |",
-      "translation": "An instrument, when destroyed, does not know its own destruction, because it is no longer present;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0645",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.109",
       "label": "Verse 2.109",
-      "deva": "अत एव न चान्येषामतोऽसौ भिन्नसाक्षिकः ॥ १०९॥",
-      "iast": "ata eva na cānyeṣāmato'sau bhinnasākṣikaḥ || 109||",
-      "translation": "nor can it know the destruction of anything else; therefore this witness is not witnessed by another.",
-      "gloss": [],
+      "deva": "स्वसाधन स्वयं नष्टो न नाशं वेत्त्यभावतः । अत एव न चान्येषामतोऽसौ भिन्नसाक्षिकः ॥ १०९॥",
+      "iast": "svasādhana svayaṃ naṣṭo na nāśaṃ vettyabhāvataḥ | ata eva na cānyeṣāmato'sau bhinnasākṣikaḥ || 109||",
+      "translation": "An instrument, once destroyed, cannot know its own destruction or that of anything else, because it no longer exists. Therefore it must be witnessed by something distinct from it.",
+      "gloss": [
+        {
+          "sa": "स्व-साधनम्",
+          "en": "its own means; instrument"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "नष्टः",
+          "en": "destroyed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नाशम्",
+          "en": "destruction"
+        },
+        {
+          "sa": "वेत्ति",
+          "en": "knows"
+        },
+        {
+          "sa": "अभावतः",
+          "en": "because of non-existence"
+        },
+        {
+          "sa": "अतः एव",
+          "en": "for this very reason"
+        },
+        {
+          "sa": "न च",
+          "en": "nor"
+        },
+        {
+          "sa": "अन्येषाम्",
+          "en": "of other things"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "असौ",
+          "en": "it; this one"
+        },
+        {
+          "sa": "भिन्न-साक्षिकः",
+          "en": "having a distinct witness"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-109"
       ]
@@ -15511,26 +15789,72 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0647",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 319",
-      "label": "Text 319",
-      "deva": "धीवन्नापेक्षते सिद्धिमात्मान्यस्मादविक्रियः ।",
-      "iast": "dhīvannāpekṣate siddhimātmānyasmādavikriyaḥ |",
-      "translation": "Unlike the intellect, the changeless Self needs nothing else to establish it;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0648",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.110",
       "label": "Verse 2.110",
-      "deva": "निरपेक्षमपेक्ष्यैव सिद्धन्त्यन्ये न तु स्वयम् ॥ ११०॥",
-      "iast": "nirapekṣamapekṣyaiva siddhantyanye na tu svayam || 110||",
-      "translation": "other things are established only by depending on something else, never by themselves.",
-      "gloss": [],
+      "deva": "धीवन्नापेक्षते सिद्धिमात्मान्यस्मादविक्रियः । निरपेक्षमपेक्ष्यैव सिध्यन्त्यन्ये न तु स्वयम् ॥ ११०॥",
+      "iast": "dhīvannāpekṣate siddhimātmānyasmādavikriyaḥ | nirapekṣamapekṣyaiva sidhyantyanye na tu svayam || 110||",
+      "translation": "Unlike the intellect, the changeless Self does not depend on anything else for its establishment. All other things are established only by depending on what is independent; they are not established by themselves.",
+      "gloss": [
+        {
+          "sa": "धी-वत्",
+          "en": "like the intellect"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपेक्षते",
+          "en": "depends on; requires"
+        },
+        {
+          "sa": "सिद्धिम्",
+          "en": "establishment; proof"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अन्यस्मात्",
+          "en": "on another"
+        },
+        {
+          "sa": "अविक्रियः",
+          "en": "changeless"
+        },
+        {
+          "sa": "निरपेक्षम्",
+          "en": "the independent one"
+        },
+        {
+          "sa": "अपेक्ष्य",
+          "en": "depending on"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "सिध्यन्ति",
+          "en": "are established"
+        },
+        {
+          "sa": "अन्ये",
+          "en": "others"
+        },
+        {
+          "sa": "न तु",
+          "en": "but not"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "by themselves"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-110"
       ]
@@ -15547,26 +15871,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0650",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 322",
-      "label": "Text 322",
-      "deva": "उत्पत्तिस्थितिनाशेषु योऽवगत्यैव वर्तते ।",
-      "iast": "utpattisthitināśeṣu yo'vagatyaiva vartate |",
-      "translation": "That which remains as awareness alone through the arising, persistence, and destruction",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0651",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.111",
       "label": "Verse 2.111",
-      "deva": "जगतोऽविकारयावेहि तमस्मीति न नश्वरम् ॥ १११॥",
-      "iast": "jagato'vikārayāvehi tamasmīti na naśvaram || 111||",
-      "translation": "of the world—know it as changeless and not subject to decay.",
-      "gloss": [],
+      "deva": "उत्पत्तिस्थितिनाशेषु योऽवगत्यैव वर्तते । जगतोऽविकारयावेहि तमस्मीति न नश्वरम् ॥ १११॥",
+      "iast": "utpattisthitināśeṣu yo'vagatyaiva vartate | jagato'vikārayāvehi tamasmīti na naśvaram || 111||",
+      "translation": "He who remains as awareness through the world’s arising, persistence, and destruction—know him as changeless: “I am that,” not the perishable.",
+      "gloss": [
+        {
+          "sa": "उत्पत्ति-स्थिति-नाशेषु",
+          "en": "amid arising, persistence, and destruction"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "अवगत्या एव",
+          "en": "as awareness alone"
+        },
+        {
+          "sa": "वर्तते",
+          "en": "remains"
+        },
+        {
+          "sa": "जगतः",
+          "en": "of the world"
+        },
+        {
+          "sa": "अविकारयावेहि",
+          "en": "know as changeless"
+        },
+        {
+          "sa": "तम्",
+          "en": "him; that one"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "I am"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; “that”"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नश्वरम्",
+          "en": "perishable"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-111"
       ]
@@ -15583,26 +15941,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0653",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 325",
-      "label": "Text 325",
-      "deva": "न स्वयं स्वस्य नानात्वं नावगत्यात्मना यतः ।",
-      "iast": "na svayaṃ svasya nānātvaṃ nāvagatyātmanā yataḥ |",
-      "translation": "Multiplicity is not known by the Self alone;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0654",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.112",
       "label": "Verse 2.112",
-      "deva": "नोभाभ्यामप्यतस्सिद्धमद्वैतं द्वैतबाधया ॥ ११२॥",
-      "iast": "nobhābhyāmapyatassiddhamadvaitaṃ dvaitabādhayā || 112||",
-      "translation": "nor is non-duality established by both together; it is established by the sublation of duality.",
-      "gloss": [],
+      "deva": "न स्वयं स्वस्य नानात्वं नावगत्यात्मना यतः । नोभाभ्यामप्यतस्सिद्धमद्वैतं द्वैतबाधया ॥ ११२॥",
+      "iast": "na svayaṃ svasya nānātvam nāvagatyātmanā yataḥ | nobhābhyāmapyatas siddhamadvaitaṃ dvaitabādhayā || 112||",
+      "translation": "Plurality cannot establish itself as real, nor can the Self as awareness establish it, nor can both together. Therefore non-duality is established by the sublation of duality.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "by itself"
+        },
+        {
+          "sa": "स्वस्य",
+          "en": "of itself"
+        },
+        {
+          "sa": "नानात्वम्",
+          "en": "plurality; multiplicity"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अवगति-आत्मना",
+          "en": "by the Self whose nature is awareness"
+        },
+        {
+          "sa": "यतः",
+          "en": "since"
+        },
+        {
+          "sa": "न उभाभ्याम् अपि",
+          "en": "nor by both together"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "सिद्धम्",
+          "en": "is established"
+        },
+        {
+          "sa": "अद्वैतम्",
+          "en": "non-duality"
+        },
+        {
+          "sa": "द्वैत-बाधया",
+          "en": "through the sublation of duality"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-112"
       ]
@@ -15619,26 +16015,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0656",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 328",
-      "label": "Text 328",
-      "deva": "नित्यावगतिरूपत्वात्कारकादिर्न चात्मनः ।",
-      "iast": "nityāvagatirūpatvātkārakādirna cātmanaḥ |",
-      "translation": "Because the Self is the nature of eternal awareness, it has no agency or other such properties;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0657",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.113",
       "label": "Verse 2.113",
-      "deva": "अस्थूलं नेतिनेतीति न जायत इति श्रुतिः ॥ ११३॥",
-      "iast": "asthūlaṃ netinetīti na jāyata iti śrutiḥ || 113||",
-      "translation": "scripture says, “It is not gross, not this, not this; it is not born.”",
-      "gloss": [],
+      "deva": "नित्यावगतिरूपत्वात्कारकादिर्न चात्मनः । अस्थूलं नेतिनेतीति न जायत इति श्रुतिः ॥ ११३॥",
+      "iast": "nityāvagatirūpatvātkārakādirna cātmanaḥ | asthūlaṃ netinetīti na jāyata iti śrutiḥ || 113||",
+      "translation": "Because the Self is eternally awareness, it has no agency or other factors of action. The Śruti says of it, “Not gross; not this, not this; it is not born.”",
+      "gloss": [
+        {
+          "sa": "नित्य-अवगति-रूपत्वात्",
+          "en": "because its nature is eternal awareness"
+        },
+        {
+          "sa": "कारक-आदिः",
+          "en": "agency and the other factors of action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "अस्थूलम्",
+          "en": "not gross"
+        },
+        {
+          "sa": "नेति नेति",
+          "en": "“not this, not this”"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "जायते",
+          "en": "is born"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "the Śruti; Vedic revelation"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-113"
       ]
@@ -15655,26 +16089,48 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0659",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 331",
-      "label": "Text 331",
-      "deva": "आत्मनश्चेन्निवार्यन्ते बुद्धिदेहघटादयः ।",
-      "iast": "ātmanaścennivāryante buddhidehaghaṭādayaḥ |",
-      "translation": "if intellect, body, pot, and the rest are removed from the Self,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0660",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.114",
       "label": "Verse 2.114",
-      "deva": "षष्ठगोचरकल्पास्ते विज्ञेयाः परमार्थतः ॥ ११४॥",
-      "iast": "ṣaṣṭhagocarakalpāste vijñeyāḥ paramārthataḥ || 114||",
-      "translation": "they should be understood as ultimately no more real than an object seen in a sixth direction.",
-      "gloss": [],
+      "deva": "आत्मनश्चेन्निवार्यन्ते बुद्धिदेहघटादयः । षष्ठगोचरकल्पास्ते विज्ञेयाः परमार्थतः ॥ ११४॥",
+      "iast": "ātmanaścennivāryante buddhidehaghaṭādayaḥ | ṣaṣṭhagocarakalpāste vijñeyāḥ paramārthataḥ || 114||",
+      "translation": "If intellect, body, pot, and the like are excluded from the Self, they should ultimately be understood as objects of non-perception, the sixth means of knowledge.",
+      "gloss": [
+        {
+          "sa": "आत्मनः",
+          "en": "from the Self"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "निवार्यन्ते",
+          "en": "are excluded; removed"
+        },
+        {
+          "sa": "बुद्धि-देह-घट-आदयः",
+          "en": "intellect, body, pot, and the rest"
+        },
+        {
+          "sa": "षष्ठ-गोचर-कल्पाः",
+          "en": "fit to be known by the sixth means of knowledge"
+        },
+        {
+          "sa": "ते",
+          "en": "they"
+        },
+        {
+          "sa": "विज्ञेयाः",
+          "en": "should be understood"
+        },
+        {
+          "sa": "परमार्थतः",
+          "en": "ultimately; in truth"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-114"
       ]
@@ -15691,26 +16147,64 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0662",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 334",
-      "label": "Text 334",
-      "deva": "नित्यां संविदमाश्रित्य स्वतस्सिद्धामविक्रियाम् ।",
-      "iast": "nityāṃ saṃvidamāśritya svatassiddhāmavikriyām |",
-      "translation": "Relying on eternal awareness, which is self-established and changeless,",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0663",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.115",
       "label": "Verse 2.115",
-      "deva": "सिद्धायन्ते धियो बोधास्तांश्चाश्रित्य घटादयः ॥ ११५॥",
-      "iast": "siddhāyante dhiyo bodhāstāṃścāśritya ghaṭādayaḥ || 115||",
-      "translation": "the intellect and its cognitions are established; relying on them, pots and the rest are established.",
-      "gloss": [],
+      "deva": "नित्यां संविदमाश्रित्य स्वतस्सिद्धामविक्रियाम् । सिद्धायन्ते धियो बोधास्तांश्चाश्रित्य घटादयः ॥ ११५॥",
+      "iast": "nityāṃ saṃvidamāśritya svatassiddhāmavikriyām | siddhāyante dhiyo bodhāstāṃścāśritya ghaṭādayaḥ || 115||",
+      "translation": "Relying on eternal, self-established, changeless awareness, intellects and cognitions are established; relying on them, pots and the like are established.",
+      "gloss": [
+        {
+          "sa": "नित्याम्",
+          "en": "eternal"
+        },
+        {
+          "sa": "संविदम्",
+          "en": "awareness"
+        },
+        {
+          "sa": "आश्रित्य",
+          "en": "relying on"
+        },
+        {
+          "sa": "स्वतः-सिद्धाम्",
+          "en": "self-established"
+        },
+        {
+          "sa": "अविक्रियाम्",
+          "en": "changeless"
+        },
+        {
+          "sa": "सिद्धायन्ते",
+          "en": "are established"
+        },
+        {
+          "sa": "धियः",
+          "en": "intellects"
+        },
+        {
+          "sa": "बोधाः",
+          "en": "cognitions"
+        },
+        {
+          "sa": "तान्",
+          "en": "them"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आश्रित्य",
+          "en": "relying on"
+        },
+        {
+          "sa": "घट-आदयः",
+          "en": "pots and the like"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-115"
       ]
@@ -15727,26 +16221,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0665",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 337",
-      "label": "Text 337",
-      "deva": "अहंमिथ्याभिशापेन दुःख्यात्मा तद्बुभुत्सया ।",
-      "iast": "ahaṃmithyābhiśāpena duḥkhyātmā tadbubhutsayā |",
-      "translation": "Cursed by the false notion “I,” the Self seems to suffer and longs to know;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0666",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.116",
       "label": "Verse 2.116",
-      "deva": "इतः श्रुतिं तया नेतीत्युक्तः कैवल्यमास्थितः ॥ ११६॥",
-      "iast": "itaḥ śrutiṃ tayā netītyuktaḥ kaivalyamāsthitaḥ || 116||",
-      "translation": "through the teaching “not this,” it is led away from this [error] and abides in liberation.",
-      "gloss": [],
+      "deva": "अहंमिथ्याभिशापेन दुःख्यात्मा तद्बुभुत्सया । इतः श्रुतिं तया नेतीत्युक्तः कैवल्यमास्थितः ॥ ११६॥",
+      "iast": "ahaṃmithyābhiśāpena duḥkhyātmā tadbubhutsayā | itaḥ śrutiṃ tayā netītyuktaḥ kaivalyamāsthitaḥ || 116||",
+      "translation": "The Self seems to suffer under the curse of the false “I.” Wanting to know its true nature, it turns to the Śruti, is taught by it “not this, not this,” and abides in liberation.",
+      "gloss": [
+        {
+          "sa": "अहम्-मिथ्या-अभिशापेन",
+          "en": "by the curse of the false “I”"
+        },
+        {
+          "sa": "दुःखी",
+          "en": "suffering"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "तत्-बुभुत्सया",
+          "en": "from the desire to know that"
+        },
+        {
+          "sa": "इतः",
+          "en": "from this; from here"
+        },
+        {
+          "sa": "श्रुतिम्",
+          "en": "the Śruti; Vedic revelation"
+        },
+        {
+          "sa": "तया",
+          "en": "by it"
+        },
+        {
+          "sa": "नेति इति",
+          "en": "“not this,” thus"
+        },
+        {
+          "sa": "उक्तः",
+          "en": "instructed; told"
+        },
+        {
+          "sa": "कैवल्यम्",
+          "en": "liberation; aloneness"
+        },
+        {
+          "sa": "आस्थितः",
+          "en": "has entered; abides in"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-116"
       ]
@@ -15763,26 +16291,60 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0668",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 340",
-      "label": "Text 340",
-      "deva": "नाहं न च ममात्मत्वात्सर्वदानात्मवर्जितः ।",
-      "iast": "nāhaṃ na ca mamātmatvātsarvadānātmavarjitaḥ |",
-      "translation": "“I am not [the body or mind], nor is anything mine; by nature I am always free of the not-Self;",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0669",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.117",
       "label": "Verse 2.117",
-      "deva": "भानाविव तमोध्यासोऽपह्नवश्च तथा मयि ॥ ११७॥",
-      "iast": "bhānāviva tamodhyāso'pahnavaśca tathā mayi || 117||",
-      "translation": "as darkness is superimposed upon light and then removed, so is error superimposed upon me and removed.”",
-      "gloss": [],
+      "deva": "नाहं न च ममात्मत्वात्सर्वदानात्मवर्जितः । भानाविव तमोध्यासोऽपह्नवश्च तथा मयि ॥ ११७॥",
+      "iast": "nāhaṃ na ca mamātmatvātsarvadānātmavarjitaḥ | bhānāviva tamodhyāso'pahnavaśca tathā mayi || 117||",
+      "translation": "“There is no separate ‘I’ or ‘mine’: by nature I am the Self, always free of the not-Self. As darkness is superimposed on light and then removed, so ignorance and its removal are superimposed on me.”",
+      "gloss": [
+        {
+          "sa": "न अहम्",
+          "en": "no separate “I”"
+        },
+        {
+          "sa": "न च मम",
+          "en": "nor anything “mine”"
+        },
+        {
+          "sa": "आत्मत्वात्",
+          "en": "because I am the Self by nature"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "अनात्म-वर्जितः",
+          "en": "free of the not-Self"
+        },
+        {
+          "sa": "भानौ",
+          "en": "in light; in the sun"
+        },
+        {
+          "sa": "इव",
+          "en": "as; like"
+        },
+        {
+          "sa": "तमः-अध्यासः",
+          "en": "superimposition of darkness"
+        },
+        {
+          "sa": "अपह्नवः च",
+          "en": "and its negation; removal"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "मयि",
+          "en": "in me"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-117"
       ]
@@ -15799,40 +16361,59 @@
       "gloss": []
     },
     {
-      "id": "naishkarmya-siddhi-0671",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 343",
-      "label": "Text 343",
-      "deva": "यत्र त्वस्येति साटोपं कृत्स्नद्वैतनिषेधिनीम् ।",
-      "iast": "yatra tvasyeti sāṭopaṃ kṛtsnadvaitaniṣedhinīm |",
-      "translation": "“Where is that emphatic scripture which rejects all duality",
-      "gloss": []
-    },
-    {
       "id": "naishkarmya-siddhi-0672",
       "chapter": 2,
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.118",
       "label": "Verse 2.118",
-      "deva": "प्रोत्सारयन्तीं संसारमप्यश्रौषं न किं श्रुतिम् ॥ ११८॥",
-      "iast": "protsārayantīṃ saṃsāramapyaśrauṣaṃ na kiṃ śrutim || 118||",
-      "translation": "and dispels saṃsāra? Why did I not hear it before?”",
-      "gloss": [],
+      "deva": "यत्र त्वस्येति साटोपं कृत्स्नद्वैतनिषेधिनीम् । प्रोत्सारयन्तीं संसारमप्यश्रौषं न किं श्रुतिम् ॥ ११८॥",
+      "iast": "yatra tvasya iti sāṭopaṃ kṛtsnadvaitaniṣedhinīm | protsārayantīṃ saṃsāramapyaśrauṣaṃ na kiṃ śrutim || 118||",
+      "translation": "“When all this has become the Self”—why did I not hear that emphatic Śruti, which rejects all duality and sweeps away saṃsāra?",
+      "gloss": [
+        {
+          "sa": "यत्र तु अस्य",
+          "en": "“but when all this has become the Self”"
+        },
+        {
+          "sa": "इति",
+          "en": "thus; the quoted words"
+        },
+        {
+          "sa": "स-आटोपम्",
+          "en": "emphatically; with force"
+        },
+        {
+          "sa": "कृत्स्न-द्वैत-निषेधिनीम्",
+          "en": "rejecting all duality"
+        },
+        {
+          "sa": "प्रोत्सारयन्तीम्",
+          "en": "driving away; sweeping away"
+        },
+        {
+          "sa": "संसारम्",
+          "en": "saṃsāra; worldly bondage"
+        },
+        {
+          "sa": "अपि",
+          "en": "even; indeed"
+        },
+        {
+          "sa": "अश्रौषम्",
+          "en": "did I hear"
+        },
+        {
+          "sa": "न किम्",
+          "en": "why did I not?"
+        },
+        {
+          "sa": "श्रुतिम्",
+          "en": "the Śruti; Vedic revelation"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-118"
       ]
-    },
-    {
-      "id": "naishkarmya-siddhi-0673",
-      "chapter": 2,
-      "sectionTitle": "Adhyāya 2 — Knowledge and action",
-      "number": "2 · 345",
-      "label": "Text 345",
-      "deva": "इत्योमित्यवबुद्धात्मा निष्कलोऽकारकोऽक्रियः ।",
-      "iast": "ityomityavabuddhātmā niṣkalo'kārako'kriyaḥ |",
-      "translation": "Understanding the Self through “Om,” he is partless, a non-agent, actionless,",
-      "gloss": []
     },
     {
       "id": "naishkarmya-siddhi-0674",
@@ -15840,10 +16421,55 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2.119",
       "label": "Verse 2.119",
-      "deva": "विरक्त इव बुद्ध्यादेरेकाकित्वमुपेयिवान् ॥ ११९॥",
-      "iast": "virakta iva buddhyāderekākitvamupeyivān || 119||",
-      "translation": "and, as if detached from the intellect and the rest, has attained solitude.",
-      "gloss": [],
+      "deva": "इत्योमित्यवबुद्धात्मा निष्कलोऽकारकोऽक्रियः । विरक्त इव बुद्ध्यादेरेकाकित्वमुपेयिवान् ॥ ११९॥",
+      "iast": "ityomityavabuddhātmā niṣkalo'kārako'kriyaḥ | virakta iva buddhyāderekākitvamupeyivān || 119||",
+      "translation": "Having realized the Self as “Om,” he is partless, not an agent, and actionless; as though detached from the intellect and the rest, he has attained solitude.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ओम् इति",
+          "en": "“Om,” thus"
+        },
+        {
+          "sa": "अवबुद्ध-आत्मा",
+          "en": "having realized the Self"
+        },
+        {
+          "sa": "निष्कलः",
+          "en": "partless"
+        },
+        {
+          "sa": "अकारकः",
+          "en": "not an agent; without action-factors"
+        },
+        {
+          "sa": "अक्रियः",
+          "en": "actionless"
+        },
+        {
+          "sa": "विरक्तः",
+          "en": "detached"
+        },
+        {
+          "sa": "इव",
+          "en": "as though"
+        },
+        {
+          "sa": "बुद्धि-आदेः",
+          "en": "from the intellect and the rest"
+        },
+        {
+          "sa": "एकाकित्वम्",
+          "en": "solitude; aloneness"
+        },
+        {
+          "sa": "उपेयिवान्",
+          "en": "has attained"
+        }
+      ],
       "sourceNumbers": [
         "chapter-2-verse-119"
       ]
@@ -23659,12 +24285,31 @@
       "2.98",
       "2.99",
       "2.100",
+      "2.101",
+      "2.102",
+      "2.103",
+      "2.104",
+      "2.105",
+      "2.106",
+      "2.107",
+      "2.108",
+      "2.109",
+      "2.110",
+      "2.111",
+      "2.112",
+      "2.113",
+      "2.114",
+      "2.115",
+      "2.116",
+      "2.117",
+      "2.118",
+      "2.119",
       "3.114",
       "3.123",
       "4.43"
     ],
     "partialUnits": [],
-    "note": "All 100 verses of Adhyāya 1 and verses 2.1–2.100, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 220 numbered verses and prose commentary still need separate glosses."
+    "note": "All 100 verses of Adhyāya 1 and verses 2.1–2.119, plus verses 3.114, 3.123, and 4.43, have complete glosses. The remaining 201 numbered verses and prose commentary still need separate glosses."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
