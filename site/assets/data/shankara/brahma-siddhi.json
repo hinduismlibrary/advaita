@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 151 passages; 80 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 152 passages; 79 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 149 passages; 82 passages still need glosses. Full Devanāgarī token-by-token gloss added for passage 1.31, including its cited verse. Full Devanāgarī token-by-token gloss added for passage 2.8."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 149 passages; 82 passages still need glosses. Full Devanāgarī token-by-token gloss added for passage 1.31, including its cited verse. Full Devanāgarī token-by-token gloss added for passage 2.8. Full Devanāgarī token-by-token gloss added for passage 2.25."
   },
   "units": [
     {
@@ -4227,7 +4227,312 @@
       "deva": "[क्क्स्_83] अथ मतम् --- नैष शब्दमात्रस्य सामर्थ्यविभागः । शब्दस्य हि निजं सामर्थ्यं कार्यनिष्ठतैव । तथा हि --- कार्यो नियोगार्थः । कार्याय चान्यस्यान्वयः प्रतीयते । न तु कार्यस्यान्यार्थो ऽन्वयः । तस्मात्कार्यत्वान्नियोगस्य तत्प्रधानता । पुरुषस्तु प्रमाणान्तरादवगम्यार्थं तत्र प्रयुङ्क्ते वचनम् । न च नियोगः प्रमाणान्तरगोचरः । तस्मान्न तत्र प्रयोक्तुमर्हति । विनियोगस्य तु तथाभावात्तत्र युज्यते प्रयोगः । तस्माद्विनियोगप्रधानं पुरुषवचः । वैदिकं तु सामर्थ्येन कार्यत्वान्नियोगस्य तत्प्रधानमिति । अत्रोच्यते ---\n\nमानान्तरव्यपेक्षत्वात्संभव्यन्यप्रमाणकः । हन्तास्य गोचरो नास्मादपेक्षास्य प्रमान्तरे",
       "iast": "[kks_83] atha matam --- naiṣa śabdamātrasya sāmarthyavibhāgaḥ / śabdasya hi nijaṃ sāmarthyaṃ kāryaniṣṭhataiva / tathā hi --- kāryo niyogārthaḥ / kāryāya cānyasyānvayaḥ pratīyate / na tu kāryasyānyārtho 'nvayaḥ / tasmātkāryatvānniyogasya tatpradhānatā / puruṣastu pramāṇāntarādavagamyārthaṃ tatra prayuṅkte vacanam / na ca niyogaḥ pramāṇāntaragocaraḥ / tasmānna tatra prayoktumarhati / viniyogasya tu tathābhāvāttatra yujyate prayogaḥ / tasmādviniyogapradhānaṃ puruṣavacaḥ / vaidikaṃ tu sāmarthyena kāryatvānniyogasya tatpradhānamiti /\n\natrocyate ---\n\nmānāntaravyapekṣatvātsaṃbhavyanyapramāṇakaḥ /\nhantāsya gocaro nāsmādapekṣāsya pramāntare",
       "translation": "Someone may argue: this distinction in power is not a property of words in general. A word’s own power is directed toward what is to be done. For the meaning of an injunction is something to be done, and what is related to what is to be done is understood; but what is to be done is not understood as related to some other thing. Thus because an injunction concerns what is to be done, it is primary. A person, however, first learns the object through another means of knowledge and then uses a statement about it. An injunction is not within the scope of another means of knowledge, so it cannot be used to establish it. But a directive for applying a word does have that character and can be used in this way. Therefore statements by people are primarily directives for application, while the Veda, by its power to prescribe what is to be done, is primarily an injunction.\n\nThe reply is:\n\n“Since it depends on another means of knowledge, it can be within the scope of a different means of knowledge. Indeed, it is not from this [word] that dependence on another means of knowledge follows.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "मतम्",
+          "en": "the view (may be stated)"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "शब्द-मात्रस्य",
+          "en": "of words alone"
+        },
+        {
+          "sa": "सामर्थ्य-विभागः",
+          "en": "a division of power"
+        },
+        {
+          "sa": "शब्दस्य",
+          "en": "of a word"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "निजम्",
+          "en": "own"
+        },
+        {
+          "sa": "सामर्थ्यम्",
+          "en": "power"
+        },
+        {
+          "sa": "कार्य-निष्ठता",
+          "en": "being directed toward what is to be done"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "तथा",
+          "en": "as follows"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "कार्यः",
+          "en": "what is to be done"
+        },
+        {
+          "sa": "नियोग-अर्थः",
+          "en": "is the meaning of an injunction"
+        },
+        {
+          "sa": "कार्याय",
+          "en": "to what is to be done"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अन्यस्य",
+          "en": "of another (word or meaning)"
+        },
+        {
+          "sa": "अन्वयः",
+          "en": "connection"
+        },
+        {
+          "sa": "प्रतीयते",
+          "en": "is understood"
+        },
+        {
+          "sa": "न",
+          "en": "but not"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "कार्यस्य",
+          "en": "of what is to be done"
+        },
+        {
+          "sa": "अन्य-अर्थः",
+          "en": "another meaning"
+        },
+        {
+          "sa": "अन्वयः",
+          "en": "as a connection"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "कार्यत्वात्",
+          "en": "because it is something to be done"
+        },
+        {
+          "sa": "नियोगस्य",
+          "en": "of an injunction"
+        },
+        {
+          "sa": "तत्-प्रधानता",
+          "en": "primacy of that (injunction)"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "a human speaker"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "प्रमाण-अन्तरात्",
+          "en": "from another means of knowledge"
+        },
+        {
+          "sa": "अवगम्य",
+          "en": "having understood"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "the meaning"
+        },
+        {
+          "sa": "तत्र",
+          "en": "in that case"
+        },
+        {
+          "sa": "प्रयुङ्क्ते",
+          "en": "uses"
+        },
+        {
+          "sa": "वचनम्",
+          "en": "a statement"
+        },
+        {
+          "sa": "न",
+          "en": "and not"
+        },
+        {
+          "sa": "च",
+          "en": "indeed"
+        },
+        {
+          "sa": "नियोगः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-गोचरः",
+          "en": "within the scope of another means of knowledge"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्र",
+          "en": "for that purpose"
+        },
+        {
+          "sa": "प्रयोक्तुम्",
+          "en": "to be used"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is fit"
+        },
+        {
+          "sa": "विनियोगस्य",
+          "en": "of word-application"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "तथा-भावात्",
+          "en": "because it has that character"
+        },
+        {
+          "sa": "तत्र",
+          "en": "for that purpose"
+        },
+        {
+          "sa": "युज्यते",
+          "en": "is appropriate"
+        },
+        {
+          "sa": "प्रयोगः",
+          "en": "the use"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "विनियोग-प्रधानम्",
+          "en": "primarily concerned with word-application"
+        },
+        {
+          "sa": "पुरुष-वचः",
+          "en": "a human utterance"
+        },
+        {
+          "sa": "वैदिकम्",
+          "en": "Vedic speech"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "सामर्थ्येन",
+          "en": "by its power"
+        },
+        {
+          "sa": "कार्यत्वात्",
+          "en": "because it concerns what is to be done"
+        },
+        {
+          "sa": "नियोगस्य",
+          "en": "for the injunction"
+        },
+        {
+          "sa": "तत्-प्रधानम्",
+          "en": "is primarily that (an injunction)"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the reply is given"
+        },
+        {
+          "sa": "मान-अन्तर-व्यपेक्षत्वात्",
+          "en": "because of dependence on another means of knowledge"
+        },
+        {
+          "sa": "संभव्य",
+          "en": "being possible"
+        },
+        {
+          "sa": "अन्य-प्रमाणकः",
+          "en": "having another means of knowledge as its basis"
+        },
+        {
+          "sa": "हन्त",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "गोचरः",
+          "en": "the scope or object"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्मात्",
+          "en": "from this (word)"
+        },
+        {
+          "sa": "अपेक्षा",
+          "en": "dependence"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "प्रम-अन्तरे",
+          "en": "on another means of knowledge"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.25"
       ]
@@ -16432,6 +16737,7 @@
       "2.22",
       "2.23",
       "2.24",
+      "2.25",
       "2.26",
       "2.27",
       "2.28",
@@ -16562,7 +16868,7 @@
       "4.10",
       "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 151 of 231 source-marked passages; 80 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 152 of 231 source-marked passages; 79 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 151 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 152 passages listed in wordGlossCoverage."
 }
