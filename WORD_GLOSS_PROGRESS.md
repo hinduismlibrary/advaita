@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Sarvavedāntasiddhāntasārasaṅgraha** — active. All 986 reader units have Sanskrit, English, and explicit IAST; its five named contents sections are in place. The first 35 of 1,006 source verses now have Devanāgarī word glosses (34 glossed reader units because verses 17–18 share one card). Continue with verse 1.36 and record each completed range.
+**Sarvavedāntasiddhāntasārasaṅgraha** — active. All 986 reader units have Sanskrit, English, and explicit IAST; its five named contents sections are in place. Devanāgarī word glosses and literal English now cover verses 1–45 (43 reader units because verses 17–18 and 44–45 share cards). Restored the omitted opening pāda in verse 42; normalized a clear typo in verse 39; retained verse 40’s printed reading and noted its prose-order variant. Continue at verse 46 and record each completed range.
 
 ## Completed
 
@@ -46,7 +46,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Nirvāṇaṣaṭkam | 7 | All four fields present |
 | Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
 | Viṣṇu Ṣaṭpadī Stotram | 8 | All four fields present |
-| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses cover verses 1–35 (34 units); verses 1.36–5.1006 remain. |
+| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses and literal translations cover verses 1–45 (43 units); verses 46–1,006 remain. |
 | Upadeśapañcakam | 5 | Glosses present; add explicit IAST |
 | Upadeśasāhasrī | 787 | All four fields present |
 | Vedāntasāra | 71 | Glosses present; add explicit IAST; review named contents |
