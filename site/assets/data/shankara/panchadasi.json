@@ -6,13 +6,13 @@
   "source": {
     "url": "https://www.upasanayoga.org/PancD.htm",
     "edition": "Pañca-Daśī, A.K. Aruna, 2020 version 1.0; translations marked ** are by Swami Swahananda, Sri Ramakrishna Math, Chennai; work by Vidyāraṇya.",
-    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–110; other units do not yet have separate glosses.",
+    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–120; other units do not yet have separate glosses.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; text by Vidyāraṇya.",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness."
+    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words."
   },
-  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110.",
+  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110. Original literal readings and word-for-word glosses for Chapter 6, verses 111–120.",
   "units": [
     {
       "id": "panchadasi-1-01",
@@ -19614,80 +19614,588 @@
       "label": "Chapter 6 · Verse 111",
       "number": "6.111",
       "deva": "नित्य-ज्ञानादिमत्त्वेऽस्य सृष्टिर् एव सदा भवेत्।\nहिरण्य-गर्भ ईशोऽतो लिङ्ग-देहेन संयुतः॥",
-      "translation": "When the (Lord) has the nature of eternal knowledge, etc. () then its manifestation (śṛṣṭi) would always be continuing. The Lord would therefore be Hiraṇya-garbha endowed with the (total) subtle body.",
-      "gloss": []
+      "translation": "If He has eternal knowledge and the like, creation would continue forever. Īśvara would therefore be Hiraṇyagarbha, endowed with a subtle body.",
+      "gloss": [
+        {
+          "sa": "नित्य-ज्ञान-आदि-मत्त्वे",
+          "en": "when possessing eternal knowledge and the like"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of Him"
+        },
+        {
+          "sa": "सृष्टिः",
+          "en": "creation"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be / would continue"
+        },
+        {
+          "sa": "हिरण्य-गर्भः",
+          "en": "Hiraṇyagarbha (the cosmic subtle being)"
+        },
+        {
+          "sa": "ईशः",
+          "en": "Īśvara"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "लिङ्ग-देहेन",
+          "en": "with a subtle body"
+        },
+        {
+          "sa": "संयुतः",
+          "en": "joined / endowed"
+        }
+      ],
+      "iast": "nitya-jñānādimattve’sya sṛṣṭir eva sadā bhavet|\nhiraṇya-garbha īśo’to liṅga-dehena saṃyutaḥ||"
     },
     {
       "id": "panchadasi-6-112",
       "label": "Chapter 6 · Verse 112",
       "number": "6.112",
       "deva": "उद्गीथ-ब्राह्मणे तस्य माहात्म्यम् अतिविस्तृतम्।\nलिङ्ग-सत्त्वेऽपि जीवत्वं नास्य कर्माद्यभावतः॥",
-      "translation": "The glory of that (Lord, as Hiraṇya-garbha, the mahā-prāṇa) is detailed in the Udgītha-Brāhmaṇa ( (Bṛhad-Āraṇyaka Upaniṣad)). Even though being the total subtle body, since itself does not have any karma, etc., then it does not have individuality (jīvatva).",
-      "gloss": []
+      "translation": "His greatness is described at great length in the Udgītha Brāhmaṇa. Although a subtle body is present, He is not a jīva, because He has no karma and the like.",
+      "gloss": [
+        {
+          "sa": "उद्गीथ-ब्राह्मणे",
+          "en": "in the Udgītha Brāhmaṇa"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of Him"
+        },
+        {
+          "sa": "माहात्म्यम्",
+          "en": "greatness / glory"
+        },
+        {
+          "sa": "अति-विस्तृतम्",
+          "en": "described very fully"
+        },
+        {
+          "sa": "लिङ्ग-सत्त्वे",
+          "en": "when a subtle body is present"
+        },
+        {
+          "sa": "अपि",
+          "en": "even though"
+        },
+        {
+          "sa": "जीवत्वम्",
+          "en": "jīva-hood / individual existence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for Him"
+        },
+        {
+          "sa": "कर्म-आदि-अभावतः",
+          "en": "because karma and the like are absent"
+        }
+      ],
+      "iast": "udgītha-brāhmaṇe tasya māhātmyam ativistṛtam|\nliṅga-sattve’pi jīvatvaṃ nāsya karmādyabhāvataḥ||"
     },
     {
       "id": "panchadasi-6-113",
       "label": "Chapter 6 · Verse 113",
       "number": "6.113",
       "deva": "स्थूल-देहं विना लिङ्ग-देहो न क्वापि दृश्यते।\nवैराजो देह ईशोऽतः सर्वतो मस्तकादिमान्॥",
-      "translation": "The worshipers of Virāj (the total manifest cosmos, as the cosmic person with its head being the heavens down to its feet being the earth) know that without its physical body nowhere can be seen its subtle body. Therefore, that (total) body everywhere starting from its head onwards is the Īśa (the awareful Lord).",
-      "gloss": []
+      "translation": "A subtle body is nowhere seen without a gross body. Therefore [they say], the Virāj body is Īśvara, having a head and the rest everywhere.",
+      "gloss": [
+        {
+          "sa": "स्थूल-देहम्",
+          "en": "a gross body"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "लिङ्ग-देहः",
+          "en": "a subtle body"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "क्वापि",
+          "en": "anywhere"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "वैराजः",
+          "en": "Virāj / the cosmic form"
+        },
+        {
+          "sa": "देहः",
+          "en": "body"
+        },
+        {
+          "sa": "ईशः",
+          "en": "Īśvara"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "सर्वतः",
+          "en": "everywhere / on all sides"
+        },
+        {
+          "sa": "मस्तक-आदि-मान्",
+          "en": "having a head and the rest"
+        }
+      ],
+      "iast": "sthūla-dehaṃ vinā liṅga-deho na kvāpi dṛśyate|\nvairājo deha īśo’taḥ sarvato mastakādimān||"
     },
     {
       "id": "panchadasi-6-114",
       "label": "Chapter 6 · Verse 114",
       "number": "6.114",
       "deva": "सहस्र-शीर्षेत्येवं च विश्वतश् चक्षुर् इत्यपि।\nश्रुतिम् इत्याहुर् अनिशं विश्व-रूपस्य चिन्तकाः॥",
-      "translation": "Also there is scripture saying, “It has countless heads,” whose eye pervades everywhere ( (Puruṣa-Sūktam) and (Śvetāśvatara Upaniṣad)). Thus they meditate upon all this that is not the Lord as belonging to that viśva-rūpa (the Virāṭ form of the Lord).",
-      "gloss": []
+      "translation": "Those who contemplate the cosmic form continually cite the scriptural expressions “thousand-headed” and “with eyes everywhere.”",
+      "gloss": [
+        {
+          "sa": "सहस्र-शीर्षा",
+          "en": "thousand-headed"
+        },
+        {
+          "sa": "इति",
+          "en": "with the words"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विश्वतः",
+          "en": "everywhere"
+        },
+        {
+          "sa": "चक्षुः",
+          "en": "eye / eyes"
+        },
+        {
+          "sa": "इति",
+          "en": "with the words"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "श्रुतिम्",
+          "en": "scripture"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they say / cite"
+        },
+        {
+          "sa": "अनिशम्",
+          "en": "continually"
+        },
+        {
+          "sa": "विश्व-रूपस्य",
+          "en": "of the cosmic form"
+        },
+        {
+          "sa": "चिन्तकाः",
+          "en": "those who contemplate"
+        }
+      ],
+      "iast": "sahasra-śīrṣetyevaṃ ca viśvataś cakṣur ityapi|\nśrutim ityāhur aniśaṃ viśva-rūpasya cintakāḥ||"
     },
     {
       "id": "panchadasi-6-115",
       "label": "Chapter 6 · Verse 115",
       "number": "6.115",
       "deva": "सर्वतः पाणि-पादत्वे कृम्यादेर् अपीशता।\nततश् चतुर्-मुखो देव एवेशो नेतरः पुमान्॥",
-      "translation": "If it is all hands and feet, then even bugs, etc. would have the nature of the Lord. Therefore, only the four-headed deity (Lord Brahmā, the creator in the holy trinity of Brahma-Viṣṇu-Śiva, its four heads being the four Vedas) is the Lord, and no one else.",
-      "gloss": []
+      "translation": "If [He] has hands and feet everywhere, even a worm and the like would have lordship. Therefore the four-faced deity alone is Īśvara, and no other person.",
+      "gloss": [
+        {
+          "sa": "सर्वतः",
+          "en": "everywhere"
+        },
+        {
+          "sa": "पाणि-पादत्वे",
+          "en": "in the condition of having hands and feet"
+        },
+        {
+          "sa": "कृमि-आदेः",
+          "en": "even a worm and the like"
+        },
+        {
+          "sa": "अपि",
+          "en": "also / even"
+        },
+        {
+          "sa": "ईशता",
+          "en": "lordship"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "चतुर्-मुखः",
+          "en": "four-faced"
+        },
+        {
+          "sa": "देवः",
+          "en": "deity"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "ईशः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इतरः",
+          "en": "another / other"
+        },
+        {
+          "sa": "पुमान्",
+          "en": "person"
+        }
+      ],
+      "iast": "sarvataḥ pāṇi-pādatve kṛmyāder apīśatā|\ntataś catur-mukho deva eveśo netaraḥ pumān||"
     },
     {
       "id": "panchadasi-6-116",
       "label": "Chapter 6 · Verse 116",
       "number": "6.116",
       "deva": "पुत्रार्थं तम् उपासीना एवम् आहुः प्रजा-पतिः।\nप्रजा असृजतेत्यादि श्रुतिं चोदाहरन्त्यमी॥",
-      "translation": "In order to get children, the worshipers thus call it Prajā-pati (the Father of creatures) and quote such scripture saying It created the offspring, etcetera ( (Praśna Upaniṣad)).",
-      "gloss": []
+      "translation": "Those who worship Him for the sake of a son say, “[He is] Prajāpati,” and cite scriptural statements such as, “Prajāpati created the creatures.”",
+      "gloss": [
+        {
+          "sa": "पुत्र-अर्थम्",
+          "en": "for the sake of a son"
+        },
+        {
+          "sa": "तम्",
+          "en": "Him"
+        },
+        {
+          "sa": "उपासीनाः",
+          "en": "worshipping"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they say"
+        },
+        {
+          "sa": "प्रजा-पतिः",
+          "en": "Prajāpati (lord of creatures)"
+        },
+        {
+          "sa": "प्रजाः",
+          "en": "creatures"
+        },
+        {
+          "sa": "असृजत्",
+          "en": "created"
+        },
+        {
+          "sa": "इति-आदि",
+          "en": "and so on / such as"
+        },
+        {
+          "sa": "श्रुतिम्",
+          "en": "scripture"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उदाहरन्ति",
+          "en": "they cite"
+        },
+        {
+          "sa": "अमी",
+          "en": "these [people]"
+        }
+      ],
+      "iast": "putrārthaṃ tam upāsīnā evam āhuḥ prajā-patiḥ|\nprajā asṛjatetyādi śrutiṃ codāharantyamī||"
     },
     {
       "id": "panchadasi-6-117",
       "label": "Chapter 6 · Verse 117",
       "number": "6.117",
       "deva": "विष्णोर् नाभेः समुद्भूतः वेधाः कमल-जस् ततः।\nविष्णुर् एवेश इत्याहुर् लोके भागवता जनाः॥",
-      "translation": "The common Bhāgavata people (who understand through the Bhāgavata-Purāṇa, and who may not be scriptural scholars) say that since the lotus born Lord Vedas (Lord Brahmā) arose from the navel of Viṣṇu, then only Viṣṇu is the Lord.",
-      "gloss": []
+      "translation": "Brahmā, the lotus-born, arose from Viṣṇu’s navel; therefore the Bhagavata devotees in the world say, “Viṣṇu alone is the Lord.”",
+      "gloss": [
+        {
+          "sa": "विष्णोः",
+          "en": "of Viṣṇu"
+        },
+        {
+          "sa": "नाभेः",
+          "en": "from the navel"
+        },
+        {
+          "sa": "समुद्भूतः",
+          "en": "arisen"
+        },
+        {
+          "sa": "वेधाः",
+          "en": "Brahmā (the creator)"
+        },
+        {
+          "sa": "कमल-जः",
+          "en": "lotus-born"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "विष्णुः",
+          "en": "Viṣṇu"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "ईशः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the words"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they say"
+        },
+        {
+          "sa": "लोके",
+          "en": "in the world"
+        },
+        {
+          "sa": "भागवताः",
+          "en": "Bhagavata devotees"
+        },
+        {
+          "sa": "जनाः",
+          "en": "people"
+        }
+      ],
+      "iast": "viṣṇor nābheḥ samudbhūtaḥ vedhāḥ kamala-jas tataḥ|\nviṣṇur eveśa ityāhur loke bhāgavatā janāḥ||"
     },
     {
       "id": "panchadasi-6-118",
       "label": "Chapter 6 · Verse 118",
       "number": "6.118",
-      "deva": "शिवस्य पादावन्वेष्टुं शार्ङ्ग्य-शक्तस् ततः शिवः।\nईशो न विष्णुर् इत्याहुः शैवा आगम-मानिनः॥",
-      "translation": "The Śaivas who rely on the authority of their āgamas (the Śiva-Purāṇa, etc.) say that since the capable bow-bearing (Lord Viṣṇu) could not find the feet of Lord Śiva (as the liṅga of light reaching to the heavens), then only Śiva, not Viṣṇu, is the Lord.",
-      "gloss": []
+      "deva": "शिवस्य पादौ अन्वेष्टुम् शार्ङ्गी अशक्तः ततः शिवः।\nईशो न विष्णुर् इत्याहुः शैवा आगम-मानिनः॥",
+      "translation": "Unable to find Śiva’s feet, Śārṅgin [Viṣṇu]—so the Śaivas who accept the Āgamas say—Śiva is the Lord, not Viṣṇu.",
+      "gloss": [
+        {
+          "sa": "शिवस्य",
+          "en": "of Śiva"
+        },
+        {
+          "sa": "पादौ",
+          "en": "feet"
+        },
+        {
+          "sa": "अन्वेष्टुम्",
+          "en": "to seek"
+        },
+        {
+          "sa": "शार्ङ्गी",
+          "en": "Śārṅgin (Viṣṇu, bearer of the Śārṅga bow)"
+        },
+        {
+          "sa": "अशक्तः",
+          "en": "unable"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "शिवः",
+          "en": "Śiva"
+        },
+        {
+          "sa": "ईशः",
+          "en": "the Lord"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विष्णुः",
+          "en": "Viṣṇu"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the words"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they say"
+        },
+        {
+          "sa": "शैवाः",
+          "en": "the Śaivas"
+        },
+        {
+          "sa": "आगम-मानिनः",
+          "en": "those who accept the Āgamas"
+        }
+      ],
+      "iast": "śivasya pādau anveṣṭum śārṅgī aśaktaḥ tataḥ śivaḥ|\nīśo na viṣṇur ityāhuḥ śaivā āgama-māninaḥ||"
     },
     {
       "id": "panchadasi-6-119",
       "label": "Chapter 6 · Verse 119",
       "number": "6.119",
       "deva": "पुर-त्रयं साधयितुं विघ्नेशं सोऽप्यपूजयत्।\nविनायकं प्राहुर् ईशम् गाण-पत्यमते रताः॥",
-      "translation": "The Gāṇa-patya followers worship Him (Gaṇeśa) as the Lord, saying this Vināyaka (the remover of obstacles) and thus Vighneśa (the Lord of obstacles) was worshiped as being able to defeat the (demons of the) three cities (on Earth, in the sky, and in the heavens).",
-      "gloss": []
+      "translation": "He too worshipped Vighneśa to bring down the three cities. Those devoted to the Gaṇapatya view say that Vināyaka is the Lord.",
+      "gloss": [
+        {
+          "sa": "पुर-त्रयम्",
+          "en": "the three cities"
+        },
+        {
+          "sa": "साधयितुम्",
+          "en": "to bring down / destroy"
+        },
+        {
+          "sa": "विघ्नेशम्",
+          "en": "Vighneśa (lord of obstacles)"
+        },
+        {
+          "sa": "सः",
+          "en": "he"
+        },
+        {
+          "sa": "अपि",
+          "en": "also / too"
+        },
+        {
+          "sa": "अपुजयत्",
+          "en": "worshipped"
+        },
+        {
+          "sa": "विनायकम्",
+          "en": "Vināyaka"
+        },
+        {
+          "sa": "प्राहुः",
+          "en": "they say / call"
+        },
+        {
+          "sa": "ईशम्",
+          "en": "the Lord"
+        },
+        {
+          "sa": "गाण-पत्य-मते",
+          "en": "in the Gaṇapatya doctrine"
+        },
+        {
+          "sa": "रताः",
+          "en": "those devoted"
+        }
+      ],
+      "iast": "pura-trayaṃ sādhayituṃ vighneśaṃ so’pyapūjayat|\nvināyakaṃ prāhur īśam gāṇa-patyamate ratāḥ||"
     },
     {
       "id": "panchadasi-6-120",
       "label": "Chapter 6 · Verse 120",
       "number": "6.120",
       "deva": "एवम् अन्ये स्वस्व-पक्षाभिमानेनान्यथाऽन्यथा।\nमन्त्रार्थ-वाद-कल्पादीन् आश्रित्य प्रतिपेदिरे॥",
-      "translation": "Similarly, others, by being proud of their own respective side, propose it (the Lord) is like this or like that, relying upon their traditions (kalpas) and praises (artha-vādas) of their mantras.",
-      "gloss": []
+      "translation": "Likewise, others, proud of their respective positions, maintain different views, relying on mantras, explanatory passages, ritual traditions, and the like.",
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus / likewise"
+        },
+        {
+          "sa": "अन्ये",
+          "en": "others"
+        },
+        {
+          "sa": "स्व-स्व-पक्ष-अभिमानेन",
+          "en": "through pride in their respective positions"
+        },
+        {
+          "sa": "अन्यथा-अन्यथा",
+          "en": "in different ways"
+        },
+        {
+          "sa": "मन्त्र",
+          "en": "mantras"
+        },
+        {
+          "sa": "अर्थ-वाद",
+          "en": "explanatory / praise passages"
+        },
+        {
+          "sa": "कल्प",
+          "en": "ritual manuals / traditions"
+        },
+        {
+          "sa": "आदीन्",
+          "en": "and the like"
+        },
+        {
+          "sa": "आश्रित्य",
+          "en": "relying on"
+        },
+        {
+          "sa": "प्रतिपेदिरे",
+          "en": "they maintain / accept"
+        }
+      ],
+      "iast": "evam anye svasva-pakṣābhimānenānyathā’nyathā|\nmantrārtha-vāda-kalpādīn āśritya pratipedire||"
     },
     {
       "id": "panchadasi-6-121",
