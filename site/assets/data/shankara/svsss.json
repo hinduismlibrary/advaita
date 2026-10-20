@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 540
+      "to": 560
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–540 (525 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–560 (545 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -35923,8 +35923,57 @@
       "number": "541",
       "label": "Verse 541",
       "deva": "यतस् तस्माद् इन्द्रियाणां युक्तम् आत्मत्वम् इत्यमुम्।\nनिश्चयं दूषयत्यन्योऽसहमानः पृथग्-जनः॥",
-      "translation": "Another person, perhaps no more learned than the others, might be unwilling to accept this conclusion, and might be prone to raise objections.",
-      "gloss": [],
+      "translation": "Therefore another ordinary person, unwilling to accept the conclusion that selfhood in the senses is reasonable, refutes it.",
+      "gloss": [
+        {
+          "sa": "यतः",
+          "en": "since"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "इन्द्रियाणाम्",
+          "en": "of the senses"
+        },
+        {
+          "sa": "युक्तम्",
+          "en": "reasonable"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अमुम्",
+          "en": "this"
+        },
+        {
+          "sa": "निश्चयम्",
+          "en": "conclusion"
+        },
+        {
+          "sa": "दूषयति",
+          "en": "refutes"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "असहमानः",
+          "en": "unwilling to accept"
+        },
+        {
+          "sa": "पृथक्-जनः",
+          "en": "ordinary person"
+        }
+      ],
       "sourceNumbers": [
         541
       ],
@@ -35937,8 +35986,57 @@
       "number": "542",
       "label": "Verse 542",
       "deva": "इन्द्रियाणि कथं त्वात्मा करणानि कुठारवत्।\nकरणस्य कुठारादेश् चेतनत्वं न हीक्ष्यते॥",
-      "translation": "The doctrine that the vital force is the Self Such a one might say, ‘How are we justified in identifying the Ātman with the sense organs? The sense organs are but the instruments of action. An axe, for instance, is an instrument; but no one says that it is endowed with consciousness.",
-      "gloss": [],
+      "translation": "How can the senses be the Self? They are instruments, like an axe; no one sees consciousness in an instrument such as an axe.",
+      "gloss": [
+        {
+          "sa": "इन्द्रियाणि",
+          "en": "the senses"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "करणानि",
+          "en": "instruments"
+        },
+        {
+          "sa": "कुठारवत्",
+          "en": "like an axe"
+        },
+        {
+          "sa": "करणस्य",
+          "en": "of an instrument"
+        },
+        {
+          "sa": "कुठार-आदेः",
+          "en": "of an axe and the like"
+        },
+        {
+          "sa": "चेतनत्वम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "ईक्ष्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         542
       ],
@@ -35951,8 +36049,53 @@
       "number": "543",
       "label": "Verse 543",
       "deva": "श्रुत्याधिदेवताम् एवेन्द्रियेषूपचर्यते।\nन तु साक्षाद् इन्द्रियाणां चेतनत्वम् उदीर्यते॥",
-      "translation": "It is true that the Śruti refers to the various deities as presiding over the function of the several organs of perception and knowledge; but it is only an indirect reference. But the Śruti does not state anywhere categorically that the sense organs are endowed with consciousness.",
-      "gloss": [],
+      "translation": "Śruti figuratively assigns the presiding deities to the senses; it does not directly declare that the senses themselves are conscious.",
+      "gloss": [
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "अधिदेवताम्",
+          "en": "the presiding deity"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "इन्द्रियेषु",
+          "en": "to the senses"
+        },
+        {
+          "sa": "उपचर्यते",
+          "en": "is figuratively assigned"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "इन्द्रियाणाम्",
+          "en": "of the senses"
+        },
+        {
+          "sa": "चेतनत्वम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "उदीर्यते",
+          "en": "is declared"
+        }
+      ],
       "sourceNumbers": [
         543
       ],
@@ -35965,8 +36108,49 @@
       "number": "544",
       "label": "Verse 544",
       "deva": "अचेतनस्य दीपादेर् अर्थाभासकता यथा।\nतथैव चक्षुर्-आदीनां जडानाम् अपि सिध्यति॥",
-      "translation": "A lamp for instance sheds light, but it does not imply that the lamp is conscious. May it not be that the senses also shed light upon the various objects of knowledge without ceasing to be unconscious matter?",
-      "gloss": [],
+      "translation": "Just as an insentient lamp and the like can make objects appear, the same is true of insentient eyes and the other senses.",
+      "gloss": [
+        {
+          "sa": "अचेतनस्य",
+          "en": "of an insentient thing"
+        },
+        {
+          "sa": "दीप-आदेः",
+          "en": "a lamp and the like"
+        },
+        {
+          "sa": "अर्थ-आभासकता",
+          "en": "the capacity to make objects appear"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "चक्षुः-आदीनाम्",
+          "en": "of the eyes and the rest"
+        },
+        {
+          "sa": "जडानाम्",
+          "en": "of insentient things"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        }
+      ],
       "sourceNumbers": [
         544
       ],
@@ -35979,8 +36163,81 @@
       "number": "545",
       "label": "Verse 545",
       "deva": "इन्द्रियाणां चेष्टयिता प्राणोऽयं पञ्च-वृत्तिकः।\nसर्वावस्थास्व् अवस्थावान् सोऽयम् आत्मत्वम् अर्हति।\nअहं क्षुधावांस् तृष्णावान् इत्याद्यनुभवाद् अपि॥",
-      "translation": "As for the prāṇa, it has a five-fold function. It makes the sense organs active, and is ever present in all the three stages of consciousness. The prāṇa alone is fit to be called the Ātman, and it is also in conformity with the experience of people; for one says, ‘I am hungry. I am thirsty’ and so on.",
-      "gloss": [],
+      "translation": "This fivefold prāṇa moves the senses and remains present in all states; it is fit to be called the Self. The experience “I am hungry, I am thirsty,” and the like also supports this.",
+      "gloss": [
+        {
+          "sa": "इन्द्रियाणाम्",
+          "en": "of the senses"
+        },
+        {
+          "sa": "चेष्टयिता",
+          "en": "the mover"
+        },
+        {
+          "sa": "प्राणः",
+          "en": "prāṇa"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "पञ्च-वृत्तिकः",
+          "en": "having five functions"
+        },
+        {
+          "sa": "सर्व-अवस्थासु",
+          "en": "in all states"
+        },
+        {
+          "sa": "अवस्थावान्",
+          "en": "remaining present"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "deserves"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "क्षुधावान्",
+          "en": "hungry"
+        },
+        {
+          "sa": "तृष्णावान्",
+          "en": "thirsty"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "अनुभवात्",
+          "en": "from experience"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        }
+      ],
       "sourceNumbers": [
         545
       ],
@@ -35993,8 +36250,69 @@
       "number": "546",
       "label": "Verse 546",
       "deva": "श्रुत्यान्योऽन्तर आत्मा प्राणमय इतीर्यते यस्मात्।\nतस्मात् प्राणस्यात्मत्वं युक्तं नो करण-संज्ञानां क्वापि॥",
-      "translation": "It has also the support of the Śruti, which says, ‘There is something else, compact of prāṇa, the inner Ātman.’ It therefore stands to reason that the prāṇa is the Ātman; but not the sense organs which are but the instruments of the Ātman. ((ChanU.7.15.1) (Chāndogya Upaniṣad), (BrhUEng.3.4.1) (Bṛhad-Āraṇyaka Upaniṣad))",
-      "gloss": [],
+      "translation": "Since Śruti declares another inner Self to be made of prāṇa, it is reasonable to regard prāṇa as the Self, never the things called instruments.",
+      "gloss": [
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "अन्तरः",
+          "en": "inner"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "प्राणमयः",
+          "en": "made of prāṇa"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "ईर्यते",
+          "en": "is declared"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "since"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "प्राणस्य",
+          "en": "of prāṇa"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "युक्तम्",
+          "en": "is reasonable"
+        },
+        {
+          "sa": "नो",
+          "en": "not"
+        },
+        {
+          "sa": "करण-संज्ञानाम्",
+          "en": "of those called instruments"
+        },
+        {
+          "sa": "क्वापि",
+          "en": "anywhere"
+        }
+      ],
       "sourceNumbers": [
         546
       ],
@@ -36007,8 +36325,65 @@
       "number": "547",
       "label": "Verse 547",
       "deva": "इति निश्चयम् एतस्य दूषयत्यपरो जडः।\nभवत्यात्मा कथं प्राणो वायुर् एवैष आन्तरः॥",
-      "translation": "The doctrine that the mind is the Self Another, not more learned, may reject such a conclusion as being unwarranted. He might raise the following objections: ‘How can the prāṇa be the Ātman? What is prāṇa, other than the air that is in our lungs?’",
-      "gloss": [],
+      "translation": "Another dull disputant criticizes this conclusion: “How can prāṇa be the Self? This inner [breath] is only air.”",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निश्चयम्",
+          "en": "the conclusion"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "दूषयति",
+          "en": "criticizes"
+        },
+        {
+          "sa": "अपरः",
+          "en": "another"
+        },
+        {
+          "sa": "जडः",
+          "en": "dull person"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "प्राणः",
+          "en": "prāṇa"
+        },
+        {
+          "sa": "वायुः",
+          "en": "air"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "आन्तरः",
+          "en": "inner"
+        }
+      ],
       "sourceNumbers": [
         547
       ],
@@ -36020,14 +36395,79 @@
       "chapter": 3,
       "number": "548",
       "label": "Verse 548",
-      "deva": "बहिर् यात्य् अन्तर् आयाति भस्त्रिका-वायुवन् मुहुः।\nन हितं वाहितं वा स्वम् अन्यद् वा वेद किञ्चन॥",
-      "translation": "In this respect it is like the wind that plays in a pair of bellows; for it enters the lungs and comes out. Can prāṇa discriminate between good and evil? Is it endowed with consciousness? Does it know what is external to it?",
-      "gloss": [],
+      "deva": "बहिर् यात्य् अन्तर् आयाति भस्त्रिका-वायुवन् मुहुः।\nन हितं वाऽहितं वा स्वम् अन्यद् वा वेद किञ्चन॥",
+      "translation": "It repeatedly goes out and comes in like air in a bellows. It knows nothing at all—neither what is beneficial nor harmful, its own nor anything else.",
+      "gloss": [
+        {
+          "sa": "बहिः",
+          "en": "outward"
+        },
+        {
+          "sa": "याति",
+          "en": "goes"
+        },
+        {
+          "sa": "अन्तः",
+          "en": "inward"
+        },
+        {
+          "sa": "आयाति",
+          "en": "comes"
+        },
+        {
+          "sa": "भस्त्रिका-वायु-वत्",
+          "en": "like air in a bellows"
+        },
+        {
+          "sa": "मुहुः",
+          "en": "repeatedly"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हितम्",
+          "en": "beneficial"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अहितम्",
+          "en": "harmful"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "स्वम्",
+          "en": "its own"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "other"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "वेद",
+          "en": "knows"
+        },
+        {
+          "sa": "किञ्चन",
+          "en": "anything"
+        }
+      ],
       "sourceNumbers": [
         548
       ],
       "sectionTitle": "Otherwise Mis-identifying with Untruth",
-      "iast": "bahir yāty antar āyāti bhastrikā-vāyuvan muhuḥ|\nna hitaṃ vāhitaṃ vā svam anyad vā veda kiñcana||"
+      "iast": "bahir yāty antar āyāti bhastrikā-vāyuvan muhuḥ|\nna hitaṃ vā’hitaṃ vā svam anyad vā veda kiñcana||"
     },
     {
       "id": "svsss-3-0549",
@@ -36035,8 +36475,57 @@
       "number": "549",
       "label": "Verse 549",
       "deva": "जड-स्वभावश् चपलः कर्म-युक्तश्च सर्वदा।\nप्राणस्य भानं मनसि स्थिते सुप्ते न दृश्यते॥",
-      "translation": "Prāṇa is not sentient; it is unsteady, even though it is ever active. Moreover prāṇa is perceived only in conjunction with the mind. That is why in the stage of deep sleep, the existence of prāṇa is not perceived.",
-      "gloss": [],
+      "translation": "Prāṇa is inert by nature, restless, and always engaged in activity. When the mind is settled in sleep, the appearance of prāṇa is not seen.",
+      "gloss": [
+        {
+          "sa": "जड-स्वभावः",
+          "en": "inert by nature"
+        },
+        {
+          "sa": "चपलः",
+          "en": "restless"
+        },
+        {
+          "sa": "कर्म-युक्तः",
+          "en": "engaged in activity"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "प्राणस्य",
+          "en": "of prāṇa"
+        },
+        {
+          "sa": "भानम्",
+          "en": "appearance"
+        },
+        {
+          "sa": "मनसि",
+          "en": "when the mind"
+        },
+        {
+          "sa": "स्थिते",
+          "en": "is settled"
+        },
+        {
+          "sa": "सुप्ते",
+          "en": "in sleep"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         549
       ],
@@ -36049,8 +36538,65 @@
       "number": "550",
       "label": "Verse 550",
       "deva": "मनस् तु सर्वं जानाति सर्व-वेदन-कारणम्।\nयत् तस्मान् मन एवात्मा प्राणस् तु न कदाचन॥",
-      "translation": "But the mind (manas) is always conscious, and it understands everything. At the same time it is also capable of comprehending external objects. Would it not follow that it is not prāṇa, but the mind that is the Ātman? ((MunU.2.2.7) (Muṇḍaka Upaniṣad))",
-      "gloss": [],
+      "translation": "The mind, however, knows everything and is the cause of all cognition. Therefore the mind alone is the Self; prāṇa is never the Self.",
+      "gloss": [
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        },
+        {
+          "sa": "जानाति",
+          "en": "knows"
+        },
+        {
+          "sa": "सर्व-वेदन-कारणम्",
+          "en": "the cause of all cognition"
+        },
+        {
+          "sa": "यत्",
+          "en": "since"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "प्राणः",
+          "en": "prāṇa"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कदाचन",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         550
       ],
@@ -36063,8 +36609,61 @@
       "number": "551",
       "label": "Verse 551",
       "deva": "सङ्कल्पवान् अहं चिन्तावान् अहं च विकल्पवान्।\nइत्याद्यनुभवाद् अन्योऽन्तर आत्मा मनोमयः॥",
-      "translation": "We hear it said, ‘think’, ‘doubt’, ‘reflect’ and so on. From all these expressions, one might reasonably presume that it is the mind alone that is the Ātman. Moreover such a view has the support of the Śruti which says, ‘There is something else, which is compact of mind, the inner Ātman’.",
-      "gloss": [],
+      "translation": "From experiences such as “I form intentions,” “I think,” and “I make distinctions,” [some infer] another inner Self, made of mind.",
+      "gloss": [
+        {
+          "sa": "सङ्कल्पवान्",
+          "en": "forming intentions"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "चिन्तावान्",
+          "en": "thinking"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विकल्पवान्",
+          "en": "making distinctions"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "अनुभवात्",
+          "en": "from experience"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "अन्तरः",
+          "en": "inner"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "मनोमयः",
+          "en": "made of mind"
+        }
+      ],
       "sourceNumbers": [
         551
       ],
@@ -36077,8 +36676,53 @@
       "number": "552",
       "label": "Verse 552",
       "deva": "इत्यादि-श्रुति-सद्-भावाद् युक्ता मनस आत्मता।\nइति निश्चयम् एतस्य दूषयत्यपरो जडः॥",
-      "translation": "Even though this view has the support of the Śruti and the backing of reason, it is also liable to be controverted. There are some disputants who are perhaps no wiser and yet advance a contrary opinion.",
-      "gloss": [],
+      "translation": "Because such statements occur in Śruti, it is reasonable to regard the mind as the Self. Another dull disputant refutes this conclusion.",
+      "gloss": [
+        {
+          "sa": "इति-आदि",
+          "en": "such statements and the like"
+        },
+        {
+          "sa": "श्रुति-सद्भावात्",
+          "en": "because of their presence in Śruti"
+        },
+        {
+          "sa": "युक्ता",
+          "en": "reasonable"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "आत्मता",
+          "en": "selfhood"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निश्चयम्",
+          "en": "conclusion"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "this"
+        },
+        {
+          "sa": "दूषयति",
+          "en": "refutes"
+        },
+        {
+          "sa": "अपरः",
+          "en": "another"
+        },
+        {
+          "sa": "जडः",
+          "en": "dull person"
+        }
+      ],
       "sourceNumbers": [
         552
       ],
@@ -36091,8 +36735,53 @@
       "number": "553",
       "label": "Verse 553",
       "deva": "कथं मनस आत्मत्वं करणस्य दृग्-आदिवत्।\nकर्तृ-प्रयोज्यं करणं न स्वयं तु प्रवर्तते॥",
-      "translation": "The doctrine that the intellect is the Self Such persons might say, “The mind also is but a tool of the Ātman. In this respect it is no better than the eye, and the other sense organs. As a rule, all things that have an instrumental value are for the sake of something else, other than their own sake. Consequently they have no independent existence.”",
-      "gloss": [],
+      "translation": "How can the mind be the Self? Like sight and the other senses, it is an instrument. An instrument is set in motion by an agent; it does not act on its own.",
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "मनसः",
+          "en": "of the mind"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "करणस्य",
+          "en": "of an instrument"
+        },
+        {
+          "sa": "दृक्-आदि-वत्",
+          "en": "like sight and the rest"
+        },
+        {
+          "sa": "कर्तृ-प्रयोज्यम्",
+          "en": "set in motion by an agent"
+        },
+        {
+          "sa": "करणम्",
+          "en": "an instrument"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "by itself"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रवर्तते",
+          "en": "acts"
+        }
+      ],
       "sourceNumbers": [
         553
       ],
@@ -36105,8 +36794,61 @@
       "number": "554",
       "label": "Verse 554",
       "deva": "करण-प्रयोक्ता यः कर्ता तस्यैवात्मत्वम् अर्हति।\nआत्मा स्व-तन्त्रः पुरुषो न प्रयोज्यः कदाचन॥",
-      "translation": "Therefore only the wielder of the tool may be said to be a doer; in that sense, the Ātman alone is the doer, for the Ātman alone is independent. If it were otherwise, the Puruṣa woud become a mere agent.",
-      "gloss": [],
+      "translation": "The agent who employs an instrument alone deserves to be called the Self. The Self is an independent person, never something made to act by another.",
+      "gloss": [
+        {
+          "sa": "करण-प्रयोक्ता",
+          "en": "one who employs an instrument"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "कर्ता",
+          "en": "an agent"
+        },
+        {
+          "sa": "तस्य",
+          "en": "his"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मत्वम्",
+          "en": "selfhood"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "deserves"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "स्वतन्त्रः",
+          "en": "independent"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "person"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रयोज्यः",
+          "en": "to be made to act by another"
+        },
+        {
+          "sa": "कदाचन",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         554
       ],
@@ -36119,8 +36861,73 @@
       "number": "555",
       "label": "Verse 555",
       "deva": "अहं कर्तास्म्यहं भोक्ता सुखीत्यनुभवाद् अपि।\nबुद्धिर् आत्मा भवत्येव बुद्धि-धर्मो ह्यहङ्-कृतिः॥",
-      "translation": "‘I am the doer’, ‘I am the enjoyer’, ‘I feel happy’ – from such expressions which we hear frequently, we see that it is the buddhi or the intellect that should be identified with the Ātman. It would then follow that this ‘I’ consciousness is a function of the buddhi or of the superior reason.",
-      "gloss": [],
+      "translation": "From the experience “I am the agent, I am the enjoyer, I am happy,” [some conclude] that the intellect itself is the Self, for the I-making function is a property of the intellect.",
+      "gloss": [
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "कर्ता",
+          "en": "the agent"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "am"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "भोक्ता",
+          "en": "the enjoyer"
+        },
+        {
+          "sa": "सुखी",
+          "en": "happy"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुभवात्",
+          "en": "from experience"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "the intellect"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "बुद्धि-धर्मः",
+          "en": "a property of the intellect"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अहङ्-कृतिः",
+          "en": "the I-making function"
+        }
+      ],
       "sourceNumbers": [
         555
       ],
@@ -36133,8 +36940,65 @@
       "number": "556",
       "label": "Verse 556",
       "deva": "अन्योऽन्तर आत्मा विज्ञानमय इति वदति निगमः।\nमनसोऽपि च भिन्नं विज्ञानमयं कर्तृ-रूपम् आत्मानम्॥",
-      "translation": "It has also the support of the Śruti, for it says, ‘There is something else, which is compact of the intellect, and that is the inner Ātman’. Some therefore say that we ought to identify the Ātman with the vijñānamaya kośa, for it is something other than the mind. ((TaitU.2.4.1) (Taittirīya Upaniṣad))",
-      "gloss": [],
+      "translation": "The Veda says, “Another inner Self is made of discernment.” It is a discernment-made, agent-shaped Self, distinct even from the mind.",
+      "gloss": [
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "अन्तरः",
+          "en": "inner"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "विज्ञानमयः",
+          "en": "made of discernment"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "वदति",
+          "en": "says"
+        },
+        {
+          "sa": "निगमः",
+          "en": "the Veda"
+        },
+        {
+          "sa": "मनसः",
+          "en": "from the mind"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "भिन्नम्",
+          "en": "distinct"
+        },
+        {
+          "sa": "विज्ञानमयम्",
+          "en": "made of discernment"
+        },
+        {
+          "sa": "कर्तृ-रूपम्",
+          "en": "agent-shaped"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "Self"
+        }
+      ],
       "sourceNumbers": [
         556
       ],
@@ -36147,8 +37011,89 @@
       "number": "557",
       "label": "Verse 557",
       "deva": "विज्ञानं यज्ञं तनुते कर्माणि तनुतेऽपि च।\nइत्यस्य कर्तृता श्रुत्या मुखतः प्रतिपाद्यते।\nतस्माद् युक्तात्मता बुद्धेर् इति बौद्धेन निश्चितम्॥",
-      "translation": "It is by means of this vijñānamaya kośa that all actions, as well as all sacrifices are performed. So says the Śruti. Thus, they say, the Śruti proves that it is the intellect that is the real doer, and therefore it would be reasonable to conclude that the intellect is the Ātman. In support of it, they say that it has the approval of the Buddhists also.",
-      "gloss": [],
+      "translation": "It performs the sacrifice and performs actions too; Śruti explicitly presents its agency. Therefore, the Buddhist concludes, it is reasonable to regard the intellect as the Self.",
+      "gloss": [
+        {
+          "sa": "विज्ञानम्",
+          "en": "discernment; intellect"
+        },
+        {
+          "sa": "यज्ञम्",
+          "en": "sacrifice"
+        },
+        {
+          "sa": "तनुते",
+          "en": "performs"
+        },
+        {
+          "sa": "कर्माणि",
+          "en": "actions"
+        },
+        {
+          "sa": "तनुते",
+          "en": "performs"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अस्य",
+          "en": "its"
+        },
+        {
+          "sa": "कर्तृता",
+          "en": "agency"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "मुखतः",
+          "en": "explicitly"
+        },
+        {
+          "sa": "प्रतिपाद्यते",
+          "en": "is presented"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "युक्ता",
+          "en": "reasonable"
+        },
+        {
+          "sa": "आत्मता",
+          "en": "selfhood"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "बौद्धेन",
+          "en": "by the Buddhist"
+        },
+        {
+          "sa": "निश्चितम्",
+          "en": "is concluded"
+        }
+      ],
       "sourceNumbers": [
         557
       ],
@@ -36161,8 +37106,65 @@
       "number": "558",
       "label": "Verse 558",
       "deva": "प्राभाकरस् तार्किकश्च ताव् उभाव् अप्य् अमर्षया।\nतन्-निश्चयं दुषयतो बुद्धिर् आत्मा कथं त्विति॥",
-      "translation": "The doctrine that ignorance is the Self But such a view stands refuted by the Mīmāṃsakas and by the Tārkikas. They vehemently oppose it, and question the validity of the conclusion which identifies the Ātman with the buddhi. ((BrSEng.2.2.19) (Brahma Sūtras Eng.))",
-      "gloss": [],
+      "translation": "Both a Prābhākara and a logician, dissatisfied, criticize that conclusion: “How can the intellect be the Self?”",
+      "gloss": [
+        {
+          "sa": "प्राभाकरः",
+          "en": "a Prābhākara"
+        },
+        {
+          "sa": "तार्किकः",
+          "en": "a logician"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तौ",
+          "en": "those two"
+        },
+        {
+          "sa": "उभौ",
+          "en": "both"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अमर्षया",
+          "en": "in dissatisfaction"
+        },
+        {
+          "sa": "तत्-निश्चयम्",
+          "en": "that conclusion"
+        },
+        {
+          "sa": "दूषयतः",
+          "en": "they criticize"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "intellect"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ],
       "sourceNumbers": [
         558
       ],
@@ -36175,8 +37177,45 @@
       "number": "559",
       "label": "Verse 559",
       "deva": "बुद्धेर् अज्ञान-कार्यत्वाद् विनाशित्वात् प्रतिक्षणम्।\nबुद्ध्यादीनां च सर्वेषाम् अज्ञाने लय-दर्शनात्॥",
-      "translation": "They say, ‘The intellect is conscious of both knowledge and ignorance. It is but a ripple arising in the stream of consciousness, and has but a momentary existence. Moreover, where there is the negation of knowledge, as in deep sleep, the intellect does not function at all.’",
-      "gloss": [],
+      "translation": "The intellect is a product of ignorance and perishes moment by moment; and all things beginning with the intellect are seen to dissolve into ignorance.",
+      "gloss": [
+        {
+          "sa": "बुद्धेः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "अज्ञान-कार्यत्वात्",
+          "en": "because it is a product of ignorance"
+        },
+        {
+          "sa": "विनाशित्वात्",
+          "en": "because it is perishable"
+        },
+        {
+          "sa": "प्रतिक्षणम्",
+          "en": "moment by moment"
+        },
+        {
+          "sa": "बुद्धि-आदीनाम्",
+          "en": "of the intellect and the rest"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सर्वेषाम्",
+          "en": "of all"
+        },
+        {
+          "sa": "अज्ञाने",
+          "en": "into ignorance"
+        },
+        {
+          "sa": "लय-दर्शनात्",
+          "en": "because dissolution is observed"
+        }
+      ],
       "sourceNumbers": [
         559
       ],
@@ -36189,8 +37228,61 @@
       "number": "560",
       "label": "Verse 560",
       "deva": "अज्ञोऽहम् इत्यनुभवाद् आ-स्त्री-बालादि-गोचरात्।\nभवत्यज्ञानम् एवात्मा न तु बुद्धिः कदाचन॥",
-      "translation": "A woman might say, or even a child might say, ‘I do not know; I am ignorant’. In all such expressions which lie within the range of common experience, we see how the intellect becomes merged in avidyā, the negation of knowledge. Would it not imply that the Ātman is not therefore compact of the buddhi, but of ajñāna or ignorance?",
-      "gloss": [],
+      "translation": "From the common experience “I am ignorant,” even among women, children, and others, [some conclude] that ignorance itself is the Self, and never the intellect.",
+      "gloss": [
+        {
+          "sa": "अज्ञः",
+          "en": "ignorant"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुभवात्",
+          "en": "from experience"
+        },
+        {
+          "sa": "आ-स्त्री-बाल-आदि-गोचरात्",
+          "en": "within the experience of women, children, and the like"
+        },
+        {
+          "sa": "भवति",
+          "en": "is"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "the intellect"
+        },
+        {
+          "sa": "कदाचन",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         560
       ],
