@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 530
+      "end": 535
     },
-    "note": "Source verses 1–530 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 531 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–535 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 536 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -38999,11 +38999,41 @@
       "label": "Verse 531",
       "deva": "अयमात्मा नित्यसिद्धः प्रमाणे सति भासते ।\nन देशं नापि कालं न शुद्धिं वाप्यपेक्षते ॥",
       "iast": "ayamātmā nityasiddhaḥ pramāṇe sati bhāsate |\nna deśaṃ nāpi kālaṃ na śuddhiṃ vāpyapekṣate ||",
-      "translation": "So this Atman, which is an eternal verity, manifests Itself as soon as the right means of knowledge is present, and does not depend upon either place or time or (internal) purity.",
-      "gloss": [],
+      "translation": "This Self is eternally established and shines forth when a valid means of knowledge is present. It needs neither place nor time nor purity.",
+      "gloss": [
+        {
+          "sa": "अयम् आत्मा",
+          "en": "this Self (ayam: this | ātmā: Self)"
+        },
+        {
+          "sa": "नित्य-सिद्धः",
+          "en": "eternally established (nitya: eternal | siddhaḥ: established, accomplished)"
+        },
+        {
+          "sa": "प्रमाणे सति",
+          "en": "when a valid means of knowledge is present (pramāṇe: in a means of knowledge | sati: when present)"
+        },
+        {
+          "sa": "भासते",
+          "en": "shines forth; becomes manifest"
+        },
+        {
+          "sa": "न देशम्",
+          "en": "not place (na: not | deśam: place)"
+        },
+        {
+          "sa": "न अपि कालम्",
+          "en": "nor time (na: not | api: also, even | kālam: time)"
+        },
+        {
+          "sa": "न शुद्धिम् वा अपि अपेक्षते",
+          "en": "nor does it require purity (na: not | śuddhim: purity | vā: or | api: even | apekṣate: depends on, requires)"
+        }
+      ],
       "sourceNumbers": [
         531
-      ]
+      ],
+      "editionTranslation": "So this Atman, which is an eternal verity, manifests Itself as soon as the right means of knowledge is present, and does not depend upon either place or time or (internal) purity."
     },
     {
       "id": "vivekachudamani-532",
@@ -39011,11 +39041,33 @@
       "label": "Verse 532",
       "deva": "देवदत्तोऽहम् इत्य् एतद् विज्ञानं निरपेक्षकम् ।\nतद्वद् ब्रह्मविदोऽप्य् अस्य ब्रह्माहमिति वेदनम् ॥",
       "iast": "devadatto'ham ity etad vijñānaṃ nirapekṣakam |\ntadvad brahmavido'py asya brahmāhamiti vedanam ||",
-      "translation": "The consciousness, \"I am Devadatta\", is independent of circumstances; similar is the case with the realisation of the knower of Brahman that he is Brahman.",
-      "gloss": [],
+      "translation": "The knowledge “I am Devadatta” is independent of anything else. Likewise, for a knower of Brahman, the knowledge “I am Brahman” is independent.",
+      "gloss": [
+        {
+          "sa": "देवदत्तः अहम् इति एतत् विज्ञानम्",
+          "en": "this knowledge, “I am Devadatta” (devadattaḥ: Devadatta | aham: I | iti: thus, “that” | etat: this | vijñānam: knowledge)"
+        },
+        {
+          "sa": "निरपेक्षकम्",
+          "en": "independent; not relying on anything else"
+        },
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "ब्रह्मविदः अपि अस्य",
+          "en": "even for this knower of Brahman (brahmavidaḥ: of the knower of Brahman | api: even | asya: of this one)"
+        },
+        {
+          "sa": "ब्रह्म अहम् इति वेदनम्",
+          "en": "the knowledge “I am Brahman” (brahma: Brahman | aham: I | iti: thus, “that” | vedanam: knowledge, knowing)"
+        }
+      ],
       "sourceNumbers": [
         532
-      ]
+      ],
+      "editionTranslation": "The consciousness, \"I am Devadatta\", is independent of circumstances; similar is the case with the realisation of the knower of Brahman that he is Brahman."
     },
     {
       "id": "vivekachudamani-533",
@@ -39023,11 +39075,41 @@
       "label": "Verse 533",
       "deva": "भानुनेव जगत्सर्वं भासते यस्य तेजसा ।\nअनात्मकमसत्तुच्छं किं नु तस्यावभासकम् ॥",
       "iast": "bhānuneva jagatsarvaṃ bhāsate yasya tejasā |\nanātmakamasattucchaṃ kiṃ nu tasyāvabhāsakam ||",
-      "translation": "What indeed can manifest That whose lustre, like the sun, causes the whole universe – unsubstantial, unreal, insignificant – to appear at all ?",
-      "gloss": [],
+      "translation": "What could illumine That, by whose radiance the whole world shines like the sun, though the world is without an independent self, unreal, and insignificant?",
+      "gloss": [
+        {
+          "sa": "भानुना इव",
+          "en": "like the sun (bhānunā: by the sun | iva: like)"
+        },
+        {
+          "sa": "जगत् सर्वम्",
+          "en": "the whole world (jagat: world | sarvam: all, whole)"
+        },
+        {
+          "sa": "भासते",
+          "en": "shines"
+        },
+        {
+          "sa": "यस्य तेजसा",
+          "en": "by whose radiance (yasya: whose | tejasā: by the radiance, light)"
+        },
+        {
+          "sa": "अनात्मकम् असत् तुच्छम्",
+          "en": "without an independent self, unreal, insignificant (anātmakam: without a self or independent essence | asat: unreal | tuccham: insignificant, trivial)"
+        },
+        {
+          "sa": "किम् नु",
+          "en": "what indeed? (kim: what | nu: indeed)"
+        },
+        {
+          "sa": "तस्य अवभासकम्",
+          "en": "could illumine That? (tasya: of That | avabhāsakam: an illuminator, what makes shine)"
+        }
+      ],
       "sourceNumbers": [
         533
-      ]
+      ],
+      "editionTranslation": "What indeed can manifest That whose lustre, like the sun, causes the whole universe – unsubstantial, unreal, insignificant – to appear at all ?"
     },
     {
       "id": "vivekachudamani-534",
@@ -39035,11 +39117,33 @@
       "label": "Verse 534",
       "deva": "वेदशास्त्रपुराणानि भूतानि सकलान्य् अपि ।\nयेनार्थवन्ति तं किन्नु विज्ञातारं प्रकाशयेत् ॥",
       "iast": "vedaśāstrapurāṇāni bhūtāni sakalāny api |\nyenārthavanti taṃ kinnu vijñātāraṃ prakāśayet ||",
-      "translation": "What, indeed, can illumine that Eternal Subject by which the Vedas and Puranas and other Scriptures, as well as all beings are endowed with a meaning ?",
-      "gloss": [],
+      "translation": "Through whom the Vedas, scriptures, Purāṇas, and all beings have meaning, what could illumine that knower?",
+      "gloss": [
+        {
+          "sa": "वेद-शास्त्र-पुराणानि",
+          "en": "the Vedas, scriptures, and Purāṇas (veda: Veda | śāstra: scripture | purāṇāni: Purāṇas)"
+        },
+        {
+          "sa": "भूतानि सकलानि अपि",
+          "en": "all beings as well (bhūtāni: beings | sakalāni: all | api: also, even)"
+        },
+        {
+          "sa": "येन अर्थवन्ति",
+          "en": "by whom they have meaning (yena: by whom | arthavanti: meaningful, having meaning)"
+        },
+        {
+          "sa": "तम् किम् नु",
+          "en": "that one—what, indeed? (tam: that one, him | kim: what | nu: indeed)"
+        },
+        {
+          "sa": "विज्ञातारम् प्रकाशयेत्",
+          "en": "could illumine the knower? (vijñātāram: the knower | prakāśayet: could illumine, make shine)"
+        }
+      ],
       "sourceNumbers": [
         534
-      ]
+      ],
+      "editionTranslation": "What, indeed, can illumine that Eternal Subject by which the Vedas and Puranas and other Scriptures, as well as all beings are endowed with a meaning ?"
     },
     {
       "id": "vivekachudamani-535",
@@ -39047,11 +39151,45 @@
       "label": "Verse 535",
       "deva": "एष स्वयंज्योतिरनन्तशक्तिः\nआत्माप्रमेयः सकलानुभूतिः ।\nयम् एव विज्ञाय विमुक्तबन्धो\nजयत्ययं ब्रह्मविदुत्तमोत्तमः ॥",
       "iast": "eṣa svayaṃjyotiranantaśaktiḥ\nātmāprameyaḥ sakalānubhūtiḥ |\nyam eva vijñāya vimuktabandho\njayatyayaṃ brahmaviduttamottamaḥ ||",
-      "translation": "Here is the Self-effulgent Atman, of infinite power, beyond the range of conditioned knowledge, yet the common experience of all - realising which alone this incomparable knower of Brahman lives his glorious life, freed from bondage.",
-      "gloss": [],
+      "translation": "This is the self-luminous Self, of infinite power, immeasurable, and present in all experience. Knowing this alone, the foremost knower of Brahman, freed from bondage, triumphs.",
+      "gloss": [
+        {
+          "sa": "एषः स्वयं-ज्योतिः",
+          "en": "this self-luminous one (eṣaḥ: this | svayam: by itself | jyotiḥ: light, luminous)"
+        },
+        {
+          "sa": "अनन्त-शक्तिः",
+          "en": "of infinite power (ananta: endless, infinite | śaktiḥ: power)"
+        },
+        {
+          "sa": "आत्मा अप्रमेयः",
+          "en": "the Self, immeasurable (ātmā: Self | aprameyaḥ: immeasurable, beyond proof)"
+        },
+        {
+          "sa": "सकल-अनुभूतिः",
+          "en": "present in all experience (sakala: all | anubhūtiḥ: experience, awareness)"
+        },
+        {
+          "sa": "यम् एव विज्ञाय",
+          "en": "knowing whom alone (yam: whom | eva: alone | vijñāya: having known)"
+        },
+        {
+          "sa": "विमुक्त-बन्धः",
+          "en": "freed from bondage (vimukta: freed | bandhaḥ: bondage)"
+        },
+        {
+          "sa": "जयति अयम्",
+          "en": "this one triumphs (jayati: triumphs | ayam: this one)"
+        },
+        {
+          "sa": "ब्रह्मविद्-उत्तम-उत्तमः",
+          "en": "the foremost among the knowers of Brahman (brahmavid: knower of Brahman | uttama: best | uttamaḥ: supreme, best of the best)"
+        }
+      ],
       "sourceNumbers": [
         535
-      ]
+      ],
+      "editionTranslation": "Here is the Self-effulgent Atman, of infinite power, beyond the range of conditioned knowledge, yet the common experience of all - realising which alone this incomparable knower of Brahman lives his glorious life, freed from bondage."
     },
     {
       "id": "vivekachudamani-536",
@@ -39648,6 +39786,7 @@
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 511–515, preserving prior English as editionTranslation. Restored the missing anusvāra in verse 512's viśvaṃ.",
     "Added original literal English translations and Devanāgarī-backed word-for-word glosses for Vivekacūḍāmaṇi verses 516–520, preserving prior English as editionTranslation. Corrected verse 516's akhaṇḍa reading and standardized ahaṅkāra in 518.",
     "Logged and completed Vivekacūḍāmaṇi verses 521–525 with original literal English translations and Devanāgarī-backed word-for-word glosses, preserving prior English as editionTranslation.",
-    "Logged and completed Vivekacūḍāmaṇi verses 526–530 with literal translations and complete word-for-word glosses; corrected the Sanskrit/transliteration of verses 526, 528, and 529."
+    "Logged and completed Vivekacūḍāmaṇi verses 526–530 with literal translations and complete word-for-word glosses; corrected the Sanskrit/transliteration of verses 526, 528, and 529.",
+    "Logged and completed Vivekacūḍāmaṇi verses 531–535 with literal English translations and complete Devanāgarī-backed word-for-word glosses."
   ]
 }
