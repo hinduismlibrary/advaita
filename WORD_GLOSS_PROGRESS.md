@@ -46,7 +46,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Nirvāṇaṣaṭkam | 7 | All four fields present |
 | Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
 | Viṣṇu Ṣaṭpadī Stotram | 8 | All four fields present |
-| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses and literal translations cover verses 1–320 (311 units); verses 321–1,006 remain. |
+| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses and literal translations cover verses 1–330 (320 units); verses 331–1,006 remain. |
 | Upadeśapañcakam | 5 | Glosses present; add explicit IAST |
 | Upadeśasāhasrī | 787 | All four fields present |
 | Vedāntasāra | 71 | Glosses present; add explicit IAST; review named contents |
