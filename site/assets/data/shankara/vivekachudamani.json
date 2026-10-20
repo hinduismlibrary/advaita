@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 460
+      "end": 465
     },
-    "note": "Source verses 1–460 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 461 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–465 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 466 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -35399,49 +35399,321 @@
       "number": "461",
       "label": "Verse 461",
       "deva": "शरीरस्यापि प्रारब्धकल्पना भ्रान्तिर् एव हि ।\nअध्यस्तस्य कुतः सत्त्वमसत्यस्य कुतो जनिः\n\nअजातस्य कुतो नाशः प्रारब्धमसतः कुतः ॥",
-      "iast": "śarīrasyāpi prārabdhakalpanā bhrāntir eva hi |\nadhyastasya kutaḥ sattvamasatyasya kuto janiḥ\n\najātasya kuto nāśaḥ prārabdhamasataḥ kutaḥ ||",
-      "translation": "The attributing of Prarabdha work to the body even is certainly an error. How can something that is superimposed (on another) have any existence, and how can that which is unreal have a birth ? And how can that which has not been born at all, die ? So how can Prarabdha work exist for something that is unreal ?",
-      "gloss": [],
+      "iast": "śarīrasya api prārabdha-kalpanā bhrāntiḥ eva hi |\nadhyastasya kutaḥ sattvam asatyasya kuto janiḥ |\najātasya kuto nāśaḥ prārabdham asataḥ kutaḥ ||",
+      "translation": "Even to posit prārabdha for the body is surely an error. How could what is superimposed exist? How could the unreal be born? How could the unborn be destroyed? Whence could prārabdha belong to what is unreal?",
+      "gloss": [
+        {
+          "sa": "शरीरस्य",
+          "en": "for the body; of the body"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "प्रारब्ध-कल्पना",
+          "en": "the supposition of prārabdha"
+        },
+        {
+          "sa": "भ्रान्तिः",
+          "en": "an error; delusion"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed; just"
+        },
+        {
+          "sa": "हि",
+          "en": "surely"
+        },
+        {
+          "sa": "अध्यस्तस्य",
+          "en": "of what is superimposed"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how; whence"
+        },
+        {
+          "sa": "सत्त्वम्",
+          "en": "existence; reality"
+        },
+        {
+          "sa": "असत्यस्य",
+          "en": "of what is unreal"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "जनिः",
+          "en": "birth; coming into being"
+        },
+        {
+          "sa": "अजातस्य",
+          "en": "of what is unborn"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "नाशः",
+          "en": "destruction"
+        },
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha"
+        },
+        {
+          "sa": "असतः",
+          "en": "of what is unreal"
+        },
+        {
+          "sa": "कुतः",
+          "en": "whence"
+        }
+      ],
       "sourceNumbers": [
         461
-      ]
+      ],
+      "editionTranslation": "The attributing of Prarabdha work to the body even is certainly an error. How can something that is superimposed (on another) have any existence, and how can that which is unreal have a birth ? And how can that which has not been born at all, die ? So how can Prarabdha work exist for something that is unreal ?"
     },
     {
       "id": "vivekachudamani-462",
       "number": "462–463",
       "label": "Verses 462–463",
       "deva": "ज्ञानेनाज्ञानकार्यस्य समूलस्य लयो यदि ।\nतिष्ठत्ययं कथं देह इति शङ्कावतो जडान् ॥\n\nसमाधातुं बाह्यदृष्ट्या प्रारब्धं वदति श्रुतिः ।\nन तु देहादिसत्यत्वबोधनाय विपश्चिताम् ॥",
-      "iast": "jñānenājñānakāryasya samūlasya layo yadi |\ntiṣṭhatyayaṃ kathaṃ deha iti śaṅkāvato jaḍān ||\n\nsamādhātuṃ bāhyadṛṣṭyā prārabdhaṃ vadati śrutiḥ |\nna tu dehādisatyatvabodhanāya vipaścitām ||",
-      "translation": "\"If the effects of ignorance are destroyed with their root by knowledge, then how does the body live?\" – it is to convince those fools who entertain a doubt like this, that the Shrutis, from a relative standpoint, hypothesise Prarabdha work, but not for proving the reality of the body etc., of the man of realisation.",
-      "gloss": [],
+      "iast": "jñānena ajñāna-kāryasya samūlasya layaḥ yadi |\ntiṣṭhaty ayaṃ kathaṃ deha iti śaṅkāvato jaḍān ||\nsamādhātuṃ bāhya-dṛṣṭyā prārabdhaṃ vadati śrutiḥ |\nna tu dehādi-satyatva-bodhanāya vipaścitām ||",
+      "translation": "If the effects of ignorance, together with their root, are dissolved by knowledge, how does this body remain? For the dull-minded who raise this doubt, scripture speaks of prārabdha from an external standpoint to resolve it—not to teach the discerning that the body and the rest are real.",
+      "gloss": [
+        {
+          "sa": "ज्ञानेन",
+          "en": "by knowledge"
+        },
+        {
+          "sa": "अज्ञान-कार्यस्य",
+          "en": "of the effect of ignorance"
+        },
+        {
+          "sa": "समूलस्य",
+          "en": "together with its root"
+        },
+        {
+          "sa": "लयः",
+          "en": "dissolution"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "remains; persists"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "देहः",
+          "en": "the body"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "शङ्कावतः",
+          "en": "of those who doubt"
+        },
+        {
+          "sa": "जडान्",
+          "en": "the dull-minded"
+        },
+        {
+          "sa": "समाधातुम्",
+          "en": "in order to resolve; answer"
+        },
+        {
+          "sa": "बाह्य-दृष्ट्या",
+          "en": "from an external standpoint"
+        },
+        {
+          "sa": "प्रारब्धम्",
+          "en": "prārabdha"
+        },
+        {
+          "sa": "वदति",
+          "en": "speaks; states"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "देह-आदि-सत्यत्व-बोधनाय",
+          "en": "to teach that the body and the rest are real"
+        },
+        {
+          "sa": "विपश्चिताम्",
+          "en": "for the discerning; for the wise"
+        }
+      ],
       "sourceNumbers": [
         462,
         463
-      ]
+      ],
+      "editionTranslation": "\"If the effects of ignorance are destroyed with their root by knowledge, then how does the body live?\" – it is to convince those fools who entertain a doubt like this, that the Shrutis, from a relative standpoint, hypothesise Prarabdha work, but not for proving the reality of the body etc., of the man of realisation."
     },
     {
       "id": "vivekachudamani-464",
       "number": "464",
       "label": "Verse 464",
       "deva": "परिपूर्णमनाद्यन्तमप्रमेयमविक्रियम् ।\nएकमेवाद्वयं ब्रह्म नेह नानास्ति किंचन ॥",
-      "iast": "paripūrṇamanādyantamaprameyamavikriyam |\nekamevādvayaṃ brahma neha nānāsti kiṃcana ||",
-      "translation": "There is only Brahman, the One without a second, infinite, without beginning or end, transcendent and changeless; there is no duality whatsoever in It.",
-      "gloss": [],
+      "iast": "paripūrṇam anādy-antam aprameyam avikriyam |\nekam eva advayaṃ brahma na iha nānā asti kiṃcana ||",
+      "translation": "Brahman is completely full, without beginning or end, immeasurable, changeless, one alone and without a second; here no plurality exists at all.",
+      "gloss": [
+        {
+          "sa": "परिपूर्णम्",
+          "en": "completely full; perfect"
+        },
+        {
+          "sa": "अनादि-अन्तम्",
+          "en": "without beginning or end"
+        },
+        {
+          "sa": "अप्रमेयम्",
+          "en": "immeasurable; beyond objectifying measurement"
+        },
+        {
+          "sa": "अविक्रियम्",
+          "en": "changeless"
+        },
+        {
+          "sa": "एकम्",
+          "en": "one"
+        },
+        {
+          "sa": "एव",
+          "en": "alone; indeed"
+        },
+        {
+          "sa": "अद्वयम्",
+          "en": "without a second; nondual"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "नाना",
+          "en": "plurality; multiplicity"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "किञ्चन",
+          "en": "anything at all"
+        }
+      ],
       "sourceNumbers": [
         464
-      ]
+      ],
+      "editionTranslation": "There is only Brahman, the One without a second, infinite, without beginning or end, transcendent and changeless; there is no duality whatsoever in It."
     },
     {
       "id": "vivekachudamani-465",
       "number": "465",
       "label": "Verse 465",
-      "deva": "सद्गनं चिद्घनं नित्यमानन्दघनमक्रियम् ।\nएकमेवाद्वयं ब्रह्म नेह नानास्ति किंचन ॥",
-      "iast": "sadganaṃ cidghanaṃ nityamānandaghanamakriyam |\nekamevādvayaṃ brahma neha nānāsti kiṃcana ||",
-      "translation": "There is only Brahman, the One without a second, the Essence of Existence, Knowledge and Eternal Bliss, and devoid of activity; there is no duality whatsoever in It.",
-      "gloss": [],
+      "deva": "सद्घनं चिद्घनं नित्यमानन्दघनमक्रियम् ।\nएकमेवाद्वयं ब्रह्म नेह नानास्ति किंचन ॥",
+      "iast": "sad-ghanaṃ cid-ghanaṃ nityam ānanda-ghanaṃ akriyam |\nekam eva advayaṃ brahma na iha nānā asti kiṃcana ||",
+      "translation": "Brahman is Being in its fullness, Consciousness in its fullness, eternal, full of bliss, and actionless. It alone is one without a second; here no plurality exists at all.",
+      "gloss": [
+        {
+          "sa": "सत्-घनम्",
+          "en": "Being in its fullness; a solid fullness of Being"
+        },
+        {
+          "sa": "चित्-घनम्",
+          "en": "Consciousness in its fullness"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "eternal"
+        },
+        {
+          "sa": "आनन्द-घनम्",
+          "en": "fullness of bliss"
+        },
+        {
+          "sa": "अक्रियम्",
+          "en": "actionless; without activity"
+        },
+        {
+          "sa": "एकम्",
+          "en": "one"
+        },
+        {
+          "sa": "एव",
+          "en": "alone; indeed"
+        },
+        {
+          "sa": "अद्वयम्",
+          "en": "without a second; nondual"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "नाना",
+          "en": "plurality; multiplicity"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "किञ्चन",
+          "en": "anything at all"
+        }
+      ],
       "sourceNumbers": [
         465
-      ]
+      ],
+      "editionTranslation": "There is only Brahman, the One without a second, the Essence of Existence, Knowledge and Eternal Bliss, and devoid of activity; there is no duality whatsoever in It."
     },
     {
       "id": "vivekachudamani-466",
@@ -36864,6 +37136,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 446–450; preserved prior translations as editionTranslation. Kept verse 446’s action-before-result reasoning and rendered the hundred-crore kalpa compound in verse 447 explicitly.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 451–455; preserved prior translations as editionTranslation. Corrected verse 452's छिनत्ति (chinatti), verse 453's damaged प्रारब्धं and प्राक्सञ्चितागामिनाम् readings against convergent text witnesses, and verse 455's ममतामिदन्ताम् sequence of 'mine-ness' and 'this-ness'.",
     "Refined verse 451's word-by-word reading to distinguish jñānodayāt (at the arising of knowledge) from jñānāt (through knowledge).",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 456–460; preserved prior translations as editionTranslation. Reparsed verse 458's n-anādeḥ as 'for the beginningless Self' and translated verse 457's prāśana-mocana as eating and bodily elimination."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 456–460; preserved prior translations as editionTranslation. Reparsed verse 458's n-anādeḥ as 'for the beginningless Self' and translated verse 457's prāśana-mocana as eating and bodily elimination.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 461–465; verses 462–463 share one reader unit and are both fully glossed. Corrected verse 465's IAST sadghanaṃ to match सद्घनं."
   ]
 }
