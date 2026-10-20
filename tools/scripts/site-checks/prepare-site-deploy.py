@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 from pathlib import Path
 
 CACHE_VERSION = "20261020-on-site-search-1"
+DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
+TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_SITE = REPO_ROOT / "site"
 MMK_PREFIX = "articles/mulamadhyamakakarika-with-chandrakirti"
@@ -64,13 +67,40 @@ def prepare(site: Path) -> tuple[int, int]:
     return changed_pages, repaired_mmk_pages
 
 
+def rewrite_project_base(site: Path, repository: str) -> int:
+    repository_name = repository.rsplit("/", 1)[-1]
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", repository_name):
+        raise RuntimeError(f"Invalid GitHub repository name: {repository!r}")
+    if repository_name.casefold() == "advaita":
+        return 0
+
+    replacement = f"/{repository_name}"
+    changed_files = 0
+    for path in site.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
+            continue
+        try:
+            content = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        updated = content.replace("/advaita", replacement)
+        if updated != content:
+            path.write_text(updated, encoding="utf-8")
+            changed_files += 1
+    return changed_files
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", type=Path, default=DEFAULT_SITE)
+    parser.add_argument("--repository", default=os.environ.get("GITHUB_REPOSITORY", DEFAULT_REPOSITORY))
     args = parser.parse_args()
-    changed, repaired = prepare(args.site.resolve())
+    site = args.site.resolve()
+    changed, repaired = prepare(site)
+    rewritten = rewrite_project_base(site, args.repository)
     print(f"Prepared {changed} HTML pages for cache-safe deployment.")
     print(f"Removed the mismatched Vishnu Purana reader styling from {repaired} MMK pages.")
+    print(f"Rewrote the Pages project path in {rewritten} files for {args.repository}.")
 
 
 if __name__ == "__main__":
