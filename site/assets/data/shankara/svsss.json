@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 391
+      "to": 400
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–391 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–400 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -26440,8 +26440,49 @@
       "number": "392",
       "label": "Verse 392",
       "deva": "स्थूलात् सूक्ष्मतया व्यष्टिर् अस्य सूक्ष्म-वपुर् मतम्।\nअस्य जागर-संस्कारमयत्वाद् वपुर् उच्यते॥",
-      "translation": "Taijasa is regarded as the subtle body of the individual. It is called subtle in relation to the gross body; but it is also called ‘a body’ inasmuch as it is compact of the impressions of the waking moment.",
-      "gloss": [],
+      "translation": "Compared with the gross body, the individual’s body is regarded as subtle because of its subtlety. It is called a body because it is made of impressions of the waking state.",
+      "gloss": [
+        {
+          "sa": "स्थूलात्",
+          "en": "than the gross"
+        },
+        {
+          "sa": "सूक्ष्मतया",
+          "en": "because of subtlety"
+        },
+        {
+          "sa": "व्यष्टिः",
+          "en": "the individual"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "सूक्ष्म-वपुः",
+          "en": "subtle body"
+        },
+        {
+          "sa": "मतम्",
+          "en": "is considered"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "जागर-संस्कार-मयत्वात्",
+          "en": "because it consists of waking-state impressions"
+        },
+        {
+          "sa": "वपुः",
+          "en": "body"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is called"
+        }
+      ],
       "sourceNumbers": [
         392
       ],
@@ -26454,8 +26495,45 @@
       "number": "393",
       "label": "Verse 393",
       "deva": "स्वप्ने जागर-कालीन-वासना-परिकल्पितान्।\nतैजसो विषयान् भुङ्क्ते सूक्ष्मार्थान् सूक्ष्म-वृत्तिभिः॥",
-      "translation": "It is this subtle body that experiences the dreams which the mind conjures out of the impressions of the waking state and in this way it creates the semblance of a world of living beings.",
-      "gloss": [],
+      "translation": "In dreams, Taijasa experiences, through subtle mental functions, subtle objects fashioned from impressions of the waking state.",
+      "gloss": [
+        {
+          "sa": "स्वप्ने",
+          "en": "in dreams"
+        },
+        {
+          "sa": "जागर-कालीन",
+          "en": "of the waking state"
+        },
+        {
+          "sa": "वासना",
+          "en": "impressions"
+        },
+        {
+          "sa": "परिकल्पितान्",
+          "en": "fashioned"
+        },
+        {
+          "sa": "तैजसः",
+          "en": "Taijasa"
+        },
+        {
+          "sa": "विषयान्",
+          "en": "objects"
+        },
+        {
+          "sa": "भुङ्क्ते",
+          "en": "experiences"
+        },
+        {
+          "sa": "सूक्ष्म-अर्थान्",
+          "en": "subtle objects"
+        },
+        {
+          "sa": "सूक्ष्म-वृत्तिभिः",
+          "en": "through subtle functions"
+        }
+      ],
       "sourceNumbers": [
         393
       ],
@@ -26468,8 +26546,61 @@
       "number": "394",
       "label": "Verse 394",
       "deva": "समष्टेर् अपि च व्यष्टेः सामान्येनैव पूर्ववत्।\nअभेद एव ज्ञातव्यो जात्येकत्वे कुतो भिदा॥",
-      "translation": "As has been already stated, there is no distinction between the subtle bodies in their individual aspect and the collective aspect. They have identical traits and where there are common traits, what difference can be found between them?",
-      "gloss": [],
+      "translation": "As before, the collective and individual aspects are to be understood as non-different in general; when they are one in kind, where is the difference?",
+      "gloss": [
+        {
+          "sa": "समष्टेः",
+          "en": "of the collective"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "व्यष्टेः",
+          "en": "of the individual"
+        },
+        {
+          "sa": "सामान्येन",
+          "en": "in general"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "पूर्ववत्",
+          "en": "as before"
+        },
+        {
+          "sa": "अभेदः",
+          "en": "non-difference"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "ज्ञातव्यः",
+          "en": "is to be understood"
+        },
+        {
+          "sa": "जाति-एकत्वे",
+          "en": "when one in kind"
+        },
+        {
+          "sa": "कुतः",
+          "en": "where"
+        },
+        {
+          "sa": "भिदा",
+          "en": "difference"
+        }
+      ],
       "sourceNumbers": [
         394
       ],
@@ -26482,8 +26613,57 @@
       "number": "395",
       "label": "Verse 395",
       "deva": "द्वयोर् उपाध्योर् एकत्वे तयोर् अप्यभिमानिनोः।\nसूत्रात्मनस् तैजसस्याप्य् अभेदः पूर्ववन् मतः॥",
-      "translation": "Both the sūtrātman and taijasa have identical adjuncts. That is because both of them tend to identity themselves with their appropriate subtle bodies. That is why there is no difference between them.",
-      "gloss": [],
+      "translation": "When the two adjuncts are one, those identified with them are also non-different; as before, Sūtrātman and Taijasa are considered non-different.",
+      "gloss": [
+        {
+          "sa": "द्वयोः",
+          "en": "of the two"
+        },
+        {
+          "sa": "उपाध्योः",
+          "en": "adjuncts"
+        },
+        {
+          "sa": "एकत्वे",
+          "en": "when one"
+        },
+        {
+          "sa": "तयोः",
+          "en": "of them"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अभिमानिनोः",
+          "en": "of those identified with them"
+        },
+        {
+          "sa": "सूत्रात्मनः",
+          "en": "Sūtrātman"
+        },
+        {
+          "sa": "तैजसस्य",
+          "en": "Taijasa"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अभेदः",
+          "en": "non-difference"
+        },
+        {
+          "sa": "पूर्ववत्",
+          "en": "as before"
+        },
+        {
+          "sa": "मतः",
+          "en": "is considered"
+        }
+      ],
       "sourceNumbers": [
         395
       ],
@@ -26496,8 +26676,29 @@
       "number": "396",
       "label": "Verse 396",
       "deva": "अथ स्थूल-प्रपञ्चस्य प्रकारः कथ्यते शृणु॥",
-      "translation": "The subtle wor1d The order in which the subtle wor1d came to be manifested, as explained here, is in conformity with the Śāstras. We shall now explain how the gross elements were made manifest.",
-      "gloss": [],
+      "translation": "Now hear: the method of the gross universe is explained.",
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "स्थूल-प्रपञ्चस्य",
+          "en": "of the gross universe"
+        },
+        {
+          "sa": "प्रकारः",
+          "en": "the method"
+        },
+        {
+          "sa": "कथ्यते",
+          "en": "is explained"
+        },
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        }
+      ],
       "sourceNumbers": [
         396
       ],
@@ -26510,8 +26711,49 @@
       "number": "397",
       "label": "Verse 397",
       "deva": "तान्येव सूक्ष्म-भूतानि व्योमादीनि परस्-परम्।\nपञ्ची-कृतानि स्थूलानि भवन्ति शृणु तत्-क्रमम्॥",
-      "translation": "Out of the five subtle elements such as ākāśa or space and the other elements, the gross world came to be made manifest. This order of manifestation is in conformity with the principle of quintuplication.",
-      "gloss": [],
+      "translation": "Those very subtle elements, beginning with space, become gross through quintuplication. Hear the sequence.",
+      "gloss": [
+        {
+          "sa": "तानि",
+          "en": "those"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सूक्ष्म-भूतानि",
+          "en": "subtle elements"
+        },
+        {
+          "sa": "व्योम-आदीनि",
+          "en": "beginning with space"
+        },
+        {
+          "sa": "परस्परम्",
+          "en": "with one another"
+        },
+        {
+          "sa": "पञ्ची-कृतानि",
+          "en": "fivefold-combined"
+        },
+        {
+          "sa": "स्थूलानि",
+          "en": "gross"
+        },
+        {
+          "sa": "भवन्ति",
+          "en": "become"
+        },
+        {
+          "sa": "शृणु",
+          "en": "hear"
+        },
+        {
+          "sa": "तत्-क्रमम्",
+          "en": "that sequence"
+        }
+      ],
       "sourceNumbers": [
         397
       ],
@@ -26524,8 +26766,61 @@
       "number": "398",
       "label": "Verse 398",
       "deva": "खादीनां भूतम् एकैकं समम् एव द्विधा द्विधा।\nविभज्य भागं तत्राद्यं त्यक्त्वा भागं द्वितीयकम्॥",
-      "translation": "Quintuplication Each of the five elements, such as space and the like, split at first into two equal halves, while one half of each element remained without undergoing further division, the other half of each element was divided into four equal parts.",
-      "gloss": [],
+      "translation": "Each element beginning with space is divided equally into two parts. Keeping the first part aside, one takes the second part.",
+      "gloss": [
+        {
+          "sa": "ख-आदीनाम्",
+          "en": "beginning with space"
+        },
+        {
+          "sa": "भूतम्",
+          "en": "element"
+        },
+        {
+          "sa": "एक-एकम्",
+          "en": "each one"
+        },
+        {
+          "sa": "समम्",
+          "en": "equally"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "द्विधा-द्विधा",
+          "en": "into two parts"
+        },
+        {
+          "sa": "विभज्य",
+          "en": "having divided"
+        },
+        {
+          "sa": "भागम्",
+          "en": "a part"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "आद्यम्",
+          "en": "the first"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "leaving aside"
+        },
+        {
+          "sa": "भागम्",
+          "en": "the part"
+        },
+        {
+          "sa": "द्वितीयकम्",
+          "en": "the second"
+        }
+      ],
       "sourceNumbers": [
         398
       ],
@@ -26538,8 +26833,57 @@
       "number": "399",
       "label": "Verse 399",
       "deva": "चतुर्धा सुविभज्याथ तम् एकैकं विनिक्षिपेत्।\nचतुर्णां प्रथमे भागे क्रमेण स्वार्धम् अन्तरा॥",
-      "translation": "Thus a fourth of each amalgamated with its corresponding one fourth form the other elements. The compound thus formed combined with the primary half of each element, and became a unified whole.",
-      "gloss": [],
+      "translation": "Then divide each [second part] well into four and place one part in turn among the four [other elements], with its own half in the middle.",
+      "gloss": [
+        {
+          "sa": "चतुर्धा",
+          "en": "into four"
+        },
+        {
+          "sa": "सु-विभज्य",
+          "en": "having divided well"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "तम्",
+          "en": "that"
+        },
+        {
+          "sa": "एक-एकम्",
+          "en": "each one"
+        },
+        {
+          "sa": "विनिक्षिपेत्",
+          "en": "one should place"
+        },
+        {
+          "sa": "चतुर्णाम्",
+          "en": "of the four"
+        },
+        {
+          "sa": "प्रथमे",
+          "en": "in the first"
+        },
+        {
+          "sa": "भागे",
+          "en": "part"
+        },
+        {
+          "sa": "क्रमेण",
+          "en": "in order"
+        },
+        {
+          "sa": "स्व-अर्धम्",
+          "en": "its own half"
+        },
+        {
+          "sa": "अन्तरा",
+          "en": "in the middle"
+        }
+      ],
       "sourceNumbers": [
         399
       ],
@@ -26552,8 +26896,49 @@
       "number": "400",
       "label": "Verse 400",
       "deva": "ततो व्योमादि-भूतानां भागाः पञ्च भवन्ति ते।\nस्व-स्वार्ध-भागेनान्येभ्यः प्राप्तं भाग-चतुष्टयम्॥",
-      "translation": "The five gross divisions of the elements, such as space and the like, came to be formed in this manner. Then they formed the gross elements by combining with a quarter of each one of the other four elements.",
-      "gloss": [],
+      "translation": "Thus the elements beginning with space each have five parts: their own half and the four quarter-parts received from the others.",
+      "gloss": [
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "व्योम-आदि-भूतानाम्",
+          "en": "of the elements beginning with space"
+        },
+        {
+          "sa": "भागाः",
+          "en": "parts"
+        },
+        {
+          "sa": "पञ्च",
+          "en": "five"
+        },
+        {
+          "sa": "भवन्ति",
+          "en": "become"
+        },
+        {
+          "sa": "ते",
+          "en": "those"
+        },
+        {
+          "sa": "स्व-स्व-अर्ध-भागेन",
+          "en": "with its own half-part"
+        },
+        {
+          "sa": "अन्येभ्यः",
+          "en": "from the others"
+        },
+        {
+          "sa": "प्राप्तम्",
+          "en": "received"
+        },
+        {
+          "sa": "भाग-चतुष्टयम्",
+          "en": "four parts"
+        }
+      ],
       "sourceNumbers": [
         400
       ],
