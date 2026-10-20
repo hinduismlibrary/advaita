@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 420
+      "to": 430
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–420 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–430 of Adhyāya 1 (verses 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -27638,7 +27638,7 @@
       "translation": "The tongue, being constituted by a portion of water, receives taste, its quality. The nose, being constituted by a portion of earth, receives smell, its quality.",
       "gloss": [
         {
-          "sa": "अप-अंशकतया",
+          "sa": "अपाम्-अंशकतया",
           "en": "because of a portion of water"
         },
         {
@@ -28071,8 +28071,53 @@
       "number": "421",
       "label": "Verse 421",
       "deva": "शरीर-करण-ग्रामाप्राणाहम्-अधिदेवताः।\nपञ्चैते हेतवः प्रोक्ता निष्पत्तौ सर्व-कर्मणाम्॥",
-      "translation": "Therefore, these five viz, the body, the senses, the vital breath, the ego, and the various presiding deities should all the regarded as the ultimate cause of all that is performed. ((BhG.18.14-15) (Bhagavad Gītā))",
-      "gloss": [],
+      "translation": "The body, group of instruments, vital breath, ego, and presiding deities are declared to be the five causes in the accomplishment of all actions.",
+      "gloss": [
+        {
+          "sa": "शरीर",
+          "en": "the body"
+        },
+        {
+          "sa": "करण-ग्राम",
+          "en": "the group of instruments"
+        },
+        {
+          "sa": "प्राण",
+          "en": "the vital breath"
+        },
+        {
+          "sa": "अहम्",
+          "en": "the ego"
+        },
+        {
+          "sa": "अधिदेवताः",
+          "en": "the presiding deities"
+        },
+        {
+          "sa": "पञ्च",
+          "en": "five"
+        },
+        {
+          "sa": "एते",
+          "en": "these"
+        },
+        {
+          "sa": "हेतवः",
+          "en": "causes"
+        },
+        {
+          "sa": "प्रोक्ताः",
+          "en": "are declared"
+        },
+        {
+          "sa": "निष्पत्तौ",
+          "en": "in the accomplishment"
+        },
+        {
+          "sa": "सर्व-कर्मणाम्",
+          "en": "of all actions"
+        }
+      ],
       "sourceNumbers": [
         421
       ],
@@ -28084,14 +28129,59 @@
       "chapter": 2,
       "number": "422",
       "label": "Verse 422",
-      "deva": "कर्मानुरूपेण गुणोदयो भवेद्\nगुणानुरूपेण मनः-प्रवृत्तिः।\nमनोऽनुवृत्तैर् उभयात्मकेन्द्रियैर्\nनिवर्त्यते पुण्यम् अपुण्यम् अत्र॥",
-      "translation": "It is according to the bent of one’s past actions that the guṇas make themselves manifest. The inclination of the mind in its turn, follows the guṇas. That is how both the organs of knowledge and those of action impel a person here on earth to perform various kinds of actions, both those that are meritorious and those that are sinful.",
-      "gloss": [],
+      "deva": "कर्मानुरूपेण गुणोदयो भवेद्\nगुणानुरूपेण मनः-प्रवृत्तिः।\nमनोऽनुवृत्तैर् उभयात्मकेन्द्रियैर्\nनिर्वर्त्यते पुण्यम् अपुण्यम् अत्र॥",
+      "translation": "Guṇas arise in accordance with action, and the mind acts in accordance with the guṇas. Here, the senses of both kinds, following the mind, produce merit and demerit.",
+      "gloss": [
+        {
+          "sa": "कर्म-अनुरूपेण",
+          "en": "in accordance with action"
+        },
+        {
+          "sa": "गुण-उदयः",
+          "en": "the rise of the guṇas"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "occurs"
+        },
+        {
+          "sa": "गुण-अनुरूपेण",
+          "en": "in accordance with the guṇas"
+        },
+        {
+          "sa": "मनः-प्रवृत्तिः",
+          "en": "the activity of the mind"
+        },
+        {
+          "sa": "मनः-अनुवृत्तैः",
+          "en": "following the mind"
+        },
+        {
+          "sa": "उभय-आत्मक-इन्द्रियैः",
+          "en": "by the senses of both kinds"
+        },
+        {
+          "sa": "निर्वर्त्यते",
+          "en": "is produced"
+        },
+        {
+          "sa": "पुण्यम्",
+          "en": "merit"
+        },
+        {
+          "sa": "अपुण्यम्",
+          "en": "demerit"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        }
+      ],
       "sourceNumbers": [
         422
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "karmānurūpeṇa guṇodayo bhaved\nguṇānurūpeṇa manaḥ-pravṛttiḥ|\nmano’nuvṛttair ubhayātmakendriyair\nnivartyate puṇyam apuṇyam atra||"
+      "iast": "karmānurūpeṇa guṇodayo bhaved\nguṇānurūpeṇa manaḥ-pravṛttiḥ|\nmano’nuvṛttair ubhayātmakendriyaiḥ\nnirvartyate puṇyam apuṇyam atra||"
     },
     {
       "id": "svsss-2-0423",
@@ -28099,8 +28189,89 @@
       "number": "423",
       "label": "Verse 423",
       "deva": "करोति विज्ञानमयोऽभिमानं\nकर्ताहम् एवेति तद्-आत्मना स्थितः।\nआत्मा तु साक्षी न करोति किञ्चिन्\nन कारयत्येव तटस्थवत् सदा॥",
-      "translation": "The vijñānamaya kośa, becomes out of attachment to its particular sheath, a participant in action. But the Ātman within remains as the eternal witness. It does not partake in any kind of activity, nor does it cause anything to be done. It remains unattached, like one who is disinterested. ((BhG.5.14) (Bhagavad Gītā))",
-      "gloss": [],
+      "translation": "The sheath of knowledge identifies itself, thinking, “I alone am the doer.” The Self, however, is a witness; it neither acts nor causes anything to act, and always remains detached.",
+      "gloss": [
+        {
+          "sa": "करोति",
+          "en": "makes"
+        },
+        {
+          "sa": "विज्ञानमयः",
+          "en": "the sheath of knowledge"
+        },
+        {
+          "sa": "अभिमानम्",
+          "en": "an identification"
+        },
+        {
+          "sa": "कर्ता",
+          "en": "the doer"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तद्-आत्मना",
+          "en": "as that self"
+        },
+        {
+          "sa": "स्थितः",
+          "en": "situated"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "साक्षी",
+          "en": "a witness"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "करोति",
+          "en": "acts"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कारयति",
+          "en": "causes to be done"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तटस्थ-वत्",
+          "en": "like an indifferent observer"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        }
+      ],
       "sourceNumbers": [
         423
       ],
@@ -28113,8 +28284,61 @@
       "number": "424",
       "label": "Verse 424",
       "deva": "द्रष्टा श्रोता वक्ता कर्ता भोक्ता भवत्यहङ्कारः।\nस्वयम् एतद्-विकृतीनां साक्षी निर्लेप एवात्मा॥",
-      "translation": "It is the ego that is the seer, the hearer, the speaker the doer, and the experiencer of all. The Ātman is the unaffected witness of all the modifications that take place in the antaḥ-karaṇa.",
-      "gloss": [],
+      "translation": "The ego becomes the seer, hearer, speaker, doer, and experiencer. The Self itself is the unattached witness of these modifications.",
+      "gloss": [
+        {
+          "sa": "द्रष्टा",
+          "en": "the seer"
+        },
+        {
+          "sa": "श्रोता",
+          "en": "the hearer"
+        },
+        {
+          "sa": "वक्ता",
+          "en": "the speaker"
+        },
+        {
+          "sa": "कर्ता",
+          "en": "the doer"
+        },
+        {
+          "sa": "भोक्ता",
+          "en": "the experiencer"
+        },
+        {
+          "sa": "भवति",
+          "en": "becomes"
+        },
+        {
+          "sa": "अहङ्कारः",
+          "en": "the ego"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "एतद्-विकृतीनाम्",
+          "en": "of these modifications"
+        },
+        {
+          "sa": "साक्षी",
+          "en": "the witness"
+        },
+        {
+          "sa": "निर्लेपः",
+          "en": "unattached"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        }
+      ],
       "sourceNumbers": [
         424
       ],
@@ -28127,8 +28351,53 @@
       "number": "425",
       "label": "Verse 425",
       "deva": "आत्मनः साक्षिमात्रत्वं न कर्तृत्वं न भोक्तृता।\nरविवत् प्राणिभिर् लोके क्रियमाणेषु कर्मसु॥",
-      "translation": "In reality, the Ātman is the pure witnessing consciousness. It is neither the doer of action nor is it the enjoyer of the fruits of action. In this respect, it is like the sun who, by his very presence, directs the activities of life.",
-      "gloss": [],
+      "translation": "The Self is merely a witness, neither an agent nor an experiencer, like the sun among actions performed by living beings in the world.",
+      "gloss": [
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "साक्षि-मात्रत्वम्",
+          "en": "the state of being only a witness"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कर्तृत्वम्",
+          "en": "agency"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भोक्तृता",
+          "en": "the state of being an experiencer"
+        },
+        {
+          "sa": "रवि-वत्",
+          "en": "like the sun"
+        },
+        {
+          "sa": "प्राणिभिः",
+          "en": "by living beings"
+        },
+        {
+          "sa": "लोके",
+          "en": "in the world"
+        },
+        {
+          "sa": "क्रियमाणेषु",
+          "en": "being performed"
+        },
+        {
+          "sa": "कर्मसु",
+          "en": "among actions"
+        }
+      ],
       "sourceNumbers": [
         425
       ],
@@ -28141,8 +28410,53 @@
       "number": "426",
       "label": "Verse 426",
       "deva": "न ह्यर्कः कुरुते कर्म न कारयति जन्तवः।\nस्व-स्व-भावानुरोधेन वर्तन्ते स्व-स्व-कर्मसु॥",
-      "translation": "The Sun does not do anything; nor does it cause anything to be done. But when the Sun shines all beings engage themselves in various kinds of activities according to the bent of their nature.",
-      "gloss": [],
+      "translation": "The sun does not act, nor does it cause living beings to act. They engage in their own actions according to their own natures.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अर्कः",
+          "en": "the sun"
+        },
+        {
+          "sa": "कुरुते",
+          "en": "performs"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कारयति",
+          "en": "causes to act"
+        },
+        {
+          "sa": "जन्तवः",
+          "en": "living beings"
+        },
+        {
+          "sa": "स्व-स्व-भाव-अनुरोधेन",
+          "en": "according to their own natures"
+        },
+        {
+          "sa": "वर्तन्ते",
+          "en": "they engage"
+        },
+        {
+          "sa": "स्व-स्व-कर्मसु",
+          "en": "in their own actions"
+        }
+      ],
       "sourceNumbers": [
         426
       ],
@@ -28155,8 +28469,53 @@
       "number": "427",
       "label": "Verse 427",
       "deva": "तथैव प्रत्यग्-आत्मापि रविवन् निष्क्रियात्मना।\nउदासीनतयैवास्ते देहादीनां प्रवृत्तिषु॥",
-      "translation": "Therefore, in relation to the various activities of life which are performed through the agency of the physical body, pure consciousness remains ever aloof and as unaffected as the Sun in the sky.",
-      "gloss": [],
+      "translation": "Likewise, the inner Self, inactive in nature like the sun, remains impartial amid the activities of the body and the rest.",
+      "gloss": [
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रत्यग्-आत्मा",
+          "en": "the inner Self"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "रवि-वत्",
+          "en": "like the sun"
+        },
+        {
+          "sa": "निष्क्रिय-आत्मना",
+          "en": "inactive in nature"
+        },
+        {
+          "sa": "उदासीनतया",
+          "en": "impartially"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "आस्ते",
+          "en": "remains"
+        },
+        {
+          "sa": "देह-आदीनाम्",
+          "en": "of the body and the rest"
+        },
+        {
+          "sa": "प्रवृत्तिषु",
+          "en": "amid activities"
+        }
+      ],
       "sourceNumbers": [
         427
       ],
@@ -28169,8 +28528,49 @@
       "number": "428",
       "label": "Verse 428",
       "deva": "अज्ञात्वैवं परं तत्त्वं माया-मोहित-चेतसः।\nस्वात्मन्यारोपयन्त्येतत् कर्तृत्वाद्यन्य-गोचरम्॥",
-      "translation": "Those who do not know the supreme Truth, whose minds are clouded by Māyā, tend to superimpose upon the supreme Ātman the idea that it is the doer. But it is not the Ātman that is the real doer; it is something else.",
-      "gloss": [],
+      "translation": "Not knowing this supreme truth and their minds deluded by Māyā, people superimpose on the Self agency and the like, which belong to something else.",
+      "gloss": [
+        {
+          "sa": "अज्ञात्वा",
+          "en": "not knowing"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "परम्",
+          "en": "supreme"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "truth"
+        },
+        {
+          "sa": "माया-मोहित-चेतसः",
+          "en": "whose minds are deluded by Māyā"
+        },
+        {
+          "sa": "स्व-आत्मनि",
+          "en": "on their own Self"
+        },
+        {
+          "sa": "आरोपयन्ति",
+          "en": "they superimpose"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "कर्तृत्व-आदि",
+          "en": "agency and the rest"
+        },
+        {
+          "sa": "अन्य-गोचरम्",
+          "en": "belonging to something else"
+        }
+      ],
       "sourceNumbers": [
         428
       ],
@@ -28182,14 +28582,75 @@
       "chapter": 2,
       "number": "429",
       "label": "Verse 429",
-      "deva": "आत्म-स्वरूपम् अविचार्य विमूढ-बुद्धिर्\nआरोपयत्यखिलम् एतद् अनात्म-कार्यम्व्।\nस्वात्मन्यसङ्ग-चिति-निष्क्रिय एव चन्द्रे\nदूरस्थ-मेघ-कृत-धावनवद् भ्रमेण॥",
-      "translation": "When the distant clouds are fleeting, it looks as though the moon is moving, and that is but the product of error. In the same way where there is no right knowledge, when people do not realize that the Ātman is pure consciousness, ever unattached, they attribute to the Ātman whatever actions are performed by means of that which is other than the Ātman.",
-      "gloss": [],
+      "deva": "आत्म-स्वरूपम् अविचार्य विमूढ-बुद्धिर्\nआरोपयत्य् अखिलम् एतद् अनात्म-कार्यम्।\nस्वात्मन्य् असङ्ग-चिति-निष्क्रिय एव चन्द्रे\nदूरस्थ-मेघ-कृत-धावनवद् भ्रमेण॥",
+      "translation": "Without discerning the Self’s true nature, the deluded intellect superimposes all the activity of the not-Self on its own Self, which is unattached, conscious, and inactive—like the apparent motion of the moon caused by distant clouds.",
+      "gloss": [
+        {
+          "sa": "आत्म-स्वरूपम्",
+          "en": "the nature of the Self"
+        },
+        {
+          "sa": "अविचार्य",
+          "en": "without discerning"
+        },
+        {
+          "sa": "विमूढ-बुद्धिः",
+          "en": "the deluded intellect"
+        },
+        {
+          "sa": "आरोपयति",
+          "en": "superimposes"
+        },
+        {
+          "sa": "अखिलम्",
+          "en": "all"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अनात्म-कार्यम्",
+          "en": "the activity of the not-Self"
+        },
+        {
+          "sa": "स्वात्मनि",
+          "en": "on its own Self"
+        },
+        {
+          "sa": "असङ्ग",
+          "en": "unattached"
+        },
+        {
+          "sa": "चिति",
+          "en": "consciousness"
+        },
+        {
+          "sa": "निष्क्रिये",
+          "en": "inactive"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "चन्द्रे",
+          "en": "on the moon"
+        },
+        {
+          "sa": "दूरस्थ-मेघ-कृत-धावन-वत्",
+          "en": "like motion caused by distant clouds"
+        },
+        {
+          "sa": "भ्रमेण",
+          "en": "through error"
+        }
+      ],
       "sourceNumbers": [
         429
       ],
       "sectionTitle": "Identifying Only with Ultimate Reality",
-      "iast": "ātma-svarūpam avicārya vimūḍha-buddhir\nāropayatyakhilam etad anātma-kāryamv|\nsvātmanyasaṅga-citi-niṣkriya eva candre\ndūrastha-megha-kṛta-dhāvanavad bhrameṇa||"
+      "iast": "ātma-svarūpam avicārya vimūḍha-buddhir\nāropayaty akhilam etad anātma-kāryam|\nsvātmany asaṅga-citi-niṣkriya eva candre\ndūrastha-megha-kṛta-dhāvanavad bhrameṇa||"
     },
     {
       "id": "svsss-2-0430",
@@ -28197,8 +28658,45 @@
       "number": "430",
       "label": "Verse 430",
       "deva": "आत्मानात्म-विवेकं स्फुटतरम् अग्रे निवेदयिष्यामः।\nइमम् आकर्णय विद्वन् जगदुत्पत्ति-प्रकारम् आवृत्त्या॥",
-      "translation": "The creation of the gross universe I shall now tell you, 0 learned one, what it is that distinguishes the Ātman from all which is other than the Ātman. But before I do so, I shall explain to you the process by which this gross universe was formed.",
-      "gloss": [],
+      "translation": "We will explain the distinction between Self and not-Self more clearly later. For now, learned one, listen as I explain the process of the world’s creation in sequence.",
+      "gloss": [
+        {
+          "sa": "आत्म-अनात्म-विवेकम्",
+          "en": "the distinction between Self and not-Self"
+        },
+        {
+          "sa": "स्फुटतरम्",
+          "en": "more clearly"
+        },
+        {
+          "sa": "अग्रे",
+          "en": "later"
+        },
+        {
+          "sa": "निवेदयिष्यामः",
+          "en": "we will explain"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "आकर्णय",
+          "en": "listen"
+        },
+        {
+          "sa": "विद्वन्",
+          "en": "O learned one"
+        },
+        {
+          "sa": "जगत्-उत्पत्ति-प्रकारम्",
+          "en": "the process of the world’s creation"
+        },
+        {
+          "sa": "आवृत्त्या",
+          "en": "in sequence"
+        }
+      ],
       "sourceNumbers": [
         430
       ],
