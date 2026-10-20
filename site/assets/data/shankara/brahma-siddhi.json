@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 149 passages; 82 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 150 passages; 81 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 149 passages; 82 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 149 passages; 82 passages still need glosses. Full Devanāgarī token-by-token gloss added for passage 1.31, including its cited verse."
   },
   "units": [
     {
@@ -864,7 +864,292 @@
       "deva": "[क्क्स्_71] वस्तुमात्रविषयं प्रथममविकल्पकं प्रत्यक्षम् । तत्पूर्वास्तु विकल्पबुद्धयो विशेषानवगाहन्त इति सर्वप्रत्यात्मवेदनीयम् । स्यादेतत् --- विशिष्टरूपोपग्राह्येव प्रत्यक्षम् । स तु भेदः शब्देनासंस्पर्शान्न तथोपलक्ष्यते, यथा विकल्पबुद्धौ । तदयुक्तम्, विप्रतिषेधात् । न चोपलक्ष्यते प्रत्यक्षबुद्धौ विशेषः प्रकाशते चेति विप्रतिषिद्धम् । अतो ऽतिसाहसमुच्यते । यस्तु संवित्तावेव विप्रतिपद्यते सर्वानात्मव्यावृत्तस्पष्टप्रतिभासं प्रत्यक्षमिति वदन्, तस्योत्तरम् --- ‘आहुर्विधातृप्रत्यक्षम्ऽ; इत्याद्युक्तमेवेति । किं च\n\nप्रतिष्ठितं च विज्ञानमर्थमात्रावलम्बनम् । भेदेषु त्वप्रतिष्ठत्वमस्तीन्द्रियधियामपि",
       "iast": "[kks_71] vastumātraviṣayaṃ prathamamavikalpakaṃ pratyakṣam / tatpūrvāstu vikalpabuddhayo viśeṣānavagāhanta iti sarvapratyātmavedanīyam / syādetat --- viśiṣṭarūpopagrāhyeva pratyakṣam / sa tu bhedaḥ śabdenāsaṃsparśānna tathopalakṣyate, yathā vikalpabuddhau / tadayuktam, vipratiṣedhāt / na copalakṣyate pratyakṣabuddhau viśeṣaḥ prakāśate ceti vipratiṣiddham / ato 'tisāhasamucyate / yastu saṃvittāveva vipratipadyate sarvānātmavyāvṛttaspaṣṭapratibhāsaṃ pratyakṣamiti vadan, tasyottaram --- ‘āhurvidhātṛpratyakṣam'; ityādyuktameveti /\n\nkiṃ ca\n\npratiṣṭhitaṃ ca vijñānamarthamātrāvalambanam /\nbhedeṣu tvapratiṣṭhatvamastīndriyadhiyāmapi",
       "translation": "Direct perception at first is non-conceptual and has only the object itself as its content. The conceptual cognitions that follow it grasp particular features. This is evident to everyone through their own experience. Someone may object that perception itself grasps a qualified form, but that difference is not marked by words as it is in conceptual cognition. That is unreasonable, since it is contradictory to say both that a particular is not marked and that it shines forth in perception. To claim this is exceedingly bold. As for one who disputes the nature of awareness itself, saying that perception has a clear appearance that excludes everything other than itself, the response has already been given: “The learned say that perception affirms…” and so forth. Moreover—\n\n“Cognition is established as resting on the object alone; but with respect to differences, even cognition of things beyond the senses is not established.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "वस्तु-मात्र-विषयम्",
+          "en": "having only the object itself as its content"
+        },
+        {
+          "sa": "प्रथमम्",
+          "en": "at first"
+        },
+        {
+          "sa": "अविकल्पकम्",
+          "en": "non-conceptual"
+        },
+        {
+          "sa": "प्रत्यक्षम्",
+          "en": "direct perception"
+        },
+        {
+          "sa": "तत्-पूर्वाः",
+          "en": "preceded by that (perception)"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "विकल्प-बुद्धयः",
+          "en": "conceptual cognitions"
+        },
+        {
+          "sa": "विशेषान्",
+          "en": "particular features"
+        },
+        {
+          "sa": "अवगाहन्ते",
+          "en": "grasp"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सर्व-प्रत्यात्म-वेदनीयम्",
+          "en": "directly knowable to each person through their own experience"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "one might say"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "विशिष्ट-रूप-उपग्राहि",
+          "en": "grasping a qualified form"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रत्यक्षम्",
+          "en": "perception"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "भेदः",
+          "en": "difference"
+        },
+        {
+          "sa": "शब्देन",
+          "en": "by words"
+        },
+        {
+          "sa": "असंस्पर्शात्",
+          "en": "because it is not contacted (by words)"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तथा",
+          "en": "in that way"
+        },
+        {
+          "sa": "उपलक्ष्यते",
+          "en": "is marked"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "विकल्प-बुद्धौ",
+          "en": "in conceptual cognition"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अयुक्तम्",
+          "en": "is unreasonable"
+        },
+        {
+          "sa": "विप्रतिषेधात्",
+          "en": "because of contradiction"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उपलक्ष्यते",
+          "en": "is marked"
+        },
+        {
+          "sa": "प्रत्यक्ष-बुद्धौ",
+          "en": "in perceptual cognition"
+        },
+        {
+          "sa": "विशेषः",
+          "en": "a particular feature"
+        },
+        {
+          "sa": "प्रकाशते",
+          "en": "shines forth"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विप्रतिषिद्धम्",
+          "en": "is contradictory"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अति-साहसम्",
+          "en": "an exceedingly bold claim"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is made"
+        },
+        {
+          "sa": "यः",
+          "en": "whoever"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "संवित्तौ",
+          "en": "about awareness"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "विप्रतिपद्यते",
+          "en": "disagrees"
+        },
+        {
+          "sa": "सर्व-अनात्म-व्यावृत्त-स्पष्ट-प्रतिभासम्",
+          "en": "having a clear appearance that excludes everything other than the Self"
+        },
+        {
+          "sa": "प्रत्यक्षम्",
+          "en": "direct perception"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "वदन्",
+          "en": "saying"
+        },
+        {
+          "sa": "तस्य",
+          "en": "to that person's view"
+        },
+        {
+          "sa": "उत्तरम्",
+          "en": "the reply"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they say"
+        },
+        {
+          "sa": "विधातृ-प्रत्यक्षम्",
+          "en": "perception that affirms (an object)"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "has been said"
+        },
+        {
+          "sa": "एव",
+          "en": "already"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "च",
+          "en": "moreover"
+        },
+        {
+          "sa": "प्रतिष्ठितम्",
+          "en": "is established"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "अर्थ-मात्र-अवलम्बनम्",
+          "en": "as resting on the object alone"
+        },
+        {
+          "sa": "भेदेषु",
+          "en": "with regard to differences"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अप्रतिष्ठत्वम्",
+          "en": "lack of firm establishment"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "इन्द्रिय-धियाम्",
+          "en": "even for sense-cognitions"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        }
+      ],
       "sourceNumbers": [
         "mbs_1.31"
       ]
@@ -15819,6 +16104,7 @@
       "1.1",
       "1.17",
       "1.19",
+      "1.31",
       "1.34",
       "1.35",
       "2.4",
@@ -15966,7 +16252,7 @@
       "4.10",
       "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 149 of 231 source-marked passages; 82 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 150 of 231 source-marked passages; 81 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 149 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 150 passages listed in wordGlossCoverage."
 }
