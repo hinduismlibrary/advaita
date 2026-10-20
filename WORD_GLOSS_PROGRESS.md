@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Brahmasiddhi** — next. 231 source-marked passages; translation/gloss coverage and the long-work contents need a full audit.
+**Brahmasiddhi** — active. All 231 passages have Sanskrit, English, and IAST. Added topic descriptions to the four traditional contents sections and completed glosses for 1.1, 2.9, 2.11–2.12, 2.14, 2.18, and 2.20; 224 passages still need glosses.
 
 ## Completed
 
@@ -29,7 +29,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Ātmabodha | 69 | Complete: all 68 verses and colophon have Sanskrit, English, IAST, and glosses; seven named contents sections |
 | Ātmavidyāvilāsa | 66 | Complete: all numbered verses and invocation have Sanskrit, English, IAST, and glosses; three named topic sections |
 | Bhajagovindam | 31 | All four fields present; review named contents sections |
-| Brahmasiddhi | 231 | Active: audit all fields; only 1 passage currently has a word gloss; 230 remain; create contents sections |
+| Brahmasiddhi | 231 | Active: Sanskrit, English, and IAST complete; four contents sections now include topic descriptions; glosses complete for 7 passages, 224 remain |
 | Brahmajñānāvalīmālā | 21 | Glosses present; add explicit IAST; review contents |
 | Śrī Dakṣiṇāmūrtyaṣṭakam | 11 | All four fields present |
 | Daśaślokī | 11 | Glosses present; add explicit IAST |
