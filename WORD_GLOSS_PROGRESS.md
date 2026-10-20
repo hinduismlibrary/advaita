@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Sarvavedāntasiddhāntasārasaṅgraha** — active. All 986 reader units have Sanskrit, English, and explicit IAST; its five named contents sections are in place. Devanāgarī word glosses and literal English now cover verses 1–160 (155 reader units because verses 17–18, 44–45, 91–92, 109–110, and 114–115 share cards). Restored omitted pādas in verses 42, 81, and 117–122, normalized clear source typos in verses 39 and 136, and retained verse 40’s printed reading with its prose-order variant noted. Continue at verse 161 and record each completed range.
+**Sarvavedāntasiddhāntasārasaṅgraha** — active. All 986 reader units have Sanskrit, English, and explicit IAST; its five named contents sections are in place. Devanāgarī word glosses and literal English now cover verses 1–170 (165 reader units because verses 17–18, 44–45, 91–92, 109–110, and 114–115 share cards). Restored omitted pādas in verses 42, 81, and 117–122, normalized clear source typos in verses 39 and 136, and retained verse 40’s printed reading with its prose-order variant noted. Continue at verse 171 and record each completed range.
 
 ## Completed
 
@@ -46,7 +46,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Nirvāṇaṣaṭkam | 7 | All four fields present |
 | Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
 | Viṣṇu Ṣaṭpadī Stotram | 8 | All four fields present |
-| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses and literal translations cover verses 1–160 (155 units); verses 161–1,006 remain. |
+| Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | All units have Sanskrit, English, and explicit IAST; five named contents sections exist. Word glosses and literal translations cover verses 1–170 (165 units); verses 171–1,006 remain. |
 | Upadeśapañcakam | 5 | Glosses present; add explicit IAST |
 | Upadeśasāhasrī | 787 | All four fields present |
 | Vedāntasāra | 71 | Glosses present; add explicit IAST; review named contents |
