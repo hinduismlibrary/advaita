@@ -106,7 +106,7 @@ h1{margin:0;color:var(--teal);font:500 clamp(34px,5vw,48px)/1.1 Vollkorn,Georgia
   }
   function sourceItemsAreDescriptive(items){
     return items.some(function(item){
-      return !/^(verses?|passages?|sections?|pages?)\s+\d+\s*[–-]\s*\d+$/i.test(item.label)
+      return !/^(?:(?:chapter\s+\S+\s*[·:–-]\s*)?)(?:verses?|passages?|sections?|pages?|entries?)\s+\S+$/i.test(item.label)
         && !/^chapter\s+\d+$/i.test(item.label);
     });
   }
