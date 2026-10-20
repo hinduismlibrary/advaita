@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 940
+      "to": 960
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–940 (920 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, 390–391, 910–912, 913–914, 921–922, and 926–927). Remaining verses still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–960 (940 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, 390–391, 910–912, 913–914, 921–922, and 926–927). Remaining verses still need glosses."
   },
   "units": [
     {
@@ -62592,14 +62592,75 @@
       "chapter": 5,
       "number": "941",
       "label": "Verse 941",
-      "deva": "स्थितः किं मूढ एवास्मि प्रेक्ष्योऽहं शास्त्र-सज्जनैः।\nवैराग्य-पूर्वम् इच्छेति शुभेच्छा चोच्यते बुधैः॥",
-      "translation": "The good intention As soon as there is an awakening of vairāgya, one feels, ‘How ignorant I am, whereas the wise and good are well versed in the Śāstras’. That is the beginning of the desire to learn, and it is called the good intention.",
-      "gloss": [],
+      "deva": "स्थितः किं मूढ एवास्मि प्रेक्ष्येऽहं शास्त्र-सज्जनैः।\nवैराग्य-पूर्वम् इच्छेति शुभेच्छा चोच्यते बुधैः॥",
+      "translation": "“Why should I remain a fool? I will look to scripture and good people.” The wise call the desire preceded by dispassion śubhecchā, “good aspiration.”",
+      "gloss": [
+        [
+          "स्थितः",
+          "remaining, staying"
+        ],
+        [
+          "किम्",
+          "why?"
+        ],
+        [
+          "मूढः",
+          "a fool, deluded"
+        ],
+        [
+          "एव",
+          "indeed"
+        ],
+        [
+          "अस्मि",
+          "am I"
+        ],
+        [
+          "प्रेक्ष्ये",
+          "I will look to, consult"
+        ],
+        [
+          "अहम्",
+          "I"
+        ],
+        [
+          "शास्त्र-सज्जनैः",
+          "with scripture and good people"
+        ],
+        [
+          "वैराग्य-पूर्वम्",
+          "preceded by dispassion"
+        ],
+        [
+          "इच्छा",
+          "desire"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "शुभेच्छा",
+          "good aspiration, good desire"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "उच्यते",
+          "is called"
+        ],
+        [
+          "बुधैः",
+          "by the wise"
+        ]
+      ],
       "sourceNumbers": [
         941
       ],
       "sectionTitle": "Assimilating this Knowledge",
-      "iast": "sthitaḥ kiṃ mūḍha evāsmi prekṣyo’haṃ śāstra-sajjanaiḥ|\nvairāgya-pūrvam iccheti śubhecchā cocyate budhaiḥ||"
+      "iast": "sthitaḥ kiṃ mūḍha evāsmi prekṣye’haṃ śāstra-sajjanaiḥ|\nvairāgya-pūrvam iccheti śubhecchā cocyate budhaiḥ||"
     },
     {
       "id": "svsss-5-0942",
@@ -62607,8 +62668,41 @@
       "number": "942",
       "label": "Verse 942",
       "deva": "शास्त्र-सज्जन-सम्पर्क-वैराग्याभ्यास-पूर्वकम्।\nसद्-आचार-प्रवृत्तिर् या प्रोच्यते सा विचारणा॥",
-      "translation": "The stage of reflection When as a result of being dispassionate one tends to practise good conduct, resorts to holy company and studies the Śāstras, it constitutes the second step and it is known as the stage of reflection.",
-      "gloss": [],
+      "translation": "The pursuit of right conduct, preceded by contact with scripture and the wise and by practice of dispassion, is called vicāraṇā, inquiry.",
+      "gloss": [
+        [
+          "शास्त्र-सज्जन-सम्पर्क",
+          "contact with scripture and good people"
+        ],
+        [
+          "वैराग्य-अभ्यास-पूर्वकम्",
+          "preceded by practice of dispassion"
+        ],
+        [
+          "सत्-आचार",
+          "right conduct"
+        ],
+        [
+          "प्रवृत्तिः",
+          "pursuit"
+        ],
+        [
+          "या",
+          "which"
+        ],
+        [
+          "प्रोच्यते",
+          "is called"
+        ],
+        [
+          "सा",
+          "that"
+        ],
+        [
+          "विचारणा",
+          "inquiry"
+        ]
+      ],
       "sourceNumbers": [
         942
       ],
@@ -62621,8 +62715,45 @@
       "number": "943",
       "label": "Verse 943",
       "deva": "विचारणा-शुभेच्छाभ्याम् इन्द्रियार्थेषु रक्तता।\nयत्र सा तनुताम् एति प्रोच्यते तनु-मानसी॥",
-      "translation": "Diminished mental attachment That plane in which all attachment to external objects drop off, where sense pleasure diminishes, as a result of the ripening of good intention and reflection, is known as the plane of diminished mental attachment.",
-      "gloss": [],
+      "translation": "When attachment to sense objects grows thin through good aspiration and inquiry, that stage is called tanu-mānasī, the thinning of the mind.",
+      "gloss": [
+        [
+          "विचारणा-शुभेच्छाभ्याम्",
+          "through inquiry and good aspiration"
+        ],
+        [
+          "इन्द्रिय-अर्थेषु",
+          "in sense objects"
+        ],
+        [
+          "रक्तता",
+          "attachment"
+        ],
+        [
+          "यत्र",
+          "where"
+        ],
+        [
+          "सा",
+          "it"
+        ],
+        [
+          "तनुताम्",
+          "thinness"
+        ],
+        [
+          "एति",
+          "reaches"
+        ],
+        [
+          "प्रोच्यते",
+          "is called"
+        ],
+        [
+          "तनु-मानसी",
+          "tanu-mānasī, the thinning of the mind"
+        ]
+      ],
       "sourceNumbers": [
         943
       ],
@@ -62635,8 +62766,45 @@
       "number": "944",
       "label": "Verse 944",
       "deva": "भूमिका-त्रितयाभ्यासाच् चित्तेऽर्थ-विरतेर् वशात्।\nसत्त्वात्मनि स्थिते शुद्धे सत्त्वापत्तिर् उदाहृता॥",
-      "translation": "The realization of sattva In the fourth plane the mind attains purity and turns away from all objects of desire. There arises a sense of indifference as a cumulative result of the virtues practised in the three earlier stages. The fourth stage is therefore known as the plane of the realization of sattva.",
-      "gloss": [],
+      "translation": "Through practice of the first three stages, the mind turns from objects and rests in pure sattva; this is called sattvāpatti, the attainment of purity.",
+      "gloss": [
+        [
+          "भूमिका-त्रितय-अभ्यासात्",
+          "through practice of the first three stages"
+        ],
+        [
+          "चित्ते",
+          "in the mind"
+        ],
+        [
+          "अर्थ-विरतेः",
+          "from turning away from objects"
+        ],
+        [
+          "वशात्",
+          "through, by the force of"
+        ],
+        [
+          "सत्त्व-आत्मनि",
+          "in the nature of sattva"
+        ],
+        [
+          "स्थिते",
+          "when established"
+        ],
+        [
+          "शुद्धे",
+          "pure"
+        ],
+        [
+          "सत्त्व-आपत्तिः",
+          "attainment of purity, sattva"
+        ],
+        [
+          "उदाहृता",
+          "is declared"
+        ]
+      ],
       "sourceNumbers": [
         944
       ],
@@ -62649,8 +62817,37 @@
       "number": "945",
       "label": "Verse 945",
       "deva": "दशा-चतुष्टयाभ्यासाद् असंसर्ग-फला तु या।\nरूढ-सत्त्व-चमत्-कारा प्रोक्ता संसक्ति-नामिका॥",
-      "translation": "The plane of non-attachment The fifth plane is that in which sattva is unusually predominant. This comes as a result of the virtues practised in the earlier stages, and it leads to vairāgya. It is known as the plane of non-attachment.",
-      "gloss": [],
+      "translation": "Practice of the first four stages yields noncontact and firmly established sattva. The transmitted verse calls this stage saṃsakti, though the stage list calls it asaṃsakti, “nonattachment.”",
+      "gloss": [
+        [
+          "दशा-चतुष्टय-अभ्यासात्",
+          "through practice of the four stages"
+        ],
+        [
+          "असंसर्ग-फला",
+          "having noncontact as its result"
+        ],
+        [
+          "तु",
+          "indeed"
+        ],
+        [
+          "या",
+          "which"
+        ],
+        [
+          "रूढ-सत्त्व-चमत्कारा",
+          "whose wonder is firmly established sattva"
+        ],
+        [
+          "प्रोक्ता",
+          "is called"
+        ],
+        [
+          "संसक्ति-नामिका",
+          "named saṃsakti; the stage list reads asaṃsakti, nonattachment"
+        ]
+      ],
       "sourceNumbers": [
         945
       ],
@@ -62663,8 +62860,37 @@
       "number": "946",
       "label": "Verse 946",
       "deva": "भूमिका-पञ्चकाभ्यासात् स्वात्मारामतया भृशम्।\nआभ्यन्तराणां बाह्यानां पदार्थानाम् अभावनात्॥",
-      "translation": "The total absence of the consciousness of external objects The sixth is the plane of padārtha-abhāvanā. In that stage there is a total absence of the consciousness of external objects. This stage is arrived at when the earlier stages become perfected, and when one is so deeply absorbed in the bliss of the Ātman that one does not feel that there is anything either within or without.",
-      "gloss": [],
+      "translation": "Through practice of the first five stages, one becomes deeply content in the Self and ceases to contemplate inner and outer objects…",
+      "gloss": [
+        [
+          "भूमिका-पञ्चक-अभ्यासात्",
+          "through practice of the first five stages"
+        ],
+        [
+          "स्व-आत्म-आरामतया",
+          "through being deeply content in one's own Self"
+        ],
+        [
+          "भृशम्",
+          "greatly, deeply"
+        ],
+        [
+          "आभ्यन्तराणाम्",
+          "inner"
+        ],
+        [
+          "बाह्यानाम्",
+          "outer"
+        ],
+        [
+          "पदार्थानाम्",
+          "objects"
+        ],
+        [
+          "अभावनात्",
+          "through not contemplating"
+        ]
+      ],
       "sourceNumbers": [
         946
       ],
@@ -62677,8 +62903,41 @@
       "number": "947",
       "label": "Verse 947",
       "deva": "पर-प्रयुक्तेन चिर-प्रयत्नेनावबोधनम्।\nपदार्थाभावना नाम षष्ठी भवति भूमिका॥",
-      "translation": "When one is at that stage of consciousness, it is only as the result of prolonged effort on the part of others that one may be brought down, with great difficulty, to the normal plane of consciousness.",
-      "gloss": [],
+      "translation": "…Only prolonged effort by another can bring such a person back to awareness. This is called the sixth stage, padārtha-abhāvanā, noncontemplation of objects.",
+      "gloss": [
+        [
+          "पर-प्रयुक्तेन",
+          "by another's effort"
+        ],
+        [
+          "चिर-प्रयत्नेन",
+          "through prolonged effort"
+        ],
+        [
+          "अवबोधनम्",
+          "bringing to awareness"
+        ],
+        [
+          "पदार्थ-अभावना",
+          "noncontemplation of objects"
+        ],
+        [
+          "नाम",
+          "named"
+        ],
+        [
+          "षष्ठी",
+          "the sixth"
+        ],
+        [
+          "भवति",
+          "becomes"
+        ],
+        [
+          "भूमिका",
+          "stage"
+        ]
+      ],
       "sourceNumbers": [
         947
       ],
@@ -62690,14 +62949,55 @@
       "chapter": 5,
       "number": "948",
       "label": "Verse 948",
-      "deva": "षड्-भूमिका-चिराभ्यासाद् भेदस्यानुपलम्भनात्।\nयत् स्व-भावैक-निष्ठत्वं सा ज्ञेया तुर्य-गा गतिः॥",
-      "translation": "Establishing in one’s own ultimate nature In this way we come to the seventh plane in which one is finally established in one’s own ultimate nature. This stage is the resultant of sustained effort maintained through all the earlier stages. Here, all consciousness of difference is totally lost. This leads to turya, which transcends waking, dreaming and deep sleep.",
-      "gloss": [],
+      "deva": "षड्भूमिका-चिराभ्यासाद् भेदस्यानुपलम्भनात्।\nयत् स्वभावैक-निष्ठत्वं सा ज्ञेया तुर्यगा क्षितिः॥",
+      "translation": "After long practice of the six stages, differences are no longer perceived. Steadfastness in one's own nature alone is known as the stage that reaches turya.",
+      "gloss": [
+        [
+          "षड्-भूमिका",
+          "the six stages"
+        ],
+        [
+          "चिर-अभ्यासात्",
+          "through long practice"
+        ],
+        [
+          "भेदस्य",
+          "of difference"
+        ],
+        [
+          "अनुपलम्भनात्",
+          "because it is not perceived"
+        ],
+        [
+          "यत्",
+          "that which"
+        ],
+        [
+          "स्व-भाव-एक-निष्ठत्वम्",
+          "steadfastness in one's own nature alone"
+        ],
+        [
+          "सा",
+          "that"
+        ],
+        [
+          "ज्ञेया",
+          "should be known"
+        ],
+        [
+          "तुर्यगा",
+          "reaching turya, the fourth"
+        ],
+        [
+          "क्षितिः",
+          "stage, level"
+        ]
+      ],
       "sourceNumbers": [
         948
       ],
       "sectionTitle": "Assimilating this Knowledge",
-      "iast": "ṣaḍ-bhūmikā-cirābhyāsād bhedasyānupalambhanāt|\nyat sva-bhāvaika-niṣṭhatvaṃ sā jñeyā turya-gā gatiḥ||"
+      "iast": "ṣaḍ-bhūmikā-cirābhyāsād bhedasyānupalambhanāt|\nyat sva-bhāvaika-niṣṭhatvaṃ sā jñeyā turyagā kṣitiḥ||"
     },
     {
       "id": "svsss-5-0949",
@@ -62705,8 +63005,53 @@
       "number": "949",
       "label": "Verse 949",
       "deva": "इदं ममेति सर्वेषु दृश्य-भावेष्वभावना।\nजाग्रज्-जाग्रद् इति प्राहुर् महान्तो ब्रह्मवित्तमाः॥",
-      "translation": "The waking aspect of waking consciousness To the mahātmā, who is the best of the knowers of Brahman, all such ideas as ‘this’ or ‘mine’ do not arise; for there is a total absence of the consciousness of external objects. It is the waking aspect of waking consciousness.",
-      "gloss": [],
+      "translation": "The great knowers of Brahman call this the waking-waking state: no thought of “this” or “mine” arises in any appearance that is seen.",
+      "gloss": [
+        [
+          "इदम्",
+          "“this”"
+        ],
+        [
+          "मम",
+          "“mine”"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "सर्वेषु",
+          "in all"
+        ],
+        [
+          "दृश्य-भावेषु",
+          "in seen appearances"
+        ],
+        [
+          "अभावना",
+          "absence of thought"
+        ],
+        [
+          "जाग्रत्-जाग्रत्",
+          "waking-waking"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "प्राहुः",
+          "they call"
+        ],
+        [
+          "महान्तः",
+          "the great"
+        ],
+        [
+          "ब्रह्म-वित्-तमाः",
+          "the best knowers of Brahman"
+        ]
+      ],
       "sourceNumbers": [
         949
       ],
@@ -62718,14 +63063,39 @@
       "chapter": 5,
       "number": "950",
       "label": "Verse 950",
-      "deva": "विदित्वा सच्-चिद्-आनन्दे मयि दृश्य-परम्-पराम्।\nनाम-रूप-परित्यागो जाग्रत्-स्वप्नः समीर्यते॥",
-      "translation": "The dream aspect of waking consciousness When one rejects all name and form after coming to know that all objects of knowledge are but superimpositions upon one’s own Ātman, whose nature is existence-consciousness-bliss, that is the dream aspect of waking consciousness.",
-      "gloss": [],
+      "deva": "विदित्वा सत्-चित्-आनन्द-मयीं दृश्य-परम्पराम्।\nनाम-रूप-परित्यागो जाग्रत्-स्वप्नः समीर्यते॥",
+      "translation": "Having recognized the whole series of visible things as made of being, consciousness, and bliss, the letting go of name and form is called the waking-dream state.",
+      "gloss": [
+        [
+          "विदित्वा",
+          "having recognized"
+        ],
+        [
+          "सत्-चित्-आनन्द-मयीम्",
+          "made of being, consciousness, and bliss"
+        ],
+        [
+          "दृश्य-परम्पराम्",
+          "the series of visible things"
+        ],
+        [
+          "नाम-रूप-परित्यागः",
+          "letting go of name and form"
+        ],
+        [
+          "जाग्रत्-स्वप्नः",
+          "the waking-dream state"
+        ],
+        [
+          "समीर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         950
       ],
       "sectionTitle": "Assimilating this Knowledge",
-      "iast": "viditvā sac-cid-ānande mayi dṛśya-param-parām|\nnāma-rūpa-parityāgo jāgrat-svapnaḥ samīryate||"
+      "iast": "viditvā sat-cid-ānanda-mayīṃ dṛśya-paramparām|\nnāma-rūpa-parityāgo jāgrat-svapnaḥ samīryate||"
     },
     {
       "id": "svsss-5-0951",
@@ -62733,8 +63103,53 @@
       "number": "951",
       "label": "Verse 951",
       "deva": "परिपूर्ण-चिद्-आकाशे मयि बोधात्मतां विना।\nन किञ्चिद् अन्यद् अस्तीति जाग्रत्-सुप्तिः समीर्यते॥",
-      "translation": "The deep-sleep aspect of waking consciousness When one comes to know that nothing exists except pure consciousness, which permeates every thing as the paripūrṇa-cid-ākāśa as the all-permeating consciousness, infinite as space, that is the deep-sleep aspect of waking consciousness.",
-      "gloss": [],
+      "translation": "In me, the all-full space of consciousness, nothing exists apart from the nature of awareness. This is called the waking-sleep state.",
+      "gloss": [
+        [
+          "परिपूर्ण-चित्-आकाशे",
+          "in the all-full space of consciousness"
+        ],
+        [
+          "मयि",
+          "in me"
+        ],
+        [
+          "बोध-आत्मताम्",
+          "the nature of awareness"
+        ],
+        [
+          "विना",
+          "apart from, without"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "किञ्चित्",
+          "anything"
+        ],
+        [
+          "अन्यत्",
+          "other"
+        ],
+        [
+          "अस्ति",
+          "exists"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "जाग्रत्-सुप्तिः",
+          "the waking-sleep state"
+        ],
+        [
+          "समीर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         951
       ],
@@ -62747,8 +63162,49 @@
       "number": "952",
       "label": "Verse 952",
       "deva": "मूलाज्ञान-विनाशेन कारणाभास-चेष्टितैः।\nबन्धो न मेऽतिस्वल्पोऽपि स्वप्न-जाग्रद् इतीर्यते॥",
-      "translation": "The waking aspect of dream consciousness With the destruction of mūlāvidyā or the primordial ignorance, one comes to know that all actions are but the product of causes that are unreal, and which are only apparent. At that stage, when one is no longer bound even to the slightest extent, it is to be regarded as the waking aspect of dream consciousness.",
-      "gloss": [],
+      "translation": "With the destruction of root ignorance, I have no bondage at all, not even the slightest, from the workings of apparent causes. This is called the dream-waking state.",
+      "gloss": [
+        [
+          "मूल-अज्ञान-विनाशेन",
+          "through the destruction of root ignorance"
+        ],
+        [
+          "कारण-आभास-चेष्टितैः",
+          "from the workings of apparent causes"
+        ],
+        [
+          "बन्धः",
+          "bondage"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "मे",
+          "for me, mine"
+        ],
+        [
+          "अति-स्वल्पः",
+          "even the slightest"
+        ],
+        [
+          "अपि",
+          "even"
+        ],
+        [
+          "स्वप्न-जाग्रत्",
+          "the dream-waking state"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ईर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         952
       ],
@@ -62761,8 +63217,49 @@
       "number": "953",
       "label": "Verse 953",
       "deva": "कारणाज्ञान-नाशाद् यद् द्रष्टृ-दर्शन-दृश्यता।\nन कार्यम् अस्ति तज् ज्ञानं स्वप्न-स्वप्नः समीर्यते॥",
-      "translation": "The dream aspect of dream consciousness The distinction between the seer, the process of seeing and the seen is all due to ignorance. When ignorance is destroyed, knowledge destroys the effects of ignorance. That is the dream aspect of dream consciousness.",
-      "gloss": [],
+      "translation": "When causal ignorance is destroyed, the triad of seer, seeing, and seen is no longer produced. That knowledge is called the dream-dream state.",
+      "gloss": [
+        [
+          "कारण-अज्ञान-नाशात्",
+          "from the destruction of causal ignorance"
+        ],
+        [
+          "यत्",
+          "when, that"
+        ],
+        [
+          "द्रष्टृ-दर्शन-दृश्यता",
+          "the triad of seer, seeing, and seen"
+        ],
+        [
+          "न",
+          "not"
+        ],
+        [
+          "कार्यम्",
+          "produced, an effect"
+        ],
+        [
+          "अस्ति",
+          "exists"
+        ],
+        [
+          "तत्",
+          "that"
+        ],
+        [
+          "ज्ञानम्",
+          "knowledge"
+        ],
+        [
+          "स्वप्न-स्वप्नः",
+          "the dream-dream state"
+        ],
+        [
+          "समीर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         953
       ],
@@ -62775,8 +63272,45 @@
       "number": "954",
       "label": "Verse 954",
       "deva": "अतिसूक्ष्म-विमर्शेन स्व-धी-वृत्तिर् अचञ्चला।\nविलीयते यदा बोधे स्वप्न-सुप्तिर् इतीर्यते॥",
-      "translation": "The deep sleep aspect of dream consciousness When the intellect becomes calm and motionless, as a result of subtle reflection it becomes merged in pure consciousness, it is to be regarded as the deep sleep aspect of dream consciousness.",
-      "gloss": [],
+      "translation": "When one's still mental mode dissolves into awareness through very subtle inquiry, it is called the dream-sleep state.",
+      "gloss": [
+        [
+          "अति-सूक्ष्म-विमर्शेन",
+          "through very subtle inquiry"
+        ],
+        [
+          "स्व-धी-वृत्तिः",
+          "one's mental mode"
+        ],
+        [
+          "अचञ्चला",
+          "still, unmoving"
+        ],
+        [
+          "विलीयते",
+          "dissolves"
+        ],
+        [
+          "यदा",
+          "when"
+        ],
+        [
+          "बोधे",
+          "in awareness"
+        ],
+        [
+          "स्वप्न-सुप्तिः",
+          "the dream-sleep state"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ईर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         954
       ],
@@ -62788,14 +63322,47 @@
       "chapter": 5,
       "number": "955",
       "label": "Verse 955",
-      "deva": "चिन्मयाकार-मतयो धी-वृत्ति-प्रसरैर् गतः।\nआनन्दानुभवो विद्वन् सुप्ति-जाग्रद् इतीर्यते॥",
-      "translation": "The waking aspect of deep sleep O Learned one, when as a result of the expanding of the mind the individual intellect becomes one with pure intelligence, the bliss of the Ātman is attained. The realization of that bliss is the waking aspect of deep sleep.",
-      "gloss": [],
+      "deva": "चिन्मयाकारमतिभिर्धीवृत्तिप्रसरैर्गतः।\nआनन्दानुभवो विद्वन् सुप्तिजाग्रदितीर्यते॥",
+      "translation": "O wise one, the experience of bliss reached through expanding mental modes in minds shaped by consciousness is called the sleep-waking state.",
+      "gloss": [
+        [
+          "चिन्मय-आकार-मतिभिः",
+          "through minds shaped by consciousness"
+        ],
+        [
+          "धी-वृत्ति-प्रसरैः",
+          "through the expansion of mental modes"
+        ],
+        [
+          "गतः",
+          "reached, attained"
+        ],
+        [
+          "आनन्द-अनुभवः",
+          "the experience of bliss"
+        ],
+        [
+          "विद्वन्",
+          "O wise one"
+        ],
+        [
+          "सुप्ति-जाग्रत्",
+          "the sleep-waking state"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ईर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         955
       ],
       "sectionTitle": "Assimilating this Knowledge",
-      "iast": "cinmayākāra-matayo dhī-vṛtti-prasarair gataḥ|\nānandānubhavo vidvan supti-jāgrad itīryate||"
+      "iast": "cinmayākāra-matibhir dhī-vṛtti-prasarair gataḥ|\nānandānubhavo vidvan supti-jāgrad itīryate||"
     },
     {
       "id": "svsss-5-0956",
@@ -62803,8 +63370,53 @@
       "number": "956",
       "label": "Verse 956",
       "deva": "वृत्तौ चिरानुभूतान्तरानन्दानुभव-स्थितौ।\nसमात्मतां यो यात्येष सुप्ति-स्वप्न इतीर्यते॥",
-      "translation": "The dream aspect of deep sleep When as a result of the prolonged experience of the bliss within, the mind ceases to function and all its modifications are no longer perceived, one comes to realize a state which is similar to that of the Ātman. That is to be regarded as the dream aspect of deep sleep.",
-      "gloss": [],
+      "translation": "One who reaches sameness with the Self while the mind abides in a long-familiar experience of inner bliss is said to be in the sleep-dream state.",
+      "gloss": [
+        [
+          "वृत्तौ",
+          "in the mental mode"
+        ],
+        [
+          "चिर-अनुभूत",
+          "long experienced"
+        ],
+        [
+          "अन्तर्-आनन्द",
+          "inner bliss"
+        ],
+        [
+          "अनुभव-स्थितौ",
+          "in the state of abiding in the experience"
+        ],
+        [
+          "सम-आत्मताम्",
+          "sameness with the Self"
+        ],
+        [
+          "यः",
+          "whoever"
+        ],
+        [
+          "याति",
+          "reaches"
+        ],
+        [
+          "एषः",
+          "this one"
+        ],
+        [
+          "सुप्ति-स्वप्नः",
+          "the sleep-dream state"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ईर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         956
       ],
@@ -62817,8 +63429,41 @@
       "number": "957",
       "label": "Verse 957",
       "deva": "दृश्य-धी-वृत्तिर् एतस्य केवली-भाव-भावना।\nपरं बोधैकतावाप्तिः सुप्ति-सुप्तिर् इतीर्यते॥",
-      "translation": "The deep sleep aspect of deep sleep When the object of knowledge, Brahman, whose nature is one of supremely pure consciousness, pervades the whole field of the intellect and all that takes place in it, there is nothing left except the concept of one-ness. That is the deep sleep aspect of deep sleep.",
-      "gloss": [],
+      "translation": "Through contemplating the cognition of the seen as the sole reality, one attains oneness with supreme awareness; this is called the sleep-sleep state.",
+      "gloss": [
+        [
+          "दृश्य-धी-वृत्तिः",
+          "the mental mode that knows the seen"
+        ],
+        [
+          "एतस्य",
+          "of this"
+        ],
+        [
+          "केवली-भाव-भावना",
+          "contemplation of being the sole reality"
+        ],
+        [
+          "परम्",
+          "supreme"
+        ],
+        [
+          "बोध-एकता-अवाप्तिः",
+          "attainment of oneness with awareness"
+        ],
+        [
+          "सुप्ति-सुप्तिः",
+          "the sleep-sleep state"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ईर्यते",
+          "is called"
+        ]
+      ],
       "sourceNumbers": [
         957
       ],
@@ -62831,8 +63476,41 @@
       "number": "958",
       "label": "Verse 958",
       "deva": "पर-ब्रह्मवद् आभाति निर्विकारैक-रूपिणी।\nसर्वावस्थासु धारैका तुर्याख्या परिकीर्तिता॥",
-      "translation": "The fourth in relation to the other three When the modifications of the mind remain ever the same, and when the flow of awareness remains unchanged through all the levels of consciousness, and when it assumes one unchanging pattern, the pattern of the supreme Brahman, that is the turya or the transcendent. It is called the fourth in relation to the other three.",
-      "gloss": [],
+      "translation": "A single, changeless stream shines through all states like the supreme Brahman; it is proclaimed as turya, the fourth.",
+      "gloss": [
+        [
+          "पर-ब्रह्म-वत्",
+          "like the supreme Brahman"
+        ],
+        [
+          "आभाति",
+          "shines"
+        ],
+        [
+          "निर्विकार-एक-रूपिणी",
+          "having one changeless form"
+        ],
+        [
+          "सर्व-अवस्थासु",
+          "through all states"
+        ],
+        [
+          "धारा",
+          "stream, current"
+        ],
+        [
+          "एका",
+          "one"
+        ],
+        [
+          "तुर्य-आख्या",
+          "named turya, the fourth"
+        ],
+        [
+          "परिकीर्तिता",
+          "is proclaimed"
+        ]
+      ],
       "sourceNumbers": [
         958
       ],
@@ -62845,8 +63523,41 @@
       "number": "959",
       "label": "Verse 959",
       "deva": "इत्यवस्था-समुल्लासं विमृशन् मुच्यते सुखी।\nशुभेच्छादि-त्रयं भूमि-भेदाभेद-युतं स्मृतम्॥",
-      "translation": "Those who become liberated by virtue of the splendour that animates the various stages of awareness are indeed happy. Beginning with the good intention in the first three of the seven steps in yoga, there is a sense of difference, as well as of non-difference. The first three steps of yoga may together be compared to the waking stage of consciousness. Just as people are aware of the sense of difference in the world, the yogī also has a proper knowledge of difference, though he is firmly convinced of non-difference.",
-      "gloss": [],
+      "translation": "Reflecting on the unfolding of these states, the happy one is freed. The triad beginning with śubhecchā is regarded as joined with distinctions and non-distinction among the stages.",
+      "gloss": [
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "अवस्था-समुल्लासम्",
+          "the unfolding of the states"
+        ],
+        [
+          "विमृशन्",
+          "reflecting"
+        ],
+        [
+          "मुच्यते",
+          "is freed"
+        ],
+        [
+          "सुखी",
+          "the happy one"
+        ],
+        [
+          "शुभेच्छा-आदि-त्रयम्",
+          "the triad beginning with good aspiration"
+        ],
+        [
+          "भूमि-भेद-अभेद-युतम्",
+          "joined with distinction and non-distinction among the stages"
+        ],
+        [
+          "स्मृतम्",
+          "is regarded"
+        ]
+      ],
       "sourceNumbers": [
         959
       ],
@@ -62859,8 +63570,65 @@
       "number": "960",
       "label": "Verse 960",
       "deva": "यथावद् भेद-बुद्ध्येदं जगज्-जाग्रद् इतीर्यते।\nअद्वैते स्थैर्यम् आयाते द्वैते च प्रशमं गते॥",
-      "translation": "Where there is an unshaken perception of the sense of one-ness and where all duality has come to an end, the yogī rises to the fourth plane of consciousness. It may be likened to the dream stage.",
-      "gloss": [],
+      "translation": "This world, properly seen through an understanding of difference, is called the waking state. When steadiness in nonduality has arisen and duality has subsided…",
+      "gloss": [
+        [
+          "यथा-वत्",
+          "properly, as it is"
+        ],
+        [
+          "भेद-बुद्ध्या",
+          "through an understanding of difference"
+        ],
+        [
+          "इदम्",
+          "this"
+        ],
+        [
+          "जगत्",
+          "world"
+        ],
+        [
+          "जाग्रत्",
+          "the waking state"
+        ],
+        [
+          "इति",
+          "thus"
+        ],
+        [
+          "ईर्यते",
+          "is called"
+        ],
+        [
+          "अद्वैते",
+          "in nonduality"
+        ],
+        [
+          "स्थैर्यम्",
+          "steadiness"
+        ],
+        [
+          "आयाते",
+          "when arisen"
+        ],
+        [
+          "द्वैते",
+          "in duality"
+        ],
+        [
+          "च",
+          "and"
+        ],
+        [
+          "प्रशमम्",
+          "to quiet, subsidence"
+        ],
+        [
+          "गते",
+          "when gone, subsided"
+        ]
+      ],
       "sourceNumbers": [
         960
       ],
@@ -63512,5 +64280,5 @@
       "iast": "sarva-vedānta-siddhānta-sāra-saṅgraha-nāmakaḥ|\ngrantho’yaṃ hṛdaya-granthi-vicchittyai racitaḥ satām||"
     }
   ],
-  "coverage": "The complete source and English translation include all 986 reader units, and all units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–940 (920 reader units); verses 941–1,006 remain."
+  "coverage": "The complete source and English translation include all 986 reader units, and all units have explicit IAST. Separate Devanāgarī word glosses and literal English translations cover source verses 1–960 (940 reader units); verses 961–1,006 remain."
 }
