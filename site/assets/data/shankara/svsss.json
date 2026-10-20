@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–55.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–65.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 55
+      "to": 65
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–55 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–65 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -3933,13 +3933,103 @@
       "number": "56",
       "label": "Verse 56",
       "deva": "यमोऽसताम् एव करोत्यनर्थं\nसतां तु सौख्यं कुरुते हितः सन्।\nकामः सताम् एव गतिं निरुन्धन्\nकरोत्यनर्थं ह्यसतां नु का कथा॥",
-      "translation": "Therefore only the wicked are afraid of Yama. In reality he is the well wisher of the virtuous people, for he grants bliss to them. But lust blocks the path even for the wise. and it is obvious how the wicked fare.",
-      "gloss": [],
+      "translation": "Yama harms only the wicked; being well-disposed, he brings happiness to the good. Desire, however, blocks the good person’s path and causes harm; what need is there to speak of the wicked?",
+      "gloss": [
+        {
+          "sa": "यमः",
+          "en": "Yama"
+        },
+        {
+          "sa": "असताम्",
+          "en": "for the wicked"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "करोति",
+          "en": "does"
+        },
+        {
+          "sa": "अनर्थम्",
+          "en": "harm"
+        },
+        {
+          "sa": "सताम्",
+          "en": "for the good"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "सौख्यम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "कुरुते",
+          "en": "brings"
+        },
+        {
+          "sa": "हितः",
+          "en": "well-disposed"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "सताम्",
+          "en": "for the good"
+        },
+        {
+          "sa": "एव",
+          "en": "even"
+        },
+        {
+          "sa": "गतिम्",
+          "en": "the path"
+        },
+        {
+          "sa": "निरुन्धन्",
+          "en": "blocking"
+        },
+        {
+          "sa": "करोति",
+          "en": "causes"
+        },
+        {
+          "sa": "अनर्थम्",
+          "en": "harm"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "असताम्",
+          "en": "for the wicked"
+        },
+        {
+          "sa": "नु",
+          "en": "then"
+        },
+        {
+          "sa": "का कथा",
+          "en": "what need to say"
+        }
+      ],
       "sourceNumbers": [
         56
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "yamo’satām eva karotyanarthaṃ\nsatāṃ tu saukhyaṃ kurute hitaḥ san|\nkāmaḥ satām eva gatiṃ nirundhan\nkarotyanarthaṃ hyasatāṃ nu kā kathā||"
+      "iast": "yamo’satām eva karotyanarthaṃ\nsatāṃ tu saukhyaṃ kurute hitaḥ san|\nkāmaḥ satām eva gatiṃ nirundhan\nkarotyanarthaṃ hyasatāṃ nu kā kathā||",
+      "editionTranslation": "Therefore only the wicked are afraid of Yama. In reality he is the well wisher of the virtuous people, for he grants bliss to them. But lust blocks the path even for the wise. and it is obvious how the wicked fare."
     },
     {
       "id": "svsss-1-0057",
@@ -3947,13 +4037,83 @@
       "number": "57",
       "label": "Verse 57",
       "deva": "विश्वस्य वृद्धिं स्वयम् एव काङ्क्षन्\nप्रवर्तकं कामि-जनं ससर्ज।\nतेनैव लोकः परिमुह्यमानः\nप्रवर्धते चन्द्रमसेव चाब्धिः॥",
-      "translation": "Lust is but Nature’s contraption for the perpetuation of the race. Human beings are drawn by the power of lust, just as the tide is urged forward when the moon is full.",
-      "gloss": [],
+      "translation": "Desiring the growth of the world, the creator himself created desire-driven people as its agents. Deluded by this, the world grows, like the ocean under the moon.",
+      "gloss": [
+        {
+          "sa": "विश्वस्य",
+          "en": "of the world"
+        },
+        {
+          "sa": "वृद्धिम्",
+          "en": "growth"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "himself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "काङ्क्षन्",
+          "en": "desiring"
+        },
+        {
+          "sa": "प्रवर्तकम्",
+          "en": "the instigator"
+        },
+        {
+          "sa": "कामि-जनम्",
+          "en": "desire-driven people"
+        },
+        {
+          "sa": "ससर्ज",
+          "en": "created"
+        },
+        {
+          "sa": "तेन",
+          "en": "by that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "लोकः",
+          "en": "the world"
+        },
+        {
+          "sa": "परिमुह्यमानः",
+          "en": "being deluded"
+        },
+        {
+          "sa": "प्रवर्धते",
+          "en": "grows"
+        },
+        {
+          "sa": "चन्द्रमसा",
+          "en": "by the moon"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अब्दिः",
+          "en": "the ocean"
+        }
+      ],
       "sourceNumbers": [
         57
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "viśvasya vṛddhiṃ svayam eva kāṅkṣan\npravartakaṃ kāmi-janaṃ sasarja|\ntenaiva lokaḥ parimuhyamānaḥ\npravardhate candramaseva cābdhiḥ||"
+      "iast": "viśvasya vṛddhiṃ svayam eva kāṅkṣan\npravartakaṃ kāmi-janaṃ sasarja|\ntenaiva lokaḥ parimuhyamānaḥ\npravardhate candramaseva cābdhiḥ||",
+      "editionTranslation": "Lust is but Nature’s contraption for the perpetuation of the race. Human beings are drawn by the power of lust, just as the tide is urged forward when the moon is full."
     },
     {
       "id": "svsss-1-0058",
@@ -3961,13 +4121,107 @@
       "number": "58",
       "label": "Verse 58",
       "deva": "कामो नाम महाञ् जगद्-भ्रमयिता स्थित्वान्तरङ्गे स्वयं\nस्त्री-पुंसाव् इतरेतराङ्गकगुणैर् हासैश्च भावैः स्फुटम्।\nअन्योन्यं परिमोह्य नैज-तमसा प्रेमानुबन्धेन तौ\nबद्ध्वा भ्रामयति प्रपञ्च-रचनां संवर्धयन् ब्रह्महा॥",
-      "translation": "But there is nothing more delusive than lust. It has its abode in the human heart, and there, by means of physical attraction, smiles and emotional allurement it brings about the union of man and woman in order that the world of creation might go on. Lust is real destroyer of Brahman, for it deludes man by the bonds of love.",
-      "gloss": [],
+      "translation": "Desire is a great deluder of the world, dwelling within. Through the qualities of one another’s bodies, smiles, and expressions it deludes woman and man, binds them with its own darkness and bonds of love, and drives the world’s creation forward, obscuring knowledge of Brahman.",
+      "gloss": [
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "नाम",
+          "en": "called"
+        },
+        {
+          "sa": "महान्",
+          "en": "great"
+        },
+        {
+          "sa": "जगत्-भ्रमयिता",
+          "en": "the deluder of the world"
+        },
+        {
+          "sa": "स्थित्वा",
+          "en": "dwelling"
+        },
+        {
+          "sa": "अन्तरङ्गे",
+          "en": "within"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "स्त्री-पुंसौ",
+          "en": "woman and man"
+        },
+        {
+          "sa": "इतर-इतर-अङ्गक-गुणैः",
+          "en": "by the qualities of each other’s bodies"
+        },
+        {
+          "sa": "हासैः",
+          "en": "by smiles"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "भावैः",
+          "en": "by expressions"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "अन्योन्यम्",
+          "en": "one another"
+        },
+        {
+          "sa": "परिमोह्य",
+          "en": "thoroughly deluding"
+        },
+        {
+          "sa": "नैज-तमसा",
+          "en": "with its own darkness"
+        },
+        {
+          "sa": "प्रेम-अनुबन्धेन",
+          "en": "by bonds of love"
+        },
+        {
+          "sa": "तौ",
+          "en": "those two"
+        },
+        {
+          "sa": "बद्ध्वा",
+          "en": "having bound"
+        },
+        {
+          "sa": "भ्रामयति",
+          "en": "causes to wander"
+        },
+        {
+          "sa": "प्रपञ्च-रचनाम्",
+          "en": "the creation of the world"
+        },
+        {
+          "sa": "संवर्धयन्",
+          "en": "promoting"
+        },
+        {
+          "sa": "ब्रह्म-हा",
+          "en": "a Brahman-slayer [obscuring Brahman-knowledge]"
+        }
+      ],
       "sourceNumbers": [
         58
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāmo nāma mahāñ jagad-bhramayitā sthitvāntaraṅge svayaṃ\nstrī-puṃsāv itaretarāṅgakaguṇair hāsaiśca bhāvaiḥ sphuṭam|\nanyonyaṃ parimohya naija-tamasā premānubandhena tau\nbaddhvā bhrāmayati prapañca-racanāṃ saṃvardhayan brahmahā||"
+      "iast": "kāmo nāma mahāñ jagad-bhramayitā sthitvāntaraṅge svayaṃ\nstrī-puṃsāv itaretarāṅgakaguṇair hāsaiśca bhāvaiḥ sphuṭam|\nanyonyaṃ parimohya naija-tamasā premānubandhena tau\nbaddhvā bhrāmayati prapañca-racanāṃ saṃvardhayan brahmahā||",
+      "editionTranslation": "But there is nothing more delusive than lust. It has its abode in the human heart, and there, by means of physical attraction, smiles and emotional allurement it brings about the union of man and woman in order that the world of creation might go on. Lust is real destroyer of Brahman, for it deludes man by the bonds of love."
     },
     {
       "id": "svsss-1-0059",
@@ -3975,13 +4229,75 @@
       "number": "59",
       "label": "Verse 59",
       "deva": "अतोऽन्तरङ्ग-स्थित-काम-वेगाद्\nभोग्ये प्रवृत्तिः स्वत एव सिद्धा।\nसर्वस्य जन्तोर् ध्रुवम् अन्यथा चेद्\nअबोधितार्थेषु कथं प्रवृत्तिः॥",
-      "translation": "It is only because lust has its abode within oneself, that people go in quest of the various objects of enjoyment. If it were otherwise, would anyone go in quest of that which he knows not?",
-      "gloss": [],
+      "translation": "Therefore, the impulse toward objects of enjoyment arises naturally from the force of desire dwelling within. If not, how could any living being be drawn toward things it has not known?",
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अन्तरङ्ग-स्थित-काम-वेगात्",
+          "en": "from the force of desire dwelling within"
+        },
+        {
+          "sa": "भोग्ये",
+          "en": "toward objects of enjoyment"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "impulse"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सिद्धा",
+          "en": "is established"
+        },
+        {
+          "sa": "सर्वस्य",
+          "en": "of every"
+        },
+        {
+          "sa": "जन्तोः",
+          "en": "living being"
+        },
+        {
+          "sa": "ध्रुवम्",
+          "en": "certainly"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "अबोधित-अर्थेषु",
+          "en": "toward unknown things"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "could an impulse arise"
+        }
+      ],
       "sourceNumbers": [
         59
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "ato’ntaraṅga-sthita-kāma-vegād\nbhogye pravṛttiḥ svata eva siddhā|\nsarvasya jantor dhruvam anyathā ced\nabodhitārtheṣu kathaṃ pravṛttiḥ||"
+      "iast": "ato’ntaraṅga-sthita-kāma-vegād\nbhogye pravṛttiḥ svata eva siddhā|\nsarvasya jantor dhruvam anyathā ced\nabodhitārtheṣu kathaṃ pravṛttiḥ||",
+      "editionTranslation": "It is only because lust has its abode within oneself, that people go in quest of the various objects of enjoyment. If it were otherwise, would anyone go in quest of that which he knows not?"
     },
     {
       "id": "svsss-1-0060",
@@ -3989,13 +4305,71 @@
       "number": "60",
       "label": "Verse 60",
       "deva": "तेनैव सर्व-जन्तूनां कामना बलवत्-तरा।\nजीर्यत्यपि च देहेऽस्मिन् कामना नैव जीर्यते॥",
-      "translation": "The physical body might decay with the advance of old-age, but lust decays not. Impetuous indeed are the passions.",
-      "gloss": [],
+      "translation": "For this reason desire in all creatures is stronger: even as this body grows old, desire does not grow old.",
+      "gloss": [
+        {
+          "sa": "तेन",
+          "en": "for that reason"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सर्व-जन्तूनाम्",
+          "en": "of all creatures"
+        },
+        {
+          "sa": "कामना",
+          "en": "desire"
+        },
+        {
+          "sa": "बलवत्तरा",
+          "en": "stronger"
+        },
+        {
+          "sa": "जीर्यति",
+          "en": "decays"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "देहे",
+          "en": "in the body"
+        },
+        {
+          "sa": "अस्मिन्",
+          "en": "this"
+        },
+        {
+          "sa": "कामना",
+          "en": "desire"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "जीर्यते",
+          "en": "grows old"
+        }
+      ],
       "sourceNumbers": [
         60
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tenaiva sarva-jantūnāṃ kāmanā balavat-tarā|\njīryatyapi ca dehe’smin kāmanā naiva jīryate||"
+      "iast": "tenaiva sarva-jantūnāṃ kāmanā balavat-tarā|\njīryatyapi ca dehe’smin kāmanā naiva jīryate||",
+      "editionTranslation": "The physical body might decay with the advance of old-age, but lust decays not. Impetuous indeed are the passions."
     },
     {
       "id": "svsss-1-0061",
@@ -4003,13 +4377,63 @@
       "number": "61",
       "label": "Verse 61",
       "deva": "अवेक्ष्य विषये दोषं बुद्धि-युक्तो विचक्षणः।\nकाम-पाशेन यो मुक्तः स मुक्तेः पथि गोचरः॥",
-      "translation": "But that person who is intelligent and wise, and who knows what defects lie hidden in the objects of enjoyment knows how to free himself from the bonds of desire. Only such a person is fit to tread the path that leads to liberation.",
-      "gloss": [],
+      "translation": "A discerning person who sees the defect in sense objects and is free from desire’s noose is fit to tread the path of liberation.",
+      "gloss": [
+        {
+          "sa": "अवेक्ष्य",
+          "en": "having seen"
+        },
+        {
+          "sa": "विषये",
+          "en": "in an object"
+        },
+        {
+          "sa": "दोषम्",
+          "en": "the defect"
+        },
+        {
+          "sa": "बुद्धि-युक्तः",
+          "en": "endowed with understanding"
+        },
+        {
+          "sa": "विचक्षणः",
+          "en": "discerning"
+        },
+        {
+          "sa": "काम-पाशेन",
+          "en": "from the noose of desire"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "मुक्तः",
+          "en": "freed"
+        },
+        {
+          "sa": "सः",
+          "en": "that person"
+        },
+        {
+          "sa": "मुक्तेः",
+          "en": "of liberation"
+        },
+        {
+          "sa": "पथि",
+          "en": "on the path"
+        },
+        {
+          "sa": "गोचरः",
+          "en": "is fit"
+        }
+      ],
       "sourceNumbers": [
         61
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "avekṣya viṣaye doṣaṃ buddhi-yukto vicakṣaṇaḥ|\nkāma-pāśena yo muktaḥ sa mukteḥ pathi gocaraḥ||"
+      "iast": "avekṣya viṣaye doṣaṃ buddhi-yukto vicakṣaṇaḥ|\nkāma-pāśena yo muktaḥ sa mukteḥ pathi gocaraḥ||",
+      "editionTranslation": "But that person who is intelligent and wise, and who knows what defects lie hidden in the objects of enjoyment knows how to free himself from the bonds of desire. Only such a person is fit to tread the path that leads to liberation."
     },
     {
       "id": "svsss-1-0062",
@@ -4017,13 +4441,59 @@
       "number": "62",
       "label": "Verse 62",
       "deva": "कामस्य विजयोपायं सूक्ष्मं वक्ष्याम्यहं सताम्।\nसङ्कल्पस्य परित्याग उपायः सुलभो मतः॥",
-      "translation": "The means of conquering desire Let me tell you what that subtle path is by means of which all those who are virtuous might conquer desire. The simplest means of conquering desire is to give up the idea that a particular object is attractive, and not to think of it at all.",
-      "gloss": [],
+      "translation": "I will explain to the good the subtle means of conquering desire: giving up the conception [that an object is desirable] is considered an easy method.",
+      "gloss": [
+        {
+          "sa": "कामस्य",
+          "en": "of desire"
+        },
+        {
+          "sa": "विजय-उपायम्",
+          "en": "the means of conquering"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "वक्ष्यामि",
+          "en": "I will explain"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "सताम्",
+          "en": "to the good"
+        },
+        {
+          "sa": "सङ्कल्पस्य",
+          "en": "of the conception"
+        },
+        {
+          "sa": "परित्यागः",
+          "en": "abandonment"
+        },
+        {
+          "sa": "उपायः",
+          "en": "the means"
+        },
+        {
+          "sa": "सुलभः",
+          "en": "easy"
+        },
+        {
+          "sa": "मतः",
+          "en": "is considered"
+        }
+      ],
       "sourceNumbers": [
         62
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāmasya vijayopāyaṃ sūkṣmaṃ vakṣyāmyahaṃ satām|\nsaṅkalpasya parityāga upāyaḥ sulabho mataḥ||"
+      "iast": "kāmasya vijayopāyaṃ sūkṣmaṃ vakṣyāmyahaṃ satām|\nsaṅkalpasya parityāga upāyaḥ sulabho mataḥ||",
+      "editionTranslation": "The means of conquering desire Let me tell you what that subtle path is by means of which all those who are virtuous might conquer desire. The simplest means of conquering desire is to give up the idea that a particular object is attractive, and not to think of it at all."
     },
     {
       "id": "svsss-1-0063",
@@ -4031,13 +4501,67 @@
       "number": "63",
       "label": "Verse 63",
       "deva": "श्रुते दृष्टेऽपि वा भोग्ये यस्मिन् कस्मिंश्च वस्तुनि।\nसमीचीनत्व-धी-त्यागात् कामो नोदेति कर्हिचित्॥",
-      "translation": "Even when one hears of a particular object or sees it, no one ever desires to possess it, unless first of all there arises the idea that it is a desirable object.",
-      "gloss": [],
+      "translation": "Even when any object of enjoyment is heard of or seen, desire never arises once the thought that it is desirable has been given up.",
+      "gloss": [
+        {
+          "sa": "श्रुते",
+          "en": "when heard"
+        },
+        {
+          "sa": "दृष्टे",
+          "en": "when seen"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "भोग्ये",
+          "en": "in an object of enjoyment"
+        },
+        {
+          "sa": "यस्मिन्",
+          "en": "in whichever"
+        },
+        {
+          "sa": "कस्मिंश्च",
+          "en": "any"
+        },
+        {
+          "sa": "वस्तुनि",
+          "en": "object"
+        },
+        {
+          "sa": "समीचीनत्व-धी-त्यागात्",
+          "en": "from giving up the thought that it is desirable"
+        },
+        {
+          "sa": "कामः",
+          "en": "desire"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उदेति",
+          "en": "arises"
+        },
+        {
+          "sa": "कर्हिचित्",
+          "en": "ever"
+        }
+      ],
       "sourceNumbers": [
         63
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śrute dṛṣṭe’pi vā bhogye yasmin kasmiṃśca vastuni|\nsamīcīnatva-dhī-tyāgāt kāmo nodeti karhicit||"
+      "iast": "śrute dṛṣṭe’pi vā bhogye yasmin kasmiṃśca vastuni|\nsamīcīnatva-dhī-tyāgāt kāmo nodeti karhicit||",
+      "editionTranslation": "Even when one hears of a particular object or sees it, no one ever desires to possess it, unless first of all there arises the idea that it is a desirable object."
     },
     {
       "id": "svsss-1-0064",
@@ -4045,13 +4569,67 @@
       "number": "64",
       "label": "Verse 64",
       "deva": "कामस्य बीजं सङ्कल्पः सङ्कल्पाद् एव जायते।\nबीजे नष्टेऽङ्कुर इव तस्मिन् नष्टे विनश्यति॥",
-      "translation": "That mental concept that a particular object is attractive is the source of all desires. Where no such thought arises, there can be no desire. For if the seed should be destroyed, how can it sprout?",
-      "gloss": [],
+      "translation": "A conception is the seed of desire; desire arises from conception alone. When that seed is destroyed, desire perishes, just as a sprout cannot remain when its seed is destroyed.",
+      "gloss": [
+        {
+          "sa": "कामस्य",
+          "en": "of desire"
+        },
+        {
+          "sa": "बीजम्",
+          "en": "the seed"
+        },
+        {
+          "sa": "सङ्कल्पः",
+          "en": "the conception"
+        },
+        {
+          "sa": "सङ्कल्पात्",
+          "en": "from conception"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "जायते",
+          "en": "arises"
+        },
+        {
+          "sa": "बीजे",
+          "en": "when the seed"
+        },
+        {
+          "sa": "नष्टे",
+          "en": "is destroyed"
+        },
+        {
+          "sa": "अङ्कुरः",
+          "en": "a sprout"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "when that"
+        },
+        {
+          "sa": "नष्टे",
+          "en": "is destroyed"
+        },
+        {
+          "sa": "विनश्यति",
+          "en": "it perishes"
+        }
+      ],
       "sourceNumbers": [
         64
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāmasya bījaṃ saṅkalpaḥ saṅkalpād eva jāyate|\nbīje naṣṭe’ṅkura iva tasmin naṣṭe vinaśyati||"
+      "iast": "kāmasya bījaṃ saṅkalpaḥ saṅkalpād eva jāyate|\nbīje naṣṭe’ṅkura iva tasmin naṣṭe vinaśyati||",
+      "editionTranslation": "That mental concept that a particular object is attractive is the source of all desires. Where no such thought arises, there can be no desire. For if the seed should be destroyed, how can it sprout?"
     },
     {
       "id": "svsss-1-0065",
@@ -4059,13 +4637,83 @@
       "number": "65",
       "label": "Verse 65",
       "deva": "न कोऽपि सम्यक्त्व-धिया विनैव\nभोग्यं नरः कामयितुं समर्थः।\nयतस् ततः काम-जयेच्छुर् एतां\nसम्यक्त्व-बुद्धिं विषये निहन्यात्॥",
-      "translation": "No one ever covets any object of enjoyment unless one thinks that it is desirable. Let him who is intent upon the conquest of desire first of all erase from his mind all ideas as to the desirability of any given object.",
-      "gloss": [],
+      "translation": "No one can desire an object of enjoyment without first judging it desirable. Therefore, one who wishes to conquer desire should remove this sense of desirability from the object.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कः",
+          "en": "anyone"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सम्यक्त्व-धिया",
+          "en": "without the judgment of desirability"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "भोग्यम्",
+          "en": "an object of enjoyment"
+        },
+        {
+          "sa": "नरः",
+          "en": "a person"
+        },
+        {
+          "sa": "कामयितुम्",
+          "en": "to desire"
+        },
+        {
+          "sa": "समर्थः",
+          "en": "is able"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "काम-जयेच्छुः",
+          "en": "one wishing to conquer desire"
+        },
+        {
+          "sa": "एताम्",
+          "en": "this"
+        },
+        {
+          "sa": "सम्यक्त्व-बुद्धिम्",
+          "en": "sense of desirability"
+        },
+        {
+          "sa": "विषये",
+          "en": "toward the object"
+        },
+        {
+          "sa": "निहन्यात्",
+          "en": "should remove"
+        }
+      ],
       "sourceNumbers": [
         65
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "na ko’pi samyaktva-dhiyā vinaiva\nbhogyaṃ naraḥ kāmayituṃ samarthaḥ|\nyatas tataḥ kāma-jayecchur etāṃ\nsamyaktva-buddhiṃ viṣaye nihanyāt||"
+      "iast": "na ko’pi samyaktva-dhiyā vinaiva\nbhogyaṃ naraḥ kāmayituṃ samarthaḥ|\nyatas tataḥ kāma-jayecchur etāṃ\nsamyaktva-buddhiṃ viṣaye nihanyāt||",
+      "editionTranslation": "No one ever covets any object of enjoyment unless one thinks that it is desirable. Let him who is intent upon the conquest of desire first of all erase from his mind all ideas as to the desirability of any given object."
     },
     {
       "id": "svsss-1-0066",
