@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 360
+      "end": 365
     },
-    "note": "Source verses 1–360 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 361 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–365 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 366 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -28677,23 +28677,131 @@
       "label": "Verse 361",
       "deva": "यथा सुवर्णं पुटपाकशोधितं\nत्यक्त्वा मलं स्वात्मगुणं समृच्छति ।\nतथा मनः सत्त्वरजस्तमोमलं\nध्यानेन सन्त्यज्य समेति तत्त्वम् ॥",
       "iast": "yathā suvarṇaṃ puṭapākaśodhitaṃ\ntyaktvā malaṃ svātmaguṇaṃ samṛcchati |\ntathā manaḥ sattvarajastamomalaṃ\ndhyānena santyajya sameti tattvam ||",
-      "translation": "As gold purified by thorough heating on the fire gives up its impurities and attains to its own lustre, so the mind, through meditation, gives up its impurities of Sattva, Rajas and Tamas, and attains to the reality of Brahman.",
-      "gloss": [],
+      "translation": "Just as gold purified by crucible heating, having cast off its impurity, attains its own natural quality, so the mind, by meditation, abandoning the impurity of sattva, rajas, and tamas, reaches Reality.",
+      "gloss": [
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "सुवर्णम्",
+          "en": "gold"
+        },
+        {
+          "sa": "पुटपाकशोधितम्",
+          "en": "purified by heating in a crucible"
+        },
+        {
+          "sa": "त्यक्त्वा",
+          "en": "having cast off"
+        },
+        {
+          "sa": "मलम्",
+          "en": "impurity"
+        },
+        {
+          "sa": "स्वात्मगुणम्",
+          "en": "its own nature or quality"
+        },
+        {
+          "sa": "समृच्छति",
+          "en": "attains"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "सत्त्व-रजस्-तमो-मलम्",
+          "en": "the impurity of sattva, rajas, and tamas"
+        },
+        {
+          "sa": "ध्यानेन",
+          "en": "by meditation"
+        },
+        {
+          "sa": "सन्त्यज्य",
+          "en": "having completely abandoned"
+        },
+        {
+          "sa": "समेति",
+          "en": "reaches"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "Reality"
+        }
+      ],
       "sourceNumbers": [
         361
-      ]
+      ],
+      "editionTranslation": "As gold purified by thorough heating on the fire gives up its impurities and attains to its own lustre, so the mind, through meditation, gives up its impurities of Sattva, Rajas and Tamas, and attains to the reality of Brahman."
     },
     {
       "id": "vivekachudamani-362",
       "number": "362",
       "label": "Verse 362",
       "deva": "निरन्तराभ्यासवशात्तदित्थं\nपक्वं मनो ब्रह्मणि लीयते यदा ।\nतदा समाधिः सविकल्पवर्जितः\nस्वतोऽद्वयानन्दरसानुभावकः ॥",
-      "iast": "nirantarābhyāsavaśāttaditthaṃ\npakvaṃ mano brahmaṇi līyate yadā |\ntadā samādhiḥ savikalpavarjitaḥ\nsvato'dvayānandarasānubhāvakaḥ ||",
-      "translation": "When the mind, thus purified by constant practice, is merged in Brahman, then Samadhi passes on from the Savikalpa to the Nirvikalpa stage, and leads directly to the realisation of the Bliss of Brahman, the One without a second.",
-      "gloss": [],
+      "iast": "nirantarābhyāsavaśāt tad itthaṃ\npakvaṃ mano brahmaṇi līyate yadā |\ntadā samādhiḥ savikalpavarjitaḥ\nsvato 'dvayānandarasānubhāvakaḥ ||",
+      "translation": "Through the force of uninterrupted practice, when the mind has thus ripened and dissolves in Brahman, then samādhi free from thought-constructs arises, itself experiencing the taste of nondual bliss.",
+      "gloss": [
+        {
+          "sa": "निरन्तर-अभ्यास-वशात्",
+          "en": "through the force of uninterrupted practice"
+        },
+        {
+          "sa": "तद् + इत्थम्",
+          "en": "that; thus, in this way"
+        },
+        {
+          "sa": "पक्वम्",
+          "en": "ripened"
+        },
+        {
+          "sa": "मनः",
+          "en": "the mind"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "लीयते",
+          "en": "dissolves"
+        },
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "समाधिः",
+          "en": "samādhi"
+        },
+        {
+          "sa": "सविकल्प-वर्जितः",
+          "en": "free from thought-constructs"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "अद्वय-आनन्द-रस-अनुभावकः",
+          "en": "experiencing the taste of nondual bliss"
+        }
+      ],
       "sourceNumbers": [
         362
-      ]
+      ],
+      "editionTranslation": "When the mind, thus purified by constant practice, is merged in Brahman, then Samadhi passes on from the Savikalpa to the Nirvikalpa stage, and leads directly to the realisation of the Bliss of Brahman, the One without a second."
     },
     {
       "id": "vivekachudamani-363",
@@ -28701,23 +28809,119 @@
       "label": "Verse 363",
       "deva": "समाधिनानेन समस्तवासना-\nग्रन्थेर्विनाशोऽखिलकर्मनाशः ।\nअन्तर्बहिः सर्वत एव सर्वदा\nस्वरूपविस्फूर्तिरयत्नतः स्यात् ॥",
       "iast": "samādhinānena samastavāsanā-\ngranthervināśo'khilakarmanāśaḥ |\nantarbahiḥ sarvata eva sarvadā\nsvarūpavisphūrtirayatnataḥ syāt ||",
-      "translation": "By this Samadhi are destroyed all desires which are like knots, all work is at an end, and inside and out there takes place everywhere and always the spontaneous manifestation of one’s real nature.",
-      "gloss": [],
+      "translation": "Through this samādhi, the knot of all latent tendencies is destroyed, all karma is destroyed, and the manifestation of one’s own nature occurs effortlessly, everywhere, within and without, always.",
+      "gloss": [
+        {
+          "sa": "समाधिना",
+          "en": "through samādhi"
+        },
+        {
+          "sa": "अनेन",
+          "en": "this"
+        },
+        {
+          "sa": "समस्त-वासना-ग्रन्थेः",
+          "en": "of the knot of all latent tendencies"
+        },
+        {
+          "sa": "विनाशः",
+          "en": "destruction"
+        },
+        {
+          "sa": "अखिल-कर्म-नाशः",
+          "en": "destruction of all karma"
+        },
+        {
+          "sa": "अन्तः",
+          "en": "within"
+        },
+        {
+          "sa": "बहिः",
+          "en": "without"
+        },
+        {
+          "sa": "सर्वतः",
+          "en": "everywhere"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सर्वदा",
+          "en": "always"
+        },
+        {
+          "sa": "स्वरूप-विस्फूर्तिः",
+          "en": "the manifestation of one’s own nature"
+        },
+        {
+          "sa": "अयत्नतः",
+          "en": "effortlessly"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "occurs"
+        }
+      ],
       "sourceNumbers": [
         363
-      ]
+      ],
+      "editionTranslation": "By this Samadhi are destroyed all desires which are like knots, all work is at an end, and inside and out there takes place everywhere and always the spontaneous manifestation of one’s real nature."
     },
     {
       "id": "vivekachudamani-364",
       "number": "364",
       "label": "Verse 364",
-      "deva": "श्रुतेः शतगुणं विद्यान्मननं मननाद् अपि ।\nनिदिंध्यासं लक्षगुणमनन्तं निर्विकल्पकम् ॥",
-      "iast": "śruteḥ śataguṇaṃ vidyānmananaṃ mananād api |\nnidiṃdhyāsaṃ lakṣaguṇamanantaṃ nirvikalpakam ||",
-      "translation": "Reflection should be considered a hundred times superior to hearing, and meditation a hundred thousand times superior even to reflection, but the Nirvikalpa Samadhi is infinite in its results.",
-      "gloss": [],
+      "deva": "श्रुतेः शतगुणं विद्यान्मननं मननादपि ।\nनिदिध्यासं लक्षगुणमनन्तं निर्विकल्पकम् ॥",
+      "iast": "śruteḥ śataguṇaṃ vidyān mananaṃ mananād api |\nnididhyāsaṃ lakṣaguṇam anantaṃ nirvikalpakam ||",
+      "translation": "One should know reflection to be a hundredfold greater than hearing, deep contemplation a hundred-thousandfold greater even than reflection, and nirvikalpa samādhi to be boundless.",
+      "gloss": [
+        {
+          "sa": "श्रुतेः",
+          "en": "than hearing"
+        },
+        {
+          "sa": "शतगुणम्",
+          "en": "a hundredfold"
+        },
+        {
+          "sa": "विद्यात्",
+          "en": "one should know"
+        },
+        {
+          "sa": "मननम्",
+          "en": "reflection"
+        },
+        {
+          "sa": "मननात्",
+          "en": "than reflection"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "निदिध्यासम्",
+          "en": "deep contemplation"
+        },
+        {
+          "sa": "लक्षगुणम्",
+          "en": "a hundred-thousandfold"
+        },
+        {
+          "sa": "अनन्तम्",
+          "en": "boundless"
+        },
+        {
+          "sa": "निर्विकल्पकम्",
+          "en": "nirvikalpa samādhi, free from thought-constructs"
+        }
+      ],
       "sourceNumbers": [
         364
-      ]
+      ],
+      "editionTranslation": "Reflection should be considered a hundred times superior to hearing, and meditation a hundred thousand times superior even to reflection, but the Nirvikalpa Samadhi is infinite in its results."
     },
     {
       "id": "vivekachudamani-365",
@@ -28725,11 +28929,57 @@
       "label": "Verse 365",
       "deva": "निर्विकल्पकसमाधिना स्फुटं\nब्रह्मतत्त्वमवगम्यते ध्रुवम् ।\nनान्यथा चलतया मनोगतेः\nप्रत्ययान्तरविमिश्रितं भवेत् ॥",
       "iast": "nirvikalpakasamādhinā sphuṭaṃ\nbrahmatattvamavagamyate dhruvam |\nnānyathā calatayā manogateḥ\npratyayāntaravimiśritaṃ bhavet ||",
-      "translation": "By the Nirvikalpa Samadhi the truth of Brahman is clearly and definitely realised, but not otherwise, for then the mind, being unstable by nature, is apt to be mixed up with other perceptions.",
-      "gloss": [],
+      "translation": "Through nirvikalpa samādhi, the truth of Brahman is clearly and certainly realized. Otherwise, because the mind is restless in its movement, [that realization] would be mixed with other cognitions.",
+      "gloss": [
+        {
+          "sa": "निर्विकल्पक-समाधिना",
+          "en": "through nirvikalpa samādhi"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "ब्रह्म-तत्त्वम्",
+          "en": "the truth of Brahman"
+        },
+        {
+          "sa": "अवगम्यते",
+          "en": "is realized"
+        },
+        {
+          "sa": "ध्रुवम्",
+          "en": "certainly"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "चलतया",
+          "en": "because of restlessness"
+        },
+        {
+          "sa": "मनः-गतेः",
+          "en": "of the mind’s movement"
+        },
+        {
+          "sa": "प्रत्यय-अन्तर-विमिश्रितम्",
+          "en": "mixed with other cognitions"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be"
+        }
+      ],
       "sourceNumbers": [
         365
-      ]
+      ],
+      "editionTranslation": "By the Nirvikalpa Samadhi the truth of Brahman is clearly and definitely realised, but not otherwise, for then the mind, being unstable by nature, is apt to be mixed up with other perceptions."
     },
     {
       "id": "vivekachudamani-366",
@@ -31313,6 +31563,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 340–344; preserved prior translations as editionTranslation. Corrected Sanskrit/IAST spacing in verses 342 and 344.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi source verses 345–350; verses 349–350 share one reader unit. Preserved prior translations as editionTranslation and corrected verse 346's Sanskrit vahniḥ spelling.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 351–355; preserved prior translations as editionTranslation.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 356–360; preserved prior translations as editionTranslation. Corrected verse 360's Sanskrit spelling to वृत्त्या."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 356–360; preserved prior translations as editionTranslation. Corrected verse 360's Sanskrit spelling to वृत्त्या.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 361–365; preserved prior translations as editionTranslation. Corrected verse 364's Devanāgarī and IAST spelling to nididhyāsaṃ."
   ]
 }
