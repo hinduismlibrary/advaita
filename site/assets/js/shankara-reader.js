@@ -69,10 +69,10 @@ const PANCHADASI_CHAPTERS={1:"Tattva-viveka",2:"Pañca-mahā-bhūta-viveka",3:"P
 const cleanAuthor=s=>String(s||"").replace(/,\s*traditional attribution/ig,"").trim();
 const SVSSS_SECTIONS={1:"Part 1 · The Topic of this Study and the Successful Student",2:"Part 2 · Identifying Only with Ultimate Reality",3:"Part 3 · Otherwise Mis-identifying with Untruth",4:"Part 4 · You are Only that Ultimate Reality",5:"Part 5 · Assimilating this Knowledge"};
 const MANDUKYA_CHAPTERS={1:"Āgama-prakaraṇa",2:"Vaitathya-prakaraṇa",3:"Advaita-prakaraṇa",4:"Alāta-śānti-prakaraṇa"};
-function aboutHTML(item){
+function aboutHTML(item,data){
  const summary=ABOUT[item.id];if(!summary)return "";
  let source="";
- if(item.id==="panchadasi")source='<p class="shankara-about-source">Sanskrit and English text: A.K. Aruna, <i>Pañca-Daśī</i> (2020); translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai. Licensed CC BY-NC-SA 4.0. This on-site reader groups six adjacent verse pairs as ranges; Sanskrit at 10.22–10.23 was checked against a second text witness. Word-for-word glosses cover Chapters 1–6 (verses 1–290) and Chapter 7 verses 1–100. Chapter 7 verses 101–298 and Chapters 8–15 still need separate glosses.</p>';
+ if(item.id==="panchadasi"){const s=data&&data.source||{};source='<p class="shankara-about-source">Sanskrit and English text: '+esc(s.edition||"Pañca-Daśī, A.K. Aruna, 2020");if(s.digitalText)source+='. '+esc(s.digitalText);if(s.attribution)source+=' Attribution: '+esc(s.attribution);if(s.license)source+=' License: '+esc(s.license);source+='</p>';}
  if(item.id==="svsss")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2020 v3.0); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā. Licensed CC BY-NC-SA 4.0. This on-site reader groups adjacent source verses where the English translation spans them. The source prose order is not presented as a word-for-word gloss.</p>';
  if(item.id==="vivekachudamani")source='<p class="shankara-about-source">English translation by Swami Madhavananda, Himalayan Series No. XLIII (1921), a public-domain edition. Sanskrit electronic witness from GRETIL, marked not proofread; normalized and converted from IAST to Devanāgarī for this reader. This reader includes all 580 numbered verses, with translations spanning adjacent verses shown as ranges. Editorial notes and index are excluded. No separate word-for-word lexical gloss is supplied.</p>';
  if(item.id==="mandukya-karika")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2022 version 6.0); Kārikā verse translation adopted from Swami Nikhilananda; Devanāgarī text credited by the source edition to Śāradā Peetham, Sringeri. Licensed CC BY-NC-SA 4.0. This reader includes all 215 numbered Kārikā verses and excludes the Upaniṣad mantras, Śaṅkara Bhāṣya, and Ṭīkā glosses. Translations spanning adjacent Sanskrit verses are shown as numbered ranges. No separate word-for-word gloss is included.</p>';
@@ -192,7 +192,7 @@ function treatiseUnitHTML(unit,index,englishOnly){
 function treatiseReaderHTML(data,item,id){
  const groups=treatiseGroups(data.units,id);
  const byline='By '+esc(cleanAuthor(item.author));
- const header='<header class="gita-hero"><h1>'+esc(item.title)+'</h1><p class="shankara-author">'+byline+'</p>'+aboutHTML(item)+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita texts</a></p></header>';
+ const header='<header class="gita-hero"><h1>'+esc(item.title)+'</h1><p class="shankara-author">'+byline+'</p>'+aboutHTML(item,data)+'<p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">← Advaita texts</a></p></header>';
  const contents=treatiseContentsHTML(groups);
  const sections=groups.map(group=>{
   const heading='<h2 class="shankara-section-heading" id="'+esc(group.anchor)+'">'+esc(group.title)+'</h2>';
@@ -331,6 +331,7 @@ function bindStudyControls(root){
   controls.className="shankara-study-controls";
   const row=document.createElement("div");
   row.className="shankara-study-button-row";
+  row.style.gap="0px";row.style.columnGap="0px";row.style.rowGap="0px";
   const transliterationPanel=document.createElement("div");
   transliterationPanel.className="shankara-study-panel shankara-transliteration-panel";
   transliterationPanel.id="shankara-transliteration-"+idBase;
@@ -422,7 +423,7 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-contents-20261020e";
+const READER_DATA_VERSION="reader-gloss-20261020a";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
  if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
@@ -444,7 +445,7 @@ async function start(root){
   const readerScript=Array.from(document.scripts).find(s=>s.src&&/\/assets\/js\/shankara-reader\.js(?:\?|$)/.test(s.src));
   const dataUrl=readerScript?new URL("../data/shankara/"+encodeURIComponent(id)+".json",readerScript.src):new URL("/advaita/assets/data/shankara/"+encodeURIComponent(id)+".json",location.origin);
   dataUrl.searchParams.set("v",READER_DATA_VERSION);
-  const res=await fetch(dataUrl.href);
+  const res=await fetch(dataUrl.href,{cache:"no-cache"});
   if(!res.ok)throw new Error("Work data unavailable");
   const data=await res.json();
   if(!complete(data)||data.id!==id)throw new Error("Incomplete text data");
