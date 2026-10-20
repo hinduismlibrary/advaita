@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 116 passages; 115 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 121 passages; 110 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 116 passages, including short verse entries through 2.182, selected Tarka verses, and 4.4, 4.6–4.11; 115 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 121 passages, including short verse entries through 2.182, selected Tarka verses, and 4.1, 4.4, 4.6–4.11; 110 passages still need glosses."
   },
   "units": [
     {
@@ -852,7 +852,152 @@
       "deva": "औत्सर्गिकः शब्दानामर्थं प्रति शेषभावः । निमित्तान्तरात्तु स्वरूपप्रधानत्वमविवक्षितार्थत्वमपवादो लोके । तथा वेदे ऽपि, लोकावगम्यत्वाच्छब्दसामर्थ्यस्य । तदुक्तम् --- ‘अविशिष्टस्तु वाक्यार्थःऽ; इति । अपि च\n\nदृष्टार्थता च स्वाध्यायविधेरत्र न भिद्यते । भवेदितरथा कृत्स्नः स विध्यर्थो ऽविवक्षितः",
       "iast": "autsargikaḥ śabdānāmarthaṃ prati śeṣabhāvaḥ / nimittāntarāttu svarūpapradhānatvamavivakṣitārthatvamapavādo loke / tathā vede 'pi, lokāvagamyatvācchabdasāmarthyasya / taduktam --- ‘aviśiṣṭastu vākyārthaḥ'; iti /\n\napi ca\n\ndṛṣṭārthatā ca svādhyāyavidheratra na bhidyate /\nbhaveditarathā kṛtsnaḥ sa vidhyartho 'vivakṣitaḥ",
       "translation": "By default, words are subordinate to their meanings; only because of some other cause, as an exception, do they become centered on their own form and have no intended meaning in ordinary usage. The same applies to the Veda, since the power of words is established by ordinary usage. As has been said: “The meaning of a sentence is not restricted [to an injunction].” Moreover—\n\n“The directly visible purpose of the injunction to study one’s own Veda does not differ here. Otherwise, the entire Veda would be left without an intended meaning and its injunction would be pointless.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "औत्सर्गिकः",
+          "en": "the default rule"
+        },
+        {
+          "sa": "शब्दानाम्",
+          "en": "of words"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning"
+        },
+        {
+          "sa": "प्रति",
+          "en": "toward"
+        },
+        {
+          "sa": "शेष-भावः",
+          "en": "a subordinate status"
+        },
+        {
+          "sa": "निमित्त-अन्तरात्",
+          "en": "because of another cause"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "स्व-रूप-प्रधानत्वम्",
+          "en": "being centered on their own form"
+        },
+        {
+          "sa": "अविवक्षित-अर्थत्वम्",
+          "en": "having no intended meaning"
+        },
+        {
+          "sa": "अपवादः",
+          "en": "an exception"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary usage"
+        },
+        {
+          "sa": "तथा",
+          "en": "similarly"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "लोक-अवगम्यत्वात्",
+          "en": "because it is understood through ordinary usage"
+        },
+        {
+          "sa": "शब्द-सामर्थ्यस्य",
+          "en": "the power of words"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "has been said"
+        },
+        {
+          "sa": "अविशिष्टः",
+          "en": "not restricted"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "वाक्य-अर्थः",
+          "en": "the meaning of a sentence"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दृष्ट-अर्थता",
+          "en": "a directly visible purpose"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्व-अध्याय-विधेः",
+          "en": "of the injunction to study one's own Veda"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भिद्यते",
+          "en": "differs"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be"
+        },
+        {
+          "sa": "इतरथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "कृत्स्नः",
+          "en": "the entire"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "विधि-अर्थः",
+          "en": "meaning of the injunction"
+        },
+        {
+          "sa": "अविवक्षितः",
+          "en": "unintended"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.7"
       ]
@@ -2392,7 +2537,136 @@
       "deva": "आप्तवचः पुनर्नार्थे नापि प्रमाणांशे संभवत्प्रमाणगोचरं बाध्यते । प्रमाणांशे चानपेक्षं तन्मुखेन चार्थसिद्धिं विदधन्नाप्रमाणं भवितुमर्हति । अन्यथा शब्दनिबन्धनो व्यवहारो न स्यात् । मयेति वक्त्रभावेन संभेदरहितं ततः । प्रलीनज्ञानविज्ञेयविभागं स्वात्मवेदनम्",
       "iast": "āptavacaḥ punarnārthe nāpi pramāṇāṃśe saṃbhavatpramāṇagocaraṃ bādhyate / pramāṇāṃśe cānapekṣaṃ tanmukhena cārthasiddhiṃ vidadhannāpramāṇaṃ bhavitumarhati / anyathā śabdanibandhano vyavahāro na syāt /\n\nmayeti vaktrabhāvena saṃbhedarahitaṃ tataḥ /\npralīnajñānavijñeyavibhāgaṃ svātmavedanam",
       "translation": "The statement of a reliable person is not defeated either with respect to the object or with respect to the aspect that makes it a means of knowledge, even when the object is within the scope of another means of knowledge. Since it is independent with respect to that aspect, and establishes the object through it, it cannot be invalid. Otherwise, ordinary usage based on words would not be possible:\n\n“Because there is no speaker saying ‘by me,’ the Self is known without being mixed with another cognition, when the distinction between knower and known has dissolved.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "आप्त-वचः",
+          "en": "the statement of a reliable person"
+        },
+        {
+          "sa": "पुनः",
+          "en": "however"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "with respect to the object"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "प्रमाण-अंशे",
+          "en": "with respect to the valid-cognition aspect"
+        },
+        {
+          "sa": "संभवत्-प्रमाण-गोचरम्",
+          "en": "when within the scope of another means of knowledge"
+        },
+        {
+          "sa": "बाध्यते",
+          "en": "is contradicted"
+        },
+        {
+          "sa": "प्रमाण-अंशे",
+          "en": "with respect to the validity aspect"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनपेक्षम्",
+          "en": "independent"
+        },
+        {
+          "sa": "तत्-मुखेन",
+          "en": "through it"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अर्थ-सिद्धिम्",
+          "en": "the establishment of the object"
+        },
+        {
+          "sa": "विदधत्",
+          "en": "bringing about"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अप्रमाणम्",
+          "en": "invalid"
+        },
+        {
+          "sa": "भवितुम्",
+          "en": "to become"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is fit"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "शब्द-निबन्धनः",
+          "en": "based on words"
+        },
+        {
+          "sa": "व्यवहारः",
+          "en": "ordinary usage"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "मया",
+          "en": "by me"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "वक्तृ-अभावेन",
+          "en": "because of the absence of a speaker"
+        },
+        {
+          "sa": "संभेद-रहितम्",
+          "en": "free from mixing"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "प्रलीन-ज्ञान-विज्ञेय-विभागम्",
+          "en": "with the division between knower and known dissolved"
+        },
+        {
+          "sa": "स्व-आत्म-वेदनम्",
+          "en": "awareness of one's own Self"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.57"
       ]
@@ -2526,7 +2800,156 @@
       "deva": "एकशब्दप्रवृत्तिस्तु दण्ड्यादिवदुपेयताम् । दृष्टरूपावमर्शः सामान्यकल्पनायां प्रमाणम् । यथा --- बाहुलेयं दृष्टवतः शाबलेये ‘स एवायम्ऽ; इति । न च किञ्चित्सद्गृहीतवतो ऽन्यत्र स भवति । एकशब्दप्रवृत्तिस्तु विनापि सामान्येनार्थान्तरयोगनिमित्ता, दण्डिपाचकादिशब्दवत् । अत्रोच्यते ---\nको नु पूर्वावमर्शो ऽयं पूर्वरूपान्वयो धियः",
       "iast": "ekaśabdapravṛttistu daṇḍyādivadupeyatām /\ndṛṣṭarūpāvamarśaḥ sāmānyakalpanāyāṃ pramāṇam / yathā --- bāhuleyaṃ dṛṣṭavataḥ śābaleye ‘sa evāyam'; iti / na ca kiñcitsadgṛhītavato 'nyatra sa bhavati / ekaśabdapravṛttistu vināpi sāmānyenārthāntarayoganimittā, daṇḍipācakādiśabdavat / atrocyate ---\nko nu pūrvāvamarśo 'yaṃ pūrvarūpānvayo dhiyaḥ",
       "translation": "One word may also be used for several things, as with “staff-bearer” and the like. Recognition of a previously seen form is a means for imagining a general feature. For example, after seeing Bāhuleya, one sees Śābaleya and thinks, “That is the same one.” Such recognition does not occur with respect to another object when nothing existent has been apprehended. But a single word can be used without a general feature because it is connected with another thing, as with “staff-bearer,” “cook,” and similar words. We reply:\n\n“What, then, is this recognition of what came before—the intellect’s continuity with the earlier form?”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "एक-शब्द-प्रवृत्तिः",
+          "en": "the use of one word"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "दण्डि-आदि-वत्",
+          "en": "as with 'staff-bearer' and the like"
+        },
+        {
+          "sa": "उपेयताम्",
+          "en": "should be accepted"
+        },
+        {
+          "sa": "दृष्ट-रूप-अवमर्शः",
+          "en": "recognition of a previously seen form"
+        },
+        {
+          "sa": "सामान्य-कल्पनायाम्",
+          "en": "for imagining a general feature"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a means of knowledge"
+        },
+        {
+          "sa": "यथा",
+          "en": "for example"
+        },
+        {
+          "sa": "बाहुलेयम्",
+          "en": "Bāhuleya"
+        },
+        {
+          "sa": "दृष्टवतः",
+          "en": "of one who has seen"
+        },
+        {
+          "sa": "शाबलेये",
+          "en": "in Śābaleya"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "same"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "सत्-गृहीतवतः",
+          "en": "by one who has apprehended an existent thing"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "भवति",
+          "en": "occurs"
+        },
+        {
+          "sa": "एक-शब्द-प्रवृत्तिः",
+          "en": "the use of one word"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सामान्येन",
+          "en": "a general feature"
+        },
+        {
+          "sa": "अर्थ-अन्तर-योग-निमित्ता",
+          "en": "caused by connection with another object"
+        },
+        {
+          "sa": "दण्डि-पाचक-आदि-शब्द-वत्",
+          "en": "like the words 'staff-bearer,' 'cook,' and the like"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is said"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "नु",
+          "en": "then"
+        },
+        {
+          "sa": "पूर्व-अवमर्शः",
+          "en": "recognition of what came before"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "पूर्व-रूप-अन्वयः",
+          "en": "continuity with the earlier form"
+        },
+        {
+          "sa": "धियः",
+          "en": "of cognition"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.61"
       ]
@@ -2757,7 +3180,156 @@
       "deva": "यस्मात्सत्यपि सामान्ययोगे मणिशराबयोः । न । ‘सःऽइति प्रख्या मणिकान्तरे च भवति भूयिष्ठसामान्ययुक्ते । तस्मात्सामान्यरूपाणां भूयिष्ठत्वेनोद्भवात् ‘सःऽ; इति तत्त्वप्रख्या । अल्पत्वे तु न तथा, तेषामनुद्भवात् । न च दण्ड्यादिवदेकशब्दप्रवृत्तिरित्याह ---\nप्रमाणं कार्यविज्ञेयमसंयोज्यास्ति धीर्यतः",
       "iast": "yasmātsatyapi sāmānyayoge maṇiśarābayoḥ /\nna / ‘saḥ'iti prakhyā maṇikāntare ca bhavati bhūyiṣṭhasāmānyayukte / tasmātsāmānyarūpāṇāṃ bhūyiṣṭhatvenodbhavāt ‘saḥ'; iti tattvaprakhyā / alpatve tu na tathā, teṣāmanudbhavāt /\n\nna ca daṇḍyādivadekaśabdapravṛttirityāha ---\npramāṇaṃ kāryavijñeyamasaṃyojyāsti dhīryataḥ",
       "translation": "No: even though a gem and a glass bead share some common feature, the recognition “That is this” also occurs when one sees another gem that shares many more features. Therefore the true appearance “That is this” comes from the many common features becoming prominent. When they are few and do not stand out, the same recognition does not arise. And it is not merely the use of one word for several things, as with “staff-bearer” and similar words; the author says:\n\n“Knowledge of what is to be done is the means of knowing [the injunction]; cognition exists without combining [such things].”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "सति",
+          "en": "even when there is"
+        },
+        {
+          "sa": "सामान्य-योगे",
+          "en": "a common feature"
+        },
+        {
+          "sa": "मणि-शराबयोः",
+          "en": "between a gem and a glass bead"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "इति",
+          "en": "as 'that'"
+        },
+        {
+          "sa": "प्रख्या",
+          "en": "recognition"
+        },
+        {
+          "sa": "मणि-कान्तरे",
+          "en": "in another gem"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "भवति",
+          "en": "occurs"
+        },
+        {
+          "sa": "भूयिष्ठ-सामान्य-युक्ते",
+          "en": "endowed with more common features"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "सामान्य-रूपाणाम्",
+          "en": "of common features"
+        },
+        {
+          "sa": "भूयिष्ठत्वेन",
+          "en": "because of their greater number"
+        },
+        {
+          "sa": "उद्भवात्",
+          "en": "because they become prominent"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्त्व-प्रख्या",
+          "en": "a true recognition"
+        },
+        {
+          "sa": "अल्पत्वे",
+          "en": "when they are few"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "of them"
+        },
+        {
+          "sa": "अनुद्भवात्",
+          "en": "because they do not become prominent"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दण्डि-आदि-वत्",
+          "en": "as with 'staff-bearer' and the like"
+        },
+        {
+          "sa": "एक-शब्द-प्रवृत्तिः",
+          "en": "the use of one word"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "a means of knowledge"
+        },
+        {
+          "sa": "कार्य-विज्ञेयम्",
+          "en": "what is to be known about an action"
+        },
+        {
+          "sa": "असंयोज्य",
+          "en": "without combining"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "धीः",
+          "en": "cognition"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.67"
       ]
@@ -8192,7 +8764,144 @@
       "deva": " ॥ इति नियोगकाण्डस् तृतीयः ॥ [क्क्स्_156] ॥ चतुर्थः (सिद्धि)काण्डः ॥ एवं तावत्प्रतिपत्तिकर्तव्यताप्रामाण्यव्याजेन यैरप्रामाण्यमुक्तं तत्प्रतिबोधनाय कृतः प्रयत्नः; इदानीं त्वप्रामाण्यमेवाहुर्ये तद्बोधनाय प्रयत्यते । तत्र पूर्वपक्षः ---\n\nनन्वन्वितपदार्थत्वाद्वाक्यार्थस्य पदार्थताम् । अप्राप्य न स्याद्वाक्यार्थः पदार्थत्वे ऽन्यमानकः",
       "iast": "//iti niyogakāṇḍas tṛtīyaḥ //\n\n[kks_156]\n\n// caturthaḥ (siddhi)kāṇḍaḥ //\n\nevaṃ tāvatpratipattikartavyatāprāmāṇyavyājena yairaprāmāṇyamuktaṃ tatpratibodhanāya kṛtaḥ prayatnaḥ; idānīṃ tvaprāmāṇyamevāhurye tadbodhanāya prayatyate / tatra pūrvapakṣaḥ ---\n\nnanvanvitapadārthatvādvākyārthasya padārthatām /\naprāpya na syādvākyārthaḥ padārthatve 'nyamānakaḥ",
       "translation": "Thus far, effort has been made to answer those who call scripture invalid, while appearing to accept it as valid when it prescribes acts of understanding. Now the author turns to those who simply declare it invalid.\n\nThe opponent’s position is:\n\n“Since a sentence’s meaning is a connected set of word-meanings, it cannot be the meaning of words; when the sentence meaning is not established by another means of knowledge, it cannot be reached through the words.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "नियोग-काण्डः",
+          "en": "the Niyoga section"
+        },
+        {
+          "sa": "तृतीयः",
+          "en": "the third"
+        },
+        {
+          "sa": "चतुर्थः",
+          "en": "the fourth"
+        },
+        {
+          "sa": "सिद्धि-काण्डः",
+          "en": "the Siddhi section"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so far"
+        },
+        {
+          "sa": "प्रतिपत्ति-कर्तव्यता-प्रामाण्य-व्याजेन",
+          "en": "under the pretext of validity depending on an act of understanding"
+        },
+        {
+          "sa": "यैः",
+          "en": "by those who"
+        },
+        {
+          "sa": "अप्रामाण्यम्",
+          "en": "invalidity"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "was stated"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "प्रतिबोधनाय",
+          "en": "to answer"
+        },
+        {
+          "sa": "कृतः",
+          "en": "was made"
+        },
+        {
+          "sa": "प्रयत्नः",
+          "en": "an effort"
+        },
+        {
+          "sa": "इदानीम्",
+          "en": "now"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "अप्रामाण्यम्",
+          "en": "invalidity"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they assert"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "तत्-प्रतिबोधनाय",
+          "en": "to answer them"
+        },
+        {
+          "sa": "प्रयत्यते",
+          "en": "an effort is made"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "पूर्व-पक्षः",
+          "en": "the opponent's position"
+        },
+        {
+          "sa": "अन्वित-पदार्थत्वात्",
+          "en": "because it consists of connected word-meanings"
+        },
+        {
+          "sa": "वाक्य-अर्थस्य",
+          "en": "of a sentence's meaning"
+        },
+        {
+          "sa": "पदार्थताम्",
+          "en": "the status of a word-meaning"
+        },
+        {
+          "sa": "अप्राप्य",
+          "en": "not attaining"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "वाक्य-अर्थः",
+          "en": "the sentence meaning"
+        },
+        {
+          "sa": "पदार्थत्वे",
+          "en": "if it were a word-meaning"
+        },
+        {
+          "sa": "अन्य-मानकः",
+          "en": "not established by another means of knowledge"
+        }
+      ],
       "sourceNumbers": [
         "mbs_4.1"
       ]
@@ -8714,6 +9423,7 @@
       "1.1",
       "1.19",
       "1.34",
+      "2.7",
       "2.9",
       "2.11",
       "2.12",
@@ -8730,11 +9440,14 @@
       "2.52",
       "2.54",
       "2.55",
+      "2.57",
       "2.58",
       "2.60",
+      "2.61",
       "2.62",
       "2.63",
       "2.64",
+      "2.67",
       "2.71",
       "2.72",
       "2.74",
@@ -8820,6 +9533,7 @@
       "2.179",
       "2.181",
       "2.182",
+      "4.1",
       "4.4",
       "4.6",
       "4.7",
@@ -8828,7 +9542,7 @@
       "4.10",
       "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 116 of 231 source-marked passages; 115 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 121 of 231 source-marked passages; 110 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 116 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 121 passages listed in wordGlossCoverage."
 }
