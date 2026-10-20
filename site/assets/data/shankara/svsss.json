@@ -52,9 +52,9 @@
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 580
+      "to": 600
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–580 (565 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–600 (585 reader units; multi-verse cards combine 17–18, 44–45, 91–92, 109–110, 114–115, 242–243, 249–250, 295–296, 319–320, 325–326, 336–337, 377–378, 386–388, and 390–391). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -38631,8 +38631,89 @@
       "number": "581",
       "label": "Verse 581",
       "deva": "सुषुप्ति-काले सकले विलीने\nशून्यं विना नान्यद् इहोपलभ्यते।\nशून्यं त्वनात्मा न ततः परः को\nऽप्यात्माभिधानस् त्वनुभूयतेऽर्थः॥",
-      "translation": "The disciple asks: Let us take the stage of deep sleep in which everything merges in its original cause. As a matter of experience, we do not find here anything except the void. You say that the Ātman is not śūnya. But we have no experience of the Ātman as such apart from śūnya.",
-      "gloss": [],
+      "translation": "At the time of deep sleep, when everything has dissolved, nothing other than emptiness is experienced here. But emptiness is non-Self; beyond it, no entity called the Self is experienced.",
+      "gloss": [
+        {
+          "sa": "सुषुप्ति-काले",
+          "en": "at the time of deep sleep"
+        },
+        {
+          "sa": "सकले",
+          "en": "when everything"
+        },
+        {
+          "sa": "विलीने",
+          "en": "has dissolved"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "विना",
+          "en": "apart from"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "anything else"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "उपलभ्यते",
+          "en": "is experienced"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अनात्मा",
+          "en": "non-Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ततः",
+          "en": "beyond that"
+        },
+        {
+          "sa": "परः",
+          "en": "other; beyond"
+        },
+        {
+          "sa": "कः-अपि",
+          "en": "any entity"
+        },
+        {
+          "sa": "आत्म-अभिधानः",
+          "en": "called the Self"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनुभूयते",
+          "en": "is experienced"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "a thing; entity"
+        }
+      ],
       "sourceNumbers": [
         581
       ],
@@ -38645,8 +38726,93 @@
       "number": "582",
       "label": "Verse 582",
       "deva": "यद्यस्ति चात्मा किमु नोपलभ्यते\nसुप्तौ यथा तिष्ठति किं प्रमाणम्।\nकिं-लक्षणोऽसौ स कथं न बाध्यते\nप्रबाध्यमानेष्वहम्-आदिषु स्वयम्॥",
-      "translation": "If the Ātman is real, why is it that we do not know it as such? Where is the proof that the Ātman exists in deep sleep? What is the real nature of the Ātman? How can we prove that the Ātman remains unaffected when the ego has ceased to function?",
-      "gloss": [],
+      "translation": "If the Self exists, why is it not perceived? What proof shows how it remains in sleep? What is its characteristic, and how is it not negated when “I” and the rest are themselves negated?",
+      "gloss": [
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "किम्-उ",
+          "en": "why"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपलभ्यते",
+          "en": "is perceived"
+        },
+        {
+          "sa": "सुप्तौ",
+          "en": "in sleep"
+        },
+        {
+          "sa": "यथा",
+          "en": "how"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "it remains"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "प्रमाणम्",
+          "en": "proof"
+        },
+        {
+          "sa": "किम्-लक्षणः",
+          "en": "of what characteristic"
+        },
+        {
+          "sa": "असौ",
+          "en": "that"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "बाध्यते",
+          "en": "is negated"
+        },
+        {
+          "sa": "प्रबाध्यमानेषु",
+          "en": "when being negated"
+        },
+        {
+          "sa": "अहम्-आदिषु",
+          "en": "the “I” and the rest"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "themselves"
+        }
+      ],
       "sourceNumbers": [
         582
       ],
@@ -38659,8 +38825,41 @@
       "number": "583",
       "label": "Verse 583",
       "deva": "एतत् संशय-जातं मे हृदय-ग्रन्थि-लक्षणम्।\nछिन्धि युक्ति-महा-खड्ग-धारया कृपया गुरो॥",
-      "translation": "May it please you, Revered Sir, to clarify all this for my faith is sorely assailed by many doubts, and I would fain put to flight all these errors of the mind, with the help of reason as with a sharp sword.",
-      "gloss": [],
+      "translation": "Out of compassion, O teacher, cut this whole mass of doubts, which is like a knot in my heart, with the edge of the great sword of reasoning.",
+      "gloss": [
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "संशय-जातम्",
+          "en": "mass of doubts"
+        },
+        {
+          "sa": "मे",
+          "en": "my"
+        },
+        {
+          "sa": "हृदय-ग्रन्थि-लक्षणम्",
+          "en": "having the character of a knot in the heart"
+        },
+        {
+          "sa": "छिन्धि",
+          "en": "cut"
+        },
+        {
+          "sa": "युक्ति-महा-खड्ग-धारया",
+          "en": "with the edge of the great sword of reasoning"
+        },
+        {
+          "sa": "कृपया",
+          "en": "out of compassion"
+        },
+        {
+          "sa": "गुरो",
+          "en": "O teacher"
+        }
+      ],
       "sourceNumbers": [
         583
       ],
@@ -38673,8 +38872,49 @@
       "number": "584",
       "label": "Verse 584",
       "deva": "अतिसूक्ष्मतरः प्रश्नस् तवायं सदृशो मतः।\nसूक्ष्मार्थ-दर्शनं सूक्ष्म-बुद्धिष्वेव प्रदृश्यते॥",
-      "translation": "The spiritual guide says: Subtle indeed are your questions, and they argue the existence of a subtle mind. Only those who are endowed with a subtle intellect can put such questions.",
-      "gloss": [],
+      "translation": "Your question is considered exceedingly subtle and fitting. Insight into a subtle meaning is seen only in subtle intellects.",
+      "gloss": [
+        {
+          "sa": "अति-सूक्ष्मतरः",
+          "en": "exceedingly subtle"
+        },
+        {
+          "sa": "प्रश्नः",
+          "en": "question"
+        },
+        {
+          "sa": "तव",
+          "en": "your"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "सदृशः",
+          "en": "fitting"
+        },
+        {
+          "sa": "मतः",
+          "en": "is considered"
+        },
+        {
+          "sa": "सूक्ष्म-अर्थ-दर्शनम्",
+          "en": "insight into a subtle meaning"
+        },
+        {
+          "sa": "सूक्ष्म-बुद्धिषु",
+          "en": "in subtle intellects"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "प्रदृश्यते",
+          "en": "is seen"
+        }
+      ],
       "sourceNumbers": [
         584
       ],
@@ -38687,8 +38927,61 @@
       "number": "585",
       "label": "Verse 585",
       "deva": "शृणु वक्ष्यामि सकलं यद् यत् पृष्टं त्वयाधुना।\nरहस्यं परमं सूक्ष्मं ज्ञातव्यं च मुमुक्षुभिः॥",
-      "translation": "I shall explain to you in detail all that you have asked; listen patiently, so that other seekers after liberation may also know what the truth is, subtle and secret as it is.",
-      "gloss": [],
+      "translation": "Listen: I will explain everything you have asked just now—the supreme, subtle secret that seekers of liberation should know.",
+      "gloss": [
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        },
+        {
+          "sa": "वक्ष्यामि",
+          "en": "I will explain"
+        },
+        {
+          "sa": "सकलम्",
+          "en": "everything"
+        },
+        {
+          "sa": "यत्-यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "पृष्टम्",
+          "en": "was asked"
+        },
+        {
+          "sa": "त्वया",
+          "en": "by you"
+        },
+        {
+          "sa": "अधुना",
+          "en": "just now"
+        },
+        {
+          "sa": "रहस्यम्",
+          "en": "the secret"
+        },
+        {
+          "sa": "परमम्",
+          "en": "supreme"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "ज्ञातव्यम्",
+          "en": "to be known"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मुमुक्षुभिः",
+          "en": "by seekers of liberation"
+        }
+      ],
       "sourceNumbers": [
         585
       ],
@@ -38701,8 +38994,49 @@
       "number": "586",
       "label": "Verse 586",
       "deva": "बुद्ध्यादि सकलं सुप्ताव् अनुलीनं स्व-कारणे।\nअव्यक्ते वटवद् बीजे तिष्ठत्यविकृतात्मना॥",
-      "translation": "The refutation of the doctrine of the void by Vedānta In the stage of deep sleep the intellect and all that comprehends merge in their material cause. They are thus re-absorbed into the unmanifest. There they lie in Māyā, without undergoing any change whatsoever, like a banyan tree in its seed. ((BrhUEng.1.4.7) (Bṛhad-Āraṇyaka Upaniṣad))",
-      "gloss": [],
+      "translation": "In sleep, everything beginning with the intellect dissolves into its own cause. It remains in the unmanifest, unchanged, like a banyan tree in a seed.",
+      "gloss": [
+        {
+          "sa": "बुद्धि-आदि",
+          "en": "beginning with the intellect"
+        },
+        {
+          "sa": "सकलम्",
+          "en": "everything"
+        },
+        {
+          "sa": "सुप्तौ",
+          "en": "in sleep"
+        },
+        {
+          "sa": "अनुलीनम्",
+          "en": "dissolved"
+        },
+        {
+          "sa": "स्व-कारणे",
+          "en": "in its own cause"
+        },
+        {
+          "sa": "अव्यक्ते",
+          "en": "in the unmanifest"
+        },
+        {
+          "sa": "वटवत्",
+          "en": "like a banyan tree"
+        },
+        {
+          "sa": "बीजे",
+          "en": "in a seed"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "remains"
+        },
+        {
+          "sa": "अविकृत-आत्मना",
+          "en": "in an unchanged nature"
+        }
+      ],
       "sourceNumbers": [
         586
       ],
@@ -38715,8 +39049,77 @@
       "number": "587",
       "label": "Verse 587",
       "deva": "तिष्ठत्येव स्व-रूपेण न तु शून्यायते जगत्।\nक्वचिद् अङ्कुर-रूपेण क्वचिद् बीजात्मना वटः।\nकार्य-कारण-रूपेण यथा तिष्ठत्यदस् तथा॥",
-      "translation": "The universe thus undoubtedly exists in its own real nature. At no time it is śūnya or the void. Just as a banyan tree is at first a seed and then a sprout, so also this whole universe unfolds itself as the effect of manifestation from that which was the cause of it.",
-      "gloss": [],
+      "translation": "The world remains in its own form; it does not become void. As a banyan exists sometimes in the form of a sprout and sometimes in the nature of a seed, so it remains in the forms of cause and effect.",
+      "gloss": [
+        {
+          "sa": "तिष्ठति",
+          "en": "remains"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्व-रूपेण",
+          "en": "in its own form"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "शून्यायते",
+          "en": "becomes void"
+        },
+        {
+          "sa": "जगत्",
+          "en": "the world"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "sometimes"
+        },
+        {
+          "sa": "अङ्कुर-रूपेण",
+          "en": "in the form of a sprout"
+        },
+        {
+          "sa": "क्वचित्",
+          "en": "sometimes"
+        },
+        {
+          "sa": "बीज-आत्मना",
+          "en": "in the nature of a seed"
+        },
+        {
+          "sa": "वटः",
+          "en": "a banyan tree"
+        },
+        {
+          "sa": "कार्य-कारण-रूपेण",
+          "en": "in the forms of effect and cause"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "तिष्ठति",
+          "en": "it remains"
+        },
+        {
+          "sa": "अदः",
+          "en": "that"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        }
+      ],
       "sourceNumbers": [
         587
       ],
@@ -38729,8 +39132,53 @@
       "number": "588",
       "label": "Verse 588",
       "deva": "अव्याकृतात्मनावस्थां जगतो वदति श्रुतिः।\nसुषुप्त्यादिषु तद्-भेदं तर्ह्यव्याकृतम् इत्यसौ॥",
-      "translation": "The Śruti says that the world of manifestation is identical with the unmanifest, that it came out of the unmanifest and merges again in the unmanifest. It was one with the unmanifest and in the stage of deep sleep it again becomes one with the unmanifest. ((TaitU.2.7.1) (Taittirīya Upaniṣad))",
-      "gloss": [],
+      "translation": "Śruti describes the world as having an unmanifest state. In deep sleep and the like, its differentiation is then called unmanifest.",
+      "gloss": [
+        {
+          "sa": "अव्याकृत-आत्मना",
+          "en": "in an unmanifest state"
+        },
+        {
+          "sa": "अवस्थाम्",
+          "en": "the state"
+        },
+        {
+          "sa": "जगतः",
+          "en": "of the world"
+        },
+        {
+          "sa": "वदति",
+          "en": "says"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "Śruti"
+        },
+        {
+          "sa": "सुषुप्ति-आदिषु",
+          "en": "in deep sleep and the like"
+        },
+        {
+          "sa": "तत्-भेदम्",
+          "en": "its differentiation"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        },
+        {
+          "sa": "अव्याकृतम्",
+          "en": "unmanifest"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "असौ",
+          "en": "that [Śruti]"
+        }
+      ],
       "sourceNumbers": [
         588
       ],
@@ -38743,8 +39191,53 @@
       "number": "589",
       "label": "Verse 589",
       "deva": "इमम् अर्थम् अविज्ञाय निर्णीतं श्रुति-युक्तिभिः।\nजगतो दर्शनं शून्यम् इति प्राहुर् अतद्-विदः॥",
-      "translation": "It is only those who do not realize the truth of what the Śruti says and reason approves, that misinterpret it. Such persons imagine that the Śruti ascribes the origin of the universe to the void. ((ChanU.6.2.2) (Chāndogya Upaniṣad))",
-      "gloss": [],
+      "translation": "Not understanding this point, those who do not know the truth say that the world’s appearance—though determined by Śruti and reasoning—is emptiness.",
+      "gloss": [
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning; point"
+        },
+        {
+          "sa": "अविज्ञाय",
+          "en": "not understanding"
+        },
+        {
+          "sa": "निर्णीतम्",
+          "en": "determined"
+        },
+        {
+          "sa": "श्रुति-युक्तिभिः",
+          "en": "by Śruti and reasoning"
+        },
+        {
+          "sa": "जगतः",
+          "en": "of the world"
+        },
+        {
+          "sa": "दर्शनम्",
+          "en": "appearance"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्राहुः",
+          "en": "they say"
+        },
+        {
+          "sa": "अतद्-विदः",
+          "en": "those who do not know that truth"
+        }
+      ],
       "sourceNumbers": [
         589
       ],
@@ -38757,8 +39250,65 @@
       "number": "590",
       "label": "Verse 590",
       "deva": "नासतः सत उत्पत्तिः श्रूयते न च दृश्यते।\nउदेति नर-शृङ्गात् किं ख-पुष्पात् किं भविष्यति॥",
-      "translation": "Existence cannot come out of non-existence. We have neither seen any such instance, nor heard of it. Does anything emerge from the flower growing in the sky or the horn on the human head?",
-      "gloss": [],
+      "translation": "The production of being from non-being is neither heard of nor seen. Does anything arise from a man’s horn? What could come from a sky-flower?",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "असतः",
+          "en": "from non-being"
+        },
+        {
+          "sa": "सतः",
+          "en": "of being"
+        },
+        {
+          "sa": "उत्पत्तिः",
+          "en": "production"
+        },
+        {
+          "sa": "श्रूयते",
+          "en": "is heard"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "उदेति",
+          "en": "arises"
+        },
+        {
+          "sa": "नर-शृङ्गात्",
+          "en": "from a man’s horn"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "ख-पुष्पात्",
+          "en": "from a sky-flower"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "भविष्यति",
+          "en": "will come to be"
+        }
+      ],
       "sourceNumbers": [
         590
       ],
@@ -38771,8 +39321,125 @@
       "number": "591",
       "label": "Verse 591",
       "deva": "प्रभवति न हि कुम्भोऽविद्यमानो मृदश्चेत्\nप्रभवतु सिकताया वाथवा वारिणो वा।\nन हि भवति च ताभ्यां सर्वथा क्वापि तस्माद्\nयत उदयति योऽर्थोऽस्त्यत्र तस्य स्वभावः॥",
-      "translation": "If there were no clay, one cannot produce a jar out of nothing. If that were possible, let one produce a jar out of sand, or out of water. Any given object can merge and become one with that object only from which it has emanated.",
-      "gloss": [],
+      "translation": "A pot that is absent from clay does not come into being; if it could, let it arise from sand or water. But it never arises from either. Therefore, an object has the nature of that from which it arises.",
+      "gloss": [
+        {
+          "sa": "प्रभवति",
+          "en": "comes into being"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "कुम्भः",
+          "en": "a pot"
+        },
+        {
+          "sa": "अविद्यमानः",
+          "en": "absent"
+        },
+        {
+          "sa": "मृदः",
+          "en": "from clay"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "प्रभवतु",
+          "en": "let it arise"
+        },
+        {
+          "sa": "सिकतायाः",
+          "en": "from sand"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अथवा",
+          "en": "or"
+        },
+        {
+          "sa": "वारिणः",
+          "en": "from water"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "भवति",
+          "en": "arises"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "ताभ्याम्",
+          "en": "from those two"
+        },
+        {
+          "sa": "सर्वथा",
+          "en": "in any way"
+        },
+        {
+          "sa": "क्वापि",
+          "en": "anywhere"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "यतः",
+          "en": "from which"
+        },
+        {
+          "sa": "उदयति",
+          "en": "arises"
+        },
+        {
+          "sa": "यः",
+          "en": "whatever"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "thing"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "स्वभावः",
+          "en": "the nature"
+        }
+      ],
       "sourceNumbers": [
         591
       ],
@@ -38785,8 +39452,41 @@
       "number": "592",
       "label": "Verse 592",
       "deva": "अन्यथा विपरीतं स्यात् कार्य-कारण-लक्षणम्।\nनियतं सर्व-शास्त्रेषु सर्व-लोकेषु सर्वतः॥",
-      "translation": "If the product did not finally merge and become one with that which caused it, there would be no law of causation in the universe. In such a contingency, the characteristics of cause and effect as ascertained by all the Śāstras, and accepted by all people, would be nullified.",
-      "gloss": [],
+      "translation": "Otherwise the established nature of cause and effect, fixed in all scriptures and worlds everywhere, would be reversed.",
+      "gloss": [
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "विपरीतम्",
+          "en": "reversed"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "कार्य-कारण-लक्षणम्",
+          "en": "the nature of cause and effect"
+        },
+        {
+          "sa": "नियतम्",
+          "en": "fixed; established"
+        },
+        {
+          "sa": "सर्व-शास्त्रेषु",
+          "en": "in all scriptures"
+        },
+        {
+          "sa": "सर्व-लोकेषु",
+          "en": "in all worlds"
+        },
+        {
+          "sa": "सर्वतः",
+          "en": "everywhere"
+        }
+      ],
       "sourceNumbers": [
         592
       ],
@@ -38799,8 +39499,69 @@
       "number": "593",
       "label": "Verse 593",
       "deva": "कथम् असतः सज् जायेतेति श्रुत्या निषिध्यते तस्मात्।\nअसतः सज्-जननं नो घटते मिथ्यैव शून्य-शब्दार्थः॥",
-      "translation": "When the Śruti asks, ‘How can existence come out of non-existence?’, it points out that such a thing never happens. In the maxim, ‘In the beginning was non-existence’, the word ‘non-existence’ merely means the unmanifest. It does not mean the void or śūnya. ((BrSEng.2.1.14) (Brahma Sūtras Eng.))",
-      "gloss": [],
+      "translation": "Śruti rejects this by asking, “How can being arise from non-being?” Therefore, being cannot be produced from non-being; the meaning of the word “void” is simply false.",
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "असतः",
+          "en": "from non-being"
+        },
+        {
+          "sa": "सत्",
+          "en": "being"
+        },
+        {
+          "sa": "जायेत",
+          "en": "could arise"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुत्या",
+          "en": "by Śruti"
+        },
+        {
+          "sa": "निषिध्यते",
+          "en": "is rejected"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "असतः",
+          "en": "from non-being"
+        },
+        {
+          "sa": "सत्-जननम्",
+          "en": "the production of being"
+        },
+        {
+          "sa": "नो",
+          "en": "not"
+        },
+        {
+          "sa": "घटते",
+          "en": "is possible"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "false"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "शून्य-शब्द-अर्थः",
+          "en": "the meaning of the word “void”"
+        }
+      ],
       "sourceNumbers": [
         593
       ],
@@ -38813,8 +39574,53 @@
       "number": "594",
       "label": "Verse 594",
       "deva": "अव्यक्त-शब्दिते प्राज्ञे सत्यात्मन्यत्र जाग्रति।\nकथं सिध्यति शून्यत्वं तस्य भ्रान्ति-शिरो-मणे॥",
-      "translation": "In the stage of deep sleep, the Ātman is known as ‘prājña’. It then becomes merged in its original cause, the unmanifest. But prājña does not mean the unconscious. Only the supremely stupid would identify consciousness with the void.",
-      "gloss": [],
+      "translation": "When the real Self, called the unmanifest Prājña, is present here, how can its being void be established, O crown jewel of delusion?",
+      "gloss": [
+        {
+          "sa": "अव्यक्त-शब्दिते",
+          "en": "called the unmanifest"
+        },
+        {
+          "sa": "प्राज्ञे",
+          "en": "in Prājña"
+        },
+        {
+          "sa": "सति",
+          "en": "being present"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "जाग्रति",
+          "en": "being awake; present"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "सिध्यति",
+          "en": "is established"
+        },
+        {
+          "sa": "शून्यत्वम्",
+          "en": "voidness"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "भ्रान्ति-शिरो-मणे",
+          "en": "O crown jewel of delusion"
+        }
+      ],
       "sourceNumbers": [
         594
       ],
@@ -38827,8 +39633,69 @@
       "number": "595",
       "label": "Verse 595",
       "deva": "सुषुप्तौ शून्यम् एवेति केन पुंसा तवेरितम्।\nहेतुनानुमितं केन कथं ज्ञातं त्वयोच्यताम्॥",
-      "translation": "Let us suppose that a man says, ‘In deep sleep the void alone exists; there is nothing else’, But who is the person who says it? By what logical process did he arrive at his inference? And you who repeat it, by what means of knowledge did you come to know it?",
-      "gloss": [],
+      "translation": "Who has said to you that only emptiness exists in deep sleep? By what reason was it inferred, and how was it known? Tell me.",
+      "gloss": [
+        {
+          "sa": "सुषुप्तौ",
+          "en": "in deep sleep"
+        },
+        {
+          "sa": "शून्यम्",
+          "en": "emptiness"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "केन",
+          "en": "by whom"
+        },
+        {
+          "sa": "पुंसा",
+          "en": "person"
+        },
+        {
+          "sa": "तव",
+          "en": "to you"
+        },
+        {
+          "sa": "ईरितम्",
+          "en": "was said"
+        },
+        {
+          "sa": "हेतुना",
+          "en": "by what reason"
+        },
+        {
+          "sa": "अनुमितम्",
+          "en": "was inferred"
+        },
+        {
+          "sa": "केन",
+          "en": "by what"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "ज्ञातम्",
+          "en": "was known"
+        },
+        {
+          "sa": "त्वया",
+          "en": "by you"
+        },
+        {
+          "sa": "उच्यताम्",
+          "en": "let it be told"
+        }
+      ],
       "sourceNumbers": [
         595
       ],
@@ -38841,8 +39708,97 @@
       "number": "596",
       "label": "Verse 596",
       "deva": "इति पृष्टो मूढतमो वदिष्यति किम् उत्तरम्।\nनैवानुरूपकं लिङ्गं वक्ता वा नास्ति कश्चन।\nसुषुप्ति-स्थित-शून्यस्य बोद्धा कोन्वात्मनः परः॥",
-      "translation": "When the deluded person is confronted with such questions, what answer could he give? Such an attitude is illogical, for there is no one to bear witness to it. If in the stage of deep sleep there were no Ātman, the knower of all, who else is there to bear witness to the existence of the void?",
-      "gloss": [],
+      "translation": "When asked this, what answer could the most deluded person give? There is no fitting sign, nor is there anyone to speak. Who other than the Self knows the emptiness present in deep sleep?",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "पृष्टः",
+          "en": "asked"
+        },
+        {
+          "sa": "मूढतमः",
+          "en": "the most deluded"
+        },
+        {
+          "sa": "वदिष्यति",
+          "en": "will say"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "उत्तरम्",
+          "en": "answer"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनुरूपकम्",
+          "en": "a fitting"
+        },
+        {
+          "sa": "लिङ्गम्",
+          "en": "sign; evidence"
+        },
+        {
+          "sa": "वक्ता",
+          "en": "speaker"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "there is"
+        },
+        {
+          "sa": "कश्चन",
+          "en": "anyone"
+        },
+        {
+          "sa": "सुषुप्ति-स्थित",
+          "en": "present in deep sleep"
+        },
+        {
+          "sa": "शून्यस्य",
+          "en": "of emptiness"
+        },
+        {
+          "sa": "बोद्धा",
+          "en": "the knower"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "नु",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "than the Self"
+        },
+        {
+          "sa": "परः",
+          "en": "another"
+        }
+      ],
       "sourceNumbers": [
         596
       ],
@@ -38855,8 +39811,77 @@
       "number": "597",
       "label": "Verse 597",
       "deva": "स्वेनानुभूतं स्वयम् एव वक्ति\nस्व-सुप्ति-काले स्थित-शून्य-भावम्।\nतत्र स्व-सत्ताम् अनवेक्ष्य मूढः\nस्वस्यापि शून्यत्वम् अयं ब्रवीति॥",
-      "translation": "When one recalls to memory one’s sleep experience, during the waking stage that follows it, one cannot even speak of the unmanifested, for in deep sleep the Ātman is one with it. That is why that stage is apparently mistaken for the void.",
-      "gloss": [],
+      "translation": "This deluded person reports what he experienced himself: the state of emptiness present during his sleep. Not seeing his own existence there, he says that even he himself was void.",
+      "gloss": [
+        {
+          "sa": "स्वेन",
+          "en": "by himself"
+        },
+        {
+          "sa": "अनुभूतम्",
+          "en": "experienced"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "himself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "वक्ति",
+          "en": "reports"
+        },
+        {
+          "sa": "स्व-सुप्ति-काले",
+          "en": "during his own sleep"
+        },
+        {
+          "sa": "स्थित",
+          "en": "present"
+        },
+        {
+          "sa": "शून्य-भावम्",
+          "en": "the state of emptiness"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "स्व-सत्ताम्",
+          "en": "his own existence"
+        },
+        {
+          "sa": "अनवेक्ष्य",
+          "en": "not seeing"
+        },
+        {
+          "sa": "मूढः",
+          "en": "the deluded person"
+        },
+        {
+          "sa": "स्वस्य",
+          "en": "of himself"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "शून्यत्वम्",
+          "en": "voidness"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "ब्रवीति",
+          "en": "says"
+        }
+      ],
       "sourceNumbers": [
         597
       ],
@@ -38869,8 +39894,77 @@
       "number": "598",
       "label": "Verse 598",
       "deva": "अवेद्यमानः स्वयम् अन्य-लोकैः\nसौषुप्तिकं धर्मम् अवैति साक्षात्।\nबुद्ध्याद्यभावस्य च योऽत्र बोद्धा\nस एष आत्मा खलु निर्विकारः॥",
-      "translation": "No one could regard the Ātman as an object of knowledge. The Ātman however perceives directly the peculiar nature of sleep experience. Ātman knows that at the level of deep sleep the intellect does not function. Only the Ātman remains, devoid of change.",
-      "gloss": [],
+      "translation": "Though not known by other people, he directly knows the state belonging to deep sleep. Whoever knows here the absence of intellect and the rest is indeed this changeless Self.",
+      "gloss": [
+        {
+          "sa": "अवेद्यमानः",
+          "en": "not being known"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "himself"
+        },
+        {
+          "sa": "अन्य-लोकैः",
+          "en": "by other people"
+        },
+        {
+          "sa": "सौषुप्तिकम्",
+          "en": "belonging to deep sleep"
+        },
+        {
+          "sa": "धर्मम्",
+          "en": "the state; property"
+        },
+        {
+          "sa": "अवैति",
+          "en": "knows"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "बुद्धि-आदि-अभावस्य",
+          "en": "of the absence of intellect and the rest"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "बोद्धा",
+          "en": "the knower"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "खलु",
+          "en": "indeed"
+        },
+        {
+          "sa": "निर्विकारः",
+          "en": "changeless"
+        }
+      ],
       "sourceNumbers": [
         598
       ],
@@ -38882,14 +39976,151 @@
       "chapter": 4,
       "number": "599",
       "label": "Verse 599",
-      "deva": "यस्येदं सकलं विभाति महसा तस्य स्वयञ्-ज्योतिषः\nसूर्यस्येव किम् अस्ति भासकम् इह प्रज्ञादि सर्वं जडम्।\nन ह्यर्कस्य विभासकं क्षिति-तले दृष्टं तथैवात्मनो\nनान्यः कोऽप्यनुभासकोऽनुभविता नातः परः कश्चन॥",
-      "translation": "Who is there who can illumine this self effulgent Ātman, by whose light all this universe is illumined, as if by the light of the Sun? All things, including the intellect, are devoid of self-consciousness. There is no need for any other agency to make the Ātman known to us, just as there is no need for a second Sun to illumine the Sun who reveals all things under it. Consequently, there is no knower, other than the Ātman. ((BhG.15.6) (Bhagavad Gītā))",
-      "gloss": [],
+      "deva": "यस्येदं सकलं विभाति महसा तस्य स्वयं-ज्योतिषः\nसूर्यस्येव किम् अस्ति भासकम् इह प्रज्ञादि सर्वं जडम्।\nन ह्यर्कस्य विभासकं क्षिति-तले दृष्टं तथैवात्मनो\nनान्यः कोऽप्यनुभासकोऽनुभविता नातः परः कश्चन॥",
+      "translation": "By whose power all this shines, what could illuminate that self-luminous Self, like the sun? The intellect and everything else are inert. No illuminator of the sun is seen on earth; likewise, no other illuminator or experiencer of the Self exists, nor anyone higher.",
+      "gloss": [
+        {
+          "sa": "यस्य",
+          "en": "by whose"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "सकलम्",
+          "en": "all"
+        },
+        {
+          "sa": "विभाति",
+          "en": "shines"
+        },
+        {
+          "sa": "महसा",
+          "en": "by power; splendor"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "स्वयम्-ज्योतिषः",
+          "en": "self-luminous"
+        },
+        {
+          "sa": "सूर्यस्य",
+          "en": "of the sun"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is there"
+        },
+        {
+          "sa": "भासकम्",
+          "en": "an illuminator"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "प्रज्ञा-आदि",
+          "en": "intellect and the rest"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "जडम्",
+          "en": "inert"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अर्कस्य",
+          "en": "of the sun"
+        },
+        {
+          "sa": "विभासकम्",
+          "en": "an illuminator"
+        },
+        {
+          "sa": "क्षितितले",
+          "en": "on earth"
+        },
+        {
+          "sa": "दृष्टम्",
+          "en": "is seen"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यः",
+          "en": "another"
+        },
+        {
+          "sa": "कः-अपि",
+          "en": "anyone"
+        },
+        {
+          "sa": "अनुभासकः",
+          "en": "illuminator"
+        },
+        {
+          "sa": "अनुभविता",
+          "en": "experiencer"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अतः",
+          "en": "beyond this"
+        },
+        {
+          "sa": "परः",
+          "en": "higher"
+        },
+        {
+          "sa": "कश्चन",
+          "en": "anyone"
+        }
+      ],
       "sourceNumbers": [
         599
       ],
       "sectionTitle": "You are Only that Ultimate Reality",
-      "iast": "yasyedaṃ sakalaṃ vibhāti mahasā tasya svayañ-jyotiṣaḥ\nsūryasyeva kim asti bhāsakam iha prajñādi sarvaṃ jaḍam|\nna hyarkasya vibhāsakaṃ kṣiti-tale dṛṣṭaṃ tathaivātmano\nnānyaḥ ko’pyanubhāsako’nubhavitā nātaḥ paraḥ kaścana||"
+      "iast": "yasyedaṃ sakalaṃ vibhāti mahasā tasya svayaṃ-jyotiṣaḥ\nsūryasyeva kim asti bhāsakam iha prajñādi sarvaṃ jaḍam|\nna hyarkasya vibhāsakaṃ kṣiti-tale dṛṣṭaṃ tathaivātmano\nnānyaḥ ko’pyanubhāsako’nubhavitā nātaḥ paraḥ kaścana||"
     },
     {
       "id": "svsss-4-0600",
@@ -38897,8 +40128,53 @@
       "number": "600",
       "label": "Verse 600",
       "deva": "येनानुभूयते सर्वं जाग्रत्-स्वप्न-सुषुप्तिषु।\nविज्ञातारम् इमं को नु कथं वेदितुम् अर्हति॥",
-      "translation": "How can any one know the knower, by whom all else is known, whether it be during waking, or dreaming, or deep sleep? ((BrhUEng.3.4.2) (Bṛhad-Āraṇyaka Upaniṣad))",
-      "gloss": [],
+      "translation": "By whom everything is experienced in waking, dream, and deep sleep—who could know this knower, and how?",
+      "gloss": [
+        {
+          "sa": "येन",
+          "en": "by whom"
+        },
+        {
+          "sa": "अनुभूयते",
+          "en": "is experienced"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "everything"
+        },
+        {
+          "sa": "जाग्रत्-स्वप्न-सुषुप्तिषु",
+          "en": "in waking, dream, and deep sleep"
+        },
+        {
+          "sa": "विज्ञातारम्",
+          "en": "the knower"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "कः",
+          "en": "who"
+        },
+        {
+          "sa": "नु",
+          "en": "indeed"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "वेदितुम्",
+          "en": "to know"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "is capable"
+        }
+      ],
       "sourceNumbers": [
         600
       ],
