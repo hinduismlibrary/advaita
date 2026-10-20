@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 545
+      "end": 550
     },
-    "note": "Source verses 1–545 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 546 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
+    "note": "Source verses 1–550 have original literal English translations and Devanāgarī-backed word-for-word glosses; verses 551 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, 349–350, and 462–463."
   },
   "units": [
     {
@@ -39561,11 +39561,33 @@
       "label": "Verse 546",
       "deva": "स्थूलादिसंबन्धवतोऽभिमानिनः\nसुखं च दुःखं च शुभाशुभे च ।\nविध्वस्तबन्धस्य सदात्मनो मुनेः\nकुतः शुभं वाप्यशुभं फलं वा ॥",
       "iast": "sthūlādisaṃbandhavato'bhimāninaḥ\nsukhaṃ ca duḥkhaṃ ca śubhāśubhe ca |\nvidhvastabandhasya sadātmano muneḥ\nkutaḥ śubhaṃ vāpyaśubhaṃ phalaṃ vā ||",
-      "translation": "Pleasure or pain, or good or evil, affects only him who has connections with the gross body etc., and identifies himself with these. How can good or evil, or their effects, touch the sage who has identified himself with the Reality and thereby shattered his bondage ?",
-      "gloss": [],
+      "translation": "Pleasure and pain, good and evil belong to the one who identifies with the gross body and the like. What good or bad result can there be for the sage whose bondage is destroyed and whose Self is Being?",
+      "gloss": [
+        {
+          "sa": "स्थूल-आदि-सम्बन्ध-वतः अभिमानिनः",
+          "en": "of one who identifies with connections to the gross body and the like (sthūla: gross | ādi: and so on | sambandha: connection | vataḥ: possessing | abhimāninaḥ: of one who identifies)"
+        },
+        {
+          "sa": "सुखम् च दुःखम् च",
+          "en": "pleasure and pain (sukham: pleasure | ca: and | duḥkham: pain | ca: and)"
+        },
+        {
+          "sa": "शुभ-अशुभे च",
+          "en": "good and evil (śubha: good, auspicious | aśubhe: bad, inauspicious | ca: and)"
+        },
+        {
+          "sa": "विध्वस्त-बन्धस्य सद्-आत्मनः मुनेः",
+          "en": "of the sage whose bondage is destroyed and whose Self is Being (vidhvasta: destroyed | bandhasya: of bondage | sat: Being, reality | ātmanaḥ: whose Self | muneḥ: of the sage)"
+        },
+        {
+          "sa": "कुतः शुभम् वा अपि अशुभम् फलम् वा",
+          "en": "how could there be a good or bad result? (kutaḥ: whence, how | śubham: good | vā: or | api: even | aśubham: bad | phalam: result, fruit | vā: or)"
+        }
+      ],
       "sourceNumbers": [
         546
-      ]
+      ],
+      "editionTranslation": "Pleasure or pain, or good or evil, affects only him who has connections with the gross body etc., and identifies himself with these. How can good or evil, or their effects, touch the sage who has identified himself with the Reality and thereby shattered his bondage ?"
     },
     {
       "id": "vivekachudamani-547",
@@ -39573,11 +39595,29 @@
       "label": "Verse 547",
       "deva": "तमसा ग्रस्तवद्भानादग्रस्तोऽपि रविर्जनैः ।\nग्रस्त इत्युच्यते भ्रान्त्यां ह्यज्ञात्वा वस्तुलक्षणम् ॥",
       "iast": "tamasā grastavadbhānādagrasto'pi ravirjanaiḥ |\ngrasta ityucyate bhrāntyāṃ hyajñātvā vastulakṣaṇam ||",
-      "translation": "The sun which appears to be, but is not actually, swallowed by Rahu, is said to be swallowed, on account of delusion, by people, not knowing the real nature of the sun.",
-      "gloss": [],
+      "translation": "Though not actually swallowed, the sun appears to be swallowed by darkness. Deluded people call it swallowed because they do not know its true nature.",
+      "gloss": [
+        {
+          "sa": "तमसा ग्रस्तवत्",
+          "en": "as if swallowed by darkness (tamasā: by darkness | grastavat: as if swallowed)"
+        },
+        {
+          "sa": "भानात् अग्रस्तः अपि रविः",
+          "en": "the sun, though not swallowed, because of its appearance (bhānāt: from appearance | agrastaḥ: not swallowed | api: even, though | raviḥ: sun)"
+        },
+        {
+          "sa": "जनैः ग्रस्तः इति उच्यते",
+          "en": "is said by people to be swallowed (janaiḥ: by people | grastaḥ: swallowed | iti: thus, as | ucyate: is called, is said)"
+        },
+        {
+          "sa": "भ्रान्त्याम् हि अज्ञात्वा वस्तु-लक्षणम्",
+          "en": "because of delusion, indeed, not knowing its true nature (bhrāntyām: in delusion | hi: indeed | ajñātvā: not having known | vastu: reality, object | lakṣaṇam: nature, defining mark)"
+        }
+      ],
       "sourceNumbers": [
         547
-      ]
+      ],
+      "editionTranslation": "The sun which appears to be, but is not actually, swallowed by Rahu, is said to be swallowed, on account of delusion, by people, not knowing the real nature of the sun."
     },
     {
       "id": "vivekachudamani-548",
@@ -39585,11 +39625,33 @@
       "label": "Verse 548",
       "deva": "तद्वद्देहादिबन्धेभ्यो विमुक्तं ब्रह्मवित्तमम् ।\nपश्यन्ति देहिवन्मूढाः शरीराभासदर्शनात् ॥",
       "iast": "tadvaddehādibandhebhyo vimuktaṃ brahmavittamam |\npaśyanti dehivanmūḍhāḥ śarīrābhāsadarśanāt ||",
-      "translation": "Similarly, ignorant people look upon the perfect knower of Brahman, who is wholly rid of bondages of the body etc., as possessed of the body, seeing but an appearance of it.",
-      "gloss": [],
+      "translation": "In the same way, the deluded see the foremost knower of Brahman, freed from bonds of the body and the like, as embodied because they see only the appearance of a body.",
+      "gloss": [
+        {
+          "sa": "तद्वत्",
+          "en": "in the same way"
+        },
+        {
+          "sa": "देह-आदि-बन्धेभ्यः",
+          "en": "from bonds of the body and the like (deha: body | ādi: and so on | bandhebhyaḥ: from bonds)"
+        },
+        {
+          "sa": "विमुक्तम् ब्रह्म-वित्तमम्",
+          "en": "the foremost knower of Brahman, freed (vimuktam: freed | brahma: Brahman | vittamam: foremost knower)"
+        },
+        {
+          "sa": "पश्यन्ति देहिवत् मूढाः",
+          "en": "the deluded see [him] as embodied (paśyanti: they see | dehivat: as if embodied | mūḍhāḥ: deluded people)"
+        },
+        {
+          "sa": "शरीर-आभास-दर्शनात्",
+          "en": "because they see the appearance of a body (śarīra: body | ābhāsa: appearance | darśanāt: because of seeing)"
+        }
+      ],
       "sourceNumbers": [
         548
-      ]
+      ],
+      "editionTranslation": "Similarly, ignorant people look upon the perfect knower of Brahman, who is wholly rid of bondages of the body etc., as possessed of the body, seeing but an appearance of it."
     },
     {
       "id": "vivekachudamani-549",
@@ -39597,23 +39659,67 @@
       "label": "Verse 549",
       "deva": "अहिर्निर्ल्वयनीं वायं मुक्त्वा देहं तु तिष्ठति ।\nइतस्ततश्चाल्यमानो यत् किंचित् प्राणवायुना ॥",
       "iast": "ahirnirlvayanīṃ vāyaṃ muktvā dehaṃ tu tiṣṭhati |\nitastataścālyamāno yat kiṃcit prāṇavāyunā ||",
-      "translation": "In reality, however, he rests discarding the body, like the snake its slough; and the body is moved hither and thither by the force of the Prana, just as it listeth.",
-      "gloss": [],
+      "translation": "As a snake remains after leaving its cast-off skin, so this sage remains after abandoning the body. The body is moved here and there, in whatever way, by the vital air.",
+      "gloss": [
+        {
+          "sa": "अहिः निर्ल्वयनीम्",
+          "en": "the snake’s cast-off skin or slough (ahiḥ: snake | nirlvayanīm: slough, cast-off skin)"
+        },
+        {
+          "sa": "वा अयम्",
+          "en": "or this one (vā: or | ayam: this one)"
+        },
+        {
+          "sa": "मुक्त्वा देहम् तु तिष्ठति",
+          "en": "having left the body, [he] indeed remains (muktvā: having abandoned | deham: body | tu: indeed, however | tiṣṭhati: remains)"
+        },
+        {
+          "sa": "इतः ततः च",
+          "en": "here and there (itaḥ: from here | tataḥ: from there | ca: and)"
+        },
+        {
+          "sa": "चाल्यमानः यत् किञ्चित्",
+          "en": "being moved in whatever way, however slightly (cālyamānaḥ: being moved | yat kiñcit: whatever, however little)"
+        },
+        {
+          "sa": "प्राण-वायुना",
+          "en": "by the vital air (prāṇa: vital breath | vāyunā: by the wind, force)"
+        }
+      ],
       "sourceNumbers": [
         549
-      ]
+      ],
+      "editionTranslation": "In reality, however, he rests discarding the body, like the snake its slough; and the body is moved hither and thither by the force of the Prana, just as it listeth."
     },
     {
       "id": "vivekachudamani-550",
       "number": "550",
       "label": "Verse 550",
-      "deva": "स्त्रोतसा नीयते दारु यथा निम्नोन्नतस्थलम् ।\nदैवेन नीयते देहो यथाकालोपभुक्तिषु ॥",
-      "iast": "strotasā nīyate dāru yathā nimnonnatasthalam |\ndaivena nīyate deho yathākālopabhuktiṣu ||",
-      "translation": "As a piece of wood is borne by the current to a high or low ground, so is his body carried on by the momentum of past actions to the varied experience of their fruits, as these present themselves in due course.",
-      "gloss": [],
+      "deva": "स्रोतसा नीयते दारु यथा निम्नोन्नतस्थलम् ।\nदैवेन नीयते देहो यथाकालोपभुक्तिषु ॥",
+      "iast": "srotasā nīyate dāru yathā nimnonnatasthalam |\ndaivena nīyate deho yathākālopabhuktiṣu ||",
+      "translation": "Just as the current carries a piece of wood to low or high ground, fate carries the body to its experiences at their proper times.",
+      "gloss": [
+        {
+          "sa": "स्रोतसा नीयते दारु",
+          "en": "a piece of wood is carried by the current (srotasā: by a current | nīyate: is carried | dāru: a piece of wood)"
+        },
+        {
+          "sa": "यथा निम्न-उन्नत-स्थलम्",
+          "en": "just as to low or high ground (yathā: just as | nimna: low | unnata: high | sthalam: ground, place)"
+        },
+        {
+          "sa": "दैवेन नीयते देहः",
+          "en": "the body is carried by fate (daivena: by fate, destiny | nīyate: is carried | dehaḥ: body)"
+        },
+        {
+          "sa": "यथा-काल-उपभुक्तिषु",
+          "en": "to experiences at their proper times (yathā: according to | kāla: time | upabhuktiṣu: in experiences, enjoyments)"
+        }
+      ],
       "sourceNumbers": [
         550
-      ]
+      ],
+      "editionTranslation": "As a piece of wood is borne by the current to a high or low ground, so is his body carried on by the momentum of past actions to the varied experience of their fruits, as these present themselves in due course."
     },
     {
       "id": "vivekachudamani-551",
@@ -40035,6 +40141,7 @@
     "Logged and completed Vivekacūḍāmaṇi verses 536–540 with literal English translations and complete Devanāgarī-backed word-for-word glosses; recorded the textual variant for verse 537's vastuniḥ/vastuni reading.",
     "Corrected the Devanāgarī segmentation of rasa + instrumental ending in verse 536’s gloss (rasena).",
     "Logged and completed Vivekacūḍāmaṇi verses 541–545 with literal English translations and complete Devanāgarī-backed word-for-word glosses.",
-    "Corrected the Devanāgarī vowel in the verse 545 gloss for priyāpriye."
+    "Corrected the Devanāgarī vowel in the verse 545 gloss for priyāpriye.",
+    "Logged and completed Vivekacūḍāmaṇi verses 546–550 with literal English translations and complete Devanāgarī-backed word-for-word glosses; corrected verse 550’s srotasā reading."
   ]
 }
