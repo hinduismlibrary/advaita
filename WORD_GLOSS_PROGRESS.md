@@ -6,10 +6,11 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Manīṣāpañcakam** — active. Five verses and a short colophon; this text is under 20 verses, so it reads on one page without a separate contents page. Audit the source text, translation, explicit IAST, and every word gloss.
+**Māyāpañcakam** — active. Five verses and a short colophon; this text is under 20 verses, so it reads on one page without a separate contents page. Audit the source text, translation, explicit IAST, and every word gloss.
 
 ## Completed
 
+- **Manīṣāpañcakam** — all five verses and the colophon were audited. Revised translations and glosses for closer word-level alignment, restored the missing *saḥ* (“that person”) in verse 5, and checked verse 3’s *vimṛśatā* and *bhāvi ca* readings against the SanskritDocuments parallel text. All six reader units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Kāśīpañcakam** — all five verses and the colophon were checked against Ambuda’s 1910 edition. Revised translations and glosses for direct word-level alignment; the fifth verse’s gloss now accounts for every Sanskrit word. All six reader units have Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Advaitapañcaratnam** — all five verses and the colophon were checked against Ambuda’s 1910 edition. Revised the English and Devanāgarī glosses for closer word-level alignment, including the elliptical ego-versus-conscious-Self contrast in verse 4. All six reader units retain Sanskrit, English, IAST, and glosses; no separate contents page is needed for this under-20-verse text.
 - **Advaitamakaranda** — all 28 verses have Sanskrit, English, explicit IAST, and non-empty Devanāgarī glosses. Added three named contents sections covering verses 1–28; revised verses 2 and 24 for closer translation/gloss alignment.
@@ -45,8 +46,8 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Hastāmalaka-stotram | 12 | All four fields present |
 | Kāśīpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
-| Manīṣāpañcakam | 6 | Current text: audit five verses and colophon against source; one-page layout (under 20 verses) |
-| Māyāpañcakam | 6 | All four fields present |
+| Manīṣāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
+| Māyāpañcakam | 6 | Current text: audit five verses and colophon against source; one-page layout (under 20 verses) |
 | Naiṣkarmyasiddhi | 880 of 897 expected reader units | All 423 numbered verses have Sanskrit, English, explicit IAST, and word glosses; four chapters have named contents sections. There are 454 unglossed prose/commentary units and 17 expected reader units are absent; these are not counted as missing verse glosses. |
 | Nirvāṇaṣaṭkam | 7 | All four fields present |
 | Pañcīkaraṇa-prakaraṇa | 7 | Glosses present; add explicit IAST |
