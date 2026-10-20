@@ -6,13 +6,13 @@
   "source": {
     "url": "https://www.upasanayoga.org/PancD.htm",
     "edition": "Pañca-Daśī, A.K. Aruna, 2020 version 1.0; translations marked ** are by Swami Swahananda, Sri Ramakrishna Math, Chennai; work by Vidyāraṇya.",
-    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–130; other units do not yet have separate glosses.",
+    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–140; other units do not yet have separate glosses.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; text by Vidyāraṇya.",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words. Chapter 6 verses 121–130 now have concise literal English readings and Devanāgarī word-by-word glosses."
+    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words. Chapter 6 verses 121–130 now have concise literal English readings and Devanāgarī word-by-word glosses. Chapter 6 verses 131–140 now have concise literal English readings and Devanāgarī word-by-word glosses. Verse 6.133 is normalized to आत्मानं against a second text witness."
   },
-  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110. Original literal readings and word-for-word glosses for Chapter 6, verses 111–120. Original literal readings and word-for-word glosses for Chapter 6, verses 121–130.",
+  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110. Original literal readings and word-for-word glosses for Chapter 6, verses 111–120. Original literal readings and word-for-word glosses for Chapter 6, verses 121–130. Original literal readings and word-for-word glosses for Chapter 6, verses 131–140.",
   "units": [
     {
       "id": "panchadasi-1-01",
@@ -20810,80 +20810,568 @@
       "label": "Chapter 6 · Verse 131",
       "number": "6.131",
       "deva": "अस्य सत्त्वम् असत्त्वं च जगतो दर्शयत्यसौ।\nप्रसारणाच् च सङ्कोचाद् यथा चित्र-पटस् तथा॥",
-      "translation": "It (māyā) reveals the reality (in waking) and unreality (in deep sleep) of this universe, because it appears spread out and rolled up, like a picture on a canvas.",
-      "gloss": []
+      "translation": "Māyā shows the world as present and absent, like a painted cloth when it is spread out and drawn together.",
+      "gloss": [
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "सत्त्वम्",
+          "en": "existence / presence"
+        },
+        {
+          "sa": "असत्त्वम्",
+          "en": "non-existence / absence"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "जगतः",
+          "en": "of the world"
+        },
+        {
+          "sa": "दर्शयति",
+          "en": "shows"
+        },
+        {
+          "sa": "असौ",
+          "en": "she / that [Māyā]"
+        },
+        {
+          "sa": "प्रसारणात्",
+          "en": "through spreading / expansion"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सङ्कोचात्",
+          "en": "through drawing together / contraction"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "चित्र-पटः",
+          "en": "a painted cloth"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        }
+      ],
+      "iast": "asya sattvam asattvaṃ ca jagato darśayatyasau|\nprasāraṇāc ca saṅkocād yathā citra-paṭas tathā||"
     },
     {
       "id": "panchadasi-6-132",
       "label": "Chapter 6 · Verse 132",
       "number": "6.132",
       "deva": "अस्वतन्त्रा हि माया स्याद् अप्रतीतेर् विना चितिम्।\nस्वतन्त्राऽपि तथैव स्याद् असङ्गस्यान्यथा-कृतेः॥",
-      "translation": "Māyā is dependent (a-sva-tantrā) without the cognition of a perceiver. Yet it is independent in a sense, because it makes the unattached (ātman, the perceiver) as being otherwise (than it itself is).",
-      "gloss": []
+      "translation": "Māyā would be dependent, since it is not perceived without consciousness. Yet it would also be independent, since it makes the unattached [Self] appear otherwise.",
+      "gloss": [
+        {
+          "sa": "अस्वतन्त्रा",
+          "en": "not independent / dependent"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "माया",
+          "en": "Māyā"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अप्रतीतेः",
+          "en": "because it is not perceived"
+        },
+        {
+          "sa": "विना",
+          "en": "without"
+        },
+        {
+          "sa": "चितिम्",
+          "en": "consciousness"
+        },
+        {
+          "sa": "स्वतन्त्रा",
+          "en": "independent"
+        },
+        {
+          "sa": "अपि",
+          "en": "also / even"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "असङ्गस्य",
+          "en": "of the unattached [Self]"
+        },
+        {
+          "sa": "अन्यथा-कृतेः",
+          "en": "because of making [it] otherwise"
+        }
+      ],
+      "iast": "asvatantrā hi māyā syād apratīter vinā citim|\nsvatantrā’pi tathaiva syād asaṅgasyānyathā-kṛteḥ||"
     },
     {
       "id": "panchadasi-6-133",
       "label": "Chapter 6 · Verse 133",
       "number": "6.133",
-      "deva": "कूटस्थासङ्गम् आत्मानां जगत्त्वेन करोति सा।\nचिद्-आभास-स्वरूपेण जीवेशावपि निर्ममे॥",
-      "translation": "That (māyā seems to) make the ātman which is unchanging (kūṭa-stha) and unattached to be the same as the rest of the universe (changing and interconnected). Due to this taking its nature as the reflection of consciousness (cit-ābhāsa-svarūpa, in an individual mind or in the cosmic subtle body), (māyā as though, by incomplete knowledge) has created (a difference between) the jīva and the Lord (respectively).",
-      "gloss": []
+      "deva": "कूटस्थासङ्गम् आत्मानं जगत्त्वेन करोति सा।\nचिद्-आभास-स्वरूपेण जीवेशावपि निर्ममे॥",
+      "translation": "Māyā makes the immutable, unattached Self into the world. In the form of reflected consciousness, she also creates the jīva and Īśvara.",
+      "gloss": [
+        {
+          "sa": "कूटस्थ",
+          "en": "immutable / unchanging"
+        },
+        {
+          "sa": "असङ्गम्",
+          "en": "unattached"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "जगत्-त्वेन",
+          "en": "as the world"
+        },
+        {
+          "sa": "करोति",
+          "en": "makes"
+        },
+        {
+          "sa": "सा",
+          "en": "she [Māyā]"
+        },
+        {
+          "sa": "चित्-आभास-स्वरूपेण",
+          "en": "in the form of reflected consciousness"
+        },
+        {
+          "sa": "जीव-ईशौ",
+          "en": "the jīva and the Lord"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "निर्ममे",
+          "en": "she created"
+        }
+      ],
+      "iast": "kūṭasthāsaṅgam ātmānaṃ jagattvena karoti sā|\ncid-ābhāsa-svarūpeṇa jīveśāvapi nirmame||"
     },
     {
       "id": "panchadasi-6-134",
       "label": "Chapter 6 · Verse 134",
       "number": "6.134",
       "deva": "कूटस्थम् अनुपद्रुत्य करोति जगदादिकम्।\nदुर्घटैक-विधायिन्यां मायायां का चमत्-कृतिः॥",
-      "translation": "Without (actually) diminishing the unchanging (kūṭa-stha, unchanging reality), it (appears to) manifest a world of differences (jagat-ādika, within the kūṭa-stha, like an imagined snake where there is only a rope). Māyā is what singularly manifests the impossible (durghaṭa-eka-vidhāyin). In regard to that, why be surprised?* *(Māyā is not some proposed entity. It is simply a name to describe why we mistake the real nature of things. It is simply the inability to distinguish appearance from reality. And this is not recognized until the scripture points out that there is an absolute reality which is the unchanging, not different from the reality of oneself. Then only can the changing be appreciated as not reality, but as unreal.)",
-      "gloss": []
+      "translation": "Without disturbing the immutable [Self], Māyā makes the world and the rest. What wonder is there in Māyā, which uniquely brings about the impossible?",
+      "gloss": [
+        {
+          "sa": "कूटस्थम्",
+          "en": "the immutable [Self]"
+        },
+        {
+          "sa": "अनुपद्रुत्य",
+          "en": "without disturbing / affecting"
+        },
+        {
+          "sa": "करोति",
+          "en": "makes"
+        },
+        {
+          "sa": "जगत्-आदिकम्",
+          "en": "the world and the rest"
+        },
+        {
+          "sa": "दुर्घट-एक-विधायिन्याम्",
+          "en": "in the one uniquely bringing about the impossible"
+        },
+        {
+          "sa": "मायायाम्",
+          "en": "in Māyā"
+        },
+        {
+          "sa": "का",
+          "en": "what"
+        },
+        {
+          "sa": "चमत्-कृतिः",
+          "en": "wonder / astonishment"
+        }
+      ],
+      "iast": "kūṭastham anupadrutya karoti jagadādikam|\ndurghaṭaika-vidhāyinyāṃ māyāyāṃ kā camat-kṛtiḥ||"
     },
     {
       "id": "panchadasi-6-135",
       "label": "Chapter 6 · Verse 135",
       "number": "6.135",
       "deva": "द्रवत्वम् उदके वह्नाव् औष्ण्यं काठिन्यम् अश्मनि।\nमायाया दुर्घटत्वं च स्वतः सिद्ध्यति नान्यतः॥",
-      "translation": "As is fluidity in water, heat in fire, and solidity in a stone, so is the impossibility (dur-ghaṭatva) of māyā. (Like water as fluidity, etc.) it uniquely establishes itself (māyā) as distinct from anything else.",
-      "gloss": []
+      "translation": "Fluidity is in water, heat in fire, and hardness in stone; likewise, Māyā’s capacity to bring about the impossible is established by itself, not by anything else.",
+      "gloss": [
+        {
+          "sa": "द्रवत्वम्",
+          "en": "fluidity"
+        },
+        {
+          "sa": "उदके",
+          "en": "in water"
+        },
+        {
+          "sa": "वह्नौ",
+          "en": "in fire"
+        },
+        {
+          "sa": "औष्ण्यम्",
+          "en": "heat"
+        },
+        {
+          "sa": "काठिन्यम्",
+          "en": "hardness"
+        },
+        {
+          "sa": "अश्मनि",
+          "en": "in stone"
+        },
+        {
+          "sa": "मायायाः",
+          "en": "of Māyā"
+        },
+        {
+          "sa": "दुर्घटत्वम्",
+          "en": "the capacity to bring about the impossible"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "सिद्ध्यति",
+          "en": "is established"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्यतः",
+          "en": "from anything else"
+        }
+      ],
+      "iast": "dravatvam udake vahnāv auṣṇyaṃ kāṭhinyam aśmani|\nmāyāyā durghaṭatvaṃ ca svataḥ siddhyati nānyataḥ||"
     },
     {
       "id": "panchadasi-6-136",
       "label": "Chapter 6 · Verse 136",
       "number": "6.136",
       "deva": "न वेत्ति लोको यावत् ताम् साक्षात् तावच् चमत्-कृतिम्।\nधत्ते मनसि पश्चात् तु मायैषेत्युपशाम्यति॥",
-      "translation": "Until which time a person does not recognize that (māyā, is the show before their eyes which lacks reality), until then (while its changes upset the show which they believed was real), surprise abides in the mind. But afterwards once this māyā (is known for what it is, as only a temporal show) then one attains calm (not constantly being surprised).",
-      "gloss": []
+      "translation": "As long as a person does not directly know Māyā, astonishment occupies the mind. But afterward, when one thinks, “This is Māyā,” it subsides.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वेत्ति",
+          "en": "knows"
+        },
+        {
+          "sa": "लोकः",
+          "en": "a person / people"
+        },
+        {
+          "sa": "यावत्",
+          "en": "as long as"
+        },
+        {
+          "sa": "ताम्",
+          "en": "her / that"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so long"
+        },
+        {
+          "sa": "चमत्-कृतिम्",
+          "en": "astonishment"
+        },
+        {
+          "sa": "धत्ते",
+          "en": "holds"
+        },
+        {
+          "sa": "मनसि",
+          "en": "in the mind"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "afterward"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "माया",
+          "en": "Māyā"
+        },
+        {
+          "sa": "एषा",
+          "en": "this"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the thought"
+        },
+        {
+          "sa": "उपशाम्यति",
+          "en": "subsides"
+        }
+      ],
+      "iast": "na vetti loko yāvat tām sākṣāt tāvac camat-kṛtim|\ndhatte manasi paścāt tu māyaiṣetyupaśāmyati||"
     },
     {
       "id": "panchadasi-6-137",
       "label": "Chapter 6 · Verse 137",
       "number": "6.137",
       "deva": "प्रसरन्ति हि चोद्यानि जगद्-वस्तुत्व-वादिषु।\nन चोदनीयं मायायां तस्याश् चोद्यैक-रूपतः॥",
-      "translation": "Among those who argue for the reality of this universe (jagat) then questions (codyas, regarding māyā) continue. But since (māyā) having a single (determinable) nature is itself questionable (codya), then there no (point in) questioning about māyā (such as, whether it exists, where it exists, how to fix it, etcetera).",
-      "gloss": []
+      "translation": "Objections multiply among those who argue that the world is real. Māyā itself need not be questioned, since its very nature is a question.",
+      "gloss": [
+        {
+          "sa": "प्रसरन्ति",
+          "en": "spread / multiply"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "चोद्याणि",
+          "en": "questions / objections"
+        },
+        {
+          "sa": "जगत्-वस्तुत्व-वादिषु",
+          "en": "among those who argue that the world is real"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "चोदनीयम्",
+          "en": "to be questioned"
+        },
+        {
+          "sa": "मायायाम्",
+          "en": "about Māyā"
+        },
+        {
+          "sa": "तस्याः",
+          "en": "of it"
+        },
+        {
+          "sa": "चोद्य-एक-रूपतः",
+          "en": "because its very nature is a question"
+        }
+      ],
+      "iast": "prasaranti hi codyāni jagad-vastutva-vādiṣu|\nna codanīyaṃ māyāyāṃ tasyāś codyaika-rūpataḥ||"
     },
     {
       "id": "panchadasi-6-138",
       "label": "Chapter 6 · Verse 138",
       "number": "6.138",
       "deva": "चोद्येऽपि यदि चोद्यं स्यात् त्वच्-चोद्ये चोद्यते मया।\nपरिहार्यं ततश् चोद्यं न पुनः प्रतिचोद्यताम्॥",
-      "translation": "If it is (always by it nature) questionable, then it would remain questionable. I would question your questioning. Questioning itself, then, is to be given up. Further questioning is not be be indulged.",
-      "gloss": []
+      "translation": "If a question itself can be questioned, I question your question. Therefore, the question should be set aside and not raised again.",
+      "gloss": [
+        {
+          "sa": "चोद्ये",
+          "en": "in a question / objection"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "चोद्यम्",
+          "en": "a question"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "were"
+        },
+        {
+          "sa": "त्वत्-चोद्ये",
+          "en": "your question / objection"
+        },
+        {
+          "sa": "चोद्यते",
+          "en": "is questioned"
+        },
+        {
+          "sa": "मया",
+          "en": "by me"
+        },
+        {
+          "sa": "परिहार्यम्",
+          "en": "to be set aside"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "चोद्यम्",
+          "en": "the question"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "प्रतिचोद्यताम्",
+          "en": "let it be questioned in reply"
+        }
+      ],
+      "iast": "codye’pi yadi codyaṃ syāt tvac-codye codyate mayā|\nparihāryaṃ tataś codyaṃ na punaḥ praticodyatām||"
     },
     {
       "id": "panchadasi-6-139",
       "label": "Chapter 6 · Verse 139",
       "number": "6.139",
       "deva": "विस्मयैक-शरीराया मायायाश् चोद्य-रूपतः।\nअन्वेष्यः परिहारोऽस्या बुद्धिमद्भिः प्रयत्नतः॥",
-      "translation": "Since māyā, which is a singular embodiment of wondering (vismaya), has a nature that is itself questionable (codya, is a continuing mystery), then the intelligent should make effort in seeking its removal (parihāra, i.e., instead of trying to solve the mystery, inquire instead into what makes this mystery seem unsolvable).",
-      "gloss": []
+      "translation": "Because Māyā is an embodiment of wonder and has the nature of a question, the wise should diligently seek a way to resolve it.",
+      "gloss": [
+        {
+          "sa": "विस्मय-एक-शरीरायाः",
+          "en": "whose very body is wonder"
+        },
+        {
+          "sa": "मायायाः",
+          "en": "of Māyā"
+        },
+        {
+          "sa": "चोद्य-रूपतः",
+          "en": "because of its question-like nature"
+        },
+        {
+          "sa": "अन्वेष्यः",
+          "en": "to be sought"
+        },
+        {
+          "sa": "परिहारः",
+          "en": "a solution / remedy"
+        },
+        {
+          "sa": "अस्याः",
+          "en": "for it"
+        },
+        {
+          "sa": "बुद्धिमद्भिः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "प्रयत्नतः",
+          "en": "with effort / diligently"
+        }
+      ],
+      "iast": "vismayaika-śarīrāyā māyāyāś codya-rūpataḥ|\nanveṣyaḥ parihāro’syā buddhimadbhiḥ prayatnataḥ||"
     },
     {
       "id": "panchadasi-6-140",
       "label": "Chapter 6 · Verse 140",
       "number": "6.140",
       "deva": "मायात्वम् एव निश्चेयम् इति चेत् तर्हि निश्चिनु।\nलोक-प्रसिद्ध-मायाया लक्षणं यत् तद् ईक्ष्यताम्॥",
-      "translation": "(Question:) Don't you have to determine māyā’s very nature, in order to make this determination (of how to remove it)? (Reply:) Then one should just accept that which is the common well known definition of māyā!",
-      "gloss": []
+      "translation": "If you say that Māyā’s very nature must be determined, then determine it: consider the well-known definition of Māyā.",
+      "gloss": [
+        {
+          "sa": "माया-त्वम्",
+          "en": "Māyā-ness / the nature of Māyā"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "निश्चेयम्",
+          "en": "to be determined"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / so"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        },
+        {
+          "sa": "निश्चिनु",
+          "en": "determine"
+        },
+        {
+          "sa": "लोक-प्रसिद्ध-मायायाः",
+          "en": "of Māyā well known in the world"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "the definition / characteristic"
+        },
+        {
+          "sa": "यत्",
+          "en": "which"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "ईक्ष्यताम्",
+          "en": "let it be considered"
+        }
+      ],
+      "iast": "māyātvam eva niśceyam iti cet tarhi niścinu|\nloka-prasiddha-māyāyā lakṣaṇaṃ yat tad īkṣyatām||"
     },
     {
       "id": "panchadasi-6-141",
