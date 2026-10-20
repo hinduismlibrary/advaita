@@ -6,13 +6,13 @@
   "source": {
     "url": "https://www.upasanayoga.org/PancD.htm",
     "edition": "Pañca-Daśī, A.K. Aruna, 2020 version 1.0; translations marked ** are by Swami Swahananda, Sri Ramakrishna Math, Chennai; work by Vidyāraṇya.",
-    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–120; other units do not yet have separate glosses.",
+    "digitalText": "Sanskrit and English transcribed from the licensed electronic edition and arranged here as a local chapter reader. Six adjacent verse pairs are displayed together with range labels. Full word-for-word glosses are present for Chapter 1, Chapter 2 verses 1–45, and Chapter 6 verses 101–130; other units do not yet have separate glosses.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; text by Vidyāraṇya.",
     "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words."
+    "changes": "Transcribed into the local chapter reader; source numbering retained, paired verses grouped and labelled as ranges; duplicate labels disambiguated; Sanskrit at 10.22–10.23 corrected against a second text witness. Chapter 2 verses 1–30 now have simple literal readings and token-by-token glosses. Readings at 2.17 and 2.28 were checked against Sanskrit Documents. The spelling गन्धौ in verse 2.6 was normalized against that text witness. Chapter 2 verses 31–45 now have literal readings and token-by-token glosses; the spelling क्वचित् in verse 2.35 is corrected. Chapter 6 verses 101–110 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit readings were checked against a second text witness. Chapter 6 verses 111–120 now have concise literal English readings and Devanāgarī word-by-word glosses; Sanskrit at 6.118 is normalized to separate the underlying words. Chapter 6 verses 121–130 now have concise literal English readings and Devanāgarī word-by-word glosses."
   },
-  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110. Original literal readings and word-for-word glosses for Chapter 6, verses 111–120.",
+  "translationCredit": "A.K. Aruna, Pañca-Daśī (2020); English translations marked ** by Swami Swahananda, Sri Ramakrishna Math, Chennai; original literal readings and word-for-word glosses for Chapter 1 and Chapter 2, verses 1–45. Original literal readings and word-for-word glosses for Chapter 6, verses 101–110. Original literal readings and word-for-word glosses for Chapter 6, verses 111–120. Original literal readings and word-for-word glosses for Chapter 6, verses 121–130.",
   "units": [
     {
       "id": "panchadasi-1-01",
@@ -20202,80 +20202,608 @@
       "label": "Chapter 6 · Verse 121",
       "number": "6.121",
       "deva": "अन्तर्-यामिणम् आरभ्य स्थावरान्तेश-वादिनः।\nसन्त्य् अश्वत्थार्क-वंशादेः कुल-दैवत-दर्शनात्॥",
-      "translation": "There are those arguing to be the Lord (Īśa) anything beginning from the inner controller to inert objects, such as the Aśvattha (fig-tree), the sun, or bamboo – because they see those as their family deity (kula-daivata).",
-      "gloss": []
+      "translation": "There are those who speak of Īśvara from the Inner Ruler all the way to immovable things; they do so because the aśvattha, arka, bamboo, and the like are regarded as family deities.",
+      "gloss": [
+        {
+          "sa": "अन्तर्-यामिणम्",
+          "en": "the Inner Ruler"
+        },
+        {
+          "sa": "आरभ्य",
+          "en": "beginning with / starting from"
+        },
+        {
+          "sa": "स्थावर-अन्त-ईश-वादिनः",
+          "en": "those who hold Īśvara to extend to immovable things"
+        },
+        {
+          "sa": "सन्ति",
+          "en": "there are"
+        },
+        {
+          "sa": "अश्वत्थ",
+          "en": "the aśvattha (sacred fig tree)"
+        },
+        {
+          "sa": "अर्क",
+          "en": "the arka plant"
+        },
+        {
+          "sa": "वंश",
+          "en": "bamboo"
+        },
+        {
+          "sa": "आदेः",
+          "en": "and the like"
+        },
+        {
+          "sa": "कुल-दैवत",
+          "en": "family deity"
+        },
+        {
+          "sa": "दर्शनात्",
+          "en": "because of seeing / regarding"
+        }
+      ],
+      "iast": "antar-yāmiṇam ārabhya sthāvarānteśa-vādinaḥ|\nsanty aśvatthārka-vaṃśādeḥ kula-daivata-darśanāt||"
     },
     {
       "id": "panchadasi-6-122",
       "label": "Chapter 6 · Verse 122",
       "number": "6.122",
       "deva": "तत्त्व-निश्चय-कामेन न्यायागम-विचारिणाम्।\nएकैव प्रतिपत्तिः स्यात् साऽप्यत्र स्फुटम् उच्यते॥",
-      "translation": "By those desiring to ascertain the truth, while inquiring through the traditional texts with supporting logic (nyāya-āgama), there would be only one understanding, and that is here and now being clearly set forth.",
-      "gloss": []
+      "translation": "For those who seek certainty about reality and examine reasoning and scripture, there should be one conclusion; that conclusion is clearly stated here.",
+      "gloss": [
+        {
+          "sa": "तत्त्व-निश्चय-कामेन",
+          "en": "by one who desires certainty about reality"
+        },
+        {
+          "sa": "न्याय-आगम-विचारिणाम्",
+          "en": "for those who examine reasoning and scripture"
+        },
+        {
+          "sa": "एका",
+          "en": "one"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "understanding / conclusion"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "स्फुटम्",
+          "en": "clearly"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ],
+      "iast": "tattva-niścaya-kāmena nyāyāgama-vicāriṇām|\nekaiva pratipattiḥ syāt sā’pyatra sphuṭam ucyate||"
     },
     {
       "id": "panchadasi-6-123",
       "label": "Chapter 6 · Verse 123",
       "number": "6.123",
       "deva": "मायां तु प्रकृतिं विद्यान् मायिनं तु महेश्वरम्।\nअस्यावयव-भूतैस् तु व्याप्तं सर्वम् इदं जगत्॥",
-      "translation": "One should know that prakṛti (all of nature) as māyā (an appearance, not as real as one’s own reality). The supreme Lord is the Lord of māyā (the māyin), and this entire universe is pervaded as (if) parts of this Lord.",
-      "gloss": []
+      "translation": "Know Māyā as Prakṛti, and the wielder of Māyā as the Great Lord. The whole universe is pervaded by beings that are His parts.",
+      "gloss": [
+        {
+          "sa": "मायाम्",
+          "en": "Māyā"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रकृतिम्",
+          "en": "Prakṛti (primordial nature)"
+        },
+        {
+          "sa": "विद्यात्",
+          "en": "one should know"
+        },
+        {
+          "sa": "मायिनम्",
+          "en": "the wielder of Māyā"
+        },
+        {
+          "sa": "तु",
+          "en": "and"
+        },
+        {
+          "sa": "महेश्वरम्",
+          "en": "the Great Lord"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of Him / His"
+        },
+        {
+          "sa": "अवयव-भूतैः",
+          "en": "by those that have become His parts"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "व्याप्तम्",
+          "en": "pervaded"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "जगत्",
+          "en": "world / universe"
+        }
+      ],
+      "iast": "māyāṃ tu prakṛtiṃ vidyān māyinaṃ tu maheśvaram|\nasyāvayava-bhūtais tu vyāptaṃ sarvam idaṃ jagat||"
     },
     {
       "id": "panchadasi-6-124",
       "label": "Chapter 6 · Verse 124",
       "number": "6.124",
       "deva": "इति श्रुत्यनुसारेण न्याय्यो निर्णय ईश्वरे।\nतथा सत्य-विरोधः स्यात् स्थावरान्तेश-वादिनाम्॥",
-      "translation": "This depiction regarding the Lord is in keeping with scripture and is logically valid. In that way, there is no contradiction in terms of reality with those who hold that even inanimate things are the Lord (as for us, all are nothing but the Lord).",
-      "gloss": []
+      "translation": "This is the reasonable conclusion about Īśvara in accordance with scripture. If so, it does not conflict with those who hold Īśvara to extend to immovable things.",
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुति-अनुसारेण",
+          "en": "in accordance with scripture"
+        },
+        {
+          "sa": "न्याय्यः",
+          "en": "reasonable"
+        },
+        {
+          "sa": "निर्णयः",
+          "en": "conclusion"
+        },
+        {
+          "sa": "ईश्वरे",
+          "en": "regarding Īśvara"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "सति",
+          "en": "being the case"
+        },
+        {
+          "sa": "अविरोधः",
+          "en": "non-contradiction"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "स्थावर-अन्त-ईश-वादिनाम्",
+          "en": "for those who hold Īśvara to extend to immovable things"
+        }
+      ],
+      "iast": "iti śrutyanusāreṇa nyāyyo nirṇaya īśvare|\ntathā satya-virodhaḥ syāt sthāvarānteśa-vādinām||"
     },
     {
       "id": "panchadasi-6-125",
       "label": "Chapter 6 · Verse 125",
       "number": "6.125",
       "deva": "माया चेयं तमो-रूपा तापनीये तद्-ईरणात्।\nअनुभूतिं तत्र मानं प्रतिजज्ञे श्रुतिः स्वयम्॥",
-      "translation": "In the (Nṛsiṃha-Uttara)-Tāpanīya Upaniṣad (Chapter 9) it is said, “Māyā is in the form of tamas (darkness, ignorance),” From that statement, the scripture herself makes the claim that one’s own experience is evidence towards this (as the darkness before creation is māyā, the same darkness we experience in deep sleep).",
-      "gloss": []
+      "translation": "The Tapanīya [Upaniṣad] says that this Māyā is of the nature of darkness. Scripture itself declares experience to be evidence for it.",
+      "gloss": [
+        {
+          "sa": "माया",
+          "en": "Māyā"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इयम्",
+          "en": "this"
+        },
+        {
+          "sa": "तमः-रूपा",
+          "en": "having the form of darkness"
+        },
+        {
+          "sa": "तापनीये",
+          "en": "in the Tapanīya [Upaniṣad]"
+        },
+        {
+          "sa": "तद्-ईरणात्",
+          "en": "because that is stated"
+        },
+        {
+          "sa": "अनुभूतिम्",
+          "en": "experience"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there / for it"
+        },
+        {
+          "sa": "मानम्",
+          "en": "evidence / a means of knowledge"
+        },
+        {
+          "sa": "प्रतिजज्ञे",
+          "en": "has affirmed / declared"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        }
+      ],
+      "iast": "māyā ceyaṃ tamo-rūpā tāpanīye tad-īraṇāt|\nanubhūtiṃ tatra mānaṃ pratijajñe śrutiḥ svayam||"
     },
     {
       "id": "panchadasi-6-126",
       "label": "Chapter 6 · Verse 126",
       "number": "6.126",
       "deva": "जडं मोहात्मकं तच् चेत्यनुभावयति श्रुतिः।\nआ-बाल-गोपं स्पष्टत्वाद् आनन्त्यं तस्य साऽब्रवीत्॥",
-      "translation": "The scripture points to our common experience of it (the nature of māyā) as insentience (jaḍa, in the inanimate) and delusion (mohātmaka, in the animate). It (the scripture) points out the pervasiveness of that (nature of māyā) as being clearly seen from (uneducated) children to (uneducable) dullards (go-pas, those qualified to just watch the cows graze).",
-      "gloss": []
+      "translation": "Scripture makes us recognize Māyā as inert and delusive. Because its extent is plainly evident even to children and cowherds, scripture declares it boundless.",
+      "gloss": [
+        {
+          "sa": "जडम्",
+          "en": "inert"
+        },
+        {
+          "sa": "मोह-आत्मकम्",
+          "en": "of a delusive nature"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुभावयति",
+          "en": "makes known / causes to be experienced"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "आ-बाल-गोपम्",
+          "en": "from children to cowherds"
+        },
+        {
+          "sa": "स्पष्टत्वात्",
+          "en": "because it is clear"
+        },
+        {
+          "sa": "आनन्त्यम्",
+          "en": "boundlessness / limitless extent"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "सा",
+          "en": "she (scripture)"
+        },
+        {
+          "sa": "अब्रवीत्",
+          "en": "declared"
+        }
+      ],
+      "iast": "jaḍaṃ mohātmakaṃ tac cetyanubhāvayati śrutiḥ|\nā-bāla-gopaṃ spaṣṭatvād ānantyaṃ tasya sā’bravīt||"
     },
     {
       "id": "panchadasi-6-127",
       "label": "Chapter 6 · Verse 127",
       "number": "6.127",
       "deva": "अचिद्-आत्म-घटादीनां यत् स्वरूपं जडं हि तत्।\nयत्र कुण्ठी-भवेद् बुद्धिः स मोह इति लौकिकाः॥",
-      "translation": "Indeed the insentient (jaḍa) nature is what belongs to pots, etc., that cannot (reflect) consciousness. Everyone sees the delusion where intelligence is (variously) dull.",
-      "gloss": []
+      "translation": "The nature of pots and the like, which are insentient, is indeed inert. Where the intellect becomes dull, ordinary people call that delusion.",
+      "gloss": [
+        {
+          "sa": "अचिद्-आत्म-घट-आदीनाम्",
+          "en": "of pots and the like, which are insentient"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever / whose"
+        },
+        {
+          "sa": "स्वरूपम्",
+          "en": "nature"
+        },
+        {
+          "sa": "जडम्",
+          "en": "inert"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "कुण्ठी-भवेत्",
+          "en": "becomes dull / blunted"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "the intellect"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "मोहः",
+          "en": "delusion"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "लौकिकाः",
+          "en": "ordinary people"
+        }
+      ],
+      "iast": "acid-ātma-ghaṭādīnāṃ yat svarūpaṃ jaḍaṃ hi tat|\nyatra kuṇṭhī-bhaved buddhiḥ sa moha iti laukikāḥ||"
     },
     {
       "id": "panchadasi-6-128",
       "label": "Chapter 6 · Verse 128",
       "number": "6.128",
       "deva": "इत्थं लौकिक-दृष्ट्यैतत् सर्वैर् अप्यनुभूयते।\nयुक्ति-दृष्ट्या त्वनिर्वाच्यं नासद् आसीद् इति श्रुतेः॥",
-      "translation": "Thus, this is the common point of view admitted by everyone. Moreover, from the logical point of view it is not categorically definable (a-nirvācya), which is based on the scripture that it was not non-existent (na a-sat, neither absolutely real nor not-real, as it is something about which our opinions based on our limited experience and knowledge are innumerable and inconclusive).",
-      "gloss": []
+      "translation": "Everyone experiences this in ordinary perception. From the standpoint of reasoning, however, it is indefinable, as scripture says, “It was not non-being.”",
+      "gloss": [
+        {
+          "sa": "इत्थम्",
+          "en": "thus"
+        },
+        {
+          "sa": "लौकिक-दृष्ट्या",
+          "en": "from the ordinary standpoint"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "सर्वैः",
+          "en": "by everyone"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अनुभूयते",
+          "en": "is experienced"
+        },
+        {
+          "sa": "युक्ति-दृष्ट्या",
+          "en": "from the standpoint of reasoning"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "अनिर्वाच्यम्",
+          "en": "indefinable"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "असत्",
+          "en": "non-being"
+        },
+        {
+          "sa": "आसीत्",
+          "en": "was"
+        },
+        {
+          "sa": "इति",
+          "en": "thus / with the words"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "because scripture says"
+        }
+      ],
+      "iast": "itthaṃ laukika-dṛṣṭyaitat sarvair apyanubhūyate|\nyukti-dṛṣṭyā tvanirvācyaṃ nāsad āsīd iti śruteḥ||"
     },
     {
       "id": "panchadasi-6-129",
       "label": "Chapter 6 · Verse 129",
       "number": "6.129",
       "deva": "नासद् आसीद् विभातत्वान् नो सदासीच् च बाधनात्।\nविद्या-दृष्ट्या श्रुतं तुच्छं तस्य नित्य-निर्वृत्तितः॥",
-      "translation": "It is not non-existent because it is variously experienced (vibhāta), nor (absolutely) real because it can be removed (bādhana, annulled by knowledge of brahman as oneself through help of scripture). From the point of view of the knowledge, according to scripture, it (all of māyā) is unreal (tuccha), since it can never have any effect (nitya-nirvṛtti, on one who is wise, (Kaṭha Upaniṣad), and since it constantly dismisses itself by its continual change, which is obvious to everyone, and the scripture points out that this is why it has to be unreal, not absolutely real).",
-      "gloss": []
+      "translation": "It was not non-existent, because it appears; nor was it existent, because it is sublated. From the standpoint of knowledge, scripture calls it insubstantial, since it is permanently negated.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "असत्",
+          "en": "non-existent"
+        },
+        {
+          "sa": "आसीत्",
+          "en": "was"
+        },
+        {
+          "sa": "विभातत्वात्",
+          "en": "because it appears"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सत्",
+          "en": "existent"
+        },
+        {
+          "sa": "आसीत्",
+          "en": "was"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "बाधनात्",
+          "en": "because it is sublated"
+        },
+        {
+          "sa": "विद्या-दृष्ट्या",
+          "en": "from the standpoint of knowledge"
+        },
+        {
+          "sa": "श्रुतम्",
+          "en": "is stated in scripture"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "तुच्छम्",
+          "en": "insubstantial / negligible"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "नित्य-निवृत्तितः",
+          "en": "because it is permanently negated"
+        }
+      ],
+      "iast": "nāsad āsīd vibhātatvān no sadāsīc ca bādhanāt|\nvidyā-dṛṣṭyā śrutaṃ tucchaṃ tasya nitya-nirvṛttitaḥ||"
     },
     {
       "id": "panchadasi-6-130",
       "label": "Chapter 6 · Verse 130",
       "number": "6.130",
       "deva": "तुच्छाऽनिर्वचनीया च वास्तवी चेत्यसौ त्रिधा।\nज्ञेया माया त्रिभिर् बोधैः श्रौत-यौक्तिक-लौकिकैः॥",
-      "translation": "This māyā is to be looked at in three ways: as unreal (tuccha) by those who know its nature, as indefinable (a-nirvacanīya) by logicians, and as real (vāstavī) by ordinary people.",
-      "gloss": []
+      "translation": "By three standpoints—scriptural, reasoned, and ordinary—Māyā is to be understood in three ways: as insubstantial, indefinable, and real.",
+      "gloss": [
+        {
+          "sa": "तुच्छा",
+          "en": "insubstantial / negligible"
+        },
+        {
+          "sa": "अनिर्वचनीया",
+          "en": "indefinable"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वास्तवी",
+          "en": "real / actual"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "असौ",
+          "en": "this"
+        },
+        {
+          "sa": "त्रिधा",
+          "en": "in three ways"
+        },
+        {
+          "sa": "ज्ञेया",
+          "en": "is to be known / understood"
+        },
+        {
+          "sa": "माया",
+          "en": "Māyā"
+        },
+        {
+          "sa": "त्रिभिः",
+          "en": "by three"
+        },
+        {
+          "sa": "बोधैः",
+          "en": "understandings / standpoints"
+        },
+        {
+          "sa": "श्रौत",
+          "en": "scriptural"
+        },
+        {
+          "sa": "यौक्तिक",
+          "en": "reasoned / based on logic"
+        },
+        {
+          "sa": "लौकिकैः",
+          "en": "ordinary / everyday"
+        }
+      ],
+      "iast": "tucchā’nirvacanīyā ca vāstavī cetyasau tridhā|\njñeyā māyā tribhir bodhaiḥ śrauta-yauktika-laukikaiḥ||"
     },
     {
       "id": "panchadasi-6-131",
