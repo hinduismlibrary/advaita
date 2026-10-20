@@ -4,7 +4,7 @@
   "author": "Maṇḍana Miśra",
   "expectedUnits": 231,
   "translationAvailable": true,
-  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 121 passages; 110 remain.",
+  "coverage": "Complete Sanskrit, English translation, and IAST for all 231 source-marked passages. Separate Devanāgarī word glosses are complete for 131 passages; 100 remain.",
   "sections": [
     {
       "id": 1,
@@ -28,7 +28,7 @@
     "license": "CC BY-NC-SA 4.0",
     "attribution": "Maṇḍana Miśra; Diwakar Acharya; GRETIL, SUB Göttingen.",
     "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_mandanamizra-brahmasiddhi.htm",
-    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 121 passages, including short verse entries through 2.182, selected Tarka verses, and 4.1, 4.4, 4.6–4.11; 110 passages still need glosses."
+    "changes": "All 231 GRETIL source-marked passages are included. The source's Kāṇḍa 1 is grouped into Brahma (1.1–1.3) and Tarka (1.4–1.36); Kāṇḍa 2 is Niyoga; source marker Kāṇḍa 4 is retained as Siddhi. IAST is converted to Devanāgarī. Passage 2.86 was normalized from an apparent typographical error to प्रमाणात्मनैव (pramāṇātmanai). Every passage has an English translation and transliteration. Original token-by-token glosses are complete for 131 passages, including short verse entries through 2.182 and selected prose passages; 100 passages still need glosses."
   },
   "units": [
     {
@@ -838,7 +838,172 @@
       "deva": "[क्क्स्_77] यदपि मतम् --- सत्यपि वाक्यादर्थोपप्लवे तात्पर्यं दुर्लभम्, भूतार्थपरस्य वैयर्थ्यात् । सांशयिकत्वं वा, अतात्पर्यस्यापि दर्शनाज्जपमन्त्रेषु । विधौ तु सत्यर्थज्ञानस्य चोदितत्वान्नार्थो ऽविवक्षितो भवितुमर्हति । तस्माद्विवक्षितार्थत्वाय विधिः प्रार्थ्यः । तद्वार्तमर्थपरता शब्दानां लोकवेदयोः । ‘अविशिष्टस्तु वाक्यार्थऽ; इत्युत्सर्गवती यतः",
       "iast": "[kks_77] yadapi matam --- satyapi vākyādarthopaplave tātparyaṃ durlabham, bhūtārthaparasya vaiyarthyāt / sāṃśayikatvaṃ vā, atātparyasyāpi darśanājjapamantreṣu / vidhau tu satyarthajñānasya coditatvānnārtho 'vivakṣito bhavitumarhati / tasmādvivakṣitārthatvāya vidhiḥ prārthyaḥ /\n\ntadvārtamarthaparatā śabdānāṃ lokavedayoḥ /\n‘aviśiṣṭastu vākyārtha'; ityutsargavatī yataḥ",
       "translation": "Someone may argue: even if a sentence conveys an object, its intended purport is hard to establish, because a statement about an already existent thing would be pointless. Or it might be uncertain, since one sees statements without intended purport in mantras used for recitation. But when there is an injunction, and understanding the truth of the object is enjoined, its meaning cannot be unintended. Therefore an injunction must be assumed to establish that the words have an intended meaning. This is badly argued: the words’ meaningfulness is equally established in ordinary and Vedic usage, since the general rule is that a sentence has an undifferentiated meaning…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "that which"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "मतम्",
+          "en": "is held"
+        },
+        {
+          "sa": "सति",
+          "en": "even when present"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "from a sentence"
+        },
+        {
+          "sa": "अर्थ-उपप्लवे",
+          "en": "an object is conveyed"
+        },
+        {
+          "sa": "तात्पर्यम्",
+          "en": "intended purport"
+        },
+        {
+          "sa": "दुर्लभम्",
+          "en": "is hard to establish"
+        },
+        {
+          "sa": "भूत-अर्थ-परस्य",
+          "en": "because it concerns an already existent object"
+        },
+        {
+          "sa": "वैयर्थ्यात्",
+          "en": "because it would be pointless"
+        },
+        {
+          "sa": "सांशयिकत्वम्",
+          "en": "uncertainty"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अतात्पर्यस्य",
+          "en": "of statements without intended purport"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "दर्शनात्",
+          "en": "because they are seen"
+        },
+        {
+          "sa": "जप-मन्त्रेषु",
+          "en": "in mantras used for recitation"
+        },
+        {
+          "sa": "विधौ",
+          "en": "when there is an injunction"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "सति",
+          "en": "present"
+        },
+        {
+          "sa": "अर्थ-ज्ञानस्य",
+          "en": "knowledge of the meaning"
+        },
+        {
+          "sa": "चोदितत्वात्",
+          "en": "because it is enjoined"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "the meaning"
+        },
+        {
+          "sa": "अविवक्षितः",
+          "en": "unintended"
+        },
+        {
+          "sa": "भवितुम्",
+          "en": "to be"
+        },
+        {
+          "sa": "अर्हति",
+          "en": "can"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "विवक्षित-अर्थत्वाय",
+          "en": "so that the meaning is intended"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "प्रार्थ्यः",
+          "en": "must be assumed"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "वार्तम्",
+          "en": "is ill argued"
+        },
+        {
+          "sa": "अर्थ-परता",
+          "en": "meaningfulness"
+        },
+        {
+          "sa": "शब्दानाम्",
+          "en": "of words"
+        },
+        {
+          "sa": "लोक-वेदयोः",
+          "en": "in ordinary and Vedic usage"
+        },
+        {
+          "sa": "अविशिष्टः",
+          "en": "not restricted"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "वाक्य-अर्थः",
+          "en": "the meaning of a sentence"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उत्सर्ग-वती",
+          "en": "the general rule applies"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.6"
       ]
@@ -1329,7 +1494,180 @@
       "deva": "कः पुनरनुवादः --- अधिगमान्तरसंभिन्नार्थत्वम्, मानान्तरेणाधिगत इति प्रतिपादनम्, आहोस्विद्भूतार्थतामात्रम्? तत्र पूर्वस्मिन् कल्पे भवत्वधिगमान्तरसंभिन्नार्थं सापेक्षम् । यत्तु भूतार्थमपि न मानान्तराधिगत इति बोधयति न तदनुवादकम्, न सापेक्षम्, पूर्वाधिगमसंस्पर्शेन प्रतिपत्तेरभावात् । अथापरः कल्पः ---\n\nसापेक्षतायाः को हेतुः शुद्धा सिद्धार्थता यदि । प्रमाणान्तरसंभेदस्तद्व्यपेक्षणकारणम्",
       "iast": "kaḥ punaranuvādaḥ --- adhigamāntarasaṃbhinnārthatvam, mānāntareṇādhigata iti pratipādanam, āhosvidbhūtārthatāmātram? tatra pūrvasmin kalpe bhavatvadhigamāntarasaṃbhinnārthaṃ sāpekṣam / yattu bhūtārthamapi na mānāntarādhigata iti bodhayati na tadanuvādakam, na sāpekṣam, pūrvādhigamasaṃsparśena pratipatterabhāvāt /\n\nathāparaḥ kalpaḥ ---\n\nsāpekṣatāyāḥ ko hetuḥ śuddhā siddhārthatā yadi /\npramāṇāntarasaṃbhedastadvyapekṣaṇakāraṇam",
       "translation": "What is meant by “restatement”? Is it that the object is blended with another cognition, or that the statement presents it as already known by another means of knowledge, or is it merely that the object is something existent? In the first case, let a statement whose object is blended with another cognition be dependent. But a statement that makes known something existent without its having been known by another means is not a restatement and is not dependent, since its cognition does not involve prior knowledge. Or perhaps the second interpretation is intended:\n\n“If the mere statement of an established fact is independent, what is the reason for dependence? Blending with another means of knowledge would be the cause of dependence.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "अनुवादः",
+          "en": "is restatement"
+        },
+        {
+          "sa": "अधिगम-अन्तर-संभिन्न-अर्थत्वम्",
+          "en": "an object blended with another cognition"
+        },
+        {
+          "sa": "मान-अन्तरेण",
+          "en": "through another means of knowledge"
+        },
+        {
+          "sa": "अधिगतः",
+          "en": "already known"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रतिपादनम्",
+          "en": "a statement"
+        },
+        {
+          "sa": "आहोस्वित्",
+          "en": "or"
+        },
+        {
+          "sa": "भूत-अर्थता-मात्रम्",
+          "en": "the mere fact of being existent"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "पूर्वस्मिन्",
+          "en": "in the first"
+        },
+        {
+          "sa": "कल्पे",
+          "en": "interpretation"
+        },
+        {
+          "sa": "भवतु",
+          "en": "let it be"
+        },
+        {
+          "sa": "अधिगम-अन्तर-संभिन्न-अर्थम्",
+          "en": "an object blended with another cognition"
+        },
+        {
+          "sa": "सापेक्षम्",
+          "en": "dependent"
+        },
+        {
+          "sa": "यत्",
+          "en": "but that which"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "भूत-अर्थम्",
+          "en": "an existent object"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "मान-अन्तर-अधिगतः",
+          "en": "known through another means"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "बोधयति",
+          "en": "makes known"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अनुवादकम्",
+          "en": "a restatement"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सापेक्षम्",
+          "en": "dependent"
+        },
+        {
+          "sa": "पूर्व-अधिगम-संस्पर्शेन",
+          "en": "through contact with prior knowledge"
+        },
+        {
+          "sa": "प्रतिपत्तेः",
+          "en": "of cognition"
+        },
+        {
+          "sa": "अभावात्",
+          "en": "because of absence"
+        },
+        {
+          "sa": "अथ",
+          "en": "or"
+        },
+        {
+          "sa": "अपरः",
+          "en": "the second"
+        },
+        {
+          "sa": "कल्पः",
+          "en": "interpretation"
+        },
+        {
+          "sa": "सापेक्षतायाः",
+          "en": "of dependence"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "is the cause"
+        },
+        {
+          "sa": "शुद्धा",
+          "en": "mere"
+        },
+        {
+          "sa": "सिद्ध-अर्थता",
+          "en": "statement of an established fact"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-संभेदः",
+          "en": "mixture with another means of knowledge"
+        },
+        {
+          "sa": "तत्-व्यपेक्षण-कारणम्",
+          "en": "is the cause of dependence"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.15"
       ]
@@ -1513,7 +1851,160 @@
       "deva": "असंभवत्प्रमाणान्तरकार्यनिष्ठे ऽपि चेद्वाक्ये पुरुषसंबन्धात्सापेक्षत्वम्, पुरुषबुद्धिपूर्वतैव तर्हि प्रमाणान्तरव्यपेक्षाकारणमन्वयव्यतिरेकाभ्याम् । तद्भावे लोके सापेक्षत्वात्, तदभावे वेदे निरपेक्षत्वात् । न विषये प्रमाणान्तरसंभवः, तदभावे ऽपि लोकनियोगे सापेक्षत्वदर्शनात् । अथ मतम् ---\n\nवेदे नियोगनिष्ठत्वं विनियोगप्रधानता । लोके वेदे न व्यपेक्षा तल्लोके च व्यपेक्षणम्",
       "iast": "asaṃbhavatpramāṇāntarakāryaniṣṭhe 'pi cedvākye puruṣasaṃbandhātsāpekṣatvam, puruṣabuddhipūrvataiva tarhi pramāṇāntaravyapekṣākāraṇamanvayavyatirekābhyām / tadbhāve loke sāpekṣatvāt, tadabhāve vede nirapekṣatvāt / na viṣaye pramāṇāntarasaṃbhavaḥ, tadabhāve 'pi lokaniyoge sāpekṣatvadarśanāt /\n\natha matam ---\n\nvede niyoganiṣṭhatvaṃ viniyogapradhānatā /\nloke vede na vyapekṣā talloke ca vyapekṣaṇam",
       "translation": "If a statement is dependent because it is connected with a person, even when it concerns something to be done that cannot be established by another means of knowledge, then human authorship itself must be the cause of dependence on another means. This follows by the method of agreement and difference: ordinary statements are dependent when they are produced by a person, while the Veda is independent because no human thought produced it. It is not that another means of knowledge is possible for the object, since ordinary injunctions are observed to be dependent even where no other means is possible. Someone may object:\n\n“In the Veda, the injunction is primary; in ordinary usage, a direction to apply words is primary. In the Veda, the words do not depend [on a speaker]; in ordinary usage, they do.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "असंभवत्-प्रमाण-अन्तर-कार्य-निष्ठे",
+          "en": "concerning an end not accessible through another means of knowledge"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "वाक्ये",
+          "en": "in a sentence"
+        },
+        {
+          "sa": "पुरुष-संबन्धात्",
+          "en": "because of connection with a human speaker"
+        },
+        {
+          "sa": "सापेक्षत्वम्",
+          "en": "dependence"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        },
+        {
+          "sa": "पुरुष-बुद्धि-पूर्वता",
+          "en": "being preceded by human intention"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-व्यपेक्षा-कारणम्",
+          "en": "is the cause of dependence on another means"
+        },
+        {
+          "sa": "अन्वय-व्यतिरेकाभ्याम्",
+          "en": "through agreement and difference"
+        },
+        {
+          "sa": "तत्-भावे",
+          "en": "when that is present"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary usage"
+        },
+        {
+          "sa": "सापेक्षत्वात्",
+          "en": "because it is dependent"
+        },
+        {
+          "sa": "तत्-अभावे",
+          "en": "when it is absent"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "निरपेक्षत्वात्",
+          "en": "because it is independent"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विषये",
+          "en": "with respect to the object"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-संभवः",
+          "en": "the possibility of another means"
+        },
+        {
+          "sa": "तत्-अभावे",
+          "en": "even in its absence"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "लोक-नियोगे",
+          "en": "in an ordinary injunction"
+        },
+        {
+          "sa": "सापेक्षत्व-दर्शनात्",
+          "en": "because dependence is observed"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "मतम्",
+          "en": "it is held"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "नियोग-निष्ठत्वम्",
+          "en": "the injunction is primary"
+        },
+        {
+          "sa": "विनियोग-प्रधानता",
+          "en": "application of words is primary"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary usage"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "व्यपेक्षा",
+          "en": "dependence"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary usage"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "व्यपेक्षणम्",
+          "en": "dependence"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.22"
       ]
@@ -1646,7 +2137,220 @@
       "deva": "न तावदयं शब्दमात्रस्यानपेक्षितपुरुषसंबन्धासंबन्धस्य शक्तिप्रविभागः --- यदेकत्र नियोगः शब्दार्थः । अन्यत्र विनियोगः, यथा गोशब्दस्य सास्नादिमान्, अश्वशब्दस्य केसरादिमान् । यतो लोकाधिगतसामर्थ्यो वेदे ऽपि प्रतिपादकः । लोके चेद्विनियोगः शब्दार्थः, तत्रैवास्य सामर्थ्यमधिगतम्, न नियोगे । तत्र वेदे ऽपि विनियोग एव प्रमाणार्थः स्यात् । अथ मानान्तराज्ज्ञात्वा प्रयुङ्क्ते पुरुषो वचः । अर्थे तत्तेन तन्निष्ठमितरत्त्वन्यथा स्थितम्",
       "iast": "na tāvadayaṃ śabdamātrasyānapekṣitapuruṣasaṃbandhāsaṃbandhasya śaktipravibhāgaḥ --- yadekatra niyogaḥ śabdārthaḥ / anyatra viniyogaḥ, yathā gośabdasya sāsnādimān, aśvaśabdasya kesarādimān / yato lokādhigatasāmarthyo vede 'pi pratipādakaḥ / loke cedviniyogaḥ śabdārthaḥ, tatraivāsya sāmarthyamadhigatam, na niyoge / tatra vede 'pi viniyoga eva pramāṇārthaḥ syāt /\n\natha mānāntarājjñātvā prayuṅkte puruṣo vacaḥ /\narthe tattena tanniṣṭhamitarattvanyathā sthitam",
       "translation": "The distinction in power cannot belong to words alone, independently of their relation to a speaker: in one case an injunction is the meaning, while in another a direction to apply a word is, as with “cow,” meaning an animal with a dewlap, and “horse,” one with a mane. This is because words derive their power from ordinary usage, and that power also explains Vedic language. If in ordinary usage the meaning is a direction to apply a word, then this is where its power is learned—not in an injunction. The Veda too would then be a valid means of knowledge only as a direction to apply words. But if a person uses a sentence after learning its object by another means of knowledge, then…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "शब्द-मात्रस्य",
+          "en": "of words alone"
+        },
+        {
+          "sa": "अनपेक्षित-पुरुष-संबन्ध-असंबन्धस्य",
+          "en": "independent of any relation to a speaker"
+        },
+        {
+          "sa": "शक्ति-प्रविभागः",
+          "en": "a division of power"
+        },
+        {
+          "sa": "यत्",
+          "en": "such that"
+        },
+        {
+          "sa": "एकत्र",
+          "en": "in one case"
+        },
+        {
+          "sa": "नियोगः",
+          "en": "injunction"
+        },
+        {
+          "sa": "शब्द-अर्थः",
+          "en": "the meaning of the word"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "in another case"
+        },
+        {
+          "sa": "विनियोगः",
+          "en": "application of a word"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "गो-शब्दस्य",
+          "en": "of the word 'cow'"
+        },
+        {
+          "sa": "सास्ना-आदि-मत्",
+          "en": "having a dewlap and the like"
+        },
+        {
+          "sa": "अश्व-शब्दस्य",
+          "en": "of the word 'horse'"
+        },
+        {
+          "sa": "केसर-आदि-मत्",
+          "en": "having a mane and the like"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "लोक-अधिगत-सामर्थ्यः",
+          "en": "whose power is learned through ordinary usage"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "प्रतिपादकः",
+          "en": "conveys meaning"
+        },
+        {
+          "sa": "लोके",
+          "en": "in ordinary usage"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "विनियोगः",
+          "en": "application"
+        },
+        {
+          "sa": "शब्द-अर्थः",
+          "en": "the meaning of a word"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अस्य",
+          "en": "its"
+        },
+        {
+          "sa": "सामर्थ्यम्",
+          "en": "power"
+        },
+        {
+          "sa": "अधिगतम्",
+          "en": "is learned"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "नियोगे",
+          "en": "in an injunction"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "वेदे",
+          "en": "in the Veda"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "विनियोगः",
+          "en": "application"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "प्रमाण-अर्थः",
+          "en": "the means' meaning"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "मान-अन्तरात्",
+          "en": "through another means"
+        },
+        {
+          "sa": "ज्ञात्वा",
+          "en": "having learned"
+        },
+        {
+          "sa": "प्रयुङ्क्ते",
+          "en": "uses"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "a person"
+        },
+        {
+          "sa": "वचः",
+          "en": "a statement"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "about an object"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "तेन",
+          "en": "by that"
+        },
+        {
+          "sa": "तत्-निष्ठम्",
+          "en": "directed toward that"
+        },
+        {
+          "sa": "इतरत्",
+          "en": "the other"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "स्थितम्",
+          "en": "stands"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.24"
       ]
@@ -1866,7 +2570,228 @@
       "deva": "अथ मतम् --- आत्मसंबन्धितयैव प्रमाणेनार्थो ऽवगम्यते । अतो न ‘अस्तिऽइति बुद्धेरुत्तरकालता प्रमाणसंबन्धविषयाया अपि, स्वात्मसंबन्धितयैवार्थस्य प्रतीतेः । एवमप्यस्तीत्येव सर्वत्र स्यात् । न त्रैविध्यम्, सर्वस्य प्रमितौ प्रमाणसंबन्धस्य वर्तमानत्वात् । न चेत्थं प्रमाणान्तरव्यपेक्षत्वमस्त्यर्थनिष्ठे वचसि तत्प्रमाणसंबन्धस्यैवास्त्यर्थत्वात् । अन्यमानावगम्यत्वमथ लिङ्गात्त्रिधेष्यते । स्याल्लिङ्गमपि सापेक्षं तत्सिद्धेस्तत एव चेत्",
       "iast": "atha matam --- ātmasaṃbandhitayaiva pramāṇenārtho 'vagamyate / ato na ‘asti'iti buddheruttarakālatā pramāṇasaṃbandhaviṣayāyā api, svātmasaṃbandhitayaivārthasya pratīteḥ / evamapyastītyeva sarvatra syāt / na traividhyam, sarvasya pramitau pramāṇasaṃbandhasya vartamānatvāt / na cetthaṃ pramāṇāntaravyapekṣatvamastyarthaniṣṭhe vacasi tatpramāṇasaṃbandhasyaivāstyarthatvāt /\n\nanyamānāvagamyatvamatha liṅgāttridheṣyate /\nsyālliṅgamapi sāpekṣaṃ tatsiddhestata eva cet",
       "translation": "Someone may argue: an object is apprehended by a means of knowledge precisely in relation to the means itself. Therefore there is no delay in the cognition “it exists,” even though it concerns relation to a means of knowledge, because the object is apprehended only through its relation to that means. Even so, everywhere one would have to say only “it exists”; there would be no threefold division, since the relation to a means of knowledge is present whenever anything is apprehended. And if this relation to the means of knowledge is what “exists” means, then a sentence about existence would not depend on another means: that relation itself would be existence. Or perhaps what is known by another means is distinguished in three times through inference. But the inferential sign too might be dependent, if its existence is established through that same means…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "मतम्",
+          "en": "it is held"
+        },
+        {
+          "sa": "आत्म-संबन्धितया",
+          "en": "in relation to the means of knowledge itself"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "प्रमाणेन",
+          "en": "through a means of knowledge"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "an object"
+        },
+        {
+          "sa": "अवगम्यते",
+          "en": "is understood"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "it exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of cognition"
+        },
+        {
+          "sa": "उत्तर-कालता",
+          "en": "later occurrence"
+        },
+        {
+          "sa": "प्रमाण-संबन्ध-विषयायाः",
+          "en": "concerning relation to a means of knowledge"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "स्व-आत्म-संबन्धितया",
+          "en": "through relation to itself"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "अर्थस्य",
+          "en": "of the object"
+        },
+        {
+          "sa": "प्रतीतेः",
+          "en": "because it is apprehended"
+        },
+        {
+          "sa": "एवम्",
+          "en": "even so"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "it exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "सर्वत्र",
+          "en": "everywhere"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "त्रैविध्यम्",
+          "en": "a threefold division"
+        },
+        {
+          "sa": "सर्वस्य",
+          "en": "of everything"
+        },
+        {
+          "sa": "प्रमितौ",
+          "en": "when it is known"
+        },
+        {
+          "sa": "प्रमाण-संबन्धस्य",
+          "en": "the relation to a means of knowledge"
+        },
+        {
+          "sa": "वर्तमानत्वात्",
+          "en": "because it is present"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-व्यपेक्षत्वम्",
+          "en": "dependence on another means of knowledge"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "अर्थ-निष्ठे",
+          "en": "concerning an object"
+        },
+        {
+          "sa": "वचसि",
+          "en": "in a statement"
+        },
+        {
+          "sa": "तत्-प्रमाण-संबन्धस्य",
+          "en": "because that relation to a means"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "अस्ति-अर्थत्वात्",
+          "en": "is the meaning of 'exists'"
+        },
+        {
+          "sa": "अन्य-मान-अवगम्यत्वम्",
+          "en": "being known through another means"
+        },
+        {
+          "sa": "अथ",
+          "en": "or"
+        },
+        {
+          "sa": "लिङ्गात्",
+          "en": "through an inferential sign"
+        },
+        {
+          "sa": "त्रिधा",
+          "en": "in three times"
+        },
+        {
+          "sa": "इष्यते",
+          "en": "is accepted"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "लिङ्गम्",
+          "en": "an inferential sign"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "सापेक्षम्",
+          "en": "dependent"
+        },
+        {
+          "sa": "तत्-सिद्धेः",
+          "en": "because it is established"
+        },
+        {
+          "sa": "ततः",
+          "en": "through that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.33"
       ]
@@ -1922,7 +2847,172 @@
       "deva": "मते यदि ततः प्राप्तमसत्त्वं स्मृतिगोचरे । [क्क्स्_88] न स्मर्यमाणस्य वर्तमानप्रमाणसंबन्धः । ननु स्मर्यमाणे विनाशसंभवान्नैव ‘अस्तिऽ; इति व्यवहारः । सत्यम् । ‘नास्तिऽ; इत्यपि नास्ति । यदि वर्तमानप्रमाणयोगः सत्ता तद्विपर्ययो ऽसत्ता, ‘नास्तिऽ; इत्येव स्यात् न च ‘अस्तिऽ; इति । तस्मादन्ये सदसत्त्वे । प्रमाणयोगमात्रं चेत्सत्तासत्ता विपर्ययः",
       "iast": "mate yadi tataḥ prāptamasattvaṃ smṛtigocare /\n[kks_88] na smaryamāṇasya vartamānapramāṇasaṃbandhaḥ / nanu smaryamāṇe vināśasaṃbhavānnaiva ‘asti'; iti vyavahāraḥ / satyam / ‘nāsti'; ityapi nāsti / yadi vartamānapramāṇayogaḥ sattā tadviparyayo 'sattā, ‘nāsti'; ityeva syāt na ca ‘asti'; iti / tasmādanye sadasattve /\npramāṇayogamātraṃ cetsattāsattā viparyayaḥ",
       "translation": "If, according to this view, a remembered object must be nonexistent, then it is not connected with a present means of knowledge. One may object that since what is remembered may have perished, people do not say “it exists.” True, but neither do they say “it does not exist.” If existence is connection with a means of knowledge operating in the present, and nonexistence its opposite, one would only say “it does not exist,” not “it exists.” Therefore existence and nonexistence must be something else. If they are simply connection with a means of knowledge and its opposite, then…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "मते",
+          "en": "according to the view"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "प्राप्तम्",
+          "en": "follows"
+        },
+        {
+          "sa": "असत्त्वम्",
+          "en": "nonexistence"
+        },
+        {
+          "sa": "स्मृति-गोचरे",
+          "en": "in the domain of memory"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्मर्यमाणस्य",
+          "en": "of what is remembered"
+        },
+        {
+          "sa": "वर्तमान-प्रमाण-संबन्धः",
+          "en": "connection with a present means of knowledge"
+        },
+        {
+          "sa": "ननु",
+          "en": "one may object"
+        },
+        {
+          "sa": "स्मर्यमाणे",
+          "en": "in what is remembered"
+        },
+        {
+          "sa": "विनाश-संभवात्",
+          "en": "because destruction is possible"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "it exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "व्यवहारः",
+          "en": "usage"
+        },
+        {
+          "sa": "सत्यम्",
+          "en": "true"
+        },
+        {
+          "sa": "नास्ति",
+          "en": "it does not exist"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "नास्ति",
+          "en": "there is no such usage"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "वर्तमान-प्रमाण-योगः",
+          "en": "connection with a present means of knowledge"
+        },
+        {
+          "sa": "सत्ता",
+          "en": "existence"
+        },
+        {
+          "sa": "तत्-विपर्ययः",
+          "en": "its opposite"
+        },
+        {
+          "sa": "असत्ता",
+          "en": "nonexistence"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "it exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अन्ये",
+          "en": "other"
+        },
+        {
+          "sa": "सत्-असत्त्वे",
+          "en": "existence and nonexistence"
+        },
+        {
+          "sa": "प्रमाण-योग-मात्रम्",
+          "en": "mere connection with a means of knowledge"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "सत्ता-असत्ता",
+          "en": "existence and nonexistence"
+        },
+        {
+          "sa": "विपर्ययः",
+          "en": "and their opposites"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.37"
       ]
@@ -2037,7 +3127,232 @@
       "deva": "अवश्यं खल्वनेन सदसद्व्यवहारविभागमिच्छता असत्कथञ्चिद्व्यवस्थाप्यम्, अन्यथा व्यवहारसंकरात् । तत्र यदि प्रमाणस्याविषयः, यदि [क्क्स्_92] सर्वशक्तिविरहो वासद्बुद्धेर्विषयः । सर्वथा तथा प्रमेयम् । अपरिच्छिन्नं हि तथा प्रमाणेन किमिति तद्विधम्, न पुनरन्यथा स्यात्? न चेत्तस्य तथाभावे ऽतथाभावे वा प्रमाणव्यापारः किंनिमित्त एकपक्षानुरागः?\n\nअपि च ---\n\nअमित्वा कण्टकाभावं चरणं न्यस्यते कथम् । नान्यग्रहात्तस्य भावे पुरस्ताच्च प्रसङ्गतः",
       "iast": "avaśyaṃ khalvanena sadasadvyavahāravibhāgamicchatā asatkathañcidvyavasthāpyam, anyathā vyavahārasaṃkarāt / tatra yadi pramāṇasyāviṣayaḥ, yadi [kks_92] sarvaśaktiviraho vāsadbuddherviṣayaḥ / sarvathā tathā prameyam / aparicchinnaṃ hi tathā pramāṇena kimiti tadvidham, na punaranyathā syāt? na cettasya tathābhāve 'tathābhāve vā pramāṇavyāpāraḥ kiṃnimitta ekapakṣānurāgaḥ?\n\napi ca ---\n\namitvā kaṇṭakābhāvaṃ caraṇaṃ nyasyate katham /\nnānyagrahāttasya bhāve purastācca prasaṅgataḥ",
       "translation": "Anyone who wants to distinguish ordinary usage of existent from nonexistent must somehow establish what nonexistent means; otherwise usage would be confused. If nonexistent is outside the scope of a means of knowledge, or if it is the object of a cognition that lacks every power of knowing, in either case it is an object of knowledge. If it were not determined by a means of knowledge in this way, how would it be so rather than otherwise? And if no means of knowledge operates to determine whether it is or is not that way, what basis is there for favoring one side?\n\nMoreover—\n\n“How can one place a foot without knowing that there are no thorns? If this absence were known from perceiving something else, it would follow beforehand as well.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अवश्यम्",
+          "en": "necessarily"
+        },
+        {
+          "sa": "खलु",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनेन",
+          "en": "by one who"
+        },
+        {
+          "sa": "सत्-असत्-व्यवहार-विभागम्",
+          "en": "the distinction in usage of existent and nonexistent"
+        },
+        {
+          "sa": "इच्छता",
+          "en": "wishes"
+        },
+        {
+          "sa": "असत्",
+          "en": "nonexistence"
+        },
+        {
+          "sa": "कथञ्चित्",
+          "en": "somehow"
+        },
+        {
+          "sa": "व्यवस्थाप्यम्",
+          "en": "must be established"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "व्यवहार-संकरात्",
+          "en": "because usage would be confused"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "प्रमाणस्य",
+          "en": "of a means of knowledge"
+        },
+        {
+          "sa": "अविषयः",
+          "en": "outside its scope"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "सर्व-शक्ति-विरहः",
+          "en": "absence of all knowing power"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "असत्-बुद्धेः",
+          "en": "of cognition of nonexistence"
+        },
+        {
+          "sa": "विषयः",
+          "en": "the object"
+        },
+        {
+          "sa": "सर्वथा",
+          "en": "in either case"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "प्रमेयम्",
+          "en": "an object of knowledge"
+        },
+        {
+          "sa": "अपरिच्छिन्नम्",
+          "en": "undetermined"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "तथा",
+          "en": "in that way"
+        },
+        {
+          "sa": "प्रमाणेन",
+          "en": "by a means of knowledge"
+        },
+        {
+          "sa": "किम्",
+          "en": "how"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्-विधम्",
+          "en": "of that kind"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "तथा-भावे",
+          "en": "when it is so"
+        },
+        {
+          "sa": "अतथा-भावे",
+          "en": "or when it is not so"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "प्रमाण-व्यापारः",
+          "en": "the operation of a means of knowledge"
+        },
+        {
+          "sa": "किम्-निमित्तः",
+          "en": "for what reason"
+        },
+        {
+          "sa": "एक-पक्ष-अनुरागः",
+          "en": "is one side favored"
+        },
+        {
+          "sa": "अपि",
+          "en": "moreover"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अमित्वा",
+          "en": "without knowing"
+        },
+        {
+          "sa": "कण्टक-अभावम्",
+          "en": "the absence of thorns"
+        },
+        {
+          "sa": "चरणम्",
+          "en": "a foot"
+        },
+        {
+          "sa": "न्यस्यते",
+          "en": "is placed"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अन्य-ग्रहात्",
+          "en": "through grasping something else"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "भावे",
+          "en": "when it exists"
+        },
+        {
+          "sa": "पुरस्तात्",
+          "en": "beforehand"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रसङ्गतः",
+          "en": "by implication"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.42"
       ]
@@ -2065,7 +3380,184 @@
       "deva": "असद्बोधे ऽनन्यहेतुभानेन ह्युपयुज्यते । अपरिच्छेदाच्चेत्प्रवृत्तिर्न प्रमाणविषयत्वस्योपयोगः, इतरत्राप्यपरिच्छेदस्य तुल्यत्वात्ततश्च प्रवृत्तेः । यस्य स्वभावः प्रमेयः, तत्परिच्छेदात्प्रवृत्तिः, [क्क्स्_93] तस्यानन्यनिमित्तत्वेनोपयोगवत्प्रमाणविषयत्वम् । नायमपरिच्छेदः सत्येवार्थे हेतुवैकल्यनिमित्तः, समग्रत्वात्तद्धेतूनाम् । तस्मादर्थाभावादिति । अथ यत्र प्रवृत्तिः स्यात्तत्र केवलसंविदः",
       "iast": "asadbodhe 'nanyahetubhānena hyupayujyate /\naparicchedāccetpravṛttirna pramāṇaviṣayatvasyopayogaḥ, itaratrāpyaparicchedasya tulyatvāttataśca pravṛtteḥ / yasya svabhāvaḥ prameyaḥ, tatparicchedātpravṛttiḥ, [kks_93] tasyānanyanimittatvenopayogavatpramāṇaviṣayatvam / nāyamaparicchedaḥ satyevārthe hetuvaikalyanimittaḥ, samagratvāttaddhetūnām / tasmādarthābhāvāditi /\natha yatra pravṛttiḥ syāttatra kevalasaṃvidaḥ",
       "translation": "It is useful to explain cognition of the nonexistent by saying that it appears without any other cause. If action arises merely from non-apprehension, then being an object of a means of knowledge serves no purpose, since the same non-apprehension is present in other cases too, and action would follow there as well. Action arises from apprehending the nature of the object, and the fact that it is within the scope of a means of knowledge is useful because it is the object’s own character and has no other cause. Non-apprehension is not due to a defect in the conditions for knowing when the object really exists, since all the conditions are complete. Therefore, it is due to the object’s absence. But if there is action in the case of what is absent, then cognition alone…",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "असत्-बोधे",
+          "en": "in cognition of what is nonexistent"
+        },
+        {
+          "sa": "अनन्य-हेतु-भानेन",
+          "en": "by appearing without another cause"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "उपयुज्यते",
+          "en": "is useful"
+        },
+        {
+          "sa": "अपरिच्छेदात्",
+          "en": "because of non-apprehension"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "action"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रमाण-विषयत्वस्य",
+          "en": "of being the object of a means of knowledge"
+        },
+        {
+          "sa": "उपयोगः",
+          "en": "the usefulness"
+        },
+        {
+          "sa": "इतरत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अपरिच्छेदस्य",
+          "en": "of non-apprehension"
+        },
+        {
+          "sa": "तुल्यत्वात्",
+          "en": "because it is the same"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रवृत्तेः",
+          "en": "action"
+        },
+        {
+          "sa": "यस्य",
+          "en": "whose"
+        },
+        {
+          "sa": "स्वभावः",
+          "en": "nature"
+        },
+        {
+          "sa": "प्रमेयः",
+          "en": "is knowable"
+        },
+        {
+          "sa": "तत्-परिच्छेदात्",
+          "en": "from its apprehension"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "action"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "अनन्य-निमित्तत्वेन",
+          "en": "because it has no other cause"
+        },
+        {
+          "sa": "उपयोग-वत्",
+          "en": "useful"
+        },
+        {
+          "sa": "प्रमाण-विषयत्वम्",
+          "en": "being within the scope of a means of knowledge"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अपरिच्छेदः",
+          "en": "non-apprehension"
+        },
+        {
+          "sa": "सति",
+          "en": "when present"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "in an object"
+        },
+        {
+          "sa": "हेतु-वैकल्य-निमित्तः",
+          "en": "caused by defective conditions"
+        },
+        {
+          "sa": "समग्रत्वात्",
+          "en": "because of completeness"
+        },
+        {
+          "sa": "तत्-हेतूनाम्",
+          "en": "of its causes"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अर्थ-अभावात्",
+          "en": "from the absence of the object"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अथ",
+          "en": "but"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "प्रवृत्तिः",
+          "en": "action"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would occur"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "केवल-संविदः",
+          "en": "of consciousness alone"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.44"
       ]
@@ -2178,7 +3670,188 @@
       "deva": "अभावे च व्यवहृतेरदृष्टौ ध्वान्तदृष्टिवत् । नैव स्तां ‘नास्तिऽ; इति बुद्धिव्यवहारौ । कथमिमौ सर्वजनानां प्रतीतावपह्नूयेते? उच्यते --- भ्रमो ऽयं सद्बुद्ध्यभावे तद्विपर्ययपरिच्छेद इति । तथा सद्व्यवहाराभावे तद्विपर्ययव्यवहारभ्रमः यथालोकदर्शनाभावे ‘तमः पश्यामिऽइति विभ्रमः । न हि तमो नाम किञ्चिद्दृश्यमस्ति । नैतत्सारम् ---\nइत्थं भवेत्सुषुप्तादौ त्रैलोक्याभावदृग्भ्रमः",
       "iast": "abhāve ca vyavahṛteradṛṣṭau dhvāntadṛṣṭivat /\nnaiva stāṃ ‘nāsti'; iti buddhivyavahārau / kathamimau sarvajanānāṃ pratītāvapahnūyete? ucyate --- bhramo 'yaṃ sadbuddhyabhāve tadviparyayapariccheda iti / tathā sadvyavahārābhāve tadviparyayavyavahārabhramaḥ yathālokadarśanābhāve ‘tamaḥ paśyāmi'iti vibhramaḥ / na hi tamo nāma kiñciddṛśyamasti /\n\nnaitatsāram ---\nitthaṃ bhavetsuṣuptādau trailokyābhāvadṛgbhramaḥ",
       "translation": "If there were no apprehension of absence, the cognition and usage “it does not exist” would not arise, just as there is no perception of darkness when it is not seen. How can one deny the cognition and usage that everyone experiences? We reply: this is an error in which, when cognition of something existent is absent, one mistakenly apprehends its opposite. Likewise, when ordinary usage of something existent is absent, one mistakenly thinks there is usage of its opposite, just as when light is absent, one has the illusion “I see darkness.” For there is no visible thing called darkness.\n\nThis is not sound:\n\n“Then in deep sleep and the like there would be the mistaken perception that the three worlds do not exist.”",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "अभावे",
+          "en": "in the absence"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "व्यवहृतेः",
+          "en": "of usage"
+        },
+        {
+          "sa": "अदृष्टौ",
+          "en": "when it is not seen"
+        },
+        {
+          "sa": "ध्वान्त-दृष्टि-वत्",
+          "en": "as with seeing darkness"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्ताम्",
+          "en": "would arise"
+        },
+        {
+          "sa": "नास्ति",
+          "en": "it does not exist"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "बुद्धि-व्यवहारौ",
+          "en": "cognition and usage"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "इमौ",
+          "en": "these two"
+        },
+        {
+          "sa": "सर्व-जनानाम्",
+          "en": "of all people"
+        },
+        {
+          "sa": "प्रतीतौ",
+          "en": "in experience"
+        },
+        {
+          "sa": "अपह्नूयेते",
+          "en": "are denied"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is replied"
+        },
+        {
+          "sa": "भ्रमः",
+          "en": "an error"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "सत्-बुद्धि-अभावे",
+          "en": "when cognition of what exists is absent"
+        },
+        {
+          "sa": "तत्-विपर्यय-परिच्छेदः",
+          "en": "apprehension of its opposite"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "सत्-व्यवहार-अभावे",
+          "en": "when ordinary usage of what exists is absent"
+        },
+        {
+          "sa": "तत्-विपर्यय-व्यवहार-भ्रमः",
+          "en": "error of using its opposite"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "आलोक-दर्शन-अभावे",
+          "en": "when seeing light is absent"
+        },
+        {
+          "sa": "तमः",
+          "en": "darkness"
+        },
+        {
+          "sa": "पश्यामि",
+          "en": "I see"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विभ्रमः",
+          "en": "an illusion"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "तमः",
+          "en": "darkness"
+        },
+        {
+          "sa": "नाम",
+          "en": "by name"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "दृश्यम्",
+          "en": "visible"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "सारम्",
+          "en": "sound"
+        },
+        {
+          "sa": "इत्थम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "भवेत्",
+          "en": "would be"
+        },
+        {
+          "sa": "सुषुप्त-आदौ",
+          "en": "in deep sleep and the like"
+        },
+        {
+          "sa": "त्रैलोक्य-अभाव-दृक्-भ्रमः",
+          "en": "the illusion of seeing the three worlds as absent"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.48"
       ]
@@ -4059,10 +5732,187 @@
       "sectionTitle": "Kāṇḍa 2 · Niyoga — whether Vedānta knowledge depends on injunction",
       "number": "2.86",
       "label": "Kāṇḍa 2 · 86",
-      "deva": "आक्षेप्ता निरपेक्षश्च कथ्यते ऽन्यप्रमां प्रति । अथोच्यते --- न ब्रूमो विधिरन्यथा वृथा स्यादिति तदधीनः संसर्गः । किं तु प्रमाणान्त्मनैव स स्वशब्देन प्रतिपाद्यते । तथा च प्रमाणत्वात्प्रमेयस्याक्षेप्तापूर्वस्य, प्रमाणान्तरानपेक्षश्च । न ह्यसौ शब्दवत्संबन्धापेक्षत्वात्पूर्वसिद्धिमपेक्षत इति । तथाप्यसिद्धे प्रागुक्तौ दोषौ सिद्धे ऽनुवादिता",
-      "iast": "ākṣeptā nirapekṣaśca kathyate 'nyapramāṃ prati /\nathocyate --- na brūmo vidhiranyathā vṛthā syāditi tadadhīnaḥ saṃsargaḥ / kiṃ tu pramāṇāntmanaiva sa svaśabdena pratipādyate / tathā ca pramāṇatvātprameyasyākṣeptāpūrvasya, pramāṇāntarānapekṣaśca / na hyasau śabdavatsaṃbandhāpekṣatvātpūrvasiddhimapekṣata iti /\ntathāpyasiddhe prāguktau doṣau siddhe 'nuvāditā",
+      "deva": "आक्षेप्ता निरपेक्षश्च कथ्यते ऽन्यप्रमां प्रति । अथोच्यते --- न ब्रूमो विधिरन्यथा वृथा स्यादिति तदधीनः संसर्गः । किं तु प्रमाणात्मनैव स स्वशब्देन प्रतिपाद्यते । तथा च प्रमाणत्वात्प्रमेयस्याक्षेप्तापूर्वस्य, प्रमाणान्तरानपेक्षश्च । न ह्यसौ शब्दवत्संबन्धापेक्षत्वात्पूर्वसिद्धिमपेक्षत इति । तथाप्यसिद्धे प्रागुक्तौ दोषौ सिद्धे ऽनुवादिता",
+      "iast": "ākṣeptā nirapekṣaśca kathyate 'nyapramāṃ prati /\nathocyate --- na brūmo vidhiranyathā vṛthā syāditi tadadhīnaḥ saṃsargaḥ / kiṃ tu pramāṇātmanai sa svaśabdena pratipādyate / tathā ca pramāṇatvātprameyasyākṣeptāpūrvasya, pramāṇāntarānapekṣaśca / na hyasau śabdavatsaṃbandhāpekṣatvātpūrvasiddhimapekṣata iti /\ntathāpyasiddhe prāguktau doṣau siddhe 'nuvāditā",
       "translation": "[It] is said to prompt the object of knowledge and to be independent of another means of knowledge. But perhaps the opponent says: we do not argue that an injunction would otherwise be pointless and that therefore the relation depends on it. Rather, it is taught in its own words as a means of knowledge itself. Thus, since it is a means of knowledge, it prompts its novel object and does not depend on another means. For unlike a word, it does not depend on knowing a word–meaning relation in advance. Even so, if its object has not been established, the two faults already stated follow; if it has been established, the statement is merely a restatement.",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "आक्षेप्ता",
+          "en": "one who prompts or elicits"
+        },
+        {
+          "sa": "निरपेक्षः",
+          "en": "independent"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कथ्यते",
+          "en": "is said"
+        },
+        {
+          "sa": "अन्य-प्रमाम्",
+          "en": "another cognition"
+        },
+        {
+          "sa": "प्रति",
+          "en": "with respect to"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is said"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ब्रूमः",
+          "en": "we say"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "वृथा",
+          "en": "pointless"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्-अधीनः",
+          "en": "dependent on it"
+        },
+        {
+          "sa": "संसर्गः",
+          "en": "the connection"
+        },
+        {
+          "sa": "किं",
+          "en": "rather"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "प्रमाण-आत्मना",
+          "en": "as a means of knowledge itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सः",
+          "en": "it"
+        },
+        {
+          "sa": "स्व-शब्देन",
+          "en": "in its own words"
+        },
+        {
+          "sa": "प्रतिपाद्यते",
+          "en": "is taught"
+        },
+        {
+          "sa": "तथा",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रमाणत्वात्",
+          "en": "because it is a means of knowledge"
+        },
+        {
+          "sa": "प्रमेयस्य",
+          "en": "of the object to be known"
+        },
+        {
+          "sa": "आक्षेप्ता",
+          "en": "it prompts"
+        },
+        {
+          "sa": "अपूर्वस्य",
+          "en": "the novel object"
+        },
+        {
+          "sa": "प्रमाण-अन्तर-अनपेक्षः",
+          "en": "independent of another means of knowledge"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "असौ",
+          "en": "it"
+        },
+        {
+          "sa": "शब्द-वत्",
+          "en": "like a word"
+        },
+        {
+          "sa": "संबन्ध-अपेक्षत्वात्",
+          "en": "because it depends on a relation"
+        },
+        {
+          "sa": "पूर्व-सिद्धिम्",
+          "en": "prior establishment"
+        },
+        {
+          "sa": "अपेक्षते",
+          "en": "requires"
+        },
+        {
+          "sa": "तथापि",
+          "en": "even so"
+        },
+        {
+          "sa": "असिद्धे",
+          "en": "if unestablished"
+        },
+        {
+          "sa": "प्राक्-उक्तौ",
+          "en": "previously stated"
+        },
+        {
+          "sa": "दोषौ",
+          "en": "the two faults"
+        },
+        {
+          "sa": "सिद्धे",
+          "en": "if established"
+        },
+        {
+          "sa": "अनुवादिता",
+          "en": "restatement"
+        }
+      ],
       "sourceNumbers": [
         "mbs_2.86"
       ]
@@ -9423,18 +11273,27 @@
       "1.1",
       "1.19",
       "1.34",
+      "2.6",
       "2.7",
       "2.9",
       "2.11",
       "2.12",
       "2.14",
+      "2.15",
       "2.18",
       "2.20",
+      "2.22",
       "2.23",
+      "2.24",
       "2.28",
       "2.31",
+      "2.33",
+      "2.37",
       "2.38",
+      "2.42",
+      "2.44",
       "2.45",
+      "2.48",
       "2.49",
       "2.50",
       "2.52",
@@ -9459,6 +11318,7 @@
       "2.82",
       "2.83",
       "2.84",
+      "2.86",
       "2.88",
       "2.89",
       "2.90",
@@ -9542,7 +11402,7 @@
       "4.10",
       "4.11"
     ],
-    "note": "Separate Devanāgarī word glosses are complete for 121 of 231 source-marked passages; 110 still need glosses."
+    "note": "Separate Devanāgarī word glosses are complete for 131 of 231 source-marked passages; 100 still need glosses."
   },
-  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 121 passages listed in wordGlossCoverage."
+  "translationCredit": "S. Kuppuswami Sastri (English translation, 1937); original token-by-token glosses for the 131 passages listed in wordGlossCoverage."
 }
