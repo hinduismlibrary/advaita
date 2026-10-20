@@ -43,18 +43,18 @@
     "proseOrder": "Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā; not used as a substitute for word-for-word gloss.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (2020); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā.",
-    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75."
+    "changes": "Arranged as an on-site reader in five parts. Verse translations that span adjacent Sanskrit verse markers are displayed with range labels. Sanskrit prose order is not presented as a word-for-word lexical gloss. Opening verses 1–27 have original simple literal readings and token-by-token glosses; the existing translation is retained in separate fields. Explicit IAST transliterations are stored for all 986 reader units. Literal English translations and Devanāgarī word glosses cover verses 1.28–1.45, including the combined 1.44–1.45 card; adopted edition translations are retained in separate fields. Restored the omitted opening pāda in verse 1.42; normalized the source typo in 1.39 to अस्तीति. In 1.40, preserved the verse reading मोहान् and noted the prose-order variant मोहात्. Normalized कोशक्रिमिस् to कोशकृमिः in 1.44. Literal English translations and Devanāgarī word glosses now cover verses 1.46–1.55. Literal English translations and Devanāgarī word glosses now cover verses 1.56–1.65. Literal English translations and Devanāgarī word glosses now cover verses 1.66–1.75. Literal English translations and Devanāgarī word glosses now cover verses 1.76–1.85. Restored the omitted first pāda नित्याहितेन वित्तेन in verse 1.81 from the cited edition."
   },
-  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–75.",
+  "translationCredit": "Swami Tattwananda, as adopted by A.K. Aruna (2020), for edition translations; editorial literal translations and Devanāgarī word-for-word glosses for verses 1–85.",
   "wordGlossComplete": false,
   "wordGlossCoverage": {
     "completeUnits": [],
     "completeVerseRange": {
       "chapter": 1,
       "from": 1,
-      "to": 75
+      "to": 85
     },
-    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–75 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
+    "note": "Separate Devanāgarī word glosses and literal English translations cover verses 1–85 of Adhyāya 1 (verses 17–18 and 44–45 share reader cards). Remaining verses and prose passages still need glosses."
   },
   "units": [
     {
@@ -5421,13 +5421,51 @@
       "number": "76",
       "label": "Verse 76",
       "deva": "धनेन मद-वृद्धिः स्यान् मदेन स्मृति-नाशनम्।\nस्मृति-नाशाद् बुद्धि-नाशो बुद्धि-नाशात् प्रणश्यति॥",
-      "translation": "With the growth of wealth pride increases; and the proud man forgets all that he has learnt. When a man forgets what he has learnt, his intellect decays; and finally the man himself perishes.",
-      "gloss": [],
+      "translation": "Wealth increases pride; pride destroys memory. From the loss of memory comes loss of discernment, and from the loss of discernment a person perishes.",
+      "gloss": [
+        {
+          "sa": "धनेन",
+          "en": "by wealth"
+        },
+        {
+          "sa": "मद-वृद्धिः",
+          "en": "increase of pride"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "occurs"
+        },
+        {
+          "sa": "मदेन",
+          "en": "from pride"
+        },
+        {
+          "sa": "स्मृति-नाशनम्",
+          "en": "destruction of memory"
+        },
+        {
+          "sa": "स्मृति-नाशात्",
+          "en": "from loss of memory"
+        },
+        {
+          "sa": "बुद्धि-नाशः",
+          "en": "destruction of discernment"
+        },
+        {
+          "sa": "बुद्धि-नाशात्",
+          "en": "from loss of discernment"
+        },
+        {
+          "sa": "प्रणश्यति",
+          "en": "one perishes"
+        }
+      ],
       "sourceNumbers": [
         76
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "dhanena mada-vṛddhiḥ syān madena smṛti-nāśanam|\nsmṛti-nāśād buddhi-nāśo buddhi-nāśāt praṇaśyati||"
+      "iast": "dhanena mada-vṛddhiḥ syān madena smṛti-nāśanam|\nsmṛti-nāśād buddhi-nāśo buddhi-nāśāt praṇaśyati||",
+      "editionTranslation": "With the growth of wealth pride increases; and the proud man forgets all that he has learnt. When a man forgets what he has learnt, his intellect decays; and finally the man himself perishes."
     },
     {
       "id": "svsss-1-0077",
@@ -5435,13 +5473,99 @@
       "number": "77",
       "label": "Verse 77",
       "deva": "सुखयति धनम् एवेत्यन्तर्-आशा-पिशाच्या\nदृढतरम् उपगूढो मूढ-लोको जडात्मा।\nनिवसति तद्-उपान्ते सन्ततं प्रेक्षमाणो\nव्रजति तदपि पश्चात् प्राणम् एतस्य हृत्वा॥",
-      "translation": "As for the deluded man who is lured by the demon of greed from within he firmly persuades himself that wealth is ever a source of happiness. Lapped in wealth, he falls into deeper delusion. Finally after it is all spent, wealth departs, taking with it the man’s life.",
-      "gloss": [],
+      "translation": "Believing “wealth alone makes me happy,” the dull-minded man is firmly embraced by the inner demon of hope and stays beside it, watching it constantly. Later wealth too departs, taking his life with it.",
+      "gloss": [
+        {
+          "sa": "सुखयति",
+          "en": "makes happy"
+        },
+        {
+          "sa": "धनम्",
+          "en": "wealth"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अन्तर्-आशा-पिशाच्या",
+          "en": "by the inner demon of hope"
+        },
+        {
+          "sa": "दृढतरम्",
+          "en": "firmly"
+        },
+        {
+          "sa": "उपगूढः",
+          "en": "embraced"
+        },
+        {
+          "sa": "मूढ-लोकः",
+          "en": "the deluded person"
+        },
+        {
+          "sa": "जड-आत्मा",
+          "en": "dull-minded"
+        },
+        {
+          "sa": "निवसति",
+          "en": "dwells"
+        },
+        {
+          "sa": "तद्-उपान्ते",
+          "en": "near it"
+        },
+        {
+          "sa": "सन्ततम्",
+          "en": "continuously"
+        },
+        {
+          "sa": "प्रेक्षमाणः",
+          "en": "watching"
+        },
+        {
+          "sa": "व्रजति",
+          "en": "goes away"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पश्चात्",
+          "en": "afterward"
+        },
+        {
+          "sa": "प्राणम्",
+          "en": "the life"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "of this person"
+        },
+        {
+          "sa": "हृत्वा",
+          "en": "having taken"
+        },
+        {
+          "sa": "व्रजति",
+          "en": "departs"
+        }
+      ],
       "sourceNumbers": [
         77
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sukhayati dhanam evetyantar-āśā-piśācyā\ndṛḍhataram upagūḍho mūḍha-loko jaḍātmā|\nnivasati tad-upānte santataṃ prekṣamāṇo\nvrajati tadapi paścāt prāṇam etasya hṛtvā||"
+      "iast": "sukhayati dhanam evetyantar-āśā-piśācyā\ndṛḍhataram upagūḍho mūḍha-loko jaḍātmā|\nnivasati tad-upānte santataṃ prekṣamāṇo\nvrajati tadapi paścāt prāṇam etasya hṛtvā||",
+      "editionTranslation": "As for the deluded man who is lured by the demon of greed from within he firmly persuades himself that wealth is ever a source of happiness. Lapped in wealth, he falls into deeper delusion. Finally after it is all spent, wealth departs, taking with it the man’s life."
     },
     {
       "id": "svsss-1-0078",
@@ -5449,13 +5573,131 @@
       "number": "78",
       "label": "Verse 78",
       "deva": "सम्पन्नोऽन्धवद् एव किञ्चिद् अपरं नो वीक्षते चक्षुषा\nसद्भिर् वर्जित-मार्ग एव चरति प्रोत्सारितो बालिशैः।\nतस्मिन्न् एव मुहुः स्खलन् प्रतिपदं गत्वान्ध-कूपे पतति\nअस्यान्धत्व-निवर्तकौषधम् इदं दारिद्र्यम् एवाञ्जनम्॥",
-      "translation": "Wealth tends to narrow one’s vision. As he is surrounded by flatterers, the rich man traverses a path which the wise have abandoned; and at every step he stumbles into hidden pitfalls. Where the vision becomes blurred, there is no remedy other than poverty.",
-      "gloss": [],
+      "translation": "The wealthy person sees nothing else, like a blind man, and, urged on by fools, follows a road the wise have abandoned. Stumbling at every step, he falls into a blind pit. Poverty alone is the eye-salve that cures this blindness.",
+      "gloss": [
+        {
+          "sa": "सम्पन्नः",
+          "en": "the prosperous person"
+        },
+        {
+          "sa": "अन्धवत्",
+          "en": "like a blind person"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "किञ्चित्",
+          "en": "anything"
+        },
+        {
+          "sa": "अपरम्",
+          "en": "else"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उ",
+          "en": "at all"
+        },
+        {
+          "sa": "वीक्षते",
+          "en": "sees"
+        },
+        {
+          "sa": "चक्षुषा",
+          "en": "with the eyes"
+        },
+        {
+          "sa": "सद्भिः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "वर्जित-मार्गः",
+          "en": "a path abandoned"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "चरति",
+          "en": "follows"
+        },
+        {
+          "sa": "प्रोत्सारितः",
+          "en": "encouraged"
+        },
+        {
+          "sa": "बालिशैः",
+          "en": "by fools"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "on that"
+        },
+        {
+          "sa": "एव",
+          "en": "same"
+        },
+        {
+          "sa": "मुहुः",
+          "en": "repeatedly"
+        },
+        {
+          "sa": "स्खलन्",
+          "en": "stumbling"
+        },
+        {
+          "sa": "प्रतिपदम्",
+          "en": "at every step"
+        },
+        {
+          "sa": "गत्वा",
+          "en": "having gone"
+        },
+        {
+          "sa": "अन्ध-कूपे",
+          "en": "into a blind pit"
+        },
+        {
+          "sa": "पतति",
+          "en": "falls"
+        },
+        {
+          "sa": "अस्य",
+          "en": "for this"
+        },
+        {
+          "sa": "अन्धत्व-निवर्तक-औषधम्",
+          "en": "the remedy that removes blindness"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "दारिद्र्यम्",
+          "en": "poverty"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अञ्जनम्",
+          "en": "eye-salve"
+        }
+      ],
       "sourceNumbers": [
         78
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sampanno’ndhavad eva kiñcid aparaṃ no vīkṣate cakṣuṣā\nsadbhir varjita-mārga eva carati protsārito bāliśaiḥ|\ntasminn eva muhuḥ skhalan pratipadaṃ gatvāndha-kūpe patati\nasyāndhatva-nivartakauṣadham idaṃ dāridryam evāñjanam||"
+      "iast": "sampanno’ndhavad eva kiñcid aparaṃ no vīkṣate cakṣuṣā\nsadbhir varjita-mārga eva carati protsārito bāliśaiḥ|\ntasminn eva muhuḥ skhalan pratipadaṃ gatvāndha-kūpe patati\nasyāndhatva-nivartakauṣadham idaṃ dāridryam evāñjanam||",
+      "editionTranslation": "Wealth tends to narrow one’s vision. As he is surrounded by flatterers, the rich man traverses a path which the wise have abandoned; and at every step he stumbles into hidden pitfalls. Where the vision becomes blurred, there is no remedy other than poverty."
     },
     {
       "id": "svsss-1-0079",
@@ -5463,13 +5705,75 @@
       "number": "79",
       "label": "Verse 79",
       "deva": "लोभः क्रोधश्च डम्भश्च मदो मत्सर एव च। (दम्भश्च)\nवर्धते वित्त-सम्प्राप्त्या कथं तच् चित्त-शोधनम्॥",
-      "translation": "Greed, anger, pride, conceit and jealousy grow ever more with the acquisition of wealth. Can it ever become a means of attaining purity of mind?",
-      "gloss": [],
+      "translation": "With the acquisition of wealth, greed, anger, conceit, arrogance, and envy all grow. How could wealth then purify the mind?",
+      "gloss": [
+        {
+          "sa": "लोभः",
+          "en": "greed"
+        },
+        {
+          "sa": "क्रोधः",
+          "en": "anger"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "डम्भः",
+          "en": "conceit"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "मदः",
+          "en": "arrogance"
+        },
+        {
+          "sa": "मत्सरः",
+          "en": "envy"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वर्धते",
+          "en": "grow"
+        },
+        {
+          "sa": "वित्त-सम्प्राप्त्या",
+          "en": "with the acquisition of wealth"
+        },
+        {
+          "sa": "दम्भः",
+          "en": "hypocrisy [alternate reading]"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "चित्त-शोधनम्",
+          "en": "a purifier of the mind"
+        }
+      ],
       "sourceNumbers": [
         79
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "lobhaḥ krodhaśca ḍambhaśca mado matsara eva ca| (dambhaśca)\nvardhate vitta-samprāptyā kathaṃ tac citta-śodhanam||"
+      "iast": "lobhaḥ krodhaśca ḍambhaśca mado matsara eva ca| (dambhaśca)\nvardhate vitta-samprāptyā kathaṃ tac citta-śodhanam||",
+      "editionTranslation": "Greed, anger, pride, conceit and jealousy grow ever more with the acquisition of wealth. Can it ever become a means of attaining purity of mind?"
     },
     {
       "id": "svsss-1-0080",
@@ -5477,27 +5781,116 @@
       "number": "80",
       "label": "Verse 80",
       "deva": "अलाभाद् द्वि-गुणं दुःखं वित्तस्य व्यय-सम्भवे।\nततोऽपि त्रि-गुणं दुःखं दुर्व्यये विदुषाम् अपि॥",
-      "translation": "Not to earn wealth is a source of sorrow; but when money is spent the sorrow that is felt is twice as great. When it is ill-spent, the sorrow felt by the wise is thrice as great.",
-      "gloss": [],
+      "translation": "Not gaining wealth brings sorrow; when wealth is spent, sorrow is twice as great; when it is badly spent, sorrow is threefold even for the wise.",
+      "gloss": [
+        {
+          "sa": "अलाभात्",
+          "en": "from not gaining"
+        },
+        {
+          "sa": "द्वि-गुणम्",
+          "en": "twofold"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "sorrow"
+        },
+        {
+          "sa": "वित्तस्य",
+          "en": "of wealth"
+        },
+        {
+          "sa": "व्यय-सम्भवे",
+          "en": "when spending occurs"
+        },
+        {
+          "sa": "ततः",
+          "en": "from that"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "त्रि-गुणम्",
+          "en": "threefold"
+        },
+        {
+          "sa": "दुःखम्",
+          "en": "sorrow"
+        },
+        {
+          "sa": "दुर्व्यये",
+          "en": "when wrongly spent"
+        },
+        {
+          "sa": "विदुषाम्",
+          "en": "for the wise"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        }
+      ],
       "sourceNumbers": [
         80
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "alābhād dvi-guṇaṃ duḥkhaṃ vittasya vyaya-sambhave|\ntato’pi tri-guṇaṃ duḥkhaṃ durvyaye viduṣām api||"
+      "iast": "alābhād dvi-guṇaṃ duḥkhaṃ vittasya vyaya-sambhave|\ntato’pi tri-guṇaṃ duḥkhaṃ durvyaye viduṣām api||",
+      "editionTranslation": "Not to earn wealth is a source of sorrow; but when money is spent the sorrow that is felt is twice as great. When it is ill-spent, the sorrow felt by the wise is thrice as great."
     },
     {
       "id": "svsss-1-0081",
       "chapter": 1,
       "number": "81",
       "label": "Verse 81",
-      "deva": "भय-चिन्तानपायिना।\nचित्त-स्वास्थ्यं कुतो जन्तोर्\nगृह-स्थेनाहिना यथा॥",
-      "translation": "In as much as fear and anxiety ever wait upon wealth, and as wealth is as harmful as a snake in one’s home, how can any one ever feel at ease in its presence?",
-      "gloss": [],
+      "deva": "नित्याहितेन वित्तेन\nभय-चिन्तानपायिना।\nचित्त-स्वास्थ्यं कुतो जन्तोर्\nगृह-स्थेनाहिना यथा॥",
+      "translation": "With wealth as a constant harm, and fear and worry never leaving, how could a person have peace of mind? It is like a snake living in the house.",
+      "gloss": [
+        {
+          "sa": "नित्य-आहितेन",
+          "en": "ever harmful"
+        },
+        {
+          "sa": "वित्तेन",
+          "en": "by wealth"
+        },
+        {
+          "sa": "भय-चिन्ता-अनपायिना",
+          "en": "with fear and worry that do not leave"
+        },
+        {
+          "sa": "चित्त-स्वास्थ्यं",
+          "en": "peace of mind"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "जन्तोः",
+          "en": "for a person"
+        },
+        {
+          "sa": "गृह-स्थेन",
+          "en": "dwelling in a house"
+        },
+        {
+          "sa": "अहिना",
+          "en": "by a snake"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        }
+      ],
       "sourceNumbers": [
         81
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "bhaya-cintānapāyinā|\ncitta-svāsthyaṃ kuto jantor\ngṛha-sthenāhinā yathā||"
+      "iast": "nityāhitena vittena\nbhaya-cintānapāyinā|\ncitta-svāsthyaṃ kuto jantor\ngṛha-sthenāhinā yathā||",
+      "editionTranslation": "In as much as fear and anxiety ever wait upon wealth, and as wealth is as harmful as a snake in one’s home, how can any one ever feel at ease in its presence?",
+      "sourceNote": "Restored the missing first pāda नित्याहितेन वित्तेन from the cited edition."
     },
     {
       "id": "svsss-1-0082",
@@ -5505,13 +5898,151 @@
       "number": "82",
       "label": "Verse 82",
       "deva": "कान्तारे विजने वने जन-पदे सेतौ निरीतौ च वा\nचोरैर् वापि तथेतरैर् नरवरैर् युक्तो वियुक्तोऽपि वा।\nनिःस्वः स्वस्थतया सुखेन वसति ह्याद्रीयमाणो जनैः\nक्लिश्नात्य् एव धनी सदाकुल-मतिर् भीतश्च पुत्राद् अपि॥",
-      "translation": "He who has no wealth leads a happy life and is respected by the people, whether he lives alone or in company. He may live in the midst of thieves, ill-natured people, or kings. He lives a care-free life, whether it is in a lonely forest, or in a town, or in a village, or under a bridge, or in any other place that is free from trouble. But the rich are subject to nervous agitation, and are afraid of even their own children, and they meet with nothing except misery.",
-      "gloss": [],
+      "translation": "A person without wealth lives happily and at ease, respected by people, whether alone or accompanied, in wilderness, forest, town, village, on a bridge, or in a safe place—even among thieves and rulers. The wealthy person alone suffers, always troubled and afraid even of his son.",
+      "gloss": [
+        {
+          "sa": "कान्तारे",
+          "en": "in the wilderness"
+        },
+        {
+          "sa": "विजने",
+          "en": "in solitude"
+        },
+        {
+          "sa": "वने",
+          "en": "in a forest"
+        },
+        {
+          "sa": "जन-पदे",
+          "en": "in a town or village"
+        },
+        {
+          "sa": "सेतौ",
+          "en": "on a bridge"
+        },
+        {
+          "sa": "निरीतौ",
+          "en": "in a place free from danger"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "चोरैः",
+          "en": "with thieves"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "तथा",
+          "en": "and likewise"
+        },
+        {
+          "sa": "इतरैः",
+          "en": "with others"
+        },
+        {
+          "sa": "नर-वरैः",
+          "en": "with rulers"
+        },
+        {
+          "sa": "युक्तः",
+          "en": "accompanied"
+        },
+        {
+          "sa": "वियुक्तः",
+          "en": "alone"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "निःस्वः",
+          "en": "one without wealth"
+        },
+        {
+          "sa": "स्वस्थतया",
+          "en": "in ease"
+        },
+        {
+          "sa": "सुखेन",
+          "en": "happily"
+        },
+        {
+          "sa": "वसति",
+          "en": "lives"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "आद्रीयमाणः",
+          "en": "being respected"
+        },
+        {
+          "sa": "जनैः",
+          "en": "by people"
+        },
+        {
+          "sa": "क्लिश्नाति",
+          "en": "suffers"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "धनी",
+          "en": "the wealthy person"
+        },
+        {
+          "sa": "सदा",
+          "en": "always"
+        },
+        {
+          "sa": "आकुल-मतिः",
+          "en": "with an agitated mind"
+        },
+        {
+          "sa": "भीतः",
+          "en": "afraid"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "पुत्रात्",
+          "en": "of a son"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        }
+      ],
       "sourceNumbers": [
         82
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "kāntāre vijane vane jana-pade setau nirītau ca vā\ncorair vāpi tathetarair naravarair yukto viyukto’pi vā|\nniḥsvaḥ svasthatayā sukhena vasati hyādrīyamāṇo janaiḥ\nkliśnāty eva dhanī sadākula-matir bhītaśca putrād api||"
+      "iast": "kāntāre vijane vane jana-pade setau nirītau ca vā\ncorair vāpi tathetarair naravarair yukto viyukto’pi vā|\nniḥsvaḥ svasthatayā sukhena vasati hyādrīyamāṇo janaiḥ\nkliśnāty eva dhanī sadākula-matir bhītaśca putrād api||",
+      "editionTranslation": "He who has no wealth leads a happy life and is respected by the people, whether he lives alone or in company. He may live in the midst of thieves, ill-natured people, or kings. He lives a care-free life, whether it is in a lonely forest, or in a town, or in a village, or under a bridge, or in any other place that is free from trouble. But the rich are subject to nervous agitation, and are afraid of even their own children, and they meet with nothing except misery."
     },
     {
       "id": "svsss-1-0083",
@@ -5519,13 +6050,79 @@
       "number": "83",
       "label": "Verse 83",
       "deva": "तस्माद् अनर्थस्य निदानम् अर्थः\nपुमर्थ-सिद्धिर् न भवत्यनेन।\nततो वनान्ते निवसन्ति सन्तः\nसंन्यस्य सर्वं प्रतिकूलम् अर्थम्॥",
-      "translation": "Wealth is ever attended with grief. None may attain by means of wealth the highest reward of life. The wise flee the world, and they give up the love of wealth; for it is an obstacle in the path. Thus they resort to a life of seclusion in a forest.",
-      "gloss": [],
+      "translation": "Wealth is therefore the cause of harm; it does not bring fulfillment of human aims. The wise live in the forest, renouncing all wealth that stands in their way.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अनर्थस्य",
+          "en": "of harm"
+        },
+        {
+          "sa": "निदानम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "wealth"
+        },
+        {
+          "sa": "पुम्-अर्थ-सिद्धिः",
+          "en": "fulfillment of human aims"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भवति",
+          "en": "occurs"
+        },
+        {
+          "sa": "अनेन",
+          "en": "by this"
+        },
+        {
+          "sa": "ततः",
+          "en": "therefore"
+        },
+        {
+          "sa": "वन-अन्ते",
+          "en": "in the forest"
+        },
+        {
+          "sa": "निवसन्ति",
+          "en": "they dwell"
+        },
+        {
+          "sa": "सन्तः",
+          "en": "the wise"
+        },
+        {
+          "sa": "संन्यस्य",
+          "en": "having renounced"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "प्रतिकूलम्",
+          "en": "harmful"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "wealth"
+        }
+      ],
       "sourceNumbers": [
         83
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "tasmād anarthasya nidānam arthaḥ\npumartha-siddhir na bhavatyanena|\ntato vanānte nivasanti santaḥ\nsaṃnyasya sarvaṃ pratikūlam artham||"
+      "iast": "tasmād anarthasya nidānam arthaḥ\npumartha-siddhir na bhavatyanena|\ntato vanānte nivasanti santaḥ\nsaṃnyasya sarvaṃ pratikūlam artham||",
+      "editionTranslation": "Wealth is ever attended with grief. None may attain by means of wealth the highest reward of life. The wise flee the world, and they give up the love of wealth; for it is an obstacle in the path. Thus they resort to a life of seclusion in a forest."
     },
     {
       "id": "svsss-1-0084",
@@ -5533,13 +6130,115 @@
       "number": "84",
       "label": "Verse 84",
       "deva": "श्रद्धा-भक्तिमतीं सतीं गुणवतीं पुत्राञ् श्रुतान् सम्मतान्\nअक्षय्यं वसुधानु-भोग-विभवैः श्रीसुन्दरं मन्दिरम्।\nसर्वं नश्वरम् इत्य् अवेत्य कवयः श्रुत्युक्तिभिर् युक्तिभिः\nसंन्यस्यन्त्य् अपरे तु तत् सुखम् इति भ्राम्यन्ति दुःखार्णवे॥",
-      "translation": "From what the Śruti says, and from what reason points out, the wise realize that all that they own, such as a good and devoted wife, learned and agreeable children, abundant wealth and home made resplendent with it, and all other means of enjoyment are transient. The wise renounce them; but those who are not wise imagine that they lead to happiness and wander about in the ocean of misery.",
-      "gloss": [],
+      "translation": "Knowing through scripture and reasoning that everything is perishable—the faithful, devoted, virtuous wife; learned, respected sons; abundant wealth and its enjoyments; and a beautiful home—the wise renounce it all. Others, however, mistake it for happiness and wander in an ocean of sorrow.",
+      "gloss": [
+        {
+          "sa": "श्रद्धा-भक्ति-मतीम्",
+          "en": "endowed with faith and devotion"
+        },
+        {
+          "sa": "सतीम्",
+          "en": "a virtuous wife"
+        },
+        {
+          "sa": "गुणवतीम्",
+          "en": "possessing good qualities"
+        },
+        {
+          "sa": "पुत्रान्",
+          "en": "sons"
+        },
+        {
+          "sa": "श्रुतान्",
+          "en": "learned"
+        },
+        {
+          "sa": "सम्मतान्",
+          "en": "respected"
+        },
+        {
+          "sa": "अक्षय्यम्",
+          "en": "inexhaustible"
+        },
+        {
+          "sa": "वसु-धानु-भोग-विभवैः",
+          "en": "with wealth and abundant means of enjoyment"
+        },
+        {
+          "sa": "श्री-सुन्दरम्",
+          "en": "beautiful with prosperity"
+        },
+        {
+          "sa": "मन्दिरम्",
+          "en": "a home"
+        },
+        {
+          "sa": "सर्वम्",
+          "en": "all"
+        },
+        {
+          "sa": "नश्वरम्",
+          "en": "perishable"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अवेत्य",
+          "en": "having understood"
+        },
+        {
+          "sa": "कवयः",
+          "en": "the wise"
+        },
+        {
+          "sa": "श्रुति-उक्तिभिः",
+          "en": "by scriptural statements"
+        },
+        {
+          "sa": "युक्तिभिः",
+          "en": "and by reasoning"
+        },
+        {
+          "sa": "संन्यस्यन्ति",
+          "en": "renounce"
+        },
+        {
+          "sa": "अपरे",
+          "en": "others"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "सुखम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "इति",
+          "en": "as"
+        },
+        {
+          "sa": "भ्राम्यन्ति",
+          "en": "they delude themselves"
+        },
+        {
+          "sa": "दुःख-अर्णवे",
+          "en": "in the ocean of sorrow"
+        }
+      ],
       "sourceNumbers": [
         84
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "śraddhā-bhaktimatīṃ satīṃ guṇavatīṃ putrāñ śrutān sammatān\nakṣayyaṃ vasudhānu-bhoga-vibhavaiḥ śrīsundaraṃ mandiram|\nsarvaṃ naśvaram ity avetya kavayaḥ śrutyuktibhir yuktibhiḥ\nsaṃnyasyanty apare tu tat sukham iti bhrāmyanti duḥkhārṇave||"
+      "iast": "śraddhā-bhaktimatīṃ satīṃ guṇavatīṃ putrāñ śrutān sammatān\nakṣayyaṃ vasudhānu-bhoga-vibhavaiḥ śrīsundaraṃ mandiram|\nsarvaṃ naśvaram ity avetya kavayaḥ śrutyuktibhir yuktibhiḥ\nsaṃnyasyanty apare tu tat sukham iti bhrāmyanti duḥkhārṇave||",
+      "editionTranslation": "From what the Śruti says, and from what reason points out, the wise realize that all that they own, such as a good and devoted wife, learned and agreeable children, abundant wealth and home made resplendent with it, and all other means of enjoyment are transient. The wise renounce them; but those who are not wise imagine that they lead to happiness and wander about in the ocean of misery."
     },
     {
       "id": "svsss-1-0085",
@@ -5547,13 +6246,103 @@
       "number": "85",
       "label": "Verse 85",
       "deva": "सुखम् इति मल-राशौ ये रमन्तेऽत्र गेहे\nकृमय इव कलत्र-क्षेत्र-पुत्रानुषक्त्या।\nसुर-पद इव तेषां नैव मोक्ष-प्रसङ्गस्\nत्वपि तु निरय-गर्भावास-दुःख-प्रवाहः॥",
-      "translation": "Those who rejoice in the possession of wife, home and children, as if they were heaven, are like unto worms that rejoice in filth. Such seek not the path of salvation; and their lot is hell, the cycle of rebirth, and trouble unending.",
-      "gloss": [],
+      "translation": "Those who, attached to wife, land, and sons, delight in the home as if it were a god’s abode are like worms rejoicing in a heap of filth. They have no prospect of liberation; instead, they face a stream of suffering in hell and the womb.",
+      "gloss": [
+        {
+          "sa": "सुखम्",
+          "en": "happiness"
+        },
+        {
+          "sa": "इति",
+          "en": "as"
+        },
+        {
+          "sa": "मल-राशौ",
+          "en": "in a heap of filth"
+        },
+        {
+          "sa": "ये",
+          "en": "those who"
+        },
+        {
+          "sa": "रमन्ते",
+          "en": "delight"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "गेहे",
+          "en": "in the home"
+        },
+        {
+          "sa": "कृमयः",
+          "en": "worms"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "कलत्र",
+          "en": "wife"
+        },
+        {
+          "sa": "क्षेत्र",
+          "en": "land and property"
+        },
+        {
+          "sa": "पुत्र",
+          "en": "sons"
+        },
+        {
+          "sa": "अनुषक्त्या",
+          "en": "through attachment"
+        },
+        {
+          "sa": "सुर-पदे",
+          "en": "a god’s abode"
+        },
+        {
+          "sa": "इव",
+          "en": "as if"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "for them"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "मोक्ष-प्रसङ्गः",
+          "en": "the prospect of liberation"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "अपि",
+          "en": "rather"
+        },
+        {
+          "sa": "निरय-गर्भ-आवास-दुःख-प्रवाहः",
+          "en": "a stream of suffering in hell and the womb"
+        }
+      ],
       "sourceNumbers": [
         85
       ],
       "sectionTitle": "The Topic of this Study and the Successful Student",
-      "iast": "sukham iti mala-rāśau ye ramante’tra gehe\nkṛmaya iva kalatra-kṣetra-putrānuṣaktyā|\nsura-pada iva teṣāṃ naiva mokṣa-prasaṅgas\ntvapi tu niraya-garbhāvāsa-duḥkha-pravāhaḥ||"
+      "iast": "sukham iti mala-rāśau ye ramante’tra gehe\nkṛmaya iva kalatra-kṣetra-putrānuṣaktyā|\nsura-pada iva teṣāṃ naiva mokṣa-prasaṅgas\ntvapi tu niraya-garbhāvāsa-duḥkha-pravāhaḥ||",
+      "editionTranslation": "Those who rejoice in the possession of wife, home and children, as if they were heaven, are like unto worms that rejoice in filth. Such seek not the path of salvation; and their lot is hell, the cycle of rebirth, and trouble unending."
     },
     {
       "id": "svsss-1-0086",
