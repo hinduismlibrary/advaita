@@ -19,9 +19,9 @@
     "completeChapters": [],
     "completeVerseRange": {
       "start": 1,
-      "end": 405
+      "end": 410
     },
-    "note": "Source verses 1–405 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 406 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
+    "note": "Source verses 1–410 have original literal readings and Devanāgarī-backed word-for-word glosses; verses 411 onward do not yet have separate glosses. Reader units pair verses 93–94, 98–99, 186–187, 198–199, 200–201, 213–214, 220–222, 237–238, 241–242, 248–249, 315–316, and 349–350."
   },
   "units": [
     {
@@ -31957,61 +31957,319 @@
       "id": "vivekachudamani-406",
       "number": "406",
       "label": "Verse 406",
-      "deva": "अनन्यत्वमधिष्ठानादारोप्यस्य निरीक्षितम् ।\nपण्डितै रज्जुसर्पादौ विकल्पो भ्रान्तिजीवनः ॥",
-      "iast": "ananyatvamadhiṣṭhānādāropyasya nirīkṣitam |\npaṇḍitai rajjusarpādau vikalpo bhrāntijīvanaḥ ||",
-      "translation": "That which is superimposed upon something else is observed by the wise to be identical with the substratum, as in the case of the rope appearing as the snake. The apparent difference depends solely on error.",
-      "gloss": [],
+      "deva": "अनन्यत्वमधिष्ठानादारोप्यस्य निरीक्षितम् ।\nपण्डितैरज्जुसर्पादौ विकल्पो भ्रान्तिजीवनः ॥",
+      "iast": "ananyatvam adhiṣṭhānād āropyasya nirīkṣitam |\npaṇḍitair rajju-sarpādau vikalpo bhrānti-jīvanaḥ ||",
+      "translation": "The wise have seen that what is superimposed is not different from its substratum, as in a rope mistaken for a snake; the imagined distinction lives by delusion.",
+      "gloss": [
+        {
+          "sa": "अनन्यत्वम्",
+          "en": "non-difference"
+        },
+        {
+          "sa": "अधिष्ठानात्",
+          "en": "from its substratum"
+        },
+        {
+          "sa": "आरोप्यस्य",
+          "en": "of what is superimposed"
+        },
+        {
+          "sa": "निरीक्षितम्",
+          "en": "has been seen"
+        },
+        {
+          "sa": "पण्डितैः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "रज्जु-सर्प-आदौ",
+          "en": "in the rope-and-snake case"
+        },
+        {
+          "sa": "विकल्पः",
+          "en": "imagined distinction"
+        },
+        {
+          "sa": "भ्रान्ति-जीवनः",
+          "en": "sustained by delusion"
+        }
+      ],
       "sourceNumbers": [
         406
-      ]
+      ],
+      "editionTranslation": "That which is superimposed upon something else is observed by the wise to be identical with the substratum, as in the case of the rope appearing as the snake. The apparent difference depends solely on error."
     },
     {
       "id": "vivekachudamani-407",
       "number": "407",
       "label": "Verse 407",
       "deva": "चित्तमूलो विकल्पोऽयं चित्ताभावे न कश्चन ।\nअतश्चित्तं समाधेहि प्रत्यग्रूपे परात्मनि ॥",
-      "iast": "cittamūlo vikalpo'yaṃ cittābhāve na kaścana |\nataścittaṃ samādhehi pratyagrūpe parātmani ||",
-      "translation": "This apparent universe has its root in the mind, and never persists after the mind is annihilated. Therefore dissolve the mind by concentrating it on the Supreme Self, which is thy inmost Essence.",
-      "gloss": [],
+      "iast": "citta-mūlo vikalpo 'yaṃ cittābhāve na kaścana |\nataś cittaṃ samādhehi pratyag-rūpe parātmani ||",
+      "translation": "This imagined distinction is rooted in the mind; when the mind is absent, there is nothing at all. Therefore steady the mind in the Supreme Self, whose nature is inward.",
+      "gloss": [
+        {
+          "sa": "चित्त-मूलः",
+          "en": "rooted in the mind"
+        },
+        {
+          "sa": "विकल्पः",
+          "en": "imagined distinction"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "चित्त-अभावे",
+          "en": "when the mind is absent"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कश्चन",
+          "en": "anything at all"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "चित्तम्",
+          "en": "the mind"
+        },
+        {
+          "sa": "समाधेहि",
+          "en": "steady; fix"
+        },
+        {
+          "sa": "प्रत्यक्-रूपे",
+          "en": "whose nature is inward"
+        },
+        {
+          "sa": "परात्मनि",
+          "en": "in the Supreme Self"
+        }
+      ],
       "sourceNumbers": [
         407
-      ]
+      ],
+      "editionTranslation": "This apparent universe has its root in the mind, and never persists after the mind is annihilated. Therefore dissolve the mind by concentrating it on the Supreme Self, which is thy inmost Essence."
     },
     {
       "id": "vivekachudamani-408",
       "number": "408",
       "label": "Verse 408",
       "deva": "किम् अपि सततबोधं केवलानन्दरूपं\nनिरुपममतिवेलं नित्यमुक्तं निरीहम् ।\nनिरवधिगगनाभं निष्कलं निर्विकल्पं\nहृदि कलयति विद्वान् ब्रह्म पूर्णं समाधौ ॥",
-      "iast": "kim api satatabodhaṃ kevalānandarūpaṃ\nnirupamamativelaṃ nityamuktaṃ nirīham |\nniravadhigaganābhaṃ niṣkalaṃ nirvikalpaṃ\nhṛdi kalayati vidvān brahma pūrṇaṃ samādhau ||",
-      "translation": "The wise man realises in his heart, through Samadhi, the Infinite Brahman, which is something of the nature of eternal Knowledge and absolute Bliss, which has no exemplar, which transcends all limitations, is ever free and without activity, and which is like the limitless sky, indivisible and absolute.",
-      "gloss": [],
+      "iast": "kim api satata-bodhaṃ kevalānanda-rūpaṃ\nnirupamam ativelaṃ nitya-muktaṃ nirīham |\nniravadhi-gaganābhaṃ niṣkalaṃ nirvikalpaṃ\nhṛdi kalayati vidvān brahma pūrṇaṃ samādhau ||",
+      "translation": "In samādhi, the wise person contemplates in the heart the complete Brahman: something beyond description, constant awareness, of pure-bliss nature, incomparable, beyond measure, eternally free, without desire, like the boundless sky, partless, and free from thought-constructs.",
+      "gloss": [
+        {
+          "sa": "किम् अपि",
+          "en": "something beyond description"
+        },
+        {
+          "sa": "सतत-बोधम्",
+          "en": "constant awareness"
+        },
+        {
+          "sa": "केवल-आनन्द-रूपम्",
+          "en": "of pure-bliss nature"
+        },
+        {
+          "sa": "निरुपमम्",
+          "en": "incomparable"
+        },
+        {
+          "sa": "अतिवेलम्",
+          "en": "beyond measure"
+        },
+        {
+          "sa": "नित्य-मुक्तम्",
+          "en": "eternally free"
+        },
+        {
+          "sa": "निरीहम्",
+          "en": "without desire"
+        },
+        {
+          "sa": "निरवधि-गगन-आभम्",
+          "en": "like the boundless sky"
+        },
+        {
+          "sa": "निष्कलम्",
+          "en": "partless"
+        },
+        {
+          "sa": "निर्विकल्पम्",
+          "en": "free from thought-constructs"
+        },
+        {
+          "sa": "हृदि",
+          "en": "in the heart"
+        },
+        {
+          "sa": "कलयति",
+          "en": "contemplates"
+        },
+        {
+          "sa": "विद्वान्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "ब्रह्म पूर्णम्",
+          "en": "the complete Brahman"
+        },
+        {
+          "sa": "समाधौ",
+          "en": "in samādhi"
+        }
+      ],
       "sourceNumbers": [
         408
-      ]
+      ],
+      "editionTranslation": "The wise man realises in his heart, through Samadhi, the Infinite Brahman, which is something of the nature of eternal Knowledge and absolute Bliss, which has no exemplar, which transcends all limitations, is ever free and without activity, and which is like the limitless sky, indivisible and absolute."
     },
     {
       "id": "vivekachudamani-409",
       "number": "409",
       "label": "Verse 409",
-      "deva": "प्रकृतिविकृतिशून्यं भावनातीतभावं\nसमरसमसमानं मानसं बन्धदूरम् ।\nनिगमवचनसिद्धं नित्यमस्मत्प्रसिद्धं\nहृदि कलयति विद्वान् ब्रह्म पूर्णं समाधौ ॥",
-      "iast": "prakṛtivikṛtiśūnyaṃ bhāvanātītabhāvaṃ\nsamarasamasamānaṃ mānasaṃ bandhadūram |\nnigamavacanasiddhaṃ nityamasmatprasiddhaṃ\nhṛdi kalayati vidvān brahma pūrṇaṃ samādhau ||",
-      "translation": "The wise man realises in his heart, through Samadhi, the Infinite Brahman, which is devoid of the ideas of cause and effect, which is the Reality beyond all imaginations, homogeneous, matchless, beyond the range of proofs, established by the pronouncements of the Vedas, and ever familiar to us as the sense of the ego.",
-      "gloss": [],
+      "deva": "प्रकृतिविकृतिशून्यं भावनातीतभावं\nसमरसम् असमानं मानसं बन्धदूरम् ।\nनिगमवचनसिद्धं नित्यमस्मत्प्रसिद्धं\nहृदि कलयति विद्वान् ब्रह्म पूर्णं समाधौ ॥",
+      "iast": "prakṛti-vikṛti-śūnyaṃ bhāvanātīta-bhāvaṃ\nsamarasam asamānaṃ mānasaṃ bandha-dūram |\nnigama-vacana-siddhaṃ nityam asmat-prasiddhaṃ\nhṛdi kalayati vidvān brahma pūrṇaṃ samādhau ||",
+      "translation": "In samādhi, the wise person contemplates in the heart the complete Brahman: free from Prakṛti and its modifications, with a nature beyond thought, of one essence, peerless, present to the mind and far from bondage, established by Vedic statements, eternal, and well-known to us.",
+      "gloss": [
+        {
+          "sa": "प्रकृति-विकृति-शून्यम्",
+          "en": "free from Prakṛti and its modifications"
+        },
+        {
+          "sa": "भावना-अतीत-भावम्",
+          "en": "whose nature is beyond thought"
+        },
+        {
+          "sa": "समरसम्",
+          "en": "of one essence"
+        },
+        {
+          "sa": "असमानम्",
+          "en": "peerless"
+        },
+        {
+          "sa": "मानसम्",
+          "en": "mind-related; present to the mind"
+        },
+        {
+          "sa": "बन्ध-दूरम्",
+          "en": "far from bondage"
+        },
+        {
+          "sa": "निगम-वचन-सिद्धम्",
+          "en": "established by Vedic statements"
+        },
+        {
+          "sa": "नित्यम्",
+          "en": "eternal"
+        },
+        {
+          "sa": "अस्मत्-प्रसिद्धम्",
+          "en": "well-known to us"
+        },
+        {
+          "sa": "हृदि",
+          "en": "in the heart"
+        },
+        {
+          "sa": "कलयति",
+          "en": "contemplates"
+        },
+        {
+          "sa": "विद्वान्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "ब्रह्म पूर्णम्",
+          "en": "the complete Brahman"
+        },
+        {
+          "sa": "समाधौ",
+          "en": "in samādhi"
+        }
+      ],
       "sourceNumbers": [
         409
-      ]
+      ],
+      "editionTranslation": "The wise man realises in his heart, through Samadhi, the Infinite Brahman, which is devoid of the ideas of cause and effect, which is the Reality beyond all imaginations, homogeneous, matchless, beyond the range of proofs, established by the pronouncements of the Vedas, and ever familiar to us as the sense of the ego."
     },
     {
       "id": "vivekachudamani-410",
       "number": "410",
       "label": "Verse 410",
       "deva": "अजरममरमस्ताभाववस्तुस्वरूपं\nस्तिमितसलिलराशिप्रख्यमाख्याविहीनम् ।\nशमितगुणविकारं शाश्वतं शान्तमेकं\nहृदि कलयति विद्वान् ब्रह्म पूर्णं समाधौ ॥",
-      "iast": "ajaramamaramastābhāvavastusvarūpaṃ\nstimitasalilarāśiprakhyamākhyāvihīnam |\nśamitaguṇavikāraṃ śāśvataṃ śāntamekaṃ\nhṛdi kalayati vidvān brahma pūrṇaṃ samādhau ||",
-      "translation": "The wise man realises in his heart, through Samadhi, the Infinite Brahman, which is undecaying and immortal, the positive Entity which precludes all negations, which resembles the placid ocean and is without a name, in which there are neither merits nor demerits, and which is eternal, pacified and One.",
-      "gloss": [],
+      "iast": "ajaram amaram astābhāva-vastu-svarūpaṃ\nstimita-salila-rāśi-prakhyam ākhyā-vihīnam |\nśamita-guṇa-vikāraṃ śāśvataṃ śāntaṃ ekam\nhṛdi kalayati vidvān brahma pūrṇaṃ samādhau ||",
+      "translation": "In samādhi, the wise person contemplates in the heart the complete Brahman: ageless and immortal, whose nature is Reality free from disappearance and non-being, resembling a still mass of water, without a name, with the guṇa-modifications quieted, eternal, peaceful, and one.",
+      "gloss": [
+        {
+          "sa": "अजरम्",
+          "en": "ageless"
+        },
+        {
+          "sa": "अमरम्",
+          "en": "deathless; immortal"
+        },
+        {
+          "sa": "अस्त-अभाव-वस्तु-स्वरूपम्",
+          "en": "whose nature is Reality free from disappearance and non-being"
+        },
+        {
+          "sa": "स्तिमित-सलिल-राशि-प्रख्यम्",
+          "en": "resembling a still mass of water"
+        },
+        {
+          "sa": "आख्या-विहीनम्",
+          "en": "without a name"
+        },
+        {
+          "sa": "शमित-गुण-विकारम्",
+          "en": "with the guṇa-modifications quieted"
+        },
+        {
+          "sa": "शाश्वतम्",
+          "en": "eternal"
+        },
+        {
+          "sa": "शान्तम्",
+          "en": "peaceful"
+        },
+        {
+          "sa": "एकम्",
+          "en": "one"
+        },
+        {
+          "sa": "हृदि",
+          "en": "in the heart"
+        },
+        {
+          "sa": "कलयति",
+          "en": "contemplates"
+        },
+        {
+          "sa": "विद्वान्",
+          "en": "the wise person"
+        },
+        {
+          "sa": "ब्रह्म पूर्णम्",
+          "en": "the complete Brahman"
+        },
+        {
+          "sa": "समाधौ",
+          "en": "in samādhi"
+        }
+      ],
       "sourceNumbers": [
         410
-      ]
+      ],
+      "editionTranslation": "The wise man realises in his heart, through Samadhi, the Infinite Brahman, which is undecaying and immortal, the positive Entity which precludes all negations, which resembles the placid ocean and is without a name, in which there are neither merits nor demerits, and which is eternal, pacified and One."
     },
     {
       "id": "vivekachudamani-411",
@@ -34067,6 +34325,7 @@
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 391–395; preserved prior translations as editionTranslation. Restored the two missing middle pādas of verse 393 from the checked Sanskrit witness.",
     "Corrected the Devanāgarī spelling of ātatam in the verse 394 gloss.",
     "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 396–400; preserved prior translations as editionTranslation. Corrected verse 397's ābhāsavastu spelling and verse 400's draṣṭṛ reading.",
-    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 401–405; preserved prior translations as editionTranslation."
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 401–405; preserved prior translations as editionTranslation.",
+    "Added original literal English translations and Devanāgarī-backed word glosses for Vivekacūḍāmaṇi verses 406–410; preserved prior translations as editionTranslation. Corrected verse 406's paṇḍitaiḥ sandhi in Sanskrit and IAST, and documented the astābhāva reading in verse 410 alongside the common bhāsavastu variant."
   ]
 }
