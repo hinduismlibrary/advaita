@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261021-wiki-stack-2";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261021-preview-match-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -22,8 +22,13 @@ function addFavicon(){
   });
 }
 function addStyles(){
-  if(document.querySelector('link[data-viveka-site-chrome]'))return;
-  const link=document.createElement("link");
+  let link=document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
+  if(link){
+    link.dataset.vivekaSiteChrome="true";
+    document.head.append(link);
+    return;
+  }
+  link=document.createElement("link");
   link.rel="stylesheet";
   link.href=CSS;
   link.dataset.vivekaSiteChrome="true";
