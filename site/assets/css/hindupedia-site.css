@@ -427,10 +427,10 @@ html body.vd-chrome-page.page-page.purana-library-page .purana-section-title{
   color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important;text-align:left!important
 }
 html body.vd-chrome-page.page-page.purana-library-page .purana-section-title .purana-title-dev{
-  display:inline!important;font:400 1em/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+  display:block!important;font:400 1em/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
 }
 html body.vd-chrome-page.page-page.purana-library-page .purana-section-title .purana-title-iast{
-  display:inline!important;margin-left:.45em!important;color:#202122!important;font:400 1em/1.4 Arial,Helvetica,sans-serif!important
+  display:block!important;margin:0!important;color:#54595d!important;font:400 .78em/1.45 Arial,Helvetica,sans-serif!important
 }
 html body.vd-chrome-page.page-page.purana-library-page .purana-list{
   margin:0!important;padding:0 0 0 1.6em!important;list-style:decimal!important
@@ -460,4 +460,21 @@ html body.vd-chrome-page.page-page.purana-library-page .purana-research-list a{
 html body.vd-chrome-page.page-page.purana-library-page .purana-research-list a:hover{text-decoration:underline!important}
 @media(max-width:720px){
   html body.vd-chrome-page.page-page.purana-library-page .hp-home.purana-home{width:calc(100% - 36px)!important;padding:22px 0 42px!important}
+}
+
+html body.vd-chrome-page.page-page.purana-library-page .purana-list .purana-sublist{
+  margin:3px 0 5px!important;padding:0 0 0 1.45em!important;list-style:disc!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list .purana-sublist>li{
+  margin:0!important;padding:1px 0!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list .purana-sublist a{
+  display:inline-flex!important;flex-direction:column!important;align-items:flex-start!important;
+  color:#0645ad!important;font:400 14px/1.45 Arial,Helvetica,sans-serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list .purana-sublist .purana-name-dev{
+  color:#202122!important;font-size:14px!important;line-height:1.4!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list .purana-sublist .purana-name-iast{
+  color:#0645ad!important;font-size:13px!important;line-height:1.4!important
 }
