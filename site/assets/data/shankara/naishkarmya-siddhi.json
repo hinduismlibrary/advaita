@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 179 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 173 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -35722,7 +35722,56 @@
       "deva": "कुतः पुनः सामान्यमात्रवृत्तेः पदस्य वाक्यार्थप्रतिपत्तिहेतुत्वमिति । बाढम् ।",
       "iast": "kutaḥ punaḥ sāmānyamātravṛtteḥ padasya vākyārthapratipattihetutvamiti | bāḍham |",
       "translation": "How can a word, which applies only to a general meaning, serve as a means of understanding the meaning of a sentence? The reply is: Certainly it can.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "सामान्य",
+          "en": "general"
+        },
+        {
+          "sa": "मात्र",
+          "en": "only"
+        },
+        {
+          "sa": "वृत्तेः",
+          "en": "applying"
+        },
+        {
+          "sa": "पदस्य",
+          "en": "of a word"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "प्रतिपत्ति",
+          "en": "understanding"
+        },
+        {
+          "sa": "हेतुत्वम्",
+          "en": "being a means"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "बाढम्",
+          "en": "certainly"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0780",
@@ -35792,7 +35841,108 @@
       "deva": "अन्वयव्यतिरेकपुरस्सरं वाक्यमेव सामानाधिकरण्यादिनाविद्या पटलप्रध्वंसद्वारेण मुमुक्षुं स्वाराज्येऽभिषेचयति न त्वन्वयव्यतिरेकमात्रसाध्योऽयमर्थ इत्याह ।",
       "iast": "anvayavyatirekapurassaraṃ vākyameva sāmānādhikaraṇyādināvidyā paṭalapradhvaṃsadvāreṇa mumukṣuṃ svārājye'bhiṣecayati na tvanvayavyatirekamātrasādhyo'yamartha ityāha |",
       "translation": "It is the sentence itself, using co-reference and the like, preceded by reasoning through agreement and difference, that destroys the veil of ignorance and enthrones the seeker in his own sovereignty. This meaning is not established by agreement and difference alone, as the following verse says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अन्वय",
+          "en": "agreement"
+        },
+        {
+          "sa": "व्यतिरेक",
+          "en": "exclusion"
+        },
+        {
+          "sa": "पुरस्सरम्",
+          "en": "preceded by"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "सामानाधिकरण्य",
+          "en": "co-reference"
+        },
+        {
+          "sa": "आदिना",
+          "en": "and the like"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "पटल",
+          "en": "veil"
+        },
+        {
+          "sa": "प्रध्वंस",
+          "en": "destruction"
+        },
+        {
+          "sa": "द्वारेण",
+          "en": "by means of"
+        },
+        {
+          "sa": "मुमुक्षुम्",
+          "en": "the seeker of liberation"
+        },
+        {
+          "sa": "स्व",
+          "en": "own"
+        },
+        {
+          "sa": "राज्ये",
+          "en": "sovereignty"
+        },
+        {
+          "sa": "अभिषेचयति",
+          "en": "consecrates"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "अन्वय",
+          "en": "agreement"
+        },
+        {
+          "sa": "व्यतिरेक",
+          "en": "exclusion"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "साध्यः",
+          "en": "to be accomplished"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0783",
@@ -35870,7 +36020,68 @@
       "deva": "न केवलमनुमानमात्रशरणोऽभिलषितमर्थं न प्राप्नोतीत्यनर्थं चाप्नोतीत्याह ।",
       "iast": "na kevalamanumānamātraśaraṇo'bhilaṣitamarthaṃ na prāpnotītyanarthaṃ cāpnotītyāha |",
       "translation": "He says that one who relies on inference alone not only fails to attain the desired meaning but also falls into error:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "केवलम्",
+          "en": "merely"
+        },
+        {
+          "sa": "अनुमान",
+          "en": "inference"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "शरणः",
+          "en": "taking refuge"
+        },
+        {
+          "sa": "अभिलषितम्",
+          "en": "desired"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "attains"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनर्थम्",
+          "en": "error"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आप्नोति",
+          "en": "incurs"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0786",
@@ -35931,8 +36142,141 @@
       "label": "Text 112",
       "deva": "न चानादरे कारणमस्ति । यस्मात्सर्वत्रैवानादरनिमित्तं प्रमाणस्य प्रमाणान्तरप्रतिपन्नप्रतिपादनं वा विपरीतप्रतिपादनं वा संशयितप्रतिपादनं वा न वा प्रतिपादनमिति -- न चैतेषामन्यतमदपि कारणमस्ति ।",
       "iast": "na cānādare kāraṇamasti | yasmātsarvatraivānādaranimittaṃ pramāṇasya pramāṇāntarapratipannapratipādanaṃ vā viparītapratipādanaṃ vā saṃśayitapratipādanaṃ vā na vā pratipādanamiti -- na caiteṣāmanyatamadapi kāraṇamasti |",
-      "translation": "There is no reason to disregard scripture. A means of knowledge may be set aside if it merely repeats what another means has established, teaches the opposite, leaves its result doubtful, or yields no result. None of these is the case here.",
-      "gloss": []
+      "translation": "There is no reason to disregard scripture. A means of knowledge may be set aside if it repeats what another means has established, teaches the opposite, teaches something uncertain, or conveys nothing. None of these applies here.",
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनादरे",
+          "en": "for disregarding"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "a reason"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "सर्वत्र",
+          "en": "in every case"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनादर",
+          "en": "disregard"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "cause"
+        },
+        {
+          "sa": "प्रमाणस्य",
+          "en": "of a means of knowledge"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "another means of knowledge"
+        },
+        {
+          "sa": "अन्तर",
+          "en": "other"
+        },
+        {
+          "sa": "प्रतिपन्न",
+          "en": "already established"
+        },
+        {
+          "sa": "प्रतिपादनम्",
+          "en": "repetition"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "विपरीत",
+          "en": "contrary"
+        },
+        {
+          "sa": "प्रतिपादनम्",
+          "en": "teaching"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "संशयित",
+          "en": "uncertain"
+        },
+        {
+          "sa": "प्रतिपादनम्",
+          "en": "teaching"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "प्रतिपादनम्",
+          "en": "any teaching"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "एतेषाम्",
+          "en": "of these"
+        },
+        {
+          "sa": "अन्यतमम्",
+          "en": "any one"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "reason"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0788",
@@ -35943,7 +36287,16 @@
       "deva": "यत आह ।",
       "iast": "yata āha |",
       "translation": "For scripture says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "आह",
+          "en": "it says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0790",
@@ -36009,7 +36362,28 @@
       "deva": "न च संशयितव्यमवगमयति । यतः ।",
       "iast": "na ca saṃśayitavyamavagamayati | yataḥ |",
       "translation": "Nor does it leave the matter uncertain, because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "संशयितव्यम्",
+          "en": "what should be doubted"
+        },
+        {
+          "sa": "अवगमयति",
+          "en": "it makes understood"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0793",
@@ -49152,7 +49526,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 179 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 173 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
