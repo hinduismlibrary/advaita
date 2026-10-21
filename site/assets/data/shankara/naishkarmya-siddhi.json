@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 373 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 361 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -10664,7 +10664,24 @@
       "deva": "अपरस्मिंस्तु पक्षे विधिः ।",
       "iast": "aparasmiṃstu pakṣe vidhiḥ |",
       "translation": "On the other alternative, however, an injunction might be possible:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अपरस्मिन्",
+          "en": "in the other"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "पक्षे",
+          "en": "view"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0227",
@@ -10722,7 +10739,36 @@
       "deva": "इतरस्मिंस्तु पक्षे विधेरेवानवकाशत्वम् । कथम् ।",
       "iast": "itarasmiṃstu pakṣe vidherevānavakāśatvam | katham |",
       "translation": "On the first alternative, however, there is no room for an injunction at all. How?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "इतरस्मिन्",
+          "en": "in the other"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "पक्षे",
+          "en": "view"
+        },
+        {
+          "sa": "विधेः",
+          "en": "for an injunction"
+        },
+        {
+          "sa": "एव",
+          "en": "at all"
+        },
+        {
+          "sa": "अनवकाशत्वम्",
+          "en": "lack of room"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0230",
@@ -10784,7 +10830,52 @@
       "deva": "सर्वकर्मनिमित्तसंभवासंभवाभ्यां सर्वकर्मसङ्करश्च प्राप्नोति । यस्मात् ।",
       "iast": "sarvakarmanimittasaṃbhavāsaṃbhavābhyāṃ sarvakarmasaṅkaraśca prāpnoti | yasmāt |",
       "translation": "If causes for every action are present or absent in the same way, all actions become confused together. For:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "कर्म",
+          "en": "actions"
+        },
+        {
+          "sa": "निमित्त",
+          "en": "causes"
+        },
+        {
+          "sa": "संभव",
+          "en": "being present"
+        },
+        {
+          "sa": "असंभवाभ्याम्",
+          "en": "and being absent"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "कर्म",
+          "en": "actions"
+        },
+        {
+          "sa": "सङ्करः",
+          "en": "confusion; mixture"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "follows"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0233",
@@ -10854,7 +10945,44 @@
       "deva": "स्याद्विधिरध्यात्मभिमानादिति चेन्नैवम् । यस्मात् ।",
       "iast": "syādvidhiradhyātmabhimānāditi cennaivam | yasmāt |",
       "translation": "If one says that injunction rests on identification with the inner Self, that is not so, because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "स्यात्",
+          "en": "might be"
+        },
+        {
+          "sa": "विधिः",
+          "en": "an injunction"
+        },
+        {
+          "sa": "अध्यात्म",
+          "en": "inner Self"
+        },
+        {
+          "sa": "अभिमानात्",
+          "en": "from identification"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one says"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0236",
@@ -10936,7 +11064,100 @@
       "deva": "अज्ञानकार्यत्वान्न समकालं नापि क्रमेण ज्ञानकर्मणोर्वस्त्ववस्तु तन्त्रत्वात्सङ्गतिरस्तीत्येवं निराकृतोऽपि काशं कुशं वावलम्ब्याह ॥",
       "iast": "ajñānakāryatvānna samakālaṃ nāpi krameṇa jñānakarmaṇorvastvavastu tantratvātsaṅgatirastītyevaṃ nirākṛto'pi kāśaṃ kuśaṃ vāvalambyāha ||",
       "translation": "Since knowledge and action depend respectively on reality and unreality, they cannot be joined either simultaneously or in sequence; action arises from ignorance. Yet, grasping at a last straw, someone objects:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "कार्यत्वात्",
+          "en": "because it is a product"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "समकालम्",
+          "en": "at the same time"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "either"
+        },
+        {
+          "sa": "क्रमेण",
+          "en": "in sequence"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्मणोः",
+          "en": "and action"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "अवस्तु",
+          "en": "and unreality"
+        },
+        {
+          "sa": "तन्त्रत्वात्",
+          "en": "because they depend on"
+        },
+        {
+          "sa": "सङ्गतिः",
+          "en": "a conjunction"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "निराकृतः",
+          "en": "having been refuted"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "काशम्",
+          "en": "a blade of kaśa grass"
+        },
+        {
+          "sa": "कुशम्",
+          "en": "a blade of kuśa grass"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अवलम्ब्य",
+          "en": "grasping"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0239",
@@ -11022,7 +11243,28 @@
       "deva": "सिद्धत्वाच्च न साध्यम् । यतः ।",
       "iast": "siddhatvācca na sādhyam | yataḥ |",
       "translation": "And because liberation is already established, it is not something to be accomplished. For:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सिद्धत्वात्",
+          "en": "because it is already accomplished"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "साध्यम्",
+          "en": "to be accomplished"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0242",
@@ -11092,7 +11334,252 @@
       "deva": "अस्तु तर्हि भिन्नाभिन्नात्मकं ब्रह्म । तथा च सति ज्ञानकर्मणो संभवतो भेदाभेदविषयत्वात्तयोः । तत्र तावदयं पक्ष एव न संभवति । किं कारणम् । न हि भिन्नोऽयमित्यभेदबुद्धिमनिराकृत्य भेदबुद्धिः पदार्थमालिङ्गते । एवं ह्यनभ्युपगमे भिन्नाभिन्नपदार्थयोरलौकिकत्वं प्रसज्येत । अथ निष्प्रमाणकमप्याश्रीयते तदप्युभयपक्षाभ्युपगमादभेदपक्षे दुःखिब्रह्म स्यादत आह ।",
       "iast": "astu tarhi bhinnābhinnātmakaṃ brahma | tathā ca sati jñānakarmaṇo saṃbhavato bhedābhedaviṣayatvāttayoḥ | tatra tāvadayaṃ pakṣa eva na saṃbhavati | kiṃ kāraṇam | na hi bhinno'yamityabhedabuddhimanirākṛtya bhedabuddhiḥ padārthamāliṅgate | evaṃ hyanabhyupagame bhinnābhinnapadārthayoralaukikatvaṃ prasajyeta | atha niṣpramāṇakamapyāśrīyate tadapyubhayapakṣābhyupagamādabhedapakṣe duḥkhibrahma syādata āha |",
       "translation": "Suppose, then, that Brahman is both different and non-different, so that knowledge and action could occur because they concern difference and non-difference. This view is impossible. Why? Unless the cognition of non-difference is first set aside, the cognition “this is different” cannot grasp its object. If this is not admitted, both difference and non-difference would be impossible to know. Even if one accepts a view unsupported by evidence, Brahman would suffer because non-difference is also part of that view. Thus he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अस्तु",
+          "en": "let it be"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        },
+        {
+          "sa": "भिन्न",
+          "en": "different"
+        },
+        {
+          "sa": "अभिन्न",
+          "en": "non-different"
+        },
+        {
+          "sa": "आत्मकम्",
+          "en": "having the nature"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "तथा",
+          "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सति",
+          "en": "when so"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्मणोः",
+          "en": "and action"
+        },
+        {
+          "sa": "संभवतः",
+          "en": "are possible"
+        },
+        {
+          "sa": "भेद",
+          "en": "difference"
+        },
+        {
+          "sa": "अभेद",
+          "en": "non-difference"
+        },
+        {
+          "sa": "विषयत्वात्",
+          "en": "because they concern"
+        },
+        {
+          "sa": "तयोः",
+          "en": "the two"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "तावत्",
+          "en": "first"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "पक्षः",
+          "en": "view"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "संभवति",
+          "en": "is possible"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "is the reason"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "भिन्नः",
+          "en": "different"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अभेद",
+          "en": "non-difference"
+        },
+        {
+          "sa": "बुद्धिम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "अनिराकृत्य",
+          "en": "without setting aside"
+        },
+        {
+          "sa": "भेद",
+          "en": "difference"
+        },
+        {
+          "sa": "बुद्धिः",
+          "en": "cognition"
+        },
+        {
+          "sa": "पदार्थम्",
+          "en": "its object"
+        },
+        {
+          "sa": "आलिङ्गते",
+          "en": "grasps"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनभ्युपगमे",
+          "en": "if this is not accepted"
+        },
+        {
+          "sa": "भिन्न",
+          "en": "different"
+        },
+        {
+          "sa": "अभिन्न",
+          "en": "non-different"
+        },
+        {
+          "sa": "पदार्थयोः",
+          "en": "of the two realities"
+        },
+        {
+          "sa": "अलौकिकत्वम्",
+          "en": "impossibility of ordinary understanding"
+        },
+        {
+          "sa": "प्रसज्येत",
+          "en": "would follow"
+        },
+        {
+          "sa": "अथ",
+          "en": "if"
+        },
+        {
+          "sa": "निष्प्रमाणकम्",
+          "en": "unsupported by evidence"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "आश्रयते",
+          "en": "one accepts"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "उभय",
+          "en": "both"
+        },
+        {
+          "sa": "पक्ष",
+          "en": "positions"
+        },
+        {
+          "sa": "अभ्युपगमात्",
+          "en": "because of accepting"
+        },
+        {
+          "sa": "अभेद",
+          "en": "non-difference"
+        },
+        {
+          "sa": "पक्षे",
+          "en": "in the view"
+        },
+        {
+          "sa": "दुःखि",
+          "en": "subject to suffering"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would become"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0245",
@@ -11170,7 +11657,48 @@
       "deva": "तस्मात्सम्यगेवाभिहितं न ज्ञानकर्मणोः समुच्चय इत्युपसंह्रियते ।",
       "iast": "tasmātsamyagevābhihitaṃ na jñānakarmaṇoḥ samuccaya ityupasaṃhriyate |",
       "translation": "Therefore the conclusion is correct: knowledge and action are not to be combined.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "rightly"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अभिहितम्",
+          "en": "it has been stated"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्मणोः",
+          "en": "and action"
+        },
+        {
+          "sa": "समुच्चयः",
+          "en": "are to be combined"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उपसंह्रियते",
+          "en": "it is concluded"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0248",
@@ -11252,7 +11780,96 @@
       "deva": "यथोक्तोपपत्तिबलेनैव पूर्वपक्षस्योत्सारितत्वाद्वक्तव्यं नावशेषितमित्यतः प्रतिपत्तिकर्मवत्पूर्वपक्षपरिहाराय यत्किञ्चिद्वक्तव्यमित्यत इदमभिधीयते ।",
       "iast": "yathoktopapattibalenaiva pūrvapakṣasyotsāritatvādvaktavyaṃ nāvaśeṣitamityataḥ pratipattikarmavatpūrvapakṣaparihārāya yatkiñcidvaktavyamityata idamabhidhīyate |",
       "translation": "Since the foregoing reasoning has already removed the opponent’s position, there is nothing further to state. Yet, to answer any remaining objection as one answers an argument with its own counter-argument, he adds:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उक्त",
+          "en": "stated"
+        },
+        {
+          "sa": "उपपत्ति",
+          "en": "reasoning"
+        },
+        {
+          "sa": "बलेन",
+          "en": "by the force"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "पूर्वपक्षस्य",
+          "en": "of the opponent's view"
+        },
+        {
+          "sa": "उत्सारितत्वात्",
+          "en": "because it has been removed"
+        },
+        {
+          "sa": "वक्तव्यम्",
+          "en": "something to be said"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अवशेषितम्",
+          "en": "has been left"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "प्रतिपत्ति",
+          "en": "counter-position"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "पूर्वपक्ष",
+          "en": "opposing view"
+        },
+        {
+          "sa": "परिहाराय",
+          "en": "for answering"
+        },
+        {
+          "sa": "यत्किञ्चित्",
+          "en": "whatever"
+        },
+        {
+          "sa": "वक्तव्यम्",
+          "en": "must be said"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0251",
@@ -11338,7 +11955,68 @@
       "deva": "योऽयं काम्यानां प्रतिषिद्धानां च त्यागः प्रतिज्ञायते सा प्रतिज्ञा तावन्न शक्यतेऽनुष्ठातुम् । किं कारणम् ।",
       "iast": "yo'yaṃ kāmyānāṃ pratiṣiddhānāṃ ca tyāgaḥ pratijñāyate sā pratijñā tāvanna śakyate'nuṣṭhātum | kiṃ kāraṇam |",
       "translation": "First, the promise to abandon desire-driven and prohibited actions cannot be carried out. Why?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "काम्यानाम्",
+          "en": "of desire-driven actions"
+        },
+        {
+          "sa": "प्रतिषिद्धानाम्",
+          "en": "of forbidden actions"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "त्यागः",
+          "en": "abandonment"
+        },
+        {
+          "sa": "प्रतिज्ञायते",
+          "en": "is promised"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "प्रतिज्ञा",
+          "en": "promise"
+        },
+        {
+          "sa": "तावत्",
+          "en": "first"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शक्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "अनुष्ठातुम्",
+          "en": "to carry out"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "is the reason"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0253",
@@ -11349,7 +12027,188 @@
       "deva": "कर्मणो हि निर्वृत्तात्मनो द्वाभ्यां प्रकाराभ्यां निवृत्तिः संभवत्यारब्धफलस्योपभोगेनानारब्धफलस्याशुभस्य प्रायश्चित्तैरिति । तृतीयोऽपि त्यागप्रकारोऽकर्त्रात्मावबोधात् स त्वात्मज्ञानानभ्युपगमाद्भवता नाभ्युपगम्यते । तत्र यान्यनुपभुक्तफलान्यनारब्धफलानि तानीश्वरेणापि केनचिदपि न शक्यन्ते परित्यक्तुम् ।",
       "iast": "karmaṇo hi nirvṛttātmano dvābhyāṃ prakārābhyāṃ nivṛttiḥ saṃbhavatyārabdhaphalasyopabhogenānārabdhaphalasyāśubhasya prāyaścittairiti | tṛtīyo'pi tyāgaprakāro'kartrātmāvabodhāt sa tvātmajñānānabhyupagamādbhavatā nābhyupagamyate | tatra yānyanupabhuktaphalānyanārabdhaphalāni tānīśvareṇāpi kenacidapi na śakyante parityaktum |",
       "translation": "Completed actions can cease in two ways: the fruit of an action whose result has begun is exhausted by experience, while harmful action whose result has not begun is removed by expiation. There is also a third way of relinquishment—knowledge of the Self as non-agent—but you do not accept it, since you reject knowledge of the Self. Of these, no one—not even the Lord—can abandon actions whose results have not begun and have not been experienced.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कर्मणः",
+          "en": "of action"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "निर्वृत्त",
+          "en": "completed"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "in its state"
+        },
+        {
+          "sa": "द्वाभ्याम्",
+          "en": "by two"
+        },
+        {
+          "sa": "प्रकाराभ्याम्",
+          "en": "ways"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation"
+        },
+        {
+          "sa": "संभवति",
+          "en": "is possible"
+        },
+        {
+          "sa": "आरब्ध",
+          "en": "begun"
+        },
+        {
+          "sa": "फलस्य",
+          "en": "whose result"
+        },
+        {
+          "sa": "उपभोगेन",
+          "en": "through experience"
+        },
+        {
+          "sa": "अनारब्ध",
+          "en": "not begun"
+        },
+        {
+          "sa": "फलस्य",
+          "en": "whose result"
+        },
+        {
+          "sa": "अशुभस्य",
+          "en": "harmful action"
+        },
+        {
+          "sa": "प्रायश्चित्तैः",
+          "en": "through expiations"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तृतीयः",
+          "en": "a third"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "त्याग",
+          "en": "abandonment"
+        },
+        {
+          "sa": "प्रकारः",
+          "en": "way"
+        },
+        {
+          "sa": "अकर्तृ",
+          "en": "non-agent"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अवबोधात्",
+          "en": "through understanding"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "अनभ्युपगमात्",
+          "en": "because of not accepting"
+        },
+        {
+          "sa": "भवता",
+          "en": "by you"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अभ्युपगम्यते",
+          "en": "is accepted"
+        },
+        {
+          "sa": "तत्र",
+          "en": "among them"
+        },
+        {
+          "sa": "यानि",
+          "en": "those"
+        },
+        {
+          "sa": "अनुपभुक्त",
+          "en": "not experienced"
+        },
+        {
+          "sa": "फलानि",
+          "en": "whose results"
+        },
+        {
+          "sa": "अनारब्ध",
+          "en": "not begun"
+        },
+        {
+          "sa": "फलानि",
+          "en": "whose results"
+        },
+        {
+          "sa": "तानि",
+          "en": "they"
+        },
+        {
+          "sa": "ईश्वरेण",
+          "en": "by the Lord"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "केनचित्",
+          "en": "by anyone"
+        },
+        {
+          "sa": "अपि",
+          "en": "at all"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शक्यन्ते",
+          "en": "can"
+        },
+        {
+          "sa": "परित्यक्तुम्",
+          "en": "be abandoned"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0254",
@@ -11360,7 +12219,44 @@
       "deva": "अथारब्धफलानि त्यज्यन्ते तान्यपि न शक्यन्ते त्यक्तुम् ।",
       "iast": "athārabdhaphalāni tyajyante tānyapi na śakyante tyaktum |",
       "translation": "If one tries to abandon actions whose results have begun, those too cannot be abandoned.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "if"
+        },
+        {
+          "sa": "आरब्ध",
+          "en": "begun"
+        },
+        {
+          "sa": "फलानि",
+          "en": "whose results"
+        },
+        {
+          "sa": "त्यज्यन्ते",
+          "en": "are abandoned"
+        },
+        {
+          "sa": "तानि",
+          "en": "they"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शक्यन्ते",
+          "en": "can"
+        },
+        {
+          "sa": "त्यक्तुम्",
+          "en": "be abandoned"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0255",
@@ -37341,7 +38237,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 373 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 361 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
