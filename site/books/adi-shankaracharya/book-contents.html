@@ -48,9 +48,9 @@ body.vd-chrome-page.contents-menu-page .page .hero h1{
   break-inside:avoid; margin:0 0 .35em; padding-left:.12em
 }
 .chapter-link{display:block;min-width:0;color:var(--link);line-height:1.45;overflow-wrap:anywhere}
-.label-en{display:block;color:inherit}
+.label-en{display:inline;color:inherit}
 .label-dev{
-  display:block;margin-top:1px;color:#202122;
+  display:inline;margin:0;color:#202122;
   font:400 13px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif
 }
 h1 .label-dev{margin-top:3px;font-size:19px;line-height:1.45}
@@ -186,10 +186,10 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     var raw=String(value||"").trim(),pair=override||labelFor(raw),key=normalizedLabel(raw),mapped=labelIndex.get(key);
     if(!raw){node.textContent="";return;}
     if(node.closest&&node.closest(".page-tools")){node.textContent=raw;return;}
-    if(!pair.devanagari||!mapped||normalizedLabel(mapped.english)===key||/^(chapter|part|book|additional sections)\\b/i.test(raw)){
+    if(!pair.devanagari||!mapped||normalizedLabel(mapped.english)===key||/^(chapter|part|book|additional sections)\b/i.test(raw)){
       node.textContent=raw;return;
     }
-    var original=raw.replace(/\\s+[—–]\\s+.*$/,"").replace(/\\s+\\([^)]*\\)\\s*$/,"").trim();
+    var original=raw.replace(/\s+[—–]\s+.*$/,"").replace(/\s+\\([^)]*\\)\s*$/,"").trim();
     if(!original){node.textContent=raw;return;}
     var sa=document.createElement("span");sa.className="label-dev";sa.lang="sa-Deva";sa.textContent=pair.devanagari;
     var separator=document.createElement("span");separator.className="label-separator";separator.setAttribute("aria-hidden","true");separator.textContent=" · ";
