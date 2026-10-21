@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 153 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 146 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -39247,7 +39247,44 @@
       "deva": "तथा सकलकार्यकारणागमापायि विभागसाक्षित्वेनापि ।",
       "iast": "tathā sakalakāryakāraṇāgamāpāyi vibhāgasākṣitvenāpi |",
       "translation": "The same point follows from the Self’s witnessing all effects and causes as they arise and disappear:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "सकल",
+          "en": "all"
+        },
+        {
+          "sa": "कार्य",
+          "en": "effects"
+        },
+        {
+          "sa": "कारण",
+          "en": "causes"
+        },
+        {
+          "sa": "आगम",
+          "en": "arising"
+        },
+        {
+          "sa": "आपायि",
+          "en": "and passing away"
+        },
+        {
+          "sa": "विभाग",
+          "en": "distinction"
+        },
+        {
+          "sa": "साक्षित्वेन",
+          "en": "by being the witness"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0852",
@@ -39337,7 +39374,180 @@
       "deva": "तत्र घटादीनां दृश्यानामनात्मत्वं द्रष्ट्रात्मपूर्वकं प्रत्यक्षेणैव प्रमाणेनोपलभ्यानात्मनश्चासाधारणान् धर्मानवधार्य तैर्दृश्यत्वागमापायादिभिर्धर्मैः शरीरेन्द्रियमनोनिश्चयादिवृत्तीरनात्मतया व्युदस्याहंवृत्तिमतोऽपि दृश्यत्वाविशेषाद्द्रष्टृपूर्वकत्वमवसीयते । तदेतदाह ।",
       "iast": "tatra ghaṭādīnāṃ dṛśyānāmanātmatvaṃ draṣṭrātmapūrvakaṃ pratyakṣeṇaiva pramāṇenopalabhyānātmanaścāsādhāraṇān dharmānavadhārya tairdṛśyatvāgamāpāyādibhirdharmaiḥ śarīrendriyamanoniścayādivṛttīranātmatayā vyudasyāhaṃvṛttimato'pi dṛśyatvāviśeṣāddraṣṭṛpūrvakatvamavasīyate | tadetadāha |",
       "translation": "The not-Selfhood of visible things such as pots is directly evident, with the seer as its ground. Their distinctive properties are recognized; then, by their being seen and by their arising and passing away, the body, senses, mind and its judgments are set aside as not-Self. Since the “I”-thought is also seen, it too is known to depend on a seer. This is expressed as follows:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "घट",
+          "en": "pots"
+        },
+        {
+          "sa": "आदीनाम्",
+          "en": "and the like"
+        },
+        {
+          "sa": "दृश्यानाम्",
+          "en": "of visible things"
+        },
+        {
+          "sa": "अनात्मत्वम्",
+          "en": "their not being the Self"
+        },
+        {
+          "sa": "द्रष्टृ",
+          "en": "seer"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "पूर्वकम्",
+          "en": "having as its basis"
+        },
+        {
+          "sa": "प्रत्यक्षेण",
+          "en": "by direct perception"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रमाणेन",
+          "en": "by a means of knowledge"
+        },
+        {
+          "sa": "उपलभ्य",
+          "en": "having perceived"
+        },
+        {
+          "sa": "अनात्मनः",
+          "en": "of things that are not the Self"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "असाधारणान्",
+          "en": "distinctive"
+        },
+        {
+          "sa": "धर्मान्",
+          "en": "properties"
+        },
+        {
+          "sa": "अवधार्य",
+          "en": "having ascertained"
+        },
+        {
+          "sa": "तैः",
+          "en": "by those"
+        },
+        {
+          "sa": "दृश्यत्व",
+          "en": "being seen"
+        },
+        {
+          "sa": "आगम",
+          "en": "arising"
+        },
+        {
+          "sa": "आपाय",
+          "en": "passing away"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "भिः",
+          "en": "by"
+        },
+        {
+          "sa": "धर्मैः",
+          "en": "properties"
+        },
+        {
+          "sa": "शरीर",
+          "en": "body"
+        },
+        {
+          "sa": "इन्द्रिय",
+          "en": "senses"
+        },
+        {
+          "sa": "मनस्",
+          "en": "mind"
+        },
+        {
+          "sa": "निश्चय",
+          "en": "determination"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "वृत्तीः",
+          "en": "mental activities"
+        },
+        {
+          "sa": "अनात्मतया",
+          "en": "as not-Self"
+        },
+        {
+          "sa": "व्युदस्य",
+          "en": "having set aside"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "वृत्तिमतः",
+          "en": "the thought"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "दृश्यत्व",
+          "en": "being seen"
+        },
+        {
+          "sa": "अविशेषात्",
+          "en": "because it is no different in this respect"
+        },
+        {
+          "sa": "द्रष्टृ",
+          "en": "seer"
+        },
+        {
+          "sa": "पूर्वकत्वम्",
+          "en": "dependence on"
+        },
+        {
+          "sa": "अवसीयते",
+          "en": "is inferred"
+        },
+        {
+          "sa": "तत्",
+          "en": "this"
+        },
+        {
+          "sa": "एतत्",
+          "en": "point"
+        },
+        {
+          "sa": "आह",
+          "en": "he states"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0855",
@@ -39419,7 +39629,144 @@
       "deva": "ननु द्रष्टृदर्शनदृश्यानां जाग्रत्स्वप्नसुषुप्तेष्वागमापायदर्शनाद्यसाक्षिकौ तेषामागमापायौ स आगमापायविभागरहित आत्मा यथा यन्निबन्धनौ जगतः प्रकाशाप्रकाशौ स प्रकाशाप्रकाशविभागरहितः सूर्य इति ।",
       "iast": "nanu draṣṭṛdarśanadṛśyānāṃ jāgratsvapnasuṣupteṣvāgamāpāyadarśanādyasākṣikau teṣāmāgamāpāyau sa āgamāpāyavibhāgarahita ātmā yathā yannibandhanau jagataḥ prakāśāprakāśau sa prakāśāprakāśavibhāgarahitaḥ sūrya iti |",
       "translation": "One might object: the seer, seeing and seen are all observed to arise and disappear in waking, dream and deep sleep. Their arising and disappearance are known by a witness; that witness is the Self, free of arising and disappearance. Just as the sun, on which the world’s light and darkness depend, is free of that division—",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "ननु",
+          "en": "one may object"
+        },
+        {
+          "sa": "द्रष्टृ",
+          "en": "seer"
+        },
+        {
+          "sa": "दर्शन",
+          "en": "seeing"
+        },
+        {
+          "sa": "दृश्यानाम्",
+          "en": "of seen objects"
+        },
+        {
+          "sa": "जाग्रत्",
+          "en": "waking"
+        },
+        {
+          "sa": "स्वप्न",
+          "en": "dream"
+        },
+        {
+          "sa": "सुषुप्तेषु",
+          "en": "in deep sleep"
+        },
+        {
+          "sa": "आगम",
+          "en": "arising"
+        },
+        {
+          "sa": "आपाय",
+          "en": "passing away"
+        },
+        {
+          "sa": "दर्शनात्",
+          "en": "because these are observed"
+        },
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "साक्षिकौ",
+          "en": "are witnessed"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "of those"
+        },
+        {
+          "sa": "आगम",
+          "en": "arising"
+        },
+        {
+          "sa": "आपायौ",
+          "en": "and passing away"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "आगम",
+          "en": "arising"
+        },
+        {
+          "sa": "आपाय",
+          "en": "passing away"
+        },
+        {
+          "sa": "विभाग",
+          "en": "distinction"
+        },
+        {
+          "sa": "रहितः",
+          "en": "free from"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "Self"
+        },
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "यत्",
+          "en": "on which"
+        },
+        {
+          "sa": "निबन्धनौ",
+          "en": "depend"
+        },
+        {
+          "sa": "जगतः",
+          "en": "of the world"
+        },
+        {
+          "sa": "प्रकाश",
+          "en": "light"
+        },
+        {
+          "sa": "अप्रकाशौ",
+          "en": "and darkness"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "प्रकाश",
+          "en": "light"
+        },
+        {
+          "sa": "अप्रकाश",
+          "en": "darkness"
+        },
+        {
+          "sa": "विभाग",
+          "en": "division"
+        },
+        {
+          "sa": "रहितः",
+          "en": "free from"
+        },
+        {
+          "sa": "सूर्यः",
+          "en": "the sun"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0857",
@@ -39430,7 +39777,100 @@
       "deva": "यदा चैवं तदा वाक्यावगम्यस्यार्थस्यानुदितानस्तमितविज्ञानमात्रस्वभावस्यानुमानेनैव प्रतिपन्नत्वात्पुनरपि वाक्यस्य निर्विषयत्वप्रसङ्गः । नैष दोषः ।",
       "iast": "yadā caivaṃ tadā vākyāvagamyasyārthasyānuditānastamitavijñānamātrasvabhāvasyānumānenaiva pratipannatvātpunarapi vākyasya nirviṣayatvaprasaṅgaḥ | naiṣa doṣaḥ |",
       "translation": "if so, the meaning taught by the sentence, whose nature is awareness without beginning or end, has already been established by inference. The scriptural sentence would then have no subject matter. This is no fault:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अवगम्यस्य",
+          "en": "made known by"
+        },
+        {
+          "sa": "अर्थस्य",
+          "en": "of the meaning"
+        },
+        {
+          "sa": "अनुदित",
+          "en": "not risen"
+        },
+        {
+          "sa": "अनस्तमित",
+          "en": "not set"
+        },
+        {
+          "sa": "विज्ञान",
+          "en": "awareness"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "स्वभावस्य",
+          "en": "whose nature is"
+        },
+        {
+          "sa": "अनुमानेन",
+          "en": "by inference"
+        },
+        {
+          "sa": "एव",
+          "en": "already"
+        },
+        {
+          "sa": "प्रतिपन्नत्वात्",
+          "en": "because it has been ascertained"
+        },
+        {
+          "sa": "पुनः",
+          "en": "again"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "वाक्यस्य",
+          "en": "of the sentence"
+        },
+        {
+          "sa": "निर्विषयत्व",
+          "en": "having no subject matter"
+        },
+        {
+          "sa": "प्रसङ्गः",
+          "en": "the consequence"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "दोषः",
+          "en": "a fault"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0858",
@@ -39441,7 +39881,96 @@
       "deva": "लिङ्गव्यवधानेन तत्प्रतिपत्तेः । ननु साक्षादपरोक्षादात्मस्वभावेनानात्मनो हानोपादानयोः संबन्धग्रहणात्कमतिशयं वाक्यं कुर्यात् । मैवं वोचः ।",
       "iast": "liṅgavyavadhānena tatpratipatteḥ | nanu sākṣādaparokṣādātmasvabhāvenānātmano hānopādānayoḥ saṃbandhagrahaṇātkamatiśayaṃ vākyaṃ kuryāt | maivaṃ vocaḥ |",
       "translation": "because that conclusion is reached only through an intervening sign. But if the Self is already directly and immediately experienced as one’s own nature, and one can distinguish what is not-Self in order to give it up or take it up, what further work could the sentence do? Do not say this.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "लिङ्ग",
+          "en": "inferential sign"
+        },
+        {
+          "sa": "व्यवधानेन",
+          "en": "through an intermediary"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "प्रतिपत्तेः",
+          "en": "because it is understood"
+        },
+        {
+          "sa": "ननु",
+          "en": "one may ask"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "directly"
+        },
+        {
+          "sa": "अपरोक्षात्",
+          "en": "immediately"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "स्वभावेन",
+          "en": "by its own nature"
+        },
+        {
+          "sa": "अनात्मनः",
+          "en": "of what is not-Self"
+        },
+        {
+          "sa": "हान",
+          "en": "giving up"
+        },
+        {
+          "sa": "उपादान",
+          "en": "taking up"
+        },
+        {
+          "sa": "योः",
+          "en": "of the two"
+        },
+        {
+          "sa": "सम्बन्ध",
+          "en": "relation"
+        },
+        {
+          "sa": "ग्रहणात्",
+          "en": "because it is recognized"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "अतिशयम्",
+          "en": "further work"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "can a sentence"
+        },
+        {
+          "sa": "कुर्यात्",
+          "en": "do"
+        },
+        {
+          "sa": "मा",
+          "en": "do not"
+        },
+        {
+          "sa": "एवम्",
+          "en": "this"
+        },
+        {
+          "sa": "वोचः",
+          "en": "say"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0859",
@@ -39452,7 +39981,24 @@
       "deva": "लिङ्गाधीनत्वात्तत्प्रतिपत्तेः ।",
       "iast": "liṅgādhīnatvāttatpratipatteḥ |",
       "translation": "The conclusion depends on an inferential sign.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "लिङ्ग",
+          "en": "inferential sign"
+        },
+        {
+          "sa": "अधीनत्वात्",
+          "en": "because of dependence on"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "प्रतिपत्तेः",
+          "en": "understanding"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0860",
@@ -39463,7 +40009,84 @@
       "deva": "न हि लिङ्गव्यवधानेनात्मप्रतिपत्तिः साक्षात्प्रतिपत्तिर्भवति \"यमेवैष वृणुते तेन लभ्यः \" इति श्रुतेः । अत आह ।",
       "iast": "na hi liṅgavyavadhānenātmapratipattiḥ sākṣātpratipattirbhavati \"yamevaiṣa vṛṇute tena labhyaḥ \" iti śruteḥ | ata āha |",
       "translation": "Knowing the Self through an intervening sign is not direct knowledge. Scripture says, “The Self is attained by the one whom it chooses.” Therefore:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "लिङ्ग",
+          "en": "an inferential sign"
+        },
+        {
+          "sa": "व्यवधानेन",
+          "en": "through an intermediary"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "knowledge"
+        },
+        {
+          "sa": "साक्षात्",
+          "en": "direct"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "knowledge"
+        },
+        {
+          "sa": "भवति",
+          "en": "is"
+        },
+        {
+          "sa": "यम्",
+          "en": "whom"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "एषः",
+          "en": "this one"
+        },
+        {
+          "sa": "वृणुते",
+          "en": "chooses"
+        },
+        {
+          "sa": "तेन",
+          "en": "by him"
+        },
+        {
+          "sa": "लभ्यः",
+          "en": "is attained"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "because scripture says"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0862",
@@ -50970,7 +51593,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 153 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 146 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
