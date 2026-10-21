@@ -1825,3 +1825,22 @@ body.vd-chrome-page.scripture-index-page .chapter-list{list-style:decimal!import
 
 
 
+
+
+/* Standardize blue links while keeping section titles black. */
+body.vd-chrome-page:is(.home-page,.page-page) .hp-section-title a,
+body.vd-chrome-page:is(.home-page,.page-page) .hp-section-title a:visited{
+  color:#202122!important;
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list a,
+body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list a:visited,
+body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list a *{
+  color:#0645ad!important;
+}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link,
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link:visited,
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-dev,
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-iast,
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-separator{
+  color:#0645ad!important;
+}
