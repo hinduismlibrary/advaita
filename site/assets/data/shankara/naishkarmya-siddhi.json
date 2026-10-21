@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 299 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 287 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -20087,7 +20087,64 @@
       "deva": "स्यात्परिहारः स्वाभाविकधर्मत्वाभ्युपगमेऽप्याम्रादिफलवदिति चेत्तन्न ।",
       "iast": "syātparihāraḥ svābhāvikadharmatvābhyupagame'pyāmrādiphalavaditi cettanna |",
       "translation": "One might answer that ego is a natural property [of the Self], like the fruit of a mango. That is not so.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "स्यात्",
+          "en": "one might say"
+        },
+        {
+          "sa": "परिहारः",
+          "en": "a reply"
+        },
+        {
+          "sa": "स्वाभाविक",
+          "en": "natural"
+        },
+        {
+          "sa": "धर्मत्व",
+          "en": "being a property"
+        },
+        {
+          "sa": "अभ्युपगमे",
+          "en": "if accepted"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "आम्र",
+          "en": "mango"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "फल",
+          "en": "fruit"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "is not so"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0425",
@@ -20165,7 +20222,44 @@
       "deva": "अहङ्कारस्य चागमापायित्वात्तद्धर्मिणश्चानित्यत्वं प्राप्नोति ।",
       "iast": "ahaṅkārasya cāgamāpāyitvāttaddharmiṇaścānityatvaṃ prāpnoti |",
       "translation": "Since ego arises and passes away, the Self that bears it would also be impermanent.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अहङ्कारस्य",
+          "en": "of ego"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आगम",
+          "en": "arising"
+        },
+        {
+          "sa": "अपायित्वात्",
+          "en": "because it also passes away"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "धर्मिणः",
+          "en": "bearer"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनित्यत्वम्",
+          "en": "impermanence"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "follows"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0428",
@@ -20235,7 +20329,48 @@
       "deva": "अस्त्वनित्यत्वं कमुपालभेमहि प्रमाणोपपन्नत्वादिति चेत्तन्न ।",
       "iast": "astvanityatvaṃ kamupālabhemahi pramāṇopapannatvāditi cettanna |",
       "translation": "One might say, “Let it be impermanent; why object, since it is established by a means of knowledge?” That is not so.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अस्तु",
+          "en": "let it be"
+        },
+        {
+          "sa": "अनित्यत्वम्",
+          "en": "impermanence"
+        },
+        {
+          "sa": "कम्",
+          "en": "whom"
+        },
+        {
+          "sa": "उपालभेमहि",
+          "en": "should we blame"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "उपपन्नत्वात्",
+          "en": "because it is supported"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one says"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "is not so"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0431",
@@ -20305,7 +20440,36 @@
       "deva": "एतस्माच्च हेतोरहंकारस्यानात्मधर्मत्वमवसीयताम् ।",
       "iast": "etasmācca hetorahaṃkārasyānātmadharmatvamavasīyatām |",
       "translation": "For this reason, understand that ego is not a property of the Self.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एतस्मात्",
+          "en": "for this"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "reason"
+        },
+        {
+          "sa": "अहङ्कारस्य",
+          "en": "of ego"
+        },
+        {
+          "sa": "अनात्म",
+          "en": "not-Self"
+        },
+        {
+          "sa": "धर्मत्वम्",
+          "en": "being a property"
+        },
+        {
+          "sa": "अवसीयताम्",
+          "en": "let it be understood"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0434",
@@ -20379,7 +20543,36 @@
       "deva": "धर्मधर्मिणोश्चेतरेतरविरुद्धात्मकत्वादसङ्गतिः ।",
       "iast": "dharmadharmiṇoścetaretaraviruddhātmakatvādasaṅgatiḥ |",
       "translation": "Moreover, the property and its bearer have opposed natures, so their relation is impossible.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "धर्म",
+          "en": "property"
+        },
+        {
+          "sa": "धर्मिणोः",
+          "en": "and its bearer"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इतरेतर",
+          "en": "one another"
+        },
+        {
+          "sa": "विरुद्ध",
+          "en": "opposed"
+        },
+        {
+          "sa": "आत्मकत्वात्",
+          "en": "because they have the nature"
+        },
+        {
+          "sa": "असङ्गतिः",
+          "en": "their relation is impossible"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0437",
@@ -20445,7 +20638,20 @@
       "deva": "तस्माद्विस्रब्धमुपगम्यताम् ।",
       "iast": "tasmādvisrabdhamupagamyatām |",
       "translation": "Therefore accept this without hesitation:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "विस्रब्धम्",
+          "en": "with confidence"
+        },
+        {
+          "sa": "उपगम्यताम्",
+          "en": "let it be accepted"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0440",
@@ -20539,7 +20745,32 @@
       "deva": "सर्वसंव्यवहारलोपश्च प्राप्नोति । यस्मात् ।",
       "iast": "sarvasaṃvyavahāralopaśca prāpnoti | yasmāt |",
       "translation": "If this were otherwise, all ordinary dealings would collapse. For:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "संव्यवहार",
+          "en": "ordinary dealings"
+        },
+        {
+          "sa": "लोपः",
+          "en": "collapse"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "follows"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0443",
@@ -20621,7 +20852,16 @@
       "deva": "कुतः । यस्मात् ।",
       "iast": "kutaḥ | yasmāt |",
       "translation": "Why? Because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कुतः",
+          "en": "why"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0446",
@@ -20707,7 +20947,32 @@
       "deva": "उक्तयुक्तिं दृढीकर्तुमागमोदाहरणोपन्यासः ।",
       "iast": "uktayuktiṃ dṛḍhīkartumāgamodāharaṇopanyāsaḥ |",
       "translation": "A scriptural example is introduced to strengthen the argument:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "उक्त",
+          "en": "stated"
+        },
+        {
+          "sa": "युक्तिम्",
+          "en": "reasoning"
+        },
+        {
+          "sa": "दृढीकर्तुम्",
+          "en": "to strengthen"
+        },
+        {
+          "sa": "आगम",
+          "en": "scripture"
+        },
+        {
+          "sa": "उदाहरण",
+          "en": "example"
+        },
+        {
+          "sa": "उपन्यासः",
+          "en": "is introduced"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0449",
@@ -20856,7 +21121,24 @@
       "deva": "अधुना प्रकृतार्थोऽपसंहारः ।",
       "iast": "adhunā prakṛtārtho'pasaṃhāraḥ |",
       "translation": "The subject is now brought to a close.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अधुना",
+          "en": "now"
+        },
+        {
+          "sa": "प्रकृत",
+          "en": "present"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "subject"
+        },
+        {
+          "sa": "उपसंहारः",
+          "en": "conclusion"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0454",
@@ -20926,7 +21208,32 @@
       "deva": "कुतो मिथ्यासिद्धत्वं द्वैतस्येति चेत् ।",
       "iast": "kuto mithyāsiddhatvaṃ dvaitasyeti cet |",
       "translation": "If one asks how duality is falsely established,",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "falsely"
+        },
+        {
+          "sa": "सिद्धत्वम्",
+          "en": "being established"
+        },
+        {
+          "sa": "द्वैतस्य",
+          "en": "of duality"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one asks"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0457",
@@ -21004,7 +21311,24 @@
       "deva": "तस्मादज्ञानविजृम्भितमेतत् ।",
       "iast": "tasmādajñānavijṛmbhitametat |",
       "translation": "This is thus an expansion of ignorance.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "विजृम्भितम्",
+          "en": "an expansion"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0460",
@@ -41895,7 +42219,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 299 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 287 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
