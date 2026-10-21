@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 337 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 323 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -14867,7 +14867,64 @@
       "deva": "न च प्रत्याख्याताशेषशरीरादिकर्मसाधनस्वभावस्यात्ममात्रस्य कर्मस्वधिकारः । यस्मात् ।",
       "iast": "na ca pratyākhyātāśeṣaśarīrādikarmasādhanasvabhāvasyātmamātrasya karmasvadhikāraḥ | yasmāt |",
       "translation": "The Self alone, whose nature excludes the body and every instrument of action, is not eligible for ritual action. Why?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रत्याख्यात",
+          "en": "excluded"
+        },
+        {
+          "sa": "अशेष",
+          "en": "all"
+        },
+        {
+          "sa": "शरीर",
+          "en": "body"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "साधन",
+          "en": "instruments"
+        },
+        {
+          "sa": "स्वभावस्य",
+          "en": "whose nature"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "मात्रस्य",
+          "en": "alone"
+        },
+        {
+          "sa": "कर्मसु",
+          "en": "in actions"
+        },
+        {
+          "sa": "अधिकारः",
+          "en": "eligibility"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0305",
@@ -14929,7 +14986,28 @@
       "deva": "प्रवृत्तिकारणाभावाच्च । यस्मात् ।",
       "iast": "pravṛttikāraṇābhāvācca | yasmāt |",
       "translation": "There is no cause that could prompt it to act. For:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "प्रवृत्ति",
+          "en": "action"
+        },
+        {
+          "sa": "कारण",
+          "en": "cause"
+        },
+        {
+          "sa": "अभावात्",
+          "en": "because there is no"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0308",
@@ -14999,7 +15077,12 @@
       "deva": "किंच ।",
       "iast": "kiṃca |",
       "translation": "Further:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "किंच",
+          "en": "further"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0311",
@@ -15089,7 +15172,24 @@
       "deva": "यस्मादन्यथा नोपपद्यते ।",
       "iast": "yasmādanyathā nopapadyate |",
       "translation": "Since that would make no sense otherwise,",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "makes sense"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0314",
@@ -15155,7 +15255,224 @@
       "deva": "यच्चोक्तं \"विरहय्य \" इति तदपि न सम्यगेव । तथापि तु न या काचित्क्रिया यत्र क्व चाध्याहरणीया किं तु या यत्राभिप्रेतसंबन्धं घटयितुं शक्नोत्याकाङ्क्षां च वाक्यस्य पूरयति सैवाध्याहरणीया । एवंविशिष्टा च क्रियास्माभिरभ्युपगतैव । सा तूपादित्सितवाक्यार्था विरोधिन्येव नाभूतार्थप्रादुर्भावफलेति ।",
       "iast": "yaccoktaṃ \"virahayya \" iti tadapi na samyageva | tathāpi tu na yā kācitkriyā yatra kva cādhyāharaṇīyā kiṃ tu yā yatrābhipretasaṃbandhaṃ ghaṭayituṃ śaknotyākāṅkṣāṃ ca vākyasya pūrayati saivādhyāharaṇīyā | evaṃviśiṣṭā ca kriyāsmābhirabhyupagataiva | sā tūpāditsitavākyārthā virodhinyeva nābhūtārthaprādurbhāvaphaleti |",
       "translation": "What you said—“sentences do not combine without an action-word”—is not quite correct. Not just any action-word may be supplied wherever one pleases. Only the verb that can establish the intended relation and complete the sentence’s expectation may be supplied, and we accept that. But in sentences whose intended meaning is knowledge, such a verb would conflict with their purpose, which is not to produce something that did not exist.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यत्",
+          "en": "what"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "was said"
+        },
+        {
+          "sa": "विरहय्य",
+          "en": "without [an action-word]"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "quite"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तथापि",
+          "en": "even so"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "या",
+          "en": "which"
+        },
+        {
+          "sa": "काचित्",
+          "en": "any"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "verb"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "क्व",
+          "en": "anywhere"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अध्याहरणीया",
+          "en": "is to be supplied"
+        },
+        {
+          "sa": "किंतु",
+          "en": "rather"
+        },
+        {
+          "sa": "या",
+          "en": "which"
+        },
+        {
+          "sa": "यत्र",
+          "en": "where"
+        },
+        {
+          "sa": "अभिप्रेत",
+          "en": "intended"
+        },
+        {
+          "sa": "सम्बन्धम्",
+          "en": "relation"
+        },
+        {
+          "sa": "घटयितुम्",
+          "en": "to establish"
+        },
+        {
+          "sa": "शक्नोति",
+          "en": "is able"
+        },
+        {
+          "sa": "आकाङ्क्षाम्",
+          "en": "the expectation"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वाक्यस्य",
+          "en": "of the sentence"
+        },
+        {
+          "sa": "पूरयति",
+          "en": "fulfills"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अध्याहरणीया",
+          "en": "is to be supplied"
+        },
+        {
+          "sa": "एवं",
+          "en": "thus"
+        },
+        {
+          "sa": "विशिष्टा",
+          "en": "qualified"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "verb"
+        },
+        {
+          "sa": "अस्माभिः",
+          "en": "by us"
+        },
+        {
+          "sa": "अभ्युपगता",
+          "en": "is accepted"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "उपादित्सित",
+          "en": "intended"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्था",
+          "en": "meaning"
+        },
+        {
+          "sa": "विरोधिनी",
+          "en": "conflicting"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अभूत",
+          "en": "not previously existing"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "thing"
+        },
+        {
+          "sa": "प्रादुर्भाव",
+          "en": "bringing into existence"
+        },
+        {
+          "sa": "फला",
+          "en": "having as its result"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0316",
@@ -15166,7 +15483,132 @@
       "deva": "षड्भावविकाररहितात्मवस्तुनो निर्धूताशेषद्वैतानर्थस्यापराधीनप्रकाशस्य विजिज्ञापयिषितत्वादस्यस्मीत्यादिक्रियापदं स्वमहिमसिद्धार्थप्रतिपादनसमर्थमभ्युपगन्तव्यं न विपरीतार्थप्रतिपादनपरमिति ।",
       "iast": "ṣaḍbhāvavikārarahitātmavastuno nirdhūtāśeṣadvaitānarthasyāparādhīnaprakāśasya vijijñāpayiṣitatvādasyasmītyādikriyāpadaṃ svamahimasiddhārthapratipādanasamarthamabhyupagantavyaṃ na viparītārthapratipādanaparamiti |",
       "translation": "Since the Self is free from the six modifications, free from every ill born of duality, self-luminous, and independent, the verb “am” in a sentence such as “I am” must be understood as conveying the reality already established in its own glory, not as conveying a contrary meaning.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "षट्",
+          "en": "six"
+        },
+        {
+          "sa": "भाव",
+          "en": "existence"
+        },
+        {
+          "sa": "विकार",
+          "en": "changes"
+        },
+        {
+          "sa": "रहित",
+          "en": "free from"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "वस्तुनः",
+          "en": "of reality"
+        },
+        {
+          "sa": "निर्धूत",
+          "en": "removed"
+        },
+        {
+          "sa": "अशेष",
+          "en": "all"
+        },
+        {
+          "sa": "द्वैत",
+          "en": "duality"
+        },
+        {
+          "sa": "अनर्थस्य",
+          "en": "and its troubles"
+        },
+        {
+          "sa": "अपराधीन",
+          "en": "independent"
+        },
+        {
+          "sa": "प्रकाशस्य",
+          "en": "self-luminous"
+        },
+        {
+          "sa": "विजिज्ञापयिषितत्वात्",
+          "en": "because it is to be made known"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "I am"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "पदम्",
+          "en": "word"
+        },
+        {
+          "sa": "स्व",
+          "en": "its own"
+        },
+        {
+          "sa": "महिम",
+          "en": "power"
+        },
+        {
+          "sa": "सिद्ध",
+          "en": "established"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "प्रतिपादन",
+          "en": "conveying"
+        },
+        {
+          "sa": "समर्थम्",
+          "en": "capable"
+        },
+        {
+          "sa": "अभ्युपगन्तव्यम्",
+          "en": "must be accepted"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विपरीत",
+          "en": "opposite"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "प्रतिपादन",
+          "en": "conveying"
+        },
+        {
+          "sa": "परम्",
+          "en": "as its purpose"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0318",
@@ -15244,7 +15686,88 @@
       "deva": "न च यथोक्तवस्तुवृत्तप्रतिपादनव्यतिरेकेण तत्त्वमस्यादिवाक्यं वाक्यार्थान्तरं वक्तीति शक्यमध्यवसातुमित्याह ।",
       "iast": "na ca yathoktavastuvṛttapratipādanavyatirekeṇa tattvamasyādivākyaṃ vākyārthāntaraṃ vaktīti śakyamadhyavasātumityāha |",
       "translation": "Nor can it be concluded that sentences such as “That thou art” express a meaning other than the reality of things as stated. He says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उक्त",
+          "en": "stated"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "वृत्त",
+          "en": "actual nature"
+        },
+        {
+          "sa": "प्रतिपादन",
+          "en": "stating"
+        },
+        {
+          "sa": "व्यतिरेकेण",
+          "en": "apart from"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "That"
+        },
+        {
+          "sa": "असि",
+          "en": "thou art"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "sentence"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "अन्तरम्",
+          "en": "another"
+        },
+        {
+          "sa": "वक्ति",
+          "en": "expresses"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "शक्यम्",
+          "en": "possible"
+        },
+        {
+          "sa": "अध्यवसातुम्",
+          "en": "to conclude"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0321",
@@ -15306,7 +15829,16 @@
       "deva": "यस्मादेवम् ।",
       "iast": "yasmādevam |",
       "translation": "Since this is so,",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0324",
@@ -15384,7 +15916,32 @@
       "deva": "तस्माच्च कारणादेतदप्युपपन्नम् ।",
       "iast": "tasmācca kāraṇādetadapyupapannam |",
       "translation": "For this reason, the following too is well said:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कारणात्",
+          "en": "for this reason"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "उपपन्नम्",
+          "en": "is well established"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0327",
@@ -15443,7 +16000,20 @@
       "deva": "इति प्रथमोऽध्यायः ॥ १॥",
       "iast": "iti prathamo'dhyāyaḥ || 1||",
       "translation": "Thus ends the first chapter.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रथमः",
+          "en": "first"
+        },
+        {
+          "sa": "अध्यायः",
+          "en": "chapter"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0329",
@@ -15454,7 +16024,20 @@
       "deva": "अथ द्वितीयोऽध्यायः ।",
       "iast": "atha dvitīyo'dhyāyaḥ |",
       "translation": "Now begins the second chapter.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "द्वितीयः",
+          "en": "second"
+        },
+        {
+          "sa": "अध्यायः",
+          "en": "chapter"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0330",
@@ -15465,7 +16048,168 @@
       "deva": "प्रत्यक्षादीनामनेवंविषयत्वात्तेषां स्वारम्भकविषयोपनिपातित्वादात्मनश्चाशेषप्रमेयवैलक्षण्यात्सर्वानर्थैकहेत्वज्ञानापनोदिज्ञानदिवाकरोदयहेतुत्वं वस्तुमात्रयाथात्म्यप्रकाशनपटीयसस्तत्त्वमस्यादेर्वचस एवेति बह्वीभिरुपपत्तिभिः प्रदर्शितम् ।",
       "iast": "pratyakṣādīnāmanevaṃviṣayatvātteṣāṃ svārambhakaviṣayopanipātitvādātmanaścāśeṣaprameyavailakṣaṇyātsarvānarthaikahetvajñānāpanodijñānadivākarodayahetutvaṃ vastumātrayāthātmyaprakāśanapaṭīyasastattvamasyādervacasa eveti bahvībhirupapattibhiḥ pradarśitam |",
       "translation": "Perception and the other ordinary means of knowledge do not take the Self as their object; they operate only on the objects that give rise to them. The Self is unlike every knowable object. Therefore only words such as “That thou art,” which clearly reveal things as they are, bring about the rising of the sun of knowledge that removes ignorance, the cause of every ill. This has been shown through many arguments.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "आदीनाम्",
+          "en": "and the other means"
+        },
+        {
+          "sa": "अन",
+          "en": "not"
+        },
+        {
+          "sa": "एवं",
+          "en": "this kind of"
+        },
+        {
+          "sa": "विषयत्वात्",
+          "en": "because they take as their object"
+        },
+        {
+          "sa": "तेषाम्",
+          "en": "they"
+        },
+        {
+          "sa": "स्व",
+          "en": "their own"
+        },
+        {
+          "sa": "आरम्भक",
+          "en": "causing"
+        },
+        {
+          "sa": "विषय",
+          "en": "objects"
+        },
+        {
+          "sa": "उपनिपातित्वात्",
+          "en": "because they concern"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अशेष",
+          "en": "all"
+        },
+        {
+          "sa": "प्रमेय",
+          "en": "knowable things"
+        },
+        {
+          "sa": "वैलक्षण्यात्",
+          "en": "because it differs from"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "अनर्थ",
+          "en": "misfortune"
+        },
+        {
+          "sa": "एक",
+          "en": "sole"
+        },
+        {
+          "sa": "हेतु",
+          "en": "cause"
+        },
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अपनोदि",
+          "en": "removing"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "दिवाकर",
+          "en": "sun"
+        },
+        {
+          "sa": "उदय",
+          "en": "rising"
+        },
+        {
+          "sa": "हेतुत्वम्",
+          "en": "being the cause"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "मात्र",
+          "en": "as it is"
+        },
+        {
+          "sa": "याथात्म्य",
+          "en": "true nature"
+        },
+        {
+          "sa": "प्रकाशन",
+          "en": "revealing"
+        },
+        {
+          "sa": "पटीयसः",
+          "en": "highly capable"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "असि",
+          "en": "art"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "वचसः",
+          "en": "of the words"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "बह्वीभिः",
+          "en": "by many"
+        },
+        {
+          "sa": "उपपत्तिभिः",
+          "en": "arguments"
+        },
+        {
+          "sa": "प्रदर्शितम्",
+          "en": "has been shown"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0331",
@@ -15473,10 +16217,55 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2 · 3",
       "label": "Text 3",
-      "deva": "अतस्तदर्थारतिपत्तौ यत्कारणं तदपनयनाय द्वितीयोऽध्याय आरभ्यते ।",
-      "iast": "atastadarthāratipattau yatkāraṇaṃ tadapanayanāya dvitīyo'dhyāya ārabhyate |",
+      "deva": "अतस्तदर्थाप्रतिपत्तौ यत्कारणं तदपनयनाय द्वितीयोऽध्याय आरभ्यते ।",
+      "iast": "atastadarthāpratipattau yatkāraṇaṃ tadapanayanāya dvitīyo'dhyāya ārabhyate |",
       "translation": "The second chapter now begins to remove the obstacle that prevents understanding the meaning of that sentence.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "अप्रतिपत्तौ",
+          "en": "when it is not understood"
+        },
+        {
+          "sa": "यत्",
+          "en": "whatever"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "cause"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपनयनाय",
+          "en": "for removing"
+        },
+        {
+          "sa": "द्वितीयः",
+          "en": "second"
+        },
+        {
+          "sa": "अध्यायः",
+          "en": "chapter"
+        },
+        {
+          "sa": "आरभ्यते",
+          "en": "is begun"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0333",
@@ -15554,7 +16343,108 @@
       "deva": "योऽयमहंब्रह्मेति वाक्यार्थस्तत्प्रतिपत्तिर्वाक्यादेवेति प्रत्यक्षादीनामनेवंविषयत्वादित्यवादिषं तस्य विशुद्ध्यर्थमनैकात्त्रिकत्वं पूर्वपक्षत्वेनोपस्थाप्यते ।",
       "iast": "yo'yamahaṃbrahmeti vākyārthastatpratipattirvākyādeveti pratyakṣādīnāmanevaṃviṣayatvādityavādiṣaṃ tasya viśuddhyarthamanaikāttrikatvaṃ pūrvapakṣatvenopasthāpyate |",
       "translation": "I said that the meaning of the sentence “I am Brahman” is known from the sentence alone, since perception and the other means of knowledge cannot know it. To clarify that point, the opponent’s claim that the reasoning is inconclusive is introduced:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यः",
+          "en": "which"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "understanding"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "from the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "आदीनाम्",
+          "en": "and the other means"
+        },
+        {
+          "sa": "अन",
+          "en": "not"
+        },
+        {
+          "sa": "एवं",
+          "en": "this"
+        },
+        {
+          "sa": "विषयत्वात्",
+          "en": "because they take as object"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अत्वादिषम्",
+          "en": "I have said"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "विशुद्धि",
+          "en": "clarification"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "for"
+        },
+        {
+          "sa": "अनैकात्त्रिकत्वम्",
+          "en": "inconclusiveness"
+        },
+        {
+          "sa": "पूर्वपक्षत्वेन",
+          "en": "as an objection"
+        },
+        {
+          "sa": "उपस्थाप्यते",
+          "en": "is introduced"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0336",
@@ -39797,7 +40687,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 337 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 323 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
