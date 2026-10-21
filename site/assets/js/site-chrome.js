@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261021-preview-match-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261021-preview-match-2";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -219,7 +219,7 @@ function makeHeader(path){
   input.type="search";
   input.id="vd-site-search";
   input.name="q";
-  input.placeholder="Search this site";
+  input.placeholder="Search";
   input.required=true;
   input.autocomplete="off";
   const button=document.createElement("button");
