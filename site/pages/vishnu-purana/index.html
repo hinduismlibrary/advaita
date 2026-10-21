@@ -22,15 +22,56 @@
 <nav class="page-tools" aria-label="Page navigation"><a href="/advaita/">← Home</a></nav>
 <div class="reader">
 <aside class="side"><h2>Contents</h2>
-<a href="#book-1">Book 1</a><a href="#book-2">Book 2</a><a href="#book-3">Book 3</a><a href="#book-4">Book 4</a><a href="#book-5">Book 5</a><a href="#book-6">Book 6</a>
-
-</aside>
+<a href="#book-1"><span class="catalog-dev" lang="sa-Deva">प्रथमांशः</span><span class="catalog-iast" lang="sa-Latn">Prathamāṃśaḥ</span></a>
+<a href="#book-2"><span class="catalog-dev" lang="sa-Deva">द्वितीयांशः</span><span class="catalog-iast" lang="sa-Latn">Dvitīyāṃśaḥ</span></a>
+<a href="#book-3"><span class="catalog-dev" lang="sa-Deva">तृतीयांशः</span><span class="catalog-iast" lang="sa-Latn">Tṛtīyāṃśaḥ</span></a>
+<a href="#book-4"><span class="catalog-dev" lang="sa-Deva">चतुर्थांशः</span><span class="catalog-iast" lang="sa-Latn">Caturthāṃśaḥ</span></a>
+<a href="#book-5"><span class="catalog-dev" lang="sa-Deva">पञ्चमांशः</span><span class="catalog-iast" lang="sa-Latn">Pañcamāṃśaḥ</span></a>
+<a href="#book-6"><span class="catalog-dev" lang="sa-Deva">षष्ठांशः</span><span class="catalog-iast" lang="sa-Latn">Ṣaṣṭhāṃśaḥ</span></a></aside>
 <section class="main"><div id="book-list"></div>
 </section>
 </div>
 </main>
 <script>
-(()=>{const root=document.getElementById('book-list');if(!root)return;const books=[{book:1,name:'Creation and the origin of the universe',count:22},{book:2,name:'The earth and its regions',count:16},{book:3,name:'The Manus and Manvantaras',count:18},{book:4,name:'The royal dynasties',count:24},{book:5,name:'The life of Kṛṣṇa',count:38},{book:6,name:'Dissolution and liberation',count:8}];const base='/advaita/articles/vishnu-purana-book-';books.forEach(({book,name,count})=>{const section=document.createElement('section');section.className='book';section.id='book-'+book;const h=document.createElement('h3');h.innerHTML='<span class=\"catalog-dev\" lang=\"sa-Deva\">अंशः '+String(book).replace(/[0-9]/g,d=>'०१२३४५६७८९'[Number(d)])+'</span><span class=\"catalog-iast\" lang=\"sa-Latn\">Aṃśa '+book+(name?' — '+name:'')+'</span>';const grid=document.createElement('div');grid.className='chapter-grid';for(let chapter=1;chapter<=count;chapter+=1){const a=document.createElement('a');a.href=base+String(book)+'-chapter-'+String(chapter)+'/';a.textContent=book+'.'+chapter;grid.appendChild(a)}section.append(h,grid);root.appendChild(section)})})();
+(()=> {
+  const root=document.getElementById('book-list');
+  if(!root)return;
+  const books=[
+    {book:1,dev:'प्रथमांशः',iast:'Prathamāṃśaḥ',count:22},
+    {book:2,dev:'द्वितीयांशः',iast:'Dvitīyāṃśaḥ',count:16},
+    {book:3,dev:'तृतीयांशः',iast:'Tṛtīyāṃśaḥ',count:18},
+    {book:4,dev:'चतुर्थांशः',iast:'Caturthāṃśaḥ',count:24},
+    {book:5,dev:'पञ्चमांशः',iast:'Pañcamāṃśaḥ',count:38},
+    {book:6,dev:'षष्ठांशः',iast:'Ṣaṣṭhāṃśaḥ',count:8}
+  ];
+  const base='/advaita/articles/vishnu-purana-book-';
+  books.forEach(({book,dev,iast,count})=>{
+    const section=document.createElement('section');
+    section.className='book';
+    section.id='book-'+book;
+    const heading=document.createElement('h3');
+    const devLabel=document.createElement('span');
+    devLabel.className='catalog-dev';
+    devLabel.lang='sa-Deva';
+    devLabel.textContent=dev;
+    const iastLabel=document.createElement('span');
+    iastLabel.className='catalog-iast';
+    iastLabel.lang='sa-Latn';
+    iastLabel.textContent=iast;
+    heading.append(devLabel,iastLabel);
+    const list=document.createElement('div');
+    list.className='chapter-grid';
+    list.setAttribute('aria-label',iast+' chapters');
+    for(let chapter=1;chapter<=count;chapter+=1){
+      const link=document.createElement('a');
+      link.href=base+String(book)+'-chapter-'+String(chapter)+'/';
+      link.textContent=String(book)+'.'+String(chapter);
+      list.appendChild(link);
+    }
+    section.append(heading,list);
+    root.appendChild(section);
+  });
+})();
 </script>
   <script src="/advaita/assets/js/site-chrome.js?v=20261021-wikisource-4"></script>
 </body>
