@@ -25,3 +25,14 @@ body.advaita-directory-page{margin:0;background:#fff;color:#202122;font:16px/1.6
 .ad-entry-author,.ad-entry-count{display:none}
 @media(max-width:600px){.ad-page,.ad-topbar{width:calc(100% - 32px)}.ad-page{padding-top:18px}.ad-entry{padding:3px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Alphabetical Wikisource-style groupings */
+.ad-title-dev,.ad-heading-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif}
+.ad-title-separator,.ad-heading-separator{padding:0 .16em;color:var(--muted)}
+.ad-alpha-groups{columns:3;column-gap:32px}
+.ad-alpha-group{break-inside:avoid; margin:0 0 12px}
+.ad-alpha-group h3{margin:0 0 3px;color:#202122;font:600 1em/1.4 Arial,Helvetica,sans-serif}
+.ad-entry-original-dev{color:inherit}
+.ad-entry-link:visited{color:var(--link)}
+@media(max-width:850px){.ad-alpha-groups{columns:2}}
+@media(max-width:600px){.ad-alpha-groups{columns:1}}
