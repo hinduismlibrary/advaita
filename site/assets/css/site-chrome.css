@@ -1540,3 +1540,18 @@ body.vd-chrome-page.vd-chrome-page .site-footer .vd-label-dev{font-size:11px!imp
   body.vd-chrome-page.vd-chrome-page.gita-page .mmk-reader-toc{position:static!important;max-height:none!important;border-right:0!important;border-bottom:1px solid #c8ccd1!important;padding:8px 0 12px!important}
   body.vd-chrome-page.vd-chrome-page.page-page .page,body.vd-chrome-page.vd-chrome-page.page-page .ad-page{padding:10px 0 42px!important}
 }
+
+/* Keep English, Devanāgarī, and IAST labels consistent across all page menus. */
+body.vd-chrome-page.vd-chrome-page .vd-label-iast{
+  display:block!important;margin-top:1px!important;color:#54595d!important;
+  font:italic 400 10px/1.3 Merriweather,Georgia,serif!important;letter-spacing:0!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main h1 .vd-label-iast{font-size:13px!important;line-height:1.3!important}
+body.vd-chrome-page.vd-chrome-page main.site-main h2 .vd-label-iast,
+body.vd-chrome-page.vd-chrome-page .hp-section-title .vd-label-iast{font-size:10px!important}
+body.vd-chrome-page.vd-chrome-page .hp-link-list a .vd-label-iast{font-size:10px!important}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-label-iast{font-size:9px!important;line-height:1.2!important}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .brand .vd-label-iast{font-size:10px!important}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button .vd-label-iast{font-size:8px!important}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner .vd-label-iast{font-size:9px!important}
+body.vd-chrome-page.vd-chrome-page .site-footer .vd-label-iast{font-size:9px!important}
