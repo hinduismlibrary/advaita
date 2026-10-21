@@ -189,7 +189,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     if(!pair.devanagari||!mapped||normalizedLabel(mapped.english)===key||/^(chapter|part|book|additional sections)\b/i.test(raw)){
       node.textContent=raw;return;
     }
-    var original=raw.replace(/\s+[—–]\s+.*$/,"").replace(/\s+\\([^)]*\\)\s*$/,"").trim();
+    var original=raw.replace(/\s+[—–]\s+.*$/,"").replace(/\s+\([^)]*\)\s*$/,"").trim();
     if(!original){node.textContent=raw;return;}
     var sa=document.createElement("span");sa.className="label-dev";sa.lang="sa-Deva";sa.textContent=pair.devanagari;
     var separator=document.createElement("span");separator.className="label-separator";separator.setAttribute("aria-hidden","true");separator.textContent=" · ";
