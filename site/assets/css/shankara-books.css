@@ -234,7 +234,7 @@
 
 /* Transliteration and Word for Word controls for the long Advaita readers. */
 .shankara-content .shankara-study-controls{width:min(100%,840px);max-width:100%;margin:0 auto 12px;text-align:left}
-.shankara-content .shankara-study-button-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+.shankara-content .shankara-study-button-row{display:flex;align-items:center;gap:0!important;column-gap:0!important;row-gap:0!important;flex-wrap:wrap;margin:0 0 8px}
 .shankara-content .shankara-study-button{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:6px 10px;border:1px solid #83b9b7;border-radius:7px;background:#f8fbfa;color:#28787a;font-family:Merriweather,Georgia,serif;font-size:12px!important;font-weight:600;line-height:1.25;cursor:pointer;transition:background .15s ease,border-color .15s ease,color .15s ease}
 .shankara-content .shankara-study-button:hover,.shankara-content .shankara-study-button:focus-visible{border-color:#4d9291;background:#edf5f4;outline:2px solid #b6d7d5;outline-offset:2px}
 .shankara-content .shankara-study-button.is-active{border-color:#4d9291;background:#e4f0ef;color:#246d70}
