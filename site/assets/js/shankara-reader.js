@@ -414,7 +414,7 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-gloss-20261021a";
+const READER_DATA_VERSION="reader-gloss-20261021b";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
  if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
