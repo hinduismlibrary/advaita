@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The reader has 69 reading cards plus a separate colophon for all 227 numbered passages and eight named contents sections. The source-number boundaries and Sanskrit, English, IAST, and word-for-word fields are being checked passage by passage. This pass restored passage markers and separated the English by passage through 142. It corrected boundary and source-wording errors through 136, including the missing passage 132. Passages 137–138 now separate the definition of rescission from its quoted verse; passages 139–142 have matching Sanskrit markers, IAST, individual translations, and glosses. I corrected the source spellings in 141–142 and the Sanskrit/English word gloss for “Brahman alone.” The reader displays each separated translation as its own paragraph. The transliteration/word-for-word button row has zero gap. All 29 reader pages point at the updated renderer (d). Semantic review remains in progress from passage 143 onward.
+**Vedāntasāra** — active. The reader has 69 reading cards plus a separate colophon for all 227 numbered passages and eight named contents sections. The source-number boundaries and Sanskrit, English, IAST, and word-for-word fields are being checked passage by passage. This pass restored passage markers and separated the English by passage through 147. Passages 137–138 now separate the definition of rescission from its quoted verse; passages 139–142 have corrected Sanskrit and glosses. Passages 143–147 now have matching source-number markers, IAST, separate translations, and complete word glosses. I refined the compounds for the direct and indicated meanings of “That” and “you.” The reader displays each separated translation as its own paragraph. The transliteration/word-for-word button row has zero gap. All 29 reader pages point at the updated renderer (d). Semantic review remains in progress from passage 148 onward.
 
 ## Completed
 
@@ -68,7 +68,7 @@ The shared transliteration/word-for-word button row now has zero gap; all 26 rea
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Upadeśasāhasrī | 787 | Complete: all 787 verse and prose units have Sanskrit, English, explicit IAST, and Devanāgarī glosses; semantic audit completed through II.3.116. |
-| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: source boundaries and passage-by-passage fields checked through 142; continue semantic review from 143. |
+| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: source boundaries and passage-by-passage fields checked through 147; continue semantic review from 148. |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 
