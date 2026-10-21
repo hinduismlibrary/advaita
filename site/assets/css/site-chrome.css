@@ -1578,3 +1578,219 @@ body.vd-chrome-page.vd-chrome-page .shankara-card small{
 @media(max-width:680px){
   body.vd-chrome-page.vd-chrome-page .shankara-cards{grid-template-columns:1fr!important;gap:0!important}
 }
+
+/* One plain Wikisource-like frame across home, indexes, menus and articles. */
+:root{color-scheme:light;--vd-chrome:#fff;--vd-paper:#fff;--vd-ink:#202122;--vd-teal:#202122;--vd-line:#a2a9b1;--vd-link:#0645ad}
+body.vd-chrome-page{
+  min-height:100vh!important;margin:0!important;background:#fff!important;color:#202122!important;
+  font:16px/1.6 Arial,Helvetica,sans-serif!important;text-rendering:auto;-webkit-font-smoothing:auto
+}
+body.vd-chrome-page a{color:#0645ad!important;text-decoration:none!important}
+body.vd-chrome-page a:visited{color:#0b0080!important}
+body.vd-chrome-page a:hover,body.vd-chrome-page a:focus-visible{color:#0645ad!important;text-decoration:underline!important}
+body.vd-chrome-page :is(h1,h2,h3,h4,h5,h6){color:#202122!important;font-family:Arial,Helvetica,sans-serif!important;font-weight:600!important;letter-spacing:normal!important}
+body.vd-chrome-page :is([lang="sa-Deva"],[lang^="sa-Deva"]){font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page>header.site-header.vd-global-header{
+  position:relative!important;top:auto!important;z-index:20!important;width:100%!important;margin:0!important;padding:0!important;
+  border:0!important;border-bottom:1px solid #a2a9b1!important;background:#fff!important;color:#202122!important;box-shadow:none!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap{
+  width:min(1080px,calc(100% - 40px))!important;min-height:54px!important;height:auto!important;margin:0 auto!important;padding:6px 0!important;
+  display:flex!important;align-items:center!important;gap:14px!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .brand{
+  color:#202122!important;font:600 16px/1.4 Arial,Helvetica,sans-serif!important;letter-spacing:normal!important;text-decoration:none!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav{gap:0!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav a{
+  min-height:0!important;padding:5px 8px!important;border:0!important;border-radius:0!important;background:transparent!important;
+  color:#0645ad!important;font:400 14px/1.4 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav a:hover,
+body.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav a:focus-visible,
+body.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav a[aria-current="page"]{
+  color:#0645ad!important;background:#f8f9fa!important;text-decoration:underline!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-label-dev{display:none!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form{gap:4px!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input{
+  width:190px!important;height:32px!important;padding:4px 8px!important;border:1px solid #72777d!important;border-radius:0!important;
+  color:#202122!important;background:#fff!important;font:14px/1.4 Arial,Helvetica,sans-serif!important;box-shadow:none!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input::placeholder{color:#54595d!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input:focus{border-color:#0645ad!important;box-shadow:0 0 0 1px #0645ad!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button{
+  height:32px!important;padding:4px 10px!important;border:1px solid #72777d!important;border-radius:0!important;
+  color:#202122!important;background:#f8f9fa!important;font:400 14px/1.4 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button:hover{background:#eaecf0!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-row{border-top:1px solid #eaecf0!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner{width:min(1080px,calc(100% - 40px))!important;margin:0 auto!important;padding:6px 0!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner ol{
+  color:#54595d!important;font:13px/1.45 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner li+li::before{color:#72777d!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner a,
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner span{color:#0645ad!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner span[aria-current="page"]{color:#202122!important;font-weight:400!important}
+body.vd-chrome-page main.site-main{
+  box-sizing:border-box!important;width:min(1080px,100%)!important;max-width:1080px!important;min-height:75vh!important;
+  margin:0 auto!important;overflow:visible!important;background:#fff!important
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-home{
+  width:min(920px,calc(100% - 40px))!important;margin:0 auto!important;padding:28px 0 54px!important
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-home>h1{
+  margin:0 0 10px!important;padding:0 0 8px!important;border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;font:600 1.8em/1.3 Arial,Helvetica,sans-serif!important;text-align:left!important
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-home>h1 .vd-label-dev,
+body.vd-chrome-page:is(.home-page,.page-page) .hp-section-title .vd-label-dev{display:none!important}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-home-intro{
+  max-width:850px!important;margin:0 0 20px!important;color:#202122!important;font:16px/1.6 Arial,Helvetica,sans-serif!important;text-align:left!important
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-directory{display:block!important}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-column{display:contents!important}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-panel{
+  margin:0 0 20px!important;padding:0 0 12px!important;border:0!important;border-bottom:1px solid #eaecf0!important;
+  border-radius:0!important;background:#fff!important;box-shadow:none!important
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-section-title{
+  margin:0 0 5px!important;padding:0 0 4px!important;border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important;text-align:left!important
+}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list{margin:0!important;padding:0 0 0 1.45em!important;list-style:disc!important}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list li{margin:0!important;padding:1px 0!important;border:0!important}
+body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list a{
+  display:inline!important;padding:0!important;color:#0645ad!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page .site-footer{
+  width:min(1080px,100%)!important;margin:0 auto!important;padding:18px 20px 28px!important;border-top:1px solid #a2a9b1!important;
+  color:#54595d!important;background:#fff!important;text-align:left!important;font:13px/1.5 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page .site-footer p{margin:0!important}
+body.vd-chrome-page :is(.article-shell,.archive-shell,.not-found){
+  box-sizing:border-box!important;width:min(920px,calc(100% - 40px))!important;max-width:920px!important;margin:0 auto!important;padding:24px 0 56px!important
+}
+body.vd-chrome-page .article-heading{
+  width:100%!important;max-width:none!important;margin:0 0 20px!important;padding:0 0 10px!important;border-bottom:1px solid #a2a9b1!important;text-align:left!important
+}
+body.vd-chrome-page .article-heading h1{
+  margin:0!important;color:#202122!important;font:600 1.8em/1.3 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page .article-heading .vd-label-dev{display:none!important}
+body.vd-chrome-page .article-date{margin:6px 0 0!important;color:#54595d!important;font:13px/1.5 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page .article-body{
+  width:100%!important;max-width:none!important;margin:0!important;color:#202122!important;font:16px/1.65 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page .article-body :is(h1,h2,h3,h4){
+  margin:1.2em 0 .5em!important;padding:0 0 5px!important;border-bottom:1px solid #eaecf0!important;
+  color:#202122!important;font:600 1.25em/1.4 Arial,Helvetica,sans-serif!important;text-align:left!important
+}
+body.vd-chrome-page .article-body p{font:16px/1.65 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page .article-body a{color:#0645ad!important}
+body.vd-chrome-page .archive-shell h1,body.vd-chrome-page .archive-shell h2{color:#202122!important;font-family:Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page :is(.page-page,.contents-menu-page) .page,
+body.vd-chrome-page.scripture-index-page .page{
+  box-sizing:border-box!important;width:min(1040px,calc(100% - 40px))!important;max-width:1040px!important;min-height:75vh!important;
+  margin:0 auto!important;padding:22px 0 48px!important;background:#fff!important;color:#202122!important;font:16px/1.6 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.contents-menu-page .page .hero{
+  display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;border:0!important;border-bottom:1px solid #a2a9b1!important;
+  background:#fff!important;text-align:left!important
+}
+body.vd-chrome-page.contents-menu-page .page .hero h1{
+  margin:0!important;color:#202122!important;font:600 1.8em/1.3 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.contents-menu-page .page .hero .label-en{display:none!important}
+body.vd-chrome-page.contents-menu-page .page .author{display:none!important}
+body.vd-chrome-page.contents-menu-page .page .page-tools{
+  position:static!important;display:flex!important;justify-content:flex-end!important;gap:10px!important;margin:0 0 18px!important;font:14px/1.5 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.contents-menu-page .page .page-tools .vd-label-dev,
+body.vd-chrome-page.contents-menu-page .page .page-tools .label-dev{display:none!important}
+body.vd-chrome-page.contents-menu-page .page .contents-group{margin:0 0 20px!important}
+body.vd-chrome-page.contents-menu-page .page .contents-group h2{
+  margin:0 0 6px!important;padding:0 0 5px!important;border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.contents-menu-page .chapter-list{columns:1!important;column-gap:0!important;margin:0!important;padding-left:1.45em!important;list-style:disc!important}
+body.vd-chrome-page.contents-menu-page .chapter-list li{break-inside:avoid!important;margin:0!important;padding:1px 0!important}
+body.vd-chrome-page.contents-menu-page .chapter-link{display:inline!important;color:#0645ad!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-dev{color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-en{color:inherit!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-separator{color:#54595d!important}
+body.vd-chrome-page.contents-menu-page .original-work-title{display:inline-flex!important;align-items:baseline!important;gap:.35em!important;flex-wrap:wrap!important}
+body.vd-chrome-page.contents-menu-page .original-work-dev{color:#202122!important;font:400 20px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page.contents-menu-page .original-work-iast{color:#202122!important;font:400 18px/1.4 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page.contents-menu-page .loading,
+body.vd-chrome-page.contents-menu-page .error{color:#54595d!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-page{width:min(1040px,calc(100% - 40px))!important;max-width:1040px!important;margin:0 auto!important;padding:22px 0 48px!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-reader,
+body.vd-chrome-page.ad-shankar-index-page .ad-main{display:block!important;min-width:0!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-side{display:none!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-hero{
+  margin:0 0 20px!important;padding:0 0 9px!important;border-bottom:1px solid #a2a9b1!important;text-align:left!important
+}
+body.vd-chrome-page.ad-shankar-index-page .ad-hero h1{
+  margin:0!important;color:#202122!important;font:600 1.8em/1.3 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.ad-shankar-index-page .ad-hero .vd-label-dev,
+body.vd-chrome-page.ad-shankar-index-page .ad-section>h2 .vd-label-dev{display:none!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-section{margin:0 0 22px!important;scroll-margin-top:16px}
+body.vd-chrome-page.ad-shankar-index-page .ad-section>h2{
+  margin:0 0 6px!important;padding:0 0 5px!important;border:0!important;border-bottom:1px solid #a2a9b1!important;
+  background:#fff!important;color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.ad-shankar-index-page .ad-links{display:block!important;margin:0!important;padding:0 0 0 1.45em!important;list-style:disc!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry{display:list-item!important;min-height:0!important;margin:0!important;padding:2px 0!important;border:0!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry::marker{color:#54595d}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-author,
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-count{display:none!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link{
+  display:inline!important;color:#0645ad!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-original{display:inline!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-original-dev{color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-original-iast{color:inherit!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-original-separator{color:#54595d!important}
+body.vd-chrome-page.scripture-index-page .reader{display:grid!important;grid-template-columns:170px minmax(0,1fr)!important;gap:24px!important}
+body.vd-chrome-page.scripture-index-page .side{
+  position:static!important;max-height:none!important;overflow:visible!important;padding:0 12px 8px 0!important;
+  border-right:1px solid #a2a9b1!important;background:#fff!important
+}
+body.vd-chrome-page.scripture-index-page .side h2,
+body.vd-chrome-page.scripture-index-page .book h3,
+body.vd-chrome-page.scripture-index-page .contents-group h2,
+body.vd-chrome-page.scripture-index-page .index-title,
+body.vd-chrome-page.scripture-index-page .section-heading{
+  margin:0 0 7px!important;padding:0 0 5px!important;border:0!important;border-bottom:1px solid #a2a9b1!important;
+  background:#fff!important;color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important
+}
+body.vd-chrome-page.scripture-index-page .book,
+body.vd-chrome-page.scripture-index-page .contents-group,
+body.vd-chrome-page.scripture-index-page details.parva,
+body.vd-chrome-page.scripture-index-page details.book{margin:0 0 20px!important;border:0!important;border-bottom:1px solid #eaecf0!important;border-radius:0!important;background:#fff!important;box-shadow:none!important}
+body.vd-chrome-page.scripture-index-page .chapter-grid{display:block!important;grid-template-columns:none!important;gap:0!important;margin:0!important;padding:0 0 0 1.4em!important;border:0!important;list-style:disc!important}
+body.vd-chrome-page.scripture-index-page .chapter-grid>a,
+body.vd-chrome-page.scripture-index-page .chapter-grid .chapter-link,
+body.vd-chrome-page.scripture-index-page .chapter-list a{
+  display:inline!important;min-width:0!important;padding:2px 0!important;border:0!important;border-radius:0!important;background:#fff!important;
+  box-shadow:none!important;color:#0645ad!important;line-height:1.6!important;text-decoration:none!important
+}
+body.vd-chrome-page.scripture-index-page .catalog-dev{display:inline!important;color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page.scripture-index-page .catalog-iast{display:inline!important;color:inherit!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page.scripture-index-page .chapter-gloss{display:none!important}
+body.vd-chrome-page.scripture-index-page .chapter-list{columns:1!important;column-gap:0!important}
+body.vd-chrome-page.scripture-index-page .page-tools .vd-label-dev{display:none!important}
+@media(max-width:760px){
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap{width:calc(100% - 28px)!important}
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav{background:#fff!important;border-color:#eaecf0!important}
+  body.vd-chrome-page main.site-main{width:100%!important}
+  body.vd-chrome-page:is(.home-page,.page-page) .hp-home{width:calc(100% - 36px)!important;padding:22px 0 42px!important}
+  body.vd-chrome-page.scripture-index-page .reader{display:block!important}
+  body.vd-chrome-page.scripture-index-page .side{margin:0 0 18px!important;padding:0 0 12px!important;border-right:0!important;border-bottom:1px solid #a2a9b1!important}
+  body.vd-chrome-page.ad-shankar-index-page .ad-page{width:calc(100% - 32px)!important;padding-top:18px!important}
+  body.vd-chrome-page.contents-menu-page .page{width:calc(100% - 32px)!important;padding-top:18px!important}
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner{width:calc(100% - 28px)!important}
+}
