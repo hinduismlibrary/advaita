@@ -331,6 +331,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       if(items.length>15)groups.push({title:"Additional sections",items:items.slice(15)});
     }
     sectionsNode.replaceChildren();
+    var nextOrdinal=1;
     groups.forEach(function(group,index){
       var groupId="contents-group-"+(index+1);
       var section=document.createElement("section");
@@ -340,9 +341,11 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       heading.textContent=group.title;
       renderBilingual(heading,group.title);
       section.append(heading);
-      var list=document.createElement("ul");
+      var list=document.createElement("ol");
       list.className="chapter-list";
       list.setAttribute("aria-label",group.title);
+      list.setAttribute("start",String(nextOrdinal));
+      nextOrdinal+=group.items.length;
       group.items.forEach(function(item){
         var entry=document.createElement("li");
         var link=document.createElement("a");
@@ -359,5 +362,5 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   }).catch(function(error){showError("The contents list could not be loaded. "+error.message,readerUrl);});
 })();
 </script>
-<script src="/advaita/assets/js/site-chrome.js?v=20261021-wikisource-4"></script></body>
+<script src="/advaita/assets/js/site-chrome.js?v=20261021-numbered-contents-1"></script></body>
 </html>
