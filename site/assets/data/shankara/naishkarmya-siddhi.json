@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 197 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 190 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -33619,8 +33619,21 @@
       "label": "Text 49",
       "deva": "भेदहेतसंभवं दर्शयन्नाह ।",
       "iast": "bhedahetasaṃbhavaṃ darśayannāha |",
-      "translation": "He shows that there is no cause of division:",
-      "gloss": []
+      "translation": "He considers the possibility of a cause for division:",
+      "gloss": [
+        {
+          "sa": "भेदहेतसंभवम्",
+          "en": "the possibility of a cause for division"
+        },
+        {
+          "sa": "दर्शयन्",
+          "en": "showing"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0726",
@@ -33690,7 +33703,52 @@
       "deva": "यस्मादज्ञानोपादानाया एव बुद्धेर्भेदो नात्मनस्तस्मादेतत्सिद्धम् ।",
       "iast": "yasmādajñānopādānāyā eva buddherbhedo nātmanastasmādetatsiddham |",
       "translation": "Since only the intellect, produced by ignorance, is divided and not the Self, this is established:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उपादानाया",
+          "en": "having as its material cause"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "भेदः",
+          "en": "division"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "सिद्धम्",
+          "en": "is established"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0729",
@@ -33760,7 +33818,44 @@
       "deva": "अथाधुना प्रकृतस्यैव परिणामिनः कूटस्थस्य च लक्षणमुच्यते ।",
       "iast": "athādhunā prakṛtasyaiva pariṇāminaḥ kūṭasthasya ca lakṣaṇamucyate |",
       "translation": "The changing and the changeless, which are under discussion, are now defined.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "अधुना",
+          "en": "at this point"
+        },
+        {
+          "sa": "प्रकृतस्य",
+          "en": "under discussion"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "परिणामिनः",
+          "en": "of the changing"
+        },
+        {
+          "sa": "कूटस्थस्य",
+          "en": "of the changeless"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "लक्षणम्",
+          "en": "definition"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0732",
@@ -33889,7 +33984,52 @@
       "deva": "आत्मनो बुद्धेश्च बोधप्रत्यगात्मत्वमभिहितं तयोरसाधारणलक्षणाभिधानार्थमाह ।",
       "iast": "ātmano buddheśca bodhapratyagātmatvamabhihitaṃ tayorasādhāraṇalakṣaṇābhidhānārthamāha |",
       "translation": "The inward awareness of both the Self and the intellect has been stated; their distinctive marks are now given:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "बुद्धेः",
+          "en": "of the intellect"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "बोध",
+          "en": "awareness"
+        },
+        {
+          "sa": "प्रत्यगात्मत्वम्",
+          "en": "inward nature"
+        },
+        {
+          "sa": "अभिहितम्",
+          "en": "has been stated"
+        },
+        {
+          "sa": "तयोः",
+          "en": "of those two"
+        },
+        {
+          "sa": "असाधारण",
+          "en": "distinctive"
+        },
+        {
+          "sa": "लक्षण",
+          "en": "characteristics"
+        },
+        {
+          "sa": "अभिधानार्थम्",
+          "en": "for stating"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0737",
@@ -34026,7 +34166,76 @@
       "deva": "तयोः कूटस्थपरिणामिनोरात्मानवबोध एव संबन्धहेतुर्न पुनर्वास्तवः कश्चिदपि संबन्ध उपपद्यत इत्याह ।",
       "iast": "tayoḥ kūṭasthapariṇāminorātmānavabodha eva saṃbandhaheturna punarvāstavaḥ kaścidapi saṃbandha upapadyata ityāha |",
       "translation": "Ignorance alone is the supposed link between the changeless Self and the changing intellect; no real connection between them is possible.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तयोः",
+          "en": "of those two"
+        },
+        {
+          "sa": "कूटस्थ",
+          "en": "changeless"
+        },
+        {
+          "sa": "परिणामिनोः",
+          "en": "and changing"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "संबन्ध",
+          "en": "relation"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "cause"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पुनः",
+          "en": "however"
+        },
+        {
+          "sa": "वास्तवः",
+          "en": "real"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "any"
+        },
+        {
+          "sa": "अपि",
+          "en": "at all"
+        },
+        {
+          "sa": "संबन्धः",
+          "en": "connection"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0742",
@@ -34092,7 +34301,36 @@
       "deva": "कुतः कूटस्थात्मसिद्धिरिति चेद्यतः ।",
       "iast": "kutaḥ kūṭasthātmasiddhiriti cedyataḥ |",
       "translation": "If one asks how the changeless Self is established, it is because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "कूटस्थ",
+          "en": "changeless"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "is established"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if asked"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0745",
@@ -34170,7 +34408,12 @@
       "deva": "एवम् ।",
       "iast": "evam |",
       "translation": "Thus:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0748",
@@ -48286,7 +48529,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 197 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 190 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
