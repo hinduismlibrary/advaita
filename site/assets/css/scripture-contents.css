@@ -152,3 +152,20 @@ body.scripture-index-page.page-page .chapter-pending{
   body.scripture-index-page.page-page .site-nav{gap:2px}
   body.scripture-index-page.page-page .site-nav a{font-size:12px;padding:4px}
 }
+
+
+/* Purāṇa contents keep their printed chapter numbers without duplicate list markers. */
+html body.vd-chrome-page.scripture-index-page .page .chapter-list{
+  columns:1!important;column-gap:0!important;list-style:none!important;padding-left:0!important
+}
+html body.vd-chrome-page.scripture-index-page .page .chapter-grid{
+  display:block!important;grid-template-columns:none!important;gap:0!important;list-style:none!important;
+  margin:0!important;padding:0!important;border:0!important
+}
+html body.vd-chrome-page.scripture-index-page .page .chapter-grid>a{
+  display:block!important;min-width:0!important;padding:5px 3px!important;border:0!important;
+  border-bottom:1px solid #eaecf0!important;border-radius:0!important;background:#fff!important;
+  box-shadow:none!important;color:#0645ad!important;line-height:1.5!important;text-decoration:none!important;
+  overflow-wrap:anywhere
+}
+html body.vd-chrome-page.scripture-index-page .page .chapter-grid>a:hover{text-decoration:underline!important}
