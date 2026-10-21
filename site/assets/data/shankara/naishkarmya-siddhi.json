@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 418 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 410 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -4451,7 +4451,48 @@
       "deva": "तत्रैतेषु चतुर्षु विषयेषु प्राप्तये परीहाराय च विभज्य न्यायः प्रदर्श्यते ।",
       "iast": "tatraiteṣu caturṣu viṣayeṣu prāptaye parīhārāya ca vibhajya nyāyaḥ pradarśyate |",
       "translation": "The reasoning is now shown with respect to these four cases, divided into what is to be gained and what is to be avoided.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "एतेषु",
+          "en": "in these"
+        },
+        {
+          "sa": "चतुर्षु",
+          "en": "four"
+        },
+        {
+          "sa": "विषयेषु",
+          "en": "cases"
+        },
+        {
+          "sa": "प्राप्तये",
+          "en": "for attaining"
+        },
+        {
+          "sa": "परीहाराय",
+          "en": "for avoiding"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विभज्य",
+          "en": "having divided"
+        },
+        {
+          "sa": "न्यायः",
+          "en": "reasoning"
+        },
+        {
+          "sa": "प्रदर्श्यते",
+          "en": "is shown"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0105",
@@ -4529,7 +4570,24 @@
       "deva": "अथावशिष्टयोः स्वभावत एव ।",
       "iast": "athāvaśiṣṭayoḥ svabhāvata eva |",
       "translation": "But in the remaining two cases, things already present by nature—",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "but now"
+        },
+        {
+          "sa": "अवशिष्टयोः",
+          "en": "in the two remaining"
+        },
+        {
+          "sa": "स्वभावतः",
+          "en": "by nature"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0108",
@@ -4595,7 +4653,92 @@
       "deva": "कस्मात्पुनरात्मवस्तुयाथात्म्यावबोधमात्रादेवाभिलषितनिरतिशयसुखावाप्तिनिश्शेषदुःखनिवृत्ती भवतो न तु कर्मणेति । उच्यते ।",
       "iast": "kasmātpunarātmavastuyāthātmyāvabodhamātrādevābhilaṣitaniratiśayasukhāvāptiniśśeṣaduḥkhanivṛttī bhavato na tu karmaṇeti | ucyate |",
       "translation": "Why, then, do the attainment of the unsurpassed happiness one desires and the complete removal of suffering follow solely from knowledge of the Self as it truly is, and not from action? The answer is:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कस्मात्",
+          "en": "why"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "याथात्म्य",
+          "en": "true nature"
+        },
+        {
+          "sa": "अवबोध",
+          "en": "understanding"
+        },
+        {
+          "sa": "मात्रात्",
+          "en": "solely from"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अभिलषित",
+          "en": "desired"
+        },
+        {
+          "sa": "निरतिशय",
+          "en": "unsurpassed"
+        },
+        {
+          "sa": "सुख",
+          "en": "happiness"
+        },
+        {
+          "sa": "अवाप्ति",
+          "en": "attainment"
+        },
+        {
+          "sa": "निश्शेष",
+          "en": "complete"
+        },
+        {
+          "sa": "दुःख",
+          "en": "suffering"
+        },
+        {
+          "sa": "निवृत्ती",
+          "en": "cessation"
+        },
+        {
+          "sa": "भवतः",
+          "en": "arise"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "कर्मणे",
+          "en": "from action"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is said"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0111",
@@ -4661,7 +4804,444 @@
       "deva": "नन्वात्मज्ञानमप्यविद्योपादानम् । न हि शास्त्रशिष्याचार्याद्यनुपादायात्मज्ञानमात्मानं लभतः इति । नैष दोषः । यत आत्मज्ञानं हि स्वतस्सिद्धपरमार्थात्मवस्तुस्वरूपमात्राशयादेवाविद्यातदुत्पन्नकारकग्रामप्रध्वंसि स्वात्मोपतावेव शास्त्रादपेक्ष्यते नोत्पन्नमविद्यानिवृत्तौ । कर्म पुनः स्वात्मोत्पत्तावुत्पन्नं च । न हिक्रिया कारकनिस्स्पृहा कल्पकोटिव्यवहितफलदानाय स्वात्मानं बिभर्ति साध्यमानमात्ररूपत्वात्तस्याः । न च क्रियात्मज्ञानवत्स्वात्मप्रतिलम्भकाल एव स्वर्गादिफलेन कर्तारं संबध्नाति । आत्मज्ञानं पुनः पुरुषार्थसिद्धौ नोत्पद्यमानस्वरूपव्यतिरेकेणान्यद्रूपान्तरं साधनान्तरं वापेक्षते । कुत एतत् । यतः ।",
       "iast": "nanvātmajñānamapyavidyopādānam | na hi śāstraśiṣyācāryādyanupādāyātmajñānamātmānaṃ labhataḥ iti | naiṣa doṣaḥ | yata ātmajñānaṃ hi svatassiddhaparamārthātmavastusvarūpamātrāśayādevāvidyātadutpannakārakagrāmapradhvaṃsi svātmopatāveva śāstrādapekṣyate notpannamavidyānivṛttau | karma punaḥ svātmotpattāvutpannaṃ ca | na hikriyā kārakanisspṛhā kalpakoṭivyavahitaphaladānāya svātmānaṃ bibharti sādhyamānamātrarūpatvāttasyāḥ | na ca kriyātmajñānavatsvātmapratilambhakāla eva svargādiphalena kartāraṃ saṃbadhnāti | ātmajñānaṃ punaḥ puruṣārthasiddhau notpadyamānasvarūpavyatirekeṇānyadrūpāntaraṃ sādhanāntaraṃ vāpekṣate | kuta etat | yataḥ |",
       "translation": "One may object: “Knowledge of the Self also has ignorance as its basis. No one gains knowledge of the Self without relying on scripture, a student, a teacher, and the like.” This is no defect. Knowledge of the Self destroys ignorance and the entire apparatus of agency that arises from it, because its aim is only the nature of the Self, the supreme reality that is already self-established. It depends on scripture only for the recognition of one’s own Self, not for the production of the Self or the removal of ignorance as a produced effect. Action, however, is undertaken to produce something. An action cannot carry itself forward to yield a result separated from it by countless ages, independently of its instruments and agent, because its very nature is only that of something being accomplished. Nor, unlike knowledge of the Self, does an action connect its agent with a result such as heaven at the very moment the Self is realized. Knowledge of the Self, by contrast, needs no other form or additional means beyond its own arising for the human end to be accomplished. Why is this so? Because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "ननु",
+          "en": "one may object"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उपादानम्",
+          "en": "basis; means"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "शास्त्र",
+          "en": "scripture"
+        },
+        {
+          "sa": "शिष्य",
+          "en": "student"
+        },
+        {
+          "sa": "आचार्य",
+          "en": "teacher"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "अनुपादाय",
+          "en": "without relying on"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "लभतः",
+          "en": "obtains"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "दोषः",
+          "en": "defect"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "सिद्ध",
+          "en": "established"
+        },
+        {
+          "sa": "परमार्थ",
+          "en": "ultimate reality"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "स्वरूप",
+          "en": "nature"
+        },
+        {
+          "sa": "मात्र",
+          "en": "only"
+        },
+        {
+          "sa": "आशयात्",
+          "en": "having as its aim"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "तद्",
+          "en": "that"
+        },
+        {
+          "sa": "उत्पन्न",
+          "en": "produced"
+        },
+        {
+          "sa": "कारक",
+          "en": "agency factors"
+        },
+        {
+          "sa": "ग्राम",
+          "en": "aggregate"
+        },
+        {
+          "sa": "प्रध्वंसि",
+          "en": "destroying"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "उपतौ",
+          "en": "in realization"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "शास्त्रात्",
+          "en": "from scripture"
+        },
+        {
+          "sa": "अपेक्ष्यते",
+          "en": "is depended on"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उत्पन्नम्",
+          "en": "for producing"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "निवृत्तौ",
+          "en": "or its removal"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "पुनः",
+          "en": "however"
+        },
+        {
+          "sa": "स्व",
+          "en": "its own"
+        },
+        {
+          "sa": "आत्म",
+          "en": "resulting form"
+        },
+        {
+          "sa": "उत्पत्तौ",
+          "en": "in production"
+        },
+        {
+          "sa": "उत्पन्नम्",
+          "en": "is produced"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "कारक",
+          "en": "instruments and agent"
+        },
+        {
+          "sa": "निःस्पृहा",
+          "en": "independent of"
+        },
+        {
+          "sa": "कल्प",
+          "en": "aeons"
+        },
+        {
+          "sa": "कोटि",
+          "en": "countless"
+        },
+        {
+          "sa": "व्यवहित",
+          "en": "separated by"
+        },
+        {
+          "sa": "फल",
+          "en": "result"
+        },
+        {
+          "sa": "दानाय",
+          "en": "for giving"
+        },
+        {
+          "sa": "स्व",
+          "en": "itself"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "itself"
+        },
+        {
+          "sa": "बिभर्ति",
+          "en": "carries; sustains"
+        },
+        {
+          "sa": "साध्यमान",
+          "en": "being accomplished"
+        },
+        {
+          "sa": "मात्र",
+          "en": "merely"
+        },
+        {
+          "sa": "रूपत्वात्",
+          "en": "because it is of the nature"
+        },
+        {
+          "sa": "तस्याः",
+          "en": "of it"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "action"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "प्रतिलम्भ",
+          "en": "attainment"
+        },
+        {
+          "sa": "काल",
+          "en": "at the time"
+        },
+        {
+          "sa": "एव",
+          "en": "exactly"
+        },
+        {
+          "sa": "स्वर्ग",
+          "en": "heaven"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "फलेन",
+          "en": "with a result"
+        },
+        {
+          "sa": "कर्तारम्",
+          "en": "the agent"
+        },
+        {
+          "sa": "संबध्नाति",
+          "en": "connects"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "पुनः",
+          "en": "by contrast"
+        },
+        {
+          "sa": "पुरुष",
+          "en": "human"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "goal"
+        },
+        {
+          "sa": "सिद्धौ",
+          "en": "in attaining"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उत्पद्यमान",
+          "en": "arising"
+        },
+        {
+          "sa": "स्वरूप",
+          "en": "nature"
+        },
+        {
+          "sa": "व्यतिरेकेण",
+          "en": "apart from"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "another"
+        },
+        {
+          "sa": "रूपान्तरम्",
+          "en": "different form"
+        },
+        {
+          "sa": "साधन",
+          "en": "means"
+        },
+        {
+          "sa": "अन्तरम्",
+          "en": "another"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अपेक्षते",
+          "en": "requires"
+        },
+        {
+          "sa": "कुतः",
+          "en": "why"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0114",
@@ -4743,7 +5323,36 @@
       "deva": "स्वपक्षस्य हेत्ववष्टम्भेन समर्थितत्वानिराशङ्कमुपसंह्रियते ।",
       "iast": "svapakṣasya hetvavaṣṭambhena samarthitatvānirāśaṅkamupasaṃhriyate |",
       "translation": "Having established his own position by supporting it with reasons, he concludes without hesitation:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "पक्षस्य",
+          "en": "position"
+        },
+        {
+          "sa": "हेतु",
+          "en": "reasons"
+        },
+        {
+          "sa": "अवष्टम्भेन",
+          "en": "by support"
+        },
+        {
+          "sa": "समर्थितत्वात्",
+          "en": "because it has been established"
+        },
+        {
+          "sa": "निराशङ्कम्",
+          "en": "without hesitation"
+        },
+        {
+          "sa": "उपसंह्रियते",
+          "en": "he concludes"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0117",
@@ -4813,7 +5422,160 @@
       "deva": "ननु बलवदपि सम्यग्ज्ञानं सदप्रमाणोत्थेन बाध्यमानमुपलभामहे यत उत्पन्नपरमार्थबोधस्यापि कर्तृत्वभोक्तृत्वरागद्वेषाद्यनवबोधोत्थप्रत्यया आविर्भवन्ति । न ह्यबाधिते सम्यग्ज्ञाने तद्विरुद्धानां प्रत्ययानां सम्भवोऽस्ति । नैतदेवम् । कुतः ।",
       "iast": "nanu balavadapi samyagjñānaṃ sadapramāṇotthena bādhyamānamupalabhāmahe yata utpannaparamārthabodhasyāpi kartṛtvabhoktṛtvarāgadveṣādyanavabodhotthapratyayā āvirbhavanti | na hyabādhite samyagjñāne tadviruddhānāṃ pratyayānāṃ sambhavo'sti | naitadevam | kutaḥ |",
       "translation": "One may object: “We observe that even powerful right knowledge is overturned by a cognition that lacks authority, since ideas of agency, enjoyment, attachment, aversion, and the like—arising from ignorance—appear even in one who has gained true understanding. Such contrary cognitions cannot occur while right knowledge remains unopposed.” That is not so. Why?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "ननु",
+          "en": "one may object"
+        },
+        {
+          "sa": "बलवत्",
+          "en": "powerful"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "right"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "सत्",
+          "en": "though present"
+        },
+        {
+          "sa": "अप्रमाण",
+          "en": "invalid means of knowledge"
+        },
+        {
+          "sa": "उत्थेन",
+          "en": "arisen from"
+        },
+        {
+          "sa": "बाध्यमानम्",
+          "en": "being contradicted"
+        },
+        {
+          "sa": "उपलभामहे",
+          "en": "we observe"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "उत्पन्न",
+          "en": "having arisen"
+        },
+        {
+          "sa": "परमार्थ",
+          "en": "true reality"
+        },
+        {
+          "sa": "बोधस्य",
+          "en": "understanding"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "कर्तृत्व",
+          "en": "agency"
+        },
+        {
+          "sa": "भोक्तृत्व",
+          "en": "enjoyership"
+        },
+        {
+          "sa": "राग",
+          "en": "attachment"
+        },
+        {
+          "sa": "द्वेष",
+          "en": "aversion"
+        },
+        {
+          "sa": "आदि",
+          "en": "and so on"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उत्थ",
+          "en": "arising from"
+        },
+        {
+          "sa": "प्रत्ययाः",
+          "en": "cognitions"
+        },
+        {
+          "sa": "आविर्भवन्ति",
+          "en": "appear"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अबाधिते",
+          "en": "when uncontradicted"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "right"
+        },
+        {
+          "sa": "ज्ञाने",
+          "en": "knowledge"
+        },
+        {
+          "sa": "तद्",
+          "en": "those"
+        },
+        {
+          "sa": "विरुद्धानाम्",
+          "en": "contrary"
+        },
+        {
+          "sa": "प्रत्ययानाम्",
+          "en": "cognitions"
+        },
+        {
+          "sa": "सम्भवः",
+          "en": "occurrence"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "is"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "कुतः",
+          "en": "why"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0120",
@@ -4887,7 +5649,120 @@
       "deva": "\"कर्माज्ञानसमुत्थत्वात् \" इत्युक्तो हेतुस्तस्य च समर्थनं पूर्वमेवाभिहितं \"हितं सम्प्रेप्सताम् \" इत्यादिना । तदभ्युच्चयार्थमविद्यान्वयेन च संसारान्वयित्वं प्रदर्शयिष्यामीत्यत आह ।",
       "iast": "\"karmājñānasamutthatvāt \" ityukto hetustasya ca samarthanaṃ pūrvamevābhihitaṃ \"hitaṃ samprepsatām \" ityādinā | tadabhyuccayārthamavidyānvayena ca saṃsārānvayitvaṃ pradarśayiṣyāmītyata āha |",
       "translation": "The reason already stated—“because action arises from ignorance”—was supported earlier by the passage beginning, “For those who seek to secure what is good.” To reinforce it, he now shows that saṃsāra continues as long as ignorance does:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "समुत्थत्वात्",
+          "en": "because of arising from"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उक्तः",
+          "en": "stated"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "reason"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "समर्थनम्",
+          "en": "support"
+        },
+        {
+          "sa": "पूर्वम्",
+          "en": "earlier"
+        },
+        {
+          "sa": "एव",
+          "en": "already"
+        },
+        {
+          "sa": "अभिहितम्",
+          "en": "was explained"
+        },
+        {
+          "sa": "हितम्",
+          "en": "good"
+        },
+        {
+          "sa": "सम्प्रेप्सताम्",
+          "en": "for those seeking to gain"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आदिना",
+          "en": "beginning with"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अभ्युच्चय",
+          "en": "reinforcement"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "for the purpose"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अन्वयेन",
+          "en": "through continuity"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "संसार",
+          "en": "transmigration"
+        },
+        {
+          "sa": "अन्वयित्वम्",
+          "en": "continuation"
+        },
+        {
+          "sa": "प्रदर्शयिष्यामि",
+          "en": "I will show"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0123",
@@ -4957,7 +5832,52 @@
       "deva": "यस्मात्कर्माज्ञानसमुत्थमेव तस्मात्तद्व्यावृत्तौ निवर्तत इत्युच्यते ।",
       "iast": "yasmātkarmājñānasamutthameva tasmāttadvyāvṛttau nivartata ityucyate |",
       "translation": "Since action arises from ignorance, it ceases when ignorance is removed, as is now explained:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "समुत्थम्",
+          "en": "arisen from"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "तद्",
+          "en": "that"
+        },
+        {
+          "sa": "व्यावृत्तौ",
+          "en": "when it is removed"
+        },
+        {
+          "sa": "निवर्तते",
+          "en": "ceases"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is said"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0126",
@@ -33973,7 +34893,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 418 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 410 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
