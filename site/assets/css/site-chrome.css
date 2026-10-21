@@ -1541,17 +1541,40 @@ body.vd-chrome-page.vd-chrome-page .site-footer .vd-label-dev{font-size:11px!imp
   body.vd-chrome-page.vd-chrome-page.page-page .page,body.vd-chrome-page.vd-chrome-page.page-page .ad-page{padding:10px 0 42px!important}
 }
 
-/* Keep English, Devanāgarī, and IAST labels consistent across all page menus. */
-body.vd-chrome-page.vd-chrome-page .vd-label-iast{
-  display:block!important;margin-top:1px!important;color:#54595d!important;
-  font:italic 400 10px/1.3 Merriweather,Georgia,serif!important;letter-spacing:0!important;
+/* Two-line menu labels and quiet Wikisource-style text lists. */
+body.vd-chrome-page.vd-chrome-page .vd-label-iast{display:none!important}
+body.vd-chrome-page.vd-chrome-page .shankara-directory{width:min(1040px,100%)!important;margin:0 auto!important}
+body.vd-chrome-page.vd-chrome-page .shankara-group{margin:28px 0 0!important}
+body.vd-chrome-page.vd-chrome-page .shankara-group h2{
+  margin:0 0 10px!important;padding:0 0 7px!important;border:0!important;border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;font:600 19px/1.4 Vollkorn,Georgia,serif!important;
 }
-body.vd-chrome-page.vd-chrome-page main.site-main h1 .vd-label-iast{font-size:13px!important;line-height:1.3!important}
-body.vd-chrome-page.vd-chrome-page main.site-main h2 .vd-label-iast,
-body.vd-chrome-page.vd-chrome-page .hp-section-title .vd-label-iast{font-size:10px!important}
-body.vd-chrome-page.vd-chrome-page .hp-link-list a .vd-label-iast{font-size:10px!important}
-body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-label-iast{font-size:9px!important;line-height:1.2!important}
-body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .brand .vd-label-iast{font-size:10px!important}
-body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button .vd-label-iast{font-size:8px!important}
-body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner .vd-label-iast{font-size:9px!important}
-body.vd-chrome-page.vd-chrome-page .site-footer .vd-label-iast{font-size:9px!important}
+body.vd-chrome-page.vd-chrome-page .shankara-directory-note{
+  margin:12px 0!important;padding:0!important;border:0!important;color:#54595d!important;font:400 13px/1.6 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page .shankara-cards{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 36px!important;
+}
+body.vd-chrome-page.vd-chrome-page .shankara-card{
+  display:block!important;min-width:0!important;margin:0!important;padding:8px 0!important;
+  border:0!important;border-bottom:1px solid #eaecf0!important;border-radius:0!important;
+  color:#36c!important;background:transparent!important;box-shadow:none!important;text-decoration:none!important;
+}
+body.vd-chrome-page.vd-chrome-page .shankara-card:hover,
+body.vd-chrome-page.vd-chrome-page .shankara-card:focus-visible{color:#2a4b8d!important;background:transparent!important}
+body.vd-chrome-page.vd-chrome-page .shankara-card strong{
+  display:block!important;color:inherit!important;font:400 15px/1.5 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page .shankara-card .vd-label-dev{
+  display:block!important;margin-top:2px!important;color:#202122!important;
+  font:400 12px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page .shankara-card span:not(.vd-label-en):not(.vd-label-dev){
+  color:#54595d!important;font:400 12px/1.5 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page .shankara-card small{
+  display:block!important;margin-top:5px!important;color:#54595d!important;font:400 11px/1.4 Merriweather,Georgia,serif!important;letter-spacing:0!important;
+}
+@media(max-width:680px){
+  body.vd-chrome-page.vd-chrome-page .shankara-cards{grid-template-columns:1fr!important;gap:0!important}
+}
