@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261021-preview-match-4";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261021-original-iast-2";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -156,17 +156,14 @@ function stackOriginalDirectoryEntry(element){
  const title=element.querySelector(".ad-entry-title");
  if(!title)return false;
  const original=title.textContent.replace(/\s+/g," ").trim();
- const fullLabel=element.textContent.replace(/\s+/g," ").trim();
  const devanagari=devanagariFor(original);
- const english=englishFor(fullLabel);
- if(!original||!devanagari||!english)return false;
+ if(!original||!devanagari)return false;
  const line=document.createElement("span");line.className="ad-entry-original";
  const sa=document.createElement("span");sa.className="ad-entry-original-dev";sa.lang="sa-Deva";sa.textContent=devanagari;
  const separator=document.createElement("span");separator.className="ad-entry-original-separator";separator.setAttribute("aria-hidden","true");separator.textContent=" · ";
  const iast=document.createElement("span");iast.className="ad-entry-original-iast";iast.lang="sa-Latn";iast.textContent=original;
  line.append(sa,separator,iast);
- const translated=document.createElement("span");translated.className="ad-entry-translation";translated.lang="en";translated.textContent=english;
- element.dataset.vdEnglish=english;element.dataset.vdBilingual="true";element.replaceChildren(line,translated);
+ element.dataset.vdBilingual="true";element.replaceChildren(line);
  return true;
 }
 function applyPageLabels(scope){
