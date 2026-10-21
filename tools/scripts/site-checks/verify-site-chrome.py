@@ -6,9 +6,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / 'site'
-SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1")
+SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-1")
 LOADER = re.compile(
-    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:20261019-unified-theme-4|20261020-on-site-search-1)["']""",
+    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:20261019-unified-theme-4|20261020-on-site-search-1|20261021-original-iast-1)["']""",
     re.IGNORECASE,
 )
 HTML_DOC = re.compile(r"<html\b", re.IGNORECASE)
