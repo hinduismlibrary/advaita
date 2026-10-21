@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The 71 display entries now map all 227 source-numbered passages, with explicit IAST and eight named contents sections. I am auditing each grouped translation and word gloss against the Sanskrit before marking the text complete.
+**Vedāntasāra** — active. The reader now has 69 reading cards plus a separate colophon, representing all 227 source-numbered passages, with explicit IAST and eight named contents sections. I joined passage 52 in one card and restored the 208/209 boundary after finding passage 212 split across those grouped cards. I also corrected related Sanskrit, translation, and gloss errors. The semantic audit of the remaining grouped entries is still in progress; this text stays active until that review is done.
 
 ## Completed
 
@@ -68,7 +68,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Upadeśasāhasrī | 787 | Complete: all 787 verse and prose units have Sanskrit, English, explicit IAST, and Devanāgarī glosses; semantic audit completed through II.3.116. |
-| Vedāntasāra | 71 grouped entries / 227 passages | In progress: all source ranges mapped; explicit IAST and eight named contents sections added; audit each grouped translation and word gloss for accuracy. |
+| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: all source-numbered passages remain represented; explicit IAST and eight named contents sections; passage 52 and 212 ranges corrected; continue semantic review of grouped translations and glosses. |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 
