@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 124 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 109 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -43418,7 +43418,16 @@
       "deva": "यस्मादेवम् ।",
       "iast": "yasmādevam |",
       "translation": "Because this is so:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "एवम्",
+          "en": "this is so"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0915",
@@ -43488,7 +43497,84 @@
       "deva": "आह । यदि वाक्यमेव यथाभूतार्थवबोधकमथ कस्य हेतोरविद्योत्थापितस्य कर्तृत्वादेरुपदेश इत्युक्ते प्रतिविधीयते ।",
       "iast": "āha | yadi vākyameva yathābhūtārthavabodhakamatha kasya hetoravidyotthāpitasya kartṛtvāderupadeśa ityukte pratividhīyate |",
       "translation": "An objection is now raised: “If the sentence itself teaches the truth as it is, why teach agency and the rest, which arise from ignorance?” The reply is:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "आह",
+          "en": "he says"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "भूत",
+          "en": "it is"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "the truth"
+        },
+        {
+          "sa": "अवबोधकम्",
+          "en": "revealing"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "कस्य",
+          "en": "for what"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "reason"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उत्थापितस्य",
+          "en": "arisen from"
+        },
+        {
+          "sa": "कर्तृत्व",
+          "en": "agency"
+        },
+        {
+          "sa": "आदेः",
+          "en": "and the like"
+        },
+        {
+          "sa": "उपदेशः",
+          "en": "instruction"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उक्ते",
+          "en": "when it is said"
+        },
+        {
+          "sa": "प्रतिविधीयते",
+          "en": "a reply is given"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0918",
@@ -43566,7 +43652,28 @@
       "deva": "इममर्थं दृष्टान्तेन बुद्धावारोहयति ।",
       "iast": "imamarthaṃ dṛṣṭāntena buddhāvārohayati |",
       "translation": "An example is offered to make this clear:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "point"
+        },
+        {
+          "sa": "दृष्टान्तेन",
+          "en": "by an example"
+        },
+        {
+          "sa": "बुद्धौ",
+          "en": "to the understanding"
+        },
+        {
+          "sa": "आरोहयति",
+          "en": "he brings / impresses"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0921",
@@ -43652,7 +43759,68 @@
       "deva": "यस्माच्छ्रोतृप्रसिद्धानुवाद्येव त्वमितिपदं तस्मादुद्दिश्यमानस्थत्वाद्दुःखित्वादेरविवक्षितत्वमेव ।",
       "iast": "yasmācchrotṛprasiddhānuvādyeva tvamitipadaṃ tasmāduddiśyamānasthatvādduḥkhitvāderavivakṣitatvameva |",
       "translation": "Since the word “thou” takes up what the listener already understands, its meanings such as being unhappy, which are merely indicated as its topic, are not intended [as the sentence’s final meaning].",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "श्रोतृ",
+          "en": "listener"
+        },
+        {
+          "sa": "प्रसिद्ध",
+          "en": "already known"
+        },
+        {
+          "sa": "अनुवाद्य",
+          "en": "merely restating"
+        },
+        {
+          "sa": "एव",
+          "en": "just"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "पदम्",
+          "en": "the word"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "उद्दिश्यमान",
+          "en": "being indicated"
+        },
+        {
+          "sa": "स्थत्वात्",
+          "en": "because it is situated in"
+        },
+        {
+          "sa": "दुःखित्व",
+          "en": "being unhappy"
+        },
+        {
+          "sa": "आदेः",
+          "en": "and the like"
+        },
+        {
+          "sa": "अविवक्षितत्वम्",
+          "en": "not being intended"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0923",
@@ -43663,7 +43831,92 @@
       "deva": "विधीयमानत्वे हि सति विरोधप्रसङ्गो न तु विधीयमाना नूद्यमानयोरिति । स्वप्रधानयोर्हि पदयोर्विरोधाशङ्का सामान्यलिङ्गतत्वात्तयोर्न विपर्यये ।",
       "iast": "vidhīyamānatve hi sati virodhaprasaṅgo na tu vidhīyamānā nūdyamānayoriti | svapradhānayorhi padayorvirodhāśaṅkā sāmānyaliṅgatatvāttayorna viparyaye |",
       "translation": "If those attributes were being newly asserted, a contradiction would follow; there is no such contradiction between what is asserted and what is merely restated. The possibility of conflict concerns two words that each primarily assert their own meaning, because the general element they share is understood by inference; it does not apply in the reverse case.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "विधीयमानत्वे",
+          "en": "when newly asserted"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "सति",
+          "en": "when so"
+        },
+        {
+          "sa": "विरोध",
+          "en": "contradiction"
+        },
+        {
+          "sa": "प्रसङ्गः",
+          "en": "would follow"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "विधीयमान",
+          "en": "what is asserted"
+        },
+        {
+          "sa": "अनूद्यमानयोः",
+          "en": "and what is restated"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "स्वप्रधानयोः",
+          "en": "of two words each primary in its own meaning"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "पदयोः",
+          "en": "of the words"
+        },
+        {
+          "sa": "विरोध",
+          "en": "conflict"
+        },
+        {
+          "sa": "आशङ्का",
+          "en": "the possibility"
+        },
+        {
+          "sa": "सामान्य",
+          "en": "common"
+        },
+        {
+          "sa": "लिङ्ग",
+          "en": "sign / inference"
+        },
+        {
+          "sa": "तत्त्वात्",
+          "en": "because it is of that nature"
+        },
+        {
+          "sa": "तयोः",
+          "en": "between those two"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "विपर्यये",
+          "en": "in the reverse case"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0925",
@@ -43717,7 +43970,152 @@
       "deva": "अपास्तसामान्यार्थत्वादनुवादस्थत्वाद्विधीयमानेन च सह विरोधाद्दुःखित्वादेरस्तु कामं जिहासितार्थयो रसंसर्गो यथोपन्यस्तदोषविरहात्तत्त्वमर्थयोः संसर्गोऽस्तु नीलोत्पलवदिति चेन्नैवमप्युपपद्यते । तस्मात् ।",
       "iast": "apāstasāmānyārthatvādanuvādasthatvādvidhīyamānena ca saha virodhādduḥkhitvāderastu kāmaṃ jihāsitārthayo rasaṃsargo yathopanyastadoṣavirahāttattvamarthayoḥ saṃsargo'stu nīlotpalavaditi cennaivamapyupapadyate | tasmāt |",
       "translation": "One might argue: “Let the meanings of ‘that’ and ‘thou’ be unrelated, since their shared general meanings have been removed; ‘thou’ merely restates what is known, and it conflicts with what is newly asserted. Then let the two meanings be related, as blue and lotus are related, since that avoids the stated fault.” This too does not work. Therefore:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अपास्त",
+          "en": "removed"
+        },
+        {
+          "sa": "सामान्य",
+          "en": "shared general"
+        },
+        {
+          "sa": "अर्थत्वात्",
+          "en": "because the meaning has been"
+        },
+        {
+          "sa": "अनुवाद",
+          "en": "restatement"
+        },
+        {
+          "sa": "स्थत्वात्",
+          "en": "because it is confined to"
+        },
+        {
+          "sa": "विधीयमानेन",
+          "en": "what is newly stated"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "सह",
+          "en": "with"
+        },
+        {
+          "sa": "विरोधात्",
+          "en": "because of conflict"
+        },
+        {
+          "sa": "दुःखित्व",
+          "en": "being unhappy"
+        },
+        {
+          "sa": "आदेः",
+          "en": "and the like"
+        },
+        {
+          "sa": "अस्तु",
+          "en": "let it be"
+        },
+        {
+          "sa": "कामम्",
+          "en": "as you wish"
+        },
+        {
+          "sa": "जिहासित",
+          "en": "to be given up"
+        },
+        {
+          "sa": "अर्थयोः",
+          "en": "between the meanings"
+        },
+        {
+          "sa": "अ",
+          "en": "non-"
+        },
+        {
+          "sa": "संसर्गः",
+          "en": "relation"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उपन्यस्त",
+          "en": "stated"
+        },
+        {
+          "sa": "दोष",
+          "en": "fault"
+        },
+        {
+          "sa": "विरहात्",
+          "en": "because it is absent"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "अर्थयोः",
+          "en": "between the meanings"
+        },
+        {
+          "sa": "संसर्गः",
+          "en": "relation"
+        },
+        {
+          "sa": "अस्तु",
+          "en": "let there be"
+        },
+        {
+          "sa": "नील",
+          "en": "blue"
+        },
+        {
+          "sa": "उत्पल",
+          "en": "lotus"
+        },
+        {
+          "sa": "वत्",
+          "en": "as in"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one says"
+        },
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "एवम्",
+          "en": "in this way"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "does it work"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0928",
@@ -43791,7 +44189,48 @@
       "deva": "अत्राह । किमिह जिहासितं किं वोपादित्सितमिति । उच्यते ।",
       "iast": "atrāha | kimiha jihāsitaṃ kiṃ vopāditsitamiti | ucyate |",
       "translation": "Someone asks: “What here is to be given up, and what is to be taken up?” The answer is:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "आह",
+          "en": "someone asks"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "जिहासितम्",
+          "en": "is to be given up"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "उपादित्सितम्",
+          "en": "is to be taken up"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the answer is given"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0930-commentary",
@@ -43802,7 +44241,200 @@
       "deva": "प्रत्यगात्मार्थाभिधायिनस्त्वंपदादुभयं प्रतीयतेऽहं दुःखी प्रत्यगात्मा च । तत्र च प्रत्यगात्मनोऽहं दुःखीत्यनेनाभिसंबन्ध आत्मयाथात्म्यानवबोधहेतुक एव । अतोऽहमर्थोऽपसृष्टत्वादज्ञानोत्थत्वाच्च हेय इति प्रत्यक्षतोवसीयते । तदर्थे किं हेयं किं वोपादेयमिति नावध्रियते । तत इदमभिधीयते ।",
       "iast": "pratyagātmārthābhidhāyinastvaṃpadādubhayaṃ pratīyate'haṃ duḥkhī pratyagātmā ca | tatra ca pratyagātmano'haṃ duḥkhītyanenābhisaṃbandha ātmayāthātmyānavabodhahetuka eva | ato'hamartho'pasṛṣṭatvādajñānotthatvācca heya iti pratyakṣatovasīyate | tadarthe kiṃ heyaṃ kiṃ vopādeyamiti nāvadhriyate | tata idamabhidhīyate |",
       "translation": "The word “thou,” which expresses the inner Self, conveys both the ordinary “I am unhappy” and the innermost Self. The connection between the innermost Self and “I am unhappy” is caused only by failure to know the Self as it truly is. The ordinary ego is therefore plainly to be relinquished: it is something superimposed and arises from ignorance. What, then, is to be given up or taken up in the meaning of “that”? The verse answers:",
-      "gloss": [],
+      "gloss": [
+        {
+          "sa": "प्रत्यगात्म",
+          "en": "inner Self"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "अभिधायिनः",
+          "en": "expressing"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "“thou”"
+        },
+        {
+          "sa": "पदात्",
+          "en": "from the word"
+        },
+        {
+          "sa": "उभयम्",
+          "en": "both"
+        },
+        {
+          "sa": "प्रतीयते",
+          "en": "are understood"
+        },
+        {
+          "sa": "अहम्",
+          "en": "“I”"
+        },
+        {
+          "sa": "दुःखी",
+          "en": "am unhappy"
+        },
+        {
+          "sa": "प्रत्यगात्मा",
+          "en": "the inner Self"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "प्रत्यगात्मनः",
+          "en": "of the inner Self"
+        },
+        {
+          "sa": "अहम्",
+          "en": "“I”"
+        },
+        {
+          "sa": "दुःखी",
+          "en": "am unhappy"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अनेन",
+          "en": "with this"
+        },
+        {
+          "sa": "अभिसंबन्धः",
+          "en": "association"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "याथात्म्य",
+          "en": "true nature"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "हेतुकः",
+          "en": "caused by"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अहम्",
+          "en": "the “I”"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "अपसृष्टत्वात्",
+          "en": "because it is superimposed"
+        },
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उत्थत्वात्",
+          "en": "because it arises from"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "हेयः",
+          "en": "to be relinquished"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रत्यक्षतः",
+          "en": "plainly"
+        },
+        {
+          "sa": "अवसीयते",
+          "en": "is understood"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "in the meaning"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "हेयम्",
+          "en": "is to be given up"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "उपादेयम्",
+          "en": "is to be taken up"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अवध्रियते",
+          "en": "is determined"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is stated"
+        }
+      ],
       "sourceNumbers": [
         "chapter-3-verse-77"
       ]
@@ -43891,7 +44523,100 @@
       "deva": "कथं पुनस्तदर्थोऽद्वितीयलक्षणः प्रत्यगात्मोपाश्रयं सद्वितीयत्वं दुःखित्वं निरन्वयमपनुदतीति । उच्यते । न चैतयोर्निवर्तकनिवर्त्यभावं वयं ब्रूमः । कथं तर्हि ।",
       "iast": "kathaṃ punastadartho'dvitīyalakṣaṇaḥ pratyagātmopāśrayaṃ sadvitīyatvaṃ duḥkhitvaṃ niranvayamapanudatīti | ucyate | na caitayornivartakanivartyabhāvaṃ vayaṃ brūmaḥ | kathaṃ tarhi |",
       "translation": "How does the meaning of “that,” characterized by nonduality and apparently distinct from the inward Self, remove the Self’s apparent duality and suffering? The answer: we do not claim that one directly removes the other. How, then?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "तदर्थः",
+          "en": "the meaning of That"
+        },
+        {
+          "sa": "अद्वितीय",
+          "en": "non-dual"
+        },
+        {
+          "sa": "लक्षणः",
+          "en": "characterized by"
+        },
+        {
+          "sa": "प्रत्यगात्म",
+          "en": "inner Self"
+        },
+        {
+          "sa": "उपाश्रयम्",
+          "en": "having as its basis"
+        },
+        {
+          "sa": "सद्वितीयत्वम्",
+          "en": "apparent duality"
+        },
+        {
+          "sa": "दुःखित्वम्",
+          "en": "being unhappy"
+        },
+        {
+          "sa": "निरन्वयम्",
+          "en": "entirely"
+        },
+        {
+          "sa": "अपनुदति",
+          "en": "removes"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the answer is given"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "एतयोः",
+          "en": "between these two"
+        },
+        {
+          "sa": "निवर्तक",
+          "en": "remover"
+        },
+        {
+          "sa": "निवर्त्य",
+          "en": "thing removed"
+        },
+        {
+          "sa": "भावम्",
+          "en": "a relation"
+        },
+        {
+          "sa": "वयम्",
+          "en": "we"
+        },
+        {
+          "sa": "ब्रूमः",
+          "en": "claim"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0932",
@@ -43902,7 +44627,44 @@
       "deva": "त्वमर्थे प्रत्यगात्मनि प्रागनवबुद्धाद्वितीयता सानेनावबोध्यते ।",
       "iast": "tvamarthe pratyagātmani prāganavabuddhādvitīyatā sānenāvabodhyate |",
       "translation": "The sentence reveals the nonduality that was previously unknown in the meaning of “thou,” the inner Self.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "त्वम्",
+          "en": "“thou”"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "in the meaning"
+        },
+        {
+          "sa": "प्रत्यगात्मनि",
+          "en": "the inner Self"
+        },
+        {
+          "sa": "प्राक्",
+          "en": "previously"
+        },
+        {
+          "sa": "अनवबुद्ध",
+          "en": "not known"
+        },
+        {
+          "sa": "अद्वितीयता",
+          "en": "nonduality"
+        },
+        {
+          "sa": "सा",
+          "en": "that"
+        },
+        {
+          "sa": "अनेन",
+          "en": "by this"
+        },
+        {
+          "sa": "अवबोध्यते",
+          "en": "is made known"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0933",
@@ -43913,7 +44675,104 @@
       "deva": "अतोऽनवबोधनिरासेन तदुत्थस्य सद्वितीयत्वस्य त्वमर्थत्वस्य परोक्षत्वस्य च तदर्थस्थस्य निरसनान्न वैयधिकरण्यादि चोद्यस्यावसरोऽस्तीति । तदिदमभिधीयते ।",
       "iast": "ato'navabodhanirāsena tadutthasya sadvitīyatvasya tvamarthatvasya parokṣatvasya ca tadarthasthasya nirasanānna vaiyadhikaraṇyādi codyasyāvasaro'stīti | tadidamabhidhīyate |",
       "translation": "By removing that ignorance, it removes the resulting duality wrongly attributed to “thou,” and the indirectness wrongly attributed to “that.” Thus the objection that these qualities belong to different subjects has no place. This is stated as follows:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "निरासेन",
+          "en": "by removing"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "उत्थस्य",
+          "en": "arisen from"
+        },
+        {
+          "sa": "सद्वितीयत्वस्य",
+          "en": "duality"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "“thou”"
+        },
+        {
+          "sa": "अर्थत्वस्य",
+          "en": "being the meaning"
+        },
+        {
+          "sa": "परोक्षत्वस्य",
+          "en": "indirectness"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "स्थस्य",
+          "en": "belonging to"
+        },
+        {
+          "sa": "निरसनात्",
+          "en": "because of removing"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "वैयधिकरण्य",
+          "en": "different subject-locus"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the like"
+        },
+        {
+          "sa": "चोद्यस्य",
+          "en": "of the objection"
+        },
+        {
+          "sa": "अवसरः",
+          "en": "an occasion"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्",
+          "en": "this"
+        },
+        {
+          "sa": "इदम्",
+          "en": "point"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0935",
@@ -43979,7 +44838,96 @@
       "deva": "कस्मात्पुनः कारणात्तदर्थोऽद्वितीयलक्षणस्त्वमर्थेन प्रत्यगात्मना पृथगर्थः सन्नविद्योत्थं सद्वितीयत्वं निहन्तीति । उच्यते । विरोधात् । तदुच्यते ।",
       "iast": "kasmātpunaḥ kāraṇāttadartho'dvitīyalakṣaṇastvamarthena pratyagātmanā pṛthagarthaḥ sannavidyotthaṃ sadvitīyatvaṃ nihantīti | ucyate | virodhāt | taducyate |",
       "translation": "Why does the nondual meaning of “that,” though apparently distinct from the inner Self meant by “thou,” destroy the duality born of ignorance? The answer is: because they contradict it. Thus:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कस्मात्",
+          "en": "why"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "कारणात्",
+          "en": "for what reason"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "अद्वितीय",
+          "en": "nondual"
+        },
+        {
+          "sa": "लक्षणः",
+          "en": "characterized by"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "“thou”"
+        },
+        {
+          "sa": "अर्थेन",
+          "en": "by the meaning"
+        },
+        {
+          "sa": "प्रत्यगात्मना",
+          "en": "the inner Self"
+        },
+        {
+          "sa": "पृथक्",
+          "en": "distinct"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "in meaning"
+        },
+        {
+          "sa": "सन्",
+          "en": "being"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उत्थम्",
+          "en": "arisen from"
+        },
+        {
+          "sa": "सद्वितीयत्वम्",
+          "en": "duality"
+        },
+        {
+          "sa": "निहन्ति",
+          "en": "destroys"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the reply is given"
+        },
+        {
+          "sa": "विरोधात्",
+          "en": "because of contradiction"
+        },
+        {
+          "sa": "तत्",
+          "en": "this"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0938",
@@ -44045,7 +44993,44 @@
       "deva": "तत्त्वमर्थयोस्तु बाधकत्वेऽन्यदपि कारणमुच्यते ।",
       "iast": "tattvamarthayostu bādhakatve'nyadapi kāraṇamucyate |",
       "translation": "Another reason is given for the power of the meanings of “that” and “thou” to remove one another’s errors:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "अर्थयोः",
+          "en": "of the two meanings"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "बाधकत्वे",
+          "en": "as for their power to remove"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "another"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "reason"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0941",
@@ -44107,7 +45092,68 @@
       "deva": "एवं तावद्यथोपक्रान्तेन प्रक्रियावर्त्मना न प्रत्यक्षादिप्रमाणान्तरैर्विरोधगन्धोऽपि संभाव्यते ।",
       "iast": "evaṃ tāvadyathopakrāntena prakriyāvartmanā na pratyakṣādipramāṇāntarairvirodhagandho'pi saṃbhāvyate |",
       "translation": "Thus, along the line of reasoning begun earlier, no conflict whatever with perception or any other means of knowledge is possible.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so far"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उपक्रान्तेन",
+          "en": "begun"
+        },
+        {
+          "sa": "प्रक्रिया",
+          "en": "line of reasoning"
+        },
+        {
+          "sa": "वर्त्मना",
+          "en": "along the path"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "अन्तरैः",
+          "en": "other"
+        },
+        {
+          "sa": "विरोध",
+          "en": "conflict"
+        },
+        {
+          "sa": "गन्धः",
+          "en": "the slightest trace"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "संभाव्यते",
+          "en": "is possible"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0943",
@@ -44118,7 +45164,96 @@
       "deva": "यदा पुनः सर्वप्रकारेणापि यतमाना नैवेमं वाक्यार्थं संभावयामः प्रत्यक्षादिप्रमाणान्तरविरोधत एव तस्मिन्नपि पक्ष उच्यते ।",
       "iast": "yadā punaḥ sarvaprakāreṇāpi yatamānā naivemaṃ vākyārthaṃ saṃbhāvayāmaḥ pratyakṣādipramāṇāntaravirodhata eva tasminnapi pakṣa ucyate |",
       "translation": "If, despite examining the matter in every way, one still cannot reconcile the sentence meaning with other means of knowledge and assumes a conflict, the author gives an answer to that position too:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "पुनः",
+          "en": "however"
+        },
+        {
+          "sa": "सर्व",
+          "en": "every"
+        },
+        {
+          "sa": "प्रकारेण",
+          "en": "way"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "यतमाना",
+          "en": "striving / examining"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "at all"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning"
+        },
+        {
+          "sa": "संभावयामः",
+          "en": "we can reconcile / deem possible"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "अन्तर",
+          "en": "other"
+        },
+        {
+          "sa": "विरोधतः",
+          "en": "because of conflict"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "in that"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "पक्षे",
+          "en": "position"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "an answer is given"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0945",
@@ -53707,7 +54842,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 124 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 109 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
