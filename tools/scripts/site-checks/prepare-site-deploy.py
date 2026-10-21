@@ -7,7 +7,7 @@ import os
 import re
 from pathlib import Path
 
-CACHE_VERSION = "20261020-on-site-search-1"
+CACHE_VERSION = "20261021-wiki-stack-1"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -17,6 +17,8 @@ CACHE_REPLACEMENTS = (
     ("/advaita/assets/js/site.js?v=20261019-unified-theme-4", f"/advaita/assets/js/site.js?v={CACHE_VERSION}"),
     ("/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-4", f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}"),
     ("/advaita/assets/css/site-chrome.css?v=20261019-unified-theme-4", f"/advaita/assets/css/site-chrome.css?v={CACHE_VERSION}"),
+    ("/advaita/assets/js/site-chrome.js?v=20261020-on-site-search-1", f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}"),
+    ("/advaita/assets/css/site-chrome.css?v=20261020-on-site-search-1", f"/advaita/assets/css/site-chrome.css?v={CACHE_VERSION}"),
 )
 BODY_TAG = re.compile(r"<body\b[^>]*>", re.IGNORECASE)
 CLASS_ATTR = re.compile(r"\bclass\s*=\s*([\"'])([^\"']*)\1", re.IGNORECASE)

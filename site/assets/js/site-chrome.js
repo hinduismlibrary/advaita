@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261020-on-site-search-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261021-wiki-stack-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -40,7 +40,7 @@ function addFonts(){
   preconnectFonts.crossOrigin="anonymous";
   const link=document.createElement("link");
   link.rel="stylesheet";
-  link.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=Vollkorn:wght@400;500;600&display=swap";
+  link.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500&family=Tiro+Devanagari+Sanskrit&family=Vollkorn:wght@400;500;600&display=swap";
   link.dataset.vivekaSiteFonts="true";
   document.head.append(preconnect,preconnectFonts,link);
 }
@@ -116,17 +116,50 @@ function makeCrumbs(path){
     return [home,{label:"Advaita Texts"}];
   return [home,{label:title}];
 }
+const TITLE_PAIRS={"A Scripture-Based Case for Viṣṇu Supremacy":"विष्णोः परात्परत्वे शास्त्रीयप्रमाणम्","A Scripture-Based Case for the Supremacy of Śiva":"शिवस्य परात्परत्वे शास्त्रीयप्रमाणम्","A Scripture-Based Case for the Validity of the Āgamas":"आगमानां शास्त्रीयप्रामाण्यम्","A Vaiṣṇava Lens on Viṣṇu as the Supreme Deity":"वैष्णवदृष्ट्या विष्णोः परात्परत्वम्","Advaita Stotrams":"अद्वैतस्तोत्राणि","Advaita Treatises":"अद्वैतप्रकरणानि","An Index of Hindu Scripture":"हिन्दुशास्त्राणाम् अनुक्रमणिका","Bhagavad Gītā Śrīdhara Bhāṣya":"श्रीमद्भगवद्गीता — श्रीधरभाष्यम्","Bhaviṣya Purāṇa Brāhmaparvan":"भविष्यपुराणम् — ब्रह्मपर्व","Bhaviṣya Purāṇa Brāhmaparvan Chapter Index":"भविष्यपुराणस्य ब्रह्मपर्वणः अध्यायानुक्रमणिका","Bhaviṣya Purāṇa Chapter 1 Introduction":"भविष्यपुराणस्य प्रथमाध्यायस्य परिचयः","Bhaviṣya Purāṇa Chapter Concordance":"भविष्यपुराणाध्यायसाम्यसूची","Bhaviṣya Purāṇa English Translation":"भविष्यपुराणम् — आङ्ग्लानुवादः","Bhāgavatam Canto 10 with Śrīdhara Svāmī":"श्रीमद्भागवतम् — दशमस्कन्धः, श्रीधरस्वामिव्याख्यासहितः","Bhāgavatam Canto 11 reader":"एकादशस्कन्धपाठः","Bhāgavatam Canto 12 reader":"द्वादशस्कन्धपाठः","Bhāgavatam Canto 2 with Śrīdhara Svāmī":"श्रीमद्भागवतम् — द्वितीयस्कन्धः, श्रीधरस्वामिव्याख्यासहितः","Bhāgavatam with Śrīdhara Bhāṣya":"श्रीमद्भागवतम् — श्रीधरभाष्यसहितम्","Bhāgavatam with Śrīdhara Bhāṣya Cantos 1–12":"श्रीमद्भागवतम् — श्रीधरभाष्यसहितम् (१–१२ स्कन्धाः)","Brahmasiddhi by Maṇḍana Miśra":"ब्रह्मसिद्धिः — मण्डनमिश्रकृता","Chapter I Arjuna Viṣāda Yoga Arjuna’s Despondency":"अर्जुनविषादयोगः","Chapter II Sāṅkhya Yoga The Yoga of Knowledge":"साङ्ख्ययोगः","Chapter III Karma Yoga The Yoga of Action":"कर्मयोगः","Chapter IV Jñāna Karma Sannyāsa Yoga Knowledge and Renunciation of Action":"ज्ञानकर्मसंन्यासयोगः","Chapter V Karma Sannyāsa Yoga The Yoga of Renunciation":"कर्मसंन्यासयोगः","Chapter VI Ātma Saṃyama Yoga The Yoga of Meditation":"आत्मसंयमयोगः","Chapter VII Jñāna Vijñāna Yoga Knowledge and Realization":"ज्ञानविज्ञानयोगः","Chapter VIII Akṣara Brahma Yoga The Imperishable Brahman":"अक्षरब्रह्मयोगः","Chapter IX Rāja Vidyā Rāja Guhya Yoga Royal Knowledge and Royal Secret":"राजविद्याराजगुह्ययोगः","Chapter X Vibhūti Yoga Divine Glories":"विभूतियोगः","Chapter XI Viśvarūpa Darśana Yoga The Vision of the Universal Form":"विश्वरूपदर्शनयोगः","Chapter XII Bhakti Yoga Devotion":"भक्तियोगः","Chapter XIII Kṣetra Kṣetrajña Vibhāga Yoga The Field and the Knower":"क्षेत्रक्षेत्रज्ञविभागयोगः","Chapter XIV Guṇatraya Vibhāga Yoga The Three Guṇas":"गुणत्रयविभागयोगः","Chapter XV Puruṣottama Yoga The Supreme Person":"पुरुषोत्तमयोगः","Chapter XVI Daivāsura Sampad Vibhāga Yoga Divine and Demonic Qualities":"दैवासुरसम्पद्विभागयोगः","Chapter XVII Śraddhātraya Vibhāga Yoga The Threefold Faith":"श्रद्धात्रयविभागयोगः","Chapter XVIII Mokṣa Sannyāsa Yoga Liberation through Renunciation":"मोक्षसंन्यासयोगः","Compilation of Peer-Reviewed Citations Against Aryan Migration Theory":"आर्यप्रवाससिद्धान्तस्य प्रतिवादे समीक्षितसन्दर्भसङ्कलनम्","Dṛg-dṛśya-viveka by Bhāratī Tīrtha":"भारतीतीर्थकृतः दृग्दृश्यविवेकः","Hinduism on Women Scriptural Analysis of Women’s Dharma":"हिन्दुधर्मे स्त्रीधर्मस्य शास्त्रीयविश्लेषणम्","Indology":"भारतविद्या","Introduction to Eastern Philosophy":"प्राच्यदर्शनपरिचयः","Introduction to Hinduism":"हिन्दुधर्मपरिचयः","Meat-eating in Hinduism through the lens of Śāstra":"शास्त्रदृष्ट्या हिन्दुधर्मे मांसभक्षणम्","Mūlamadhyamakakārikā with Candrakīrti’s Commentary":"मूलमध्यमककारिका — चन्द्रकीर्तिव्याख्यासह","Naiṣkarmyasiddhi by Sureśvara":"नैष्कर्म्यसिद्धिः — सुरेश्वरकृता","On the Lack of Steppe Ancestry and Haplogroups in Ancient Iranians":"प्राचीनपारसीकेषु स्तेपीयपूर्वजत्वस्य हैप्लोग्रूपाणां च अभावः","Pratisargaparvan Four-Part Chapter Index":"प्रतिसर्गपर्वणः चतुर्भागीयाध्यायानुक्रमणिका","Purāṇa Attestation Heatmap":"पुराणसाक्ष्यतापचित्रम्","Purāṇa Library":"पुराणग्रन्थालयः","Purāṇa Research Index":"पुराणानुसन्धानानुक्रमणिका","Short Advaita Texts":"अद्वैतलघुग्रन्थाः","Stotrams and Hymns by Ādi Śaṅkara":"आदिशङ्कराचार्यकृतानि स्तोत्राणि","Tattvabodha by Ādi Śaṅkara":"तत्त्वबोधः — आदिशङ्करकृतः","Vedāntasāra by Sadānanda Yogīndra":"वेदान्तसारः — सदानन्दयोगीन्द्रकृतः","Viṣṇu Purāṇa Śrīdhara Bhāṣya":"विष्णुपुराणम् — श्रीधरभाष्यम्","Ātmabodha by Ādi Śaṅkara":"आत्मबोधः — आदिशङ्करकृतः","Śrīmad Bhāgavatam Śrīdhara Bhāṣya":"श्रीमद्भागवतम् — श्रीधरभाष्यम्","Home":"मुखपृष्ठम्","Writings":"लेखाः","Advaita texts":"अद्वैतग्रन्थाः","Advaita Texts":"अद्वैतग्रन्थाः","Advaita Vedānta Portal":"अद्वैतवेदान्तः","Purāṇas":"पुराणानि","Search":"अन्वेषणम्","Search results":"अन्वेषणपरिणामाः","Text sources":"पाठस्रोतांसि","Reader":"पाठः","Eastern Philosophy":"प्राच्यदर्शनम्","Sections":"विभागाः","Viveka Dṛṣṭi":"विवेकदृष्टिः","Bhagavad Gītā":"श्रीमद्भगवद्गीता","Varṇa":"वर्णः","Chaturvarnya":"चातुर्वर्ण्यम्","Hinduism on Women":"हिन्दुधर्मे स्त्रीधर्मः","Mūlamadhyamakakārikā":"मूलमध्यमककारिका","Analysis of Texts":"ग्रन्थविश्लेषणम्","Documents":"निबन्धाः","Reference sections":"सन्दर्भविभागाः","Short Texts (under 50 verses)":"लघुग्रन्थाः","Summaries and Explanations (over 50 verses)":"सारव्याख्यानानि","Stotrams and Hymns":"स्तोत्राणि च स्तुतयः","Purāṇa Research":"पुराणानुसन्धानम्","Śrīmad Bhāgavatam":"श्रीमद्भागवतम्","Bhaviṣya Purāṇa":"भविष्यपुराणम्","Related Scripture":"सम्बद्धशास्त्राणि","Archaeogenetics and Migration":"पुरातनवंशविज्ञानं जनप्रवासश्च","Textual Reference":"ग्रन्थसन्दर्भः","Purāṇa Studies":"पुराणाध्ययनम्","Theology and Interpretation":"ईश्वरमीमांसा तथा व्याख्या","Contents":"विषयसूची"};
+function normalizeLabel(value){return String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[–—:.,'’]/g," ").replace(/\s+/g," ").trim().toLowerCase();}
+const TITLE_INDEX=new Map(Object.entries(TITLE_PAIRS).map(([english,devanagari])=>[normalizeLabel(english),devanagari]));
+function devanagariFor(english){
+ const key=normalizeLabel(english), mapped=TITLE_INDEX.get(key);
+ if(mapped)return mapped;
+ const chapter=key.match(/^chapter (\d+)$/);
+ return chapter?"अध्यायः "+chapter[1].replace(/\d/g,d=>"०१२३४५६७८९"[Number(d)]):null;
+}
+function stackLabel(element,english,devanagari){
+ if(!element||!english||!devanagari||element.dataset.vdBilingual==="true")return;
+ const en=document.createElement("span");en.className="vd-label-en";en.lang="en";en.textContent=english;
+ const sa=document.createElement("span");sa.className="vd-label-dev";sa.lang="sa-Deva";sa.textContent=devanagari;
+ element.dataset.vdEnglish=english;element.dataset.vdBilingual="true";element.replaceChildren(en,sa);
+}
+function applyPageLabels(){
+ const root=document.querySelector("main.site-main")||document.body;
+ const elements=[...root.querySelectorAll("h1,h2,.hp-section-title,a"),...document.querySelectorAll(".site-footer p")];
+ elements.forEach(element=>{
+  if(element.closest(".vd-global-header")||element.dataset.vdBilingual==="true")return;
+  let target=element;
+  if(!element.matches("a")){const link=element.querySelector(":scope > a");if(link)target=link;}
+  if(target.dataset.vdBilingual==="true")return;
+  const english=target.textContent.replace(/\s+/g," ").trim();
+  if(!english||target.querySelector("img,svg,button,small,sup,sub,.sr-only"))return;
+  const devanagari=devanagariFor(english);if(devanagari)stackLabel(target,english,devanagari);
+ });
+}
+
 function addLink(parent,href,label,current){
   const li=document.createElement("li");
   if(href){
     const a=document.createElement("a");
     a.href=href;
     a.textContent=label;
+    const devanagari=devanagariFor(label);
+    if(devanagari)stackLabel(a,label,devanagari);
     li.append(a);
   }else{
     const span=document.createElement("span");
     span.textContent=label;
     span.setAttribute("aria-current","page");
+    const devanagari=devanagariFor(label);
+    if(devanagari)stackLabel(span,label,devanagari);
     li.append(span);
   }
   parent.append(li);
@@ -140,6 +173,7 @@ function makeHeader(path){
   brand.className="brand";
   brand.href=SITE;
   brand.textContent="Viveka Dṛṣṭi";
+  stackLabel(brand,"Viveka Dṛṣṭi","विवेकदृष्टिः");
   const toggle=document.createElement("button");
   toggle.className="vd-menu-toggle";
   toggle.type="button";
@@ -157,13 +191,14 @@ function makeHeader(path){
     [SITE+"books/adi-shankaracharya/","Advaita texts",/\/books\//.test(path)],
     [SITE+"pages/purana-library/","Purāṇas",/purana|bhagavatam|vishnu-purana/i.test(path)],
     [SITE+"pages/indology/","Indology",/indology|aryan-migration|steppe-ancestry/i.test(path)],
-    [SITE+"contact/","Contact",/\/contact$/.test(path)]
   ];
   links.forEach(([href,label,current])=>{
     const a=document.createElement("a");
     a.href=href;
     a.textContent=label;
     if(current)a.setAttribute("aria-current","page");
+    const devanagari=devanagariFor(label);
+    if(devanagari)stackLabel(a,label,devanagari);
     nav.append(a);
   });
   const form=document.createElement("form");
@@ -185,9 +220,13 @@ function makeHeader(path){
   const button=document.createElement("button");
   button.type="submit";
   button.textContent="Search";
+  stackLabel(button,"Search","अन्वेषणम्");
   form.append(label,input,button);
-  row.append(brand,toggle,nav,form);
-  header.append(row);
+  const navRow=document.createElement("div");
+  navRow.className="vd-nav-subrow";
+  navRow.append(nav);
+  row.append(brand,toggle,form);
+  header.append(row,navRow);
   const crumbs=makeCrumbs(path);
   if(crumbs.length){
     const crumbRow=document.createElement("div");
@@ -220,6 +259,13 @@ function makeHeader(path){
   });
   return header;
 }
+function watchSearchResults(){
+  const results=document.querySelector(".search-results");
+  if(!results||results.dataset.vdLabelWatch==="true")return;
+  results.dataset.vdLabelWatch="true";
+  const observer=new MutationObserver(applyPageLabels);
+  observer.observe(results,{childList:true,subtree:true});
+}
 function repairMmkLayout(path){
   if(!/\/articles\/mulamadhyamakakarika-with-chandrakirti(?:\/|$)/i.test(path))return;
   document.body.classList.remove("vp-book-1");
@@ -240,6 +286,8 @@ function mount(){
     header=makeHeader(normalizedPath());
     document.body.prepend(header);
   }
+  applyPageLabels();
+  watchSearchResults();
   return true;
 }
 function init(){

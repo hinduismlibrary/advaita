@@ -778,3 +778,522 @@ body.vd-chrome-page.search-page main.site-main{
   .page-search-control button{align-self:flex-start!important}
   .search-result{padding:14px!important}
 }
+
+
+/* 2026-10-21: restrained, consistent Wikisource-inspired layout. */
+:root{
+  color-scheme:light;
+  --vd-chrome:#fff;
+  --vd-paper:#fff;
+  --vd-ink:#202122;
+  --vd-teal:#202122;
+  --vd-line:#a2a9b1;
+  --vd-link:#36c;
+}
+body.vd-chrome-page{
+  min-height:100vh!important;
+  margin:0!important;
+  background:#fff!important;
+  color:#202122!important;
+  font-family:Merriweather,Georgia,"Times New Roman",serif!important;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+body.vd-chrome-page a{color:#36c!important;text-decoration:none!important;text-underline-offset:2px}
+body.vd-chrome-page a:hover,
+body.vd-chrome-page a:focus-visible{color:#2a4b8d!important;text-decoration:underline!important}
+body.vd-chrome-page :is(button,input,select,textarea){font-family:inherit}
+body.vd-chrome-page :is([lang="sa-Deva"],[lang^="sa-Deva"]){
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header{
+  position:relative!important;
+  top:auto!important;
+  z-index:20!important;
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-top:3px solid #a2a9b1!important;
+  border-bottom:0!important;
+  background:#fff!important;
+  color:#202122!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap{
+  box-sizing:border-box!important;
+  display:flex!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:20px!important;
+  width:min(1260px,100%)!important;
+  min-height:68px!important;
+  height:auto!important;
+  margin:0 auto!important;
+  padding:9px 24px!important;
+  background:#fff!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .brand{
+  display:flex!important;
+  flex:0 0 auto!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:0!important;
+  color:#202122!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:15px!important;
+  font-weight:500!important;
+  line-height:1.25!important;
+  letter-spacing:0!important;
+  white-space:nowrap!important;
+  text-decoration:none!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-label-en{
+  display:block!important;
+  color:inherit!important;
+  font:inherit!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .brand .vd-label-dev{
+  display:block!important;
+  margin-top:2px!important;
+  color:#202122!important;
+  font:400 12px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-nav-subrow{
+  width:100%!important;
+  border-top:1px solid #eaecf0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  background:#fff!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav{
+  box-sizing:border-box!important;
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  align-items:stretch!important;
+  gap:0 25px!important;
+  width:min(1260px,100%)!important;
+  margin:0 auto!important;
+  padding:0 24px!important;
+  position:static!important;
+  border:0!important;
+  background:#fff!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:auto!important;
+  min-height:48px!important;
+  margin:0!important;
+  padding:6px 3px 7px!important;
+  border:0!important;
+  border-bottom:2px solid transparent!important;
+  border-radius:0!important;
+  color:#36c!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.35!important;
+  text-align:center!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav .vd-label-en{font:inherit!important;color:inherit!important}
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav .vd-label-dev{
+  display:block!important;
+  margin-top:2px!important;
+  color:#202122!important;
+  font:400 11px/1.3 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav a:hover,
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav a:focus-visible{
+  color:#2a4b8d!important;
+  background:#f8f9fa!important;
+  text-decoration:underline!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav a[aria-current="page"]{
+  border-bottom-color:#087b75!important;
+  color:#202122!important;
+  font-weight:600!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form{
+  display:flex!important;
+  flex:0 1 min(360px,48vw)!important;
+  align-items:stretch!important;
+  gap:0!important;
+  width:min(360px,48vw)!important;
+  margin:0 0 0 auto!important;
+  padding:0!important;
+  background:#fff!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input{
+  box-sizing:border-box!important;
+  flex:1 1 auto!important;
+  width:100%!important;
+  min-width:0!important;
+  height:36px!important;
+  padding:0 10px!important;
+  border:1px solid #a2a9b1!important;
+  border-right:0!important;
+  border-radius:0!important;
+  outline:none!important;
+  color:#202122!important;
+  background:#fff!important;
+  font:400 13px/1.4 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input::placeholder{color:#72777d!important}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input:focus{
+  border-color:#36c!important;
+  box-shadow:inset 0 0 0 1px #36c!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button{
+  display:flex!important;
+  flex:none!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:70px!important;
+  min-height:42px!important;
+  height:auto!important;
+  margin:0!important;
+  padding:3px 10px!important;
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  color:#202122!important;
+  background:#f8f9fa!important;
+  font:400 12px/1.25 Merriweather,Georgia,serif!important;
+  cursor:pointer!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button .vd-label-dev{
+  display:block!important;
+  margin-top:1px!important;
+  color:#202122!important;
+  font:400 10px/1.25 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button:hover,
+body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button:focus-visible{
+  border-color:#72777d!important;
+  color:#202122!important;
+  background:#eaecf0!important;
+  outline:2px solid #36c!important;
+  outline-offset:2px!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle{
+  display:none!important;
+  margin:0!important;
+  padding:8px!important;
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  background:#f8f9fa!important;
+  cursor:pointer!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle span{
+  display:block!important;
+  width:22px!important;
+  height:2px!important;
+  margin:4px!important;
+  background:#202122!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-row{
+  border-top:0!important;
+  border-bottom:1px solid #eaecf0!important;
+  background:#fff!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner{
+  width:min(1260px,100%)!important;
+  margin:0 auto!important;
+  padding:7px 24px!important;
+  overflow-x:auto!important;
+  scrollbar-width:thin;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner ol{
+  display:flex!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:0!important;
+  list-style:none!important;
+  margin:0!important;
+  padding:0!important;
+  color:#54595d!important;
+  font:400 12px/1.4 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner li{
+  display:inline-flex!important;
+  align-items:center!important;
+  min-width:0!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner li+li::before{
+  content:"›";
+  padding:0 9px!important;
+  color:#72777d!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner a,
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner span{
+  display:flex!important;
+  flex-direction:column!important;
+  color:#36c!important;
+  text-decoration:none!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner .vd-label-dev{
+  margin-top:1px!important;
+  color:#202122!important;
+  font:400 10px/1.3 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner span[aria-current="page"]{
+  color:#54595d!important;
+  font-weight:400!important;
+}
+body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner span[aria-current="page"] .vd-label-dev{color:#202122!important}
+.vd-visually-hidden{
+  position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;
+  overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;
+}
+body.vd-chrome-page main.site-main{
+  box-sizing:border-box!important;
+  display:block!important;
+  width:min(1260px,100%)!important;
+  max-width:1260px!important;
+  min-height:75vh!important;
+  margin:0 auto!important;
+  padding:16px 24px 60px!important;
+  overflow:visible!important;
+  background:#fff!important;
+  color:#202122!important;
+  font:400 15px/1.7 Merriweather,Georgia,"Times New Roman",serif!important;
+}
+body.vd-chrome-page :is(.hp-home,.article-shell,.archive-shell,.page,.ad-page,.search-panel,.contact-panel){
+  box-sizing:border-box!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:#fff!important;
+  color:#202122!important;
+}
+body.vd-chrome-page:not(.gita-page) main.site-main>.article-shell{
+  width:min(920px,100%)!important;
+  max-width:920px!important;
+  margin:0 auto!important;
+  padding:14px 0 64px!important;
+  background:#fff!important;
+  color:#202122!important;
+}
+body.vd-chrome-page.gita-page main.site-main>.article-shell{
+  width:100%!important;max-width:none!important;margin:0!important;padding:0!important;background:#fff!important;
+}
+body.vd-chrome-page .page,
+body.vd-chrome-page .ad-page{
+  width:min(1120px,100%)!important;
+  max-width:1120px!important;
+  min-height:75vh!important;
+  margin:0 auto!important;
+  padding:14px 0 60px!important;
+  background:#fff!important;
+  color:#202122!important;
+  font:400 15px/1.7 Merriweather,Georgia,"Times New Roman",serif!important;
+}
+body.vd-chrome-page .page>header:not(.hero):not(.article-head){
+  border-color:#a2a9b1!important;
+  background:#fff!important;
+}
+body.vd-chrome-page .page .viewer{
+  color:#202122!important;
+  background:#fff!important;
+  font-family:Merriweather,Georgia,"Times New Roman",serif!important;
+}
+body.vd-chrome-page.archive-page main.site-main,
+body.vd-chrome-page.search-page main.site-main{background:#fff!important}
+body.vd-chrome-page.archive-page .archive-shell{
+  width:min(1120px,100%)!important;max-width:1120px!important;margin:0 auto!important;padding:14px 0 60px!important;
+  background:#fff!important;color:#202122!important;
+}
+body.vd-chrome-page.archive-page .archive-shell h2{
+  margin:28px 0 9px!important;padding:0 0 6px!important;border-bottom:1px solid #c8ccd1!important;
+  color:#202122!important;font:600 19px/1.35 Vollkorn,Georgia,serif!important;
+}
+body.vd-chrome-page.archive-page .archive-list{
+  display:block!important;margin:0!important;padding:0 0 0 22px!important;list-style:disc!important;
+}
+body.vd-chrome-page.archive-page .archive-list li{
+  margin:4px 0!important;padding:0!important;border:0!important;border-radius:0!important;background:#fff!important;
+}
+body.vd-chrome-page.archive-page .archive-list a{
+  display:inline!important;padding:0!important;color:#36c!important;background:transparent!important;
+  font:400 14px/1.6 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page :is(h1,h2,h3,h4,h5,h6){
+  color:#202122!important;
+  font-family:Vollkorn,Georgia,"Times New Roman",serif!important;
+}
+body.vd-chrome-page main.site-main h1{
+  margin:0 0 14px!important;
+  padding:7px 0 12px!important;
+  border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;
+  font:500 clamp(25px,4vw,31px)/1.3 Vollkorn,Georgia,serif!important;
+  text-align:center!important;
+}
+body.vd-chrome-page main.site-main h2{
+  margin:24px 0 9px!important;
+  padding:0 0 6px!important;
+  border:0!important;
+  border-bottom:1px solid #c8ccd1!important;
+  color:#202122!important;
+  font:600 19px/1.35 Vollkorn,Georgia,serif!important;
+}
+body.vd-chrome-page main.site-main h3{
+  margin:20px 0 7px!important;
+  color:#202122!important;
+  font:600 16px/1.4 Vollkorn,Georgia,serif!important;
+}
+body.vd-chrome-page main.site-main h4,
+body.vd-chrome-page main.site-main h5,
+body.vd-chrome-page main.site-main h6{
+  color:#202122!important;font-family:Vollkorn,Georgia,serif!important;font-weight:600!important;
+}
+body.vd-chrome-page .vd-label-en{display:block!important;color:inherit!important}
+body.vd-chrome-page .vd-label-dev{
+  display:block!important;
+  margin-top:2px!important;
+  color:#202122!important;
+  font:400 12px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page main.site-main h1 .vd-label-en{font:inherit!important}
+body.vd-chrome-page main.site-main h1 .vd-label-dev{font:400 19px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page main.site-main h2 .vd-label-en{font:inherit!important}
+body.vd-chrome-page main.site-main h2 .vd-label-dev{font-size:13px!important}
+body.vd-chrome-page .hp-home{
+  width:min(1120px,100%)!important;
+  margin:0 auto!important;
+  padding:15px 0 60px!important;
+}
+body.vd-chrome-page .hp-home>h1{
+  margin:0 0 13px!important;
+  padding:7px 0 12px!important;
+  color:#202122!important;
+  font:500 30px/1.25 Vollkorn,Georgia,serif!important;
+  text-align:center!important;
+}
+body.vd-chrome-page .hp-home>h1 .vd-label-dev{font-size:20px!important}
+body.vd-chrome-page .hp-home-intro{
+  max-width:850px!important;margin:14px auto 25px!important;color:#54595d!important;
+  font:400 14px/1.7 Merriweather,Georgia,serif!important;text-align:center!important;
+}
+body.vd-chrome-page .hp-home-intro p{margin:0!important;color:inherit!important}
+body.vd-chrome-page .hp-directory{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:25px 42px!important;align-items:start!important;
+}
+body.vd-chrome-page .hp-column{display:grid!important;align-content:start!important;gap:20px!important;min-width:0!important}
+body.vd-chrome-page .hp-panel{
+  margin:0!important;padding:11px 0 0!important;border:0!important;border-top:1px solid #c8ccd1!important;
+  border-radius:0!important;background:#fff!important;box-shadow:none!important;
+}
+body.vd-chrome-page .hp-section-title{
+  margin:0 0 6px!important;padding:0!important;border:0!important;color:#202122!important;
+  font:600 19px/1.35 Vollkorn,Georgia,serif!important;
+}
+body.vd-chrome-page .hp-section-title a{color:#36c!important}
+body.vd-chrome-page .hp-section-title .vd-label-en{font:inherit!important}
+body.vd-chrome-page .hp-section-title .vd-label-dev{font-size:13px!important}
+body.vd-chrome-page .hp-link-list{
+  margin:0!important;padding:0 0 0 22px!important;list-style:disc!important;
+}
+body.vd-chrome-page .hp-link-list li{margin:3px 0!important;padding:0!important;color:#202122!important}
+body.vd-chrome-page .hp-link-list a{color:#36c!important;font:400 14px/1.6 Merriweather,Georgia,serif!important}
+body.vd-chrome-page .hp-link-list a .vd-label-dev{font-size:12px!important}
+body.vd-chrome-page .ad-section>h2{
+  margin:24px 0 9px!important;padding:0 0 6px!important;border:0!important;border-bottom:1px solid #c8ccd1!important;
+  background:#fff!important;color:#202122!important;font:600 19px/1.35 Vollkorn,Georgia,serif!important;
+}
+body.vd-chrome-page .ad-entry{
+  margin:0!important;padding:5px 0!important;border:0!important;border-radius:0!important;border-bottom:1px solid #eaecf0!important;
+  background:#fff!important;box-shadow:none!important;
+}
+body.vd-chrome-page .ad-entry-link{color:#36c!important;font:400 14px/1.6 Merriweather,Georgia,serif!important}
+body.vd-chrome-page .ad-entry-link:hover{color:#2a4b8d!important}
+body.vd-chrome-page.search-page .search-panel{
+  width:min(840px,100%)!important;margin:0 auto!important;padding:14px 0 64px!important;
+  background:#fff!important;color:#202122!important;
+}
+body.vd-chrome-page.search-page .search-panel h1{color:#202122!important}
+body.vd-chrome-page.search-page .search-intro{color:#54595d!important;font:400 14px/1.7 Merriweather,Georgia,serif!important}
+body.vd-chrome-page.search-page .page-search-form{
+  margin:22px 0 18px!important;padding:14px 0!important;border:0!important;border-top:1px solid #c8ccd1!important;
+  border-bottom:1px solid #c8ccd1!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;
+}
+body.vd-chrome-page.search-page .page-search-form label{color:#202122!important;font-weight:500!important}
+body.vd-chrome-page.search-page .page-search-control input{
+  border:1px solid #a2a9b1!important;border-radius:0!important;color:#202122!important;background:#fff!important;
+  font:400 14px/1.4 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page.search-page .page-search-control input:focus{outline:2px solid #36c!important;border-color:#36c!important}
+body.vd-chrome-page.search-page .page-search-control button{
+  border:1px solid #a2a9b1!important;border-radius:0!important;color:#202122!important;background:#f8f9fa!important;
+  font:400 13px/1.4 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page.search-page .page-search-control button:hover,
+body.vd-chrome-page.search-page .page-search-control button:focus-visible{background:#eaecf0!important;outline:2px solid #36c!important}
+body.vd-chrome-page.search-page .search-status{color:#54595d!important}
+body.vd-chrome-page.search-page .search-results{display:block!important;margin:0!important;padding:0 0 0 22px!important;list-style:disc!important}
+body.vd-chrome-page.search-page .search-result{
+  margin:8px 0!important;padding:7px 0!important;border:0!important;border-bottom:1px solid #eaecf0!important;
+  border-radius:0!important;background:#fff!important;box-shadow:none!important;
+}
+body.vd-chrome-page.search-page .search-result h2{
+  margin:0 0 5px!important;border:0!important;font:500 18px/1.35 Vollkorn,Georgia,serif!important;
+}
+body.vd-chrome-page.search-page .search-result p{color:#54595d!important;font:400 13px/1.6 Merriweather,Georgia,serif!important}
+body.vd-chrome-page .site-footer{
+  box-sizing:border-box!important;width:min(1260px,100%)!important;margin:0 auto!important;padding:16px 24px 22px!important;
+  border-top:1px solid #a2a9b1!important;color:#54595d!important;background:#fff!important;
+  font:400 12px/1.5 Merriweather,Georgia,serif!important;text-align:center!important;
+}
+body.vd-chrome-page .site-footer .vd-label-dev{font-size:11px!important}
+body.vd-chrome-page .contact-action{border-radius:0!important;background:#f8f9fa!important;color:#202122!important}
+@media(max-width:980px){
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap{
+    width:min(1260px,100%)!important;min-height:64px!important;gap:14px!important;padding:9px 20px!important;
+  }
+  body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav{
+    display:flex!important;flex-direction:row!important;align-items:stretch!important;gap:0 18px!important;
+    padding-right:20px!important;padding-left:20px!important;
+  }
+  body.vd-chrome-page .hp-directory{gap:22px 28px!important}
+}
+@media(max-width:680px){
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap{
+    width:100%!important;min-height:0!important;gap:10px!important;padding:10px 16px!important;
+  }
+  body.vd-chrome-page>header.site-header.vd-global-header .brand{flex:1 1 auto!important}
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle{
+    display:block!important;order:2!important;margin-left:auto!important;
+  }
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-search-form{
+    display:flex!important;flex:1 0 100%!important;order:3!important;width:100%!important;margin:0!important;
+  }
+  body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav{
+    display:none!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;
+    width:100%!important;padding:5px 16px!important;
+  }
+  body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav.open{display:flex!important}
+  body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav a{
+    align-items:flex-start!important;justify-content:flex-start!important;width:100%!important;min-height:0!important;
+    padding:8px 2px!important;text-align:left!important;
+  }
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner{padding:7px 16px!important}
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner ol{font-size:11px!important}
+  body.vd-chrome-page main.site-main{padding:10px 17px 42px!important}
+  body.vd-chrome-page .hp-home{padding:5px 0 42px!important}
+  body.vd-chrome-page .hp-directory{grid-template-columns:1fr!important;gap:19px!important}
+  body.vd-chrome-page .hp-column{gap:18px!important}
+  body.vd-chrome-page .page,
+  body.vd-chrome-page .ad-page{padding:10px 0 42px!important}
+  body.vd-chrome-page:not(.gita-page) main.site-main>.article-shell{padding:8px 0 42px!important}
+  body.vd-chrome-page.archive-page .archive-shell{padding:8px 0 42px!important}
+  body.vd-chrome-page.search-page .search-panel{padding:8px 0 42px!important}
+}
