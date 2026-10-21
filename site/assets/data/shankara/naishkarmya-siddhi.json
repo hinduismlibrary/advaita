@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 239 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 227 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -27259,7 +27259,16 @@
       "deva": "अत आह ।",
       "iast": "ata āha |",
       "translation": "Therefore he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0613",
@@ -27323,9 +27332,46 @@
       "number": "2 · 286",
       "label": "Text 286",
       "deva": "स्वयमनवगमात्मकत्वादनवगमात्कत्वं च मोहमात्रोपादानत्वात् ।",
-      "iast": "svayamanavagamātmakatvādanavagamātkatvaṃ ca mohamātropādānatvāt |",
+      "iast": "svayamanavagamātmakatvādanavagamātmakatvaṃ ca mohamātropādānatvāt |",
       "translation": "Because the intellect and the rest are not themselves awareness, their non-awareness rests on delusion alone.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "स्वयम्",
+          "en": "itself"
+        },
+        {
+          "sa": "अनवगम",
+          "en": "non-awareness"
+        },
+        {
+          "sa": "आत्मकत्वात्",
+          "en": "because it has the nature"
+        },
+        {
+          "sa": "अनवगम",
+          "en": "non-awareness"
+        },
+        {
+          "sa": "आत्मकत्वम्",
+          "en": "being of that nature"
+        },
+        {
+          "sa": "च",
+          "en": "also"
+        },
+        {
+          "sa": "मोह",
+          "en": "delusion"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "उपादानत्वात्",
+          "en": "because it is the basis"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0616",
@@ -27391,7 +27437,40 @@
       "deva": "वक्ष्यमाणेतरेतराध्याससिद्ध्यर्थमुक्तव्यतिरेकानुवादः ।",
       "iast": "vakṣyamāṇetaretarādhyāsasiddhyarthamuktavyatirekānuvādaḥ |",
       "translation": "The earlier distinction is repeated to establish the mutual superimposition that will be explained next:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "वक्ष्यमाण",
+          "en": "to be explained later"
+        },
+        {
+          "sa": "इतरेतर",
+          "en": "mutual"
+        },
+        {
+          "sa": "अध्यास",
+          "en": "superimposition"
+        },
+        {
+          "sa": "सिद्धि",
+          "en": "establishment"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "for"
+        },
+        {
+          "sa": "उक्त",
+          "en": "stated"
+        },
+        {
+          "sa": "व्यतिरेक",
+          "en": "distinction"
+        },
+        {
+          "sa": "अनुवादः",
+          "en": "repetition"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0619",
@@ -27457,7 +27536,88 @@
       "deva": "एवमेतयोरात्मानात्मनोः स्वतः परतः सिद्धयोर्लौकिकरज्जु सर्पाध्यारोपवदविद्योपाश्रय एवेतरेतराध्यारोप इत्येतदाह ।",
       "iast": "evametayorātmānātmanoḥ svataḥ parataḥ siddhayorlaukikarajju sarpādhyāropavadavidyopāśraya evetaretarādhyāropa ityetadāha |",
       "translation": "Thus the mutual superimposition of the Self and not-Self—each established in itself and in the other—is supported only by ignorance, like the snake superimposed on a rope.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "एतयोः",
+          "en": "of these two"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनात्मनोः",
+          "en": "and not-Self"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "in themselves"
+        },
+        {
+          "sa": "परतः",
+          "en": "through the other"
+        },
+        {
+          "sa": "सिद्धयोः",
+          "en": "being established"
+        },
+        {
+          "sa": "लौकिक",
+          "en": "ordinary"
+        },
+        {
+          "sa": "रज्जु",
+          "en": "rope"
+        },
+        {
+          "sa": "सर्प",
+          "en": "snake"
+        },
+        {
+          "sa": "अध्यारोप",
+          "en": "superimposition"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उपाश्रयः",
+          "en": "the support"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "इतरेतर",
+          "en": "mutual"
+        },
+        {
+          "sa": "अध्यासः",
+          "en": "superimposition"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0622",
@@ -27594,7 +27754,128 @@
       "deva": "सर्व एवायमात्मानात्मविभागः प्रत्यक्षादिप्रमाणवर्त्मन्युनपतितोऽविद्योत्सङ्गवर्त्येव न परमात्मव्यपाश्रयः । अस्याश्चाविद्यायाः सर्वानर्थहेतोः कुतो निवृत्तिरिति चेत्तदाह ।",
       "iast": "sarva evāyamātmānātmavibhāgaḥ pratyakṣādipramāṇavartmanyunapatito'vidyotsaṅgavartyeva na paramātmavyapāśrayaḥ | asyāścāvidyāyāḥ sarvānarthahetoḥ kuto nivṛttiriti cettadāha |",
       "translation": "The whole division between Self and not-Self that appears through perception and the other means of knowledge exists only in the lap of ignorance; it does not depend on the Supreme Self. How is this ignorance removed? He says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सर्वः",
+          "en": "all"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनात्म",
+          "en": "not-Self"
+        },
+        {
+          "sa": "विभागः",
+          "en": "division"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "वर्त्मनि",
+          "en": "on the path"
+        },
+        {
+          "sa": "उपनिपतितः",
+          "en": "has appeared"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "उत्सङ्ग",
+          "en": "lap"
+        },
+        {
+          "sa": "वर्ती",
+          "en": "existing in"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "परमात्म",
+          "en": "supreme Self"
+        },
+        {
+          "sa": "व्यपाश्रयः",
+          "en": "dependent on"
+        },
+        {
+          "sa": "अस्याः",
+          "en": "of this"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अविद्यायाः",
+          "en": "ignorance"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "अनर्थ",
+          "en": "misfortune"
+        },
+        {
+          "sa": "हेतोः",
+          "en": "cause"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "is it removed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one asks"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0627",
@@ -27656,7 +27937,84 @@
       "deva": "तद्बाधस्तत्त्वदर्शनादिति कुतः संभाव्यत इति चेदत आहागोपालाविपालपण्डितमियमेव प्रसिद्धिः ।",
       "iast": "tadbādhastattvadarśanāditi kutaḥ saṃbhāvyata iti cedata āhāgopālāvipālapaṇḍitamiyameva prasiddhiḥ |",
       "translation": "If one asks how seeing reality could remove it, that is well known to everyone, from cowherd to scholar:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "बाधः",
+          "en": "removal"
+        },
+        {
+          "sa": "तत्त्व",
+          "en": "reality"
+        },
+        {
+          "sa": "दर्शनात्",
+          "en": "by seeing"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "संभाव्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one asks"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        },
+        {
+          "sa": "आ",
+          "en": "up to"
+        },
+        {
+          "sa": "गोपाल",
+          "en": "cowherd"
+        },
+        {
+          "sa": "अवि",
+          "en": "sheep"
+        },
+        {
+          "sa": "पाल",
+          "en": "herder"
+        },
+        {
+          "sa": "पण्डितम्",
+          "en": "learned person"
+        },
+        {
+          "sa": "इयम्",
+          "en": "this"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रसिद्धिः",
+          "en": "is well known"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0630",
@@ -27718,7 +28076,48 @@
       "deva": "लौकिकप्रमेयवैलक्षण्यादात्मनो नेहानधिगताधिगमः प्रमाणफलम् ।",
       "iast": "laukikaprameyavailakṣaṇyādātmano nehānadhigatādhigamaḥ pramāṇaphalam |",
       "translation": "Because the Self differs from ordinary objects of knowledge, the result of a means of knowledge is not the acquisition of something previously unknown.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "लौकिक",
+          "en": "ordinary"
+        },
+        {
+          "sa": "प्रमेय",
+          "en": "objects of knowledge"
+        },
+        {
+          "sa": "वैलक्षण्यात्",
+          "en": "because of differing from"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "the Self"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "अनधिगत",
+          "en": "previously unknown"
+        },
+        {
+          "sa": "अधिगमः",
+          "en": "acquisition"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "फलम्",
+          "en": "the result"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0633",
@@ -27780,7 +28179,40 @@
       "deva": "यस्मादात्मानवबोधमात्रोपादानाः प्रमात्रादयस्तस्मात् ।",
       "iast": "yasmādātmānavabodhamātropādānāḥ pramātrādayastasmāt |",
       "translation": "Since the knower and the rest are produced only by ignorance of the Self,",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "उपादानाः",
+          "en": "having as their basis"
+        },
+        {
+          "sa": "प्रमातृ",
+          "en": "knower"
+        },
+        {
+          "sa": "आदयः",
+          "en": "and the rest"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0636",
@@ -27842,7 +28274,32 @@
       "deva": "द्रष्ट्रादेरसाधारणरूपज्ञापनायाह ।",
       "iast": "draṣṭrāderasādhāraṇarūpajñāpanāyāha |",
       "translation": "To show the distinctive nature of the knower and the rest, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "द्रष्टृ",
+          "en": "seer"
+        },
+        {
+          "sa": "आदेः",
+          "en": "and the rest"
+        },
+        {
+          "sa": "असाधारण",
+          "en": "distinctive"
+        },
+        {
+          "sa": "रूप",
+          "en": "nature"
+        },
+        {
+          "sa": "ज्ञापनाय",
+          "en": "for showing"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0639",
@@ -27917,10 +28374,83 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2 · 312",
       "label": "Text 312",
-      "deva": "सर्वकारकक्रियाफलविभागात्त्मकसंसारशून्य आत्मेति कारकक्रियाफलविभागसाक्षित्वादात्मनस्तदाह ।",
-      "iast": "sarvakārakakriyāphalavibhāgāttmakasaṃsāraśūnya ātmeti kārakakriyāphalavibhāgasākṣitvādātmanastadāha |",
+      "deva": "सर्वकारकक्रियाफलविभागात्मकसंसारशून्य आत्मेति कारकक्रियाफलविभागसाक्षित्वादात्मनस्तदाह ।",
+      "iast": "sarvakārakakriyāphalavibhāgātmakasaṃsāraśūnya ātmeti kārakakriyāphalavibhāgasākṣitvādātmanastadāha |",
       "translation": "The Self is free of saṃsāra, which consists of the divisions of all agents, actions, and results. Because the Self witnesses those divisions, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "कारक",
+          "en": "agents and instruments"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "actions"
+        },
+        {
+          "sa": "फल",
+          "en": "results"
+        },
+        {
+          "sa": "विभाग",
+          "en": "division"
+        },
+        {
+          "sa": "आत्मक",
+          "en": "consisting of"
+        },
+        {
+          "sa": "संसार",
+          "en": "transmigration"
+        },
+        {
+          "sa": "शून्यः",
+          "en": "free from"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "कारक",
+          "en": "agents and instruments"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "actions"
+        },
+        {
+          "sa": "फल",
+          "en": "results"
+        },
+        {
+          "sa": "विभाग",
+          "en": "division"
+        },
+        {
+          "sa": "साक्षित्वात्",
+          "en": "because it witnesses"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "the Self"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0642",
@@ -27970,7 +28500,72 @@
       "deva": "ग्राहकादिनिष्ठैव ग्राहकादिभावाभावविभागसिद्धिः कस्मान्नेति चेत्तदाह ।",
       "iast": "grāhakādiniṣṭhaiva grāhakādibhāvābhāvavibhāgasiddhiḥ kasmānneti cettadāha |",
       "translation": "If one asks why the divisions of knower and the rest cannot be established by themselves, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "ग्राहक",
+          "en": "knower"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "निष्ठा",
+          "en": "based in"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "ग्राहक",
+          "en": "knower"
+        },
+        {
+          "sa": "आदि",
+          "en": "and the rest"
+        },
+        {
+          "sa": "भाव",
+          "en": "presence"
+        },
+        {
+          "sa": "अभाव",
+          "en": "absence"
+        },
+        {
+          "sa": "विभाग",
+          "en": "distinction"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "the establishment"
+        },
+        {
+          "sa": "कस्मात्",
+          "en": "why"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one asks"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0645",
@@ -28048,7 +28643,100 @@
       "deva": "ग्राहकादेरन्यसाक्षिपूर्वकत्वसिद्धेः स्वसाक्षिणोऽप्यन्यसाक्षिपूर्वकत्वादनवस्थेति चेत्तन्न साक्षिणो व्यतिरिक्तहेत्वनपेक्षत्वादत आह ।",
       "iast": "grāhakāderanyasākṣipūrvakatvasiddheḥ svasākṣiṇo'pyanyasākṣipūrvakatvādanavastheti cettanna sākṣiṇo vyatiriktahetvanapekṣatvādata āha |",
       "translation": "If one argues that the knower and the rest must first be established by another witness, and that this witness too requires another, leading to an infinite regress, that is not so, because the witness does not depend on an external cause. He says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "ग्राहक",
+          "en": "knower"
+        },
+        {
+          "sa": "आदेः",
+          "en": "and the rest"
+        },
+        {
+          "sa": "अन्य",
+          "en": "another"
+        },
+        {
+          "sa": "साक्षि",
+          "en": "witness"
+        },
+        {
+          "sa": "पूर्वकत्व",
+          "en": "being preceded by"
+        },
+        {
+          "sa": "सिद्धेः",
+          "en": "because it is established"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "साक्षिणः",
+          "en": "witness"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अन्य",
+          "en": "another"
+        },
+        {
+          "sa": "साक्षि",
+          "en": "witness"
+        },
+        {
+          "sa": "पूर्वकत्वात्",
+          "en": "because it is preceded by"
+        },
+        {
+          "sa": "अनवस्था",
+          "en": "infinite regress"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one argues"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "is not so"
+        },
+        {
+          "sa": "साक्षिणः",
+          "en": "of the witness"
+        },
+        {
+          "sa": "व्यतिरिक्त",
+          "en": "external"
+        },
+        {
+          "sa": "हेतु",
+          "en": "cause"
+        },
+        {
+          "sa": "अनपेक्षत्वात्",
+          "en": "because it does not depend"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0648",
@@ -44387,7 +45075,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 239 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 227 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
