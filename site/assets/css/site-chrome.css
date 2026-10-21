@@ -1813,3 +1813,8 @@ body.vd-chrome-page .article-body :is([lang="sa-Deva"],[lang^="sa-Deva"]){
 body.vd-chrome-page .article-body a,
 body.vd-chrome-page .article-body a:visited{color:#0645ad!important}
 body.vd-chrome-page .article-body blockquote{border-color:#a2a9b1!important;background:#f8f9fa!important}
+
+@media(max-width:980px){
+ body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle{border:1px solid #a2a9b1!important;border-radius:0!important;background:#f8f9fa!important}
+ body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle span{background:#202122!important}
+}
