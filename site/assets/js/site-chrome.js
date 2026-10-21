@@ -151,6 +151,24 @@ function stackSanskritLabel(element,devanagari){
  const sa=document.createElement("span");sa.className="vd-label-dev";sa.lang="sa-Deva";sa.textContent=devanagari;
  element.dataset.vdBilingual="true";element.dataset.vdScriptOnly="true";element.replaceChildren(sa);
 }
+function stackOriginalDirectoryEntry(element){
+ if(!element||element.dataset.vdBilingual==="true")return false;
+ const title=element.querySelector(".ad-entry-title");
+ if(!title)return false;
+ const original=title.textContent.replace(/\s+/g," ").trim();
+ const fullLabel=element.textContent.replace(/\s+/g," ").trim();
+ const devanagari=devanagariFor(original);
+ const english=englishFor(fullLabel);
+ if(!original||!devanagari||!english)return false;
+ const line=document.createElement("span");line.className="ad-entry-original";
+ const sa=document.createElement("span");sa.className="ad-entry-original-dev";sa.lang="sa-Deva";sa.textContent=devanagari;
+ const separator=document.createElement("span");separator.className="ad-entry-original-separator";separator.setAttribute("aria-hidden","true");separator.textContent=" · ";
+ const iast=document.createElement("span");iast.className="ad-entry-original-iast";iast.lang="sa-Latn";iast.textContent=original;
+ line.append(sa,separator,iast);
+ const translated=document.createElement("span");translated.className="ad-entry-translation";translated.lang="en";translated.textContent=english;
+ element.dataset.vdEnglish=english;element.dataset.vdBilingual="true";element.replaceChildren(line,translated);
+ return true;
+}
 function applyPageLabels(scope){
  const root=scope&&scope.nodeType===1?scope:(document.querySelector("main.site-main")||document.body);
  const selector="h1,h2,.hp-section-title,.shankara-card strong,.shankara-author,.shankara-section-heading,a,.site-footer p";
@@ -161,6 +179,7 @@ function applyPageLabels(scope){
   let target=element;
   if(!element.matches("a")){const link=element.querySelector(":scope > a");if(link)target=link;}
   if(target.dataset.vdBilingual==="true")return;
+  if(document.body.classList.contains("ad-shankar-index-page")&&target.matches(".ad-entry-link")&&stackOriginalDirectoryEntry(target))return;
   const english=target.textContent.replace(/\s+/g," ").trim();
   if(!english||target.querySelector("img,svg,button,small,sup,sub,.sr-only"))return;
   const devanagari=devanagariFor(english);

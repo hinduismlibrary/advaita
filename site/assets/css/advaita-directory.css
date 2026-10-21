@@ -101,3 +101,16 @@ body.ad-shankar-index-page .ad-links>.ad-entry:last-child:nth-child(odd){
  body.ad-shankar-index-page .ad-main{grid-template-columns:1fr}
 }
 
+
+/* Preserve each Sanskrit work's original title before its English display name. */
+body.ad-shankar-index-page .ad-entry-link{display:block}
+body.ad-shankar-index-page .ad-entry-original{
+ display:block;margin:0 0 1px;color:#202122;font:400 13px/1.45 Arial,Helvetica,sans-serif
+}
+body.ad-shankar-index-page .ad-entry-original-dev{
+ color:#202122;font:400 14px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif
+}
+body.ad-shankar-index-page .ad-entry-original-iast{color:#54595d;font:italic 400 13px/1.45 Arial,Helvetica,sans-serif}
+body.ad-shankar-index-page .ad-entry-translation{
+ display:block;color:var(--blue);font:400 16px/1.45 Arial,Helvetica,sans-serif
+}
