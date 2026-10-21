@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The reader has 69 reading cards plus a separate colophon for all 227 numbered passages and eight named contents sections. The source-number boundaries and Sanskrit, English, IAST, and word-for-word fields are being checked passage by passage. This pass restored markers and separate translations through 221. Passages 216–217 now define the jīvanmukta separately, with the editorial heading removed from the Sanskrit text. Passage 218 includes the Muṇḍaka citation. Passages 219–220 are separated, with the Bṛhadāraṇyaka citation restored in 220. Passage 221 carries the Upadeśasāhasrī reference and the corrected source marker. The reader displays each separated translation as its own paragraph. The transliteration/word-for-word button row has zero gap. All 29 reader pages point at the updated renderer (d). Semantic review remains in progress from passage 222 onward.
+**Vedāntasāra** — complete. All 227 passages are represented once in 71 reading entries, with a separate colophon and eight named contents sections. Every passage has Sanskrit, English, explicit IAST, and a Devanāgarī word-for-word gloss. Audited passages 1–227; split 224–225 and 226–227 into separate entries and translations. Corrected the reading *asya* in 222, restored the lead-in and citations in 223, normalized *yatheṣṭācaraṇam* and *adveṣṭṛtvam*, corrected the final scriptural quotations and citations, and restored the full colophon. The transliteration/word-for-word button row has zero gap.
 ## Completed
 
 - **Bhajagovindam (Mohamudgara)** — all 31 verses were checked against the cited Sanskrit Documents recension. Rewrote each translation and word gloss, retained explicit IAST, and replaced generic ranges with an opening verse, the Dvādaśamañjarikā (2–13), the Caturdaśamañjarikā (14–27), and a topic-labeled closing group (28–31). No appended verses beyond the 31-verse recension were added.
@@ -67,7 +67,7 @@ The shared transliteration/word-for-word button row now has zero gap; all 26 rea
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Upadeśasāhasrī | 787 | Complete: all 787 verse and prose units have Sanskrit, English, explicit IAST, and Devanāgarī glosses; semantic audit completed through II.3.116. |
-| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: source boundaries and passage-by-passage fields checked through 173; continue semantic review from 174. |
+| Vedāntasāra | 71 reading entries + colophon / 227 passages | Complete: all 227 passages and the colophon have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; eight named contents sections. |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 

@@ -2,9 +2,9 @@
   "id": "vedantasara",
   "title": "Vedāntasāra — Complete Sanskrit Reader",
   "author": "Sadānanda Yogīndra",
-  "expectedUnits": 70,
+  "expectedUnits": 72,
   "translationAvailable": true,
-  "coverage": "All 227 source-numbered passages (1–227) are represented once across 69 reader entries; the colophon has a separate 70th entry. Each reading entry has Sanskrit, English translation, explicit IAST, and a Devanāgarī word-for-word gloss. Adjacent numbered passages are grouped where the translation and gloss cover them together.",
+  "coverage": "All 227 source-numbered passages (1–227) are represented once across 71 reader entries; the colophon has a separate 72nd entry. Each reading entry has Sanskrit, English translation, explicit IAST, and a Devanāgarī word-for-word gloss.",
   "sections": [
     {
       "id": 1,
@@ -68,7 +68,7 @@
     "license": "CC BY-SA 4.0 (Wikisource source edition).",
     "attribution": "Sadānanda Yogīndra; Wikisource contributors.",
     "url": "https://sa.wikisource.org/wiki/वेदान्तसारः_(सदानन्दः)",
-    "changes": "Mapped source passages 1–227 exactly once across 69 reading entries, retained the two opening verses as separate cards, and kept the colophon separate. Joined passage 52 in one entry and restored the 208/209 range boundary by moving the second half of passage 212. Added explicit IAST and eight topic-led contents ranges; corrected reviewed Sanskrit, translation, and gloss errors."
+    "changes": "Mapped source passages 1–227 exactly once across 69 reading entries, retained the two opening verses as separate cards, and kept the colophon separate. Joined passage 52 in one entry and restored the 208/209 range boundary by moving the second half of passage 212. Added explicit IAST and eight topic-led contents ranges; corrected reviewed Sanskrit, translation, and gloss errors. During the final review, split passages 224–225 and 226–227 into separate reading entries and translations, completed the semantic audit through passage 227, restored the full colophon, and checked the closing text against Advaita Śāradā and Ambuda."
   },
   "units": [
     {
@@ -10404,12 +10404,12 @@
       "sectionTitle": "216–227 · Liberation while living and final release",
       "number": "222",
       "label": "Passage 222",
-      "deva": "अथ ज्ञानात्पूर्वं विद्यमानानामेवाहारविहारादीनामनुवृत्तिवच्छुभ-वासनानामेवानुवृत्तिर्भवति शुभाशुभयोरौदासीन्यं वा । यदुक्तं –",
-      "translation": "Now, only the auspicious tendencies already present before knowledge continue, just as food, movement, and similar activities continue; alternatively, there is indifference to both good and bad. As stated:",
+      "deva": "अस्य ज्ञानात्पूर्वं विद्यमानानामेवाहारविहारादीनामनुवृत्तिवच्छुभवासनानामेवानुवृत्तिर्भवति शुभाशुभयोरौदासीन्यं वा ॥२२२॥",
+      "translation": "The auspicious tendencies that were present before this person’s knowledge alone continue, just as food, movement, and the like continue; or there is indifference toward both the good and the bad.",
       "gloss": [
         {
-          "sa": "अथ",
-          "en": "now"
+          "sa": "अस्य",
+          "en": "of this person"
         },
         {
           "sa": "ज्ञानात्-पूर्वम्",
@@ -10417,15 +10417,15 @@
         },
         {
           "sa": "विद्यमानानाम्-एव",
-          "en": "of those already present"
+          "en": "only those already present"
         },
         {
           "sa": "आहार-विहार-आदीनाम्",
-          "en": "food, movement, and similar activities"
+          "en": "of food, movement, and the like"
         },
         {
           "sa": "अनुवृत्ति-वत्",
-          "en": "like their continuance"
+          "en": "just as their continuation"
         },
         {
           "sa": "शुभ-वासना-नाम्",
@@ -10433,19 +10433,19 @@
         },
         {
           "sa": "एव",
-          "en": "only"
+          "en": "alone"
         },
         {
           "sa": "अनुवृत्तिः",
-          "en": "continuance"
+          "en": "continuation"
         },
         {
           "sa": "भवति",
-          "en": "takes place"
+          "en": "occurs"
         },
         {
           "sa": "शुभ-अशुभयोः",
-          "en": "toward good and bad"
+          "en": "toward the good and the bad"
         },
         {
           "sa": "औदासीन्यम्",
@@ -10454,16 +10454,12 @@
         {
           "sa": "वा",
           "en": "or"
-        },
-        {
-          "sa": "यत्-उक्तम्",
-          "en": "as stated"
         }
       ],
       "sourceNumbers": [
         "222"
       ],
-      "iast": "atha jñānātpūrvaṃ vidyamānānāmevāhāravihārādīnāmanuvṛttivacchubha-vāsanānāmevānuvṛttirbhavati śubhāśubhayoraudāsīnyaṃ vā | yaduktaṃ –"
+      "iast": "asya jñānātpūrvaṃ vidyamānānāmevāhāravihārādīnāmanuvṛttivacchubhavāsanānāmevānuvṛttirbhavati śubhāśubhayoraudāsīnyaṃ vā ||222||"
     },
     {
       "id": "vedantasara-067",
@@ -10471,16 +10467,20 @@
       "sectionTitle": "216–227 · Liberation while living and final release",
       "number": "223",
       "label": "Passage 223",
-      "deva": "\"बुद्धाद्वैतसतत्त्वस्य यथेष्टाचराणं यदि ।\nशुनां तत्त्वदृशाञ्चैव को भेदोऽशुचिभक्षणे ॥“ इति ।\n\"ब्रह्मवित्त्वं तथा मुक्त्वा स आत्मज्ञो न चेतरः\" इति च ॥३६॥",
-      "translation": "“If one who has understood the truth of non-duality acts as he pleases, what difference indeed is there, in eating impure things, between dogs and those who see the truth?” “Having relinquished the status of a Brahman-knower in that way, he is a knower of the Self, and no other.”",
+      "deva": "तदुक्तम् -\n“बुद्धाद्वैतसतत्त्वस्य यथेष्टाचरणं यदि ।\nशुनां तत्त्वदृशाञ्चैव को भेदोऽशुचिभक्षणे ॥” इति (नैष्कर्म्यसिद्धिः ४.६२)\n“ब्रह्मवित्त्वं तथा मुक्त्वा स आत्मज्ञो न चेतरः ॥” इति च (उपदेशसाहस्री ११५) ॥२२३॥",
+      "translation": "As stated: “If one who has realized the truth of non-duality acts as he wishes, what difference is there between dogs and those who see the truth when it comes to eating impure things?” And: “Having given up the conceit of being a knower of Brahman in that way, he is a knower of the Self, and no other.”",
       "gloss": [
         {
+          "sa": "तत्-उक्तम्",
+          "en": "thus it is stated"
+        },
+        {
           "sa": "बुद्ध-अद्वैत-सत्-तत्त्वस्य",
-          "en": "of one who has understood the true nature of non-duality"
+          "en": "of one who has realized the true nature of non-duality"
         },
         {
           "sa": "यथा-इष्ट-आचरणम्",
-          "en": "acting as one pleases"
+          "en": "acting as one wishes"
         },
         {
           "sa": "यदि",
@@ -10492,7 +10492,7 @@
         },
         {
           "sa": "तत्त्व-दृशाम्",
-          "en": "of those who see truth"
+          "en": "of those who see the truth"
         },
         {
           "sa": "च",
@@ -10520,19 +10520,19 @@
         },
         {
           "sa": "ब्रह्म-वित्-त्वम्",
-          "en": "the status of being a knower of Brahman"
+          "en": "being a knower of Brahman"
         },
         {
           "sa": "तथा",
-          "en": "thus"
+          "en": "in that way"
         },
         {
           "sa": "मुक्त्वा",
-          "en": "having relinquished"
+          "en": "having given up"
         },
         {
           "sa": "सः",
-          "en": "that one"
+          "en": "he"
         },
         {
           "sa": "आत्म-ज्ञः",
@@ -10548,34 +10548,38 @@
         },
         {
           "sa": "इतरः",
-          "en": "other"
+          "en": "another"
         },
         {
           "sa": "इति",
           "en": "thus"
+        },
+        {
+          "sa": "च",
+          "en": "and"
         }
       ],
       "sourceNumbers": [
         "223"
       ],
-      "iast": "\"buddhādvaitasatattvasya yatheṣṭācarāṇaṃ yadi |\nśunāṃ tattvadṛśāñcaiva ko bhedo’śucibhakṣaṇe ||“ iti |\n\"brahmavittvaṃ tathā muktvā sa ātmajño na cetaraḥ\" iti ca ||36||"
+      "iast": "taduktam - “buddhādvaitasatattvasya yatheṣṭācaraṇaṃ yadi |\nśunāṃ tattvadṛśāñcaiva ko bhedo’śucibhakṣaṇe ||” iti (naiṣkarmyasiddhiḥ 4.62)\n“brahmavittvaṃ tathā muktvā sa ātmajño na cetaraḥ ||” iti ca (upadeśasāhasrī 115) ||223||"
     },
     {
       "id": "vedantasara-068",
       "chapter": 6,
       "sectionTitle": "216–227 · Liberation while living and final release",
-      "number": "224–225",
-      "label": "Passages 224–225",
-      "deva": "तदानीममानित्वादीनि ज्ञानसाधनान्यद्वेष्ट्रत्वादयः सद्गुणाश्चालङ्कारवदनु-वर्तन्ते । तदुक्तम्\n“उत्पन्नात्मावबोधस्य ह्यद्वेष्टृत्वादयो गुणाः ।\nअयत्नतो भवन्त्यस्य न तु साधनरूपिणः ॥“ इति ॥३७॥",
-      "translation": "At that time, the means to knowledge—such as humility—and good qualities—such as non-hatred—remain with the knower like ornaments. As the verse says: “For one whose knowledge of the Self has arisen, qualities such as non-hatred arise effortlessly; they are not themselves means to knowledge.”",
+      "number": "224",
+      "label": "Passage 224",
+      "deva": "तदानीममानित्वादीनि ज्ञानसाधनान्यद्वेष्टृत्वादयः सद्गुणाश्चालङ्कारवदनुवर्तन्ते ॥२२४॥",
+      "translation": "Then the means to knowledge, such as humility, and good qualities, such as non-hatred, remain like ornaments.",
       "gloss": [
         {
           "sa": "तदानीम्",
-          "en": "at that time"
+          "en": "then; at that time"
         },
         {
           "sa": "अमानित्व-आदीनि",
-          "en": "humility and the rest"
+          "en": "humility and the like"
         },
         {
           "sa": "ज्ञान-साधनानि",
@@ -10583,7 +10587,7 @@
         },
         {
           "sa": "अद्वेष्टृत्व-आदयः",
-          "en": "non-hatred and the rest"
+          "en": "non-hatred and the like"
         },
         {
           "sa": "सद्-गुणाः",
@@ -10599,11 +10603,26 @@
         },
         {
           "sa": "अनुवर्तन्ते",
-          "en": "continue"
-        },
+          "en": "continue; remain"
+        }
+      ],
+      "sourceNumbers": [
+        "224"
+      ],
+      "iast": "tadānīmamānitvādīni jñānasādhanānyadveṣṭṛtvādayaḥ sadguṇāścālaṅkāravadanuvartante ||224||"
+    },
+    {
+      "id": "vedantasara-068b",
+      "chapter": 6,
+      "sectionTitle": "216–227 · Liberation while living and final release",
+      "number": "225",
+      "label": "Passage 225",
+      "deva": "तदुक्तम् -\n“उत्पन्नात्मावबोधस्य ह्यद्वेष्टृत्वादयो गुणाः ।\nअयत्नतो भवन्त्यस्य न तु साधनरूपिणः ॥” इति (नैष्कर्म्यसिद्धिः ४.६९) ॥२२५॥",
+      "translation": "As stated: “For one whose knowledge of the Self has arisen, qualities such as non-hatred arise effortlessly; they are not themselves means to knowledge.”",
+      "gloss": [
         {
           "sa": "तत्-उक्तम्",
-          "en": "that is stated"
+          "en": "thus it is stated"
         },
         {
           "sa": "उत्पन्न-आत्म-अवबोधस्य",
@@ -10631,7 +10650,7 @@
         },
         {
           "sa": "अस्य",
-          "en": "for this one"
+          "en": "for this person"
         },
         {
           "sa": "न",
@@ -10639,11 +10658,11 @@
         },
         {
           "sa": "तु",
-          "en": "indeed"
+          "en": "but"
         },
         {
           "sa": "साधन-रूपिणः",
-          "en": "having the form of means"
+          "en": "of the nature of means"
         },
         {
           "sa": "इति",
@@ -10651,19 +10670,18 @@
         }
       ],
       "sourceNumbers": [
-        "224",
         "225"
       ],
-      "iast": "tadānīmamānitvādīni jñānasādhanānyadveṣṭratvādayaḥ sadguṇāścālaṅkāravadanu-vartante | taduktam\n“utpannātmāvabodhasya hyadveṣṭṛtvādayo guṇāḥ |\nayatnato bhavantyasya na tu sādhanarūpiṇaḥ ||“ iti ||37||"
+      "iast": "taduktam - “utpannātmāvabodhasya hyadveṣṭṛtvādayo guṇāḥ |\nayatnato bhavantyasya na tu sādhanarūpiṇaḥ ||” iti (naiṣkarmyasiddhiḥ 4.69) ||225||"
     },
     {
       "id": "vedantasara-069",
       "chapter": 6,
       "sectionTitle": "216–227 · Liberation while living and final release",
-      "number": "226–227",
-      "label": "Passages 226–227",
-      "deva": "किं बहुनायं देहयात्रामात्रार्थमिच्छानिच्छापरेच्छाप्रापितानि सुखदुःख-लक्षणान्यारब्धफलान्यनुभवन्नन्तःकरणाभासादीनामवभासकः संस्तदवसाने प्रत्यगानन्दपरब्रह्मणि प्राणे लीने सत्यज्ञानतत्कार्य-संस्काराणामपि विनाशात्परमकैवल्यमानन्दैकरसमखिलभेदप्रतिभास-रहितमखण्डब्रह्मावतिष्ठते । “न तस्य प्राणा उत्क्रान्ति”, “अत्रैव समवलीयन्ते\", “विमुक्तश्च विमुच्यते” इत्यादिश्रुतेः ॥३८॥",
-      "translation": "What more need be said? For the mere continuation of bodily life, the knower experiences the fruits of past action—pleasure and pain—brought about by one’s own will, lack of will, or another’s will. Remaining the illuminator of the inner organ, its reflections, and the rest, when those experiences come to an end and the vital force dissolves into the inward blissful supreme Brahman, ignorance and even its residual impressions perish. The knower remains as absolute liberation, an indivisible Brahman whose nature is a single, undivided bliss, free from every appearance of difference. Scripture says, “His vital forces do not depart,” “Here they are completely dissolved,” and “having been freed, he is released.”",
+      "number": "226",
+      "label": "Passage 226",
+      "deva": "किं बहुना अयं देहयात्रामात्रार्थमिच्छानिच्छापरेच्छाप्रापितानि सुखदुःखलक्षणान्यारब्धफलान्यनुभवन्नन्तःकरणाभासादीनामवभासकः संस्तदवसाने प्रत्यगानन्दपरब्रह्मणि प्राणे लीने सत्यज्ञानतत्कार्यसंस्काराणामपि विनाशात्परमकैवल्यमानन्दैकरसमखिलभेदप्रतिभासरहितमखण्डब्रह्मावतिष्ठते ॥२२६॥",
+      "translation": "What more need be said? This person experiences the already-begun results—pleasure and pain—brought about by desire, absence of desire, or another’s desire, merely to sustain bodily life. He remains the illuminator of the inner organ, its reflection, and the like. When those results end and the vital force has merged into inward, blissful, supreme Brahman, ignorance, its effects, and their latent impressions also perish. He abides as supreme liberation: indivisible Brahman, whose sole essence is bliss and which is free from every appearance of difference.",
       "gloss": [
         {
           "sa": "किम्",
@@ -10671,27 +10689,27 @@
         },
         {
           "sa": "बहुना",
-          "en": "more need be said"
+          "en": "with more; what more need be said"
         },
         {
           "sa": "अयम्",
-          "en": "this one"
+          "en": "this person"
         },
         {
           "sa": "देह-यात्रा-मात्र-अर्थम्",
-          "en": "for the mere continuation of bodily life"
+          "en": "merely for bodily life-maintenance"
         },
         {
           "sa": "इच्छा-अनिच्छा-पर-इच्छा-प्रापितानि",
-          "en": "brought about by one’s own will, lack of will, or another’s will"
+          "en": "brought about by desire, absence of desire, or another’s desire"
         },
         {
           "sa": "सुख-दुःख-लक्षणानि",
-          "en": "characterized by pleasure and pain"
+          "en": "marked by pleasure and pain"
         },
         {
           "sa": "आरब्ध-फलानि",
-          "en": "fruits of actions already begun"
+          "en": "results already set in motion"
         },
         {
           "sa": "अनुभवन्",
@@ -10699,7 +10717,7 @@
         },
         {
           "sa": "अन्तःकरण-आभास-आदीनाम्",
-          "en": "of the inner organ, its reflection, and the rest"
+          "en": "of the inner organ, its reflection, and the like"
         },
         {
           "sa": "अवभासकः",
@@ -10710,28 +10728,28 @@
           "en": "being"
         },
         {
-          "sa": "तद्-अवसाने",
-          "en": "when those come to an end"
+          "sa": "तत्-अवसाने",
+          "en": "when those results end"
         },
         {
           "sa": "प्रत्यक्-आनन्द-पर-ब्रह्मणि",
-          "en": "in the inward, blissful supreme Brahman"
+          "en": "in inward, blissful, supreme Brahman"
         },
         {
           "sa": "प्राणे",
-          "en": "when the vital force"
+          "en": "in the vital force"
         },
         {
           "sa": "लीने",
-          "en": "is dissolved"
+          "en": "merged"
         },
         {
           "sa": "सति",
-          "en": "when"
+          "en": "when that is so"
         },
         {
           "sa": "अज्ञान-तत्-कार्य-संस्काराणाम्",
-          "en": "of ignorance, its effects, and residual impressions"
+          "en": "of ignorance, its effects, and their latent impressions"
         },
         {
           "sa": "अपि",
@@ -10743,11 +10761,11 @@
         },
         {
           "sa": "परम-कैवल्यम्",
-          "en": "absolute liberation"
+          "en": "supreme liberation"
         },
         {
           "sa": "आनन्द-एक-रसम्",
-          "en": "having bliss as its sole essence"
+          "en": "whose sole essence is bliss"
         },
         {
           "sa": "अखिल-भेद-प्रतिभास-रहितम्",
@@ -10759,22 +10777,37 @@
         },
         {
           "sa": "अवतिष्ठते",
-          "en": "remains"
-        },
+          "en": "abides"
+        }
+      ],
+      "sourceNumbers": [
+        "226"
+      ],
+      "iast": "kiṃ bahunāyaṃ dehayātrāmātrārtham icchānicchāparecchāprāpitāni sukhaduḥkhalakṣaṇānyārabdhaphalānyanubhavannantaḥkaraṇābhāsādīnāmavabhāsakaḥ saṃstadavasāne pratyagānandaparabrahmaṇi prāṇe līne satyajñānatatkāryasaṃskārāṇāmapi vināśātparamakaivalyamānandaikarasamakhilabhedapratibhāsarahitamakhaṇḍabrahmāvatiṣṭhate ||226||"
+    },
+    {
+      "id": "vedantasara-069b",
+      "chapter": 6,
+      "sectionTitle": "216–227 · Liberation while living and final release",
+      "number": "227",
+      "label": "Passage 227",
+      "deva": "“न तस्य प्राणा उत्क्रामन्ति” (बृ. उ. ४.४.६) “अत्रैव समवनीयन्ते” (बृ. उ. ३.२.११) “विमुक्तश्च विमुच्यते” (क. उ. ५.१) इत्यादिश्रुतेः ॥२२७॥",
+      "translation": "Scripture says: “His vital forces do not depart”; “they are gathered right here”; and “the freed one is released.”",
+      "gloss": [
         {
           "sa": "न",
           "en": "not"
         },
         {
           "sa": "तस्य",
-          "en": "of that one"
+          "en": "of him"
         },
         {
           "sa": "प्राणाः",
           "en": "the vital forces"
         },
         {
-          "sa": "उत्क्रान्ति",
+          "sa": "उत्क्रामन्ति",
           "en": "depart"
         },
         {
@@ -10782,12 +10815,12 @@
           "en": "right here"
         },
         {
-          "sa": "समवलीयन्ते",
-          "en": "are completely dissolved"
+          "sa": "समवनीयन्ते",
+          "en": "are gathered together"
         },
         {
           "sa": "विमुक्तः",
-          "en": "freed"
+          "en": "the freed one"
         },
         {
           "sa": "च",
@@ -10799,14 +10832,13 @@
         },
         {
           "sa": "इति-आदि-श्रुतेः",
-          "en": "from scripture beginning thus"
+          "en": "from scripture that says these and similar things"
         }
       ],
       "sourceNumbers": [
-        "226",
         "227"
       ],
-      "iast": "kiṃ bahunāyaṃ dehayātrāmātrārthamicchānicchāparecchāprāpitāni sukhaduḥkha-lakṣaṇānyārabdhaphalānyanubhavannantaḥkaraṇābhāsādīnāmavabhāsakaḥ saṃstadavasāne pratyagānandaparabrahmaṇi prāṇe līne satyajñānatatkārya-saṃskārāṇāmapi vināśātparamakaivalyamānandaikarasamakhilabhedapratibhāsa-rahitamakhaṇḍabrahmāvatiṣṭhate | “na tasya prāṇā utkrānti”, “atraiva samavalīyante\", “vimuktaśca vimucyate” ityādiśruteḥ ||38||"
+      "iast": "“na tasya prāṇā utkrāmanti” (bṛ. u. 4.4.6) “atraiva samavanīyante” (bṛ. u. 3.2.11) “vimuktaśca vimucyate” (ka. u. 5.1) ityādiśruteḥ ||227||"
     },
     {
       "id": "vedantasara-070",
@@ -10814,23 +10846,56 @@
       "sectionTitle": "216–227 · Liberation while living and final release",
       "number": "Colophon",
       "label": "Colophon",
-      "deva": "॥ इति श्रीसदानन्दयतिविरचितः वेदान्तसारः ॥",
-      "translation": "Thus ends the Vedāntasāra composed by the ascetic Sadānanda.",
+      "deva": "॥ इति श्रीमत्परमहंसपरिव्राजकाचार्य-सदानन्दयोगीन्द्र-विरचितो वेदान्तसारनामको ग्रन्थः समाप्तः ॥",
+      "translation": "Thus ends the treatise named Vedāntasāra, composed by the venerable Sadānanda Yogīndra, a Paramahaṃsa wandering renunciate and teacher.",
       "gloss": [
         {
           "sa": "इति",
           "en": "thus"
         },
         {
-          "sa": "श्री-सदानन्द-यति-विरचितः",
-          "en": "composed by the venerable ascetic Sadānanda"
+          "sa": "श्रीमत्",
+          "en": "venerable; illustrious"
         },
         {
-          "sa": "वेदान्त-सारः",
-          "en": "Vedāntasāra"
+          "sa": "परमहंस",
+          "en": "a Paramahaṃsa; a supreme renunciate"
+        },
+        {
+          "sa": "परिव्राजक",
+          "en": "wandering renunciate"
+        },
+        {
+          "sa": "आचार्य",
+          "en": "teacher"
+        },
+        {
+          "sa": "सदानन्द",
+          "en": "Sadānanda"
+        },
+        {
+          "sa": "योगीन्द्र",
+          "en": "foremost of yogins"
+        },
+        {
+          "sa": "विरचितः",
+          "en": "composed by"
+        },
+        {
+          "sa": "वेदान्त-सार-नामकः",
+          "en": "named Vedāntasāra"
+        },
+        {
+          "sa": "ग्रन्थः",
+          "en": "treatise"
+        },
+        {
+          "sa": "समाप्तः",
+          "en": "is ended"
         }
       ],
-      "iast": "|| iti śrīsadānandayativiracitaḥ vedāntasāraḥ ||"
+      "sourceNumbers": [],
+      "iast": "|| iti śrīmatparamahaṃsaparivrājakācāryasadānandayogīndraviracito vedāntasāranāmako granthaḥ samāptaḥ ||"
     }
   ],
   "expectedSourcePassages": 227
