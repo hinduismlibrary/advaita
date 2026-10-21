@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 385 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 373 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -9178,7 +9178,24 @@
       "deva": "यस्माद्गुणस्यैतत्स्वाभाव्यम् ।",
       "iast": "yasmādguṇasyaitatsvābhāvyam |",
       "translation": "This follows from the nature of an auxiliary:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "गुणस्य",
+          "en": "of an auxiliary"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "स्वाभाव्यम्",
+          "en": "is its nature"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0195",
@@ -9260,7 +9277,12 @@
       "deva": "यस्मात् ।",
       "iast": "yasmāt |",
       "translation": "For this reason:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0198",
@@ -9401,7 +9423,36 @@
       "deva": "समुच्चयपक्षवादिनाप्यवश्यमेतदभ्युपगन्तव्यम् ।",
       "iast": "samuccayapakṣavādināpyavaśyametadabhyupagantavyam |",
       "translation": "Even the proponent of combining knowledge and action must necessarily accept this;",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "समुच्चय",
+          "en": "combination"
+        },
+        {
+          "sa": "पक्ष",
+          "en": "position"
+        },
+        {
+          "sa": "वादिना",
+          "en": "by the proponent"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "अवश्यम्",
+          "en": "necessarily"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "अभ्युपगन्तव्यम्",
+          "en": "must be accepted"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0202",
@@ -9412,7 +9463,12 @@
       "deva": "यस्मात् ।",
       "iast": "yasmāt |",
       "translation": "for:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0204",
@@ -9482,7 +9538,40 @@
       "deva": "इदं चापरं कारणं ज्ञानकर्मणोः समुच्चयनिबर्हि ।",
       "iast": "idaṃ cāparaṃ kāraṇaṃ jñānakarmaṇoḥ samuccayanibarhi |",
       "translation": "Here is another reason why knowledge and action cannot be combined:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अपरम्",
+          "en": "another"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "reason"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्मणोः",
+          "en": "and action"
+        },
+        {
+          "sa": "समुच्चय",
+          "en": "combination"
+        },
+        {
+          "sa": "निबर्हि",
+          "en": "refuting"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0207",
@@ -9552,7 +9641,272 @@
       "deva": "एवमुपसंहृते केचित्स्वसम्प्रदायबलावष्टम्भादाहुर्यदे तद्वेदान्तवाक्यादहं ब्रह्मेति विज्ञानं समुत्पद्यते तन्नैव स्वोत्पत्तिमात्रेणाज्ञानं निरस्यति । किं तर्हि । अहन्यहनि द्राघीयसा कालेनोपासीनस्य सतो भावनोपचयान्निश्शेषम् अज्ञानमपगच्छति \"देवो भूत्वा देवानप्येति \" इति श्रुतेः । अपरे तु ब्रुवते वेदान्तवाक्यजनितमहं ब्रह्मेति विज्ञानं संसर्गात्मकत्वादात्मवस्तुयाथात्म्यावगाह्येव न भवति । किं तर्हि ।",
       "iast": "evamupasaṃhṛte kecitsvasampradāyabalāvaṣṭambhādāhuryade tadvedāntavākyādahaṃ brahmeti vijñānaṃ samutpadyate tannaiva svotpattimātreṇājñānaṃ nirasyati | kiṃ tarhi | ahanyahani drāghīyasā kālenopāsīnasya sato bhāvanopacayānniśśeṣam ajñānamapagacchati \"devo bhūtvā devānapyeti \" iti śruteḥ | apare tu bruvate vedāntavākyajanitamahaṃ brahmeti vijñānaṃ saṃsargātmakatvādātmavastuyāthātmyāvagāhyeva na bhavati | kiṃ tarhi |",
       "translation": "Having concluded thus, some, relying on the strength of their own tradition, say: “The knowledge ‘I am Brahman’ arises from a Vedānta sentence, but its mere arising does not remove ignorance. What does? After one has meditated for a long time, day after day, the increase of contemplation removes ignorance completely, as scripture says, ‘Having become a god, one reaches the gods.’ Others say that the knowledge ‘I am Brahman’ produced by a Vedānta sentence does not penetrate the true nature of the Self, because it is relational in form. What does?”",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "उपसंहृते",
+          "en": "having concluded"
+        },
+        {
+          "sa": "केचित्",
+          "en": "some"
+        },
+        {
+          "sa": "स्व",
+          "en": "their own"
+        },
+        {
+          "sa": "सम्प्रदाय",
+          "en": "tradition"
+        },
+        {
+          "sa": "बल",
+          "en": "strength"
+        },
+        {
+          "sa": "अवष्टम्भात्",
+          "en": "by relying on"
+        },
+        {
+          "sa": "आहुः",
+          "en": "they say"
+        },
+        {
+          "sa": "यत्",
+          "en": "that"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "वेदान्त",
+          "en": "Vedānta"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "from a sentence"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "समुत्पद्यते",
+          "en": "arises"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "स्व",
+          "en": "its own"
+        },
+        {
+          "sa": "उत्पत्ति",
+          "en": "arising"
+        },
+        {
+          "sa": "मात्रेण",
+          "en": "merely by"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "निरस्यति",
+          "en": "removes"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        },
+        {
+          "sa": "अहनि",
+          "en": "on the day"
+        },
+        {
+          "sa": "अहनि",
+          "en": "after day"
+        },
+        {
+          "sa": "द्राघीयसा",
+          "en": "long"
+        },
+        {
+          "sa": "कालेन",
+          "en": "over time"
+        },
+        {
+          "sa": "उपासीनस्य",
+          "en": "for one who meditates"
+        },
+        {
+          "sa": "सतः",
+          "en": "being"
+        },
+        {
+          "sa": "भावना",
+          "en": "contemplation"
+        },
+        {
+          "sa": "उपचयात्",
+          "en": "through increase"
+        },
+        {
+          "sa": "निश्शेषम्",
+          "en": "completely"
+        },
+        {
+          "sa": "अज्ञानम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "अपगच्छति",
+          "en": "goes away"
+        },
+        {
+          "sa": "देवः",
+          "en": "a god"
+        },
+        {
+          "sa": "भूत्वा",
+          "en": "having become"
+        },
+        {
+          "sa": "देवान्",
+          "en": "the gods"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "एति",
+          "en": "one reaches"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "because scripture says"
+        },
+        {
+          "sa": "अपरे",
+          "en": "others"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "ब्रुवते",
+          "en": "say"
+        },
+        {
+          "sa": "वेदान्त",
+          "en": "Vedānta"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "जनितम्",
+          "en": "produced"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "संसर्ग",
+          "en": "relational connection"
+        },
+        {
+          "sa": "आत्मकत्वात्",
+          "en": "because it has the nature"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "याथात्म्य",
+          "en": "true nature"
+        },
+        {
+          "sa": "अवगाहि",
+          "en": "penetrating"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भवति",
+          "en": "is"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0209",
@@ -9563,7 +9917,84 @@
       "deva": "एतदेव गङ्गास्रोतोवत्सततमभ्यस्यतोऽन्यदेवावाक्यार्थात्मकं विज्ञानान्तरमुत्पद्यते । अस्य पक्षद्वयस्य निवृत्तय इदमभिधीयते ।",
       "iast": "etadeva gaṅgāsrotovatsatatamabhyasyato'nyadevāvākyārthātmakaṃ vijñānāntaramutpadyate | asya pakṣadvayasya nivṛttaya idamabhidhīyate |",
       "translation": "“By constantly repeating that very [sentence], like the flow of the Ganges, a different knowledge arises, whose content is no longer merely the sentence.” This is stated to refute both views.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एतत्",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "very"
+        },
+        {
+          "sa": "गङ्गा",
+          "en": "Ganges"
+        },
+        {
+          "sa": "स्रोतः",
+          "en": "current"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "सततम्",
+          "en": "continually"
+        },
+        {
+          "sa": "अभ्यस्यतः",
+          "en": "of one who practices"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "another"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अवाक्यार्थात्मकम्",
+          "en": "whose content is beyond the sentence meaning"
+        },
+        {
+          "sa": "विज्ञान",
+          "en": "cognition"
+        },
+        {
+          "sa": "अन्तरम्",
+          "en": "another"
+        },
+        {
+          "sa": "उत्पद्यते",
+          "en": "arises"
+        },
+        {
+          "sa": "अस्य",
+          "en": "these"
+        },
+        {
+          "sa": "पक्ष",
+          "en": "views"
+        },
+        {
+          "sa": "द्वयस्य",
+          "en": "two"
+        },
+        {
+          "sa": "निवृत्तये",
+          "en": "for refutation"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0211",
@@ -9629,7 +10060,88 @@
       "deva": "एवं तावदनानात्वे ब्रह्मणि ज्ञानकर्मणोः समुच्चयो निराकृतः । अथाधुना पक्षान्तराभ्युपगमेनापि प्रत्यवस्थाने पूर्ववदनाश्वासो यथा तथाभिधीयते ।",
       "iast": "evaṃ tāvadanānātve brahmaṇi jñānakarmaṇoḥ samuccayo nirākṛtaḥ | athādhunā pakṣāntarābhyupagamenāpi pratyavasthāne pūrvavadanāśvāso yathā tathābhidhīyate |",
       "translation": "Thus the combination of knowledge and action has been rejected for Brahman, which is free from multiplicity. Now, even if another position is accepted, it is shown that it remains just as uncertain as before.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so far"
+        },
+        {
+          "sa": "अनानात्वे",
+          "en": "in non-duality"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्मणोः",
+          "en": "and action"
+        },
+        {
+          "sa": "समुच्चयः",
+          "en": "combination"
+        },
+        {
+          "sa": "निराकृतः",
+          "en": "has been rejected"
+        },
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "अधुना",
+          "en": "at this point"
+        },
+        {
+          "sa": "पक्ष",
+          "en": "position"
+        },
+        {
+          "sa": "अन्तर",
+          "en": "another"
+        },
+        {
+          "sa": "अभ्युपगमेन",
+          "en": "by accepting"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "प्रत्यवस्थाने",
+          "en": "in maintaining the counter-position"
+        },
+        {
+          "sa": "पूर्ववत्",
+          "en": "as before"
+        },
+        {
+          "sa": "अनाश्वासः",
+          "en": "unreliability"
+        },
+        {
+          "sa": "यथा",
+          "en": "how"
+        },
+        {
+          "sa": "तथा",
+          "en": "so"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is explained"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0214",
@@ -9691,7 +10203,32 @@
       "deva": "तस्य विभागोक्तिर्दूषणविभागप्रज्ञप्तये ।",
       "iast": "tasya vibhāgoktirdūṣaṇavibhāgaprajñaptaye |",
       "translation": "The alternatives are stated to lay out the separate objections:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तस्य",
+          "en": "of that"
+        },
+        {
+          "sa": "विभाग",
+          "en": "distinction"
+        },
+        {
+          "sa": "उक्तिः",
+          "en": "statement"
+        },
+        {
+          "sa": "दूषण",
+          "en": "objections"
+        },
+        {
+          "sa": "विभाग",
+          "en": "separate arrangement"
+        },
+        {
+          "sa": "प्रज्ञप्तये",
+          "en": "for setting out"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0217",
@@ -9773,7 +10310,88 @@
       "deva": "तत्र यदि तावद्वास्तवेनैव वृत्तेन ब्रह्म प्राप्तमात्मस्वाभाव्यात्केवलमासुरमोहापिधानमात्रमेवानाप्तिनिमित्तं तस्मिन्पक्षे ।",
       "iast": "tatra yadi tāvadvāstavenaiva vṛttena brahma prāptamātmasvābhāvyātkevalamāsuramohāpidhānamātramevānāptinimittaṃ tasminpakṣe |",
       "translation": "If Brahman is already truly attained because it is the nature of the Self, and its non-attainment is caused only by a demonic delusion that veils it, then, on that view,",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "तावत्",
+          "en": "for the moment"
+        },
+        {
+          "sa": "वास्तवेन",
+          "en": "in reality"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "वृत्तेन",
+          "en": "by what has occurred"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "प्राप्तम्",
+          "en": "is attained"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "स्वाभाव्यात्",
+          "en": "because it is one's nature"
+        },
+        {
+          "sa": "केवलम्",
+          "en": "only"
+        },
+        {
+          "sa": "आसुर",
+          "en": "demonic"
+        },
+        {
+          "sa": "मोह",
+          "en": "delusion"
+        },
+        {
+          "sa": "अपिधान",
+          "en": "veiling"
+        },
+        {
+          "sa": "मात्रम्",
+          "en": "alone"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनाप्ति",
+          "en": "non-attainment"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "the cause"
+        },
+        {
+          "sa": "तस्मिन्",
+          "en": "on that"
+        },
+        {
+          "sa": "पक्षे",
+          "en": "view"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0220",
@@ -9843,7 +10461,116 @@
       "deva": "अनात्मरूपके तु ब्रह्मणि न कर्म साधनभावं प्रतिपद्यते नापि ज्ञानं कर्मसमुच्चितमसमुच्चितं वा यस्मादन्यस्य स्वत एव साधकस्य ब्रह्मणोऽप्यन्यत्वं स्वत एव सिद्धम् ।",
       "iast": "anātmarūpake tu brahmaṇi na karma sādhanabhāvaṃ pratipadyate nāpi jñānaṃ karmasamuccitamasamuccitaṃ vā yasmādanyasya svata eva sādhakasya brahmaṇo'pyanyatvaṃ svata eva siddham |",
       "translation": "But if Brahman has the nature of not-Self, action cannot become its means, nor can knowledge—combined with action or without it—be its means, since Brahman is already established as different from the one who independently acts to attain it.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अनात्म",
+          "en": "not-Self"
+        },
+        {
+          "sa": "रूपके",
+          "en": "whose nature"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "ब्रह्मणि",
+          "en": "in Brahman"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "साधन",
+          "en": "a means"
+        },
+        {
+          "sa": "भावम्",
+          "en": "the status"
+        },
+        {
+          "sa": "प्रतिपद्यते",
+          "en": "attains"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "either"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "समुच्चितम्",
+          "en": "combined with"
+        },
+        {
+          "sa": "असमुच्चितम्",
+          "en": "not combined"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "अन्यस्य",
+          "en": "of another"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "independently"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "साधकस्य",
+          "en": "of the seeker"
+        },
+        {
+          "sa": "ब्रह्मणः",
+          "en": "from Brahman"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अन्यत्वम्",
+          "en": "difference"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सिद्धम्",
+          "en": "is established"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0222",
@@ -9854,7 +10581,16 @@
       "deva": "तत्रैवम् ।",
       "iast": "tatraivam |",
       "translation": "In that case,",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्र",
+          "en": "in that case"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0224",
@@ -36605,7 +37341,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 385 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 373 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
