@@ -177,3 +177,20 @@ html body.vd-chrome-page.scripture-index-page.purana-reader-page .catalog-dev{
 html body.vd-chrome-page.scripture-index-page.purana-reader-page .catalog-iast{
   display:block!important;color:#54595d!important;font:400 13px/1.45 Arial,Helvetica,sans-serif!important;font-style:normal!important
 }
+
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .hero h1 .catalog-dev,
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .bookhead h1 .catalog-dev{
+  font-size:1em!important;line-height:1.25!important
+}
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .hero h1 .catalog-iast,
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .bookhead h1 .catalog-iast{
+  font-size:.68em!important;line-height:1.35!important
+}
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .book h3 .catalog-dev,
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .section-heading .catalog-dev{
+  font-size:1em!important
+}
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .book h3 .catalog-iast,
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .section-heading .catalog-iast{
+  font-size:.82em!important
+}
