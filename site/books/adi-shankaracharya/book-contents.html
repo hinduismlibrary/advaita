@@ -20,18 +20,18 @@ a:focus-visible{outline:2px solid #36c;outline-offset:2px}
 .topbar{height:41px;border-bottom:1px solid var(--line);padding:5px max(24px,calc((100% - 1200px)/2))}
 .topbar a{color:#202122;font:500 16px Arial,Helvetica,sans-serif}
 body.vd-chrome-page.contents-menu-page .page{
-  box-sizing:border-box!important;width:min(1000px,100%)!important;max-width:1000px!important;
+  position:relative!important;box-sizing:border-box!important;width:min(1000px,100%)!important;max-width:1000px!important;
   min-height:75vh!important;margin:0 auto!important;padding:22px clamp(20px,3vw,34px) 56px!important;
   background:#fff!important;color:#202122!important;font:15px/1.65 Arial,Helvetica,sans-serif!important
 }
-body.vd-chrome-page.contents-menu-page .page .hero{
-  display:block;margin:0 0 10px;padding:0;border:0;background:transparent;text-align:left
+body.vd-chrome-page.contents-menu-page .page body.vd-chrome-page.contents-menu-page .page .hero{
+  display:block;margin:0 0 10px;padding:0 245px 0 0;border:0;background:transparent;text-align:left
 }
 body.vd-chrome-page.contents-menu-page .page .hero h1{
   margin:0;color:#202122;font:400 1.8em/1.3 Arial,Helvetica,sans-serif
 }
 .author{margin:5px 0 0;color:var(--muted);font-size:13px;font-style:normal}
-.page-tools{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin:12px 0 26px;font-size:13px}
+.page-tools{position:absolute;top:22px;right:clamp(20px,3vw,34px);display:flex;align-items:baseline;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin:0;font-size:13px}
 .page-tools a{color:var(--link)}
 .page-tools .separator{color:#72777d}
 .sections{min-width:0}
@@ -40,9 +40,8 @@ body.vd-chrome-page.contents-menu-page .page .hero h1{
   margin:0 0 8px;padding:0 0 5px;border-bottom:1px solid var(--line);
   color:#202122;font:400 1.45em/1.35 Arial,Helvetica,sans-serif
 }
-.list-summary{margin:0 0 12px;color:var(--muted);font-size:13px}
 .chapter-list{
-  columns:3;column-gap:36px;column-fill:balance;
+  columns:2;column-gap:28px;column-fill:balance;
   margin:0;padding-left:1.45em
 }
 .chapter-list li{
@@ -63,10 +62,16 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
 .contents-group h2 .label-dev{font-size:14px}
 .loading,.error{margin:12px 0;color:var(--muted)}
 .complete-link{font-weight:400}
-@media(max-width:800px){.chapter-list{columns:2;column-gap:28px}}
+@media(max-width:680px){
+  body.vd-chrome-page.contents-menu-page .page .hero{padding-right:0}
+  .page-tools{position:static;justify-content:flex-end;margin:4px 0 16px}
+  .chapter-list{columns:1}
+}
 @media(max-width:520px){
   body.vd-chrome-page.contents-menu-page .page{padding:16px 18px 42px!important}
+  .page-tools{position:static;justify-content:flex-end;margin:4px 0 16px}
   .chapter-list{columns:1}
+  body.vd-chrome-page.contents-menu-page .page .hero{padding-right:0}
   body.vd-chrome-page.contents-menu-page .page .hero h1{font-size:1.65em}
 }
 </style>
@@ -193,8 +198,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     var separator=document.createElement("span");separator.className="original-work-separator";separator.setAttribute("aria-hidden","true");separator.textContent=" · ";
     var iast=document.createElement("span");iast.className="original-work-iast";iast.lang="sa-Latn";iast.textContent=raw;
     original.append(sa,separator,iast);
-    var en=document.createElement("span");en.className="label-en";en.lang="en";en.textContent=pair.english;
-    node.dataset.vdEnglish=pair.english;node.dataset.vdBilingual="true";node.replaceChildren(original,en);
+    node.dataset.vdEnglish=pair.english;node.dataset.vdBilingual="true";node.replaceChildren(original);
   }
   function renderStaticLabels(){
     document.querySelectorAll(".page-tools a").forEach(function(node){renderBilingual(node,node.textContent.trim());});
@@ -277,10 +281,11 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     var units=Array.isArray(data&&data.units)?data.units:[];
     if(units.length<=20)return units.map(function(unit,index){return {label:unit.label||("Entry "+(index+1)),hash:unit.id};});
     var result=[];
-    for(var i=0;i<units.length;i+=10){
-      var part=units.slice(i,i+10);
+    var chunkSize=Math.max(1,Math.ceil(units.length/12));
+    for(var i=0;i<units.length;i+=chunkSize){
+      var part=units.slice(i,i+chunkSize);
       var numbers=part.flatMap(function(unit){return Array.isArray(unit.sourceNumbers)?unit.sourceNumbers:[unit.number];}).filter(function(value){return value!==undefined&&value!==null;});
-      var start=numbers[0]||part[0].number||String(i+1),end=numbers[numbers.length-1]||part[part.length-1].number||String(Math.min(i+10,units.length));
+      var start=numbers[0]||part[0].number||String(i+1),end=numbers[numbers.length-1]||part[part.length-1].number||String(Math.min(i+part.length,units.length));
       var firstLabel=String(part[0].label||"");
       var kind=/page/i.test(firstLabel)?"Pages":/passage/i.test(firstLabel)?"Passages":/section/i.test(firstLabel)?"Sections":"Verses";
       result.push({label:kind+" "+start+"–"+end,hash:part[0].id});
@@ -309,9 +314,8 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     document.title="Text contents — "+titlePair.english+" — Viveka Drishti";
     var items=sectionItems(data);
     var fallback=sourceItems(doc);
-    if(!items.length&&sourceItemsAreDescriptive(fallback))items=fallback;
+    if(!items.length&&fallback.length)items=fallback;
     if(!items.length)items=fallbackRanges(data);
-    if(!items.length)items=fallback;
     if(!items.length)throw new Error("No chapter or section links were found.");
     var groups=[{title:"Chapters and sections",items:items}];
     if(work==="panchadasi"&&items.length>=15){
@@ -323,16 +327,6 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       if(items.length>15)groups.push({title:"Additional sections",items:items.slice(15)});
     }
     sectionsNode.replaceChildren();
-    var summary=document.createElement("p");
-    summary.className="list-summary";
-    var summaryEnglish=document.createElement("span");
-    summaryEnglish.textContent=items.length+" entries";
-    var summarySanskrit=document.createElement("span");
-    summarySanskrit.className="label-dev";
-    summarySanskrit.lang="sa-Deva";
-    summarySanskrit.textContent=devanagariDigits(items.length)+" प्रविष्टयः";
-    summary.append(summaryEnglish,summarySanskrit);
-    sectionsNode.append(summary);
     groups.forEach(function(group,index){
       var groupId="contents-group-"+(index+1);
       var section=document.createElement("section");
