@@ -1794,3 +1794,8 @@ body.vd-chrome-page.scripture-index-page .page-tools .vd-label-dev{display:none!
   body.vd-chrome-page.contents-menu-page .page{width:calc(100% - 32px)!important;padding-top:18px!important}
   body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner{width:calc(100% - 28px)!important}
 }
+
+/* Keep automatically added translations off interface labels; original title pairs use dedicated classes. */
+body.vd-chrome-page .vd-label-dev{display:none!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-dev{display:inline!important;margin:0!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-en{display:inline!important}
