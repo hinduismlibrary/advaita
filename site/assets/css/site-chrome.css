@@ -1821,7 +1821,7 @@ body.vd-chrome-page .article-body blockquote{border-color:#a2a9b1!important;back
 
 /* Number chapter and section entries like a traditional contents list. */
 body.vd-chrome-page.scripture-index-page .chapter-list{list-style:decimal!important;padding-left:1.6em!important}
-body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-grid{counter-reset:gita-chapter 0!important;padding-left:0!important;list-style:none!important}
-body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-grid>a{display:block!important;counter-increment:gita-chapter}
-body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-grid>a::before{content:counter(gita-chapter) ". ";display:inline-block;min-width:2.25em;color:#54595d;text-decoration:none}
-body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-number{display:none!important}
+
+
+
+
