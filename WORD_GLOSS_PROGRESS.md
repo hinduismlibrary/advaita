@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The reader has 69 reading cards plus a separate colophon for all 227 numbered passages and eight named contents sections. The source-number boundaries and Sanskrit, English, IAST, and word-for-word fields are being checked passage by passage. This pass restored passage markers and separated the English by passage through 158. Passages 137–154 have individual Sanskrit markers, IAST, translations, and word glosses. Passages 155–157 now separately explain why “blue lotus” is a valid sentence meaning while “That you are” cannot be read as a qualifier relation or as an ordinary identity; passage 158 includes the cited Pañcadaśī verse. The word-for-word glosses were aligned to the restored Sanskrit. The reader displays each separated translation as its own paragraph. The transliteration/word-for-word button row has zero gap. All 29 reader pages point at the updated renderer (d). Semantic review remains in progress from passage 159 onward.
+**Vedāntasāra** — active. The reader has 69 reading cards plus a separate colophon for all 227 numbered passages and eight named contents sections. The source-number boundaries and Sanskrit, English, IAST, and word-for-word fields are being checked passage by passage. This pass restored passage markers and separated the English by passage through 163. Passages 137–158 have individual Sanskrit markers, IAST, translations, and word glosses. Passages 159–163 now explain why complete abandonment works for “A village dwells on the Ganges” but not for “That you are,” and answer the objection that one word could imply the other’s meaning. The glosses identify the Ganges-bank example and the meanings of “That” and “you” consistently. The reader displays each separated translation as its own paragraph. The transliteration/word-for-word button row has zero gap. All 29 reader pages point at the updated renderer (d). Semantic review remains in progress from passage 164 onward.
 
 ## Completed
 
@@ -68,7 +68,7 @@ The shared transliteration/word-for-word button row now has zero gap; all 26 rea
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Upadeśasāhasrī | 787 | Complete: all 787 verse and prose units have Sanskrit, English, explicit IAST, and Devanāgarī glosses; semantic audit completed through II.3.116. |
-| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: source boundaries and passage-by-passage fields checked through 158; continue semantic review from 159. |
+| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: source boundaries and passage-by-passage fields checked through 163; continue semantic review from 164. |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 
