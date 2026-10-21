@@ -169,3 +169,11 @@ html body.vd-chrome-page.scripture-index-page.purana-reader-page .chapter-grid>a
   overflow-wrap:anywhere
 }
 html body.vd-chrome-page.scripture-index-page.purana-reader-page .chapter-grid>a:hover{text-decoration:underline!important}
+
+/* Keep original Purāṇa names in Devanāgarī over their IAST forms. */
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .catalog-dev{
+  display:block!important;color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+html body.vd-chrome-page.scripture-index-page.purana-reader-page .catalog-iast{
+  display:block!important;color:#54595d!important;font:400 13px/1.45 Arial,Helvetica,sans-serif!important;font-style:normal!important
+}
