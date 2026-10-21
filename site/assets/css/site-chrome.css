@@ -1717,8 +1717,8 @@ body.vd-chrome-page.contents-menu-page .page .contents-group h2{
 body.vd-chrome-page.contents-menu-page .chapter-list{columns:1!important;column-gap:0!important;margin:0!important;padding-left:1.45em!important;list-style:disc!important}
 body.vd-chrome-page.contents-menu-page .chapter-list li{break-inside:avoid!important;margin:0!important;padding:1px 0!important}
 body.vd-chrome-page.contents-menu-page .chapter-link{display:inline!important;color:#0645ad!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
-body.vd-chrome-page.contents-menu-page .chapter-link .label-dev{color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
-body.vd-chrome-page.contents-menu-page .chapter-link .label-en{color:inherit!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-dev{display:inline!important;margin:0!important;color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+body.vd-chrome-page.contents-menu-page .chapter-link .label-en{display:inline!important;color:inherit!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
 body.vd-chrome-page.contents-menu-page .chapter-link .label-separator{color:#54595d!important}
 body.vd-chrome-page.contents-menu-page .original-work-title{display:inline-flex!important;align-items:baseline!important;gap:.35em!important;flex-wrap:wrap!important}
 body.vd-chrome-page.contents-menu-page .original-work-dev{color:#202122!important;font:400 20px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
