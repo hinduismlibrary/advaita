@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 251 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 239 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -26142,7 +26142,16 @@
       "deva": "श्रुत्यवष्टम्भात् ।",
       "iast": "śrutyavaṣṭambhāt |",
       "translation": "Because it is grounded in revelation.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "श्रुति",
+          "en": "scripture"
+        },
+        {
+          "sa": "अवष्टम्भात्",
+          "en": "because of its support"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0587",
@@ -26204,7 +26213,24 @@
       "deva": "का त्वसौ श्रुतिः ।",
       "iast": "kā tvasau śrutiḥ |",
       "translation": "Which passage of revelation?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "का",
+          "en": "which"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "असौ",
+          "en": "that"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scriptural passage"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0590",
@@ -26278,7 +26304,72 @@
       "deva": "यस्मात्सर्वप्रमाणोपपन्नोऽयमर्थस्तस्मादतोऽन्यथावादिनो जात्यन्धा इवानुकम्पनीया इत्याह ।",
       "iast": "yasmātsarvapramāṇopapanno'yamarthastasmādato'nyathāvādino jātyandhā ivānukampanīyā ityāha |",
       "translation": "Since this point is established by every means of knowledge, those who argue otherwise are like people blind from birth and deserve compassion.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "उपपन्नः",
+          "en": "established by"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "point"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "अतः",
+          "en": "from this"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "वादिनः",
+          "en": "those who argue"
+        },
+        {
+          "sa": "जाति",
+          "en": "birth"
+        },
+        {
+          "sa": "अन्धाः",
+          "en": "blind"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "अनुकम्पनीयाः",
+          "en": "are to be pitied"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0593",
@@ -26344,7 +26435,36 @@
       "deva": "प्रमाणोपपनस्यार्थस्यासंभावनात्तदनुकम्पनीयत्वसिद्धिः ।",
       "iast": "pramāṇopapanasyārthasyāsaṃbhāvanāttadanukampanīyatvasiddhiḥ |",
       "translation": "Since they cannot accept what is established by means of knowledge, they are indeed to be pitied.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "उपपन्नस्य",
+          "en": "of what is established"
+        },
+        {
+          "sa": "अर्थस्य",
+          "en": "point"
+        },
+        {
+          "sa": "असंभावनात्",
+          "en": "because it is not accepted"
+        },
+        {
+          "sa": "तत्",
+          "en": "their"
+        },
+        {
+          "sa": "अनुकम्पनीयत्व",
+          "en": "being pitiable"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "is established"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0595",
@@ -26355,7 +26475,20 @@
       "deva": "तदेतदाह ।",
       "iast": "tadetadāha |",
       "translation": "He states the point:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्",
+          "en": "this"
+        },
+        {
+          "sa": "एतत्",
+          "en": "point"
+        },
+        {
+          "sa": "आह",
+          "en": "he states"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0597",
@@ -26433,7 +26566,48 @@
       "deva": "अतश्चात्मनो भेदासंस्पर्शो भेदस्य मिथ्यास्वाभाव्यादत आह ।",
       "iast": "ataścātmano bhedāsaṃsparśo bhedasya mithyāsvābhāvyādata āha |",
       "translation": "Difference does not touch the Self because its nature is false. Therefore he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "भेद",
+          "en": "difference"
+        },
+        {
+          "sa": "असंस्पर्शः",
+          "en": "non-contact"
+        },
+        {
+          "sa": "भेदस्य",
+          "en": "of difference"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "false"
+        },
+        {
+          "sa": "स्वाभाव्यात्",
+          "en": "because of its nature"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0600",
@@ -26503,7 +26677,48 @@
       "deva": "सर्वस्यैवानुमानव्यापारस्य फलमियदेव यद्विवेकग्रहणम् ।",
       "iast": "sarvasyaivānumānavyāpārasya phalamiyadeva yadvivekagrahaṇam |",
       "translation": "The entire work of inference is only this: to grasp a distinction.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सर्वस्य",
+          "en": "of the whole"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनुमान",
+          "en": "inference"
+        },
+        {
+          "sa": "व्यापारस्य",
+          "en": "operation"
+        },
+        {
+          "sa": "फलम्",
+          "en": "result"
+        },
+        {
+          "sa": "इयत्",
+          "en": "only this much"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "यत्",
+          "en": "namely"
+        },
+        {
+          "sa": "विवेक",
+          "en": "distinction"
+        },
+        {
+          "sa": "ग्रहणम्",
+          "en": "grasping"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0602",
@@ -26514,7 +26729,16 @@
       "deva": "तदुच्यते ।",
       "iast": "taducyate |",
       "translation": "This is stated:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "तत्",
+          "en": "this"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0604",
@@ -26580,7 +26804,144 @@
       "deva": "यद्यप्ययं ग्रहीतृग्रहणग्राह्यगृहीतितत्फलात्मक आब्रह्मस्तम्बपर्यन्तः संसारोऽन्वयव्यतिरेकाभ्यामनात्मतया निर्माल्यवदपविद्धः । तथापि तु नैवासौ स्वतस्सिद्धात्म व्यतिरिक्तानात्मप्रकृतिपदार्थव्यपाश्रयः सांख्यानामिव ।",
       "iast": "yadyapyayaṃ grahītṛgrahaṇagrāhyagṛhītitatphalātmaka ābrahmastambaparyantaḥ saṃsāro'nvayavyatirekābhyāmanātmatayā nirmālyavadapaviddhaḥ | tathāpi tu naivāsau svatassiddhātma vyatiriktānātmaprakṛtipadārthavyapāśrayaḥ sāṃkhyānāmiva |",
       "translation": "Though saṃsāra, from Brahmā down to a clump of grass, consisting of knower, knowing, known, and their results, has been discarded as not-Self through agreement and exclusion, like a withered garland, it does not depend on a material principle separate from the self-established Self, as the Sāṃkhyas claim.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यद्यपि",
+          "en": "although"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "ग्रहीतृ",
+          "en": "knower"
+        },
+        {
+          "sa": "ग्रहण",
+          "en": "knowing"
+        },
+        {
+          "sa": "ग्राह्य",
+          "en": "object known"
+        },
+        {
+          "sa": "गृहीति",
+          "en": "cognition"
+        },
+        {
+          "sa": "तत्",
+          "en": "and its"
+        },
+        {
+          "sa": "फल",
+          "en": "result"
+        },
+        {
+          "sa": "आत्मकः",
+          "en": "consisting of"
+        },
+        {
+          "sa": "आ",
+          "en": "from"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahmā"
+        },
+        {
+          "sa": "स्तम्ब",
+          "en": "a clump of grass"
+        },
+        {
+          "sa": "पर्यन्तः",
+          "en": "extending to"
+        },
+        {
+          "sa": "संसारः",
+          "en": "transmigration"
+        },
+        {
+          "sa": "अन्वय",
+          "en": "agreement"
+        },
+        {
+          "sa": "व्यतिरेकाभ्याम्",
+          "en": "and difference"
+        },
+        {
+          "sa": "अनात्मतया",
+          "en": "as not-Self"
+        },
+        {
+          "sa": "निर्माल्यवत्",
+          "en": "like a withered garland"
+        },
+        {
+          "sa": "अपविद्धः",
+          "en": "has been discarded"
+        },
+        {
+          "sa": "तथापि",
+          "en": "even so"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "असौ",
+          "en": "it"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "सिद्ध",
+          "en": "established"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "व्यतिरिक्त",
+          "en": "separate from"
+        },
+        {
+          "sa": "अनात्म",
+          "en": "not-Self"
+        },
+        {
+          "sa": "प्रकृति",
+          "en": "material principle"
+        },
+        {
+          "sa": "पदार्थ",
+          "en": "entity"
+        },
+        {
+          "sa": "व्यपाश्रयः",
+          "en": "dependent on"
+        },
+        {
+          "sa": "सांख्यानाम्",
+          "en": "of the Sāṃkhyas"
+        },
+        {
+          "sa": "इव",
+          "en": "as"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0606",
@@ -26591,7 +26952,16 @@
       "deva": "किं तर्हि ।",
       "iast": "kiṃ tarhi |",
       "translation": "What, then, is its basis?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0607",
@@ -26602,7 +26972,104 @@
       "deva": "स्वतस्सिद्धानुदितानस्तमितकूटस्थात्मप्रज्ञानमात्रशरीरप्रतिबिम्बिताविचारितसिद्धात्मानवबोधाश्रय एव तदुपादानत्वात्तस्येतीममर्थं निर्वक्तुकाम आह ।",
       "iast": "svatassiddhānuditānastamitakūṭasthātmaprajñānamātraśarīrapratibimbitāvicāritasiddhātmānavabodhāśraya eva tadupādānatvāttasyetīmamarthaṃ nirvaktukāma āha |",
       "translation": "It rests on ignorance of the Self, which is not examined and is reflected in the self-established, unborn, unceasing, immutable awareness of the Self. Ignorance is its material cause. To explain this point, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "सिद्ध",
+          "en": "established"
+        },
+        {
+          "sa": "अनुदित",
+          "en": "unrisen"
+        },
+        {
+          "sa": "अनस्तमित",
+          "en": "unsetting"
+        },
+        {
+          "sa": "कूटस्थ",
+          "en": "immutable"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "प्रज्ञान",
+          "en": "awareness"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "शरीर",
+          "en": "having as its body"
+        },
+        {
+          "sa": "प्रतिबिम्बित",
+          "en": "reflected"
+        },
+        {
+          "sa": "अविचारित",
+          "en": "unexamined"
+        },
+        {
+          "sa": "सिद्ध",
+          "en": "established"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "आश्रयः",
+          "en": "the basis"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "उपादानत्वात्",
+          "en": "because it is the material cause"
+        },
+        {
+          "sa": "तस्य",
+          "en": "of it"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "point"
+        },
+        {
+          "sa": "निर्वक्तुकामः",
+          "en": "wishing to explain"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0609",
@@ -26688,7 +27155,100 @@
       "deva": "यस्मात्प्रमाणप्रमेयव्यवहार आत्मानवबोधाश्रय एव तस्मात्सिद्धमात्मनोऽप्रमेयत्वम् । नैव हि कार्यं स्वकारणमतिलङ्घ्यान्यत्राकारक आस्पदमुपनिबध्नाति ।",
       "iast": "yasmātpramāṇaprameyavyavahāra ātmānavabodhāśraya eva tasmātsiddhamātmano'prameyatvam | naiva hi kāryaṃ svakāraṇamatilaṅghyānyatrākāraka āspadamupanibadhnāti |",
       "translation": "Since the dealings between means of knowledge and their objects rest only on ignorance of the Self, the Self is established as beyond objectification. An effect does not set its own cause aside and find a footing elsewhere.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "प्रमेय",
+          "en": "objects of knowledge"
+        },
+        {
+          "sa": "व्यवहारः",
+          "en": "dealings"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "आश्रयः",
+          "en": "based on"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "सिद्धम्",
+          "en": "it is established"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "अप्रमेयत्वम्",
+          "en": "not being an object of knowledge"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "हि",
+          "en": "for"
+        },
+        {
+          "sa": "कार्यम्",
+          "en": "an effect"
+        },
+        {
+          "sa": "स्व",
+          "en": "its own"
+        },
+        {
+          "sa": "कारणम्",
+          "en": "cause"
+        },
+        {
+          "sa": "अतिलङ्घ्य",
+          "en": "leaving behind"
+        },
+        {
+          "sa": "अन्यत्र",
+          "en": "elsewhere"
+        },
+        {
+          "sa": "अकारकः",
+          "en": "not an agent"
+        },
+        {
+          "sa": "आस्पदम्",
+          "en": "a footing"
+        },
+        {
+          "sa": "उपनिबध्नाति",
+          "en": "establishes"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0611",
@@ -43827,7 +44387,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 251 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 239 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
