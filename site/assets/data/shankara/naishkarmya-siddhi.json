@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 84 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 69 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -48303,7 +48303,12 @@
       "deva": "यथोक्तेन ।",
       "iast": "yathoktena |",
       "translation": "As explained:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यथोक्तेन",
+          "en": "as stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1013",
@@ -48373,7 +48378,44 @@
       "deva": "नाञ्जसात्राभिधीयत इति को हेतुरिति चेत् ।",
       "iast": "nāñjasātrābhidhīyata iti ko heturiti cet |",
       "translation": "If asked why it is not stated directly:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अञ्जसा",
+          "en": "directly"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is expressed"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "हेतुः",
+          "en": "reason"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if asked"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1016",
@@ -48455,7 +48497,84 @@
       "deva": "यदि शब्दोऽभिधानाभिधेयत्वसंबन्धाङ्गीकारेण नात्मनि वर्तते कथं शब्दादहं ब्रह्मास्मीति सम्यग्बोधोत्पत्तिः ।",
       "iast": "yadi śabdo'bhidhānābhidheyatvasaṃbandhāṅgīkāreṇa nātmani vartate kathaṃ śabdādahaṃ brahmāsmīti samyagbodhotpattiḥ |",
       "translation": "If words do not apply to the Self through a relation between word and denoted thing, how can the sentence “I am Brahman” produce correct knowledge?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "शब्दः",
+          "en": "a word"
+        },
+        {
+          "sa": "अभिधान",
+          "en": "word-denotation"
+        },
+        {
+          "sa": "अभिधेय",
+          "en": "denoted-object"
+        },
+        {
+          "sa": "त्व",
+          "en": "as a relation"
+        },
+        {
+          "sa": "सम्बन्ध",
+          "en": "connection"
+        },
+        {
+          "sa": "अङ्गीकारेण",
+          "en": "by accepting"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "with the Self"
+        },
+        {
+          "sa": "वर्तते",
+          "en": "applies"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "शब्दात्",
+          "en": "from words"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "am"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "correct"
+        },
+        {
+          "sa": "बोध",
+          "en": "knowledge"
+        },
+        {
+          "sa": "उत्पत्तिः",
+          "en": "arising"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1018",
@@ -48466,7 +48585,12 @@
       "deva": "उच्यते ।",
       "iast": "ucyate |",
       "translation": "The reply is:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "उच्यते",
+          "en": "the answer is given"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1020",
@@ -48528,7 +48652,100 @@
       "deva": "कथं पुनरभिधानमभिधेयेनानभिसंबद्धं सदनभिधेयेऽर्थे प्रमां जनयतीति । शृणु यथानभिसंबद्धमप्यनभिधे येऽर्थेऽविद्यानिराकरणमुखेन बोधयतीत्याह ।",
       "iast": "kathaṃ punarabhidhānamabhidheyenānabhisaṃbaddhaṃ sadanabhidheye'rthe pramāṃ janayatīti | śṛṇu yathānabhisaṃbaddhamapyanabhidhe ye'rthe'vidyānirākaraṇamukhena bodhayatītyāha |",
       "translation": "How can a word, unconnected with what it denotes, produce knowledge of something that cannot be denoted? Listen: though it is unconnected, it awakens knowledge by removing ignorance, as the following verse says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "अभिधानम्",
+          "en": "a word"
+        },
+        {
+          "sa": "अभिधेयेन",
+          "en": "with what it denotes"
+        },
+        {
+          "sa": "अनभिसंबद्धम्",
+          "en": "unconnected"
+        },
+        {
+          "sa": "सत्",
+          "en": "being"
+        },
+        {
+          "sa": "अनभिधेये",
+          "en": "what cannot be denoted"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "about a reality"
+        },
+        {
+          "sa": "प्रमाम्",
+          "en": "valid knowledge"
+        },
+        {
+          "sa": "जनयति",
+          "en": "produces"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        },
+        {
+          "sa": "यथा",
+          "en": "how"
+        },
+        {
+          "sa": "अनभिसंबद्धम्",
+          "en": "though unconnected"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अनभिधेये",
+          "en": "what cannot be denoted"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "about a reality"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "निराकरण",
+          "en": "removal"
+        },
+        {
+          "sa": "मुखेन",
+          "en": "by means of"
+        },
+        {
+          "sa": "बोधयति",
+          "en": "it awakens knowledge"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1023",
@@ -48673,7 +48890,16 @@
       "deva": "यथा च ।",
       "iast": "yathā ca |",
       "translation": "And again:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1028",
@@ -48743,7 +48969,52 @@
       "deva": "\"असत्ये वर्त्मनि स्थित्वा\" इत्युपश्रुत्यातिविस्मितो महता संभ्रमेण कश्चिच्चोदयति ।",
       "iast": "\"asatye vartmani sthitvā\" ityupaśrutyātivismito mahatā saṃbhrameṇa kaściccodayati |",
       "translation": "Hearing the words “one reaches the goal by taking an unreal path,” someone, greatly astonished, objects:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "असत्ये",
+          "en": "unreal"
+        },
+        {
+          "sa": "वर्त्मनि",
+          "en": "on a path"
+        },
+        {
+          "sa": "स्थित्वा",
+          "en": "having taken"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उपश्रुत्य",
+          "en": "having heard"
+        },
+        {
+          "sa": "अति",
+          "en": "greatly"
+        },
+        {
+          "sa": "विस्मितः",
+          "en": "astonished"
+        },
+        {
+          "sa": "महता",
+          "en": "with great"
+        },
+        {
+          "sa": "संभ्रमेण",
+          "en": "confusion"
+        },
+        {
+          "sa": "कश्चित्",
+          "en": "someone"
+        },
+        {
+          "sa": "चोदयति",
+          "en": "objects"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1031",
@@ -48900,7 +49171,36 @@
       "deva": "एवं कुचोद्यमुन्मूल्याथेदानीं प्रकृतमभिधीयते ।",
       "iast": "evaṃ kucodyamunmūlyāthedānīṃ prakṛtamabhidhīyate |",
       "translation": "Having uprooted this mistaken objection, the author returns to the main point:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "कुचोद्यम्",
+          "en": "a mistaken objection"
+        },
+        {
+          "sa": "उन्मूल्य",
+          "en": "having uprooted"
+        },
+        {
+          "sa": "अथ",
+          "en": "then"
+        },
+        {
+          "sa": "इदानीम्",
+          "en": "now"
+        },
+        {
+          "sa": "प्रकृतम्",
+          "en": "the main point"
+        },
+        {
+          "sa": "अभिधीयते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1035",
@@ -48911,7 +49211,76 @@
       "deva": "प्रकृतं चानभिधेये कथमभिधाश्रुतिरविद्याध्वंस्यात्मनि ज्ञानं जनयतीति । तत्रैव कारणान्तरमुच्यते ।",
       "iast": "prakṛtaṃ cānabhidheye kathamabhidhāśrutiravidyādhvaṃsyātmani jñānaṃ janayatīti | tatraiva kāraṇāntaramucyate |",
       "translation": "The question at hand is how a scriptural statement can produce knowledge of the Self, which cannot be denoted and which destroys ignorance. Another reason is now given.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "प्रकृतम्",
+          "en": "the present topic"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनभिधेये",
+          "en": "what cannot be denoted"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "अभिधा",
+          "en": "a literal statement"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scripture"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "ध्वंसि",
+          "en": "destroying"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "in the Self"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "जनयति",
+          "en": "produces"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "एव",
+          "en": "on this"
+        },
+        {
+          "sa": "कारण",
+          "en": "reason"
+        },
+        {
+          "sa": "अन्तरम्",
+          "en": "another"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1037",
@@ -48993,7 +49362,112 @@
       "deva": "अनुदितानस्तमितकूटस्थबोधमात्रस्वाभाव्यादात्मनो दुस्संभाव्योऽविद्यासद्भाव इति चेन्न । अविद्याप्रसिद्ध्यैव तत्सद्भावसिद्धेरुलूकनिशावदित्यत इदमुच्यते ।",
       "iast": "anuditānastamitakūṭasthabodhamātrasvābhāvyādātmano dussaṃbhāvyo'vidyāsadbhāva iti cenna | avidyāprasiddhyaiva tatsadbhāvasiddherulūkaniśāvadityata idamucyate |",
       "translation": "One might say that ignorance is hard to conceive when the Self is changeless, pure awareness, neither arising nor setting. This is no objection: ignorance is established by ordinary experience, just as an owl’s night is established. Hence the verse:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अनुदित",
+          "en": "not arisen"
+        },
+        {
+          "sa": "अनस्तमित",
+          "en": "not set"
+        },
+        {
+          "sa": "कूटस्थ",
+          "en": "changeless"
+        },
+        {
+          "sa": "बोध",
+          "en": "awareness"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "स्वाभाव्यात्",
+          "en": "because this is the nature"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "दुस्संभाव्यः",
+          "en": "hard to conceive"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "सद्भावः",
+          "en": "the presence"
+        },
+        {
+          "sa": "इति",
+          "en": "so"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one says"
+        },
+        {
+          "sa": "न",
+          "en": "no"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "प्रसिद्ध्या",
+          "en": "because it is established"
+        },
+        {
+          "sa": "एव",
+          "en": "precisely"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "सद्भाव",
+          "en": "presence"
+        },
+        {
+          "sa": "सिद्धेः",
+          "en": "is established"
+        },
+        {
+          "sa": "उलूक",
+          "en": "an owl’s"
+        },
+        {
+          "sa": "निशा",
+          "en": "night"
+        },
+        {
+          "sa": "वत्",
+          "en": "as"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1040",
@@ -49063,7 +49537,92 @@
       "deva": "यस्मादविद्याप्रसिद्ध्यैवाविद्यासद्भावसिद्धिरतआत्मवस्तुवृत्तानुरोधेन न कथंचनापि तत्संभावनाप्यस्ति यत आह ।",
       "iast": "yasmādavidyāprasiddhyaivāvidyāsadbhāvasiddhirataātmavastuvṛttānurodhena na kathaṃcanāpi tatsaṃbhāvanāpyasti yata āha |",
       "translation": "Since ignorance is established only through ordinary experience, and cannot be supposed in keeping with the reality of the Self, the author says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "प्रसिद्ध्या",
+          "en": "by its being known"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "सद्भाव",
+          "en": "presence"
+        },
+        {
+          "sa": "सिद्धिः",
+          "en": "is established"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "वृत्त",
+          "en": "nature"
+        },
+        {
+          "sa": "अनुरोधेन",
+          "en": "in keeping with"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कथंचन",
+          "en": "in any way"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "संभावना",
+          "en": "possibility"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "अस्ति",
+          "en": "exists"
+        },
+        {
+          "sa": "यत्",
+          "en": "as"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1043",
@@ -49145,7 +49704,96 @@
       "deva": "सोऽयमेवमनुदितानस्तमितावगतिमात्रशरीर आत्मापि सन्नविचारितप्रसिद्धाविद्यामात्रव्यवहित एवातथैवेक्ष्यते यतोऽतः ।",
       "iast": "so'yamevamanuditānastamitāvagatimātraśarīra ātmāpi sannavicāritaprasiddhāvidyāmātravyavahita evātathaivekṣyate yato'taḥ |",
       "translation": "Though the Self is awareness alone, without arising or setting, it is nevertheless seen otherwise, screened by ignorance accepted without examination. Therefore:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "अनुदित",
+          "en": "not arisen"
+        },
+        {
+          "sa": "अनस्तमित",
+          "en": "not set"
+        },
+        {
+          "sa": "अवगति",
+          "en": "awareness"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "शरीरः",
+          "en": "whose nature is"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "the Self"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "सन्",
+          "en": "though being"
+        },
+        {
+          "sa": "अविचारित",
+          "en": "unexamined"
+        },
+        {
+          "sa": "प्रसिद्ध",
+          "en": "established in common experience"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "व्यवहितः",
+          "en": "screened by"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अतथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "इव",
+          "en": "as if"
+        },
+        {
+          "sa": "ईक्ष्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "यतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "अतः",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1046",
@@ -49295,7 +49943,60 @@
       "deva": "भाववदभावादपि निवृत्तिरनुमानादेव किमिति न भवतीति चेच्छृणु ।",
       "iast": "bhāvavadabhāvādapi nivṛttiranumānādeva kimiti na bhavatīti cecchṛṇu |",
       "translation": "If asked why inference cannot remove nonexistence just as it removes what exists, listen:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "भाववत्",
+          "en": "like what exists"
+        },
+        {
+          "sa": "अभावात्",
+          "en": "from nonexistence"
+        },
+        {
+          "sa": "अपि",
+          "en": "also"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "removal"
+        },
+        {
+          "sa": "अनुमानात्",
+          "en": "by inference"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "किम्",
+          "en": "why"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "भवति",
+          "en": "does it happen"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if asked"
+        },
+        {
+          "sa": "शृणु",
+          "en": "listen"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1048",
@@ -49306,7 +50007,60 @@
       "deva": "यतो नानुमानेन व्याविद्धाशेषक्रियाकारकफलात्मनि स्वाराज्येऽभिषेक्तुं शक्यते तस्मात् ।",
       "iast": "yato nānumānena vyāviddhāśeṣakriyākārakaphalātmani svārājye'bhiṣektuṃ śakyate tasmāt |",
       "translation": "Inference cannot enthrone one in the sovereignty free from all actions, agents, instruments and results. Therefore:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अनुमानेन",
+          "en": "by inference"
+        },
+        {
+          "sa": "व्याविद्ध",
+          "en": "free from / apart from"
+        },
+        {
+          "sa": "अशेष",
+          "en": "all"
+        },
+        {
+          "sa": "क्रिया",
+          "en": "actions"
+        },
+        {
+          "sa": "कारक",
+          "en": "agents and instruments"
+        },
+        {
+          "sa": "फल",
+          "en": "results"
+        },
+        {
+          "sa": "आत्मनि",
+          "en": "consisting of"
+        },
+        {
+          "sa": "स्वाराज्ये",
+          "en": "in the sovereignty of the Self"
+        },
+        {
+          "sa": "अभिषेक्तुम्",
+          "en": "to enthrone"
+        },
+        {
+          "sa": "शक्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1050",
@@ -49368,7 +50122,76 @@
       "deva": "अत्राहानुदितानस्तमितविज्ञानात्ममात्रस्वरूपत्वाद्दुस्संभाव्या अविद्येति । नैतदेवम् । कुतः । यत आह ।",
       "iast": "atrāhānuditānastamitavijñānātmamātrasvarūpatvāddussaṃbhāvyā avidyeti | naitadevam | kutaḥ | yata āha |",
       "translation": "Someone objects: “Ignorance is hard to conceive because the Self is awareness alone, without arising or setting.” This is not so. Why? The verse says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "आह",
+          "en": "someone objects"
+        },
+        {
+          "sa": "अनुदित",
+          "en": "not arisen"
+        },
+        {
+          "sa": "अनस्तमित",
+          "en": "not set"
+        },
+        {
+          "sa": "विज्ञान",
+          "en": "awareness"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "स्वरूपत्वात्",
+          "en": "because of having as its nature"
+        },
+        {
+          "sa": "दुस्संभाव्या",
+          "en": "hard to conceive"
+        },
+        {
+          "sa": "अविद्या",
+          "en": "ignorance"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "कुतः",
+          "en": "why"
+        },
+        {
+          "sa": "यत्",
+          "en": "because"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1053",
@@ -56219,7 +57042,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 84 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 69 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
