@@ -1263,6 +1263,7 @@ body.vd-chrome-page .contact-action{border-radius:0!important;background:#f8f9fa
     display:flex!important;flex-direction:row!important;align-items:stretch!important;gap:0 18px!important;
     padding-right:20px!important;padding-left:20px!important;
   }
+  body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle{display:none!important;margin-left:0!important}
   body.vd-chrome-page .hp-directory{gap:22px 28px!important}
 }
 @media(max-width:680px){
