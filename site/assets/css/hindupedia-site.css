@@ -399,3 +399,65 @@ body.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part .sb-rule{backgrou
   .article-body p,.article-body li,.home-content p,.home-content li{font-size:15px!important}
   .chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
+
+
+/* Compact Wikisource-style Purāṇa library index. */
+html body.vd-chrome-page.page-page.purana-library-page .hp-home.purana-home{
+  width:min(920px,calc(100% - 40px))!important;margin:0 auto!important;padding:28px 0 54px!important;
+  color:#202122!important;font:16px/1.6 Arial,Helvetica,sans-serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-home>h1{
+  margin:0 0 16px!important;padding:0 0 8px!important;border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;font:600 1.8em/1.3 Arial,Helvetica,sans-serif!important;text-align:left!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-title-dev,
+html body.vd-chrome-page.page-page.purana-library-page .purana-name-dev{
+  display:block!important;color:#202122!important;
+  font:400 1em/1.55 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-title-iast{
+  display:block!important;margin-top:1px!important;color:#54595d!important;
+  font:400 .72em/1.45 Arial,Helvetica,sans-serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-section{
+  margin:0 0 22px!important;padding:0 0 14px!important;border-bottom:1px solid #eaecf0!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-section-title{
+  margin:0 0 8px!important;padding:0 0 6px!important;border:0!important;border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important;text-align:left!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-section-title .purana-title-dev{
+  display:inline!important;font:400 1em/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-section-title .purana-title-iast{
+  display:inline!important;margin-left:.45em!important;color:#202122!important;font:400 1em/1.4 Arial,Helvetica,sans-serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list{
+  margin:0!important;padding:0 0 0 1.6em!important;list-style:decimal!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list>li{
+  margin:0!important;padding:3px 0!important;border:0!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list a{
+  display:inline-flex!important;flex-direction:column!important;align-items:flex-start!important;
+  color:#0645ad!important;font:400 16px/1.5 Arial,Helvetica,sans-serif!important;text-decoration:none!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-list a:hover,
+html body.vd-chrome-page.page-page.purana-library-page .purana-list a:focus-visible{text-decoration:underline!important}
+html body.vd-chrome-page.page-page.purana-library-page .purana-name-dev{
+  color:#202122!important;font-size:16px!important;line-height:1.45!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-name-iast{
+  display:block!important;color:#0645ad!important;font:400 15px/1.5 Arial,Helvetica,sans-serif!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-research-list{
+  margin:0!important;padding:0 0 0 1.45em!important;list-style:disc!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-research-list li{margin:0!important;padding:1px 0!important}
+html body.vd-chrome-page.page-page.purana-library-page .purana-research-list a{
+  color:#0645ad!important;font:400 15px/1.6 Arial,Helvetica,sans-serif!important;text-decoration:none!important
+}
+html body.vd-chrome-page.page-page.purana-library-page .purana-research-list a:hover{text-decoration:underline!important}
+@media(max-width:720px){
+  html body.vd-chrome-page.page-page.purana-library-page .hp-home.purana-home{width:calc(100% - 36px)!important;padding:22px 0 42px!important}
+}
