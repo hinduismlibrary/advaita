@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 424 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 418 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -3001,7 +3001,20 @@
       "deva": "प्रमाणासंभवाच्च ।",
       "iast": "pramāṇāsaṃbhavācca |",
       "translation": "And there is no valid means of knowledge for this claim.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "प्रमाण",
+          "en": "means of valid knowledge"
+        },
+        {
+          "sa": "असंभवात्",
+          "en": "because it is impossible"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0087",
@@ -3071,7 +3084,48 @@
       "deva": "अभ्युपगताभ्युपगमाच्च श्वश्रूनिर्गच्छोक्तिवद्भवतो निष्प्रयोजनः प्रलापः ।",
       "iast": "abhyupagatābhyupagamācca śvaśrūnirgacchoktivadbhavato niṣprayojanaḥ pralāpaḥ |",
       "translation": "Since you merely repeat what has already been admitted, your speech is pointless—like telling a mother-in-law, “Go out!”",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अभ्युपगत",
+          "en": "already admitted"
+        },
+        {
+          "sa": "अभ्युपगमात्",
+          "en": "because of the acceptance"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "श्वश्रू",
+          "en": "mother-in-law"
+        },
+        {
+          "sa": "निर्गच्छ",
+          "en": "go out!"
+        },
+        {
+          "sa": "उक्ति",
+          "en": "saying"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "भवतः",
+          "en": "your"
+        },
+        {
+          "sa": "निष्प्रयोजनः",
+          "en": "pointless"
+        },
+        {
+          "sa": "प्रलापः",
+          "en": "speech; rambling"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0090",
@@ -3149,7 +3203,148 @@
       "deva": "एवं तावत् \"मुक्तेः क्रियाभिः सिद्धत्वात् \" इति निरस्तोऽयं पक्षः । अथाधुना सर्वकर्मप्रवृत्तिहेतुनिरूपणेन यथावस्थितात्मवस्तुविषयकेवलज्ञानमात्रादेव सकलसंसारानर्थनिवृत्तिरितीमं पक्षं द्रढयितुकाम आह ।",
       "iast": "evaṃ tāvat \"mukteḥ kriyābhiḥ siddhatvāt \" iti nirasto'yaṃ pakṣaḥ | athādhunā sarvakarmapravṛttihetunirūpaṇena yathāvasthitātmavastuviṣayakevalajñānamātrādeva sakalasaṃsārānarthanivṛttiritīmaṃ pakṣaṃ draḍhayitukāma āha |",
       "translation": "Thus the view that liberation is accomplished through actions has been refuted. Now, wishing to establish that the cessation of every ill of saṃsāra comes solely from knowledge of the Self as it truly is, through examining the causes that prompt all action, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so far"
+        },
+        {
+          "sa": "मुक्तेः",
+          "en": "of liberation"
+        },
+        {
+          "sa": "क्रियाभिः",
+          "en": "through actions"
+        },
+        {
+          "sa": "सिद्धत्वात्",
+          "en": "because it is accomplished"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निरस्तः",
+          "en": "refuted"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "पक्षः",
+          "en": "view"
+        },
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "अधुना",
+          "en": "at this point"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "प्रवृत्ति",
+          "en": "engagement"
+        },
+        {
+          "sa": "हेतु",
+          "en": "cause"
+        },
+        {
+          "sa": "निरूपणेन",
+          "en": "by examining"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "अवस्थित",
+          "en": "it truly is"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "reality"
+        },
+        {
+          "sa": "विषयक",
+          "en": "having as its object"
+        },
+        {
+          "sa": "केवल",
+          "en": "mere"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "knowledge"
+        },
+        {
+          "sa": "मात्रात्",
+          "en": "solely from"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "सकल",
+          "en": "all"
+        },
+        {
+          "sa": "संसार",
+          "en": "transmigration"
+        },
+        {
+          "sa": "अनर्थ",
+          "en": "trouble"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation"
+        },
+        {
+          "sa": "इति",
+          "en": "that"
+        },
+        {
+          "sa": "इमम्",
+          "en": "this"
+        },
+        {
+          "sa": "पक्षम्",
+          "en": "view"
+        },
+        {
+          "sa": "द्रढयितु",
+          "en": "to strengthen"
+        },
+        {
+          "sa": "कामः",
+          "en": "wishing"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0092",
@@ -3160,7 +3355,504 @@
       "deva": "इह चेदं परीक्ष्यते । किं यथा प्रतिषिद्धेषु यादृच्छिकेषु च कर्मसु स्वाभाविकस्वाशयोत्थनिमित्तवशादेवेदं हितमिदमहितमिति विशेषान् परिकल्प्य मृगतृष्णिकोदकपिपासुरिव लौकिकप्रमाणप्रसिद्धान्येव साधनान्युपादाय हितप्राप्तयेऽहितनिरासाय च स्वयमेव प्रवर्तते निवर्तते च तथैवादृष्टार्थेषु काम्येषु नित्येषु च कर्मसु किं वान्यदेव तत्र प्रवृत्तिनिवृत्तिनिमित्तमिति । किंचातः । यद्येवं श्रुणु । यदि तावद्यथावस्थितवस्तुसम्यग्ज्ञानं प्रमाणभूतं लौकिकमागमिकं वा प्रवृत्तिनिमित्तमिति निश्चीयते निवृत्तिशास्त्रं च नाभ्युपगम्यते तदा हताः कर्मत्यागिनो भ्रान्तिविज्ञानमात्रावष्टम्भादलौकिकप्रमाणोपात्तकर्मानुष्ठानत्यागित्वाच्च । अथ मृगतृष्णिकोदकपिपासुप्रवृत्तिनिमित्तवदयथावस्तुभ्रान्तिविज्ञानमेव सर्वप्रवृत्तिनिमित्तं तदा वर्द्धामहे वयं हताः स्थ यूयमिति ।",
       "iast": "iha cedaṃ parīkṣyate | kiṃ yathā pratiṣiddheṣu yādṛcchikeṣu ca karmasu svābhāvikasvāśayotthanimittavaśādevedaṃ hitamidamahitamiti viśeṣān parikalpya mṛgatṛṣṇikodakapipāsuriva laukikapramāṇaprasiddhānyeva sādhanānyupādāya hitaprāptaye'hitanirāsāya ca svayameva pravartate nivartate ca tathaivādṛṣṭārtheṣu kāmyeṣu nityeṣu ca karmasu kiṃ vānyadeva tatra pravṛttinivṛttinimittamiti | kiṃcātaḥ | yadyevaṃ śruṇu | yadi tāvadyathāvasthitavastusamyagjñānaṃ pramāṇabhūtaṃ laukikamāgamikaṃ vā pravṛttinimittamiti niścīyate nivṛttiśāstraṃ ca nābhyupagamyate tadā hatāḥ karmatyāgino bhrāntivijñānamātrāvaṣṭambhādalaukikapramāṇopāttakarmānuṣṭhānatyāgitvācca | atha mṛgatṛṣṇikodakapipāsupravṛttinimittavadayathāvastubhrāntivijñānameva sarvapravṛttinimittaṃ tadā varddhāmahe vayaṃ hatāḥ stha yūyamiti |",
       "translation": "Here this matter is examined: in forbidden and spontaneous actions, does one act or refrain by distinguishing what is beneficial from what is harmful, prompted by one’s natural interests—as a person thirsty for water in a mirage acts on the means known through ordinary experience, seeking good and avoiding harm? Or is some other cause responsible for acting and refraining in rites whose results are unseen, whether desired or obligatory? What follows? Listen. If correct knowledge of things as they are—whether gained by ordinary or scriptural means—is held to prompt action, while the scriptural teaching of renunciation is rejected, then those who abandon action are ruined: they have renounced rites prescribed by a superhuman authority, relying only on a mistaken cognition. But if mistaken cognition of things as they are, like the thirst for water in a mirage, is the cause of all action, then we say: “We are thriving; you are the ones who are lost.”",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "इह",
+          "en": "here"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "परीक्ष्यते",
+          "en": "is examined"
+        },
+        {
+          "sa": "किम्",
+          "en": "whether"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "प्रतिषिद्धेषु",
+          "en": "among forbidden actions"
+        },
+        {
+          "sa": "यादृच्छिकेषु",
+          "en": "among spontaneous actions"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कर्मसु",
+          "en": "actions"
+        },
+        {
+          "sa": "स्वाभाविक",
+          "en": "natural"
+        },
+        {
+          "sa": "स्व",
+          "en": "one's own"
+        },
+        {
+          "sa": "आशय",
+          "en": "inclination"
+        },
+        {
+          "sa": "उत्थ",
+          "en": "arising from"
+        },
+        {
+          "sa": "निमित्त",
+          "en": "cause"
+        },
+        {
+          "sa": "वशात्",
+          "en": "under the influence"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "हितम्",
+          "en": "beneficial"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "अहितम्",
+          "en": "harmful"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "विशेषान्",
+          "en": "distinctions"
+        },
+        {
+          "sa": "परिकल्प्य",
+          "en": "having imagined"
+        },
+        {
+          "sa": "मृगतृष्णिका",
+          "en": "mirage"
+        },
+        {
+          "sa": "उदक",
+          "en": "water"
+        },
+        {
+          "sa": "पिपासुः",
+          "en": "a thirsty person"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "लौकिक",
+          "en": "ordinary"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "प्रसिद्धानि",
+          "en": "known; established"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "साधनानि",
+          "en": "means"
+        },
+        {
+          "sa": "उपादाय",
+          "en": "having taken up"
+        },
+        {
+          "sa": "हित",
+          "en": "good"
+        },
+        {
+          "sa": "प्राप्तये",
+          "en": "for attaining"
+        },
+        {
+          "sa": "अहित",
+          "en": "harm"
+        },
+        {
+          "sa": "निरासाय",
+          "en": "for removing"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "स्वयम्",
+          "en": "oneself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "प्रवर्तते",
+          "en": "engages"
+        },
+        {
+          "sa": "निवर्तते",
+          "en": "refrains"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तथा",
+          "en": "in the same way"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अदृष्ट",
+          "en": "unseen"
+        },
+        {
+          "sa": "अर्थेषु",
+          "en": "in results"
+        },
+        {
+          "sa": "काम्येषु",
+          "en": "desired"
+        },
+        {
+          "sa": "नित्येषु",
+          "en": "obligatory"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "कर्मसु",
+          "en": "actions"
+        },
+        {
+          "sa": "किम्",
+          "en": "what"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "अन्यत्",
+          "en": "another"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "प्रवृत्ति",
+          "en": "engaging"
+        },
+        {
+          "sa": "निवृत्ति",
+          "en": "refraining"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "cause"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "किंच",
+          "en": "and what follows"
+        },
+        {
+          "sa": "अतः",
+          "en": "from this"
+        },
+        {
+          "sa": "यत्",
+          "en": "if"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "श्रुणु",
+          "en": "listen"
+        },
+        {
+          "sa": "यदि",
+          "en": "if"
+        },
+        {
+          "sa": "तावत्",
+          "en": "for now"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "अवस्थित",
+          "en": "they are"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "things"
+        },
+        {
+          "sa": "सम्यक्",
+          "en": "rightly"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "knowledge"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "valid means"
+        },
+        {
+          "sa": "भूतम्",
+          "en": "being"
+        },
+        {
+          "sa": "लौकिकम्",
+          "en": "ordinary"
+        },
+        {
+          "sa": "आगमिकम्",
+          "en": "scriptural"
+        },
+        {
+          "sa": "वा",
+          "en": "or"
+        },
+        {
+          "sa": "प्रवृत्ति",
+          "en": "action"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "cause"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निश्चीयते",
+          "en": "is held to be"
+        },
+        {
+          "sa": "निवृत्ति",
+          "en": "renunciation"
+        },
+        {
+          "sa": "शास्त्रम्",
+          "en": "scripture"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अभ्युपगम्यते",
+          "en": "is accepted"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "हताः",
+          "en": "ruined"
+        },
+        {
+          "sa": "कर्म",
+          "en": "action"
+        },
+        {
+          "sa": "त्यागिनः",
+          "en": "those who abandon"
+        },
+        {
+          "sa": "भ्रान्ति",
+          "en": "mistaken"
+        },
+        {
+          "sa": "विज्ञान",
+          "en": "cognition"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "अवष्टम्भात्",
+          "en": "because of relying on"
+        },
+        {
+          "sa": "अलौकिक",
+          "en": "supersensible; scriptural"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "उपात्त",
+          "en": "taught; prescribed"
+        },
+        {
+          "sa": "कर्म",
+          "en": "rites"
+        },
+        {
+          "sa": "अनुष्ठान",
+          "en": "performance"
+        },
+        {
+          "sa": "त्यागित्वात्",
+          "en": "because of giving up"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अथ",
+          "en": "but if"
+        },
+        {
+          "sa": "मृगतृष्णिका",
+          "en": "mirage"
+        },
+        {
+          "sa": "उदक",
+          "en": "water"
+        },
+        {
+          "sa": "पिपासु",
+          "en": "a thirsty person"
+        },
+        {
+          "sa": "प्रवृत्ति",
+          "en": "pursuit"
+        },
+        {
+          "sa": "निमित्त",
+          "en": "cause"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "अयथा",
+          "en": "as they are not"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "things"
+        },
+        {
+          "sa": "भ्रान्ति",
+          "en": "mistaken"
+        },
+        {
+          "sa": "विज्ञानम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "सर्व",
+          "en": "all"
+        },
+        {
+          "sa": "प्रवृत्ति",
+          "en": "activity"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "cause"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "वर्द्धामहे",
+          "en": "we flourish"
+        },
+        {
+          "sa": "वयम्",
+          "en": "we"
+        },
+        {
+          "sa": "हताः",
+          "en": "ruined"
+        },
+        {
+          "sa": "स्थ",
+          "en": "you are"
+        },
+        {
+          "sa": "यूयम्",
+          "en": "you"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0094",
@@ -3230,7 +3922,256 @@
       "deva": "एवं तावत्प्रत्यक्षानुमानागमप्रमाणावष्टम्भादात्मनो निरतिशयसुखहिताव्यतिरेकसिद्धेरहितस्य च षष्ठगोचरवत्स्वत एवानभिसंबन्धादेवंस्वाभाव्यात्मानवबोधमात्रादेव हितं मे स्यादहितं मे मा भूदिति मिथ्याज्ञानं तूषरशुक्तिकानवबोधोत्थमिथ्याज्ञानवत् प्रवृत्तिनिमित्तमिति निर्धारितम् । शास्त्रं च न पदार्थशक्त्याधानकृदिति । अथैतस्यैवोत्तरत्र प्रपञ्च आरभ्यते ।",
       "iast": "evaṃ tāvatpratyakṣānumānāgamapramāṇāvaṣṭambhādātmano niratiśayasukhahitāvyatirekasiddherahitasya ca ṣaṣṭhagocaravatsvata evānabhisaṃbandhādevaṃsvābhāvyātmānavabodhamātrādeva hitaṃ me syādahitaṃ me mā bhūditi mithyājñānaṃ tūṣaraśuktikānavabodhotthamithyājñānavat pravṛttinimittamiti nirdhāritam | śāstraṃ ca na padārthaśaktyādhānakṛditi | athaitasyaivottaratra prapañca ārabhyate |",
       "translation": "Thus it has been established, relying on perception, inference, and scripture, that the Self is inseparable from unsurpassed happiness and good, while what is harmful is unrelated to it of itself, like a sixth sense-object. Because this is the Self’s nature, the mere ignorance of it gives rise to the false thought, “May good come to me; may harm not come to me,” just as ignorance of a shell gives rise to the false perception of silver in a barren place. Scripture does not implant powers in things. This very point will now be developed.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "तावत्",
+          "en": "so far"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "अनुमान",
+          "en": "inference"
+        },
+        {
+          "sa": "आगम",
+          "en": "scripture"
+        },
+        {
+          "sa": "प्रमाण",
+          "en": "means of knowledge"
+        },
+        {
+          "sa": "अवष्टम्भात्",
+          "en": "by relying on"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "निरतिशय",
+          "en": "unsurpassed"
+        },
+        {
+          "sa": "सुख",
+          "en": "happiness"
+        },
+        {
+          "sa": "हित",
+          "en": "good"
+        },
+        {
+          "sa": "अव्यतिरेक",
+          "en": "non-separation"
+        },
+        {
+          "sa": "सिद्धेः",
+          "en": "because it is established"
+        },
+        {
+          "sa": "अहितस्य",
+          "en": "of what is harmful"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "षष्ठ",
+          "en": "sixth"
+        },
+        {
+          "sa": "गोचर",
+          "en": "object of sense"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "स्वतः",
+          "en": "by itself"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनभिसंबन्धात्",
+          "en": "because it is unconnected"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "स्वाभाव्य",
+          "en": "by its nature"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "ignorance"
+        },
+        {
+          "sa": "मात्रात्",
+          "en": "merely from"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "हितम्",
+          "en": "good"
+        },
+        {
+          "sa": "मे",
+          "en": "for me"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "may be"
+        },
+        {
+          "sa": "अहितम्",
+          "en": "harm"
+        },
+        {
+          "sa": "मे",
+          "en": "for me"
+        },
+        {
+          "sa": "मा",
+          "en": "not"
+        },
+        {
+          "sa": "भूत्",
+          "en": "may arise"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "false"
+        },
+        {
+          "sa": "ज्ञानम्",
+          "en": "cognition"
+        },
+        {
+          "sa": "तूषर",
+          "en": "saline ground"
+        },
+        {
+          "sa": "शुक्तिका",
+          "en": "shell"
+        },
+        {
+          "sa": "अनवबोध",
+          "en": "failure to recognize"
+        },
+        {
+          "sa": "उत्थ",
+          "en": "arising from"
+        },
+        {
+          "sa": "मिथ्या",
+          "en": "false"
+        },
+        {
+          "sa": "ज्ञान",
+          "en": "cognition"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "प्रवृत्ति",
+          "en": "action"
+        },
+        {
+          "sa": "निमित्तम्",
+          "en": "cause"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "निर्धारितम्",
+          "en": "has been established"
+        },
+        {
+          "sa": "शास्त्रम्",
+          "en": "scripture"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "पदार्थ",
+          "en": "objects"
+        },
+        {
+          "sa": "शक्ति",
+          "en": "powers"
+        },
+        {
+          "sa": "आधान",
+          "en": "implanting"
+        },
+        {
+          "sa": "कृत्",
+          "en": "that causes"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "एतस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "एव",
+          "en": "very"
+        },
+        {
+          "sa": "उत्तरत्र",
+          "en": "later"
+        },
+        {
+          "sa": "प्रपञ्चः",
+          "en": "detailed explanation"
+        },
+        {
+          "sa": "आरभ्यते",
+          "en": "is begun"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0097",
@@ -3317,10 +4258,55 @@
       "sectionTitle": "Adhyāya 1 — Why Self-knowledge is needed",
       "number": "1 · 98",
       "label": "Text 98",
-      "deva": "उक्तं तावदनवबुद्धवस्तुयाथात्म्य एव विधिप्रतिषेशशास्त्रेष्वधिक्रियत इति ।",
-      "iast": "uktaṃ tāvadanavabuddhavastuyāthātmya eva vidhipratiṣeśaśāstreṣvadhikriyata iti |",
-      "translation": "It has already been said that one who does not understand the true nature of things is eligible for the scriptural injunctions and prohibitions.",
-      "gloss": []
+      "deva": "उक्तं तावदनवबुद्धवस्तुयाथात्म्य एव विधिप्रतिषेधशास्त्रेष्वधिक्रियत इति ।",
+      "iast": "uktaṃ tāvadanavabuddhavastuyāthātmya eva vidhipratiṣedhaśāstreṣvadhikriyata iti |",
+      "translation": "It has already been said that only a person who has not understood the true nature of things is eligible for the scriptures of injunction and prohibition.",
+      "gloss": [
+        {
+          "sa": "उक्तम्",
+          "en": "it has been said"
+        },
+        {
+          "sa": "तावत्",
+          "en": "already"
+        },
+        {
+          "sa": "अनवबुद्ध",
+          "en": "not understood"
+        },
+        {
+          "sa": "वस्तु",
+          "en": "things"
+        },
+        {
+          "sa": "याथात्म्ये",
+          "en": "in their true nature"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "विधि",
+          "en": "injunction"
+        },
+        {
+          "sa": "प्रतिषेध",
+          "en": "prohibition"
+        },
+        {
+          "sa": "शास्त्रेषु",
+          "en": "in scriptures"
+        },
+        {
+          "sa": "अधिक्रियते",
+          "en": "is made eligible"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0100",
@@ -32987,7 +33973,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 424 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 418 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
