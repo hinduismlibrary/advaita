@@ -1714,7 +1714,7 @@ body.vd-chrome-page.contents-menu-page .page .contents-group h2{
   margin:0 0 6px!important;padding:0 0 5px!important;border-bottom:1px solid #a2a9b1!important;
   color:#202122!important;font:600 1.2em/1.4 Arial,Helvetica,sans-serif!important
 }
-body.vd-chrome-page.contents-menu-page .chapter-list{columns:1!important;column-gap:0!important;margin:0!important;padding-left:1.45em!important;list-style:disc!important}
+body.vd-chrome-page.contents-menu-page .chapter-list{columns:1!important;column-gap:0!important;margin:0!important;padding-left:1.45em!important;list-style:decimal!important}
 body.vd-chrome-page.contents-menu-page .chapter-list li{break-inside:avoid!important;margin:0!important;padding:1px 0!important}
 body.vd-chrome-page.contents-menu-page .chapter-link{display:inline!important;color:#0645ad!important;font:400 16px/1.6 Arial,Helvetica,sans-serif!important}
 body.vd-chrome-page.contents-menu-page .chapter-link .label-dev{display:inline!important;margin:0!important;color:#202122!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
@@ -1818,3 +1818,10 @@ body.vd-chrome-page .article-body blockquote{border-color:#a2a9b1!important;back
  body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle{border:1px solid #a2a9b1!important;border-radius:0!important;background:#f8f9fa!important}
  body.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle span{background:#202122!important}
 }
+
+/* Number chapter and section entries like a traditional contents list. */
+body.vd-chrome-page.scripture-index-page .chapter-list{list-style:decimal!important;padding-left:1.6em!important}
+body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-grid{counter-reset:gita-chapter 0!important;padding-left:0!important;list-style:none!important}
+body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-grid>a{display:block!important;counter-increment:gita-chapter}
+body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-grid>a::before{content:counter(gita-chapter) ". ";display:inline-block;min-width:2.25em;color:#54595d;text-decoration:none}
+body.vd-chrome-page.scripture-index-page #gita-chapters .chapter-number{display:none!important}
