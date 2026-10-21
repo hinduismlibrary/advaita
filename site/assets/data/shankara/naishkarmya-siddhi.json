@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 311 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 299 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -16341,7 +16341,7 @@
       "number": "2 · 6",
       "label": "Text 6",
       "deva": "योऽयमहंब्रह्मेति वाक्यार्थस्तत्प्रतिपत्तिर्वाक्यादेवेति प्रत्यक्षादीनामनेवंविषयत्वादित्यवादिषं तस्य विशुद्ध्यर्थमनैकात्त्रिकत्वं पूर्वपक्षत्वेनोपस्थाप्यते ।",
-      "iast": "yo'yamahaṃbrahmeti vākyārthastatpratipattirvākyādeveti pratyakṣādīnāmanevaṃviṣayatvādityavādiṣaṃ tasya viśuddhyarthamanaikāttrikatvaṃ pūrvapakṣatvenopasthāpyate |",
+      "iast": "yo'yamahaṃbrahmeti vākyārthastatpratipattirvākyādeveti pratyakṣādīnāmanevaṃviṣayatvādityavādiṣaṃ tasya viśuddhyarthamanaikāntikatvaṃ pūrvapakṣatvenopasthāpyate |",
       "translation": "I said that the meaning of the sentence “I am Brahman” is known from the sentence alone, since perception and the other means of knowledge cannot know it. To clarify that point, the opponent’s claim that the reasoning is inconclusive is introduced:",
       "gloss": [
         {
@@ -16433,7 +16433,7 @@
           "en": "for"
         },
         {
-          "sa": "अनैकात्त्रिकत्वम्",
+          "sa": "अनैकान्तिकत्वम्",
           "en": "inconclusiveness"
         },
         {
@@ -17386,7 +17386,7 @@
           "en": "not"
         },
         {
-          "sa": "आदरियसे",
+          "sa": "आद्रियसे",
           "en": "you heed"
         },
         {
@@ -18464,10 +18464,35 @@
       "sectionTitle": "Adhyāya 2 — Knowledge and action",
       "number": "2 · 59",
       "label": "Text 59",
-      "deva": "कथं देहं सूक्ष्मं निराकृर्यादिति । उच्यते ।",
-      "iast": "kathaṃ dehaṃ sūkṣmaṃ nirākṛryāditi | ucyate |",
+      "deva": "कथं देहं सूक्ष्मं निराकुर्यादिति । उच्यते ।",
+      "iast": "kathaṃ dehaṃ sūkṣmaṃ nirākuryād iti | ucyate |",
       "translation": "How is the subtle body rejected? It is explained:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "देहम्",
+          "en": "the body"
+        },
+        {
+          "sa": "सूक्ष्मम्",
+          "en": "subtle"
+        },
+        {
+          "sa": "निराकुर्यात्",
+          "en": "should be rejected"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is explained"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0389",
@@ -18541,7 +18566,16 @@
       "deva": "वैधर्म्ये दृष्टान्तः ।",
       "iast": "vaidharmye dṛṣṭāntaḥ |",
       "translation": "An example of difference is given:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "वैधर्म्ये",
+          "en": "for a difference"
+        },
+        {
+          "sa": "दृष्टान्तः",
+          "en": "an example"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0392",
@@ -18631,7 +18665,96 @@
       "deva": "एकस्यात्मनः कर्मकर्तृभावः सर्वथा नोपपद्यत इति श्रुत्वा मीमांसकः प्रत्यवतिष्ठते । अहंप्रत्ययग्राह्यत्वाद्ग्राहक आत्मेति तन्निवृत्त्यर्थमाह ।",
       "iast": "ekasyātmanaḥ karmakartṛbhāvaḥ sarvathā nopapadyata iti śrutvā mīmāṃsakaḥ pratyavatiṣṭhate | ahaṃpratyayagrāhyatvādgrāhaka ātmeti tannivṛttyarthamāha |",
       "translation": "After hearing that one and the same Self cannot be both agent and object of action, the Mīmāṃsaka objects: “The Self is the knower because it is grasped by the cognition ‘I.’” To remove this view, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एकस्य",
+          "en": "of one"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "Self"
+        },
+        {
+          "sa": "कर्म",
+          "en": "object"
+        },
+        {
+          "sa": "कर्तृ",
+          "en": "agent"
+        },
+        {
+          "sa": "भावः",
+          "en": "the state"
+        },
+        {
+          "sa": "सर्वथा",
+          "en": "in any way"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुत्वा",
+          "en": "having heard"
+        },
+        {
+          "sa": "मीमांसकः",
+          "en": "the Mīmāṃsaka"
+        },
+        {
+          "sa": "प्रत्यवतिष्ठते",
+          "en": "objects"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "प्रत्यय",
+          "en": "cognition"
+        },
+        {
+          "sa": "ग्राह्यत्वात्",
+          "en": "because it is grasped by"
+        },
+        {
+          "sa": "ग्राहकः",
+          "en": "the knower"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "is the Self"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "निवृत्ति",
+          "en": "removal"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "for the purpose"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0395",
@@ -18713,7 +18836,88 @@
       "deva": "अत्राह प्रत्यक्षेणात्मनः कर्मकर्तृत्वाभ्युपगमेतत्पादोपजीविनानुमानेन प्रत्यक्षोत्सारणमयुक्तमिति चोद्यं तन्निराकरणाय प्रत्यक्षोपन्यासः ।",
       "iast": "atrāha pratyakṣeṇātmanaḥ karmakartṛtvābhyupagametatpādopajīvinānumānena pratyakṣotsāraṇamayuktamiti codyaṃ tannirākaraṇāya pratyakṣopanyāsaḥ |",
       "translation": "An objection is raised: “Direct perception accepts that the Self is both agent and object. It is wrong to use an inference that depends on perception to set perception aside.” Direct perception is now cited to answer it.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "आह",
+          "en": "he raises"
+        },
+        {
+          "sa": "प्रत्यक्षेण",
+          "en": "through direct perception"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "of the Self"
+        },
+        {
+          "sa": "कर्म",
+          "en": "object"
+        },
+        {
+          "sa": "कर्तृत्व",
+          "en": "and agenthood"
+        },
+        {
+          "sa": "अभ्युपगमे",
+          "en": "if accepted"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "पाद",
+          "en": "basis"
+        },
+        {
+          "sa": "उपजीविना",
+          "en": "depending on"
+        },
+        {
+          "sa": "अनुमानेन",
+          "en": "by an inference"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "perception"
+        },
+        {
+          "sa": "उत्सारणम्",
+          "en": "setting aside"
+        },
+        {
+          "sa": "अयुक्तम्",
+          "en": "is improper"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चोद्यम्",
+          "en": "the objection"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "निराकरणाय",
+          "en": "to refute"
+        },
+        {
+          "sa": "प्रत्यक्ष",
+          "en": "direct perception"
+        },
+        {
+          "sa": "उपन्यासः",
+          "en": "is cited"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0398",
@@ -18807,7 +19011,80 @@
       "deva": "प्रत्यक्षेणैव भवदभिमतस्य प्रत्यक्षस्याभासीकृतत्वात् सुस्थमेवानुमानम् । अतस्तदेव प्रक्रियते तत्र च विकल्पदूषणाभिधानम् ।",
       "iast": "pratyakṣeṇaiva bhavadabhimatasya pratyakṣasyābhāsīkṛtatvāt susthamevānumānam | atastadeva prakriyate tatra ca vikalpadūṣaṇābhidhānam |",
       "translation": "Since direct perception itself has shown that your supposed perception is illusory, the inference stands firm. He now states the inference and its alternatives.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "प्रत्यक्षेण",
+          "en": "by direct perception"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "भवत्",
+          "en": "your"
+        },
+        {
+          "sa": "अभिमतस्य",
+          "en": "supposed"
+        },
+        {
+          "sa": "प्रत्यक्षस्य",
+          "en": "perception"
+        },
+        {
+          "sa": "आभासीकृतत्वात्",
+          "en": "because it has been shown to be illusory"
+        },
+        {
+          "sa": "सुस्थम्",
+          "en": "secure"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनुमानम्",
+          "en": "the inference"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "प्रक्रियते",
+          "en": "is set out"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "विकल्प",
+          "en": "alternatives"
+        },
+        {
+          "sa": "दूषण",
+          "en": "refutation"
+        },
+        {
+          "sa": "अभिधानम्",
+          "en": "the statement"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0401",
@@ -18881,7 +19158,72 @@
       "deva": "न युगपन्नपि क्रमेणोभयथा चैकस्य धर्मिणो ग्राह्यग्राहकत्वमुपपद्यत इति प्रतिपादनायाह ।",
       "iast": "na yugapannapi krameṇobhayathā caikasya dharmiṇo grāhyagrāhakatvamupapadyata iti pratipādanāyāha |",
       "translation": "To show that the same substance cannot be both the knower and the known, either simultaneously or in sequence, he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "युगपत्",
+          "en": "at the same time"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अपि",
+          "en": "either"
+        },
+        {
+          "sa": "क्रमेण",
+          "en": "in sequence"
+        },
+        {
+          "sa": "उभयथा",
+          "en": "in either way"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "एकस्य",
+          "en": "of one"
+        },
+        {
+          "sa": "धर्मिणः",
+          "en": "substance"
+        },
+        {
+          "sa": "ग्राह्य",
+          "en": "known"
+        },
+        {
+          "sa": "ग्राहक",
+          "en": "knower"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "the condition"
+        },
+        {
+          "sa": "उपपद्यते",
+          "en": "is possible"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रतिपादनाय",
+          "en": "to show"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0404",
@@ -18963,7 +19305,148 @@
       "deva": "सन्तु काममनात्मधर्मा ममत्वादयो यथोक्तन्यायबलादनात्मतयैव च तेषु व्यवहारादहंरूपस्य तु प्रत्यगात्मसंबन्धितयैव प्रसिद्धेरहंब्रह्मास्मीति श्रुतेश्चानात्मधर्मत्वमयुक्तमिति चेत्तन्न ।",
       "iast": "santu kāmamanātmadharmā mamatvādayo yathoktanyāyabalādanātmatayaiva ca teṣu vyavahārādahaṃrūpasya tu pratyagātmasaṃbandhitayaiva prasiddherahaṃbrahmāsmīti śruteścānātmadharmatvamayuktamiti cettanna |",
       "translation": "One might object: “Let ‘mine’ and desire be properties of the not-Self, as reason shows; ordinary usage confirms that. But ‘I’ is known only in relation to the inward Self, and the revelation ‘I am Brahman’ shows that it cannot belong to the not-Self.” This is not so.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "सन्तु",
+          "en": "let them be"
+        },
+        {
+          "sa": "कामम्",
+          "en": "indeed"
+        },
+        {
+          "sa": "अनात्म",
+          "en": "not-Self"
+        },
+        {
+          "sa": "धर्माः",
+          "en": "properties"
+        },
+        {
+          "sa": "ममत्व",
+          "en": "mineness"
+        },
+        {
+          "sa": "आदयः",
+          "en": "and the like"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उक्त",
+          "en": "stated"
+        },
+        {
+          "sa": "न्याय",
+          "en": "reasoning"
+        },
+        {
+          "sa": "बलात्",
+          "en": "by the force"
+        },
+        {
+          "sa": "अनात्मतया",
+          "en": "as not-Self"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "तेषु",
+          "en": "in those"
+        },
+        {
+          "sa": "व्यवहारात्",
+          "en": "because of ordinary usage"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "रूपस्य",
+          "en": "of the form"
+        },
+        {
+          "sa": "तु",
+          "en": "but"
+        },
+        {
+          "sa": "प्रत्यगात्म",
+          "en": "inward Self"
+        },
+        {
+          "sa": "संबन्धितया",
+          "en": "because it is related"
+        },
+        {
+          "sa": "एव",
+          "en": "only"
+        },
+        {
+          "sa": "प्रसिद्धेः",
+          "en": "because it is known"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "am"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "श्रुतेः",
+          "en": "because of scripture"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "अनात्म",
+          "en": "not-Self"
+        },
+        {
+          "sa": "धर्मत्वम्",
+          "en": "being a property"
+        },
+        {
+          "sa": "अयुक्तम्",
+          "en": "is unreasonable"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one objects"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "न",
+          "en": "is not so"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0407",
@@ -19049,7 +19532,36 @@
       "deva": "कथं वाक्यं तद्व्यपनेतृ तदिति । उच्यते ।",
       "iast": "kathaṃ vākyaṃ tadvyapanetṛ taditi | ucyate |",
       "translation": "How does that sentence remove the error? The answer is:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "the sentence"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "व्यपनेतृ",
+          "en": "removes"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "it is explained"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0410",
@@ -19139,7 +19651,68 @@
       "deva": "अहंपरिच्छेदव्यावृत्तौ न किंचिदव्यावृत्तं द्वैतजातमवशिष्यते द्वितीयसंबन्धस्य तन्मूलत्वात् । अत आह ।",
       "iast": "ahaṃparicchedavyāvṛttau na kiṃcidavyāvṛttaṃ dvaitajātamavaśiṣyate dvitīyasaṃbandhasya tanmūlatvāt | ata āha |",
       "translation": "When the limited notion “I” is removed, no duality remains; the relation to a second thing has that notion as its root. Therefore he says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "परिच्छेद",
+          "en": "limitation"
+        },
+        {
+          "sa": "व्यावृत्तौ",
+          "en": "when removed"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "किंचित्",
+          "en": "anything"
+        },
+        {
+          "sa": "अव्यावृत्तम्",
+          "en": "left unremoved"
+        },
+        {
+          "sa": "द्वैत",
+          "en": "duality"
+        },
+        {
+          "sa": "जातम्",
+          "en": "of every kind"
+        },
+        {
+          "sa": "अवशिष्यते",
+          "en": "remains"
+        },
+        {
+          "sa": "द्वितीय",
+          "en": "a second"
+        },
+        {
+          "sa": "संबन्धस्य",
+          "en": "relationship"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "मूलत्वात्",
+          "en": "because it is the root"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0413",
@@ -19209,7 +19782,32 @@
       "deva": "विवक्षितदृष्टान्तांशज्ञापनाय दृष्टान्तव्याख्या ।",
       "iast": "vivakṣitadṛṣṭāntāṃśajñāpanāya dṛṣṭāntavyākhyā |",
       "translation": "The example is explained to show the point intended:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "विवक्षित",
+          "en": "intended"
+        },
+        {
+          "sa": "दृष्टान्त",
+          "en": "example"
+        },
+        {
+          "sa": "अंश",
+          "en": "part"
+        },
+        {
+          "sa": "ज्ञापनाय",
+          "en": "for conveying"
+        },
+        {
+          "sa": "दृष्टान्त",
+          "en": "example"
+        },
+        {
+          "sa": "व्याख्या",
+          "en": "explanation"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0416",
@@ -19287,7 +19885,32 @@
       "deva": "अनन्वयाच्च नात्मधर्मोऽहङ्कारः ।",
       "iast": "ananvayācca nātmadharmo'haṅkāraḥ |",
       "translation": "The ego is not a property of the Self because it is not continuous with it.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अनन्वयात्",
+          "en": "because of non-continuity"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "धर्मः",
+          "en": "a property"
+        },
+        {
+          "sa": "अहङ्कारः",
+          "en": "ego"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0419",
@@ -19365,7 +19988,36 @@
       "deva": "आत्मधर्मत्वाभ्युपगमेऽपरिहार्यदोषप्रसक्तिश्च ।",
       "iast": "ātmadharmatvābhyupagame'parihāryadoṣaprasaktiśca |",
       "translation": "If ego is accepted as a property of the Self, an unavoidable defect follows:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "धर्मत्व",
+          "en": "being a property"
+        },
+        {
+          "sa": "अभ्युपगमे",
+          "en": "if accepted"
+        },
+        {
+          "sa": "अपरिहार्य",
+          "en": "unavoidable"
+        },
+        {
+          "sa": "दोष",
+          "en": "fault"
+        },
+        {
+          "sa": "प्रसक्तिः",
+          "en": "follows"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0422",
@@ -41243,7 +41895,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 311 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 299 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
