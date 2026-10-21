@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 216 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 212 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -31057,7 +31057,44 @@
       "deva": "अज्ञानमात्रनिमित्तत्वात्तद्विभागस्य सर्पात्मतेव रज्ज्वाः ।",
       "iast": "ajñānamātranimittatvāttadvibhāgasya sarpātmateva rajjvāḥ |",
       "translation": "The division [between Self and not-Self] is caused only by ignorance, as the snake-appearance is caused by a rope.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अज्ञान",
+          "en": "ignorance"
+        },
+        {
+          "sa": "मात्र",
+          "en": "alone"
+        },
+        {
+          "sa": "निमित्तत्वात्",
+          "en": "because it is the cause"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "विभागस्य",
+          "en": "of the division"
+        },
+        {
+          "sa": "सर्प",
+          "en": "snake"
+        },
+        {
+          "sa": "आत्मता",
+          "en": "having the form"
+        },
+        {
+          "sa": "इव",
+          "en": "like"
+        },
+        {
+          "sa": "रज्ज्वाः",
+          "en": "of a rope"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0680",
@@ -31067,8 +31104,153 @@
       "label": "Text 5",
       "deva": "तस्मात्तदपनुत्तौ द्वैतानर्थाभावः । तदपनोदश्च वाक्यादेव तत्पदपदार्थाभिज्ञस्य । अतो वाक्यव्याख्यानायाध्याय आरभ्यते । तत्र यथोक्तेन प्रकारेण तत्त्वमस्यादिवाक्योपनिविष्टपदपदार्थयोः कृतान्वयव्यतिरेकः ।",
       "iast": "tasmāttadapanuttau dvaitānarthābhāvaḥ | tadapanodaśca vākyādeva tatpadapadārthābhijñasya | ato vākyavyākhyānāyādhyāya ārabhyate | tatra yathoktena prakāreṇa tattvamasyādivākyopaniviṣṭapadapadārthayoḥ kṛtānvayavyatirekaḥ |",
-      "translation": "When ignorance is removed, there is no harm of duality. Its removal comes from the sentence alone, for one who knows the meanings of its words. Therefore this chapter begins to explain the sentence. The word-meanings in “That thou art” are connected through the agreement and exclusion already described.",
-      "gloss": []
+      "translation": "Therefore, when that ignorance is removed, the misery of duality is absent. Its removal is by the sentence alone for one who knows the word “That” and its meaning. For this reason the chapter begins to explain the sentence. There, the words and meanings contained in statements such as “That thou art” are brought into relation and distinguished through agreement and exclusion, as already described.",
+      "gloss": [
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "अपनुत्तौ",
+          "en": "when it is removed"
+        },
+        {
+          "sa": "द्वैत",
+          "en": "duality"
+        },
+        {
+          "sa": "अनर्थ",
+          "en": "misfortune"
+        },
+        {
+          "sa": "अभावः",
+          "en": "absence"
+        },
+        {
+          "sa": "तत्",
+          "en": "its"
+        },
+        {
+          "sa": "अपनोदः",
+          "en": "removal"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "from the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "पद",
+          "en": "word"
+        },
+        {
+          "sa": "पदार्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "अभिज्ञस्य",
+          "en": "for one who knows"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "व्याख्यानाय",
+          "en": "for explaining"
+        },
+        {
+          "sa": "अध्यायः",
+          "en": "the chapter"
+        },
+        {
+          "sa": "आरभ्यते",
+          "en": "begins"
+        },
+        {
+          "sa": "तत्र",
+          "en": "there"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उक्तेन",
+          "en": "described"
+        },
+        {
+          "sa": "प्रकारेण",
+          "en": "by the method"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "असि",
+          "en": "art"
+        },
+        {
+          "sa": "आदि",
+          "en": "and similar"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentences"
+        },
+        {
+          "sa": "उपनिविष्ट",
+          "en": "contained in"
+        },
+        {
+          "sa": "पद",
+          "en": "words"
+        },
+        {
+          "sa": "पदार्थ",
+          "en": "meanings"
+        },
+        {
+          "sa": "योः",
+          "en": "of both"
+        },
+        {
+          "sa": "कृत",
+          "en": "done"
+        },
+        {
+          "sa": "अन्वय",
+          "en": "connection"
+        },
+        {
+          "sa": "व्यतिरेकः",
+          "en": "and exclusion"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0682",
@@ -31138,7 +31320,104 @@
       "deva": "यदैव तदर्थं त्वमर्थेऽवैति तदैवावाक्यार्थतां प्रतिपद्यते गीर्मनसोः सृतिं न प्रतिपद्यत इति । कुत एतद्ध्यवसीयते । यस्मात् ।",
       "iast": "yadaiva tadarthaṃ tvamarthe'vaiti tadaivāvākyārthatāṃ pratipadyate gīrmanasoḥ sṛtiṃ na pratipadyata iti | kuta etaddhyavasīyate | yasmāt |",
       "translation": "When he understands the meaning of “That” through the meaning of “thou,” the sentence then passes beyond the course of speech and mind. How is this understood? Because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यदा",
+          "en": "when"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "अर्थे",
+          "en": "in the meaning"
+        },
+        {
+          "sa": "अवैति",
+          "en": "he understands"
+        },
+        {
+          "sa": "तदा",
+          "en": "then"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "अ",
+          "en": "beyond / not"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थताम्",
+          "en": "the state of meaning"
+        },
+        {
+          "sa": "प्रतिपद्यते",
+          "en": "he attains"
+        },
+        {
+          "sa": "गीः",
+          "en": "speech"
+        },
+        {
+          "sa": "मनसोः",
+          "en": "and mind"
+        },
+        {
+          "sa": "सृतिम्",
+          "en": "the path"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रतिपद्यते",
+          "en": "he enters"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "कुतः",
+          "en": "how"
+        },
+        {
+          "sa": "एतत्",
+          "en": "this"
+        },
+        {
+          "sa": "हि",
+          "en": "indeed"
+        },
+        {
+          "sa": "अवसीयते",
+          "en": "is determined"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0685",
@@ -31196,7 +31475,76 @@
       "deva": "एवं कृतान्वयव्यतिरेको वाक्यादेवावाक्यार्थं प्रतिपद्यत इत्युक्तमतस्तद्व्याख्यानाय सूत्रोपन्यासः ।",
       "iast": "evaṃ kṛtānvayavyatireko vākyādevāvākyārthaṃ pratipadyata ityuktamatastadvyākhyānāya sūtropanyāsaḥ |",
       "translation": "It has been said that, after agreement and exclusion, the meaning beyond the sentence is understood from the sentence alone. A concise rule is now stated to explain this:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "कृत",
+          "en": "having made"
+        },
+        {
+          "sa": "अन्वय",
+          "en": "connection"
+        },
+        {
+          "sa": "व्यतिरेकः",
+          "en": "and exclusion"
+        },
+        {
+          "sa": "वाक्यात्",
+          "en": "from the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "अ",
+          "en": "beyond / not"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning"
+        },
+        {
+          "sa": "प्रतिपद्यते",
+          "en": "he understands"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उक्तम्",
+          "en": "it has been said"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "व्याख्यानाय",
+          "en": "for explaining"
+        },
+        {
+          "sa": "सूत्र",
+          "en": "a concise rule"
+        },
+        {
+          "sa": "उपन्यासः",
+          "en": "is stated"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0688",
@@ -46655,7 +47003,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 216 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 212 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
