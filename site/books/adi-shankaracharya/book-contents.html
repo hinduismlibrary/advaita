@@ -10,74 +10,77 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light;--paper:#fff;--ink:#202122;--muted:#54595d;--line:#a2a9b1;--soft-line:#eaecf0;--link:#36c}
+:root{color-scheme:light;--ink:#202122;--muted:#54595d;--line:#a2a9b1;--link:#0645ad}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--ink);font:14px/1.65 Merriweather,Georgia,serif}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.65 Arial,Helvetica,sans-serif}
 a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline}
 a:focus-visible{outline:2px solid #36c;outline-offset:2px}
 .topbar{height:41px;border-bottom:1px solid var(--line);padding:5px max(24px,calc((100% - 1200px)/2))}
-.topbar a{color:#202122;font:500 16px Vollkorn,Georgia,serif}
-.page{width:min(1260px,100%);margin:0 auto;padding:14px 24px 56px}
-.hero{margin:0 0 24px;padding:8px 0 16px;text-align:left;border-bottom:1px solid var(--line)}
-.eyebrow{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:400;letter-spacing:0;text-transform:none}
-h1{margin:0;color:#202122;font:500 clamp(30px,3vw,36px)/1.25 Vollkorn,Georgia,serif}
-.author{margin:8px 0 0;color:var(--muted);font-style:normal;font-size:13px}
-.hero-links{display:flex;justify-content:flex-start;gap:18px;flex-wrap:wrap;margin-top:10px}
-.hero-links a{display:inline-block;min-height:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--link);font-size:13px;transition:none}
-.hero-links a:hover{text-decoration:underline}
-.reading-grid{display:grid;grid-template-columns:minmax(155px,195px) minmax(0,1fr);column-gap:clamp(24px,3vw,40px);align-items:start}
-.sidebar{position:sticky;top:18px;max-height:calc(100vh - 36px);overflow:auto;padding:0 16px 8px 0;border-right:1px solid var(--line)}
-.sidebar h2{margin:0 0 10px;padding:0 0 6px;border-bottom:1px solid #c8ccd1;color:#202122;font:600 19px/1.35 Vollkorn,Georgia,serif}
-.sidebar nav{display:block}
-.sidebar a{display:block;padding:6px 0;border-bottom:1px solid var(--soft-line);color:var(--link);font-size:13px;text-decoration:none}
-.sidebar a:hover{text-decoration:underline}
-.sections{min-width:0}
-.contents-group{margin:0 0 30px;scroll-margin-top:18px}
-.contents-group h2{margin:0 0 8px;padding:0 0 7px;border:0;border-bottom:1px solid #c8ccd1;color:#202122;font:600 19px/1.4 Vollkorn,Georgia,serif}
-.chapter-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;align-items:start}
-.chapter-link{display:block;min-width:0;min-height:0;padding:8px 0;border:0;border-bottom:1px solid var(--soft-line);border-radius:0;background:transparent;color:var(--link);font-size:14px;line-height:1.5;text-decoration:none;overflow-wrap:anywhere;transition:none}
-.chapter-link:hover,.chapter-link:focus-visible{background:transparent;color:#2a4b8d;text-decoration:underline}
-.bilingual-label{display:block}
-.label-en{display:block;color:inherit}
-.label-dev{display:block;margin-top:2px;color:#202122;font:400 12px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif}
-h1 .label-dev{margin-top:5px;font-size:20px;line-height:1.4}
-.author .label-dev,.eyebrow .label-dev{font-size:12px}
-.sidebar h2 .label-dev,.contents-group h2 .label-dev{font-size:13px}
-.loading,.error{padding:14px 0;color:var(--muted)}
-.complete-link{font-weight:400}
-@media(max-width:760px){
- .page{padding:12px 18px 44px}
- .hero{margin-bottom:22px;padding-top:5px}
- .reading-grid{grid-template-columns:1fr;gap:22px}
- .sidebar{position:static;max-height:none;padding:0 0 12px;border-right:0;border-bottom:1px solid var(--line)}
- .sidebar nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
- .chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px}
+.topbar a{color:#202122;font:500 16px Arial,Helvetica,sans-serif}
+body.vd-chrome-page.contents-menu-page .page{
+  box-sizing:border-box!important;width:min(1000px,100%)!important;max-width:1000px!important;
+  min-height:75vh!important;margin:0 auto!important;padding:22px clamp(20px,3vw,34px) 56px!important;
+  background:#fff!important;color:#202122!important;font:15px/1.65 Arial,Helvetica,sans-serif!important
 }
-@media(max-width:420px){.chapter-grid,.sidebar nav{grid-template-columns:1fr}.contents-group h2{font-size:18px}}
+body.vd-chrome-page.contents-menu-page .page .hero{
+  display:block;margin:0 0 10px;padding:0;border:0;background:transparent;text-align:left
+}
+body.vd-chrome-page.contents-menu-page .page .hero h1{
+  margin:0;color:#202122;font:400 1.8em/1.3 Arial,Helvetica,sans-serif
+}
+.author{margin:5px 0 0;color:var(--muted);font-size:13px;font-style:normal}
+.page-tools{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin:12px 0 26px;font-size:13px}
+.page-tools a{color:var(--link)}
+.page-tools .separator{color:#72777d}
+.sections{min-width:0}
+.contents-group{margin:0 0 28px;scroll-margin-top:18px}
+.contents-group h2{
+  margin:0 0 8px;padding:0 0 5px;border-bottom:1px solid var(--line);
+  color:#202122;font:400 1.45em/1.35 Arial,Helvetica,sans-serif
+}
+.list-summary{margin:0 0 12px;color:var(--muted);font-size:13px}
+.chapter-list{
+  columns:3;column-gap:36px;column-fill:balance;
+  margin:0;padding-left:1.45em
+}
+.chapter-list li{
+  break-inside:avoid; margin:0 0 .35em; padding-left:.12em
+}
+.chapter-link{display:block;min-width:0;color:var(--link);line-height:1.45;overflow-wrap:anywhere}
+.label-en{display:block;color:inherit}
+.label-dev{
+  display:block;margin-top:1px;color:#202122;
+  font:400 13px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif
+}
+h1 .label-dev{margin-top:3px;font-size:19px;line-height:1.45}
+.author .label-dev{font-size:12px}
+.contents-group h2 .label-dev{font-size:14px}
+.loading,.error{margin:12px 0;color:var(--muted)}
+.complete-link{font-weight:400}
+@media(max-width:800px){.chapter-list{columns:2;column-gap:28px}}
+@media(max-width:520px){
+  body.vd-chrome-page.contents-menu-page .page{padding:16px 18px 42px!important}
+  .chapter-list{columns:1}
+  body.vd-chrome-page.contents-menu-page .page .hero h1{font-size:1.65em}
+}
 </style>
 </head>
-<body>
+<body class="contents-menu-page">
 <header class="topbar"><a href="/advaita/">Viveka Dṛṣṭi</a></header>
 <main class="page">
   <header class="hero">
-    <p class="eyebrow">Advaita Texts</p>
     <h1 id="work-title">Contents</h1>
     <p class="author" id="work-author"></p>
-    <div class="hero-links">
-      <a href="/advaita/books/adi-shankaracharya/">← All Advaita texts</a>
-      <a class="complete-link" id="complete-link" href="/advaita/books/adi-shankaracharya/">Open full text</a>
-    </div>
   </header>
-  <div class="reading-grid">
-    <aside class="sidebar" aria-label="Contents">
-      <h2>Contents</h2>
-      <nav id="group-nav" aria-label="Book sections"></nav>
-    </aside>
-    <div class="sections" id="sections" aria-live="polite">
-      <p class="loading" role="status">Loading the chapter list…</p>
-    </div>
+  <nav class="page-tools" aria-label="Text navigation">
+    <a href="/advaita/books/adi-shankaracharya/">← All Advaita texts</a>
+    <span class="separator" aria-hidden="true">·</span>
+    <a class="complete-link" id="complete-link" href="/advaita/books/adi-shankaracharya/">Open full text</a>
+  </nav>
+  <div class="sections" id="sections" aria-live="polite">
+    <p class="loading" role="status">Loading the chapter list…</p>
   </div>
 </main>
 <script>
@@ -178,11 +181,10 @@ h1 .label-dev{margin-top:5px;font-size:20px;line-height:1.4}
     node.dataset.vdEnglish=pair.english;node.dataset.vdBilingual="true";node.classList.add("bilingual-label");node.replaceChildren(en,sa);
   }
   function renderStaticLabels(){
-    document.querySelectorAll(".hero .eyebrow,.hero-links a,.sidebar h2").forEach(function(node){renderBilingual(node,node.textContent.trim());});
+    document.querySelectorAll(".page-tools a").forEach(function(node){renderBilingual(node,node.textContent.trim());});
   }
   renderStaticLabels();
   var sectionsNode=document.getElementById("sections");
-  var groupNav=document.getElementById("group-nav");
   var titleNode=document.getElementById("work-title");
   var authorNode=document.getElementById("work-author");
   var completeLink=document.getElementById("complete-link");
@@ -305,14 +307,18 @@ h1 .label-dev{margin-top:5px;font-size:20px;line-height:1.4}
       if(items.length>15)groups.push({title:"Additional sections",items:items.slice(15)});
     }
     sectionsNode.replaceChildren();
-    groupNav.replaceChildren();
+    var summary=document.createElement("p");
+    summary.className="list-summary";
+    var summaryEnglish=document.createElement("span");
+    summaryEnglish.textContent=items.length+" entries";
+    var summarySanskrit=document.createElement("span");
+    summarySanskrit.className="label-dev";
+    summarySanskrit.lang="sa-Deva";
+    summarySanskrit.textContent=devanagariDigits(items.length)+" प्रविष्टयः";
+    summary.append(summaryEnglish,summarySanskrit);
+    sectionsNode.append(summary);
     groups.forEach(function(group,index){
       var groupId="contents-group-"+(index+1);
-      var sidebarLink=document.createElement("a");
-      sidebarLink.href="#"+groupId;
-      sidebarLink.textContent=group.title;
-      renderBilingual(sidebarLink,group.title);
-      groupNav.append(sidebarLink);
       var section=document.createElement("section");
       section.className="contents-group";
       section.id=groupId;
@@ -320,18 +326,20 @@ h1 .label-dev{margin-top:5px;font-size:20px;line-height:1.4}
       heading.textContent=group.title;
       renderBilingual(heading,group.title);
       section.append(heading);
-      var grid=document.createElement("nav");
-      grid.className="chapter-grid";
-      grid.setAttribute("aria-label",group.title);
+      var list=document.createElement("ul");
+      list.className="chapter-list";
+      list.setAttribute("aria-label",group.title);
       group.items.forEach(function(item){
+        var entry=document.createElement("li");
         var link=document.createElement("a");
         link.className="chapter-link";
         link.href=new URL("book-chapter.html?work="+encodeURIComponent(work)+"&unit="+encodeURIComponent(item.hash),window.location.href).href;
         link.textContent=item.label;
         renderBilingual(link,item.label);
-        grid.append(link);
+        entry.append(link);
+        list.append(entry);
       });
-      section.append(grid);
+      section.append(list);
       sectionsNode.append(section);
     });
   }).catch(function(error){showError("The contents list could not be loaded. "+error.message,readerUrl);});
