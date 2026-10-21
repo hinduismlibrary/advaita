@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The current reader has 71 units with Sanskrit, English translations, and glosses, but no explicit IAST; its contents currently have one generic section. Verify the advertised 227-verse coverage against the Sanskrit source, add any missing source units and named topic sections, then provide checked IAST throughout.
+**Vedāntasāra** — active. The 71 display entries now map all 227 source-numbered passages, with explicit IAST and eight named contents sections. I am auditing each grouped translation and word gloss against the Sanskrit before marking the text complete.
 
 ## Completed
 
@@ -68,7 +68,7 @@ The transliteration-button spacing correction and reader cache/version updates w
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Upadeśasāhasrī | 787 | Complete: all 787 verse and prose units have Sanskrit, English, explicit IAST, and Devanāgarī glosses; semantic audit completed through II.3.116. |
-| Vedāntasāra | 71 | Active: current reader has Sanskrit, English, and glosses; verify 227-verse coverage, add missing source units and descriptive contents, and provide explicit IAST. |
+| Vedāntasāra | 71 grouped entries / 227 passages | In progress: all source ranges mapped; explicit IAST and eight named contents sections added; audit each grouped translation and word gloss for accuracy. |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 
