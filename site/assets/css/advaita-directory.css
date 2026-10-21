@@ -102,12 +102,15 @@ body.ad-shankar-index-page .ad-links>.ad-entry:last-child:nth-child(odd){
 }
 
 
-/* Show Sanskrit work titles in Devanāgarī and IAST. */
-body.ad-shankar-index-page .ad-entry-link{display:block}
+/* Wikisource-style blue links for the original Sanskrit titles. */
+body.ad-shankar-index-page .ad-entry-link{display:block;color:#0645ad}
+body.ad-shankar-index-page .ad-entry-link:visited{color:#0b0080}
+body.ad-shankar-index-page .ad-entry-link:hover,
+body.ad-shankar-index-page .ad-entry-link:focus-visible{color:#0645ad;text-decoration:underline}
 body.ad-shankar-index-page .ad-entry-original{
- display:block;margin:0 0 1px;color:#202122;font:400 13px/1.45 Arial,Helvetica,sans-serif
+ display:block;margin:0;color:inherit;font:400 16px/1.45 Arial,Helvetica,sans-serif
 }
 body.ad-shankar-index-page .ad-entry-original-dev{
- color:#202122;font:400 14px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif
+ color:inherit;font:400 16px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif
 }
-body.ad-shankar-index-page .ad-entry-original-iast{color:#54595d;font:italic 400 13px/1.45 Arial,Helvetica,sans-serif}
+body.ad-shankar-index-page .ad-entry-original-iast{color:inherit;font:400 16px/1.45 Arial,Helvetica,sans-serif}
