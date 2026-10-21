@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Naiṣkarmyasiddhi** — active. All 423 numbered verses have Sanskrit, English, explicit IAST, and complete word glosses. The prose/commentary gloss pass now covers the chapter heading and entries 1.5–1.23 and 1.26–1.52; 434 non-verse entries remain, and 17 expected reader units are absent from the current transcription.
+**Naiṣkarmyasiddhi** — active. All 423 numbered verses have Sanskrit, English, explicit IAST, and complete word glosses. The prose/commentary gloss pass now covers the chapter heading and entries 1.5–1.23, 1.26–1.52, and 1.55–1.82; 424 non-verse entries remain, and 17 expected reader units are absent from the current transcription.
 ## Completed
 
 - **Vivekacūḍāmaṇi** — verified the 29 named, topic-led contents ranges cover verses 1–580 with no gaps or overlap. All 580 source verses occur once across 566 reader units, and every unit has Sanskrit, English, explicit IAST, and a word gloss.
@@ -61,7 +61,7 @@ The shared transliteration/word-for-word button row now has zero gap; all 26 rea
 | Māṇḍūkyakārikā | 215 | Complete: all 215 verses have Sanskrit, English, explicit IAST, and a non-empty Devanāgarī word gloss; four traditional chapter links now have topic cues. |
 | Manīṣāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Māyāpañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
-| Naiṣkarmyasiddhi | 880 of 897 expected reader units | Verse audit complete: all 423 numbered verses have Sanskrit, English, IAST, and Devanāgarī glosses. Prose/commentary pass in progress (434 non-verse entries remain unglossed; 17 expected units are absent). |
+| Naiṣkarmyasiddhi | 880 of 897 expected reader units | Verse audit complete: all 423 numbered verses have Sanskrit, English, IAST, and Devanāgarī glosses. Prose/commentary pass in progress (424 non-verse entries remain unglossed; 17 expected units are absent). |
 | Nirvāṇaṣaṭkam | 7 | Complete: all six verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 | Pañcīkaraṇa-prakaraṇa | 7 | Complete: all seven sections have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Viṣṇu Ṣaṭpadī Stotram | 8 | Complete: all seven verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
