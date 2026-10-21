@@ -24,6 +24,7 @@ function addFavicon(){
 function addStyles(){
   let link=document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
   if(link){
+    link.href=CSS;
     link.dataset.vivekaSiteChrome="true";
     document.head.append(link);
     return;
