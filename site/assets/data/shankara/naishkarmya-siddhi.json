@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 69 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 54 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -50277,7 +50277,60 @@
       "deva": "यस्मात्तत्त्वमस्यादिवाक्यमेवात्मनोऽशेषामविद्यां निरन्वयामपनुदति तस्मात् ।",
       "iast": "yasmāttattvamasyādivākyamevātmano'śeṣāmavidyāṃ niranvayāmapanudati tasmāt |",
       "translation": "Because a sentence such as “you are that” alone removes every trace of ignorance about the Self:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "असि",
+          "en": "art"
+        },
+        {
+          "sa": "आदि",
+          "en": "and similar"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "alone"
+        },
+        {
+          "sa": "आत्मनः",
+          "en": "about the Self"
+        },
+        {
+          "sa": "अशेषाम्",
+          "en": "all"
+        },
+        {
+          "sa": "अविद्याम्",
+          "en": "ignorance"
+        },
+        {
+          "sa": "निरन्वयम्",
+          "en": "completely"
+        },
+        {
+          "sa": "अपनुदति",
+          "en": "removes"
+        },
+        {
+          "sa": "तस्मात्",
+          "en": "therefore"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1056",
@@ -50351,7 +50404,108 @@
       "deva": "एवमप्रतिहतामहं ब्रह्मेति प्रमां तत्त्वमस्यादिवाक्यं कुर्वदपि न प्रतिपादयतीति चेदभिमतं न कुतश्चनापि प्रतिपत्तिः स्यादत आह ।",
       "iast": "evamapratihatāmahaṃ brahmeti pramāṃ tattvamasyādivākyaṃ kurvadapi na pratipādayatīti cedabhimataṃ na kutaścanāpi pratipattiḥ syādata āha |",
       "translation": "If one says that even though the sentence “I am Brahman” produces unobstructed valid knowledge, it does not actually teach it, then nothing could ever be understood. Therefore:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "एवम्",
+          "en": "thus"
+        },
+        {
+          "sa": "अप्रतिहताम्",
+          "en": "unobstructed"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "प्रमाम्",
+          "en": "valid cognition"
+        },
+        {
+          "sa": "तत्",
+          "en": "That"
+        },
+        {
+          "sa": "त्वम्",
+          "en": "thou"
+        },
+        {
+          "sa": "असि",
+          "en": "art"
+        },
+        {
+          "sa": "आदि",
+          "en": "and similar"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "sentence"
+        },
+        {
+          "sa": "कुर्वत्",
+          "en": "producing"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्रतिपादयति",
+          "en": "teaches"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if one says"
+        },
+        {
+          "sa": "अभिमतम्",
+          "en": "what is intended"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "कुतश्चन",
+          "en": "from anywhere"
+        },
+        {
+          "sa": "अपि",
+          "en": "at all"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "understanding"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would occur"
+        },
+        {
+          "sa": "अतः",
+          "en": "therefore"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1059",
@@ -50433,7 +50587,48 @@
       "deva": "न चोपादित्सिताद्वाक्यार्थाद्वाक्यार्थान्तरं कल्पयितुं युक्तम् । यस्मात् ।",
       "iast": "na copāditsitādvākyārthādvākyārthāntaraṃ kalpayituṃ yuktam | yasmāt |",
       "translation": "It is not reasonable to invent a different meaning for the sentence than the one intended. For:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "उपादित्सितात्",
+          "en": "from what is intended"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थात्",
+          "en": "meaning"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थान्तरम्",
+          "en": "a different meaning"
+        },
+        {
+          "sa": "कल्पयितुम्",
+          "en": "to invent"
+        },
+        {
+          "sa": "युक्तम्",
+          "en": "is reasonable"
+        },
+        {
+          "sa": "यस्मात्",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1062",
@@ -50519,7 +50714,48 @@
       "deva": "न च यथाभिमतोऽर्थो यथोक्तेन न्यायेन नावसीयते ।",
       "iast": "na ca yathābhimato'rtho yathoktena nyāyena nāvasīyate |",
       "translation": "Nor is the intended meaning impossible to determine by the reasoning already explained.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "अभिमतः",
+          "en": "intended"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "उक्तेन",
+          "en": "stated"
+        },
+        {
+          "sa": "न्यायेन",
+          "en": "by the reasoning"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "अवसीयते",
+          "en": "is determined"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1064",
@@ -50530,7 +50766,28 @@
       "deva": "कोऽसौ न्याय इत्याह ।",
       "iast": "ko'sau nyāya ityāha |",
       "translation": "The author states that reasoning:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कः",
+          "en": "what"
+        },
+        {
+          "sa": "असौ",
+          "en": "is that"
+        },
+        {
+          "sa": "न्यायः",
+          "en": "reasoning"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1066",
@@ -50663,7 +50920,52 @@
       "deva": "न चेदेवमुपगम्यते वाक्यस्य प्रमाणस्य सतोऽप्रामाण्यं प्राप्नोति । तदाह ।",
       "iast": "na cedevamupagamyate vākyasya pramāṇasya sato'prāmāṇyaṃ prāpnoti | tadāha |",
       "translation": "If this is not accepted, a sentence that is in fact a valid means of knowledge would be declared invalid. The author says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "if not"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if"
+        },
+        {
+          "sa": "एवम्",
+          "en": "this"
+        },
+        {
+          "sa": "उपगम्यते",
+          "en": "is accepted"
+        },
+        {
+          "sa": "वाक्यस्य",
+          "en": "of a sentence"
+        },
+        {
+          "sa": "प्रमाणस्य",
+          "en": "as a means of knowledge"
+        },
+        {
+          "sa": "सतः",
+          "en": "though valid"
+        },
+        {
+          "sa": "अप्रामाण्यम्",
+          "en": "invalidity"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "would follow"
+        },
+        {
+          "sa": "तत्",
+          "en": "this"
+        },
+        {
+          "sa": "आह",
+          "en": "he states"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1071",
@@ -50749,7 +51051,16 @@
       "deva": "अथ मन्यसे ।",
       "iast": "atha manyase |",
       "translation": "Suppose you think:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "मन्यसे",
+          "en": "you suppose"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1073",
@@ -50824,7 +51135,56 @@
       "deva": "न च युक्तिशब्दावृत्तिलक्षणात्प्रसंख्यानाद्यथावत्प्रतिपत्तिर्भविष्यतीति संभावयामः । यस्मात् ।",
       "iast": "na ca yuktiśabdāvṛttilakṣaṇātprasaṃkhyānādyathāvatpratipattirbhaviṣyatīti saṃbhāvayāmaḥ | yasmāt |",
       "translation": "We cannot suppose that correct understanding will arise from contemplation consisting of repeatedly turning over the reasoning and the words. For:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "युक्ति",
+          "en": "reasoning"
+        },
+        {
+          "sa": "शब्द",
+          "en": "words"
+        },
+        {
+          "sa": "आवृत्ति",
+          "en": "repeatedly turning over"
+        },
+        {
+          "sa": "लक्षणात्",
+          "en": "characterized by"
+        },
+        {
+          "sa": "प्रसंख्यानात्",
+          "en": "from contemplation"
+        },
+        {
+          "sa": "यथावत्",
+          "en": "correctly"
+        },
+        {
+          "sa": "प्रतिपत्तिः",
+          "en": "understanding"
+        },
+        {
+          "sa": "भविष्यति",
+          "en": "will arise"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "संभावयामः",
+          "en": "we can suppose"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1078",
@@ -50906,7 +51266,72 @@
       "deva": "अथैवमपि प्रसंख्यानमन्तरेण प्राणान्धारयितुं न शक्नोषीति चेच्छ्रवणादावेव संपादयिष्यामः । कथम् ।",
       "iast": "athaivamapi prasaṃkhyānamantareṇa prāṇāndhārayituṃ na śaknoṣīti cecchravaṇādāveva saṃpādayiṣyāmaḥ | katham |",
       "translation": "If you say that without such contemplation you cannot even sustain life, we will provide for it during listening itself. How?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "if"
+        },
+        {
+          "sa": "एवम्",
+          "en": "so"
+        },
+        {
+          "sa": "अपि",
+          "en": "even"
+        },
+        {
+          "sa": "प्रसंख्यानम्",
+          "en": "contemplation"
+        },
+        {
+          "sa": "अन्तरेण",
+          "en": "without"
+        },
+        {
+          "sa": "प्राणान्",
+          "en": "the breaths"
+        },
+        {
+          "sa": "धारयितुम्",
+          "en": "to sustain"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "शक्नोषि",
+          "en": "you are able"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "चेत्",
+          "en": "if you say"
+        },
+        {
+          "sa": "श्रवण",
+          "en": "hearing"
+        },
+        {
+          "sa": "आदौ",
+          "en": "from the beginning"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "संपादयिष्यामः",
+          "en": "we will provide"
+        },
+        {
+          "sa": "कथम्",
+          "en": "how"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1081",
@@ -50980,7 +51405,116 @@
       "deva": "ननु प्रसंख्यानविधिमनभ्युपगच्छतः पारमहंसी चर्या बौद्धादिचर्यावदशास्त्रपूर्विका प्राप्नोति ततश्चारूढपतितत्वं न स्यादशेषकर्मणां च निवृत्तिर्न प्राप्नोतीति । उच्यते ।",
       "iast": "nanu prasaṃkhyānavidhimanabhyupagacchataḥ pāramahaṃsī caryā bauddhādicaryāvadaśāstrapūrvikā prāpnoti tataścārūḍhapatitatvaṃ na syādaśeṣakarmaṇāṃ ca nivṛttirna prāpnotīti | ucyate |",
       "translation": "An objection: “If you reject an injunction to repeated contemplation, the highest renunciant’s way of life will be unscriptural, like the practices of Buddhists and others. Then there can be no ‘fallen’ person who has attained the path, and the cessation of all action cannot follow.” The answer is:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "ननु",
+          "en": "one may object"
+        },
+        {
+          "sa": "प्रसंख्यान",
+          "en": "contemplation"
+        },
+        {
+          "sa": "विधिम्",
+          "en": "injunction"
+        },
+        {
+          "sa": "अनभ्युपगच्छतः",
+          "en": "of one who does not accept"
+        },
+        {
+          "sa": "पारमहंसी",
+          "en": "of the supreme renunciant"
+        },
+        {
+          "sa": "चर्या",
+          "en": "the conduct"
+        },
+        {
+          "sa": "बौद्ध",
+          "en": "Buddhist"
+        },
+        {
+          "sa": "आदि",
+          "en": "and similar"
+        },
+        {
+          "sa": "चर्या",
+          "en": "practices"
+        },
+        {
+          "sa": "वत्",
+          "en": "like"
+        },
+        {
+          "sa": "अशास्त्र",
+          "en": "not scriptural"
+        },
+        {
+          "sa": "पूर्विका",
+          "en": "having as its source"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "follows"
+        },
+        {
+          "sa": "ततः",
+          "en": "then"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "आरूढ",
+          "en": "one who has taken up the path"
+        },
+        {
+          "sa": "पतितत्वम्",
+          "en": "the state of falling"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "स्यात्",
+          "en": "would be"
+        },
+        {
+          "sa": "अशेष",
+          "en": "all"
+        },
+        {
+          "sa": "कर्मणाम्",
+          "en": "of actions"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "निवृत्तिः",
+          "en": "cessation"
+        },
+        {
+          "sa": "न",
+          "en": "not"
+        },
+        {
+          "sa": "प्राप्नोति",
+          "en": "would follow"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the answer is given"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1084",
@@ -51066,7 +51600,20 @@
       "deva": "इति तृतीयोऽध्यायः ॥ ३॥",
       "iast": "iti tṛtīyo'dhyāyaḥ || 3||",
       "translation": "[End of the third chapter.]",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "तृतीयः",
+          "en": "third"
+        },
+        {
+          "sa": "अध्यायः",
+          "en": "chapter"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1086",
@@ -51077,7 +51624,20 @@
       "deva": "अथ चतुर्थोऽध्यायः ।",
       "iast": "atha caturtho'dhyāyaḥ |",
       "translation": "Now begins the fourth chapter.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "चतुर्थः",
+          "en": "fourth"
+        },
+        {
+          "sa": "अध्यायः",
+          "en": "chapter"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1088",
@@ -51462,7 +52022,56 @@
       "deva": "केन पुनर्न्यायेनात्मानात्मनोरश्वमहिषयोरिव विभागः क्रियत इति । उच्यते ।",
       "iast": "kena punarnyāyenātmānātmanoraśvamahiṣayoriva vibhāgaḥ kriyata iti | ucyate |",
       "translation": "By what reasoning can the Self be distinguished from the not-Self, as a horse from a buffalo? The answer:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "केन",
+          "en": "by what"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "न्यायेन",
+          "en": "reasoning"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अनात्मनोः",
+          "en": "and not-Self"
+        },
+        {
+          "sa": "अश्व",
+          "en": "horse"
+        },
+        {
+          "sa": "महिषयोः",
+          "en": "and buffalo"
+        },
+        {
+          "sa": "इव",
+          "en": "as between"
+        },
+        {
+          "sa": "विभागः",
+          "en": "a distinction"
+        },
+        {
+          "sa": "क्रियते",
+          "en": "is made"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "उच्यते",
+          "en": "the reply is given"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1101",
@@ -51596,10 +52205,47 @@
       "sectionTitle": "Adhyāya 4 — Liberation through knowledge",
       "number": "4 · 19",
       "label": "Text 19",
-      "deva": "उच्यतां तर्हि कया तु परिपाय्या वाक्यार्थं वेत्तीति ।",
-      "iast": "ucyatāṃ tarhi kayā tu paripāyyā vākyārthaṃ vettīti |",
+      "deva": "उच्यतां तर्हि कया तु परिपाट्या वाक्यार्थं वेत्तीति ।",
+      "iast": "ucyatāṃ tarhi kayā tu paripāṭyā vākyārthaṃ vettīti |",
       "translation": "Then by what method does one understand the sentence meaning?",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "उच्यताम्",
+          "en": "let it be stated"
+        },
+        {
+          "sa": "तर्हि",
+          "en": "then"
+        },
+        {
+          "sa": "कया",
+          "en": "by what"
+        },
+        {
+          "sa": "तु",
+          "en": "indeed"
+        },
+        {
+          "sa": "परिपाट्या",
+          "en": "method / order"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थम्",
+          "en": "meaning"
+        },
+        {
+          "sa": "वेत्ति",
+          "en": "one understands"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1105",
@@ -51610,7 +52256,20 @@
       "deva": "उच्यते । अन्वयव्यतिरेकाभ्याम् ।",
       "iast": "ucyate | anvayavyatirekābhyām |",
       "translation": "The answer: through agreement and difference.",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "उच्यते",
+          "en": "it is said"
+        },
+        {
+          "sa": "अन्वय",
+          "en": "agreement"
+        },
+        {
+          "sa": "व्यतिरेकाभ्याम्",
+          "en": "and difference"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-1107",
@@ -57042,7 +57701,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 69 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 54 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
