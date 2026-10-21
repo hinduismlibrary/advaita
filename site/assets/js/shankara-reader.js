@@ -128,21 +128,12 @@ function contentsHTML(units,id){
  }).join("")+'</ol>';
 }
 const TREATISE_READERS=new Set(["upadesha-sahasri","vedantasara","naishkarmya-siddhi","brahma-siddhi","panchadasi","svsss","mandukya-karika"]);
-function vedantasaraGroup(index){
- if(index<8)return "Opening · Anubandha-catuṣṭaya";
- if(index<19)return "Avidyā and its effects";
- if(index<24)return "Subtle body and sheaths";
- if(index<32)return "Pañcīkaraṇa and gross creation";
- if(index<37)return "Superimposition and negation";
- if(index<55)return "Mahāvākya and knowledge";
- if(index<62)return "Samādhi";
- return "Jīvanmukti";
-}
+function vedantasaraGroup(index,unit){return unit.sectionTitle||"Complete Sanskrit text";}
 function treatiseGroups(units,id){
  const groups=[];
  units.forEach((unit,index)=>{
   let title;
-  if(id==="vedantasara")title=vedantasaraGroup(index);
+  if(id==="vedantasara")title=vedantasaraGroup(index,unit);
   else if(id==="panchadasi"){
    const chapter=chapterOf(unit,id);
    title="Chapter "+chapter+(PANCHADASI_CHAPTERS[chapter]?": "+PANCHADASI_CHAPTERS[chapter]:"");
@@ -423,7 +414,7 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-gloss-20261020a";
+const READER_DATA_VERSION="reader-gloss-20261021a";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
  if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
