@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The reader now has 69 reading cards plus a separate colophon, representing all 227 source-numbered passages, with explicit IAST and eight named contents sections. I joined passages 51–52 in one card and restored the 208/209 boundary after finding passage 212 split across those grouped cards. This audit corrected the reversal of the dissolution relation in 197–199, fixed the compound and rope-ignorance spelling in 53–54, restored the closing Om and refined the quoted verse in 196, and refreshed IAST for the corrected readings. The shared transliteration/word-for-word button row now has zero gap, with refreshed asset URLs on all 26 reader pages that use the shared stylesheet. The semantic audit of the remaining grouped entries is still in progress; this text stays active until that review is done.
+**Vedāntasāra** — active. The reader has 69 reading cards plus a separate colophon for all 227 numbered passages and eight named contents sections. The source-number boundaries and Sanskrit, English, IAST, and word-for-word fields are being checked passage by passage. This pass restored passage markers and separated the English by passage through 121; it corrected the boundary errors in 90–97, restored passage 101, repaired the quoted sūtra in 102, restored the source wording and order in 104–109, and refined the translations for 112, 113, 119, and 120. The projection-power example in 53–54 now follows the source reading, and the reader displays each separated translation as its own paragraph. The shared transliteration/word-for-word button row has zero gap. All 29 reader pages now point at the updated renderer (d); the three pages that still had version a and the other 26 at c have been refreshed. Semantic review remains in progress from passage 122 onward.
 
 ## Completed
 
@@ -68,7 +68,7 @@ The shared transliteration/word-for-word button row now has zero gap; all 26 rea
 | Sarvavedāntasiddhāntasārasaṅgraha | 986 reader units / 1,006 source verses | Complete: every unit has Sanskrit, English, IAST, and a non-empty Devanāgarī word gloss; five named contents sections |
 | Upadeśapañcakam | 5 | Complete: all five verses have Sanskrit, reviewed English, explicit IAST, and Devanāgarī word glosses; one-page layout |
 | Upadeśasāhasrī | 787 | Complete: all 787 verse and prose units have Sanskrit, English, explicit IAST, and Devanāgarī glosses; semantic audit completed through II.3.116. |
-| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: all source-numbered passages remain represented; explicit IAST and eight named contents sections; passages 51–54 and 196–199 received source-based content corrections; IAST normalized in 51–52 and 224–225; continue semantic review of grouped translations and glosses. |
+| Vedāntasāra | 69 reading entries + colophon / 227 passages | In progress: source boundaries and passage-by-passage fields checked through 121; continue semantic review from 122. |
 | Vivekacūḍāmaṇi | 566 of 580 source verses | All reader units have word glosses and IAST; paired entries account for the source-unit difference; review contents |
 | Yatipañcakam | 6 | Complete: all five verses and colophon audited; all reader units have Sanskrit, English, IAST, and word glosses; one-page layout (under 20 verses) |
 

@@ -177,7 +177,7 @@ function treatiseUnitHTML(unit,index,englishOnly){
  const classes="gita-sanskrit sa-text"+(isLong?" treatise-long-text":"");
  const gloss=Array.isArray(unit.gloss)?unit.gloss:[];
  const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
- const translation=unit.translation?'<p class="gita-translation">'+esc(unit.translation)+'</p>':"";
+ const translation=unit.translation?String(unit.translation).split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\r?\n/g," "))+'</p>').join(""):"";
  return '<article class="gita-verse shankara-verse'+(isLong?" treatise-long-unit":"")+'" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/><div class="'+classes+'" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+breakLines(deva)+'</div>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
 }
 function treatiseReaderHTML(data,item,id){
@@ -414,7 +414,7 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-gloss-20261021c";
+const READER_DATA_VERSION="reader-gloss-20261021d";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
  if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
