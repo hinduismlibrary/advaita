@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Vedāntasāra** — active. The reader now has 69 reading cards plus a separate colophon, representing all 227 source-numbered passages, with explicit IAST and eight named contents sections. I joined passages 51–52 in one card and restored the 208/209 boundary after finding passage 212 split across those grouped cards. This audit corrected the reversal of the dissolution relation in 197–199, fixed the compound and rope-ignorance spelling in 53–54, restored the closing Om and refined the quoted verse in 196, and refreshed IAST for the corrected readings. The semantic audit of the remaining grouped entries is still in progress; this text stays active until that review is done.
+**Vedāntasāra** — active. The reader now has 69 reading cards plus a separate colophon, representing all 227 source-numbered passages, with explicit IAST and eight named contents sections. I joined passages 51–52 in one card and restored the 208/209 boundary after finding passage 212 split across those grouped cards. This audit corrected the reversal of the dissolution relation in 197–199, fixed the compound and rope-ignorance spelling in 53–54, restored the closing Om and refined the quoted verse in 196, and refreshed IAST for the corrected readings. The shared transliteration/word-for-word button row now has zero gap, with refreshed asset URLs on all 26 reader pages that use the shared stylesheet. The semantic audit of the remaining grouped entries is still in progress; this text stays active until that review is done.
 
 ## Completed
 
@@ -38,7 +38,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 - **Brahmasiddhi** — all 231 passages have Sanskrit, English, explicit IAST, and Devanāgarī word glosses; all four traditional contents sections have topic descriptions. Passage 1.2 has 5,231 gloss entries covering 3,441 Sanskrit tokens. Its source text was cleaned for an editorial marker split and spelling issues; the reading tattvagrahaṇātmikayā was emended from the source's tattvāgrahaṇātmikayā on contextual grounds.
 - **Māṇḍūkyakārikā** — all 215 verses have Sanskrit, English, explicit IAST, and non-empty Devanāgarī word glosses. The four traditional chapter links now name their topic as well as their prakaraṇa.
 
-The transliteration-button spacing correction and reader cache/version updates were completed earlier in the same workstream.
+The shared transliteration/word-for-word button row now has zero gap; all 26 reader pages that use the shared stylesheet have refreshed CSS and reader URLs.
 
 ## Inventory and remaining work
 
