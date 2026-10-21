@@ -45,7 +45,7 @@ function addFonts(){
   preconnectFonts.crossOrigin="anonymous";
   const link=document.createElement("link");
   link.rel="stylesheet";
-  link.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500&family=Tiro+Devanagari+Sanskrit&family=Vollkorn:wght@400;500;600&display=swap";
+  link.href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500&display=swap";
   link.dataset.vivekaSiteFonts="true";
   document.head.append(preconnect,preconnectFonts,link);
 }
