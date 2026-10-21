@@ -4,7 +4,7 @@
   "author": "Sureśvara",
   "expectedUnits": 897,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 173 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
+  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. The 880 present reader units include 457 prose, heading, and other non-verse entries; 167 of those still need word glosses. Seventeen expected reader units are absent from the current source transcription.",
   "sections": [
     {
       "id": 1,
@@ -36449,7 +36449,16 @@
       "deva": "अपि च ।",
       "iast": "api ca |",
       "translation": "Moreover:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अपि",
+          "en": "moreover"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0796",
@@ -36531,7 +36540,36 @@
       "deva": "अनवबोधकत्वं तु दूरोत्सारितमेव । यत आह ।",
       "iast": "anavabodhakatvaṃ tu dūrotsāritameva | yata āha |",
       "translation": "That scripture is unable to reveal the Self has already been ruled out completely. For it says:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अनवबोधकत्वम्",
+          "en": "inability to reveal"
+        },
+        {
+          "sa": "तु",
+          "en": "however"
+        },
+        {
+          "sa": "दूर",
+          "en": "far"
+        },
+        {
+          "sa": "उत्सारितम्",
+          "en": "cast away"
+        },
+        {
+          "sa": "एव",
+          "en": "indeed"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        },
+        {
+          "sa": "आह",
+          "en": "he says"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0799",
@@ -36609,7 +36647,80 @@
       "deva": "अन्वयव्यतिरेकपुरस्सरं वाक्यमेवावाक्यार्थरूपमात्मानं प्रतिपादयतीत्यस्य पक्षस्य द्रढिम्न श्रुत्युदाहरणमुपन्यस्यति ।",
       "iast": "anvayavyatirekapurassaraṃ vākyamevāvākyārtharūpamātmānaṃ pratipādayatītyasya pakṣasya draḍhimna śrutyudāharaṇamupanyasyati |",
       "translation": "To strengthen the view that the sentence of scripture, preceded by reasoning through agreement and difference, teaches the Self beyond ordinary sentence meaning, he gives a scriptural example:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "अन्वय",
+          "en": "agreement"
+        },
+        {
+          "sa": "व्यतिरेक",
+          "en": "exclusion"
+        },
+        {
+          "sa": "पुरस्सरम्",
+          "en": "preceded by"
+        },
+        {
+          "sa": "वाक्यम्",
+          "en": "the sentence"
+        },
+        {
+          "sa": "एव",
+          "en": "itself"
+        },
+        {
+          "sa": "अ",
+          "en": "beyond / not"
+        },
+        {
+          "sa": "वाक्य",
+          "en": "sentence"
+        },
+        {
+          "sa": "अर्थ",
+          "en": "meaning"
+        },
+        {
+          "sa": "रूपम्",
+          "en": "in the form"
+        },
+        {
+          "sa": "आत्मानम्",
+          "en": "the Self"
+        },
+        {
+          "sa": "प्रतिपादयति",
+          "en": "teaches"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "पक्षस्य",
+          "en": "view"
+        },
+        {
+          "sa": "द्रढिम्ने",
+          "en": "for strengthening"
+        },
+        {
+          "sa": "श्रुति",
+          "en": "scriptural"
+        },
+        {
+          "sa": "उदाहरणम्",
+          "en": "example"
+        },
+        {
+          "sa": "उपन्यस्यति",
+          "en": "he presents"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0802",
@@ -36703,7 +36814,148 @@
       "deva": "यथा \"तत्सत्यं स आत्मा तत्त्वमसि \" इत्यस्य शेषत्वेनान्वयव्यतिरेकश्रुतिर्यथा \"य एषोऽक्षिणिपुरुषो दृश्यते \" इत्याद्या \"अथ यो वेदेदं जिघ्राणि \" इत्यन्ता तथा \"अहं ब्रह्मास्मि \" इत्यस्य शेषः ।",
       "iast": "yathā \"tatsatyaṃ sa ātmā tattvamasi \" ityasya śeṣatvenānvayavyatirekaśrutiryathā \"ya eṣo'kṣiṇipuruṣo dṛśyate \" ityādyā \"atha yo vededaṃ jighrāṇi \" ityantā tathā \"ahaṃ brahmāsmi \" ityasya śeṣaḥ |",
       "translation": "Just as the teaching “That is the real; that is the Self; you are that” is clarified by the passages on agreement and difference beginning “the person seen in the eye” and ending “now, the one who knows ‘I smell this’,” so too those passages explain “I am Brahman.”",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "यथा",
+          "en": "just as"
+        },
+        {
+          "sa": "तत्",
+          "en": "that"
+        },
+        {
+          "sa": "सत्यम्",
+          "en": "is real"
+        },
+        {
+          "sa": "सः",
+          "en": "that"
+        },
+        {
+          "sa": "आत्मा",
+          "en": "is the Self"
+        },
+        {
+          "sa": "तत्त्वम्",
+          "en": "that"
+        },
+        {
+          "sa": "असि",
+          "en": "thou art"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "शेषत्वेन",
+          "en": "as a supplement"
+        },
+        {
+          "sa": "अन्वय",
+          "en": "agreement"
+        },
+        {
+          "sa": "व्यतिरेक",
+          "en": "exclusion"
+        },
+        {
+          "sa": "श्रुतिः",
+          "en": "scriptural teaching"
+        },
+        {
+          "sa": "यथा",
+          "en": "as"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "एषः",
+          "en": "this"
+        },
+        {
+          "sa": "अक्षिणि",
+          "en": "in the eye"
+        },
+        {
+          "sa": "पुरुषः",
+          "en": "person"
+        },
+        {
+          "sa": "दृश्यते",
+          "en": "is seen"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "आद्या",
+          "en": "beginning with"
+        },
+        {
+          "sa": "अथ",
+          "en": "now"
+        },
+        {
+          "sa": "यः",
+          "en": "who"
+        },
+        {
+          "sa": "वेद",
+          "en": "knows"
+        },
+        {
+          "sa": "इदम्",
+          "en": "this"
+        },
+        {
+          "sa": "जिघ्राणि",
+          "en": "I smell"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अन्ता",
+          "en": "ending with"
+        },
+        {
+          "sa": "तथा",
+          "en": "likewise"
+        },
+        {
+          "sa": "अहम्",
+          "en": "I"
+        },
+        {
+          "sa": "ब्रह्म",
+          "en": "Brahman"
+        },
+        {
+          "sa": "अस्मि",
+          "en": "am"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "अस्य",
+          "en": "of this"
+        },
+        {
+          "sa": "शेषः",
+          "en": "a supplement"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0805",
@@ -36765,7 +37017,60 @@
       "deva": "कथं पुनरयमर्थोऽवसीयते अहंव्याजेनात्रात्मार्थो बुबोधयिषित इति । यतः ।",
       "iast": "kathaṃ punarayamartho'vasīyate ahaṃvyājenātrātmārtho bubodhayiṣita iti | yataḥ |",
       "translation": "How is it established that the intended meaning of the word “I” here is the Self? Because:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "कथम्",
+          "en": "how"
+        },
+        {
+          "sa": "पुनः",
+          "en": "then"
+        },
+        {
+          "sa": "अयम्",
+          "en": "this"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "अवसीयते",
+          "en": "is determined"
+        },
+        {
+          "sa": "अहम्",
+          "en": "“I”"
+        },
+        {
+          "sa": "व्याजेन",
+          "en": "by way of"
+        },
+        {
+          "sa": "अत्र",
+          "en": "here"
+        },
+        {
+          "sa": "आत्म",
+          "en": "Self"
+        },
+        {
+          "sa": "अर्थः",
+          "en": "meaning"
+        },
+        {
+          "sa": "बुबोधयिषितः",
+          "en": "intended to be made known"
+        },
+        {
+          "sa": "इति",
+          "en": "thus"
+        },
+        {
+          "sa": "यतः",
+          "en": "because"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0808",
@@ -36839,7 +37144,24 @@
       "deva": "निर्णेनेक्ति च पृष्टो मुनिः ।",
       "iast": "nirṇenekti ca pṛṣṭo muniḥ |",
       "translation": "The sage explains the point in response to a question:",
-      "gloss": []
+      "gloss": [
+        {
+          "sa": "निर्णेनेक्ति",
+          "en": "makes clear"
+        },
+        {
+          "sa": "च",
+          "en": "and"
+        },
+        {
+          "sa": "पृष्टः",
+          "en": "when asked"
+        },
+        {
+          "sa": "मुनिः",
+          "en": "the sage"
+        }
+      ]
     },
     {
       "id": "naishkarmya-siddhi-0811",
@@ -49526,7 +49848,7 @@
       "4.78"
     ],
     "partialUnits": [],
-    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 173 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
+    "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. 167 non-verse entries remain without glosses; 17 expected reader units are absent from the current source transcription."
   },
   "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
 }
