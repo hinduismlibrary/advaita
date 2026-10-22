@@ -6,13 +6,28 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / 'site'
-SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-2", "20261021-wikisource-4", "20261021-numbered-contents-1", "20261021-standardized-blue-1")
+SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-2", "20261021-wikisource-4", "20261021-numbered-contents-1", "20261021-standardized-blue-1", "20261022-link-styles-1")
 LOADER = re.compile(
-    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:20261019-unified-theme-4|20261020-on-site-search-1|20261021-original-iast-2|20261021-wikisource-4|20261021-numbered-contents-1|20261021-standardized-blue-1)["']""",
+    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:20261019-unified-theme-4|20261020-on-site-search-1|20261021-original-iast-2|20261021-wikisource-4|20261021-numbered-contents-1|20261021-standardized-blue-1|20261022-link-styles-1)["']""",
     re.IGNORECASE,
 )
 HTML_DOC = re.compile(r"<html\b", re.IGNORECASE)
 BODY = re.compile(r"<body\b", re.IGNORECASE)
+
+PREPARE = ROOT / "tools/scripts/site-checks/prepare-site-deploy.py"
+CHROME_JS = SITE / "assets/js/site-chrome.js"
+prepare_source = PREPARE.read_text(encoding="utf-8")
+chrome_source = CHROME_JS.read_text(encoding="utf-8")
+cache_line = next((line for line in prepare_source.splitlines() if line.startswith("CACHE_VERSION = ")), "")
+quote = '"'
+css_marker = "site-chrome.css?v="
+cache_version = cache_line.split(quote, 2)[1] if quote in cache_line else None
+css_version = chrome_source.split(css_marker, 1)[1].split(quote, 1)[0] if css_marker in chrome_source else None
+if not cache_version or not css_version or cache_version != css_version:
+    expected = cache_version or "missing deploy cache version"
+    actual = css_version or "missing CSS cache version"
+    print(f"Shared CSS cache version mismatch: deploy uses {expected}; site-chrome.js loads {actual}.")
+    sys.exit(1)
 
 missing = []
 checked = 0
