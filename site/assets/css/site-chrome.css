@@ -2201,3 +2201,410 @@ body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-prima
     justify-content:flex-start!important;
   }
 }
+
+
+/* A quieter Wikisource-led catalogue style: flat paper, small headings, and ordinary lists. */
+:root{
+  color-scheme:light!important;
+  --vd-chrome:#fff!important;
+  --vd-paper:#fff!important;
+  --vd-ink:#202122!important;
+  --vd-teal:#202122!important;
+  --vd-line:#a2a9b1!important;
+  --vd-link:#0645ad!important;
+}
+body.vd-chrome-page.vd-chrome-page{
+  background:#fff!important;
+  color:#202122!important;
+  font:400 15px/1.6 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page a,
+body.vd-chrome-page.vd-chrome-page a:visited{
+  color:#0645ad!important;
+  text-decoration:none!important;
+}
+body.vd-chrome-page.vd-chrome-page a:hover,
+body.vd-chrome-page.vd-chrome-page a:focus-visible{
+  color:#0645ad!important;
+  text-decoration:underline!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header{
+  position:relative!important;
+  top:auto!important;
+  background:#fff!important;
+  color:#202122!important;
+  border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap,
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-nav-subrow{
+  width:min(1180px,calc(100% - 40px))!important;
+  max-width:1180px!important;
+  margin:0 auto!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap{
+  min-height:56px!important;
+  padding:7px 0!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .brand{
+  color:#202122!important;
+  font:500 21px/1.2 Arial,Helvetica,sans-serif!important;
+  letter-spacing:normal!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-nav-subrow{
+  padding:0 0 5px!important;
+  background:#fff!important;
+  border:0!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav{
+  justify-content:flex-start!important;
+  gap:0 14px!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav a{
+  min-height:30px!important;
+  padding:3px 1px!important;
+  border:0!important;
+  border-bottom:2px solid transparent!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#0645ad!important;
+  font:400 14px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-primary-nav a[aria-current="page"]{
+  border-bottom-color:#0645ad!important;
+  background:transparent!important;
+  color:#0645ad!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-search-form{
+  gap:5px!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input{
+  min-width:150px!important;
+  min-height:32px!important;
+  padding:4px 7px!important;
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  background:#fff!important;
+  color:#202122!important;
+  font:400 14px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-search-form button{
+  min-height:32px!important;
+  padding:4px 9px!important;
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  background:#f8f9fa!important;
+  color:#0645ad!important;
+  font:400 14px/1.4 Arial,Helvetica,sans-serif!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-menu-toggle{
+  border:1px solid #a2a9b1!important;
+  border-radius:0!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-home,.archive-shell,.page,.ad-page,.search-panel,.contact-panel,.not-found){
+  box-sizing:border-box!important;
+  width:min(1180px,calc(100% - 48px))!important;
+  max-width:1180px!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  padding:20px 0 34px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page .article-shell{
+  width:min(1080px,calc(100% - 48px))!important;
+  max-width:1080px!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  padding:20px 0 34px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-home,.page,.ad-page,.archive-shell,.article-shell) :is(h1,h2,h3,h4){
+  color:#202122!important;
+  letter-spacing:normal!important;
+  text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-home,.page,.ad-page,.archive-shell,.article-shell) h1{
+  font:500 1.75rem/1.3 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-home,.page,.ad-page,.archive-shell,.article-shell) h2{
+  font:600 1.12rem/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-home,.page,.ad-page,.archive-shell,.article-shell) h3{
+  font:600 1rem/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-panel,.ad-section,.ad-alpha-group,.purana-section,.purana-letter-group,.contents-group){
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home>h1,
+body.vd-chrome-page.vd-chrome-page :is(.article-heading,.page>.hero,.page>.bookhead,.ad-hero){
+  margin:0 0 14px!important;
+  padding:0 0 8px!important;
+  border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  background:#fff!important;
+  text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.article-heading,.page>.hero,.page>.bookhead,.ad-hero) h1{
+  margin:0!important;
+  color:#202122!important;
+  font:500 1.75rem/1.3 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-intro{
+  max-width:850px!important;
+  margin:0 0 18px!important;
+  color:#202122!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  align-items:start!important;
+  gap:18px 28px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
+  display:contents!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title{
+  margin:0 0 5px!important;
+  padding:0 0 4px!important;
+  border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;
+  font:600 1.05rem/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list,
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-research-list,
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-letter-group ul,
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-links,
+body.vd-chrome-page.vd-chrome-page.archive-page .archive-list{
+  margin:3px 0 12px!important;
+  padding:0 0 0 1.45em!important;
+  list-style:disc!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list li,
+body.vd-chrome-page.vd-chrome-page.purana-library-page :is(.purana-research-list,.purana-letter-group ul) li,
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-links li,
+body.vd-chrome-page.vd-chrome-page.archive-page .archive-list li{
+  margin:0!important;
+  padding:1px 0!important;
+  border:0!important;
+  background:transparent!important;
+  line-height:1.5!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-link-list,.archive-list,.purana-letter-group ul,.purana-research-list,.ad-links) a{
+  color:#0645ad!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.hp-link-list,.archive-list,.purana-letter-group ul,.purana-research-list,.ad-links) a :is([lang="sa-Deva"],.purana-name-dev,.ad-entry-original-dev){
+  color:inherit!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-alpha-index,
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-alpha-groups{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  align-items:start!important;
+  gap:10px 28px!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.purana-letter-group,.ad-alpha-group){
+  min-width:0!important;
+  margin:0 0 8px!important;
+  padding:0!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.purana-letter-group,.ad-alpha-group) h3{
+  margin:0 0 4px!important;
+  padding:0 0 3px!important;
+  border:0!important;
+  border-bottom:1px solid #eaecf0!important;
+  color:#202122!important;
+  font:600 1rem/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-section-title{
+  margin:14px 0 7px!important;
+  padding:0 0 5px!important;
+  border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  color:#202122!important;
+  font:600 1.15rem/1.45 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-name-dev{
+  color:inherit!important;
+  font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-name-iast{
+  color:inherit!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0 0 0 1.55em!important;
+  columns:1!important;
+  column-gap:28px!important;
+  column-fill:balance!important;
+  list-style:decimal!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list:has(>li:nth-child(8)),
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list:has(>li:nth-child(8)){
+  columns:2!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list:has(>li:nth-child(16)),
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list:has(>li:nth-child(16)){
+  columns:3!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list li,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list li{
+  display:list-item!important;
+  break-inside:avoid-column!important;
+  margin:0 0 3px!important;
+  padding:0 5px 0 0!important;
+  border:0!important;
+  background:transparent!important;
+  color:#202122!important;
+  line-height:1.55!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-link{
+  display:inline!important;
+  color:#0645ad!important;
+  line-height:1.5!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid,
+body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid,
+body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0 0 0 1.45em!important;
+  columns:1!important;
+  column-gap:28px!important;
+  column-fill:balance!important;
+  list-style:disc!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid:has(>a:nth-child(8)),
+body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid:has(>a:nth-child(8)),
+body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid:has(>a:nth-child(8)){
+  columns:2!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid:has(>a:nth-child(14)),
+body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid:has(>a:nth-child(14)),
+body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid:has(>a:nth-child(14)){
+  columns:3!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid>a,
+body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid>a,
+body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid>a{
+  display:list-item!important;
+  break-inside:avoid-column!important;
+  min-width:0!important;
+  margin:0 0 4px!important;
+  padding:0 8px 0 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#0645ad!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
+  text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid>a:hover,
+body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid>a:hover{
+  text-decoration:underline!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-number,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-name{
+  color:#0645ad!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-name{
+  font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-iast{
+  display:block!important;
+  margin:0!important;
+  color:#54595d!important;
+  font:italic 400 13px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.archive-list,.ad-links,.purana-letter-group ul) li::marker,
+body.vd-chrome-page.vd-chrome-page .chapter-grid>a::marker{
+  color:#202122!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.vd-breadcrumbs,.vd-breadcrumb-nav,.breadcrumb-nav,.breadcrumbs){
+  margin:0 auto 12px!important;
+  color:#54595d!important;
+  font:400 13px/1.45 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.vd-breadcrumbs,.vd-breadcrumb-nav,.breadcrumb-nav,.breadcrumbs) a{
+  color:#0645ad!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.reader .side,.sidebar){
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+@media(max-width:960px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory,
+  body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-alpha-index,
+  body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-alpha-groups{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list:has(>li:nth-child(8)),
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list:has(>li:nth-child(8)),
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid:has(>a:nth-child(8)),
+  body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid:has(>a:nth-child(8)),
+  body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid:has(>a:nth-child(8)){
+    columns:2!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list:has(>li:nth-child(16)),
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list:has(>li:nth-child(16)),
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid:has(>a:nth-child(14)),
+  body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid:has(>a:nth-child(14)),
+  body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid:has(>a:nth-child(14)){
+    columns:2!important;
+  }
+}
+@media(max-width:620px){
+  body.vd-chrome-page.vd-chrome-page :is(.hp-home,.archive-shell,.page,.ad-page,.search-panel,.contact-panel,.not-found,.article-shell){
+    width:calc(100% - 32px)!important;
+    padding-top:16px!important;
+    padding-bottom:28px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory,
+  body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-alpha-index,
+  body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-alpha-groups{
+    grid-template-columns:1fr!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list,
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .chapter-list,
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader .chapter-grid,
+  body.vd-chrome-page.vd-chrome-page.page-page .chapter-grid,
+  body.vd-chrome-page.vd-chrome-page.reader-page .chapter-grid{
+    columns:1!important;
+  }
+  body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-nav-wrap,
+  body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-nav-subrow{
+    width:calc(100% - 32px)!important;
+  }
+}
