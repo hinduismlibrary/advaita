@@ -2608,3 +2608,60 @@ body.vd-chrome-page.vd-chrome-page :is(.reader .side,.sidebar){
     width:calc(100% - 32px)!important;
   }
 }
+
+
+/* Apply the directory-list pattern to chapter indexes even on pages without a page-type class. */
+body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{
+  display:block!important;
+  grid-template-columns:none!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0 0 0 1.45em!important;
+  columns:1!important;
+  column-gap:28px!important;
+  column-fill:balance!important;
+  list-style:disc!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid:has(>a:nth-child(8)),
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid:has(>a:nth-child(8)){
+  columns:2!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid:has(>a:nth-child(14)),
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid:has(>a:nth-child(14)){
+  columns:3!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid>a,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid>a{
+  display:list-item!important;
+  break-inside:avoid-column!important;
+  min-width:0!important;
+  margin:0 0 4px!important;
+  padding:0 8px 0 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#0645ad!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
+  text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid>a:hover,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid>a:hover{
+  text-decoration:underline!important;
+}
+@media(max-width:960px){
+  body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid:has(>a:nth-child(8)),
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid:has(>a:nth-child(8)),
+  body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid:has(>a:nth-child(14)),
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid:has(>a:nth-child(14)){
+    columns:2!important;
+  }
+}
+@media(max-width:620px){
+  body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid,
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{
+    columns:1!important;
+  }
+}
