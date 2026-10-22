@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261022-wikisource-inspired-3";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261022-standardized-reading-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -46,7 +46,7 @@ function addFonts(){
   preconnectFonts.crossOrigin="anonymous";
   const link=document.createElement("link");
   link.rel="stylesheet";
-  link.href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500&display=swap";
+  link.href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600&family=Vollkorn:wght@400;500;600;700&display=swap";
   link.dataset.vivekaSiteFonts="true";
   document.head.append(preconnect,preconnectFonts,link);
 }
@@ -301,6 +301,14 @@ function makeHeader(path){
   });
   return header;
 }
+function fixInlineLabelSpacing(){
+  document.querySelectorAll("main.site-main .article-body :is(p,li,td,dd,dt,div)>strong,main.site-main .article-body :is(p,li,td,dd,dt,div)>b").forEach(label=>{
+    const next=label.nextSibling;
+    if(!next||next.nodeType!==3)return;
+    const text=next.textContent||"";
+    if(text&&!/^\s/.test(text)&&! /^[,.;:!?)}\]]/.test(text))next.textContent=" "+text;
+  });
+}
 function watchSearchResults(){
   const results=document.querySelector(".search-results");
   if(!results||results.dataset.vdLabelWatch==="true")return;
@@ -339,6 +347,7 @@ function mount(){
     document.body.prepend(header);
   }
   applyPageLabels();
+  fixInlineLabelSpacing();
   watchSearchResults();
   watchDynamicLabels();
   return true;

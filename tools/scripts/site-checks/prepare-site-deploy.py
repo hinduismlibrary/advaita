@@ -7,7 +7,7 @@ import os
 import re
 from pathlib import Path
 
-CACHE_VERSION = "20261022-wikisource-inspired-3"
+CACHE_VERSION = "20261022-standardized-reading-1"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]

@@ -239,6 +239,16 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
         && !/^chapter\s+\d+$/i.test(item.label);
     });
   }
+  function hasTraditionalDivisions(data,items){
+    var units=Array.isArray(data&&data.units)?data.units:[];
+    var sections=Array.isArray(data&&data.sections)?data.sections:[];
+    if(data&&data.traditionalDivisions===true)return true;
+    if(sections.some(function(section){return section&&section.traditional===true;}))return true;
+    if(units.some(function(unit){return unit.chapter!==undefined&&unit.chapter!==null&&String(unit.chapter).trim()!=="";}))return true;
+    if(work==="panchadasi"||work==="svsss")return true;
+    if(items.some(function(item){return /^(?:chapter|part|book)\s+(?:\d+|[ivxlcdm]+)\b/i.test(item.label);}))return true;
+    return items.length>1&&items.length<=15&&sourceItemsAreDescriptive(items);
+  }
   function unitChapter(unit){
     if(unit.chapter!==undefined&&unit.chapter!==null)return String(unit.chapter);
     var match=String(unit.id||"").match(/^(?:panchadasi|svsss)-(\d+)-/);
@@ -273,17 +283,14 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       if(!prior||prior.title!==title)grouped.push({title:title,hash:unit.id,count:0,index:index});
       grouped[grouped.length-1].count++;
     });
-    if(grouped.length>1)return grouped.map(function(group){return {label:group.title,hash:group.hash};});
-    var descriptiveLabels=units.every(function(unit){return unit.label&&!/^(?:(?:chapter\s+\S+\s*[·:–-]\s*)?)(?:verses?|passages?|sections?|pages?|entries?)\s+\S+$/i.test(unit.label);});
-    if(descriptiveLabels)return units.map(function(unit){return {label:unit.label,hash:unit.id};});
-    if(units.length<=20&&units.some(function(unit){return unit.label&&!/^verse\s+\S+$/i.test(unit.label);})){
-      return units.map(function(unit,index){return {label:unit.label||("Section "+(index+1)),hash:unit.id};});
-    }
+    var hasTraditionalChapter=units.some(function(unit){return unit.chapter!==undefined&&unit.chapter!==null&&String(unit.chapter).trim()!=="";})||work==="panchadasi"||work==="svsss";
+    if(grouped.length>1&&(hasTraditionalChapter||grouped.length<=20))return grouped.map(function(group){return {label:group.title,hash:group.hash};});
+    if(grouped.length===1&&hasTraditionalChapter)return [{label:grouped[0].title,hash:grouped[0].hash}];
     return [];
   }
   function fallbackRanges(data){
     var units=Array.isArray(data&&data.units)?data.units:[];
-    if(units.length<=20)return units.map(function(unit,index){return {label:unit.label||("Entry "+(index+1)),hash:unit.id};});
+    if(units.length<=50)return [];
     var result=[];
     var chunkSize=Math.max(1,Math.ceil(units.length/12));
     for(var i=0;i<units.length;i+=chunkSize){
@@ -316,9 +323,26 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     var sourceAuthor=doc.querySelector(".shankara-author");
     renderBilingual(authorNode,sourceAuthor?sourceAuthor.textContent.trim():"",authorPairs[work]||labelFor("By "+(sourceAuthor?sourceAuthor.textContent.trim().replace(/^By\s+/i,""):"")));
     document.title="Text contents — "+titlePair.english+" — Viveka Drishti";
-    var items=sectionItems(data);
     var fallback=sourceItems(doc);
-    if(!items.length&&fallback.length)items=fallback;
+    var units=Array.isArray(data&&data.units)?data.units:[];
+    if(units.length<=50&&!hasTraditionalDivisions(data,fallback)){
+      sectionsNode.replaceChildren();
+      sectionsNode.hidden=true;
+      completeLink.href=readerUrl.href;
+      return;
+    }
+    sectionsNode.hidden=false;
+    var items=sectionItems(data);
+    if(!items.length&&fallback.length&&(
+      (fallback.length>1&&fallback.length<=15&&sourceItemsAreDescriptive(fallback))
+      ||fallback.some(function(item){return /^(?:chapter|part|book)\s+(?:\d+|[ivxlcdm]+)\b/i.test(item.label);})
+    ))items=fallback;
+    if(!items.length&&units.length<=50){
+      sectionsNode.replaceChildren();
+      sectionsNode.hidden=true;
+      completeLink.href=readerUrl.href;
+      return;
+    }
     if(!items.length)items=fallbackRanges(data);
     if(!items.length)throw new Error("No chapter or section links were found.");
     var groups=[{title:"Chapters and sections",items:items}];
