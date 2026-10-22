@@ -7,8 +7,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / 'site'
 SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-2", "20261021-wikisource-4", "20261021-numbered-contents-1", "20261021-standardized-blue-1", "20261022-link-styles-1", "20261022-wikisource-directory-1", "20261022-sitewide-content-1")
+SUPPORTED_THEME_PATTERN = "|".join(re.escape(version) for version in SUPPORTED_THEME_VERSIONS)
 LOADER = re.compile(
-    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:20261019-unified-theme-4|20261020-on-site-search-1|20261021-original-iast-2|20261021-wikisource-4|20261021-numbered-contents-1|20261021-standardized-blue-1|20261022-link-styles-1|20261022-sitewide-content-1)["']""",
+    r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:THEME_VERSION)["']""".replace("THEME_VERSION", SUPPORTED_THEME_PATTERN),
     re.IGNORECASE,
 )
 HTML_DOC = re.compile(r"<html\b", re.IGNORECASE)
