@@ -1844,3 +1844,72 @@ body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-iast
 body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-separator{
   color:#0645ad!important;
 }
+
+/* Full-width, compact Wikisource-style directories and contents. */
+body.vd-chrome-page.vd-chrome-page:is(.home-page,.page-page) .hp-home{
+  width:min(1040px,calc(100% - 40px))!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px 34px!important;align-items:start!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
+  display:grid!important;grid-template-columns:1fr!important;align-content:start!important;gap:14px!important;min-width:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
+  margin:0!important;padding:8px 0 0!important;border-top:1px solid #c8ccd1!important;border-bottom:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a:visited,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a *{color:#0645ad!important}
+body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-letter-group a .purana-name-dev{color:#0645ad!important}
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link,
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link:visited,
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link *{color:#0645ad!important}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single{
+  display:block!important;width:100%!important;max-width:none!important;margin:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single>.main{
+  width:100%!important;max-width:none!important;min-width:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0 28px!important;
+  width:100%!important;margin:0!important;padding:0!important;border:0!important;list-style:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid>a{
+  display:block!important;min-width:0!important;margin:0!important;padding:7px 8px 8px 0!important;
+  border:0!important;border-bottom:1px solid #eaecf0!important;background:#fff!important;
+  color:#0645ad!important;font:400 15px/1.5 Arial,Helvetica,sans-serif!important;text-decoration:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid>a:hover,
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid>a:focus-visible{
+  color:#0645ad!important;text-decoration:underline!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-number{
+  display:inline!important;color:#54595d!important;font:400 14px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-name{
+  display:inline!important;color:#0645ad!important;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-name::before{
+  content:" · ";color:#72777d!important;font:400 14px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-iast{
+  display:block!important;margin-top:1px!important;color:#0645ad!important;font:400 14px/1.45 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list{
+  display:grid!important;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))!important;gap:0 28px!important;
+  columns:unset!important;margin:0!important;padding-left:1.6em!important;list-style:decimal!important;
+}
+body.vd-chrome-page.vd-chrome-page.contents-menu-page .chapter-list li{
+  break-inside:avoid!important;margin:0!important;padding:4px 6px 5px 0!important;border-bottom:1px solid #eaecf0!important;
+}
+@media(max-width:900px){
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 20px!important;
+  }
+}
+@media(max-width:600px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:1fr!important;gap:14px!important}
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-column{gap:12px!important}
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{grid-template-columns:1fr!important}
+}

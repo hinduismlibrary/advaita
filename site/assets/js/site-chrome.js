@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261022-link-styles-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261022-wikisource-directory-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -73,6 +73,7 @@ function routeTitle(path){
   if(/\/articles\/mulamadhyamakakarika-with-chandrakirti$/.test(path))return "Mūlamadhyamakakārikā";
   if(path==="/advaita/articles")return "Writings";
   if(/\/books\/adi-shankaracharya\/book-contents$/.test(path))return "Contents";
+  if(/\/books\/adi-shankaracharya\/stotrams$/.test(path))return "Advaita Stotrams";
   if(/\/search$/.test(path))return "Search";
   return currentTitle();
 }
@@ -115,7 +116,7 @@ function makeCrumbs(path){
     return [home,{label:"Advaita Texts",href:bookIndex},{label:title}];
   }
   if(/\/articles\/varna-vicara$/.test(path)||/\/articles\/a-shashtric-lens-of-varna/.test(path))
-    return [home,{label:"Varṇa",href:SITE+"#varna"},{label:title}];
+    return [home,{label:"Documents",href:SITE+"#documents"},{label:title}];
   if(/\/articles(?:\/|$)/.test(path))
     return [home,{label:"Writings",href:SITE+"articles/"},{label:title}];
   if(/\/pages(?:\/|$)/.test(path))

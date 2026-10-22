@@ -29,10 +29,14 @@ body.advaita-directory-page{margin:0;background:#fff;color:#202122;font:16px/1.6
 /* Alphabetical Wikisource-style groupings */
 .ad-title-dev,.ad-heading-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif}
 .ad-title-separator,.ad-heading-separator{padding:0 .16em;color:var(--muted)}
-.ad-alpha-groups{columns:3;column-gap:32px}
-.ad-alpha-group{break-inside:avoid; margin:0 0 12px}
+.ad-alpha-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:30px;row-gap:0;align-items:start}
+.ad-alpha-group{min-width:0;break-inside:avoid;margin:0 0 10px}
 .ad-alpha-group h3{margin:0 0 3px;color:#202122;font:600 1em/1.4 Arial,Helvetica,sans-serif}
 .ad-entry-original-dev{color:inherit}
 .ad-entry-link:visited{color:var(--link)}
-@media(max-width:850px){.ad-alpha-groups{columns:2}}
-@media(max-width:600px){.ad-alpha-groups{columns:1}}
+@media(max-width:850px){.ad-alpha-groups{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}}
+@media(max-width:600px){.ad-alpha-groups{grid-template-columns:1fr}}
+
+.ad-index-navigation{margin:0 0 16px;padding:0 0 8px;border-bottom:1px solid #eaecf0}
+.ad-index-navigation a{color:var(--link);font:400 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-alpha-group h3{padding:0 0 2px;border-bottom:1px solid #eaecf0}
