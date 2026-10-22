@@ -2216,7 +2216,7 @@ body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-prima
 body.vd-chrome-page.vd-chrome-page{
   background:#fff!important;
   color:#202122!important;
-  font:400 15px/1.6 Arial,Helvetica,sans-serif!important;
+  font:400 16px/1.65 Arial,Helvetica,sans-serif!important;
 }
 body.vd-chrome-page.vd-chrome-page a,
 body.vd-chrome-page.vd-chrome-page a:visited{
@@ -2311,8 +2311,8 @@ body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-menu-
 }
 body.vd-chrome-page.vd-chrome-page :is(.hp-home,.archive-shell,.page,.ad-page,.search-panel,.contact-panel,.not-found){
   box-sizing:border-box!important;
-  width:min(1180px,calc(100% - 48px))!important;
-  max-width:1180px!important;
+  width:min(1080px,calc(100% - 48px))!important;
+  max-width:1080px!important;
   min-height:0!important;
   margin:0 auto!important;
   padding:20px 0 34px!important;
@@ -2373,17 +2373,30 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-home-intro{
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
   display:grid!important;
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  align-items:start!important;
-  gap:18px 28px!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:18px 36px!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
-  display:contents!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  gap:14px!important;
+  min-width:0!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
   min-width:0!important;
   margin:0!important;
-  padding:0!important;
+  padding:8px 0 0!important;
+  border:0!important;
+  border-top:1px solid #c8ccd1!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-panel:last-child{
+  padding-bottom:8px!important;
+  border-bottom:1px solid #c8ccd1!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title{
   margin:0 0 5px!important;
@@ -2610,18 +2623,18 @@ body.vd-chrome-page.vd-chrome-page :is(.reader .side,.sidebar){
 }
 
 
-/* Apply the directory-list pattern to chapter indexes even on pages without a page-type class. */
+/* Keep source chapter numbering while sharing one compact contents layout. */
 body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid,
 body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{
   display:block!important;
   grid-template-columns:none!important;
   width:100%!important;
   margin:0!important;
-  padding:0 0 0 1.45em!important;
+  padding:0!important;
   columns:1!important;
   column-gap:28px!important;
   column-fill:balance!important;
-  list-style:disc!important;
+  list-style:none!important;
 }
 body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid:has(>a:nth-child(8)),
 body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid:has(>a:nth-child(8)){
@@ -2664,4 +2677,94 @@ body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .c
   body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .chapter-grid{
     columns:1!important;
   }
+}
+
+/* Shared finishing rules for consistent reading pages and compact contents. */
+body.vd-chrome-page.vd-chrome-page :is(.article-shell,.article-body,.gita-content,.mmk-content,.page,.ad-page,.ad-main,.archive-shell,.hp-home,.reader,.reader .main,.main,.parva-content,.part,.article){
+  color:#202122!important;
+  font:400 16px/1.65 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main :is(.article-shell,.article-body,.gita-content,.mmk-content,.page,.ad-page,.ad-main,.archive-shell,.hp-home,.reader,.reader .main,.main,.parva-content,.part,.article) :is(p,li,dd,dt,blockquote,figcaption,.verse,.gita-verse,.gita-sanskrit,.gita-translation,.gita-commentary,.chapter-text,.verse-text){
+  color:#202122!important;
+  font-size:16px!important;
+  line-height:1.65!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main :is(.article-shell,.article-body,.gita-content,.mmk-content,.page,.ad-page,.ad-main,.archive-shell,.hp-home,.reader,.reader .main,.main,.parva-content,.part,.article) :is([lang$="-Deva"],.catalog-dev,.ad-title-dev,.ad-heading-dev,.purana-name-dev,.chapter-name,.ad-entry-original-dev,.hp-home-title-dev){
+  color:#202122!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.catalog-iast,.ad-title-en,.ad-entry-original-iast,.chapter-iast,.hp-home-title-iast){
+  color:#54595d!important;
+  font-style:italic!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title{
+  margin:0 0 15px!important;
+  padding:0 0 10px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title .hp-home-title-dev{
+  display:block!important;
+  margin:0 0 2px!important;
+  color:#202122!important;
+  font:500 28px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title .hp-home-title-iast{
+  display:block!important;
+  color:#54595d!important;
+  font:italic 400 15px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .brand .vd-label-dev{
+  order:-1!important;
+  margin:0 0 2px!important;
+}
+body.vd-chrome-page.vd-chrome-page :is(.page,.reader,.ad-page,.article-shell) .chapter-grid:has(>a .chapter-number){
+  list-style:none!important;
+}
+
+body.vd-chrome-page.vd-chrome-page main.site-main [data-vd-bilingual="true"]>.vd-label-dev{
+  display:block!important;
+  margin-top:1px!important;
+  color:#202122!important;
+  font:400 13px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main [data-vd-bilingual="true"]>.vd-label-en[lang^="sa-Latn"]{
+  display:block!important;
+  color:#54595d!important;
+  font:italic 400 14px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main :is(.hero,.bookhead,.ad-hero,.article-heading,.article-head) h1 :is(.catalog-dev,.ad-title-dev){
+  display:block!important;
+  margin:0 0 2px!important;
+  color:#202122!important;
+  font:500 26px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main :is(.hero,.bookhead,.ad-hero,.article-heading,.article-head) h1 :is(.catalog-iast,.ad-title-en){
+  display:block!important;
+  margin:0!important;
+  color:#54595d!important;
+  font:italic 400 15px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page .ad-entry-original{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:1px!important;
+}
+body.vd-chrome-page.vd-chrome-page .ad-entry-original-dev{
+  display:block!important;
+  color:#202122!important;
+  font:400 16px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page .ad-entry-original-separator{display:none!important}
+body.vd-chrome-page.vd-chrome-page .ad-entry-original-iast{
+  display:block!important;
+  color:#0645ad!important;
+  font:italic 400 14px/1.4 Arial,Helvetica,sans-serif!important;
+}
+
+body.vd-chrome-page.vd-chrome-page main.site-main h1[data-vd-bilingual="true"]>.vd-label-dev{
+  margin:0 0 2px!important;
+  font:500 26px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page main.site-main h1[data-vd-bilingual="true"]>.vd-label-en[lang^="sa-Latn"]{
+  font:italic 400 15px/1.4 Arial,Helvetica,sans-serif!important;
 }
