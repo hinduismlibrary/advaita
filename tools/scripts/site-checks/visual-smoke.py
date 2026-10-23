@@ -22,15 +22,26 @@ class QuietHandler(SimpleHTTPRequestHandler):
         pass
 
 
-def assert_monochrome(page) -> None:
+def assert_site_palette(page) -> None:
     colors = page.locator("a").evaluate_all(
         "links => links.map(link => getComputedStyle(link).color)"
     )
-    assert all(color == "rgb(32, 33, 34)" for color in colors), colors
+    assert all(color == "rgb(6, 69, 173)" for color in colors), colors
     background = page.locator("body").evaluate(
         "element => getComputedStyle(element).backgroundColor"
     )
     assert background == "rgb(255, 255, 255)", background
+    devanagari = page.locator('[lang^="sa-Deva"], [lang^="hi-Deva"]').evaluate_all(
+        "nodes => nodes.map(node => getComputedStyle(node).color)"
+    )
+    assert all(color == "rgb(32, 33, 34)" for color in devanagari), devanagari
+    blue_labels = page.locator(
+        ".vd-label-en, .vd-label-iast, .label-en, .original-work-iast, "
+        ".ad-entry-original-iast, .catalog-iast, .chapter-iast, "
+        ".purana-name-iast, .ad-title-en, .ad-heading-en, "
+        ".hp-home-title-iast, .hp-section-en, .hp-link-en, .hp-original-iast"
+    ).evaluate_all("nodes => nodes.map(node => getComputedStyle(node).color)")
+    assert all(color == "rgb(6, 69, 173)" for color in blue_labels), blue_labels
 
 
 def run() -> None:
@@ -54,7 +65,22 @@ def run() -> None:
                 page.goto(base, wait_until="domcontentloaded")
                 page.locator(".vd-global-header .vd-label-dev").first.wait_for(timeout=20000)
                 page.evaluate("() => document.fonts.ready")
-                assert_monochrome(page)
+                assert_site_palette(page)
+                nav_formats = page.locator(".vd-primary-nav a").evaluate_all("""
+                    links => links.map(link => {
+                        const dev = link.querySelector(".vd-label-dev");
+                        const roman = link.querySelector(".vd-label-en, .vd-label-iast");
+                        return {
+                            devColor: dev ? getComputedStyle(dev).color : null,
+                            romanColor: roman ? getComputedStyle(roman).color : null
+                        };
+                    })
+                """)
+                assert nav_formats and all(
+                    row["devColor"] == "rgb(32, 33, 34)"
+                    and row["romanColor"] == "rgb(6, 69, 173)"
+                    for row in nav_formats
+                ), nav_formats
                 title_order = page.locator(".hp-section-title").first.evaluate(
                     "el => Array.from((el.querySelector(':scope > a') || el).children).map(child => child.className)"
                 )
@@ -69,7 +95,7 @@ def run() -> None:
                     "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
                 )
                 assert colors["dev"] == "rgb(32, 33, 34)", colors
-                assert colors["latin"] == "rgb(32, 33, 34)", colors
+                assert colors["latin"] == "rgb(6, 69, 173)", colors
                 link_formats = page.locator(".hp-link-list a").evaluate_all("""
                     links => links.map(link => {
                         const [first, second] = Array.from(link.children);
@@ -87,16 +113,16 @@ def run() -> None:
                     and row["firstLang"] == "sa-Deva"
                     and row["secondLang"] != "sa-Deva"
                     and row["firstColor"] == "rgb(32, 33, 34)"
-                    and row["secondColor"] == "rgb(32, 33, 34)"
+                    and row["secondColor"] == "rgb(6, 69, 173)"
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"panel_gap_px": round(gap, 1), "link_format": "Devanagari first; Latin/English second; monochrome", "links_checked": len(link_formats), **colors}
+                report["home"] = {"panel_gap_px": round(gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "nav_items_checked": len(nav_formats), **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
                 page.locator(".ad-entry-original-dev").first.wait_for(timeout=20000)
                 page.evaluate("() => document.fonts.ready")
-                assert_monochrome(page)
+                assert_site_palette(page)
                 directory = page.locator(".ad-entry-original").evaluate_all("""
                     rows => rows.map(row => {
                         const devanagari = row.querySelector(".ad-entry-original-dev");
@@ -118,19 +144,43 @@ def run() -> None:
                     and row["romanDisplay"] == "block"
                     and row["devTop"] < row["romanTop"]
                     and row["devColor"] == "rgb(32, 33, 34)"
-                    and row["romanColor"] == "rgb(32, 33, 34)"
+                    and row["romanColor"] == "rgb(6, 69, 173)"
                     and row["separatorDisplay"] in ("none", "absent")
                     for row in directory
                 ), directory
-                assert page.locator("a").first.evaluate("(el)=>getComputedStyle(el).color") == "rgb(32, 33, 34)"
+                assert page.locator("a").first.evaluate("(el)=>getComputedStyle(el).color") == "rgb(6, 69, 173)"
                 assert page.locator("body").evaluate("(el)=>getComputedStyle(el).backgroundColor") == "rgb(255, 255, 255)"
-                report["directory"] = {"entries_checked": len(directory), "order": "Devanagari above IAST", "palette": "black on white"}
+                report["directory"] = {"entries_checked": len(directory), "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST; white background"}
                 page.screenshot(path=str(OUT / "advaita-directory.png"))
+
+                page.goto(base + "pages/purana-library/", wait_until="domcontentloaded")
+                page.locator(".purana-name-dev").first.wait_for(timeout=20000)
+                page.evaluate("() => document.fonts.ready")
+                assert_site_palette(page)
+                puranas = page.locator(".purana-name-dev").evaluate_all("""
+                    labels => labels.map(dev => {
+                        const roman = dev.nextElementSibling;
+                        return {
+                            devColor: getComputedStyle(dev).color,
+                            romanColor: roman ? getComputedStyle(roman).color : null,
+                            devTop: dev.getBoundingClientRect().top,
+                            romanTop: roman ? roman.getBoundingClientRect().top : null
+                        };
+                    })
+                """)
+                assert puranas and all(
+                    row["devColor"] == "rgb(32, 33, 34)"
+                    and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devTop"] < row["romanTop"]
+                    for row in puranas
+                ), puranas
+                report["puranas"] = {"entries_checked": len(puranas), "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST"}
+                page.screenshot(path=str(OUT / "purana-library.png"))
 
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")
                 document = page.locator("details.sanskrit-reveal").first
                 document.wait_for(timeout=20000)
-                assert_monochrome(page)
+                assert_site_palette(page)
                 source = document.locator(':scope > [lang^="sa-Deva"]').first
                 document.locator("summary").click()
                 assert document.get_attribute("open") is not None and source.is_visible()
@@ -148,7 +198,7 @@ def run() -> None:
                     has=page.locator('.bp-reader-toggle[data-bp-view="word-for-word"]')
                 ).first
                 verse.wait_for(timeout=20000)
-                assert_monochrome(page)
+                assert_site_palette(page)
                 button = verse.locator('.bp-reader-toggle[data-bp-view="word-for-word"]')
                 panel = verse.locator('.bp-reader-panel[data-bp-panel="word-for-word"]')
                 button.click()
@@ -160,7 +210,7 @@ def run() -> None:
                 page.goto(base + "articles/vishnu-purana-book-1-chapter-1/", wait_until="domcontentloaded")
                 verse = page.locator(".gita-verse").first
                 verse.wait_for(timeout=20000)
-                assert_monochrome(page)
+                assert_site_palette(page)
                 details = verse.locator(":scope > .gita-controls > details.gita-details")
                 assert details.count() == 2, f"Viṣṇu verse has {details.count()} controls"
                 labels = details.locator("summary").all_text_contents()
@@ -179,7 +229,7 @@ def run() -> None:
                     "() => document.querySelector('[data-work=\"tattvabodha\"]')?.getAttribute('aria-busy') === 'false'",
                     timeout=20000,
                 )
-                assert_monochrome(page)
+                assert_site_palette(page)
                 fallback = reader.locator(".shankara-reader-error")
                 assert fallback.count() == 0, "Tattvabodha reader fallback: " + "; ".join(browser_errors) + " / " + fallback.all_text_contents().__str__()
                 assert reader.locator(".gita-contents:visible").count() == 0

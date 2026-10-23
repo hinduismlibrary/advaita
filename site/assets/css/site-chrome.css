@@ -3201,13 +3201,14 @@ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.
 body.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page .site-footer p :is(.vd-label-dev,.vd-label-iast){display:block!important}
 
 
-/* Final monochrome lock: outrank page and navigation ID selectors. */
+
+/* Final black, white, and blue palette across the site. */
 :root:not(#vd-mono-lock-a#vd-mono-lock-b){
   color-scheme:light!important;
-  --paper:#fff!important;--ink:#202122!important;--teal:#202122!important;--red:#202122!important;--purple:#202122!important;--dark:#fff!important;--line:#a2a9b1!important;
-  --vd-chrome:#fff!important;--vd-paper:#fff!important;--vd-ink:#202122!important;--vd-teal:#202122!important;--vd-line:#a2a9b1!important;--vd-link:#202122!important;
-  --gita-paper:#fff!important;--gita-ink:#202122!important;--gita-teal:#202122!important;--gita-line:#a2a9b1!important;
-  --vr-outer:#fff!important;--vr-paper:#fff!important;--vr-ink:#202122!important;--vr-teal:#202122!important;--vr-purple:#202122!important
+  --paper:#fff!important;--ink:#202122!important;--teal:#0645ad!important;--red:#0645ad!important;--purple:#0645ad!important;--dark:#fff!important;--line:#a2a9b1!important;
+  --vd-chrome:#fff!important;--vd-paper:#fff!important;--vd-ink:#202122!important;--vd-teal:#0645ad!important;--vd-line:#a2a9b1!important;--vd-link:#0645ad!important;
+  --gita-paper:#fff!important;--gita-ink:#202122!important;--gita-teal:#0645ad!important;--gita-line:#a2a9b1!important;
+  --vr-outer:#fff!important;--vr-paper:#fff!important;--vr-ink:#202122!important;--vr-teal:#0645ad!important;--vr-purple:#0645ad!important
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b){
   color:#202122!important;background:#fff!important;color-scheme:light!important;scrollbar-color:#202122 #fff!important
@@ -3215,7 +3216,7 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b){
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b){
   color:#202122!important;background:#fff!important;border-color:#a2a9b1!important;
   box-shadow:none!important;text-shadow:none!important;outline-color:#202122!important;background-image:none!important;
-  accent-color:#202122!important;fill:#202122!important;stroke:#202122!important
+  accent-color:#0645ad!important;fill:#202122!important;stroke:#202122!important
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::before,
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::after,
@@ -3227,10 +3228,21 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) a:not(#vd-mono-lock-a#vd
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) a:visited:not(#vd-mono-lock-a#vd-mono-lock-b),
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) a:hover:not(#vd-mono-lock-a#vd-mono-lock-b),
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) a:focus-visible:not(#vd-mono-lock-a#vd-mono-lock-b){
-  color:#202122!important;text-decoration-color:#202122!important
+  color:#0645ad!important;text-decoration-color:#0645ad!important
+}
+body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)[lang^="sa-Deva"],
+body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)[lang^="hi-Deva"]{
+  color:#202122!important
+}
+body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+  .vd-label-en,.vd-label-iast,.label-en,.original-work-iast,.ad-entry-original-iast,
+  .catalog-iast,.chapter-iast,.purana-name-iast,.ad-title-en,.ad-heading-en,
+  .hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast
+){
+  color:#0645ad!important
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :is(button,input,select,textarea):not(#vd-mono-lock-a#vd-mono-lock-b){
-  color:#202122!important;background:#fff!important;border-color:#202122!important;accent-color:#202122!important
+  color:#202122!important;background:#fff!important;border-color:#202122!important;accent-color:#0645ad!important
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :is(input,textarea):not(#vd-mono-lock-a#vd-mono-lock-b)::placeholder{color:#54595d!important;opacity:1!important}
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::selection{background:#202122!important;color:#fff!important}
