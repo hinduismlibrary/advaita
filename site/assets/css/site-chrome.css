@@ -3307,14 +3307,16 @@ body.vd-chrome-page.purana-chapter-names-visible .purana-chapter-name:not([hidde
 }
 
 /* Wider, responsive home menu. */
-.home-page .site-main{width:min(1440px,100%)!important}
-.home-page .hp-home{width:min(1320px,calc(100% - 48px))!important}
-.home-page .hp-directory{grid-template-columns:repeat(3,minmax(0,1fr))!important}
-.home-page .hp-column{display:contents!important}
-@media(max-width:900px){.home-page .hp-directory{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+body.vd-chrome-page.vd-chrome-page.home-page .site-main{width:min(1440px,100%)!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home{width:min(1320px,calc(100% - 48px))!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-column{display:contents!important}
+@media(max-width:900px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
 @media(max-width:620px){
-  .home-page .hp-home{width:calc(100% - 32px)!important}
-  .home-page .hp-directory{grid-template-columns:1fr!important}
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-home{width:calc(100% - 32px)!important}
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:1fr!important}
 }
 body.vd-chrome-page .purana-chapter-grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:0 8px
