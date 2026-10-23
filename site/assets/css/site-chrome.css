@@ -3139,10 +3139,11 @@ body.vd-chrome-page.vd-chrome-page .bp-reader-panel[hidden]{display:none!importa
   }
 }
 body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .article :is(p,li){
-  font-family:Merriweather,Georgia,serif!important;line-height:1.65!important
+  font-family:Merriweather,Georgia,serif!important;font-size:16px!important;line-height:1.65!important
 }
-body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) [lang^="sa-Deva"]{
-  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .article [lang^="sa-Deva"]{
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:16px!important;line-height:1.75!important
 }
 
 /* Tattvabodha is one continuous teaching; its data units are not chapters. */
