@@ -1057,3 +1057,44 @@ body.vp-book-1 .shankara-content .gita-sridhara-sanskrit {
   color: #171717 !important;
   font-weight: 400 !important;
 }
+
+
+/* Home index: show the site's Sanskrit name and section labels in Devanagari. */
+.home-page .hp-home-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1px;
+}
+.home-page .hp-home-title .hp-home-title-dev{
+  display:block;
+  color:#202122;
+  font:500 clamp(28px,4vw,36px)/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+}
+.home-page .hp-home-title .hp-home-title-iast{
+  display:block;
+  color:#0645ad;
+  font:italic 400 clamp(20px,3vw,25px)/1.35 Merriweather,Georgia,serif;
+}
+.home-page .hp-section-title .hp-section-en,
+.home-page .hp-section-title .hp-section-dev{
+  display:block;
+}
+.home-page .hp-section-title .hp-section-en{
+  color:#202122;
+}
+.home-page .hp-section-title .hp-section-dev{
+  margin-top:2px;
+  color:#202122;
+  font:400 12px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+}
+.home-page .hp-link-list a .hp-original-dev{
+  display:block;
+  color:#202122!important;
+  font:400 14px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+.home-page .hp-link-list a .hp-original-iast{
+  display:block;
+  color:#0645ad!important;
+  font:italic 400 13px/1.5 Merriweather,Georgia,serif!important;
+}

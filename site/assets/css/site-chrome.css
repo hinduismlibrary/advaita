@@ -2885,3 +2885,17 @@ body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] .s
     gap:12px!important;
   }
 }
+
+/* Keep the page-return control beside the shared site navigation. */
+body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav .vd-back-link{
+  margin-left:auto!important;
+  padding-left:14px!important;
+  border-left:1px solid #eaecf0!important;
+}
+@media(max-width:680px){
+  body.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav .vd-back-link{
+    margin-left:0!important;
+    padding-left:2px!important;
+    border-left:0!important;
+  }
+}
