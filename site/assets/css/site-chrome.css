@@ -3155,3 +3155,12 @@ body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] .s
 body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] :is(.gita-hero,.shankara-unit-column){
   width:100%!important;max-width:none!important;margin-inline:auto!important
 }
+
+/* Use the homepage directory pattern everywhere: Latin or English first, Devanagari beneath. */
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-en,.vd-label-en,.vd-label-iast){
+  display:block!important;color:#0645ad!important;font:400 14px/1.5 Merriweather,Georgia,serif!important;font-style:normal!important
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-dev,.vd-label-dev){
+  display:block!important;margin-top:2px!important;color:#202122!important;
+  font:400 13px/1.42 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}

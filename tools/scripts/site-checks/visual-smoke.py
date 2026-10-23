@@ -49,12 +49,32 @@ def run() -> None:
                 first, second = panels.nth(0).bounding_box(), panels.nth(1).bounding_box()
                 gap = second["y"] - (first["y"] + first["height"])
                 assert 0 <= gap <= 35, f"Homepage panels separated by {gap}px"
-                colors = page.locator(".hp-original-dev").first.evaluate(
-                    "(el) => ({dev:getComputedStyle(el).color, iast:getComputedStyle(el.nextElementSibling).color})"
+                colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
+                    "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.previousElementSibling).color})"
                 )
                 assert colors["dev"] == "rgb(32, 33, 34)", colors
-                assert colors["iast"] == "rgb(6, 69, 173)", colors
-                report["home"] = {"panel_gap_px": round(gap, 1), **colors}
+                assert colors["latin"] == "rgb(6, 69, 173)", colors
+                link_formats = page.locator(".hp-link-list a").evaluate_all("""
+                    links => links.map(link => {
+                        const [first, second] = Array.from(link.children);
+                        return {
+                            count: link.children.length,
+                            firstLang: first?.lang,
+                            secondLang: second?.lang,
+                            firstColor: first ? getComputedStyle(first).color : null,
+                            secondColor: second ? getComputedStyle(second).color : null
+                        };
+                    })
+                """)
+                assert link_formats and all(
+                    row["count"] == 2
+                    and row["firstLang"] != "sa-Deva"
+                    and row["secondLang"] == "sa-Deva"
+                    and row["firstColor"] == "rgb(6, 69, 173)"
+                    and row["secondColor"] == "rgb(32, 33, 34)"
+                    for row in link_formats
+                ), link_formats
+                report["home"] = {"panel_gap_px": round(gap, 1), "link_format": "Latin/English blue; Devanagari black below", "links_checked": len(link_formats), **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")
