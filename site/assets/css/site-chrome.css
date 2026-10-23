@@ -3233,7 +3233,7 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   .vd-label-en,.vd-label-iast,.label-en,.original-work-iast,.ad-entry-original-iast,
-  .catalog-iast,.chapter-iast,.purana-name-iast,.ad-title-en,.ad-heading-en,
+  .catalog-iast,.chapter-iast,.purana-name-iast,.purana-chapter-reference,.purana-chapter-name,.ad-title-en,.ad-heading-en,
   .hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast
 ){
   color:#0645ad!important
@@ -3271,7 +3271,7 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   .vd-label-en,.vd-label-iast,.hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast,
-  .purana-title-iast,.purana-name-iast,.ad-title-en,.ad-heading-en,.ad-entry-original-iast,
+  .purana-title-iast,.purana-name-iast,.purana-chapter-reference,.purana-chapter-name,.ad-title-en,.ad-heading-en,.ad-entry-original-iast,
   .catalog-iast,.chapter-iast,.label-en,.original-work-iast
 ){
   display:block!important;visibility:visible!important;opacity:1!important;
