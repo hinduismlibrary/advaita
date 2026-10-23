@@ -17,6 +17,7 @@ permissions:
 jobs:
   smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - name: Prepare site
@@ -24,7 +25,7 @@ jobs:
       - name: Install browser
         run: |
           python3 -m pip install --user --quiet playwright
-          python3 -m playwright install --with-deps chromium
+          python3 -m playwright install chromium
       - name: Check rendered pages
         run: python3 tools/scripts/site-checks/visual-smoke.py
       - name: Upload visual review
