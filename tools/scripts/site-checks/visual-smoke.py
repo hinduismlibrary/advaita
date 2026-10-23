@@ -92,11 +92,16 @@ def run() -> None:
                 )
                 assert title_order[0] == "hp-section-dev", title_order
                 page.locator("body.vd-chrome-page .hp-panel").first.wait_for()
-                page.locator("body.vd-chrome-page .hp-column").first.wait_for()
-                panels = page.locator(".hp-column").first.locator(".hp-panel")
-                first, second = panels.nth(0).bounding_box(), panels.nth(1).bounding_box()
-                gap = second["y"] - (first["y"] + first["height"])
-                assert 0 <= gap <= 35, f"Homepage panels separated by {gap}px"
+                panels = page.locator(".hp-directory .hp-panel")
+                assert panels.count() == 6, f"Homepage has {panels.count()} menu panels"
+                panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(3)]
+                assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Puranas"], panel_titles
+                first, second, third = [panels.nth(i).bounding_box() for i in range(3)]
+                horizontal_gap = second["x"] - (first["x"] + first["width"])
+                assert abs(first["y"] - second["y"]) <= 2 and abs(first["y"] - third["y"]) <= 2
+                assert 0 <= horizontal_gap <= 35, f"Homepage panel gap is {horizontal_gap}px"
+                fourth = panels.nth(3).bounding_box()
+                assert fourth["y"] > first["y"], "Second menu row should begin below the first"
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
                     "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
                 )
@@ -269,39 +274,65 @@ def run() -> None:
                 page.screenshot(path=str(OUT / "purana-library.png"))
 
                 page.goto(base + "pages/bhagavatam-with-sridhara-bhasya/", wait_until="domcontentloaded")
+                canto4 = page.locator("#canto-4 .chapter-list a")
+                assert canto4.count() == 31 and canto4.first.inner_text() == "4.1" and canto4.last.inner_text() == "4.31"
+                canto4_color = canto4.first.locator(".purana-chapter-reference").evaluate("(el)=>getComputedStyle(el).color")
+                assert canto4_color == "rgb(6, 69, 173)", canto4_color
+                page.goto(base + "articles/srimad-bhagavatam-canto-01-sridhara-svami/", wait_until="domcontentloaded")
+                assert page.locator(".source-note").count() == 0
+                assert "Coverage runs through" not in page.locator("body").inner_text()
+                page.goto(base + "pages/bhagavatam-with-sridhara-bhasya/", wait_until="domcontentloaded")
                 bhagavatam_link = page.locator(".chapter-list a").first
                 bhagavatam_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
                 assert bhagavatam_link.locator(".purana-chapter-reference").inner_text() == "1.1"
                 chapter_name = bhagavatam_link.locator(".purana-chapter-name")
                 assert not chapter_name.is_visible()
                 names_toggle = page.locator(".purana-chapter-name-toggle")
-                assert names_toggle.get_attribute("aria-pressed") == "false"
-                names_toggle.click()
+                assert names_toggle.evaluate("(el) => el.tagName") == "INPUT"
+                number_color = bhagavatam_link.locator(".purana-chapter-reference").evaluate("(el) => getComputedStyle(el).color")
+                assert number_color == "rgb(6, 69, 173)", number_color
+                assert not names_toggle.is_checked()
+                names_toggle.check()
                 assert chapter_name.is_visible()
                 assert "Questions by the Sages" in chapter_name.inner_text()
-                names_toggle.click()
+                names_toggle.uncheck()
                 assert not chapter_name.is_visible()
                 report["purana_chapter_names"] = {"default": "numbered references", "optional": "chapter names show and hide"}
                 page.screenshot(path=str(OUT / "purana-chapter-numbers.png"))
 
+                page.goto(base + "pages/bhavishya-purana/", wait_until="domcontentloaded")
+                parva_links = page.locator('aside[aria-label="Contents"] a')
+                assert parva_links.count() == 4
+                assert page.locator("details, summary, button").count() == 0
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
-                page.locator("#brahmaparvan > summary").click()
                 brahma_link = page.locator(".chapter-list a").first
                 brahma_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
                 assert brahma_link.locator(".purana-chapter-reference").inner_text() == "1.1"
+                brahma_color = brahma_link.locator(".purana-chapter-reference").evaluate("(el) => getComputedStyle(el).color")
+                assert brahma_color == "rgb(6, 69, 173)", brahma_color
                 assert not brahma_link.locator(".purana-chapter-name").is_visible()
-                page.locator(".purana-chapter-name-toggle").click()
+                assert page.locator("#pratisargaparvan .purana-chapter-reference").last.inner_text() == "4.26"
+                page.locator(".purana-chapter-name-toggle").check()
                 assert brahma_link.locator(".purana-chapter-name").is_visible()
                 assert "Śatānīka’s Inquiry" in brahma_link.locator(".purana-chapter-name").inner_text()
 
                 page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
-                page.locator("#part-1 > summary").click()
-                page.locator("#part-2 > summary").click()
                 part_one = page.locator('a[href$="part-1-chapter-1/"] .purana-chapter-reference')
                 part_one.wait_for(timeout=20000)
                 assert part_one.inner_text() == "1.1"
                 part_two = page.locator('a[href$="part-2-chapter-1/"] .purana-chapter-reference')
                 assert part_two.inner_text() == "2.1"
+                assert page.locator("#part-4 .purana-chapter-reference").last.inner_text() == "4.26"
+                page.goto(base + "pages/bhavishya-purana-madhyamaparvan/", wait_until="domcontentloaded")
+                madhyama_refs = page.locator(".purana-chapter-grid .purana-chapter-reference")
+                assert madhyama_refs.count() == 62 and madhyama_refs.first.inner_text() == "1.1"
+                assert page.locator("#part-2 .purana-chapter-reference").first.inner_text() == "2.1"
+                assert page.locator("#part-3 .purana-chapter-reference").first.inner_text() == "3.1"
+                assert "in preparation" not in page.locator("body").inner_text().lower()
+                page.goto(base + "pages/bhavishya-purana-uttaraparvan/", wait_until="domcontentloaded")
+                uttara_refs = page.locator(".purana-chapter-grid .purana-chapter-reference")
+                assert uttara_refs.count() == 208 and uttara_refs.last.inner_text() == "1.208"
+                assert page.locator(".bp-index-controls, details.bp-index-dropdown").count() == 0
 
                 page.goto(base + "pages/vishnu-purana/", wait_until="domcontentloaded")
                 vishnu_first = page.locator("#book-list .chapter-grid a .purana-chapter-reference").first

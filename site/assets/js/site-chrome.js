@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261023-purana-chapter-names-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261024-public-navigation-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -471,22 +471,22 @@ function enhancePuranaChapterLabels(root=document){
   if(!hasNames||document.querySelector(".purana-chapter-name-tools"))return;
   const tools=document.createElement("div");
   tools.className="purana-chapter-name-tools";
-  const button=document.createElement("button");
-  button.type="button";
-  button.className="purana-chapter-name-toggle";
+  const input=document.createElement("input");
+  input.type="checkbox";
+  input.id="purana-chapter-name-toggle";
+  input.className="purana-chapter-name-toggle";
   const showing=document.body.classList.contains("purana-chapter-names-visible");
-  button.textContent=showing?"Hide chapter names":"Show chapter names";
-  button.setAttribute("aria-pressed",String(showing));
-  button.setAttribute("aria-label",showing?"Hide chapter names":"Show chapter names");
-  button.addEventListener("click",()=>{
-    const next=!document.body.classList.contains("purana-chapter-names-visible");
+  input.checked=showing;
+  input.setAttribute("aria-label","Chapter names");
+  input.addEventListener("change",()=>{
+    const next=input.checked;
     document.body.classList.toggle("purana-chapter-names-visible",next);
-    button.textContent=next?"Hide chapter names":"Show chapter names";
-    button.setAttribute("aria-label",button.textContent);
-    button.setAttribute("aria-pressed",String(next));
     document.querySelectorAll(".purana-chapter-name").forEach(node=>{node.hidden=!next});
   });
-  tools.appendChild(button);
+  const label=document.createElement("label");
+  label.htmlFor=input.id;
+  label.textContent="Chapter names";
+  tools.append(input,label);
   const reader=document.querySelector(".reader");
   const firstList=document.querySelector(selector);
   if(reader&&reader.parentNode)reader.parentNode.insertBefore(tools,reader);

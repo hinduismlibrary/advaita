@@ -106,7 +106,7 @@
       if(document.querySelector('.chapter-index')){
         const link=document.querySelector(`a[href*="${slugFor(query)}"]`);
         if(!link){
-          status.textContent='That chapter is not uploaded yet. It is marked in the book index as in preparation.';
+          status.textContent='No matching chapter.';
           return;
         }
       }
@@ -114,89 +114,8 @@
     });
   }
 
-  function searchBlock(){
-    const section=document.createElement('section');
-    section.className='bp-index-tools';
-    section.setAttribute('aria-labelledby','bp-search-title');
-    section.innerHTML=`<strong id="bp-search-title">Go to a verse</strong><p>Use <b>2.3.5</b> for Pratisargaparvan, <b>MP 1.3.5</b> for Madhyamaparvan, <b>19.3</b> for Brāhmaparvan, or <b>UP 12.4</b> for Uttaraparvan.</p><form class="bp-search"><label><span class="sr-only">Verse reference</span><input inputmode="decimal" autocomplete="off" placeholder="e.g. 2.3.5 or BP 1.19.3" aria-label="Verse reference" required></label><button type="submit">Open verse</button></form><p class="bp-search-status" role="status" aria-live="polite"></p>`;
-    wireSearch(section.querySelector('form'));
-    return section;
-  }
-
-  function switcher(){
-    const nav=document.createElement('nav');
-    nav.className='bp-index-switcher';
-    nav.setAttribute('aria-label','Bhavishya Purāṇa sections');
-    nav.innerHTML=`<a href="${root}pages/bhavishya-purana/">All parvas</a><a href="${root}pages/bhavishya-purana-pratisargaparvan/">Pratisargaparvan</a><a href="${root}pages/bhavishya-purana-brahmaparvan/">Brāhmaparvan</a><a href="${root}pages/bhavishya-purana-madhyamaparvan/">Madhyamaparvan</a><a href="${root}pages/bhavishya-purana-uttaraparvan/">Uttaraparvan</a>`;
-    return nav;
-  }
-
-  function makeDropdown(section,depth,open){
-    if(section.dataset.bpDropdown==='1')return;
-    const heading=Array.from(section.children).find(x=>x.matches('h3.section-heading,h4.section-heading'));
-    if(!heading)return;
-    const details=document.createElement('details');
-    details.className=`bp-index-dropdown ${depth===0?'bp-parva-dropdown':'bp-section-dropdown'}`;
-    details.open=Boolean(open);
-    details.dataset.bpDropdown='1';
-    details.dataset.bpDepth=String(depth);
-    const summary=document.createElement('summary');
-    const label=document.createElement('span');
-    label.className='bp-summary-label';
-    label.innerHTML=heading.innerHTML;
-    summary.append(label);
-    details.append(summary);
-    Array.from(section.children).forEach(child=>{if(child!==heading)details.append(child)});
-    section.replaceWith(details);
-    Array.from(details.children).filter(x=>x.matches('section.section-block')).forEach(child=>makeDropdown(child,depth+1,false));
-  }
-
-  function indexControls(content){
-    const controls=document.createElement('div');
-    controls.className='bp-index-controls';
-    controls.setAttribute('aria-label','Contents controls');
-    controls.innerHTML='<span class="bp-index-controls-label">Contents:</span><button class="bp-index-control" type="button" data-bp-open="all">Expand all</button><button class="bp-index-control" type="button" data-bp-open="none">Collapse all</button>';
-    controls.querySelector('[data-bp-open="all"]').addEventListener('click',()=>{
-      content.querySelectorAll('details.bp-index-dropdown').forEach(details=>{details.open=true});
-    });
-    controls.querySelector('[data-bp-open="none"]').addEventListener('click',()=>{
-      content.querySelectorAll('details.bp-index-dropdown').forEach(details=>{details.open=false});
-    });
-    return controls;
-  }
-
-  function expandPendingRanges(content){
-    content.querySelectorAll('[data-bp-pending-range]').forEach(grid=>{
-      if(grid.dataset.bpExpanded==='1')return;
-      const nums=(grid.dataset.bpPendingRange.match(/\d+/g)||[]).map(Number);
-      if(nums.length!==2)return;
-      grid.dataset.bpExpanded='1';
-      grid.innerHTML='';
-      for(let n=nums[0];n<=nums[1];n++){
-        const item=document.createElement('span');
-        item.className='chapter-pending';
-        item.textContent=`Chapter ${n} — in preparation`;
-        grid.append(item);
-      }
-    });
-  }
-
   function enhanceIndex(){
-    const body=document.body;
-    const content=document.querySelector('.chapter-index');
-    if(!content||content.dataset.bpEnhanced==='1')return;
-    content.dataset.bpEnhanced='1';
-    expandPendingRanges(content);
-    const title=content.querySelector('.index-title');
-    if(title)title.after(switcher(),searchBlock(),indexControls(content));
-    Array.from(content.children).filter(x=>x.matches('section.section-block')).forEach(section=>makeDropdown(section,0,false));
-    if(isBookIndex){
-      const note=document.createElement('p');
-      note.className='bp-book-order-note';
-      note.textContent='Reading order begins with Pratisargaparvan, then Brāhmaparvan, Madhyamaparvan, and Uttaraparvan. Each chapter is labeled as it enters the reader.';
-      const first=content.querySelector('.bp-index-dropdown');
-      if(first)first.before(note);
-    }
+    // The page markup contains the complete public contents menu.
   }
 
   function removePratisargaReaderClutter(){

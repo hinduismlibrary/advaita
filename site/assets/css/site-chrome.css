@@ -228,10 +228,7 @@ body.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner spa
   align-items:start!important;
 }
 :is(.home-page,.page-page) .hp-column{
-  display:grid!important;
-  align-content:start!important;
-  gap:18px!important;
-  min-width:0!important;
+  display:grid!important;align-content:start!important;gap:18px!important;min-width:0!important
 }
 :is(.home-page,.page-page) .hp-panel{
   margin:0!important;
@@ -3284,22 +3281,18 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-
 
 /* Small optional chapter-title display on Purāṇa contents pages. */
 body.vd-chrome-page .purana-chapter-name-tools{
-  display:flex;align-items:center;justify-content:flex-end;margin:0 0 10px;
-  font-size:12px;line-height:1.4
+  display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:0 0 10px;
+  color:#202122;font-size:12px;line-height:1.4
 }
 body.vd-chrome-page .purana-chapter-name-toggle{
-  display:inline-flex;align-items:center;min-height:25px;padding:2px 7px;
-  border:1px solid #a2a9b1;border-radius:2px;background:#fff;color:#0645ad;
-  font:inherit;line-height:1.3;cursor:pointer
+  width:14px;height:14px;margin:0;accent-color:#0645ad;cursor:pointer
 }
-body.vd-chrome-page .purana-chapter-name-toggle:hover{
-  background:#f8f9fa;text-decoration:underline
-}
+body.vd-chrome-page .purana-chapter-name-tools label{cursor:pointer;color:#202122}
 body.vd-chrome-page .purana-chapter-name-toggle:focus-visible{
   outline:2px solid #0645ad;outline-offset:2px
 }
 body.vd-chrome-page .purana-chapter-reference{
-  display:inline-block;min-width:3.2em;color:#202122!important;
+  display:inline-block;min-width:3.2em;color:#0645ad!important;
   font-size:13px;font-variant-numeric:tabular-nums;font-weight:600
 }
 body.vd-chrome-page .purana-chapter-name{
@@ -3311,4 +3304,21 @@ body.vd-chrome-page .purana-chapter-name[hidden]{
 }
 body.vd-chrome-page.purana-chapter-names-visible .purana-chapter-name:not([hidden]){
   display:block!important
+}
+
+/* Wider, responsive home menu. */
+.home-page .site-main{width:min(1440px,100%)!important}
+.home-page .hp-home{width:min(1320px,calc(100% - 48px))!important}
+.home-page .hp-directory{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.home-page .hp-column{display:contents!important}
+@media(max-width:900px){.home-page .hp-directory{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){
+  .home-page .hp-home{width:calc(100% - 32px)!important}
+  .home-page .hp-directory{grid-template-columns:1fr!important}
+}
+body.vd-chrome-page .purana-chapter-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:0 8px
+}
+body.vd-chrome-page .purana-chapter-grid .purana-chapter-reference{
+  display:block;min-width:0;padding:2px 0
 }
