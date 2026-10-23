@@ -42,6 +42,7 @@ def run() -> None:
                 page.on("pageerror", lambda error: javascript_errors.append(str(error)))
                 page.goto(base, wait_until="domcontentloaded")
                 page.locator(".vd-global-header .vd-label-dev").first.wait_for(timeout=20000)
+                page.evaluate("() => document.fonts.ready")
                 page.locator("body.vd-chrome-page .hp-panel").first.wait_for()
                 page.locator("body.vd-chrome-page .hp-column").first.wait_for()
                 panels = page.locator(".hp-column").first.locator(".hp-panel")
