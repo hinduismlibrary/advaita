@@ -38,7 +38,7 @@ def assert_site_palette(page) -> None:
     blue_labels = page.locator(
         ".vd-label-en, .vd-label-iast, .label-en, .original-work-iast, "
         ".ad-entry-original-iast, .catalog-iast, .chapter-iast, "
-        ".purana-name-iast, .ad-title-en, .ad-heading-en, "
+        ".purana-title-iast, .purana-name-iast, .ad-title-en, .ad-heading-en, "
         ".hp-home-title-iast, .hp-section-en, .hp-link-en, .hp-original-iast"
     ).evaluate_all("nodes => nodes.map(node => getComputedStyle(node).color)")
     assert all(color == "rgb(6, 69, 173)" for color in blue_labels), blue_labels
@@ -157,7 +157,7 @@ def run() -> None:
                 page.locator(".purana-name-dev").first.wait_for(timeout=20000)
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
-                puranas = page.locator(".purana-name-dev").evaluate_all("""
+                puranas = page.locator(".purana-alpha-index .purana-name-dev").evaluate_all("""
                     labels => labels.map(dev => {
                         const roman = dev.nextElementSibling;
                         return {
@@ -174,7 +174,68 @@ def run() -> None:
                     and row["devTop"] < row["romanTop"]
                     for row in puranas
                 ), puranas
-                report["puranas"] = {"entries_checked": len(puranas), "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST"}
+                headings = page.locator(".purana-library-title").evaluate_all("""
+                    nodes => nodes.map(node => {
+                        const dev = node.querySelector(".purana-title-dev");
+                        const roman = node.querySelector(".purana-title-iast");
+                        return {devColor:getComputedStyle(dev).color, romanColor:getComputedStyle(roman).color,
+                            devTop:dev.getBoundingClientRect().top, romanTop:roman.getBoundingClientRect().top};
+                    })
+                """)
+                section_headings = page.locator(".purana-section-title").evaluate_all("""
+                    nodes => nodes.map(node => {
+                        const dev = node.querySelector(".purana-title-dev");
+                        const roman = node.querySelector(".purana-title-iast");
+                        return {devColor:getComputedStyle(dev).color, romanColor:getComputedStyle(roman).color,
+                            devTop:dev.getBoundingClientRect().top, romanTop:roman.getBoundingClientRect().top};
+                    })
+                """)
+                assert headings and all(
+                    row["devColor"] == "rgb(32, 33, 34)"
+                    and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devTop"] < row["romanTop"]
+                    for row in headings
+                ), headings
+                assert section_headings and all(
+                    row["devColor"] == "rgb(32, 33, 34)"
+                    and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devTop"] < row["romanTop"]
+                    for row in section_headings
+                ), section_headings
+                research_links = page.locator(".purana-research-list a").evaluate_all("""
+                    links => links.map(link => {
+                        const dev = link.querySelector(".purana-name-dev");
+                        const roman = link.querySelector(".purana-name-iast");
+                        return {count:link.children.length, devColor:getComputedStyle(dev).color,
+                            romanColor:getComputedStyle(roman).color, devTop:dev.getBoundingClientRect().top,
+                            romanTop:roman.getBoundingClientRect().top};
+                    })
+                """)
+                assert research_links and all(
+                    row["count"] == 2
+                    and row["devColor"] == "rgb(32, 33, 34)"
+                    and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devTop"] < row["romanTop"]
+                    for row in research_links
+                ), research_links
+                page.locator(".vd-breadcrumb-inner span[aria-current='page'] .vd-label-dev").wait_for(timeout=20000)
+                crumb = page.locator(".vd-breadcrumb-inner span[aria-current='page']").evaluate("""
+                    node => ({text:node.textContent, dev:!!node.querySelector(".vd-label-dev"),
+                        roman:!!node.querySelector(".vd-label-en"),
+                        devColor:getComputedStyle(node.querySelector(".vd-label-dev")).color,
+                        romanColor:getComputedStyle(node.querySelector(".vd-label-en")).color,
+                        devTop:node.querySelector(".vd-label-dev").getBoundingClientRect().top,
+                        romanTop:node.querySelector(".vd-label-en").getBoundingClientRect().top})
+                """)
+                assert "□" not in crumb["text"] and crumb["dev"] and crumb["roman"], crumb
+                assert crumb["devColor"] == "rgb(32, 33, 34)" and crumb["romanColor"] == "rgb(6, 69, 173)" and crumb["devTop"] < crumb["romanTop"], crumb
+                footer = page.locator(".site-footer p").evaluate("""
+                    node => ({dev:!!node.querySelector(".vd-label-dev"), roman:!!node.querySelector(".vd-label-iast"),
+                        devColor:getComputedStyle(node.querySelector(".vd-label-dev")).color,
+                        romanColor:getComputedStyle(node.querySelector(".vd-label-iast")).color})
+                """)
+                assert footer["dev"] and footer["roman"] and footer["devColor"] == "rgb(32, 33, 34)" and footer["romanColor"] == "rgb(6, 69, 173)", footer
+                report["puranas"] = {"entries_checked": len(puranas), "headings_checked": len(headings) + len(section_headings), "research_links_checked": len(research_links), "breadcrumb": "Devanagari above blue English", "footer": "black Devanagari; blue IAST", "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST"}
                 page.screenshot(path=str(OUT / "purana-library.png"))
 
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")

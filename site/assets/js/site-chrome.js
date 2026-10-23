@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261023-sitewide-bilingual-blue-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261023-sitewide-bilingual-blue-2";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -73,6 +73,7 @@ function routeTitle(path){
   if(/\/articles\/mulamadhyamakakarika-with-chandrakirti$/.test(path))return "Mūlamadhyamakakārikā";
   if(/\/books\/adi-shankaracharya\/book-contents$/.test(path))return "Contents";
   if(/\/books\/adi-shankaracharya\/stotrams$/.test(path))return "Advaita Stotrams";
+  if(/\/pages\/purana-library$/.test(path))return "Purāṇa Library";
   if(/\/search$/.test(path))return "Search";
   return currentTitle();
 }
@@ -80,6 +81,7 @@ function makeCrumbs(path){
   if(path==="/advaita")return [];
   const home={label:"Home",href:SITE};
   const title=routeTitle(path);
+  if(/\/pages\/purana-library$/.test(path))return [home,{label:title}];
   if(/\/books\/adi-shankaracharya\/book-contents$/.test(path))return [home,{label:"Advaita texts",href:SITE+"books/adi-shankaracharya/"},{label:"Contents"}];
   if(/\/articles\/mulamadhyamakakarika-with-chandrakirti(?:\/|$)/.test(path)){
     const parent="/advaita/articles/mulamadhyamakakarika-with-chandrakirti/";
@@ -425,6 +427,8 @@ function mount(){
     document.body.prepend(header);
   }
   applyPageLabels();
+  const footer=document.querySelector(".site-footer");
+  if(footer)applyPageLabels(footer);
   fixInlineLabelSpacing();
   watchSearchResults();
   watchDynamicLabels();

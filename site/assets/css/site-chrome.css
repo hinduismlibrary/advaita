@@ -3246,3 +3246,18 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :is(button,input,select,
 }
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :is(input,textarea):not(#vd-mono-lock-a#vd-mono-lock-b)::placeholder{color:#54595d!important;opacity:1!important}
 body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::selection{background:#202122!important;color:#fff!important}
+
+
+/* Paired labels keep Devanagari black and Latin or English blue everywhere. */
+body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+  .vd-label-en,.vd-label-iast,.label-en,.original-work-iast,.ad-entry-original-iast,
+  .catalog-iast,.chapter-iast,.purana-name-iast,.purana-title-iast,
+  .ad-title-en,.ad-heading-en,.hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast
+){
+  color:#0645ad!important
+}
+body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+  [lang^="sa-Deva"],[lang^="hi-Deva"],.vd-label-dev,.purana-title-dev
+){
+  color:#202122!important
+}
