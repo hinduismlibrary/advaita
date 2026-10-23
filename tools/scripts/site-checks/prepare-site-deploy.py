@@ -7,7 +7,7 @@ import os
 import re
 from pathlib import Path
 
-CACHE_VERSION = "20261023-reader-layout-5"
+CACHE_VERSION = "20261023-reader-layout-6"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -29,6 +29,7 @@ SITE_CHROME_JS_URL = re.compile(
     r"""/advaita/assets/js/site-chrome\.js(?:\?[^"'\s>]*)?""",
     re.IGNORECASE,
 )
+WORD_SUMMARY = re.compile(r"(<summary\b[^>]*>)\s*Word[-– ]for[-– ]word\s*(</summary>)", re.IGNORECASE)
 CHROME_LINK_TAG = re.compile(r"""<link\b(?=[^>]*\bsite-chrome\.css)[^>]*>""", re.IGNORECASE)
 CHROME_LINK_HREF = re.compile(r"""\bhref\s*=\s*(["'])[^"']*site-chrome\.css(?:\?[^"']*)?\1""", re.IGNORECASE)
 HEAD_CLOSE = re.compile(r"</head\s*>", re.IGNORECASE)
@@ -91,6 +92,7 @@ def prepare(site: Path) -> tuple[int, int]:
         updated = SITE_CHROME_JS_URL.sub(f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}", updated)
         updated = BHAVISHYA_CONTROLS_URL.sub(f"/advaita/assets/js/bhavishya-controls.js?v={CACHE_VERSION}", updated)
         updated = SHANKARA_READER_URL.sub(f"/advaita/assets/js/shankara-reader.js?v={CACHE_VERSION}", updated)
+        updated = WORD_SUMMARY.sub(r'\1Word for Word\2', updated)
         updated = ensure_shared_chrome(updated)
 
         if relative.startswith(MMK_PREFIX + "/"):

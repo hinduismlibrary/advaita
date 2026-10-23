@@ -54,11 +54,16 @@ def run() -> None:
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")
                 document = page.locator("details.sanskrit-reveal").first
                 document.wait_for(timeout=20000)
+                source = document.locator(':scope > [lang^="sa-Deva"]').first
                 document.locator("summary").click()
-                assert document.get_attribute("open") is not None
+                assert document.get_attribute("open") is not None and source.is_visible()
+                page.screenshot(path=str(OUT / "document-open.png"))
                 document.locator("summary").click()
-                assert document.get_attribute("open") is None
-                report["document"] = {"sanskrit_toggle": "opens and closes"}
+                assert document.get_attribute("open") is None and not source.is_visible()
+                page.wait_for_function(
+                    "() => document.querySelector('details.sanskrit-reveal summary')?.textContent.trim() === 'Show Sanskrit'"
+                )
+                report["document"] = {"sanskrit_toggle": "content appears and disappears"}
                 page.screenshot(path=str(OUT / "document.png"))
 
                 page.goto(base + "articles/bhavishya-purana-brahmaparvan-chapter-1/", wait_until="domcontentloaded")
