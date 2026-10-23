@@ -39,7 +39,7 @@ standardizeVishnuControls();
 const citation=/\/articles\/compilation-of-peer-reviewed-citations-against-aryan-migration-theory\/?$/.test(p),meat=/\/articles\/meat-eating-in-hinduism-through-the-lens-of-shastra\/?$/.test(p);
 const css=(key,href)=>{if(document.querySelector(`link[data-${key}]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=href;l.dataset[key]='1';document.head.append(l)};
 const js=(key,src)=>{if(document.querySelector(`script[data-${key}]`))return;const s=document.createElement('script');s.src=src;s.async=false;s.dataset[key]='1';document.body.append(s)};
-js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261023-reader-layout-6');
+js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261023-reader-layout-7');
 if(article){
  document.querySelectorAll('link[href*="/assets/css/hindupedia-site.css"]').forEach(n=>n.remove());
  if(mmkChapter){

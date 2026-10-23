@@ -36,7 +36,12 @@ def run() -> None:
             with sync_playwright() as playwright:
                 browser = playwright.chromium.launch(headless=True)
                 page = browser.new_page(viewport={"width": 1366, "height": 900})
+                browser_errors = []
+                javascript_errors = []
+                page.on("console", lambda message: browser_errors.append(message.text) if message.type == "error" else None)
+                page.on("pageerror", lambda error: javascript_errors.append(str(error)))
                 page.goto(base, wait_until="domcontentloaded")
+                page.locator(".vd-global-header .vd-label-dev").first.wait_for(timeout=20000)
                 page.locator("body.vd-chrome-page .hp-panel").first.wait_for()
                 page.locator("body.vd-chrome-page .hp-column").first.wait_for()
                 panels = page.locator(".hp-column").first.locator(".hp-panel")
@@ -93,9 +98,6 @@ def run() -> None:
                 report["vishnu"] = {"controls": labels, "toggle": "opens and closes"}
                 page.screenshot(path=str(OUT / "vishnu.png"))
 
-                browser_errors = []
-                page.on("console", lambda message: browser_errors.append(message.text) if message.type == "error" else None)
-                page.on("pageerror", lambda error: browser_errors.append(str(error)))
                 page.goto(base + "books/adi-shankaracharya/tattvabodha/", wait_until="domcontentloaded")
                 reader = page.locator('.shankara-content[data-work="tattvabodha"]')
                 reader.wait_for(timeout=20000)
@@ -106,8 +108,10 @@ def run() -> None:
                 fallback = reader.locator(".shankara-reader-error")
                 assert fallback.count() == 0, "Tattvabodha reader fallback: " + "; ".join(browser_errors) + " / " + fallback.all_text_contents().__str__()
                 assert reader.locator(".gita-contents:visible").count() == 0
+                assert reader.locator(".gita-verse").count() == 44, "Tattvabodha did not load all 44 units"
                 report["tattvabodha"] = {"contents_list": "absent", "text": "continuous"}
                 page.screenshot(path=str(OUT / "tattvabodha.png"))
+                assert not javascript_errors, "Browser JavaScript errors: " + "; ".join(javascript_errors)
                 browser.close()
         finally:
             server.shutdown()
