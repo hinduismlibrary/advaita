@@ -230,7 +230,7 @@
     const bhagavatamTransliteration = entry.transliteration.join('\n');
 
     section.append(heading, rule, devanagari, translation);
-    if (entry.synonyms) section.append(makeDetails('Word-for-word', [{ label: 'Bhāgavatam word-for-word', text: entry.synonyms }], 'sb-word-details'));
+    if (entry.synonyms) section.append(makeDetails('Word for Word', [{ label: 'Bhāgavatam word-for-word', text: entry.synonyms }], 'sb-word-details'));
     if (bhagavatamTransliteration || sridharaTransliteration) section.append(makeDetails('Transliteration', [
       { label: 'Bhāgavatam transliteration', text: bhagavatamTransliteration, lang: 'sa-Latn', italic: true },
       { label: 'Śrīdhara transliteration', text: sridharaTransliteration, lang: 'sa-Latn', italic: true }

@@ -27,6 +27,20 @@ const repairVishnuWordForWord=()=>{
  });
 };
 repairVishnuWordForWord();
+// Keep Devanāgarī verses visible in the verse body and reserve the disclosure for Śrīdhara Sanskrit.
+const standardizeVishnuControls=()=>{
+ if(!vishnuPuranaRoute)return;
+ document.querySelectorAll('.gita-devanagari-details').forEach(detail=>{
+  const commentary=detail.querySelector('.gita-dual-section.gita-dual-sridhara');
+  const sanskrit=commentary?.querySelector('[lang^="sa-Deva"]');
+  if(!sanskrit){detail.remove();return;}
+  detail.querySelectorAll('.gita-dual-section.gita-dual-gita').forEach(node=>node.remove());
+  const summary=detail.querySelector(':scope > summary');
+  if(summary)summary.textContent='Śrīdhara Sanskrit';
+  detail.classList.remove('gita-devanagari-details');
+ });
+};
+standardizeVishnuControls();
 // Keep the WFW control visible even when an invalid generated layer was removed.
 // The status is explicit; no ordinary translation is relabelled as lexical data.
 const restoreVishnuWordForWordControl=()=>{
@@ -49,7 +63,7 @@ restoreVishnuWordForWordControl();
 const citation=/\/articles\/compilation-of-peer-reviewed-citations-against-aryan-migration-theory\/?$/.test(p),meat=/\/articles\/meat-eating-in-hinduism-through-the-lens-of-shastra\/?$/.test(p);
 const css=(key,href)=>{if(document.querySelector(`link[data-${key}]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=href;l.dataset[key]='1';document.head.append(l)};
 const js=(key,src)=>{if(document.querySelector(`script[data-${key}]`))return;const s=document.createElement('script');s.src=src;s.async=false;s.dataset[key]='1';document.body.append(s)};
-js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261023-navigation-devanagari-1');
+js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261023-standardized-sitewide-2');
 if(article){
  document.querySelectorAll('link[href*="/assets/css/hindupedia-site.css"]').forEach(n=>n.remove());
  if(mmkChapter){
@@ -74,10 +88,10 @@ const paths=new Map([
 ['/advaita/introduction-to-hinduism/','/advaita/pages/introduction-to-hinduism/'],['/advaita/indology/','/advaita/pages/indology/'],['/advaita/purana-library/','/advaita/pages/purana-library/'],['/advaita/bhagavatam-with-sridhara-bhasya/','/advaita/pages/bhagavatam-with-sridhara-bhasya/'],['/advaita/bhavishya-purana/','/advaita/pages/bhavishya-purana/'],['/advaita/bhavishya-purana-brahmaparvan/','/advaita/pages/bhavishya-purana-brahmaparvan/'],['/advaita/bhagavad-gita/','/advaita/pages/bhagavad-gita/']]);
 document.querySelectorAll('a[href]').forEach(a=>{const x=paths.get(a.getAttribute('href'));if(x)a.href=x});
 const primaryNavItems=[
- {href:'/advaita/',label:'Advaita Vedānta Portal',isCurrent:path=>path==='/advaita/'},
- {href:'/advaita/pages/purana-library/',label:'Purāṇas',isCurrent:path=>/\/(?:pages\/(?:purana-library|vishnu-purana|bhagavatam-with-sridhara-bhasya|bhavishya-purana[^/]*)|articles\/(?:vishnu-purana-|bhavishya-purana-|bhavisya-purana-addresses-varna-system|srimad-bhagavatam-))/.test(path)},
- {href:'/advaita/pages/bhagavad-gita/',label:'Bhagavad Gītā',isCurrent:path=>/\/(?:pages\/bhagavad-gita|articles\/bhagavad-gita-chapter-)/.test(path)},
- {href:'/advaita/#vaishnavism',label:'Vaiṣṇavism',isCurrent:path=>/\/articles\/a-vaishnava-lens-on-vishnu-as-the-supreme-deity\/?$/.test(path)},
+ {href:'/advaita/',label:'Advaita Vedanta Portal',isCurrent:path=>path==='/advaita/'},
+ {href:'/advaita/pages/purana-library/',label:'Puranas',isCurrent:path=>/\/(?:pages\/(?:purana-library|vishnu-purana|bhagavatam-with-sridhara-bhasya|bhavishya-purana[^/]*)|articles\/(?:vishnu-purana-|bhavishya-purana-|bhavisya-purana-addresses-varna-system|srimad-bhagavatam-))/.test(path)},
+ {href:'/advaita/pages/bhagavad-gita/',label:'Bhagavad Gita',isCurrent:path=>/\/(?:pages\/bhagavad-gita|articles\/bhagavad-gita-chapter-)/.test(path)},
+ {href:'/advaita/#vaishnavism',label:'Vaishnavism',isCurrent:path=>/\/articles\/a-vaishnava-lens-on-vishnu-as-the-supreme-deity\/?$/.test(path)},
  {href:'/advaita/pages/indology/',label:'Indology',isCurrent:path=>/\/pages\/indology\/?$/.test(path)||/\/articles\/(?:on-the-lack-of-steppe-ancestry|compilation-of-peer-reviewed-citations-against-aryan-migration-theory)\/?$/.test(path)},
  {href:'/advaita/books/',label:'Other books',isCurrent:path=>/\/advaita\/books\//.test(path)&&!/\/books\/adi-shankaracharya\//.test(path)}
 ];

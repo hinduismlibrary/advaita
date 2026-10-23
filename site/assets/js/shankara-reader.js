@@ -157,7 +157,7 @@ function treatiseContentsHTML(groups){
 }function sourceVerseHTML(verse){
  const label=verse.label||("Verse "+(verse.number||"")),number=verse.number||"";
  const deva=String(verse.deva||""),transliteration=verse.iast||iast(deva),gloss=Array.isArray(verse.gloss)?verse.gloss:[];
- const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word for Word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
  const translation=verse.translation?'<p class="gita-translation">'+esc(verse.translation)+'</p>':"";
  return '<article class="gita-verse shankara-verse jmv-source-verse" id="'+esc(verse.id)+'" aria-label="'+esc(label)+'"><h3>Verse '+esc(number)+'</h3><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+breakLines(deva)+'</div><p class="jmv-literal-label">Literal translation</p>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
 }
@@ -176,7 +176,7 @@ function treatiseUnitHTML(unit,index,englishOnly){
  const isLong=deva.length>260||/\n/.test(deva);
  const classes="gita-sanskrit sa-text"+(isLong?" treatise-long-text":"");
  const gloss=Array.isArray(unit.gloss)?unit.gloss:[];
- const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word for Word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
  const translation=unit.translation?String(unit.translation).split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="gita-translation">'+esc(p.replace(/\r?\n/g," "))+'</p>').join(""):"";
  return '<article class="gita-verse shankara-verse'+(isLong?" treatise-long-unit":"")+'" id="'+esc(unit.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(number)+'</h2><hr class="gita-verse-rule"/><div class="'+classes+'" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+breakLines(deva)+'</div>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
 }
@@ -261,7 +261,7 @@ function unitHTML(u,index,englishOnly,translationAvailable){
  }
  const transliteration=u.iast||iast(u.deva);
  const gloss=Array.isArray(u.gloss)?u.gloss:[];
- const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word-for-word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
+ const wordGloss=gloss.length?'<details class="gita-details shankara-word-gloss"><summary>Word for Word</summary><div class="gita-reveal"><div class="gita-word-list">'+glossHTML(gloss)+'</div></div></details>':"";
  const translation=u.translation?'<p class="gita-translation">'+esc(u.translation)+'</p>':"";
  return '<article class="gita-verse shankara-verse" id="'+esc(u.id)+'" aria-label="'+esc(label)+'"><h2>'+esc(u.number||String(index+1))+'</h2><hr class="gita-verse-rule"/><div class="gita-sanskrit sa-text" lang="sa-Deva" data-iast="'+esc(transliteration)+'">'+esc(u.deva)+'</div>'+translation+'<div class="gita-controls">'+wordGloss+'<details class="gita-details shankara-transliteration"><summary>Transliteration</summary><div class="gita-reveal"><p class="shankara-iast" lang="sa-Latn">'+esc(transliteration)+'</p></div></details></div></article>';
 }

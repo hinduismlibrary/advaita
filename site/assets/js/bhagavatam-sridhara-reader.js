@@ -668,7 +668,7 @@
       wordSections.push(makeDualSection('Śrīdhara', 'gita-dual-sridhara',
         makeWordForWordParagraph(sridharaPairs)));
     }
-    controls.appendChild(makeDetails('Word-for-word translation', wordSections));
+    controls.appendChild(makeDetails('Word for Word', wordSections));
 
     const transliterationSections = [];
     if (verseTransliteration) {
@@ -695,17 +695,6 @@
           { className: 'gita-no-source' }
         )
     ]);
-    if (sridharaSanskrit) {
-      const previewLine = sridharaSanskrit.split(/\r?\n/).map((line) => line.trim()).filter(Boolean)[0] || '';
-      const preview = document.createElement('span');
-      preview.className = 'gita-sridhara-preview';
-      preview.lang = 'sa-Deva';
-      const glyphs = Array.from(previewLine);
-      preview.textContent = glyphs.length > 84 ? glyphs.slice(0, 84).join('') + '…' : previewLine;
-      preview.style.cssText = "display:block;max-width:min(840px,80vw);margin-top:5px;font-family:'Noto Serif Devanagari',serif;font-size:12px;font-weight:400;line-height:1.4;color:#3c362e;overflow-wrap:anywhere";
-      const summary = sridharaSanskritDetails.querySelector('summary');
-      if (summary) summary.appendChild(preview);
-    }
     controls.appendChild(sridharaSanskritDetails);
 
     section.append(heading, rule, devanagari, ...translationNodes, controls);

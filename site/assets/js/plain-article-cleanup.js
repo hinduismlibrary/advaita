@@ -1,6 +1,4 @@
-/* Plain-English cleanup shared by the Varna and meat-eating articles.
-   It keeps Devanagari in quiet Sanskrit controls and presents every Roman
-   word in the same plain ASCII reader style. */
+/* Clean article source notes while preserving the IAST spelling and diacritics. */
 (()=>{
 'use strict';
 
@@ -10,23 +8,7 @@ if(!root)return;
 
 const devanagariRun=/(?:[॥।]\s*)?[\u0900-\u097F][\u0900-\u097F\s।॥०-९|,.;:!?()\-–—\u200c\u200d]*[\u0900-\u097F।॥]/gu;
 
-const toAscii=value=>String(value??'')
-  .replace(/[śṣ]/g,'sh').replace(/[ŚṢ]/g,'Sh')
-  .replace(/[ṛṝ]/g,'r').replace(/[ṚṜ]/g,'R')
-  .replace(/[ṇṅñ]/g,'n').replace(/[ṆṄÑ]/g,'N')
-  .replace(/[ṭ]/g,'t').replace(/[Ṭ]/g,'T')
-  .replace(/[ḍ]/g,'d').replace(/[Ḍ]/g,'D')
-  .replace(/[ḷ]/g,'l').replace(/[Ḷ]/g,'L')
-  .replace(/[ṃṁ]/g,'m').replace(/[ṂṀ]/g,'M')
-  .replace(/[ḥ]/g,'h').replace(/[Ḥ]/g,'H')
-  .normalize('NFD')
-  .replace(/[\u0300-\u036f]/g,'')
-  .replace(/[ß]/g,'ss')
-  .replace(/[æ]/gi,'ae')
-  .replace(/[œ]/gi,'oe')
-  .replace(/\bKrishna\b/gi,'Krishna')
-  .replace(/\bRigveda\b/gi,'Rigveda')
-  .replace(/\bDrishti\b/gi,'Drishti')
+const cleanArticleText=value=>String(value??'')
   .replace(/\bin\s+this\s+document\b/gi,'in this article')
   .replace(/\bthis\s+document\b/gi,'this article')
   .replace(/\bsource\s+document\b/gi,'article')
@@ -38,7 +20,6 @@ const toAscii=value=>String(value??'')
   .replace(/\bPDF\b/gi,'article')
   .replace(/\bBY\s+POPCULTKING\b/gi,'')
   .replace(/\bPOPCULTKING\b/gi,'')
-  .replace(/\b([A-Z]{2,})\b/g,match=>match.toLowerCase())
   .replace(/[ \t]{2,}/g,' ');
 
 const isSanskritNode=node=>{
@@ -58,10 +39,11 @@ const makeDetails=(sourceText,transliteration='')=>{
   if(transliteration.trim()){
     const roman=document.createElement('p');
     roman.className='sanskrit-transliteration';
-    roman.textContent=toAscii(transliteration.trim());
+    roman.lang='sa-Latn';
+    roman.textContent=cleanArticleText(transliteration.trim());
     details.append(roman);
   }
-  details.addEventListener('toggle',()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit'});
+  details.addEventListener('toggle',()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit';summary.setAttribute('aria-expanded',String(details.open));});
   return details;
 };
 
@@ -69,12 +51,13 @@ const makeTransliterationDetails=value=>{
   const details=document.createElement('details');
   details.className='sanskrit-reveal';
   const summary=document.createElement('summary');
-  summary.textContent='Show Sanskrit';
+  summary.textContent='Transliteration';
   const roman=document.createElement('p');
   roman.className='sanskrit-transliteration';
-  roman.textContent=toAscii(value.trim());
+  roman.lang='sa-Latn';
+  roman.textContent=cleanArticleText(value.trim());
   details.append(summary,roman);
-  details.addEventListener('toggle',()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit'});
+  details.addEventListener('toggle',()=>{summary.setAttribute('aria-expanded',String(details.open));});
   return details;
 };
 
@@ -94,7 +77,7 @@ const blockPart=(node,value,keepId)=>{
   const part=node.cloneNode(false);
   part.removeAttribute('style');
   if(!keepId)part.removeAttribute('id');
-  part.textContent=toAscii(value);
+  part.textContent=cleanArticleText(value);
   return part;
 };
 
@@ -190,12 +173,10 @@ while((current=walker.nextNode())){
 }
 for(const node of textNodes){
   if(isSanskritNode(node))continue;
-  node.nodeValue=toAscii(node.nodeValue);
+  node.nodeValue=cleanArticleText(node.nodeValue);
 }
 
-const brand=document.querySelector('.sitebar a');
-if(brand)brand.textContent='Viveka Drishti';
-document.title=toAscii(document.title).replace(/Viveka Drsti/g,'Viveka Drishti');
+document.title=cleanArticleText(document.title).replace(/Viveka Drsti/g,'Viveka Drishti');
 const title=document.querySelector('.article-head h1');
-if(title)title.textContent=toAscii(title.textContent);
+if(title)title.textContent=cleanArticleText(title.textContent);
 })();
