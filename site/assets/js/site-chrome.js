@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261023-sitewide-bilingual-blue-2";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261023-sitewide-bilingual-blue-3";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];

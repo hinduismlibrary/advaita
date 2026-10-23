@@ -72,13 +72,19 @@ def run() -> None:
                         const roman = link.querySelector(".vd-label-en, .vd-label-iast");
                         return {
                             devColor: dev ? getComputedStyle(dev).color : null,
-                            romanColor: roman ? getComputedStyle(roman).color : null
+                            romanColor: roman ? getComputedStyle(roman).color : null,
+                            devDisplay: dev ? getComputedStyle(dev).display : null,
+                            romanDisplay: roman ? getComputedStyle(roman).display : null,
+                            devHeight: dev ? dev.getBoundingClientRect().height : 0,
+                            romanHeight: roman ? roman.getBoundingClientRect().height : 0
                         };
                     })
                 """)
                 assert nav_formats and all(
                     row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
+                    and row["devHeight"] > 0 and row["romanHeight"] > 0
                     for row in nav_formats
                 ), nav_formats
                 title_order = page.locator(".hp-section-title").first.evaluate(
@@ -104,7 +110,11 @@ def run() -> None:
                             firstLang: first?.lang,
                             secondLang: second?.lang,
                             firstColor: first ? getComputedStyle(first).color : null,
-                            secondColor: second ? getComputedStyle(second).color : null
+                            secondColor: second ? getComputedStyle(second).color : null,
+                            firstDisplay: first ? getComputedStyle(first).display : null,
+                            secondDisplay: second ? getComputedStyle(second).display : null,
+                            firstHeight: first ? first.getBoundingClientRect().height : 0,
+                            secondHeight: second ? second.getBoundingClientRect().height : 0
                         };
                     })
                 """)
@@ -114,6 +124,8 @@ def run() -> None:
                     and row["secondLang"] != "sa-Deva"
                     and row["firstColor"] == "rgb(32, 33, 34)"
                     and row["secondColor"] == "rgb(6, 69, 173)"
+                    and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
+                    and row["firstHeight"] > 0 and row["secondHeight"] > 0
                     for row in link_formats
                 ), link_formats
                 report["home"] = {"panel_gap_px": round(gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "nav_items_checked": len(nav_formats), **colors}
@@ -163,6 +175,10 @@ def run() -> None:
                         return {
                             devColor: getComputedStyle(dev).color,
                             romanColor: roman ? getComputedStyle(roman).color : null,
+                            devDisplay: getComputedStyle(dev).display,
+                            romanDisplay: roman ? getComputedStyle(roman).display : null,
+                            devHeight: dev.getBoundingClientRect().height,
+                            romanHeight: roman ? roman.getBoundingClientRect().height : 0,
                             devTop: dev.getBoundingClientRect().top,
                             romanTop: roman ? roman.getBoundingClientRect().top : null
                         };
@@ -171,6 +187,8 @@ def run() -> None:
                 assert puranas and all(
                     row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
+                    and row["devHeight"] > 0 and row["romanHeight"] > 0
                     and row["devTop"] < row["romanTop"]
                     for row in puranas
                 ), puranas
@@ -179,6 +197,8 @@ def run() -> None:
                         const dev = node.querySelector(".purana-title-dev");
                         const roman = node.querySelector(".purana-title-iast");
                         return {devColor:getComputedStyle(dev).color, romanColor:getComputedStyle(roman).color,
+                            devDisplay:getComputedStyle(dev).display, romanDisplay:getComputedStyle(roman).display,
+                            devHeight:dev.getBoundingClientRect().height, romanHeight:roman.getBoundingClientRect().height,
                             devTop:dev.getBoundingClientRect().top, romanTop:roman.getBoundingClientRect().top};
                     })
                 """)
@@ -187,18 +207,24 @@ def run() -> None:
                         const dev = node.querySelector(".purana-title-dev");
                         const roman = node.querySelector(".purana-title-iast");
                         return {devColor:getComputedStyle(dev).color, romanColor:getComputedStyle(roman).color,
+                            devDisplay:getComputedStyle(dev).display, romanDisplay:getComputedStyle(roman).display,
+                            devHeight:dev.getBoundingClientRect().height, romanHeight:roman.getBoundingClientRect().height,
                             devTop:dev.getBoundingClientRect().top, romanTop:roman.getBoundingClientRect().top};
                     })
                 """)
                 assert headings and all(
                     row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
+                    and row["devHeight"] > 0 and row["romanHeight"] > 0
                     and row["devTop"] < row["romanTop"]
                     for row in headings
                 ), headings
                 assert section_headings and all(
                     row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
+                    and row["devHeight"] > 0 and row["romanHeight"] > 0
                     and row["devTop"] < row["romanTop"]
                     for row in section_headings
                 ), section_headings
@@ -207,7 +233,9 @@ def run() -> None:
                         const dev = link.querySelector(".purana-name-dev");
                         const roman = link.querySelector(".purana-name-iast");
                         return {count:link.children.length, devColor:getComputedStyle(dev).color,
-                            romanColor:getComputedStyle(roman).color, devTop:dev.getBoundingClientRect().top,
+                            romanColor:getComputedStyle(roman).color, devDisplay:getComputedStyle(dev).display,
+                            romanDisplay:getComputedStyle(roman).display, devHeight:dev.getBoundingClientRect().height,
+                            romanHeight:roman.getBoundingClientRect().height, devTop:dev.getBoundingClientRect().top,
                             romanTop:roman.getBoundingClientRect().top};
                     })
                 """)
@@ -215,6 +243,8 @@ def run() -> None:
                     row["count"] == 2
                     and row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
+                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
+                    and row["devHeight"] > 0 and row["romanHeight"] > 0
                     and row["devTop"] < row["romanTop"]
                     for row in research_links
                 ), research_links
