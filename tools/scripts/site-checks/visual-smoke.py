@@ -285,6 +285,7 @@ def run() -> None:
                 page.screenshot(path=str(OUT / "purana-chapter-numbers.png"))
 
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
+                page.locator("#brahmaparvan > summary").click()
                 brahma_link = page.locator(".chapter-list a").first
                 brahma_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
                 assert brahma_link.locator(".purana-chapter-reference").inner_text() == "1.1"
@@ -294,6 +295,8 @@ def run() -> None:
                 assert "Śatānīka’s Inquiry" in brahma_link.locator(".purana-chapter-name").inner_text()
 
                 page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
+                page.locator("#part-1 > summary").click()
+                page.locator("#part-2 > summary").click()
                 part_one = page.locator('a[href*="part-1-chapter-1"] .purana-chapter-reference')
                 part_one.wait_for(timeout=20000)
                 assert part_one.inner_text() == "1.1"
