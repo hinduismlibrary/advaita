@@ -7,7 +7,7 @@ import os
 import re
 from pathlib import Path
 
-CACHE_VERSION = "20261023-reader-layout-3"
+CACHE_VERSION = "20261023-reader-layout-4"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -19,6 +19,10 @@ SITE_JS_URL = re.compile(
 )
 BHAVISHYA_CONTROLS_URL = re.compile(
     r"""/advaita/assets/js/bhavishya-controls\.js(?:\?[^"'\s>]*)?""",
+    re.IGNORECASE,
+)
+SHANKARA_READER_URL = re.compile(
+    r"""/advaita/assets/js/shankara-reader\.js(?:\?[^"'\s>]*)?""",
     re.IGNORECASE,
 )
 SITE_CHROME_JS_URL = re.compile(
@@ -86,6 +90,7 @@ def prepare(site: Path) -> tuple[int, int]:
         updated = SITE_JS_URL.sub(f"/advaita/assets/js/site.js?v={CACHE_VERSION}", content)
         updated = SITE_CHROME_JS_URL.sub(f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}", updated)
         updated = BHAVISHYA_CONTROLS_URL.sub(f"/advaita/assets/js/bhavishya-controls.js?v={CACHE_VERSION}", updated)
+        updated = SHANKARA_READER_URL.sub(f"/advaita/assets/js/shankara-reader.js?v={CACHE_VERSION}", updated)
         updated = ensure_shared_chrome(updated)
 
         if relative.startswith(MMK_PREFIX + "/"):

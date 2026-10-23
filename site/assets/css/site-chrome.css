@@ -3144,3 +3144,6 @@ body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .article :is(p,li){
 body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) [lang^="sa-Deva"]{
   font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
 }
+
+/* Tattvabodha is one continuous teaching; its data units are not chapters. */
+body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] .gita-contents{display:none!important}
