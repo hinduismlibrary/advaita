@@ -109,6 +109,8 @@ def run() -> None:
                 assert fallback.count() == 0, "Tattvabodha reader fallback: " + "; ".join(browser_errors) + " / " + fallback.all_text_contents().__str__()
                 assert reader.locator(".gita-contents:visible").count() == 0
                 assert reader.locator(".gita-verse").count() == 44, "Tattvabodha did not load all 44 units"
+                box = reader.locator(".shankara-reading-grid").bounding_box()
+                assert abs(box["x"] + box["width"] / 2 - 683) <= 35, f"Tattvabodha column is off center: {box}"
                 report["tattvabodha"] = {"contents_list": "absent", "text": "continuous"}
                 page.screenshot(path=str(OUT / "tattvabodha.png"))
                 assert not javascript_errors, "Browser JavaScript errors: " + "; ".join(javascript_errors)

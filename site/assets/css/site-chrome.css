@@ -3148,3 +3148,10 @@ body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .article [lang^="sa
 
 /* Tattvabodha is one continuous teaching; its data units are not chapters. */
 body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] .gita-contents{display:none!important}
+
+body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] .shankara-reading-grid{
+  display:block!important;max-width:760px!important;margin-inline:auto!important
+}
+body.vd-chrome-page.vd-chrome-page .shankara-content[data-work="tattvabodha"] :is(.gita-hero,.shankara-unit-column){
+  width:100%!important;max-width:none!important;margin-inline:auto!important
+}
