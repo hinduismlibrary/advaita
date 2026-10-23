@@ -43,6 +43,8 @@ jobs:
           exit 1
       - name: Prepare site deployment
         run: python3 tools/scripts/site-checks/prepare-site-deploy.py
+      - name: Verify prepared shared chrome on every page
+        run: VERIFY_PREPARED=1 python3 tools/scripts/site-checks/verify-site-chrome.py
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:

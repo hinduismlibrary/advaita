@@ -7,7 +7,7 @@ import os
 import re
 from pathlib import Path
 
-CACHE_VERSION = "20261023-standardized-sitewide-2"
+CACHE_VERSION = "20261023-reader-layout-3"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -15,6 +15,10 @@ DEFAULT_SITE = REPO_ROOT / "site"
 MMK_PREFIX = "articles/mulamadhyamakakarika-with-chandrakirti"
 SITE_JS_URL = re.compile(
     r"""/advaita/assets/js/site\.js(?:\?[^"'\s>]*)?""",
+    re.IGNORECASE,
+)
+BHAVISHYA_CONTROLS_URL = re.compile(
+    r"""/advaita/assets/js/bhavishya-controls\.js(?:\?[^"'\s>]*)?""",
     re.IGNORECASE,
 )
 SITE_CHROME_JS_URL = re.compile(
@@ -81,6 +85,7 @@ def prepare(site: Path) -> tuple[int, int]:
         content = page.read_text(encoding="utf-8")
         updated = SITE_JS_URL.sub(f"/advaita/assets/js/site.js?v={CACHE_VERSION}", content)
         updated = SITE_CHROME_JS_URL.sub(f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}", updated)
+        updated = BHAVISHYA_CONTROLS_URL.sub(f"/advaita/assets/js/bhavishya-controls.js?v={CACHE_VERSION}", updated)
         updated = ensure_shared_chrome(updated)
 
         if relative.startswith(MMK_PREFIX + "/"):

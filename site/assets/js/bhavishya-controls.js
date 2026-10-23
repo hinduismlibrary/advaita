@@ -60,6 +60,7 @@
   }
 
   function initialiseVerse(verse){
+    const wasReady=verse.dataset.bpControlsReady==='true';
     const english=verse.querySelector('.bp-reader-panel[data-bp-panel="english"],.bp-reader-panel[data-bp-panel="translation"]');
     if(english){
       english.dataset.bpPanel='english';
@@ -126,13 +127,13 @@
     }
     if(transliterationButton){
       transliterationButton.dataset.bpView='transliteration';
-      transliterationButton.textContent='Transliteration';
+      if(transliterationButton.textContent!=='Transliteration')transliterationButton.textContent='Transliteration';
       transliterationButton.disabled=!(transliteration&&text);
       if(transliteration&&transliteration.id)transliterationButton.setAttribute('aria-controls',transliteration.id);
       transliterationButton.setAttribute('aria-disabled',String(transliterationButton.disabled));
     }
     if(wordButton){
-      wordButton.textContent='Word for Word';
+      if(wordButton.textContent!=='Word for Word')wordButton.textContent='Word for Word';
       wordButton.disabled=!hasWords;
       if(wordPanel&&wordPanel.id)wordButton.setAttribute('aria-controls',wordPanel.id);
       wordButton.setAttribute('aria-disabled',String(wordButton.disabled));
@@ -147,15 +148,14 @@
         showView(currentVerse,button.dataset.bpView);
       });
     });
-    const initialView='';
-    if(initialView)showView(verse,initialView);
-    else{
+    if(!wasReady){
       [transliteration,wordPanel].filter(Boolean).forEach(panel=>{panel.hidden=true;});
       verse.querySelectorAll('.bp-reader-toggle').forEach(button=>{
         button.classList.remove('is-active');
         button.setAttribute('aria-pressed','false');
       });
     }
+    verse.dataset.bpControlsReady='true';
   }
 
   function initialiseSubtree(root){

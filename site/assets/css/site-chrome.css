@@ -2310,7 +2310,7 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
 body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
   display:flex!important;
   flex-direction:column!important;
-  justify-content:space-between!important;
+  justify-content:flex-start!important;
   gap:14px!important;
   min-width:0!important;
 }
@@ -2901,7 +2901,7 @@ body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header #vd-prima
 }
 body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header #vd-primary-nav a[aria-current="page"]{
   border-bottom-color:#0645ad!important;
-  color:#202122!important;
+  color:#0645ad!important;
 }
 body.vd-chrome-page.vd-chrome-page>header.site-header.vd-global-header .vd-search-form input{
   min-height:32px!important;
@@ -3093,3 +3093,54 @@ body.vd-chrome-page.vd-chrome-page :is(.gita-details,.sanskrit-reveal,.sb-detail
   }
 }
 
+
+/* Final shared rules for bilingual titles, continuous documents and disclosures. */
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{align-items:start!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-column{justify-content:flex-start!important;align-self:start!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a .hp-original-dev,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a .hp-link-dev{
+  display:block!important;color:#202122!important;
+  font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a .hp-original-iast{
+  display:block!important;color:#0645ad!important;
+  font:400 15px/1.5 Merriweather,Georgia,serif!important
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .hp-section-dev{
+  font:400 14px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+body.vd-chrome-page.vd-chrome-page main h1 .vd-label-dev,
+body.vd-chrome-page.vd-chrome-page .ad-hero h1 .ad-title-dev{
+  display:block!important;color:#202122!important;
+  font:500 clamp(23px,3vw,30px)/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+body.vd-chrome-page.vd-chrome-page main h1 .vd-label-iast,
+body.vd-chrome-page.vd-chrome-page .ad-hero h1 .ad-title-en{
+  display:block!important;color:#0645ad!important;
+  font:400 18px/1.5 Merriweather,Georgia,serif!important
+}
+body.vd-chrome-page.vd-chrome-page main h2 .vd-label-dev{
+  display:block!important;color:#202122!important;
+  font:400 17px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}
+body.vd-chrome-page.vd-chrome-page :is(.gita-details,.sanskrit-reveal,.sb-details):not([open]) > :not(summary){display:none!important}
+body.vd-chrome-page.vd-chrome-page .bp-reader-panel[hidden]{display:none!important}
+@media(min-width:901px){
+  body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .reader-grid{
+    grid-template-columns:220px minmax(0,1fr)!important;
+    justify-content:stretch!important;gap:28px!important;width:100%!important
+  }
+  body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .reader-grid > .article{
+    width:100%!important;max-width:none!important
+  }
+  body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) > .article-head{
+    width:calc(100% - 248px)!important;max-width:none!important;
+    margin:0 0 24px auto!important
+  }
+}
+body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) .article :is(p,li){
+  font-family:Merriweather,Georgia,serif!important;line-height:1.65!important
+}
+body.vd-chrome-page.vd-chrome-page .page:has(> .reader-grid) [lang^="sa-Deva"]{
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important
+}

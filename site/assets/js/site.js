@@ -27,43 +27,19 @@ const repairVishnuWordForWord=()=>{
  });
 };
 repairVishnuWordForWord();
-// Keep Devanāgarī verses visible in the verse body and reserve the disclosure for Śrīdhara Sanskrit.
+// Keep Devanāgarī verses visible in the verse body and remove the extra disclosure.
 const standardizeVishnuControls=()=>{
  if(!vishnuPuranaRoute)return;
- document.querySelectorAll('.gita-devanagari-details').forEach(detail=>{
-  const commentary=detail.querySelector('.gita-dual-section.gita-dual-sridhara');
-  const sanskrit=commentary?.querySelector('[lang^="sa-Deva"]');
-  if(!sanskrit){detail.remove();return;}
-  detail.querySelectorAll('.gita-dual-section.gita-dual-gita').forEach(node=>node.remove());
-  const summary=detail.querySelector(':scope > summary');
-  if(summary)summary.textContent='Śrīdhara Sanskrit';
-  detail.classList.remove('gita-devanagari-details');
- });
+ // The verse text is already visible; keep just the two requested disclosures.
+ document.querySelectorAll('.gita-devanagari-details').forEach(detail=>detail.remove());
 };
 standardizeVishnuControls();
-// Keep the WFW control visible even when an invalid generated layer was removed.
-// The status is explicit; no ordinary translation is relabelled as lexical data.
-const restoreVishnuWordForWordControl=()=>{
- if(!vishnuPuranaRoute)return;
- document.querySelectorAll('.gita-verse').forEach(article=>{
-  const controls=article.querySelector(':scope > .gita-controls');
-  if(!controls)return;
-  const exists=[...controls.querySelectorAll(':scope > details.gita-details')].some(d=>/^Word-for-word$/i.test((d.querySelector(':scope > summary')?.textContent||'').trim()));
-  if(exists)return;
-  const detail=document.createElement('details');detail.className='gita-details';
-  const summary=document.createElement('summary');summary.textContent='Word-for-word';
-  const reveal=document.createElement('div');reveal.className='gita-reveal';
-  const note=document.createElement('p');note.className='gita-wfw-pending';note.textContent='No verified word-for-word rendering is currently published for this verse.';
-  reveal.append(note);detail.append(summary,reveal);controls.prepend(detail);
- });
-};
-restoreVishnuWordForWordControl();
 
 
 const citation=/\/articles\/compilation-of-peer-reviewed-citations-against-aryan-migration-theory\/?$/.test(p),meat=/\/articles\/meat-eating-in-hinduism-through-the-lens-of-shastra\/?$/.test(p);
 const css=(key,href)=>{if(document.querySelector(`link[data-${key}]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=href;l.dataset[key]='1';document.head.append(l)};
 const js=(key,src)=>{if(document.querySelector(`script[data-${key}]`))return;const s=document.createElement('script');s.src=src;s.async=false;s.dataset[key]='1';document.body.append(s)};
-js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261023-standardized-sitewide-2');
+js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261023-reader-layout-3');
 if(article){
  document.querySelectorAll('link[href*="/assets/css/hindupedia-site.css"]').forEach(n=>n.remove());
  if(mmkChapter){

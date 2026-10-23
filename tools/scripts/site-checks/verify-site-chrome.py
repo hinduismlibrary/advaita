@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Fail when a published HTML document does not load the current shared site chrome."""
 from pathlib import Path
+import os
 import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / 'site'
-SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-2", "20261021-wikisource-4", "20261021-numbered-contents-1", "20261021-standardized-blue-1", "20261022-link-styles-1", "20261022-wikisource-directory-1", "20261022-wikisource-inspired-2", "20261022-wikisource-inspired-3", "20261022-standardized-reading-1", "20261023-navigation-devanagari-1", "20261023-standardized-sitewide-1", "20261023-standardized-sitewide-2")
+SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-2", "20261021-wikisource-4", "20261021-numbered-contents-1", "20261021-standardized-blue-1", "20261022-link-styles-1", "20261022-wikisource-directory-1", "20261022-wikisource-inspired-2", "20261022-wikisource-inspired-3", "20261022-standardized-reading-1", "20261023-navigation-devanagari-1", "20261023-standardized-sitewide-1", "20261023-standardized-sitewide-2", "20261023-reader-layout-3")
 SUPPORTED_THEME_PATTERN = "|".join(re.escape(version) for version in SUPPORTED_THEME_VERSIONS)
 LOADER = re.compile(
     r"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v=(?:THEME_VERSION)["']""".replace("THEME_VERSION", SUPPORTED_THEME_PATTERN),
@@ -39,6 +40,13 @@ if not js_version or js_version != cache_version:
     print(f"Shared JavaScript cache version mismatch: deploy uses {cache_version}; site.js loads {actual}.")
     sys.exit(1)
 
+prepared = os.environ.get("VERIFY_PREPARED") == "1"
+expected_loader = re.compile(
+    rf"""<script\\b[^>]*\\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\\.js\\?v={re.escape(cache_version)}["']""",
+    re.IGNORECASE,
+)
+expected_css = f"/advaita/assets/css/site-chrome.css?v={cache_version}"
+
 missing = []
 checked = 0
 for path in SITE.rglob("*.html"):
@@ -50,8 +58,10 @@ for path in SITE.rglob("*.html"):
     if not HTML_DOC.search(source) or not BODY.search(source):
         continue
     checked += 1
-    if not LOADER.search(source):
+    if not (expected_loader if prepared else LOADER).search(source):
         missing.append(relative)
+    if prepared and (expected_css not in source or 'vd-chrome-page' not in source):
+        missing.append(relative + ' (shared CSS or body class missing)')
 
 if missing:
     print(f"{len(missing)} of {checked} page documents lack the shared chrome at supported cache versions {SUPPORTED_THEME_VERSIONS}:")
@@ -59,4 +69,4 @@ if missing:
         print(f" - {relative}")
     sys.exit(1)
 
-print(f"All {checked} full HTML pages load a supported shared chrome asset.")
+print(f"All {checked} full HTML pages load the {'current' if prepared else 'supported'} shared chrome asset.")
