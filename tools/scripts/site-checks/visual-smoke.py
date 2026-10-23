@@ -133,7 +133,7 @@ def run() -> None:
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"panel_gap_px": round(gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "nav_items_checked": len(nav_formats), **colors}
+                report["home"] = {"panel_gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "nav_items_checked": len(nav_formats), **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
