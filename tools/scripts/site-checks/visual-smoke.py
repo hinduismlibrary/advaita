@@ -297,10 +297,10 @@ def run() -> None:
                 page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
                 page.locator("#part-1 > summary").click()
                 page.locator("#part-2 > summary").click()
-                part_one = page.locator('a[href*="part-1-chapter-1"] .purana-chapter-reference')
+                part_one = page.locator('a[href$="part-1-chapter-1/"] .purana-chapter-reference')
                 part_one.wait_for(timeout=20000)
                 assert part_one.inner_text() == "1.1"
-                part_two = page.locator('a[href*="part-2-chapter-1"] .purana-chapter-reference')
+                part_two = page.locator('a[href$="part-2-chapter-1/"] .purana-chapter-reference')
                 assert part_two.inner_text() == "2.1"
 
                 page.goto(base + "pages/vishnu-purana/", wait_until="domcontentloaded")
