@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261023-reader-layout-9";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261023-sitewide-monochrome-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -180,7 +180,7 @@ function stackLabel(element,original,devanagari,mode="english"){
  element.dataset.vdOriginal=original;
  element.dataset.vdBilingual="true";
  element.dataset.vdLabelMode=originalMode?"original":"english";
- element.replaceChildren(...(originalMode?[sa,roman]:[roman,sa]));
+ element.replaceChildren(sa,roman);
 }
 function stackOriginalDirectoryEntry(element){
  if(!element||element.dataset.vdBilingual==="true")return false;
