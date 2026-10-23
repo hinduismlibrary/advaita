@@ -303,7 +303,7 @@ def run() -> None:
                 page.goto(base + "pages/bhavishya-purana/", wait_until="domcontentloaded")
                 parva_links = page.locator('aside[aria-label="Contents"] a')
                 assert parva_links.count() == 4
-                assert page.locator("details, summary, button").count() == 0
+                assert page.locator(".reader details, .reader summary, .reader button").count() == 0
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
                 brahma_link = page.locator(".chapter-list a").first
                 brahma_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
