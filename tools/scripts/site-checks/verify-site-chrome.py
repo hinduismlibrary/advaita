@@ -42,7 +42,7 @@ if not js_version or js_version != cache_version:
 
 prepared = os.environ.get("VERIFY_PREPARED") == "1"
 expected_loader = re.compile(
-    rf"""<script\\b[^>]*\\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\\.js\\?v={re.escape(cache_version)}["']""",
+    rf"""<script\b[^>]*\bsrc=["'][^"']*/assets/js/(?:site|site-chrome)\.js\?v={re.escape(cache_version)}["']""",
     re.IGNORECASE,
 )
 expected_css = f"/advaita/assets/css/site-chrome.css?v={cache_version}"
