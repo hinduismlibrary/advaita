@@ -3280,3 +3280,35 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-
   display:block!important;visibility:visible!important;opacity:1!important;
   color:#0645ad!important;-webkit-text-fill-color:#0645ad!important
 }
+
+
+/* Small optional chapter-title display on Purāṇa contents pages. */
+body.vd-chrome-page .purana-chapter-name-tools{
+  display:flex;align-items:center;justify-content:flex-end;margin:0 0 10px;
+  font-size:12px;line-height:1.4
+}
+body.vd-chrome-page .purana-chapter-name-toggle{
+  display:inline-flex;align-items:center;min-height:25px;padding:2px 7px;
+  border:1px solid #a2a9b1;border-radius:2px;background:#fff;color:#0645ad;
+  font:inherit;line-height:1.3;cursor:pointer
+}
+body.vd-chrome-page .purana-chapter-name-toggle:hover{
+  background:#f8f9fa;text-decoration:underline
+}
+body.vd-chrome-page .purana-chapter-name-toggle:focus-visible{
+  outline:2px solid #0645ad;outline-offset:2px
+}
+body.vd-chrome-page .purana-chapter-reference{
+  display:inline-block;min-width:3.2em;color:#202122!important;
+  font-size:13px;font-variant-numeric:tabular-nums;font-weight:600
+}
+body.vd-chrome-page .purana-chapter-name{
+  display:none!important;margin:.12em 0 0 1.65em;color:#0645ad!important;
+  font-size:13px;font-weight:400;line-height:1.45
+}
+body.vd-chrome-page .purana-chapter-name[hidden]{
+  display:none!important
+}
+body.vd-chrome-page.purana-chapter-names-visible .purana-chapter-name:not([hidden]){
+  display:block!important
+}

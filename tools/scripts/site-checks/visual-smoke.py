@@ -268,6 +268,44 @@ def run() -> None:
                 report["puranas"] = {"entries_checked": len(puranas), "headings_checked": len(headings) + len(section_headings), "research_links_checked": len(research_links), "breadcrumb": "Devanagari above blue English", "footer": "black Devanagari; blue IAST", "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST"}
                 page.screenshot(path=str(OUT / "purana-library.png"))
 
+                page.goto(base + "pages/bhagavatam-with-sridhara-bhasya/", wait_until="domcontentloaded")
+                bhagavatam_link = page.locator(".chapter-list a").first
+                bhagavatam_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
+                assert bhagavatam_link.locator(".purana-chapter-reference").inner_text() == "1.1"
+                chapter_name = bhagavatam_link.locator(".purana-chapter-name")
+                assert not chapter_name.is_visible()
+                names_toggle = page.locator(".purana-chapter-name-toggle")
+                assert names_toggle.get_attribute("aria-pressed") == "false"
+                names_toggle.click()
+                assert chapter_name.is_visible()
+                assert "Questions by the Sages" in chapter_name.inner_text()
+                names_toggle.click()
+                assert not chapter_name.is_visible()
+                report["purana_chapter_names"] = {"default": "numbered references", "optional": "chapter names show and hide"}
+                page.screenshot(path=str(OUT / "purana-chapter-numbers.png"))
+
+                page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
+                brahma_link = page.locator(".chapter-list a").first
+                brahma_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
+                assert brahma_link.locator(".purana-chapter-reference").inner_text() == "1.1"
+                assert not brahma_link.locator(".purana-chapter-name").is_visible()
+                page.locator(".purana-chapter-name-toggle").click()
+                assert brahma_link.locator(".purana-chapter-name").is_visible()
+                assert "Śatānīka’s Inquiry" in brahma_link.locator(".purana-chapter-name").inner_text()
+
+                page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
+                part_one = page.locator('a[href*="part-1-chapter-1"] .purana-chapter-reference')
+                part_one.wait_for(timeout=20000)
+                assert part_one.inner_text() == "1.1"
+                part_two = page.locator('a[href*="part-2-chapter-1"] .purana-chapter-reference')
+                assert part_two.inner_text() == "2.1"
+
+                page.goto(base + "pages/vishnu-purana/", wait_until="domcontentloaded")
+                vishnu_first = page.locator("#book-list .chapter-grid a .purana-chapter-reference").first
+                vishnu_first.wait_for(timeout=20000)
+                assert vishnu_first.inner_text() == "1.1"
+                report["purana_indexes"] = {"bhagavatam_canto": "1.1", "bhavishya_parvan_parts": "1.1 and 2.1", "vishnu_purana_book": "1.1"}
+
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")
                 document = page.locator("details.sanskrit-reveal").first
                 document.wait_for(timeout=20000)

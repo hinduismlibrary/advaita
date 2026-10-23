@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261023-sitewide-bilingual-blue-3";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261023-purana-chapter-names-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -402,9 +402,97 @@ function watchDynamicLabels(){
   const observer=new MutationObserver(records=>{
     const changed=new Set(records.map(record=>record.target).filter(node=>node&&node.nodeType===1));
     changed.forEach(node=>applyPageLabels(node));
+    if(records.some(record=>Array.from(record.addedNodes).some(node=>node&&node.nodeType===1)))enhancePuranaChapterLabels(root);
   });
   observer.observe(root,{childList:true,subtree:true});
 }
+
+function enhancePuranaChapterLabels(root=document){
+  const pagePath=normalizedPath().toLowerCase();
+  if(!/purana|bhagavatam/.test(pagePath))return;
+  const scope=root&&root.querySelectorAll?root:document;
+  const selector=".chapter-list a,.chapter-grid a,.context-chapter-list a";
+  const links=Array.from(scope.querySelectorAll(selector));
+  if(!links.length)return;
+
+  const clean=value=>String(value||"").replace(/\s+/g," ").trim();
+  const nameFrom=value=>{
+    const text=clean(value);
+    const match=text.match(/^(?:(?:chapter\s+)?\d+(?:\.\d+)*)(?:\s*[—–-]\s*|\s*:\s*)(.+)$/i);
+    return match?clean(match[1]):"";
+  };
+  const referenceFor=link=>{
+    const label=clean(link.textContent);
+    let route="";
+    try{
+      const url=new URL(link.getAttribute("href")||"",location.href);
+      route=(url.pathname+url.hash).toLowerCase();
+    }catch(_error){}
+    let match=route.match(/\/vishnu-purana-book-(\d+)-chapter-(\d+)/i);
+    if(match)return String(Number(match[1]))+"."+String(Number(match[2]));
+    match=route.match(/\/(?:srimad-)?bhagavatam-canto-(\d+)[^#]*#chapter-(\d+)/i);
+    if(match)return String(Number(match[1]))+"."+String(Number(match[2]));
+    match=route.match(/\/bhavishya-purana-(?:pratisargaparvan|madhyamaparvan)-part-(\d+)-chapter-(\d+)/i);
+    if(match)return String(Number(match[1]))+"."+String(Number(match[2]));
+    match=route.match(/\/bhavishya-purana-(?:brahmaparvan|uttaraparvan)-chapter-(\d+)/i);
+    if(match)return "1."+String(Number(match[1]));
+    match=route.match(/\/[^/]*(?:purana|bhagavatam)-book-(\d+)-chapter-(\d+)/i);
+    if(match)return String(Number(match[1]))+"."+String(Number(match[2]));
+    match=label.match(/^(\d+(?:\.\d+)+)(?:\s|$)/);
+    if(match)return match[1];
+    match=route.match(/(?:#chapter-|(?:^|[-/])chapter-)(\d+)/i);
+    if(match)return "1."+String(Number(match[1]));
+    return "";
+  };
+
+  for(const link of links){
+    if(link.dataset.vdPuranaChapterLabel==="true")continue;
+    const label=clean(link.textContent);
+    const reference=referenceFor(link);
+    if(!reference)continue;
+    const searchTitle=clean(link.getAttribute("data-search-title"));
+    const chapterName=nameFrom(label)||nameFrom(searchTitle)||
+      (searchTitle&&!/^(?:chapter\s+)?\d+(?:\.\d+)*$/i.test(searchTitle)?searchTitle:"");
+    const referenceNode=document.createElement("span");
+    referenceNode.className="purana-chapter-reference";
+    referenceNode.textContent=reference;
+    link.replaceChildren(referenceNode);
+    if(chapterName){
+      const nameNode=document.createElement("span");
+      nameNode.className="purana-chapter-name";
+      nameNode.textContent=chapterName;
+      nameNode.hidden=!document.body.classList.contains("purana-chapter-names-visible");
+      link.appendChild(nameNode);
+    }
+    link.dataset.vdPuranaChapterLabel="true";
+  }
+
+  const hasNames=!!document.querySelector(".purana-chapter-name");
+  if(!hasNames||document.querySelector(".purana-chapter-name-tools"))return;
+  const tools=document.createElement("div");
+  tools.className="purana-chapter-name-tools";
+  const button=document.createElement("button");
+  button.type="button";
+  button.className="purana-chapter-name-toggle";
+  const showing=document.body.classList.contains("purana-chapter-names-visible");
+  button.textContent=showing?"Hide chapter names":"Show chapter names";
+  button.setAttribute("aria-pressed",String(showing));
+  button.setAttribute("aria-label",showing?"Hide chapter names":"Show chapter names");
+  button.addEventListener("click",()=>{
+    const next=!document.body.classList.contains("purana-chapter-names-visible");
+    document.body.classList.toggle("purana-chapter-names-visible",next);
+    button.textContent=next?"Hide chapter names":"Show chapter names";
+    button.setAttribute("aria-label",button.textContent);
+    button.setAttribute("aria-pressed",String(next));
+    document.querySelectorAll(".purana-chapter-name").forEach(node=>{node.hidden=!next});
+  });
+  tools.appendChild(button);
+  const reader=document.querySelector(".reader");
+  const firstList=document.querySelector(selector);
+  if(reader&&reader.parentNode)reader.parentNode.insertBefore(tools,reader);
+  else if(firstList&&firstList.parentNode)firstList.parentNode.insertBefore(tools,firstList);
+}
+
 function repairMmkLayout(path){
   if(!/\/articles\/mulamadhyamakakarika-with-chandrakirti(?:\/|$)/i.test(path))return;
   document.body.classList.remove("vp-book-1");
@@ -427,6 +515,7 @@ function mount(){
     document.body.prepend(header);
   }
   applyPageLabels();
+  enhancePuranaChapterLabels();
   const footer=document.querySelector(".site-footer");
   if(footer)applyPageLabels(footer);
   fixInlineLabelSpacing();
