@@ -93,6 +93,9 @@ def run() -> None:
                 report["vishnu"] = {"controls": labels, "toggle": "opens and closes"}
                 page.screenshot(path=str(OUT / "vishnu.png"))
 
+                browser_errors = []
+                page.on("console", lambda message: browser_errors.append(message.text) if message.type == "error" else None)
+                page.on("pageerror", lambda error: browser_errors.append(str(error)))
                 page.goto(base + "books/adi-shankaracharya/tattvabodha/", wait_until="domcontentloaded")
                 reader = page.locator('.shankara-content[data-work="tattvabodha"]')
                 reader.wait_for(timeout=20000)
@@ -100,6 +103,8 @@ def run() -> None:
                     "() => document.querySelector('[data-work=\"tattvabodha\"]')?.getAttribute('aria-busy') === 'false'",
                     timeout=20000,
                 )
+                fallback = reader.locator(".shankara-reader-error")
+                assert fallback.count() == 0, "Tattvabodha reader fallback: " + "; ".join(browser_errors) + " / " + fallback.all_text_contents().__str__()
                 assert reader.locator(".gita-contents:visible").count() == 0
                 report["tattvabodha"] = {"contents_list": "absent", "text": "continuous"}
                 page.screenshot(path=str(OUT / "tattvabodha.png"))
