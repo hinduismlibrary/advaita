@@ -63,30 +63,10 @@ def run() -> None:
                 page.on("console", lambda message: browser_errors.append(message.text) if message.type == "error" else None)
                 page.on("pageerror", lambda error: javascript_errors.append(str(error)))
                 page.goto(base, wait_until="domcontentloaded")
-                page.locator(".vd-global-header .vd-label-dev").first.wait_for(timeout=20000)
+                page.locator(".hp-home-title-dev").wait_for(timeout=20000)
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
-                nav_formats = page.locator(".vd-primary-nav a").evaluate_all("""
-                    links => links.map(link => {
-                        const dev = link.querySelector(".vd-label-dev");
-                        const roman = link.querySelector(".vd-label-en, .vd-label-iast");
-                        return {
-                            devColor: dev ? getComputedStyle(dev).color : null,
-                            romanColor: roman ? getComputedStyle(roman).color : null,
-                            devDisplay: dev ? getComputedStyle(dev).display : null,
-                            romanDisplay: roman ? getComputedStyle(roman).display : null,
-                            devHeight: dev ? dev.getBoundingClientRect().height : 0,
-                            romanHeight: roman ? roman.getBoundingClientRect().height : 0
-                        };
-                    })
-                """)
-                assert nav_formats and all(
-                    row["devColor"] == "rgb(32, 33, 34)"
-                    and row["romanColor"] == "rgb(6, 69, 173)"
-                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
-                    and row["devHeight"] > 0 and row["romanHeight"] > 0
-                    for row in nav_formats
-                ), nav_formats
+                assert not page.locator(".vd-global-header").is_visible(), "Homepage navigation/search should be hidden"
                 title_order = page.locator(".hp-section-title").first.evaluate(
                     "el => Array.from((el.querySelector(':scope > a') || el).children).map(child => child.className)"
                 )
@@ -94,6 +74,8 @@ def run() -> None:
                 page.locator("body.vd-chrome-page .hp-panel").first.wait_for()
                 panels = page.locator(".hp-directory .hp-panel")
                 assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
+                home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
+                assert home_width >= 1200, f"Homepage content is only {home_width}px wide"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
                 assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
                 first, second, third = [panels.nth(i).bounding_box() for i in range(3)]
@@ -106,9 +88,11 @@ def run() -> None:
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
                 assert documents.locator("li").count() == 8
-                assert documents.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 4
+                assert documents.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 2
                 assert shastras.locator("li").count() == 4
                 assert shastras.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 2
+                link_font_size = page.locator(".hp-link-list a").first.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize)")
+                assert link_font_size >= 16, f"Homepage links are only {link_font_size}px"
                 assert page.locator("#gita").count() == 0
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
                     "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
@@ -141,7 +125,7 @@ def run() -> None:
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"panel_gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "nav_items_checked": len(nav_formats), **colors}
+                report["home"] = {"panel_gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
