@@ -66,7 +66,7 @@ def run() -> None:
                 page.locator(".hp-home-title-dev").wait_for(timeout=20000)
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
-                assert not page.locator(".vd-global-header").is_visible(), "Homepage navigation/search should be hidden"
+                assert page.locator(".vd-global-header").count() == 0, "Homepage should not include global navigation/search"
                 title_order = page.locator(".hp-section-title").first.evaluate(
                     "el => Array.from((el.querySelector(':scope > a') || el).children).map(child => child.className)"
                 )

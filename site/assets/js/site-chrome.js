@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261024-readable-home-5";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261024-readable-home-6";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -506,13 +506,18 @@ function mount(){
   addFonts();
   addStyles();
   document.body.classList.add("vd-chrome-page");
+  const homePage=document.body.classList.contains("home-page");
   let header=document.querySelector("body > header.site-header.vd-global-header");
-  document.querySelectorAll("body > header.site-header, body > header.sitebar, body > header.topbar, body > header.ad-topbar").forEach(node=>{
-    if(node!==header)node.remove();
-  });
-  if(!header){
-    header=makeHeader(normalizedPath());
-    document.body.prepend(header);
+  if(homePage){
+    document.querySelectorAll("body > header.site-header, body > header.sitebar, body > header.topbar, body > header.ad-topbar").forEach(node=>node.remove());
+  }else{
+    document.querySelectorAll("body > header.site-header, body > header.sitebar, body > header.topbar, body > header.ad-topbar").forEach(node=>{
+      if(node!==header)node.remove();
+    });
+    if(!header){
+      header=makeHeader(normalizedPath());
+      document.body.prepend(header);
+    }
   }
   applyPageLabels();
   enhancePuranaChapterLabels();
