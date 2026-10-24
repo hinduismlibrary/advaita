@@ -84,7 +84,7 @@ def run() -> None:
                 left, right = columns.nth(0).bounding_box(), columns.nth(1).bounding_box()
                 horizontal_gap = right["x"] - (left["x"] + left["width"])
                 assert abs(left["width"] - right["width"]) <= 2, (left, right)
-                assert 20 <= horizontal_gap <= 40, f"Homepage column gap is {horizontal_gap}px"
+                assert 20 <= horizontal_gap <= 44, f"Homepage column gap is {horizontal_gap}px"
 
                 advaita_panel, documents_panel, shastras_panel, eastern_panel, indology_panel = [
                     panels.nth(i).bounding_box() for i in range(5)
@@ -98,24 +98,37 @@ def run() -> None:
                 shastras = page.locator(".home-shastra-list")
                 assert documents.locator("li").count() == 8
                 assert shastras.locator("li").count() == 4
-                list_style = documents.evaluate("(el) => ({display:getComputedStyle(el).display, type:getComputedStyle(el).listStyleType})")
-                assert list_style == {"display": "block", "type": "disc"}, list_style
-                assert shastras.evaluate("(el) => getComputedStyle(el).listStyleType") == "disc"
+                list_metrics = page.locator(".hp-link-list").evaluate_all("""
+                    lists => lists.map(list => {
+                        const item = list.querySelector("li");
+                        const link = list.querySelector("a");
+                        const ls = getComputedStyle(list), is = getComputedStyle(item), as = getComputedStyle(link);
+                        return {
+                            display: ls.display, type: ls.listStyleType, paddingLeft: ls.paddingLeft,
+                            itemMargin: is.margin, itemPadding: is.padding, itemBorder: is.borderWidth,
+                            linkSize: as.fontSize, linkLineHeight: as.lineHeight, linkFamily: as.fontFamily
+                        };
+                    })
+                """)
+                assert len(list_metrics) == 5 and all(row == list_metrics[0] for row in list_metrics), list_metrics
+                assert list_metrics[0]["display"] == "block" and list_metrics[0]["type"] == "disc", list_metrics
+                assert list_metrics[0]["linkSize"] == "16px" and "Arial" in list_metrics[0]["linkFamily"], list_metrics
                 link_font_size = page.locator(".hp-link-list a").first.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize)")
-                assert link_font_size >= 15, f"Homepage links are only {link_font_size}px"
+                assert link_font_size == 16, f"Homepage links are {link_font_size}px"
                 panel_style = panels.first.evaluate("""el => {
                     const s = getComputedStyle(el);
                     return {radius:s.borderRadius, shadow:s.boxShadow, background:s.backgroundColor, topBorder:s.borderTopWidth, sideBorder:s.borderLeftWidth};
                 }""")
                 assert panel_style["radius"] == "0px" and panel_style["shadow"] == "none"
                 assert panel_style["background"] in ("rgba(0, 0, 0, 0)", "rgb(255, 255, 255)"), panel_style
-                assert panel_style["topBorder"] == "1px" and panel_style["sideBorder"] == "0px", panel_style
+                assert panel_style["topBorder"] == "0px" and panel_style["sideBorder"] == "0px", panel_style
                 assert page.locator("#gita").count() == 0
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
-                    "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
+                    "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color, devSize:getComputedStyle(el).fontSize, latinSize:getComputedStyle(el.nextElementSibling).fontSize})"
                 )
                 assert colors["dev"] == "rgb(32, 33, 34)", colors
                 assert colors["latin"] == "rgb(6, 69, 173)", colors
+                assert colors["devSize"] == colors["latinSize"] == "16px", colors
                 link_formats = page.locator(".hp-link-list a").evaluate_all("""
                     links => links.map(link => {
                         const [first, second] = Array.from(link.children);
@@ -128,7 +141,9 @@ def run() -> None:
                             firstDisplay: first ? getComputedStyle(first).display : null,
                             secondDisplay: second ? getComputedStyle(second).display : null,
                             firstHeight: first ? first.getBoundingClientRect().height : 0,
-                            secondHeight: second ? second.getBoundingClientRect().height : 0
+                            secondHeight: second ? second.getBoundingClientRect().height : 0,
+                            firstFontSize: first ? getComputedStyle(first).fontSize : null,
+                            secondFontSize: second ? getComputedStyle(second).fontSize : null
                         };
                     })
                 """)
@@ -140,9 +155,10 @@ def run() -> None:
                     and row["secondColor"] == "rgb(6, 69, 173)"
                     and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
+                    and row["firstFontSize"] == row["secondFontSize"] == "16px"
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"columns": 2, "style": "bulleted lists", "gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
+                report["home"] = {"columns": 2, "style": "uniform Wikisource-style lists", "gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue at matching size", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
