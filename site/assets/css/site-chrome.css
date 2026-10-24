@@ -3667,3 +3667,120 @@ body.vd-chrome-page.vd-chrome-page.home-page #indology{grid-column:2!important;g
   }
 }
 
+
+
+/* Homepage: open editorial directory */
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home{
+  padding:22px 0 34px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-intro{
+  margin-bottom:18px!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+  gap:22px 18px!important;
+  align-items:start!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
+  min-width:0!important;
+  margin:0!important;
+  padding:0 2px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title{
+  margin:0 0 8px!important;
+  padding:0 0 6px!important;
+  border:0!important;
+  border-bottom:1px solid #c8ccd1!important;
+  border-radius:0!important;
+  background:transparent!important;
+  font-size:21px!important;
+  line-height:1.28!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-dev,.vd-label-dev,[lang^="sa-Deva"]){
+  display:block!important;
+  margin:0 0 1px!important;
+  color:#202122!important;
+  font-size:13px!important;
+  line-height:1.45!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){
+  display:block!important;
+  color:#0645ad!important;
+  font-size:21px!important;
+  line-height:1.3!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list li{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a{
+  display:block!important;
+  min-width:0!important;
+  padding:7px 2px!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+  text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a:hover,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a:focus-visible{
+  text-decoration:underline!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]){
+  display:block!important;
+  color:#202122!important;
+  font-size:13px!important;
+  line-height:1.45!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){
+  display:block!important;
+  color:#0645ad!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:10px 22px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:8px 18px!important;
+}
+@media(max-width:1020px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px 20px!important;
+  }
+}
+@media(max-width:900px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+    gap:22px!important;
+  }
+}
+@media(max-width:540px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list,
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
+    grid-template-columns:1fr!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-home{
+    padding:18px 0 28px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
+    padding:0!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title,
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-en,.vd-label-en,.vd-label-iast){
+    font-size:19px!important;
+  }
+}
