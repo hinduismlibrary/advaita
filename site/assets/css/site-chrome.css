@@ -3650,3 +3650,20 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
   }
 }
 
+/* Pin desktop homepage sections into three balanced rows. */
+body.vd-chrome-page.vd-chrome-page.home-page #advaita{grid-column:1!important;grid-row:1!important}
+body.vd-chrome-page.vd-chrome-page.home-page #shastras{grid-column:2!important;grid-row:1!important}
+body.vd-chrome-page.vd-chrome-page.home-page #documents{grid-column:1 / -1!important;grid-row:2!important}
+body.vd-chrome-page.vd-chrome-page.home-page #eastern-philosophy{grid-column:1!important;grid-row:3!important}
+body.vd-chrome-page.vd-chrome-page.home-page #indology{grid-column:2!important;grid-row:3!important}
+@media(max-width:900px){
+  body.vd-chrome-page.vd-chrome-page.home-page #advaita,
+  body.vd-chrome-page.vd-chrome-page.home-page #shastras,
+  body.vd-chrome-page.vd-chrome-page.home-page #documents,
+  body.vd-chrome-page.vd-chrome-page.home-page #eastern-philosophy,
+  body.vd-chrome-page.vd-chrome-page.home-page #indology{
+    grid-column:1!important;
+    grid-row:auto!important;
+  }
+}
+
