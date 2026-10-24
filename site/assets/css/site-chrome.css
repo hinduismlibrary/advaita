@@ -3491,3 +3491,162 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-e
   }
 }
 
+/* Compact balanced homepage groups. */
+body.vd-chrome-page.vd-chrome-page.home-page main.site-main{
+  box-sizing:border-box!important;
+  width:min(1280px,calc(100% - 32px))!important;
+  max-width:1280px!important;
+  margin:0 auto!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home{
+  box-sizing:border-box!important;
+  width:min(1200px,calc(100% - 40px))!important;
+  max-width:1200px!important;
+  margin:0 auto!important;
+  padding:20px 0 42px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home>h1{
+  margin:0 0 8px!important;
+  font-size:clamp(32px,4vw,44px)!important;
+  line-height:1.14!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title-dev{
+  font:500 32px/1.25 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title-iast{
+  font:italic 400 21px/1.3 Merriweather,Georgia,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-intro{
+  max-width:860px!important;
+  margin:0 auto 20px!important;
+  font-size:16px!important;
+  line-height:1.55!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:16px!important;
+  align-items:stretch!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
+  display:contents!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page #advaita{grid-column:1!important}
+body.vd-chrome-page.vd-chrome-page.home-page #shastras{grid-column:2!important}
+body.vd-chrome-page.vd-chrome-page.home-page #documents{grid-column:1 / -1!important}
+body.vd-chrome-page.vd-chrome-page.home-page #eastern-philosophy{grid-column:1!important}
+body.vd-chrome-page.vd-chrome-page.home-page #indology{grid-column:2!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
+  min-width:0!important;
+  padding:16px 20px 14px!important;
+  border:1px solid #c8ccd1!important;
+  border-radius:9px!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title{
+  margin:0 0 8px!important;
+  font-size:22px!important;
+  line-height:1.25!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .hp-section-dev,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .vd-label-dev{
+  margin:0 0 2px!important;
+  font-size:13px!important;
+  line-height:1.45!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .hp-section-en,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .vd-label-en,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .vd-label-iast{
+  font-size:22px!important;
+  line-height:1.3!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list{
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list li{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-top:1px solid #eaecf0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list li:first-child{
+  border-top:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a{
+  display:block!important;
+  min-width:0!important;
+  padding:6px 3px!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+  overflow-wrap:anywhere!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-dev,.vd-label-dev,[lang^="sa-Deva"]){
+  display:block!important;
+  color:#202122!important;
+  font-size:13px!important;
+  line-height:1.45!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){
+  display:block!important;
+  color:#0645ad!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:6px 16px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list li{
+  min-width:0!important;
+  padding:5px 0!important;
+  border-top:0!important;
+  border-bottom:1px solid #eaecf0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:8px 16px!important;
+}
+@media(max-width:1020px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:900px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page #advaita,
+  body.vd-chrome-page.vd-chrome-page.home-page #shastras,
+  body.vd-chrome-page.vd-chrome-page.home-page #documents,
+  body.vd-chrome-page.vd-chrome-page.home-page #eastern-philosophy,
+  body.vd-chrome-page.vd-chrome-page.home-page #indology{
+    grid-column:1!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-home{
+    width:calc(100% - 32px)!important;
+    padding:18px 0 32px!important;
+  }
+}
+@media(max-width:540px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list,
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
+    grid-template-columns:1fr!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
+    padding:14px 15px 12px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title,
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title .hp-section-en{
+    font-size:20px!important;
+  }
+}
+

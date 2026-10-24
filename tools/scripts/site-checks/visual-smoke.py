@@ -75,24 +75,26 @@ def run() -> None:
                 panels = page.locator(".hp-directory .hp-panel")
                 assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
-                assert home_width >= 1200, f"Homepage content is only {home_width}px wide"
+                assert home_width >= 1150, f"Homepage content is only {home_width}px wide"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
                 assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
-                first, second, third = [panels.nth(i).bounding_box() for i in range(3)]
-                horizontal_gap = second["x"] - (first["x"] + first["width"])
-                assert abs(first["y"] - second["y"]) <= 2 and abs(first["y"] - third["y"]) <= 2
-                assert 0 <= horizontal_gap <= 35, f"Homepage panel gap is {horizontal_gap}px"
-                assert second["width"] > first["width"] * 1.7
+                advaita_panel, documents_panel, shastras_panel = [panels.nth(i).bounding_box() for i in range(3)]
+                horizontal_gap = shastras_panel["x"] - (advaita_panel["x"] + advaita_panel["width"])
+                assert abs(advaita_panel["y"] - shastras_panel["y"]) <= 2
+                assert 0 <= horizontal_gap <= 20, f"Homepage panel gap is {horizontal_gap}px"
+                assert abs(advaita_panel["width"] - shastras_panel["width"]) <= 2
+                assert documents_panel["y"] > advaita_panel["y"]
+                assert documents_panel["width"] > advaita_panel["width"] * 1.8
                 fourth, fifth = panels.nth(3).bounding_box(), panels.nth(4).bounding_box()
-                assert abs(fourth["y"] - fifth["y"]) <= 2 and fourth["y"] > first["y"]
+                assert abs(fourth["y"] - fifth["y"]) <= 2 and fourth["y"] > documents_panel["y"]
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
                 assert documents.locator("li").count() == 8
-                assert documents.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 2
+                assert documents.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 4
                 assert shastras.locator("li").count() == 4
                 assert shastras.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 2
                 link_font_size = page.locator(".hp-link-list a").first.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize)")
-                assert link_font_size >= 16, f"Homepage links are only {link_font_size}px"
+                assert link_font_size >= 15, f"Homepage links are only {link_font_size}px"
                 assert page.locator("#gita").count() == 0
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
                     "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
