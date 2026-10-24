@@ -3791,3 +3791,18 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
     gap:16px!important;
   }
 }
+
+
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list{
+  display:block!important;
+  list-style-type:disc!important;
+  list-style-position:outside!important;
+  padding-left:22px!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page #documents ul.hp-link-list.home-documents-list,
+body.vd-chrome-page.vd-chrome-page.home-page #shastras ul.hp-link-list.home-shastra-list{
+  display:block!important;
+  list-style-type:disc!important;
+  list-style-position:outside!important;
+  padding-left:22px!important;
+}
