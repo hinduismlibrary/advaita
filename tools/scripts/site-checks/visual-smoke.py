@@ -93,15 +93,23 @@ def run() -> None:
                 assert title_order[0] == "hp-section-dev", title_order
                 page.locator("body.vd-chrome-page .hp-panel").first.wait_for()
                 panels = page.locator(".hp-directory .hp-panel")
-                assert panels.count() == 6, f"Homepage has {panels.count()} menu panels"
-                panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(3)]
-                assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Puranas"], panel_titles
+                assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
+                panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
+                assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
                 first, second, third = [panels.nth(i).bounding_box() for i in range(3)]
                 horizontal_gap = second["x"] - (first["x"] + first["width"])
                 assert abs(first["y"] - second["y"]) <= 2 and abs(first["y"] - third["y"]) <= 2
                 assert 0 <= horizontal_gap <= 35, f"Homepage panel gap is {horizontal_gap}px"
-                fourth = panels.nth(3).bounding_box()
-                assert fourth["y"] > first["y"], "Second menu row should begin below the first"
+                assert second["width"] > first["width"] * 1.7
+                fourth, fifth = panels.nth(3).bounding_box(), panels.nth(4).bounding_box()
+                assert abs(fourth["y"] - fifth["y"]) <= 2 and fourth["y"] > first["y"]
+                documents = page.locator(".home-documents-list")
+                shastras = page.locator(".home-shastra-list")
+                assert documents.locator("li").count() == 8
+                assert documents.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 4
+                assert shastras.locator("li").count() == 4
+                assert shastras.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 2
+                assert page.locator("#gita").count() == 0
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
                     "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
                 )
@@ -301,8 +309,9 @@ def run() -> None:
                 page.screenshot(path=str(OUT / "purana-chapter-numbers.png"))
 
                 page.goto(base + "pages/bhavishya-purana/", wait_until="domcontentloaded")
-                parva_links = page.locator('aside[aria-label="Contents"] a')
+                parva_links = page.locator(".bp-overview-grid .parva a")
                 assert parva_links.count() == 4
+                assert page.locator("main .page-tools, main aside.side").count() == 0
                 assert page.locator(".reader details, .reader summary, .reader button").count() == 0
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
                 brahma_link = page.locator(".chapter-list a").first

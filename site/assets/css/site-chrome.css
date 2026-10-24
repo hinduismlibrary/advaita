@@ -3306,17 +3306,63 @@ body.vd-chrome-page.purana-chapter-names-visible .purana-chapter-name:not([hidde
   display:block!important
 }
 
-/* Wider, responsive home menu. */
-body.vd-chrome-page.vd-chrome-page.home-page .site-main{width:min(1440px,100%)!important}
-body.vd-chrome-page.vd-chrome-page.home-page .hp-home{width:min(1320px,calc(100% - 48px))!important}
-body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+/* Compact homepage groups use the available width. */
+body.vd-chrome-page.vd-chrome-page.home-page .site-main{width:min(1500px,100%)!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home{width:min(1400px,calc(100% - 48px))!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
+  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:18px 22px!important;align-items:start!important
+}
 body.vd-chrome-page.vd-chrome-page.home-page .hp-column{display:contents!important}
-@media(max-width:900px){
+body.vd-chrome-page.vd-chrome-page.home-page #advaita{grid-column:1!important}
+body.vd-chrome-page.vd-chrome-page.home-page #documents{grid-column:2 / span 2!important}
+body.vd-chrome-page.vd-chrome-page.home-page #shastras{grid-column:4!important}
+body.vd-chrome-page.vd-chrome-page.home-page #eastern-philosophy{grid-column:1 / span 2!important}
+body.vd-chrome-page.vd-chrome-page.home-page #indology{grid-column:3 / span 2!important}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{
+  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px 16px!important;
+  margin:0!important;padding:0!important;list-style:none!important
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px 18px!important;
+  margin:0!important;padding:0!important;list-style:none!important
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list li{
+  min-width:0!important;margin:0!important;padding:6px 0!important;border-bottom:1px solid #eaecf0!important
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list a,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list a{
+  display:block!important;min-width:0!important
+}
+@media(max-width:1100px){
   body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  body.vd-chrome-page.vd-chrome-page.home-page #advaita,
+  body.vd-chrome-page.vd-chrome-page.home-page #documents,
+  body.vd-chrome-page.vd-chrome-page.home-page #shastras,
+  body.vd-chrome-page.vd-chrome-page.home-page #eastern-philosophy,
+  body.vd-chrome-page.vd-chrome-page.home-page #indology{grid-column:auto!important}
+  body.vd-chrome-page.vd-chrome-page.home-page #documents{grid-column:1 / -1!important}
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media(max-width:620px){
   body.vd-chrome-page.vd-chrome-page.home-page .hp-home{width:calc(100% - 32px)!important}
   body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{grid-template-columns:1fr!important}
+  body.vd-chrome-page.vd-chrome-page.home-page #documents{grid-column:1!important}
+}
+@media(max-width:460px){
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list{grid-template-columns:1fr!important}
+}
+
+/* The Bhaviṣya Purāṇa opening page shows one parva grid without a duplicate contents rail. */
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .bp-overview-grid{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px 28px!important;
+  width:100%!important;margin:0!important;padding:0!important
+}
+body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .bp-overview-grid>.parva{
+  min-width:0!important;margin:0!important;padding:8px 12px!important;border-bottom:1px solid #a2a9b1!important
+}
+@media(max-width:620px){
+  body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single .bp-overview-grid{grid-template-columns:1fr!important}
 }
 body.vd-chrome-page .purana-chapter-grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:0 8px
