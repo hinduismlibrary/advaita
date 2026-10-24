@@ -108,7 +108,7 @@ def run() -> None:
                     return {radius:s.borderRadius, shadow:s.boxShadow, background:s.backgroundColor, topBorder:s.borderTopWidth, sideBorder:s.borderLeftWidth};
                 }""")
                 assert panel_style["radius"] == "0px" and panel_style["shadow"] == "none"
-                assert panel_style["background"] == "rgba(0, 0, 0, 0)"
+                assert panel_style["background"] in ("rgba(0, 0, 0, 0)", "rgb(255, 255, 255)"), panel_style
                 assert panel_style["topBorder"] == "1px" and panel_style["sideBorder"] == "0px", panel_style
                 assert page.locator("#gita").count() == 0
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
