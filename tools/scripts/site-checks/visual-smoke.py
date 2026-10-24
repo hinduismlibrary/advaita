@@ -78,23 +78,38 @@ def run() -> None:
                 assert home_width >= 1150, f"Homepage content is only {home_width}px wide"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
                 assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
-                advaita_panel, documents_panel, shastras_panel = [panels.nth(i).bounding_box() for i in range(3)]
-                horizontal_gap = shastras_panel["x"] - (advaita_panel["x"] + advaita_panel["width"])
-                assert abs(advaita_panel["y"] - shastras_panel["y"]) <= 2
-                assert 0 <= horizontal_gap <= 20, f"Homepage panel gap is {horizontal_gap}px"
-                assert abs(advaita_panel["width"] - shastras_panel["width"]) <= 2
-                assert documents_panel["y"] > advaita_panel["y"]
-                assert documents_panel["width"] > advaita_panel["width"] * 1.8
-                fourth, fifth = panels.nth(3).bounding_box(), panels.nth(4).bounding_box()
-                assert abs(fourth["y"] - fifth["y"]) <= 2 and fourth["y"] > documents_panel["y"]
+
+                columns = page.locator(".hp-directory > .hp-column")
+                assert columns.count() == 2, f"Homepage has {columns.count()} list columns"
+                left, right = columns.nth(0).bounding_box(), columns.nth(1).bounding_box()
+                horizontal_gap = right["x"] - (left["x"] + left["width"])
+                assert abs(left["width"] - right["width"]) <= 2, (left, right)
+                assert 20 <= horizontal_gap <= 40, f"Homepage column gap is {horizontal_gap}px"
+
+                advaita_panel, documents_panel, shastras_panel, eastern_panel, indology_panel = [
+                    panels.nth(i).bounding_box() for i in range(5)
+                ]
+                assert abs(advaita_panel["x"] - left["x"]) <= 2
+                assert abs(documents_panel["x"] - left["x"]) <= 2 and documents_panel["y"] > advaita_panel["y"]
+                assert abs(shastras_panel["x"] - right["x"]) <= 2
+                assert eastern_panel["y"] > shastras_panel["y"] and indology_panel["y"] > eastern_panel["y"]
+
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
                 assert documents.locator("li").count() == 8
-                assert documents.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 4
                 assert shastras.locator("li").count() == 4
-                assert shastras.evaluate("(el) => getComputedStyle(el).gridTemplateColumns.split(' ').filter(Boolean).length") == 2
+                list_style = documents.evaluate("(el) => ({display:getComputedStyle(el).display, type:getComputedStyle(el).listStyleType})")
+                assert list_style == {"display": "block", "type": "disc"}, list_style
+                assert shastras.evaluate("(el) => getComputedStyle(el).listStyleType") == "disc"
                 link_font_size = page.locator(".hp-link-list a").first.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize)")
                 assert link_font_size >= 15, f"Homepage links are only {link_font_size}px"
+                panel_style = panels.first.evaluate("""el => {
+                    const s = getComputedStyle(el);
+                    return {radius:s.borderRadius, shadow:s.boxShadow, background:s.backgroundColor, topBorder:s.borderTopWidth, sideBorder:s.borderLeftWidth};
+                }""")
+                assert panel_style["radius"] == "0px" and panel_style["shadow"] == "none"
+                assert panel_style["background"] == "rgba(0, 0, 0, 0)"
+                assert panel_style["topBorder"] == "1px" and panel_style["sideBorder"] == "0px", panel_style
                 assert page.locator("#gita").count() == 0
                 colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
                     "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color})"
@@ -127,7 +142,7 @@ def run() -> None:
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"panel_gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
+                report["home"] = {"columns": 2, "style": "bulleted lists", "gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
