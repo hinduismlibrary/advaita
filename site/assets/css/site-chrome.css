@@ -3670,25 +3670,59 @@ body.vd-chrome-page.vd-chrome-page.home-page #indology{grid-column:2!important;g
 
 
 
-/* Home: two-column reference lists */
+
+/* Homepage: plain, uniform Wikisource-style lists */
+body.vd-chrome-page.vd-chrome-page.home-page main.site-main{
+  width:min(1240px,100%)!important;
+  min-height:75vh!important;
+  margin:0 auto!important;
+  background:#fff!important;
+  overflow:visible!important;
+}
 body.vd-chrome-page.vd-chrome-page.home-page .hp-home{
-  padding:24px 0 42px!important;
+  width:min(1160px,calc(100% - 48px))!important;
+  margin:0 auto!important;
+  padding:24px 0 40px!important;
+  color:#202122!important;
+  font:400 16px/1.6 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:0!important;
+  margin:0 0 8px!important;
+  color:#202122!important;
+  text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title-dev{
+  display:block!important;
+  color:#202122!important;
+  font:500 30px/1.25 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title-iast{
+  display:block!important;
+  color:#0645ad!important;
+  font:400 22px/1.35 Arial,Helvetica,sans-serif!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-home-intro{
-  margin:0 auto 22px!important;
-  font-size:15px!important;
-  line-height:1.5!important;
+  max-width:900px!important;
+  margin:0 0 22px!important;
+  color:#202122!important;
+  font:400 16px/1.5 Arial,Helvetica,sans-serif!important;
+  text-align:left!important;
 }
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-intro p{margin:0!important}
 body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
   display:grid!important;
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
   align-items:start!important;
-  gap:0 34px!important;
+  gap:0 42px!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
   display:grid!important;
   align-content:start!important;
-  gap:18px!important;
+  gap:24px!important;
   min-width:0!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page #advaita,
@@ -3702,107 +3736,102 @@ body.vd-chrome-page.vd-chrome-page.home-page #indology{
 body.vd-chrome-page.vd-chrome-page.home-page .hp-panel{
   min-width:0!important;
   margin:0!important;
-  padding:8px 0 0!important;
+  padding:0!important;
   border:0!important;
-  border-top:1px solid #c8ccd1!important;
   border-radius:0!important;
   background:transparent!important;
   box-shadow:none!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title{
-  margin:0 0 6px!important;
-  padding:0!important;
+  margin:0 0 8px!important;
+  padding:0 0 5px!important;
   border:0!important;
+  border-bottom:1px solid #a2a9b1!important;
+  border-radius:0!important;
   background:transparent!important;
   color:#202122!important;
-  font:600 19px/1.35 Vollkorn,Georgia,serif!important;
+  font:600 19px/1.35 Arial,Helvetica,sans-serif!important;
   text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title a{
+  color:inherit!important;
+  text-decoration:none!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-dev,.vd-label-dev,[lang^="sa-Deva"]){
   display:block!important;
   margin:0 0 1px!important;
   color:#202122!important;
-  font:400 13px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font:400 14px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){
   display:block!important;
   color:#0645ad!important;
-  font:600 19px/1.35 Vollkorn,Georgia,serif!important;
+  font:600 19px/1.35 Arial,Helvetica,sans-serif!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list{
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list{
   display:block!important;
   margin:0!important;
   padding:0 0 0 22px!important;
-  list-style:disc!important;
+  list-style-type:disc!important;
+  list-style-position:outside!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list li{
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list > li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list > li{
   display:list-item!important;
-  margin:2px 0!important;
+  margin:0 0 9px!important;
   padding:0!important;
   border:0!important;
   background:transparent!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list li::marker{
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li::marker{
   color:#54595d!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a{
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li > a,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list > li > a,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list > li > a{
   display:block!important;
   min-width:0!important;
-  padding:3px 0!important;
+  margin:0!important;
+  padding:0!important;
   color:#0645ad!important;
-  font:400 15px/1.5 Merriweather,Georgia,serif!important;
+  font:400 16px/1.45 Arial,Helvetica,sans-serif!important;
   text-decoration:none!important;
   overflow-wrap:anywhere!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a:hover,
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a:focus-visible{
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li > a:hover,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li > a:focus-visible{
   text-decoration:underline!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]){
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li > a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list > li > a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list > li > a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]){
   display:block!important;
+  margin:0!important;
   color:#202122!important;
-  font:400 13px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font:400 16px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
 }
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list > li > a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list > li > a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list > li > a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){
   display:block!important;
+  margin:0!important;
   color:#0645ad!important;
-  font:400 15px/1.5 Merriweather,Georgia,serif!important;
-}
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-documents-list,
-body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list.home-shastra-list{
-  display:block!important;
+  font:400 16px/1.45 Arial,Helvetica,sans-serif!important;
 }
 @media(max-width:900px){
-  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:0 26px!important;
-  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{gap:0 28px!important}
 }
-@media(max-width:620px){
+@media(max-width:740px){
   body.vd-chrome-page.vd-chrome-page.home-page .hp-home{
-    width:calc(100% - 32px)!important;
-    padding:18px 0 30px!important;
+    width:calc(100% - 36px)!important;
+    padding:20px 0 32px!important;
   }
   body.vd-chrome-page.vd-chrome-page.home-page .hp-directory{
     grid-template-columns:1fr!important;
     gap:0!important;
   }
-  body.vd-chrome-page.vd-chrome-page.home-page .hp-column{
-    gap:16px!important;
-  }
-}
-
-
-body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list{
-  display:block!important;
-  list-style-type:disc!important;
-  list-style-position:outside!important;
-  padding-left:22px!important;
-}
-body.vd-chrome-page.vd-chrome-page.home-page #documents ul.hp-link-list.home-documents-list,
-body.vd-chrome-page.vd-chrome-page.home-page #shastras ul.hp-link-list.home-shastra-list{
-  display:block!important;
-  list-style-type:disc!important;
-  list-style-position:outside!important;
-  padding-left:22px!important;
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-column{gap:20px!important}
 }
