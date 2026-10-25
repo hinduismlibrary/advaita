@@ -39,7 +39,7 @@ def assert_site_palette(page) -> None:
         ".vd-label-en, .vd-label-iast, .label-en, .original-work-iast, "
         ".ad-entry-original-iast, .catalog-iast, .chapter-iast, "
         ".purana-title-iast, .purana-name-iast, .ad-title-en, .ad-heading-en, "
-        ".hp-home-title-iast, .hp-section-en, .hp-link-en, .hp-original-iast"
+        ".hp-home-title-iast, .hp-link-en, .hp-original-iast"
     ).evaluate_all("nodes => nodes.map(node => getComputedStyle(node).color)")
     assert all(color == "rgb(6, 69, 173)" for color in blue_labels), blue_labels
 
@@ -78,30 +78,17 @@ def run() -> None:
                 title_order = page.locator(".hp-section-title").first.evaluate(
                     "el => Array.from((el.querySelector(':scope > a') || el).children).map(child => child.className)"
                 )
-                assert title_order[0] == "hp-section-dev", title_order
-                page.locator("body.vd-chrome-page .hp-panel").first.wait_for()
-                panels = page.locator(".hp-directory .hp-panel")
+                assert title_order[:2] == ["hp-section-en", "hp-section-dev"], title_order
+                panels = page.locator(".hp-directory > .hp-panel")
                 assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
-                assert home_width >= 1150, f"Homepage content is only {home_width}px wide"
+                assert 1179 <= home_width <= 1181, f"Homepage content width is {home_width}px"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
-                assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
-
-                columns = page.locator(".hp-directory > .hp-column")
-                assert columns.count() == 2, f"Homepage has {columns.count()} list columns"
-                left, right = columns.nth(0).bounding_box(), columns.nth(1).bounding_box()
-                horizontal_gap = right["x"] - (left["x"] + left["width"])
-                assert abs(left["width"] - right["width"]) <= 2, (left, right)
-                assert 44 <= horizontal_gap <= 60, f"Homepage column gap is {horizontal_gap}px"
-
-                advaita_panel, documents_panel, shastras_panel, eastern_panel, indology_panel = [
-                    panels.nth(i).bounding_box() for i in range(5)
-                ]
-                assert abs(advaita_panel["x"] - left["x"]) <= 2
-                assert abs(documents_panel["x"] - left["x"]) <= 2 and documents_panel["y"] > advaita_panel["y"]
-                assert abs(shastras_panel["x"] - right["x"]) <= 2
-                assert eastern_panel["y"] > shastras_panel["y"] and indology_panel["y"] > eastern_panel["y"]
-
+                assert panel_titles == ["Śāstras", "Documents", "Indology", "Advaita Vedanta Portal", "Introduction to Eastern Philosophy"], panel_titles
+                boxes = [panels.nth(i).bounding_box() for i in range(5)]
+                assert all(abs(box["x"] - boxes[0]["x"]) <= 2 and abs(box["width"] - boxes[0]["width"]) <= 2 for box in boxes), boxes
+                assert all(boxes[i + 1]["y"] > boxes[i]["y"] for i in range(len(boxes) - 1)), boxes
+                assert page.locator(".hp-directory > .hp-column").count() == 0
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
                 assert documents.locator("li").count() == 8
@@ -120,24 +107,22 @@ def run() -> None:
                 """)
                 assert len(list_metrics) == 5 and all(row == list_metrics[0] for row in list_metrics), list_metrics
                 assert list_metrics[0]["display"] == "block" and list_metrics[0]["type"] == "disc", list_metrics
-                assert list_metrics[0]["linkSize"] == "16px" and "Arial" in list_metrics[0]["linkFamily"], list_metrics
+                assert list_metrics[0]["linkSize"] == "19px" and "Merriweather" in list_metrics[0]["linkFamily"], list_metrics
                 assert all(row["itemBorder"] == "0px" for row in list_metrics), list_metrics
-                link_font_size = page.locator(".hp-link-list a").first.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize)")
-                assert link_font_size == 16, f"Homepage links are {link_font_size}px"
-                panel_style = panels.first.evaluate("""el => {
+                section_style = panels.nth(1).evaluate("""el => {
                     const s = getComputedStyle(el);
                     return {radius:s.borderRadius, shadow:s.boxShadow, background:s.backgroundColor, topBorder:s.borderTopWidth, sideBorder:s.borderLeftWidth};
                 }""")
-                assert panel_style["radius"] == "0px" and panel_style["shadow"] == "none"
-                assert panel_style["background"] in ("rgba(0, 0, 0, 0)", "rgb(255, 255, 255)"), panel_style
-                assert panel_style["topBorder"] == "0px" and panel_style["sideBorder"] == "0px", panel_style
+                assert section_style["radius"] == "0px" and section_style["shadow"] == "none"
+                assert section_style["background"] in ("rgba(0, 0, 0, 0)", "rgb(255, 255, 255)"), section_style
+                assert section_style["topBorder"] == "1px" and section_style["sideBorder"] == "0px", section_style
                 assert page.locator("#gita").count() == 0
-                colors = page.locator(".hp-link-list a .hp-link-dev").first.evaluate(
-                    "(el) => ({dev:getComputedStyle(el).color, latin:getComputedStyle(el.nextElementSibling).color, devSize:getComputedStyle(el).fontSize, latinSize:getComputedStyle(el.nextElementSibling).fontSize})"
+                colors = page.locator(".hp-link-list a .hp-link-en").first.evaluate(
+                    "(el) => ({english:getComputedStyle(el).color, dev:getComputedStyle(el.nextElementSibling).color, englishSize:getComputedStyle(el).fontSize, devSize:getComputedStyle(el.nextElementSibling).fontSize})"
                 )
+                assert colors["english"] == "rgb(6, 69, 173)", colors
                 assert colors["dev"] == "rgb(32, 33, 34)", colors
-                assert colors["latin"] == "rgb(6, 69, 173)", colors
-                assert colors["devSize"] == colors["latinSize"] == "16px", colors
+                assert colors["englishSize"] == "19px" and colors["devSize"] == "16px", colors
                 link_formats = page.locator(".hp-link-list a").evaluate_all("""
                     links => links.map(link => {
                         const [first, second] = Array.from(link.children);
@@ -158,16 +143,16 @@ def run() -> None:
                 """)
                 assert link_formats and all(
                     row["count"] == 2
-                    and row["firstLang"] == "sa-Deva"
-                    and row["secondLang"] != "sa-Deva"
-                    and row["firstColor"] == "rgb(32, 33, 34)"
-                    and row["secondColor"] == "rgb(6, 69, 173)"
+                    and row["firstLang"] != "sa-Deva"
+                    and row["secondLang"] == "sa-Deva"
+                    and row["firstColor"] == "rgb(6, 69, 173)"
+                    and row["secondColor"] == "rgb(32, 33, 34)"
                     and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
-                    and row["firstFontSize"] == row["secondFontSize"] == "16px"
+                    and row["firstFontSize"] == "19px" and row["secondFontSize"] == "16px"
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"columns": 2, "style": "uniform Wikisource-style lists", "gap_px": round(horizontal_gap, 1), "link_format": "Devanagari black; Latin/English blue at matching size", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
+                report["home"] = {"columns": 1, "style": "single-column Wikisource-style sections", "link_format": "English blue above Devanagari black", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
                 page.screenshot(path=str(OUT / "home.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
