@@ -63,6 +63,10 @@ def run() -> None:
                 page.on("console", lambda message: browser_errors.append(message.text) if message.type == "error" else None)
                 page.on("pageerror", lambda error: javascript_errors.append(str(error)))
                 page.goto(base, wait_until="domcontentloaded")
+                page.wait_for_function("""() => {
+                    const link = document.querySelector('link[data-viveka-site-chrome]');
+                    return Boolean(link?.sheet && link.sheet.cssRules.length > 0);
+                }""", timeout=20000)
                 page.locator(".hp-home-title-dev").wait_for(timeout=20000)
                 assert page.title() == "विवेकदृष्टिः", page.title()
                 assert page.locator(".hp-home-title-iast").count() == 0
