@@ -4044,3 +4044,13 @@ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.
   margin:0!important;
   color:#202122!important;
 }
+
+
+/* Homepage reference ordering and heading color. */
+body#home-directory .hp-section-title { display:block!important; color:#202122!important; }
+body#home-directory .hp-section-title a { color:#202122!important; }
+body#home-directory .hp-section-title :is(.hp-section-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]) { color:#202122!important; }
+body#home-directory .hp-section-title :is(.hp-section-dev,.vd-label-dev,[lang^="sa-Deva"]) { display:none!important; }
+body#home-directory .hp-directory .hp-link-list>li>a { display:flex!important; flex-direction:column!important; align-items:flex-start!important; gap:2px!important; }
+body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]) { order:1!important; display:block!important; margin:0!important; color:#0645ad!important; }
+body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]) { order:2!important; display:block!important; margin:0!important; color:#202122!important; }
