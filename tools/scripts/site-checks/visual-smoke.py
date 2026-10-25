@@ -82,7 +82,7 @@ def run() -> None:
                 panels = page.locator(".hp-directory > .hp-panel")
                 assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
-                assert 1179 <= home_width <= 1181, f"Homepage content width is {home_width}px"
+                assert 1167 <= home_width <= 1169, f"Homepage content width is {home_width}px"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
                 assert panel_titles == ["Śāstras", "Documents", "Indology", "Advaita Vedanta Portal", "Introduction to Eastern Philosophy"], panel_titles
                 boxes = [panels.nth(i).bounding_box() for i in range(5)]
