@@ -3835,3 +3835,183 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link
   }
   body.vd-chrome-page.vd-chrome-page.home-page .hp-column{gap:20px!important}
 }
+
+
+/* Home page: plain Wikisource-style subject lists. */
+body.vd-chrome-page.vd-chrome-page.home-page {
+  min-height:100vh!important;
+  background:#fff!important;
+  color:#202122!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:16px!important;
+  line-height:1.5!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page main.site-main {
+  box-sizing:border-box!important;
+  width:min(1240px,100%)!important;
+  max-width:1240px!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  overflow:visible!important;
+  background:#fff!important;
+  color:#202122!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home {
+  box-sizing:border-box!important;
+  width:min(1160px,calc(100% - 48px))!important;
+  max-width:1160px!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  padding:24px 0 48px!important;
+  color:#202122!important;
+  font:400 16px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home>h1 {
+  box-sizing:border-box!important;
+  margin:0 0 24px!important;
+  padding:0 0 10px!important;
+  border:0!important;
+  border-bottom:1px solid #c8ccd1!important;
+  color:#202122!important;
+  font:400 30px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title {
+  display:block!important;
+  margin:0!important;
+  color:#202122!important;
+  text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title-dev {
+  display:block!important;
+  color:#202122!important;
+  font:400 30px/1.35 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory {
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:0 52px!important;
+  align-items:start!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-column {
+  display:flex!important;
+  flex-direction:column!important;
+  align-content:start!important;
+  gap:28px!important;
+  min-width:0!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-panel {
+  display:block!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title {
+  margin:0 0 9px!important;
+  padding:0 0 7px!important;
+  border:0!important;
+  border-bottom:1px solid #eaecf0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#202122!important;
+  font:600 18px/1.35 Arial,Helvetica,sans-serif!important;
+  text-align:left!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title a {
+  color:#0645ad!important;
+  text-decoration:none!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title a:hover,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title a:focus-visible {
+  text-decoration:underline!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-dev,.vd-label-dev,[lang^="sa-Deva"]) {
+  display:block!important;
+  margin:0 0 1px!important;
+  color:#202122!important;
+  font:400 18px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-section-title :is(.hp-section-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]) {
+  display:block!important;
+  margin:0!important;
+  color:#0645ad!important;
+  font:600 18px/1.4 Arial,Helvetica,sans-serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list {
+  display:block!important;
+  margin:0!important;
+  padding:0 0 0 22px!important;
+  list-style:disc outside!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list>li,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list>li {
+  display:list-item!important;
+  margin:0 0 10px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:#202122!important;
+  line-height:1.45!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li::marker {
+  color:#54595d!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li>a,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list>li>a,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list>li>a {
+  display:block!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  color:#0645ad!important;
+  font:400 16px/1.45 Arial,Helvetica,sans-serif!important;
+  text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li>a:hover,
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li>a:focus-visible {
+  text-decoration:underline!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-documents-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list.home-shastra-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]) {
+  display:block!important;
+  margin:0!important;
+  color:#202122!important;
+  font:400 16px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-column ul.hp-link-list>li>a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-link-list.home-documents-list>li>a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]),
+body.vd-chrome-page.vd-chrome-page.home-page .hp-directory .hp-link-list.home-shastra-list>li>a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]) {
+  display:block!important;
+  margin:0!important;
+  color:#0645ad!important;
+  font:400 16px/1.45 Arial,Helvetica,sans-serif!important;
+}
+@media(max-width:760px) {
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-home {
+    width:calc(100% - 32px)!important;
+    padding:20px 0 36px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-home>h1 {
+    margin-bottom:20px!important;
+    font-size:28px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-home-title-dev {
+    font-size:28px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-directory {
+    grid-template-columns:1fr!important;
+    gap:28px!important;
+  }
+  body.vd-chrome-page.vd-chrome-page.home-page .hp-column {
+    gap:26px!important;
+  }
+}

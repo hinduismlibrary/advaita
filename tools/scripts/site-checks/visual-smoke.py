@@ -64,6 +64,14 @@ def run() -> None:
                 page.on("pageerror", lambda error: javascript_errors.append(str(error)))
                 page.goto(base, wait_until="domcontentloaded")
                 page.locator(".hp-home-title-dev").wait_for(timeout=20000)
+                assert page.title() == "विवेकदृष्टिः", page.title()
+                assert page.locator(".hp-home-title-iast").count() == 0
+                assert page.locator(".hp-home-intro").count() == 0
+                assert page.locator(".site-footer").count() == 0
+                assert page.locator(".hp-home > h1").inner_text().strip() == "विवेकदृष्टिः"
+                home_text = page.locator(".hp-home").inner_text().lower()
+                for note in ("reference library for hindu scripture", "verification in progress", "pinned source mirror", "audit log", "translation review is ongoing"):
+                    assert note not in home_text, note
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
                 assert page.locator(".vd-global-header").count() == 0, "Homepage should not include global navigation/search"
@@ -84,7 +92,7 @@ def run() -> None:
                 left, right = columns.nth(0).bounding_box(), columns.nth(1).bounding_box()
                 horizontal_gap = right["x"] - (left["x"] + left["width"])
                 assert abs(left["width"] - right["width"]) <= 2, (left, right)
-                assert 20 <= horizontal_gap <= 44, f"Homepage column gap is {horizontal_gap}px"
+                assert 44 <= horizontal_gap <= 60, f"Homepage column gap is {horizontal_gap}px"
 
                 advaita_panel, documents_panel, shastras_panel, eastern_panel, indology_panel = [
                     panels.nth(i).bounding_box() for i in range(5)
@@ -113,6 +121,7 @@ def run() -> None:
                 assert len(list_metrics) == 5 and all(row == list_metrics[0] for row in list_metrics), list_metrics
                 assert list_metrics[0]["display"] == "block" and list_metrics[0]["type"] == "disc", list_metrics
                 assert list_metrics[0]["linkSize"] == "16px" and "Arial" in list_metrics[0]["linkFamily"], list_metrics
+                assert all(row["itemBorder"] == "0px" for row in list_metrics), list_metrics
                 link_font_size = page.locator(".hp-link-list a").first.evaluate("(el) => parseFloat(getComputedStyle(el).fontSize)")
                 assert link_font_size == 16, f"Homepage links are {link_font_size}px"
                 panel_style = panels.first.evaluate("""el => {
