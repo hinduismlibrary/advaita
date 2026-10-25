@@ -75,12 +75,20 @@ def run() -> None:
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
                 assert page.locator(".vd-global-header").count() == 0, "Homepage should not include global navigation/search"
-                title_order = page.locator(".hp-section-title").first.evaluate(
-                    "el => Array.from((el.querySelector(':scope > a') || el).children).map(child => child.className)"
-                )
-                assert title_order[:2] == ["hp-section-en", "hp-section-dev"], title_order
                 panels = page.locator(".hp-directory > .hp-panel")
                 assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
+                heading_metrics = panels.first.locator(".hp-section-title").evaluate("""el => {
+                    const english = el.querySelector(".hp-section-en");
+                    const devanagari = el.querySelector(".hp-section-dev");
+                    return {
+                        headingColor: getComputedStyle(english).color,
+                        headingText: english.innerText.trim(),
+                        devanagariDisplay: getComputedStyle(devanagari).display
+                    };
+                }""")
+                assert heading_metrics["headingColor"] == "rgb(32, 33, 34)", heading_metrics
+                assert heading_metrics["headingText"] == "Śāstras", heading_metrics
+                assert heading_metrics["devanagariDisplay"] == "none", heading_metrics
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
                 assert 1167 <= home_width <= 1169, f"Homepage content width is {home_width}px"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
@@ -136,6 +144,8 @@ def run() -> None:
                             secondDisplay: second ? getComputedStyle(second).display : null,
                             firstHeight: first ? first.getBoundingClientRect().height : 0,
                             secondHeight: second ? second.getBoundingClientRect().height : 0,
+                            firstTop: first ? first.getBoundingClientRect().top : 0,
+                            secondTop: second ? second.getBoundingClientRect().top : 0,
                             firstFontSize: first ? getComputedStyle(first).fontSize : null,
                             secondFontSize: second ? getComputedStyle(second).fontSize : null
                         };
@@ -149,6 +159,7 @@ def run() -> None:
                     and row["secondColor"] == "rgb(32, 33, 34)"
                     and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
+                    and row["firstTop"] < row["secondTop"]
                     and row["firstFontSize"] == "19px" and row["secondFontSize"] == "16px"
                     for row in link_formats
                 ), link_formats
