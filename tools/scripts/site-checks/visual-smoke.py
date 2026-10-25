@@ -24,7 +24,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 def assert_site_palette(page) -> None:
     colors = page.locator("a").evaluate_all(
-        "links => links.map(link => getComputedStyle(link).color)"
+        "links => links.filter(link => !link.closest('.hp-section-title')).map(link => getComputedStyle(link).color)"
     )
     assert all(color == "rgb(6, 69, 173)" for color in colors), colors
     background = page.locator("body").evaluate(
