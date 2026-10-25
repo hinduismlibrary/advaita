@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261025-wikisource-home-6";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261025-wikisource-home-7";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -239,6 +239,10 @@ function applyHomepageReferenceFormat(){
   heading.querySelectorAll(".hp-section-en,.vd-label-en,.vd-label-iast,[lang^='sa-Latn']").forEach(label=>{
    label.style.setProperty("display","block","important");
    label.style.setProperty("color","#202122","important");
+   label.style.setProperty("-webkit-text-fill-color","#202122","important");
+   label.style.setProperty("visibility","visible","important");
+   label.style.setProperty("opacity","1","important");
+   label.style.setProperty("-webkit-text-fill-color","#202122","important");
   });
   heading.querySelectorAll(".hp-section-dev,.vd-label-dev,[lang^='sa-Deva']").forEach(label=>{
    label.style.setProperty("display","none","important");
@@ -254,6 +258,9 @@ function applyHomepageReferenceFormat(){
    label.style.setProperty("display","block","important");
    label.style.setProperty("margin","0","important");
    label.style.setProperty("color","#0645ad","important");
+   label.style.setProperty("-webkit-text-fill-color","#0645ad","important");
+   label.style.setProperty("visibility","visible","important");
+   label.style.setProperty("opacity","1","important");
   });
   link.querySelectorAll(".hp-link-dev,.vd-label-dev,[lang^='sa-Deva']").forEach(label=>{
    label.style.setProperty("order","2","important");

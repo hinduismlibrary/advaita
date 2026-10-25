@@ -86,11 +86,13 @@ def run() -> None:
                     const devanagari = el.querySelector(".hp-section-dev");
                     return {
                         headingColor: getComputedStyle(english).color,
+                        headingFill: getComputedStyle(english).webkitTextFillColor,
                         headingText: english.innerText.trim(),
                         devanagariDisplay: getComputedStyle(devanagari).display
                     };
                 }""")
                 assert heading_metrics["headingColor"] == "rgb(32, 33, 34)", heading_metrics
+                assert heading_metrics["headingFill"] == "rgb(32, 33, 34)", heading_metrics
                 assert heading_metrics["headingText"] == "Śāstras", heading_metrics
                 assert heading_metrics["devanagariDisplay"] == "none", heading_metrics
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
@@ -144,6 +146,8 @@ def run() -> None:
                             secondLang: second?.lang,
                             firstColor: first ? getComputedStyle(first).color : null,
                             secondColor: second ? getComputedStyle(second).color : null,
+                            secondFill: second ? getComputedStyle(second).webkitTextFillColor : null,
+                            secondText: second ? second.textContent.trim() : null,
                             firstDisplay: first ? getComputedStyle(first).display : null,
                             secondDisplay: second ? getComputedStyle(second).display : null,
                             firstHeight: first ? first.getBoundingClientRect().height : 0,
@@ -161,6 +165,8 @@ def run() -> None:
                     and row["secondLang"] == "sa-Deva"
                     and row["firstColor"] == "rgb(6, 69, 173)"
                     and row["secondColor"] == "rgb(32, 33, 34)"
+                    and row["secondFill"] == "rgb(32, 33, 34)"
+                    and row["secondText"]
                     and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
                     and row["firstTop"] < row["secondTop"]
