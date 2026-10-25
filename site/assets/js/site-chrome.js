@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261025-wikisource-home-5";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261025-wikisource-home-6";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -230,6 +230,40 @@ function bindReaderDisclosureState(){
   if(details&&details.matches&&details.matches("details"))syncReaderDisclosure(details);
  },true);
 }
+function applyHomepageReferenceFormat(){
+ if(!document.body?.classList.contains("home-page"))return;
+ document.querySelectorAll(".hp-section-title").forEach(heading=>{
+  heading.style.setProperty("display","block","important");
+  heading.style.setProperty("color","#202122","important");
+  heading.querySelectorAll("a").forEach(link=>link.style.setProperty("color","#202122","important"));
+  heading.querySelectorAll(".hp-section-en,.vd-label-en,.vd-label-iast,[lang^='sa-Latn']").forEach(label=>{
+   label.style.setProperty("display","block","important");
+   label.style.setProperty("color","#202122","important");
+  });
+  heading.querySelectorAll(".hp-section-dev,.vd-label-dev,[lang^='sa-Deva']").forEach(label=>{
+   label.style.setProperty("display","none","important");
+  });
+ });
+ document.querySelectorAll(".hp-link-list > li > a").forEach(link=>{
+  link.style.setProperty("display","flex","important");
+  link.style.setProperty("flex-direction","column","important");
+  link.style.setProperty("align-items","flex-start","important");
+  link.style.setProperty("gap","2px","important");
+  link.querySelectorAll(".hp-link-en,.vd-label-en,.vd-label-iast,[lang^='sa-Latn']").forEach(label=>{
+   label.style.setProperty("order","1","important");
+   label.style.setProperty("display","block","important");
+   label.style.setProperty("margin","0","important");
+   label.style.setProperty("color","#0645ad","important");
+  });
+  link.querySelectorAll(".hp-link-dev,.vd-label-dev,[lang^='sa-Deva']").forEach(label=>{
+   label.style.setProperty("order","2","important");
+   label.style.setProperty("display","block","important");
+   label.style.setProperty("margin","0","important");
+   label.style.setProperty("color","#202122","important");
+  });
+ });
+}
+
 function applyPageLabels(scope){
  const root=scope&&scope.nodeType===1?scope:(document.querySelector("main.site-main")||document.body);
  normalizeReaderControls(root);
@@ -251,6 +285,7 @@ function applyPageLabels(scope){
    stackLabel(target,original,devanagariFor(original)||devanagari,isOriginalSanskritTitle(original)?"original":"english");
   }
  });
+ applyHomepageReferenceFormat();
 }
 
 function addLink(parent,href,label,current){
