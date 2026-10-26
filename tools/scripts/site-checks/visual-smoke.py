@@ -131,7 +131,7 @@ def run() -> None:
                 """)
                 assert len(list_metrics) == 5 and all(row == list_metrics[0] for row in list_metrics), list_metrics
                 assert list_metrics[0]["display"] == "block" and list_metrics[0]["type"] == "disc", list_metrics
-                assert list_metrics[0]["linkSize"] == "19px" and "Merriweather" in list_metrics[0]["linkFamily"], list_metrics
+                assert list_metrics[0]["linkSize"] == "16px" and "Arial" in list_metrics[0]["linkFamily"], list_metrics
                 assert all(row["itemBorder"] == "0px" for row in list_metrics), list_metrics
                 section_style = panels.nth(1).evaluate("""el => {
                     const s = getComputedStyle(el);
