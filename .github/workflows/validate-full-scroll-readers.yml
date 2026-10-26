@@ -38,7 +38,7 @@ jobs:
             'hinduism-on-women',
             'meat-eating-in-hinduism-through-the-lens-of-shastra',
           )
-          full_scroll = '20261019-unified-theme-3'
+          full_scroll = '20261026-document-cleanup-1'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
           shared_css = Path('site/assets/css/article-reader-template.css').read_text(encoding='utf-8')

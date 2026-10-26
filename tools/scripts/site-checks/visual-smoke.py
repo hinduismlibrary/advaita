@@ -98,12 +98,12 @@ def run() -> None:
                 }""")
                 assert heading_metrics["headingColor"] == "rgb(32, 33, 34)", heading_metrics
                 assert heading_metrics["headingFill"] == "rgb(32, 33, 34)", heading_metrics
-                assert heading_metrics["headingText"] == "Advaita Vedanta Portal", heading_metrics
+                assert heading_metrics["headingText"] == "Advaita Vedanta", heading_metrics
                 assert heading_metrics["devanagariDisplay"] == "none", heading_metrics
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
                 assert 1039 <= home_width <= 1041, f"Homepage content width is {home_width}px"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
-                assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
+                assert panel_titles == ["Advaita Vedanta", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
                 left_box, right_box = [columns.nth(i).bounding_box() for i in range(2)]
                 assert right_box["x"] > left_box["x"] and abs(left_box["width"] - right_box["width"]) <= 2, (left_box, right_box)
                 left_panels = columns.nth(0).locator(":scope > .hp-panel")
