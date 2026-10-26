@@ -445,6 +445,7 @@ def run() -> None:
                 report["vishnu"] = {"controls": labels, "toggle": "opens and closes"}
                 page.screenshot(path=str(OUT / "vishnu.png"))
 
+                page.set_viewport_size({"width": 1366, "height": 900})
                 page.goto(base + "books/adi-shankaracharya/tattvabodha/", wait_until="domcontentloaded")
                 reader = page.locator('.shankara-content[data-work="tattvabodha"]')
                 reader.wait_for(timeout=20000)
