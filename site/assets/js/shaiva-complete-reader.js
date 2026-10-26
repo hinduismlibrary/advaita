@@ -569,7 +569,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20261026-shaiva-citation-1');
+  const response=await fetch(site+path+'?v=20261026-shaiva-citation-2');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }
@@ -584,6 +584,31 @@ async function load(){
   return pages;
 }
 
+function pairScriptureQuotes(root){
+  const isCitation=node=>node?.matches?.('p.reference,p.source-citation,p.scripture-source,p.citation');
+  const isSource=node=>node?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text');
+  const candidates=[...root.querySelectorAll('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation')];
+  for(const translation of candidates){
+    if(translation.closest('.scripture-quote-pair'))continue;
+    let cursor=translation.previousElementSibling;
+    const trailingCitations=[];
+    while(cursor&&isCitation(cursor)){trailingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    const source=isSource(cursor)?cursor:null;
+    const leadingCitations=[];
+    if(source){
+      cursor=source.previousElementSibling;
+      while(cursor&&isCitation(cursor)){leadingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    }
+    const citations=[...leadingCitations,...trailingCitations];
+    if(!source&&!citations.length)continue;
+    const first=leadingCitations[0]||source||trailingCitations[0];
+    const pair=make('div','scripture-quote-pair');
+    first.before(pair);
+    pair.append(...citations);
+    if(source)pair.append(source);
+    pair.append(translation);
+  }
+}
 function normalizeSourcePage(body){
   for(const heading of [...body.querySelectorAll('h2,h3,h4,h5,h6')]){
     const label=(heading.innerText||heading.textContent||'').trim();
@@ -660,6 +685,7 @@ async function render(){
     for(const block of section.blocks)sourceBody.append(renderBlock(block,section.id));
     if(sourcePage){normalizeSourcePage(sourceBody);container.append(sourceBody);}
     normalizeCitationOrder(container);
+    pairScriptureQuotes(container);
     content.append(container);
   }
   root.replaceChildren(content);

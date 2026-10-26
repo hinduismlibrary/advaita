@@ -247,6 +247,8 @@ jobs:
                   assert pair.locator(':scope > p.reference').inner_text().strip() == expected_source, f'shaiva: wrong source label for {expected_source}'
                   assert pair.locator(':scope > details.sanskrit-reveal').count() == 1, f'shaiva: Sanskrit reveal missing for {expected_source}'
                   assert pair.locator(':scope > p.translation').count() == 1, f'shaiva: English translation missing for {expected_source}'
+                  quote_text = pair.locator(':scope > p.translation').inner_text().strip()
+                  assert quote_text.startswith('“') and quote_text.endswith('”'), f'shaiva: English quotation marks missing for {expected_source}'
                   order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
                   assert order == ['source', 'sanskrit', 'translation'], f'shaiva: quote order differs for {expected_source}: {order}'
               desktop = metrics(page)
