@@ -40,3 +40,12 @@ body.advaita-directory-page{margin:0;background:#fff;color:#202122;font:16px/1.6
 .ad-index-navigation{margin:0 0 16px;padding:0 0 8px;border-bottom:1px solid #eaecf0}
 .ad-index-navigation a{color:var(--link);font:400 16px/1.5 Arial,Helvetica,sans-serif}
 .ad-alpha-group h3{padding:0 0 2px;border-bottom:1px solid #eaecf0}
+
+
+/* Keep each same-sound text group compact while preserving Devanāgarī over IAST. */
+.ad-alpha-group .ad-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:4px}
+.ad-alpha-group .ad-links .ad-entry{min-width:0;padding:2px 0}
+.ad-alpha-group .ad-entry-link{display:flex;flex-direction:column;align-items:flex-start}
+.ad-alpha-group .ad-entry-original-dev{color:#202122!important}
+.ad-alpha-group .ad-entry-original-iast{color:#0645ad!important}
+@media(max-width:420px){.ad-alpha-group .ad-links{grid-template-columns:1fr}}

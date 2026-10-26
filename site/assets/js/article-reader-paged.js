@@ -505,11 +505,11 @@ function clean(node,page){
     const isSa=(n.getAttribute('lang')||'').toLowerCase().startsWith('sa');
     if(n.matches('details')&&/\b(?:show|hide)\s+sanskrit\b/i.test(text(n.querySelector('summary'))))n.classList.add('sanskrit-reveal');
     if(n.matches('p')){
-      const citationSource=/^(?:Lord Krsna|Krsna|Manusmriti|Manu Smriti|Mahabharata|Bhagavata|Bhagavatam|Bhagavad Gita|Skanda|Siva|Shiva|Padma|Gita|Yajnavalkya|Taittiriya|Taittirlya|Rgveda|Ṛgveda|Veda|Satapatha|Apastamba|Baudhayana|Gautama|Visnu|Vishnu|Matsya|Harivamsa|Brahmavaivarta|Mahanirvana|Gobhila|Garuda|Devala|Daksa|Angiras|Bhavisya|Bhavishya|Vasistha|Valmiki Ramayana|Atri|Katyayana|Kātyāyana|Parasara|Parashara|Narada|Nārada|Yama|Sankha|Sankhalikhita|Vatsyayana|Harita|Atharva|Brahma|Agni|Vayu|Brahmanda)(?=$|[\s(,.:])/i.test(value);
+      const citationSource=/(?:Pur(?:ana|āṇa)|Markandeya|Upani(?:shad|ṣad)|Veda|Samhit(?:a|ā)|Brāhmaṇa|Brahmana|Smṛti|Smriti|Sūtra|Sutra|Gītā|Gita|Rāmāyaṇa|Ramayana|Mahābhārata|Mahabharata|Tantra|Āgama|Agama|Yāmala|Yamala|Itihāsa|Itihasa|Nirṇaya|Nirnaya|Bhāṣya|Bhashya|Parvan)(?=.{0,120}\d)/i.test(value);
       const hasCitationNumber=/\d/.test(value);
       const proseCitationCue=/\b(?:says?|states?|mentions?|discusses?|speaks?|describes?|explains?|elaborates?|concludes?|writes?|teaches?|gives?|calls?|regards?|regarding|is|are|was|were|the|this|these|that|which|his|her|they|there|because|since|if|when|for)\b/i.test(value);
       const citationLabel=citationSource&&hasCitationNumber&&value.length<=160&&!proseCitationCue;
-      if(n.classList.contains('scripture-source')||(title==='Hinduism on Women'&&citationLabel))n.classList.add('source-citation');
+      if(n.classList.contains('scripture-source')||citationLabel)n.classList.add('source-citation');
       else if(n.classList.contains('scripture-translation')||n.classList.contains('translation')||
               /color\s*:\s*#(?:a92727|65516f|7b3d35)/i.test(style))n.classList.add('translation');
       if(isSa&&!n.closest('details.sanskrit-reveal'))n.classList.add('sanskrit-text');
@@ -566,6 +566,58 @@ function styleArticleQuotes(root){
   }
 }
 
+function flattenNestedSanskritDetails(root){
+  for(const inner of [...root.querySelectorAll('details.sanskrit-reveal details.sanskrit-reveal')]){
+    inner.querySelector(':scope > summary')?.remove();
+    inner.replaceWith(...inner.childNodes);
+  }
+}
+function wrapSanskritSources(root){
+  const isStatic=p=>p.closest('.women-title-page')||
+    p.matches('.women-colophon-source-title,.women-om,.source-postscript-heading')||
+    p.closest('.source-cover-art');
+  const pending=new Set([...root.querySelectorAll('p[lang^="sa"],p.sanskrit-text')]
+    .filter(p=>!p.closest('details.sanskrit-reveal')&&!isStatic(p)&&devanagari.test(text(p))));
+  for(const source of [...pending]){
+    if(!pending.has(source))continue;
+    const run=[source];
+    let sibling=source.nextElementSibling;
+    while(sibling&&pending.has(sibling)){run.push(sibling);sibling=sibling.nextElementSibling;}
+    for(const p of run)pending.delete(p);
+    const reveal=el('details','sanskrit-reveal');
+    reveal.append(el('summary',null,'Show Sanskrit'));
+    source.before(reveal);
+    reveal.append(...run);
+  }
+}
+function pairScriptureQuotes(root){
+  const isCitation=n=>n?.matches?.('p.reference,p.source-citation,p.scripture-source,p.citation');
+  const isSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text');
+  const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation')||
+    (n?.matches?.('p')&&/^[“"'‘]/u.test(text(n)));
+  const candidates=[...root.querySelectorAll('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation,p')]
+    .filter(n=>isTranslation(n)&&!n.closest('.women-scripture-pair,.scripture-quote-pair'));
+  for(const translation of candidates){
+    if(translation.closest('.women-scripture-pair,.scripture-quote-pair'))continue;
+    let cursor=translation.previousElementSibling;
+    const trailingCitations=[];
+    while(cursor&&isCitation(cursor)){trailingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    const source=isSource(cursor)?cursor:null;
+    const leadingCitations=[];
+    if(source){
+      cursor=source.previousElementSibling;
+      while(cursor&&isCitation(cursor)){leadingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    }
+    const citations=[...leadingCitations,...trailingCitations];
+    if(!source&&!citations.length)continue;
+    const first=leadingCitations[0]||source||trailingCitations[0];
+    const pair=el('div','scripture-quote-pair');
+    first.before(pair);
+    pair.append(...citations);
+    if(source)pair.append(source);
+    pair.append(translation);
+  }
+}
 function pairWomenScripture(root){
   if(title!=='Hinduism on Women')return;
   const isStaticSanskrit=p=>p.closest('.women-title-page')||
@@ -678,9 +730,12 @@ function renderSection(page){
   const body=sourcePage?el('div','source-page-body'):section;
   for(const node of page.nodes)body.append(clean(node,page));
   if(sourcePage){normalizeSourcePage(body);section.append(body);}
-  pairWomenScripture(section);
-  styleArticleQuotes(section);
+  flattenNestedSanskritDetails(section);
+  wrapSanskritSources(section);
   normalizeCitationOrder(section);
+  pairWomenScripture(section);
+  pairScriptureQuotes(section);
+  styleArticleQuotes(section);
   return section;
 }
 function decodeFragment(value){
@@ -723,7 +778,7 @@ document.body.replaceChildren(bar,main);
 document.body.className='document-paged-page shastric-article'+(title==='Hinduism on Women'?' women-reader':'')+(title==='Śrī Sadvarṇārthaprakāśinī'?' sadvarn-reader':'');
 renderDocument();
 const siteChrome=document.createElement('script');
-siteChrome.src='/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-3';
+siteChrome.src='/advaita/assets/js/site-chrome.js?v=20261026-document-cleanup-1';
 siteChrome.async=false;
 document.body.append(siteChrome);
 })();

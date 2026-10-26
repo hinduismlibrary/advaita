@@ -4170,3 +4170,19 @@ body#home-directory .hp-column>.hp-panel:first-child { border-top:1px solid #c8c
   body#home-directory .hp-home { width:calc(100% - 32px)!important; padding:20px 0 40px!important; }
   body#home-directory .hp-directory { grid-template-columns:1fr!important; gap:0!important; }
 }
+
+
+/* Standard document controls and wiki palette */
+body#home-directory{background:#fff!important;color:#202122!important}
+body#home-directory .hp-section-title,
+body#home-directory .hp-section-title :is(.hp-section-en,.hp-section-dev){color:#202122!important}
+body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-en,.hp-link-iast,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){color:#0645ad!important}
+body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]){color:#202122!important}
+body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary{
+  min-height:27px!important;padding:3px 8px!important;border-radius:4px!important;
+  background:#fff!important;color:#0645ad!important;font:400 12px/1.35 Arial,Helvetica,sans-serif!important
+}
+body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary:hover,
+body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary:focus-visible{
+  background:#f3f4f5!important;border-color:#54595d!important;outline:2px solid #0645ad!important;outline-offset:1px
+}
