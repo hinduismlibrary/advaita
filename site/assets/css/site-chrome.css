@@ -3371,9 +3371,9 @@ body.vd-chrome-page .purana-chapter-grid .purana-chapter-reference{
   display:block;min-width:0;padding:2px 0
 }
 
-/* Homepage readability: use the open width and give links room to scan. */
+/* Homepage readability: keep the shared menu and search visible. */
 body.vd-chrome-page.home-page > header.vd-global-header{
-  display:none!important;
+  display:block!important;
 }
 body.vd-chrome-page.vd-chrome-page.home-page main.site-main{
   box-sizing:border-box!important;
@@ -4054,3 +4054,119 @@ body#home-directory .hp-section-title :is(.hp-section-dev,.vd-label-dev,[lang^="
 body#home-directory .hp-directory .hp-link-list>li>a { display:flex!important; flex-direction:column!important; align-items:flex-start!important; gap:2px!important; }
 body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-en,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]) { order:1!important; display:block!important; margin:0!important; color:#0645ad!important; }
 body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]) { order:2!important; display:block!important; margin:0!important; color:#202122!important; }
+
+
+/* Homepage: restore the two-column directory and classic white header. */
+body#home-directory > header.vd-global-header {
+  position:relative!important; top:auto!important; z-index:20!important;
+  display:block!important; margin:0!important; padding:0!important;
+  background:#fff!important; color:#202122!important;
+  border:0!important; border-bottom:1px solid #c8ccd1!important; box-shadow:none!important;
+}
+body#home-directory > header.vd-global-header .vd-nav-wrap {
+  box-sizing:border-box!important; width:min(1040px,calc(100% - 64px))!important;
+  min-height:54px!important; height:auto!important; margin:0 auto!important;
+  padding:8px 0!important; display:flex!important; align-items:center!important;
+  justify-content:space-between!important; gap:18px!important;
+}
+body#home-directory > header.vd-global-header .brand {
+  display:flex!important; flex:0 0 auto!important; flex-direction:column!important;
+  align-items:flex-start!important; gap:0!important; color:#202122!important;
+  font:500 20px/1.15 Vollkorn,Georgia,serif!important; text-decoration:none!important;
+}
+body#home-directory > header.vd-global-header .brand .vd-label-dev {
+  display:block!important; margin:0!important; color:#202122!important;
+  -webkit-text-fill-color:#202122!important;
+  font:500 18px/1.2 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body#home-directory > header.vd-global-header .brand .vd-label-iast {
+  display:block!important; margin:0!important; color:#0645ad!important;
+  -webkit-text-fill-color:#0645ad!important; font:400 13px/1.3 Merriweather,Georgia,serif!important;
+}
+body#home-directory > header.vd-global-header .vd-search-form {
+  display:flex!important; align-items:center!important; gap:6px!important;
+  flex:0 0 auto!important; margin:0 0 0 auto!important;
+}
+body#home-directory > header.vd-global-header .vd-search-form input {
+  width:clamp(160px,20vw,230px)!important; height:34px!important; padding:0 10px!important;
+  border:1px solid #a2a9b1!important; border-radius:2px!important; outline:none!important;
+  color:#202122!important; background:#fff!important; font:400 14px/1.4 Merriweather,Georgia,serif!important;
+}
+body#home-directory > header.vd-global-header .vd-search-form input::placeholder { color:#72777d!important; }
+body#home-directory > header.vd-global-header .vd-search-form button {
+  min-height:34px!important; height:auto!important; padding:5px 11px!important;
+  border:1px solid #a2a9b1!important; border-radius:2px!important;
+  color:#0645ad!important; background:#f8f9fa!important;
+  font:500 13px/1.2 Merriweather,Georgia,serif!important; cursor:pointer!important;
+}
+body#home-directory > header.vd-global-header .vd-search-form button .vd-label-dev {
+  margin:1px 0 0!important; color:#202122!important; -webkit-text-fill-color:#202122!important;
+  font:400 10px/1.2 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body#home-directory > header.vd-global-header .vd-nav-subrow {
+  box-sizing:border-box!important; width:min(1040px,calc(100% - 64px))!important;
+  margin:0 auto!important; padding:0!important; border-top:1px solid #eaecf0!important;
+}
+body#home-directory > header.vd-global-header .vd-primary-nav {
+  display:flex!important; width:100%!important; margin:0!important; padding:0!important;
+  align-items:stretch!important; justify-content:flex-start!important; gap:4px!important;
+  background:transparent!important;
+}
+body#home-directory > header.vd-global-header .vd-primary-nav a {
+  display:flex!important; flex-direction:column!important; align-items:flex-start!important;
+  justify-content:center!important; min-height:42px!important; width:auto!important;
+  padding:5px 12px!important; border:0!important; border-bottom:2px solid transparent!important;
+  border-radius:0!important; color:#0645ad!important; background:transparent!important;
+  font:500 14px/1.25 Merriweather,Georgia,serif!important; text-decoration:none!important; white-space:nowrap!important;
+}
+body#home-directory > header.vd-global-header .vd-primary-nav a:hover,
+body#home-directory > header.vd-global-header .vd-primary-nav a:focus-visible,
+body#home-directory > header.vd-global-header .vd-primary-nav a[aria-current="page"] {
+  color:#0645ad!important; background:#f8f9fa!important; border-bottom-color:#0645ad!important; outline:none!important;
+}
+body#home-directory > header.vd-global-header .vd-primary-nav a .vd-label-en,
+body#home-directory > header.vd-global-header .vd-primary-nav a .vd-label-iast {
+  color:#0645ad!important; -webkit-text-fill-color:#0645ad!important; font:500 13px/1.25 Merriweather,Georgia,serif!important;
+}
+body#home-directory > header.vd-global-header .vd-primary-nav a .vd-label-dev {
+  margin:1px 0 0!important; color:#202122!important; -webkit-text-fill-color:#202122!important;
+  font:400 11px/1.2 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body#home-directory > header.vd-global-header .vd-menu-toggle { display:none!important; }
+body#home-directory .hp-home { width:min(1040px,calc(100% - 64px))!important; max-width:1040px!important; }
+body#home-directory .hp-home>h1,
+body#home-directory .hp-home-title,
+body#home-directory .hp-home-title-dev { text-align:center!important; }
+body#home-directory .hp-directory {
+  display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:start!important; gap:0 34px!important;
+}
+body#home-directory .hp-column {
+  display:flex!important; flex-direction:column!important; align-items:stretch!important;
+  gap:0!important; min-width:0!important;
+}
+body#home-directory .hp-column>.hp-panel:first-child { border-top:1px solid #c8ccd1!important; }
+@media(max-width:760px) {
+  body#home-directory > header.vd-global-header .vd-nav-wrap {
+    width:calc(100% - 32px)!important; min-height:52px!important; flex-wrap:wrap!important; gap:8px!important;
+  }
+  body#home-directory > header.vd-global-header .vd-menu-toggle {
+    display:block!important; margin:0 0 0 auto!important; padding:7px!important;
+    border:0!important; background:transparent!important; cursor:pointer!important;
+  }
+  body#home-directory > header.vd-global-header .vd-menu-toggle span {
+    display:block!important; width:22px!important; height:2px!important; margin:4px!important; background:#202122!important;
+  }
+  body#home-directory > header.vd-global-header .vd-search-form {
+    order:3!important; flex:1 0 100%!important; width:100%!important; margin:0!important;
+  }
+  body#home-directory > header.vd-global-header .vd-search-form input { width:auto!important; flex:1 1 auto!important; }
+  body#home-directory > header.vd-global-header .vd-nav-subrow { width:calc(100% - 32px)!important; }
+  body#home-directory > header.vd-global-header .vd-primary-nav {
+    display:none!important; flex-direction:column!important; align-items:stretch!important; gap:0!important;
+  }
+  body#home-directory > header.vd-global-header .vd-primary-nav.open { display:flex!important; }
+  body#home-directory > header.vd-global-header .vd-primary-nav a { width:100%!important; min-height:40px!important; padding:8px 10px!important; }
+  body#home-directory .hp-home { width:calc(100% - 32px)!important; padding:20px 0 40px!important; }
+  body#home-directory .hp-directory { grid-template-columns:1fr!important; gap:0!important; }
+}

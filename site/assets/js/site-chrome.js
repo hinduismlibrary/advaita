@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261025-wikisource-home-7";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261025-wikisource-home-8";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -182,7 +182,8 @@ function stackLabel(element,original,devanagari,mode="english"){
  element.dataset.vdOriginal=original;
  element.dataset.vdBilingual="true";
  element.dataset.vdLabelMode=originalMode?"original":"english";
- if(document.body?.classList.contains("home-page"))element.replaceChildren(roman,sa);
+ if(element.classList.contains("brand"))element.replaceChildren(sa,roman);
+ else if(document.body?.classList.contains("home-page"))element.replaceChildren(roman,sa);
  else element.replaceChildren(sa,roman);
 }
 function stackOriginalDirectoryEntry(element){
@@ -335,6 +336,12 @@ function makeHeader(path){
   nav.className="site-nav vd-primary-nav";
   nav.id="vd-primary-nav";
   nav.setAttribute("aria-label","Primary navigation");
+  toggle.addEventListener("click",()=>{
+    const open=toggle.getAttribute("aria-expanded")!=="true";
+    toggle.setAttribute("aria-expanded",String(open));
+    toggle.setAttribute("aria-label",open?"Close navigation":"Open navigation");
+    nav.classList.toggle("open",open);
+  });
   const links=[
     [SITE,"Home",path==="/advaita"],
     [SITE+"#documents","Documents",/\/articles\/(?:a-vaishnava-lens-on-vishnu-as-the-supreme-deity|a-shaiva-lens-on-shiva-as-the-supreme-deity|meat-eating-in-hinduism-through-the-lens-of-shastra|a-case-for-the-scriptural-validity-of-the-agamas|hinduism-on-women|varna-vicara|a-shashtric-lens-of-varna-part-one)(?:\/|$)/.test(path)],
@@ -364,7 +371,7 @@ function makeHeader(path){
   back.setAttribute("aria-label",previousPage?"Go to the previous page":"Go to the home page");
   back.textContent="Back";
   stackLabel(back,"Back",devanagariFor("Back"),false);
-  nav.append(back);
+  if(path!=="/advaita"&&path!=="/")nav.append(back);
   const form=document.createElement("form");
   form.className="vd-search-form";
   form.action=SITE+"search/";
@@ -391,7 +398,7 @@ function makeHeader(path){
   navRow.append(nav);
   row.append(brand,toggle,form);
   header.append(row,navRow);
-  const crumbs=makeCrumbs(path);
+  const crumbs=(path==="/advaita"||path==="/")?[]:makeCrumbs(path);
   if(crumbs.length){
     const crumbRow=document.createElement("div");
     crumbRow.className="vd-breadcrumb-row";
@@ -551,16 +558,12 @@ function mount(){
   document.body.classList.add("vd-chrome-page");
   const homePage=document.body.classList.contains("home-page");
   let header=document.querySelector("body > header.site-header.vd-global-header");
-  if(homePage){
-    document.querySelectorAll("body > header.site-header, body > header.sitebar, body > header.topbar, body > header.ad-topbar").forEach(node=>node.remove());
-  }else{
-    document.querySelectorAll("body > header.site-header, body > header.sitebar, body > header.topbar, body > header.ad-topbar").forEach(node=>{
-      if(node!==header)node.remove();
-    });
-    if(!header){
-      header=makeHeader(normalizedPath());
-      document.body.prepend(header);
-    }
+  document.querySelectorAll("body > header.site-header, body > header.sitebar, body > header.topbar, body > header.ad-topbar").forEach(node=>{
+    if(node!==header)node.remove();
+  });
+  if(!header){
+    header=makeHeader(normalizedPath());
+    document.body.prepend(header);
   }
   applyPageLabels();
   enhancePuranaChapterLabels();

@@ -24,7 +24,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 def assert_site_palette(page) -> None:
     colors = page.locator("a").evaluate_all(
-        "links => links.filter(link => !link.closest('.hp-section-title')).map(link => getComputedStyle(link).color)"
+        "links => links.filter(link => !link.closest('.hp-section-title') && !link.classList.contains('brand')).map(link => getComputedStyle(link).color)"
     )
     assert all(color == "rgb(6, 69, 173)" for color in colors), colors
     background = page.locator("body").evaluate(
@@ -78,8 +78,13 @@ def run() -> None:
                     assert note not in home_text, note
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
-                assert page.locator(".vd-global-header").count() == 0, "Homepage should not include global navigation/search"
-                panels = page.locator(".hp-directory > .hp-panel")
+                header = page.locator("body > header.vd-global-header")
+                assert header.count() == 1 and header.is_visible(), "Homepage header is missing"
+                assert header.locator(".vd-primary-nav:visible").count() == 1, "Homepage navigation is missing"
+                assert header.locator(".vd-search-form:visible").count() == 1, "Homepage search is missing"
+                panels = page.locator(".hp-directory .hp-column > .hp-panel")
+                columns = page.locator(".hp-directory > .hp-column")
+                assert columns.count() == 2, f"Homepage has {columns.count()} columns"
                 assert panels.count() == 5, f"Homepage has {panels.count()} subject groups"
                 heading_metrics = panels.first.locator(".hp-section-title").evaluate("""el => {
                     const english = el.querySelector(".hp-section-en");
@@ -96,13 +101,16 @@ def run() -> None:
                 assert heading_metrics["headingText"] == "Śāstras", heading_metrics
                 assert heading_metrics["devanagariDisplay"] == "none", heading_metrics
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
-                assert 1167 <= home_width <= 1169, f"Homepage content width is {home_width}px"
+                assert 1039 <= home_width <= 1041, f"Homepage content width is {home_width}px"
                 panel_titles = [panels.nth(i).locator(".hp-section-en").inner_text() for i in range(5)]
-                assert panel_titles == ["Śāstras", "Documents", "Indology", "Advaita Vedanta Portal", "Introduction to Eastern Philosophy"], panel_titles
-                boxes = [panels.nth(i).bounding_box() for i in range(5)]
-                assert all(abs(box["x"] - boxes[0]["x"]) <= 2 and abs(box["width"] - boxes[0]["width"]) <= 2 for box in boxes), boxes
-                assert all(boxes[i + 1]["y"] > boxes[i]["y"] for i in range(len(boxes) - 1)), boxes
-                assert page.locator(".hp-directory > .hp-column").count() == 0
+                assert panel_titles == ["Advaita Vedanta Portal", "Documents", "Śāstras", "Introduction to Eastern Philosophy", "Indology"], panel_titles
+                left_box, right_box = [columns.nth(i).bounding_box() for i in range(2)]
+                assert right_box["x"] > left_box["x"] and abs(left_box["width"] - right_box["width"]) <= 2, (left_box, right_box)
+                left_panels = columns.nth(0).locator(":scope > .hp-panel")
+                right_panels = columns.nth(1).locator(":scope > .hp-panel")
+                left_y = [left_panels.nth(i).bounding_box()["y"] for i in range(left_panels.count())]
+                right_y = [right_panels.nth(i).bounding_box()["y"] for i in range(right_panels.count())]
+                assert left_y == sorted(left_y) and right_y == sorted(right_y), (left_y, right_y)
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
                 assert documents.locator("li").count() == 8
@@ -173,8 +181,22 @@ def run() -> None:
                     and row["firstFontSize"] == "19px" and row["secondFontSize"] == "16px"
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"columns": 1, "style": "single-column Wikisource-style sections", "link_format": "English blue above Devanagari black", "links_checked": len(link_formats), "navigation_hidden": True, **colors}
+                report["home"] = {"columns": 2, "style": "two-column wiki-style lists", "link_format": "English blue above Devanagari black", "links_checked": len(link_formats), "navigation_visible": True, "search_visible": True, **colors}
                 page.screenshot(path=str(OUT / "home.png"))
+                page.set_viewport_size({"width": 390, "height": 844})
+                page.reload(wait_until="domcontentloaded")
+                page.wait_for_function("""() => {
+                    const link = document.querySelector('link[data-viveka-site-chrome]');
+                    return Boolean(link?.sheet && link.sheet.cssRules.length > 0);
+                }""", timeout=20000)
+                mobile_toggle = page.locator(".vd-menu-toggle")
+                mobile_nav = page.locator(".vd-primary-nav")
+                assert mobile_toggle.is_visible(), "Mobile menu button is hidden"
+                assert not mobile_nav.is_visible(), "Mobile menu should start closed"
+                mobile_toggle.click()
+                assert mobile_nav.is_visible(), "Mobile menu did not open"
+                assert page.locator(".vd-search-form:visible").count() == 1
+                report["home_mobile"] = {"menu": "opens", "search": "visible"}
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
                 page.locator(".ad-entry-original-dev").first.wait_for(timeout=20000)
