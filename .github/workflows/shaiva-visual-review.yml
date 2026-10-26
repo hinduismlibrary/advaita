@@ -15,6 +15,7 @@ on:
       - site/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
       - site/assets/js/article-reader-paged.js
       - site/assets/js/shaiva-complete-reader.js
+      - site/assets/data/shaiva-manuscript.b64
       - site/assets/css/varna-vicara-paged.css
       - site/assets/css/article-reader-template.css
   workflow_dispatch:
@@ -238,6 +239,16 @@ jobs:
               page.on('pageerror', lambda error, bucket=errors: bucket.append(str(error)))
               url = root + slug + '/'
               response = open_reader(page, url, errors)
+              if label == 'shaiva':
+                for verse in range(36, 41):
+                  expected_source = f'Shiva Purana, Rudra Samhita 16.{verse}'
+                  pair = page.locator('.scripture-quote-pair').filter(has_text=expected_source)
+                  assert pair.count() == 1, f'shaiva: missing unique citation pair for {expected_source}'
+                  assert pair.locator(':scope > p.reference').inner_text().strip() == expected_source, f'shaiva: wrong source label for {expected_source}'
+                  assert pair.locator(':scope > details.sanskrit-reveal').count() == 1, f'shaiva: Sanskrit reveal missing for {expected_source}'
+                  assert pair.locator(':scope > p.translation').count() == 1, f'shaiva: English translation missing for {expected_source}'
+                  order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
+                  assert order == ['source', 'sanskrit', 'translation'], f'shaiva: quote order differs for {expected_source}: {order}'
               desktop = metrics(page)
               print(json.dumps({'site':label,'desktop':desktop},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'

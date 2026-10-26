@@ -138,8 +138,9 @@ function mixedSanskrit(value,mode='paragraph'){
   return fragment;
 }
 
-function translation(value){
-  const text=stripOuterQuotes(articleText(value));
+function translation(value,preserveQuotes=false){
+  const visible=articleText(value);
+  const text=preserveQuotes?visible:stripOuterQuotes(visible);
   return text?make('p','translation',text):empty();
 }
 
@@ -339,7 +340,7 @@ function renderQuote(value){
   if(inlineQuote){
     /* The Roman line belongs with the Sanskrit reveal, never as a separate
        teal citation in the article flow. */
-    return translation(inlineQuote[2]);
+    return translation(inlineQuote[2],true);
   }
   const mixed=mixedSanskrit(value,'translation');
   if(mixed)return mixed;
@@ -351,7 +352,7 @@ function renderQuote(value){
   const fragment=document.createDocumentFragment();
   const quoteText=noteAt<0?withoutLabel:withoutLabel.slice(0,noteAt).trim();
   const pieces=quoteText.split(/\s+>\s+/).map(stripOuterQuotes).filter(Boolean);
-  for(const piece of pieces)fragment.append(translation(piece));
+  for(const piece of pieces)fragment.append(translation('“'+piece+'”',true));
   if(noteAt>=0)fragment.append(note(withoutLabel.slice(noteAt+1)));
   return fragment;
 }
@@ -415,6 +416,7 @@ function renderParagraph(value,section){
 }
 
 function renderBlock(block,section){
+  if(block.kind==='reference')return reference(block.value);
   if(block.kind==='sa')return sanskrit(block.value);
   if(block.kind==='quote')return renderQuote(block.value);
   if(block.kind==='table')return renderTable(block.value);
@@ -567,7 +569,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20260923-shaiva-parity-1');
+  const response=await fetch(site+path+'?v=20261026-shaiva-citation-1');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }
