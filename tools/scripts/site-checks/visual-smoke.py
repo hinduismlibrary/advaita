@@ -146,7 +146,7 @@ def run() -> None:
                 )
                 assert colors["english"] == "rgb(6, 69, 173)", colors
                 assert colors["dev"] == "rgb(32, 33, 34)", colors
-                assert colors["englishSize"] == "19px" and colors["devSize"] == "16px", colors
+                assert colors["englishSize"] == "16px" and colors["devSize"] == "16px", colors
                 link_formats = page.locator(".hp-link-list a").evaluate_all("""
                     links => links.map(link => {
                         const [first, second] = Array.from(link.children);
@@ -180,7 +180,7 @@ def run() -> None:
                     and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
                     and row["firstHeight"] > 0 and row["secondHeight"] > 0
                     and row["firstTop"] < row["secondTop"]
-                    and row["firstFontSize"] == "19px" and row["secondFontSize"] == "16px"
+                    and row["firstFontSize"] == "16px" and row["secondFontSize"] == "16px"
                     for row in link_formats
                 ), link_formats
                 report["home"] = {"columns": 2, "style": "two-column wiki-style lists", "link_format": "English blue above Devanagari black", "links_checked": len(link_formats), "navigation_visible": True, "search_visible": True, **colors}
