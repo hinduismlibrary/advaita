@@ -470,6 +470,7 @@ function styleQuotedText(root){
   }
 }
 function clean(node,page){
+  if(node?.matches?.('.editorial-note,.quote-source-note,.translation-note'))return document.createDocumentFragment();
   if(title==='Hinduism on Women'&&node?.matches?.('p')){
     const raw=text(node);
     const strongOnly=node.children.length===1&&node.firstElementChild?.matches('strong');
@@ -493,6 +494,9 @@ function clean(node,page){
     }
   }
   const copy=node.cloneNode(true);
+  copy.querySelectorAll?.('.editorial-note,.quote-source-note,.translation-note').forEach(n=>n.remove());
+  if(copy.matches?.('p.translation-attribution'))copy.classList.add('reference');
+  copy.querySelectorAll?.('p.translation-attribution').forEach(n=>n.classList.add('reference'));
   if(copy.matches?.('h3'))copy.classList.add('reader-subheading');
   copy.querySelectorAll?.('h3').forEach(heading=>heading.classList.add('reader-subheading'));
   if(copy.matches?.('.sanskrit-transliteration,[lang^="sa-Latn"]'))return document.createDocumentFragment();
@@ -590,51 +594,228 @@ function wrapSanskritSources(root){
     reveal.append(...run);
   }
 }
-function pairScriptureQuotes(root){
-  const isCitation=n=>n?.matches?.('p.reference,p.source-citation,p.scripture-source,p.citation');
-  const isSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text');
-  const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation')||
-    (n?.matches?.('p')&&/^[“"'‘]/u.test(text(n)));
-  const candidates=[...root.querySelectorAll('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation,p')]
-    .filter(n=>isTranslation(n)&&!n.closest('.women-scripture-pair,.scripture-quote-pair'));
-  for(const translation of candidates){
-    if(translation.closest('.women-scripture-pair,.scripture-quote-pair'))continue;
-    let cursor=translation.previousElementSibling;
-    const trailingCitations=[];
-    while(cursor&&isCitation(cursor)){trailingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
-    const source=isSource(cursor)?cursor:null;
-    const leadingCitations=[];
-    if(source){
-      cursor=source.previousElementSibling;
-      while(cursor&&isCitation(cursor)){leadingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+function isSourceCitationNode(node){
+  return node?.matches?.('p.reference,p.source-citation,p.scripture-source,p.citation');
+}
+function isSanskritSourceNode(node){
+  return node?.matches?.('details.sanskrit-reveal:not(.quote-source-note),p[lang^="sa"],.sanskrit-text');
+}
+function isEnglishTranslationNode(node){
+  return node?.matches?.('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation')||
+    (node?.matches?.('p')&&/^[“"'‘]/u.test(text(node)));
+}
+function citationIntroducesNextQuote(node){
+  return /\b(?:states?|says?|reads?|writes?|quotes?|as follows|is stated|are stated|continues?)\s*[:;,]?\s*$/i.test(text(node));
+}
+function normalizeSanskritDisclosureLabels(root){
+  for(const details of root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note)')){
+    const summary=details.querySelector(':scope>summary');
+    if(!summary)continue;
+    const hasDevanagari=devanagari.test(text(details));
+    const marked=/^(?:show|hide)\s+(?:sanskrit|संस्कृतम्)/i.test(text(summary));
+    if(!hasDevanagari&&!marked)continue;
+    const update=()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit';summary.setAttribute('aria-expanded',String(details.open));};
+    update();
+    if(!details.dataset.readerDisclosureBound){
+      details.dataset.readerDisclosureBound='true';
+      details.addEventListener('toggle',update);
     }
-    const citations=[...leadingCitations,...trailingCitations];
-    if(!source&&!citations.length)continue;
-    const first=leadingCitations[0]||source||trailingCitations[0];
+  }
+}
+const sourceNames=[
+  'Bhagavad Gita','Bhagavad Gītā','Gita','Gītā','Rigveda','Yajurveda','Samaveda','Atharvaveda',
+  'Taittiriya Samhita','Taittiriya Saṃhitā','Taittiriya Brahmana','Taittiriya Brāhmaṇa','Taittiriya Aranyaka','Taittiriya Āraṇyaka','Taittiriya Upanishad',
+  'Shatapatha Brahmana','Aitareya Brahmana','Annapurna Upanishad','Chandogya Upanishad','Narayana Upanishad','Mundaka Upanishad','Mahopanishad',
+  'Brihadaranyaka Upanishad','Katha Upanishad','Shvetashvatara Upanishad','Yajnavalkya Shiksha','Yajnavalkya Siksha',
+  'Manusmrti','Manusmriti','Manusmṛti','Parashara Smriti','Parashara Smrti','Vasistha Smriti','Vasistha Smrti','Vyasa Smriti','Vyasa Smrti','Yajnavalkya Smriti','Yajnavalkya Smrti','Daksha Smriti','Daksha Smrti',
+  'Mimamsa Sutras','Mimamsa Sutra','Mīmāṃsā Sūtras','Mīmāṃsā Sūtra','Brahma Sutras','Brahma Sutra','Brahma Sūtras','Brahma Sūtra',
+  'Mahabharata','Mahābhārata','Ramayana','Rāmāyaṇa','Yoga Vasistha','Yoga Vasishtha',
+  'Vishnu Purana','Viṣṇu Purāṇa','Bhagavata Purana','Bhāgavata Purāṇa','Shiva Purana','Siva Purana','Śiva Purāṇa','Padma Purana','Skanda Purana','Garuda Purana','Narada Purana','Markandeya Purana','Agni Purana','Linga Purana','Matsya Purana','Brahma Purana','Devi Bhagavatam',
+  'Ahirbudhnya Samhita','Paingi-rahasya Brahmana','Paingi Rahasya Brahmana','Narayana Sukta','Vishnu Sahasranama','Agama Pramanya','Agama Pramāṇya','Brahmasutra-bhashya','Brahmasutra-bhāṣya'
+];
+const sourceNameRegex=new RegExp('(?<![\\p{L}\\p{N}])(?:'+sourceNames
+  .sort((a,b)=>b.length-a.length)
+  .map(name=>name.split(/\s+/).join('\\s+'))
+  .join('|')+')(?![\\p{L}\\p{N}])','giu');
+function labelsFromSourceContext(value){
+  const sourceText=String(value||'').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
+  if(!sourceText)return [];
+  if(/\bA\.?\s*S\.?\s*Altekar\b/i.test(sourceText)&&/position of women in hindu civilization/i.test(sourceText))
+    return ['A. S. Altekar, The Position of Women in Hindu Civilization, pp. 206–207'];
+  const matches=[...sourceText.matchAll(new RegExp(sourceNameRegex.source,sourceNameRegex.flags))];
+  const labels=[],labelsWithReference=[];
+  for(let i=0;i<matches.length;i++){
+    const match=matches[i],title=match[0].replace(/\s+/g,' ').trim();
+    const preceding=sourceText.slice(Math.max(0,match.index-55),match.index);
+    if(/\b(?:(?:mentioned|cited|quoted|listed|named)\s+in|of|from)\s+(?:the\s+)?$/i.test(preceding))continue;
+    const tail=sourceText.slice(match.index+match[0].length,match.index+match[0].length+150);
+    let info='';
+    const parenthetical=tail.match(/\(([^)]{0,130}\d[^)]*)\)/);
+    if(parenthetical)info=parenthetical[1].replace(/\s+/g,' ').trim().replace(/[.;:]$/,'');
+    if(!info){
+      const named=tail.match(/\b(?:book|chapter|verse|sarga|khanda|khaṇḍa|parva|kanda)\s+\d+(?:[.:]\d+)*(?:\s*[–—-]\s*\d+(?:[.:]\d+)*)?/i);
+      if(named)info=named[0].replace(/\s+/g,' ').trim();
+    }
+    if(!info){
+      const direct=tail.match(/^\s*(?:[,;:]?\s*)?(?:(?:book|chapter|verse)\s+)?(\d+(?:[.:]\d+)*(?:\s*[–—-]\s*\d+(?:[.:]\d+)*)?)/i);
+      if(direct)info=direct[1].replace(/\s+/g,' ').trim();
+    }
+    if(!info){
+      const closeNumber=tail.slice(0,150).match(/^[^.!?]{0,150}?\b(\d+(?:[.:]\d+)+(?:\s*[–—-]\s*\d+(?:[.:]\d+)*)?)/);
+      if(closeNumber)info=closeNumber[1].replace(/\s+/g,' ').trim();
+    }
+    const label=title+(info?( /^(?:book|chapter|verse|sarga|khanda|khaṇḍa|parva|kanda)\b/i.test(info)||/,/.test(info)?', '+info:' '+info):'');
+    if(!labels.includes(label))labels.push(label);
+    if(info&&!labelsWithReference.includes(label))labelsWithReference.push(label);
+  }
+  return labelsWithReference.length?labelsWithReference:labels;
+}
+function hasCitationBesideSource(source){
+  if(isSourceCitationNode(source.previousElementSibling)||isSourceCitationNode(source.nextElementSibling))return true;
+  let cursor=source.nextElementSibling;
+  while(isSourceCitationNode(cursor))cursor=cursor.nextElementSibling;
+  while(isEnglishTranslationNode(cursor))cursor=cursor.nextElementSibling;
+  return isSourceCitationNode(cursor)&&!citationIntroducesNextQuote(cursor);
+}
+function contextCitationFor(anchor){
+  let cursor=anchor.previousElementSibling,steps=0,continuity=false;
+  while(cursor&&steps<5){
+    if(isSourceCitationNode(cursor))return [];
+    if(isSanskritSourceNode(cursor)||cursor.matches?.('h2,h3,h4,h5,h6,figure,ul,ol,table,.scripture-quote-pair,.women-scripture-pair'))break;
+    if(isEnglishTranslationNode(cursor)){
+      if(continuity){
+        let prior=cursor.previousElementSibling,depth=0;
+        while(prior&&depth<3){
+          if(isSourceCitationNode(prior))return [text(prior)];
+          if(isSanskritSourceNode(prior)||prior.matches?.('h2,h3,h4,h5,h6'))break;
+          prior=prior.previousElementSibling;depth++;
+        }
+      }
+      break;
+    }
+    if(cursor.matches?.('p')){
+      const labels=labelsFromSourceContext(text(cursor));
+      if(labels.length)return labels;
+      if(/^(?:further\b|he further\b|she further\b|again\b|the same\b|continued\b|also\b)/i.test(text(cursor))){
+        continuity=true;cursor=cursor.previousElementSibling;steps++;continue;
+      }
+      if(text(cursor))break;
+    }
+    cursor=cursor.previousElementSibling;steps++;
+  }
+  return [];
+}
+function normalizeSourceContextCitations(root){
+  const openingVerses=[...root.querySelectorAll('.women-scripture-pair.women-opening-verse')];
+  const openingSources=[
+    'Saundarya Laharī, verse 97',
+    'Saundarya Laharī, verse 2',
+    'Nārīdharmavivecanī, Maṅgalācaraṇam'
+  ];
+  openingVerses.forEach((pair,index)=>{
+    if(pair.querySelector(':scope > p.reference'))return;
+    pair.prepend(el('p','reference',openingSources[index]||'Nārīdharmavivecanī, Maṅgalācaraṇam'));
+  });
+  const sources=[...root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note),p[lang^="sa"],.sanskrit-text')]
+    .filter(source=>!source.closest('.women-title-page,.source-cover-art,.women-colophon-source-title,.women-om'));
+  for(const source of sources){
+    if(source.closest('.scripture-quote-pair,.women-scripture-pair')||hasCitationBesideSource(source))continue;
+    let anchor=source;
+    let previous=source.previousElementSibling;
+    while(isSourceCitationNode(previous))previous=previous.previousElementSibling;
+    if(isEnglishTranslationNode(previous)&&!isSanskritSourceNode(previous.previousElementSibling))anchor=previous;
+    let following=source.nextElementSibling;
+    while(isSourceCitationNode(following))following=following.nextElementSibling;
+    const hasAfterTranslation=isEnglishTranslationNode(following);
+    const hasBeforeTranslation=anchor!==source;
+    if(!hasAfterTranslation&&!hasBeforeTranslation)continue;
+    let labels=contextCitationFor(anchor);
+    if(!labels.length&&title==='Śrī Sadvarṇārthaprakāśinī'&&source.previousElementSibling?.matches?.('.source-postscript-heading'))
+      labels=['Śrī Sadvarṇārthaprakāśinī, Maṅgalācaraṇam'];
+    if(!labels.length)continue;
+    const citation=el('p','reference',labels.join('; '));
+    anchor.before(citation);
+  }
+  const translations=[...root.querySelectorAll('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation,p')]
+    .filter(isEnglishTranslationNode);
+  for(const translation of translations){
+    if(translation.closest('.scripture-quote-pair,.women-scripture-pair'))continue;
+    let previous=translation.previousElementSibling;
+    while(isSourceCitationNode(previous))previous=previous.previousElementSibling;
+    if(isSanskritSourceNode(previous)||isSourceCitationNode(translation.previousElementSibling))continue;
+    if(isSourceCitationNode(translation.nextElementSibling)||isSanskritSourceNode(translation.nextElementSibling))continue;
+    const labels=contextCitationFor(translation);
+    if(!labels.length)continue;
+    translation.before(el('p','reference',labels.join('; ')));
+  }
+}
+function pairScriptureQuotes(root){
+  const isCitation=isSourceCitationNode;
+  const isSource=isSanskritSourceNode;
+  const isTranslation=isEnglishTranslationNode;
+  const sources=[...root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note),p[lang^="sa"],.sanskrit-text')]
+    .filter(source=>!source.closest('.scripture-quote-pair,.women-scripture-pair')&&
+      !source.closest('.women-title-page,.source-cover-art,.women-colophon-source-title,.women-om'));
+  const isPreviouslyPaired=translation=>{
+    const before=translation.previousElementSibling;
+    if(before?.matches?.('.scripture-quote-pair,.women-scripture-pair'))return true;
+    let cursor=before;
+    while(isCitation(cursor))cursor=cursor.previousElementSibling;
+    return isSource(cursor);
+  };
+  for(const source of sources){
+    if(source.closest('.scripture-quote-pair,.women-scripture-pair'))continue;
+    const sourceRun=[source];
+    let cursor=source.previousElementSibling;
+    while(isSource(cursor)){sourceRun.unshift(cursor);cursor=cursor.previousElementSibling;}
+    cursor=source.nextElementSibling;
+    while(isSource(cursor)){sourceRun.push(cursor);cursor=cursor.nextElementSibling;}
+    const beforeCitations=[];
+    cursor=sourceRun[0].previousElementSibling;
+    while(isCitation(cursor)){beforeCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    let beforeTranslations=[];
+    if(isTranslation(cursor)&&!isPreviouslyPaired(cursor)){
+      beforeTranslations.unshift(cursor);
+      cursor=cursor.previousElementSibling;
+      while(isTranslation(cursor)&&!isPreviouslyPaired(cursor)){beforeTranslations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    }
+    cursor=sourceRun[sourceRun.length-1].nextElementSibling;
+    const afterCitations=[];
+    while(isCitation(cursor)){afterCitations.push(cursor);cursor=cursor.nextElementSibling;}
+    const afterTranslations=[];
+    while(isTranslation(cursor)){afterTranslations.push(cursor);cursor=cursor.nextElementSibling;}
+    const trailingCitations=[];
+    while(isCitation(cursor)&&!citationIntroducesNextQuote(cursor)){
+      trailingCitations.push(cursor);cursor=cursor.nextElementSibling;
+    }
+    const citations=[...beforeCitations,...afterCitations,...trailingCitations];
+    const translations=[...beforeTranslations,...afterTranslations];
+    if(!translations.length)continue;
+    const nodes=[...beforeTranslations,...beforeCitations,...sourceRun,...afterCitations,...afterTranslations,...trailingCitations];
+    const first=nodes.reduce((earliest,node)=>
+      node.compareDocumentPosition(earliest)&Node.DOCUMENT_POSITION_FOLLOWING?node:earliest,nodes[0]);
     const pair=el('div','scripture-quote-pair');
     first.before(pair);
-    pair.append(...citations);
-    if(source)pair.append(source);
-    pair.append(translation);
+    pair.append(...citations,...sourceRun,...translations);
+  }
+  const translations=[...root.querySelectorAll('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation,p')]
+    .filter(isTranslation);
+  for(const translation of translations){
+    if(translation.closest('.scripture-quote-pair,.women-scripture-pair'))continue;
+    let cursor=translation.previousElementSibling;
+    const citations=[];
+    while(isCitation(cursor)){citations.unshift(cursor);cursor=cursor.previousElementSibling;}
+    if(!citations.length)continue;
+    const quoteRun=[translation];
+    cursor=translation.nextElementSibling;
+    while(isTranslation(cursor)){quoteRun.push(cursor);cursor=cursor.nextElementSibling;}
+    const pair=el('div','scripture-quote-pair');
+    citations[0].before(pair);
+    pair.append(...citations,...quoteRun);
   }
 }
 function pairWomenScripture(root){
   if(title!=='Hinduism on Women')return;
-  const isStaticSanskrit=p=>p.closest('.women-title-page')||
-    p.matches('.women-colophon-source-title,.women-om');
-  const pending=new Set([...root.querySelectorAll('p[lang^="sa"]')]
-    .filter(p=>!p.closest('details.sanskrit-reveal')&&!isStaticSanskrit(p)));
-  for(const source of [...pending]){
-    if(!pending.has(source))continue;
-    const run=[source];
-    let sibling=source.nextElementSibling;
-    while(sibling&&pending.has(sibling)){run.push(sibling);sibling=sibling.nextElementSibling;}
-    for(const p of run)pending.delete(p);
-    const reveal=el('details','sanskrit-reveal');
-    reveal.append(el('summary',null,'Show Sanskrit'));
-    source.before(reveal);
-    reveal.append(...run);
-  }
   for(const term of root.querySelectorAll('dt[lang^="sa"]')){
     if(term.closest('details.sanskrit-reveal'))continue;
     const span=el('span','sanskrit-text');
@@ -645,34 +826,29 @@ function pairWomenScripture(root){
     reveal.append(el('summary',null,'Show Sanskrit'),span);
     term.append(reveal);
   }
-  const sources=[...root.querySelectorAll('details.sanskrit-reveal,p[lang^="sa"]')];
-  for(const source of sources){
-    if(source.closest('.women-scripture-pair'))continue;
-    let next=source.nextElementSibling;
+  for(const source of [...root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note)')]){
+    if(source.closest('.women-scripture-pair,.scripture-quote-pair'))continue;
+    let cursor=source.nextElementSibling;
     const citations=[];
-    while(next&&next.matches('p.reference,p.source-citation,p.citation')){
-      citations.push(next);next=next.nextElementSibling;
-    }
-    if(!next||next.closest('.women-scripture-pair'))continue;
-    const isList=next.matches('ol.women-name-list');
-    const isBlockquote=next.matches('blockquote.translation');
-    const isTranslationParagraph=next.matches('p.translation')||
-      (source.matches('details.sanskrit-reveal')&&next.matches('p')&&
-       !next.matches('[lang^="sa"],.reference,.source-citation,.citation'));
-    const quotedParagraph=next.matches('p')&&/^[“"'‘]/u.test(text(next));
-    if(!isList&&!isBlockquote&&!isTranslationParagraph&&!quotedParagraph)continue;
+    while(isSourceCitationNode(cursor)){citations.push(cursor);cursor=cursor.nextElementSibling;}
+    if(!cursor?.matches?.('ol.women-name-list'))continue;
+    let before=source.previousElementSibling;
+    const leading=[];
+    while(isSourceCitationNode(before)){leading.unshift(before);before=before.previousElementSibling;}
+    const all=[...leading,...citations,source,cursor];
+    const first=all.reduce((earliest,node)=>
+      node.compareDocumentPosition(earliest)&Node.DOCUMENT_POSITION_FOLLOWING?node:earliest,all[0]);
     const pair=el('div','women-scripture-pair');
-    source.before(pair);
-    pair.append(source,...citations,next);
-    if(next.matches('p')&&!next.classList.contains('translation'))
-      next.classList.add('women-scripture-translation');
+    first.before(pair);
+    pair.append(...leading,...citations,source,cursor);
   }
 }
 function normalizeCitationOrder(root){
-  const isTranslation=n=>n?.matches?.('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation');
-  const isQuoteSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text,blockquote.translation,blockquote.scripture-translation');
+  const isTranslation=isEnglishTranslationNode;
+  const isQuoteSource=isSanskritSourceNode;
   for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
     if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\s*:?[.]?$/i.test(text(citation)))continue;
+    if(isQuoteSource(citation.nextElementSibling))continue;
     let target=citation.previousElementSibling;
     if(isTranslation(target)){
       while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
@@ -732,7 +908,9 @@ function renderSection(page){
   if(sourcePage){normalizeSourcePage(body);section.append(body);}
   flattenNestedSanskritDetails(section);
   wrapSanskritSources(section);
+  normalizeSanskritDisclosureLabels(section);
   normalizeCitationOrder(section);
+  normalizeSourceContextCitations(section);
   pairWomenScripture(section);
   pairScriptureQuotes(section);
   styleArticleQuotes(section);

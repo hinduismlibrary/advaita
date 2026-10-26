@@ -14,6 +14,7 @@ on:
       - site/articles/hinduism-on-women/index.html
       - site/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
       - site/assets/js/article-reader-paged.js
+      - site/assets/js/vishnu-source-restoration.js
       - site/assets/js/shaiva-complete-reader.js
       - site/assets/data/shaiva-manuscript.b64
       - site/assets/css/varna-vicara-paged.css
@@ -81,7 +82,7 @@ jobs:
                   const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\.js(?:\?|$)/.test(url)) || '';
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
-                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261026-shaiva-citation-3' : '20261026-document-cleanup-1';
+                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261026-shaiva-citation-3' : '20261026-document-cleanup-2';
                   const assetsReady = sharedStyle?.href.includes('20261026-document-cleanup-1') && readerScript.includes(readerVersion) && contentReady;
                   return assetsReady;
                 }""")
@@ -137,6 +138,24 @@ jobs:
               const pStyle = paragraph ? getComputedStyle(paragraph) : null;
               const qStyle = quote ? getComputedStyle(quote) : null;
               const hStyle = sectionHeading ? getComputedStyle(sectionHeading) : null;
+              const sourceSelector='p.reference,p.source-citation,p.scripture-source,p.citation';
+              const sanskritSelector='details.sanskrit-reveal:not(.quote-source-note),p[lang^="sa"],.sanskrit-text';
+              const translationSelector='p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation';
+              const quotePairs=[...article.querySelectorAll('.scripture-quote-pair,.women-scripture-pair')];
+              const quoteGroups=quotePairs.filter(pair=>pair.querySelector(sanskritSelector)&&pair.querySelector(translationSelector));
+              const citationExamples=quoteGroups.flatMap(pair=>[...pair.querySelectorAll(':scope > p.reference,:scope > p.source-citation,:scope > p.scripture-source,:scope > p.citation')].map(node=>node.textContent.trim()));
+              const orderRank=node=>node.matches(sourceSelector)?0:node.matches(sanskritSelector)?1:node.matches(translationSelector)?2:9;
+              const quoteOrderErrors=quoteGroups.filter(pair=>{
+                const ranks=[...pair.children].map(orderRank).filter(rank=>rank<9);
+                return ranks.some((rank,index)=>index>0&&rank<ranks[index-1]);
+              }).map(pair=>pair.innerText.trim().slice(0,140));
+              const sourceDisclosures=[...article.querySelectorAll('.document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)')]
+                .filter(details=>/[\\u0900-\\u097f]/.test(details.textContent));
+              const badDisclosureLabels=sourceDisclosures.filter(details=>! /^(?:Show|Hide) Sanskrit$/.test(details.querySelector(':scope > summary')?.textContent.trim()||'')).length;
+              const translationCandidates=[...article.querySelectorAll(translationSelector+',p')].filter(node=>
+                (node.matches(translationSelector)||/^[“"'‘]/u.test(node.textContent.trim()))&&!node.closest('.source-page-body'));
+              const unpairedTranslations=translationCandidates.filter(node=>!node.closest('.scripture-quote-pair,.women-scripture-pair')).length;
+              const editorialNotes=article.querySelectorAll('.editorial-note,.quote-source-note,.translation-note').length;
               return {
                 status: document.querySelector('.page-context span, #section-count')?.textContent.trim() || '',
                 sections: sections.length,
@@ -150,7 +169,15 @@ jobs:
                 width: window.innerWidth,
                 paragraphStyle: pStyle ? {fontFamily:pStyle.fontFamily,fontSize:pStyle.fontSize} : null,
                 quoteStyle: qStyle ? {fontSize:qStyle.fontSize,color:qStyle.color,borderLeftWidth:qStyle.borderLeftWidth} : null,
-                headingStyle: hStyle ? {fontFamily:hStyle.fontFamily,fontSize:hStyle.fontSize} : null
+                headingStyle: hStyle ? {fontFamily:hStyle.fontFamily,fontSize:hStyle.fontSize} : null,
+                quoteGroups: quoteGroups.length,
+                citationGroups: quoteGroups.filter(pair=>pair.querySelector(':scope > '+sourceSelector.replaceAll(',',',:scope > '))).length,
+                citationExamples,
+                quoteOrderErrors,
+                sanskritDisclosures: sourceDisclosures.length,
+                badDisclosureLabels,
+                unpairedTranslations,
+                editorialNotes
               };
             }""")
           
@@ -188,6 +215,17 @@ jobs:
               }).filter(Boolean);
             }""", toc_selector)
           
+          def verify_sanskrit_disclosure(page, label):
+            disclosure = page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)').filter(has=page.locator('[lang^="sa"]')).first
+            assert disclosure.count(), f'{label}: Sanskrit disclosure is missing'
+            summary = disclosure.locator(':scope > summary')
+            assert summary.inner_text().strip() == 'Show Sanskrit', f'{label}: Sanskrit disclosure label is not standardized'
+            handle = disclosure.element_handle()
+            summary.click()
+            page.wait_for_function("(element) => element.open && element.querySelector(':scope > summary').textContent.trim() === 'Hide Sanskrit'", arg=handle, timeout=5000)
+            summary.click()
+            page.wait_for_function("(element) => !element.open && element.querySelector(':scope > summary').textContent.trim() === 'Show Sanskrit'", arg=handle, timeout=5000)
+
           def verify_scrollspy(page, label, mobile=False):
             selector = '.mobile-toc .toc' if mobile else '.side-toc .toc'
             if mobile:
@@ -240,6 +278,7 @@ jobs:
               page.on('pageerror', lambda error, bucket=errors: bucket.append(str(error)))
               url = root + slug + '/'
               response = open_reader(page, url, errors)
+              verify_sanskrit_disclosure(page, label)
               if label == 'shaiva':
                 for verse in range(36, 41):
                   expected_source = f'Shiva Purana, Rudra Samhita 16.{verse}'
@@ -261,6 +300,21 @@ jobs:
               assert desktop['links'] >= 3, f'{label}: Contents entries are missing'
               assert not desktop['broken'], f'{label}: broken Contents anchors {desktop["broken"]}'
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
+              assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
+              assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
+              assert not desktop['quoteOrderErrors'], f'{label}: quote order differs from source, Sanskrit, English: {desktop["quoteOrderErrors"]}'
+              assert desktop['sanskritDisclosures'] > 0, f'{label}: Devanagari disclosures are missing'
+              assert desktop['badDisclosureLabels'] == 0, f'{label}: Sanskrit disclosure labels differ from the shared reader'
+              assert desktop['editorialNotes'] == 0, f'{label}: editorial or source-process notes remain visible'
+              expected_source = {
+                'agamas':'Taittiriya Samhita 2.2.10.2',
+                'shaiva':'Shiva Purana, Rudra Samhita 16.36',
+                'varna':'Bhagavad Gita 16.23',
+                'vaishnava':'Rigveda 10.113.2',
+                'women':'Saundarya Laharī, verse 97',
+                'meat':'Manusmrti 5.48'
+              }[label]
+              assert any(expected_source.lower() in item.lower() for item in desktop['citationExamples']), f'{label}: expected source label is missing: {expected_source}'
               assert not desktop['pageNav'], f'{label}: old Previous/Next navigation remains'
               assert desktop['paragraphStyle'], f'{label}: no article paragraph rendered'
               assert desktop['headingStyle'], f'{label}: no section heading rendered'

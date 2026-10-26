@@ -68,8 +68,6 @@ const tables=[
 ];
 const makeTable=(rows,offset=0)=>{const t=make('table');t.className='source-evidence-table';t.append(make('caption','Statements and references as tabulated in the source PDF'));const tr=make('tr');['No.','Reference','Statement in the source'].forEach(s=>tr.append(make('th',s)));const head=make('thead');head.append(tr);t.append(head);const body=make('tbody');rows.forEach((r,i)=>{const row=make('tr');[String(i+1+offset),...r].forEach(v=>row.append(make('td',v)));body.append(row)});t.append(body);return t};
 tables.forEach(([heading,rows],i)=>{const h=find('h3',new RegExp('^Table '+(i+1)+':'));if(!h)return;let n=h.nextElementSibling;while(n&&!n.matches('table,h2,h3'))n=n.nextElementSibling;if(n?.matches('table'))n.replaceWith(makeTable(rows,[0,8,0,6,0][i]));h.textContent=heading});
-const purana=find('h3',/^Table 5:/);
-if(purana&&!root.querySelector('[data-vishnu-recap]')){const rec=make('div');rec.dataset.vishnuRecap='65-67';rec.innerHTML='<h4>Purana meta-analysis — summary in the source</h4><ul><li>The opening questions of Vaishnava Puranas ask generally which deity is supreme; the Shaiva Puranas cited begin with questions specifically about Shiva.</li><li>The paper compares Padma Purana 6.236, Skanda Purana 7.1.2.87 and Matsya Purana 56.68 on the sattvika, rajasa and tamasa classification of Puranas.</li><li>It cites Varaha Purana 70.20–24 on sattva, rajas and tamas.</li></ul>';purana.before(rec)}
 // The PDF (pp. 70–71) has 30 separately numbered scriptures and 18 works.
 const scriptures=[
 ['Vedas',['Rigveda Samhita','Taittiriya Samhita','Aitareya Brahmana','Shatapatha Brahmana','Paingi Rahasya Brahmana','Purusha Suktam (Taittiriya Aranyaka)','Mahopanishat','Narayanopanishat','Chandogyopanishat','Brhadaranyakopanishat','Kathopanishat','Shvetashvataropanishat']],
@@ -85,5 +83,5 @@ function restoreBibliography(h,groups){if(!h)return;let n=h.nextElementSibling;c
 restoreBibliography(find('h3',/^I\. Scriptures/),scriptures);
 restoreBibliography(find('h3',/^II\. Works of the Acaryas/),acharyas);
 const note=find('p',/^Editorial note: This web edition preserves/i);
-if(note)note.textContent='Editorial note: This online article is an edited transcription of Caligayla’s paper, not a page-for-page diplomatic edition. Check the source PDF for exact wording and references.';
+if(note)note.remove();
 })();
