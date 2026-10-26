@@ -98,7 +98,7 @@ def run() -> None:
                 }""")
                 assert heading_metrics["headingColor"] == "rgb(32, 33, 34)", heading_metrics
                 assert heading_metrics["headingFill"] == "rgb(32, 33, 34)", heading_metrics
-                assert heading_metrics["headingText"] == "Śāstras", heading_metrics
+                assert heading_metrics["headingText"] == "Advaita Vedanta Portal", heading_metrics
                 assert heading_metrics["devanagariDisplay"] == "none", heading_metrics
                 home_width = page.locator(".hp-home").evaluate("el => el.getBoundingClientRect().width")
                 assert 1039 <= home_width <= 1041, f"Homepage content width is {home_width}px"
