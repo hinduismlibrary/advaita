@@ -113,7 +113,9 @@ def run() -> None:
                 assert left_y == sorted(left_y) and right_y == sorted(right_y), (left_y, right_y)
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
-                assert documents.locator("li").count() == 8
+                assert documents.locator("li").count() == 7
+                assert documents.locator('a[href="/advaita/articles/purana-analysis/"]').count() == 0
+                assert page.locator('#indology a[href="/advaita/articles/purana-analysis/"]').count() == 1
                 assert shastras.locator("li").count() == 4
                 list_metrics = page.locator(".hp-link-list").evaluate_all("""
                     lists => lists.map(list => {
