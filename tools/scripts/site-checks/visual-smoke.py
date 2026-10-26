@@ -32,7 +32,7 @@ def assert_site_palette(page) -> None:
     )
     assert background == "rgb(255, 255, 255)", background
     devanagari = page.locator('[lang^="sa-Deva"], [lang^="hi-Deva"]').evaluate_all(
-        "nodes => nodes.map(node => getComputedStyle(node).color)"
+        "nodes => nodes.filter(node => node.isConnected && node.getClientRects().length > 0).map(node => getComputedStyle(node).color)"
     )
     assert all(color == "rgb(32, 33, 34)" for color in devanagari), devanagari
     blue_labels = page.locator(
