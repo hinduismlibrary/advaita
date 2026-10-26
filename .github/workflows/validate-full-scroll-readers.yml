@@ -40,7 +40,7 @@ jobs:
             'meat-eating-in-hinduism-through-the-lens-of-shastra',
           )
           full_scroll_style = '20261026-document-cleanup-1'
-          shared_reader_version = '20261026-document-cleanup-2'
+          shared_reader_version = '20261026-document-cleanup-3'
           shaiva_reader_version = '20261026-shaiva-citation-3'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')

@@ -778,6 +778,7 @@ function pairScriptureQuotes(root){
       beforeTranslations.unshift(cursor);
       cursor=cursor.previousElementSibling;
       while(isTranslation(cursor)&&!isPreviouslyPaired(cursor)){beforeTranslations.unshift(cursor);cursor=cursor.previousElementSibling;}
+      while(isCitation(cursor)){beforeCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
     }
     cursor=sourceRun[sourceRun.length-1].nextElementSibling;
     const afterCitations=[];
