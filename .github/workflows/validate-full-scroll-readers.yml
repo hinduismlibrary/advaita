@@ -39,6 +39,7 @@ jobs:
             'meat-eating-in-hinduism-through-the-lens-of-shastra',
           )
           full_scroll = '20261026-document-cleanup-1'
+          shaiva_reader_version = '20261026-shaiva-citation-1'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
           shared_css = Path('site/assets/css/article-reader-template.css').read_text(encoding='utf-8')
@@ -57,7 +58,7 @@ jobs:
             assert html.count('varna-vicara-paged.css?v=20260914-3') == 1, f'{path}: missing shared base style'
             assert html.count('article-reader-template.css?v=' + full_scroll) == 1, f'{path}: stale shared style cache'
             if slug == 'a-shaiva-lens-on-shiva-as-the-supreme-deity':
-              assert html.count('shaiva-complete-reader.js?v=' + full_scroll) == 1, f'{path}: stale Śaiva reader cache'
+              assert html.count('shaiva-complete-reader.js?v=' + shaiva_reader_version) == 1, f'{path}: stale Śaiva reader cache'
               assert 'class="page-nav"' not in html, f'{path}: old Previous/Next navigation remains'
             else:
               assert 'id="article-config"' in html and 'id="source-document"' in html, f'{path}: source document is missing'
