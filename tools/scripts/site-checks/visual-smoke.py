@@ -364,40 +364,35 @@ def run() -> None:
                 report["purana_chapter_names"] = {"default": "numbered references", "optional": "chapter names show and hide"}
                 page.screenshot(path=str(OUT / "purana-chapter-numbers.png"))
 
-                page.goto(base + "pages/bhavishya-purana/", wait_until="domcontentloaded")
-                parva_links = page.locator(".bp-overview-grid .parva a")
-                assert parva_links.count() == 4
-                assert page.locator("main .page-tools, main aside.side").count() == 0
-                assert page.locator(".reader details, .reader summary, .reader button").count() == 0
+                page.goto(base, wait_until="domcontentloaded")
+                bhavishya_home_link = page.locator('#shastras a[href="/advaita/pages/bhavishya-purana-brahmaparvan/"]')
+                assert bhavishya_home_link.count() == 1
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
-                brahma_link = page.locator(".chapter-list a").first
+                chapter_links = page.locator(".chapter-list a")
+                brahma_link = chapter_links.first
                 brahma_link.locator(".purana-chapter-reference").wait_for(timeout=20000)
+                assert chapter_links.count() == 216
+                assert page.locator(".parva").count() == 1
+                assert page.locator("#pratisargaparvan, #madhyamaparvan, #uttaraparvan").count() == 0
+                assert page.locator(".side a").count() == 1
+                assert page.locator(".reader details, .reader summary, .reader button").count() == 0
                 assert brahma_link.locator(".purana-chapter-reference").inner_text() == "1.1"
+                assert chapter_links.last.locator(".purana-chapter-reference").inner_text() == "1.216"
                 brahma_color = brahma_link.locator(".purana-chapter-reference").evaluate("(el) => getComputedStyle(el).color")
                 assert brahma_color == "rgb(6, 69, 173)", brahma_color
                 assert not brahma_link.locator(".purana-chapter-name").is_visible()
-                assert page.locator("#pratisargaparvan .purana-chapter-reference").last.inner_text() == "4.26"
-                page.locator(".purana-chapter-name-toggle").check()
+                names_toggle = page.locator(".purana-chapter-name-toggle")
+                assert not names_toggle.is_checked()
+                names_toggle.check()
                 assert brahma_link.locator(".purana-chapter-name").is_visible()
                 assert "Śatānīka’s Inquiry" in brahma_link.locator(".purana-chapter-name").inner_text()
+                report["bhavishya_index"] = {"default": "1.1–1.216", "parvas": 1, "chapter_names": "optional"}
 
-                page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
-                part_one = page.locator('a[href$="part-1-chapter-1/"] .purana-chapter-reference')
-                part_one.wait_for(timeout=20000)
-                assert part_one.inner_text() == "1.1"
-                part_two = page.locator('a[href$="part-2-chapter-1/"] .purana-chapter-reference')
-                assert part_two.inner_text() == "2.1"
-                assert page.locator("#part-4 .purana-chapter-reference").last.inner_text() == "4.26"
-                page.goto(base + "pages/bhavishya-purana-madhyamaparvan/", wait_until="domcontentloaded")
-                madhyama_refs = page.locator(".purana-chapter-grid .purana-chapter-reference")
-                assert madhyama_refs.count() == 62 and madhyama_refs.first.inner_text() == "1.1"
-                assert page.locator("#part-2 .purana-chapter-reference").first.inner_text() == "2.1"
-                assert page.locator("#part-3 .purana-chapter-reference").first.inner_text() == "3.1"
-                assert "in preparation" not in page.locator("body").inner_text().lower()
-                page.goto(base + "pages/bhavishya-purana-uttaraparvan/", wait_until="domcontentloaded")
-                uttara_refs = page.locator(".purana-chapter-grid .purana-chapter-reference")
-                assert uttara_refs.count() == 208 and uttara_refs.last.inner_text() == "1.208"
-                assert page.locator(".bp-index-controls, details.bp-index-dropdown").count() == 0
+                page.goto(base + "pages/vishnu-purana/", wait_until="domcontentloaded")
+                vishnu_first = page.locator("#book-list .chapter-grid a .purana-chapter-reference").first
+                vishnu_first.wait_for(timeout=20000)
+                assert vishnu_first.inner_text() == "1.1"
+                report["purana_indexes"] = {"bhagavatam_canto": "1.1", "bhavishya_brahmaparvan": "216 chapters", "vishnu_purana_book": "1.1"}
 
                 page.goto(base + "pages/vishnu-purana/", wait_until="domcontentloaded")
                 vishnu_first = page.locator("#book-list .chapter-grid a .purana-chapter-reference").first
