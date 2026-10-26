@@ -336,12 +336,6 @@ function makeHeader(path){
   nav.className="site-nav vd-primary-nav";
   nav.id="vd-primary-nav";
   nav.setAttribute("aria-label","Primary navigation");
-  toggle.addEventListener("click",()=>{
-    const open=toggle.getAttribute("aria-expanded")!=="true";
-    toggle.setAttribute("aria-expanded",String(open));
-    toggle.setAttribute("aria-label",open?"Close navigation":"Open navigation");
-    nav.classList.toggle("open",open);
-  });
   const links=[
     [SITE,"Home",path==="/advaita"],
     [SITE+"#documents","Documents",/\/articles\/(?:a-vaishnava-lens-on-vishnu-as-the-supreme-deity|a-shaiva-lens-on-shiva-as-the-supreme-deity|meat-eating-in-hinduism-through-the-lens-of-shastra|a-case-for-the-scriptural-validity-of-the-agamas|hinduism-on-women|varna-vicara|a-shashtric-lens-of-varna-part-one)(?:\/|$)/.test(path)],
