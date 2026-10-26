@@ -438,6 +438,7 @@ function normalizeCitationOrder(root){
   const isQuoteSource=n=>n?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text,blockquote.translation,blockquote.scripture-translation');
   for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
     if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\s*:?[.]?$/i.test(articleText(citation.textContent)))continue;
+    if(isQuoteSource(citation.nextElementSibling))continue;
     let target=citation.previousElementSibling;
     if(isTranslation(target)){
       while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
@@ -569,7 +570,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20261026-shaiva-citation-2');
+  const response=await fetch(site+path+'?v=20261026-shaiva-citation-3');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }
