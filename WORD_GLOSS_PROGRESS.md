@@ -6,7 +6,7 @@ This is a working log for the texts linked from the Adi Śaṅkarācārya page. 
 
 ## Current text
 
-**Final cross-inventory audit — complete, 2026-10-27.** Checked the full 29-work Ādi Śaṅkarācārya and Stotrams inventory. The reader-data validator passed for all 29 works: routes and collection links resolve, every present unit has Sanskrit, English, explicit IAST, and a valid Devanāgarī-to-English gloss, and no fallback gloss remains. All works with 20 or more units use named contents divisions; short works open directly. The shared transliteration/Word for Word controls have zero gap. The final deployment workflow is rerunning this audit after the log update.
+**Final cross-inventory audit — complete, 2026-10-27.** Checked the full 29-work Ādi Śaṅkarācārya and Stotrams inventory. The reader-data validator passed for all 29 works: routes and collection links resolve, every present unit has Sanskrit, English, explicit IAST, and a valid Devanāgarī-to-English gloss, and no fallback gloss remains. All works with 20 or more units use named contents divisions; short works open directly. The shared transliteration/Word for Word controls have zero gap. The validator and deployment workflow passed on the final audit commit after one retry cleared an overlapping in-progress Pages deployment (GitHub Actions run 40599493908).
 
 **Next text:** none remains in the requested inventory.
 
