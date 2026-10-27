@@ -82,7 +82,7 @@ jobs:
                   const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\.js(?:\?|$)/.test(url)) || '';
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
-                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261027-shaiva-citations-4' : '20261027-document-citations-7';
+                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261027-shaiva-citations-4' : '20261027-document-citations-8';
                   const assetsReady = sharedStyle?.href.includes('20261027-document-template-2') && readerScript.includes(readerVersion) && contentReady;
                   return assetsReady;
                 }""")

@@ -866,7 +866,7 @@ function normalizeCitationOrder(root){
   for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
     if(citationIntroducesNextQuote(citation))continue;
     if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\s*:?[.]?$/i.test(text(citation)))continue;
-    if(isQuoteSource(citation.nextElementSibling)&&(!isTranslation(citation.previousElementSibling)||citationIntroducesNextQuote(citation)))continue;
+    if(isQuoteSource(citation.nextElementSibling))continue;
     let target=citation.previousElementSibling;
     if(isTranslation(target)){
       while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
