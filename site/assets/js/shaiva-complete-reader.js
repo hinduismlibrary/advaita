@@ -9,7 +9,7 @@ const base=site+'articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/';
 const root=document.getElementById('source-content');
 if(!root)return;
 const siteChrome=document.createElement('script');
-siteChrome.src='/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-3';
+siteChrome.src='/advaita/assets/js/site-chrome.js?v=20261027-document-brand-3';
 siteChrome.async=false;
 document.body.append(siteChrome);
 
@@ -51,11 +51,6 @@ function articleText(value){
     .replace(/\bcontinued\s+on\s+(?:the\s+)?source\s+PDF\s+page\s+\d+\b/gi,' ')
     .replace(/\bsource\s+PDF\s+page\s+\d+\b/gi,' ')
     .replace(/\bPDF\s+page\s+\d+\b/gi,' ')
-    .replace(/\b(?:source\s+)?document\b/gi,'article')
-    .replace(/\bthis\s+article\s+article\b/gi,'this article')
-    .replace(/\bBY\s+POPCULTKING\b/gi,' ')
-    .replace(/\b([A-Z]{2,})\b/g,match=>match.toLowerCase())
-    .replace(/\s*&\s*/g,' and ')
     .replace(/\s*([,.;:!?])/g,'$1')
     .replace(/([,.;:!?])(?=[A-Z“‘])/g,'$1 ')
     .replace(/,([A-Za-z])/g,', $1')
@@ -65,29 +60,11 @@ function articleText(value){
     .replace(/\s{2,}/g,' ')
     .trim();
   if(!text)return '';
-  text=normaliseSpelling(text);
-  return text.replace(/^([a-z])/u,(_,letter)=>letter.toUpperCase());
+  return text;
 }
 
 function sentenceTitle(value){
-  let text=articleText(value)
-    .replace(/^\s*\d+(?:\.\d+)*[.)]?\s*/,'')
-    .replace(/\s*:\s*$/,'')
-    .trim();
-  if(!text)return '';
-  text=text.toLocaleLowerCase();
-  const proper=['shiva','shaiva','vishnu','vaishnava','narayana','mahanarayana',
-    'rama','krishna','mahadeva','maheshvara','shvetashvatara','upanishad','upanishads',
-    'purana','puranas','padma','garuda','bhagavata','matsya','kurma','skanda','shruti',
-    'smriti','gita','itihasa','itihasas','dharmashastra','dharmashastras','purvapaksha',
-    'mimamsa','shankara','shankaracharya','shri','shastra','shastras','adi','hara','yajurveda','bhagavad','karmakanda',
-    'jnana','sattvic','sattvika','tamasic','tamasika'];
-  for(const word of proper){
-    const title=word.charAt(0).toUpperCase()+word.slice(1);
-    text=text.replace(new RegExp('(?<![a-z])'+word+'(?![a-z])','gi'),title);
-  }
-  text=text.replace(/^(\s*["“‘'(]*)([a-z])/u,(_,prefix,letter)=>prefix+letter.toUpperCase());
-  return text;
+  return articleText(value).replace(/\s*:\s*$/,'').trim();
 }
 
 function stripOuterQuotes(value){
@@ -114,7 +91,28 @@ function sanskrit(value){
   const source=make('div',null,text);
   source.lang='sa-Deva';
   details.append(summary,source);
-  details.addEventListener('toggle',()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit';});
+  const update=()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit';summary.setAttribute('aria-expanded',String(details.open));};
+  details.addEventListener('toggle',update);update();
+  return details;
+}
+
+function sanskritPair(value){
+  const [devanagari,transliteration]=Array.isArray(value)?value:[];
+  if(!devanagari)return empty();
+  const details=make('details','sanskrit-reveal');
+  const summary=make('summary',null,'Show Sanskrit');
+  const pair=make('div','sanskrit-pair');
+  const source=make('p','sanskrit-text',cleanSanskrit(devanagari));
+  source.lang='sa-Deva';
+  pair.append(source);
+  if(transliteration){
+    const roman=make('p','sanskrit-transliteration',transliteration);
+    roman.lang='sa-Latn';
+    pair.append(roman);
+  }
+  details.append(summary,pair);
+  const update=()=>{summary.textContent=details.open?'Hide Sanskrit':'Show Sanskrit';summary.setAttribute('aria-expanded',String(details.open));};
+  details.addEventListener('toggle',update);update();
   return details;
 }
 
@@ -163,48 +161,55 @@ function normaliseMajorHeading(value){
   const number=numberMatch?Number(numberMatch[1]):null;
   if(/^\s*index\b/i.test(raw))return {id:'index',title:'Contents'};
   const titles={
-    1:'Preface',
-    2:'On guna based Purana classification',
-    3:'Vishnu as tamasic and Shiva as sattvic',
-    4:'Double standards on absolute and relative supremacy',
-    5:'Evidence from Shruti on the supremacy of Shiva',
-    6:'Supremacy of Shiva in itihasas',
-    7:'Purva paksha: Mahanarayana Upanishad on the supposed supremacy of Vishnu',
-    8:'Addressing the scope-of-questions argument',
-    9:'Supremacy of Shiva in Dharmashastras'
+    1:'1. Preface',
+    2:'2. On Guṇa-Based Purāṇa Classification',
+    3:'3. Viṣṇu as Tāmasic & Śiva as Sāttvic',
+    4:'4. Double Standards on Relative & Absolute Supremacy',
+    5:'5. Evidence from Śruti on the Supremacy of Śiva',
+    6:'6. Supremacy of Śiva in Itihāsas',
+    7:'7. Pūrva Pakṣa: Mahānārāyaṇa Upaniṣad',
+    8:'8. Addressing the Scope-of-Questions Argument',
+    9:'9. Supremacy of Śiva in Dharmaśāstras'
   };
   const title=titles[number]||sentenceTitle(raw);
-  const prefix=number===6?'6.1 Lord Rama on the supremacy of Shiva':null;
+  const prefix=number===6?'6.1 Lord Rāma on Supremacy of Śiva':null;
   return {id:number?'section-'+number:title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''),title,number,prefix};
 }
 
 function sectionGroup(number){
-  if(number===null)return 'Opening';
-  if(number<=3)return 'Introduction and Puranas';
-  if(number<=6)return 'Scriptural evidence';
-  if(number<=8)return 'Objections';
-  return 'Dharmashastra';
+  const titles={
+    1:'1. Preface',
+    2:'2. On Guṇa-Based Purāṇa Classification',
+    3:'3. Viṣṇu as Tāmasic & Śiva as Sāttvic',
+    4:'4. Double Standards on Relative & Absolute Supremacy',
+    5:'5. Evidence from Śruti on the Supremacy of Śiva',
+    6:'6. Supremacy of Śiva in Itihāsas',
+    7:'7. Pūrva Pakṣa: Mahānārāyaṇa Upaniṣad',
+    8:'8. Addressing the Scope-of-Questions Argument',
+    9:'9. Supremacy of Śiva in Dharmaśāstras'
+  };
+  return number===null?'Opening':titles[number]||'Contents';
 }
 
 function sectionsFrom(pages){
   const opening={id:'opening-salutation',title:'Opening Salutation',parent:'Opening',blocks:[]};
   const sections=[opening];
   const subsectionTitles={
-    '1.1':{id:'introduction',title:'Introduction'},
-    '1.2':{id:'methodology',title:'Methodology'},
-    '2.1':{id:'padma-pur-a-s-contradiction',title:'Padma Purana and Its Contradiction'},
-    '2.2':{id:'garuda-pur-a-s-contradiction',title:'Garuda Purana and Its Contradiction'},
-    '2.3':{id:'supremacy-of-shiva-in-vaishnava-puranas',title:'Supremacy of Shiva in Vaishnava Puranas'},
-    '3.1':{id:'shiva-purana-on-the-true-nature-of-vishnu',title:'Shiva Purana on the True Nature of Vishnu'},
-    '3.2':{id:'tamasic-nature-of-vaishnava-puranas',title:'Tamasic Nature of Vaishnava Puranas'},
-    '4.1':{id:'krsna-on-shivas-supremacy',title:'Kṛṣṇa on Śiva\'s Supremacy in Mahābhārat'},
-    '5.1':{id:'shvetashvatara-upanishad-and-adi-shankaracharya-on-shivas-supremacy',title:'Shvetashvatara Upanishad and Adi Shankaracharya on the Supremacy of Shiva'},
-    '5.2':{id:'the-vai-ava-claim-relative-superiority-and-courtesy',title:'The Vaishnava Claim: Relative Superiority and Courtesy'},
-    '5.3':{id:'hara-as-the-destroyer-of-the-root-of-bondage',title:'Hara as the Destroyer of the Root of Bondage'},
-    '5.4':{id:'sri-rudram-in-yajurveda',title:'Sri Rudram in Yajurveda'},
-    '5.5':{id:'supremacy-of-vishnu-in-brahmanas',title:'Supremacy of Vishnu in Brahmanas'},
-    '6.1':{id:'lord-rama-on-supremacy-of-shiva',title:'Lord Rama on the Supremacy of Shiva'},
-    '6.2':{id:'supremacy-of-shiva-in-bhagavad-gita',title:'Supremacy of Shiva in Bhagavad Gita'}
+    '1.1':{id:'introduction',title:'1.1 Introduction'},
+    '1.2':{id:'methodology',title:'1.2 Methodology'},
+    '2.1':{id:'padma-pur-a-s-contradiction',title:'2.1 Padma Purāṇa’s Contradiction'},
+    '2.2':{id:'garuda-pur-a-s-contradiction',title:'2.2 Garuḍa Purāṇa’s Contradiction'},
+    '2.3':{id:'supremacy-of-shiva-in-vaishnava-puranas',title:'2.3 Supremacy of Śiva in Vaiṣṇava Purāṇas'},
+    '3.1':{id:'shiva-purana-on-the-true-nature-of-vishnu',title:'3.1 Śiva Purāṇa on the True Nature of Viṣṇu'},
+    '3.2':{id:'tamasic-nature-of-vaishnava-puranas',title:'3.2 Tāmasic Nature of Vaiṣṇava Purāṇas'},
+    '4.1':{id:'krsna-on-shivas-supremacy',title:'4.1 Kṛṣṇa on Śiva\'s Supremacy in Mahābhārat'},
+    '5.1':{id:'shvetashvatara-upanishad-and-adi-shankaracharya-on-shivas-supremacy',title:'5.1 Śvetāśvatara Upaniṣad & Ādi Śaṅkarācārya on the Supremacy of Śiva'},
+    '5.2':{id:'the-vai-ava-claim-relative-superiority-and-courtesy',title:'5.2 The Vaiṣṇava Claim: "Relative Superiority" and "Courtesy"'},
+    '5.3':{id:'hara-as-the-destroyer-of-the-root-of-bondage',title:'5.3 "Hara" as the Destroyer of the Root of Bondage'},
+    '5.4':{id:'sri-rudram-in-yajurveda',title:'5.4 Śrī-Rudram in Yajurveda'},
+    '5.5':{id:'supremacy-of-vishnu-in-brahmanas',title:'5.5 Supremacy of Viṣṇu in Brāhmaṇas'},
+    '6.1':{id:'lord-rama-on-supremacy-of-shiva',title:'6.1 Lord Rāma on Supremacy of Śiva'},
+    '6.2':{id:'supremacy-of-shiva-in-bhagavad-gita',title:'6.2 Supremacy of Lord Śiva in Bhagavad Gītā'}
   };
   let current=opening;
   let major=null;
@@ -418,6 +423,7 @@ function renderParagraph(value,section){
 function renderBlock(block,section){
   if(block.kind==='reference')return reference(block.value);
   if(block.kind==='sa')return sanskrit(block.value);
+  if(block.kind==='sa-pair')return sanskritPair(block.value);
   if(block.kind==='quote')return renderQuote(block.value);
   if(block.kind==='table')return renderTable(block.value);
   if(block.kind==='subheading'){
@@ -462,7 +468,7 @@ function tocLabel(value){
 const isSources=section=>/^\s*(?:\d+(?:\.\d+)*[.)]?\s+)?(?:(?:primary|secondary|selected|additional|further|list of)\s+)*(?:bibliograph(?:y|ies)|references?|sources?|works cited)\b/i.test(section.title);
 
 function tocInto(node,sections,selected){
-  const outline=[{"label":"1. Preface","sectionId":"section-1","children":[{"label":"1.1 Introduction","sectionId":"section-1","target":"introduction","children":[]},{"label":"1.2 Methodology","sectionId":"section-1","target":"methodology","children":[]}]},{"label":"2. On Guṇa-Based Purāṇa Classification","sectionId":"section-2","children":[{"label":"2.1 Padma Purāṇa's Contradiction","sectionId":"section-2","target":"padma-pur-a-s-contradiction","children":[]},{"label":"2.2 Garuḍa Purāṇa's Contradiction","sectionId":"section-2","target":"garuda-pur-a-s-contradiction","children":[]},{"label":"2.3 Supremacy of Śiva in Vaiṣṇava Purāṇas","sectionId":"section-2","target":"supremacy-of-shiva-in-vaishnava-puranas","children":[]}]},{"label":"3. Viṣṇu as Tāmasic & Śiva as Sāttvic","sectionId":"section-3","children":[{"label":"3.1 Śiva Purāṇa on the True Nature of Viṣṇu","sectionId":"section-3","target":"shiva-purana-on-the-true-nature-of-vishnu","children":[]},{"label":"3.2 Tāmasic Nature of Vaiṣṇava Purāṇas","sectionId":"section-3","target":"tamasic-nature-of-vaishnava-puranas","children":[]}]},{"label":"4. Double Standards on Relative & Absolute Supremacy","sectionId":"double-standards-on-absolute-and-relative-supremacy","children":[{"label":"4.1 Kṛṣṇa on Śiva's Supremacy in Mahābhārat","sectionId":"double-standards-on-absolute-and-relative-supremacy","target":"krsna-on-shivas-supremacy","children":[]}]},{"label":"5. Evidence from Śruti on the Supremacy of Śiva","sectionId":"section-5","children":[{"label":"5.1 Śvetāśvatara Upaniṣad & Ādi Śaṅkarācārya on the Supremacy of Śiva","sectionId":"section-5","target":"shvetashvatara-upanishad-and-adi-shankaracharya-on-shivas-supremacy","children":[]},{"label":"5.2 The Vaiṣṇava Claim: “Relative Superiority” and “Courtesy”","sectionId":"section-5","target":"the-vai-ava-claim-relative-superiority-and-courtesy","children":[]},{"label":"5.3 “Hara” as the Destroyer of the Root of Bondage","sectionId":"section-5","target":"hara-as-the-destroyer-of-the-root-of-bondage","children":[]},{"label":"5.4 Śrī-Rudram in Yajurveda","sectionId":"section-5","target":"sri-rudram-in-yajurveda","children":[]},{"label":"5.5 Supremacy of Viṣṇu in Brāhmaṇas","sectionId":"section-5","target":"supremacy-of-vishnu-in-brahmanas","children":[]}]},{"label":"6. Supremacy of Śiva in Itihāsas","children":[{"label":"6.1 Lord Rāma on Supremacy of Śiva","sectionId":"lord-rama-on-supremacy-of-shiva","target":null,"children":[]},{"label":"6.2 Supremacy of Lord Śiva in Bhagavad Gītā","sectionId":"supremacy-of-shiva-in-bhagavad-gita","target":null,"children":[]}]},{"label":"7. Pūrva Pakṣa: Mahānārāyaṇa Upaniṣad","sectionId":"objections","target":"objections-section-7","children":[]},{"label":"8. Addressing the Scope-of-Questions Argument","sectionId":"objections","target":"objections-section-8","children":[]},{"label":"9. Supremacy of Śiva in Dharmaśāstras","sectionId":"smriti-testimony","target":null,"children":[]}];
+  const outline=[{"label":"1. Preface","sectionId":"section-1","children":[{"label":"1.1 Introduction","sectionId":"section-1","target":"introduction","children":[]},{"label":"1.2 Methodology","sectionId":"section-1","target":"methodology","children":[]}]},{"label":"2. On Guṇa-Based Purāṇa Classification","sectionId":"section-2","children":[{"label":"2.1 Padma Purāṇa's Contradiction","sectionId":"section-2","target":"padma-pur-a-s-contradiction","children":[]},{"label":"2.2 Garuḍa Purāṇa’s Contradiction","sectionId":"section-2","target":"garuda-pur-a-s-contradiction","children":[]},{"label":"2.3 Supremacy of Śiva in Vaiṣṇava Purāṇas","sectionId":"section-2","target":"supremacy-of-shiva-in-vaishnava-puranas","children":[]}]},{"label":"3. Viṣṇu as Tāmasic & Śiva as Sāttvic","sectionId":"section-3","children":[{"label":"3.1 Śiva Purāṇa on the True Nature of Viṣṇu","sectionId":"section-3","target":"shiva-purana-on-the-true-nature-of-vishnu","children":[]},{"label":"3.2 Tāmasic Nature of Vaiṣṇava Purāṇas","sectionId":"section-3","target":"tamasic-nature-of-vaishnava-puranas","children":[]}]},{"label":"4. Double Standards on Relative & Absolute Supremacy","sectionId":"double-standards-on-absolute-and-relative-supremacy","children":[{"label":"4.1 Kṛṣṇa on Śiva's Supremacy in Mahābhārat","sectionId":"double-standards-on-absolute-and-relative-supremacy","target":"krsna-on-shivas-supremacy","children":[]}]},{"label":"5. Evidence from Śruti on the Supremacy of Śiva","sectionId":"section-5","children":[{"label":"5.1 Śvetāśvatara Upaniṣad & Ādi Śaṅkarācārya on the Supremacy of Śiva","sectionId":"section-5","target":"shvetashvatara-upanishad-and-adi-shankaracharya-on-shivas-supremacy","children":[]},{"label":"5.2 The Vaiṣṇava Claim: “Relative Superiority” and “Courtesy”","sectionId":"section-5","target":"the-vai-ava-claim-relative-superiority-and-courtesy","children":[]},{"label":"5.3 “Hara” as the Destroyer of the Root of Bondage","sectionId":"section-5","target":"hara-as-the-destroyer-of-the-root-of-bondage","children":[]},{"label":"5.4 Śrī-Rudram in Yajurveda","sectionId":"section-5","target":"sri-rudram-in-yajurveda","children":[]},{"label":"5.5 Supremacy of Viṣṇu in Brāhmaṇas","sectionId":"section-5","target":"supremacy-of-vishnu-in-brahmanas","children":[]}]},{"label":"6. Supremacy of Śiva in Itihāsas","children":[{"label":"6.1 Lord Rāma on Supremacy of Śiva","sectionId":"lord-rama-on-supremacy-of-shiva","target":null,"children":[]},{"label":"6.2 Supremacy of Lord Śiva in Bhagavad Gītā","sectionId":"supremacy-of-shiva-in-bhagavad-gita","target":null,"children":[]}]},{"label":"7. Pūrva Pakṣa: Mahānārāyaṇa Upaniṣad","sectionId":"objections","target":"objections-section-7","children":[]},{"label":"8. Addressing the Scope-of-Questions Argument","sectionId":"objections","target":"objections-section-8","children":[]},{"label":"9. Supremacy of Śiva in Dharmaśāstras","sectionId":"smriti-testimony","target":null,"children":[]}];
   const pageFor=item=>item.sectionId?sections.find(section=>section.id===item.sectionId):null;
   const renderList=(items,depth=0)=>{
     const list=make('ul',depth?'toc-index-list toc-index-nested':'toc-index-list');
@@ -570,7 +576,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20261027-shaiva-citations-5');
+  const response=await fetch(site+path+'?v=20261027-shaiva-source-fidelity-6');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }

@@ -119,10 +119,6 @@ body.document-paged-page .article .document-content .sanskrit-text{
   font-size:20px;
   line-height:1.8;
 }
-body.document-paged-page .article .document-content .sanskrit-transliteration,
-body.document-paged-page .article .document-content [lang="sa-Latn"]{
-  display:none!important;
-}
 body.document-paged-page .article .document-content .aside-note,
 body.document-paged-page .article .document-content .editorial-note,
 body.document-paged-page .article .document-content .closing-postscript{
@@ -724,4 +720,66 @@ body.document-paged-page .article .document-content figure.source-document-figur
   height:auto;
   margin:0 auto;
   object-fit:contain;
+}
+
+
+/* Shared article reading refinements: quieter headings, readable line length, and visible source transliteration. */
+body.document-paged-page{background:#fff;color:#202122}
+body.document-paged-page .page{max-width:1180px;padding:48px 36px 76px;background:#fff}
+body.document-paged-page .article-head{width:720px;max-width:calc(100% - 270px);margin-bottom:48px}
+body.document-paged-page .article-head h1{color:#202122;font-size:40px;line-height:1.2}
+body.document-paged-page .reader-grid{grid-template-columns:minmax(188px,220px) minmax(0,720px);gap:46px;justify-content:center}
+body.document-paged-page .article{width:720px;max-width:100%}
+body.document-paged-page .article .document-content p,
+body.document-paged-page .article .document-content li,
+body.document-paged-page .article .document-content dt,
+body.document-paged-page .article .document-content dd{font-size:18px;line-height:1.68;color:#202122}
+body.document-paged-page .article .document-content h2{margin:0 0 22px;color:#202122;font-size:28px}
+body.document-paged-page .article .document-content h3,
+body.document-paged-page .article .document-content h4,
+body.document-paged-page .article .document-content h5{color:#202122}
+body.document-paged-page .article .document-content h4,
+body.document-paged-page .article .document-content h5{font-size:20px}
+body.document-paged-page .article .document-content p.reference,
+body.document-paged-page .article .document-content p.source-citation,
+body.document-paged-page .article .document-content p.scripture-source,
+body.document-paged-page .article .document-content p.citation{color:#0645ad;font-size:14px}
+body.document-paged-page a{color:#0645ad}
+body.document-paged-page .article .document-content .translation,
+body.document-paged-page .article .document-content p.translation,
+body.document-paged-page .article .document-content p.scripture-translation{color:#30363d;font-size:17px}
+body.document-paged-page .article .document-content details.sanskrit-reveal [lang="sa-Deva"],
+body.document-paged-page .article .document-content p.sanskrit-text,
+body.document-paged-page .article .document-content .sanskrit-text{font-size:19px;line-height:1.75}
+body.document-paged-page .article .document-content details.sanskrit-reveal .sanskrit-transliteration,
+body.document-paged-page .article .document-content [lang="sa-Latn"]{display:block!important;color:#5b6570;font-family:Georgia,serif;font-size:15px;line-height:1.65;font-style:italic}
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p.sanskrit-transliteration),
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p[lang="sa-Latn"]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px}
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p.sanskrit-transliteration)>summary,
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p[lang="sa-Latn"])>summary{grid-column:1/-1;justify-self:start}
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + .sanskrit-pair){display:block}
+body.document-paged-page .article .document-content .sanskrit-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px}
+body.document-paged-page .article .document-content .sanskrit-pair>*{min-width:0}
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary{border-radius:4px;border-color:#a2a9b1;color:#0645ad;background:#fff;font-size:12px}
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary:hover,
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary:focus-visible{background:#f3f4f5;border-color:#54595d;outline:2px solid #0645ad;outline-offset:1px}
+body.document-paged-page .article .document-content figure img{max-width:100%;height:auto;object-fit:contain}
+@media(max-width:900px){
+ body.document-paged-page .page{padding:38px 26px 64px}
+ body.document-paged-page .article-head{width:100%;max-width:100%;margin:0 auto 36px}
+ body.document-paged-page .reader-grid{display:block;width:720px;max-width:100%;margin:0 auto}
+ body.document-paged-page .article{width:100%}
+}
+@media(max-width:760px){
+ body.document-paged-page .page{padding:30px 18px 52px}
+ body.document-paged-page .article-head h1{font-size:clamp(28px,7.4vw,36px)}
+ body.document-paged-page .article .document-content p,
+ body.document-paged-page .article .document-content li,
+ body.document-paged-page .article .document-content dt,
+ body.document-paged-page .article .document-content dd{font-size:16.5px;line-height:1.68}
+ body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p.sanskrit-transliteration),
+ body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p[lang="sa-Latn"]),
+ body.document-paged-page .article .document-content .sanskrit-pair{grid-template-columns:1fr}
+ body.document-paged-page .article .document-content details.sanskrit-reveal .sanskrit-transliteration,
+ body.document-paged-page .article .document-content [lang="sa-Latn"]{font-size:14px}
 }

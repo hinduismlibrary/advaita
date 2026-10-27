@@ -212,8 +212,8 @@ const el=(tag,cls,value)=>{
   if(value!==undefined)n.textContent=value;
   return n;
 };
-const bar=el('header','sitebar'),brand=el('a',null,'Viveka Dṛṣṭi');
-brand.href='/advaita/';bar.append(brand);
+const bar=el('header','sitebar'),brand=el('a',null,'विवेकदृष्टिः');
+brand.href='/advaita/';brand.lang='sa-Deva';bar.append(brand);
 const main=el('main','page'),header=el('header','article-head');
 header.append(el('h1',null,title));
 if(subtitle)header.append(el('p','article-subtitle',subtitle));
@@ -499,8 +499,6 @@ function clean(node,page){
   copy.querySelectorAll?.('p.translation-attribution').forEach(n=>n.classList.add('reference'));
   if(copy.matches?.('h3'))copy.classList.add('reader-subheading');
   copy.querySelectorAll?.('h3').forEach(heading=>heading.classList.add('reader-subheading'));
-  if(copy.matches?.('.sanskrit-transliteration,[lang^="sa-Latn"]'))return document.createDocumentFragment();
-  copy.querySelectorAll('.sanskrit-transliteration,[lang^="sa-Latn"]').forEach(n=>n.remove());
   if(title==='Hinduism on Women')copy.querySelectorAll('.women-title-subtitle,.women-title-author').forEach(n=>n.remove());
   for(const n of [copy,...copy.querySelectorAll('*')]){
     if(!(n instanceof Element))continue;

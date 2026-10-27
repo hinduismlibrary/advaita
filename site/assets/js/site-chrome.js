@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261027-heatmap-colors-2";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261027-document-brand-3";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -52,7 +52,7 @@ function addFonts(){
 }
 function currentTitle(){
   const raw=(document.title||"").trim();
-  const title=raw.replace(/\s*[|–—-]\s*(?:Viveka\s+Dṛṣṭi|Viveka\s+Drishti)(?:\s*[|–—-].*)?$/i,"").trim();
+  const title=raw.replace(/\s*[|–—-]\s*(?:Viveka\s+Dṛṣṭi|Viveka\s+Drishti|Viveka\s+Drshti)(?:\s*[|–—-].*)?$/i,"").trim();
   return title||document.querySelector("main h1,h1")?.textContent?.replace(/\s+/g," ").trim()||"Current page";
 }
 function normalizedPath(){
@@ -323,8 +323,8 @@ function makeHeader(path){
   const brand=document.createElement("a");
   brand.className="brand";
   brand.href=SITE;
-  brand.textContent="Vivekadṛṣṭiḥ";
-  stackLabel(brand,"Vivekadṛṣṭiḥ","विवेकदृष्टिः","original");
+  brand.textContent="विवेकदृष्टिः";
+  brand.lang="sa-Deva";
   const toggle=document.createElement("button");
   toggle.className="vd-menu-toggle";
   toggle.type="button";
