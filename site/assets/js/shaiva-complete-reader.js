@@ -576,7 +576,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20261027-shaiva-source-fidelity-6');
+  const response=await fetch(site+path+'?v=20261027-shaiva-source-fidelity-7');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }
