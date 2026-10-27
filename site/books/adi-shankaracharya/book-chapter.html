@@ -37,7 +37,7 @@
 <script>
 (function(){
 "use strict";
-var allowed=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha"]);
+var allowed=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","bhaja-govindam"]);
 var params=new URLSearchParams(window.location.search);
 var work=params.get("work")||"";
 var requestedUnit=params.get("unit")||"";
@@ -157,6 +157,17 @@ Promise.all([
  });
  var selectedId=requestedUnit||items[0].id;
  var selectedIndex=items.findIndex(function(item){return item.id===selectedId});
+ if(selectedIndex<0&&requestedUnit){
+  var requestedNode=doc.getElementById(requestedUnit);
+  var requestedBlock=requestedNode?topBlock(requestedNode,sourceColumn):null;
+  if(requestedBlock){
+   selectedIndex=items.findIndex(function(item){
+    var itemNode=doc.getElementById(item.id);
+    return itemNode&&topBlock(itemNode,sourceColumn)===requestedBlock;
+   });
+   if(selectedIndex>=0)selectedId=items[selectedIndex].id;
+  }
+ }
  if(selectedIndex<0){
   chapterTitle.textContent="Section not found";
   setError("That chapter or verse range is not in this text.");
