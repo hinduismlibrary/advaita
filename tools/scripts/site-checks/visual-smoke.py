@@ -229,7 +229,7 @@ def run() -> None:
                     and row["separatorDisplay"] in ("none", "absent")
                     for row in directory
                 ), directory
-                assert page.locator("a").first.evaluate("(el)=>getComputedStyle(el).color") == "rgb(6, 69, 173)"
+                assert page.locator(".ad-entry-link").first.evaluate("(el)=>getComputedStyle(el).color") == "rgb(6, 69, 173)"
                 assert page.locator("body").evaluate("(el)=>getComputedStyle(el).backgroundColor") == "rgb(255, 255, 255)"
                 report["directory"] = {"entries_checked": len(directory), "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST; white background"}
                 page.screenshot(path=str(OUT / "advaita-directory.png"))
