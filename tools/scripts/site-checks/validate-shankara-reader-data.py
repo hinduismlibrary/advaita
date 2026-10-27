@@ -185,10 +185,10 @@ def main() -> int:
         if work_id == "panchadasi":
             for unit in units:
                 if isinstance(unit, dict):
-                    match = re.match(r"^panchadasi-(\\d+)-", str(unit.get("id", "")))
+                    match = re.match(r"^panchadasi-(\d+)-", str(unit.get("id", "")))
                     if match:
                         derived_chapters.add(int(match.group(1)))
-            chapter_map = re.search(r"const PANCHADASI_CHAPTERS=\\{([^}]+)\\}", reader_js)
+            chapter_map = re.search(r"const PANCHADASI_CHAPTERS=\{([^}]+)\}", reader_js)
             named_chapter_count = (
                 len(re.findall(r'"\\d+"\\s*:', chapter_map.group(1)))
                 if chapter_map
