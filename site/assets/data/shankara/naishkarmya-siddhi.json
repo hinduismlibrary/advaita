@@ -2,9 +2,9 @@
   "id": "naishkarmya-siddhi",
   "title": "Naiṣkarmyasiddhi — Complete Sanskrit Reader",
   "author": "Sureśvara",
-  "expectedUnits": 897,
+  "expectedUnits": 880,
   "translationAvailable": true,
-  "coverage": "All 423 numbered verses across the four chapters have Sanskrit, English, explicit IAST, and word-for-word glosses. All 880 present reader units now have Sanskrit, English, IAST, and glosses; 17 expected reader units are absent from the current source transcription.",
+  "coverage": "The reader contains all 423 numbered verses and all 457 non-verse units present in the source transcription; each present unit has Sanskrit, English, explicit IAST, and a word gloss. The source transcription indicates 897 expected reader units, with 17 prose, heading, or other units absent.",
   "sections": [
     {
       "id": 1,
@@ -59845,5 +59845,6 @@
     "partialUnits": [],
     "note": "All 423 numbered verses (Adhyāya 1: 100; Adhyāya 2: 119; Adhyāya 3: 126; Adhyāya 4: 78) have complete glosses. All 457 present prose, heading, and other non-verse entries also have word glosses; 17 expected reader units are absent from the current source transcription."
   },
-  "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits."
+  "translationCredit": "Original English translation for the complete text; Devanāgarī word-by-word glosses for every entry listed under wordGlossCoverage.completeUnits.",
+  "expectedSourceUnits": 897
 }
