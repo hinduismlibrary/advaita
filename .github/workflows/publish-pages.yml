@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+      - name: Validate Advaita reader data and routes
+        run: python3 tools/scripts/site-checks/validate-shankara-reader-data.py
       - name: Wait for branch Pages deployment
         if: ${{ github.event_name == 'push' }}
         env:
