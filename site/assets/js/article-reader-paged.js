@@ -638,7 +638,7 @@ const sourceNames=[
   'Manusmrti','Manusmriti','Manusmṛti','Parashara Smriti','Parashara Smrti','Vasistha Smriti','Vasistha Smrti','Vyasa Smriti','Vyasa Smrti','Yajnavalkya Smriti','Yajnavalkya Smrti','Daksha Smriti','Daksha Smrti',
   'Mimamsa Sutras','Mimamsa Sutra','Mīmāṃsā Sūtras','Mīmāṃsā Sūtra','Brahma Sutras','Brahma Sutra','Brahma Sūtras','Brahma Sūtra',
   'Mahabharata','Mahābhārata','Ramayana','Rāmāyaṇa','Yoga Vasistha','Yoga Vasishtha',
-  'Vishnu Purana','Viṣṇu Purāṇa','Bhagavata Purana','Bhāgavata Purāṇa','Shiva Purana','Siva Purana','Śiva Purāṇa','Padma Purana','Skanda Purana','Garuda Purana','Narada Purana','Markandeya Purana','Agni Purana','Linga Purana','Matsya Purana','Brahma Purana','Devi Bhagavatam',
+  'Vishnu Purana','Viṣṇu Purāṇa','Bhagavata Purana','Bhāgavata Purāṇa','Bhagavatam','Bhāgavatam','Shrimad Bhagavatam','Śrīmad Bhāgavatam','Srimad Bhagavatam','Śrīmad-Bhāgavatam','Shri Bhagavatam','Shiva Purana','Siva Purana','Śiva Purāṇa','Padma Purana','Skanda Purana','Garuda Purana','Narada Purana','Markandeya Purana','Agni Purana','Linga Purana','Matsya Purana','Brahma Purana','Devi Bhagavatam',
   'Ahirbudhnya Samhita','Pancaratra Raksha','Pāñcarātra Rakṣā','Paingi-rahasya Brahmana','Paingi Rahasya Brahmana','Narayana Sukta','Vishnu Sahasranama','Agama Pramanya','Agama Pramāṇya','Brahmasutra-bhashya','Brahmasutra-bhāṣya'
 ];
 const sourceNameRegex=new RegExp('(?<![\\p{L}\\p{N}])(?:'+sourceNames
@@ -655,7 +655,7 @@ function labelsFromSourceContext(value){
   for(let i=0;i<matches.length;i++){
     const match=matches[i],title=match[0].replace(/\s+/g,' ').trim();
     const preceding=sourceText.slice(Math.max(0,match.index-55),match.index);
-    if(/\b(?:(?:mentioned|cited|quoted|listed|named)\s+in|of)\s+(?:the\s+)?$/i.test(preceding))continue;
+    if(/\bof\s+(?:the\s+)?$/i.test(preceding))continue;
     const tail=sourceText.slice(match.index+match[0].length,match.index+match[0].length+150);
     let info='';
     const parenthetical=tail.match(/\(([^)]{0,130}\d[^)]*)\)/);
@@ -689,8 +689,8 @@ function hasCitationBesideSource(source){
   return isSourceCitationNode(cursor)&&!citationIntroducesNextQuote(cursor);
 }
 function contextCitationFor(anchor){
-  let cursor=anchor.previousElementSibling,steps=0,continuity=false;
-  while(cursor&&steps<5){
+  let cursor=anchor.previousElementSibling,steps=0,continuity=false,skippedProse=0;
+  while(cursor&&steps<8){
     if(isSourceCitationNode(cursor))return [];
     if(isSanskritSourceNode(cursor)||cursor.matches?.('h2,h3,h4,h5,h6,figure,ul,ol,table,.scripture-quote-pair,.women-scripture-pair'))break;
     if(isEnglishTranslationNode(cursor)){
@@ -707,8 +707,11 @@ function contextCitationFor(anchor){
     if(cursor.matches?.('p')){
       const labels=labelsFromSourceContext(text(cursor));
       if(labels.length)return labels;
-      if(/^(?:further\b|he further\b|she further\b|again\b|the same\b|continued\b|also\b)/i.test(text(cursor))){
+      if(/^(?:further\b|he further\b|she further\b|again\b|the same\b|continued\b|also\b|the chapter then\b|at the end of the chapter\b|the text then\b)/i.test(text(cursor))){
         continuity=true;cursor=cursor.previousElementSibling;steps++;continue;
+      }
+      if(skippedProse<2&&text(cursor).length<=180&&!/^(?:question|objection|answer|refutation)\b/i.test(text(cursor))){
+        skippedProse++;cursor=cursor.previousElementSibling;steps++;continue;
       }
       if(text(cursor))break;
     }
