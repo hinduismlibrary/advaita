@@ -796,7 +796,7 @@ function pairScriptureQuotes(root){
     }
     cursor=sourceRun[sourceRun.length-1].nextElementSibling;
     const afterCitations=[];
-    while(isCitation(cursor)&&!citationIntroducesNextQuote(cursor)){afterCitations.push(cursor);cursor=cursor.nextElementSibling;}
+    while(isCitation(cursor)&&!citationIntroducesNextQuote(cursor)&&!isSource(cursor.nextElementSibling)){afterCitations.push(cursor);cursor=cursor.nextElementSibling;}
     const afterTranslations=[];
     while(isTranslation(cursor)){afterTranslations.push(cursor);cursor=cursor.nextElementSibling;}
     const trailingCitations=[];
