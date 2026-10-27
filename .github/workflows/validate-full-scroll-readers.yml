@@ -41,7 +41,7 @@ jobs:
           )
           full_scroll_style = '20261027-document-template-2'
           shared_reader_version = '20261027-document-citations-8'
-          shaiva_reader_version = '20261027-shaiva-citations-4'
+          shaiva_reader_version = '20261027-shaiva-citations-5'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
           shared_css = Path('site/assets/css/article-reader-template.css').read_text(encoding='utf-8')
