@@ -4,6 +4,7 @@ on:
     paths:
       - .github/workflows/validate-full-scroll-readers.yml
       - site/assets/js/article-reader-paged.js
+      - site/assets/js/varna-vicara-paged.js
       - site/assets/js/vishnu-source-restoration.js
       - site/assets/js/shaiva-complete-reader.js
       - site/assets/data/shaiva-manuscript.b64
@@ -15,6 +16,10 @@ on:
       - site/articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
       - site/articles/hinduism-on-women/index.html
       - site/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - site/articles/varna-vicara/index.html
+      - site/articles/varna-vicara/preface.html
+      - site/articles/varna-vicara/purvapaksha.html
+      - site/articles/varna-vicara/rejection.html
   workflow_dispatch:
 permissions:
   contents: read
@@ -27,6 +32,7 @@ jobs:
         run: |
           node --check site/assets/js/article-reader-paged.js
           node --check site/assets/js/shaiva-complete-reader.js
+          node --check site/assets/js/varna-vicara-paged.js
           python3 - <<'PY'
           from pathlib import Path
           import re
@@ -38,6 +44,7 @@ jobs:
             'a-vaishnava-lens-on-vishnu-as-the-supreme-deity',
             'hinduism-on-women',
             'meat-eating-in-hinduism-through-the-lens-of-shastra',
+            'varna-vicara',
           )
           full_scroll_style = '20261027-document-template-2'
           shared_reader_version = '20261027-document-citations-9'

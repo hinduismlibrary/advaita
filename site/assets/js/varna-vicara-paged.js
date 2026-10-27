@@ -1,8 +1,11 @@
 (()=>{
-const siteChrome=document.createElement('script');
-siteChrome.src='/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-3';
-siteChrome.async=false;
-document.body.append(siteChrome);
+const fullScrollMode=document.body.dataset.readerMode==='full-scroll';
+if(!fullScrollMode){
+  const siteChrome=document.createElement('script');
+  siteChrome.src='/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-3';
+  siteChrome.async=false;
+  document.body.append(siteChrome);
+}
 const base='/advaita/articles/varna-vicara/';
 const pages=[
 {id:'introduction',file:'preface.html',parent:'Preface',title:'Introduction',stop:'remark-1'},
@@ -21,28 +24,32 @@ const params=new URLSearchParams(location.search);
 let id=params.get('section')||location.hash.slice(1)||'introduction';
 id=aliases.get(id)||id;
 const current=byId.get(id)||pages[0],index=pages.indexOf(current);
-if(location.hash||params.get('section')!==current.id){
-  const u=new URL(location.href);u.hash='';
-  current.id==='introduction'?u.searchParams.delete('section'):u.searchParams.set('section',current.id);
-  history.replaceState(null,'',u.pathname+u.search);
+const root=document.getElementById('source-content');
+if(!root)return;
+if(!fullScrollMode){
+  if(location.hash||params.get('section')!==current.id){
+    const u=new URL(location.href);u.hash='';
+    current.id==='introduction'?u.searchParams.delete('section'):u.searchParams.set('section',current.id);
+    history.replaceState(null,'',u.pathname+u.search);
+  }
+  const parent=document.getElementById('section-parent'),count=document.getElementById('section-count');
+  if(parent)parent.textContent=current.parent;
+  if(count)count.textContent=`Section ${index+1} of ${pages.length}`;
+  document.title=`${current.title} — Varṇa-vicāra — Viveka Dṛṣṭi`;
+  document.querySelectorAll('.toc a[data-section]').forEach(a=>{
+    const on=a.dataset.section===current.id;
+    a.classList.toggle('is-active',on);
+    on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');
+  });
+  const href=p=>p?(p.id==='introduction'?base:`${base}?section=${encodeURIComponent(p.id)}`):'';
+  const pager=(el,p,label)=>{
+    if(!el)return;
+    if(!p){el.classList.add('disabled');el.removeAttribute('href');el.innerHTML=`<small>${label}</small>`;return}
+    el.classList.remove('disabled');el.href=href(p);el.innerHTML=`<small>${label}</small>${p.title}`;
+  };
+  pager(document.getElementById('page-prev'),pages[index-1],'Previous');
+  pager(document.getElementById('page-next'),pages[index+1],'Next');
 }
-const root=document.getElementById('source-content'),parent=document.getElementById('section-parent'),count=document.getElementById('section-count');
-if(parent)parent.textContent=current.parent;
-if(count)count.textContent=`Section ${index+1} of ${pages.length}`;
-document.title=`${current.title} — Varṇa-vicāra — Viveka Dṛṣṭi`;
-document.querySelectorAll('.toc a[data-section]').forEach(a=>{
-  const on=a.dataset.section===current.id;
-  a.classList.toggle('is-active',on);
-  on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');
-});
-const href=p=>p?(p.id==='introduction'?base:`${base}?section=${encodeURIComponent(p.id)}`):'';
-const pager=(el,p,label)=>{
-  if(!el)return;
-  if(!p){el.classList.add('disabled');el.removeAttribute('href');el.innerHTML=`<small>${label}</small>`;return}
-  el.classList.remove('disabled');el.href=href(p);el.innerHTML=`<small>${label}</small>${p.title}`;
-};
-pager(document.getElementById('page-prev'),pages[index-1],'Previous');
-pager(document.getElementById('page-next'),pages[index+1],'Next');
 
 const bindSanskrit=scope=>scope.querySelectorAll('details.sanskrit-reveal').forEach(d=>{
   const s=d.querySelector(':scope>summary');if(!s)return;
@@ -210,12 +217,7 @@ const jatiArguments=[
 {title:'Varṇa by svabhāva, guṇa, karma, śīla and ācāra',context:`The chapter finally explains the four names through activity and then gives their characteristic qualities and work.`,refs:['bp-1-44-19','bp-1-44-20','bp-1-44-21','bp-1-44-22','bp-1-44-23','bp-1-44-24','bp-1-44-25','bp-1-44-26','bp-1-44-27','bp-1-44-28','bp-1-44-29','bp-1-44-30','bp-1-44-31','bp-1-44-32','bp-1-44-33'],label:'Bhaviṣya Purāṇa 1.44.19–33',argument:`The closing statements are especially clear: karmas are divided by guṇas arising from svabhāva; a brāhmaṇa-lakṣaṇa is listed; and a śūdra with śīla may be superior to a brāhmaṇa who has lost ācāra.`}
 ];
 
-const intro=()=>{
-  const d=document.createElement('div');
-  d.innerHTML=`<p>The earlier draft left out too much of this discussion. Here I have kept the portions of <em>Bhaviṣya Purāṇa</em> 1.40–44 which actually bear on jāti, brāhmaṇya, saṃskāra and the marks by which a varṇa is supposed to be known. Ritual and narrative material which does not affect the argument is left out. Where several verses make one argument, they are quoted together.</p>
-<p class="translation"><strong>Translation note.</strong> The tarka passages below have been retranslated closely from the Sanskrit. I often leave terms such as <em>jāti</em>, <em>brāhmaṇya</em>, <em>saṃskāra</em>, <em>ācāra</em>, <em>pramāṇa</em> and <em>nyāya</em> untranslated where an English substitute would decide the question too early. In 1.40.26, <em>nityam</em> is the adverb “always,” not “eternal jāti.” Difficult readings are marked instead of silently repaired.</p>`;
-  return d;
-};
+const intro=()=>document.createElement('div');
 
 const verseData=(doc,id)=>{
   const h=doc.getElementById(id);if(!h)throw Error(`Missing ${id}`);
@@ -233,9 +235,12 @@ const passage=(doc,item)=>{
   const details=document.createElement('details');details.className='sanskrit-reveal';
   details.innerHTML=`<summary>Show Sanskrit</summary><div lang="sa-Deva">${verses.map(v=>`<div style="margin:0 0 14px"><strong style="font-family:Vollkorn,Georgia,serif">${v.ref}</strong><br>${v.sanskrit}</div>`).join('')}</div>`;
   wrap.appendChild(details);
-  const trans=document.createElement('div');trans.className='translation';
-  trans.innerHTML=verses.map(v=>`<p style="margin:0 0 12px"><strong>${v.ref}</strong> ${v.translation}${v.note?`<br><span style="font-size:.92em"><em>Text/translation note:</em> ${v.note}</span>`:''}</p>`).join('');
-  wrap.appendChild(trans);
+  for(const v of verses){
+    const trans=document.createElement('p');trans.className='translation';
+    const verseRef=document.createElement('strong');verseRef.textContent=v.ref;
+    trans.append(verseRef,document.createTextNode(' “'+v.translation.replace(/^(?:“|"|'|‘)\s*|\s*(?:”|"|'|’)$/gu,'')+'”'));
+    wrap.appendChild(trans);
+  }
   return wrap;
 };
 
@@ -267,6 +272,64 @@ const mountJatiArguments=async()=>{
     console.error(e);
   }
 };
+
+if(fullScrollMode){
+  (async()=>{
+    try{
+      const fragments=new Map();
+      const files=[...new Set(pages.map(page=>page.file))];
+      await Promise.all(files.map(async file=>{
+        const response=await fetch(`${base}${file}?v=full-scroll-1`,{cache:'no-store'});
+        if(!response.ok)throw new Error(file);
+        const template=document.createElement('template');
+        template.innerHTML=await response.text();
+        fragments.set(file,template.content);
+      }));
+      const assembled=[];
+      const groupIds={
+        'Preface':'vv-preface',
+        'Pūrvapakṣa':'vv-purvapaksha',
+        'Bhaviṣya Purāṇa on Varṇa':'vv-bhavishya-purana-varna'
+      };
+      let lastParent='';
+      for(const page of pages){
+        if(page.parent!==lastParent){
+          const group=document.createElement('h2');
+          group.id=groupIds[page.parent]||('vv-'+slug(page.parent));
+          group.textContent=page.parent;
+          assembled.push(group);
+          lastParent=page.parent;
+        }
+        const extracted=extract(fragments.get(page.file).cloneNode(true),page);
+        const normalized=[];
+        for(const node of extracted){
+          if(node.matches?.('section.remark-section')){
+            const heading=node.querySelector(':scope > h3');
+            if(heading&&!heading.id)heading.id=page.id;
+            normalized.push(...[...node.childNodes].map(child=>child.cloneNode(true)));
+          }else normalized.push(node);
+        }
+        if(page.id==='jati-distinctions'){
+          root.replaceChildren(...normalized);
+          await mountJatiArguments();
+          assembled.push(...[...root.childNodes].map(node=>node.cloneNode(true)));
+        }else assembled.push(...normalized);
+      }
+      root.replaceChildren(...assembled);
+      root.querySelectorAll('.reader-page-position,.section-pager').forEach(node=>node.remove());
+      bindSanskrit(root);
+      const reader=document.createElement('script');
+      reader.src=document.getElementById('article-config')?.dataset.readerScript||'/advaita/assets/js/article-reader-paged.js?v=20261027-document-citations-9';
+      reader.onerror=()=>{const source=document.getElementById('source-document');if(source)source.hidden=false;};
+      document.body.append(reader);
+    }catch(error){
+      root.innerHTML='<p class="load-error">Could not load this document. Refresh the page.</p>';
+      const source=document.getElementById('source-document');if(source)source.hidden=false;
+      console.error(error);
+    }
+  })();
+  return;
+}
 
 (async()=>{
   try{

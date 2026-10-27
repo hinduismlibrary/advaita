@@ -1,4 +1,4 @@
-name: Review all six article Contents layouts
+name: Review all seven document Contents layouts
 on:
   push:
     branches:
@@ -13,6 +13,11 @@ on:
       - site/articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
       - site/articles/hinduism-on-women/index.html
       - site/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
+      - site/articles/varna-vicara/index.html
+      - site/articles/varna-vicara/preface.html
+      - site/articles/varna-vicara/purvapaksha.html
+      - site/articles/varna-vicara/rejection.html
+      - site/assets/js/varna-vicara-paged.js
       - site/assets/js/article-reader-paged.js
       - site/assets/js/vishnu-source-restoration.js
       - site/assets/js/shaiva-complete-reader.js
@@ -33,7 +38,7 @@ jobs:
         run: |
           python3 -m pip install --user --quiet playwright
           if ! command -v google-chrome >/dev/null && ! command -v chromium >/dev/null; then python3 -m playwright install chromium; fi
-      - name: Verify full-scroll content and Contents across all six articles
+      - name: Verify full-scroll content and Contents across all seven documents
         env:
           PAGE_REVISION: ${{ github.event.workflow_run.head_sha || github.sha }}
         run: |
@@ -54,6 +59,7 @@ jobs:
             ('vaishnava', 'a-vaishnava-lens-on-vishnu-as-the-supreme-deity'),
             ('women', 'hinduism-on-women'),
             ('meat', 'meat-eating-in-hinduism-through-the-lens-of-shastra'),
+            ('varna-vicara', 'varna-vicara'),
           ]
           
           def versioned(url, attempt):
@@ -353,7 +359,8 @@ jobs:
                 'varna':'Bhagavad Gita 16.23',
                 'vaishnava':'Rigveda 10.113.2',
                 'women':'Saundarya Laharī, verse 97',
-                'meat':'Manusmrti 5.48'
+                'meat':'Manusmrti 5.48',
+                'varna-vicara':'Bhagavad Gītā 16.23–24'
               }[label]
               assert any(expected_source.lower() in item.lower() for item in desktop['citationExamples']), f'{label}: expected source label is missing: {expected_source}'
               if label == 'women':
@@ -405,7 +412,7 @@ jobs:
               page.close()
             (out / 'results.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
             browser.close()
-          assert len(records) == 6
+          assert len(records) == 7
           if uncited_quote_diagnostics: raise AssertionError('Scripture quote groups without source labels: ' + json.dumps(uncited_quote_diagnostics,ensure_ascii=False))
           if scrollspy_errors: raise AssertionError('Contents highlight mismatches: ' + json.dumps(scrollspy_errors,ensure_ascii=False))
           
