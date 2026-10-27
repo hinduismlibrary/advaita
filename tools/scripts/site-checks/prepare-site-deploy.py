@@ -6,6 +6,7 @@ import argparse
 import os
 import re
 from pathlib import Path
+from site_seo import prepare_site_seo
 
 CACHE_VERSION = "20261026-document-cleanup-2"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
@@ -156,9 +157,12 @@ def main() -> None:
     site = args.site.resolve()
     changed, repaired = prepare(site)
     rewritten = rewrite_project_base(site, args.repository)
+    seo_changed, sitemap_pages = prepare_site_seo(site, args.repository)
     print(f"Prepared {changed} HTML pages for cache-safe deployment.")
     print(f"Removed the mismatched Vishnu Purana reader styling from {repaired} MMK pages.")
     print(f"Rewrote the Pages project path in {rewritten} files for {args.repository}.")
+    print(f"Updated SEO metadata on {seo_changed} full HTML pages.")
+    print(f"Generated sitemap.xml with {sitemap_pages} canonical indexable URLs.")
 
 
 if __name__ == "__main__":
