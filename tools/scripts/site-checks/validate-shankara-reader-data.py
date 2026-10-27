@@ -190,7 +190,7 @@ def main() -> int:
                         derived_chapters.add(int(match.group(1)))
             chapter_map = re.search(r"const PANCHADASI_CHAPTERS=\{([^}]+)\}", reader_js)
             named_chapter_count = (
-                len(re.findall(r'"\\d+"\\s*:', chapter_map.group(1)))
+                len(re.findall(r"(?:^|,)\s*\d+\s*:", chapter_map.group(1)))
                 if chapter_map
                 else 0
             )
