@@ -52,3 +52,6 @@ The validator checks all work IDs, reader paths, collection links, long-work con
 - Set Naiṣkarmyasiddhi’s loader count to its 880 present units and retained 897 as `expectedSourceUnits`. All 423 numbered verses are present; 17 prose, heading, or other expected source units are absent from the available transcription and remain documented.
 - Added six named, topic-led contents divisions for Tattvabodha’s 44 sections.
 - Routed Advaitamakaranda (28 verses), Brahmajñānāvalīmālā (21 verses), and Tattvabodha (44 sections) through the contents page.
+- Routed Dṛg-dṛśya-viveka (46 verses) through the named contents page; checked all long-work links in the main collection and Stotrams index.
+- Added Pañcadaśī validation for all 15 chapter IDs and their 15 topic names, which are supplied by the reader’s chapter map rather than a JSON `sections` array.
+- Tightened the reader loader so a work fails clearly if any unit lacks explicit IAST or a non-empty, valid Sanskrit/English gloss object; the deployment workflow now runs the 29-work validator before publishing.
