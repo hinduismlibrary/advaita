@@ -150,7 +150,15 @@ jobs:
               const quoteGroups=quotePairs.filter(pair=>pair.querySelector(sanskritSelector)&&pair.querySelector(translationSelector));
               const sourceNodeSelector=':scope > p.reference,:scope > p.source-citation,:scope > p.scripture-source,:scope > p.citation';
               const citedQuoteGroups=quoteGroups.filter(pair=>pair.querySelector(sourceNodeSelector));
-              const uncitedQuoteGroups=quoteGroups.filter(pair=>!pair.querySelector(sourceNodeSelector)).map(pair=>pair.innerText.trim().slice(0,140));
+              const uncitedQuoteGroups=quoteGroups.filter(pair=>!pair.querySelector(sourceNodeSelector)).map(pair=>{
+                const previous=[];
+                let cursor=pair.previousElementSibling,depth=0;
+                while(cursor&&depth<4){
+                  previous.push({tag:cursor.tagName,className:typeof cursor.className==='string'?cursor.className:'',text:(cursor.innerText||'').trim().slice(0,220)});
+                  cursor=cursor.previousElementSibling;depth++;
+                }
+                return {text:pair.innerText.trim().slice(0,140),previous};
+              });
               const citationExamples=citedQuoteGroups.flatMap(pair=>[...pair.querySelectorAll(sourceNodeSelector)].map(node=>node.textContent.trim()));
               const sourceDiagramImages=[...article.querySelectorAll('figure.source-document-figure img')];
               const sourceDiagramIssues=sourceDiagramImages.filter(image=>{
@@ -333,7 +341,7 @@ jobs:
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
               if desktop['uncitedQuoteGroups']:
-                uncited_quote_diagnostics.append({'site':label,'groups':desktop['uncitedQuoteGroups']})
+                uncited_quote_diagnostics.append({'site':label,'total':len(desktop['uncitedQuoteGroups']),'examples':desktop['uncitedQuoteGroups'][:8]})
               assert desktop['scriptureSourceLabels'] == 0, f'{label}: unstandardized scripture-source labels remain'
               assert not desktop['quoteOrderErrors'], f'{label}: quote order differs from source, Sanskrit, English: {desktop["quoteOrderErrors"]}'
               assert desktop['sanskritDisclosures'] > 0, f'{label}: Devanagari disclosures are missing'
