@@ -181,11 +181,28 @@ def main() -> int:
         if not isinstance(sections, list):
             sections = []
         long_work = isinstance(expected, int) and expected >= 20
-        if long_work and not sections and not any(
+        derived_chapters = set()
+        if work_id == "panchadasi":
+            for unit in units:
+                if isinstance(unit, dict):
+                    match = re.match(r"^panchadasi-(\\d+)-", str(unit.get("id", "")))
+                    if match:
+                        derived_chapters.add(int(match.group(1)))
+            chapter_map = re.search(r"const PANCHADASI_CHAPTERS=\\{([^}]+)\\}", reader_js)
+            named_chapter_count = (
+                len(re.findall(r'"\\d+"\\s*:', chapter_map.group(1)))
+                if chapter_map
+                else 0
+            )
+            if len(derived_chapters) != 15 or named_chapter_count != 15:
+                error("panchadasi: expected 15 ID-mapped chapters with 15 topic names")
+
+        has_named_divisions = bool(sections) or bool(derived_chapters) or any(
             unit.get("chapter") is not None or unit.get("sectionTitle")
             for unit in units
             if isinstance(unit, dict)
-        ):
+        )
+        if long_work and not has_named_divisions:
             error(f"{work_id}: long text has no named contents divisions")
         if long_work and sections:
             for section_index, section in enumerate(sections, start=1):
