@@ -47,6 +47,7 @@ jobs:
             'varna-vicara',
           )
           full_scroll_style = '20261027-document-template-2'
+          varna_script_version = '20261027-full-scroll-2'
           shared_reader_version = '20261027-document-citations-9'
           shaiva_reader_version = '20261027-shaiva-citations-5'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
@@ -64,6 +65,8 @@ jobs:
           for slug in slugs:
             path = Path('site/articles') / slug / 'index.html'
             html = path.read_text(encoding='utf-8')
+            if slug == 'varna-vicara':
+              assert html.count('varna-vicara-paged.js?v=' + varna_script_version) == 1, f'{path}: stale Varṇa-vicāra loader cache'
             assert html.count('varna-vicara-paged.css?v=20260914-3') == 1, f'{path}: missing shared base style'
             assert html.count('article-reader-template.css?v=' + full_scroll_style) == 1, f'{path}: stale shared style cache'
             if slug == 'a-shaiva-lens-on-shiva-as-the-supreme-deity':

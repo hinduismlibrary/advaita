@@ -353,6 +353,10 @@ jobs:
               assert desktop['sanskritDisclosures'] > 0, f'{label}: Devanagari disclosures are missing'
               assert desktop['badDisclosureLabels'] == 0, f'{label}: Sanskrit disclosure labels differ from the shared reader'
               assert desktop['editorialNotes'] == 0, f'{label}: editorial or source-process notes remain visible'
+              if label == 'varna-vicara':
+                visible_text = page.locator('#source-content').inner_text().lower()
+                assert 'problem in the old translation' not in visible_text, 'varna-vicara: internal translation note remains visible'
+                assert 'earlier draft left out too much' not in visible_text, 'varna-vicara: internal draft note remains visible'
               expected_source = {
                 'agamas':'Taittiriya Samhita 2.2.10.2',
                 'shaiva':'Shiva Purana, Rudra Samhita 16.36',
