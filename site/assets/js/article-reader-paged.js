@@ -639,7 +639,7 @@ const sourceNames=[
   'Mimamsa Sutras','Mimamsa Sutra','Mīmāṃsā Sūtras','Mīmāṃsā Sūtra','Brahma Sutras','Brahma Sutra','Brahma Sūtras','Brahma Sūtra',
   'Mahabharata','Mahābhārata','Ramayana','Rāmāyaṇa','Yoga Vasistha','Yoga Vasishtha',
   'Vishnu Purana','Viṣṇu Purāṇa','Bhagavata Purana','Bhāgavata Purāṇa','Shiva Purana','Siva Purana','Śiva Purāṇa','Padma Purana','Skanda Purana','Garuda Purana','Narada Purana','Markandeya Purana','Agni Purana','Linga Purana','Matsya Purana','Brahma Purana','Devi Bhagavatam',
-  'Ahirbudhnya Samhita','Paingi-rahasya Brahmana','Paingi Rahasya Brahmana','Narayana Sukta','Vishnu Sahasranama','Agama Pramanya','Agama Pramāṇya','Brahmasutra-bhashya','Brahmasutra-bhāṣya'
+  'Ahirbudhnya Samhita','Pancaratra Raksha','Pāñcarātra Rakṣā','Paingi-rahasya Brahmana','Paingi Rahasya Brahmana','Narayana Sukta','Vishnu Sahasranama','Agama Pramanya','Agama Pramāṇya','Brahmasutra-bhashya','Brahmasutra-bhāṣya'
 ];
 const sourceNameRegex=new RegExp('(?<![\\p{L}\\p{N}])(?:'+sourceNames
   .sort((a,b)=>b.length-a.length)
@@ -655,7 +655,7 @@ function labelsFromSourceContext(value){
   for(let i=0;i<matches.length;i++){
     const match=matches[i],title=match[0].replace(/\s+/g,' ').trim();
     const preceding=sourceText.slice(Math.max(0,match.index-55),match.index);
-    if(/\b(?:(?:mentioned|cited|quoted|listed|named)\s+in|of|from)\s+(?:the\s+)?$/i.test(preceding))continue;
+    if(/\b(?:(?:mentioned|cited|quoted|listed|named)\s+in|of)\s+(?:the\s+)?$/i.test(preceding))continue;
     const tail=sourceText.slice(match.index+match[0].length,match.index+match[0].length+150);
     let info='';
     const parenthetical=tail.match(/\(([^)]{0,130}\d[^)]*)\)/);
@@ -797,7 +797,9 @@ function pairScriptureQuotes(root){
     const afterTranslations=[];
     while(isTranslation(cursor)){afterTranslations.push(cursor);cursor=cursor.nextElementSibling;}
     const trailingCitations=[];
-    while(isCitation(cursor)&&!citationIntroducesNextQuote(cursor)){
+    // A label immediately before the next Sanskrit passage belongs to that passage.
+    // Keeping it out of this group prevents the previous quote from stealing its source.
+    while(isCitation(cursor)&&!citationIntroducesNextQuote(cursor)&&!isSanskritSourceNode(cursor.nextElementSibling)){
       trailingCitations.push(cursor);cursor=cursor.nextElementSibling;
     }
     const citations=[...beforeCitations,...afterCitations,...trailingCitations];

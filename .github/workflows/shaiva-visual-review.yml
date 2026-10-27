@@ -395,6 +395,9 @@ jobs:
               page.screenshot(path=str(out / (label + '-mobile.png')), full_page=False)
               record = {'site':label,'http':response.status,'sections':desktop['sections'],'textChars':desktop['textLength'],'sectionLengths':desktop['sectionLengths'],
                         'contentsLinks':desktop['links'],'sourcesSections':desktop['sourceSections'],
+                        'quoteGroups':desktop['quoteGroups'],'citationGroups':desktop['citationGroups'],
+                        'uncitedQuoteGroups':desktop['uncitedQuoteGroups'],'quoteOrderErrors':desktop['quoteOrderErrors'],
+                        'citationExamples':desktop['citationExamples'],'scriptureSourceLabels':desktop['scriptureSourceLabels'],
                         'mobileWidth':mobile['scrollWidth'],'errors':errors}
               records.append(record)
               print(json.dumps(record,ensure_ascii=False),flush=True)
