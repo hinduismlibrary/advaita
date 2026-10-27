@@ -234,7 +234,11 @@ function esc(s){return String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",
 function complete(data){
  if(!data||!Array.isArray(data.units)||!Number.isInteger(data.expectedUnits)||data.units.length!==data.expectedUnits||!data.units.length)return false;
  if(data.englishOnly)return data.units.every(u=>u&&u.id&&u.translation);
- return data.units.every(u=>u&&u.id&&u.deva&&Array.isArray(u.gloss)&&u.gloss.every(w=>w&&w.sa&&w.en)&&(data.translationAvailable===false||u.translation));
+ return data.units.every(u=>
+  u&&u.id&&u.deva&&u.translation&&u.iast&&
+  Array.isArray(u.gloss)&&u.gloss.length>0&&
+  u.gloss.every(w=>w&&typeof w.sa==="string"&&w.sa.trim()&&typeof w.en==="string"&&w.en.trim())
+ );
 }
 function glossHTML(words){return words.map(w=>'<div class="gita-word-row"><span class="gita-word-source"><span class="gita-word-dev" lang="sa-Deva">'+esc(w.sa)+'</span> <span class="gita-word-iast">('+esc(iast(w.sa))+')</span></span><span class="gita-word-separator" aria-hidden="true"> — </span><span class="gita-word-gloss">'+esc(w.en)+'</span></div>').join("")}
 function normalizeGlossMarkup(wordList){
