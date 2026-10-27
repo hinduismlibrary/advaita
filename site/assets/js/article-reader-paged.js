@@ -513,7 +513,13 @@ function clean(node,page){
       const hasCitationNumber=/\d/.test(value);
       const proseCitationCue=/\b(?:says?|states?|mentions?|discusses?|speaks?|describes?|explains?|elaborates?|concludes?|writes?|teaches?|gives?|calls?|regards?|regarding|is|are|was|were|the|this|these|that|which|his|her|they|there|because|since|if|when|for)\b/i.test(value);
       const citationLabel=citationSource&&hasCitationNumber&&value.length<=160&&!proseCitationCue;
-      if(n.classList.contains('scripture-source')||citationLabel)n.classList.add('source-citation');
+      if(n.classList.contains('scripture-source')){
+        n.classList.remove('scripture-source','source-citation','citation');
+        n.classList.add('reference');
+        n.querySelectorAll('em,i').forEach(em=>em.replaceWith(...em.childNodes));
+        const sourceText=text(n).replace(/^\s*[—–-]\s*/u,'');
+        if(sourceText!==text(n))n.textContent=sourceText;
+      }else if(citationLabel&&!n.classList.contains('reference'))n.classList.add('source-citation');
       else if(n.classList.contains('scripture-translation')||n.classList.contains('translation')||
               /color\s*:\s*#(?:a92727|65516f|7b3d35)/i.test(style))n.classList.add('translation');
       if(isSa&&!n.closest('details.sanskrit-reveal'))n.classList.add('sanskrit-text');
@@ -605,7 +611,9 @@ function isEnglishTranslationNode(node){
     (node?.matches?.('p')&&/^[“"'‘]/u.test(text(node)));
 }
 function citationIntroducesNextQuote(node){
-  return /\b(?:states?|says?|reads?|writes?|quotes?|as follows|is stated|are stated|continues?)\s*[:;,]?\s*$/i.test(text(node));
+  const value=text(node).replace(/\s+/g,' ').trim();
+  return /^(?:also|similarly|likewise)\s+in\b/i.test(value)||
+    /\b(?:states?|says?|reads?|writes?|quotes?|as follows|is stated|are stated|continues?)\s*[:;,]?\s*$/i.test(value);
 }
 function normalizeSanskritDisclosureLabels(root){
   for(const details of root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note)')){
@@ -671,7 +679,10 @@ function labelsFromSourceContext(value){
   return labelsWithReference.length?labelsWithReference:labels;
 }
 function hasCitationBesideSource(source){
-  if(isSourceCitationNode(source.previousElementSibling)||isSourceCitationNode(source.nextElementSibling))return true;
+  const previous=source.previousElementSibling;
+  const next=source.nextElementSibling;
+  if((isSourceCitationNode(previous)&&!citationIntroducesNextQuote(previous))||
+     (isSourceCitationNode(next)&&!citationIntroducesNextQuote(next)))return true;
   let cursor=source.nextElementSibling;
   while(isSourceCitationNode(cursor))cursor=cursor.nextElementSibling;
   while(isEnglishTranslationNode(cursor))cursor=cursor.nextElementSibling;
@@ -782,7 +793,7 @@ function pairScriptureQuotes(root){
     }
     cursor=sourceRun[sourceRun.length-1].nextElementSibling;
     const afterCitations=[];
-    while(isCitation(cursor)){afterCitations.push(cursor);cursor=cursor.nextElementSibling;}
+    while(isCitation(cursor)&&!citationIntroducesNextQuote(cursor)){afterCitations.push(cursor);cursor=cursor.nextElementSibling;}
     const afterTranslations=[];
     while(isTranslation(cursor)){afterTranslations.push(cursor);cursor=cursor.nextElementSibling;}
     const trailingCitations=[];
@@ -848,6 +859,7 @@ function normalizeCitationOrder(root){
   const isTranslation=isEnglishTranslationNode;
   const isQuoteSource=isSanskritSourceNode;
   for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
+    if(citationIntroducesNextQuote(citation))continue;
     if(citation.matches('p.reference')&&/^(?:english translation|sanskrit text(?: and english translation)?)\s*:?[.]?$/i.test(text(citation)))continue;
     if(isQuoteSource(citation.nextElementSibling))continue;
     let target=citation.previousElementSibling;

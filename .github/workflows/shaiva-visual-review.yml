@@ -82,8 +82,8 @@ jobs:
                   const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\.js(?:\?|$)/.test(url)) || '';
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
-                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261026-shaiva-citation-3' : '20261026-document-cleanup-3';
-                  const assetsReady = sharedStyle?.href.includes('20261026-document-cleanup-1') && readerScript.includes(readerVersion) && contentReady;
+                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261026-shaiva-citation-3' : '20261027-document-cleanup-4';
+                  const assetsReady = sharedStyle?.href.includes('20261027-document-template-2') && readerScript.includes(readerVersion) && contentReady;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {
@@ -100,6 +100,11 @@ jobs:
                   };
                 }""")
                 if response and response.status == 200 and ready:
+                  page.evaluate("""async () => {
+                    const images=[...document.querySelectorAll('#source-content figure.source-document-figure img')];
+                    images.forEach(image=>image.loading='eager');
+                    await Promise.all(images.map(image=>image.decode().catch(()=>null)));
+                  }""")
                   return response
               except Exception as error:
                 last_error = str(error)
@@ -143,7 +148,26 @@ jobs:
               const translationSelector='p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation';
               const quotePairs=[...article.querySelectorAll('.scripture-quote-pair,.women-scripture-pair')];
               const quoteGroups=quotePairs.filter(pair=>pair.querySelector(sanskritSelector)&&pair.querySelector(translationSelector));
-              const citationExamples=quoteGroups.flatMap(pair=>[...pair.querySelectorAll(':scope > p.reference,:scope > p.source-citation,:scope > p.scripture-source,:scope > p.citation')].map(node=>node.textContent.trim()));
+              const sourceNodeSelector=':scope > p.reference,:scope > p.source-citation,:scope > p.scripture-source,:scope > p.citation';
+              const citedQuoteGroups=quoteGroups.filter(pair=>pair.querySelector(sourceNodeSelector));
+              const uncitedQuoteGroups=quoteGroups.filter(pair=>!pair.querySelector(sourceNodeSelector)).map(pair=>pair.innerText.trim().slice(0,140));
+              const citationExamples=citedQuoteGroups.flatMap(pair=>[...pair.querySelectorAll(sourceNodeSelector)].map(node=>node.textContent.trim()));
+              const sourceDiagramImages=[...article.querySelectorAll('figure.source-document-figure img')];
+              const sourceDiagramIssues=sourceDiagramImages.filter(image=>{
+                const box=image.getBoundingClientRect();
+                const naturalRatio=image.naturalWidth&&image.naturalHeight?image.naturalWidth/image.naturalHeight:0;
+                const renderedRatio=box.width&&box.height?box.width/box.height:0;
+                return !image.alt.trim()||!image.complete||!image.naturalWidth||!image.naturalHeight||Math.abs(naturalRatio-renderedRatio)>0.03;
+              }).map(image=>({src:image.currentSrc||image.src,alt:image.alt,complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight}));
+              const meatCitation=[...article.querySelectorAll('p.reference,p.source-citation,p.citation')]
+                .find(node=>/Yajurveda\s+22\.42/i.test(node.textContent));
+              const meatCitationStyle=meatCitation?{
+                text:meatCitation.textContent.trim(),
+                className:meatCitation.className,
+                italic:getComputedStyle(meatCitation).fontStyle,
+                emphasized:!!meatCitation.querySelector('em,i')
+              }:null;
+              const scriptureSourceLabels=article.querySelectorAll('p.scripture-source').length;
               const orderRank=node=>node.matches(sourceSelector)?0:node.matches(sanskritSelector)?1:node.matches(translationSelector)?2:9;
               const quoteOrderErrors=quoteGroups.filter(pair=>{
                 const ranks=[...pair.children].map(orderRank).filter(rank=>rank<9);
@@ -171,9 +195,14 @@ jobs:
                 quoteStyle: qStyle ? {fontSize:qStyle.fontSize,color:qStyle.color,borderLeftWidth:qStyle.borderLeftWidth} : null,
                 headingStyle: hStyle ? {fontFamily:hStyle.fontFamily,fontSize:hStyle.fontSize} : null,
                 quoteGroups: quoteGroups.length,
-                citationGroups: quoteGroups.filter(pair=>pair.querySelector(':scope > '+sourceSelector.replaceAll(',',',:scope > '))).length,
+                citationGroups: citedQuoteGroups.length,
+                uncitedQuoteGroups,
                 citationExamples,
                 quoteOrderErrors,
+                sourceDiagramImages: sourceDiagramImages.length,
+                sourceDiagramIssues,
+                scriptureSourceLabels,
+                meatCitationStyle,
                 sanskritDisclosures: sourceDisclosures.length,
                 badDisclosureLabels,
                 unpairedTranslations,
@@ -302,6 +331,8 @@ jobs:
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
+              assert not desktop['uncitedQuoteGroups'], f'{label}: scripture quote groups lack source labels: {desktop["uncitedQuoteGroups"]}'
+              assert desktop['scriptureSourceLabels'] == 0, f'{label}: unstandardized scripture-source labels remain'
               assert not desktop['quoteOrderErrors'], f'{label}: quote order differs from source, Sanskrit, English: {desktop["quoteOrderErrors"]}'
               assert desktop['sanskritDisclosures'] > 0, f'{label}: Devanagari disclosures are missing'
               assert desktop['badDisclosureLabels'] == 0, f'{label}: Sanskrit disclosure labels differ from the shared reader'
@@ -315,6 +346,20 @@ jobs:
                 'meat':'Manusmrti 5.48'
               }[label]
               assert any(expected_source.lower() in item.lower() for item in desktop['citationExamples']), f'{label}: expected source label is missing: {expected_source}'
+              if label == 'women':
+                for source_label in ('Manusmrti 6.86–87','Mahabharata 12.261.7','Padma Purana 2.59.16–17'):
+                  assert any(source_label.lower() in item.lower() for item in desktop['citationExamples']), f'women: source label missing: {source_label}'
+              if label == 'meat':
+                assert desktop['meatCitationStyle'], 'meat: Yajurveda 22.42 source label is missing'
+                assert desktop['meatCitationStyle']['italic'] == 'normal' and not desktop['meatCitationStyle']['emphasized'], f'meat: Yajurveda 22.42 source label is still italic: {desktop["meatCitationStyle"]}'
+              if label == 'vaishnava':
+                assert desktop['sourceDiagramImages'] == 2, f'vaishnava: expected both source diagrams, got {desktop["sourceDiagramImages"]}'
+                assert not desktop['sourceDiagramIssues'], f'vaishnava: source diagram assets are missing, cropped, or missing alt text: {desktop["sourceDiagramIssues"]}'
+                cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Taittiriya Samhita (5.5.1)')
+                assert cite_pair.count() == 1, 'vaishnava: Taittiriya source was not paired with its own quote'
+                cite_order=cite_pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference,p.source-citation,p.scripture-source,p.citation') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation') ? 'translation' : 'other')")
+                assert cite_order == ['source','sanskrit','translation'], f'vaishnava: Taittiriya quote group order is wrong: {cite_order}'
+                assert 'MahabharataBhagavad Gita' not in page.locator('#source-content').inner_text(), 'vaishnava: the old joined diagram labels remain'
               assert not desktop['pageNav'], f'{label}: old Previous/Next navigation remains'
               assert desktop['paragraphStyle'], f'{label}: no article paragraph rendered'
               assert desktop['headingStyle'], f'{label}: no section heading rendered'

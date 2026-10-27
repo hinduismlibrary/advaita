@@ -703,3 +703,25 @@ body.document-paged-page .article .document-content .vishnu-smriti-branch li{
   body.document-paged-page .article .document-content .vishnu-veda-groups{grid-template-columns:1fr}
   body.document-paged-page .article .document-content .vishnu-veda-unit{grid-template-columns:minmax(88px,.42fr) minmax(0,1fr)}
 }
+
+
+/* Keep diagrams taken from source documents intact in the shared reader. */
+body.document-paged-page .article .document-content figure.source-document-figure{
+  display:block;
+  max-width:900px;
+  margin:18px auto 28px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  text-align:center;
+}
+body.document-paged-page .article .document-content figure.source-document-figure img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  margin:0 auto;
+  object-fit:contain;
+}
