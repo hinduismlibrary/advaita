@@ -297,6 +297,7 @@ jobs:
             chrome = shutil.which('google-chrome') or shutil.which('chromium')
             browser = playwright.chromium.launch(headless=True, executable_path=chrome) if chrome else playwright.chromium.launch(headless=True)
             records = []
+            uncited_quote_diagnostics = []
             scrollspy_errors = []
             paragraph_reference = None
             heading_reference = None
@@ -331,7 +332,8 @@ jobs:
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
-              assert not desktop['uncitedQuoteGroups'], f'{label}: scripture quote groups lack source labels: {desktop["uncitedQuoteGroups"]}'
+              if desktop['uncitedQuoteGroups']:
+                uncited_quote_diagnostics.append({'site':label,'groups':desktop['uncitedQuoteGroups']})
               assert desktop['scriptureSourceLabels'] == 0, f'{label}: unstandardized scripture-source labels remain'
               assert not desktop['quoteOrderErrors'], f'{label}: quote order differs from source, Sanskrit, English: {desktop["quoteOrderErrors"]}'
               assert desktop['sanskritDisclosures'] > 0, f'{label}: Devanagari disclosures are missing'
@@ -393,6 +395,7 @@ jobs:
             (out / 'results.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
             browser.close()
           assert len(records) == 6
+          if uncited_quote_diagnostics: raise AssertionError('Scripture quote groups without source labels: ' + json.dumps(uncited_quote_diagnostics,ensure_ascii=False))
           if scrollspy_errors: raise AssertionError('Contents highlight mismatches: ' + json.dumps(scrollspy_errors,ensure_ascii=False))
           
           PY
