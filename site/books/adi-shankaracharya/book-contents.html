@@ -309,23 +309,21 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   }
   var readerUrl=new URL(work+"/",window.location.href);
   var dataUrl=new URL("/advaita/assets/data/shankara/"+encodeURIComponent(work)+".json",window.location.origin);
+  dataUrl.searchParams.set("v","reader-gloss-20261027b");
   completeLink.href=readerUrl.href;
-  Promise.all([
-    fetch(readerUrl.href,{credentials:"same-origin"}).then(function(response){if(!response.ok)throw new Error("The text page could not be loaded.");return response.text();}),
-    fetch(dataUrl.href,{credentials:"same-origin"}).then(function(response){if(!response.ok)throw new Error("The contents data could not be loaded.");return response.json();})
-  ]).then(function(results){
-    var doc=new DOMParser().parseFromString(results[0],"text/html");
-    var data=results[1];
-    var sourceTitle=doc.querySelector(".gita-hero h1")||doc.querySelector("h1");
-    var rawTitle=sourceTitle?sourceTitle.textContent.trim():(data.title||"");
+  fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(response){
+    if(!response.ok)throw new Error("The contents data could not be loaded.");
+    return response.json();
+  }).then(function(data){
+    var rawTitle=data.title||work;
     var titlePair=workPairs[work]||labelFor(rawTitle);
     renderWorkTitle(titleNode,rawTitle,titlePair);
-    var sourceAuthor=doc.querySelector(".shankara-author");
-    renderBilingual(authorNode,sourceAuthor?sourceAuthor.textContent.trim():"",authorPairs[work]||labelFor("By "+(sourceAuthor?sourceAuthor.textContent.trim().replace(/^By\s+/i,""):"")));
+    var authorPair=authorPairs[work];
+    var authorText=authorPair?authorPair.english:(data.author?"By "+data.author:"");
+    renderBilingual(authorNode,authorText,authorPair||labelFor(authorText));
     document.title="Text contents — "+titlePair.english+" — Viveka Drishti";
-    var fallback=sourceItems(doc);
     var units=Array.isArray(data&&data.units)?data.units:[];
-    if(units.length<=50&&!hasTraditionalDivisions(data,fallback)){
+    if(units.length<=50&&!hasTraditionalDivisions(data,[])){
       sectionsNode.replaceChildren();
       sectionsNode.hidden=true;
       completeLink.href=readerUrl.href;
@@ -333,10 +331,6 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     }
     sectionsNode.hidden=false;
     var items=sectionItems(data);
-    if(!items.length&&fallback.length&&(
-      (fallback.length>1&&fallback.length<=15&&sourceItemsAreDescriptive(fallback))
-      ||fallback.some(function(item){return /^(?:chapter|part|book)\s+(?:\d+|[ivxlcdm]+)\b/i.test(item.label);})
-    ))items=fallback;
     if(!items.length&&units.length<=50){
       sectionsNode.replaceChildren();
       sectionsNode.hidden=true;

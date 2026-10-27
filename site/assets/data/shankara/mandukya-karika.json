@@ -41,7 +41,7 @@
     "sanskrit": "Devanāgarī text from Śāradā Peetham, Sringeri, as credited by the source edition.",
     "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
     "attribution": "A.K. Aruna (format and transcription); Swami Nikhilananda (Kārikā translation for the original single-verse entries); Śāradā Peetham, Sringeri (Devanāgarī text as credited by the source edition); editorial translators (the split-range translations and word-for-word glosses).",
-    "changes": "Arranged as a local reader of all 215 numbered Kārikā verses. Former multi-verse entries (1.3–1.4, 2.20–2.28, 4.7–4.8, 4.31–4.32, 4.51–4.52, 4.61–4.62, 4.65–4.66, and 4.68–4.70) are split into individual cards. Verse translations for those ranges are newly rendered individually; every kārikā has an editorial word-for-word gloss. Upaniṣad mantras, Śaṅkara Bhāṣya, and Ṭīkā glosses are excluded. Added explicit IAST transliteration for every kārikā. Expanded the four traditional contents labels with short topic summaries.",
+    "changes": "Arranged as a local reader of all 215 numbered Kārikā verses. Former multi-verse entries (1.3–1.4, 2.20–2.28, 4.7–4.8, 4.31–4.32, 4.51–4.52, 4.61–4.62, 4.65–4.66, and 4.68–4.70) are split into individual cards. Verse translations for those ranges are newly rendered individually; every kārikā has an editorial word-for-word gloss. Upaniṣad mantras, Śaṅkara Bhāṣya, and Ṭīkā glosses are excluded. Added explicit IAST transliteration for every kārikā. Expanded the four traditional contents labels with short topic summaries. Corrected per-card source-number metadata so every sourceNumbers value matches that individual kārikā.",
     "gloss": "Original editorial word-for-word glosses prepared for this local reader."
   },
   "translationCredit": "Swami Nikhilananda, as adopted by A.K. Aruna.",
@@ -252,8 +252,7 @@
         }
       ],
       "sourceNumbers": [
-        "1.3",
-        "1.4"
+        "1.3"
       ],
       "sectionTitle": "Āgama-prakaraṇa",
       "iast": "viśvo hi sthūlabhuṅ nityaṃ taijasaḥ praviviktabhuk|\nānandabhuktathā prājñastridhā bhogaṃ nibodhata||"
@@ -320,7 +319,6 @@
         }
       ],
       "sourceNumbers": [
-        "1.3",
         "1.4"
       ],
       "sectionTitle": "Āgama-prakaraṇa",
@@ -3320,15 +3318,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.20"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "prāṇa iti prāṇavido bhūtānīti ca tadvidaḥ|\nguṇā iti guṇavidastattvānīti ca tadvidaḥ||"
@@ -3395,15 +3385,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.21"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "pādā iti pādavido viṣayā iti tadvidaḥ|\nlokā iti lokavido devā iti ca tadvidaḥ||"
@@ -3478,15 +3460,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.22"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "vedā iti vedavido yajñā iti ca tadvidaḥ|\nbhokteti ca bhoktṛvido bhojyamiti ca tadvidaḥ||"
@@ -3557,15 +3531,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.23"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "sūkṣma iti sūkṣmavidaḥ sthūla iti ca tadvidaḥ|\nmūrta iti mūrtavido’mūrta iti ca tadvidaḥ||"
@@ -3632,15 +3598,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.24"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "kāla iti kālavido diśa iti ca tadvidaḥ|\nvādā iti vādavido bhuvanānīti tadvidaḥ||"
@@ -3707,15 +3665,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.25"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "mana iti manovido buddhiriti ca tadvidaḥ|\ncittamiti cittavido dharmādharmau ca tadvidaḥ||"
@@ -3786,15 +3736,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.26"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "pañcaviṃśaka ityeke ṣaḍviṃśa iti cāpare|\nekatriṃśaka ityāhurananta iti cāpare||"
@@ -3865,15 +3807,7 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
-        "2.28"
+        "2.27"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
       "iast": "lokāṃllokavidaḥ prāhurāśramā iti tadvidaḥ|\nstrīpuṃnapuṃsakaṃ laiṅgāḥ parāparamathāpare||"
@@ -3948,14 +3882,6 @@
         }
       ],
       "sourceNumbers": [
-        "2.20",
-        "2.21",
-        "2.22",
-        "2.23",
-        "2.24",
-        "2.25",
-        "2.26",
-        "2.27",
         "2.28"
       ],
       "sectionTitle": "Vaitathya-prakaraṇa",
@@ -8179,8 +8105,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.7",
-        "4.8"
+        "4.7"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "na bhavatyamṛtaṃ martyaṃ na martyamamṛtaṃ tathā|\nprakṛteranyathābhāvo na kathañcidbhaviṣyati||"
@@ -8243,7 +8168,6 @@
         }
       ],
       "sourceNumbers": [
-        "4.7",
         "4.8"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
@@ -9805,8 +9729,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.31",
-        "4.32"
+        "4.31"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "ādāvante ca yannāsti vartamāne’pi tattathā|\nvitathaiḥ sadṛśāḥ santo’vitathā iva lakṣitāḥ||"
@@ -9865,7 +9788,6 @@
         }
       ],
       "sourceNumbers": [
-        "4.31",
         "4.32"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
@@ -11119,8 +11041,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.51",
-        "4.52"
+        "4.51"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "vijñāne spandamāne vai nābhāsā anyatobhuvaḥ|\nna tato’nyatra niḥspandānna vijñānaṃ viśanti te||"
@@ -11179,7 +11100,6 @@
         }
       ],
       "sourceNumbers": [
-        "4.51",
         "4.52"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
@@ -11791,8 +11711,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.61",
-        "4.62"
+        "4.61"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "yathā svapne dvayābhāsaṃ cittaṃ calati māyayā|\ntathā jāgraddvayābhāsaṃ cittaṃ calati māyayā||"
@@ -11863,7 +11782,6 @@
         }
       ],
       "sourceNumbers": [
-        "4.61",
         "4.62"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
@@ -12081,8 +11999,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.65",
-        "4.66"
+        "4.65"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "carañjāgarite jāgraddikṣu vai daśasu sthitān|\naṇḍajānsvedajānvāpi jīvānpaśyati yānsadā||"
@@ -12153,7 +12070,6 @@
         }
       ],
       "sourceNumbers": [
-        "4.65",
         "4.66"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
@@ -12308,9 +12224,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.68",
-        "4.69",
-        "4.70"
+        "4.68"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "yathā svapnamayo jīvo jāyate mriyate’pi ca|\ntathā jīvā amī sarve bhavanti na bhavanti ca||"
@@ -12385,9 +12299,7 @@
         }
       ],
       "sourceNumbers": [
-        "4.68",
-        "4.69",
-        "4.70"
+        "4.69"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "yathā māyāmayo jīvo jāyate mriyate’pi ca|\ntathā jīvā amī sarve bhavanti na bhavanti ca||"
@@ -12462,8 +12374,6 @@
         }
       ],
       "sourceNumbers": [
-        "4.68",
-        "4.69",
         "4.70"
       ],
       "sectionTitle": "Alāta-śānti-prakaraṇa",
@@ -14455,5 +14365,8 @@
       "sectionTitle": "Alāta-śānti-prakaraṇa",
       "iast": "durdarśamatigambhīramajaṃ sāmyaṃ viśāradam|\nbuddhvā padamanānātvaṃ namaskurmo yathābalam||"
     }
+  ],
+  "changes": [
+    "Corrected sourceNumbers metadata to identify only the individual Kārikā shown on each of the 215 already-separated verse cards."
   ]
 }

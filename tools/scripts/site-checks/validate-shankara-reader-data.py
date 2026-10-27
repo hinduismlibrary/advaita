@@ -26,6 +26,7 @@ PLACEHOLDERS = (
     "a word-for-word gloss is not available for this entry yet",
     "word-for-word gloss unavailable",
 )
+PROSE_PASSAGE_WORKS = {"vedantasara"}
 
 errors: list[str] = []
 
@@ -103,6 +104,14 @@ def main() -> int:
         error("the reader's WORKS inventory could not be parsed")
     if len(work_ids) != len(set(work_ids)):
         error("the reader's WORKS inventory contains duplicate IDs")
+    study_start = reader_js.find("const STUDY_LAYOUT_WORKS=new Set([")
+    study_end = reader_js.find("]);", study_start)
+    if study_start < 0 or study_end < 0:
+        error("the reader's study-control work list could not be parsed")
+    else:
+        study_ids = set(re.findall(r'"([^"]+)"', reader_js[study_start:study_end]))
+        if study_ids != set(work_ids):
+            error(f"study controls do not cover every work: {sorted(set(work_ids) - study_ids)}")
 
     data_files = sorted(DATA_DIR.glob("*.json"))
     data_ids = {path.stem for path in data_files}
@@ -176,6 +185,18 @@ def main() -> int:
                         error(f"{where} gloss {row_index}: missing English gloss")
 
             numeric_units.update(numeric_source_numbers(unit))
+
+            # Verse texts must render one numbered source verse per card.
+            # Vedāntasāra is prose; its numbered passages may share a study card.
+            source_numbers = unit.get("sourceNumbers")
+            number_label = str(unit.get("number", ""))
+            if work_id not in PROSE_PASSAGE_WORKS:
+                if isinstance(source_numbers, list) and len(source_numbers) > 1:
+                    error(f"{where}: combines multiple source verses in one card")
+                if re.search(r"\b\d+(?:\.\d+)?\s*[–—]\s*\d+\b", number_label):
+                    error(f"{where}: verse card is labeled with a source-number range")
+            if work_id == "mandukya-karika" and source_numbers != [number_label]:
+                error(f"{where}: sourceNumbers must identify this one Kārikā verse")
 
         sections = data.get("sections")
         if not isinstance(sections, list):
@@ -310,6 +331,7 @@ def main() -> int:
         f"contents pages; short works open as single pages."
     )
     print("PASS: all units satisfy the reader loader and have Sanskrit, English, IAST, and word glosses.")
+    print("PASS: verse texts use one source verse per card; numbered prose passage groups remain explicit.")
     print("PASS: named numeric contents ranges have no gaps or overlaps where directly comparable.")
     print("PASS: shared transliteration and word-gloss buttons have zero gap.")
     return 0

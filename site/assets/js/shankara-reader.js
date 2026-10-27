@@ -31,7 +31,7 @@ const WORKS=[
 {id:"brahma-siddhi",title:"Brahmasiddhi",author:"Maṇḍana Miśra",path:"/advaita/books/adi-shankaracharya/brahma-siddhi/"},
 ];
 
-const STUDY_LAYOUT_WORKS=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","nirvana-shatkam","maya-panchakam","advaita-pancharatnam","yati-panchakam","kashi-panchakam","dakshinamurti-ashtakam","shatpadi-stotram","bhaja-govindam","manisha-panchakam","hastamalaka-stotram"]);
+const STUDY_LAYOUT_WORKS=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","nirvana-shatkam","maya-panchakam","advaita-pancharatnam","yati-panchakam","kashi-panchakam","dakshinamurti-ashtakam","shatpadi-stotram","bhaja-govindam","manisha-panchakam","hastamalaka-stotram","ekashloki","dashashloki","panchikarana-prakarana","upadesha-panchakam"]);
 
 const ABOUT={
  "nirvana-shatkam":"Six verses that loosen identification with body, mind, senses, and roles, pointing to the Self as awareness.",
@@ -73,13 +73,13 @@ function aboutHTML(item,data){
  const summary=ABOUT[item.id];if(!summary)return "";
  let source="";
  if(item.id==="panchadasi"){const s=data&&data.source||{};source='<p class="shankara-about-source">Sanskrit and English text: '+esc(s.edition||"Pañca-Daśī, A.K. Aruna, 2020");if(s.digitalText)source+='. '+esc(s.digitalText);if(s.attribution)source+=' Attribution: '+esc(s.attribution);if(s.license)source+=' License: '+esc(s.license);source+='</p>';}
- if(item.id==="svsss")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2020 v3.0); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā. Licensed CC BY-NC-SA 4.0. This on-site reader groups adjacent source verses where the English translation spans them. The source prose order is not presented as a word-for-word gloss.</p>';
- if(item.id==="vivekachudamani")source='<p class="shankara-about-source">English translation by Swami Madhavananda, Himalayan Series No. XLIII (1921), a public-domain edition. Sanskrit electronic witness from GRETIL, marked not proofread; normalized and converted from IAST to Devanāgarī for this reader. This reader includes all 580 numbered verses, with translations spanning adjacent verses shown as ranges. Editorial notes and index are excluded. No separate word-for-word lexical gloss is supplied.</p>';
- if(item.id==="mandukya-karika")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2022 version 6.0); Kārikā verse translation adopted from Swami Nikhilananda; Devanāgarī text credited by the source edition to Śāradā Peetham, Sringeri. Licensed CC BY-NC-SA 4.0. This reader includes all 215 numbered Kārikā verses and excludes the Upaniṣad mantras, Śaṅkara Bhāṣya, and Ṭīkā glosses. Translations spanning adjacent Sanskrit verses are shown as numbered ranges. No separate word-for-word gloss is included.</p>';
+ if(item.id==="svsss")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2020 v3.0); English translation adopted from Swami Tattwananda, Sri Ramakrishna Advaita Ashrama; Sanskrit prose order adopted from Pandit Rāmasvarūpaśarmā. Licensed CC BY-NC-SA 4.0. This reader presents all 1,006 numbered verses individually, each with its own Sanskrit, IAST, English translation, and Devanāgarī word-for-word gloss.</p>';
+ if(item.id==="vivekachudamani")source='<p class="shankara-about-source">English translation by Swami Madhavananda, Himalayan Series No. XLIII (1921), a public-domain edition. Sanskrit electronic witness from GRETIL, marked not proofread; normalized and converted from IAST to Devanāgarī for this reader. All 580 numbered verses are presented individually, with Sanskrit, IAST, English translation, and a Devanāgarī word-for-word gloss. Editorial notes and index are excluded.</p>';
+ if(item.id==="mandukya-karika")source='<p class="shankara-about-source">A.K. Aruna format and transcription (2022 version 6.0); Kārikā verse translation adopted from Swami Nikhilananda; Devanāgarī text credited by the source edition to Śāradā Peetham, Sringeri. Licensed CC BY-NC-SA 4.0. All 215 numbered Kārikā verses are presented individually with their own translation, IAST, and Devanāgarī word-for-word gloss. The reader excludes the Upaniṣad mantras, Śaṅkara Bhāṣya, and Ṭīkā.</p>';
  if(item.id==="upadesha-sahasri")source='<p class="shankara-about-source">Sanskrit and IAST from the GRETIL text, data entry by Ivan Andrijanić, based on Sengaku Mayeda’s edition (1973; 2006). Licensed CC BY-NC-SA 4.0. All 787 source-marked verse and prose passages have clear literal English readings and word-for-word glosses. Prose sections: II.1.1–II.1.44, II.2.45–II.2.111, and II.3.112–II.3.116.</p>';
- if(item.id==="vedantasara")source='<p class="shankara-about-source">Sanskrit text of Sadānanda Yogīndra’s work, distributed from a CC BY-SA 4.0 Wikisource edition. The complete local text includes prose and all 38 numbered source passages in this recension. No English translation or word-for-word gloss is supplied.</p>';
- if(item.id==="naishkarmya-siddhi")source='<p class="shankara-about-source">Sanskrit Wikisource text, compiled and transliterated by the ERC-funded Intellexus project, under CC BY-SA 4.0. The complete four-chapter source is converted from IAST to Devanāgarī for this local reader. No English translation or word-for-word gloss is supplied.</p>';
- if(item.id==="brahma-siddhi")source='<p class="shankara-about-source">Sanskrit from GRETIL, data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition. Licensed CC BY-NC-SA 4.0. This local reader contains the 231 source-marked passages present in that transcription, across Kāṇḍas 1, 2, and 4; it makes no claim for unrepresented sections. No English translation or word-for-word gloss is supplied.</p>';
+ if(item.id==="vedantasara")source='<p class="shankara-about-source">Sanskrit text of Sadānanda Yogīndra’s work, distributed from a CC BY-SA 4.0 Wikisource edition. The reader contains all 227 numbered passage references in this recension, organized into 72 study entries where adjacent prose passages form one explanation. Every displayed entry has an English translation, IAST, and Devanāgarī word-for-word gloss.</p>';
+ if(item.id==="naishkarmya-siddhi")source='<p class="shankara-about-source">Sanskrit Wikisource text, compiled and transliterated by the ERC-funded Intellexus project, under CC BY-SA 4.0. The reader has 880 of 897 expected source entries: 423 numbered verses and 457 prose, heading, or other entries. Each available entry has Devanāgarī, IAST, English, and a word-for-word gloss; 17 absent source entries remain unfilled.</p>';
+ if(item.id==="brahma-siddhi")source='<p class="shankara-about-source">Sanskrit from GRETIL, data entry by Diwakar Acharya, based on S. Kuppuswami Sastri’s 1937 edition. Licensed CC BY-NC-SA 4.0. This local reader contains the 231 source-marked passages present in that transcription across Kāṇḍas 1, 2, and 4; each has Devanāgarī, IAST, English, and a word-for-word gloss. The reader makes no claim for unrepresented sections.</p>';
  return '<details class="gita-details shankara-about"><summary>Info</summary><div class="shankara-about-copy"><p>'+esc(summary)+'</p>'+source+'</div></details>';
 }
 function chapterOf(unit,id){
@@ -377,7 +377,7 @@ function bindStudyControls(root){
  return {total:total,available:available};
 }
 window.ShankaraReaderControls={apply:bindStudyControls};
-function bindScript(root){
+function bindScript(root,includeStudyControls=true){
  root.dataset.scriptMode="deva";
  root.querySelectorAll(".script-controls").forEach(node=>node.remove());
  root.querySelectorAll(".gita-verse,.shankara-verse").forEach(article=>{
@@ -397,7 +397,7 @@ function bindScript(root){
   }
   controls.appendChild(details);
  });
- if(STUDY_LAYOUT_WORKS.has(root.dataset.work)){
+ if(includeStudyControls&&STUDY_LAYOUT_WORKS.has(root.dataset.work)){
   const counts=bindStudyControls(root);
   const hero=root.querySelector(".gita-hero");
   if(hero&&counts.total){
@@ -418,10 +418,10 @@ function bindTreatiseNavigation(root){
   if(select.value)location.href=select.value;
  }));
 }
-const READER_DATA_VERSION="reader-gloss-20261021d";
+const READER_DATA_VERSION="reader-gloss-20261027b";
 function readerErrorHTML(item,fallback){
  const retry=esc(location.pathname+location.search);
- if(fallback)return '<p class="shankara-reader-error" role="alert">The complete local text could not be loaded. The embedded edition is shown below; reload to try the complete reader again. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
+ if(fallback)return '<p class="shankara-reader-error" role="alert">The complete reader data could not load. The embedded text is shown, but its full Word for Word panels are unavailable until the data loads. <a href="'+retry+'">Reload this text</a> · <a href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p>';
  return '<header class="gita-hero"><p class="eyebrow">Advaita Treatises</p><h1>'+esc(item.title)+'</h1><p class="shankara-reader-error" role="alert">The locally stored text could not be loaded. Check the connection and reload this page. <a href="'+retry+'">Reload this text</a></p><p><a class="shankara-index-link" href="/advaita/books/adi-shankaracharya/">Advaita Treatises</a></p></header>';
 }
 async function start(root){
@@ -430,7 +430,6 @@ async function start(root){
  const hasStaticText=Boolean(root.querySelector(".gita-verse,.shankara-verse"));
  // Keep embedded verse HTML as a no-JavaScript fallback, but refresh it from the checked-in reader data when JavaScript runs.
  root.setAttribute("aria-busy","true");
- bindScript(root);
  if(!hasStaticText){
   const hero=root.querySelector(".gita-hero");
   const status='<p class="gita-loading shankara-loading-status" role="status" aria-live="polite">Loading the complete text stored on this site…</p>';
@@ -465,6 +464,7 @@ async function start(root){
    root.querySelector(".shankara-loading-status")?.remove();
    if(hero)hero.insertAdjacentHTML("beforeend",readerErrorHTML(item,true));
    else root.insertAdjacentHTML("afterbegin",readerErrorHTML(item,true));
+   bindScript(root,false);
    enhanceFallback(root,item);
   }else root.innerHTML=readerErrorHTML(item,false);
   console.error(err);

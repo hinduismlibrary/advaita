@@ -26,7 +26,7 @@ If a source transcription itself is incomplete, keep `expectedUnits` equal to th
 
 ## 3. Verify the contents divisions
 
-For each long work, require descriptive division names. When divisions use numeric ranges, compare their coverage with the source verse numbers and flag gaps, overlap, or reversed ranges. For chaptered works, check the named chapter IDs and their topic labels. Keep colophons and grouped source verses represented in the underlying data without counting them as missing source verses.
+For each long work, require descriptive division names. When divisions use numeric ranges, compare their coverage with the source verse numbers and flag gaps, overlap, or reversed ranges. For chaptered works, check the named chapter IDs and their topic labels. For verse texts, require one numbered source verse per display card. Split by the source edition’s numbering and stanza boundaries, not by blank lines alone: a numbered śloka can contain more than four pādas, and double-daṇḍa punctuation can be inconsistent. Keep colophons distinct from numbered verses. For prose works, preserve numbered passage references; adjacent prose passages may share a study card only when the translations and glosses cover all of them.
 
 ## 4. Review Sanskrit, translation, and gloss meaning
 
@@ -34,7 +34,7 @@ Use the cited edition or primary text recorded for that work. Compare the Devan�
 
 ## 5. Check reader presentation
 
-Open the transliteration and Word for Word controls on representative short, long, and prose entries. Confirm that each gloss line shows the Sanskrit word in Devanāgarī beside a compact English meaning, and confirm that the transliteration control has no extra gap before the gloss control. Check a narrow viewport as well as desktop.
+Open the transliteration and Word for Word controls on representative short, long, and prose entries. Confirm that each gloss line shows the Sanskrit word in Devanāgarī beside a compact English meaning, and confirm that the transliteration control has no extra gap before the gloss control. Check a narrow viewport as well as desktop. Also simulate a data-fetch failure: the embedded fallback may explain the loading failure, but it must not create a false “gloss unavailable” result when the complete gloss data was not loaded.
 
 ## 6. Run the automated gate
 
@@ -44,7 +44,7 @@ Run:
 python3 tools/scripts/site-checks/validate-shankara-reader-data.py
 ```
 
-The validator checks all work IDs, reader paths, collection links, long-work contents routes, required fields, gloss row shape, count agreement, directly comparable numeric contents ranges, and the shared button gap. The Pages deployment workflow runs the same validator before deployment.
+The validator checks all work IDs, reader paths, collection links, long-work contents routes, required fields, gloss row shape, count agreement, one source verse per card in verse texts, directly comparable numeric contents ranges, and the shared button gap. The Pages deployment workflow runs the same validator before deployment.
 
 ## Repairs from the 2026-10-27 cross-inventory audit
 
@@ -55,3 +55,7 @@ The validator checks all work IDs, reader paths, collection links, long-work con
 - Routed Dṛg-dṛśya-viveka (46 verses) through the named contents page; checked all long-work links in the main collection and Stotrams index.
 - Added Pañcadaśī validation for all 15 chapter IDs and their 15 topic names, which are supplied by the reader’s chapter map rather than a JSON `sections` array.
 - Tightened the reader loader so a work fails clearly if any unit lacks explicit IAST or a non-empty, valid Sanskrit/English gloss object; the deployment workflow now runs the 29-work validator before publishing.
+- Split the 14 combined Vivekacūḍāmaṇi verses, 20 combined Sarvavedāntasiddhāntasārasaṅgraha verses, and six combined Pañcadaśī verses into individual source-verse cards. Corrected Māṇḍūkyakārikā verse metadata and added a validator rule for one source verse per card.
+- Added reader-data cache versioning and changed the static fallback so a failed JSON fetch is reported as a loading error, not as a missing word gloss.
+- Changed the contents and chapter readers to build their section lists and verse cards from JSON instead of fetching the entire embedded reader page.
+- Enabled the shared transliteration and Word for Word controls on all 29 text readers.
