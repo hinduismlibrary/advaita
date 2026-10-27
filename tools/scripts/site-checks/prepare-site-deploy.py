@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 from site_seo import prepare_site_seo
 
-CACHE_VERSION = "20261027-heatmap-colors-2"
+CACHE_VERSION = "20261027-document-brand-3"
 DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]

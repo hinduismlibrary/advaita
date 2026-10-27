@@ -28,11 +28,11 @@ GENERIC_HEADING = re.compile(
     r"^(?:chapter|book|part|canto|verse|text)\s+(?:\d+|[ivxlcdm]+)$",
     re.IGNORECASE,
 )
-SITE_NAME = "विवेकदृष्टिः | Viveka Dṛṣṭi"
-HOME_TITLE = "विवेकदृष्टिः — Hindu Scripture & Philosophy | Viveka Dṛṣṭi"
+SITE_NAME = "विवेकदृष्टिः"
+HOME_TITLE = "विवेकदृष्टिः"
 HOME_DESCRIPTION = (
     "Read Sanskrit Hindu scriptures, Advaita Vedānta texts, Purāṇas, English translations, "
-    "verse-by-verse word meanings, philosophy, and Indology at Viveka Dṛṣṭi."
+    "verse-by-verse word meanings, philosophy, and Indological research."
 )
 
 
@@ -181,13 +181,11 @@ def humanize_path(relative: str) -> str:
     text = re.sub(r"(?i)-book-(\d+)", r" Book \1", text)
     text = re.sub(r"(?i)-part-(\d+)", r" Part \1", text)
     text = text.replace("-", " ").replace("/", " ")
-    return re.sub(r"\s+", " ", text).strip().title() or "Viveka Dṛṣṭi"
+    return re.sub(r"\s+", " ", text).strip().title() or "विवेकदृष्टिः"
 
 
 def with_brand(value: str) -> str:
-    if "viveka dṛṣṭi" in value.casefold():
-        return value
-    return value + " | Viveka Dṛṣṭi"
+    return value
 
 
 def trim_description(value: str, limit: int = 220) -> str:
