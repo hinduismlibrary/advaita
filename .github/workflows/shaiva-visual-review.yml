@@ -416,6 +416,7 @@ jobs:
                         'quoteGroups':desktop['quoteGroups'],'citationGroups':desktop['citationGroups'],
                         'uncitedQuoteGroups':desktop['uncitedQuoteGroups'],'quoteOrderErrors':desktop['quoteOrderErrors'],
                         'citationExamples':desktop['citationExamples'],'scriptureSourceLabels':desktop['scriptureSourceLabels'],
+                        'unpairedTranslations':desktop['unpairedTranslations'],'unpairedTranslationExamples':desktop['unpairedTranslationExamples'],
                         'mobileWidth':mobile['scrollWidth'],'errors':errors}
               records.append(record)
               print(json.dumps(record,ensure_ascii=False),flush=True)
