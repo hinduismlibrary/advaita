@@ -98,14 +98,11 @@ jobs:
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
                   const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : '20261027-document-citations-10';
-                  const activeLink = document.querySelector('.toc-index-link.is-active, .toc-index-link.is-active-subsection');
-                  const activeColor = activeLink ? getComputedStyle(activeLink).color : '';
-                  const activeWeight = activeLink ? getComputedStyle(activeLink).fontWeight : '';
-                  const tocTransition = activeLink && getComputedStyle(activeLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
+                  const tocLink = document.querySelector('.toc-index-link');
+                  const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const assetsReady = sharedStyle?.href.includes('20261028-blue-scroll-1') &&
-                    readerScript.includes(readerVersion) && contentReady && smoothScroll &&
-                    activeColor === 'rgb(6, 69, 173)' && activeWeight === '700' && tocTransition;
+                    readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {
@@ -391,6 +388,23 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
+                visual = page.evaluate("""selector => {
+                  const nav=document.querySelector(selector);
+                  const active=nav?.querySelector('a.toc-index-link.is-active, a.toc-index-link.is-active-subsection');
+                  if(!active)return null;
+                  const style=getComputedStyle(active);
+                  return {
+                    color:style.color,
+                    weight:style.fontWeight,
+                    transition:style.transitionProperty.split(',').map(value=>value.trim()),
+                    scroll:getComputedStyle(document.documentElement).scrollBehavior
+                  };
+                }""", selector)
+                if (not visual or visual['color'] != 'rgb(6, 69, 173)' or
+                    visual['weight'] != '700' or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
+                  issue={'site':label,'mobile':mobile,'sample':sample,'visual':visual}
+                  scrollspy_errors.append(issue)
+                  print('SCROLLSPY_STYLE_DIAGNOSTIC ' + json.dumps(issue,ensure_ascii=False),flush=True)
               except Exception:
                 state = page.evaluate("""({selector,id}) => {
                   const nav=document.querySelector(selector);
