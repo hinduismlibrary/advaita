@@ -248,6 +248,8 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
     for path in sorted(site.rglob("*.html")):
         relative = path.relative_to(site).as_posix()
         content = path.read_text(encoding="utf-8")
+        if '<meta name="legacy-pages-redirect" content="true">' in content:
+            continue
         if not is_full_document(content):
             continue
         heading, excerpt = page_text(content)
