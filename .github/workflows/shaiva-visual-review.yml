@@ -61,6 +61,15 @@ jobs:
             ('meat', 'meat-eating-in-hinduism-through-the-lens-of-shastra'),
             ('varna-vicara', 'varna-vicara'),
           ]
+          expected_article_images = {
+            'agamas': {'cover.webp'},
+            'shaiva': {'shaiva-original-cover.webp'},
+            'varna': {'varna-cover-art.webp', 'varna-om.webp'},
+            'vaishnava': {'vishnu-lakshmi.webp', 'vishnu-veda-divisions.webp', 'vishnu-smriti-sources.webp', 'vishnu-emblem.webp'},
+            'women': {'cover-art.webp', 'dress-code-diagram.webp', 'daily-ornaments-diagram.webp', 'ornaments-diagram.webp'},
+            'meat': {'om-cover.png'},
+            'varna-vicara': set()
+          }
           
           def versioned(url, attempt):
             query = 'qa-attempt=' + str(attempt)
@@ -107,7 +116,7 @@ jobs:
                 }""")
                 if response and response.status == 200 and ready:
                   page.evaluate("""async () => {
-                    const images=[...document.querySelectorAll('#source-content figure.source-document-figure img')];
+                    const images=[...document.querySelectorAll('img')];
                     images.forEach(image=>image.loading='eager');
                     await Promise.all(images.map(image=>image.decode().catch(()=>null)));
                   }""")
@@ -179,13 +188,18 @@ jobs:
               const citationNode=article.querySelector('p.reference,p.source-citation,p.scripture-source,p.citation');
               const citationColor=citationNode?getComputedStyle(citationNode).color:'';
               const contentsLinkColor=links[0]?getComputedStyle(links[0]).color:'';
-              const sourceDiagramImages=[...article.querySelectorAll('figure.source-document-figure img')];
-              const sourceDiagramIssues=sourceDiagramImages.filter(image=>{
+              const articleImages=[...document.querySelectorAll('img')];
+              const articleImageSources=articleImages.map(image=>new URL(image.currentSrc||image.src,location.href).pathname.split('/').pop());
+              const articleImageIssues=articleImages.filter(image=>{
                 const box=image.getBoundingClientRect();
                 const naturalRatio=image.naturalWidth&&image.naturalHeight?image.naturalWidth/image.naturalHeight:0;
                 const renderedRatio=box.width&&box.height?box.width/box.height:0;
-                return !image.alt.trim()||!image.complete||!image.naturalWidth||!image.naturalHeight||Math.abs(naturalRatio-renderedRatio)>0.03;
-              }).map(image=>({src:image.currentSrc||image.src,alt:image.alt,complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight}));
+                return !image.alt.trim()||!image.complete||!image.naturalWidth||!image.naturalHeight||Math.abs(naturalRatio-renderedRatio)>0.03||box.right>window.innerWidth+1;
+              }).map(image=>({src:image.currentSrc||image.src,alt:image.alt,complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,renderedWidth:image.getBoundingClientRect().width,renderedHeight:image.getBoundingClientRect().height}));
+              const captionIssues=[...document.querySelectorAll('figcaption')].filter(caption=>{
+                const figure=caption.closest('figure');
+                return !figure||!figure.querySelector('img');
+              }).map(caption=>caption.textContent.trim());
               const meatCitation=[...article.querySelectorAll('p.reference,p.source-citation,p.citation')]
                 .find(node=>/Yajurveda\s+22\.42/i.test(node.textContent));
               const meatCitationStyle=meatCitation?{
@@ -232,8 +246,10 @@ jobs:
                 uncitedQuoteGroups,
                 citationExamples,
                 quoteOrderErrors,
-                sourceDiagramImages: sourceDiagramImages.length,
-                sourceDiagramIssues,
+                articleImages: articleImages.length,
+                articleImageSources,
+                articleImageIssues,
+                captionIssues,
                 scriptureSourceLabels,
                 meatCitationStyle,
                 sanskritDisclosures: sourceDisclosures.length,
@@ -421,7 +437,9 @@ jobs:
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
               if label != 'varna-vicara':
                 assert desktop['unpairedTranslations'] == 0, f'{label}: an English quotation sits outside its source group: {desktop["unpairedTranslationExamples"]}'
-              assert not desktop['sourceDiagramIssues'], f'{label}: source images are missing, distorted, or missing alt text: {desktop["sourceDiagramIssues"]}'
+              assert set(desktop['articleImageSources']) == expected_article_images[label], f'{label}: source image set differs: expected {sorted(expected_article_images[label])}, got {sorted(desktop["articleImageSources"])}'
+              assert not desktop['articleImageIssues'], f'{label}: images are missing, distorted, overflowing, or missing alt text: {desktop["articleImageIssues"]}'
+              assert not desktop['captionIssues'], f'{label}: a figure caption is detached from its image: {desktop["captionIssues"]}'
               assert not desktop['brokenPageLinks'], f'{label}: broken article fragment links {desktop["brokenPageLinks"]}'
               assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
               if label != 'varna-vicara':
@@ -471,8 +489,8 @@ jobs:
                 assert desktop['meatCitationStyle'], 'meat: Yajurveda 22.42 source label is missing'
                 assert desktop['meatCitationStyle']['italic'] == 'normal' and not desktop['meatCitationStyle']['emphasized'], f'meat: Yajurveda 22.42 source label is still italic: {desktop["meatCitationStyle"]}'
               if label == 'vaishnava':
-                assert desktop['sourceDiagramImages'] == 2, f'vaishnava: expected both source diagrams, got {desktop["sourceDiagramImages"]}'
-                assert not desktop['sourceDiagramIssues'], f'vaishnava: source diagram assets are missing, cropped, or missing alt text: {desktop["sourceDiagramIssues"]}'
+                assert desktop['articleImages'] == 4, f'vaishnava: expected all four source images, got {desktop["articleImages"]}'
+                assert not desktop['articleImageIssues'], f'vaishnava: source diagram assets are missing, cropped, or missing alt text: {desktop["articleImageIssues"]}'
                 cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Taittiriya Samhita (5.5.1)')
                 assert cite_pair.count() == 1, 'vaishnava: Taittiriya source was not paired with its own quote'
                 cite_order=cite_pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference,p.source-citation,p.scripture-source,p.citation') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation') ? 'translation' : 'other')")
@@ -499,6 +517,9 @@ jobs:
               assert mobile['sections'] == desktop['sections'], f'{label}: sections disappeared on mobile'
               assert mobile['textLength'] >= 5000, f'{label}: mobile article text is incomplete'
               assert mobile['scrollWidth'] <= mobile['width'], f'{label}: horizontal overflow at mobile width'
+              assert set(mobile['articleImageSources']) == expected_article_images[label], f'{label}: mobile image set differs from desktop'
+              assert not mobile['articleImageIssues'], f'{label}: mobile images are distorted, overflowing, or missing alt text: {mobile["articleImageIssues"]}'
+              assert not mobile['captionIssues'], f'{label}: a mobile figure caption is detached from its image'
               verify_scrollspy(page, label, mobile=True)
               page.screenshot(path=str(out / (label + '-mobile.png')), full_page=False)
               record = {'site':label,'http':response.status,'sections':desktop['sections'],'textChars':desktop['textLength'],'sectionLengths':desktop['sectionLengths'],
@@ -510,8 +531,8 @@ jobs:
                         'uncitedTranslationGroups':desktop['uncitedTranslationGroups'],'brokenPageLinks':desktop['brokenPageLinks'],
                         'citationColor':desktop['citationColor'],'contentsLinkColor':desktop['contentsLinkColor'],'articleLinks':desktop['articleLinks'],
                         'linksChecked':link_check['checked'],'brokenLinks':link_check['broken'],'unavailableLinks':link_check['unavailable'],
-                        'sanskritControlsTested':sanskrit_controls_tested,'sourceDiagramImages':desktop['sourceDiagramImages'],
-                        'mobileWidth':mobile['scrollWidth'],'errors':errors}
+                        'sanskritControlsTested':sanskrit_controls_tested,'articleImages':desktop['articleImages'],'articleImageSources':desktop['articleImageSources'],'articleImageIssues':desktop['articleImageIssues'],'captionIssues':desktop['captionIssues'],
+                        'mobileWidth':mobile['scrollWidth'],'mobileImageIssues':mobile['articleImageIssues'],'errors':errors}
               records.append(record)
               print(json.dumps(record,ensure_ascii=False),flush=True)
               assert not errors, f'{label}: browser errors {errors}'
