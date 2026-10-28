@@ -101,7 +101,7 @@ jobs:
                   const tocLink = document.querySelector('.toc-index-link');
                   const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
-                  const assetsReady = sharedStyle?.href.includes('20261028-anton-vollkorn-1') &&
+                  const assetsReady = sharedStyle?.href.includes('20261028-anton-vollkorn-2') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition;
                   return assetsReady;
                 }""")
@@ -453,6 +453,8 @@ jobs:
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
+              assert 'Vollkorn' in desktop['paragraphStyle']['fontFamily'], f'{label}: article text is not Vollkorn: {desktop["paragraphStyle"]}'
+              assert 'Anton' in desktop['headingStyle']['fontFamily'], f'{label}: article headings are not Anton: {desktop["headingStyle"]}'
               assert desktop['status'] == 'Full document', f'{label}: page still has section pagination'
               assert desktop['sections'] >= 3, f'{label}: only {desktop["sections"]} sections rendered'
               assert desktop['textLength'] >= 5000, f'{label}: full document text is missing ({desktop["textLength"]} chars)'
