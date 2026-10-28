@@ -424,6 +424,12 @@ function renderBlock(block,section){
   if(block.kind==='reference')return reference(block.value);
   if(block.kind==='sa')return sanskrit(block.value);
   if(block.kind==='sa-pair')return sanskritPair(block.value);
+  if(block.kind==='hi'){
+    const hindi=make('p','hindi-translation',articleText(block.value));
+    hindi.lang='hi';
+    return hindi;
+  }
+  if(block.kind==='translation')return translation(block.value);
   if(block.kind==='quote')return renderQuote(block.value);
   if(block.kind==='table')return renderTable(block.value);
   if(block.kind==='subheading'){
@@ -594,26 +600,45 @@ async function load(){
 function pairScriptureQuotes(root){
   const isCitation=node=>node?.matches?.('p.reference,p.source-citation,p.scripture-source,p.citation');
   const isSource=node=>node?.matches?.('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text');
-  const candidates=[...root.querySelectorAll('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation')];
-  for(const translation of candidates){
-    if(translation.closest('.scripture-quote-pair'))continue;
-    let cursor=translation.previousElementSibling;
-    const trailingCitations=[];
-    while(cursor&&isCitation(cursor)){trailingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
-    const source=isSource(cursor)?cursor:null;
-    const leadingCitations=[];
-    if(source){
-      cursor=source.previousElementSibling;
-      while(cursor&&isCitation(cursor)){leadingCitations.unshift(cursor);cursor=cursor.previousElementSibling;}
+  const isTranslation=node=>node?.matches?.('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation');
+  const isHindi=node=>node?.matches?.('p.hindi-translation');
+  const sources=[...root.querySelectorAll('details.sanskrit-reveal,p[lang^="sa"],.sanskrit-text')];
+  for(const source of sources){
+    if(source.closest('.scripture-quote-pair'))continue;
+    let first=source;
+    while(first.previousElementSibling&&(isCitation(first.previousElementSibling)||isSource(first.previousElementSibling))){
+      first=first.previousElementSibling;
     }
-    const citations=[...leadingCitations,...trailingCitations];
-    if(!source&&!citations.length)continue;
-    const first=leadingCitations[0]||source||trailingCitations[0];
+    const members=[];
+    let cursor=first;
+    while(cursor&&(isCitation(cursor)||isSource(cursor))){
+      members.push(cursor);
+      cursor=cursor.nextElementSibling;
+    }
+    let translations=[];
+    while(cursor&&(isHindi(cursor)||isTranslation(cursor))){
+      translations.push(cursor);
+      cursor=cursor.nextElementSibling;
+    }
+    if(!members.some(isSource)||!translations.length)continue;
     const pair=make('div','scripture-quote-pair');
     first.before(pair);
-    pair.append(...citations);
-    if(source)pair.append(source);
-    pair.append(translation);
+    pair.append(...members,...translations);
+  }
+  for(const translationNode of [...root.querySelectorAll('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation')]){
+    if(translationNode.closest('.scripture-quote-pair'))continue;
+    let first=translationNode;
+    let cursor=translationNode.previousElementSibling;
+    const citations=[];
+    while(cursor&&isCitation(cursor)){
+      citations.unshift(cursor);
+      first=cursor;
+      cursor=cursor.previousElementSibling;
+    }
+    if(!citations.length)continue;
+    const pair=make('div','scripture-quote-pair');
+    first.before(pair);
+    pair.append(...citations,translationNode);
   }
 }
 function normalizeSourcePage(body){
