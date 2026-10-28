@@ -46,7 +46,7 @@ jobs:
           python3 - <<'PY'
           import json, os, shutil, time
           from pathlib import Path
-          from urllib.parse import quote
+          from urllib.parse import quote, urlsplit
           from playwright.sync_api import sync_playwright
           
           out = Path('/tmp/shaiva-qa')
@@ -89,7 +89,7 @@ jobs:
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
                   const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : '20261027-document-citations-10';
-                  const assetsReady = sharedStyle?.href.includes('20261028-document-template-4') && readerScript.includes(readerVersion) && contentReady;
+                  const assetsReady = sharedStyle?.href.includes('20261028-document-template-5') && readerScript.includes(readerVersion) && contentReady;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {
@@ -166,6 +166,18 @@ jobs:
                 return {text:pair.innerText.trim().slice(0,140),previous};
               });
               const citationExamples=citedQuoteGroups.flatMap(pair=>[...pair.querySelectorAll(sourceNodeSelector)].map(node=>node.textContent.trim()));
+              const translationPairs=quotePairs.filter(pair=>pair.querySelector(translationSelector));
+              const uncitedTranslationGroups=translationPairs.filter(pair=>!pair.querySelector(sourceNodeSelector)).map(pair=>pair.innerText.trim().slice(0,180));
+              const articleLinks=[...article.querySelectorAll('a[href]')].map(link=>({href:link.href,text:link.innerText.trim().slice(0,100)}));
+              const brokenPageLinks=articleLinks.filter(item=>{
+                try {
+                  const url=new URL(item.href,location.href);
+                  if(url.origin!==location.origin||!url.hash||url.pathname!==location.pathname)return false;
+                  return !document.getElementById(decodeURIComponent(url.hash.slice(1)));
+                } catch { return true; }
+              });
+              const citationNode=article.querySelector('p.reference,p.source-citation,p.scripture-source,p.citation');
+              const citationColor=citationNode?getComputedStyle(citationNode).color:'';
               const sourceDiagramImages=[...article.querySelectorAll('figure.source-document-figure img')];
               const sourceDiagramIssues=sourceDiagramImages.filter(image=>{
                 const box=image.getBoundingClientRect();
@@ -227,6 +239,10 @@ jobs:
                 badDisclosureLabels,
                 unpairedTranslations,
                 unpairedTranslationExamples,
+                uncitedTranslationGroups,
+                brokenPageLinks:brokenPageLinks.map(item=>item.text||item.href),
+                articleLinks,
+                citationColor,
                 editorialNotes
               };
             }""")
@@ -265,16 +281,62 @@ jobs:
               }).filter(Boolean);
             }""", toc_selector)
           
+          def verify_article_links(page, label, article_links, cache):
+            broken = []
+            unavailable = []
+            checked = set()
+            for item in article_links:
+              href = item['href']
+              parsed = urlsplit(href)
+              if parsed.scheme.lower() not in ('http', 'https'):
+                continue
+              target = href.split('#', 1)[0]
+              if not target:
+                continue
+              checked.add(target)
+              if target not in cache:
+                status = 0
+                error = ''
+                for attempt in range(2):
+                  try:
+                    response = page.request.head(target, timeout=12000, max_redirects=5)
+                    status = response.status
+                    if status in (405, 501):
+                      response = page.request.get(target, timeout=12000, max_redirects=5, headers={'Range':'bytes=0-0'})
+                      status = response.status
+                    if status >= 500 and attempt == 0:
+                      continue
+                    break
+                  except Exception as exc:
+                    error = str(exc)
+                    if attempt == 1:
+                      status = 0
+                cache[target] = {'status':status,'error':error}
+              result = cache[target]
+              status = result['status']
+              entry = {'url':target,'status':status,'text':item['text']}
+              if status in (404, 410):
+                broken.append(entry)
+              elif status == 0 or status in (401, 403, 429) or status >= 500:
+                entry['error'] = result['error']
+                unavailable.append(entry)
+            return {'checked':len(checked),'broken':broken,'unavailable':unavailable}
+
           def verify_sanskrit_disclosure(page, label):
-            disclosure = page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)').filter(has=page.locator('[lang^="sa"]')).first
-            assert disclosure.count(), f'{label}: Sanskrit disclosure is missing'
-            summary = disclosure.locator(':scope > summary')
-            assert summary.inner_text().strip() == 'Show Sanskrit', f'{label}: Sanskrit disclosure label is not standardized'
-            handle = disclosure.element_handle()
-            summary.click()
-            page.wait_for_function("(element) => element.open && element.querySelector(':scope > summary').textContent.trim() === 'Hide Sanskrit'", arg=handle, timeout=5000)
-            summary.click()
-            page.wait_for_function("(element) => !element.open && element.querySelector(':scope > summary').textContent.trim() === 'Show Sanskrit'", arg=handle, timeout=5000)
+            disclosures = page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)').filter(has=page.locator('[lang^="sa"]'))
+            count = disclosures.count()
+            assert count, f'{label}: Sanskrit disclosure is missing'
+            for index in range(count):
+              disclosure = disclosures.nth(index)
+              summary = disclosure.locator(':scope > summary')
+              assert summary.inner_text().strip() == 'Show Sanskrit', f'{label}: Sanskrit disclosure {index + 1} label is not standardized'
+              handle = disclosure.element_handle()
+              summary.focus()
+              summary.press('Enter')
+              page.wait_for_function("(element) => element.open && element.querySelector(':scope > summary').textContent.trim() === 'Hide Sanskrit'", arg=handle, timeout=5000)
+              summary.press('Enter')
+              page.wait_for_function("(element) => !element.open && element.querySelector(':scope > summary').textContent.trim() === 'Show Sanskrit'", arg=handle, timeout=5000)
+            return count
 
           def verify_scrollspy(page, label, mobile=False):
             selector = '.mobile-toc .toc' if mobile else '.side-toc .toc'
@@ -318,6 +380,7 @@ jobs:
             chrome = shutil.which('google-chrome') or shutil.which('chromium')
             browser = playwright.chromium.launch(headless=True, executable_path=chrome) if chrome else playwright.chromium.launch(headless=True)
             records = []
+            link_check_cache = {}
             uncited_quote_diagnostics = []
             scrollspy_errors = []
             paragraph_reference = None
@@ -329,7 +392,7 @@ jobs:
               page.on('pageerror', lambda error, bucket=errors: bucket.append(str(error)))
               url = root + slug + '/'
               response = open_reader(page, url, errors)
-              verify_sanskrit_disclosure(page, label)
+              sanskrit_controls_tested = verify_sanskrit_disclosure(page, label)
               if label == 'shaiva':
                 for verse in range(36, 41):
                   expected_source = f'Shiva Purana, Rudra Samhita 16.{verse}'
@@ -343,7 +406,8 @@ jobs:
                   order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
                   assert order == ['source', 'sanskrit', 'translation'], f'shaiva: quote order differs for {expected_source}: {order}'
               desktop = metrics(page)
-              print(json.dumps({'site':label,'desktop':desktop},ensure_ascii=False),flush=True)
+              link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
+              print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
               assert desktop['status'] == 'Full document', f'{label}: page still has section pagination'
               assert desktop['sections'] >= 3, f'{label}: only {desktop["sections"]} sections rendered'
@@ -353,8 +417,15 @@ jobs:
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
-              if label in ('women', 'meat'):
+              if label != 'varna-vicara':
                 assert desktop['unpairedTranslations'] == 0, f'{label}: an English quotation sits outside its source group: {desktop["unpairedTranslationExamples"]}'
+              assert not desktop['sourceDiagramIssues'], f'{label}: source images are missing, distorted, or missing alt text: {desktop["sourceDiagramIssues"]}'
+              assert not desktop['brokenPageLinks'], f'{label}: broken article fragment links {desktop["brokenPageLinks"]}'
+              assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
+              if label != 'varna-vicara':
+                assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
+                assert desktop['citationColor'] == 'rgb(6, 69, 173)', f'{label}: source citations are not blue: {desktop["citationColor"]}'
+              assert sanskrit_controls_tested == desktop['sanskritDisclosures'], f'{label}: not all Sanskrit controls were tested'
               if label == 'women':
                 figure_pairs = page.locator('#source-content .women-figure-transcription .women-scripture-pair')
                 assert figure_pairs.count() == 4, 'women: each dress-code diagram transcription must be a separate quotation group'
@@ -433,6 +504,10 @@ jobs:
                         'uncitedQuoteGroups':desktop['uncitedQuoteGroups'],'quoteOrderErrors':desktop['quoteOrderErrors'],
                         'citationExamples':desktop['citationExamples'],'scriptureSourceLabels':desktop['scriptureSourceLabels'],
                         'unpairedTranslations':desktop['unpairedTranslations'],'unpairedTranslationExamples':desktop['unpairedTranslationExamples'],
+                        'uncitedTranslationGroups':desktop['uncitedTranslationGroups'],'brokenPageLinks':desktop['brokenPageLinks'],
+                        'citationColor':desktop['citationColor'],'articleLinks':desktop['articleLinks'],
+                        'linksChecked':link_check['checked'],'brokenLinks':link_check['broken'],'unavailableLinks':link_check['unavailable'],
+                        'sanskritControlsTested':sanskrit_controls_tested,'sourceDiagramImages':desktop['sourceDiagramImages'],
                         'mobileWidth':mobile['scrollWidth'],'errors':errors}
               records.append(record)
               print(json.dumps(record,ensure_ascii=False),flush=True)

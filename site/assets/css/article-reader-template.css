@@ -61,7 +61,7 @@ body.document-paged-page .article .document-content p.source-citation,
 body.document-paged-page .article .document-content p.scripture-source,
 body.document-paged-page .article .document-content p.citation{
   margin:34px 0 10px;
-  color:#006f71;
+  color:#0645ad;
   font-size:16px;
   line-height:1.45;
   font-weight:700;
@@ -805,4 +805,12 @@ body.document-paged-page .article .document-content .scripture-quote-pair>:is(p.
     font-size:15.5px!important;
     line-height:1.68!important;
   }
+}
+
+body.document-paged-page .article .document-content .source-language-text[lang="kn"]{
+  margin:4px 0 10px!important;
+  color:#202122!important;
+  font-family:"Noto Serif Kannada","Tunga",serif!important;
+  font-size:19px!important;
+  line-height:1.8!important;
 }
