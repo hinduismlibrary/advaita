@@ -417,6 +417,7 @@ function renderParagraph(value,section){
   if(/^\s*\d{1,2}\.\d{1,2}(?:\.\d+)?\s+/.test(visible)&&visible.length<220){
     return make('h3',null,sentenceTitle(visible));
   }
+  if(/^(?:rig\s+veda|rigveda)\s+\d+(?:\.\d+){1,2}\s*$/i.test(visible))return reference(visible);
   if(/^(?:bhagavadgita|laugaksi)\b/i.test(visible)&&visible.length<100)return reference(visible);
   if(/^[“"]/.test(visible)&&visible.length>40)return translation(visible);
   return make('p',null,visible);
@@ -585,7 +586,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20261028-shaiva-quote-groups-2');
+  const response=await fetch(site+path+'?v=20261028-shaiva-quote-groups-3');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }
@@ -614,16 +615,21 @@ function pairScriptureQuotes(root){
     }
     const members=[];
     let cursor=first;
-    while(cursor&&(isCitation(cursor)||isSource(cursor))){
+    while(cursor&&isCitation(cursor)){
       members.push(cursor);
       cursor=cursor.nextElementSibling;
     }
-    let translations=[];
+    while(cursor&&isSource(cursor)){
+      members.push(cursor);
+      cursor=cursor.nextElementSibling;
+    }
+    if(!members.some(isSource))continue;
+    const translations=[];
     while(cursor&&(isHindi(cursor)||isTranslation(cursor))){
       translations.push(cursor);
       cursor=cursor.nextElementSibling;
     }
-    if(!members.some(isSource)||!translations.length)continue;
+    if(!translations.length)continue;
     const pair=make('div','scripture-quote-pair');
     first.before(pair);
     pair.append(...members,...translations);
