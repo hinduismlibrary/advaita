@@ -49,7 +49,7 @@ jobs:
           full_scroll_style = '20261028-document-template-4'
           varna_script_version = '20261027-full-scroll-2'
           shared_reader_version = '20261027-document-citations-10'
-          shaiva_reader_version = '20261028-shaiva-source-fidelity-8'
+          shaiva_reader_version = '20261028-shaiva-quote-groups-1'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
           shared_css = Path('site/assets/css/article-reader-template.css').read_text(encoding='utf-8')
