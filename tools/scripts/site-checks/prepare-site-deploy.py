@@ -5,8 +5,10 @@ from __future__ import annotations
 import argparse
 import os
 import re
+from html import escape
 from pathlib import Path
-from site_seo import prepare_site_seo
+from site_seo import base_url_for, prepare_site_seo, url_for_page
+import json
 
 CACHE_VERSION = "20261028-pages-root-1"
 DEFAULT_REPOSITORY = "hinduismlibrary/advaita"
@@ -153,6 +155,47 @@ def rewrite_project_base(site: Path, repository: str) -> int:
     return changed_files
 
 
+def create_legacy_project_redirects(site: Path, repository: str) -> int:
+    owner, separator, repository_name = repository.partition("/")
+    if not separator or not owner or not repository_name:
+        raise RuntimeError(f"Invalid GitHub repository: {repository!r}")
+    is_user_site = repository_name.casefold() == f"{owner}.github.io".casefold()
+    if not is_user_site:
+        return 0
+
+    base_url = base_url_for(repository)
+    pages = [
+        path for path in sorted(site.rglob("*.html"))
+        if not path.relative_to(site).as_posix().startswith("advaita/")
+    ]
+    legacy_root = site / "advaita"
+    changed = 0
+
+    for page in pages:
+        relative = page.relative_to(site).as_posix()
+        target_url = url_for_page(relative, base_url)
+        escaped_url = escape(target_url, quote=True)
+        js_url = json.dumps(target_url, ensure_ascii=False).replace("<", "\\u003c")
+        redirect = (
+            "<!doctype html>\\n"
+            '<html lang="en"><head><meta charset="utf-8">\\n'
+            '<meta name="robots" content="noindex,follow">\\n'
+            '<meta name="legacy-pages-redirect" content="true">\\n'
+            f'<link rel="canonical" href="{escaped_url}">\\n'
+            f'<meta http-equiv="refresh" content="0;url={escaped_url}">\\n'
+            "<title>Page moved</title>\\n"
+            f"<script>window.location.replace({js_url});</script>\\n"
+            f'</head><body><p>This page has moved. <a href="{escaped_url}">Open the new location</a>.</p></body></html>\\n'
+        )
+        destination = legacy_root / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.exists() and destination.read_text(encoding="utf-8") == redirect:
+            continue
+        destination.write_text(redirect, encoding="utf-8")
+        changed += 1
+
+    return changed
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site", type=Path, default=DEFAULT_SITE)
@@ -161,10 +204,12 @@ def main() -> None:
     site = args.site.resolve()
     changed, repaired = prepare(site)
     rewritten = rewrite_project_base(site, args.repository)
+    redirects = create_legacy_project_redirects(site, args.repository)
     seo_changed, sitemap_pages = prepare_site_seo(site, args.repository)
     print(f"Prepared {changed} HTML pages for cache-safe deployment.")
     print(f"Removed the mismatched Vishnu Purana reader styling from {repaired} MMK pages.")
     print(f"Rewrote the Pages project path in {rewritten} files for {args.repository}.")
+    print(f"Created or updated {redirects} legacy /advaita route redirects.")
     print(f"Updated SEO metadata on {seo_changed} full HTML pages.")
     print(f"Generated sitemap.xml with {sitemap_pages} canonical indexable URLs.")
 
