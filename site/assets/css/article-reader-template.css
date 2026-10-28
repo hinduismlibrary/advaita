@@ -783,3 +783,26 @@ body.document-paged-page .article .document-content figure img{max-width:100%;he
  body.document-paged-page .article .document-content details.sanskrit-reveal .sanskrit-transliteration,
  body.document-paged-page .article .document-content [lang="sa-Latn"]{font-size:14px}
 }
+
+/* Keep source Hindi translations visibly distinct from collapsible Sanskrit text. */
+body.document-paged-page .article .document-content p.hindi-translation{
+  margin:2px 0 7px!important;
+  padding:1px 0 1px 13px!important;
+  border-left:2px solid #a2a9b1!important;
+  color:#30363d!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:16.5px!important;
+  line-height:1.68!important;
+}
+body.document-paged-page .article .document-content .scripture-quote-pair>p.hindi-translation{
+  order:2;
+}
+body.document-paged-page .article .document-content .scripture-quote-pair>:is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation){
+  order:3;
+}
+@media(max-width:760px){
+  body.document-paged-page .article .document-content p.hindi-translation{
+    font-size:15.5px!important;
+    line-height:1.68!important;
+  }
+}
