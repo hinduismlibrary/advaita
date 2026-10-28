@@ -303,13 +303,18 @@ jobs:
             broken = []
             unavailable = []
             checked = set()
+            current_page = urlsplit(page.url)
             for item in article_links:
               href = item['href']
               parsed = urlsplit(href)
               if parsed.scheme.lower() not in ('http', 'https'):
                 continue
+              if (parsed.scheme.lower() == current_page.scheme.lower() and
+                  parsed.netloc.lower() == current_page.netloc.lower() and
+                  parsed.path == current_page.path):
+                continue
               target = href.split('#', 1)[0]
-              if not target:
+              if not target or target in checked:
                 continue
               checked.add(target)
               if target not in cache:
@@ -319,7 +324,7 @@ jobs:
                   try:
                     response = page.request.head(target, timeout=12000, max_redirects=5)
                     status = response.status
-                    if status in (405, 501):
+                    if status in (404, 405, 410, 501):
                       response = page.request.get(target, timeout=12000, max_redirects=5, headers={'Range':'bytes=0-0'})
                       status = response.status
                     if status >= 500 and attempt == 0:
