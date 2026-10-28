@@ -283,7 +283,7 @@ function sectionsFrom(pages){
         }
       }
     }
-    if(kind==='sa'&&major===4&&current&&!current.blocks.some(block=>block.kind==='subheading'&&block.id==='krsna-on-shivas-supremacy')){
+    if((kind==='reference'||kind==='sa')&&major===4&&current&&!current.blocks.some(block=>block.kind==='subheading'&&block.id==='krsna-on-shivas-supremacy')){
       const definition=subsectionTitles['4.1'];
       append(current,{kind:'subheading',value:definition.title,id:definition.id});
     }
@@ -341,18 +341,14 @@ function renderVerse(value){
 function renderQuote(value){
   const visible=articleText(value);
   if(!visible)return empty();
-  const inlineQuote=visible.match(/^([\s\S]*?\|\|\s*)([“\"][\s\S]+)$/);
-  if(inlineQuote){
-    /* The Roman line belongs with the Sanskrit reveal, never as a separate
-       teal citation in the article flow. */
-    return translation(inlineQuote[2],true);
-  }
-  const mixed=mixedSanskrit(value,'translation');
-  if(mixed)return mixed;
-  if(/^(?:english(?:\s+translation)?|translation)\s*:?[.]?$/i.test(visible))return reference('English translation');
-  if(/^(?:Bhagavadgita|Laugaksi)\b/i.test(visible))return reference(visible);
+  if(/^(?:english(?:\s+translation)?|translation)\s*:?[.]?$/i.test(visible))return empty();
   const withoutLabel=visible.replace(/^\s*(?:English\s+)?translation\s*:\s*/i,'').trim();
   if(!withoutLabel)return empty();
+  const inlineQuote=withoutLabel.match(/^([\s\S]*?\|\|\s*)([“\"][\s\S]+)$/);
+  if(inlineQuote)return translation(inlineQuote[2],true);
+  const mixed=mixedSanskrit(withoutLabel,'translation');
+  if(mixed)return mixed;
+  if(/^(?:Bhagavadgita|Laugaksi)\b/i.test(withoutLabel))return reference(withoutLabel);
   const noteAt=withoutLabel.search(/\s+NOTE\s*:\s*/i);
   const fragment=document.createDocumentFragment();
   const quoteText=noteAt<0?withoutLabel:withoutLabel.slice(0,noteAt).trim();
@@ -396,7 +392,15 @@ function renderParagraph(value,section){
   const visible=articleText(value);
   if(!visible||/popcultking/i.test(visible))return empty();
   if(section==='contents')return indexList(visible);
-  const mixed=mixedSanskrit(value,/^\s*\(?translation\s*:/i.test(String(value??''))?'translation':'paragraph');
+  if(/^\s*(?:english\s+translation|sanskrit\s+text(?:\s+and\s+english\s+translation)?)\s*:?\s*$/i.test(visible))return empty();
+  const englishPrefixed=visible.match(/^\s*English\s+Translation\s*:\s*([\s\S]+)$/i);
+  if(englishPrefixed){
+    const text=englishPrefixed[1].trim();
+    return mixedSanskrit(text,'translation')||translation(text);
+  }
+  const unlabelled=visible.replace(/^\s*Sanskrit\s+Text(?:\s+and\s+English\s+Translation)?\s*:\s*/i,'').trim();
+  if(!unlabelled)return empty();
+  const mixed=mixedSanskrit(unlabelled,/^\s*\(?translation\s*:/i.test(String(value??''))?'translation':'paragraph');
   if(mixed){
     const first=mixed.firstElementChild;
     if(first?.matches('p')&&/^\s*[●•]/u.test(first.textContent||'')){
@@ -405,8 +409,6 @@ function renderParagraph(value,section){
     }
     return mixed;
   }
-  if(/^\s*(?:english\s+)?translation\s*:?\s*$/i.test(visible))return reference('English translation');
-  if(/^\s*sanskrit\s+text(?:\s+and\s+english\s+translation)?\s*:?\s*$/i.test(visible))return reference(sentenceTitle(visible));
   if(/^\s*shankara[’']s commentary\b/i.test(visible)||/^\s*shankara[’']s commentary\s*\(sanskrit bhashya\)\s*$/i.test(visible))return reference(visible);
   if(/^\s*\(?translation\s*:/i.test(visible))return translation(visible.replace(/^\s*\(?translation\s*:\s*/i,'').replace(/\)\s*$/,'').trim());
   const verse=renderVerse(value);if(verse)return verse;
@@ -453,6 +455,7 @@ function normalizeCitationOrder(root){
     if(isQuoteSource(citation.nextElementSibling))continue;
     let target=citation.previousElementSibling;
     if(isTranslation(target)){
+      if(isTranslation(citation.nextElementSibling))continue;
       while(isTranslation(target.previousElementSibling))target=target.previousElementSibling;
       if(isQuoteSource(target.previousElementSibling))target=target.previousElementSibling;
       target.before(citation);
@@ -582,7 +585,7 @@ function navLink(anchor,section,label){
 }
 
 async function get(path){
-  const response=await fetch(site+path+'?v=20261028-shaiva-quote-groups-1');
+  const response=await fetch(site+path+'?v=20261028-shaiva-quote-groups-2');
   if(!response.ok)throw Error(path+': HTTP '+response.status);
   return (await response.text()).trim();
 }
@@ -606,7 +609,7 @@ function pairScriptureQuotes(root){
   for(const source of sources){
     if(source.closest('.scripture-quote-pair'))continue;
     let first=source;
-    while(first.previousElementSibling&&(isCitation(first.previousElementSibling)||isSource(first.previousElementSibling))){
+    while(first.previousElementSibling&&isCitation(first.previousElementSibling)){
       first=first.previousElementSibling;
     }
     const members=[];
@@ -703,7 +706,7 @@ async function render(){
   const mobile=document.getElementById('shaiva-mobile-toc');
   if(desktop)tocInto(desktop,sections,initial);
   if(mobile)tocInto(mobile,sections,initial);
-  document.title='A Scripture-Based Case for the Supremacy of Shiva — Viveka Drishti';
+  document.title='A Scripture-Based Case for the Supremacy of Shiva — विवेकदृष्टिः';
   const content=document.createDocumentFragment();
   for(const section of sections){
     const sourcePage=isSources(section);
