@@ -8,8 +8,8 @@ import re
 from pathlib import Path
 from site_seo import prepare_site_seo
 
-CACHE_VERSION = "20261027-document-brand-3"
-DEFAULT_REPOSITORY = "krishnavyasmuni/advaita"
+CACHE_VERSION = "20261028-pages-root-1"
+DEFAULT_REPOSITORY = "hinduismlibrary/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_SITE = REPO_ROOT / "site"
@@ -127,13 +127,17 @@ def prepare(site: Path) -> tuple[int, int]:
 
 
 def rewrite_project_base(site: Path, repository: str) -> int:
-    repository_name = repository.rsplit("/", 1)[-1]
+    owner, separator, repository_name = repository.partition("/")
+    if not separator or not owner or not repository_name:
+        raise RuntimeError(f"Invalid GitHub repository: {repository!r}")
     if not re.fullmatch(r"[A-Za-z0-9._-]+", repository_name):
         raise RuntimeError(f"Invalid GitHub repository name: {repository!r}")
     if repository_name.casefold() == "advaita":
         return 0
 
-    replacement = f"/{repository_name}"
+    # User and organization Pages repositories publish at the host root.
+    is_user_site = repository_name.casefold() == f"{owner}.github.io".casefold()
+    replacement = "" if is_user_site else f"/{repository_name}"
     changed_files = 0
     for path in site.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
