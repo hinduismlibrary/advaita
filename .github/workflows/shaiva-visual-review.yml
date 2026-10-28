@@ -101,7 +101,7 @@ jobs:
                   const tocLink = document.querySelector('.toc-index-link');
                   const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
-                  const assetsReady = sharedStyle?.href.includes('20261028-anton-vollkorn-2') &&
+                  const assetsReady = sharedStyle?.href.includes('20261028-anton-vollkorn-3') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition;
                   return assetsReady;
                 }""")
