@@ -192,7 +192,13 @@ jobs:
               const badDisclosureLabels=sourceDisclosures.filter(details=>! /^(?:Show|Hide) Sanskrit$/.test(details.querySelector(':scope > summary')?.textContent.trim()||'')).length;
               const translationCandidates=[...article.querySelectorAll(translationSelector+',p')].filter(node=>
                 (node.matches(translationSelector)||/^[“"'‘]/u.test(node.textContent.trim()))&&!node.closest('.source-page-body'));
-              const unpairedTranslations=translationCandidates.filter(node=>!node.closest('.scripture-quote-pair,.women-scripture-pair')).length;
+              const unpairedTranslationNodes=translationCandidates.filter(node=>!node.closest('.scripture-quote-pair,.women-scripture-pair'));
+              const unpairedTranslations=unpairedTranslationNodes.length;
+              const unpairedTranslationExamples=unpairedTranslationNodes.map(node=>({
+                text:node.textContent.trim().slice(0,260),
+                previous:node.previousElementSibling?.textContent.trim().slice(0,180)||'',
+                next:node.nextElementSibling?.textContent.trim().slice(0,180)||''
+              }));
               const editorialNotes=article.querySelectorAll('.editorial-note,.quote-source-note,.translation-note').length;
               return {
                 status: document.querySelector('.page-context span, #section-count')?.textContent.trim() || '',
@@ -220,6 +226,7 @@ jobs:
                 sanskritDisclosures: sourceDisclosures.length,
                 badDisclosureLabels,
                 unpairedTranslations,
+                unpairedTranslationExamples,
                 editorialNotes
               };
             }""")
