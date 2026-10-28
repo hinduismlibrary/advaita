@@ -89,7 +89,7 @@ jobs:
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
                   const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : '20261027-document-citations-10';
-                  const assetsReady = sharedStyle?.href.includes('20261028-document-template-5') && readerScript.includes(readerVersion) && contentReady;
+                  const assetsReady = sharedStyle?.href.includes('20261028-document-template-6') && readerScript.includes(readerVersion) && contentReady;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {
@@ -178,6 +178,7 @@ jobs:
               });
               const citationNode=article.querySelector('p.reference,p.source-citation,p.scripture-source,p.citation');
               const citationColor=citationNode?getComputedStyle(citationNode).color:'';
+              const contentsLinkColor=links[0]?getComputedStyle(links[0]).color:'';
               const sourceDiagramImages=[...article.querySelectorAll('figure.source-document-figure img')];
               const sourceDiagramIssues=sourceDiagramImages.filter(image=>{
                 const box=image.getBoundingClientRect();
@@ -243,6 +244,7 @@ jobs:
                 brokenPageLinks:brokenPageLinks.map(item=>item.text||item.href),
                 articleLinks,
                 citationColor,
+                contentsLinkColor,
                 editorialNotes
               };
             }""")
@@ -424,7 +426,8 @@ jobs:
               assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
               if label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
-                assert desktop['citationColor'] == 'rgb(6, 69, 173)', f'{label}: source citations are not blue: {desktop["citationColor"]}'
+                assert desktop['citationColor'] == 'rgb(32, 33, 34)', f'{label}: source citation text is not dark: {desktop["citationColor"]}'
+                assert desktop['contentsLinkColor'] == 'rgb(6, 69, 173)', f'{label}: Contents links are not blue: {desktop["contentsLinkColor"]}'
               assert sanskrit_controls_tested == desktop['sanskritDisclosures'], f'{label}: not all Sanskrit controls were tested'
               if label == 'women':
                 figure_pairs = page.locator('#source-content .women-figure-transcription .women-scripture-pair')
@@ -505,7 +508,7 @@ jobs:
                         'citationExamples':desktop['citationExamples'],'scriptureSourceLabels':desktop['scriptureSourceLabels'],
                         'unpairedTranslations':desktop['unpairedTranslations'],'unpairedTranslationExamples':desktop['unpairedTranslationExamples'],
                         'uncitedTranslationGroups':desktop['uncitedTranslationGroups'],'brokenPageLinks':desktop['brokenPageLinks'],
-                        'citationColor':desktop['citationColor'],'articleLinks':desktop['articleLinks'],
+                        'citationColor':desktop['citationColor'],'contentsLinkColor':desktop['contentsLinkColor'],'articleLinks':desktop['articleLinks'],
                         'linksChecked':link_check['checked'],'brokenLinks':link_check['broken'],'unavailableLinks':link_check['unavailable'],
                         'sanskritControlsTested':sanskrit_controls_tested,'sourceDiagramImages':desktop['sourceDiagramImages'],
                         'mobileWidth':mobile['scrollWidth'],'errors':errors}
