@@ -353,6 +353,22 @@ jobs:
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
+              if label in ('women', 'meat'):
+                assert desktop['unpairedTranslations'] == 0, f'{label}: an English quotation sits outside its source group: {desktop["unpairedTranslationExamples"]}'
+              if label == 'women':
+                figure_pairs = page.locator('#source-content .women-figure-transcription .women-scripture-pair')
+                assert figure_pairs.count() == 4, 'women: each dress-code diagram transcription must be a separate quotation group'
+                for index in range(figure_pairs.count()):
+                  pair = figure_pairs.nth(index)
+                  order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
+                  assert order == ['source','sanskrit','translation'], f'women: diagram quote order differs: {order}'
+                  source = pair.locator(':scope > p.reference').inner_text()
+                  assert 'Śaṅkha-Likhita Dharmasūtra' in source and 'p. 60–61' in source, f'women: diagram quotation source is incomplete: {source}'
+              if label == 'meat':
+                commentary = page.locator('#source-content .commentary-quote-pair')
+                assert commentary.count() == 1, 'meat: Medhātithi commentary quotation is missing its group'
+                source = commentary.locator(':scope > p.reference').inner_text()
+                assert 'Medhātithi' in source and 'Manusmṛti 5.56' in source and 'p. 18' in source, f'meat: Medhātithi source citation is incomplete: {source}'
               if desktop['uncitedQuoteGroups']:
                 uncited_quote_diagnostics.append({'site':label,'total':len(desktop['uncitedQuoteGroups']),'examples':desktop['uncitedQuoteGroups'][:8]})
               assert desktop['scriptureSourceLabels'] == 0, f'{label}: unstandardized scripture-source labels remain'
