@@ -177,15 +177,15 @@ def create_legacy_project_redirects(site: Path, repository: str) -> int:
         escaped_url = escape(target_url, quote=True)
         js_url = json.dumps(target_url, ensure_ascii=False).replace("<", "\\u003c")
         redirect = (
-            "<!doctype html>\\n"
-            '<html lang="en"><head><meta charset="utf-8">\\n'
-            '<meta name="robots" content="noindex,follow">\\n'
-            '<meta name="legacy-pages-redirect" content="true">\\n'
-            f'<link rel="canonical" href="{escaped_url}">\\n'
-            f'<meta http-equiv="refresh" content="0;url={escaped_url}">\\n'
-            "<title>Page moved</title>\\n"
-            f"<script>window.location.replace({js_url});</script>\\n"
-            f'</head><body><p>This page has moved. <a href="{escaped_url}">Open the new location</a>.</p></body></html>\\n'
+            "<!doctype html>\n"
+            '<html lang="en"><head><meta charset="utf-8">\n'
+            '<meta name="robots" content="noindex,follow">\n'
+            '<meta name="legacy-pages-redirect" content="true">\n'
+            f'<link rel="canonical" href="{escaped_url}">\n'
+            f'<meta http-equiv="refresh" content="0;url={escaped_url}">\n'
+            "<title>Page moved</title>\n"
+            f"<script>window.location.replace({js_url});</script>\n"
+            f'</head><body><p>This page has moved. <a href="{escaped_url}">Open the new location</a>.</p></body></html>\n'
         )
         destination = legacy_root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
