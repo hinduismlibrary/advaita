@@ -82,9 +82,18 @@ function nearbyVerbatimReference(details){
     if(isCitation(prev)&&txt(prev))return txt(prev);
     if(prev.matches('h2,h3,h4,details,table,figure,.scripture-quote-pair'))break;
     const t=txt(prev);
-    // A literal "Source: ..." line in the provided transcription.
+    // Literal source attributions are preferred. Do not borrow from a distant paragraph.
     const explicit=t.match(/(?:^|\s)Source:\s*([^\n]{5,155})/i);
     if(explicit)return 'Source: '+explicit[1].replace(/\s+/g,' ').trim();
+    // Only print chapter/verse numbers that are explicitly present next to a
+    // named work in the supplied HTML. Never synthesize numbering.
+    const names='Bhagavad G(?:ita|ītā)|(?:Ṛg|Rig)veda|(?:Taittirīya|Taittiriya) (?:Saṃhitā|Samhita|Āraṇyaka|Aranyaka)|(?:Aitareya|Śatapatha|Shatapatha|Paiṅgi-rahasya) (?:Brāhmaṇa|Brahmana)|(?:Mahābhārata|Mahabharata)|(?:Rāmāyaṇa|Ramayana)|(?:Manusmṛti|Manusmrti)|(?:Brahma Sūtra|Brahma Sutra)|(?:Chāndogya|Chandogya|Bṛhadāraṇyaka|Brihadaranyaka|Kaṭha|Katha|Nārāyaṇa|Narayana|Mahā|Maha) (?:Upaniṣad|Upanishad)|(?:Viṣṇu|Vishnu|Śiva|Shiva|Bhāgavata|Bhagavata|Agni|Liṅga|Linga|Skanda|Kūrma|Kurma|Garuḍa|Garuda|Padma|Varāha|Varaha|Nārada|Narada|Vāmana|Vamana) (?:Purāṇa|Purana)|(?:Vyāsa|Vyasa) (?:Smṛti|Smriti)';
+    const exact=new RegExp('('+names+')\\s*\\(?\\s*(\\d+(?:\\.\\d+){1,4}(?:\\s*[-–]\\s*\\d+(?:\\.\\d+)*)?)\\)?','giu');
+    const matches=[...t.matchAll(exact)];
+    if(matches.length){
+      const hit=matches[matches.length-1];
+      return 'Source: '+hit[1]+' '+hit[2].replace(/\\s+/g,'');
+    }
     prev=prev.previousElementSibling;
   }
   return '';
