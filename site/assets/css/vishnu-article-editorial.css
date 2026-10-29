@@ -154,10 +154,6 @@ body.document-paged-page.vishnu-editorial-reader #vishnu-desktop-toc a.toc-index
 body.document-paged-page.vishnu-editorial-reader #vishnu-mobile-toc a.toc-index-link:is(.is-active,.is-active-subsection) {
   color:var(--teal)!important;
 }
-body.document-paged-page.vishnu-editorial-reader #vishnu-desktop-toc a.toc-index-link:is(.is-active,.is-active-subsection),
-body.document-paged-page.vishnu-editorial-reader #vishnu-mobile-toc a.toc-index-link:is(.is-active,.is-active-subsection) {
-  font-weight:600!important;
-}
 body.document-paged-page.vishnu-editorial-reader .page-context {
   display:none!important;
 }
