@@ -103,8 +103,11 @@ jobs:
                   const tocLink = document.querySelector('.toc-index-link');
                   const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
+                  const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
+                  const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
+                    editorialStyle?.href.includes('20261029-paper-4');
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
-                    readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition;
+                    readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {

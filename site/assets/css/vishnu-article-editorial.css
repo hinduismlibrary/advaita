@@ -9,8 +9,8 @@ body.document-paged-page {
   --rule:rgba(119,119,119,.17);
   --quote:#6731fb;
   --quote-rule:transparent;
-  background:var(--outer)!important;
-  color:var(--ink)!important;
+  background:#2b261f!important;
+  color:#3c362e!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
 }
 body.document-paged-page .sitebar,
@@ -18,16 +18,16 @@ body.document-paged-page .page {
   width:min(920px,100%)!important;
   max-width:920px!important;
   margin:0 auto!important;
-  background:var(--paper)!important;
-  color:var(--ink)!important;
+  background:#f4f4f4!important;
+  color:#3c362e!important;
 }
 body.document-paged-page .sitebar {
   min-height:60px!important;
   padding:0 clamp(24px,6vw,90px)!important;
-  border-bottom:1px solid var(--rule)!important;
+  border-bottom:1px solid rgba(119,119,119,.17)!important;
 }
 body.document-paged-page .sitebar a {
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 24px/1.3 Vollkorn,Georgia,serif!important;
 }
 body.document-paged-page .page {
@@ -61,12 +61,12 @@ body.document-paged-page .article-head:after {
   max-width:50%!important;
   height:2px!important;
   margin:30px auto 0!important;
-  background:var(--rule)!important;
+  background:rgba(119,119,119,.17)!important;
 }
 body.document-paged-page .article-head h1 {
   max-width:none!important;
   margin:0!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 clamp(38px,5.4vw,50px)/1.125 Vollkorn,Georgia,serif!important;
   letter-spacing:normal!important;
   text-align:center!important;
@@ -107,7 +107,7 @@ body.document-paged-page .side-toc-title {
   margin:0!important;
   padding:0!important;
   border:0!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 34px/1.125 Vollkorn,Georgia,serif!important;
   text-align:center!important;
 }
@@ -118,7 +118,7 @@ body.document-paged-page .side-toc-title:after {
   max-width:50%;
   height:2px;
   margin:30px auto 48px;
-  background:var(--rule);
+  background:rgba(119,119,119,.17);
 }
 body.document-paged-page .toc,
 body.document-paged-page .toc :is(ul,li) {
@@ -148,7 +148,7 @@ body.document-paged-page .toc a.toc-index-link {
   border:0!important;
   border-radius:0!important;
   background:transparent!important;
-  color:var(--purple)!important;
+  color:#6731fb!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
   letter-spacing:normal!important;
   text-decoration:none!important;
@@ -159,12 +159,12 @@ body.document-paged-page .toc .toc-index-nested a.toc-index-link {
 }
 body.document-paged-page .toc a.toc-index-link:hover,
 body.document-paged-page .toc a.toc-index-link:focus-visible {
-  color:var(--teal)!important;
+  color:#00787a!important;
   text-decoration:underline!important;
   text-underline-offset:4px;
 }
 body.document-paged-page .toc a:is(.is-active,.is-active-subsection) {
-  color:var(--teal)!important;
+  color:#00787a!important;
   font-weight:400!important;
 }
 body.document-paged-page .page-context {display:none!important}
@@ -172,7 +172,7 @@ body.document-paged-page .article {
   padding:0!important;
 }
 body.document-paged-page .article .document-content {
-  color:var(--ink)!important;
+  color:#3c362e!important;
   font-family:Merriweather,Georgia,serif!important;
 }
 body.document-paged-page .article .document-content .document-section,
@@ -193,7 +193,7 @@ body.document-paged-page .article .document-content :is(h2,h3,h4,h5) {
   border:0!important;
   border-radius:0!important;
   background:transparent!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font-family:Vollkorn,Georgia,serif!important;
   font-weight:400!important;
   letter-spacing:normal!important;
@@ -220,7 +220,7 @@ body.document-paged-page .article .document-content :is(.document-group-heading,
   max-width:50%!important;
   height:2px!important;
   margin:30px auto 48px!important;
-  background:var(--rule)!important;
+  background:rgba(119,119,119,.17)!important;
 }
 body.document-paged-page .article .document-content h3.reader-subheading {
   margin:46px 0 22px!important;
@@ -233,7 +233,7 @@ body.document-paged-page .article .document-content :is(h4,h5) {
   text-align:left!important;
 }
 body.document-paged-page .article .document-content :is(p,li,dt,dd,blockquote) {
-  color:var(--ink)!important;
+  color:#3c362e!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
   letter-spacing:normal!important;
   overflow-wrap:break-word;
@@ -247,7 +247,7 @@ body.document-paged-page .article .document-content :is(ol,ul) {
 }
 body.document-paged-page .article .document-content li {margin:0 0 9px!important}
 body.document-paged-page .article .document-content a {
-  color:var(--purple)!important;
+  color:#6731fb!important;
   text-decoration:none!important;
   text-underline-offset:4px;
 }
@@ -281,7 +281,7 @@ body.document-paged-page .article .document-content :is(p.reference,p.source-cit
   padding:0!important;
   border:0!important;
   background:transparent!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 17px/1.4 Vollkorn,Georgia,serif!important;
   text-align:left!important;
 }
@@ -293,7 +293,7 @@ body.document-paged-page .article .document-content :is(p.translation,p.scriptur
   border-radius:0!important;
   background:transparent!important;
   box-shadow:none!important;
-  color:var(--purple)!important;
+  color:#6731fb!important;
   font:400 20px/1.58 Merriweather,Georgia,serif!important;
   text-wrap:pretty;
 }
@@ -311,10 +311,10 @@ body.document-paged-page .article .document-content details.sanskrit-reveal > su
   list-style:none!important;
   margin:0!important;
   padding:7px 14px!important;
-  border:1px solid var(--teal)!important;
+  border:1px solid #00787a!important;
   border-radius:5px!important;
   background:#e6efee!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 14px/1.35 Merriweather,Georgia,serif!important;
   letter-spacing:normal!important;
   cursor:pointer;
@@ -323,16 +323,16 @@ body.document-paged-page .article .document-content details.sanskrit-reveal > su
 }
 body.document-paged-page .article .document-content details.sanskrit-reveal > summary::-webkit-details-marker {display:none}
 body.document-paged-page .article .document-content details.sanskrit-reveal > summary:hover {
-  background:var(--teal)!important;
+  background:#00787a!important;
   color:white!important;
   transform:translateY(-1px);
 }
 body.document-paged-page .article .document-content details.sanskrit-reveal > summary:focus-visible {
-  outline:2px solid var(--purple)!important;
+  outline:2px solid #6731fb!important;
   outline-offset:3px!important;
 }
 body.document-paged-page .article .document-content details.sanskrit-reveal[open] > summary {
-  background:var(--teal)!important;
+  background:#00787a!important;
   color:white!important;
 }
 body.document-paged-page .article .document-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
@@ -394,7 +394,7 @@ body.document-paged-page .article .document-content .table-scroll :is(th,td) {
   padding:10px 11px!important;
   border:0!important;
   border-bottom:1px solid #d9d5d0!important;
-  color:var(--ink)!important;
+  color:#3c362e!important;
   font:400 14px/1.55 Merriweather,Georgia,serif!important;
   text-align:left!important;
   vertical-align:top!important;
@@ -402,7 +402,7 @@ body.document-paged-page .article .document-content .table-scroll :is(th,td) {
   word-break:normal!important;
 }
 body.document-paged-page .article .document-content .table-scroll thead th {
-  border-bottom:2px solid var(--teal)!important;
+  border-bottom:2px solid #00787a!important;
   background:#e6efee!important;
   color:#006d70!important;
   font-weight:700!important;
@@ -425,7 +425,7 @@ body.document-paged-page .article .document-content .source-page-body h4.source-
   margin:36px 0 12px!important;
   padding:0!important;
   border:0!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 24px/1.3 Vollkorn,Georgia,serif!important;
 }
 body.document-paged-page .article .document-content .source-page-body ol {
@@ -439,7 +439,7 @@ body.document-paged-page .article .document-content .source-page-body li {
 }
 body.document-paged-page .mobile-toc {display:none!important}
 @media (max-width:780px) {
-  body.document-paged-page {background:var(--paper)!important}
+  body.document-paged-page {background:#f4f4f4!important}
   body.document-paged-page .page {padding:46px 24px 80px!important}
   body.document-paged-page .article-head {margin-bottom:46px!important}
   body.document-paged-page .side-toc {display:none!important}
@@ -448,11 +448,11 @@ body.document-paged-page .mobile-toc {display:none!important}
     margin:0 0 55px!important;
     padding:0 0 16px!important;
     border:0!important;
-    border-bottom:1px solid var(--rule)!important;
+    border-bottom:1px solid rgba(119,119,119,.17)!important;
     background:transparent!important;
   }
   body.document-paged-page .mobile-toc > summary {
-    color:var(--teal)!important;
+    color:#00787a!important;
     font:400 25px/1.3 Vollkorn,Georgia,serif!important;
     cursor:pointer;
   }
@@ -472,21 +472,21 @@ body.document-paged-page .mobile-toc {display:none!important}
 /* The shared template also pins quote colors and citation sizes.  The
    article's palette needs to win at the actual rendered content node. */
 body.document-paged-page #source-content :is(p,li,dt,dd,blockquote):lang(en) {
-  color:var(--ink)!important;
+  color:#3c362e!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
 }
 body.document-paged-page #source-content :is(p.reference,p.source-citation,p.scripture-source,p.citation):lang(en) {
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 17px/1.4 Vollkorn,Georgia,serif!important;
 }
 body.document-paged-page #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {
-  color:var(--purple)!important;
+  color:#6731fb!important;
   font:400 20px/1.58 Merriweather,Georgia,serif!important;
   padding:0!important;
   border:0!important;
 }
 body.document-paged-page #source-content :is(h2,h3,h4,h5) {
-  color:var(--teal)!important;
+  color:#00787a!important;
   font-family:Vollkorn,Georgia,serif!important;
   font-weight:400!important;
 }
@@ -497,20 +497,20 @@ body.document-paged-page #source-content :is(.document-group-heading,.document-s
   max-width:50%!important;
   height:2px!important;
   margin:30px auto 48px!important;
-  background:var(--rule)!important;
+  background:rgba(119,119,119,.17)!important;
 }
 body.document-paged-page #source-content details.sanskrit-reveal > summary {
-  border:1px solid var(--teal)!important;
+  border:1px solid #00787a!important;
   border-radius:4px!important;
   background:#e6efee!important;
-  color:var(--teal)!important;
+  color:#00787a!important;
   font:400 14px/1.35 Merriweather,Georgia,serif!important;
   padding:7px 14px!important;
   transition:background-color .2s ease,color .2s ease,transform .2s ease!important;
 }
 body.document-paged-page #source-content details.sanskrit-reveal > summary:hover,
 body.document-paged-page #source-content details.sanskrit-reveal[open] > summary {
-  background:var(--teal)!important;
+  background:#00787a!important;
   color:#fff!important;
 }
 body.document-paged-page #source-content .source-page-body li:lang(en) {
@@ -518,13 +518,13 @@ body.document-paged-page #source-content .source-page-body li:lang(en) {
   line-height:1.55!important;
 }
 body.document-paged-page .page .reader-grid .toc a.toc-index-link {
-  color:var(--purple)!important;
+  color:#6731fb!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
 }
 body.document-paged-page .page .reader-grid .toc .toc-index-nested a.toc-index-link {font-size:17px!important}
 body.document-paged-page .page .reader-grid .toc a.toc-index-link:is(.is-active,.is-active-subsection),
 body.document-paged-page .page .reader-grid .toc a.toc-index-link:hover {
-  color:var(--teal)!important;
+  color:#00787a!important;
   font-weight:400!important;
 }
 @media(max-width:520px) {
