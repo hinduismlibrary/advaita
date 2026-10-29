@@ -2,14 +2,14 @@
 body.document-paged-page.vishnu-editorial-reader {
   --outer:#f5f3ef;
   --paper:#fffdfa;
-  --ink:#38332f;
+  --ink:#3c362e;
   --teal:#00787a;
   --link:#514487;
-  --quote:#71319a;
-  --quote-rule:#c8becb;
+  --quote:#6f4c72;
+  --quote-rule:#c4b8c6;
   --rule:rgba(90,82,75,.18);
   --side-rule:#d4d0ca;
-  --orange-soft:#b8a18c;
+  --button-border:#9eaea8;
   --sanskrit:#7f432f;
   background:var(--outer)!important;
   color:var(--ink)!important;
@@ -234,7 +234,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(p,li,dt,dd,
   overflow-wrap:break-word;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content p {
-  margin:0 0 20px!important;
+  margin:0 0 15px!important;
   text-wrap:pretty;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(ol,ul) {
@@ -260,7 +260,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quot
   flex-direction:column!important;
   align-items:flex-start!important;
   gap:0!important;
-  margin:20px 0 26px!important;
+  margin:14px 0 20px!important;
   padding:0!important;
   border:0!important;
   border-radius:0!important;
@@ -288,7 +288,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(p.reference
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {
   width:100%;
-  margin:2px 0 18px!important;
+  margin:0 0 12px!important;
   padding:0 0 0 12px!important;
   border:0!important;
   border-left:2px solid var(--quote-rule)!important;
@@ -296,7 +296,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translati
   background:transparent!important;
   box-shadow:none!important;
   color:var(--quote)!important;
-  font:400 18.5px/1.58 Merriweather,Georgia,serif!important;
+  font:400 20px/1.5 Merriweather,Georgia,serif!important;
   text-wrap:pretty;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content blockquote {
@@ -317,10 +317,10 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   min-height:0!important;
   margin:1px 0!important;
   padding:3px 10px!important;
-  border:1px solid var(--orange-soft)!important;
-  border-radius:999px!important;
+  border:1px solid var(--button-border)!important;
+  border-radius:3px!important;
   background:transparent!important;
-  color:#3c362e!important;
+  color:#315d5e!important;
   font:400 13px/1.4 Vollkorn,Georgia,serif!important;
   list-style:none!important;
   cursor:pointer;
@@ -331,17 +331,17 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   display:none;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary:hover {
-  background:#eee8e2!important;
-  border-color:#a99887!important;
-  color:#2e2a27!important;
+  background:#edf2ef!important;
+  border-color:#78928a!important;
+  color:#274b47!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary:focus-visible {
-  outline:2px solid #8b6aa2!important;
+  outline:2px solid #00787a!important;
   outline-offset:2px!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal[open]>summary {
-  background:#eee8e2!important;
-  color:#2e2a27!important;
+  background:#edf2ef!important;
+  color:#274b47!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
   margin:12px 0 8px!important;
