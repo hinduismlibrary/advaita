@@ -397,6 +397,7 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
+                page.wait_for_timeout(260)  # Allow the Contents color transition to finish.
                 visual = page.evaluate("""selector => {
                   const nav=document.querySelector(selector);
                   const active=nav?.querySelector('a.toc-index-link.is-active, a.toc-index-link.is-active-subsection');
