@@ -196,13 +196,14 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(h2,h3,h4,h5
   font-family:Vollkorn,Georgia,serif!important;
   font-weight:400!important;
   letter-spacing:normal!important;
+  text-align:left!important;
   text-wrap:balance;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(.document-group-heading,.document-section-title,.source-page-heading) {
-  margin:30px 0 16px!important;
+  margin:22px 0 12px!important;
   font-size:27px!important;
   line-height:1.22!important;
-  text-align:center!important;
+  text-align:left!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .document-group-heading:first-child,
 body.document-paged-page.vishnu-editorial-reader #source-content .document-section-title:first-child,
@@ -215,7 +216,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(.document-g
   content:none!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content h3.reader-subheading {
-  margin:24px 0 12px!important;
+  margin:20px 0 10px!important;
   font:400 22px/1.28 Vollkorn,Georgia,serif!important;
   text-align:left!important;
 }
