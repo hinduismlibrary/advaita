@@ -416,6 +416,8 @@ function syncActiveSection(){
     if(entry.heading.getBoundingClientRect().top<=line)active=entry;
     else break;
   }
+  const atDocumentEnd=window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-2;
+  if(atDocumentEnd)active=entries[entries.length-1];
   currentTocPage=active.page;
   const sourcePage=isSourceHeading(active.page.title);
   parent.textContent=sourcePage?'Sources':active.page.group?.title||active.page.title;
