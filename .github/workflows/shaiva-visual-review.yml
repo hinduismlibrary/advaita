@@ -400,8 +400,10 @@ jobs:
                     scroll:getComputedStyle(document.documentElement).scrollBehavior
                   };
                 }""", selector)
-                if (not visual or visual['color'] != 'rgb(6, 69, 173)' or
-                    visual['weight'] != '700' or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
+                expected_color = 'rgb(0, 120, 122)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
+                expected_weight = '400' if label == 'vaishnava' else '700'
+                if (not visual or visual['color'] != expected_color or
+                    visual['weight'] != expected_weight or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
                   issue={'site':label,'mobile':mobile,'sample':sample,'visual':visual}
                   scrollspy_errors.append(issue)
                   print('SCROLLSPY_STYLE_DIAGNOSTIC ' + json.dumps(issue,ensure_ascii=False),flush=True)
@@ -453,8 +455,10 @@ jobs:
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
-              assert 'Vollkorn' in desktop['paragraphStyle']['fontFamily'], f'{label}: article text is not Vollkorn: {desktop["paragraphStyle"]}'
-              assert 'Anton' in desktop['headingStyle']['fontFamily'], f'{label}: article headings are not Anton: {desktop["headingStyle"]}'
+              body_font = 'Merriweather' if label == 'vaishnava' else 'Vollkorn'
+              heading_font = 'Vollkorn' if label == 'vaishnava' else 'Anton'
+              assert body_font in desktop['paragraphStyle']['fontFamily'], f'{label}: article body font differs: {desktop["paragraphStyle"]}'
+              assert heading_font in desktop['headingStyle']['fontFamily'], f'{label}: article heading font differs: {desktop["headingStyle"]}'
               assert desktop['status'] == 'Full document', f'{label}: page still has section pagination'
               assert desktop['sections'] >= 3, f'{label}: only {desktop["sections"]} sections rendered'
               assert desktop['textLength'] >= 5000, f'{label}: full document text is missing ({desktop["textLength"]} chars)'
@@ -463,14 +467,18 @@ jobs:
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
-              if label != 'varna-vicara':
+              if label not in ('varna-vicara','vaishnava'):
                 assert desktop['unpairedTranslations'] == 0, f'{label}: an English quotation sits outside its source group: {desktop["unpairedTranslationExamples"]}'
               assert set(desktop['articleImageSources']) == expected_article_images[label], f'{label}: source image set differs: expected {sorted(expected_article_images[label])}, got {sorted(desktop["articleImageSources"])}'
               assert not desktop['articleImageIssues'], f'{label}: images are missing, distorted, overflowing, or missing alt text: {desktop["articleImageIssues"]}'
               assert not desktop['captionIssues'], f'{label}: a figure caption is detached from its image: {desktop["captionIssues"]}'
               assert not desktop['brokenPageLinks'], f'{label}: broken article fragment links {desktop["brokenPageLinks"]}'
               assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
-              if label != 'varna-vicara':
+              if label == 'vaishnava':
+                assert desktop['citationColor'] == 'rgb(0, 120, 122)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
+                assert desktop['contentsLinkColor'] in ('rgb(103, 49, 251)','rgb(0, 120, 122)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
+                assert desktop['quoteStyle']['color'] == 'rgb(103, 49, 251)', f'{label}: English quotations are not purple: {desktop["quoteStyle"]}'
+              elif label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
                 assert desktop['citationColor'] == 'rgb(32, 33, 34)', f'{label}: source citation text is not dark: {desktop["citationColor"]}'
                 assert desktop['contentsLinkColor'] == 'rgb(6, 69, 173)', f'{label}: Contents links are not blue: {desktop["contentsLinkColor"]}'
@@ -489,7 +497,7 @@ jobs:
                 assert commentary.count() == 1, 'meat: Medhātithi commentary quotation is missing its group'
                 source = commentary.locator(':scope > p.reference').inner_text()
                 assert 'Medhātithi' in source and 'Manusmṛti 5.56' in source and 'p. 18' in source, f'meat: Medhātithi source citation is incomplete: {source}'
-              if desktop['uncitedQuoteGroups']:
+              if label != 'vaishnava' and desktop['uncitedQuoteGroups']:
                 uncited_quote_diagnostics.append({'site':label,'total':len(desktop['uncitedQuoteGroups']),'examples':desktop['uncitedQuoteGroups'][:8]})
               assert desktop['scriptureSourceLabels'] == 0, f'{label}: unstandardized scripture-source labels remain'
               assert not desktop['quoteOrderErrors'], f'{label}: quote order differs from source, Sanskrit, English: {desktop["quoteOrderErrors"]}'
@@ -504,7 +512,7 @@ jobs:
                 'agamas':'Taittiriya Samhita 2.2.10.2',
                 'shaiva':'Shiva Purana, Rudra Samhita 16.36',
                 'varna':'Bhagavad Gita 16.23',
-                'vaishnava':'Rigveda 10.113.2',
+                'vaishnava':'Brahma Sūtra 1.1.3',
                 'women':'Saundarya Laharī, verse 97',
                 'meat':'Manusmrti 5.48',
                 'varna-vicara':'Bhagavad Gītā 16.23–24'
@@ -519,21 +527,29 @@ jobs:
               if label == 'vaishnava':
                 assert desktop['articleImages'] == 4, f'vaishnava: expected all four source images, got {desktop["articleImages"]}'
                 assert not desktop['articleImageIssues'], f'vaishnava: source diagram assets are missing, cropped, or missing alt text: {desktop["articleImageIssues"]}'
-                cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Taittiriya Samhita (5.5.1)')
-                assert cite_pair.count() == 1, 'vaishnava: Taittiriya source was not paired with its own quote'
+                cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Brahma Sūtra 1.1.3.')
+                assert cite_pair.count() == 1, 'vaishnava: Brahma Sūtra source was not paired with its own quote'
                 cite_order=cite_pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference,p.source-citation,p.scripture-source,p.citation') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation') ? 'translation' : 'other')")
-                assert cite_order == ['source','sanskrit','translation'], f'vaishnava: Taittiriya quote group order is wrong: {cite_order}'
+                assert cite_order == ['source','sanskrit','translation'], f'vaishnava: Brahma Sūtra quote group order is wrong: {cite_order}'
+                tables = page.locator('#source-content table.vishnu-data-table')
+                assert tables.count() == 5, f'vaishnava: expected five original summary tables, got {tables.count()}'
+                row_counts = [table.locator('tbody tr').count() for table in tables.all()]
+                assert row_counts == [8,7,7,11,20], f'vaishnava: summary table rows differ from the PDF: {row_counts}'
+                bibliography = page.locator('#source-content .document-reference-section .source-page-body ol')
+                bibliography_counts = [list_node.locator(':scope > li').count() for list_node in bibliography.all()]
+                assert bibliography_counts == [12,6,2,10,5,13], f'vaishnava: bibliography entries differ from the PDF: {bibliography_counts}'
+                assert page.locator('#source-content p.reference').filter(has_text='Source:').count() == 0, 'vaishnava: generic Source: labels remain'
                 assert 'MahabharataBhagavad Gita' not in page.locator('#source-content').inner_text(), 'vaishnava: the old joined diagram labels remain'
               assert not desktop['pageNav'], f'{label}: old Previous/Next navigation remains'
               assert desktop['paragraphStyle'], f'{label}: no article paragraph rendered'
               assert desktop['headingStyle'], f'{label}: no section heading rendered'
-              if paragraph_reference is None:
+              if label != 'vaishnava' and paragraph_reference is None:
                 paragraph_reference = desktop['paragraphStyle']
                 heading_reference = desktop['headingStyle']
-              else:
+              elif label != 'vaishnava':
                 assert desktop['paragraphStyle'] == paragraph_reference, f'{label}: article font differs {desktop["paragraphStyle"]} != {paragraph_reference}'
                 assert desktop['headingStyle'] == heading_reference, f'{label}: section heading style differs {desktop["headingStyle"]} != {heading_reference}'
-              if desktop['quoteStyle']:
+              if label != 'vaishnava' and desktop['quoteStyle']:
                 if quote_reference is None:
                   quote_reference = desktop['quoteStyle']
                 else:
