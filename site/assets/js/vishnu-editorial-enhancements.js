@@ -5,6 +5,14 @@
 const root=document.querySelector('.document-content');
 if(!root)return;
 document.body.classList.add('vishnu-editorial-reader');
+function showSanskritPassages(){
+  for(const details of root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note)')){
+    details.open=true;
+    details.querySelector(':scope > summary')?.remove();
+  }
+}
+showSanskritPassages();
+new MutationObserver(showSanskritPassages).observe(root,{childList:true,subtree:true});
 const desktopToc=document.querySelector('.side-toc .toc');
 const mobileToc=document.querySelector('.mobile-toc .toc');
 if(desktopToc)desktopToc.id='vishnu-desktop-toc';
@@ -13,7 +21,7 @@ for(const nav of [desktopToc,mobileToc].filter(Boolean)){
   const paintActive=()=>{
     for(const link of nav.querySelectorAll('a.toc-index-link')){
       const active=link.classList.contains('is-active')||link.classList.contains('is-active-subsection');
-      if(active)link.style.setProperty('color','#00787a','important');
+      if(active)link.style.setProperty('color','#496b6c','important');
       else link.style.removeProperty('color');
     }
   };

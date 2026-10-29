@@ -232,7 +232,11 @@ jobs:
               }).map(pair=>pair.innerText.trim().slice(0,140));
               const sourceDisclosures=[...article.querySelectorAll('.document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)')]
                 .filter(details=>/[\\u0900-\\u097f]/.test(details.textContent));
-              const badDisclosureLabels=sourceDisclosures.filter(details=>! /^(?:Show|Hide) Sanskrit$/.test(details.querySelector(':scope > summary')?.textContent.trim()||'')).length;
+              const badDisclosureLabels=sourceDisclosures.filter(details=>{
+                const summary=details.querySelector(':scope > summary');
+                return summary&&!/^(?:Show|Hide) Sanskrit$/.test(summary.textContent.trim());
+              }).length;
+              const sanskritAlwaysVisible=sourceDisclosures.length>0&&sourceDisclosures.every(details=>details.open&&!details.querySelector(':scope > summary'));
               const translationCandidates=[...article.querySelectorAll(translationSelector+',p')].filter(node=>
                 (node.matches(translationSelector)||/^[“"'‘]/u.test(node.textContent.trim()))&&!node.closest('.source-page-body'));
               const unpairedTranslationNodes=translationCandidates.filter(node=>!node.closest('.scripture-quote-pair,.women-scripture-pair'));
@@ -270,6 +274,7 @@ jobs:
                 meatCitationStyle,
                 sanskritDisclosures: sourceDisclosures.length,
                 badDisclosureLabels,
+                sanskritAlwaysVisible,
                 unpairedTranslations,
                 unpairedTranslationExamples,
                 uncitedTranslationGroups,
@@ -400,7 +405,7 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
-                expected_color = 'rgb(0, 120, 122)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
+                expected_color = 'rgb(73, 107, 108)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
                 page.wait_for_function("""({selector,color}) => {
                   const active=document.querySelector(selector+' a.toc-index-link.is-active, '+selector+' a.toc-index-link.is-active-subsection');
                   return active && getComputedStyle(active).color===color;
@@ -455,7 +460,14 @@ jobs:
               page.on('pageerror', lambda error, bucket=errors: bucket.append(str(error)))
               url = root + slug + '/'
               response = open_reader(page, url, errors)
-              sanskrit_controls_tested = verify_sanskrit_disclosure(page, label)
+              if label == 'vaishnava':
+                sanskrit_controls_tested = page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)').filter(has=page.locator('[lang^="sa"]')).count()
+                page.wait_for_function("""() => {
+                  const passages=[...document.querySelectorAll('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)')].filter(item=>/[\\u0900-\\u097f]/.test(item.textContent));
+                  return passages.length>0&&passages.every(item=>item.open&&!item.querySelector(':scope > summary'));
+                }""")
+              else:
+                sanskrit_controls_tested = verify_sanskrit_disclosure(page, label)
               if label == 'shaiva':
                 for verse in range(36, 41):
                   expected_source = f'Shiva Purana, Rudra Samhita 16.{verse}'
@@ -469,6 +481,8 @@ jobs:
                   order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
                   assert order == ['source', 'sanskrit', 'translation'], f'shaiva: quote order differs for {expected_source}: {order}'
               desktop = metrics(page)
+              if label == 'vaishnava':
+                assert desktop['sanskritAlwaysVisible'], 'vaishnava: Sanskrit passages are not visible without a toggle'
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
@@ -492,9 +506,9 @@ jobs:
               assert not desktop['brokenPageLinks'], f'{label}: broken article fragment links {desktop["brokenPageLinks"]}'
               assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
               if label == 'vaishnava':
-                assert desktop['citationColor'] == 'rgb(0, 120, 122)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
-                assert desktop['contentsLinkColor'] in ('rgb(103, 49, 251)','rgb(0, 120, 122)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
-                assert desktop['quoteStyle']['color'] == 'rgb(103, 49, 251)', f'{label}: English quotations are not purple: {desktop["quoteStyle"]}'
+                assert desktop['citationColor'] == 'rgb(73, 107, 108)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
+                assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
+                assert desktop['quoteStyle']['color'] == 'rgb(75, 72, 79)', f'{label}: English quotations are not purple: {desktop["quoteStyle"]}'
               elif label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
                 assert desktop['citationColor'] == 'rgb(32, 33, 34)', f'{label}: source citation text is not dark: {desktop["citationColor"]}'

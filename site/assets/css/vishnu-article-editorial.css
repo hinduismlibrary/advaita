@@ -3,14 +3,14 @@ body.document-paged-page.vishnu-editorial-reader {
   --outer:#f5f3ef;
   --paper:#fffdfa;
   --ink:#3c362e;
-  --teal:#00787a;
-  --link:#6731fb;
-  --quote:#6731fb;
-  --quote-rule:#c4b8c6;
+  --teal:#496b6c;
+  --link:#504b53;
+  --quote:#4b484f;
+  --quote-rule:#b6b2ba;
   --rule:rgba(90,82,75,.18);
   --side-rule:#d4d0ca;
   --button-border:#9eaea8;
-  --sanskrit:#7f432f;
+  --sanskrit:#4b484f;
   background:var(--outer)!important;
   color:var(--ink)!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
@@ -311,7 +311,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   background:transparent!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
-  display:inline-block!important;
+  display:none!important;
   min-height:0!important;
   margin:1px 0!important;
   padding:3px 10px!important;
@@ -345,7 +345,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   margin:12px 0 8px!important;
   padding:0 0 0 12px!important;
   border:0!important;
-  border-left:2px solid #c5a48f!important;
+  border-left:2px solid var(--quote-rule)!important;
   background:transparent!important;
   color:var(--sanskrit)!important;
   font:400 20px/1.8 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
