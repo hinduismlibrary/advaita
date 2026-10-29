@@ -387,7 +387,7 @@ function syncSubsectionToc(){
       if(order&Node.DOCUMENT_POSITION_PRECEDING)return 1;
       return 0;
     }):[];
-  const line=40;
+  const line=80;
   let selected=null;
   for(const item of candidates){
     if(item.target.getBoundingClientRect().top<=line)selected=item;
@@ -410,7 +410,7 @@ function tocTargetId(link){
 function syncActiveSection(){
   const entries=segments.map(page=>({page,heading:renderedHeadings.get(page.id)})).filter(item=>item.heading);
   if(!entries.length)return;
-  const line=40;
+  const line=80;
   let active=entries[0];
   for(const entry of entries){
     if(entry.heading.getBoundingClientRect().top<=line)active=entry;

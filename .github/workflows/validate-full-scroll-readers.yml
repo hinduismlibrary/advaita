@@ -48,7 +48,7 @@ jobs:
           )
           full_scroll_style = '20261029-paper-reader-restore-1'
           varna_script_version = '20261027-full-scroll-2'
-          shared_reader_version = '20261029-scrollspy-bottom-1'
+          shared_reader_version = '20261029-scrollspy-threshold-1'
           shaiva_reader_version = '20261028-shaiva-quote-groups-3'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
