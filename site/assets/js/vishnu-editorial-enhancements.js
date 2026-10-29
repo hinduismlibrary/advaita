@@ -9,6 +9,17 @@ const desktopToc=document.querySelector('.side-toc .toc');
 const mobileToc=document.querySelector('.mobile-toc .toc');
 if(desktopToc)desktopToc.id='vishnu-desktop-toc';
 if(mobileToc)mobileToc.id='vishnu-mobile-toc';
+for(const nav of [desktopToc,mobileToc].filter(Boolean)){
+  const paintActive=()=>{
+    for(const link of nav.querySelectorAll('a.toc-index-link')){
+      const active=link.classList.contains('is-active')||link.classList.contains('is-active-subsection');
+      if(active)link.style.setProperty('color','#00787a','important');
+      else link.style.removeProperty('color');
+    }
+  };
+  paintActive();
+  new MutationObserver(paintActive).observe(nav,{subtree:true,attributes:true,attributeFilter:['class']});
+}
 // Keep the paper's opening illustration and invocation before the Preface.
 const firstSection=root.querySelector('.document-section');
 const cover=firstSection?.querySelector(':scope > figure.vishnu-cover-art');
