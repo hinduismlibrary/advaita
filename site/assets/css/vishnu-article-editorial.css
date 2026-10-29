@@ -469,6 +469,14 @@ body.document-paged-page .mobile-toc {display:none!important}
   body.document-paged-page .article .document-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation) {font-size:18px!important}
   body.document-paged-page .article .document-content .table-scroll table {min-width:560px!important}
 }
+/* The shared reader pins Vollkorn to #source-content with an ID selector.
+   Match that specificity so the article body truly uses Merriweather. */
+body.document-paged-page #source-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td,summary,.source-entry):lang(en) {
+  font-family:Merriweather,Georgia,serif!important;
+}
+body.document-paged-page #source-content :is(p.reference,p.source-citation,p.scripture-source,p.citation):lang(en) {
+  font-family:Vollkorn,Georgia,serif!important;
+}
 @media (prefers-reduced-motion:reduce) {
   body.document-paged-page .article .document-content details.sanskrit-reveal > summary,
   body.document-paged-page .toc a {transition:none!important}
