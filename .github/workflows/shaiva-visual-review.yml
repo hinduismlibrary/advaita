@@ -509,7 +509,7 @@ jobs:
               if label == 'vaishnava':
                 assert desktop['citationColor'] == 'rgb(73, 107, 108)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
                 assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
-                assert desktop['quoteStyle']['color'] == 'rgb(75, 72, 79)', f'{label}: English quotations are not purple: {desktop["quoteStyle"]}'
+                assert desktop['quoteStyle']['color'] == 'rgb(101, 81, 111)', f'{label}: English quotations do not match the Varṇa-vicāra purple: {desktop["quoteStyle"]}'
               elif label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
                 assert desktop['citationColor'] == 'rgb(32, 33, 34)', f'{label}: source citation text is not dark: {desktop["citationColor"]}'
