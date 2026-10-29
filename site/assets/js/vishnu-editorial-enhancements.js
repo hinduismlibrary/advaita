@@ -84,7 +84,7 @@ function nearbyVerbatimReference(details){
     const t=txt(prev);
     // Literal source attributions are preferred. Do not borrow from a distant paragraph.
     const explicit=t.match(/(?:^|\s)Source:\s*([^\n]{5,155})/i);
-    if(explicit)return 'Source: '+explicit[1].replace(/\s+/g,' ').trim();
+    if(explicit)return explicit[1].replace(/\s+/g,' ').trim();
     // Only print chapter/verse numbers that are explicitly present next to a
     // named work in the supplied HTML. Never synthesize numbering.
     const names='Bhagavad G(?:ita|ītā)|(?:Ṛg|Rig)veda|(?:Taittirīya|Taittiriya) (?:Saṃhitā|Samhita|Āraṇyaka|Aranyaka)|(?:Aitareya|Śatapatha|Shatapatha|Paiṅgi-rahasya) (?:Brāhmaṇa|Brahmana)|(?:Mahābhārata|Mahabharata)|(?:Rāmāyaṇa|Ramayana)|(?:Manusmṛti|Manusmrti)|(?:Brahma Sūtra|Brahma Sutra)|(?:Chāndogya|Chandogya|Bṛhadāraṇyaka|Brihadaranyaka|Kaṭha|Katha|Nārāyaṇa|Narayana|Mahā|Maha) (?:Upaniṣad|Upanishad)|(?:Viṣṇu|Vishnu|Śiva|Shiva|Bhāgavata|Bhagavata|Agni|Liṅga|Linga|Skanda|Kūrma|Kurma|Garuḍa|Garuda|Padma|Varāha|Varaha|Nārada|Narada|Vāmana|Vamana) (?:Purāṇa|Purana)|(?:Vyāsa|Vyasa) (?:Smṛti|Smriti)';
@@ -107,14 +107,14 @@ for(let i=0;i<quotedDetails.length;i++){
   if(siblingCitation)continue;
   let label=nearbyVerbatimReference(details);
   let uncertainty=false;
-  if(i===0)label='Source: Maṅgalācaraṇam (opening invocation), Hari-paratva-vimarśaḥ, PDF p. 2.';
+  if(i===0)label='Maṅgalācaraṇam — Hari-paratva-vimarśaḥ, p. 2';
   if(!label&&i===quotedDetails.length-1){
-    label='Source: Closing colophon, Hari-paratva-vimarśaḥ, PDF p. 72.';
+    label='Closing colophon — Hari-paratva-vimarśaḥ, p. 72';
   }
   if(!label){
     const section=details.closest('.document-section');
     const sectionName=txt(section?.querySelector('.document-section-title,.source-page-heading,.document-group-heading'))||'this section';
-    label='Exact scripture/verse locator not provided beside this passage in the source transcription ('+sectionName+').';
+    label='Citation not specified in the original text';
     uncertainty=true;
   }
   const note=document.createElement('p');
@@ -122,4 +122,36 @@ for(let i=0;i<quotedDetails.length;i++){
   note.textContent=label;
   details.before(note);
 }
+
+/* Citation headings are plain work names and verse numbers, not labels. */
+for(const p of root.querySelectorAll(citationSel)){
+  const original=txt(p);
+  if(/^source\s*:/i.test(original))p.textContent=original.replace(/^source\s*:\s*/i,'').trim();
+}
+/* Retain a single "Sources" label on this page despite global bilingual chrome. */
+for(const el of document.querySelectorAll('.toc a, .document-reference-section .source-page-heading')){
+  const href=el.getAttribute('href')||'';
+  if(/#bibliography$/i.test(href)||el.matches('.document-reference-section .source-page-heading')){
+    el.textContent='Sources';
+    el.dataset.vdBilingual='true';
+    el.setAttribute('aria-label','Sources');
+  }
+}
+/* Chrome adds its shared CSS after page load; keep these page-specific type
+   rules last in the cascade, without affecting any other article. */
+const editorialCss=[...document.head.querySelectorAll('link[rel="stylesheet"]')]
+  .find(link=>(link.getAttribute('href')||'').includes('/vishnu-article-editorial.css'));
+const raiseEditorialCss=()=>{
+  if(!editorialCss)return;
+  const chrome=document.head.querySelector('link[href*="/site-chrome.css"]');
+  if(chrome && (editorialCss.compareDocumentPosition(chrome)&Node.DOCUMENT_POSITION_FOLLOWING)){
+    document.head.append(editorialCss);
+  }
+};
+raiseEditorialCss();
+const cssOrderWatch=new MutationObserver(()=>{
+  raiseEditorialCss();
+  if(document.head.querySelector('link[href*="/site-chrome.css"]'))cssOrderWatch.disconnect();
+});
+cssOrderWatch.observe(document.head,{childList:true});
 })();
