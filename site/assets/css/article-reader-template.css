@@ -908,3 +908,366 @@ body.document-paged-page #source-content :is(p,li,dt,dd,blockquote,figcaption,ca
 body.document-paged-page #source-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td,summary,.index-heading,.index-subitem,.source-entry):lang(kn){
   font-family:"Noto Serif Kannada","Tunga",serif!important;
 }
+
+
+/* Return document readers to the paper and Contents layout. */
+body.document-paged-page{
+  --outer:#2b261f;
+  --paper:#f4f4f0;
+  --ink:#3c362e;
+  --teal:#00787a;
+  --purple:#0645ad;
+  --quote:#3c362e;
+  --quote-rule:#c5a48f;
+  --rule:rgba(119,119,119,.16);
+  --side-rule:#d4d0ca;
+  --orange-soft:#b8a18c;
+  --sanskrit:#3c362e;
+  background:var(--outer)!important;
+  color:var(--ink)!important;
+  font-family:"Vollkorn",Georgia,serif!important;
+  font-size:19px!important;
+  line-height:1.62!important;
+}
+body.document-paged-page .sitebar,
+body.document-paged-page .page{
+  background:var(--paper)!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page .sitebar{
+  width:1080px;
+  max-width:100%;
+  height:58px;
+  margin:0 auto;
+  padding:0 42px;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--rule);
+}
+body.document-paged-page .sitebar a{
+  color:var(--teal)!important;
+  font-family:"Vollkorn",Georgia,serif!important;
+}
+body.document-paged-page .page{
+  width:1080px;
+  max-width:100%;
+  min-height:100vh;
+  margin:0 auto;
+  padding:64px 54px 96px;
+}
+body.document-paged-page .article-head{
+  width:652px;
+  max-width:calc(100% - 286px);
+  margin:0 0 58px auto!important;
+  text-align:center;
+}
+body.document-paged-page .article-head h1{
+  margin:0;
+  color:var(--teal)!important;
+  font-family:"Anton","Noto Serif Devanagari","Nirmala UI",Mangal,sans-serif!important;
+  font-size:42px!important;
+  font-weight:400!important;
+  letter-spacing:.012em;
+  line-height:1.18!important;
+}
+body.document-paged-page .article-head:after{
+  width:280px;
+  max-width:48%;
+  height:1px;
+  margin:24px auto 0;
+  background:var(--rule);
+}
+body.document-paged-page .reader-grid{
+  display:grid;
+  grid-template-columns:220px minmax(0,652px);
+  gap:42px;
+  justify-content:end;
+  align-items:start;
+}
+body.document-paged-page .side-toc{
+  position:sticky;
+  top:28px;
+  max-height:calc(100vh - 56px);
+  overflow:auto;
+  padding:0 24px 20px 0;
+  border-right:1px solid var(--side-rule);
+  scrollbar-width:none;
+}
+body.document-paged-page .side-toc::-webkit-scrollbar{display:none}
+body.document-paged-page .side-toc-title,
+body.document-paged-page .toc h2,
+body.document-paged-page .toc h3{
+  color:var(--teal)!important;
+  font-family:"Anton","Noto Serif Devanagari","Nirmala UI",Mangal,sans-serif!important;
+  font-size:24px;
+  font-weight:400!important;
+  letter-spacing:.012em;
+  line-height:1.2;
+}
+body.document-paged-page .toc{
+  font-family:"Vollkorn",Georgia,serif!important;
+}
+body.document-paged-page .toc .toc-group{margin:0 0 14px}
+body.document-paged-page .toc a.toc-index-link,
+body.document-paged-page .toc a.toc-subitem,
+body.document-paged-page .toc a.toc-parent{
+  display:block;
+  color:#625b54;
+  font-family:"Vollkorn",Georgia,serif!important;
+  font-size:13.5px;
+  line-height:1.48;
+  text-decoration:none;
+  transition:color 180ms ease-out;
+}
+body.document-paged-page .toc a.toc-parent{
+  margin:0 0 8px;
+  color:var(--ink);
+  font-size:15px;
+  font-weight:600;
+}
+body.document-paged-page .toc a.toc-subitem{
+  color:#817970;
+  font-size:12px;
+}
+body.document-paged-page .toc .toc-children,
+body.document-paged-page .toc .toc-subitems{
+  margin:4px 0 8px 11px;
+  padding-left:12px;
+  border-left:1px solid var(--side-rule);
+}
+body.document-paged-page .toc a.toc-index-link.is-active,
+body.document-paged-page .toc a.toc-index-link.is-active-subsection,
+body.document-paged-page .toc a.toc-subitem.is-active-subsection,
+body.document-paged-page .toc a.toc-parent.is-active{
+  color:#0645ad!important;
+  font-weight:700;
+}
+body.document-paged-page .toc a.toc-index-link:hover,
+body.document-paged-page .toc a.toc-subitem:hover,
+body.document-paged-page .toc a.toc-parent:hover{
+  color:#0645ad!important;
+}
+body.document-paged-page .article{
+  min-width:0;
+  width:652px;
+  max-width:100%;
+  margin:0;
+}
+body.document-paged-page .article .document-content{
+  min-width:0;
+  color:var(--ink);
+  font-family:"Vollkorn",Georgia,serif!important;
+  overflow-wrap:break-word;
+}
+body.document-paged-page .article .document-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td){
+  color:var(--ink);
+  font-family:"Vollkorn",Georgia,serif!important;
+  font-size:18px!important;
+  line-height:1.62!important;
+}
+body.document-paged-page .article .document-content p{margin:0 0 18px!important}
+body.document-paged-page .article .document-content :is(h2,h3,h4,h5,.document-group-heading,.document-section-title){
+  color:var(--teal)!important;
+  font-family:"Anton","Noto Serif Devanagari","Nirmala UI",Mangal,sans-serif!important;
+  font-weight:400!important;
+  letter-spacing:.012em;
+  line-height:1.25!important;
+  text-align:left!important;
+}
+body.document-paged-page .article .document-content :is(h2,.document-section-title,.document-group-heading){
+  margin:34px 0 12px!important;
+  padding:0 0 8px!important;
+  border-bottom:1px solid var(--rule);
+  font-size:25px!important;
+}
+body.document-paged-page .article .document-content :is(h3,h4,h5){
+  margin:24px 0 8px!important;
+  padding:0!important;
+  border:0!important;
+  font-size:20px!important;
+}
+body.document-paged-page .article .document-content :is(h2,h3,h4,h5)::after{display:none!important;content:none!important}
+body.document-paged-page .article .document-content a,
+body.document-paged-page .article .document-content p.reference,
+body.document-paged-page .article .document-content p.source-citation,
+body.document-paged-page .article .document-content p.scripture-source,
+body.document-paged-page .article .document-content p.citation{
+  color:#0645ad!important;
+}
+body.document-paged-page .article .document-content p.reference,
+body.document-paged-page .article .document-content p.source-citation,
+body.document-paged-page .article .document-content p.scripture-source,
+body.document-paged-page .article .document-content p.citation{
+  margin:8px 0 6px!important;
+  font-size:14px!important;
+  line-height:1.45!important;
+  font-weight:600;
+}
+body.document-paged-page .article .document-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation,.women-scripture-translation){
+  margin:3px 0 0!important;
+  padding:1px 0 1px 13px!important;
+  border-left:2px solid var(--side-rule)!important;
+  color:var(--ink)!important;
+  font-size:17px!important;
+  line-height:1.6!important;
+}
+body.document-paged-page .article .document-content :is(.scripture-quote-pair,.women-scripture-pair){
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:5px;
+  margin:16px 0 24px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.document-paged-page .article .document-content .scripture-quote-pair>details.sanskrit-reveal,
+body.document-paged-page .article .document-content .women-scripture-pair>details.sanskrit-reveal{order:1}
+body.document-paged-page .article .document-content .scripture-quote-pair>:is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation),
+body.document-paged-page .article .document-content .women-scripture-pair>:is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation,.women-scripture-translation){order:2}
+body.document-paged-page .article .document-content details.sanskrit-reveal{
+  margin:0!important;
+}
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary{
+  display:inline-block;
+  min-height:0!important;
+  margin:2px 0;
+  padding:3px 10px!important;
+  border:1px solid #b8a18c!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#0645ad!important;
+  font:400 12px/1.4 "Vollkorn",Georgia,serif!important;
+  list-style:none;
+  cursor:pointer;
+}
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary::-webkit-details-marker{display:none}
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary:hover,
+body.document-paged-page .article .document-content details.sanskrit-reveal>summary:focus-visible{
+  background:#eeebe5!important;
+  border-color:#0645ad!important;
+  outline:2px solid #0645ad!important;
+  outline-offset:2px;
+}
+body.document-paged-page .article .document-content details.sanskrit-reveal [lang="sa-Deva"],
+body.document-paged-page .article .document-content p.sanskrit-text{
+  margin:8px 0!important;
+  padding:0 0 0 12px!important;
+  border-left:2px solid #c5a48f!important;
+  color:var(--sanskrit)!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:19px!important;
+  line-height:1.75!important;
+}
+body.document-paged-page .article .document-content details.sanskrit-reveal .sanskrit-transliteration,
+body.document-paged-page .article .document-content [lang="sa-Latn"]{
+  display:block!important;
+  color:#5b6570!important;
+  font-family:"Vollkorn",Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.6!important;
+  font-style:italic;
+}
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p.sanskrit-transliteration),
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p[lang="sa-Latn"]){
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px 20px;
+}
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p.sanskrit-transliteration)>summary,
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p[lang="sa-Latn"])>summary{grid-column:1/-1;justify-self:start}
+body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + .sanskrit-pair){display:block}
+body.document-paged-page .article .document-content .sanskrit-pair{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px 20px;
+}
+body.document-paged-page .article .document-content .sanskrit-pair>*{min-width:0}
+body.document-paged-page .article .document-content figure.source-document-figure{
+  display:block;
+  max-width:900px;
+  margin:20px auto 28px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  text-align:center;
+}
+body.document-paged-page .article .document-content figure.source-document-figure img,
+body.document-paged-page .article .document-content figure img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  margin:0 auto;
+  object-fit:contain;
+}
+body.document-paged-page .article .document-content figure figcaption{
+  margin:8px 0 0;
+  color:#625b54;
+  font-size:14px!important;
+  line-height:1.5!important;
+  text-align:center;
+}
+body.document-paged-page .article .document-content table{
+  width:100%;
+  border-collapse:collapse;
+  margin:22px 0 30px;
+}
+body.document-paged-page .article .document-content th,
+body.document-paged-page .article .document-content td{
+  padding:9px 10px;
+  border:1px solid #d8d2ca;
+  vertical-align:top;
+  text-align:left;
+  overflow-wrap:anywhere;
+}
+body.document-paged-page .article .document-content th{background:#eee9e2}
+body.document-paged-page .article .document-content tr:nth-child(even) td{background:#f7f4f0}
+body.document-paged-page .article .document-content .document-section+.document-section{margin-top:34px}
+body.document-paged-page .article .document-content :is(h2,h3,h4,h5,.document-group-heading,.document-section-title){scroll-margin-top:32px}
+@media(max-width:900px){
+  body.document-paged-page{background:var(--paper)!important}
+  body.document-paged-page .sitebar{padding:0 24px}
+  body.document-paged-page .page{padding:48px 24px 76px}
+  body.document-paged-page .article-head{width:652px;max-width:100%;margin:0 auto 48px!important}
+  body.document-paged-page .reader-grid{display:block;width:652px;max-width:100%;margin:0 auto}
+  body.document-paged-page .side-toc{display:none}
+  body.document-paged-page .article{width:100%}
+  body.document-paged-page .mobile-toc{display:block;margin:0 auto 38px;padding:0 0 18px;border-bottom:1px solid var(--side-rule)}
+  body.document-paged-page .mobile-toc>summary{
+    cursor:pointer;
+    color:var(--teal);
+    font-family:"Anton","Noto Serif Devanagari","Nirmala UI",Mangal,sans-serif!important;
+    font-size:21px;
+    list-style:none;
+  }
+  body.document-paged-page .mobile-toc>summary::-webkit-details-marker{display:none}
+  body.document-paged-page .mobile-toc>summary:after{content:"+";float:right;color:#8c837b}
+  body.document-paged-page .mobile-toc[open]>summary:after{content:"−"}
+}
+@media(max-width:620px){
+  body.document-paged-page{font-size:17px!important;line-height:1.62!important}
+  body.document-paged-page .sitebar{height:50px;padding:0 18px}
+  body.document-paged-page .page{padding:36px 18px 62px}
+  body.document-paged-page .article-head{margin-bottom:36px!important}
+  body.document-paged-page .article-head h1{font-size:34px!important}
+  body.document-paged-page .mobile-toc{margin-bottom:32px}
+  body.document-paged-page .mobile-toc>summary{font-size:20px}
+  body.document-paged-page .article .document-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td){
+    font-size:16.5px!important;
+    line-height:1.66!important;
+  }
+  body.document-paged-page .article .document-content :is(h2,.document-section-title,.document-group-heading){font-size:22px!important}
+  body.document-paged-page .article .document-content :is(h3,h4,h5){font-size:18px!important}
+  body.document-paged-page .article .document-content details.sanskrit-reveal [lang="sa-Deva"],
+  body.document-paged-page .article .document-content p.sanskrit-text{font-size:18px!important}
+  body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p.sanskrit-transliteration),
+  body.document-paged-page .article .document-content details.sanskrit-reveal:has(>summary + p[lang="sa-Deva"] + p[lang="sa-Latn]),
+  body.document-paged-page .article .document-content .sanskrit-pair{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  body.document-paged-page .toc a.toc-index-link,
+  body.document-paged-page .toc a.toc-subitem,
+  body.document-paged-page .toc a.toc-parent{transition:none}
+}
