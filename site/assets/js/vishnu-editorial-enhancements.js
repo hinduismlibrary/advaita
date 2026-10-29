@@ -125,8 +125,12 @@ for(let i=0;i<quotedDetails.length;i++){
 
 /* Citation headings are plain work names and verse numbers, not labels. */
 for(const p of root.querySelectorAll(citationSel)){
-  const original=txt(p);
-  if(/^source\s*:/i.test(original))p.textContent=original.replace(/^source\s*:\s*/i,'').trim();
+  const firstText=document.createTreeWalker(p,NodeFilter.SHOW_TEXT);
+  let node=firstText.nextNode();
+  while(node&&!node.nodeValue.trim())node=firstText.nextNode();
+  if(node&&/^\s*source\s*:/i.test(node.nodeValue)){
+    node.nodeValue=node.nodeValue.replace(/^\s*source\s*:\s*/i,'');
+  }
 }
 /* Retain a single "Sources" label on this page despite global bilingual chrome. */
 for(const el of document.querySelectorAll('.toc a, .document-reference-section .source-page-heading')){
