@@ -400,7 +400,11 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
-                page.wait_for_timeout(260)  # Allow the Contents color transition to finish.
+                expected_color = 'rgb(0, 120, 122)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
+                page.wait_for_function("""({selector,color}) => {
+                  const active=document.querySelector(selector+' a.toc-index-link.is-active, '+selector+' a.toc-index-link.is-active-subsection');
+                  return active && getComputedStyle(active).color===color;
+                }""", arg={'selector':selector,'color':expected_color}, timeout=7000)
                 visual = page.evaluate("""selector => {
                   const nav=document.querySelector(selector);
                   const active=nav?.querySelector('a.toc-index-link.is-active, a.toc-index-link.is-active-subsection');
@@ -413,7 +417,6 @@ jobs:
                     scroll:getComputedStyle(document.documentElement).scrollBehavior
                   };
                 }""", selector)
-                expected_color = 'rgb(0, 120, 122)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
                 expected_weight = '400' if label == 'vaishnava' else '700'
                 if (not visual or visual['color'] != expected_color or
                     visual['weight'] != expected_weight or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
@@ -425,7 +428,8 @@ jobs:
                   const nav=document.querySelector(selector);
                   const target=document.getElementById(id);
                   return {
-                    active:nav?[...nav.querySelectorAll('a.is-active,a.is-active-subsection')].map(a=>({text:a.textContent.trim(),section:a.dataset.section,subsection:a.dataset.subsection})):[],
+                    navId:nav?.id || '',
+                    active:nav?[...nav.querySelectorAll('a.is-active,a.is-active-subsection')].map(a=>({text:a.textContent.trim(),section:a.dataset.section,subsection:a.dataset.subsection,color:getComputedStyle(a).color,inline:a.getAttribute('style')})):[],
                     section:document.querySelector('#section-parent')?.textContent || document.querySelector('.page-context strong')?.textContent || '',
                     targetTop:target?.getBoundingClientRect().top,
                     scrollY:window.scrollY
