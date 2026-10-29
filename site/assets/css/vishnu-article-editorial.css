@@ -532,6 +532,23 @@ body.document-paged-page .page .reader-grid .toc a.toc-index-link:hover {
   body.document-paged-page #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {font-size:18px!important}
   body.document-paged-page #source-content .source-page-body li:lang(en) {font-size:16px!important}
 }
+/* The site header remains shared; this page has its own editorial palette. */
+body.document-paged-page.vishnu-editorial-reader {background:#2b261f!important;color:#3c362e!important}
+body.document-paged-page.vishnu-editorial-reader .page {background:#f4f4f4!important}
+body.document-paged-page.vishnu-editorial-reader .article-head h1,
+body.document-paged-page.vishnu-editorial-reader .side-toc-title {color:#00787a!important}
+body.document-paged-page #vishnu-desktop-toc a.toc-index-link,
+body.document-paged-page #vishnu-mobile-toc a.toc-index-link {
+  color:#6731fb!important;
+  font:400 20px/1.5 Merriweather,Georgia,serif!important;
+  transition:color .18s ease,text-decoration-color .18s ease!important;
+}
+body.document-paged-page #vishnu-desktop-toc a.toc-index-link:is(.is-active,.is-active-subsection,:hover,:focus-visible),
+body.document-paged-page #vishnu-mobile-toc a.toc-index-link:is(.is-active,.is-active-subsection,:hover,:focus-visible) {
+  color:#00787a!important;
+  font-weight:400!important;
+}
+body.document-paged-page :is(#vishnu-desktop-toc,#vishnu-mobile-toc) .toc-index-nested a.toc-index-link {font-size:17px!important}
 /* The shared reader pins Vollkorn to #source-content with an ID selector.
    Match that specificity so the article body truly uses Merriweather. */
 body.document-paged-page #source-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td,summary,.source-entry):lang(en) {

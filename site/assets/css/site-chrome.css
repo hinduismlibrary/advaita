@@ -3207,53 +3207,53 @@ body.vd-chrome-page:not(.heatmap-body).vd-chrome-page.vd-chrome-page.vd-chrome-p
   --gita-paper:#fff!important;--gita-ink:#202122!important;--gita-teal:#0645ad!important;--gita-line:#a2a9b1!important;
   --vr-outer:#fff!important;--vr-paper:#fff!important;--vr-ink:#202122!important;--vr-teal:#0645ad!important;--vr-purple:#0645ad!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b){
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b){
   color:#202122!important;background:#fff!important;color-scheme:light!important;scrollbar-color:#202122 #fff!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b){
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b){
   color:#202122!important;background:#fff!important;border-color:#a2a9b1!important;
   box-shadow:none!important;text-shadow:none!important;outline-color:#202122!important;background-image:none!important;
   accent-color:#0645ad!important;fill:#202122!important;stroke:#202122!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::before,
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::after,
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::marker{
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::before,
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::after,
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::marker{
   color:#202122!important;background:#fff!important;border-color:#a2a9b1!important;
   box-shadow:none!important;background-image:none!important;fill:#202122!important;stroke:#202122!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) a:not(#vd-mono-lock-a#vd-mono-lock-b),
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) a:visited:not(#vd-mono-lock-a#vd-mono-lock-b),
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) a:hover:not(#vd-mono-lock-a#vd-mono-lock-b),
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) a:focus-visible:not(#vd-mono-lock-a#vd-mono-lock-b){
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) a:not(#vd-mono-lock-a#vd-mono-lock-b),
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) a:visited:not(#vd-mono-lock-a#vd-mono-lock-b),
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) a:hover:not(#vd-mono-lock-a#vd-mono-lock-b),
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) a:focus-visible:not(#vd-mono-lock-a#vd-mono-lock-b){
   color:#0645ad!important;text-decoration-color:#0645ad!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)[lang^="sa-Deva"],
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)[lang^="hi-Deva"]{
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)[lang^="sa-Deva"],
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)[lang^="hi-Deva"]{
   color:#202122!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   .vd-label-en,.vd-label-iast,.label-en,.original-work-iast,.ad-entry-original-iast,
   .catalog-iast,.chapter-iast,.purana-name-iast,.purana-chapter-reference,.purana-chapter-name,.ad-title-en,.ad-heading-en,
   .hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast
 ){
   color:#0645ad!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :is(button,input,select,textarea):not(#vd-mono-lock-a#vd-mono-lock-b){
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :is(button,input,select,textarea):not(#vd-mono-lock-a#vd-mono-lock-b){
   color:#202122!important;background:#fff!important;border-color:#202122!important;accent-color:#0645ad!important
 }
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :is(input,textarea):not(#vd-mono-lock-a#vd-mono-lock-b)::placeholder{color:#54595d!important;opacity:1!important}
-body.vd-chrome-page:not(.heatmap-body):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::selection{background:#202122!important;color:#fff!important}
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :is(input,textarea):not(#vd-mono-lock-a#vd-mono-lock-b)::placeholder{color:#54595d!important;opacity:1!important}
+body.vd-chrome-page:not(.heatmap-body):not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b)::selection{background:#202122!important;color:#fff!important}
 
 
 /* Paired labels keep Devanagari black and Latin or English blue everywhere. */
-body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+body.vd-chrome-page:not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   .vd-label-en,.vd-label-iast,.label-en,.original-work-iast,.ad-entry-original-iast,
   .catalog-iast,.chapter-iast,.purana-name-iast,.purana-title-iast,
   .ad-title-en,.ad-heading-en,.hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast
 ){
   color:#0645ad!important
 }
-body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+body.vd-chrome-page:not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   [lang^="sa-Deva"],[lang^="hi-Deva"],.vd-label-dev,.purana-title-dev
 ){
   color:#202122!important
@@ -3261,7 +3261,7 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-
 
 
 /* Keep every bilingual label visible as a two-line pair. */
-body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+body.vd-chrome-page:not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   .vd-label-dev,.hp-home-title-dev,.hp-section-dev,.hp-link-dev,.hp-original-dev,
   .purana-title-dev,.purana-name-dev,.ad-title-dev,.ad-heading-dev,.ad-entry-original-dev,
   .catalog-dev,.chapter-name,.label-dev,.original-work-dev
@@ -3269,7 +3269,7 @@ body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-
   display:block!important;visibility:visible!important;opacity:1!important;
   color:#202122!important;-webkit-text-fill-color:#202122!important
 }
-body.vd-chrome-page:not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
+body.vd-chrome-page:not(.vishnu-editorial-reader):not(#vd-mono-lock-a#vd-mono-lock-b) :not(#vd-mono-lock-a#vd-mono-lock-b):is(
   .vd-label-en,.vd-label-iast,.hp-home-title-iast,.hp-section-en,.hp-link-en,.hp-original-iast,
   .purana-title-iast,.purana-name-iast,.ad-title-en,.ad-heading-en,.ad-entry-original-iast,
   .catalog-iast,.chapter-iast,.label-en,.original-work-iast

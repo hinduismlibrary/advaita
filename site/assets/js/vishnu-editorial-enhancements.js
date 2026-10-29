@@ -4,6 +4,11 @@
 'use strict';
 const root=document.querySelector('.document-content');
 if(!root)return;
+document.body.classList.add('vishnu-editorial-reader');
+const desktopToc=document.querySelector('.side-toc .toc');
+const mobileToc=document.querySelector('.mobile-toc .toc');
+if(desktopToc)desktopToc.id='vishnu-desktop-toc';
+if(mobileToc)mobileToc.id='vishnu-mobile-toc';
 // Keep the paper's opening illustration and invocation before the Preface.
 const firstSection=root.querySelector('.document-section');
 const cover=firstSection?.querySelector(':scope > figure.vishnu-cover-art');
@@ -52,6 +57,8 @@ const editorialCss=[...document.head.querySelectorAll('link[rel="stylesheet"]')]
   .find(link=>(link.getAttribute('href')||'').includes('/vishnu-article-editorial.css'));
 function keepLast(){
   const chrome=document.head.querySelector('link[href*="/site-chrome.css"]');
+  if(chrome&&!chrome.href.includes('20261029-vishnu-exception-1'))
+    chrome.href='/advaita/assets/css/site-chrome.css?v=20261029-vishnu-exception-1';
   if(chrome&&editorialCss&&(editorialCss.compareDocumentPosition(chrome)&Node.DOCUMENT_POSITION_FOLLOWING))
     document.head.append(editorialCss);
 }

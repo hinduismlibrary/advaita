@@ -22,6 +22,7 @@ on:
       - site/assets/js/vishnu-source-restoration.js
       - site/assets/js/vishnu-editorial-enhancements.js
       - site/assets/css/vishnu-article-editorial.css
+      - site/assets/css/site-chrome.css
       - site/assets/js/shaiva-complete-reader.js
       - site/assets/data/shaiva-manuscript.b64
       - site/assets/css/varna-vicara-paged.css
@@ -105,9 +106,12 @@ jobs:
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261029-paper-4');
+                    editorialStyle?.href.includes('20261029-paper-5');
+                  const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
+                  const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
+                    (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
-                    readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady;
+                    readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {
