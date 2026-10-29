@@ -271,8 +271,8 @@ body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quot
   content:none!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > :is(.reference,.source-citation,.citation) {order:0}
-body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > details.sanskrit-reveal {order:1}
-body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > :is(.translation,.scripture-translation) {order:2}
+body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > details.sanskrit-reveal {order:2}
+body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > :is(.translation,.scripture-translation) {order:1}
 body.document-paged-page.vishnu-editorial-reader #source-content :is(p.reference,p.source-citation,p.scripture-source,p.citation):lang(en) {
   display:block!important;
   width:100%;
@@ -314,12 +314,12 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   display:inline-block!important;
   min-height:0!important;
   margin:0!important;
-  padding:4px 11px 5px!important;
+  padding:3px 9px 4px!important;
   border:1px solid var(--button-border)!important;
   border-radius:999px!important;
   background:transparent!important;
   color:#9b4e1d!important;
-  font:400 13px/1.45 Merriweather,Georgia,serif!important;
+  font:400 12px/1.45 Merriweather,Georgia,serif!important;
   list-style:none!important;
   cursor:pointer;
   user-select:none;
@@ -545,7 +545,7 @@ body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!impor
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
     padding:3px 9px 4px!important;
-    font-size:12.5px!important;
+    font-size:12px!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
     font-size:18px!important;
