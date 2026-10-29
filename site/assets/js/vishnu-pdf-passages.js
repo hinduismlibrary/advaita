@@ -8,8 +8,9 @@ const text=n=>(n?.textContent||'').replace(/\s+/g,' ').trim();
 const find=(tag,re)=>children.find(n=>n.matches(tag)&&re.test(text(n)));
 function insert(anchor,key,verse){
  if(!anchor||root.querySelector(`[data-pdf-restoration="${key}"]`))return;
- const details=document.createElement('details');details.className='sanskrit-reveal';details.open=true;details.dataset.pdfRestoration=key;
- const p=document.createElement('p');p.lang='sa-Deva';p.textContent=verse;details.append(p);anchor.after(details);
+ const details=document.createElement('details');details.className='sanskrit-reveal';details.dataset.pdfRestoration=key;
+ const summary=document.createElement('summary');summary.textContent='Show Sanskrit';
+ const p=document.createElement('p');p.lang='sa-Deva';p.textContent=verse;details.append(summary,p);anchor.after(details);
 }
 // Page 22: Govindaraja's first Bhushana gloss.
 insert(find('h3',/Commentary by Govindaraja \(Bhushana\)/),'22-govindaraja','आधिक्यावबोधेन न पक्षपातमूलमित्याह सर्षिगणा इति । अतीन्द्रियार्थद्रष्टार ऋषयः । न तत् ज्ञानं न पक्षपातमूलं न वा भ्रान्तिमूलमिति भावः ।');

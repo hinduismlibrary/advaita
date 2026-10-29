@@ -5,12 +5,12 @@ body.document-paged-page.vishnu-editorial-reader {
   --ink:#3c362e;
   --teal:#496b6c;
   --link:#504b53;
-  --quote:#4b484f;
-  --quote-rule:#b6b2ba;
+  --quote:#65516f;
+  --quote-rule:#8c739a;
   --rule:rgba(90,82,75,.18);
   --side-rule:#d4d0ca;
-  --button-border:#9eaea8;
-  --sanskrit:#4b484f;
+  --button-border:#d8ad8b;
+  --sanskrit:#7f432f;
   background:var(--outer)!important;
   color:var(--ink)!important;
   font:400 20px/1.5 Merriweather,Georgia,serif!important;
@@ -287,14 +287,14 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(p.reference
 body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {
   width:100%;
   margin:0 0 12px!important;
-  padding:0 0 0 12px!important;
+  padding:1px 0 1px 17px!important;
   border:0!important;
   border-left:2px solid var(--quote-rule)!important;
   border-radius:0!important;
   background:transparent!important;
   box-shadow:none!important;
   color:var(--quote)!important;
-  font:400 20px/1.5 Merriweather,Georgia,serif!important;
+  font:400 18.5px/1.62 Merriweather,Georgia,serif!important;
   text-wrap:pretty;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content blockquote {
@@ -311,41 +311,43 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   background:transparent!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
-  display:none!important;
+  display:inline-block!important;
   min-height:0!important;
-  margin:1px 0!important;
-  padding:3px 10px!important;
+  margin:0!important;
+  padding:4px 11px 5px!important;
   border:1px solid var(--button-border)!important;
-  border-radius:3px!important;
+  border-radius:999px!important;
   background:transparent!important;
-  color:#315d5e!important;
-  font:400 13px/1.4 Vollkorn,Georgia,serif!important;
+  color:#9b4e1d!important;
+  font:400 13px/1.45 Merriweather,Georgia,serif!important;
   list-style:none!important;
   cursor:pointer;
   user-select:none;
   transition:background-color .16s ease,border-color .16s ease,color .16s ease!important;
 }
-body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary::-webkit-details-marker {
+body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary::-webkit-details-marker,
+body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary::marker {
   display:none;
+  content:"";
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary:hover {
-  background:#edf2ef!important;
-  border-color:#78928a!important;
-  color:#274b47!important;
+  background:#eee8e2!important;
+  border-color:var(--button-border)!important;
+  color:#9b4e1d!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary:focus-visible {
-  outline:2px solid #00787a!important;
+  outline:2px solid var(--quote-rule)!important;
   outline-offset:2px!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal[open]>summary {
-  background:#edf2ef!important;
-  color:#274b47!important;
+  background:transparent!important;
+  color:#9b4e1d!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
   margin:12px 0 8px!important;
-  padding:0 0 0 12px!important;
+  padding:0 0 0 17px!important;
   border:0!important;
-  border-left:2px solid var(--quote-rule)!important;
+  border-left:2px solid #c5a48f!important;
   background:transparent!important;
   color:var(--sanskrit)!important;
   font:400 20px/1.8 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
@@ -538,7 +540,12 @@ body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!impor
     line-height:1.55!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {
-    font-size:18px!important;
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
+    padding:3px 9px 4px!important;
+    font-size:12.5px!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
     font-size:18px!important;

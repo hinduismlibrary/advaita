@@ -236,7 +236,7 @@ jobs:
                 const summary=details.querySelector(':scope > summary');
                 return summary&&!/^(?:Show|Hide) Sanskrit$/.test(summary.textContent.trim());
               }).length;
-              const sanskritAlwaysVisible=sourceDisclosures.length>0&&sourceDisclosures.every(details=>details.open&&!details.querySelector(':scope > summary'));
+              const sanskritToggleAvailable=sourceDisclosures.length>0&&sourceDisclosures.every(details=>{const summary=details.querySelector(':scope > summary');return !details.open&&summary?.textContent.trim()==='Show Sanskrit';});
               const translationCandidates=[...article.querySelectorAll(translationSelector+',p')].filter(node=>
                 (node.matches(translationSelector)||/^[“"'‘]/u.test(node.textContent.trim()))&&!node.closest('.source-page-body'));
               const unpairedTranslationNodes=translationCandidates.filter(node=>!node.closest('.scripture-quote-pair,.women-scripture-pair'));
@@ -274,7 +274,7 @@ jobs:
                 meatCitationStyle,
                 sanskritDisclosures: sourceDisclosures.length,
                 badDisclosureLabels,
-                sanskritAlwaysVisible,
+                sanskritToggleAvailable,
                 unpairedTranslations,
                 unpairedTranslationExamples,
                 uncitedTranslationGroups,
@@ -464,8 +464,9 @@ jobs:
                 sanskrit_controls_tested = page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)').filter(has=page.locator('[lang^="sa"]')).count()
                 page.wait_for_function("""() => {
                   const passages=[...document.querySelectorAll('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)')].filter(item=>/[\\u0900-\\u097f]/.test(item.textContent));
-                  return passages.length>0&&passages.every(item=>item.open&&!item.querySelector(':scope > summary'));
+                  return passages.length>0&&passages.every(item=>!item.open&&item.querySelector(':scope > summary')?.textContent.trim()==='Show Sanskrit');
                 }""")
+                sanskrit_controls_tested = verify_sanskrit_disclosure(page, label)
               else:
                 sanskrit_controls_tested = verify_sanskrit_disclosure(page, label)
               if label == 'shaiva':
@@ -482,7 +483,7 @@ jobs:
                   assert order == ['source', 'sanskrit', 'translation'], f'shaiva: quote order differs for {expected_source}: {order}'
               desktop = metrics(page)
               if label == 'vaishnava':
-                assert desktop['sanskritAlwaysVisible'], 'vaishnava: Sanskrit passages are not visible without a toggle'
+                assert desktop['sanskritToggleAvailable'], 'vaishnava: Sanskrit disclosures are not using the Show Sanskrit toggle'
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'

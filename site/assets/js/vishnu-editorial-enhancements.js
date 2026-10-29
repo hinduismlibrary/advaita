@@ -5,14 +5,7 @@
 const root=document.querySelector('.document-content');
 if(!root)return;
 document.body.classList.add('vishnu-editorial-reader');
-function showSanskritPassages(){
-  for(const details of root.querySelectorAll('details.sanskrit-reveal:not(.quote-source-note)')){
-    details.open=true;
-    details.querySelector(':scope > summary')?.remove();
-  }
-}
-showSanskritPassages();
-new MutationObserver(showSanskritPassages).observe(root,{childList:true,subtree:true});
+// Keep native Sanskrit disclosures collapsed until the reader opens them.
 const desktopToc=document.querySelector('.side-toc .toc');
 const mobileToc=document.querySelector('.mobile-toc .toc');
 if(desktopToc)desktopToc.id='vishnu-desktop-toc';
