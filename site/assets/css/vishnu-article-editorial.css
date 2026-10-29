@@ -469,6 +469,69 @@ body.document-paged-page .mobile-toc {display:none!important}
   body.document-paged-page .article .document-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation) {font-size:18px!important}
   body.document-paged-page .article .document-content .table-scroll table {min-width:560px!important}
 }
+/* The shared template also pins quote colors and citation sizes.  The
+   article's palette needs to win at the actual rendered content node. */
+body.document-paged-page #source-content :is(p,li,dt,dd,blockquote):lang(en) {
+  color:var(--ink)!important;
+  font:400 20px/1.5 Merriweather,Georgia,serif!important;
+}
+body.document-paged-page #source-content :is(p.reference,p.source-citation,p.scripture-source,p.citation):lang(en) {
+  color:var(--teal)!important;
+  font:400 17px/1.4 Vollkorn,Georgia,serif!important;
+}
+body.document-paged-page #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {
+  color:var(--purple)!important;
+  font:400 20px/1.58 Merriweather,Georgia,serif!important;
+  padding:0!important;
+  border:0!important;
+}
+body.document-paged-page #source-content :is(h2,h3,h4,h5) {
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-weight:400!important;
+}
+body.document-paged-page #source-content :is(.document-group-heading,.document-section-title,.source-page-heading)::after {
+  display:block!important;
+  content:""!important;
+  width:326px!important;
+  max-width:50%!important;
+  height:2px!important;
+  margin:30px auto 48px!important;
+  background:var(--rule)!important;
+}
+body.document-paged-page #source-content details.sanskrit-reveal > summary {
+  border:1px solid var(--teal)!important;
+  border-radius:4px!important;
+  background:#e6efee!important;
+  color:var(--teal)!important;
+  font:400 14px/1.35 Merriweather,Georgia,serif!important;
+  padding:7px 14px!important;
+  transition:background-color .2s ease,color .2s ease,transform .2s ease!important;
+}
+body.document-paged-page #source-content details.sanskrit-reveal > summary:hover,
+body.document-paged-page #source-content details.sanskrit-reveal[open] > summary {
+  background:var(--teal)!important;
+  color:#fff!important;
+}
+body.document-paged-page #source-content .source-page-body li:lang(en) {
+  font-size:18px!important;
+  line-height:1.55!important;
+}
+body.document-paged-page .page .reader-grid .toc a.toc-index-link {
+  color:var(--purple)!important;
+  font:400 20px/1.5 Merriweather,Georgia,serif!important;
+}
+body.document-paged-page .page .reader-grid .toc .toc-index-nested a.toc-index-link {font-size:17px!important}
+body.document-paged-page .page .reader-grid .toc a.toc-index-link:is(.is-active,.is-active-subsection),
+body.document-paged-page .page .reader-grid .toc a.toc-index-link:hover {
+  color:var(--teal)!important;
+  font-weight:400!important;
+}
+@media(max-width:520px) {
+  body.document-paged-page #source-content :is(p,li,dt,dd,blockquote):lang(en) {font-size:17px!important;line-height:1.6!important}
+  body.document-paged-page #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation):lang(en) {font-size:18px!important}
+  body.document-paged-page #source-content .source-page-body li:lang(en) {font-size:16px!important}
+}
 /* The shared reader pins Vollkorn to #source-content with an ID selector.
    Match that specificity so the article body truly uses Merriweather. */
 body.document-paged-page #source-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td,summary,.source-entry):lang(en) {
