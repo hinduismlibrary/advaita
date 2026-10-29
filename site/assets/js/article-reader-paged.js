@@ -928,7 +928,7 @@ function renderSection(page){
   wrapSanskritSources(section);
   normalizeSanskritDisclosureLabels(section);
   normalizeCitationOrder(section);
-  normalizeSourceContextCitations(section);
+  if(title!=='A Vaishnava lens on Vishnu as the supreme deity')normalizeSourceContextCitations(section);
   pairWomenScripture(section);
   pairScriptureQuotes(section);
   styleArticleQuotes(section);
