@@ -510,7 +510,47 @@ function tocInto(node,sections,selected){
     return list;
   };
   node.classList.add('toc-index');
-  node.replaceChildren(renderList(outline));
+  const requiredSections=sections.filter(section=>section.id!=='opening-salutation'&&section.id!=='contents');
+  const represented=new Set();
+  const collectOutlineItems=items=>items.forEach(item=>{
+    if(item.sectionId)represented.add(item.sectionId);
+    if(item.target)represented.add(item.target);
+    if(item.children)collectOutlineItems(item.children);
+  });
+  collectOutlineItems(outline);
+  const outlineIsComplete=requiredSections.every(section=>represented.has(section.id));
+  if(outlineIsComplete){
+    node.replaceChildren(renderList(outline));
+    return;
+  }
+  const list=make('ul','toc-index-list');
+  for(const section of requiredSections){
+    const entry=make('li','toc-index-entry');
+    const link=make('a','toc-index-link',section.title);
+    link.href=base+'#'+encodeURIComponent(section.id);
+    link.dataset.section=section.id;
+    link.title=section.title;
+    link.setAttribute('aria-label',section.title);
+    entry.append(link);
+    const subsections=section.blocks.filter(block=>block.kind==='subheading'&&block.id);
+    if(subsections.length){
+      const nested=make('ul','toc-index-list toc-index-nested');
+      for(const subsection of subsections){
+        const childEntry=make('li','toc-index-entry');
+        const childLink=make('a','toc-index-link',subsection.value);
+        childLink.href=base+'#'+encodeURIComponent(subsection.id);
+        childLink.dataset.section=section.id;
+        childLink.dataset.subsection=subsection.id;
+        childLink.title=subsection.value;
+        childLink.setAttribute('aria-label',subsection.value);
+        childEntry.append(childLink);
+        nested.append(childEntry);
+      }
+      entry.append(nested);
+    }
+    list.append(entry);
+  }
+  node.replaceChildren(list);
 }
 let currentTocSection=null,subsectionSyncPending=false,renderedSections=[];
 function syncActiveSubsection(){
