@@ -55,7 +55,7 @@ jobs:
           shared_reader_version = '20261030-source-quote-order-2'
           vaishnava_reader_version = '20261030-source-quote-order-2'
           shaiva_reader_version = '20261030-shaiva-outline-fallback-3'
-          editorial_css_version = '20261030-vishnu-citations-10'
+          editorial_css_version = '20261030-vishnu-citations-11'
           editorial_script_version = '20261030-vishnu-citations-10'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
