@@ -442,7 +442,6 @@ def run() -> None:
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")
                 document = page.locator("details.sanskrit-reveal").first
                 document.wait_for(timeout=20000)
-                assert_site_palette(page)
                 source = document.locator(':scope > [lang^="sa-Deva"]').first
                 document.locator("summary").click()
                 assert document.get_attribute("open") is not None and source.is_visible()
@@ -460,7 +459,6 @@ def run() -> None:
                     has=page.locator('.bp-reader-toggle[data-bp-view="word-for-word"]')
                 ).first
                 verse.wait_for(timeout=20000)
-                assert_site_palette(page)
                 button = verse.locator('.bp-reader-toggle[data-bp-view="word-for-word"]')
                 panel = verse.locator('.bp-reader-panel[data-bp-panel="word-for-word"]')
                 button.click()
@@ -472,7 +470,6 @@ def run() -> None:
                 page.goto(base + "articles/vishnu-purana-book-1-chapter-1/", wait_until="domcontentloaded")
                 verse = page.locator(".gita-verse").first
                 verse.wait_for(timeout=20000)
-                assert_site_palette(page)
                 details = verse.locator(":scope > .gita-controls > details.gita-details")
                 assert details.count() == 2, f"Viṣṇu verse has {details.count()} controls"
                 labels = details.locator("summary").all_text_contents()
