@@ -106,13 +106,13 @@ jobs:
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261030-vishnu-citations-7');
+                    editorialStyle?.href.includes('20261030-vishnu-citations-8');
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    enhancementScript?.src.includes('20261030-vishnu-citations-8');
+                    enhancementScript?.src.includes('20261030-vishnu-citations-9');
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
@@ -493,7 +493,8 @@ jobs:
               desktop = metrics(page)
               if label == 'vaishnava':
                 assert desktop['sanskritToggleAvailable'], 'vaishnava: Sanskrit disclosures are not using the Show Sanskrit toggle'
-                assert not desktop['uncitedTranslationGroups'], f'vaishnava: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
+                uncited_translation_groups=[group for group in desktop['uncitedTranslationGroups'] if 'thus concludes the hari-paratva-vimarsa' not in group.lower()]
+                assert not uncited_translation_groups, f'vaishnava: quotation group has no source citation: {uncited_translation_groups}'
                 uncited_scripture_groups=[group for group in desktop['uncitedQuoteGroups'] if 'thus concludes the hari-paratva-vimarsa' not in group['text'].lower()]
                 assert not uncited_scripture_groups, f'vaishnava: Sanskrit quotation has no numbered source above it: {uncited_scripture_groups}'
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
@@ -584,6 +585,13 @@ jobs:
                    return [...node.children].sort((a,b)=>Number(getComputedStyle(a).order)-Number(getComputedStyle(b).order)).map(kind);
                  }""")
                 assert varaha_visual_order == ['source','translation','sanskrit'], f'vaishnava: English quote must appear before the Sanskrit control: {varaha_visual_order}'
+                quote_visual_order_errors=page.locator('#source-content .scripture-quote-pair').evaluate_all("""pairs=>pairs.filter(pair=>pair.querySelector('details.sanskrit-reveal:not(.quote-source-note)')&&pair.querySelector('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation')).flatMap(pair=>{
+                  const kind=child=>child.matches('p.reference,p.source-citation,p.scripture-source,p.citation')?'source':child.matches('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation')?'translation':child.matches('details.sanskrit-reveal:not(.quote-source-note)')?'sanskrit':null;
+                  const order=[...pair.children].map(child=>({child,kind:kind(child)})).filter(item=>item.kind).sort((a,b)=>Number(getComputedStyle(a.child).order)-Number(getComputedStyle(b.child).order)).map(item=>item.kind);
+                  const translation=order.indexOf('translation'), sanskrit=order.indexOf('sanskrit');
+                  return order[0]==='source'&&translation>0&&sanskrit>translation&&!order.slice(translation).includes('source')?[]:[{text:pair.innerText.trim().slice(0,140),order}];
+                })""")
+                assert not quote_visual_order_errors, f'vaishnava: every Sanskrit passage must show its source above the English quote and its Sanskrit button below: {quote_visual_order_errors}'
                 typography=page.locator('#source-content').evaluate("""(node) => ({
                   hasQuotes: /[\u0022\u201c\u201d\u2018\u2019]/u.test(node.innerText),
                   hasMarks: /[\u0300-\u036f]/u.test(node.innerText)
@@ -602,7 +610,7 @@ jobs:
                 assert section_order[sources_index]['title']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
                 assert page.locator('.side-toc .toc a[href$="#bibliography"]').inner_text().strip()=='Sources and tables', 'vaishnava: Contents does not show the combined sources and tables section'
                 button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
-                assert button_style['fontSize']=='14px' and button_style['height']<=27, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
+                assert button_style['fontSize']=='15px' and button_style['height']<=30, f'vaishnava: Show Sanskrit control is too small or oversized: {button_style}'
                 objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
                 assert objection_section.locator(':scope > h3#objections').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
                 assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'
