@@ -4,6 +4,8 @@ on:
     paths:
       - .github/workflows/validate-full-scroll-readers.yml
       - site/assets/js/article-reader-paged.js
+      - site/assets/js/vishnu-editorial-enhancements.js
+      - site/assets/css/vishnu-article-editorial.css
       - site/assets/js/varna-vicara-paged.js
       - site/assets/js/vishnu-source-restoration.js
       - site/assets/js/shaiva-complete-reader.js
@@ -11,6 +13,7 @@ on:
       - site/assets/css/varna-vicara-paged.css
       - site/assets/css/article-reader-template.css
       - site/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - site/articles/a-defence-of-the-manusmriti/index.html
       - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
       - site/articles/a-shashtric-lens-of-varna-part-one/index.html
       - site/articles/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/index.html
@@ -39,6 +42,7 @@ jobs:
 
           slugs = (
             'a-case-for-the-scriptural-validity-of-the-agamas',
+            'a-defence-of-the-manusmriti',
             'a-shaiva-lens-on-shiva-as-the-supreme-deity',
             'a-shashtric-lens-of-varna-part-one',
             'a-vaishnava-lens-on-vishnu-as-the-supreme-deity',
@@ -48,9 +52,11 @@ jobs:
           )
           full_scroll_style = '20261030-shared-reader-refresh-1'
           varna_script_version = '20261027-full-scroll-2'
-          shared_reader_version = '20261029-scrollspy-threshold-1'
-          vaishnava_reader_version = '20261030-vaishnava-citations-1'
+          shared_reader_version = '20261030-source-quote-order-2'
+          vaishnava_reader_version = '20261030-source-quote-order-2'
           shaiva_reader_version = '20261028-shaiva-quote-groups-3'
+          editorial_css_version = '20261030-vishnu-citations-10'
+          editorial_script_version = '20261030-vishnu-citations-10'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
           shared_css = Path('site/assets/css/article-reader-template.css').read_text(encoding='utf-8')
@@ -70,6 +76,9 @@ jobs:
               assert html.count('varna-vicara-paged.js?v=' + varna_script_version) == 1, f'{path}: stale Varṇa-vicāra loader cache'
             assert html.count('varna-vicara-paged.css?v=20260914-3') == 1, f'{path}: missing shared base style'
             assert html.count('article-reader-template.css?v=' + full_scroll_style) == 1, f'{path}: stale shared style cache'
+            if slug != 'varna-vicara':
+              assert html.count('vishnu-article-editorial.css?v=' + editorial_css_version) == 1, f'{path}: stale editorial style cache'
+              assert html.count('vishnu-editorial-enhancements.js?v=' + editorial_script_version) == 1, f'{path}: stale editorial script cache'
             if slug == 'a-shaiva-lens-on-shiva-as-the-supreme-deity':
               assert html.count('shaiva-complete-reader.js?v=' + shaiva_reader_version) == 1, f'{path}: stale Śaiva reader cache'
               assert 'class="page-nav"' not in html, f'{path}: old Previous/Next navigation remains'
