@@ -54,7 +54,7 @@ jobs:
           varna_script_version = '20261027-full-scroll-2'
           shared_reader_version = '20261030-source-quote-order-2'
           vaishnava_reader_version = '20261030-source-quote-order-2'
-          shaiva_reader_version = '20261030-shaiva-outline-fallback-1'
+          shaiva_reader_version = '20261030-shaiva-outline-fallback-2'
           editorial_css_version = '20261030-vishnu-citations-10'
           editorial_script_version = '20261030-vishnu-citations-10'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')

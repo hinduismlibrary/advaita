@@ -511,16 +511,11 @@ function tocInto(node,sections,selected){
   };
   node.classList.add('toc-index');
   const requiredSections=sections.filter(section=>section.id!=='opening-salutation'&&section.id!=='contents');
-  const represented=new Set();
-  const collectOutlineItems=items=>items.forEach(item=>{
-    if(item.sectionId)represented.add(item.sectionId);
-    if(item.target)represented.add(item.target);
-    if(item.children)collectOutlineItems(item.children);
-  });
-  collectOutlineItems(outline);
-  const outlineIsComplete=requiredSections.every(section=>represented.has(section.id));
+  const rendered=renderList(outline);
+  const linkedSections=new Set([...rendered.querySelectorAll('a[data-section]')].map(link=>link.dataset.section));
+  const outlineIsComplete=requiredSections.every(section=>linkedSections.has(section.id));
   if(outlineIsComplete){
-    node.replaceChildren(renderList(outline));
+    node.replaceChildren(rendered);
     return;
   }
   const list=make('ul','toc-index-list');
