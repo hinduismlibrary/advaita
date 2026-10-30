@@ -564,8 +564,8 @@ function syncActiveSubsection(){
   document.getElementById('section-parent').textContent=isSources(section)?'Sources':section.chapterTitle||section.parent;
   document.getElementById('section-count').textContent='Full document';
   root.classList.toggle('document-reference-page',isSources(section));
-  const desktop=document.getElementById('shaiva-desktop-toc');
-  const mobile=document.getElementById('shaiva-mobile-toc');
+  const desktop=document.querySelector('.side-toc .toc');
+  const mobile=document.querySelector('.mobile-toc .toc');
   const reference=desktop||mobile;
   const candidates=reference?[...reference.querySelectorAll('a[data-subsection]')]
     .filter(link=>link.dataset.section===section.id)
@@ -743,8 +743,8 @@ async function render(){
   const findSection=target=>sections.find(section=>section.id===target||section.blocks.some(block=>block.id===target));
   const initial=findSection(requestedTarget)||sections[0];
   currentTocSection=initial;
-  const desktop=document.getElementById('shaiva-desktop-toc');
-  const mobile=document.getElementById('shaiva-mobile-toc');
+  const desktop=document.querySelector('.side-toc .toc');
+  const mobile=document.querySelector('.mobile-toc .toc');
   if(desktop)tocInto(desktop,sections,initial);
   if(mobile)tocInto(mobile,sections,initial);
   document.title='A Scripture-Based Case for the Supremacy of Shiva — विवेकदृष्टिः';
