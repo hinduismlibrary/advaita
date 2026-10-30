@@ -645,7 +645,7 @@ const sourceNameRegex=new RegExp('(?<![\\p{L}\\p{N}])(?:'+sourceNames
   .sort((a,b)=>b.length-a.length)
   .map(name=>name.split(/\s+/).join('\\s+'))
   .join('|')+')(?![\\p{L}\\p{N}])','giu');
-function labelsFromSourceContext(value){
+function labelsFromSourceContext(value,requireReference=false){
   const sourceText=String(value||'').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
   if(!sourceText)return [];
   if(/\bA\.?\s*S\.?\s*Altekar\b/i.test(sourceText)&&/position of women in hindu civilization/i.test(sourceText))
@@ -676,7 +676,7 @@ function labelsFromSourceContext(value){
     if(!labels.includes(label))labels.push(label);
     if(info&&!labelsWithReference.includes(label))labelsWithReference.push(label);
   }
-  return labelsWithReference.length?labelsWithReference:labels;
+  return labelsWithReference.length?labelsWithReference:(requireReference?[]:labels);
 }
 function hasCitationBesideSource(source){
   const previous=source.previousElementSibling;
@@ -688,7 +688,7 @@ function hasCitationBesideSource(source){
   while(isEnglishTranslationNode(cursor))cursor=cursor.nextElementSibling;
   return isSourceCitationNode(cursor)&&!citationIntroducesNextQuote(cursor);
 }
-function contextCitationFor(anchor){
+function contextCitationFor(anchor,requireReference=false){
   let cursor=anchor.previousElementSibling,steps=0,continuity=false,skippedProse=0;
   while(cursor&&steps<8){
     if(isSourceCitationNode(cursor))return [];
@@ -705,7 +705,7 @@ function contextCitationFor(anchor){
       break;
     }
     if(cursor.matches?.('p')){
-      const labels=labelsFromSourceContext(text(cursor));
+      const labels=labelsFromSourceContext(text(cursor),requireReference);
       if(labels.length)return labels;
       if(/^(?:further\b|he further\b|she further\b|again\b|the same\b|continued\b|also\b|the chapter then\b|at the end of the chapter\b|the text then\b)/i.test(text(cursor))){
         continuity=true;cursor=cursor.previousElementSibling;steps++;continue;
@@ -719,7 +719,7 @@ function contextCitationFor(anchor){
   }
   return [];
 }
-function normalizeSourceContextCitations(root){
+function normalizeSourceContextCitations(root,requireReference=false){
   const openingVerses=[...root.querySelectorAll('.women-scripture-pair.women-opening-verse')];
   const openingSources=[
     'Saundarya Laharī, verse 97',
@@ -743,7 +743,7 @@ function normalizeSourceContextCitations(root){
     const hasAfterTranslation=isEnglishTranslationNode(following);
     const hasBeforeTranslation=anchor!==source;
     if(!hasAfterTranslation&&!hasBeforeTranslation)continue;
-    let labels=contextCitationFor(anchor);
+    let labels=contextCitationFor(anchor,requireReference);
     if(!labels.length&&title==='Śrī Sadvarṇārthaprakāśinī'&&source.previousElementSibling?.matches?.('.source-postscript-heading'))
       labels=['Śrī Sadvarṇārthaprakāśinī, Maṅgalācaraṇam'];
     if(!labels.length)continue;
@@ -758,7 +758,7 @@ function normalizeSourceContextCitations(root){
     while(isSourceCitationNode(previous))previous=previous.previousElementSibling;
     if(isSanskritSourceNode(previous)||isSourceCitationNode(translation.previousElementSibling))continue;
     if(isSourceCitationNode(translation.nextElementSibling)||isSanskritSourceNode(translation.nextElementSibling))continue;
-    const labels=contextCitationFor(translation);
+    const labels=contextCitationFor(translation,requireReference);
     if(!labels.length)continue;
     translation.before(el('p','reference',labels.join('; ')));
   }
@@ -928,7 +928,7 @@ function renderSection(page){
   wrapSanskritSources(section);
   normalizeSanskritDisclosureLabels(section);
   normalizeCitationOrder(section);
-  if(title!=='A Vaishnava lens on Vishnu as the supreme deity')normalizeSourceContextCitations(section);
+  normalizeSourceContextCitations(section,title==='A Vaishnava lens on Vishnu as the supreme deity');
   pairWomenScripture(section);
   pairScriptureQuotes(section);
   styleArticleQuotes(section);

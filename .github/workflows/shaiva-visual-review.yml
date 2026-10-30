@@ -100,19 +100,19 @@ jobs:
                   const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\.js(?:\?|$)/.test(url)) || '';
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
-                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : '20261029-scrollspy-threshold-1';
+                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ? '20261030-vaishnava-citations-1' : '20261029-scrollspy-threshold-1';
                   const tocLink = document.querySelector('.toc-index-link');
                   const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261030-sources-tables-5');
+                    editorialStyle?.href.includes('20261030-sources-tables-6');
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    enhancementScript?.src.includes('20261030-sources-tables-6');
+                    enhancementScript?.src.includes('20261030-sources-tables-7');
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
@@ -411,7 +411,7 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
-                expected_color = 'rgb(73, 107, 108)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
+                expected_color = 'rgb(38, 119, 122)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
                 page.wait_for_function("""({selector,color}) => {
                   const active=document.querySelector(selector+' a.toc-index-link.is-active, '+selector+' a.toc-index-link.is-active-subsection');
                   return active && getComputedStyle(active).color===color;
@@ -490,6 +490,9 @@ jobs:
               desktop = metrics(page)
               if label == 'vaishnava':
                 assert desktop['sanskritToggleAvailable'], 'vaishnava: Sanskrit disclosures are not using the Show Sanskrit toggle'
+                assert not desktop['uncitedTranslationGroups'], f'vaishnava: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
+                uncited_scripture_groups=[group for group in desktop['uncitedQuoteGroups'] if 'thus concludes the hari-paratva-vimarsa' not in group['text'].lower()]
+                assert not uncited_scripture_groups, f'vaishnava: Sanskrit quotation has no numbered source above it: {uncited_scripture_groups}'
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
@@ -514,7 +517,7 @@ jobs:
               assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
               if label == 'vaishnava':
                 assert desktop['citationColor'] == 'rgb(73, 107, 108)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
-                assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
+                assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)','rgb(38, 119, 122)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
                 assert desktop['quoteStyle']['color'] == 'rgb(102, 106, 108)', f'{label}: English quotations are not grey: {desktop["quoteStyle"]}'
               elif label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
@@ -596,7 +599,7 @@ jobs:
                 assert section_order[sources_index]['title']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
                 assert page.locator('.side-toc .toc a[href$="#bibliography"]').inner_text().strip()=='Sources and tables', 'vaishnava: Contents does not show the combined sources and tables section'
                 button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
-                assert button_style['fontSize']=='9px' and button_style['height']<=18, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
+                assert button_style['fontSize']=='12px' and button_style['height']<=24, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
                 objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
                 assert objection_section.locator(':scope > h3#objections').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
                 assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'

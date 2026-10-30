@@ -9,10 +9,10 @@ const compactSanskritControls=()=>{
   for(const summary of root.querySelectorAll('details.sanskrit-reveal>summary')){
     summary.style.setProperty('display','inline-block','important');
     summary.style.setProperty('min-height','0','important');
-    summary.style.setProperty('padding','1px 5px 2px','important');
+    summary.style.setProperty('padding','2px 8px','important');
     summary.style.setProperty('font-family','Merriweather,Georgia,serif','important');
-    summary.style.setProperty('font-size','9px','important');
-    summary.style.setProperty('line-height','1.25','important');
+    summary.style.setProperty('font-size','12px','important');
+    summary.style.setProperty('line-height','1.3','important');
     summary.style.setProperty('font-weight','400','important');
   }
 };
@@ -37,11 +37,13 @@ for(const nav of [desktopToc,mobileToc].filter(Boolean)){
     for(const link of nav.querySelectorAll('a.toc-index-link')){
       const active=link.classList.contains('is-active')||link.classList.contains('is-active-subsection');
       if(active){
-        link.style.setProperty('color','#496b6c','important');
+        link.style.setProperty('color','#26777a','important');
         link.style.setProperty('font-weight','700','important');
+        link.style.setProperty('background-color','#eaf1f0','important');
       }else{
         link.style.removeProperty('color');
         link.style.removeProperty('font-weight');
+        link.style.removeProperty('background-color');
       }
     }
   };
