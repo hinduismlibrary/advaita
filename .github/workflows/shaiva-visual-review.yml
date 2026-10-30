@@ -585,7 +585,7 @@ jobs:
                 'vaishnava':'Brahma Sutra 1.1.3',
                 'women':'Saundarya Lahari verse 97',
                 'meat':'Manusmrti 5.48',
-                'varna-vicara':'Bhagavad Gītā 16.23–24'
+                'varna-vicara':'Bhagavad Gita 16.23 to 24'
               }[label]
               assert any(expected_source.lower() in item.lower() for item in desktop['citationExamples']), f'{label}: expected source label is missing: {expected_source}'
               if label == 'women':
