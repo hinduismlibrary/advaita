@@ -6,7 +6,7 @@ const root=document.querySelector('.document-content');
 if(!root)return;
 document.body.classList.add('vishnu-editorial-reader');
 for(const heading of root.querySelectorAll('.document-section-title,.document-group-heading,.source-page-heading')){
-  const label=txt(heading);
+  const label=(heading.textContent||'').replace(/\s+/g,' ').trim();
   if(/^(?:\d+\.\s*)?(?:objections|summary\s*&\s*conclusion|conclusion)$/i.test(label))
     heading.classList.add('vishnu-strong-heading');
 }
