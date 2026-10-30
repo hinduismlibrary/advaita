@@ -34,6 +34,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 jobs:
   compare:
     runs-on: ubuntu-latest
@@ -41,6 +42,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - name: Wait for this commit's Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 90); do
+            state=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${GITHUB_SHA}&per_page=100" --jq '[.workflow_runs[] | select(.name == "Deploy GitHub Pages")] | sort_by(.created_at) | last // {} | [.status // "pending", .conclusion // ""] | @tsv')
+            read -r status conclusion <<< "$state"
+            if [ "$status" = completed ]; then
+              if [ "$conclusion" = success ]; then exit 0; fi
+              echo "Pages deployment ended with conclusion: ${conclusion:-unknown}" >&2
+              exit 1
+            fi
+            sleep 10
+          done
+          echo 'Timed out waiting for this commit's Pages deployment' >&2
+          exit 1
       - name: Install browser QA dependencies
         run: |
           python3 -m pip install --user --quiet playwright
@@ -237,9 +254,10 @@ jobs:
               const scriptureSourceLabels=article.querySelectorAll('p.scripture-source').length;
               const quoteKind=node=>node.matches(sourceSelector)?'source':node.matches(sanskritSelector)?'sanskrit':node.matches(translationSelector)?'translation':null;
               const quoteOrderErrors=quoteGroups.filter(pair=>{
-                const visual=[...pair.children].map(child=>({child,kind:quoteKind(child)})).filter(item=>item.kind)
+                const orderedKinds=[...pair.children].map(child=>({child,kind:quoteKind(child)})).filter(item=>item.kind)
                   .sort((a,b)=>Number(getComputedStyle(a.child).order)-Number(getComputedStyle(b.child).order))
                   .map(item=>item.kind);
+                const visual=orderedKinds.filter((kind,index)=>kind!==orderedKinds[index-1]);
                 return visual.join(',')!=='source,translation,sanskrit';
               }).map(pair=>pair.innerText.trim().slice(0,140));
               const sourceDisclosures=[...article.querySelectorAll('.document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)')]
