@@ -121,12 +121,12 @@ jobs:
                   const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader|varna-vicara-paged)\.js(?:\?|$)/.test(url)) || '';
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
-                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261030-shaiva-outline-fallback-3' : location.pathname.includes('/varna-vicara/') ? '20261027-full-scroll-2' : '20261030-source-quote-order-2';
+                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261030-shaiva-outline-fallback-3' : location.pathname.includes('/varna-vicara/') ? '20261027-full-scroll-3' : '20261030-source-quote-order-2';
                   const tocLink = document.querySelector('.toc-index-link');
                   const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
-                  const usesEditorialTemplate = !location.pathname.includes('/varna-vicara/');
+                  const usesEditorialTemplate = true;
                   const editorialReady = !usesEditorialTemplate ||
                     (editorialStyle?.href.includes('20261030-vishnu-citations-11') && !!editorialStyle.sheet);
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
