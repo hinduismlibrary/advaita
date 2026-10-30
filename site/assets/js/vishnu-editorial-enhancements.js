@@ -5,6 +5,14 @@
 const root=document.querySelector('.document-content');
 if(!root)return;
 document.body.classList.add('vishnu-editorial-reader');
+for(const heading of root.querySelectorAll('.document-section-title,.document-group-heading,.source-page-heading')){
+  const label=txt(heading);
+  if(/^(?:\d+\.\s*)?(?:objections|summary\s*&\s*conclusion|conclusion)$/i.test(label))
+    heading.classList.add('vishnu-strong-heading');
+}
+const objectionsSection=[...root.querySelectorAll('.document-section')]
+  .find(section=>section.querySelector(':scope > .document-section-title#objections'));
+objectionsSection?.classList.add('vishnu-objections');
 // Keep native Sanskrit disclosures collapsed until the reader opens them.
 const desktopToc=document.querySelector('.side-toc .toc');
 const mobileToc=document.querySelector('.mobile-toc .toc');

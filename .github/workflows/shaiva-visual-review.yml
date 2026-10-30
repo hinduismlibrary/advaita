@@ -106,13 +106,13 @@ jobs:
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261030-sources-tables-4');
+                    editorialStyle?.href.includes('20261030-sources-tables-5');
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    enhancementScript?.src.includes('20261030-sources-tables-3');
+                    enhancementScript?.src.includes('20261030-sources-tables-4');
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
@@ -577,20 +577,25 @@ jobs:
                   hasMarks: /[\u0300-\u036f]/u.test(node.innerText)
                 })""")
                 assert not typography['hasQuotes'] and not typography['hasMarks'], f'vaishnava: quote marks or Latin accent marks remain: {typography}'
-                section_order = page.locator('#source-content > .document-section > h3').evaluate_all('nodes=>nodes.map(node=>({id:node.id,text:node.textContent.trim()}))')
-                objection_index = next((i for i,item in enumerate(section_order) if item['id']=='objections'),-1)
-                conclusion_index = next((i for i,item in enumerate(section_order) if item['id']=='summary-and-conclusion'),-1)
-                sources_index = next((i for i,item in enumerate(section_order) if item['id']=='bibliography'),-1)
-                assert objection_index>=0 and conclusion_index>objection_index and sources_index>conclusion_index, 'vaishnava: objections and conclusion must precede the combined sources and tables section'
-                assert section_order[sources_index]['text']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
+                section_order = page.locator('#source-content > .document-section').evaluate_all("""sections=>sections.map(section=>{
+                  const title=section.querySelector(':scope > h3')?.textContent.trim()||'';
+                  const ids=[...section.querySelectorAll(':scope > h2,:scope > h3')].map(node=>node.id);
+                  return {title,ids};
+                })""")
+                objection_index = next((i for i,item in enumerate(section_order) if item['title']=='Objections' and 'objections' in item['ids']),-1)
+                summary_index = next((i for i,item in enumerate(section_order) if 'summary-and-conclusion' in item['ids']),-1)
+                conclusion_index = next((i for i,item in enumerate(section_order) if item['title']=='Conclusion'),-1)
+                sources_index = next((i for i,item in enumerate(section_order) if 'bibliography' in item['ids']),-1)
+                assert objection_index>=0 and summary_index>objection_index and conclusion_index>objection_index and sources_index>conclusion_index, 'vaishnava: objections and conclusion must precede the combined sources and tables section'
+                assert section_order[sources_index]['title']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
                 assert page.locator('.side-toc .toc a[href$="#bibliography"]').inner_text().strip()=='Sources and tables', 'vaishnava: Contents does not show the combined sources and tables section'
                 button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
                 assert button_style['fontSize']=='9px' and button_style['height']<=18, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
                 objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
                 assert objection_section.locator(':scope > h3').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
                 assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'
-                conclusion_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#summary-and-conclusion'))
-                assert conclusion_section.locator('h3.reader-subheading').filter(has_text='Conclusion').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: conclusion heading is not bold'
+                assert page.locator('#source-content .vishnu-strong-heading').filter(has_text='Summary & conclusion').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Summary and conclusion heading is not bold'
+                assert page.locator('#source-content .vishnu-strong-heading').filter(has_text='Conclusion').last.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: conclusion heading is not bold'
                 captions=page.locator('#source-content figure figcaption').all_inner_texts()
                 assert captions==['Vishnu and Lakshmi','The Vedic divisions','The sources of smrti','Closing emblem'], f'vaishnava: source figure captions include page numbers or unexpected text: {captions}'
                 tables = page.locator('#source-content table.vishnu-data-table')
