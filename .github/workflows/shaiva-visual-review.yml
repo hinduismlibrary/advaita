@@ -589,7 +589,7 @@ jobs:
               }[label]
               assert any(expected_source.lower() in item.lower() for item in desktop['citationExamples']), f'{label}: expected source label is missing: {expected_source}'
               if label == 'women':
-                for source_label in ('Manusmrti 6.86–87','Mahabharata 12.261.7','Padma Purana 2.59.16–17'):
+                for source_label in ('Manusmrti 6.86 to 87','Mahabharata 12.261.7','Padma Purana 2.59.16 to 17'):
                   assert any(source_label.lower() in item.lower() for item in desktop['citationExamples']), f'women: source label missing: {source_label}'
               if label == 'meat':
                 assert desktop['meatCitationStyle'], 'meat: Yajurveda 22.42 source label is missing'
