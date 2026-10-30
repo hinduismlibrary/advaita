@@ -64,6 +64,28 @@ for(const item of document.querySelectorAll('.toc a[href$="#bibliography"],.docu
   item.dataset.vdBilingual='true';
   item.setAttribute('aria-label','Sources');
 }
+const normalizeArticleText=value=>{
+  const latin=String(value||'').replace(/(?:\p{Script=Latin}\p{M}*)+/gu,run=>run.normalize('NFD').replace(/\p{M}+/gu,''));
+  return latin.replace(/["“”]/gu,'').replace(/[‘’]/gu,"'");
+};
+for(const textRoot of [root,desktopToc,mobileToc].filter(Boolean)){
+  const walker=document.createTreeWalker(textRoot,NodeFilter.SHOW_TEXT);
+  const nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  for(const node of nodes)node.nodeValue=normalizeArticleText(node.nodeValue);
+}
+for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
+  const walker=document.createTreeWalker(citation,NodeFilter.SHOW_TEXT);
+  const nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  for(const node of nodes){
+    node.nodeValue=(node.nodeValue||'')
+      .replace(/\s*[–—-]\s*(?=\d)/gu,' to ')
+      .replace(/(\p{L})[-‐‑](\p{L})/gu,'$1 $2')
+      .replace(/[^\p{L}\p{N}. ]+/gu,' ')
+      .replace(/\s+/gu,' ');
+  }
+}
 /* Site chrome loads late. Keep the article's typography last in the cascade. */
 const editorialCss=[...document.head.querySelectorAll('link[rel="stylesheet"]')]
   .find(link=>(link.getAttribute('href')||'').includes('/vishnu-article-editorial.css'));
