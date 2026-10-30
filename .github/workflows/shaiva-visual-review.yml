@@ -118,29 +118,30 @@ jobs:
                   const article = document.querySelector('#source-content');
                   const sections = article ? article.querySelectorAll(':scope > .document-section').length : 0;
                   const status = document.querySelector('.page-context span, #section-count')?.textContent.trim() || '';
-                  const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\.js(?:\?|$)/.test(url)) || '';
+                  const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader|varna-vicara-paged)\.js(?:\?|$)/.test(url)) || '';
                   const sharedStyle = document.querySelector('link[href*="article-reader-template.css"]');
                   const contentReady = !!article && sections >= 3 && status === 'Full document' && article.innerText.trim().length >= 5000;
-                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ? '20261030-vaishnava-citations-1' : '20261029-scrollspy-threshold-1';
+                  const readerVersion = location.pathname.includes('/a-shaiva-lens-on-shiva-as-the-supreme-deity/') ? '20261028-shaiva-quote-groups-3' : location.pathname.includes('/varna-vicara/') ? '20261027-full-scroll-2' : '20261030-source-quote-order-2';
                   const tocLink = document.querySelector('.toc-index-link');
                   const tocTransition = tocLink && getComputedStyle(tocLink).transitionProperty.split(',').map(value=>value.trim()).includes('color');
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
-                  const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261030-vishnu-citations-10');
+                  const usesEditorialTemplate = !location.pathname.includes('/varna-vicara/');
+                  const editorialReady = !usesEditorialTemplate ||
+                    (editorialStyle?.href.includes('20261030-vishnu-citations-10') && !!editorialStyle.sheet);
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
-                  const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
+                  const chromeReady = !usesEditorialTemplate ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
-                  const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    enhancementScript?.src.includes('20261030-vishnu-citations-9');
+                  const enhancementReady = !usesEditorialTemplate ||
+                    enhancementScript?.src.includes('20261030-vishnu-citations-10');
                   const assetsReady = sharedStyle?.href.includes('20261030-shared-reader-refresh-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
                 }""")
                 last_state = page.evaluate("""() => {
                   const article = document.querySelector('#source-content');
-                  const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\\.js(?:\\?|$)/.test(url)) || '';
+                  const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader|varna-vicara-paged)\\.js(?:\\?|$)/.test(url)) || '';
                   const editorialStyle=document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const chromeStyle=document.querySelector('link[href*="site-chrome.css"]');
                   const enhancementScript=document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
@@ -152,7 +153,7 @@ jobs:
                     status: document.querySelector('.page-context span, #section-count')?.textContent.trim() || '',
                     sections: article ? article.querySelectorAll(':scope > .document-section').length : 0,
                     textChars: article?.innerText.trim().length || 0,
-                    readerScript: performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\\.js(?:\\?|$)/.test(url)) || '',
+                    readerScript: performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader|varna-vicara-paged)\\.js(?:\\?|$)/.test(url)) || '',
                     sharedStyle: document.querySelector('link[href*="article-reader-template.css"]')?.href || ''
                   };
                 }""")
