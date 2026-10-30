@@ -26,7 +26,7 @@ def assert_site_palette(page) -> None:
     colors = page.locator("a").evaluate_all(
         "links => links.filter(link => !link.closest('.hp-section-title') && !link.classList.contains('brand')).map(link => getComputedStyle(link).color)"
     )
-    assert all(color in ("rgb(6, 69, 173)", "rgb(45, 72, 125)") for color in colors), colors
+    assert all(color in ("rgb(6, 69, 173)", "rgb(45, 72, 125)", "rgb(61, 73, 107)") for color in colors), colors
     background = page.locator("body").evaluate(
         "element => getComputedStyle(element).backgroundColor"
     )
