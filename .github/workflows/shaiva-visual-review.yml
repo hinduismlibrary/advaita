@@ -162,7 +162,7 @@ jobs:
                   return !id || !document.getElementById(id);
                 } catch { return true; }
               });
-              const sourceSections = sections.filter(section => /^sources$/i.test(section.querySelector('h3')?.textContent.trim() || ''));
+              const sourceSections = sections.filter(section => /^sources(?: and tables)?$/i.test(section.querySelector('h3')?.textContent.trim() || ''));
               const paragraphs = [...article.querySelectorAll('p')].filter(p =>
                 !p.closest('details') &&
                 !p.matches('.reference,.source-citation,.scripture-source,.citation,.translation,.scripture-translation,.women-scripture-translation,.sanskrit-text') &&
@@ -422,7 +422,7 @@ jobs:
                     scroll:getComputedStyle(document.documentElement).scrollBehavior
                   };
                 }""", selector)
-                expected_weight = '400' if label == 'vaishnava' else '700'
+                expected_weight = '700'
                 if (not visual or visual['color'] != expected_color or
                     visual['weight'] != expected_weight or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
                   issue={'site':label,'mobile':mobile,'sample':sample,'visual':visual}
@@ -509,7 +509,7 @@ jobs:
               if label == 'vaishnava':
                 assert desktop['citationColor'] == 'rgb(73, 107, 108)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
                 assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
-                assert desktop['quoteStyle']['color'] == 'rgb(101, 81, 111)', f'{label}: English quotations do not match the Varṇa-vicāra purple: {desktop["quoteStyle"]}'
+                assert desktop['quoteStyle']['color'] == 'rgb(102, 106, 108)', f'{label}: English quotations are not grey: {desktop["quoteStyle"]}'
               elif label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
                 assert desktop['citationColor'] == 'rgb(32, 33, 34)', f'{label}: source citation text is not dark: {desktop["citationColor"]}'
@@ -577,8 +577,25 @@ jobs:
                   hasMarks: /[\u0300-\u036f]/u.test(node.innerText)
                 })""")
                 assert not typography['hasQuotes'] and not typography['hasMarks'], f'vaishnava: quote marks or Latin accent marks remain: {typography}'
+                section_order = page.locator('#source-content > .document-section > h3').evaluate_all('nodes=>nodes.map(node=>({id:node.id,text:node.textContent.trim()}))')
+                objection_index = next((i for i,item in enumerate(section_order) if item['id']=='objections'),-1)
+                conclusion_index = next((i for i,item in enumerate(section_order) if item['id']=='summary-and-conclusion'),-1)
+                sources_index = next((i for i,item in enumerate(section_order) if item['id']=='bibliography'),-1)
+                assert objection_index>=0 and conclusion_index>objection_index and sources_index>conclusion_index, 'vaishnava: objections and conclusion must precede the combined sources and tables section'
+                assert section_order[sources_index]['text']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
+                assert page.locator('.side-toc .toc a[href$="#bibliography"]').inner_text().strip()=='Sources and tables', 'vaishnava: Contents does not show the combined sources and tables section'
+                button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
+                assert button_style['fontSize']=='9px' and button_style['height']<=18, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
+                objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
+                assert objection_section.locator(':scope > h3').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
+                assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'
+                conclusion_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#summary-and-conclusion'))
+                assert conclusion_section.locator('h3.reader-subheading').filter(has_text='Conclusion').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: conclusion heading is not bold'
+                captions=page.locator('#source-content figure figcaption').all_inner_texts()
+                assert captions==['Vishnu and Lakshmi','The Vedic divisions','The sources of smrti','Closing emblem'], f'vaishnava: source figure captions include page numbers or unexpected text: {captions}'
                 tables = page.locator('#source-content table.vishnu-data-table')
                 assert tables.count() == 5, f'vaishnava: expected five original summary tables, got {tables.count()}'
+                assert tables.evaluate_all('items=>items.every(table=>!!table.closest(".document-reference-section"))'), 'vaishnava: summary tables are separated from the combined sources section'
                 row_counts = [table.locator('tbody tr').count() for table in tables.all()]
                 assert row_counts == [8,7,7,11,20], f'vaishnava: summary table rows differ from the PDF: {row_counts}'
                 bibliography = page.locator('#source-content .document-reference-section .source-page-body ol')

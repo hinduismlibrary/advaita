@@ -14,8 +14,13 @@ for(const nav of [desktopToc,mobileToc].filter(Boolean)){
   const paintActive=()=>{
     for(const link of nav.querySelectorAll('a.toc-index-link')){
       const active=link.classList.contains('is-active')||link.classList.contains('is-active-subsection');
-      if(active)link.style.setProperty('color','#496b6c','important');
-      else link.style.removeProperty('color');
+      if(active){
+        link.style.setProperty('color','#496b6c','important');
+        link.style.setProperty('font-weight','700','important');
+      }else{
+        link.style.removeProperty('color');
+        link.style.removeProperty('font-weight');
+      }
     }
   };
   paintActive();
@@ -30,10 +35,10 @@ if(cover){
   else firstSection.prepend(cover);
 }
 const captions=new Map([
-  ['vishnu-lakshmi.webp','Viṣṇu and Lakṣmī · p. 1'],
-  ['vishnu-veda-divisions.webp','The Vedic divisions · p. 5'],
-  ['vishnu-smriti-sources.webp','The sources of smṛti · p. 7'],
-  ['vishnu-emblem.webp','Closing emblem · p. 72']
+  ['vishnu-lakshmi.webp','Vishnu and Lakshmi'],
+  ['vishnu-veda-divisions.webp','The Vedic divisions'],
+  ['vishnu-smriti-sources.webp','The sources of smrti'],
+  ['vishnu-emblem.webp','Closing emblem']
 ]);
 for(const figure of root.querySelectorAll('figure')){
   const img=figure.querySelector('img');
@@ -60,9 +65,9 @@ for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scr
   if(first)first.nodeValue=first.nodeValue.replace(/^\s*Source:\s*/i,'');
 }
 for(const item of document.querySelectorAll('.toc a[href$="#bibliography"],.document-reference-section .source-page-heading')){
-  item.textContent='Sources';
+  item.textContent='Sources and tables';
   item.dataset.vdBilingual='true';
-  item.setAttribute('aria-label','Sources');
+  item.setAttribute('aria-label','Sources and tables');
 }
 const normalizeArticleText=value=>{
   const latin=String(value||'').replace(/(?:\p{Script=Latin}\p{M}*)+/gu,run=>run.normalize('NFD').replace(/\p{M}+/gu,''));
