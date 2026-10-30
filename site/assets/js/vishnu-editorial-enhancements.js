@@ -11,7 +11,7 @@ const compactSanskritControls=()=>{
     summary.style.setProperty('min-height','0','important');
     summary.style.setProperty('padding','4px 10px','important');
     summary.style.setProperty('font-family','Merriweather,Georgia,serif','important');
-    summary.style.setProperty('font-size','15px','important');
+    summary.style.setProperty('font-size','16px','important');
     summary.style.setProperty('line-height','1.3','important');
     summary.style.setProperty('font-weight','400','important');
   }
