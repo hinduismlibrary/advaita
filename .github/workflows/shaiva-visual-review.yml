@@ -537,7 +537,7 @@ jobs:
               assert desktop['sourceSections'] <= 1, f'{label}: Sources split into multiple sections'
               assert desktop['quoteGroups'] > 0, f'{label}: source, Sanskrit and English quote groups are missing'
               assert desktop['citationGroups'] > 0, f'{label}: no source labels appear with the scripture quotes'
-              if label not in ('varna-vicara','vaishnava'):
+              if label != 'varna-vicara':
                 assert desktop['unpairedTranslations'] == 0, f'{label}: an English quotation sits outside its source group: {desktop["unpairedTranslationExamples"]}'
               assert set(desktop['articleImageSources']) == expected_article_images[label], f'{label}: source image set differs: expected {sorted(expected_article_images[label])}, got {sorted(desktop["articleImageSources"])}'
               assert not desktop['articleImageIssues'], f'{label}: images are missing, distorted, overflowing, or missing alt text: {desktop["articleImageIssues"]}'
@@ -600,7 +600,7 @@ jobs:
                 cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Brahma Sutra 1.1.3.')
                 assert cite_pair.count() == 1, 'vaishnava: Brahma Sūtra source was not paired with its own quote'
                 cite_order=cite_pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference,p.source-citation,p.scripture-source,p.citation') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation') ? 'translation' : 'other')")
-                assert cite_order == ['source','sanskrit','translation'], f'vaishnava: Brahma Sūtra quote group order is wrong: {cite_order}'
+                assert cite_order == ['source','translation','sanskrit'], f'vaishnava: Brahma Sūtra quote group order is wrong: {cite_order}'
                 varaha_pair=page.locator('.scripture-quote-pair').filter(has_text='Varaha Purana 70.16 to 18')
                 assert varaha_pair.count() == 1, 'vaishnava: Varaha Purana 70.16 to 18 quote is missing its citation pair'
                 varaha_reference=varaha_pair.locator(':scope > p.reference').inner_text().strip()
