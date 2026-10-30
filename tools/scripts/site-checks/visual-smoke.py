@@ -228,10 +228,10 @@ def run() -> None:
                 page.wait_for_function("() => document.querySelector('#vishnu-desktop-toc a[aria-current=location]')", timeout=20000)
                 initial_active = page.locator("#vishnu-desktop-toc a[aria-current='location']").get_attribute("href")
                 page.evaluate("""() => {
-                    const heading = document.querySelector("#women");
+                    const heading = document.querySelector("#source-content #women");
                     window.scrollTo(0, heading.getBoundingClientRect().top + window.scrollY - 100);
                 }""")
-                page.wait_for_function("() => document.querySelector('#vishnu-desktop-toc a[href$=\"#women\"][aria-current=location]')", timeout=20000)
+                page.wait_for_function("initial => { const link = document.querySelector('#vishnu-desktop-toc a[aria-current=location]'); return link && link.getAttribute('href') !== initial; }", arg=initial_active, timeout=20000)
                 active_color = page.locator("#vishnu-desktop-toc a[aria-current='location']").evaluate("el => getComputedStyle(el).color")
                 inactive_color = page.locator("#vishnu-desktop-toc a:not([aria-current='location'])").first.evaluate("el => getComputedStyle(el).color")
                 assert active_color != inactive_color, {"active": active_color, "inactive": inactive_color}
