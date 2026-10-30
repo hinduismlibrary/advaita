@@ -437,10 +437,13 @@ jobs:
                   });
                 }""", arg=sample, timeout=15000)
                 expected_color = 'rgb(50, 100, 102)'
-                page.wait_for_function("""({selector,color}) => {
+                expected_background = 'rgb(224, 233, 231)'
+                page.wait_for_function("""({selector,color,background}) => {
                   const active=document.querySelector(selector+' a.toc-index-link.is-active, '+selector+' a.toc-index-link.is-active-subsection');
-                  return active && getComputedStyle(active).color===color;
-                }""", arg={'selector':selector,'color':expected_color}, timeout=7000)
+                  if(!active)return false;
+                  const style=getComputedStyle(active);
+                  return style.color===color && style.backgroundColor===background;
+                }""", arg={'selector':selector,'color':expected_color,'background':expected_background}, timeout=7000)
                 visual = page.evaluate("""selector => {
                   const nav=document.querySelector(selector);
                   const active=nav?.querySelector('a.toc-index-link.is-active, a.toc-index-link.is-active-subsection');
