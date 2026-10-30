@@ -116,7 +116,7 @@ def run() -> None:
                 assert documents.locator("li").count() == 8
                 assert documents.locator('a[href="/advaita/articles/a-defence-of-the-manusmriti/"]').count() == 1
                 document_titles = documents.locator("li > a").evaluate_all("""
-                    links => links.map(link => (link.querySelector(".hp-link-en") || link).innerText.trim())
+                    links => links.map(link => (link.querySelector(".hp-link-en") || link).innerText.trim().split(/\\r?\\n/)[0].trim())
                 """)
                 assert document_titles == sorted(document_titles, key=len), document_titles
                 assert documents.locator('a[href="/advaita/articles/purana-analysis/"]').count() == 0
