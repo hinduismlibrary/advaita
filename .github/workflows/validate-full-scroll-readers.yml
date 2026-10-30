@@ -51,7 +51,7 @@ jobs:
             'varna-vicara',
           )
           full_scroll_style = '20261030-shared-reader-refresh-1'
-          varna_script_version = '20261027-full-scroll-2'
+          varna_script_version = '20261027-full-scroll-3'
           shared_reader_version = '20261030-source-quote-order-2'
           vaishnava_reader_version = '20261030-source-quote-order-2'
           shaiva_reader_version = '20261030-shaiva-outline-fallback-3'
@@ -76,8 +76,11 @@ jobs:
               assert html.count('varna-vicara-paged.js?v=' + varna_script_version) == 1, f'{path}: stale Varṇa-vicāra loader cache'
             assert html.count('varna-vicara-paged.css?v=20260914-3') == 1, f'{path}: missing shared base style'
             assert html.count('article-reader-template.css?v=' + full_scroll_style) == 1, f'{path}: stale shared style cache'
-            if slug != 'varna-vicara':
-              assert html.count('vishnu-article-editorial.css?v=' + editorial_css_version) == 1, f'{path}: stale editorial style cache'
+            assert html.count('vishnu-article-editorial.css?v=' + editorial_css_version) == 1, f'{path}: stale editorial style cache'
+            if slug == 'varna-vicara':
+              varna_reader = Path('site/assets/js/varna-vicara-paged.js').read_text(encoding='utf-8')
+              assert 'vishnu-editorial-enhancements.js?v=' + editorial_script_version in varna_reader, f'{path}: Varṇa-vicāra does not load the editorial enhancements'
+            else:
               assert html.count('vishnu-editorial-enhancements.js?v=' + editorial_script_version) == 1, f'{path}: stale editorial script cache'
             if slug == 'a-shaiva-lens-on-shiva-as-the-supreme-deity':
               assert html.count('shaiva-complete-reader.js?v=' + shaiva_reader_version) == 1, f'{path}: stale Śaiva reader cache'
