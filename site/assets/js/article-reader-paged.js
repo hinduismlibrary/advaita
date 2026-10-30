@@ -813,7 +813,7 @@ function pairScriptureQuotes(root){
       node.compareDocumentPosition(earliest)&Node.DOCUMENT_POSITION_FOLLOWING?node:earliest,nodes[0]);
     const pair=el('div','scripture-quote-pair');
     first.before(pair);
-    pair.append(...citations,...sourceRun,...translations);
+    pair.append(...citations,...translations,...sourceRun);
   }
   const translations=[...root.querySelectorAll('p.translation,p.scripture-translation,.women-scripture-translation,blockquote.translation,blockquote.scripture-translation,p')]
     .filter(isTranslation);
