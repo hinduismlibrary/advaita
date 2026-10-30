@@ -7,6 +7,10 @@ on:
       - .github/workflows/shaiva-visual-review.yml
       - .github/workflows/validate-full-scroll-readers.yml
       - site/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
+      - site/articles/a-defence-of-the-manusmriti/index.html
+      - site/articles/index.html
+      - site/assets/pdfs/manusmriti-defence.pdf
+      - site/sitemap.xml
       - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/index.html
       - site/articles/a-shaiva-lens-on-shiva-as-the-supreme-deity/source-original.html
       - site/articles/a-shashtric-lens-of-varna-part-one/index.html
@@ -113,7 +117,7 @@ jobs:
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     enhancementScript?.src.includes('20261030-vishnu-citations-9');
-                  const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
+                  const assetsReady = sharedStyle?.href.includes('20261030-shared-reader-refresh-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
                 }""")
@@ -231,10 +235,12 @@ jobs:
                 emphasized:!!meatCitation.querySelector('em,i')
               }:null;
               const scriptureSourceLabels=article.querySelectorAll('p.scripture-source').length;
-              const orderRank=node=>node.matches(sourceSelector)?0:node.matches(sanskritSelector)?1:node.matches(translationSelector)?2:9;
+              const quoteKind=node=>node.matches(sourceSelector)?'source':node.matches(sanskritSelector)?'sanskrit':node.matches(translationSelector)?'translation':null;
               const quoteOrderErrors=quoteGroups.filter(pair=>{
-                const ranks=[...pair.children].map(orderRank).filter(rank=>rank<9);
-                return ranks.some((rank,index)=>index>0&&rank<ranks[index-1]);
+                const visual=[...pair.children].map(child=>({child,kind:quoteKind(child)})).filter(item=>item.kind)
+                  .sort((a,b)=>Number(getComputedStyle(a.child).order)-Number(getComputedStyle(b.child).order))
+                  .map(item=>item.kind);
+                return visual.join(',')!=='source,translation,sanskrit';
               }).map(pair=>pair.innerText.trim().slice(0,140));
               const sourceDisclosures=[...article.querySelectorAll('.document-section:not(.document-reference-section) details.sanskrit-reveal:not(.quote-source-note)')]
                 .filter(details=>/[\\u0900-\\u097f]/.test(details.textContent));
@@ -411,7 +417,7 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
-                expected_color = 'rgb(50, 100, 102)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
+                expected_color = 'rgb(50, 100, 102)'
                 page.wait_for_function("""({selector,color}) => {
                   const active=document.querySelector(selector+' a.toc-index-link.is-active, '+selector+' a.toc-index-link.is-active-subsection');
                   return active && getComputedStyle(active).color===color;
@@ -488,8 +494,8 @@ jobs:
                   assert pair.locator(':scope > p.translation').count() == 1, f'shaiva: English translation missing for {expected_source}'
                   quote_text = pair.locator(':scope > p.translation').inner_text().strip()
                   assert quote_text.startswith('“') and quote_text.endswith('”'), f'shaiva: English quotation marks missing for {expected_source}'
-                  order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
-                  assert order == ['source', 'sanskrit', 'translation'], f'shaiva: quote order differs for {expected_source}: {order}'
+                  order = pair.evaluate("""(node) => Array.from(node.children).map(child => ({child,kind:child.matches('p.reference')?'source':child.matches('details.sanskrit-reveal')?'sanskrit':child.matches('p.translation')?'translation':'other'})).filter(item=>item.kind!=='other').sort((a,b)=>Number(getComputedStyle(a.child).order)-Number(getComputedStyle(b.child).order)).map(item=>item.kind)""")
+                  assert order == ['source', 'translation', 'sanskrit'], f'shaiva: source, English quote, Sanskrit order differs for {expected_source}: {order}'
               desktop = metrics(page)
               if label == 'vaishnava':
                 assert desktop['sanskritToggleAvailable'], 'vaishnava: Sanskrit disclosures are not using the Show Sanskrit toggle'
@@ -500,8 +506,8 @@ jobs:
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
-              body_font = 'Merriweather' if label == 'vaishnava' else 'Vollkorn'
-              heading_font = 'Vollkorn' if label == 'vaishnava' else 'Anton'
+              body_font = 'Merriweather'
+              heading_font = 'Vollkorn'
               assert body_font in desktop['paragraphStyle']['fontFamily'], f'{label}: article body font differs: {desktop["paragraphStyle"]}'
               assert heading_font in desktop['headingStyle']['fontFamily'], f'{label}: article heading font differs: {desktop["headingStyle"]}'
               assert desktop['status'] == 'Full document', f'{label}: page still has section pagination'
@@ -519,22 +525,22 @@ jobs:
               assert not desktop['captionIssues'], f'{label}: a figure caption is detached from its image: {desktop["captionIssues"]}'
               assert not desktop['brokenPageLinks'], f'{label}: broken article fragment links {desktop["brokenPageLinks"]}'
               assert not link_check['broken'], f'{label}: broken internal or external links: {link_check["broken"]}'
-              if label == 'vaishnava':
-                assert desktop['citationColor'] == 'rgb(73, 107, 108)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
-                assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)','rgb(38, 119, 122)'), f'{label}: Contents links lack the article palette: {desktop["contentsLinkColor"]}'
-                assert desktop['quoteStyle']['color'] == 'rgb(102, 106, 108)', f'{label}: English quotations are not grey: {desktop["quoteStyle"]}'
-              elif label != 'varna-vicara':
+              if label != 'varna-vicara':
                 assert not desktop['uncitedTranslationGroups'], f'{label}: quotation group has no source citation: {desktop["uncitedTranslationGroups"]}'
-                assert desktop['citationColor'] == 'rgb(32, 33, 34)', f'{label}: source citation text is not dark: {desktop["citationColor"]}'
-                assert desktop['contentsLinkColor'] == 'rgb(6, 69, 173)', f'{label}: Contents links are not blue: {desktop["contentsLinkColor"]}'
+              assert desktop['citationColor'] == 'rgb(73, 107, 108)', f'{label}: source citations are not teal: {desktop["citationColor"]}'
+              assert desktop['contentsLinkColor'] in ('rgb(80, 75, 83)','rgb(73, 107, 108)'), f'{label}: Contents links lack the reader palette: {desktop["contentsLinkColor"]}'
+              assert desktop['quoteStyle']['color'] == 'rgb(102, 106, 108)', f'{label}: English quotations are not grey: {desktop["quoteStyle"]}'
               assert sanskrit_controls_tested == desktop['sanskritDisclosures'], f'{label}: not all Sanskrit controls were tested'
+              disclosure = page.locator('details.sanskrit-reveal:not(.quote-source-note) > summary').first
+              button_style = disclosure.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
+              assert button_style['fontSize']=='15px' and button_style['height']<=30, f'{label}: Show Sanskrit control is too small or oversized: {button_style}'
               if label == 'women':
                 figure_pairs = page.locator('#source-content .women-figure-transcription .women-scripture-pair')
                 assert figure_pairs.count() == 4, 'women: each dress-code diagram transcription must be a separate quotation group'
                 for index in range(figure_pairs.count()):
                   pair = figure_pairs.nth(index)
-                  order = pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation') ? 'translation' : 'other')")
-                  assert order == ['source','sanskrit','translation'], f'women: diagram quote order differs: {order}'
+                  order = pair.evaluate("""(node) => Array.from(node.children).map(child => ({child,kind:child.matches('p.reference')?'source':child.matches('details.sanskrit-reveal')?'sanskrit':child.matches('p.translation')?'translation':'other'})).filter(item=>item.kind!=='other').sort((a,b)=>Number(getComputedStyle(a.child).order)-Number(getComputedStyle(b.child).order)).map(item=>item.kind)""")
+                  assert order == ['source','translation','sanskrit'], f'women: source, English quote, Sanskrit order differs: {order}'
                   source = pair.locator(':scope > p.reference').inner_text()
                   assert 'Śaṅkha-Likhita Dharmasūtra' in source and 'p. 60–61' in source, f'women: diagram quotation source is incomplete: {source}'
               if label == 'meat':
@@ -669,6 +675,22 @@ jobs:
               print(json.dumps(record,ensure_ascii=False),flush=True)
               assert not errors, f'{label}: browser errors {errors}'
               page.close()
+            manuscript_page = browser.new_page()
+            manuscript_url = root + 'a-defence-of-the-manusmriti/'
+            manuscript_response = manuscript_page.goto(versioned(manuscript_url, 1), wait_until='domcontentloaded', timeout=45000)
+            assert manuscript_response and manuscript_response.status == 200, 'manusmriti: article page is unavailable'
+            manuscript_iframe = manuscript_page.locator('iframe.manusmriti-frame')
+            assert manuscript_iframe.count() == 1, 'manusmriti: the original document is not embedded'
+            assert manuscript_iframe.get_attribute('title') == 'A Defence of the Manusmriti. Complete original 22 page document', 'manusmriti: accessible document title is missing'
+            assert '/assets/pdfs/manusmriti-defence.pdf' in manuscript_iframe.get_attribute('src'), 'manusmriti: embedded PDF path is wrong'
+            pdf_response = manuscript_page.request.get('https://hinduismlibrary.github.io/advaita/assets/pdfs/manusmriti-defence.pdf', timeout=45000)
+            assert pdf_response.status == 200 and 'application/pdf' in pdf_response.headers.get('content-type','').lower() and len(pdf_response.body()) > 1000000, 'manusmriti: original PDF is missing or incomplete'
+            archive_page = browser.new_page()
+            archive_response = archive_page.goto(versioned(root, 1), wait_until='domcontentloaded', timeout=45000)
+            assert archive_response and archive_response.status == 200, 'articles: archive is unavailable'
+            assert archive_page.locator('a[href="/advaita/articles/a-defence-of-the-manusmriti/"]').inner_text().strip() == 'A Defence of the Manusmriti', 'articles: Manusmriti is missing from Scriptural Studies'
+            archive_page.close()
+            manuscript_page.close()
             (out / 'results.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
             browser.close()
           assert len(records) == 7
