@@ -566,7 +566,7 @@ jobs:
                 commentary = page.locator('#source-content .commentary-quote-pair')
                 assert commentary.count() == 1, 'meat: Medhātithi commentary quotation is missing its group'
                 source = commentary.locator(':scope > p.reference').inner_text()
-                assert 'Medhātithi' in source and 'Manusmṛti 5.56' in source and 'p. 18' in source, f'meat: Medhātithi source citation is incomplete: {source}'
+                assert 'Medhatithi' in source and 'Manusmriti 5.56' in source and 'p. 18' not in source, f'meat: Medhatithi source citation is incomplete or contains a page marker: {source}'
               if label != 'vaishnava' and desktop['uncitedQuoteGroups']:
                 uncited_quote_diagnostics.append({'site':label,'total':len(desktop['uncitedQuoteGroups']),'examples':desktop['uncitedQuoteGroups'][:8]})
               assert desktop['scriptureSourceLabels'] == 0, f'{label}: unstandardized scripture-source labels remain'
