@@ -518,10 +518,10 @@ jobs:
               desktop = metrics(page)
               if label == 'vaishnava':
                 assert desktop['sanskritToggleAvailable'], 'vaishnava: Sanskrit disclosures are not using the Show Sanskrit toggle'
-                uncited_translation_groups=[group for group in desktop['uncitedTranslationGroups'] if 'thus concludes the hari-paratva-vimarsa' not in group.lower()]
+                uncited_translation_groups=desktop['uncitedTranslationGroups']
                 assert not uncited_translation_groups, f'vaishnava: quotation group has no source citation: {uncited_translation_groups}'
-                uncited_scripture_groups=[group for group in desktop['uncitedQuoteGroups'] if 'thus concludes the hari-paratva-vimarsa' not in group['text'].lower()]
-                assert not uncited_scripture_groups, f'vaishnava: Sanskrit quotation has no numbered source above it: {uncited_scripture_groups}'
+                uncited_scripture_groups=desktop['uncitedQuoteGroups']
+                assert not uncited_scripture_groups, f'vaishnava: Sanskrit quotation has no source label above it: {uncited_scripture_groups}'
               link_check = verify_article_links(page, label, desktop['articleLinks'], link_check_cache)
               print(json.dumps({'site':label,'desktop':desktop,'linkCheck':link_check},ensure_ascii=False),flush=True)
               assert response.status == 200, f'{label}: HTTP {response.status}'
