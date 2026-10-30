@@ -212,9 +212,12 @@ def run() -> None:
                 page.locator("#vishnu-desktop-toc a").first.wait_for(timeout=20000)
                 assert page.locator("#vishnu-desktop-toc a").count() >= 5
                 first_translation = page.locator("p.translation").first
-                assert first_translation.evaluate("el => el.previousElementSibling?.textContent.trim()") == "Taittirīya Brāhmaṇa 2.2.10.2"
-                assert first_translation.evaluate("el => el.nextElementSibling?.matches('details.sanskrit-reveal')") is True
-                details = first_translation.locator("xpath=following-sibling::details[contains(@class, 'sanskrit-reveal')][1]")
+                pair = first_translation.locator("xpath=ancestor::div[contains(@class, 'scripture-quote-pair')][1]")
+                assert pair.locator("p.reference").inner_text().strip() == "Taittirīya Brāhmaṇa 2.2.10.2"
+                details = pair.locator("details.sanskrit-reveal")
+                quote_box = first_translation.bounding_box()
+                button_box = details.locator("summary").bounding_box()
+                assert button_box["y"] >= quote_box["y"] + quote_box["height"] - 1, {"quote": quote_box, "button": button_box}
                 details.locator("summary").click()
                 assert details.get_attribute("open") is not None
                 source_image = details.locator("img")
