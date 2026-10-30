@@ -314,12 +314,12 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   display:inline-block!important;
   min-height:0!important;
   margin:0!important;
-  padding:3px 9px 4px!important;
+  padding:3px 8px 4px!important;
   border:1px solid var(--button-border)!important;
   border-radius:999px!important;
   background:transparent!important;
   color:#9b4e1d!important;
-  font:400 12px/1.45 Merriweather,Georgia,serif!important;
+  font:400 11px/1.45 Merriweather,Georgia,serif!important;
   list-style:none!important;
   cursor:pointer;
   user-select:none;
@@ -544,8 +544,8 @@ body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!impor
     line-height:1.68!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
-    padding:3px 9px 4px!important;
-    font-size:12px!important;
+    padding:3px 8px 4px!important;
+    font-size:11px!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
     font-size:18px!important;
