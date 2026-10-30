@@ -4,6 +4,20 @@
 'use strict';
 const root=document.querySelector('.document-content');
 if(!root)return;
+// Keep Sanskrit controls compact even when late shared chrome styles load.
+const compactSanskritControls=()=>{
+  for(const summary of root.querySelectorAll('details.sanskrit-reveal>summary')){
+    summary.style.setProperty('display','inline-block','important');
+    summary.style.setProperty('min-height','0','important');
+    summary.style.setProperty('padding','1px 5px 2px','important');
+    summary.style.setProperty('font-family','Merriweather,Georgia,serif','important');
+    summary.style.setProperty('font-size','9px','important');
+    summary.style.setProperty('line-height','1.25','important');
+    summary.style.setProperty('font-weight','400','important');
+  }
+};
+compactSanskritControls();
+new MutationObserver(compactSanskritControls).observe(root,{childList:true,subtree:true});
 document.body.classList.add('vishnu-editorial-reader');
 for(const heading of root.querySelectorAll('.document-section-title,.document-group-heading,.source-page-heading')){
   const label=(heading.textContent||'').replace(/\s+/g,' ').trim();
