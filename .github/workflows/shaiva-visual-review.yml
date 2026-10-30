@@ -110,7 +110,7 @@ jobs:
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261030-vishnu-citations-8');
+                    editorialStyle?.href.includes('20261030-vishnu-citations-10');
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
@@ -533,7 +533,7 @@ jobs:
               assert sanskrit_controls_tested == desktop['sanskritDisclosures'], f'{label}: not all Sanskrit controls were tested'
               disclosure = page.locator('details.sanskrit-reveal:not(.quote-source-note) > summary').first
               button_style = disclosure.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
-              assert button_style['fontSize']=='15px' and button_style['height']<=30, f'{label}: Show Sanskrit control is too small or oversized: {button_style}'
+              assert button_style['fontSize']=='16px' and button_style['height']<=32, f'{label}: Show Sanskrit control is too small or oversized: {button_style}'
               if label == 'women':
                 figure_pairs = page.locator('#source-content .women-figure-transcription .women-scripture-pair')
                 assert figure_pairs.count() == 4, 'women: each dress-code diagram transcription must be a separate quotation group'
@@ -616,7 +616,7 @@ jobs:
                 assert section_order[sources_index]['title']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
                 assert page.locator('.side-toc .toc a[href$="#bibliography"]').inner_text().strip()=='Sources and tables', 'vaishnava: Contents does not show the combined sources and tables section'
                 button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
-                assert button_style['fontSize']=='15px' and button_style['height']<=30, f'vaishnava: Show Sanskrit control is too small or oversized: {button_style}'
+                assert button_style['fontSize']=='16px' and button_style['height']<=32, f'vaishnava: Show Sanskrit control is too small or oversized: {button_style}'
                 objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
                 assert objection_section.locator(':scope > h3#objections').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
                 assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'

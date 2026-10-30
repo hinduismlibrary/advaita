@@ -293,9 +293,9 @@ body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quot
   display:none!important;
   content:none!important;
 }
-body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > :is(.reference,.source-citation,.citation) {order:0}
-body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > details.sanskrit-reveal {order:2}
-body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quote-pair > :is(.translation,.scripture-translation) {order:1}
+body.document-paged-page.vishnu-editorial-reader #source-content :is(.scripture-quote-pair,.women-scripture-pair) > :is(.reference,.source-citation,.scripture-source,.citation) {order:0!important}
+body.document-paged-page.vishnu-editorial-reader #source-content :is(.scripture-quote-pair,.women-scripture-pair) > :is(.translation,.scripture-translation,blockquote.translation,blockquote.scripture-translation,.women-scripture-translation) {order:1!important}
+body.document-paged-page.vishnu-editorial-reader #source-content :is(.scripture-quote-pair,.women-scripture-pair) > details.sanskrit-reveal:not(.quote-source-note) {order:2!important}
 body.document-paged-page.vishnu-editorial-reader #source-content :is(p.reference,p.source-citation,p.scripture-source,p.citation):lang(en) {
   display:block!important;
   width:100%;
@@ -342,7 +342,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   border-radius:999px!important;
   background:transparent!important;
   color:#9b4e1d!important;
-  font:400 15px/1.3 Merriweather,Georgia,serif!important;
+  font:400 16px/1.2 Merriweather,Georgia,serif!important;
   list-style:none!important;
   cursor:pointer;
   user-select:none;
@@ -567,8 +567,8 @@ body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!impor
     line-height:1.68!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
-    padding:3px 10px!important;
-    font-size:15px!important;
+    padding:4px 12px!important;
+    font-size:16px!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
     font-size:18px!important;
