@@ -598,7 +598,7 @@ jobs:
                 button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
                 assert button_style['fontSize']=='9px' and button_style['height']<=18, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
                 objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
-                assert objection_section.locator(':scope > h3').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
+                assert objection_section.locator(':scope > h3#objections').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
                 assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'
                 assert page.locator('#source-content .vishnu-strong-heading').filter(has_text='Summary & conclusion').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Summary and conclusion heading is not bold'
                 assert page.locator('#source-content .vishnu-strong-heading').filter(has_text='Conclusion').last.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: conclusion heading is not bold'
