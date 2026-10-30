@@ -106,13 +106,13 @@ jobs:
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261029-varna-quote-button-2');
+                    editorialStyle?.href.includes('20261029-varna-quote-button-3');
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    enhancementScript?.src.includes('20261029-varna-quote-button-1');
+                    enhancementScript?.src.includes('20261029-varna-quote-button-2');
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
@@ -544,7 +544,7 @@ jobs:
                 'agamas':'Taittiriya Samhita 2.2.10.2',
                 'shaiva':'Shiva Purana, Rudra Samhita 16.36',
                 'varna':'Bhagavad Gita 16.23',
-                'vaishnava':'Brahma Sūtra 1.1.3',
+                'vaishnava':'Brahma Sutra 1.1.3',
                 'women':'Saundarya Laharī, verse 97',
                 'meat':'Manusmrti 5.48',
                 'varna-vicara':'Bhagavad Gītā 16.23–24'
@@ -559,19 +559,24 @@ jobs:
               if label == 'vaishnava':
                 assert desktop['articleImages'] == 4, f'vaishnava: expected all four source images, got {desktop["articleImages"]}'
                 assert not desktop['articleImageIssues'], f'vaishnava: source diagram assets are missing, cropped, or missing alt text: {desktop["articleImageIssues"]}'
-                cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Brahma Sūtra 1.1.3.')
+                cite_pair=page.locator('.scripture-quote-pair').filter(has_text='Brahma Sutra 1.1.3.')
                 assert cite_pair.count() == 1, 'vaishnava: Brahma Sūtra source was not paired with its own quote'
                 cite_order=cite_pair.evaluate("(node) => Array.from(node.children).map(child => child.matches('p.reference,p.source-citation,p.scripture-source,p.citation') ? 'source' : child.matches('details.sanskrit-reveal') ? 'sanskrit' : child.matches('p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation') ? 'translation' : 'other')")
                 assert cite_order == ['source','sanskrit','translation'], f'vaishnava: Brahma Sūtra quote group order is wrong: {cite_order}'
-                varaha_pair=page.locator('.scripture-quote-pair').filter(has_text='Varāha Purāṇa 70.16–18')
-                assert varaha_pair.count() == 1, 'vaishnava: Varāha Purāṇa 70.16–18 quote is missing its citation pair'
+                varaha_pair=page.locator('.scripture-quote-pair').filter(has_text='Varaha Purana 70.16 to 18')
+                assert varaha_pair.count() == 1, 'vaishnava: Varaha Purana 70.16 to 18 quote is missing its citation pair'
                 varaha_reference=varaha_pair.locator(':scope > p.reference').inner_text().strip()
-                assert varaha_reference == 'Varāha Purāṇa 70.16–18', f'vaishnava: wrong citation for the Varāha passage: {varaha_reference}'
+                assert varaha_reference == 'Varaha Purana 70.16 to 18', f'vaishnava: wrong citation for the Varāha passage: {varaha_reference}'
                 varaha_visual_order=varaha_pair.evaluate("""(node) => {
                    const kind=child=>child.matches('p.reference')?'source':child.matches('details.sanskrit-reveal')?'sanskrit':child.matches('p.translation')?'translation':'other';
                    return [...node.children].sort((a,b)=>Number(getComputedStyle(a).order)-Number(getComputedStyle(b).order)).map(kind);
                  }""")
                 assert varaha_visual_order == ['source','translation','sanskrit'], f'vaishnava: English quote must appear before the Sanskrit control: {varaha_visual_order}'
+                typography=page.locator('#source-content').evaluate("""(node) => ({
+                  hasQuotes: /[\u0022\u201c\u201d\u2018\u2019]/u.test(node.innerText),
+                  hasMarks: /[\u0300-\u036f]/u.test(node.innerText)
+                })""")
+                assert not typography['hasQuotes'] and not typography['hasMarks'], f'vaishnava: quote marks or Latin accent marks remain: {typography}'
                 tables = page.locator('#source-content table.vishnu-data-table')
                 assert tables.count() == 5, f'vaishnava: expected five original summary tables, got {tables.count()}'
                 row_counts = [table.locator('tbody tr').count() for table in tables.all()]
