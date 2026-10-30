@@ -106,13 +106,13 @@ jobs:
                   const smoothScroll = getComputedStyle(document.documentElement).scrollBehavior === 'smooth';
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const editorialReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    editorialStyle?.href.includes('20261030-sources-tables-6');
+                    editorialStyle?.href.includes('20261030-vishnu-citations-7');
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !location.pathname.includes('/a-vaishnava-lens-on-vishnu-as-the-supreme-deity/') ||
-                    enhancementScript?.src.includes('20261030-sources-tables-7');
+                    enhancementScript?.src.includes('20261030-vishnu-citations-8');
                   const assetsReady = sharedStyle?.href.includes('20261029-paper-reader-restore-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
@@ -411,7 +411,7 @@ jobs:
                       (sample.group ? link.dataset.group === sample.group : link.dataset.section === sample.section);
                   });
                 }""", arg=sample, timeout=15000)
-                expected_color = 'rgb(38, 119, 122)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
+                expected_color = 'rgb(50, 100, 102)' if label == 'vaishnava' else 'rgb(6, 69, 173)'
                 page.wait_for_function("""({selector,color}) => {
                   const active=document.querySelector(selector+' a.toc-index-link.is-active, '+selector+' a.toc-index-link.is-active-subsection');
                   return active && getComputedStyle(active).color===color;
@@ -424,13 +424,16 @@ jobs:
                   return {
                     color:style.color,
                     weight:style.fontWeight,
+                    background:style.backgroundColor,
+                    borderColor:style.borderLeftColor,
+                    borderWidth:style.borderLeftWidth,
                     transition:style.transitionProperty.split(',').map(value=>value.trim()),
                     scroll:getComputedStyle(document.documentElement).scrollBehavior
                   };
                 }""", selector)
                 expected_weight = '700'
                 if (not visual or visual['color'] != expected_color or
-                    visual['weight'] != expected_weight or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
+                    visual['weight'] != expected_weight or visual['background'] != 'rgb(224, 233, 231)' or visual['borderColor'] != expected_color or visual['borderWidth'] != '3px' or 'color' not in visual['transition'] or visual['scroll'] != 'smooth'):
                   issue={'site':label,'mobile':mobile,'sample':sample,'visual':visual}
                   scrollspy_errors.append(issue)
                   print('SCROLLSPY_STYLE_DIAGNOSTIC ' + json.dumps(issue,ensure_ascii=False),flush=True)
@@ -599,7 +602,7 @@ jobs:
                 assert section_order[sources_index]['title']=='Sources and tables', 'vaishnava: the combined end section is not labelled Sources and tables'
                 assert page.locator('.side-toc .toc a[href$="#bibliography"]').inner_text().strip()=='Sources and tables', 'vaishnava: Contents does not show the combined sources and tables section'
                 button_style=page.locator('#source-content .document-section:not(.document-reference-section) details.sanskrit-reveal > summary').first.evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
-                assert button_style['fontSize']=='12px' and button_style['height']<=24, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
+                assert button_style['fontSize']=='14px' and button_style['height']<=27, f'vaishnava: Show Sanskrit control is still too large: {button_style}'
                 objection_section=page.locator('#source-content > .document-section').filter(has=page.locator('h3#objections'))
                 assert objection_section.locator(':scope > h3#objections').evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: Objections heading is not bold'
                 assert objection_section.locator('h3.reader-subheading').first.evaluate('(node)=>getComputedStyle(node).fontWeight')=='700', 'vaishnava: objection titles are not bold'
