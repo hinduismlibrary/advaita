@@ -113,7 +113,12 @@ def run() -> None:
                 assert left_y == sorted(left_y) and right_y == sorted(right_y), (left_y, right_y)
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
-                assert documents.locator("li").count() == 7
+                assert documents.locator("li").count() == 8
+                assert documents.locator('a[href="/advaita/articles/a-defence-of-the-manusmriti/"]').count() == 1
+                document_titles = documents.locator("li > a").evaluate_all("""
+                    links => links.map(link => (link.querySelector(".hp-link-en") || link).innerText.trim())
+                """)
+                assert document_titles == sorted(document_titles, key=len), document_titles
                 assert documents.locator('a[href="/advaita/articles/purana-analysis/"]').count() == 0
                 assert page.locator('#indology a[href="/advaita/articles/purana-analysis/"]').count() == 1
                 assert shastras.locator("li").count() == 4
@@ -199,6 +204,37 @@ def run() -> None:
                 assert mobile_nav.is_visible(), "Mobile menu did not open"
                 assert page.locator(".vd-search-form:visible").count() == 1
                 report["home_mobile"] = {"menu": "opens", "search": "visible"}
+
+                page.set_viewport_size({"width": 1366, "height": 900})
+                page.goto(base + "articles/a-defence-of-the-manusmriti/", wait_until="domcontentloaded")
+                page.locator(".article h1").wait_for(timeout=20000)
+                assert page.locator(".article h1").inner_text().strip() == "A Defence of the Manusmriti"
+                page.locator("#vishnu-desktop-toc a").first.wait_for(timeout=20000)
+                assert page.locator("#vishnu-desktop-toc a").count() >= 5
+                first_translation = page.locator("p.translation").first
+                assert first_translation.evaluate("el => el.previousElementSibling?.textContent.trim()") == "Taittirīya Brāhmaṇa 2.2.10.2"
+                assert first_translation.evaluate("el => el.nextElementSibling?.matches('details.sanskrit-reveal')") is True
+                details = first_translation.locator("xpath=following-sibling::details[contains(@class, 'sanskrit-reveal')][1]")
+                details.locator("summary").click()
+                assert details.get_attribute("open") is not None
+                source_image = details.locator("img")
+                source_image.wait_for(state="visible", timeout=20000)
+                assert source_image.evaluate("img => img.complete && img.naturalWidth > 0"), "Sanskrit source image did not load"
+                assert page.locator(".reference-table tbody tr").count() == 15
+
+                page.wait_for_function("() => document.querySelector('#vishnu-desktop-toc a[aria-current=location]')", timeout=20000)
+                initial_active = page.locator("#vishnu-desktop-toc a[aria-current='location']").get_attribute("href")
+                page.evaluate("""() => {
+                    const heading = document.querySelector("#women");
+                    window.scrollTo(0, heading.getBoundingClientRect().top + window.scrollY - 100);
+                }""")
+                page.wait_for_function("() => document.querySelector('#vishnu-desktop-toc a[href$=\"#women\"][aria-current=location]')", timeout=20000)
+                active_color = page.locator("#vishnu-desktop-toc a[aria-current='location']").evaluate("el => getComputedStyle(el).color")
+                inactive_color = page.locator("#vishnu-desktop-toc a:not([aria-current='location'])").first.evaluate("el => getComputedStyle(el).color")
+                assert active_color != inactive_color, {"active": active_color, "inactive": inactive_color}
+                assert initial_active != page.locator("#vishnu-desktop-toc a[aria-current='location']").get_attribute("href")
+                report["manusmriti"] = {"sections": "linked", "active_contents": "updates while scrolling", "sanskrit": "source scan opens", "table_rows": 15}
+                page.screenshot(path=str(OUT / "manusmriti.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
                 page.locator(".ad-entry-original-dev").first.wait_for(timeout=20000)
@@ -472,3 +508,4 @@ def run() -> None:
 
 if __name__ == "__main__":
     run()
+
