@@ -120,7 +120,12 @@ jobs:
                 last_state = page.evaluate("""() => {
                   const article = document.querySelector('#source-content');
                   const readerScript = performance.getEntriesByType('resource').map(resource=>resource.name).find(url=>/(?:article-reader-paged|shaiva-complete-reader)\\.js(?:\\?|$)/.test(url)) || '';
+                  const editorialStyle=document.querySelector('link[href*="vishnu-article-editorial.css"]');
+                  const chromeStyle=document.querySelector('link[href*="site-chrome.css"]');
+                  const enhancementScript=document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
+                  const tocLink=document.querySelector('.toc-index-link');
                   return {
+                    readiness:{editorialHref:editorialStyle?.href||'',editorialSheet:!!editorialStyle?.sheet,chromeHref:chromeStyle?.href||'',chromeSheet:!!chromeStyle?.sheet,enhancementSrc:enhancementScript?.src||'',bodyClass:document.body.className,tocTransition:tocLink?getComputedStyle(tocLink).transitionProperty:'',scrollBehavior:getComputedStyle(document.documentElement).scrollBehavior},
                     title: document.title,
                     pageText: document.body?.innerText?.slice(0,300) || '',
                     status: document.querySelector('.page-context span, #section-count')?.textContent.trim() || '',
@@ -130,6 +135,7 @@ jobs:
                     sharedStyle: document.querySelector('link[href*="article-reader-template.css"]')?.href || ''
                   };
                 }""")
+                last_state['pageErrors']=errors[-10:]
                 if response and response.status == 200 and ready:
                   page.evaluate("""async () => {
                     const images=[...document.querySelectorAll('img')];
