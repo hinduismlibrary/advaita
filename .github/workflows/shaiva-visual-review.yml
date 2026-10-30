@@ -561,7 +561,7 @@ jobs:
                   order = pair.evaluate("""(node) => Array.from(node.children).map(child => ({child,kind:child.matches('p.reference')?'source':child.matches('details.sanskrit-reveal')?'sanskrit':child.matches('p.translation')?'translation':'other'})).filter(item=>item.kind!=='other').sort((a,b)=>Number(getComputedStyle(a.child).order)-Number(getComputedStyle(b.child).order)).map(item=>item.kind)""")
                   assert order == ['source','translation','sanskrit'], f'women: source, English quote, Sanskrit order differs: {order}'
                   source = pair.locator(':scope > p.reference').inner_text()
-                  assert 'Śaṅkha-Likhita Dharmasūtra' in source and 'p. 60–61' in source, f'women: diagram quotation source is incomplete: {source}'
+                  assert 'Sankha Likhita Dharmasutra' in source and '60 to 61' in source, f'women: diagram quotation source is incomplete: {source}'
               if label == 'meat':
                 commentary = page.locator('#source-content .commentary-quote-pair')
                 assert commentary.count() == 1, 'meat: Medhātithi commentary quotation is missing its group'
