@@ -207,8 +207,8 @@ def run() -> None:
 
                 page.set_viewport_size({"width": 1366, "height": 900})
                 page.goto(base + "articles/a-defence-of-the-manusmriti/", wait_until="domcontentloaded")
-                page.locator(".article h1").wait_for(timeout=20000)
-                assert page.locator(".article h1").inner_text().strip() == "A Defence of the Manusmriti"
+                page.locator(".article-head h1").wait_for(timeout=20000)
+                assert page.locator(".article-head h1").inner_text().strip() == "A Defence of the Manusmriti"
                 page.locator("#vishnu-desktop-toc a").first.wait_for(timeout=20000)
                 assert page.locator("#vishnu-desktop-toc a").count() >= 5
                 first_translation = page.locator("p.translation").first
