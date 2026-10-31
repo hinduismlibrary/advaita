@@ -213,7 +213,8 @@ def run() -> None:
                 assert page.locator("#vishnu-desktop-toc a").count() >= 5
                 first_translation = page.locator("p.translation").first
                 pair = first_translation.locator("xpath=ancestor::div[contains(@class, 'scripture-quote-pair')][1]")
-                assert pair.locator("p.reference").inner_text().strip() == "Taittirīya Brāhmaṇa 2.2.10.2"
+                first_reference = pair.locator("p.reference").inner_text().strip()
+                assert first_reference == "Taittirīya Brāhmaṇa 2.2.10.2", {"expected": "Taittirīya Brāhmaṇa 2.2.10.2", "actual": first_reference, "pair": pair.inner_text()}
                 details = pair.locator("details.sanskrit-reveal")
                 quote_box = first_translation.bounding_box()
                 button_box = details.locator("summary").bounding_box()
