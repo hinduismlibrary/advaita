@@ -14,7 +14,7 @@ body.document-paged-page.vishnu-editorial-reader {
   --sanskrit:#7f432f;
   background:var(--outer)!important;
   color:var(--ink)!important;
-  font:400 20px/1.5 Merriweather,Georgia,serif!important;
+  font:400 18.5px/1.58 Merriweather,Georgia,serif!important;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
 }
@@ -61,7 +61,7 @@ body.document-paged-page.vishnu-editorial-reader .article-head h1 {
   max-width:none!important;
   margin:0!important;
   color:var(--teal)!important;
-  font:400 clamp(32px,4vw,40px)/1.18 Vollkorn,Georgia,serif!important;
+  font:400 clamp(30px,3.6vw,36px)/1.2 Vollkorn,Georgia,serif!important;
   letter-spacing:normal!important;
   text-align:center!important;
   text-wrap:balance;
@@ -192,7 +192,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content {
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .document-section,
 body.document-paged-page.vishnu-editorial-reader #source-content .document-section:nth-of-type(n) {
-  margin:0 0 28px!important;
+  margin:0 0 24px!important;
   padding:0!important;
   border:0!important;
   border-radius:0!important;
@@ -216,9 +216,9 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(h2,h3,h4,h5
   text-wrap:balance;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(.document-group-heading,.document-section-title,.source-page-heading) {
-  margin:22px 0 12px!important;
-  font-size:27px!important;
-  line-height:1.22!important;
+  margin:19px 0 10px!important;
+  font-size:24px!important;
+  line-height:1.25!important;
   text-align:left!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .document-group-heading:first-child,
@@ -232,8 +232,8 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(.document-g
   content:none!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content h3.reader-subheading {
-  margin:20px 0 10px!important;
-  font:400 22px/1.28 Vollkorn,Georgia,serif!important;
+  margin:17px 0 8px!important;
+  font:400 20px/1.3 Vollkorn,Georgia,serif!important;
   text-align:left!important;
 }
 
@@ -244,26 +244,26 @@ body.document-paged-page.vishnu-editorial-reader #source-content .document-secti
   font-weight:700!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(h4,h5) {
-  margin:22px 0 10px!important;
-  font:400 20px/1.3 Vollkorn,Georgia,serif!important;
+  margin:18px 0 8px!important;
+  font:400 18.5px/1.35 Vollkorn,Georgia,serif!important;
   text-align:left!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(p,li,dt,dd,blockquote,figcaption,caption,th,td,summary,.source-entry):lang(en) {
   color:var(--ink)!important;
-  font:400 20px/1.5 Merriweather,Georgia,serif!important;
+  font:400 18.5px/1.58 Merriweather,Georgia,serif!important;
   letter-spacing:normal!important;
   overflow-wrap:break-word;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content p {
-  margin:0 0 15px!important;
+  margin:0 0 12px!important;
   text-wrap:pretty;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(ol,ul) {
-  margin:0 0 22px!important;
+  margin:0 0 18px!important;
   padding-left:1.5em!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content li {
-  margin:0 0 8px!important;
+  margin:0 0 6px!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content a {
   color:var(--link)!important;
@@ -281,7 +281,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content .scripture-quot
   flex-direction:column!important;
   align-items:flex-start!important;
   gap:0!important;
-  margin:14px 0 20px!important;
+  margin:12px 0 16px!important;
   padding:0!important;
   border:0!important;
   border-radius:0!important;
@@ -309,7 +309,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(p.reference
 }
 body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation,.women-scripture-translation):lang(en) {
   width:100%;
-  margin:0 0 12px!important;
+  margin:0 0 10px!important;
   padding:1px 0 1px 17px!important;
   border:0!important;
   border-left:2px solid var(--quote-rule)!important;
@@ -317,7 +317,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translati
   background:transparent!important;
   box-shadow:none!important;
   color:var(--quote)!important;
-  font:400 18.5px/1.62 Merriweather,Georgia,serif!important;
+  font:400 17.5px/1.6 Merriweather,Georgia,serif!important;
   text-wrap:pretty;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content blockquote {
@@ -367,13 +367,13 @@ body.document-paged-page.vishnu-editorial-reader #source-content details.sanskri
   color:#9b4e1d!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
-  margin:12px 0 8px!important;
+  margin:10px 0 6px!important;
   padding:0 0 0 17px!important;
   border:0!important;
   border-left:2px solid #c5a48f!important;
   background:transparent!important;
   color:var(--sanskrit)!important;
-  font:400 20px/1.8 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font:400 18.5px/1.72 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
   overflow-wrap:anywhere;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal [lang="sa-Latn"] {
@@ -408,7 +408,7 @@ body.document-paged-page.vishnu-editorial-reader #source-content .table-scroll {
   width:100%;
   max-width:100%;
   overflow-x:auto;
-  margin:18px 0 28px!important;
+  margin:16px 0 22px!important;
   padding:0!important;
   border:0!important;
   border-radius:0!important;
@@ -451,20 +451,20 @@ body.document-paged-page.vishnu-editorial-reader #source-content .table-scroll t
   background:#f7f5f2!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .source-page-body h4.source-group-heading {
-  margin:24px 0 10px!important;
+  margin:21px 0 8px!important;
   padding:0!important;
   border:0!important;
   color:var(--teal)!important;
-  font:400 20px/1.3 Vollkorn,Georgia,serif!important;
+  font:400 18.5px/1.35 Vollkorn,Georgia,serif!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .source-page-body ol {
-  margin:0 0 22px!important;
+  margin:0 0 18px!important;
   padding-left:1.6em!important;
 }
 body.document-paged-page.vishnu-editorial-reader #source-content .source-page-body li {
   padding-left:.15em;
-  font-size:17px!important;
-  line-height:1.5!important;
+  font-size:16px!important;
+  line-height:1.55!important;
 }
 
 body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!important}
@@ -559,28 +559,28 @@ body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!impor
   }
   body.document-paged-page.vishnu-editorial-reader .mobile-toc .toc {margin-top:14px!important}
   body.document-paged-page.vishnu-editorial-reader #source-content :is(p,li,dt,dd,blockquote):lang(en) {
-    font-size:18px!important;
-    line-height:1.55!important;
+    font-size:17.5px!important;
+    line-height:1.58!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content :is(p.translation,p.scripture-translation,blockquote.translation,blockquote.scripture-translation,.women-scripture-translation):lang(en) {
-    font-size:16.8px!important;
-    line-height:1.68!important;
+    font-size:16px!important;
+    line-height:1.62!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal>summary {
     padding:4px 12px!important;
     font-size:16px!important;
   }
   body.document-paged-page.vishnu-editorial-reader #source-content details.sanskrit-reveal :is([lang="sa-Deva"],.sanskrit-text) {
-    font-size:18px!important;
+    font-size:17.5px!important;
   }
 }
 @media (max-width:520px) {
   body.document-paged-page.vishnu-editorial-reader .page {padding:26px 18px 52px!important}
-  body.document-paged-page.vishnu-editorial-reader .article-head h1 {font-size:31px!important}
+  body.document-paged-page.vishnu-editorial-reader .article-head h1 {font-size:29px!important}
   body.document-paged-page.vishnu-editorial-reader #source-content :is(.document-group-heading,.document-section-title,.source-page-heading) {
-    font-size:24px!important;
+    font-size:22px!important;
   }
-  body.document-paged-page.vishnu-editorial-reader #source-content h3.reader-subheading {font-size:20px!important}
+  body.document-paged-page.vishnu-editorial-reader #source-content h3.reader-subheading {font-size:19px!important}
   body.document-paged-page.vishnu-editorial-reader #source-content .table-scroll table {min-width:560px!important}
 }
 @media (prefers-reduced-motion:reduce) {

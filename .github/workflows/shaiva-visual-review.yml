@@ -128,7 +128,7 @@ jobs:
                   const editorialStyle = document.querySelector('link[href*="vishnu-article-editorial.css"]');
                   const usesEditorialTemplate = true;
                   const editorialReady = !usesEditorialTemplate ||
-                    (editorialStyle?.href.includes('20261030-vishnu-citations-11') && !!editorialStyle.sheet);
+                    (editorialStyle?.href.includes('20261031-reader-scale-1') && !!editorialStyle.sheet);
                   const chromeStyle = document.querySelector('link[href*="site-chrome.css"]');
                   const chromeReady = !usesEditorialTemplate ||
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
