@@ -214,7 +214,7 @@ def run() -> None:
                 first_translation = page.locator("p.translation").first
                 pair = first_translation.locator("xpath=ancestor::div[contains(@class, 'scripture-quote-pair')][1]")
                 first_reference = pair.locator("p.reference").inner_text().strip()
-                assert first_reference == "Taittirīya Brāhmaṇa 2.2.10.2", {"expected": "Taittirīya Brāhmaṇa 2.2.10.2", "actual": first_reference, "pair": pair.inner_text()}
+                assert first_reference == "Taittiriya Brahmana 2.2.10.2", {"expected": "Taittiriya Brahmana 2.2.10.2", "actual": first_reference, "pair": pair.inner_text()}
                 details = pair.locator("details.sanskrit-reveal")
                 quote_box = first_translation.bounding_box()
                 button_box = details.locator("summary").bounding_box()
