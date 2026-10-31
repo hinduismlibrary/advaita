@@ -20,6 +20,7 @@ on:
       - site/articles/hinduism-on-women/index.html
       - site/articles/meat-eating-in-hinduism-through-the-lens-of-shastra/index.html
       - site/articles/varna-vicara/index.html
+      - site/index.html
       - site/articles/varna-vicara/preface.html
       - site/articles/varna-vicara/purvapaksha.html
       - site/articles/varna-vicara/rejection.html
@@ -56,7 +57,7 @@ jobs:
           vaishnava_reader_version = '20261030-source-quote-order-2'
           shaiva_reader_version = '20261030-shaiva-outline-fallback-3'
           editorial_css_version = '20261031-document-standard-1'
-          editorial_script_version = '20261030-vishnu-citations-10'
+          editorial_script_version = '20261031-shared-reader-audit-2'
           shared_reader = Path('site/assets/js/article-reader-paged.js').read_text(encoding='utf-8')
           shaiva_reader = Path('site/assets/js/shaiva-complete-reader.js').read_text(encoding='utf-8')
           shared_css = Path('site/assets/css/article-reader-template.css').read_text(encoding='utf-8')
@@ -68,6 +69,16 @@ jobs:
           assert 'const active=!activeOnce&&matches;' in shaiva_reader
           assert 'window.innerHeight*.82' not in shared_reader + shaiva_reader
           assert len(Path('site/assets/data/shaiva-manuscript.b64').read_text(encoding='utf-8').strip()) > 10000
+
+          home = Path('site/index.html').read_text(encoding='utf-8')
+          documents = re.search(r'<section[^>]*id="documents"[\s\S]*?<ul[^>]*>([\s\S]*?)</ul>', home)
+          assert documents, 'Documents list is missing from the homepage'
+          titles = [
+            re.sub(r'<[^>]+>', '', title).strip()
+            for title in re.findall(r'<span class="hp-link-en"[^>]*>(.*?)</span>', documents.group(1), re.S)
+          ]
+          assert len(titles) == 8, f'Expected eight document links, found {len(titles)}'
+          assert [len(title) for title in titles] == sorted(len(title) for title in titles), f'Documents are not sorted by title length: {titles}'
 
           for slug in slugs:
             path = Path('site/articles') / slug / 'index.html'

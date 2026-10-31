@@ -2,6 +2,7 @@
    keep the printed table rows and bibliography in their original order. */
 (()=>{
 'use strict';
+document.body.classList.add('vishnu-editorial-reader');
 const root=document.querySelector('.document-content');
 if(!root)return;
 // Keep Sanskrit controls compact even when late shared chrome styles load.
@@ -18,7 +19,6 @@ const compactSanskritControls=()=>{
 };
 compactSanskritControls();
 new MutationObserver(compactSanskritControls).observe(root,{childList:true,subtree:true});
-document.body.classList.add('vishnu-editorial-reader');
 for(const heading of root.querySelectorAll('.document-section-title,.document-group-heading,.source-page-heading')){
   const label=(heading.textContent||'').replace(/\s+/g,' ').trim();
   if(/^(?:\d+\.\s*)?(?:objections|summary\s*&\s*conclusion|conclusion)$/i.test(label))

@@ -8,6 +8,7 @@ on:
       - .github/workflows/validate-full-scroll-readers.yml
       - site/articles/a-case-for-the-scriptural-validity-of-the-agamas/index.html
       - site/articles/a-defence-of-the-manusmriti/index.html
+      - site/index.html
       - site/articles/index.html
       - site/assets/pdfs/manusmriti-defence.pdf
       - site/sitemap.xml
@@ -134,7 +135,7 @@ jobs:
                     (chromeStyle?.href.includes('20261029-vishnu-exception-1') && !!chromeStyle.sheet && document.body.classList.contains('vishnu-editorial-reader'));
                   const enhancementScript = document.querySelector('script[src*="vishnu-editorial-enhancements.js"]');
                   const enhancementReady = !usesEditorialTemplate ||
-                    enhancementScript?.src.includes('20261030-vishnu-citations-10');
+                    enhancementScript?.src.includes('20261031-shared-reader-audit-2');
                   const assetsReady = sharedStyle?.href.includes('20261030-shared-reader-refresh-1') &&
                     readerScript.includes(readerVersion) && contentReady && smoothScroll && tocTransition && editorialReady && chromeReady && enhancementReady;
                   return assetsReady;
@@ -705,6 +706,23 @@ jobs:
             assert manuscript_iframe.count() == 1, 'manusmriti: the original document is not embedded'
             assert manuscript_iframe.get_attribute('title') == 'A Defence of the Manusmriti. Complete original 22 page document', 'manusmriti: accessible document title is missing'
             assert '/assets/pdfs/manusmriti-defence.pdf' in manuscript_iframe.get_attribute('src'), 'manusmriti: embedded PDF path is wrong'
+            scan_controls = manuscript_page.locator('#source-content details.source-scan-reveal')
+            assert scan_controls.count() == 24, f'manusmriti: expected 24 source-scan links, got {scan_controls.count()}'
+            assert manuscript_page.locator('#source-content details.source-scan-reveal img').count() == 0, 'manusmriti: scanned paper images are still displayed inside the article'
+            assert manuscript_page.locator('#source-content .source-document-figure img').count() == 0, 'manusmriti: a source-page image remains in the reading flow'
+            scan_labels = [scan_controls.nth(i).locator(':scope > summary').inner_text().strip() for i in range(scan_controls.count())]
+            assert scan_labels.count('View original table scan') == 1 and scan_labels.count('View source scan') == 23, f'manusmriti: source-scan labels are inconsistent: {scan_labels}'
+            scan_link = scan_controls.first.locator('a.source-scan-open')
+            assert scan_link.count() == 1 and scan_link.get_attribute('href').endswith('source-page-02.webp'), 'manusmriti: opening Sanskrit source scan link is missing'
+            scan_button_style = scan_controls.first.locator(':scope > summary').evaluate('(node)=>{const style=getComputedStyle(node);return {fontSize:style.fontSize,height:node.getBoundingClientRect().height}}')
+            assert scan_button_style['fontSize'] == '16px' and scan_button_style['height'] <= 32, f'manusmriti: source-scan control differs from the shared reader style: {scan_button_style}'
+            source_heading = manuscript_iframe.evaluate("""node => node.closest('.document-section')?.querySelector(':scope > .source-page-heading')?.textContent.trim() || ''""")
+            assert source_heading == 'Sources and tables', f'manusmriti: original PDF is outside Sources and tables: {source_heading}'
+            quote_pair = manuscript_page.locator('#source-content .scripture-quote-pair').filter(has_text='Mahabharata 13.44.17')
+            assert quote_pair.count() == 1, 'manusmriti: Mahabharata 13.44.17 is not paired with its translation'
+            assert quote_pair.locator(':scope > p.reference').count() == 1 and quote_pair.locator(':scope > p.translation').count() == 1 and quote_pair.locator(':scope > details.source-scan-reveal').count() == 1, 'manusmriti: citation, translation, and source scan are not grouped together'
+            quote_order = quote_pair.evaluate("""node => [...node.children].map(child => ({kind:child.matches('p.reference')?'source':child.matches('p.translation')?'translation':child.matches('details.sanskrit-reveal')?'scan':'other',order:Number(getComputedStyle(child).order)})).filter(item=>item.kind!=='other').sort((a,b)=>a.order-b.order).map(item=>item.kind)""")
+            assert quote_order == ['source','translation','scan'], f'manusmriti: quote order differs from the shared reader: {quote_order}'
             pdf_response = manuscript_page.request.get('https://hinduismlibrary.github.io/advaita/assets/pdfs/manusmriti-defence.pdf', timeout=45000)
             assert pdf_response.status == 200 and 'application/pdf' in pdf_response.headers.get('content-type','').lower() and len(pdf_response.body()) > 1000000, 'manusmriti: original PDF is missing or incomplete'
             archive_page = browser.new_page()

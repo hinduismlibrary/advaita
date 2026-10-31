@@ -322,7 +322,7 @@ if(fullScrollMode){
       reader.src=document.getElementById('article-config')?.dataset.readerScript||'/advaita/assets/js/article-reader-paged.js?v=20261027-document-citations-9';
       reader.onload=()=>{
         const editorial=document.createElement('script');
-        editorial.src='/advaita/assets/js/vishnu-editorial-enhancements.js?v=20261030-vishnu-citations-10';
+        editorial.src='/advaita/assets/js/vishnu-editorial-enhancements.js?v=20261031-shared-reader-audit-2';
         editorial.async=false;
         document.body.append(editorial);
       };
