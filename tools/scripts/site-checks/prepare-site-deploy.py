@@ -10,7 +10,7 @@ from pathlib import Path
 from site_seo import base_url_for, prepare_site_seo, url_for_page
 import json
 
-CACHE_VERSION = "20261028-pages-root-1"
+CACHE_VERSION = "20261031-document-standard-1"
 DEFAULT_REPOSITORY = "hinduismlibrary/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
