@@ -4172,17 +4172,139 @@ body#home-directory .hp-column>.hp-panel:first-child { border-top:1px solid #c8c
 }
 
 
-/* Standard document controls and wiki palette */
-body#home-directory{background:#fff!important;color:#202122!important}
-body#home-directory .hp-section-title,
-body#home-directory .hp-section-title :is(.hp-section-en,.hp-section-dev){color:#202122!important}
-body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-en,.hp-link-iast,.vd-label-en,.vd-label-iast,[lang^="sa-Latn"]){color:#0645ad!important}
-body#home-directory .hp-directory .hp-link-list>li>a :is(.hp-link-dev,.vd-label-dev,[lang^="sa-Deva"]){color:#202122!important}
+/* Shared document controls follow the long-form editorial reader. */
 body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary{
-  min-height:27px!important;padding:3px 8px!important;border-radius:4px!important;
-  background:#fff!important;color:#0645ad!important;font:400 12px/1.35 Arial,Helvetica,sans-serif!important
+  min-height:0!important;
+  padding:4px 10px!important;
+  border:1px solid #d8ad8b!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#9b4e1d!important;
+  font:400 14px/1.3 Merriweather,Georgia,serif!important;
+  list-style:none!important;
 }
+body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary::-webkit-details-marker,
+body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary::marker{display:none!important;content:""!important}
 body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary:hover,
 body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary:focus-visible{
-  background:#f3f4f5!important;border-color:#54595d!important;outline:2px solid #0645ad!important;outline-offset:1px
+  background:#eee8e2!important;
+  border-color:#d8ad8b!important;
+  outline:2px solid #a5a9aa!important;
+  outline-offset:2px!important;
+}
+body#home-directory{background:#fffdfa!important;color:#3c362e!important}
+body#home-directory.home-page #documents{
+  margin:0!important;
+  padding:17px 0 0!important;
+  border:0!important;
+  border-top:1px solid #d4d0ca!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+body#home-directory.home-page #documents>.hp-section-title{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:1px!important;
+  margin:0 0 12px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:#496b6c!important;
+  font:400 25px/1.25 Vollkorn,Georgia,serif!important;
+  text-align:left!important;
+}
+body#home-directory.home-page #documents>.hp-section-title .hp-section-en{
+  display:block!important;
+  margin:0!important;
+  color:#496b6c!important;
+  -webkit-text-fill-color:#496b6c!important;
+  font:inherit!important;
+}
+body#home-directory.home-page #documents>.hp-section-title .hp-section-dev{
+  display:block!important;
+  margin:0!important;
+  color:#817970!important;
+  -webkit-text-fill-color:#817970!important;
+  font:400 13px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:0!important;
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list>li{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-bottom:1px solid rgba(90,82,75,.18)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#3c362e!important;
+  list-style:none!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list>li::marker{content:""!important}
+body#home-directory.home-page #documents ul.home-documents-list>li>a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:2px!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:9px 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#504b53!important;
+  font:400 18px/1.42 Merriweather,Georgia,serif!important;
+  text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+  transition:color .16s ease!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list>li>a .hp-link-en{
+  display:block!important;
+  margin:0!important;
+  color:#3c362e!important;
+  -webkit-text-fill-color:#3c362e!important;
+  font:400 18px/1.42 Merriweather,Georgia,serif!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list>li>a .hp-link-dev{
+  display:block!important;
+  margin:0!important;
+  color:#496b6c!important;
+  -webkit-text-fill-color:#496b6c!important;
+  font:400 15px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list>li>a:hover,
+body#home-directory.home-page #documents ul.home-documents-list>li>a:focus-visible{
+  color:#496b6c!important;
+  text-decoration:underline!important;
+  outline:2px solid #496b6c!important;
+  outline-offset:3px!important;
+}
+body#home-directory.home-page #documents ul.home-documents-list>li>a:hover .hp-link-en,
+body#home-directory.home-page #documents ul.home-documents-list>li>a:focus-visible .hp-link-en{
+  color:#496b6c!important;
+  -webkit-text-fill-color:#496b6c!important;
+}
+@media(max-width:760px){
+  body#home-directory.home-page #documents ul.home-documents-list{
+    grid-template-columns:1fr!important;
+    gap:0!important;
+  }
+  body#home-directory.home-page #documents>.hp-section-title{font-size:23px!important}
+  body#home-directory.home-page #documents ul.home-documents-list>li>a,
+  body#home-directory.home-page #documents ul.home-documents-list>li>a .hp-link-en{
+    font-size:17px!important;
+  }
+  body#home-directory.home-page #documents ul.home-documents-list>li>a .hp-link-dev{font-size:14px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  body#home-directory.home-page #documents ul.home-documents-list>li>a{transition:none!important}
 }

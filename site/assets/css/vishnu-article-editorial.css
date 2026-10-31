@@ -590,3 +590,64 @@ body.document-paged-page.vishnu-editorial-reader .mobile-toc {display:none!impor
     transition:none!important;
   }
 }
+/* Source scans and the full paper control use the same clean article treatment. */
+body.document-paged-page.vishnu-editorial-reader #source-content figure.manusmriti-mark{margin:0 auto 20px!important}
+body.document-paged-page.vishnu-editorial-reader #source-content figure.manusmriti-mark img{width:132px!important;max-width:132px!important}
+body.document-paged-page.vishnu-editorial-reader #source-content .source-scan-link{display:block!important;text-align:center!important}
+body.document-paged-page.vishnu-editorial-reader #source-content .source-scan-link img{width:auto!important;max-width:100%!important}
+body.document-paged-page.vishnu-editorial-reader #source-content .reference-table{min-width:0!important}
+body.document-paged-page.vishnu-editorial-reader #source-content .reference-table td:first-child{width:56px!important;color:var(--teal)!important;font-variant-numeric:tabular-nums}
+body.document-paged-page.vishnu-editorial-reader #source-content .source-table-scan{margin-top:10px!important}
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view{
+  display:block!important;
+  margin:0 0 18px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view>summary{
+  display:inline-block!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:4px 10px!important;
+  border:1px solid var(--button-border)!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#9b4e1d!important;
+  font:400 16px/1.2 Merriweather,Georgia,serif!important;
+  list-style:none!important;
+  cursor:pointer!important;
+  user-select:none;
+  transition:background-color .16s ease,border-color .16s ease,color .16s ease!important;
+}
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view>summary::-webkit-details-marker,
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view>summary::marker{display:none!important;content:""!important}
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view>summary:hover,
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view>summary:focus-visible{
+  background:#eee8e2!important;
+  border-color:var(--button-border)!important;
+  color:#9b4e1d!important;
+}
+body.document-paged-page.vishnu-editorial-reader #source-content details.manusmriti-pdf-view>summary:focus-visible{
+  outline:2px solid var(--quote-rule)!important;
+  outline-offset:2px!important;
+}
+body.document-paged-page.vishnu-editorial-reader #source-content iframe.manusmriti-frame{
+  display:block!important;
+  width:100%!important;
+  max-width:760px!important;
+  height:min(76vh,900px)!important;
+  min-height:620px!important;
+  margin:12px auto 0!important;
+  border:1px solid var(--side-rule)!important;
+  background:var(--paper)!important;
+}
+@media(max-width:780px){
+  body.document-paged-page.vishnu-editorial-reader #source-content iframe.manusmriti-frame{
+    height:66vh!important;
+    min-height:440px!important;
+  }
+  body.document-paged-page.vishnu-editorial-reader #source-content .reference-table th,
+  body.document-paged-page.vishnu-editorial-reader #source-content .reference-table td{padding:8px 6px!important;font-size:12px!important}
+}
