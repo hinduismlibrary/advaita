@@ -720,7 +720,8 @@ jobs:
             assert source_heading == 'Sources and tables', f'manusmriti: original PDF is outside Sources and tables: {source_heading}'
             quote_pair = manuscript_page.locator('#source-content .scripture-quote-pair').filter(has_text='Mahabharata 13.44.17')
             assert quote_pair.count() == 1, 'manusmriti: Mahabharata 13.44.17 is not paired with its translation'
-            assert quote_pair.locator(':scope > p.reference').count() == 1 and quote_pair.locator(':scope > p.translation').count() == 1 and quote_pair.locator(':scope > details.source-scan-reveal').count() == 1, 'manusmriti: citation, translation, and source scan are not grouped together'
+            group_children = quote_pair.evaluate("""node => [...node.children].map(child => ({tag:child.tagName.toLowerCase(),classes:typeof child.className==='string'?child.className:'',text:(child.textContent||'').trim()}))""")
+            assert quote_pair.locator(':scope > p.reference').count() == 1 and quote_pair.locator(':scope > p.translation').count() == 1 and quote_pair.locator(':scope > details.source-scan-reveal').count() == 1, f'manusmriti: citation, translation, and source scan are not grouped together: {group_children}'
             quote_order = quote_pair.evaluate("""node => [...node.children].map(child => ({kind:child.matches('p.reference')?'source':child.matches('p.translation')?'translation':child.matches('details.sanskrit-reveal')?'scan':'other',order:Number(getComputedStyle(child).order)})).filter(item=>item.kind!=='other').sort((a,b)=>a.order-b.order).map(item=>item.kind)""")
             assert quote_order == ['source','translation','scan'], f'manusmriti: quote order differs from the shared reader: {quote_order}'
             pdf_response = manuscript_page.request.get('https://hinduismlibrary.github.io/advaita/assets/pdfs/manusmriti-defence.pdf', timeout=45000)
