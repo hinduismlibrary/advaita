@@ -97,35 +97,14 @@ for(const item of document.querySelectorAll('.toc a[href$="#bibliography"],.docu
   item.dataset.vdBilingual='true';
   item.setAttribute('aria-label','Sources and tables');
 }
-const normalizeArticleText=value=>{
-  const latin=String(value||'').replace(/(?:\p{Script=Latin}\p{M}*)+/gu,run=>run.normalize('NFD').replace(/\p{M}+/gu,''));
-  return latin.replace(/["“”]/gu,'').replace(/[‘’]/gu,"'");
-};
-for(const textRoot of [root,desktopToc,mobileToc].filter(Boolean)){
-  const walker=document.createTreeWalker(textRoot,NodeFilter.SHOW_TEXT);
-  const nodes=[];
-  while(walker.nextNode())nodes.push(walker.currentNode);
-  for(const node of nodes)node.nodeValue=normalizeArticleText(node.nodeValue);
-}
-for(const citation of root.querySelectorAll('p.reference,p.source-citation,p.scripture-source,p.citation')){
-  const walker=document.createTreeWalker(citation,NodeFilter.SHOW_TEXT);
-  const nodes=[];
-  while(walker.nextNode())nodes.push(walker.currentNode);
-  for(const node of nodes){
-    node.nodeValue=(node.nodeValue||'')
-      .replace(/\s*[–—-]\s*(?=\d)/gu,' to ')
-      .replace(/(\p{L})[-‐‑](\p{L})/gu,'$1 $2')
-      .replace(/[^\p{L}\p{N}. ]+/gu,' ')
-      .replace(/\s+/gu,' ');
-  }
-}
+// Preserve the source spelling, quotation marks, and citation punctuation.
 /* Site chrome loads late. Keep the article's typography last in the cascade. */
 const editorialCss=[...document.head.querySelectorAll('link[rel="stylesheet"]')]
   .find(link=>(link.getAttribute('href')||'').includes('/vishnu-article-editorial.css'));
 function keepLast(){
   const chrome=document.head.querySelector('link[href*="/site-chrome.css"]');
-  if(chrome&&!chrome.href.includes('20261029-vishnu-exception-1'))
-    chrome.href='/advaita/assets/css/site-chrome.css?v=20261029-vishnu-exception-1';
+  if(chrome&&!chrome.href.includes('20261101-site-repair-1'))
+    chrome.href='/advaita/assets/css/site-chrome.css?v=20261101-site-repair-1';
   if(chrome&&editorialCss&&(editorialCss.compareDocumentPosition(chrome)&Node.DOCUMENT_POSITION_FOLLOWING))
     document.head.append(editorialCss);
 }

@@ -1,78 +1,29 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>An Index of Hindu Scripture — Viveka Dṛṣṭi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Vollkorn:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/advaita/assets/css/varna-vicara-paged.css?v=20260914-2">
-  <style>
-    .article-head .page-kicker{margin:0 0 12px;color:#926a45;font-size:11px;line-height:1.4;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-    .article-head .page-intro{max-width:560px;margin:19px auto 0;color:#625b54;font-size:15px;line-height:1.65}
-    .page-context{margin-bottom:19px}
-    .desktop-toc>summary{cursor:pointer;list-style:none;user-select:none}
-    .desktop-toc>summary::-webkit-details-marker{display:none}
-    .desktop-toc>summary:after{content:"+";float:right;color:#8c837b;font-family:Merriweather,Georgia,serif;font-size:18px;line-height:1}
-    .desktop-toc[open]>summary:after{content:"−"}
-    .scripture-section{margin:0 0 15px;border:1px solid #d8d0c6;border-radius:5px;background:#fbfaf7;scroll-margin-top:24px;overflow:hidden;transition:border-color .18s ease,box-shadow .18s ease}
-    .scripture-section:hover{border-color:#c4ad99}
-    .scripture-section[open]{border-color:#c4ad99;box-shadow:0 3px 12px rgba(43,38,31,.06)}
-    .scripture-summary{display:grid;grid-template-columns:38px minmax(0,1fr) auto 30px;align-items:center;gap:14px;margin:0;padding:19px 21px;cursor:pointer;list-style:none;user-select:none;background:linear-gradient(100deg,#fbfaf7,#f6f1e9)}
-    .scripture-summary::-webkit-details-marker{display:none}
-    .scripture-summary:focus-visible,.desktop-toc>summary:focus-visible,.mobile-toc>summary:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
-    .collection-number{display:grid;width:34px;height:34px;place-items:center;border:1px solid #d8b99e;border-radius:50%;color:#92572f;font-size:11px;font-weight:700;letter-spacing:.04em}
-    .collection-name{color:var(--teal);font-family:Vollkorn,Georgia,serif;font-size:27px;line-height:1.2}
-    .collection-count{color:#82776d;font-size:11px;line-height:1.4;letter-spacing:.04em}
-    .collection-toggle{display:grid;width:29px;height:29px;place-items:center;border:1px solid #d4c8bb;border-radius:50%;color:var(--teal)}
-    .collection-toggle:before{content:"+";font-family:Merriweather,Georgia,serif;font-size:18px;line-height:1}
-    .scripture-section[open] .collection-toggle:before{content:"−"}
-    .scripture-section-content{padding:5px 22px 22px;background:#fffefa}
-    .scripture-link-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:34px;margin:0;padding:0;list-style:none}
-    .scripture-link-list>li{position:relative;min-width:0;margin:0;padding:10px 0 10px 17px;border-bottom:1px solid #e7e0d8;color:#514a43;font-size:14px;line-height:1.5}
-    .scripture-link-list:not(.scripture-work-list)>li:before{content:"";position:absolute;top:1.2em;left:1px;width:5px;height:5px;border-radius:50%;background:#bf8e66}
-    .scripture-work-list{display:block}
-    .scripture-work-list>li{margin:0;padding:12px 0 18px;border:0;border-bottom:1px solid #e2dbd3}
-    .scripture-work-list>li:last-child{padding-bottom:4px;border-bottom:0}
-    .scripture-work-list>li:before{display:none}
-    .scripture-work-list>li>strong{display:block;margin:0 0 10px;color:var(--teal);font-family:Vollkorn,Georgia,serif;font-size:23px;line-height:1.3;font-weight:500}
-    .scripture-sublist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 12px;margin:0;padding:0;list-style:none}
-    .scripture-sublist>li{margin:0;padding:7px 8px 7px 12px;border:0;border-left:2px solid #d8ad8b;color:#625b54;font-size:12.5px;line-height:1.45}
-    @media(max-width:620px){
-      .article-head .page-kicker{margin-bottom:9px;font-size:10px}
-      .article-head .page-intro{margin-top:15px;font-size:14px}
-      .page-context{margin-bottom:15px}
-      .scripture-section{margin-bottom:11px}
-      .scripture-summary{grid-template-columns:34px minmax(0,1fr) 29px;gap:10px;padding:15px 14px}
-      .collection-number{width:31px;height:31px;font-size:10px}
-      .collection-name{font-size:23px}
-      .collection-count{grid-column:2;grid-row:2;margin-top:-5px;font-size:10px}
-      .collection-toggle{grid-column:3;grid-row:1/3;width:27px;height:27px}
-      .scripture-section-content{padding:3px 15px 17px}
-      .scripture-link-list{grid-template-columns:1fr;column-gap:0}
-      .scripture-link-list>li{padding:9px 0 9px 16px;font-size:13.5px}
-      .scripture-work-list>li{padding:10px 0 14px}
-      .scripture-work-list>li>strong{font-size:21px}
-      .scripture-sublist{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 8px}
-      .scripture-sublist>li{padding:6px 6px 6px 9px;font-size:12px}
-    }
-    @media(prefers-reduced-motion:reduce){.scripture-section{transition:none}}
-  </style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An Index of Hindu Scripture — Viveka Dṛṣṭi | Vivekadrishti</title><meta name="description" content="An Index of Hindu Scripture — Viveka Dṛṣṭi. Read the article, sources, and linked references">
+<link rel="canonical" href="https://hinduismlibrary.github.io/advaita/articles/scripture/"><link rel="icon" type="image/svg+xml" href="/advaita/favicon.svg">
+<link rel="stylesheet" href="/advaita/assets/css/article-standard.css?v=20261101-article-standard-1">
+<script src="/advaita/assets/js/article-standard.js?v=20261101-article-standard-1" defer></script>  <meta property="og:site_name" content="Vivekadrishti — विवेकदृष्टिः">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="An Index of Hindu Scripture — Viveka Dṛṣṭi | Vivekadrishti">
+  <meta property="og:description" content="An Index of Hindu Scripture — Viveka Dṛṣṭi. Read the article, sources, and linked references">
+  <meta property="og:url" content="https://hinduismlibrary.github.io/advaita/articles/scripture/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="An Index of Hindu Scripture — Viveka Dṛṣṭi | Vivekadrishti">
+  <meta name="twitter:description" content="An Index of Hindu Scripture — Viveka Dṛṣṭi. Read the article, sources, and linked references">
+  <script type="application/ld+json" id="viveka-seo-jsonld">{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"WebPage","@id":"https://hinduismlibrary.github.io/advaita/articles/scripture/#webpage","url":"https://hinduismlibrary.github.io/advaita/articles/scripture/","name":"An Index of Hindu Scripture — Viveka Dṛṣṭi | Vivekadrishti","description":"An Index of Hindu Scripture — Viveka Dṛṣṭi. Read the article, sources, and linked references","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Vivekadrishti — विवेकदृष्टिः","url":"https://hinduismlibrary.github.io/advaita/"},"breadcrumb":{"@id":"https://hinduismlibrary.github.io/advaita/articles/scripture/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://hinduismlibrary.github.io/advaita/articles/scripture/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hinduismlibrary.github.io/advaita/"},{"@type":"ListItem","position":2,"name":"An Index of Hindu Scripture — Viveka Dṛṣṭi","item":"https://hinduismlibrary.github.io/advaita/articles/scripture/"}]}]}</script>
 </head>
-<body>
-<header class="sitebar"><a href="/advaita/">Viveka Dṛṣṭi</a></header>
-<main class="page">
-  <header class="article-head">
-    <p class="page-kicker">Scripture index · 58 titles</p>
-    <h1>An Index of Hindu Scripture</h1>
-    <p class="page-intro">Open a collection to browse its names.</p>
-  </header>
-  <div class="reader-grid">
-    <aside class="side-toc" aria-label="Table of contents"><details class="desktop-toc"><summary class="side-toc-title">Contents</summary><nav class="toc"><div class="toc-group"><div class="toc-parent">Collections</div><div class="toc-children"><a href="#upanishads">Upaniṣads</a><a href="#puranas">Purāṇas</a><a href="#itihasa">Itihāsa</a></div></div></nav></details></aside>
-    <article class="article scripture-directory">
-      <details class="mobile-toc"><summary>Contents</summary><nav class="toc"><div class="toc-group"><div class="toc-parent">Collections</div><div class="toc-children"><a href="#upanishads">Upaniṣads</a><a href="#puranas">Purāṇas</a><a href="#itihasa">Itihāsa</a></div></div></nav></details>
+<body class="article-standard-page" data-article-standard="1"><a class="skip-link" href="#main-content">Skip to content</a>
+<header data-pagefind-ignore class="sitebar site-header vd-global-header">
+<a class="brand" href="/advaita/" aria-label="Vivekadrishti home"><span lang="sa-Deva">विवेकदृष्टिः</span></a>
+<nav aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/#documents">Documents</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a><a href="/advaita/pages/indology/">Indology</a></nav>
+<form class="site-search" action="/advaita/search/" role="search"><label class="sr-only" for="vd-site-search">Search the library</label><input id="vd-site-search" type="search" name="q" placeholder="Search the library" required><button type="submit">Search</button></form>
+</header>
+<main class="page" id="main-content"><header class="article-head"><h1>An Index of Hindu Scripture — Viveka Dṛṣṭi</h1></header>
+<div class="reader-grid"><aside data-pagefind-ignore class="side-toc" aria-label="Table of contents"><h2 class="side-toc-title">Contents</h2><nav class="toc toc-index" aria-label="Table of contents" id="desktop-toc"><ul class="toc-index-list"><li class="toc-index-entry"><a href="#overview">Overview</a></li></ul></nav></aside>
+<article class="article" aria-label="An Index of Hindu Scripture — Viveka Dṛṣṭi" data-pagefind-body><details data-pagefind-ignore class="mobile-toc"><summary>Contents</summary><nav class="toc toc-index" aria-label="Table of contents" id="mobile-toc"><ul class="toc-index-list"><li class="toc-index-entry"><a href="#overview">Overview</a></li></ul></nav></details>
+<div class="document-content" id="source-content">
+      <h2 id="overview">Overview</h2><details data-pagefind-ignore class="mobile-toc"><summary>Contents</summary><nav class="toc"><div class="toc-group"><div class="toc-parent">Collections</div><div class="toc-children"><a href="#upanishads">Upaniṣads</a><a href="#puranas">Purāṇas</a><a href="#itihasa">Itihāsa</a></div></div></nav></details>
       <div class="page-context"><strong>Collections</strong><span>58 titles</span></div>
 <details class="scripture-section" id="upanishads">
   <summary class="scripture-summary">
@@ -108,8 +59,5 @@
 <li><strong>Mahābhārata</strong><ul class="scripture-sublist"><li>Ādi Parva</li><li>Sabhā Parva</li><li>Vana Parva</li><li>Virāṭa Parva</li><li>Udyoga Parva</li><li>Bhīṣma Parva</li><li>Droṇa Parva</li><li>Karṇa Parva</li><li>Śalya Parva</li><li>Sauptika Parva</li><li>Strī Parva</li><li>Śānti Parva</li><li>Anuśāsana Parva</li><li>Āśvamedhika Parva</li><li>Āśramavāsika Parva</li><li>Mausala Parva</li><li>Mahāprasthānika Parva</li><li>Svargārohaṇa Parva</li><li>Harivaṃśa supplement</li></ul></li>
 </ul></div>
 </details>
-    </article>
-  </div>
-</main>
-<script src="/advaita/assets/js/site-chrome.js?v=20261019-unified-theme-4"></script></body>
-</html>
+    </div>
+  </article></div></main><footer data-pagefind-ignore class="article-footer"><a href="/advaita/">Home</a><a href="/advaita/#documents">Documents</a><a href="/advaita/pages/indology/">Indology</a><a href="#main-content">Back to top</a></footer></body></html>

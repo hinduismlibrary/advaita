@@ -10,7 +10,7 @@ from pathlib import Path
 from site_seo import base_url_for, prepare_site_seo, url_for_page
 import json
 
-CACHE_VERSION = "20261031-document-standard-1"
+CACHE_VERSION = "20261101-site-repair-1"
 DEFAULT_REPOSITORY = "hinduismlibrary/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -45,6 +45,10 @@ VP_CSS_LINK = re.compile(r"\s*<link\b[^>]*vishnu-purana-chapter-reader\.css[^>]*
 
 def ensure_shared_chrome(content: str) -> str:
     if not HTML_DOC.search(content) or not BODY_TAG.search(content):
+        return content
+    # These pages already contain the complete accessible header in their HTML.
+    # Avoid loading the legacy theme and replacing that header at runtime.
+    if 'data-article-standard="1"' in content or 'data-article-tool="1"' in content:
         return content
 
     versioned_href = f'/advaita/assets/css/site-chrome.css?v={CACHE_VERSION}'
@@ -91,7 +95,22 @@ def prepare(site: Path) -> tuple[int, int]:
     for page in html_files:
         relative = page.relative_to(site).as_posix()
         content = page.read_text(encoding="utf-8")
-        updated = SITE_JS_URL.sub(f"/advaita/assets/js/site.js?v={CACHE_VERSION}", content)
+        updated = content.replace("https://krishnavyasmuni.github.io/advaita", "https://hinduismlibrary.github.io/advaita")
+        for old, new in {
+            "/advaita/introduction-to-hinduism/": "/advaita/pages/introduction-to-hinduism/",
+            "/advaita/indology/": "/advaita/pages/indology/",
+            "/advaita/purana-library/": "/advaita/pages/purana-library/",
+        }.items():
+            updated = updated.replace(old, new)
+        # Old previous/next links referred to unpublished works. The collection
+        # is the useful destination; do not invent a replacement transcription.
+        updated = re.sub(
+            r'''<a\b[^>]*href=["']/advaita/books/adi-shankaracharya/(?:jivanmukti-viveka|prasthanabheda)/["'][^>]*>[\s\S]*?</a>''',
+            '<a href="/advaita/books/adi-shankaracharya/">All Advaita texts</a>',
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = SITE_JS_URL.sub(f"/advaita/assets/js/site.js?v={CACHE_VERSION}", updated)
         updated = SITE_CHROME_JS_URL.sub(f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}", updated)
         updated = BHAVISHYA_CONTROLS_URL.sub(f"/advaita/assets/js/bhavishya-controls.js?v={CACHE_VERSION}", updated)
         updated = SHANKARA_READER_URL.sub(f"/advaita/assets/js/shankara-reader.js?v={CACHE_VERSION}", updated)
@@ -216,3 +235,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

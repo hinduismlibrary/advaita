@@ -58,6 +58,11 @@ for path in SITE.rglob("*.html"):
     if not HTML_DOC.search(source) or not BODY.search(source):
         continue
     checked += 1
+    if 'data-article-standard="1"' in source or 'data-article-tool="1"' in source:
+        required = ('vd-global-header', 'aria-label="Primary navigation"', 'role="search"', 'article-standard.css')
+        if not all(marker in source for marker in required):
+            missing.append(relative + ' (static navigation or search missing)')
+        continue
     if not (expected_loader if prepared else LOADER).search(source):
         missing.append(relative)
     if prepared and (expected_css not in source or 'vd-chrome-page' not in source):
@@ -70,3 +75,4 @@ if missing:
     sys.exit(1)
 
 print(f"All {checked} full HTML pages load the {'current' if prepared else 'supported'} shared chrome asset.")
+

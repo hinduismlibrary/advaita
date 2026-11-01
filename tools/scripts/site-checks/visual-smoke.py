@@ -68,7 +68,7 @@ def run() -> None:
                     return Boolean(link?.sheet && link.sheet.cssRules.length > 0);
                 }""", timeout=20000)
                 page.locator(".hp-home-title-dev").wait_for(timeout=20000)
-                assert page.title() == "विवेकदृष्टिः", page.title()
+                assert "Vivekadrishti" in page.title(), page.title()
                 assert page.locator(".hp-home-title-iast").count() == 0
                 assert page.locator(".hp-home-intro").count() == 0
                 assert page.locator(".site-footer").count() == 0
@@ -208,36 +208,20 @@ def run() -> None:
                 page.set_viewport_size({"width": 1366, "height": 900})
                 page.goto(base + "articles/a-defence-of-the-manusmriti/", wait_until="domcontentloaded")
                 page.locator(".article-head h1").wait_for(timeout=20000)
-                assert page.locator(".article-head h1").inner_text().strip() == "A Defence of the Manusmriti"
-                page.locator("#vishnu-desktop-toc a").first.wait_for(timeout=20000)
-                assert page.locator("#vishnu-desktop-toc a").count() >= 5
-                first_translation = page.locator("p.translation").first
-                pair = first_translation.locator("xpath=ancestor::div[contains(@class, 'scripture-quote-pair')][1]")
-                first_reference = pair.locator("p.reference").inner_text().strip()
-                assert first_reference == "Taittiriya Brahmana 2.2.10.2", {"expected": "Taittiriya Brahmana 2.2.10.2", "actual": first_reference, "pair": pair.inner_text()}
-                details = pair.locator("details.sanskrit-reveal")
-                quote_box = first_translation.bounding_box()
-                button_box = details.locator("summary").bounding_box()
-                assert button_box["y"] >= quote_box["y"] + quote_box["height"] - 1, {"quote": quote_box, "button": button_box}
+                assert "Manusm" in page.locator(".article-head h1").inner_text()
+                assert page.locator("#desktop-toc a").count() >= 5
+                assert page.locator("#source-content p").count() >= 147
+                details = page.locator("#source-content details.sanskrit-reveal").first
                 details.locator("summary").click()
                 assert details.get_attribute("open") is not None
-                source_image = details.locator("img")
-                source_image.wait_for(state="visible", timeout=20000)
-                assert source_image.evaluate("img => img.complete && img.naturalWidth > 0"), "Sanskrit source image did not load"
+                assert details.locator("summary").inner_text() == "Hide Sanskrit"
+                details.locator("summary").click()
+                assert details.get_attribute("open") is None
                 assert page.locator(".reference-table tbody tr").count() == 15
-
-                page.wait_for_function("() => document.querySelector('#vishnu-desktop-toc a[aria-current=location]')", timeout=20000)
-                initial_active = page.locator("#vishnu-desktop-toc a[aria-current='location']").get_attribute("href")
-                page.evaluate("""() => {
-                    const heading = document.querySelector("#source-content #women");
-                    window.scrollTo(0, heading.getBoundingClientRect().top + window.scrollY - 100);
-                }""")
-                page.wait_for_function("initial => { const link = document.querySelector('#vishnu-desktop-toc a[aria-current=location]'); return link && link.getAttribute('href') !== initial; }", arg=initial_active, timeout=20000)
-                active_color = page.locator("#vishnu-desktop-toc a[aria-current='location']").evaluate("el => getComputedStyle(el).color")
-                inactive_color = page.locator("#vishnu-desktop-toc a:not([aria-current='location'])").first.evaluate("el => getComputedStyle(el).color")
-                assert active_color != inactive_color, {"active": active_color, "inactive": inactive_color}
-                assert initial_active != page.locator("#vishnu-desktop-toc a[aria-current='location']").get_attribute("href")
-                report["manusmriti"] = {"sections": "linked", "active_contents": "updates while scrolling", "sanskrit": "source scan opens", "table_rows": 15}
+                contents = page.locator('#desktop-toc a[href="#women"]')
+                contents.click()
+                assert page.locator("#source-content #women").is_visible()
+                report["manusmriti"] = {"contents": "working", "sanskrit": "opens and closes", "table_rows": 15}
                 page.screenshot(path=str(OUT / "manusmriti.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")

@@ -47,6 +47,8 @@ jobs:
         run: python3 tools/scripts/site-checks/prepare-site-deploy.py
       - name: Verify prepared shared chrome on every page
         run: VERIFY_PREPARED=1 python3 tools/scripts/site-checks/verify-site-chrome.py
+      - name: Validate routes, complete article content, and SEO
+        run: python3 tools/scripts/site-checks/verify-site-integrity.py
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -64,4 +66,5 @@ jobs:
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
+
 

@@ -5,7 +5,7 @@ from __future__ import annotations
 from collections import Counter
 from html import escape, unescape
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urljoin, urlparse
 import json
 import re
 
@@ -28,8 +28,8 @@ GENERIC_HEADING = re.compile(
     r"^(?:chapter|book|part|canto|verse|text)\s+(?:\d+|[ivxlcdm]+)$",
     re.IGNORECASE,
 )
-SITE_NAME = "विवेकदृष्टिः"
-HOME_TITLE = "विवेकदृष्टिः"
+SITE_NAME = "Vivekadrishti — विवेकदृष्टिः"
+HOME_TITLE = "Vivekadrishti — Sanskrit Scriptures, Advaita & Indology"
 HOME_DESCRIPTION = (
     "Read Sanskrit Hindu scriptures, Advaita Vedānta texts, Purāṇas, English translations, "
     "verse-by-verse word meanings, philosophy, and Indological research."
@@ -185,10 +185,12 @@ def humanize_path(relative: str) -> str:
 
 
 def with_brand(value: str) -> str:
-    return value
+    if re.search(r"viveka(?:d|\s|\s*dṛṣṭi)|विवेकदृष्टि", value, re.IGNORECASE):
+        return value
+    return value + " | Vivekadrishti"
 
 
-def trim_description(value: str, limit: int = 220) -> str:
+def trim_description(value: str, limit: int = 160) -> str:
     value = re.sub(r"\s+", " ", value).strip(" \t\r\n.-")
     if len(value) <= limit:
         return value
@@ -232,6 +234,8 @@ def is_forced_noindex(relative: str) -> bool:
         or lower.startswith("assets/templates/")
         or basename == "source.html"
         or basename.startswith("source-")
+        or basename in {"book-contents.html", "book-chapter.html"}
+        or (lower.startswith("articles/varna-vicara/") and basename != "index.html")
         or any(private_page.search(part) for part in lower.split("/"))
     )
 
@@ -346,7 +350,18 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
         page_url = url_for_page(relative, base_url)
         robots = str(page["robots"])
         forced_noindex = is_forced_noindex(relative)
-        noindex = forced_noindex or bool(ROBOTS_NO_INDEX.search(robots))
+        # Redirect aliases must name their destination, never themselves, as canonical.
+        redirect_url = ""
+        for tag in META_TAG.finditer(content):
+            attrs = attributes(tag.group(0))
+            if attrs.get("http-equiv", "").casefold() == "refresh":
+                match = re.search(r"(?:^|;)\s*url\s*=\s*(.+)$", attrs.get("content", ""), re.I)
+                if match:
+                    candidate = urljoin(page_url, match.group(1).strip(" \"'"))
+                    parsed = urlparse(candidate)
+                    if parsed.netloc == urlparse(base_url).netloc:
+                        redirect_url = candidate.split("#", 1)[0]
+        noindex = forced_noindex or bool(redirect_url) or bool(ROBOTS_NO_INDEX.search(robots))
 
         content = set_title(content, title)
         content = set_meta(content, "name", "description", description)
@@ -354,14 +369,15 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
         content = set_meta(content, "property", "og:type", "article" if relative.startswith("articles/") else "website")
         content = set_meta(content, "property", "og:title", title)
         content = set_meta(content, "property", "og:description", description)
-        content = set_meta(content, "property", "og:url", page_url)
+        content = set_meta(content, "property", "og:url", redirect_url or page_url)
         content = set_meta(content, "name", "twitter:card", "summary")
         content = set_meta(content, "name", "twitter:title", title)
         content = set_meta(content, "name", "twitter:description", description)
 
         if noindex:
             content = set_meta(content, "name", "robots", "noindex,follow")
-            content = remove_canonical(content)
+            content = set_canonical(content, redirect_url) if redirect_url else remove_canonical(content)
+            content = JSON_LD.sub("", content)
         else:
             content = set_canonical(content, page_url)
             sitemap_urls.append(page_url)
@@ -372,8 +388,8 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
                 schema = {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-                    "name": "विवेकदृष्टिः",
-                    "alternateName": "Viveka Dṛṣṭi",
+                    "name": SITE_NAME,
+                    "alternateName": ["Viveka Dṛṣṭi", "Vivekadrishti", "विवेकदृष्टिः"],
                     "url": base_url + "/",
                     "inLanguage": language,
                 }
@@ -392,10 +408,26 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
                         "url": base_url + "/",
                     },
                 }
+                article = relative.startswith("articles/") and 'data-article-standard="1"' in content and relative != "articles/scripture/index.html"
+                if article:
+                    schema["@type"] = "Article"
+                    schema["@id"] = page_url + "#article"
+                    schema["headline"] = str(page["heading"]) or title
+                    schema["mainEntityOfPage"] = page_url
+                    author = get_meta(content, "name", "author")
+                    if author:
+                        schema["author"] = {"@type": "Person", "name": author}
+                crumbs = [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": base_url + "/"},
+                    {"@type": "ListItem", "position": 2, "name": str(page["heading"]) or title, "item": page_url},
+                ]
+                breadcrumb = {"@type": "BreadcrumbList", "@id": page_url + "#breadcrumb", "itemListElement": crumbs}
+                schema["breadcrumb"] = {"@id": page_url + "#breadcrumb"}
+                schema = {"@context": "https://schema.org", "@graph": [schema, breadcrumb]}
             json_ld = json.dumps(schema, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
             script = '<script type="application/ld+json" id="viveka-seo-jsonld">' + json_ld + "</script>"
             if JSON_LD.search(content):
-                content = JSON_LD.sub(script, content, count=1)
+                content = JSON_LD.sub(lambda _match: script, content, count=1)
             else:
                 content = insert_in_head(content, script)
 
@@ -418,3 +450,4 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
         sitemap_path.write_text(sitemap_content, encoding="utf-8")
 
     return changed_pages, len(sitemap_urls)
+
