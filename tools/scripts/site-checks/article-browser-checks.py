@@ -7,7 +7,7 @@ import json
 import tempfile
 import threading
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "article-review-output"
@@ -52,7 +52,7 @@ def main():
                     if details.count():
                         details.locator("summary").click()
                         assert details.get_attribute("open") is not None, slug
-                        assert details.locator("summary").inner_text() == "Hide Sanskrit", slug
+                        expect(details.locator("summary")).to_have_text("Hide Sanskrit")
                         details.locator("summary").click()
                         assert details.get_attribute("open") is None, slug
                     for width in (390, 760, 1366):

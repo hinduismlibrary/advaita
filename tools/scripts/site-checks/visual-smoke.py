@@ -9,7 +9,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 ROOT = Path(__file__).resolve().parents[3]
 SITE = ROOT / "site"
@@ -214,7 +214,7 @@ def run() -> None:
                 details = page.locator("#source-content details.sanskrit-reveal").first
                 details.locator("summary").click()
                 assert details.get_attribute("open") is not None
-                assert details.locator("summary").inner_text() == "Hide Sanskrit"
+                expect(details.locator("summary")).to_have_text("Hide Sanskrit")
                 details.locator("summary").click()
                 assert details.get_attribute("open") is None
                 assert page.locator(".reference-table tbody tr").count() == 15
