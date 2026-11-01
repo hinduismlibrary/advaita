@@ -389,8 +389,13 @@ def run() -> None:
                 page.screenshot(path=str(OUT / "purana-chapter-numbers.png"))
 
                 page.goto(base, wait_until="domcontentloaded")
-                bhavishya_home_link = page.locator('#shastras a[href="/advaita/pages/bhavishya-purana-brahmaparvan/"]')
+                bhavishya_home_link = page.locator('#shastras a[href="/advaita/pages/bhavishya-purana/"]')
                 assert bhavishya_home_link.count() == 1
+                bhavishya_home_link.click()
+                expect(page.locator("#available-texts")).to_be_visible()
+                assert page.locator('a[href="/advaita/pages/bhavishya-purana-pratisargaparvan/"]').count() == 1
+                page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
+                assert page.locator('#source-content a[href*="-chapter-"]').count() == 93
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
                 chapter_links = page.locator(".chapter-list a")
                 brahma_link = chapter_links.first

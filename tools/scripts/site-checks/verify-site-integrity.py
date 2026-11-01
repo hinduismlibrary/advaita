@@ -100,6 +100,10 @@ def main():
                 errors.append(f"{relative}: duplicate anchor IDs {duplicates}")
             if not any(tag == "main" for tag, _ in doc.elements):
                 errors.append(f"{relative}: missing main landmark")
+            for navigation in ("mobile-toc", "side-toc"):
+                count = sum(navigation in a.get("class", "").split() for _, a in doc.elements)
+                if count != 1:
+                    errors.append(f"{relative}: expected one {navigation} navigation, found {count}")
             if any(tag == "div" and a.get("id") == "source-document" and "hidden" in a for tag, a in doc.elements):
                 errors.append(f"{relative}: article still depends on a hidden JavaScript source")
         for tag, a in doc.elements:

@@ -409,21 +409,36 @@ def prepare_site_seo(site: Path, repository: str) -> tuple[int, int]:
                     },
                 }
                 article = relative.startswith("articles/") and 'data-article-standard="1"' in content and relative != "articles/scripture/index.html"
+                graph = [schema]
                 if article:
-                    schema["@type"] = "Article"
-                    schema["@id"] = page_url + "#article"
-                    schema["headline"] = str(page["heading"]) or title
-                    schema["mainEntityOfPage"] = page_url
+                    article_schema = {
+                        "@type": "Article", "@id": page_url + "#article",
+                        "headline": str(page["heading"]) or title,
+                        "url": page_url, "description": description,
+                        "inLanguage": language,
+                        "mainEntityOfPage": {"@id": page_url + "#webpage"},
+                    }
+                    schema["mainEntity"] = {"@id": page_url + "#article"}
                     author = get_meta(content, "name", "author")
                     if author:
-                        schema["author"] = {"@type": "Person", "name": author}
+                        article_schema["author"] = {"@type": "Person", "name": author}
+                    image_tag = re.search(r"<img\b[^>]*>", content, re.IGNORECASE)
+                    if image_tag:
+                        image_attrs = attributes(image_tag.group(0))
+                        image_url = urljoin(page_url, image_attrs.get("src", ""))
+                        if image_attrs.get("src") and urlparse(image_url).netloc == urlparse(base_url).netloc:
+                            article_schema["image"] = [image_url]
+                            content = set_meta(content, "property", "og:image", image_url)
+                            content = set_meta(content, "property", "og:image:alt", image_attrs.get("alt", ""))
+                            content = set_meta(content, "name", "twitter:card", "summary_large_image")
+                    graph.append(article_schema)
                 crumbs = [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": base_url + "/"},
                     {"@type": "ListItem", "position": 2, "name": str(page["heading"]) or title, "item": page_url},
                 ]
                 breadcrumb = {"@type": "BreadcrumbList", "@id": page_url + "#breadcrumb", "itemListElement": crumbs}
                 schema["breadcrumb"] = {"@id": page_url + "#breadcrumb"}
-                schema = {"@context": "https://schema.org", "@graph": [schema, breadcrumb]}
+                schema = {"@context": "https://schema.org", "@graph": graph + [breadcrumb]}
             json_ld = json.dumps(schema, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
             script = '<script type="application/ld+json" id="viveka-seo-jsonld">' + json_ld + "</script>"
             if JSON_LD.search(content):
