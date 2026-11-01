@@ -3,7 +3,7 @@
 :root { color-scheme:light; --paper:#fffdfa; --outer:#f5f3ef; --ink:#3c362e; --teal:#496b6c; --muted:#68635d; --rule:#d4d0ca; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:24px; }
-body.article-standard-page,body.article-tool-page { margin:0; background:var(--outer); color:var(--ink); font:400 18.5px/1.62 Georgia,"Times New Roman",serif; -webkit-font-smoothing:antialiased; }
+body.article-standard-page,body.article-tool-page { margin:0; background:var(--outer); color:var(--ink); font:400 18.5px/1.62 Merriweather,Georgia,"Times New Roman",serif; -webkit-font-smoothing:antialiased; }
 a { color:#326466; text-underline-offset:3px; overflow-wrap:anywhere; }
 a:hover { color:#203f40; }
 :focus-visible { outline:3px solid #326466; outline-offset:4px; border-radius:2px; }
@@ -21,11 +21,11 @@ a:hover { color:#203f40; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 .page { width:min(1600px,100%); margin:0 auto; padding:36px clamp(24px,4vw,64px) 64px; background:var(--paper); min-height:calc(100vh - 58px); }
 .article-head { margin:0 0 30px 332px; text-align:center; }
-.article-head h1 { margin:0; color:var(--teal); font-size:clamp(28px,3.1vw,36px); line-height:1.25; font-weight:400; text-wrap:balance; overflow-wrap:anywhere; }
+.article-head h1 { margin:0; color:var(--teal); font:400 clamp(28px,3.1vw,36px)/1.25 Vollkorn,Georgia,serif; text-wrap:balance; overflow-wrap:anywhere; }
 .article-subtitle { margin:12px 0 0; color:var(--muted); font-size:15px; }
 .reader-grid { display:grid; grid-template-columns:280px minmax(0,1050px); gap:52px; align-items:start; }
 .side-toc { position:sticky; top:22px; max-height:calc(100vh - 44px); overflow-y:auto; padding:0 16px 14px 0; border-right:1px solid var(--rule); scrollbar-width:thin; }
-.side-toc-title { margin:0 0 12px; padding-bottom:10px; border-bottom:1px solid var(--rule); color:var(--teal); font-size:23px; font-weight:400; line-height:1.25; }
+.side-toc-title { margin:0 0 12px; padding-bottom:10px; border-bottom:1px solid var(--rule); color:var(--teal); font:400 23px/1.25 Vollkorn,Georgia,serif; }
 .toc { font-size:14px; line-height:1.45; }
 .toc ul,.toc ol { list-style:none; padding:0; margin:0; }
 .toc li { margin:5px 0; }
@@ -37,7 +37,7 @@ a:hover { color:#203f40; }
 .mobile-toc { display:none; }
 .page-context,.article-byline:empty { display:none; }
 .document-content { min-width:0; overflow-wrap:break-word; }
-.document-content h2,.document-content h3,.document-content h4,.document-content h5 { color:var(--teal); font-weight:400; line-height:1.35; scroll-margin-top:24px; }
+.document-content h2,.document-content h3,.document-content h4,.document-content h5 { color:var(--teal); font-family:Vollkorn,Georgia,serif; font-weight:400; line-height:1.35; scroll-margin-top:24px; }
 .document-content h2 { margin:2.8rem 0 1rem; padding-top:10px; font-size:29px; border-top:1px solid #e6e1d8; }
 .document-content h3 { margin:2rem 0 1rem; font-size:24px; }
 .document-content h4 { margin:1.7rem 0 .8rem; font-size:21px; }
@@ -49,9 +49,14 @@ a:hover { color:#203f40; }
 .document-content blockquote,.document-content p.translation,.document-content .scripture-translation,.document-content .women-scripture-translation,.document-content .gita-translation { margin:.4em 0 1.1em; padding:0 0 0 16px; border-left:2px solid #a5a9aa; color:#626463; }
 .document-content blockquote p:last-child { margin-bottom:0; }
 .document-content .scripture-quote-pair { margin:1.4em 0; }
+.document-content .shaiva-verse-list { margin:1.1em 0 1.6em; }
+.document-content .shaiva-verse-pair { margin:0 0 .9em; }
+.document-content .shaiva-verse-pair p.translation { margin:.35em 0 .55em; color:var(--ink); }
+.document-content .shaiva-verse-pair .sanskrit-reveal { margin:0 0 1.25em 16px; }
 .document-content details.sanskrit-reveal { margin:10px 0 1.2em; }
 .document-content summary { cursor:pointer; }
-.document-content .sanskrit-reveal>summary { display:list-item; width:fit-content; max-width:100%; padding:3px 10px; border:1px solid #d8ad8b; border-radius:18px; font-size:16px; line-height:1.4; color:#5c5144; }
+.document-content .sanskrit-reveal>summary { display:inline-flex; align-items:center; list-style:none; width:fit-content; max-width:100%; padding:5px 11px; border:1px solid #d8ad8b; border-radius:18px; font-size:16px; line-height:1.4; color:#5c5144; }
+.document-content .sanskrit-reveal>summary::-webkit-details-marker { display:none; }
 .document-content .sanskrit-reveal>summary:hover { background:#f6eee5; }
 .document-content .sanskrit-reveal[open]>summary { margin-bottom:12px; }
 .document-content [lang^="sa"],.document-content .sa-text,.document-content .sanskrit-text { font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif; line-height:1.9; color:#7f432f; }
@@ -73,7 +78,7 @@ a:hover { color:#203f40; }
 .document-content .source-entry { overflow-wrap:anywhere; }
 .article-footer { width:min(1600px,100%); margin:auto; padding:20px 32px; border-top:1px solid var(--rule); background:var(--paper); text-align:center; font-size:14px; }
 .article-footer a { margin:0 12px; }
-.article-tool-page .sitebar { font-family:Georgia,serif; }
+.article-tool-page .sitebar { font-family:Merriweather,Georgia,serif; }
 .article-tool-page .shell,.article-tool-page>.page { max-width:1600px; }
 @media(min-width:1600px) { .reader-grid { grid-template-columns:300px minmax(0,1050px); } .article-head { margin-left:352px; } }
 @media(max-width:1000px) { .reader-grid { grid-template-columns:230px minmax(0,1fr); gap:28px; } .article-head { margin-left:258px; } .page { padding-left:24px; padding-right:24px; } }
