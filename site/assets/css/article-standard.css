@@ -36,8 +36,8 @@ a:hover { color:#203f40; }
 .article { min-width:0; }
 .mobile-toc { display:none; }
 .page-context,.article-byline:empty { display:none; }
-.document-content { min-width:0; overflow-wrap:break-word; }
-.document-content h2,.document-content h3,.document-content h4,.document-content h5 { color:var(--teal); font-family:Vollkorn,Georgia,serif; font-weight:400; line-height:1.35; scroll-margin-top:24px; }
+.document-content { min-width:0; overflow-wrap:break-word; font-family:"Noto Serif Devanagari",Merriweather,Georgia,"Times New Roman",serif; }
+.document-content h2,.document-content h3,.document-content h4,.document-content h5 { color:var(--teal); font-family:inherit; font-weight:400; line-height:1.35; scroll-margin-top:24px; }
 .document-content h2 { margin:2.8rem 0 1rem; padding-top:10px; font-size:29px; border-top:1px solid #e6e1d8; }
 .document-content h3 { margin:2rem 0 1rem; font-size:24px; }
 .document-content h4 { margin:1.7rem 0 .8rem; font-size:21px; }
