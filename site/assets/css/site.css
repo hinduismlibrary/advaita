@@ -1098,9 +1098,3 @@ body.vp-book-1 .shankara-content .gita-sridhara-sanskrit {
   color:#0645ad!important;
   font:italic 400 13px/1.5 Merriweather,Georgia,serif!important;
 }
-
-
-/* Hide empty Śrīdhara translation shells in the Viṣṇu Purāṇa reader. */
-.gita-page .gita-sridhara-translation:has(> .gita-sridhara-body:empty) {
-  display: none !important;
-}
