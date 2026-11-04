@@ -427,29 +427,35 @@
         const sanskrit = String(entry.sanskrit || '').trim();
         const literal = String(entry.literal_english || '').trim();
         const range = readerVerseRange(targetCanto, targetChapter, entry.start, entry.end);
-        const generatedPlaceholder = /^(?:contextual literal sense of|generic filler|translation pending|to be translated|placeholder(?:\s+(?:commentary|translation|gloss))?)/i.test(literal);
+        const generatedPlaceholder = /contextual literal sense of|generic filler|translation pending|to be translated|placeholder(?:\s+(?:commentary|translation|gloss))?/i.test(literal) ||
+          /^literal rendering:/i.test(literal);
         const commentatorAttribution = isCommentatorAttribution(literal);
         const noCommentary = (targetCanto !== 10 && entry.source_available === false && entry.source_gap !== true) ||
           isNoCommentaryMarker(sanskrit) ||
           /^no commentary[.]?$/i.test(literal);
         const sourceGap = entry.source_gap === true ||
           (targetCanto !== 10 && entry.source_available === false && !noCommentary);
+        const translationUnavailable = !noCommentary && !sourceGap &&
+          (entry.commentary_translation_status === 'not-yet-translated' ||
+            !literal || generatedPlaceholder || commentatorAttribution);
         return {
           start: range.start,
           end: range.end,
           text: noCommentary || sourceGap || generatedPlaceholder || commentatorAttribution ? '' : literal,
           noCommentary,
-          sourceGap
+          sourceGap,
+          translationUnavailable
         };
       })
       .filter((entry) => Number.isFinite(entry.start) && Number.isFinite(entry.end) &&
-        (entry.text || entry.noCommentary || entry.sourceGap));
+        (entry.text || entry.noCommentary || entry.sourceGap || entry.translationUnavailable));
   }
 
   function commentaryStatusForRange(entries, start, end) {
     const matching = entries.filter((entry) => entry.end >= start && entry.start <= end);
     if (matching.some((entry) => entry.noCommentary)) return 'no-commentary';
     if (matching.some((entry) => entry.sourceGap)) return 'source-gap';
+    if (matching.some((entry) => entry.translationUnavailable)) return 'translation-unavailable';
     return 'english-rendering-unavailable';
   }
 
@@ -649,6 +655,7 @@
 
     const verseTransliteration = entry.transliteration.join('\n');
     const sridharaSanskrit = sridharaForRange(sridharaEntries, entry.start, entry.end, chapter);
+    const commentaryStatus = commentaryStatusForRange(localCommentaryEntries, entry.start, entry.end);
 
     const controls = document.createElement('div');
     controls.className = 'gita-controls';
@@ -664,10 +671,18 @@
         makeEmptyParagraph('No source text')));
     }
     const sridharaPairs = wordForWordForRange(wordForWordEntries, entry.start, entry.end);
-    if (sridharaPairs.length) {
-      wordSections.push(makeDualSection('Śrīdhara', 'gita-dual-sridhara',
-        makeWordForWordParagraph(sridharaPairs)));
-    }
+    const sridharaWordNote = sridharaPairs.length
+      ? makeWordForWordParagraph(sridharaPairs)
+      : makeEmptyParagraph(
+        sridharaSanskrit
+          ? 'No Śrīdhara word-for-word glosses are entered for this commentary block yet.'
+          : commentaryStatus === 'no-commentary'
+            ? 'The pinned source marks this verse as having no separate Śrīdhara commentary.'
+            : commentaryStatus === 'source-gap'
+              ? 'The pinned Śrīdhara source has a gap for this verse.'
+              : 'No Śrīdhara word-for-word source record is available for this verse.'
+      );
+    wordSections.push(makeDualSection('Śrīdhara', 'gita-dual-sridhara', sridharaWordNote));
     controls.appendChild(makeDetails('Word for Word', wordSections));
 
     const transliterationSections = [];
@@ -684,7 +699,6 @@
     }
     controls.appendChild(makeDetails('Transliteration', transliterationSections));
 
-    const commentaryStatus = commentaryStatusForRange(localCommentaryEntries, entry.start, entry.end);
     const sridharaSanskritDetails = makeDetails('Śrīdhara Sanskrit', [
       sridharaSanskrit
         ? makeParagraph(sridharaSanskrit, { lang: 'sa-Deva' })
@@ -708,8 +722,15 @@
       commentaryHeading.textContent = 'Śrīdhara’s Commentary';
       commentary.append(commentaryHeading, makeParagraph(commentaryText));
       section.appendChild(commentary);
-    } else if (commentaryStatus === 'english-rendering-unavailable' && sridharaSanskrit) {
-      section.appendChild(makeParagraph('No English rendering.', { className: 'gita-commentary-note' }));
+    } else {
+      const note = commentaryStatus === 'no-commentary'
+        ? 'The pinned Śrīdhara source explicitly has no separate commentary for this verse.'
+        : commentaryStatus === 'source-gap'
+          ? 'The pinned Śrīdhara source has a gap here; no commentary text is available for this verse.'
+          : sridharaSanskrit
+            ? 'The Śrīdhara Sanskrit is retained, but its English commentary translation is not yet available.'
+            : 'No Śrīdhara source block is available for this verse, so there is no English commentary translation to display.';
+      section.appendChild(makeParagraph(note, { className: 'gita-commentary-note' }));
     }
 
     return section;
@@ -797,7 +818,7 @@
   function commentaryUrl(manifest) {
     const path = (manifest.english_commentary && manifest.english_commentary.path) ||
       'assets/data/bhagavatam-sridhara-english-checkpoints.json';
-    const versionedPath = path + (path.includes('?') ? '&' : '?') + 'v=live-' + Date.now();
+    const versionedPath = path + (path.includes('?') ? '&' : '?') + 'v=20261104-coverage-status-1';
     return versionedPath.charAt(0) === '/' ? versionedPath : '/advaita/' + versionedPath;
   }
 
