@@ -22,26 +22,32 @@ jobs:
         uses: actions/checkout@v6
       - name: Validate Advaita reader data and routes
         run: python3 tools/scripts/site-checks/validate-shankara-reader-data.py
-      - name: Wait for branch Pages deployment
+      - name: Wait for legacy branch Pages deployment if present
         if: ${{ github.event_name == 'push' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Once Pages is configured to use Actions, there is no branch build to wait for.
+          # Until then, allow the old automatic branch deployment to finish first.
           for attempt in $(seq 1 90); do
             state=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${GITHUB_SHA}&per_page=100" --jq '[.workflow_runs[] | select(.name == "pages build and deployment")] | sort_by(.created_at) | last | [.status // "pending", .conclusion // ""] | @tsv')
-            read -r status conclusion <<< "$state"
-            if [ "$status" = completed ]; then
-              if [ "$conclusion" = success ]; then exit 0; fi
-              if [ "$conclusion" = cancelled ]; then
-                echo 'Branch Pages build was superseded; continuing with this commit’s static deployment.'
+            if [ -z "$state" ]; then
+              if [ "$attempt" -ge 3 ]; then
+                echo 'No branch Pages run: proceeding with GitHub Actions publishing.'
                 exit 0
               fi
-              echo "Branch Pages deployment ended with conclusion: ${conclusion:-unknown}" >&2
+              sleep 5
+              continue
+            fi
+            read -r status conclusion <<< "$state"
+            if [ "$status" = completed ]; then
+              if [ "$conclusion" = success ] || [ "$conclusion" = cancelled ]; then exit 0; fi
+              echo "Legacy branch Pages deployment failed: ${conclusion:-unknown}" >&2
               exit 1
             fi
             sleep 10
           done
-          echo 'Timed out waiting for branch Pages deployment' >&2
+          echo 'Legacy branch Pages deployment did not complete in time' >&2
           exit 1
       - name: Prepare site deployment
         run: python3 tools/scripts/site-checks/prepare-site-deploy.py
