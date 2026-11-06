@@ -65,6 +65,8 @@ def check():
                 assert desktop.locator(".mk-inline-list a").first.inner_text() == "2.1"
                 report["desktop"] = {"chapter_1_verses":29,"chapter_2_verses":38,"contents_precedes_text":True}
                 desktop.screenshot(path=str(OUT / "desktop-chapter-2.png"), full_page=False)
+                desktop.locator(".mk-verse").first.scroll_into_view_if_needed()
+                desktop.screenshot(path=str(OUT / "desktop-reading-verse.png"), full_page=False)
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=1)
                 mobile.on("pageerror", lambda e: page_errors.append(str(e)))
                 mobile.goto(url + "?chapter=4", wait_until="domcontentloaded")
@@ -83,6 +85,8 @@ def check():
                 assert not mobile.locator("#mk-sidebar").is_visible()
                 report["mobile"] = {"chapter_4_verses":100,"horizontal_overflow_px":overflow,"drawer":"passed"}
                 mobile.screenshot(path=str(OUT / "mobile-chapter-4.png"), full_page=False)
+                mobile.locator(".mk-verse").first.scroll_into_view_if_needed()
+                mobile.screenshot(path=str(OUT / "mobile-reading-verse.png"), full_page=False)
                 assert not page_errors, page_errors
                 browser.close()
         finally:
