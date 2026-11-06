@@ -94,14 +94,19 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   "use strict";
   var params=new URLSearchParams(window.location.search);
   var work=params.get("work")||"";
-  // Keep the historic contents link working with the integrated Māṇḍūkya verse reader.
+  // Māṇḍūkyakārikā has its own editorial reader; keep previous deep links valid.
   if(work==="mandukya-karika"){
-    var reader=new URL("book-chapter.html",window.location.href);
-    reader.searchParams.set("work",work);
+    var target=new URL("/advaita/books/adi-shankaracharya/mandukya-karika/",window.location.origin);
     var chosen=params.get("unit");
-    if(chosen)reader.searchParams.set("unit",chosen);
-    reader.hash=window.location.hash;
-    window.location.replace(reader.href);
+    var chapter=Number(params.get("chapter"));
+    if(chosen&&/^mandukya-karika-[1-4]-/.test(chosen)){
+      target.searchParams.set("chapter",chosen.match(/^mandukya-karika-([1-4])-/)[1]);
+      target.hash=chosen;
+    }else if(Number.isInteger(chapter)&&chapter>=1&&chapter<=4){
+      target.searchParams.set("chapter",String(chapter));
+    }
+    if(window.location.hash)target.hash=window.location.hash;
+    window.location.replace(target.href);
     return;
   }
   var validWorks=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","bhaja-govindam"]);
