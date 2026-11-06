@@ -1,6 +1,13 @@
 (()=>{
 "use strict";
 const BASE="/advaita/books/adi-shankaracharya/mandukya-karika/";
+/* The shared chrome script mounts before DOMContentLoaded. Keep its search
+   infrastructure loaded, but use this reader's uncluttered masthead instead. */
+document.addEventListener("DOMContentLoaded",()=>{
+ const chrome=document.querySelector("body > header.site-header.vd-global-header");
+ if(chrome)chrome.style.setProperty("display","none","important");
+},{once:true});
+
 const DATA="/advaita/assets/data/shankara/mandukya-karika.json?v=editorial-reader-20261106";
 const COLORS={1:"#276e70",2:"#526e9c",3:"#796490",4:"#a27a52"};
 const root=document.getElementById("mk-reader");
