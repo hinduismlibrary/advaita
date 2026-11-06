@@ -37,6 +37,16 @@ def check():
                 response = desktop.goto(url, wait_until="domcontentloaded")
                 assert response.status == 200, response.status
                 desktop.locator(".mk-verse").first.wait_for(timeout=25000)
+                print("Styles:", desktop.evaluate("""() => ({
+                  body: document.body.className,
+                  header: getComputedStyle(document.querySelector('body > header.vd-global-header')).display,
+                  local: getComputedStyle(document.querySelector('.mk-local-header')).display,
+                  tocLink: getComputedStyle(document.querySelector('.mk-inline-list a')).color,
+                  tocFill: getComputedStyle(document.querySelector('.mk-inline-list a')).webkitTextFillColor,
+                  tocCSS: [...document.styleSheets].filter(s => String(s.href).includes('mandukya-editorial-reader')).map(s => ({href:s.href,length:(s.cssRules||[]).length}))
+                })"""))
+                assert desktop.locator("body > header.vd-global-header").is_hidden()
+
                 desktop.evaluate("document.fonts.ready")
                 assert desktop.locator(".mk-verse").count() == 29
                 assert desktop.locator(".mk-inline-list a").count() == 29
