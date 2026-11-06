@@ -40,11 +40,16 @@ HEAD_OPEN = re.compile(r"<head\b[^>]*>", re.IGNORECASE)
 HTML_DOC = re.compile(r"<html\b", re.IGNORECASE)
 BODY_TAG = re.compile(r"<body\b[^>]*>", re.IGNORECASE)
 CLASS_ATTR = re.compile(r"""\bclass\s*=\s*(["'])([^"']*)\1""", re.IGNORECASE)
+ISOLATED_READER = re.compile(r"\bdata-reader-isolated\s*=\s*([\"'])mandukya\1", re.IGNORECASE)
 VP_CSS_LINK = re.compile(r"\s*<link\b[^>]*vishnu-purana-chapter-reader\.css[^>]*>", re.IGNORECASE)
 
 
 def ensure_shared_chrome(content: str) -> str:
     if not HTML_DOC.search(content) or not BODY_TAG.search(content):
+        return content
+    # The Māṇḍūkyakārikā reader has a complete, page-specific masthead and
+    # navigation. Keep deployment preparation from adding a second chrome.
+    if ISOLATED_READER.search(content):
         return content
     # These pages already contain the complete accessible header in their HTML.
     # Avoid loading the legacy theme and replacing that header at runtime.

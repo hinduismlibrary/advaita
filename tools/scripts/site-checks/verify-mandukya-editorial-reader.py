@@ -2,6 +2,7 @@
 """Browser-level QA for the stand-alone Māṇḍūkyakārikā reader."""
 from __future__ import annotations
 import json
+import os
 import tempfile
 import threading
 from functools import partial
@@ -30,31 +31,34 @@ def check():
         url = f"http://127.0.0.1:{server.server_port}/advaita/books/adi-shankaracharya/mandukya-karika/"
         try:
             with sync_playwright() as pw:
-                browser = pw.chromium.launch(headless=True, args=["--no-sandbox"])
+                browser = pw.chromium.launch(
+                    headless=True,
+                    args=["--no-sandbox"],
+                    executable_path=os.environ.get("PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH"),
+                )
                 desktop = browser.new_page(viewport={"width": 1440, "height": 900}, device_scale_factor=1)
                 page_errors = []
                 desktop.on("pageerror", lambda e: page_errors.append(str(e)))
                 response = desktop.goto(url, wait_until="domcontentloaded")
                 assert response.status == 200, response.status
                 desktop.locator(".mk-verse").first.wait_for(timeout=25000)
-                print("Styles:", desktop.evaluate("""() => ({
-                  body: document.body.className,
-                  header: getComputedStyle(document.querySelector('body > header.vd-global-header')).display,
-                  local: getComputedStyle(document.querySelector('.mk-local-header')).display,
-                  tocLink: getComputedStyle(document.querySelector('.mk-inline-list a')).color,
-                  tocFill: getComputedStyle(document.querySelector('.mk-inline-list a')).webkitTextFillColor,
-                  tocCSS: [...document.styleSheets].filter(s => String(s.href).includes('mandukya-editorial-reader')).map(s => ({href:s.href,length:(s.cssRules||[]).length}))
-                })"""))
-                assert desktop.locator("body > header.vd-global-header").is_hidden()
+                assert desktop.locator("body > header.mk-local-header").count() == 1
+                assert desktop.locator("body[data-reader-isolated='mandukya']").count() == 1
+                assert desktop.locator("body > header.vd-global-header").count() == 0
+                assert not desktop.evaluate("document.body.classList.contains('vd-chrome-page')")
+                assert desktop.locator("script[src*='site-chrome.js']").count() == 0
+                assert desktop.locator("link[rel='canonical']").get_attribute("href") == "https://hinduismlibrary.github.io/advaita/books/adi-shankaracharya/mandukya-karika/"
 
                 desktop.evaluate("document.fonts.ready")
                 assert desktop.locator(".mk-verse").count() == 29
                 assert desktop.locator(".mk-inline-list a").count() == 29
                 assert desktop.locator(".mk-verse-nav a").count() == 29
                 assert desktop.locator("h1").inner_text().strip() == "Māṇḍūkyakārikā"
+                assert "Four chapters" in desktop.locator(".mk-byline").inner_text()
                 assert desktop.locator(".mk-deva").first.inner_text().startswith("बहिःप्रज्ञो")
                 assert desktop.locator(".mk-iast").first.inner_text().startswith("bahiḥprajño")
                 assert desktop.locator(".mk-translation").first.inner_text().startswith("Viśva")
+                assert desktop.locator(".mk-gloss summary").first.inner_text() == "Word for Word"
                 toc_box = desktop.locator("#contents").bounding_box()
                 verse_box = desktop.locator(".mk-verse").first.bounding_box()
                 assert toc_box["y"] + toc_box["height"] <= verse_box["y"] + 3, (toc_box, verse_box)
@@ -64,6 +68,13 @@ def check():
                 assert desktop.locator(".mk-gloss-row").count() > 20
                 desktop.locator(".mk-gloss summary").first.click()
                 assert not desktop.locator(".mk-gloss-list").first.is_visible()
+                original_size = desktop.locator(".mk-deva").first.evaluate("el => getComputedStyle(el).fontSize")
+                desktop.locator("#mk-text-larger").click()
+                larger_size = desktop.locator(".mk-deva").first.evaluate("el => getComputedStyle(el).fontSize")
+                assert float(larger_size.removesuffix("px")) > float(original_size.removesuffix("px"))
+                desktop.locator("#mk-text-smaller").click()
+                restored_size = desktop.locator(".mk-deva").first.evaluate("el => getComputedStyle(el).fontSize")
+                assert restored_size == original_size
                 desktop.locator(".mk-inline-list a").nth(6).click()
                 assert desktop.url.endswith("#mandukya-karika-1-007"), desktop.url
                 assert desktop.locator(".mk-verse-nav a[aria-current='location']").count() == 1
@@ -73,10 +84,33 @@ def check():
                 assert desktop.locator(".mk-inline-list a").count() == 38
                 assert desktop.locator(".mk-verse").count() == 38
                 assert desktop.locator(".mk-inline-list a").first.inner_text() == "2.1"
-                report["desktop"] = {"chapter_1_verses":29,"chapter_2_verses":38,"contents_precedes_text":True}
+                assert desktop.evaluate("[...document.querySelectorAll('a[href^=\"#\"]')].every(a => !!document.getElementById(decodeURIComponent(a.hash.slice(1))))")
                 desktop.screenshot(path=str(OUT / "desktop-chapter-2.png"), full_page=False)
-                desktop.locator(".mk-verse").first.scroll_into_view_if_needed()
+                desktop.go_back()
+                desktop.wait_for_function("location.search === '' && location.hash === '#mandukya-karika-1-007'")
+                assert desktop.locator(".mk-verse").count() == 29
+                desktop.go_forward()
+                desktop.wait_for_function("location.search === '?chapter=2'")
+                assert desktop.locator(".mk-verse").count() == 38
+                desktop.goto(url + "?chapter=3#mandukya-karika-3-020", wait_until="domcontentloaded")
+                desktop.locator(".mk-verse").first.wait_for(timeout=25000)
+                assert desktop.locator(".mk-verse").count() == 48
+                assert desktop.evaluate("location.hash") == "#mandukya-karika-3-020"
+                assert desktop.locator("#mandukya-karika-3-020").get_attribute("aria-label") == "Verse 3.20"
+                assert desktop.locator(".mk-verse-nav a[aria-current='location']").count() == 1
+                report["desktop"] = {"chapter_1_verses":29,"chapter_2_verses":38,"chapter_3_verses":48,"contents_precedes_text":True,"browser_history":"passed","font_controls":"passed"}
+                desktop.locator("#mandukya-karika-3-020").scroll_into_view_if_needed()
                 desktop.screenshot(path=str(OUT / "desktop-reading-verse.png"), full_page=False)
+                tablet = browser.new_page(viewport={"width": 768, "height": 1024}, device_scale_factor=1)
+                tablet.on("pageerror", lambda e: page_errors.append(str(e)))
+                tablet.goto(url + "?chapter=2", wait_until="domcontentloaded")
+                tablet.locator(".mk-verse").first.wait_for(timeout=25000)
+                tablet_overflow = tablet.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+                assert tablet_overflow <= 3, f"Tablet horizontal overflow: {tablet_overflow}px"
+                assert tablet.locator("#mk-mobile-toggle").is_visible()
+                assert tablet.locator(".mk-verse").count() == 38
+                report["tablet"] = {"width":768,"horizontal_overflow_px":tablet_overflow,"chapter_2_verses":38}
+                tablet.screenshot(path=str(OUT / "tablet-chapter-2.png"), full_page=False)
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=1)
                 mobile.on("pageerror", lambda e: page_errors.append(str(e)))
                 mobile.goto(url + "?chapter=4", wait_until="domcontentloaded")
@@ -91,12 +125,26 @@ def check():
                 mobile.locator("#mk-mobile-toggle").click()
                 assert mobile.locator("#mk-sidebar").is_visible()
                 assert mobile.locator("#mk-mobile-toggle").get_attribute("aria-expanded") == "true"
+                mobile.locator(".mk-chapter-name").first.focus()
+                mobile.keyboard.press("Escape")
+                assert not mobile.locator("#mk-sidebar").is_visible()
+                assert mobile.locator("#mk-mobile-toggle").evaluate("el => el === document.activeElement")
+                mobile.locator("#mk-mobile-toggle").click()
                 mobile.locator("#mk-scrim").click(position={"x":380,"y":400}, force=True)
                 assert not mobile.locator("#mk-sidebar").is_visible()
-                report["mobile"] = {"chapter_4_verses":100,"horizontal_overflow_px":overflow,"drawer":"passed"}
+                report["mobile"] = {"width":390,"chapter_4_verses":100,"horizontal_overflow_px":overflow,"drawer":"passed"}
                 mobile.screenshot(path=str(OUT / "mobile-chapter-4.png"), full_page=False)
                 mobile.locator(".mk-verse").first.scroll_into_view_if_needed()
                 mobile.screenshot(path=str(OUT / "mobile-reading-verse.png"), full_page=False)
+                small = browser.new_page(viewport={"width":320, "height":700}, device_scale_factor=1)
+                small.on("pageerror", lambda e: page_errors.append(str(e)))
+                small.goto(url + "?chapter=4", wait_until="domcontentloaded")
+                small.locator(".mk-verse").first.wait_for(timeout=25000)
+                small_overflow = small.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+                assert small_overflow <= 3, f"Small mobile horizontal overflow: {small_overflow}px"
+                assert small.locator(".mk-verse").count() == 100
+                report["small_mobile"] = {"width":320,"horizontal_overflow_px":small_overflow,"chapter_4_verses":100}
+                small.screenshot(path=str(OUT / "small-mobile-chapter-4.png"), full_page=False)
                 assert not page_errors, page_errors
                 browser.close()
         finally:

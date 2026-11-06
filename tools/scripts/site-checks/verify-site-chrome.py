@@ -6,7 +6,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[3]
-SITE = ROOT / 'site'
+SITE = Path(os.environ.get("VERIFY_SITE_ROOT", ROOT / "site")).resolve()
 SUPPORTED_THEME_VERSIONS = ("20261019-unified-theme-4", "20261020-on-site-search-1", "20261021-original-iast-2", "20261021-wikisource-4", "20261021-numbered-contents-1", "20261021-standardized-blue-1", "20261022-link-styles-1", "20261022-wikisource-directory-1", "20261022-wikisource-inspired-2", "20261022-wikisource-inspired-3", "20261022-standardized-reading-1", "20261023-navigation-devanagari-1", "20261023-standardized-sitewide-1", "20261023-standardized-sitewide-2", "20261023-reader-layout-3", "20261023-reader-layout-4", "20261023-reader-layout-5", "20261023-reader-layout-6", "20261023-reader-layout-7", "20261023-reader-layout-8", "20261023-reader-layout-9", "20261023-sitewide-monochrome-1", "20261023-sitewide-monochrome-2", "20261023-sitewide-bilingual-blue-1", "20261023-sitewide-bilingual-blue-2", "20261023-sitewide-bilingual-blue-3", "20261023-purana-chapter-names-1", "20261024-public-navigation-4", "20261024-readable-home-5", "20261024-readable-home-6", "20261024-balanced-home-7", "20261025-wikisource-list-1", "20261025-wikisource-home-2", "20261025-wikisource-home-3", "20261025-wikisource-home-4", "20261025-wikisource-home-5", "20261025-wikisource-home-6", "20261025-wikisource-home-7", "20261025-wikisource-home-8", "20261026-document-cleanup-1", "20261026-document-cleanup-2", "20261027-document-template-2", "20261027-heatmap-colors-2", "20261027-document-template-3", "20261027-document-brand-3", "20261031-document-standard-1", "20261101-site-repair-1")
 SUPPORTED_THEME_PATTERN = "|".join(re.escape(version) for version in SUPPORTED_THEME_VERSIONS)
 LOADER = re.compile(
@@ -46,6 +46,17 @@ expected_loader = re.compile(
     re.IGNORECASE,
 )
 expected_css = f"/advaita/assets/css/site-chrome.css?v={cache_version}"
+ISOLATED_READER = re.compile(r"""\bdata-reader-isolated\s*=\s*(["'])mandukya\1""", re.IGNORECASE)
+LOCAL_NAV = re.compile(
+    r"""<nav\b(?=[^>]*\bclass\s*=\s*(["'])[^"']*\bmk-local-nav\b[^"']*\1)[^>]*>([\s\S]*?)</nav\s*>""",
+    re.IGNORECASE,
+)
+LOCAL_HEADER = re.compile(r"""<header\b[^>]*\bclass\s*=\s*(["'])[^"']*\bmk-local-header\b[^"']*\1""", re.IGNORECASE)
+HOME_LINK = re.compile(r"""<a\b[^>]*\bhref\s*=\s*(["'])/advaita/\1[^>]*>""", re.IGNORECASE)
+TEXTS_LINK = re.compile(r"""<a\b[^>]*\bhref\s*=\s*(["'])/advaita/books/adi-shankaracharya/\1[^>]*>""", re.IGNORECASE)
+SEARCH_LINK = re.compile(r"""<a\b[^>]*\bhref\s*=\s*(["'])/advaita/search/\1[^>]*>""", re.IGNORECASE)
+READER_STYLESHEET = re.compile(r"<link\b(?=[^>]*mandukya-editorial-reader\.css)[^>]*>", re.IGNORECASE)
+SHARED_CHROME = re.compile(r"(?:site-chrome\.(?:css|js))", re.IGNORECASE)
 
 missing = []
 checked = 0
@@ -58,6 +69,29 @@ for path in SITE.rglob("*.html"):
     if not HTML_DOC.search(source) or not BODY.search(source):
         continue
     checked += 1
+    if ISOLATED_READER.search(source):
+        nav = LOCAL_NAV.search(source)
+        nav_source = nav.group(2) if nav else ""
+        body = re.search(r"<body\b[^>]*>", source, re.IGNORECASE)
+        body_tag = body.group(0) if body else ""
+        body_class = re.search(r"""\bclass\s*=\s*(["'])(.*?)\1""", body_tag, re.IGNORECASE)
+        if (
+            not LOCAL_HEADER.search(source)
+            or not nav
+            or 'aria-label="Main site navigation"' not in nav.group(0)
+            or not HOME_LINK.search(nav_source)
+            or not TEXTS_LINK.search(nav_source)
+            or not SEARCH_LINK.search(nav_source)
+            or not READER_STYLESHEET.search(source)
+        ):
+            missing.append(relative + ' (isolated reader masthead, navigation, search link, or stylesheet missing)')
+        if SHARED_CHROME.search(source):
+            missing.append(relative + ' (isolated reader unexpectedly loads shared chrome)')
+        if not body_class or "mk-reading-page" not in body_class.group(2).split():
+            missing.append(relative + ' (isolated reader body class missing)')
+        if prepared and body_class and "vd-chrome-page" in body_class.group(2).split():
+            missing.append(relative + ' (isolated reader received shared body class)')
+        continue
     if 'data-article-standard="1"' in source or 'data-article-tool="1"' in source:
         required = ('vd-global-header', 'aria-label="Primary navigation"', 'role="search"', 'article-standard.css')
         if not all(marker in source for marker in required):
