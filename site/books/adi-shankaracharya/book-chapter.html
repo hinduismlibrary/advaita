@@ -24,7 +24,7 @@
 <h1 id="work-title">Loading text…</h1>
 <p class="shankara-author" id="work-author"></p>
 <p class="shankara-chapter-title" id="chapter-title"></p>
-<p class="shankara-reader-links"><a id="contents-link" href="#reader-toc">Chapters &amp; verses</a><a id="full-text-link">Read entire text</a></p>
+<p class="shankara-reader-links"><a id="contents-link" href="#section-contents">Chapter contents</a><a id="full-text-link">Read entire text</a></p>
 <p class="shankara-reader-coverage" id="word-coverage" aria-live="polite"></p>
 </header>
 <nav class="gita-contents" id="reader-toc" aria-label="Verse navigation"><div class="reader-toc-head"><span class="reader-overline">Explore the text</span><h2>Chapters &amp; verses</h2><p id="toc-progress">Browse by chapter and verse</p></div><ol id="chapter-list" class="reader-chapter-list"></ol></nav>
@@ -119,7 +119,7 @@ var dataUrl=new URL("/advaita/assets/data/shankara/"+encodeURIComponent(work)+".
 dataUrl.searchParams.set("v","reader-gloss-20261027b");
 var contentsUrl=new URL("book-contents.html",rootUrl);
 contentsUrl.searchParams.set("work",work);
-contentsLink.href="#reader-toc";
+contentsLink.href="#section-contents";
 fullTextLink.href=readerUrl.href;
 function unitChapter(unit){
  if(unit.chapter!==undefined&&unit.chapter!==null)return String(unit.chapter);
@@ -213,6 +213,38 @@ function renderVerseNavigation(units,chapters,selectedChapter){
   listNode.append(wrapper);
  });
 }
+function renderSectionContents(units,chapterIndex){
+ var nav=document.createElement("nav");
+ nav.id="section-contents";
+ nav.className="reader-section-contents";
+ nav.dataset.chapter=String(chapterIndex+1);
+ nav.setAttribute("aria-label","Contents of the selected chapter");
+ var header=document.createElement("div");
+ header.className="reader-section-contents-header";
+ var label=document.createElement("span");
+ label.className="reader-section-contents-eyebrow";
+ label.textContent="CHAPTER "+String(chapterIndex+1).padStart(2,"0");
+ var heading=document.createElement("h3");
+ heading.textContent="Contents";
+ var note=document.createElement("p");
+ note.textContent=units.length+" verses · Select a number to jump directly to that verse";
+ header.append(label,heading,note);
+ var list=document.createElement("ol");
+ list.className="reader-section-verse-list";
+ units.forEach(function(unit,index){
+  var li=document.createElement("li");
+  var a=document.createElement("a");
+  a.className="reader-section-verse-link";
+  a.href="#"+encodeURIComponent(String(unit.id));
+  a.dataset.verseId=String(unit.id);
+  a.textContent=String(unit.number||index+1);
+  a.setAttribute("aria-label","Jump to verse "+a.textContent);
+  li.append(a);
+  list.append(li);
+ });
+ nav.append(header,list);
+ return nav;
+}
 function renderUnit(unit,index){
  var card=document.createElement("article"),label=unit.label||"Verse "+(index+1);
  card.className="gita-verse shankara-verse";
@@ -243,6 +275,7 @@ function renderUnit(unit,index){
 function trackActiveVerse(units){
  var cards=Array.from(contentNode.querySelectorAll(".shankara-verse"));
  var links=Array.from(listNode.querySelectorAll(".reader-verse-link"));
+ var chapterLinks=Array.from(contentNode.querySelectorAll(".reader-section-verse-link"));
  var activeId="";
  function setActive(id){
   if(!id||id===activeId)return;
@@ -252,6 +285,12 @@ function trackActiveVerse(units){
    var selected=link.dataset.verseId===id;
    link.classList.toggle("is-active",selected);
    if(selected){link.setAttribute("aria-current","location");activeLink=link;}
+   else link.removeAttribute("aria-current");
+  });
+  chapterLinks.forEach(function(link){
+   var selected=link.dataset.verseId===id;
+   link.classList.toggle("is-active",selected);
+   if(selected)link.setAttribute("aria-current","location");
    else link.removeAttribute("aria-current");
   });
   var unit=units.find(function(item){return String(item.id)===id});
@@ -333,6 +372,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  count.textContent=selectedUnits.length+" verses";
  intro.append(heading,count);
  contentNode.append(intro);
+ contentNode.append(renderSectionContents(selectedUnits,selectedIndex));
  selectedUnits.forEach(function(unit,index){contentNode.append(renderUnit(unit,selectedStart+index));});
  var total=selectedUnits.length,withGloss=selectedUnits.filter(function(unit){return unit.gloss&&unit.gloss.length>0;}).length;
  coverageNode.textContent=withGloss===total
@@ -344,7 +384,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  pager.setAttribute("aria-label","Chapter navigation");
  if(selectedIndex>0){var previous=document.createElement("a");previous.rel="prev";previous.href=chapterUrl(items[selectedIndex-1].id);previous.textContent="← "+items[selectedIndex-1].label;pager.append(previous)}
  else{var spacer=document.createElement("span");pager.append(spacer)}
- var middle=document.createElement("a");middle.className="shankara-index-link";middle.href=contentsUrl.href;middle.textContent="All chapters";pager.append(middle);
+ var middle=document.createElement("a");middle.className="shankara-index-link";middle.href="#section-contents";middle.textContent="Chapter contents";pager.append(middle);
  if(selectedIndex<items.length-1){var next=document.createElement("a");next.rel="next";next.href=chapterUrl(items[selectedIndex+1].id);next.textContent=items[selectedIndex+1].label+" →";pager.append(next)}
  else{var spacerEnd=document.createElement("span");pager.append(spacerEnd)}
  contentNode.append(pager);
