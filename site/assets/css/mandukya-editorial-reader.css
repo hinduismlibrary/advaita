@@ -167,3 +167,48 @@ body.mk-reading-page.vd-chrome-page>header.site-header.vd-global-header .vd-brea
 body.mk-reading-page.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner ol{
  box-sizing:border-box!important;max-width:100%!important;min-width:0!important
 }
+
+/* The site-wide wiki-style header is intentionally replaced on this one page. */
+body.mk-reading-page.vd-chrome-page>header.site-header.vd-global-header{display:none!important}
+body.mk-reading-page .mk-local-header{
+ display:block!important;width:100%!important;min-height:65px!important;
+ padding:0 24px!important;background:#fff!important;border-bottom:1px solid #e2e8e5!important
+}
+body.mk-reading-page .mk-local-inner{
+ display:flex;justify-content:space-between;align-items:center;gap:25px;
+ width:100%;max-width:1386px;min-height:65px;margin:0 auto
+}
+body.mk-reading-page .mk-local-brand{display:flex;align-items:baseline;gap:11px;min-width:0;text-decoration:none!important}
+body.mk-reading-page .mk-local-sanskrit{font:500 19px/1.6 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;color:#295553!important}
+body.mk-reading-page .mk-local-brand-english{font:500 13px/1.5 "Vollkorn",Georgia,serif!important;color:#626f70!important}
+body.mk-reading-page .mk-local-nav{display:flex;align-items:center;gap:clamp(14px,2.5vw,29px);white-space:nowrap}
+body.mk-reading-page .mk-local-nav a{color:#5b7173!important;font:500 12px/1.6 "Merriweather",Georgia,serif!important;text-decoration:none!important}
+body.mk-reading-page .mk-local-nav a:hover{color:#236b6d!important;text-decoration:underline!important}
+body.mk-reading-page .mk-local-nav a[aria-current="page"]{color:#245d61!important}
+body.mk-reading-page.vd-chrome-page #mk-reader a{color:#31696d!important}
+body.mk-reading-page.vd-chrome-page #mk-reader a:hover{color:#194e54!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-breadcrumb a{color:#677577!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-chapter-name{color:#596669!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-chapter.is-current>.mk-chapter-name{color:#273b3c!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-verse-nav a{color:#737e80!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-verse-nav a:hover,
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-verse-nav a[aria-current="location"]{color:var(--current)!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-inline-list a{color:#396c70!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-inline-list a:hover,
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-inline-list a[aria-current="location"]{color:var(--mk-accent)!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-tools-link{color:#637878!important}
+body.mk-reading-page.vd-chrome-page #mk-reader .mk-source a{color:#31696d!important;text-decoration:underline!important}
+@media(max-width:650px){
+ body.mk-reading-page .mk-local-header{min-height:59px!important;padding:0 18px!important}
+ body.mk-reading-page .mk-local-inner{min-height:59px;gap:14px}
+ body.mk-reading-page .mk-local-sanskrit{font-size:17px!important}
+ body.mk-reading-page .mk-local-brand-english{display:none}
+ body.mk-reading-page .mk-local-nav{gap:13px}
+ body.mk-reading-page .mk-local-nav a{font-size:11px!important}
+ body.mk-reading-page .mk-local-nav a:first-child{display:none}
+}
+@media(max-width:370px){
+ body.mk-reading-page .mk-local-nav{gap:10px}
+ body.mk-reading-page .mk-local-sanskrit{font-size:15px!important}
+ body.mk-reading-page .mk-local-nav a{font-size:10px!important}
+}
