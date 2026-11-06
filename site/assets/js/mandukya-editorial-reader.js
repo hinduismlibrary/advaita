@@ -6,6 +6,7 @@ const BASE="/advaita/books/adi-shankaracharya/mandukya-karika/";
 document.addEventListener("DOMContentLoaded",()=>{
  const chrome=document.querySelector("body > header.site-header.vd-global-header");
  if(chrome)chrome.style.setProperty("display","none","important");
+ refreshEditorialLinks();
 },{once:true});
 
 const DATA="/advaita/assets/data/shankara/mandukya-karika.json?v=editorial-reader-20261106";
@@ -39,6 +40,19 @@ function initialChapter(){
  const hash=hashId().match(/^mandukya-karika-(\d)-/);
  if(hash)return Number(hash[1]);
  return 1;
+}
+function forceLinkInk(link,color){
+ link.style.setProperty("color",color,"important");
+ link.style.setProperty("-webkit-text-fill-color",color,"important");
+}
+function refreshEditorialLinks(){
+ document.querySelectorAll(".mk-local-nav a").forEach(a=>forceLinkInk(a,"#536b6c"));
+ document.querySelectorAll(".mk-local-brand").forEach(a=>forceLinkInk(a,"#295553"));
+ root.querySelectorAll(".mk-breadcrumb a").forEach(a=>forceLinkInk(a,"#718181"));
+ root.querySelectorAll(".mk-verse-nav a").forEach(a=>forceLinkInk(a,"#728081"));
+ root.querySelectorAll(".mk-inline-list a").forEach(a=>forceLinkInk(a,"#376e71"));
+ root.querySelectorAll(".mk-chapter-switch a").forEach(a=>forceLinkInk(a,"#536f72"));
+ root.querySelectorAll(".mk-tools-link, .mk-source a, .mk-pager-link").forEach(a=>forceLinkInk(a,"#467174"));
 }
 function sectionName(section){
  const pieces=String(section.title||"").split(/\s+[—–]\s+/);
@@ -196,6 +210,7 @@ function render(data){
  const reading=$("div","mk-reading-copy");
  units.forEach(unit=>reading.append(renderVerse(unit)));
  chapterNode.append(reading,sourceBox(data),pager());
+ refreshEditorialLinks();
  articleNodes=[...chapterNode.querySelectorAll(".mk-verse")];
  indexLinks=[...root.querySelectorAll("[data-verse-id]")];
  document.title="Māṇḍūkyakārikā · Chapter "+chapterNo+" — Viveka Dṛṣṭi";
@@ -216,8 +231,13 @@ function updateActive(){
  if(chosen===activeId)return;
  activeId=chosen;
  indexLinks.forEach(a=>{
-  if(a.dataset.verseId===chosen)a.setAttribute("aria-current","location");
-  else a.removeAttribute("aria-current");
+  if(a.dataset.verseId===chosen){
+   a.setAttribute("aria-current","location");
+   forceLinkInk(a,COLORS[chapterNo]);
+  }else{
+   a.removeAttribute("aria-current");
+   forceLinkInk(a,a.classList.contains("mk-verse-nav")?"#728081":(a.closest(".mk-verse-nav")?"#728081":"#376e71"));
+  }
  });
  const activeSidebar=nav.querySelector('[data-verse-id="'+chosen+'"]');
  if(activeSidebar&&matchMedia("(min-width: 791px)").matches){
