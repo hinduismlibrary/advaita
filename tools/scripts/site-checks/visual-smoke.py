@@ -217,11 +217,17 @@ def run() -> None:
                 expect(details.locator("summary")).to_have_text("Hide Sanskrit")
                 details.locator("summary").click()
                 assert details.get_attribute("open") is None
-                assert page.locator(".reference-table tbody tr").count() == 15
+                facsimile = page.locator('.source-document-figure img[src$="manusmriti-mahabharata-table-p8.png"]')
+                assert facsimile.count() == 1
+                facsimile.scroll_into_view_if_needed()
+                page.wait_for_function("""() => {
+                    const image = document.querySelector('.source-document-figure img[src$="manusmriti-mahabharata-table-p8.png"]');
+                    return Boolean(image && image.complete && image.naturalWidth > 0);
+                }""")
                 contents = page.locator('#desktop-toc a[href="#women"]')
                 contents.click()
                 assert page.locator("#source-content #women").is_visible()
-                report["manusmriti"] = {"contents": "working", "sanskrit": "opens and closes", "table_rows": 15}
+                report["manusmriti"] = {"contents": "working", "sanskrit": "opens and closes", "table": "source facsimile rendered"}
                 page.screenshot(path=str(OUT / "manusmriti.png"))
 
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
