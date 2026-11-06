@@ -72,6 +72,9 @@ def check():
                 assert mobile.locator(".mk-verse").count() == 100
                 assert mobile.locator(".mk-inline-list a").count() == 100
                 overflow = mobile.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+                if overflow > 3:
+                    print("Overflowing elements:", mobile.evaluate("""() => [...document.querySelectorAll('*')].map(el => ({node:el.tagName.toLowerCase(),className:typeof el.className === 'string'?el.className:'',width:Math.round(el.getBoundingClientRect().width),right:Math.round(el.getBoundingClientRect().right)})).filter(x => x.right > innerWidth+4 || x.width > innerWidth+4).slice(0,20)"""))
+                    mobile.screenshot(path=str(OUT / "mobile-overflow-debug.png"), full_page=False)
                 assert overflow <= 3, f"Horizontal overflow: {overflow}px"
                 mobile.locator("#mk-mobile-toggle").click()
                 assert mobile.locator("#mk-sidebar").is_visible()
