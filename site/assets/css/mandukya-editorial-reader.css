@@ -157,3 +157,13 @@ body.mk-reading-page #mk-reader .mk-scrim{display:none}
  html{scroll-behavior:auto!important}
  body.mk-reading-page #mk-reader *{transition:none!important;animation:none!important}
 }
+
+/* The shared site header's mobile breadcrumbs use content-box sizing.
+   Scope the correction to this reader to prevent horizontal overflow. */
+body.mk-reading-page.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner{
+ box-sizing:border-box!important;width:100%!important;max-width:100%!important;
+ padding-inline:clamp(12px,4vw,24px)!important
+}
+body.mk-reading-page.vd-chrome-page>header.site-header.vd-global-header .vd-breadcrumb-inner ol{
+ box-sizing:border-box!important;max-width:100%!important;min-width:0!important
+}
