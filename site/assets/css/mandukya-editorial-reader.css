@@ -212,3 +212,7 @@ body.mk-reading-page.vd-chrome-page #mk-reader .mk-source a{color:#31696d!import
  body.mk-reading-page .mk-local-sanskrit{font-size:15px!important}
  body.mk-reading-page .mk-local-nav a{font-size:10px!important}
 }
+
+/* Keep the standalone masthead inside the viewport on narrow screens. */
+body.mk-reading-page .mk-local-header,
+body.mk-reading-page .mk-local-inner{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}
