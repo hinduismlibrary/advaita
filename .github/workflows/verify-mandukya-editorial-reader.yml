@@ -1,0 +1,35 @@
+name: Check Māṇḍūkyakārikā editorial reader
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verify-mandukya-editorial-reader.yml
+      - tools/scripts/site-checks/verify-mandukya-editorial-reader.py
+      - site/books/adi-shankaracharya/mandukya-karika/index.html
+      - site/assets/css/mandukya-editorial-reader.css
+      - site/assets/js/mandukya-editorial-reader.js
+      - site/assets/data/shankara/mandukya-karika.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare site for local preview
+        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
+      - name: Install browser
+        run: |
+          python3 -m pip install --quiet playwright
+          python3 -m playwright install chromium
+      - name: Test chapter contents, Sanskrit, and responsive reading
+        run: python3 tools/scripts/site-checks/verify-mandukya-editorial-reader.py
+      - name: Preserve desktop and mobile screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mandukya-reader-review
+          path: mandukya-reader-review/
+          retention-days: 7
