@@ -42,6 +42,20 @@ var allowed=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika",
 var params=new URLSearchParams(window.location.search);
 var work=params.get("work")||"";
 var requestedUnit=params.get("unit")||"";
+if(work==="mandukya-karika"){
+ var destination=new URL("/advaita/books/adi-shankaracharya/mandukya-karika/",window.location.origin);
+ var match=requestedUnit.match(/^mandukya-karika-([1-4])-\d+$/);
+ var oldSection=requestedUnit.match(/^treatise-mandukya-karika-section-([1-4])$/);
+ if(match){
+  destination.searchParams.set("chapter",match[1]);
+  destination.hash=requestedUnit;
+ }else if(oldSection){
+  destination.searchParams.set("chapter",oldSection[1]);
+ }
+ if(window.location.hash)destination.hash=window.location.hash;
+ window.location.replace(destination.href);
+ return;
+}
 var root=document.getElementById("chapter-reader");
 var titleNode=document.getElementById("work-title");
 var authorNode=document.getElementById("work-author");
