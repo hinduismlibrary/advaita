@@ -127,3 +127,85 @@ body.article-standard-page .sitebar,body.article-standard-page .page,body.articl
   .article-standard-page .mobile-toc .toc { margin-top:8px; max-height:42vh; overflow-y:auto; }
 }
 @media print { body.article-standard-page { background:#fff; font-size:11pt; color:#000; } .sitebar,.side-toc,.mobile-toc,.article-footer,.skip-link { display:none!important; } .page { width:100%; padding:0; min-height:0; } .article-head { margin:0 0 24px; } .reader-grid { display:block; } .document-content details>* { display:block!important; } .document-content .sanskrit-reveal>summary { display:none; } .table-scroll { overflow:visible; } .document-content table { font-size:9pt; } .document-content h2,.document-content h3 { break-after:avoid; } .document-content figure,tr { break-inside:avoid; } a { color:inherit; } }
+/* One ink color and one reading size across all shared article text. */
+body.article-standard-page {
+  --ink:#000;
+  --teal:#000;
+  --muted:#000;
+  --purple:#000;
+  color:#000;
+  font-family:Georgia,"Times New Roman",serif;
+}
+.article-standard-page a,
+.article-standard-page a:hover,
+.article-standard-page .sitebar,
+.article-standard-page .sitebar a,
+.article-standard-page .site-search input,
+.article-standard-page .site-search button,
+.article-standard-page .article-head,
+.article-standard-page .article-head h1,
+.article-standard-page .article-subtitle,
+.article-standard-page .article-byline,
+.article-standard-page .side-toc-title,
+.article-standard-page .toc a,
+.article-standard-page .toc a:hover,
+.article-standard-page .toc a.is-active,
+.article-standard-page .toc a.is-active-subsection,
+.article-standard-page .mobile-toc>summary,
+.article-standard-page .document-content,
+.article-standard-page .document-content *,
+.article-standard-page .article-footer {
+  color:#000!important;
+}
+.article-standard-page :is(.sitebar,.page,.article-footer,.document-content,.document-content *) {
+  font-family:Georgia,"Times New Roman",serif!important;
+}
+.article-standard-page .article-head,
+.article-standard-page .article-head h1,
+.article-standard-page .article-subtitle,
+.article-standard-page .article-byline,
+.article-standard-page .document-content,
+.article-standard-page .document-content * {
+  font-size:19px!important;
+}
+.article-standard-page .article-head { line-height:1.58; }
+.article-standard-page .article-head h1 { font-size:32px!important; font-weight:400!important; line-height:1.25!important; }
+.article-standard-page .article-head h1,
+.article-standard-page .document-content h2,
+.article-standard-page .document-content h3,
+.article-standard-page .document-content h4,
+.article-standard-page .document-content h5 { font-weight:700!important; }
+.article-standard-page .document-content,
+.article-standard-page .document-content * { line-height:1.58; }
+.article-standard-page .document-content :is([lang="sa"],[lang="sa-Deva"],[lang^="sa-Deva"],[lang="hi"],[lang^="hi-"],.sa-text,.sanskrit-text) {
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  line-height:1.9!important;
+}
+.article-standard-page .document-content [lang="kn"] {
+  font-family:"Noto Serif Kannada","Noto Sans Kannada",serif!important;
+}
+.article-standard-page .side-toc-title { font-family:Georgia,"Times New Roman",serif!important; font-size:19px!important; }
+.article-standard-page .toc,
+.article-standard-page .toc a { font-family:Georgia,"Times New Roman",serif!important; color:#000!important; }
+.article-standard-page .toc,
+.article-standard-page .toc a { font-size:12.5px!important; }
+.article-standard-page .toc a.is-active,
+.article-standard-page .toc a.is-active-subsection { font-weight:700!important; }
+.article-standard-page .toc a:hover,
+.article-standard-page .toc a:focus-visible,
+.article-standard-page .document-content a:hover { text-decoration:underline; }
+.article-standard-page :focus-visible { outline-color:#000; }
+.article-standard-page .document-content .sanskrit-reveal>summary {
+  color:#000!important;
+  border-color:#777;
+  background:#fff;
+}
+.article-standard-page .document-content .sanskrit-reveal>summary:hover { background:#f5f5f5; }
+.article-standard-page .document-content th,
+.article-standard-page .document-content tr:nth-child(even) td { background:#fff!important; }
+.article-standard-page .document-content th { color:#000!important; }
+.article-standard-page .document-content blockquote,
+.article-standard-page .document-content p.translation,
+.article-standard-page .document-content .scripture-translation,
+.article-standard-page .document-content .women-scripture-translation,
+.article-standard-page .document-content .gita-translation { color:#000!important; }
