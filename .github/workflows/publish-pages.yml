@@ -72,23 +72,26 @@ jobs:
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Verify published document route
+      - name: Verify published article routes
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           set -euo pipefail
-          url="${PAGE_URL%/}/articles/a-defence-of-the-manusmriti/"
           for attempt in $(seq 1 12); do
-            if body=$(curl --fail --silent --show-error --location --max-time 20 "$url") \
-              && grep -Fq 'A Defence of the Manusmṛti' <<< "$body" \
-              && grep -Fq 'article-standard.css' <<< "$body"; then
-              echo "Published article route and stylesheet are reachable."
+            manuscript_url="${PAGE_URL%/}/articles/a-defence-of-the-manusmriti/"
+            women_url="${PAGE_URL%/}/articles/hinduism-on-women/"
+            if manuscript=$(curl --fail --silent --show-error --location --max-time 20 "$manuscript_url") \
+              && women=$(curl --fail --silent --show-error --location --max-time 20 "$women_url") \
+              && grep -Fq 'A Defence of the Manusmṛti' <<< "$manuscript" \
+              && grep -Fq 'article-standard.css' <<< "$manuscript" \
+              && grep -Fq 'women-reader-page' <<< "$women" \
+              && grep -Fq 'women-reader-typography' <<< "$women" \
+              && grep -Fq 'hinduism-on-women' <<< "$women"; then
+              echo "Both published articles, including Hinduism on Women, are reachable."
               exit 0
             fi
-            echo "Waiting for the published article route (attempt ${attempt}/12)."
+            echo "Waiting for both published article routes (attempt ${attempt}/12)."
             sleep 10
           done
-          echo "GitHub Pages did not serve the article route from ${url}." >&2
+          echo "GitHub Pages did not serve both article routes after deployment." >&2
           exit 1
-
-
