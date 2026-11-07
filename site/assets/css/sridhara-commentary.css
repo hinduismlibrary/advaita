@@ -1,17 +1,32 @@
 /* Match the rendered Śrīdhara commentary typography across the document readers. */
 #sridhara-bhagavatam-reader main.site-main .gita-commentary {
   max-width:840px!important;
+  margin:1.6rem auto 2.4rem!important;
   font-family:Merriweather,Georgia,"Times New Roman",serif!important;
   font-size:16px!important;
   font-weight:400!important;
-  line-height:1.58!important;
+  line-height:1.72!important;
 }
 
 #sridhara-bhagavatam-reader main.site-main .gita-commentary p {
   font-family:Merriweather,Georgia,"Times New Roman",serif!important;
   font-size:16px!important;
   font-weight:400!important;
-  line-height:1.62!important;
+  margin:0 0 1.2em!important;
+  line-height:1.72!important;
+}
+
+#sridhara-bhagavatam-reader main.site-main .gita-commentary p:last-child {
+  margin-bottom:0!important;
+}
+
+#sridhara-bhagavatam-reader main.site-main .gita-commentary h3 {
+  margin:1.3em 0 .8em!important;
+  line-height:1.4!important;
+}
+
+#sridhara-bhagavatam-reader main.site-main .gita-commentary h3:first-child {
+  margin-top:0!important;
 }
 
 #sridhara-bhagavatam-reader main.site-main .gita-hero h1 {
