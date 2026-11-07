@@ -72,5 +72,23 @@ jobs:
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published document route
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          url="${PAGE_URL%/}/articles/a-defence-of-the-manusmriti/"
+          for attempt in $(seq 1 12); do
+            if body=$(curl --fail --silent --show-error --location --max-time 20 "$url") \
+              && grep -Fq 'A Defence of the Manusmṛti' <<< "$body" \
+              && grep -Fq 'article-standard.css?v=20261107-wide-reading-1' <<< "$body"; then
+              echo "Published article route and stylesheet are reachable."
+              exit 0
+            fi
+            echo "Waiting for the published article route (attempt ${attempt}/12)."
+            sleep 10
+          done
+          echo "GitHub Pages did not serve the article route from ${url}." >&2
+          exit 1
 
 
