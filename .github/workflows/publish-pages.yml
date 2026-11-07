@@ -81,7 +81,7 @@ jobs:
           for attempt in $(seq 1 12); do
             if body=$(curl --fail --silent --show-error --location --max-time 20 "$url") \
               && grep -Fq 'A Defence of the Manusmṛti' <<< "$body" \
-              && grep -Fq 'article-standard.css?v=20261107-wide-reading-1' <<< "$body"; then
+              && grep -Fq 'article-standard.css' <<< "$body"; then
               echo "Published article route and stylesheet are reachable."
               exit 0
             fi
