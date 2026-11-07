@@ -1,6 +1,11 @@
 /* Match the rendered Śrīdhara commentary typography across the document readers. */
+#sridhara-bhagavatam-reader main.site-main .article-body,
+#sridhara-bhagavatam-reader main.site-main .gita-content {
+  max-width:1200px!important;
+}
+
 #sridhara-bhagavatam-reader main.site-main .gita-commentary {
-  max-width:840px!important;
+  max-width:1000px!important;
   margin:1.6rem auto 2.4rem!important;
   font-family:Merriweather,Georgia,"Times New Roman",serif!important;
   font-size:16px!important;

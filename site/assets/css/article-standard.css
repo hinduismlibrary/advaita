@@ -88,9 +88,9 @@ a:hover { color:#203f40; }
 body.article-standard-page { --purple:#000; background:#fff; font:400 20px/1.6 Merriweather,Georgia,"Times New Roman",serif; }
 body.article-standard-page .sitebar,body.article-standard-page .page,body.article-standard-page .article-footer { background:#fff; }
 .article-standard-page .page {
-  --reader-column:min(652px,calc(100% - 260px));
-  --toc-column:min(250px,max(120px,calc((100% - var(--reader-column))/2 - 20px)));
-  --reader-gap:max(20px,calc((100% - var(--reader-column))/2 - var(--toc-column)));
+  --reader-column:min(900px,calc(100% - 240px));
+  --toc-column:min(200px,max(120px,calc((100% - var(--reader-column))/2 - 24px)));
+  --reader-gap:max(24px,calc((100% - var(--reader-column))/2 - var(--toc-column)));
 }
 .article-standard-page .reader-grid { display:grid; grid-template-columns:var(--toc-column) minmax(0,var(--reader-column)); column-gap:var(--reader-gap); row-gap:0; align-items:start; }
 .article-standard-page .article { width:100%; margin:0; }
@@ -105,11 +105,11 @@ body.article-standard-page .sitebar,body.article-standard-page .page,body.articl
 .article-standard-page .document-section+.document-section { margin-top:2rem; }
 .article-standard-page .side-toc { position:sticky; top:22px; width:100%; padding-right:14px; }
 .article-standard-page .side-toc-title { margin-bottom:11px; padding-bottom:8px; font-size:20px; }
-.article-standard-page .toc { font-size:12.5px; line-height:1.5; }
-.article-standard-page .toc li { margin:.22em 0; }
+.article-standard-page .toc { font-size:12px; line-height:1.45; }
+.article-standard-page .toc li { margin:.2em 0; }
 .article-standard-page .toc li ul,.article-standard-page .toc li ol { margin:5px 0 10px 8px; padding-left:10px; border-left:1px solid #dedad5; }
-.article-standard-page .toc a { display:block; margin:0; padding:3px 0; border:0; color:#625b54; background:transparent; font-size:12.5px; line-height:1.5; text-decoration:none; }
-.article-standard-page .toc>.toc-index-list>.toc-index-entry>.toc-index-link { font-size:13px; line-height:1.5; font-weight:400; }
+.article-standard-page .toc a { display:block; margin:0; padding:3px 0; border:0; color:#625b54; background:transparent; font-size:12px; line-height:1.45; text-decoration:none; }
+.article-standard-page .toc>.toc-index-list>.toc-index-entry>.toc-index-link { font-size:12px; line-height:1.45; font-weight:400; }
 .article-standard-page .document-content details.sanskrit-reveal { margin:16px 0 1.6em; }
 .article-standard-page .document-content figure { margin:38px auto; }
 .article-standard-page .document-content li { margin:.7em 0; }
@@ -131,7 +131,7 @@ body.article-standard-page .sitebar,body.article-standard-page .page,body.articl
   .article-standard-page .document-content h3 { margin:1.7rem 0 .9rem; }
   .article-standard-page .document-section+.document-section { margin-top:1.6rem; }
   .article-standard-page .mobile-toc { margin:0 0 24px; padding:0 0 12px; border:0; border-bottom:1px solid #d3cec8; border-radius:0; background:transparent; }
-  .article-standard-page .mobile-toc>summary { color:#000; font:400 18px/1.45 Merriweather,Georgia,serif; }
+  .article-standard-page .mobile-toc>summary { color:#000; font:400 16px/1.45 Merriweather,Georgia,serif; }
   .article-standard-page .mobile-toc .toc { margin-top:12px; max-height:55vh; overflow-y:auto; }
 }
 @media print { body.article-standard-page { background:#fff; font-size:11pt; color:#000; } .sitebar,.side-toc,.mobile-toc,.article-footer,.skip-link { display:none!important; } .page { width:100%; padding:0; min-height:0; } .article-head { margin:0 0 24px; } .reader-grid { display:block; } .document-content details>* { display:block!important; } .document-content .sanskrit-reveal>summary { display:none; } .table-scroll { overflow:visible; } .document-content table { font-size:9pt; } .document-content h2,.document-content h3 { break-after:avoid; } .document-content figure,tr { break-inside:avoid; } a { color:inherit; } }
@@ -209,11 +209,11 @@ body.article-standard-page {
 .article-standard-page .document-content [lang="kn"] {
   font-family:"Noto Serif Kannada","Noto Sans Kannada",serif!important;
 }
-.article-standard-page .side-toc-title { font-family:Merriweather,Georgia,"Times New Roman",serif!important; font-size:19px!important; }
+.article-standard-page .side-toc-title { font-family:Merriweather,Georgia,"Times New Roman",serif!important; font-size:17px!important; }
 .article-standard-page .toc,
 .article-standard-page .toc a { font-family:Merriweather,Georgia,"Times New Roman",serif!important; color:#000!important; }
 .article-standard-page .toc,
-.article-standard-page .toc a { font-size:13px!important; }
+.article-standard-page .toc a { font-size:12px!important; }
 .article-standard-page .toc a.is-active,
 .article-standard-page .toc a.is-active-subsection { font-weight:700!important; }
 .article-standard-page .toc a:hover,
