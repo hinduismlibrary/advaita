@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/site.css">
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
-<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261106b">
+<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261107-panchadasi-chapter-one-1">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -42,6 +42,8 @@ var allowed=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika",
 var params=new URLSearchParams(window.location.search);
 var work=params.get("work")||"";
 var requestedUnit=params.get("unit")||"";
+var isPanchadasiChapterOne=work==="panchadasi"&&requestedUnit==="panchadasi-1-01";
+if(isPanchadasiChapterOne)document.body.classList.add("panchadasi-chapter-one-reader");
 if(work==="mandukya-karika"){
  var destination=new URL("/advaita/books/adi-shankaracharya/mandukya-karika/",window.location.origin);
  var match=requestedUnit.match(/^mandukya-karika-([1-4])-\d+$/);
@@ -135,6 +137,12 @@ var contentsUrl=new URL("book-contents.html",rootUrl);
 contentsUrl.searchParams.set("work",work);
 contentsLink.href="#section-contents";
 fullTextLink.href=readerUrl.href;
+if(isPanchadasiChapterOne){
+ var removedHero=root.querySelector(".gita-hero");
+ if(removedHero)removedHero.remove();
+ var removedFooter=document.querySelector(".shankara-reader-footer");
+ if(removedFooter)removedFooter.remove();
+}
 function unitChapter(unit){
  if(unit.chapter!==undefined&&unit.chapter!==null)return String(unit.chapter);
  var match=String(unit.id||"").match(/^(?:panchadasi|svsss)-(\d+)-/);
@@ -190,6 +198,23 @@ function chapterItems(data){
 
 function renderVerseNavigation(units,chapters,selectedChapter){
  listNode.replaceChildren();
+ if(isPanchadasiChapterOne){
+  var current=chapters[selectedChapter];
+  if(!current)return;
+  var next=chapters[selectedChapter+1];
+  var start=current.index,end=next?next.index:units.length;
+  units.slice(start,end).forEach(function(unit,verseIndex){
+   var item=document.createElement("li"),link=document.createElement("a");
+   link.className="reader-verse-link";
+   link.href="#"+encodeURIComponent(String(unit.id));
+   link.textContent=String(unit.number||start+verseIndex+1);
+   link.dataset.verseId=String(unit.id);
+   link.setAttribute("aria-label","Read verse "+link.textContent);
+   item.append(link);
+   listNode.append(item);
+  });
+  return;
+ }
  chapters.forEach(function(chapter,chapterIndex){
   var start=chapter.index,end=chapters[chapterIndex+1]?chapters[chapterIndex+1].index:units.length;
   var subset=units.slice(start,end);
@@ -265,7 +290,11 @@ function renderUnit(unit,index){
  card.id=String(unit.id);
  card.setAttribute("aria-label",label);
  var heading=document.createElement("h2");
- heading.textContent=String(unit.number||index+1);
+ if(isPanchadasiChapterOne){
+  var chapter=Number(unitChapter(unit)||1),book=Math.floor((chapter-1)/5)+1,chapterInBook=(chapter-1)%5+1;
+  var verse=String(unit.number||index+1).split(".").pop();
+  heading.textContent="Pañcadaśī "+book+"."+chapterInBook+"."+verse;
+ }else heading.textContent=String(unit.number||index+1);
  var source=document.createElement("div");
  source.className="gita-sanskrit sa-text";
  source.lang="sa-Deva";
@@ -283,7 +312,18 @@ function renderUnit(unit,index){
  var details=document.createElement("details");
  makeGloss(details,unit.gloss);
  controls.append(details);
- card.append(heading,source,roman,translation,controls);
+ if(isPanchadasiChapterOne){
+  var transliteration=document.createElement("details");
+  transliteration.className="gita-details shankara-transliteration";
+  var transliterationSummary=document.createElement("summary");
+  transliterationSummary.textContent="Transliteration";
+  var transliterationReveal=document.createElement("div");
+  transliterationReveal.className="gita-reveal";
+  transliterationReveal.append(roman);
+  transliteration.append(transliterationSummary,transliterationReveal);
+  controls.append(transliteration);
+  card.append(heading,source,translation,controls);
+ }else card.append(heading,source,roman,translation,controls);
  return card;
 }
 function trackActiveVerse(units){
@@ -351,6 +391,18 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  titleNode.textContent=data.title||work;
  authorNode.textContent=data.author?"By "+data.author:"";
  document.title=titleNode.textContent+" — Chapter reader — Viveka Dṛṣṭi";
+ if(isPanchadasiChapterOne){
+  var overline=document.querySelector(".gita-hero .eyebrow");
+  var tocOverline=document.querySelector(".reader-toc-head .reader-overline");
+  var tocHeading=document.querySelector(".reader-toc-head h2");
+  if(overline)overline.textContent="Pañcadaśī";
+  if(authorNode)authorNode.hidden=true;
+  if(contentsLink)contentsLink.hidden=true;
+  if(fullTextLink)fullTextLink.hidden=true;
+  if(tocOverline)tocOverline.textContent="विषयसूची";
+  if(tocHeading)tocHeading.textContent="Contents";
+  if(tocProgress)tocProgress.hidden=true;
+ }
  var items=chapterItems(data);
  if(!items.length)throw new Error("No named chapter or contents divisions were found.");
  var selectedIndex=items.findIndex(function(item){return item.id===requestedUnit;});
@@ -375,33 +427,44 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  var selectedUnits=units.slice(selectedStart,selectedEnd);
  if(!selectedUnits.length)throw new Error("The selected section is empty.");
  chapterTitle.textContent=items[selectedIndex].label;
+ if(isPanchadasiChapterOne){
+  var selectedChapter=Number((items[selectedIndex].label.match(/^Chapter\s+(\d+)/i)||[])[1]||selectedIndex+1);
+  var bookNumber=Math.floor((selectedChapter-1)/5)+1,chapterInBook=(selectedChapter-1)%5+1;
+  titleNode.textContent="Book "+bookNumber+", Chapter "+chapterInBook;
+  chapterTitle.textContent=items[selectedIndex].label.replace(/^Chapter\s+\d+\s*[:—-]\s*/i,"");
+  document.title="Pañcadaśī — Book "+bookNumber+", Chapter "+chapterInBook+" — Viveka Dṛṣṭi";
+ }
  root.dataset.activeChapter=String(selectedIndex+1);
  renderVerseNavigation(units,items,selectedIndex);
  contentNode.replaceChildren();
- var intro=document.createElement("div");
- intro.className="reader-section-intro";
- var heading=document.createElement("h2");
- heading.textContent=items[selectedIndex].label.replace(/^Chapter\s+\d+\s*[:—-]\s*/i,"");
- var count=document.createElement("span");
- count.textContent=selectedUnits.length+" verses";
- intro.append(heading,count);
- contentNode.append(intro);
- contentNode.append(renderSectionContents(selectedUnits,selectedIndex));
+ if(!isPanchadasiChapterOne){
+  var intro=document.createElement("div");
+  intro.className="reader-section-intro";
+  var heading=document.createElement("h2");
+  heading.textContent=items[selectedIndex].label.replace(/^Chapter\s+\d+\s*[:—-]\s*/i,"");
+  var count=document.createElement("span");
+  count.textContent=selectedUnits.length+" verses";
+  intro.append(heading,count);
+  contentNode.append(intro);
+  contentNode.append(renderSectionContents(selectedUnits,selectedIndex));
+ }
  selectedUnits.forEach(function(unit,index){contentNode.append(renderUnit(unit,selectedStart+index));});
  var total=selectedUnits.length,withGloss=selectedUnits.filter(function(unit){return unit.gloss&&unit.gloss.length>0;}).length;
  coverageNode.textContent=withGloss===total
   ?"Word for Word glosses are available for all "+total+" entries in this chapter."
   :"Word for Word glosses are available for "+withGloss+" of "+total+" entries in this chapter.";
  trackActiveVerse(selectedUnits);
- var pager=document.createElement("nav");
- pager.className="shankara-work-nav";
- pager.setAttribute("aria-label","Chapter navigation");
- if(selectedIndex>0){var previous=document.createElement("a");previous.rel="prev";previous.href=chapterUrl(items[selectedIndex-1].id);previous.textContent="← "+items[selectedIndex-1].label;pager.append(previous)}
- else{var spacer=document.createElement("span");pager.append(spacer)}
- var middle=document.createElement("a");middle.className="shankara-index-link";middle.href="#section-contents";middle.textContent="Chapter contents";pager.append(middle);
- if(selectedIndex<items.length-1){var next=document.createElement("a");next.rel="next";next.href=chapterUrl(items[selectedIndex+1].id);next.textContent=items[selectedIndex+1].label+" →";pager.append(next)}
- else{var spacerEnd=document.createElement("span");pager.append(spacerEnd)}
- contentNode.append(pager);
+ if(!isPanchadasiChapterOne){
+  var pager=document.createElement("nav");
+  pager.className="shankara-work-nav";
+  pager.setAttribute("aria-label","Chapter navigation");
+  if(selectedIndex>0){var previous=document.createElement("a");previous.rel="prev";previous.href=chapterUrl(items[selectedIndex-1].id);previous.textContent="← "+items[selectedIndex-1].label;pager.append(previous)}
+  else{var spacer=document.createElement("span");pager.append(spacer)}
+  var middle=document.createElement("a");middle.className="shankara-index-link";middle.href="#section-contents";middle.textContent="Chapter contents";pager.append(middle);
+  if(selectedIndex<items.length-1){var next=document.createElement("a");next.rel="next";next.href=chapterUrl(items[selectedIndex+1].id);next.textContent=items[selectedIndex+1].label+" →";pager.append(next)}
+  else{var spacerEnd=document.createElement("span");pager.append(spacerEnd)}
+  contentNode.append(pager);
+ }
 }).catch(function(error){
  chapterTitle.textContent="Could not load this section";
  setError("The selected text could not be loaded. "+error.message);
