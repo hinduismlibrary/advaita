@@ -95,9 +95,7 @@ body.docs-quote-format .document-content p.reference,
 body.docs-quote-format .document-content p.source-citation,
 body.docs-quote-format .document-content p.scripture-source,
 body.docs-quote-format .document-content p.citation {
- color:#007e87;font-weight:700;text-decoration-line:underline;
- text-decoration-color:#00c9c7;text-decoration-thickness:2px;
- text-underline-offset:5px;text-shadow:0 0 4px rgba(0,212,196,.16);
+ color:#007e87;font-weight:600;text-decoration:none;text-shadow:none;
 }
 body.docs-quote-format .document-content .scripture-quote-pair>p.reference{margin:0 0 .8em;font-size:inherit}
 body.docs-quote-format .document-content .revealed-sanskrit{margin:.15em 0 .85em}
@@ -141,7 +139,55 @@ body.docs-quote-format .document-content span.sanskrit-text[lang="sa-Deva"]{
 /* The Women article's pre-existing in-head stylesheet has a more specific rule.
    Explicitly maintain the same luminous, underlined citations there. */
 body.docs-quote-format.women-reader-page .document-content .scripture-quote-pair>p.reference{
- color:#007e87;font-weight:700;text-decoration-line:underline;
- text-decoration-color:#00c9c7;text-decoration-thickness:2px;
- text-underline-offset:5px;text-shadow:0 0 4px rgba(0,212,196,.16);
+ color:#007e87;font-weight:600;text-decoration:none;text-shadow:none;
+}
+
+/* Compact, clean document contents across the eight research articles. */
+body.docs-quote-format .reader-grid{grid-template-columns:minmax(190px,240px) minmax(0,1050px);gap:clamp(22px,3vw,44px)}
+body.docs-quote-format .article-head{margin-left:min(280px,25vw)}
+body.docs-quote-format .side-toc{
+  border-right:0;padding:6px 7px 14px 0;scrollbar-width:thin;
+  max-height:calc(100vh - 38px);top:18px;
+}
+body.docs-quote-format .side-toc-title{
+  font:700 13px/1.35 Merriweather,Georgia,serif;letter-spacing:.07em;
+  text-transform:uppercase;color:#61596a;padding:0 0 11px;margin:0 0 6px;
+  border:0;
+}
+body.docs-quote-format .side-toc .toc{font:400 12px/1.36 Merriweather,Georgia,serif}
+body.docs-quote-format .side-toc .toc li{margin:0}
+body.docs-quote-format .side-toc .toc ul,
+body.docs-quote-format .side-toc .toc ol{margin:3px 0 7px;padding-left:9px}
+body.docs-quote-format .side-toc .toc a{
+  padding:5px 6px 5px 10px;color:#5d5961;border-left:3px solid transparent;
+  border-radius:0 5px 5px 0;background:transparent;
+  text-decoration:none;overflow-wrap:anywhere;
+}
+body.docs-quote-format .side-toc .toc a:hover{background:#f5f0f7;color:#633c79;text-decoration:none}
+body.docs-quote-format .side-toc .toc a.is-active{
+  color:#67328a;background:#f6f0fa;border-left-color:#823fa7;
+  font-weight:700;text-decoration:none;
+}
+body.docs-quote-format .mobile-toc{border-color:#e6e1e8}
+body.docs-quote-format .mobile-toc>summary{color:#643a81;font-weight:700}
+body.docs-quote-format .mobile-toc .toc{font-size:12px;line-height:1.38}
+body.docs-quote-format .mobile-toc .toc li{margin:1px 0}
+body.docs-quote-format .mobile-toc .toc a.is-active{
+ color:#67328a;background:#f6f0fa;border-left-color:#823fa7;
+}
+body.docs-quote-format .document-content .manu-original-sanskrit{
+  margin:.18em 0 .85em;padding:.15em 0 .22em 15px;border-left:3px solid #a5a9aa;
+  color:#bd570d;font:400 1em/1.8 "Noto Serif Devanagari","Noto Sans Devanagari",serif;
+}
+body.docs-quote-format .document-content .scripture-quote-pair>p.reference,
+body.docs-quote-format .document-content .scripture-quote-pair>p.source-citation{
+  text-decoration:none;text-shadow:none;
+}
+@media(max-width:1120px) and (min-width:761px){
+ body.docs-quote-format .reader-grid{grid-template-columns:200px minmax(0,1fr);gap:24px}
+ body.docs-quote-format .article-head{margin-left:224px}
+}
+@media(max-width:760px){
+ body.docs-quote-format .reader-grid{display:block}
+ body.docs-quote-format .article-head{margin:0 0 24px}
 }
