@@ -17,15 +17,15 @@ SLUGS = (
     "a-case-for-the-scriptural-validity-of-the-agamas",
     "hinduism-on-women",
 )
-DIV = re.compile(r"</?div\\b[^>]*>", re.I)
-PAIR = re.compile(r'\\bclass="[^"]*\\bscripture-quote-pair\\b')
-REF = re.compile(r'<p\\b[^>]*class="[^"]*\\breference\\b', re.I)
-SA = re.compile(r'<(?:p|div)\\b[^>]*lang="sa-Deva"', re.I)
-TRANS = re.compile(r'<p\\b[^>]*class="[^"]*\\btranslation\\b', re.I)
-NAV = re.compile(r'<nav\\b[^>]*class="toc toc-index"[^>]*>[\\s\\S]*?</nav>', re.I)
+DIV = re.compile(r"</?div\b[^>]*>", re.I)
+PAIR = re.compile(r'\bclass="[^"]*\bscripture-quote-pair\b')
+REF = re.compile(r'<p\b[^>]*class="[^"]*\breference\b', re.I)
+SA = re.compile(r'<(?:p|div)\b[^>]*lang="sa-Deva"', re.I)
+TRANS = re.compile(r'<p\b[^>]*class="[^"]*\btranslation\b', re.I)
+NAV = re.compile(r'<nav\b[^>]*class="toc toc-index"[^>]*>[\s\S]*?</nav>', re.I)
 LINK = re.compile(r'href="#([^"]+)"')
-IDS = re.compile(r'\\bid="([^"]+)"')
-DEV = re.compile(r'[\\u0900-\\u097F]')
+IDS = re.compile(r'\bid="([^"]+)"')
+DEV = re.compile(r'[\u0900-\u097F]')
 
 
 def quote_blocks(html: str) -> list[tuple[int, int, str]]:
