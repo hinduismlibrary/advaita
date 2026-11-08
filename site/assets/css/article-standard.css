@@ -191,3 +191,24 @@ body.docs-quote-format .document-content .scripture-quote-pair>p.source-citation
  body.docs-quote-format .reader-grid{display:block}
  body.docs-quote-format .article-head{margin:0 0 24px}
 }
+
+
+/* The eight document readers share one contents layout and non-linked, non-underlined citations. */
+body.docs-quote-format .document-content p.reference,
+body.docs-quote-format .document-content p.source-citation,
+body.docs-quote-format .document-content p.scripture-source,
+body.docs-quote-format .document-content p.citation,
+body.docs-quote-format .document-content .scripture-quote-pair>p.reference {
+ text-decoration:none!important;text-shadow:none!important;
+}
+body.docs-quote-format .document-content .scripture-quote-pair [lang="sa-Deva"],
+body.docs-quote-format .document-content .revealed-sanskrit [lang="sa-Deva"],
+body.docs-quote-format .document-content .women-sanskrit-note [lang="sa-Deva"],
+body.docs-quote-format .document-content p[lang="sa-Deva"],
+body.docs-quote-format .document-content span.sanskrit-text[lang="sa-Deva"] {
+ font-weight:700!important;
+}
+body.docs-quote-format .side-toc .toc a,
+body.docs-quote-format .mobile-toc .toc a {text-decoration:none}
+body.docs-quote-format .side-toc .toc .toc-index-nested,
+body.docs-quote-format .mobile-toc .toc .toc-index-nested {padding-left:12px;margin:4px 0 9px}
