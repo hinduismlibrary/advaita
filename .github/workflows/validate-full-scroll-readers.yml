@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check reading enhancements
         run: node --check site/assets/js/article-standard.js
+      - name: Check document quote and citation alignment
+        run: python3 tools/scripts/site-checks/verify-quote-alignment.py
       - name: Prepare and validate all published pages
         run: |
           python3 tools/scripts/site-checks/prepare-site-deploy.py
