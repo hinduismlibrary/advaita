@@ -31,7 +31,12 @@
 .women-reader-page .side-toc .toc a.is-active{color:#743894;background:#f5eef8;border-left-color:#843aa0;font-weight:700}
 /* A blue source, then two separate grey-marked paragraphs, as in the document. */
 .women-reader-page .document-content .scripture-quote-pair{margin:1.3em 0 1.65em;padding:0;border:0}
-.women-reader-page .document-content .scripture-quote-pair>p.reference{margin:0 0 .72em;color:#326466;font-weight:500}
+/* Citation labels: underlined luminous teal, consistent across scripture extracts. */
+.women-reader-page .document-content .scripture-quote-pair>p.reference{
+  margin:0 0 .72em;color:#007e87;font-weight:700;text-decoration-line:underline;
+  text-decoration-color:#00cdc7;text-decoration-thickness:2px;text-underline-offset:5px;
+  text-shadow:0 0 5px rgba(0,215,200,.16);
+}
 .women-reader-page .document-content .scripture-quote-pair>p[lang^="sa"]{margin:.12em 0 .9em;padding:.12em 0 .16em 15px;border-left:3px solid #a5a9aa;color:#bd570d;font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif;line-height:1.76;font-size:1em;font-weight:400;overflow-wrap:anywhere}
 .women-reader-page .document-content .scripture-quote-pair>p.translation,
 .women-reader-page .document-content .scripture-quote-pair>p.women-colophon-translation{margin:.1em 0 .5em;padding:.12em 0 .16em 15px;border-left:3px solid #a5a9aa;background:transparent;color:#24211e;font-family:Merriweather,Georgia,"Times New Roman",serif;font-size:inherit;line-height:1.62;font-weight:700;font-style:normal}
@@ -41,6 +46,17 @@
 .women-reader-page .mobile-toc .toc li ol{margin:3px 0 8px;padding-left:12px}
 .women-reader-page .mobile-toc .toc a.is-active{color:#743894;background:#f5eef8;border-left-color:#843aa0}
 @media(max-width:760px){.women-reader-page .mobile-toc{margin-bottom:20px;padding:9px 12px}.women-reader-page .mobile-toc>summary{font-size:16px}}
+
+/* Inline Sanskrit technical terms remain visibly distinct; full citations use standalone markers. */
+.women-reader-page .document-content .women-sanskrit-note{margin:.45em 0 1em}
+.women-reader-page .document-content .women-sanskrit-note>p[lang^="sa"]{
+  margin:0;padding:.15em 0 .2em 15px;border-left:3px solid #a5a9aa;color:#bd570d;
+  font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif;font-size:1em;line-height:1.76;
+}
+.women-reader-page .document-content span.sanskrit-text[lang^="sa"]{
+  color:#bd570d;font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif;
+  border-left:2px solid #a5a9aa;padding-left:5px;
+}
 </style>
 </head>
 <body class="article-standard-page women-reader-page" data-article-standard="1"><a class="skip-link" href="#main-content">Skip to content</a>
@@ -242,7 +258,7 @@
 <p class="translation">Soma gave them physical purity, Gandharva gave them pure speech, Agni gave them complete ritual purity, the Women are therefore completely pure.</p>
 
 </div>
-<h4 id="mahima-names" class="document-section-title women-subsection">Names of women</h4><p>Sanskrit is one of the richest languages in terms of synonyms for a single thing. A synonym is not random but based on a specific quality of the thing it denotes. Fire, for example, while usually called Agni, is also called Pavaka purifier as whatever is put in it is burnt and thereby purified.</p><p>The Amarakosa is a very famous lexicon which records such synonyms for each thing, arranged by topic in metrical verses. While not itself a scripture, its words almost always have examples of Scriptural use.</p><p>For Men it contains only two lines, of mostly generic names deriving from descendant of Manu Manava, Manusa, Manusya, Manuja . The women, however, get five lines of highly descriptive names, a testament of how many qualities of women are recognised in scriptures. The following are a few select examples of the names it records,</p><p lang="sa-Deva">स्त्री । नारी । महिला । वधू । योषित् । योषा । वामा । रामा । मानिनी ।</p><ol class="women-name-list"><li><strong>Stri</strong>, she who bears the womb</li><li><strong>Nari</strong>, she who leads</li><li><strong>Mahila</strong>, the great or honoured one</li><li><strong>Vadhu</strong>, she who is taken in marriage</li><li><strong>Yosit</strong>, she who is served by men</li><li><strong>Yosa</strong>, she who serves men</li><li><strong>Vama</strong>, she who embodies beauty</li><li><strong>Rama</strong>, delighted or who delights others</li><li><strong>Manini</strong>, she who has dignity</li></ol><h4 id="mothers-daughters" class="document-section-title women-subsection">As mothers and daughters</h4><p>Women, of course, do not exist in a vacuum. They are related to others as mothers, daughters, sisters, etc. Of all relations, the one which everyone has and which is the root of all others, is that of the mother. The mother too is heavily glorified in the scriptures,</p><div class="scripture-quote-pair">
+<h4 id="mahima-names" class="document-section-title women-subsection">Names of women</h4><p>Sanskrit is one of the richest languages in terms of synonyms for a single thing. A synonym is not random but based on a specific quality of the thing it denotes. Fire, for example, while usually called Agni, is also called Pavaka purifier as whatever is put in it is burnt and thereby purified.</p><p>The Amarakosa is a very famous lexicon which records such synonyms for each thing, arranged by topic in metrical verses. While not itself a scripture, its words almost always have examples of Scriptural use.</p><p>For Men it contains only two lines, of mostly generic names deriving from descendant of Manu Manava, Manusa, Manusya, Manuja . The women, however, get five lines of highly descriptive names, a testament of how many qualities of women are recognised in scriptures. The following are a few select examples of the names it records,</p><div class="scripture-quote-pair"><p class="reference">Amarakośa, Sanskrit names for women</p><p lang="sa-Deva" class="sanskrit-text">स्त्री । नारी । महिला । वधू । योषित् । योषा । वामा । रामा । मानिनी ।</p></div><ol class="women-name-list"><li><strong>Stri</strong>, she who bears the womb</li><li><strong>Nari</strong>, she who leads</li><li><strong>Mahila</strong>, the great or honoured one</li><li><strong>Vadhu</strong>, she who is taken in marriage</li><li><strong>Yosit</strong>, she who is served by men</li><li><strong>Yosa</strong>, she who serves men</li><li><strong>Vama</strong>, she who embodies beauty</li><li><strong>Rama</strong>, delighted or who delights others</li><li><strong>Manini</strong>, she who has dignity</li></ol><h4 id="mothers-daughters" class="document-section-title women-subsection">As mothers and daughters</h4><p>Women, of course, do not exist in a vacuum. They are related to others as mothers, daughters, sisters, etc. Of all relations, the one which everyone has and which is the root of all others, is that of the mother. The mother too is heavily glorified in the scriptures,</p><div class="scripture-quote-pair">
 <p class="reference">Taittiriya Upanishad, Sisyanusasana, 2</p><p lang="sa-Deva">मातृदेवो भव । पितृदेवो भव । आचार्यदेवो भव ।</p>
 <p class="translation">Be one for whom the mother is like god, be one for whom the father is like god, be one for whom the teacher is like god.</p>
 </div><p>Note how the Mother is mentioned first and foremost, then the father, then the teacher. This is because this is their order of superiority, as mentioned in the Manusmriti 2.145,</p><div class="scripture-quote-pair">
@@ -257,7 +273,7 @@
 <p class="reference">Manusmṛti 9.130, Mahābhārata 13.45.12</p>
   <p lang="sa-Deva" class="sanskrit-text">यथैवात्मा तथा पुत्रः पुत्रेण दुहिता समा ।</p>
 <p class="translation">The son is like one's own self, and the daughter is equal to the son.</p>
-</div><p>Skanda purana 1.2.23.45</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Skanda Purāṇa 1.2.23.45</p>
 <p lang="sa-Deva" class="sanskrit-text">शास्त्रेषूक्तमसंदिग्धं वाक्यमेतन्महाफलम् ।<br>दशपुत्रसमा कन्या दशपुत्रान् प्रवर्धयन् ।<br>यत्फलं लभते मर्त्यस्तल्लभ्यं कन्ययैकया ॥</p>
 <p class="translation">This faultless statement said in the scripture is conducive to great reward, 'A single daughter is equal to ten sons. That merit which is attained by men by raising ten sons is attained by raising a single daughter'.</p>
@@ -275,15 +291,15 @@
 <p class="reference">Manusmṛti 6.36</p>
 <p lang="sa-Deva" class="sanskrit-text">अधीत्य विधिवद्वेदान् पुत्रांश्चोत्पाद्य धर्मतः । इष्ट्वा च शक्तितो यज्ञैर्मनो मोक्षे निवेशयेत् ॥</p>
 <p class="translation">Only after having studied the Vedas according to the rules, having begotten sons in the rightful manner, and having offered sacrifices to the rest of his ability, he shall turn his mind towards Liberation.</p>
-</div><h5 class="document-section-title women-subsection women-subsection--minor">Disqualification of the unmarried from religious observances</h5><p>The second rna, to the gods, is paid by religious observances. However, as stated, religious observances have been stated to be common between the husband and wife, and so neither can perform them without the other,</p><p>Taittiriya Brahmana 3.3.3.1</p><div class="scripture-quote-pair">
+</div><h5 class="document-section-title women-subsection women-subsection--minor">Disqualification of the unmarried from religious observances</h5><p>The second rna, to the gods, is paid by religious observances. However, as stated, religious observances have been stated to be common between the husband and wife, and so neither can perform them without the other,</p><div class="scripture-quote-pair">
 <p class="reference">Taittirīya Brāhmaṇa 3.3.3.1</p>
 <p lang="sa-Deva" class="sanskrit-text">अयज्ञो वा एषः । योऽपत्नीकः ।</p>
 <p class="translation">He is without the Vedic ritual, who is without a wife.</p>
-</div><p>Skanda Purana 4.1.4.68, Siva Purana 2.6.54.66</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Skanda Purāṇa 4.1.4.68, Śiva Purāṇa 2.6.54.66</p>
 <p lang="sa-Deva" class="sanskrit-text">देवपित्रतिथीज्यादि नाभार्यः कर्म चार्हति</p>
 <p class="translation">The man without a wife does not have the right to the rites of the gods, ancestors, guests or Vedic rituals.</p>
-</div><p>Skanda Purana 4.1.4.19, Siva Purana 2.6.54.19</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Skanda Purāṇa 4.1.4.19, Śiva Purāṇa 2.6.54.19</p>
 <p lang="sa-Deva" class="sanskrit-text">कुर्यात्पत्यननुज्ञाता नोपवासव्रतादिकम् ॥</p>
 <p class="translation">A Woman must not perform religious observances such as fasting without the prior knowledge of her husband.</p>
@@ -380,7 +396,7 @@
 </div><p class="reference">Mahabharata 3.297.50</p><p>Yaksa asked, Who is like one's own self. Who is the divinely ordained friend.</p><p>Yudhisthira answered,The son is like one's own self. The wife is the divinely ordained friend.</p><p>Yaksa asked, Who is the friend of the traveler. Who is the friend within the house.</p><p>Yudhisthira answered, Knowledge is the friend of the traveler . The wife is the friend within the house</p><div class="scripture-quote-pair">
 <p class="reference">Śiva Purāṇa 2.6.54.64 and Skanda Purāṇa 4.4.67</p><p lang="sa-Deva" class="sanskrit-text">यक्ष उवाच । किंस्विदात्मा मनुष्यस्य किंस्विद्दैवकृतः सखा ।<br>युधिष्ठिर उवाच । पुत्र आत्मा मनुष्यस्य भार्या दैवकृतः सखा ॥</p>
 <p class="translation">The wife is the basis of the householder, the wife is the basis of happiness.</p>
-</div><p>Padma purana 2.59.21 to 23</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Padma Purāṇa 2.59.21 to 23</p>
 <p lang="sa-Deva" class="sanskrit-text">भार्याहीनस्य पुंसोऽपि न सिद्ध्यति महाव्रतम् । धर्मकर्माणि सर्वाणि पुण्यानि विविधानि च ।<br>नास्ति भार्यासमं तीर्थं धर्मसाधनहेतवे । शृणुष्व त्वं गृहस्थस्य नान्यो धर्मो जगत्त्रये ।<br>यत्र भार्या गृहं तत्र पुरुषस्यापि नान्यथा । ग्रामे वाप्यथवारण्ये सर्वधर्मस्य साधनम्</p>
 <p class="translation">Even great fasts or other various holy religious deeds are fruitless for a man without his wife. There is no greater holy site than the wife for the performance of Dharma. Hear, O you. There is no other dharma of the householder in the three realms. Where one is with the wife, be it in the village or the forest, there all Dharma is attainable.</p>
@@ -388,7 +404,7 @@
 <p class="reference">Manusmṛti 9.95</p>
   <p lang="sa-Deva" class="sanskrit-text">दैवदत्तां पतिर्भार्यां विन्दते नैच्छयात्मनः । तां साध्वीं बिभृयाद्भर्ता देवतानां प्रियमाचरन् ॥</p>
 <p class="translation">The husband obtains his wife as a present from the gods, and not by his own wish, hence he should always support the faithful wife, thereby doing what is agreeable to the gods.</p>
-</div><p>Manusmriti 3.59</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 3.59</p>
 <p lang="sa-Deva" class="sanskrit-text">तस्मादेता: सदा पूज्या भूषणाच्छादनाशनैः । भूतिकामैर्नरैर्नित्यं सत्कारेषूत्सवेषु च ॥</p>
 <p class="translation">Hence, those men who desire prosperity always propitiate their wives with ornaments, food and clothing, especially on festivals.</p>
@@ -426,11 +442,11 @@
 </div><div class="scripture-quote-pair">
 <p class="reference">Vālmīki Rāmāyaṇa 2.118.2</p><p lang="sa-Deva" class="sanskrit-text">सीतोवाच । विदितं तु ममाप्येतद्यथा नार्याः पतिर्गुरुः ।</p>
 <p class="translation">This too is known by me, that the husband is the Guru of the wife.</p>
-</div><p>Brahmavaivarta 1.9.64 to 66</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Brahmavaivarta Purāṇa 1.9.64 to 66</p>
   <p lang="sa-Deva" class="sanskrit-text">पतिरेव गति: स्त्रीणां पतिः प्राणाश्च सम्पदः । धर्मार्थकाममोक्षाणां हेतु: सेतुर्भवार्णवे ॥<br>पतिर्नारायणः स्त्रीणां व्रतं धर्मः सनातनः । सर्वं कर्म वृथा तासां स्वामिनं विमुखाश्च याः ॥<br>स्नानं च सर्वतीर्थेषु सर्वयज्ञेषु दक्षिणा । सर्वदानानि पुण्यानि व्रतानि नियमाश्च ये ॥<br>देवार्चनं चानशनं सर्वाणि च तपांसि च । स्वामिनः पादसेवायाः कलां नार्हन्ति षोडशीम् ॥</p>
 <p class="translation">The husband is the refuge of the women, their very life and their wealth, the catalyst for Dharma, wealth, sensual pleasure and liberation, the bridge through the ocean of the material world. Husband is Narayana Lord Visnu for the woman, he is the vow and eternal dharma. All deeds of those who turn away from their husbands are fruitless. Bathing at all the holy water bodies, giving alms at vedic sacrifices, charity, holy vows, offering unto the gods and all austerities, none of these match even the sixteenth part of serving the husband.</p>
-</div><h4 id="wife-duties" class="document-section-title women-subsection">Duties of the wife</h4><h5 class="document-section-title women-subsection women-subsection--minor">Wife as Queen of the household</h5><p>The Rgveda calls on the bride to be a Queen over her in laws in the marriage hymn,</p><p>Rgveda Samhita 10.85.46</p><div class="scripture-quote-pair">
+</div><h4 id="wife-duties" class="document-section-title women-subsection">Duties of the wife</h4><h5 class="document-section-title women-subsection women-subsection--minor">Wife as Queen of the household</h5><p>The Rgveda calls on the bride to be a Queen over her in laws in the marriage hymn,</p><div class="scripture-quote-pair">
 <p class="reference">Ṛgveda Saṃhitā 10.85.46</p>
 <p lang="sa-Deva" class="sanskrit-text">सम्राज्ञी श्वशुरे भव सम्राज्ञी श्वश्र्वां भव । ननान्दरि सम्राज्ञी भव सम्राज्ञी अधि देवृषु ॥</p>
 <p class="translation">Be a queen over your father in law and mother in law, be a queen over your sisters in law and brothers in law.</p>
@@ -456,11 +472,11 @@
 </div><h4 id="spousal-conclusion" class="document-section-title women-subsection">Conclusion</h4><p>We often hear only one side of the Scriptural statements on spousal status. We often hear that the husband is called the lord and god for the wife, compared to Narayana and Siva, the only dharma whom she is called on to serve and please.</p><p>Rarely are we told the other side, that the wife is also called lord and goddess, compared to Laksmi and Parvati, stated to be the supreme dharma for a man whom he is called on to provide for and please.</p><p>Valmiki Ramayana 2.118.2</p><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 9.101 to 102</p><p lang="sa-Deva" class="sanskrit-text">अन्योन्यस्याव्यभिचारो भवेदामरणान्तिकः । एष धर्मः समासेन ज्ञेयः स्त्रीपुंसयोः परः ॥<br>तथा नित्यं यतेयातां स्त्रीपुंसौ तु कृतक्रियौ । यथा नाभिचरेतां तौ वियुक्तावितरेतरम् ॥</p>
 <p class="translation">May mutual fidelity continue till death, this, in summary, should be understood as the highest duty of Man and Woman. Husband and wife, after they have passed through the rites, should always exert themselves so that they may not become separated and be unfaithful to each other.</p>
-</div><p>Manusmriti 3.60</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 3.60</p>
 <p lang="sa-Deva" class="sanskrit-text">सन्तुष्टो भार्यया भर्ता भर्त्रा भार्या तथैव च । यस्मिन्नेव कुले नित्यं कल्याणं तत्र वै ध्रुवम् ॥</p>
 <p class="translation">In that family, where the husband is pleased with his wife and the wife with her husband, prosperity will assuredly be lasting.</p>
-</div><p>Garuda Purana 1.95.25</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Garuḍa Purāṇa 1.95.25</p>
 <p lang="sa-Deva" class="sanskrit-text">यत्राविरोधो दम्पत्योस्त्रिवर्गस्तत्र वर्धते</p>
 <p class="translation">Where there is no conflict between a couple, the three goals of life abound.</p>
@@ -468,7 +484,7 @@
 <p class="reference">Śiva Purāṇa 2.3.54.69</p>
 <p lang="sa-Deva" class="sanskrit-text">उमाशिवसमौ साक्षात्तस्मात्तौ पूजयेद् बुधः ॥<br>तारः पतिः श्रुतिर्नारी क्षमा सा स स्वयं तपः ।<br>फलं पतिः सत्क्रिया सा धन्यौ तौ दम्पती शिवे ॥</p>
 <p class="translation">The two of them are Siva and Parvati Uma in manifest form, therefore the wise worship them, the husband is Omkara and the wife is the Vedas, she is forbearance and he is austerity itself, the husband is the fruit and the wife is the good deeds which produce it, together the couple are prosperous in auspiciousness.</p>
-</div><p>Aside from mere description, there are also plenty of examples in the Sastras of ideal couples. Chief among them are Rama and Sita. Their devotion to each other as demonstrated by the narrative of Ramayana itself is well known, Sita willingly coming together with Rama in the exile instead of staying at the palace waiting for him, as he himself wanted her to, him mustering the force of the Vanaras, finding her and reaching Lanka to defeat Ravana and rescue her, all this requires no introduction. Aside from the narrative itself however, they both openly express their love and devotion for each other in similar terms,</p><p>Valmiki Ramayana 2.27.21</p><div class="scripture-quote-pair">
+</div><p>Aside from mere description, there are also plenty of examples in the Sastras of ideal couples. Chief among them are Rama and Sita. Their devotion to each other as demonstrated by the narrative of Ramayana itself is well known, Sita willingly coming together with Rama in the exile instead of staying at the palace waiting for him, as he himself wanted her to, him mustering the force of the Vanaras, finding her and reaching Lanka to defeat Ravana and rescue her, all this requires no introduction. Aside from the narrative itself however, they both openly express their love and devotion for each other in similar terms,</p><div class="scripture-quote-pair">
 <p class="reference">Vālmīki Rāmāyaṇa 2.27.21</p>
 <p lang="sa-Deva" class="sanskrit-text">स्वर्गोऽपि च विना वासो भविता यदि राघव । त्वया विना नरव्याघ्र नाहं तदपि रोचये ॥</p>
 <p class="translation">If I were to live even in heaven without you, O descendant of Raghu. Then even that I would not desire, O tiger amongst men.</p>
@@ -512,7 +528,7 @@
 <p class="reference">Īśā Upaniṣad 3</p>
   <p lang="sa-Deva" class="sanskrit-text">असुर्या नाम ते लोका अन्धेन तमसावृताः ।<br>ताँस्ते प्रेत्याभिगच्छन्ति ये के चात्महनो जनाः ॥</p>
 <p class="translation">Those realms are called sunless, they are filled with darkness. There go those, after passing away, who killed themselves.</p>
-</div><p>Since these extant Srutis clearly forbid suicide, Smrti, which derives it's pramanya from an inferred basis on lost sruti, cannot contradict it. If they appear to contradict it, such as by enjoining suicide for the woman if her husband dies, they must be either reinterpreted or considered apramana and rejected.</p><p>As stated however, before invoking the hierarchy and rejecting any lower prameana, reconciliation must be ruled out. The mainstream Acaryas have indeed attempted to reconcile this, Apararka for example writes in his commentary on Yajnavalkya smrti 1.87</p><p> If it is objected that This is forbidden by the sruti He shall live out his full life, then this is explained by this being a general rule, and the smrti of ascending the funeral pyre is a specific rule, the general injunction prohibits suicide except in the case of specific injunction . A smrti that contradicts a general sruti cannot be considered invalid, because they differ in scope, namely one general and one specific, and thus there is no contradiction</p><p>Tryambaka in his Stridharmapaddhati adds the example of animal sacrifice. One sruti forbids killing any being, whereas another enjoins it in certain rites. The two are easily recognised as a general case samanya or utsarga and a specific case or exception visesa or apavada .</p><p>This however has one obvious flaw. By the definition of general and exceptional injunctions, the exceptional is stronger than the general.</p><p>(<span class="sanskrit-text" lang="sa-Deva">उत्सर्गापवादयोरपवादो बलीयान्</span>) In the example given, both injunctions were from the Vedas themselves, and so that doesn't matter.</p><p>However, in this case, the general injunction is a Vedic injunction and the exceptional would have to be from the smrti, i.e., the Smrti would have to be considered stronger than the Sruti in this case. Even Apararka acknowledges, stating The specific smrti is stronger than the general sruti and thereby overrides it (<span class="sanskrit-text" lang="sa-Deva">सा च सामान्यविषयश्रुतेर्बलीयसी सती तस्याः सङ्कोचहेतुर्भवति</span>). For a smrti to be considered stronger than or overriding a Sruti is, in any case, an utter absurdity. That is why the</p><p>Visaya bheda reconciliation is suggested for internal contradiction between Smrtis, not between Sruti and Smrti.</p><div class="scripture-quote-pair">
+</div><p>Since these extant Srutis clearly forbid suicide, Smrti, which derives it's pramanya from an inferred basis on lost sruti, cannot contradict it. If they appear to contradict it, such as by enjoining suicide for the woman if her husband dies, they must be either reinterpreted or considered apramana and rejected.</p><p>As stated however, before invoking the hierarchy and rejecting any lower prameana, reconciliation must be ruled out. The mainstream Acaryas have indeed attempted to reconcile this, Apararka for example writes in his commentary on Yajnavalkya smrti 1.87</p><p> If it is objected that This is forbidden by the sruti He shall live out his full life, then this is explained by this being a general rule, and the smrti of ascending the funeral pyre is a specific rule, the general injunction prohibits suicide except in the case of specific injunction . A smrti that contradicts a general sruti cannot be considered invalid, because they differ in scope, namely one general and one specific, and thus there is no contradiction</p><p>Tryambaka in his Stridharmapaddhati adds the example of animal sacrifice. One sruti forbids killing any being, whereas another enjoins it in certain rites. The two are easily recognised as a general case samanya or utsarga and a specific case or exception visesa or apavada .</p><p>This however has one obvious flaw. By the definition of general and exceptional injunctions, the exceptional is stronger than the general.</p><div class="women-sanskrit-note"><p lang="sa-Deva">उत्सर्गापवादयोरपवादो बलीयान्</p></div><p>In the example given, both injunctions were from the Vedas themselves, and so that doesn't matter.</p><p>However, in this case, the general injunction is a Vedic injunction and the exceptional would have to be from the smrti, i.e., the Smrti would have to be considered stronger than the Sruti in this case. Even Apararka acknowledges, stating The specific smrti is stronger than the general sruti and thereby overrides it (<span class="sanskrit-text" lang="sa-Deva">सा च सामान्यविषयश्रुतेर्बलीयसी सती तस्याः सङ्कोचहेतुर्भवति</span>). For a smrti to be considered stronger than or overriding a Sruti is, in any case, an utter absurdity. That is why the</p><p>Visaya bheda reconciliation is suggested for internal contradiction between Smrtis, not between Sruti and Smrti.</p><div class="scripture-quote-pair">
 <p class="reference">Devī Bhāgavata Purāṇa 11.1.22 to 23</p>
   <p lang="sa-Deva" class="sanskrit-text">विरोधो यत्र तु भवेदत्रयाणां च परस्परम् । श्रुतिस्तत्र प्रमाणं स्याद् द्वयोरर्थे स्मृतिर्वरा ॥<br>श्रुतिद्वैधं भवेदत्र तत्र धर्मावुभौ स्मृती । स्मृतिद्वैधं तु यत्र स्याद्विषयः कल्प्यतां पृथक् ॥</p>
 <p class="translation">Upon contradiction between the three Sruti, Smrti &amp, purana, the Sruti is supreme. Between the two, Smrti is superior. When two Srutis conflict, both should be considered true optionally . When two Smrtis conflict, one should consider them to be of different Visayas General and exceptional.</p>
@@ -554,7 +570,7 @@
 <p class="reference">Kātyāyana Smṛti 906</p>
   <p lang="sa-Deva" class="sanskrit-text">सौदायिके सदा स्त्रीणां स्वातन्त्र्यं परिकीर्तितम् । विक्रये चैव दाने च यथेष्टं स्थावरेऽपि ॥</p>
 <p class="translation">Women’s independence with regard to their own property has always been stated, even to sell or give as they please, and even on immovable assets.</p>
-</div><p>For the male relatives to violate the sanctity of the woman’s right to her own property has both spiritual and legal consequence,</p><p>Manusmriti 3.52</p><div class="scripture-quote-pair">
+</div><p>For the male relatives to violate the sanctity of the woman’s right to her own property has both spiritual and legal consequence,</p><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 3.52</p>
 <p lang="sa-Deva" class="sanskrit-text">स्त्रीधनानि तु ये मोहादुपजीवन्ति बान्धवाः । नारीयानानि वस्त्रं वा ते पापा यान्त्यधोगतिम् ॥</p>
 <p class="translation">Those relations who, through folly, live upon the Stridhana such as the bride’s conveyances and clothes, are sinners and fall into the lowest state.</p>
@@ -582,7 +598,7 @@
 <p class="reference">Yājñavalkya Smṛti 2.114</p>
 <p lang="sa-Deva" class="sanskrit-text">विभागं चेत्पिता कुर्यादिच्छया विभजेत्सुतान् । ज्येष्ठं वा श्रेष्ठभागेन सर्वे वा स्युः समांशिनः ॥<br>यदि कुर्यात्समानंशान् पत्नी च स्यादसमांशिका ।</p>
 <p class="translation">If the father does the partition amongst the sons, he may, as he wishes, give a special share to the elder son Jyesthamsa or give everyone an equal part Samamsa . If he makes an equal partition, then the share of the wife must also be made equal.</p>
-</div><p>The father may will his property to be divided in one of two ways, Jyesthamsa and samamesa. The former was a form where there wasn't really a partition, the elder son replaced the father, getting most of the property but also the responsibility of the mother and younger siblings. This form is, as briefly seen earlier, Kalivarjya. Hence only samamsa may be done in Kaliyuga. In that system the wife’s share must be equal to that of the sons.</p><p>For the married daughters, as they receive Stridhana from their family and others at marriage, and have their own share in the husband’s property, they receive no separate inheritance from the father upon death.</p><p>The case of unmarried daughters is different however. As they have neither been given their due Stridhana at marriage nor do they have a husband to maintain them and in whose property they have share, they must receive inheritance upon their father’s death,</p><p>Manusmriti 9.118</p><div class="scripture-quote-pair">
+</div><p>The father may will his property to be divided in one of two ways, Jyesthamsa and samamesa. The former was a form where there wasn't really a partition, the elder son replaced the father, getting most of the property but also the responsibility of the mother and younger siblings. This form is, as briefly seen earlier, Kalivarjya. Hence only samamsa may be done in Kaliyuga. In that system the wife’s share must be equal to that of the sons.</p><p>For the married daughters, as they receive Stridhana from their family and others at marriage, and have their own share in the husband’s property, they receive no separate inheritance from the father upon death.</p><p>The case of unmarried daughters is different however. As they have neither been given their due Stridhana at marriage nor do they have a husband to maintain them and in whose property they have share, they must receive inheritance upon their father’s death,</p><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 9.118</p>
 <p lang="sa-Deva" class="sanskrit-text">स्वेभ्योऽंशेभ्यस्तु कन्याभ्यः प्रदद्युर्भ्रातरः पृथक् । स्वात्स्वादंशाच्चतुर्भागं पतिताः स्युरदित्सवः ॥</p>
 <p class="translation">From their respective shares, each brother must separately give a fourth part to the unmarried girls, refusing to do so, they shall become fallen.</p>
@@ -622,15 +638,15 @@
 <p class="reference">Manusmṛti 8.275</p>
 <p lang="sa-Deva" class="sanskrit-text">अभिगन्तास्मि भगिनीं मातरं वा तवेति ह । शपन्तं दापयेद्राजा पञ्चविंशतिकं दमम् ॥</p>
 <p class="translation">One who reviles the mother, the father, the wife, the child or the guru, he is to be fined a hundred. Also one who doesn't give way to elders….</p>
-</div><h4 id="abandonment" class="document-section-title women-subsection">Abandonment</h4><p>The condemnability of abandoning one’s wife and mother should be clear from the Mahima of the mother and the status of the wife, as seen earlier. These are not just idealistic statements, they are legally enforceable rights,</p><p>Manusmriti 8.389</p><div class="scripture-quote-pair">
+</div><h4 id="abandonment" class="document-section-title women-subsection">Abandonment</h4><p>The condemnability of abandoning one’s wife and mother should be clear from the Mahima of the mother and the status of the wife, as seen earlier. These are not just idealistic statements, they are legally enforceable rights,</p><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 8.389</p>
 <p lang="sa-Deva" class="sanskrit-text">न माता न पिता न स्त्री न पुत्रस्त्यागमर्हति । त्यजन्नपतितानेतान् राजा दण्ड्यः शतानि षट् ॥</p>
 <p class="translation">Neither the mother nor father nor wife nor son are fit to be abandoned. The one who abandons any of these, except if they are fallen, is to be fined six hundred panas by the king.</p>
-</div><p>Yajnavalkya 1.73</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Yājñavalkya Smṛti 1.73</p>
   <p lang="sa-Deva" class="sanskrit-text">त्यजन्दाप्यस्तृतीयांशमद्रव्यो भरणं स्त्रियाः ॥</p>
 <p class="translation">If he abandons his wife, he must pay a third of his wealth to her . If he does not have accumulated wealth, he should pay her maintenance.</p>
-</div><p>Devala smrti as quoted in Vivadaratnakara 1229 </p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Devala Smṛti, as quoted in Vivādaratnākara 1229</p>
   <p lang="sa-Deva" class="sanskrit-text">स्वदारांस्त्यजतो मोहात् प्रस्थस्यायमयोचिनः । धर्मवंशपरित्यक्तुर्निष्कृतिर्न विधीयते ॥</p>
 <p class="translation">No penance is possible for the man who, out of delusion, abandons his wife. He is the doer of grave injustice and gives up dharma and his lineage.</p>
@@ -642,11 +658,11 @@
 <p class="reference">Viṣṇu Purāṇa 3.11.126</p>
   <p lang="sa-Deva" class="sanskrit-text">परदारान् गच्छेत् मनसापि कथञ्चन । मृतो नरकमभ्येति हीयतेऽत्रापि चायुषः ।<br>परदाररतिः पुंसामिह चामुत्र भीतिदा ॥</p>
 <p class="translation">One should not have recourse to a woman other than his wife, even mentally. The one who does so, his lifespan is shortened and he goes to hell upon death. Thus, interest in women other than his wife is terrible for men, here and hereafter.</p>
-</div><p>There are also legally enforceable punishments for it,</p><p>Manusmriti 8.352</p><div class="scripture-quote-pair">
+</div><p>There are also legally enforceable punishments for it,</p><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 8.352</p>
 <p lang="sa-Deva" class="sanskrit-text">परदाराभिमर्शेषु प्रवृत्तान्नृन्महीपतिः । उद्वेजनकरैर्दण्डैश्छिन्नयित्वा प्रवासयेत् ॥</p>
 <p class="translation">Those men who are addicted to intercourse with the wives of other men, the king shall banish after having branded them with terror inspiring punishments.</p>
-</div><p>Apastamba dharmasitra 2.26.20</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Āpastamba Dharmasūtra 2.26.20</p>
   <p lang="sa-Deva" class="sanskrit-text">संनिपाते वृते शिश्नच्छेदनं सबीजस्य</p>
 <p class="translation">Upon the committing of adultery, the punishment is the castration of the penis along with the testicles.</p>
@@ -677,15 +693,15 @@
 <p class="reference">Medhātithi, commentary on Manusmṛti 8.299</p>
   <p lang="sa-Deva" class="sanskrit-text">मार्गस्थापनापायविधिप्रश्रयम्, न ताडनविधिरेव । तेन वाग्दण्डादिरपि कर्तव्यः ।</p>
 <p class="translation">Here merely guiding them to the right path is ordained, and not actually beating. By this it should be understood that verbal beating should be done.</p>
-</div><p>Thus the word Tadana in this verse must be taken to mean verbal censure on when any of the listed members have committed a fault, and not actual physical beating.</p><h4 id="rape" class="document-section-title women-subsection">Rape</h4><p>Rape is considered one of the gravest offences. Immediate execution is enjoined for it across scriptures,</p><p>Manusmriti 8.364</p><div class="scripture-quote-pair">
+</div><p>Thus the word Tadana in this verse must be taken to mean verbal censure on when any of the listed members have committed a fault, and not actual physical beating.</p><h4 id="rape" class="document-section-title women-subsection">Rape</h4><p>Rape is considered one of the gravest offences. Immediate execution is enjoined for it across scriptures,</p><div class="scripture-quote-pair">
 <p class="reference">Manusmṛti 8.364</p>
 <p lang="sa-Deva" class="sanskrit-text">योऽकामां दूषयेत् कन्यां स सद्यो वधमर्हति ।</p>
 <p class="translation">He who defiles an unwilling girl is to be executed immediately.</p>
-</div><p>Kātyāyana smṛti 830</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Kātyāyana Smṛti 830</p>
 <p lang="sa-Deva" class="sanskrit-text">स्त्रीषु वृत्तोपभोगः स्यात्प्रसह्य पुरुषो यदा । वधे तत्र प्रवर्तेत कार्यातिक्रमणं हि तत् ॥</p>
 <p class="translation">When a man has intercourse with a woman by force, he is to be executed, for that is a grave violation of appropriate behavior.</p>
-</div><p>Visnu dharmottara purana 2.72.108</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Viṣṇu Dharmottara Purāṇa 2.72.108</p>
 <p lang="sa-Deva" class="sanskrit-text">योऽकामां दूषयेत्कन्यां स सद्यो वधमर्हति । यश्च संरक्षणे तत्र पुरुषः स तथा भवेत् ॥</p>
 <p class="translation">He who defiles an unwilling girl is to be executed immediately. Any man who assists him in that shall also receive the same punishment.</p>
@@ -693,7 +709,7 @@
 <p class="reference">Matsya Purāṇa 227.125</p>
   <p lang="sa-Deva" class="sanskrit-text">बलात्संदूषयेद्यस्तु परभार्यां नरः क्वचित् । वधो दण्डो भवेत् तस्य नापराधो भवेत् स्त्रियाः ॥</p>
 <p class="translation">If a man forcibly defiles the wife of another, the punishment shall be execution. There is no fault of the woman.</p>
-</div><p>Atri smrti 194 to 195</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Atri Smṛti 194 to 195</p>
   <p lang="sa-Deva" class="sanskrit-text">बलात्कारेण भुक्ता वा चौरभुक्ता तथापि वा । न त्याज्या दूषिता नारी न कामोऽस्या विधीयते ॥<br>ऋतुकाल उपासीत पुष्पकालेन शुद्ध्यति ॥</p>
 <p class="translation">If a woman is violated forcibly, or by a thief, she is not to be abandoned. One should not have intercourse with her until her periods, at which point she is purified.</p>
@@ -735,7 +751,12 @@
 <dt>Karnabhusana</dt><dd>Earrings</dd>
 <dt>Karabhusana</dt><dd>Arm ornament</dd>
 </dl>
-</div><h5 class="document-section-title women-subsection women-subsection--minor">General ornaments</h5><p>Aside from these daily ornaments, hundreds of different types of ornaments are mentioned in the Sastras. Broadly, however, ornaments can be classified based on three aspects,</p><p> I Based on material, i.e., whether it is made of gold, silver, bronze, ivory, etc, or whether it is laid with precious stones and of which kind.</p><p> II Based on the method of wearing, which is stated in the Natya sastra 23.12 of Bharata Muni as follows,</p><p lang="sa-Deva">आवेध्यं बन्धनीयं च क्षेप्यमारोप्यमेव च ॥ २३॥</p><p> I Pierced such as an ear ring, ii tied such as an armband or necklace, iii slipped on such as bangles, iv simply placed such as a headpiece .</p><p> III Based on part of the body, the Natya sastra chapter 21, Amarakosa 2.3 and Manasara 50 contain exhaustive lists of ornaments based on this final and most important classification. A few exemplary ones are illustrated and labelled in the following diagram.</p><figure class="women-diagram"><img src="/advaita/assets/images/hinduism-on-women/ornaments-diagram.webp?v=20260930-cropped" alt="Labeled illustration of ornaments described in Hindu scriptures" aria-describedby="women-general-ornaments-description" width="1120" height="1281" loading="lazy" decoding="async"></figure>
+</div><h5 class="document-section-title women-subsection women-subsection--minor">General ornaments</h5><p>Aside from these daily ornaments, hundreds of different types of ornaments are mentioned in the Sastras. Broadly, however, ornaments can be classified based on three aspects,</p><p> I Based on material, i.e., whether it is made of gold, silver, bronze, ivory, etc, or whether it is laid with precious stones and of which kind.</p><p>II. Based on the method of wearing, as described by Bharata Muni.</p>
+<div class="scripture-quote-pair">
+<p class="reference">Nāṭyaśāstra 23.12</p>
+<p lang="sa-Deva" class="sanskrit-text">आवेध्यं बन्धनीयं च क्षेप्यमारोप्यमेव च ॥ २३॥</p>
+<p class="translation">Pierced ornaments, such as earrings. Tied ornaments, such as armbands or necklaces. Slipped-on ornaments, such as bangles. Ornaments simply placed on the body, such as headpieces.</p>
+</div><p> III Based on part of the body, the Natya sastra chapter 21, Amarakosa 2.3 and Manasara 50 contain exhaustive lists of ornaments based on this final and most important classification. A few exemplary ones are illustrated and labelled in the following diagram.</p><figure class="women-diagram"><img src="/advaita/assets/images/hinduism-on-women/ornaments-diagram.webp?v=20260930-cropped" alt="Labeled illustration of ornaments described in Hindu scriptures" aria-describedby="women-general-ornaments-description" width="1120" height="1281" loading="lazy" decoding="async"></figure>
 <div class="women-figure-transcription sr-only" id="women-general-ornaments-description" data-pagefind-ignore>
 <h5 class="document-section-title women-subsection women-subsection--minor">Text in the diagram</h5>
 <p><strong>Ornaments in Hindu scriptures.</strong> Sources shown, Amarakosa 2.6, Natyasastra 21, Manasara 50.</p>
@@ -744,7 +765,7 @@
 <p class="translation">There are absolutely no traces of any Purdah observed within the family in the Hindu period. The general adoption of the Purdah system by the ruling and aristocratic families of Hindu community is subsequent to the advent of the Muslim rule. It was accepted by Hindu society in imitation of the manners of the conquerors.</p>
 </div><p>Further he states,</p><div class="scripture-quote-pair">
 <p class="translation">This happened almost universally in northern India, where the Muslim rule and culture were in ascendancy for a long time. In the Deccan, the Muslim influence was superficial, and so the Purdah system got no footing in the Hindu society there.</p>
-</div><p>Not only is the practice itself absent from Hindu scriptures and pre islamic Hindu society as a whole, but even the rationale for it is explicitly rejected. In Islam, purdah is done to protect the women of the house from the male gaze. However, lord Rama himself states,</p><p>Valmiki Ramayana 6.117.23 to 24</p><div class="scripture-quote-pair">
+</div><p>Not only is the practice itself absent from Hindu scriptures and pre islamic Hindu society as a whole, but even the rationale for it is explicitly rejected. In Islam, purdah is done to protect the women of the house from the male gaze. However, lord Rama himself states,</p><div class="scripture-quote-pair">
 <p class="reference">Vālmīki Rāmāyaṇa 6.117.23 to 24</p>
 <p lang="sa-Deva" class="sanskrit-text">न गृहाणि न वस्त्राणि न प्राकारास्तिरस्क्रियाः । नेदृशा राजसत्कारा वृतमावरणं स्त्रियाः ॥<br>व्यसनेषु न कृच्छेषु न युद्धेषु स्वयंवरे । न क्रतौ नो विवाहे वा दर्शनं दूष्यते स्त्रियाः ॥</p>
 <p class="translation">Neither the house nor clothes nor walls nor veils/curtains nor royal protection truly protects the woman, but only her character. Whether in times of crisis, in war, in a choosing ceremony, in religious events or in weddings, does public appearance ever pollute a woman.</p>
@@ -883,7 +904,7 @@
 <p class="reference">Śakti saṅgama Tantra 58.8</p>
   <p lang="sa-Deva" class="sanskrit-text">देवीपरम्पराप्राप्ता दीक्षा स्त्रीणां शुभा मता ।</p>
 <p class="translation">Initiation in the tradition of Devi is considered auspicious for women.</p>
-</div><p>Mahanirvana 8.45 to 46</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Mahānirvāṇa Tantra 8.45 to 46</p>
   <p lang="sa-Deva" class="sanskrit-text">पुत्रश्चैव प्रयत्नतः पालनीयोऽनुशिक्षितः । जनकैस्त्रिस्त्रविभिश्च तावद्यावद् द्विषतिक्षमः ॥<br>ततः स्वकीयेषु तान् जन्यः कर्मणि विनियोजयेत् । ततो विभावयेद्धीमान् वयसा सह वर्धता ॥<br>कन्याप्येवं पालनीया शिक्षणीयातियत्नतः ।</p>
 <p class="translation">The fathers and mothers should raise and educate the son with effort, until he is of sixteen years of age, then he should be engaged in proper duties and occupation. As he grows in age he should be established in livelihood. The female child is to be raised and educated with effort in the same manner.</p>
@@ -898,7 +919,7 @@
 <p class="reference">Vyāsa Smṛti</p>
 <p lang="sa-Deva" class="sanskrit-text">संस्काराः षोडश स्मृताः । नवैताः कर्णवेधान्ता मन्त्रवर्जं क्रियाः स्त्रियाः ।<br>विवाहो मन्त्रतस्तासां शूद्रस्यामन्त्रतो दश</p>
 <p class="translation">The samskaras are reckoned to be sixteen. Of these, nine, ending with Karnavedhana are to be performed for women, without mantras. Marriage is performed for them with mantras, except the Sudras for whom it is without, thus totalling ten.</p>
-</div><p>It then lists their names and when they are to be performed,</p><ol class="women-ordered-list"><li>Garbhadhana, the rite to mark conception in the first month.</li><li>Pumsava, prayers for the fetus in the third month.</li><li>Simanta, ceremony of parting the mother’s hair in the eighth month.</li><li>Jatakarma, the birth rites.</li><li>Namakarana, naming ceremony on the 11th day.</li><li>Niskramana, first outing in the fourth month.</li><li>Annaprasana, first feeding in the sixth month.</li><li>Cidakarma, first haircut, as per family tradition.</li><li>Karnavedhana, ear piercing after the Cudakarma.</li></ol><h5 class="document-section-title women-subsection women-subsection--minor">Fasting Vrata </h5><p>For all the topics henceforth there is pretty much no difference by gender. Any injunction for men is also valid for women, unless explicitly stated otherwise, because there is no restriction on women stated for these. However, for demonstration, we will see only those verses which explicitly enjoin the activity for women.</p><p>Bhavishya Purana 4.23</p><p>Listen, O son of Prtha, I shall narrate to you that best vrata among vratas, doing which a fortunate woman may beget many children.</p><p>Narada Purana 1.112.1</p><div class="scripture-quote-pair">
+</div><p>It then lists their names and when they are to be performed,</p><ol class="women-ordered-list"><li>Garbhadhana, the rite to mark conception in the first month.</li><li>Pumsava, prayers for the fetus in the third month.</li><li>Simanta, ceremony of parting the mother’s hair in the eighth month.</li><li>Jatakarma, the birth rites.</li><li>Namakarana, naming ceremony on the 11th day.</li><li>Niskramana, first outing in the fourth month.</li><li>Annaprasana, first feeding in the sixth month.</li><li>Cidakarma, first haircut, as per family tradition.</li><li>Karnavedhana, ear piercing after the Cudakarma.</li></ol><h5 class="document-section-title women-subsection women-subsection--minor">Fasting Vrata </h5><p>For all the topics henceforth there is pretty much no difference by gender. Any injunction for men is also valid for women, unless explicitly stated otherwise, because there is no restriction on women stated for these. However, for demonstration, we will see only those verses which explicitly enjoin the activity for women.</p><p>Bhavishya Purana 4.23</p><p>Listen, O son of Prtha, I shall narrate to you that best vrata among vratas, doing which a fortunate woman may beget many children.</p><div class="scripture-quote-pair">
 <p class="reference">Nārada Purāṇa 1.112.1</p>
 <p lang="sa-Deva" class="sanskrit-text">श्रुणु नारद वक्ष्यामि तृतीयाया व्रतानि ते । यानि संसेवितव्याशु नारी सौभाग्यमाप्नुयात् ॥</p>
 <p class="translation">Listen, O Narada, I shall narrate that fasts of the 3rd night of the fortnight, which a woman, by doing properly, attains great fortune.</p>
@@ -906,11 +927,11 @@
 <p class="reference">Liṅga Purāṇa 84.5</p>
   <p lang="sa-Deva" class="sanskrit-text">निवेद्यद्रव्यं चैव शिवाय परमेष्ठिने । स याति शिवसायुज्यं नारी देव्याः यदि प्रभो ॥</p>
 <p class="translation">One should perform fast for Siva, the supreme. Doing so, he attains oneness with Siva if a man, or with Devi, if a woman, O lord.</p>
-</div><h5 class="document-section-title women-subsection women-subsection--minor">Pilgrimage Tirtha </h5><p>Matsya 192.33 and Padma 3.19.31</p><div class="scripture-quote-pair">
+</div><h5 class="document-section-title women-subsection women-subsection--minor">Pilgrimage Tirtha </h5><div class="scripture-quote-pair">
 <p class="reference">Matsya Purāṇa 192.33, Padma Purāṇa 3.19.31</p>
   <p lang="sa-Deva" class="sanskrit-text">शुक्लतीर्थं तु या नारी ददाति कनकं शुभम् । घृतेन स्नापयेद्देवं कुमारं चापि पूजयेत् ॥<br>एवं या कुरुते भक्त्या तस्याः पुण्यफलं शृणु । मोदते शर्वलोकेऽस्या यावदिन्द्रचतुर्दशम् ॥</p>
 <p class="translation">The woman who donates an auspicious golden ornament at the pilgrimage site Suklatirtha and bathes the idol of Lord Kumara with ghee and worships it, all this with devotion, listen to her holy fruit. She enjoys in the realm of Siva for the reign of fourteen Indras.</p>
-</div><p>Skanda purana 7.1.157.4</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Skanda Purāṇa 7.1.157.4</p>
 <p lang="sa-Deva" class="sanskrit-text">स्नात्वा तद्वैष्णवं स्थानं नृणां पातकनाशनम् । माघे मासि तृतीयायां नारी वा पुरुषोऽपि वा ॥<br>यस्तं पूजयते भक्त्या स मुक्तः पातकैर्भवेत् ॥</p>
 <p class="translation">The one who bathes at that holy site of Visnu on the third day of the month of Magha and worships Visnu with devotion, whether man or woman, is freed of all sins.</p>
@@ -922,7 +943,7 @@
 <p class="reference">Śiva Purāṇa 1.17.128</p>
   <p lang="sa-Deva" class="sanskrit-text">नारी वाथ नरो वाथ ब्राह्मणो वान्य एव वा । नमोऽन्तं वा नमःपूर्वमातुरः सर्वदा जपेत् ॥</p>
 <p class="translation">Whether one is a woman or a man, whether Brahmana or another varna, one should always chant the mantra, whether with Namah at the beginning or the end Sivaya namah.</p>
-</div><p>Padma Purana 5.81.19</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Padma Purāṇa 5.81.19</p>
 <p lang="sa-Deva" class="sanskrit-text">वक्ष्यामि युगलं तुभ्यं कृष्णमन्त्रमनुत्तमम् । सर्वाधिकारिणस्तत्र चण्डालान्ता मुनीश्वर । स्त्रियः शूद्रादयश्चापि ॥</p>
 <p class="translation">I shall narrate to you regarding the Krsna mantra, which is the greatest … all are eligible in it, from women and Sudras up to Candalas.</p>
@@ -930,7 +951,7 @@
 <p class="reference">Devī Bhāgavata Purāṇa 12.7</p>
   <p lang="sa-Deva" class="sanskrit-text">अधुना श्रोतुमिच्छामि दीक्षालक्षणमुत्तमम् । विना येन न सिध्येत देवीमन्त्रेऽधिकारिता ॥<br>ब्राह्मणानां क्षत्रियाणां विशां स्त्रीणां तथैव च ।</p>
 <p class="translation">Now I wish to listen to characteristics of the initiation in Devi mantra, without which one cannot have eligibility for devi mantra, for Brahmanas, Ksatriyas, Vaisyas and women.</p>
-</div><h5 class="document-section-title women-subsection women-subsection--minor">Offerings to the gods</h5><p>Gobhila grhaya sutra 1.3.14</p><div class="scripture-quote-pair">
+</div><h5 class="document-section-title women-subsection women-subsection--minor">Offerings to the gods</h5><div class="scripture-quote-pair">
 <p class="reference">Gobhila Gṛhyasūtra 1.3.14</p>
 <p lang="sa-Deva" class="sanskrit-text">गृह्याग्निं पत्नी जुहुयात् सायंप्रातरहोमौ ।</p>
 <p class="translation">The wife should make offerings into the household sacrificial fire every morning.</p>
@@ -938,7 +959,7 @@
 <p class="reference">Bhaviṣya Purāṇa 4.92.2 to 5</p>
   <p lang="sa-Deva" class="sanskrit-text">शुक्लपक्षे चतुर्दश्यां मासि भाद्रपदे नृप । दत्तमर्च्यं वरस्त्रीभिः फलैर्नानाविधैः शुभैः ॥<br>विरूढैः सप्तधान्यैश्च दीपैर्बलिककुङ्कुमैः ... तस्मिन्नहनि दातव्यं स्त्रीभिः सर्वाभिरल्पकम् ॥</p>
 <p class="translation">On the fourteenth day of the waxing fortnight of the month of Bhadrapada, O king, the good women make offerings of various kinds of auspicious fruits, seven kinds of grains, sprouts, lamps, dyes, sandalwood....... In that, every woman should offer something, be it only a little.</p>
-</div><p>Matsya 62.8 to 9</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Matsya Purāṇa 62.8 to 9</p>
   <p lang="sa-Deva" class="sanskrit-text">कुमारी शुक्लवसना देवीं तु पञ्चगव्येन ततः क्षीरेण केवलं स्नापयेद् मधुना ततः ।<br>पुष्पगन्धोदकेन च पूजयेत् शुक्लपुष्पैश्च फलैर्नानाविधैरपि ॥</p>
 <p class="translation">The maiden, wearing white, should bathe the idol of the goddess first with the five kinds of dairy, then with milk, then with honey, then with water infused with the scent of flowers, then offer white flowers and fruits of various kinds.</p>
@@ -946,7 +967,7 @@
 <p class="reference">Gopatha Brāhmaṇa 1.2.6</p>
   <p lang="sa-Deva" class="sanskrit-text">तस्माद् ब्रह्मचारिणोऽहरहर्भिक्षां दद्यात् गृहिणी ।</p>
 <p class="translation"><h5 class="document-section-title women-subsection women-subsection--minor">Charity dana </h5><p>The woman of the house should give alms to the student.</p></p>
-</div><p>Harivamsa 2.79.21</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Harivaṃśa 2.79.21</p>
   <p lang="sa-Deva" class="sanskrit-text">ततो द्विजं शुचिं दान्तं ज्ञानविज्ञानकोविदम् । भोजयेच्च यथाशक्त्या सह भर्त्रा सुमध्यमे ॥</p>
 <p class="translation">She should, along with her husband, beautiful one, feed a Brahmana who is pure, in control of his senses and learned in all subjects.</p>
@@ -990,11 +1011,11 @@
 </div><div class="scripture-quote-pair">
 <p class="reference">Brahma Purāṇa 227.13 to 14</p><p lang="sa-Deva" class="sanskrit-text">धन्यास्ते पुरुषा लोके येऽर्चयन्ति सदा हरिम् । सर्वपापहरं देवं सर्वकामफलप्रदम् ॥<br>ब्राह्मणाः क्षत्रिया वैश्याः स्त्रियः शूद्रान्त्यजातयः । संपूज्य तं सुरवरं प्राप्नुवन्ति परां गतिम् ॥</p>
 <p class="translation">Blessed are those who always worship Lord Visnu, the God who destroys all sins and fulfills all desires, be they Brahmanas, Ksatriyas, Vaisyas, Sudras or mixed castes. By worshipping him, the best of the gods, they attain the supreme destination.</p>
-</div><p>Skanda 3.3.5.10</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Skanda Purāṇa 3.3.5.10</p>
   <p lang="sa-Deva" class="sanskrit-text">शिवभक्तियुतो मर्त्यश्चाण्डालः पुल्कसोऽपि च । नारी नरो वा षण्डो वा सद्यो मुच्येत संसृतेः ॥</p>
 <p class="translation">The mortal who is endowed with devotion to Lord Siva, be it even a Pulkasa or Candala, whether man, woman or intersex, is immediately liberated from this material world.</p>
-</div><p>Matsya 60.12 and Padma 1.29.13</p><div class="scripture-quote-pair">
+</div><div class="scripture-quote-pair">
 <p class="reference">Matsya Purāṇa 60.12, Padma Purāṇa 1.29.13</p>
   <p lang="sa-Deva" class="sanskrit-text">या देवी सौभाग्यमयी भक्तिमुक्तिफलप्रदा । तामाराध्य पुमान् भक्त्या नारी वा किं न विन्दति</p>
 <p class="translation">By worshipping Devi with devotion, who is of the nature of Good fortune, giver of material benefits and liberation, what does one, be it a man or woman, not attain.</p>
