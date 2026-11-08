@@ -212,3 +212,43 @@ body.docs-quote-format .side-toc .toc a,
 body.docs-quote-format .mobile-toc .toc a {text-decoration:none}
 body.docs-quote-format .side-toc .toc .toc-index-nested,
 body.docs-quote-format .mobile-toc .toc .toc-index-nested {padding-left:12px;margin:4px 0 9px}
+
+/* Editorial and Indology reader-wide consistency. Reuses the Vishnu reader layout without rewriting source text. */
+body.article-standard-page .reader-grid{grid-template-columns:minmax(190px,240px) minmax(0,1050px);gap:clamp(22px,3vw,44px)}
+body.article-standard-page .article-head{margin-left:min(280px,25vw)}
+body.article-standard-page .side-toc{top:18px;max-height:calc(100vh - 38px);padding:6px 7px 14px 0;border-right:0;scrollbar-width:thin}
+body.article-standard-page .side-toc-title{font:700 13px/1.35 Merriweather,Georgia,serif;letter-spacing:.07em;text-transform:uppercase;color:#61596a;padding:0 0 11px;margin:0 0 6px;border:0}
+body.article-standard-page .side-toc .toc{font:400 12px/1.36 Merriweather,Georgia,serif}
+body.article-standard-page .side-toc .toc li{margin:0}
+body.article-standard-page .side-toc .toc ul,body.article-standard-page .side-toc .toc ol{margin:3px 0 7px;padding-left:9px}
+body.article-standard-page .side-toc .toc a{padding:5px 6px 5px 10px;color:#5d5961;border-left:3px solid transparent;border-radius:0 5px 5px 0;background:transparent;text-decoration:none;overflow-wrap:anywhere}
+body.article-standard-page .side-toc .toc a:hover{background:#f5f0f7;color:#633c79;text-decoration:none}
+body.article-standard-page .side-toc .toc a.is-active,body.article-standard-page .mobile-toc .toc a.is-active{color:#67328a;background:#f6f0fa;border-left-color:#823fa7;font-weight:700;text-decoration:none}
+body.article-standard-page .mobile-toc{border-color:#e6e1e8}
+body.article-standard-page .mobile-toc>summary{color:#643a81;font-weight:700}
+body.article-standard-page .mobile-toc .toc{font-size:12px;line-height:1.38}
+body.article-standard-page .mobile-toc .toc li{margin:1px 0}
+body.article-standard-page .toc .vd-label-dev{display:none}
+body.article-standard-page .toc .vd-label-en{display:inline}
+body.article-standard-page .document-content p.reference,body.article-standard-page .document-content p.scripture-source,body.article-standard-page .document-content p.citation{color:#007e87;font-weight:600;text-decoration:none;text-shadow:none}
+body.article-standard-page .document-content .scripture-quote-pair p[lang="sa-Deva"],
+body.article-standard-page .document-content .scripture-quote-pair div[lang="sa-Deva"],
+body.article-standard-page .document-content .revealed-sanskrit p[lang="sa-Deva"],
+body.article-standard-page .document-content .women-sanskrit-note p[lang="sa-Deva"]{
+display:block;margin:.15em 0 .9em;padding:.15em 0 .2em 15px;border-left:3px solid #a5a9aa;color:#bd570d;font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif;font-size:1em;line-height:1.78;font-weight:700}
+body.article-standard-page .document-content .scripture-quote-pair p.translation{
+display:block;margin:.1em 0 .65em;padding:.15em 0 .2em 15px;border-left:3px solid #a5a9aa;color:#24211e;background:transparent;font-family:Merriweather,Georgia,serif;font-size:inherit;line-height:1.64;font-style:normal;font-weight:700}
+body.article-standard-page .document-content .scripture-quote-pair .sanskrit-transliteration[lang="sa-Latn"],body.article-standard-page .document-content .revealed-sanskrit .sanskrit-transliteration[lang="sa-Latn"]{display:none}
+body.article-standard-page .document-content figcaption{display:none}
+body.article-standard-page .document-content p.reference a{color:inherit;text-decoration:none}
+body.indology-directory-page .hp-home-intro{margin:0 0 24px;color:var(--muted);max-width:72ch}
+body.indology-directory-page .hp-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 26px}
+body.indology-directory-page .hp-column{display:flex;flex-direction:column;gap:20px;min-width:0}
+body.indology-directory-page .hp-panel{padding:2px 0 18px;border-bottom:1px solid #e6e1d8;min-width:0}
+body.indology-directory-page .document-content .hp-panel h2{border:0;padding:0;margin:4px 0 12px;font-size:22px;line-height:1.3;color:var(--teal)}
+body.indology-directory-page .hp-link-list{margin:0;padding-left:1.2em}
+body.indology-directory-page .hp-link-list li{margin:.65em 0}
+body.indology-directory-page .hp-link-list a{color:#326466;text-decoration:none;text-underline-offset:3px}
+body.indology-directory-page .hp-link-list a:hover{text-decoration:underline}
+@media(max-width:1120px) and (min-width:761px){body.article-standard-page .reader-grid{grid-template-columns:200px minmax(0,1fr);gap:24px}body.article-standard-page .article-head{margin-left:224px}}
+@media(max-width:760px){body.article-standard-page .reader-grid{display:block}body.article-standard-page .article-head{margin:0 0 24px}body.indology-directory-page .hp-directory{grid-template-columns:1fr}body.indology-directory-page .hp-column{gap:12px}}
