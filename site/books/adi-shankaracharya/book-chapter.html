@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/site.css">
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
-<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261107-panchadasi-chapter-one-3">
+<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261108-panchadasi-all-chapters-2">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -42,8 +42,8 @@ var allowed=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika",
 var params=new URLSearchParams(window.location.search);
 var work=params.get("work")||"";
 var requestedUnit=params.get("unit")||"";
-var isPanchadasiChapterOne=work==="panchadasi"&&requestedUnit==="panchadasi-1-01";
-if(isPanchadasiChapterOne)document.body.classList.add("panchadasi-chapter-one-reader");
+var isPanchadasi=work==="panchadasi";
+if(isPanchadasi)document.body.classList.add("panchadasi-reader");
 if(work==="mandukya-karika"){
  var destination=new URL("/advaita/books/adi-shankaracharya/mandukya-karika/",window.location.origin);
  var match=requestedUnit.match(/^mandukya-karika-([1-4])-\d+$/);
@@ -137,7 +137,7 @@ var contentsUrl=new URL("book-contents.html",rootUrl);
 contentsUrl.searchParams.set("work",work);
 contentsLink.href="#section-contents";
 fullTextLink.href=readerUrl.href;
-if(isPanchadasiChapterOne){
+if(isPanchadasi){
  var removedHero=root.querySelector(".gita-hero");
  if(removedHero)removedHero.remove();
  var removedFooter=document.querySelector(".shankara-reader-footer");
@@ -198,7 +198,7 @@ function chapterItems(data){
 
 function renderVerseNavigation(units,chapters,selectedChapter){
  listNode.replaceChildren();
- if(isPanchadasiChapterOne){
+ if(isPanchadasi){
   var current=chapters[selectedChapter];
   if(!current)return;
   var next=chapters[selectedChapter+1];
@@ -290,7 +290,7 @@ function renderUnit(unit,index){
  card.id=String(unit.id);
  card.setAttribute("aria-label",label);
  var heading=document.createElement("h2");
- if(isPanchadasiChapterOne){
+ if(isPanchadasi){
   var chapter=Number(unitChapter(unit)||1),book=Math.floor((chapter-1)/5)+1,chapterInBook=(chapter-1)%5+1;
   var verse=String(unit.number||index+1).split(".").pop();
   heading.textContent="Pañcadaśī "+book+"."+chapterInBook+"."+verse;
@@ -312,7 +312,7 @@ function renderUnit(unit,index){
  var details=document.createElement("details");
  makeGloss(details,unit.gloss);
  controls.append(details);
- if(isPanchadasiChapterOne){
+ if(isPanchadasi){
   var verseRule=document.createElement("hr");
   verseRule.className="gita-verse-rule";
   card.append(heading,verseRule,source,roman,translation,controls);
@@ -384,7 +384,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  titleNode.textContent=data.title||work;
  authorNode.textContent=data.author?"By "+data.author:"";
  document.title=titleNode.textContent+" — Chapter reader — Viveka Dṛṣṭi";
- if(isPanchadasiChapterOne){
+ if(isPanchadasi){
   var overline=document.querySelector(".gita-hero .eyebrow");
   var tocOverline=document.querySelector(".reader-toc-head .reader-overline");
   var tocHeading=document.querySelector(".reader-toc-head h2");
@@ -392,7 +392,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   if(authorNode)authorNode.hidden=true;
   if(contentsLink)contentsLink.hidden=true;
   if(fullTextLink)fullTextLink.hidden=true;
-  if(tocOverline)tocOverline.textContent="विषयसूची";
+  if(tocOverline){tocOverline.textContent="विषयसूची";tocOverline.lang="sa-Deva";}
   if(tocHeading)tocHeading.textContent="Contents";
   if(tocProgress)tocProgress.hidden=true;
  }
@@ -420,7 +420,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  var selectedUnits=units.slice(selectedStart,selectedEnd);
  if(!selectedUnits.length)throw new Error("The selected section is empty.");
  chapterTitle.textContent=items[selectedIndex].label;
- if(isPanchadasiChapterOne){
+ if(isPanchadasi){
   var selectedChapter=Number((items[selectedIndex].label.match(/^Chapter\s+(\d+)/i)||[])[1]||selectedIndex+1);
   var bookNumber=Math.floor((selectedChapter-1)/5)+1,chapterInBook=(selectedChapter-1)%5+1;
   titleNode.textContent="Book "+bookNumber+", Chapter "+chapterInBook;
@@ -430,7 +430,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  root.dataset.activeChapter=String(selectedIndex+1);
  renderVerseNavigation(units,items,selectedIndex);
  contentNode.replaceChildren();
- if(!isPanchadasiChapterOne){
+ if(!isPanchadasi){
   var intro=document.createElement("div");
   intro.className="reader-section-intro";
   var heading=document.createElement("h2");
@@ -447,7 +447,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   ?"Word for Word glosses are available for all "+total+" entries in this chapter."
   :"Word for Word glosses are available for "+withGloss+" of "+total+" entries in this chapter.";
  trackActiveVerse(selectedUnits);
- if(!isPanchadasiChapterOne){
+ if(!isPanchadasi){
   var pager=document.createElement("nav");
   pager.className="shankara-work-nav";
   pager.setAttribute("aria-label","Chapter navigation");

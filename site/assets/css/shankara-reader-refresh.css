@@ -140,132 +140,137 @@ body.shankara-reader-page .reader-section-verse-link[aria-current="location"]{
  body.shankara-reader-page .reader-section-verse-list{grid-template-columns:repeat(4,minmax(0,1fr))!important}
 }
 
-/* Pañcadaśī chapter reader follows the compact Purāṇa verse layout. */
-body.panchadasi-chapter-one-reader{--panch-ink:#292929;--panch-blue:#0645ad;--panch-line:#aeb6bf;background:#fff!important;color:var(--panch-ink)!important}
-body.panchadasi-chapter-one-reader .site-main,
-body.panchadasi-chapter-one-reader .article-shell,
-body.panchadasi-chapter-one-reader .article-body{width:100%!important;max-width:none!important;margin:0 auto!important;padding:0!important;background:#fff!important}
-body.panchadasi-chapter-one-reader #chapter-reader{width:100%!important;max-width:1370px!important;margin:0 auto!important;padding:0 24px 42px!important;background:#fff!important;color:var(--panch-ink)!important;font-family:"Noto Serif",Georgia,serif!important}
-body.panchadasi-chapter-one-reader .shankara-reading-grid{display:grid!important;grid-template-columns:minmax(150px,205px) minmax(0,1fr)!important;column-gap:38px!important;row-gap:0!important;align-items:start!important}
-body.panchadasi-chapter-one-reader .gita-hero{grid-column:2!important;grid-row:1!important;width:100%!important;max-width:900px!important;margin:0 auto 18px!important;padding:15px 0 22px!important;border-bottom:1px solid var(--panch-line)!important;text-align:center!important}
-body.panchadasi-chapter-one-reader .gita-hero .eyebrow{margin:0 0 9px!important;color:#292929!important;font:500 16px/1.5 "Noto Serif",Georgia,serif!important;letter-spacing:.08em!important;text-transform:uppercase!important}
-body.panchadasi-chapter-one-reader .gita-hero h1{max-width:none!important;margin:0!important;color:#292929!important;font:600 clamp(26px,3vw,36px)/1.2 "Noto Serif",Georgia,serif!important;letter-spacing:0!important;text-align:center!important}
-body.panchadasi-chapter-one-reader .gita-hero .shankara-author,
-body.panchadasi-chapter-one-reader .gita-hero .shankara-reader-links,
-body.panchadasi-chapter-one-reader .gita-hero .shankara-reader-coverage{display:none!important}
-body.panchadasi-chapter-one-reader .gita-hero .shankara-chapter-title{margin:8px 0 0!important;color:#333!important;font:500 19px/1.45 "Noto Serif",Georgia,serif!important;text-align:center!important}
-body.panchadasi-chapter-one-reader .gita-contents{grid-column:1!important;grid-row:1/3!important;position:sticky!important;top:8px!important;align-self:start!important;width:100%!important;max-width:none!important;max-height:calc(100vh - 16px)!important;overflow:auto!important;margin:0!important;padding:12px 14px 18px 0!important;border:0!important;border-right:1px solid var(--panch-line)!important;background:#fff!important;scrollbar-width:thin;scrollbar-color:#cbd2d5 transparent}
-body.panchadasi-chapter-one-reader .reader-toc-head{position:sticky!important;top:0!important;z-index:2!important;margin:0 0 8px!important;padding:0 0 9px!important;border-bottom:1px solid #d5d9dc!important;background:#fff!important}
-body.panchadasi-chapter-one-reader .reader-toc-head .reader-overline{display:block!important;margin:0 0 2px!important;color:#555!important;font:400 11px/1.4 "Noto Serif Devanagari","Noto Serif",serif!important;letter-spacing:0!important}
-body.panchadasi-chapter-one-reader .reader-toc-head h2{margin:0!important;color:#2f7f82!important;font:400 17px/1.25 Vollkorn,Georgia,serif!important}
-body.panchadasi-chapter-one-reader .reader-toc-head #toc-progress{display:none!important}
-body.panchadasi-chapter-one-reader .gita-contents ol.reader-chapter-list{display:block!important;columns:1!important;margin:0!important;padding:0!important;list-style:none!important}
-body.panchadasi-chapter-one-reader .gita-contents li{display:block!important;margin:0!important;padding:0!important;list-style:none!important}
-body.panchadasi-chapter-one-reader .gita-contents a.reader-verse-link{display:block!important;width:100%!important;min-height:0!important;margin:0!important;padding:4px 0!important;border:0!important;border-radius:0!important;background:transparent!important;color:var(--panch-blue)!important;font:500 12px/1.4 Merriweather,Georgia,serif!important;text-align:left!important;text-decoration:none!important}
-body.panchadasi-chapter-one-reader .gita-contents a.reader-verse-link:hover,
-body.panchadasi-chapter-one-reader .gita-contents a.reader-verse-link:focus-visible,
-body.panchadasi-chapter-one-reader .gita-contents a.reader-verse-link.is-active{color:#123a76!important;text-decoration:underline!important;background:transparent!important;outline-offset:2px}
-body.panchadasi-chapter-one-reader .shankara-unit-column{grid-column:2!important;grid-row:2!important;width:100%!important;max-width:900px!important;margin:0 auto!important}
-body.panchadasi-chapter-one-reader .shankara-verse{margin:0 0 22px!important;padding:0!important;border:0!important;background:transparent!important;scroll-margin-top:20px!important}
-body.panchadasi-chapter-one-reader .shankara-verse h2{display:block!important;margin:0!important;padding:0!important;border:0!important;color:#2f7f82!important;font:600 23px/1.1 Vollkorn,Georgia,serif!important;letter-spacing:.01em!important;text-align:center!important}
-body.panchadasi-chapter-one-reader .shankara-verse h2::before{content:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-verse-rule{display:block!important;width:56%!important;max-width:520px!important;height:0!important;margin:10px auto 12px!important;border:0!important;border-top:1px solid #dedbd6!important;background:transparent!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-sanskrit{max-width:840px!important;margin:0 auto 6px!important;color:#3c362e!important;font:400 17px/1.45 "Noto Serif Devanagari","Noto Serif",serif!important;text-align:center!important;white-space:pre-line!important}
-body.panchadasi-chapter-one-reader .shankara-verse .reader-inline-iast{display:block!important;max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;color:#3c362e!important;font:italic 400 13px/1.45 Noto Serif,Georgia,serif!important;text-align:center!important;white-space:pre-line!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-translation{max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important;font:400 14px/1.45 Noto Serif,Georgia,serif!important;text-align:center!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-controls{display:block!important;width:100%!important;max-width:840px!important;margin:0 auto!important;padding:0!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details.shankara-word-gloss>summary{display:block!important;width:max-content!important;max-width:100%!important;min-height:0!important;margin:0!important;padding:4px 10px!important;border:1px solid #9bc5c7!important;border-radius:999px!important;background:transparent!important;color:#2f7f82!important;font:600 12px/1.15 Merriweather,Georgia,serif!important;list-style:none!important;cursor:pointer}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details.shankara-word-gloss>summary::-webkit-details-marker{display:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details.shankara-word-gloss>summary::after{content:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details.shankara-word-gloss[open]>summary::after{content:"−"}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details.shankara-word-gloss .gita-reveal{margin:6px 0 9px!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important;font-size:14px!important;line-height:1.5!important}
-body.panchadasi-chapter-one-reader .shankara-work-nav{grid-column:2!important;grid-row:3!important;max-width:900px!important;margin:20px auto 0!important;padding-top:14px!important;border-top:1px solid #dedbd6!important}
+/* Every Pañcadaśī chapter follows the chapter reader layout. */
+body.panchadasi-reader{--panch-ink:#292929;--panch-blue:#0645ad;--panch-line:#aeb6bf;background:#fff!important;color:var(--panch-ink)!important}
+body.panchadasi-reader .site-main,
+body.panchadasi-reader .article-shell,
+body.panchadasi-reader .article-body{width:100%!important;max-width:none!important;margin:0 auto!important;padding:0!important;background:#fff!important}
+body.panchadasi-reader #chapter-reader{width:100%!important;max-width:1370px!important;margin:0 auto!important;padding:0 24px 42px!important;background:#fff!important;color:var(--panch-ink)!important;font-family:Merriweather,Georgia,serif!important}
+body.panchadasi-reader .shankara-reading-grid{display:grid!important;grid-template-columns:minmax(150px,205px) minmax(0,1fr)!important;column-gap:38px!important;row-gap:0!important;align-items:start!important}
+body.panchadasi-reader .gita-hero{grid-column:2!important;grid-row:1!important;width:100%!important;max-width:900px!important;margin:0 auto 18px!important;padding:15px 0 22px!important;border-bottom:1px solid var(--panch-line)!important;text-align:center!important}
+body.panchadasi-reader .gita-hero .eyebrow{margin:0 0 9px!important;color:#292929!important;font:500 16px/1.5 Merriweather,Georgia,serif!important;letter-spacing:.08em!important;text-transform:uppercase!important}
+body.panchadasi-reader .gita-hero h1{max-width:none!important;margin:0!important;color:#292929!important;font:600 clamp(26px,3vw,36px)/1.2 Merriweather,Georgia,serif!important;letter-spacing:0!important;text-align:center!important}
+body.panchadasi-reader .gita-hero .shankara-author,
+body.panchadasi-reader .gita-hero .shankara-reader-links,
+body.panchadasi-reader .gita-hero .shankara-reader-coverage{display:none!important}
+body.panchadasi-reader .gita-hero .shankara-chapter-title{margin:8px 0 0!important;color:#333!important;font:500 19px/1.45 Merriweather,Georgia,serif!important;text-align:center!important}
+body.panchadasi-reader .gita-contents{grid-column:1!important;grid-row:1/3!important;position:sticky!important;top:8px!important;align-self:start!important;width:100%!important;max-width:none!important;max-height:calc(100vh - 16px)!important;overflow:auto!important;margin:0!important;padding:12px 14px 18px 0!important;border:0!important;border-right:1px solid var(--panch-line)!important;background:#fff!important;scrollbar-width:thin;scrollbar-color:#cbd2d5 transparent}
+body.panchadasi-reader .reader-toc-head{position:sticky!important;top:0!important;z-index:2!important;margin:0 0 8px!important;padding:0 0 9px!important;border-bottom:1px solid #d5d9dc!important;background:#fff!important}
+body.panchadasi-reader .reader-toc-head .reader-overline{display:block!important;margin:0 0 2px!important;color:#555!important;font:400 11px/1.4 "Noto Serif Devanagari","Noto Sans Devanagari",serif!important;letter-spacing:0!important}
+body.panchadasi-reader .reader-toc-head h2{margin:0!important;color:#2f7f82!important;font:400 17px/1.25 Merriweather,Georgia,serif!important}
+body.panchadasi-reader .reader-toc-head #toc-progress{display:none!important}
+body.panchadasi-reader .gita-contents ol.reader-chapter-list{display:block!important;columns:1!important;margin:0!important;padding:0!important;list-style:none!important}
+body.panchadasi-reader .gita-contents li{display:block!important;margin:0!important;padding:0!important;list-style:none!important}
+body.panchadasi-reader .gita-contents a.reader-verse-link{display:block!important;width:100%!important;min-height:0!important;margin:0!important;padding:4px 0!important;border:0!important;border-radius:0!important;background:transparent!important;color:var(--panch-blue)!important;font:500 12px/1.4 Merriweather,Georgia,serif!important;text-align:left!important;text-decoration:none!important}
+body.panchadasi-reader .gita-contents a.reader-verse-link:hover,
+body.panchadasi-reader .gita-contents a.reader-verse-link:focus-visible,
+body.panchadasi-reader .gita-contents a.reader-verse-link.is-active{color:#123a76!important;text-decoration:underline!important;background:transparent!important;outline-offset:2px}
+body.panchadasi-reader .shankara-unit-column{grid-column:2!important;grid-row:2!important;width:100%!important;max-width:900px!important;margin:0 auto!important}
+body.panchadasi-reader .shankara-verse{margin:0 0 22px!important;padding:0!important;border:0!important;background:transparent!important;scroll-margin-top:20px!important}
+body.panchadasi-reader .shankara-verse h2{display:block!important;margin:0!important;padding:0!important;border:0!important;color:#2f7f82!important;font:600 23px/1.1 Merriweather,Georgia,serif!important;letter-spacing:.01em!important;text-align:center!important}
+body.panchadasi-reader .shankara-verse h2::before{content:none!important}
+body.panchadasi-reader .shankara-verse .gita-verse-rule{display:block!important;width:56%!important;max-width:520px!important;height:0!important;margin:10px auto 12px!important;border:0!important;border-top:1px solid #dedbd6!important;background:transparent!important}
+body.panchadasi-reader .shankara-verse .gita-sanskrit{max-width:840px!important;margin:0 auto 6px!important;color:#3c362e!important;font:400 17px/1.45 "Noto Serif Devanagari","Noto Sans Devanagari",serif!important;text-align:center!important;white-space:pre-line!important}
+body.panchadasi-reader .shankara-verse .reader-inline-iast{display:block!important;max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;color:#3c362e!important;font:italic 400 13px/1.45 Merriweather,Georgia,serif!important;text-align:center!important;white-space:pre-line!important}
+body.panchadasi-reader .shankara-verse .gita-translation{max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important;font:400 14px/1.45 Merriweather,Georgia,serif!important;text-align:center!important}
+body.panchadasi-reader .shankara-verse .gita-controls{display:block!important;width:100%!important;max-width:840px!important;margin:0 auto!important;padding:0!important}
+body.panchadasi-reader .shankara-verse .gita-details.shankara-word-gloss>summary{display:block!important;width:max-content!important;max-width:100%!important;min-height:0!important;margin:0!important;padding:4px 10px!important;border:1px solid #9bc5c7!important;border-radius:999px!important;background:transparent!important;color:#2f7f82!important;font:600 12px/1.15 Merriweather,Georgia,serif!important;list-style:none!important;cursor:pointer}
+body.panchadasi-reader .shankara-verse .gita-details.shankara-word-gloss>summary::-webkit-details-marker{display:none!important}
+body.panchadasi-reader .shankara-verse .gita-details.shankara-word-gloss>summary::after{content:none!important}
+body.panchadasi-reader .shankara-verse .gita-details.shankara-word-gloss[open]>summary::after{content:"−"}
+body.panchadasi-reader .shankara-verse .gita-details.shankara-word-gloss .gita-reveal{margin:6px 0 9px!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important;font-size:14px!important;line-height:1.5!important}
+body.panchadasi-reader .shankara-work-nav{grid-column:2!important;grid-row:3!important;max-width:900px!important;margin:20px auto 0!important;padding-top:14px!important;border-top:1px solid #dedbd6!important}
 @media(max-width:760px){
- body.panchadasi-chapter-one-reader #chapter-reader{padding:0 16px 32px!important}
- body.panchadasi-chapter-one-reader .shankara-reading-grid{display:flex!important;flex-direction:column!important;gap:0!important}
- body.panchadasi-chapter-one-reader .gita-hero{order:0;width:100%!important;margin:0 0 14px!important;padding:15px 0!important}
- body.panchadasi-chapter-one-reader .gita-contents{order:1;position:relative!important;top:auto!important;width:100%!important;max-height:180px!important;margin:0 0 15px!important;padding:8px 12px!important;border:1px solid #c4c9cd!important}
- body.panchadasi-chapter-one-reader .shankara-unit-column{order:2;width:100%!important}
- body.panchadasi-chapter-one-reader .shankara-verse{padding:15px 0 22px!important}
- body.panchadasi-chapter-one-reader .shankara-verse .gita-sanskrit{font-size:18px!important}
- body.panchadasi-chapter-one-reader .shankara-verse .gita-translation{font-size:15px!important}
+ body.panchadasi-reader #chapter-reader{padding:0 16px 32px!important}
+ body.panchadasi-reader .shankara-reading-grid{display:flex!important;flex-direction:column!important;gap:0!important}
+ body.panchadasi-reader .gita-hero{order:0;width:100%!important;margin:0 0 14px!important;padding:15px 0!important}
+ body.panchadasi-reader .gita-contents{order:1;position:relative!important;top:auto!important;width:100%!important;max-height:180px!important;margin:0 0 15px!important;padding:8px 12px!important;border:1px solid #c4c9cd!important}
+ body.panchadasi-reader .shankara-unit-column{order:2;width:100%!important}
+ body.panchadasi-reader .shankara-verse{padding:15px 0 22px!important}
+ body.panchadasi-reader .shankara-verse .gita-sanskrit{font-size:18px!important}
+ body.panchadasi-reader .shankara-verse .gita-translation{font-size:15px!important}
 }
-body.panchadasi-chapter-one-reader .gita-hero .shankara-reader-links{display:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-controls{display:block!important;flex:none!important;max-width:840px!important;margin:0 auto!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details>summary{display:block!important;width:max-content!important;max-width:100%!important;min-height:0!important;margin:0!important;padding:4px 10px!important;border:1px solid #9bc5c7!important;border-radius:999px!important;background:transparent!important;color:#2f7f82!important;font:600 12px/1.15 Merriweather,Georgia,serif!important;list-style:none!important;cursor:pointer}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details>summary::-webkit-details-marker{display:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .shankara-word-gloss>summary::after{content:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details[open]>summary::after{content:none!important}
-body.panchadasi-chapter-one-reader .shankara-verse .gita-details .gita-reveal{display:block!important;margin:6px 0 9px!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#3c362e!important;font-size:14px!important;line-height:1.5!important}
-body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader .shankara-verse .reader-inline-iast{margin:0 auto 12px!important;padding:0!important;border:0!important;text-align:center!important}
+body.panchadasi-reader .gita-hero .shankara-reader-links{display:none!important}
+body.panchadasi-reader .shankara-verse .gita-controls{display:block!important;flex:none!important;max-width:840px!important;margin:0 auto!important}
+body.panchadasi-reader .shankara-verse .gita-details>summary{display:block!important;width:max-content!important;max-width:100%!important;min-height:0!important;margin:0!important;padding:4px 10px!important;border:1px solid #9bc5c7!important;border-radius:999px!important;background:transparent!important;color:#2f7f82!important;font:600 12px/1.15 Merriweather,Georgia,serif!important;list-style:none!important;cursor:pointer}
+body.panchadasi-reader .shankara-verse .gita-details>summary::-webkit-details-marker{display:none!important}
+body.panchadasi-reader .shankara-verse .shankara-word-gloss>summary::after{content:none!important}
+body.panchadasi-reader .shankara-verse .gita-details[open]>summary::after{content:none!important}
+body.panchadasi-reader .shankara-verse .gita-details .gita-reveal{display:block!important;margin:6px 0 9px!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#3c362e!important;font-size:14px!important;line-height:1.5!important}
+body.vd-chrome-page.vd-chrome-page.panchadasi-reader .shankara-verse .reader-inline-iast{margin:0 auto 12px!important;padding:0!important;border:0!important;text-align:center!important}
 
 /* Keep the reader inside the same centered, two-column measure as the Purāṇa template. */
-body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main>.article-shell{box-sizing:border-box!important;width:min(950px,calc(100% - 40px))!important;max-width:950px!important;margin:0 auto!important;padding:0!important}
-body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main>.article-shell>.article-body{box-sizing:border-box!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
-body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader #chapter-reader{box-sizing:border-box!important;width:100%!important;max-width:none!important;padding:0!important}
-body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader .shankara-reading-grid{grid-template-columns:112px minmax(0,1fr)!important;column-gap:40px!important}
-body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader #reader-toc .reader-toc-head>.reader-overline{display:none!important}
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse .gita-controls details>summary{border-radius:999px!important}
+body.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main>.article-shell{box-sizing:border-box!important;width:min(950px,calc(100% - 40px))!important;max-width:950px!important;margin:0 auto!important;padding:0!important}
+body.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main>.article-shell>.article-body{box-sizing:border-box!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+body.vd-chrome-page.vd-chrome-page.panchadasi-reader #chapter-reader{box-sizing:border-box!important;width:100%!important;max-width:none!important;padding:0!important}
+body.vd-chrome-page.vd-chrome-page.panchadasi-reader .shankara-reading-grid{grid-template-columns:112px minmax(0,1fr)!important;column-gap:40px!important}
+body.vd-chrome-page.vd-chrome-page.panchadasi-reader #reader-toc .reader-toc-head>.reader-overline{display:none!important}
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse .gita-controls details>summary{border-radius:999px!important}
 @media(max-width:760px){
- body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main>.article-shell{width:100%!important;max-width:none!important}
- body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader #chapter-reader{padding:0 14px 32px!important}
- body.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader .shankara-reading-grid{grid-template-columns:minmax(0,1fr)!important;column-gap:0!important}
+ body.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main>.article-shell{width:100%!important;max-width:none!important}
+ body.vd-chrome-page.vd-chrome-page.panchadasi-reader #chapter-reader{padding:0 14px 32px!important}
+ body.vd-chrome-page.vd-chrome-page.panchadasi-reader .shankara-reading-grid{grid-template-columns:minmax(0,1fr)!important;column-gap:0!important}
 }
 
 
 /* The requested Chapter 1 URL is a verse-only reader: no work header or chapter links. */
-body.panchadasi-chapter-one-reader .gita-hero{display:none!important}
-body.panchadasi-chapter-one-reader .shankara-reading-grid{row-gap:0!important}
-body.panchadasi-chapter-one-reader .gita-contents{grid-row:1!important}
-body.panchadasi-chapter-one-reader .shankara-unit-column{grid-row:1!important;padding-top:0!important}
-body.panchadasi-chapter-one-reader .shankara-work-nav,
-body.panchadasi-chapter-one-reader .shankara-reader-footer{display:none!important}
-body.panchadasi-chapter-one-reader .reader-toc-head{padding-top:0!important}
+body.panchadasi-reader .gita-hero{display:none!important}
+body.panchadasi-reader .shankara-reading-grid{row-gap:0!important}
+body.panchadasi-reader .gita-contents{grid-row:1!important}
+body.panchadasi-reader .shankara-unit-column{grid-row:1!important;padding-top:0!important}
+body.panchadasi-reader .shankara-work-nav,
+body.panchadasi-reader .shankara-reader-footer{display:none!important}
+body.panchadasi-reader .reader-toc-head{padding-top:0!important}
 @media(max-width:760px){
- body.panchadasi-chapter-one-reader .gita-contents{order:0!important}
- body.panchadasi-chapter-one-reader .shankara-unit-column{order:1!important}
+ body.panchadasi-reader .gita-contents{order:0!important}
+ body.panchadasi-reader .shankara-unit-column{order:1!important}
 }
 
-body.panchadasi-chapter-one-reader .shankara-reading-grid{grid-template-rows:auto!important}
-body.panchadasi-chapter-one-reader .gita-contents{grid-column:1!important;grid-row:1!important}
-body.panchadasi-chapter-one-reader .shankara-unit-column{grid-column:2!important;grid-row:1!important}
+body.panchadasi-reader .shankara-reading-grid{grid-template-rows:auto!important}
+body.panchadasi-reader .gita-contents{grid-column:1!important;grid-row:1!important}
+body.panchadasi-reader .shankara-unit-column{grid-column:2!important;grid-row:1!important}
 
-/* Match Bhagavatam verse and contents sizing on this one Pañcadaśī chapter route. */
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .reader-toc-head h2{
- margin:0!important;padding:0!important;border:0!important;color:#3c362e!important;font:500 16px/1.25 Vollkorn,Georgia,serif!important
+/* Match the chapter 1 verse and contents sizing across Pañcadaśī. */
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .reader-toc-head h2{
+ margin:0!important;padding:0!important;border:0!important;color:#3c362e!important;font:500 16px/1.25 Merriweather,Georgia,serif!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .gita-contents a.reader-verse-link{
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .gita-contents a.reader-verse-link{
  margin:0!important;padding:4px 0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#0645ad!important;font:500 10.5px/1.4 Merriweather,Georgia,serif!important;text-align:left!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse{margin:0 0 22px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>h2{
- display:block!important;margin:0!important;padding:0!important;border:0!important;color:#2f7f82!important;font:600 23px/1.1 Vollkorn,Georgia,serif!important;letter-spacing:.01em!important;text-align:center!important
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse{margin:0 0 22px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>h2{
+ display:block!important;margin:0!important;padding:0!important;border:0!important;color:#2f7f82!important;font:600 23px/1.1 Merriweather,Georgia,serif!important;letter-spacing:.01em!important;text-align:center!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-verse-rule{
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-verse-rule{
  display:block!important;width:56%!important;max-width:520px!important;height:0!important;margin:10px auto 12px!important;border:0!important;border-top:1px solid #dedbd6!important;background:transparent!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit{
- max-width:840px!important;margin:0 auto 6px!important;padding:0!important;color:#3c362e!important;font:400 18px/1.45 "Noto Serif Devanagari","Noto Serif",serif!important;text-align:center!important;white-space:pre-line!important
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit{
+ max-width:840px!important;margin:0 auto 6px!important;padding:0!important;color:#3c362e!important;font:400 18px/1.45 "Noto Serif Devanagari","Noto Sans Devanagari",serif!important;text-align:center!important;white-space:pre-line!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{
  display:block!important;max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;background:transparent!important;color:#3c362e!important;font:italic 400 16px/1.62 Merriweather,Georgia,serif!important;text-align:center!important;white-space:pre-line!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>p.gita-translation{
- display:block!important;max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e!important;font:400 14px/1.45 Noto Serif,Georgia,serif!important;text-align:center!important
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.gita-translation{
+ display:block!important;max-width:840px!important;margin:0 auto 12px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e!important;font:400 14px/1.45 Merriweather,Georgia,serif!important;text-align:center!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-controls{display:block!important;width:100%!important;max-width:840px!important;margin:0 auto!important;padding:0!important}
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details{
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-controls{display:block!important;width:100%!important;max-width:840px!important;margin:0 auto!important;padding:0!important}
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details{
  display:block!important;width:auto!important;max-width:840px!important;margin:0 auto 6px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary{
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary{
  display:block!important;width:max-content!important;max-width:100%!important;min-height:0!important;margin:0!important;padding:6px 12px!important;border:1px solid #c8c1ba!important;border-radius:6px!important;background:#fffdfb!important;color:#514a44!important;font:400 12.5px/1.2 Merriweather,Georgia,serif!important;list-style:none!important;cursor:pointer!important;box-shadow:none!important;text-decoration:none!important
 }
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary::-webkit-details-marker{display:none!important}
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary:after{content:none!important}
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary::-webkit-details-marker{display:none!important}
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary:after{content:none!important}
 @media(max-width:700px){
- body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>h2{font-size:21px!important}
- body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit{font-size:16px!important}
- body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{font-size:14px!important;line-height:1.5!important}
- body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>p.gita-translation{font-size:13px!important;line-height:1.45!important}
- body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-chapter-one-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary{font-size:12px!important;padding:4px 10px!important}
+ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>h2{font-size:21px!important}
+ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit{font-size:16px!important}
+ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{font-size:14px!important;line-height:1.5!important}
+ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.gita-translation{font-size:13px!important;line-height:1.45!important}
+ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-controls>.gita-details>summary{font-size:12px!important;padding:4px 10px!important}
 }
+
+
+/* Keep the article font after shared site chrome styles load. */
+body.vd-chrome-page.vd-chrome-page.gita-page.panchadasi-reader .shankara-content .shankara-reading-grid *:not([lang^="sa-Deva"]){font-family:Merriweather,Georgia,"Times New Roman",serif!important}
+body.vd-chrome-page.vd-chrome-page.gita-page.panchadasi-reader .shankara-content .shankara-reading-grid [lang^="sa-Deva"]{font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif!important}
