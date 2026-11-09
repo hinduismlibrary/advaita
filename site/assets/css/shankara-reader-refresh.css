@@ -274,3 +274,17 @@ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-ma
 /* Keep the article font after shared site chrome styles load. */
 body.vd-chrome-page.vd-chrome-page.gita-page.panchadasi-reader .shankara-content .shankara-reading-grid *:not([lang^="sa-Deva"]){font-family:Merriweather,Georgia,"Times New Roman",serif!important}
 body.vd-chrome-page.vd-chrome-page.gita-page.panchadasi-reader .shankara-content .shankara-reading-grid [lang^="sa-Deva"]{font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif!important}
+
+/* Add the article's grey quote rule to Sanskrit and IAST, leaving English plain. */
+body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>.gita-sanskrit,
+body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>p.reader-inline-iast,
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit,
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{
+ box-sizing:border-box!important;width:100%!important;max-width:840px!important;padding:0 0 0 16px!important;border:0!important;border-left:2px solid #a5a9aa!important;text-align:left!important
+}
+body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>.gita-sanskrit,
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit{margin:0 auto 6px!important}
+body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>p.reader-inline-iast,
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{margin:0 auto 12px!important}
+body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>p.gita-translation,
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.gita-translation{border:0!important;padding:0!important}
