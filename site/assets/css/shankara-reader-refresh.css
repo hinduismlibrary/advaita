@@ -280,11 +280,17 @@ body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankar
 body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>p.reader-inline-iast,
 body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit,
 body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{
- box-sizing:border-box!important;width:100%!important;max-width:840px!important;padding:0 0 0 16px!important;border:0!important;border-left:2px solid #a5a9aa!important;text-align:left!important
+ box-sizing:border-box!important;width:fit-content!important;max-width:100%!important;padding:0 0 0 16px!important;border:0!important;border-left:2px solid #a5a9aa!important;text-align:center!important
 }
 body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>.gita-sanskrit,
 body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>.gita-sanskrit{margin:0 auto 6px!important}
 body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>p.reader-inline-iast,
 body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.reader-inline-iast{margin:0 auto 12px!important}
-body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse>p.gita-translation,
-body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-verse>p.gita-translation{border:0!important;padding:0!important}
+body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse .gita-translation,
+body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-reading-grid .shankara-unit-column .shankara-verse p.gita-translation{
+ max-width:840px!important;margin:0 auto 12px!important;border:0!important;padding:0!important;text-align:center!important;font:400 18.5px/1.62 Merriweather,Georgia,serif!important
+}
+@media(max-width:700px){
+ body.panchadasi-reader.shankara-reader-page.gita-page .shankara-content .shankara-reading-grid .shankara-verse .gita-translation,
+ body.vd-chrome-page.vd-chrome-page.vd-chrome-page.panchadasi-reader main.site-main #chapter-reader .shankara-reading-grid .shankara-unit-column .shankara-verse p.gita-translation{font-size:17px!important;line-height:1.58!important}
+}
