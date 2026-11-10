@@ -74,21 +74,32 @@ jobs:
                       masthead:cs('.panchadasi-reader-masthead')}
                   }""")
                   print(name,'STYLES',json.dumps(styles,ensure_ascii=False))
-                  assert styles['sanskrit']['background'] != 'rgb(255, 255, 255)', styles
+                  assert styles['paper']['background'] == 'rgb(255, 253, 250)', styles
                   assert styles['english']['textAlign'] == 'left', styles
                   assert styles['masthead']['display'] != 'none',styles
-                  assert styles['paper']['background'] == 'rgb(252, 251, 248)',styles
+                  assert styles['paper']['background'] == 'rgb(255, 253, 250)',styles
                   assert page.locator('header.vd-global-header:visible').count()==0
                   assert not errors,errors
                   assert metrics['verses']==65,metrics
                   assert not metrics['overflow'],metrics
+                  source=page.locator('.panchadasi-sanskrit-reveal').first
+                  assert source.count()==1 and source.get_attribute('open') is None
+                  source.locator('summary').click()
+                  assert source.get_attribute('open') is not None
+                  assert source.locator('.gita-sanskrit').is_visible()
                   toggle=page.locator('.panchadasi-script-toggle')
                   assert toggle.count()==1
                   toggle.click()
                   assert toggle.get_attribute('aria-pressed')=='true'
-                  assert page.locator('.shankara-verse .reader-inline-iast').first.is_visible()
+                  assert source.locator('.reader-inline-iast').is_visible()
                   page.locator('.shankara-verse .gita-details').first.locator('summary').click()
                   assert page.locator('.shankara-verse .gita-details').first.get_attribute('open') is not None
+                  if name=='mobile':
+                      menu=page.locator('.panchadasi-mobile-toc-toggle')
+                      assert menu.is_visible()
+                      menu.click()
+                      assert menu.get_attribute('aria-expanded')=='true'
+                      assert page.locator('#reader-toc .reader-verse-link:visible').count()>0
                   page.close()
               browser.close()
           PY
