@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/site.css">
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
-<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261109-panchadasi-scripture-rules-5">
+<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261110-panchadasi-ch1-polish-1">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -430,6 +430,20 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
  root.dataset.activeChapter=String(selectedIndex+1);
  renderVerseNavigation(units,items,selectedIndex);
  contentNode.replaceChildren();
+ if(isPanchadasi&&selectedIndex===0){
+  var chapterIntro=document.createElement("header");
+  chapterIntro.className="panchadasi-chapter-intro";
+  var chapterKicker=document.createElement("p");
+  chapterKicker.className="panchadasi-chapter-kicker";
+  chapterKicker.textContent="Pañcadaśī · Chapter 1";
+  var chapterHeading=document.createElement("h2");
+  chapterHeading.textContent=chapterTitle.textContent||"Tattva-viveka";
+  var chapterMeta=document.createElement("p");
+  chapterMeta.className="panchadasi-chapter-meta";
+  chapterMeta.textContent=selectedUnits.length+" verses";
+  chapterIntro.append(chapterKicker,chapterHeading,chapterMeta);
+  contentNode.append(chapterIntro);
+ }
  if(!isPanchadasi){
   var intro=document.createElement("div");
   intro.className="reader-section-intro";
