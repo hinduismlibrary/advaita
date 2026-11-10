@@ -10,7 +10,7 @@ permissions:
   id-token: write
 concurrency:
   group: github-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   deploy:
     environment:
@@ -22,45 +22,38 @@ jobs:
         uses: actions/checkout@v6
       - name: Validate Advaita reader data and routes
         run: python3 tools/scripts/site-checks/validate-shankara-reader-data.py
-      - name: Wait for legacy branch Pages deployment if present
-        if: ${{ github.event_name == 'push' }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          # Once Pages is configured to use Actions, there is no branch build to wait for.
-          # Until then, allow the old automatic branch deployment to finish first.
-          for attempt in $(seq 1 90); do
-            state=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${GITHUB_SHA}&per_page=100" --jq '[.workflow_runs[] | select(.name == "pages build and deployment")] | sort_by(.created_at) | last | [.status // "pending", .conclusion // ""] | @tsv')
-            if [ -z "$state" ]; then
-              if [ "$attempt" -ge 3 ]; then
-                echo 'No branch Pages run: proceeding with GitHub Actions publishing.'
-                exit 0
-              fi
-              sleep 5
-              continue
-            fi
-            read -r status conclusion <<< "$state"
-            if [ "$status" = completed ]; then
-              echo "Legacy branch Pages finished (${conclusion:-unknown}); proceeding with the Actions publisher."
-              exit 0
-            fi
-            sleep 10
-          done
-          echo 'Legacy branch Pages deployment did not complete in time' >&2
-          exit 1
       - name: Recover stalled Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Earlier publication was accepted but remains the active deployment
-          # in GitHub Pages' API, blocking new attempts with HTTP 400.
           stale="62cd733e9ca56b8ff6014b7c78f00260d1815805"
           state=$(gh api "repos/${GITHUB_REPOSITORY}/pages/deployments/${stale}" --jq '.status' 2>/dev/null || true)
           echo "Previous Pages deployment status: ${state:-unavailable}"
-          if [ "$state" = "in_progress" ] || [ "$state" = "pending" ] || [ "$state" = "queued" ]; then
-            echo "Requesting cancellation of the stalled deployment ${stale}."
-            gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/deployments/${stale}/cancel" || true
-          fi
+          case "$state" in
+            succeed|success|failed|cancelled|canceled)
+              echo "Previous Pages deployment has completed."
+              ;;
+            *)
+              echo "Attempting cancellation of the stalled Pages deployment."
+              gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/deployments/${stale}/cancel" || true
+              ;;
+          esac
+      - name: Wait briefly for legacy branch Pages workflow
+        if: ${{ github.event_name == 'push' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 24); do
+            state=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${GITHUB_SHA}&per_page=100" --jq '[.workflow_runs[] | select(.name == "pages build and deployment")] | sort_by(.created_at) | last | [.status // "pending", .conclusion // ""] | @tsv' || true)
+            if [ -z "$state" ] && [ "$attempt" -ge 3 ]; then exit 0; fi
+            read -r status conclusion <<< "$state"
+            if [ "$status" = completed ]; then
+              echo "Branch publisher finished (${conclusion:-unknown}); proceeding with Actions."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Branch publisher is slow; attempting the Actions deployment anyway."
       - name: Prepare site deployment
         run: python3 tools/scripts/site-checks/prepare-site-deploy.py
       - name: Verify prepared shared chrome on every page
