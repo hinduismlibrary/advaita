@@ -232,11 +232,3 @@ body.article-standard-page.advaita-standard-reader #chapter-reader :focus-visibl
  body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>p.reader-inline-iast{font-size:13px!important;line-height:1.75!important}
  body.article-standard-page.advaita-standard-reader #chapter-reader .reader-section-intro{align-items:flex-start!important;flex-direction:column!important;gap:4px!important}
 }
-
-/* Keep the Advaita reader palette above the broader shared Gītā page rules. */
-body.vd-chrome-page.advaita-standard-reader.gita-page #chapter-reader.gita-content.shankara-content.page{
-  background:#fffdfa!important;color:#3c362e!important;
-}
-body.vd-chrome-page.advaita-standard-reader.gita-page #chapter-reader.gita-content.shankara-content.page .gita-hero.article-head h1{
-  color:#496b6c!important;
-}

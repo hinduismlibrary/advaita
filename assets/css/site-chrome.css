@@ -4192,3 +4192,11 @@ body.document-paged-page :is(.gita-details,.sanskrit-reveal,.sb-details)>summary
   outline:2px solid #a5a9aa!important;
   outline-offset:2px!important;
 }
+
+/* Preserve the Advaita reader palette when the site-wide chrome is injected. */
+body.vd-chrome-page.advaita-standard-reader #chapter-reader.page{
+  background:#fffdfa!important;color:#3c362e!important;
+}
+body.vd-chrome-page.advaita-standard-reader #chapter-reader .gita-hero h1{
+  color:#496b6c!important;
+}
