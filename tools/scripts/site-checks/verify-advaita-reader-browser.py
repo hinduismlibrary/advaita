@@ -226,7 +226,7 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
 
     if work == "panchadasi":
         page.set_viewport_size({"width": 1440, "height": 900})
-        page.goto(route_for(work, unit="panchadasi-1-01"), wait_until="domcontentloaded")
+        page.goto(f"{BASE}{READER_PATH}?work=panchadasi&unit=panchadasi-1-01", wait_until="domcontentloaded")
         page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
         page.screenshot(path=str(OUTPUT / "reader-panchadasi-1440x900.png"), full_page=True)
         page.set_viewport_size({"width": 1024, "height": 768})
