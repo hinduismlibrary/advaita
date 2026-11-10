@@ -268,7 +268,7 @@ def main() -> None:
         # Shared template representative pass at all four remaining target widths.
         for width, height in ((1024, 768), (768, 1024), (390, 844)):
             page.set_viewport_size({"width": width, "height": height})
-            page.goto(route_for("panchadasi", unit="panchadasi-1-01"), wait_until="domcontentloaded")
+            page.goto(f"{BASE}{READER_PATH}?work=panchadasi&unit=panchadasi-1-01", wait_until="domcontentloaded")
             page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
             require(not page.evaluate("document.documentElement.scrollWidth > innerWidth"),
                     f"Pañcadaśī has horizontal overflow at {width} px")
