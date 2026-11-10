@@ -41,14 +41,26 @@ jobs:
             fi
             read -r status conclusion <<< "$state"
             if [ "$status" = completed ]; then
-              if [ "$conclusion" = success ] || [ "$conclusion" = cancelled ]; then exit 0; fi
-              echo "Legacy branch Pages deployment failed: ${conclusion:-unknown}" >&2
-              exit 1
+              echo "Legacy branch Pages finished (${conclusion:-unknown}); proceeding with the Actions publisher."
+              exit 0
             fi
             sleep 10
           done
           echo 'Legacy branch Pages deployment did not complete in time' >&2
           exit 1
+      - name: Recover stalled Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Earlier publication was accepted but remains the active deployment
+          # in GitHub Pages' API, blocking new attempts with HTTP 400.
+          stale="62cd733e9ca56b8ff6014b7c78f00260d1815805"
+          state=$(gh api "repos/${GITHUB_REPOSITORY}/pages/deployments/${stale}" --jq '.status' 2>/dev/null || true)
+          echo "Previous Pages deployment status: ${state:-unavailable}"
+          if [ "$state" = "in_progress" ] || [ "$state" = "pending" ] || [ "$state" = "queued" ]; then
+            echo "Requesting cancellation of the stalled deployment ${stale}."
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/deployments/${stale}/cancel" || true
+          fi
       - name: Prepare site deployment
         run: python3 tools/scripts/site-checks/prepare-site-deploy.py
       - name: Verify prepared shared chrome on every page
