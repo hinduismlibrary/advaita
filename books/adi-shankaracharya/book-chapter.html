@@ -533,6 +533,32 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   contentNode.append(renderSectionContents(selectedUnits,selectedIndex));
  }
  selectedUnits.forEach(function(unit,index){contentNode.append(renderUnit(unit,selectedStart+index));});
+ if(isPanchadasi&&selectedIndex===0){
+  // The shared site chrome applies !important rules late. Keep these
+  // chapter-only reading colors authoritative without changing other books.
+  function chapterStyle(node,name,value){
+   if(node)node.style.setProperty(name,value,"important");
+  }
+  document.querySelectorAll("header.site-header,header.vd-global-header").forEach(function(node){
+   if(!node.classList.contains("panchadasi-reader-masthead"))chapterStyle(node,"display","none");
+  });
+  document.querySelectorAll("body,main.site-main,main.site-main .article-shell,main.site-main .article-body,#chapter-reader,.panchadasi-reader-masthead").forEach(function(node){
+   chapterStyle(node,"background","#fcfbf8");
+  });
+  document.querySelectorAll("#chapter-content .shankara-verse>.gita-sanskrit").forEach(function(node){
+   chapterStyle(node,"background","#f5f2eb");
+   chapterStyle(node,"border","1px solid #ebe6da");
+  });
+  document.querySelectorAll("#chapter-content .shankara-verse>p.gita-translation").forEach(function(node){
+   chapterStyle(node,"text-align","left");
+  });
+  document.querySelectorAll(".panchadasi-reader-nav a").forEach(function(node){
+   chapterStyle(node,"color","#63584d");
+  });
+  document.querySelectorAll("#reader-toc .reader-verse-link").forEach(function(node){
+   chapterStyle(node,"color","#675f53");
+  });
+ }
  var total=selectedUnits.length,withGloss=selectedUnits.filter(function(unit){return unit.gloss&&unit.gloss.length>0;}).length;
  coverageNode.textContent=withGloss===total
   ?"Word for Word glosses are available for all "+total+" entries in this chapter."

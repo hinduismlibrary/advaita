@@ -66,6 +66,8 @@ jobs:
                   assert styles['sanskrit']['background'] != 'rgb(255, 255, 255)', styles
                   assert styles['english']['textAlign'] == 'left', styles
                   assert styles['masthead']['display'] != 'none',styles
+                  assert styles['paper']['background'] == 'rgb(252, 251, 248)',styles
+                  assert page.locator('header.vd-global-header:visible').count()==0
                   assert not errors,errors
                   assert metrics['verses']==65,metrics
                   assert not metrics['overflow'],metrics
