@@ -56,8 +56,15 @@ jobs:
                   }""")
                   print(name,json.dumps(metrics,ensure_ascii=False), 'JS errors:',errors)
                   assert not errors,errors
-                  assert metrics['verses']>100,metrics
+                  assert metrics['verses']==65,metrics
                   assert not metrics['overflow'],metrics
+                  toggle=page.locator('.panchadasi-script-toggle')
+                  assert toggle.count()==1
+                  toggle.click()
+                  assert toggle.get_attribute('aria-pressed')=='true'
+                  assert page.locator('.shankara-verse .reader-inline-iast').first.is_visible()
+                  page.locator('.shankara-verse .gita-details').first.locator('summary').click()
+                  assert page.locator('.shankara-verse .gita-details').first.get_attribute('open') is not None
                   page.close()
               browser.close()
           PY
