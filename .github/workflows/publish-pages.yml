@@ -69,15 +69,30 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: site
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Verify published article routes
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           set -euo pipefail
+          # Confirm the public landing page and Chapter 1 are reachable as well as
+          # the previously checked article routes.
           for attempt in $(seq 1 12); do
+            base="${PAGE_URL%/}"
+            home_status=$(curl --location --silent --show-error --max-time 20 -o /tmp/vd-home.html -w '%{http_code}' "$base/" || true)
+            chapter_status=$(curl --location --silent --show-error --max-time 20 -o /tmp/vd-chapter.html -w '%{http_code}' "$base/books/adi-shankaracharya/book-chapter.html?work=panchadasi&unit=panchadasi-1-01" || true)
+            echo "Public site HTTP: ${home_status:-unreachable}; Pañcadaśī Chapter 1 HTTP: ${chapter_status:-unreachable} (attempt ${attempt}/12)"
+            if [ "$home_status" != "200" ] || [ "$chapter_status" != "200" ] \
+              || ! grep -Fq 'Vivekadrishti' /tmp/vd-home.html \
+              || ! grep -Fq 'id="chapter-reader"' /tmp/vd-chapter.html; then
+              sleep 10
+              continue
+            fi
             manuscript_url="${PAGE_URL%/}/articles/a-defence-of-the-manusmriti/"
             women_url="${PAGE_URL%/}/articles/hinduism-on-women/"
             if manuscript=$(curl --fail --silent --show-error --location --max-time 20 "$manuscript_url") \
