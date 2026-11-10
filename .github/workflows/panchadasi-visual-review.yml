@@ -37,10 +37,10 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare deployed site
-        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
       - name: Audit all text data, routes, and publication mirrors
         run: node tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - name: Prepare deployed site
+        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
       - name: Install Chromium
         run: |
           python3 -m pip install --quiet playwright
