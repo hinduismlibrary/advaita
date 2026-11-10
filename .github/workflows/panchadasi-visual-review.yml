@@ -1,0 +1,69 @@
+name: Review Panchadasi Chapter 1 visually
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/panchadasi-visual-review.yml
+      - site/books/adi-shankaracharya/book-chapter.html
+      - site/assets/css/shankara-reader-refresh.css
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare deployed site
+        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
+      - name: Install browser
+        run: |
+          python3 -m pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium
+      - name: Render chapter desktop and mobile
+        run: |
+          mkdir -p panchadasi-visual-output preview-root
+          ln -s "$GITHUB_WORKSPACE/site" preview-root/advaita
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory preview-root >/tmp/panchadasi-preview-server.log 2>&1 &
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          base = 'http://127.0.0.1:8765/advaita/books/adi-shankaracharya/book-chapter.html?work=panchadasi&unit=panchadasi-1-01'
+          with sync_playwright() as p:
+              browser = p.chromium.launch()
+              for width,height,name in [(1440,900,'desktop'),(390,844,'mobile')]:
+                  page = browser.new_page(viewport={'width':width,'height':height}, device_scale_factor=1)
+                  errors=[]
+                  page.on('pageerror',lambda err: errors.append(str(err)))
+                  page.goto(base,wait_until='domcontentloaded')
+                  page.locator('.shankara-verse').first.wait_for(timeout=30000)
+                  page.evaluate('document.fonts.ready')
+                  page.screenshot(path=f'panchadasi-visual-output/{name}.png')
+                  metrics=page.evaluate("""() => {
+                     const sel=(s)=>document.querySelector(s);
+                     const rect=(s)=>{let e=sel(s);if(!e)return null;let r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}};
+                     return {verses:document.querySelectorAll('.shankara-verse').length,
+                       title:sel('.panchadasi-chapter-intro')?.textContent,
+                       body:document.body.className,
+                       overflow:document.documentElement.scrollWidth>innerWidth,
+                       intro:rect('.panchadasi-chapter-intro'),
+                       toc:rect('#reader-toc'),
+                       verse:rect('.shankara-verse'),
+                       english:rect('.gita-translation'),
+                       activeLinks:document.querySelectorAll('.reader-verse-link').length}
+                  }""")
+                  print(name,json.dumps(metrics,ensure_ascii=False), 'JS errors:',errors)
+                  assert not errors,errors
+                  assert metrics['verses']>100,metrics
+                  assert not metrics['overflow'],metrics
+                  page.close()
+              browser.close()
+          PY
+      - name: Save screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: panchadasi-visual-${{ github.run_id }}
+          path: panchadasi-visual-output/
