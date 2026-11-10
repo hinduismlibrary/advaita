@@ -300,3 +300,13 @@ body.article-standard-page.panchadasi-chapter-one #chapter-reader .gita-word-glo
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
  }
 }
+
+/* Prevent legacy controls spacing from shifting the article-style disclosures. */
+body.article-standard-page.panchadasi-chapter-one #chapter-reader #chapter-content .shankara-verse>.gita-controls,
+body.article-standard-page.panchadasi-chapter-one #chapter-reader #chapter-content .shankara-verse>.gita-controls>.gita-details{
+ display:block!important;margin:0!important;padding:0!important;width:100%!important;max-width:none!important;
+}
+body.article-standard-page.panchadasi-chapter-one #chapter-reader #reader-toc .panchadasi-mobile-toc-toggle,
+body.article-standard-page.panchadasi-chapter-one #chapter-reader #reader-toc .panchadasi-mobile-toc-toggle::before{
+ color:#643a81!important;
+}

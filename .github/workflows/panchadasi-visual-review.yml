@@ -84,6 +84,10 @@ jobs:
                       assert metrics['toc']['x'] < 130,metrics
                   assert styles['paper']['background'] == 'rgb(255, 253, 250)',styles
                   assert page.locator('header.vd-global-header:visible').count()==0
+                  assert page.locator('.reader-toc-head .reader-overline').count()==0
+                  disclosure=page.locator('.shankara-verse').first.locator('.gita-details > summary')
+                  source_button=page.locator('.shankara-verse').first.locator('.panchadasi-sanskrit-reveal > summary')
+                  assert abs(disclosure.bounding_box()['x'] - source_button.bounding_box()['x']) < 16
                   assert not errors,errors
                   assert metrics['verses']==65,metrics
                   assert not metrics['overflow'],metrics

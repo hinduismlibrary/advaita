@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261110-panchadasi-ch1-editorial-2">
-<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-shastric-article-2">
+<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-shastric-article-3">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -613,7 +613,23 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   enforce(chapterIntro.querySelector(".panchadasi-chapter-meta"),"color","#68635d");
   enforce(document.querySelector(".reader-toc-head h2"),"color","#61596a");
   enforce(document.querySelector(".reader-toc-head h2"),"font","700 13px/1.35 Merriweather,Georgia,serif");
+  var redundantTocLabel=document.querySelector(".reader-toc-head .reader-overline");
+  if(redundantTocLabel)redundantTocLabel.remove();
   enforce(document.getElementById("reader-toc"),"display","block");
+  enforce(document.querySelector(".panchadasi-mobile-toc-toggle"),"color","#643a81");
+  enforce(document.querySelector(".panchadasi-script-toggle"),"color","#326466");
+  contentNode.querySelectorAll(".shankara-verse>.gita-controls").forEach(function(node){
+   enforce(node,"margin","0");
+   enforce(node,"padding","0");
+   enforce(node,"width","100%");
+   enforce(node,"max-width","none");
+   var details=node.querySelector(".gita-details");
+   enforce(details,"margin","0");
+   enforce(details,"padding","0");
+   enforce(details,"width","100%");
+   enforce(details,"max-width","none");
+   enforce(details&&details.querySelector("summary"),"margin-left","0");
+  });
   document.querySelectorAll("#reader-toc .reader-verse-band-details").forEach(function(details){
    var summary=details.querySelector("summary");
    function sync(){
