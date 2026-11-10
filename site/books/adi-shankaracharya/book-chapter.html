@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261110-panchadasi-ch1-editorial-2">
-<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-shastric-article-1">
+<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-shastric-article-2">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -370,6 +370,11 @@ function trackActiveVerse(units){
   links.forEach(function(link){
    var selected=link.dataset.verseId===id;
    link.classList.toggle("is-active",selected);
+   if(isPanchadasi&&root.dataset.activeChapter==="1"){
+    link.style.setProperty("color",selected?"#67328a":"#5d5961","important");
+    link.style.setProperty("background-color",selected?"#f6f0fa":"transparent","important");
+    link.style.setProperty("border-left-color",selected?"#823fa7":"transparent","important");
+   }
    if(selected){link.setAttribute("aria-current","location");activeLink=link;}
    else link.removeAttribute("aria-current");
   });
@@ -584,6 +589,52 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
    if(!node.classList.contains("panchadasi-reader-masthead"))enforce(node,"display","none");
   });
   enforce(document.body,"background","#f5f3ef");
+  var siteMain=document.querySelector("main.site-main");
+  enforce(siteMain,"width","100%");
+  enforce(siteMain,"max-width","1600px");
+  enforce(siteMain,"margin","0 auto");
+  document.querySelectorAll("main.site-main .article-shell,main.site-main .article-body").forEach(function(node){
+   enforce(node,"width","100%");
+   enforce(node,"max-width","none");
+   enforce(node,"margin","0");
+   enforce(node,"padding","0");
+  });
+  enforce(root,"width","100%");
+  enforce(root,"max-width","none");
+  enforce(root,"box-sizing","border-box");
+  enforce(root,"padding",window.innerWidth<=760?"28px 20px 48px":"36px clamp(24px,4vw,64px) 64px");
+  enforce(chapterIntro,"border","0");
+  var displayedTitle=chapterIntro.querySelector("h1");
+  enforce(displayedTitle,"border","0");
+  enforce(displayedTitle,"color","#496b6c");
+  enforce(displayedTitle,"font","400 clamp(28px,3.1vw,36px)/1.25 Merriweather,Georgia,serif");
+  enforce(displayedTitle,"text-align","center");
+  enforce(chapterIntro.querySelector(".panchadasi-chapter-kicker"),"color","#68635d");
+  enforce(chapterIntro.querySelector(".panchadasi-chapter-meta"),"color","#68635d");
+  enforce(document.querySelector(".reader-toc-head h2"),"color","#61596a");
+  enforce(document.querySelector(".reader-toc-head h2"),"font","700 13px/1.35 Merriweather,Georgia,serif");
+  enforce(document.getElementById("reader-toc"),"display","block");
+  document.querySelectorAll("#reader-toc .reader-verse-band-details").forEach(function(details){
+   var summary=details.querySelector("summary");
+   function sync(){
+    var open=details.open;
+    enforce(summary,"color",open?"#67328a":"#5d5961");
+    enforce(summary,"background-color",open?"#f6f0fa":"transparent");
+    enforce(summary,"border-left","3px solid "+(open?"#823fa7":"transparent"));
+   }
+   sync();details.addEventListener("toggle",sync);
+  });
+  document.querySelectorAll(".panchadasi-reader-brand,.panchadasi-reader-nav a").forEach(function(node){
+   enforce(node,"color","#326466");
+  });
+  document.querySelectorAll(".panchadasi-reader-search input").forEach(function(node){enforce(node,"border","1px solid #bcb8af");});
+  document.querySelectorAll(".panchadasi-reader-search button").forEach(function(node){enforce(node,"color","#326466");enforce(node,"border","1px solid #9baba8");});
+  document.querySelectorAll(".panchadasi-sanskrit-reveal>summary,.gita-controls .gita-details>summary").forEach(function(node){
+   enforce(node,"border","1px solid #d8ad8b");
+   enforce(node,"border-radius","18px");
+   enforce(node,"color","#5c5144");
+   enforce(node,"background","transparent");
+  });
   document.querySelectorAll("main.site-main,main.site-main .article-shell,main.site-main .article-body,#chapter-reader,.panchadasi-reader-masthead").forEach(function(node){
    enforce(node,"background","#fffdfa");
   });
