@@ -85,30 +85,39 @@ jobs:
                   assert styles['paper']['background'] == 'rgb(255, 253, 250)',styles
                   assert page.locator('header.vd-global-header:visible').count()==0
                   assert page.locator('.reader-toc-head .reader-overline').count()==0
-                  disclosure=page.locator('.shankara-verse').first.locator('.gita-details > summary')
-                  source_button=page.locator('.shankara-verse').first.locator('.panchadasi-sanskrit-reveal > summary')
-                  assert abs(disclosure.bounding_box()['x'] - source_button.bounding_box()['x']) < 16
                   assert not errors,errors
-                  assert metrics['verses']==65,metrics
+                  assert metrics['verses']==65 and metrics['activeLinks']==65,metrics
                   assert not metrics['overflow'],metrics
-                  source=page.locator('.panchadasi-sanskrit-reveal').first
-                  assert source.count()==1 and source.get_attribute('open') is None
-                  source.locator('summary').click()
-                  assert source.get_attribute('open') is not None
-                  assert source.locator('.gita-sanskrit').is_visible()
-                  toggle=page.locator('.panchadasi-script-toggle')
-                  assert toggle.count()==1
-                  toggle.click()
-                  assert toggle.get_attribute('aria-pressed')=='true'
-                  assert source.locator('.reader-inline-iast').is_visible()
-                  page.locator('.shankara-verse .gita-details').first.locator('summary').click()
-                  assert page.locator('.shankara-verse .gita-details').first.get_attribute('open') is not None
+                  links=page.locator('#chapter-list>li>a.reader-verse-link')
+                  assert links.count()==65
+                  assert links.first.inner_text()=='1.1'
+                  assert links.last.inner_text()=='1.65'
+                  assert page.locator('.reader-verse-band-details').count()==0
+                  assert page.locator('.panchadasi-script-toggle,.panchadasi-sanskrit-reveal').count()==0
+                  first=page.locator('.shankara-verse').first
+                  sa=first.locator('.panchadasi-visible-sanskrit')
+                  iast=first.locator('.panchadasi-visible-iast')
+                  en=first.locator('.gita-translation')
+                  assert sa.is_visible() and iast.is_visible() and en.is_visible()
+                  ys=[x.bounding_box()['y'] for x in (sa,iast,en)]
+                  assert ys==sorted(ys),ys
+                  gloss=first.locator('.gita-details > summary')
+                  assert gloss.count()==1 and gloss.inner_text()=='Word for Word'
+                  gloss.click()
+                  assert first.locator('.gita-details').get_attribute('open') is not None
+                  if name=='desktop':
+                      toc=page.locator('#reader-toc')
+                      assert toc.evaluate('(e)=>getComputedStyle(e).overflowY')=='visible'
+                      assert toc.evaluate('(e)=>e.scrollHeight<=e.clientHeight+4')
+                      assert toc.bounding_box()['height']>1400
                   if name=='mobile':
                       menu=page.locator('.panchadasi-mobile-toc-toggle')
                       assert menu.is_visible()
                       menu.click()
                       assert menu.get_attribute('aria-expanded')=='true'
-                      assert page.locator('#reader-toc .reader-verse-link:visible').count()>0
+                      assert page.locator('#reader-toc .reader-verse-link:visible').count()==65
+                      assert page.locator('#reader-toc').evaluate('(e)=>getComputedStyle(e).overflowY')=='visible'
+                      assert page.locator('#reader-toc').evaluate('(e)=>e.scrollHeight<=e.clientHeight+4')
                   page.close()
               browser.close()
           PY

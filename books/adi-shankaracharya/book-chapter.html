@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261110-panchadasi-ch1-editorial-2">
-<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-shastric-article-3">
+<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-full-verse-4">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -98,7 +98,7 @@ function makeGloss(details,words){
  details.className="gita-details shankara-word-gloss";
  details.replaceChildren();
  var summary=document.createElement("summary");
- summary.textContent=isPanchadasi&&root.dataset.activeChapter==="1"?"Word meanings":"Word for Word";
+ summary.textContent="Word for Word";
  var reveal=document.createElement("div");
  reveal.className="gita-reveal";
  var list=document.createElement("div");
@@ -205,42 +205,17 @@ function renderVerseNavigation(units,chapters,selectedChapter){
   var next=chapters[selectedChapter+1];
   var start=current.index,end=next?next.index:units.length;
   var verses=units.slice(start,end);
-  if(selectedChapter===0){
-   for(var first=0;first<verses.length;first+=10){
-    var group=document.createElement("li"),details=document.createElement("details");
-    group.className="reader-verse-band";
-    details.className="reader-verse-band-details";
-    details.open=first===0;
-    var summary=document.createElement("summary");
-    summary.textContent="Verses "+(first+1)+"–"+Math.min(first+10,verses.length);
-    var links=document.createElement("ol");
-    links.className="reader-verse-band-links";
-    verses.slice(first,first+10).forEach(function(unit,offset){
-     var item=document.createElement("li"),link=document.createElement("a");
-     link.className="reader-verse-link";
-     link.href="#"+encodeURIComponent(String(unit.id));
-     link.textContent=String(unit.number||start+first+offset+1);
-     link.dataset.verseId=String(unit.id);
-     link.setAttribute("aria-label","Read verse "+link.textContent);
-     item.append(link);
-     links.append(item);
-    });
-    details.append(summary,links);
-    group.append(details);
-    listNode.append(group);
-   }
-  }else{
-   verses.forEach(function(unit,verseIndex){
-    var item=document.createElement("li"),link=document.createElement("a");
-    link.className="reader-verse-link";
-    link.href="#"+encodeURIComponent(String(unit.id));
-    link.textContent=String(unit.number||start+verseIndex+1);
-    link.dataset.verseId=String(unit.id);
-    link.setAttribute("aria-label","Read verse "+link.textContent);
-    item.append(link);
-    listNode.append(item);
-   });
-  }
+  // Flat verse navigation; the browser page is the only scroller.
+  verses.forEach(function(unit,i){
+   var li=document.createElement("li"),link=document.createElement("a");
+   if(selectedChapter===0)li.className="panchadasi-verse-toc-item";
+   link.className="reader-verse-link";
+   link.href="#"+encodeURIComponent(String(unit.id));
+   link.textContent=selectedChapter===0?"1."+(i+1):String(unit.number||start+i+1);
+   link.dataset.verseId=String(unit.id);
+   link.setAttribute("aria-label","Read verse "+link.textContent);
+   li.append(link);listNode.append(li);
+  });
   return;
  }
  chapters.forEach(function(chapter,chapterIndex){
@@ -343,14 +318,10 @@ function renderUnit(unit,index){
  if(isPanchadasi&&root.dataset.activeChapter==="1"){
   heading.textContent="Pañcadaśī "+String(unit.number||index+1);
   card.classList.add("scripture-quote-pair");
-  heading.classList.add("reference");
-  translation.classList.add("translation");
-  var sanskritDetails=document.createElement("details");
-  sanskritDetails.className="sanskrit-reveal panchadasi-sanskrit-reveal";
-  var sanskritSummary=document.createElement("summary");
-  sanskritSummary.textContent="Sanskrit";
-  sanskritDetails.append(sanskritSummary,source,roman);
-  card.append(heading,translation,sanskritDetails,controls);
+  heading.classList.add("reference");translation.classList.add("translation");
+  source.classList.add("panchadasi-visible-sanskrit");
+  roman.classList.add("panchadasi-visible-iast");
+  card.append(heading,source,roman,translation,controls);
  }else if(isPanchadasi){
   var verseRule=document.createElement("hr");
   verseRule.className="gita-verse-rule";
@@ -386,19 +357,11 @@ function trackActiveVerse(units){
   });
   var unit=units.find(function(item){return String(item.id)===id});
   if(unit)tocProgress.textContent="Reading verse "+(unit.number||"")+" · "+units.length+" in this chapter";
-  if(activeLink&&isPanchadasi&&root.dataset.activeChapter==="1"){
-   var band=activeLink.closest(".reader-verse-band-details");
-   if(band&&!band.open){
-    listNode.querySelectorAll(".reader-verse-band-details[open]").forEach(function(other){if(other!==band)other.open=false;});
-    band.open=true;
-   }
-  }
-  if(activeLink){
+  if(activeLink&&!(isPanchadasi&&root.dataset.activeChapter==="1")){
    var toc=document.getElementById("reader-toc");
    var box=toc.getBoundingClientRect(),position=activeLink.getBoundingClientRect();
-   if(position.top<box.top+85||position.bottom>box.bottom-12){
+   if(position.top<box.top+85||position.bottom>box.bottom-12)
     toc.scrollTop+=position.top-(box.top+Math.min(box.height*.42,170));
-   }
   }
  }
  var queued=false;
@@ -492,20 +455,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   var chapterMeta=document.createElement("p");
   chapterMeta.className="panchadasi-chapter-meta";
   chapterMeta.textContent=selectedUnits.length+" verses  ·  Vidyāraṇya";
-  var readingActions=document.createElement("div");
-  readingActions.className="panchadasi-reading-actions";
-  var scriptButton=document.createElement("button");
-  scriptButton.type="button";
-  scriptButton.className="panchadasi-script-toggle";
-  scriptButton.setAttribute("aria-pressed","false");
-  scriptButton.textContent="Show transliteration";
-  scriptButton.addEventListener("click",function(){
-   var active=root.classList.toggle("show-iast");
-   scriptButton.setAttribute("aria-pressed",String(active));
-   scriptButton.textContent=active?"Hide transliteration":"Show transliteration";
-  });
-  readingActions.append(scriptButton);
-  chapterIntro.append(chapterKicker,chapterHeading,chapterMeta,readingActions);
+  chapterIntro.append(chapterKicker,chapterHeading,chapterMeta);
   document.body.classList.add("panchadasi-chapter-one");
   // Reuse the same structure and stylesheet as the Varṇa editorial article.
   document.body.classList.add("article-standard-page","docs-quote-format");
@@ -617,7 +567,6 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   if(redundantTocLabel)redundantTocLabel.remove();
   enforce(document.getElementById("reader-toc"),"display","block");
   enforce(document.querySelector(".panchadasi-mobile-toc-toggle"),"color","#643a81");
-  enforce(document.querySelector(".panchadasi-script-toggle"),"color","#326466");
   contentNode.querySelectorAll(".shankara-verse>.gita-controls").forEach(function(node){
    enforce(node,"margin","0");
    enforce(node,"padding","0");
@@ -645,7 +594,7 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   });
   document.querySelectorAll(".panchadasi-reader-search input").forEach(function(node){enforce(node,"border","1px solid #bcb8af");});
   document.querySelectorAll(".panchadasi-reader-search button").forEach(function(node){enforce(node,"color","#326466");enforce(node,"border","1px solid #9baba8");});
-  document.querySelectorAll(".panchadasi-sanskrit-reveal>summary,.gita-controls .gita-details>summary").forEach(function(node){
+  document.querySelectorAll(".gita-controls .gita-details>summary").forEach(function(node){
    enforce(node,"border","1px solid #d8ad8b");
    enforce(node,"border-radius","18px");
    enforce(node,"color","#5c5144");
@@ -658,10 +607,15 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
    enforce(node,"text-align","left");enforce(node,"background","transparent");
    enforce(node,"color","#3c362e");enforce(node,"border-left","2px solid #a5a9aa");
   });
-  contentNode.querySelectorAll(".panchadasi-sanskrit-reveal .gita-sanskrit").forEach(function(node){
-   enforce(node,"text-align","left");enforce(node,"background","transparent");
-   enforce(node,"border","0");enforce(node,"border-left","3px solid #a5a9aa");
-   enforce(node,"color","#bd570d");
+  contentNode.querySelectorAll(".shankara-verse>.panchadasi-visible-sanskrit").forEach(function(node){
+   enforce(node,"display","block");enforce(node,"text-align","left");
+   enforce(node,"background","transparent");enforce(node,"border","0");
+   enforce(node,"border-left","3px solid #a5a9aa");enforce(node,"color","#bd570d");
+  });
+  contentNode.querySelectorAll(".shankara-verse>.panchadasi-visible-iast").forEach(function(node){
+   enforce(node,"display","block");enforce(node,"text-align","left");
+   enforce(node,"background","transparent");enforce(node,"border","0");
+   enforce(node,"border-left","2px solid #c7c1c3");enforce(node,"color","#68635d");
   });
  }
  var total=selectedUnits.length,withGloss=selectedUnits.filter(function(unit){return unit.gloss&&unit.gloss.length>0;}).length;
