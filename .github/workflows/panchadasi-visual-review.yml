@@ -37,6 +37,17 @@ jobs:
                   page = browser.new_page(viewport={'width':width,'height':height}, device_scale_factor=1)
                   errors=[]
                   page.on('pageerror',lambda err: errors.append(str(err)))
+                  reference=base.split('books/adi-shankaracharya/')[0]+'articles/a-shashtric-lens-of-varna-part-one/'
+                  page.goto(reference,wait_until='domcontentloaded')
+                  page.locator('.article-head h1').wait_for(timeout=30000)
+                  page.evaluate('document.fonts.ready')
+                  page.screenshot(path=f'panchadasi-visual-output/reference-{name}.png')
+                  ref_metrics=page.evaluate("""() => {
+                    const r=s=>{const e=document.querySelector(s);if(!e)return null;const b=e.getBoundingClientRect();return{x:b.x,y:b.y,w:b.width,h:b.height}};
+                    const c=s=>{const e=document.querySelector(s);if(!e)return null;const x=getComputedStyle(e);return{font:x.fontFamily,fs:x.fontSize,color:x.color,bg:x.backgroundColor,lineHeight:x.lineHeight}};
+                    return{title:r('.article-head'),toc:r('.side-toc'),reading:r('.article'),titleStyle:c('.article-head h1'),bodyStyle:c('body'),pageStyle:c('.page'),tocStyle:c('.side-toc-title')}
+                  }""")
+                  print('REFERENCE',name,json.dumps(ref_metrics,ensure_ascii=False))
                   page.goto(base,wait_until='domcontentloaded')
                   page.locator('.shankara-verse').first.wait_for(timeout=30000)
                   page.evaluate('document.fonts.ready')
