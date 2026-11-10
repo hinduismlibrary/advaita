@@ -1,0 +1,310 @@
+/* Second Canto rebuild: one Bhaviṣya-style presentation for every verse, regardless of legacy markup. */
+.bhagavatam-rebuild-page .article-body{
+  width:min(920px,calc(100% - 48px))!important;
+  margin:0 auto!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:16px!important;
+  line-height:1.45!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild{
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild>div{
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:8px 0 20px!important;
+  background:#f7f6f4!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild>div>div{
+  width:100%!important;
+  max-width:760px!important;
+  margin:0 auto!important;
+  padding:0 24px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:16px!important;
+  line-height:1.45!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h1{
+  margin:0!important;
+  color:#00787a!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:clamp(38px,6vw,50px)!important;
+  font-weight:400!important;
+  line-height:1.125!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h1+p{
+  margin:18px 0 0!important;
+  color:#a92727!important;
+  font-size:18px!important;
+  line-height:1.45!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild h2{
+  color:#2f7f82!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:26px!important;
+  font-weight:600!important;
+  line-height:1.1!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild ol{
+  max-width:760px!important;
+  margin:0 auto!important;
+  padding-left:28px!important;
+  font-size:16px!important;
+  line-height:1.4!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part{
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:#f7f6f4!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part>div,
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part>.sb-panel,
+.bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part .sb-inner{
+  position:static!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:920px!important;
+  margin:0 auto!important;
+  padding:0 24px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.bhagavatam-rebuild-page h2[id^="chapter-"],
+.bhagavatam-rebuild-page .sb-chapter{
+  max-width:840px!important;
+  margin:38px auto 28px!important;
+  padding:0!important;
+  color:#2f7f82!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:28px!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  letter-spacing:.01em!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page h2[id^="chapter-"]>span,
+.bhagavatam-rebuild-page .sb-chapter>span{
+  color:#2f7f82!important
+}
+
+.bhagavatam-rebuild-page .sb-verse-section,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]{
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 26px!important;
+  padding:0!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important
+}
+
+.bhagavatam-rebuild-page h3[id^="sb-"],
+.bhagavatam-rebuild-page .sb-verse{
+  margin:0!important;
+  padding:0!important;
+  color:#2f7f82!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:26px!important;
+  font-weight:600!important;
+  line-height:1.1!important;
+  letter-spacing:.01em!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page .sb-verse-section>.sb-rule,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>hr,
+.bhagavatam-rebuild-page .sb-rule{
+  width:56%!important;
+  max-width:520px!important;
+  height:0!important;
+  margin:13px auto 16px!important;
+  padding:0!important;
+  border:0!important;
+  border-top:1px solid #dedbd6!important;
+  background:transparent!important
+}
+
+.bhagavatam-rebuild-page .sb-devanagari,
+.bhagavatam-rebuild-page .sb-dev,
+.bhagavatam-rebuild-page .sb-verse-section>div[lang="sa-Deva"],
+.bhagavatam-rebuild-page .sb-verse-section>div[lang="sa"],
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>div[lang="sa-Deva"],
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>div[lang="sa"]{
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:21px!important;
+  font-style:normal!important;
+  font-weight:400!important;
+  line-height:1.48!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page .sb-translation{
+  display:block!important;
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:16px!important;
+  font-style:normal!important;
+  font-weight:400!important;
+  line-height:1.45!important;
+  text-align:center!important
+}
+
+.bhagavatam-rebuild-page .sb-details,
+.bhagavatam-rebuild-page .sb-verse-section>details,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details{
+  display:block!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 8px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  overflow:visible!important
+}
+
+.bhagavatam-rebuild-page .sb-details>summary,
+.bhagavatam-rebuild-page .sb-verse-section>details>summary,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details>summary{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:5px 13px!important;
+  cursor:pointer!important;
+  list-style:none!important;
+  border:1px solid #9bc5c7!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#2f7f82!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:14px!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  text-align:left!important
+}
+
+.bhagavatam-rebuild-page details>summary::-webkit-details-marker{
+  display:none!important
+}
+
+.bhagavatam-rebuild-page .sb-bhasya>summary{
+  border-color:#dfaaa5!important;
+  color:#ab382d!important
+}
+
+.bhagavatam-rebuild-page .sb-details>div,
+.bhagavatam-rebuild-page .sb-details>p,
+.bhagavatam-rebuild-page .sb-verse-section>details>div,
+.bhagavatam-rebuild-page .sb-verse-section>details>p,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details>div,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>details>p,
+.bhagavatam-rebuild-page .sb-meaning,
+.bhagavatam-rebuild-page .sb-bhasya-text{
+  margin:8px 0 12px!important;
+  padding:0!important;
+  color:#3c362e!important;
+  background:transparent!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.55!important;
+  text-align:left!important
+}
+
+.bhagavatam-rebuild-page .sb-transliteration-details>div,
+.bhagavatam-rebuild-page .sb-transliteration-details>p{
+  font-size:14px!important;
+  font-style:italic!important;
+  line-height:1.55!important
+}
+
+.bhagavatam-rebuild-page .sb-commentary,
+.bhagavatam-rebuild-page .sb-verse-section>p.sb-commentary,
+.bhagavatam-rebuild-page section[aria-labelledby^="sb-"]>p.sb-commentary{
+  max-width:840px!important;
+  margin:14px auto 0!important;
+  color:#3c362e!important;
+  font-family:Merriweather,Georgia,'Times New Roman',serif!important;
+  font-size:16px!important;
+  font-style:normal!important;
+  font-weight:400!important;
+  line-height:1.45!important;
+  text-align:left!important
+}
+
+.bhagavatam-rebuild-page .sb-commentary>strong:first-child{
+  color:#2f7f82!important;
+  font-size:17px!important;
+  font-weight:700!important
+}
+
+/* Keep the Śrīdhara layer strictly textual: no third-person commentary, textual notes, or legacy prose fallback. */
+.bhagavatam-rebuild-page .sb-commentary,
+.bhagavatam-rebuild-page .sb-sridhara-legacy-sense{
+  display:none!important
+}
+
+@media(max-width:780px){
+  .bhagavatam-rebuild-page .article-body{
+    width:calc(100% - 36px)!important
+  }
+  .bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild>div>div,
+  .bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part>div,
+  .bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part>.sb-panel,
+  .bhagavatam-rebuild-page .empyrean-bhagavatam-rebuild-part .sb-inner,
+  .bhagavatam-rebuild-page .sb-verse-section,
+  .bhagavatam-rebuild-page section[aria-labelledby^="sb-"]{
+    width:100%!important;
+    max-width:100%!important;
+    padding-left:0!important;
+    padding-right:0!important
+  }
+  .bhagavatam-rebuild-page h2[id^="chapter-"],
+  .bhagavatam-rebuild-page .sb-chapter,
+  .bhagavatam-rebuild-page h3[id^="sb-"],
+  .bhagavatam-rebuild-page .sb-verse{
+    font-size:24px!important
+  }
+  .bhagavatam-rebuild-page .sb-devanagari,
+  .bhagavatam-rebuild-page .sb-dev,
+  .bhagavatam-rebuild-page .sb-verse-section>div[lang="sa-Deva"],
+  .bhagavatam-rebuild-page .sb-verse-section>div[lang="sa"]{
+    font-size:19px!important
+  }
+}

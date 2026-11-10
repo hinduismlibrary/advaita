@@ -1,0 +1,58 @@
+/* One subsection at a time for essays; scripture readers intentionally do not use this file. */
+body.paged-article-page .vicara-doc-page[hidden],
+body.paged-article-page .vicara-parent-heading{display:none!important}
+body.paged-article-page .vicara-doc-page{width:100%!important;max-width:652px!important;margin:0!important;padding:0!important}
+body.paged-article-page .vicara-doc-page>h2:first-of-type,
+body.paged-article-page .vicara-doc-page>h3:first-of-type,
+body.paged-article-page .vicara-doc-page>h4:first-of-type{margin-top:0!important}
+body.paged-article-page .page-context{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:0 0 18px!important;padding:0 0 10px!important;border-bottom:1px solid #ddd8d2;color:#817970;font-size:12px!important;line-height:1.35!important}
+body.paged-article-page .page-context strong{color:#625a53;font-weight:700}
+body.paged-article-page .page-context span{white-space:nowrap}
+body.paged-article-page .page-nav{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:62px 0 0!important;padding:20px 0 0!important;border-top:1px solid #d7d1ca}
+body.paged-article-page .page-nav a{display:block!important;color:#5b544e!important;font-size:13px!important;line-height:1.4!important;text-decoration:none!important}
+body.paged-article-page .page-nav a:hover{color:var(--vr-purple)!important}
+body.paged-article-page .page-nav .next{text-align:right}.page-nav .disabled{visibility:hidden}
+body.paged-article-page .page-nav small{display:block;margin-bottom:4px;color:#918980;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em}
+
+/* Kill legacy spacer rows before they can become grid tracks. These empty WordPress wrappers were the source of the large white gaps above illustrated essays. */
+body.paged-article-page .article-body>.wp-block-spacer,
+body.paged-article-page .article-body>.wp-block-group.varna-style-hook,
+body.paged-article-page .article-body>:empty,
+body.paged-article-page .article-body>.wp-block-group:has(>.wp-block-group__inner-container:empty){display:none!important}
+body.paged-article-page .article-body>.empyrean-final-article,
+body.paged-article-page .article-body>.empyrean-final-meat{grid-row:1!important;align-self:start!important}
+
+/* Original-document art belongs to the section it illustrates. Keep it tight to the title/context instead of leaving a second title-sized gap. */
+body.paged-article-page .source-document-figure{width:100%!important;max-width:652px!important;margin:0 auto 28px!important;padding:0!important;text-align:center!important;background:transparent!important;border:0!important}
+body.paged-article-page .source-document-figure img{display:block!important;width:auto!important;height:auto!important;max-width:100%!important;margin:0 auto!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important}
+body.paged-article-page .source-document-figure--varna img{max-width:min(100%,460px)!important}
+body.paged-article-page .source-document-figure--vishnu img{max-width:min(100%,470px)!important}
+body.paged-article-page .source-document-figure--meat img{max-width:min(72vw,300px)!important}
+body.paged-article-page .source-document-figure--diagram{margin:22px auto 30px!important}
+body.paged-article-page .source-document-figure--diagram img{width:100%!important;max-width:620px!important}
+body.paged-article-page .source-document-figure--closing{margin:42px auto 4px!important}
+body.paged-article-page .source-document-figure--closing img{max-width:min(55vw,235px)!important}
+body.paged-article-page .source-document-figure--vishnu-emblem img{max-width:min(60vw,260px)!important}
+body.paged-article-page .article-heading,
+body.paged-article-page .empyrean-final-article>div>div:first-child,
+body.paged-article-page.meat-reader-page .empyrean-final-meat>div>div:first-child{margin-bottom:14px!important}
+
+/* The meat essay used a separate legacy full-page frame; fold it into the shared reader instead. */
+body.vicara-reader-page.meat-reader-page .article-body .empyrean-final-meat{position:static!important;z-index:auto!important;left:auto!important;width:652px!important;max-width:100%!important;margin:0!important;padding:0!important;background:transparent!important;color:var(--vr-ink)!important;font-family:Merriweather,Georgia,serif!important}
+body.vicara-reader-page.meat-reader-page .empyrean-final-meat>div{width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;background:transparent!important}
+body.vicara-reader-page.meat-reader-page .empyrean-final-meat>div>div{width:652px!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+body.vicara-reader-page.meat-reader-page .empyrean-final-meat h1:first-of-type{margin:0!important;padding:0!important;color:var(--vr-teal)!important;font-family:Vollkorn,Georgia,serif!important;font-size:50px!important;font-style:normal!important;font-weight:400!important;line-height:1.125!important;text-align:center!important}
+body.vicara-reader-page.meat-reader-page .article-body h4{margin:44px 0 18px!important;color:var(--vr-teal)!important;font-family:Vollkorn,Georgia,serif!important;font-size:24px!important;font-weight:400!important;line-height:1.25!important}
+
+@media(max-width:900px){
+ body.paged-article-page .page-context{margin-bottom:16px!important}
+ body.vicara-reader-page.meat-reader-page .empyrean-final-meat,body.vicara-reader-page.meat-reader-page .empyrean-final-meat>div,body.vicara-reader-page.meat-reader-page .empyrean-final-meat>div>div{width:100%!important;max-width:100%!important}
+}
+@media(max-width:620px){
+ body.paged-article-page .page-context{font-size:11px!important;margin-bottom:13px!important}
+ body.paged-article-page .page-nav{gap:12px;margin-top:48px!important}.page-nav a{font-size:12.5px!important}
+ body.paged-article-page .source-document-figure{margin:0 auto 22px!important}.source-document-figure--varna img{max-width:92%!important}.source-document-figure--vishnu img{max-width:90%!important}.source-document-figure--diagram{margin:18px auto 26px!important}.source-document-figure--closing{margin-top:34px!important}
+ body.paged-article-page .article-heading,body.paged-article-page .empyrean-final-article>div>div:first-child,body.paged-article-page.meat-reader-page .empyrean-final-meat>div>div:first-child{margin-bottom:10px!important}
+ body.vicara-reader-page.meat-reader-page .empyrean-final-meat h1:first-of-type{font-size:35px!important;line-height:1.12!important}
+ body.vicara-reader-page.meat-reader-page .article-body h4{margin-top:36px!important;font-size:21px!important}
+}

@@ -1,0 +1,828 @@
+/* Small semantic additions for the Other essays.
+   The reader itself uses the exact Varṇa-vicāra stylesheet. These rules only
+   give its preserved tables and long-form notes a quiet, academic treatment. */
+
+.document-paged-page .document-content{
+  min-width:0;
+  overflow-wrap:break-word;
+}
+
+.document-paged-page .document-content .source-citation,
+.document-paged-page .document-content .reference{
+  margin:34px 0 10px!important;
+  color:#006f71;
+  font-size:16px;
+  line-height:1.45;
+  font-weight:700;
+}
+
+.document-paged-page .document-content .sanskrit-text{
+  margin:16px 0 24px;
+  padding-left:17px;
+  border-left:2px solid #c5a48f;
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:20px;
+  line-height:1.8;
+}
+
+.document-paged-page .document-content .aside-note,
+.document-paged-page .document-content .closing-postscript{
+  margin:32px 0;
+  padding:0 0 0 17px;
+  border-left:2px solid var(--quote-rule);
+  color:var(--quote);
+}
+
+.document-paged-page .document-content .aside-note p,
+.document-paged-page .document-content .closing-postscript p{
+  margin-bottom:24px;
+}
+
+.document-paged-page .document-content table{
+  width:100%;
+  max-width:100%;
+  margin:22px 0 28px;
+  border-collapse:collapse;
+  table-layout:auto;
+  font-size:14px;
+  line-height:1.48;
+}
+
+.document-paged-page .document-content table caption{
+  margin:0 0 8px;
+  color:#625b54;
+  font-family:Vollkorn,Georgia,serif;
+  font-size:18px;
+  line-height:1.3;
+  text-align:left;
+}
+
+.document-paged-page .document-content table th,
+.document-paged-page .document-content table td{
+  padding:7px 8px;
+  border:0;
+  border-bottom:1px solid #e5e1db;
+  text-align:left;
+  vertical-align:top;
+  overflow-wrap:anywhere;
+}
+
+.document-paged-page .document-content table th{
+  background:#f7f6f3;
+  color:#514941;
+  font-weight:700;
+}
+
+.document-paged-page .document-content table tbody tr:nth-child(even) td{
+  background:transparent;
+}
+
+.document-paged-page .document-content h3.reader-subheading{
+  margin:24px 0 10px;
+  color:#514941;
+  font-family:Vollkorn,Georgia,serif;
+  font-size:19px;
+  line-height:1.35;
+  font-weight:500;
+}
+
+.document-paged-page .document-content table a{
+  color:var(--teal);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* The index is part of the article, but reads as a quiet list rather than a
+   pasted page of a manuscript. */
+.document-paged-page .document-content .article-index{
+  margin:0 0 12px;
+}
+
+.document-paged-page .document-content .index-entry{
+  margin:0;
+  padding:15px 0 16px;
+  border-bottom:1px solid #ddd8d2;
+}
+
+.document-paged-page .document-content .index-entry:first-child{
+  padding-top:0;
+}
+
+.document-paged-page .document-content .index-heading{
+  display:block;
+  color:var(--teal);
+  font-size:19px;
+  line-height:1.42;
+  text-decoration:none;
+}
+
+.document-paged-page .document-content .index-subitem{
+  display:block;
+  margin:7px 0 0 22px;
+  color:#625b54;
+  font-size:15px;
+  line-height:1.55;
+  text-decoration:none;
+}
+
+.document-paged-page .document-content .index-heading:hover,
+.document-paged-page .document-content .index-subitem:hover{
+  color:var(--purple);
+  text-decoration:underline;
+}
+
+.document-paged-page .document-content .article-bullet{
+  margin-left:18px;
+  padding-left:2px;
+  text-indent:-18px;
+}
+
+.document-paged-page .document-content .article-bullet::first-letter{
+  color:#817970;
+}
+
+.document-paged-page .document-content .shaiva-parallel{
+  width:100%;
+  margin:22px 0 28px;
+  border-collapse:collapse;
+  table-layout:fixed;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.document-paged-page .document-content .shaiva-parallel th,
+.document-paged-page .document-content .shaiva-parallel td{
+  padding:7px 8px;
+  border:0;
+  border-bottom:1px solid #e5e1db;
+  text-align:left;
+  vertical-align:top;
+  overflow-wrap:anywhere;
+}
+
+.document-paged-page .document-content .shaiva-parallel th{
+  background:#f7f6f3;
+  color:#514941;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+
+.document-paged-page .document-content .shaiva-parallel th:first-child,
+.document-paged-page .document-content .shaiva-parallel td:first-child{
+  width:47%;
+}
+
+.document-paged-page .document-content .shaiva-parallel td.shaiva-parallel__sanskrit{
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:17px;
+  line-height:1.62;
+  white-space:pre-line;
+}
+
+.document-paged-page .document-content .shaiva-parallel td.shaiva-parallel__english{
+  font-family:Merriweather,Georgia,serif;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.document-paged-page .document-content .shaiva-parallel tbody tr:nth-child(even) td{
+  background:transparent;
+}
+
+.document-paged-page .document-content .shaiva-note{
+  display:block;
+  margin-top:10px;
+  color:#817970;
+  font-size:12px;
+  line-height:1.5;
+}
+
+/* Body text uses Merriweather; structural headings inherit the shared
+   Vollkorn styling from the Varna reader. Devanagari uses Noto Serif. */
+.shastric-article .article,
+.shastric-article .document-content,
+.shastric-article .document-content details.sanskrit-reveal>summary,
+.shastric-article .document-content table caption{
+  font-family:Merriweather,Georgia,serif;
+}
+
+.shastric-article .document-content details.sanskrit-reveal>summary{
+  font-size:13px;
+  font-weight:400;
+  letter-spacing:0;
+}
+
+.shastric-article .document-content details.sanskrit-reveal [lang^="sa"],
+.shastric-article .document-content .sanskrit-text{
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:20px;
+  line-height:1.58;
+  font-weight:400;
+  letter-spacing:0;
+}
+
+.shastric-article .document-content .sanskrit-transliteration{
+  margin:12px 0 16px;
+  color:var(--sanskrit);
+  font-family:Merriweather,Georgia,serif;
+  font-size:15px;
+  line-height:1.55;
+  font-style:italic;
+}
+
+@media(max-width:620px){
+  .document-paged-page .document-content .source-citation,
+  .document-paged-page .document-content .reference{
+    font-size:14px;
+  }
+
+  .document-paged-page .document-content .sanskrit-text{
+    padding-left:12px;
+    font-size:18px;
+    line-height:1.78;
+  }
+
+  .document-paged-page .document-content .aside-note,
+  .document-paged-page .document-content .closing-postscript{
+    padding-left:13px;
+  }
+
+  .document-paged-page .document-content table{
+    display:block;
+    overflow-x:auto;
+    font-size:12.5px;
+  }
+
+  .document-paged-page .document-content table caption{
+    font-size:17px;
+  }
+
+  .document-paged-page .document-content table th,
+  .document-paged-page .document-content table td{
+    padding:6px 7px;
+    min-width:70px;
+  }
+
+  .document-paged-page .document-content .index-subitem{
+    margin-left:16px;
+    font-size:13px;
+  }
+
+  .document-paged-page .document-content .shaiva-parallel,
+  .document-paged-page .document-content .shaiva-parallel thead,
+  .document-paged-page .document-content .shaiva-parallel tbody,
+  .document-paged-page .document-content .shaiva-parallel tr,
+  .document-paged-page .document-content .shaiva-parallel th,
+  .document-paged-page .document-content .shaiva-parallel td{
+    display:block;
+    width:100%!important;
+  }
+
+  .document-paged-page .document-content .shaiva-parallel thead{
+    position:absolute;
+    width:1px!important;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    clip-path:inset(50%);
+    white-space:nowrap;
+  }
+
+  .document-paged-page .document-content .shaiva-parallel tr{
+    padding:9px 0;
+    border-top:1px solid #e5e1db;
+  }
+
+  .document-paged-page .document-content .shaiva-parallel tr:first-child{
+    border-top:0;
+  }
+
+  .document-paged-page .document-content .shaiva-parallel td{
+    padding:3px 8px 5px;
+    border:0;
+    background:transparent!important;
+  }
+
+  .document-paged-page .document-content .shaiva-parallel td::before{
+    display:block;
+    margin:0 0 4px;
+    color:#817970;
+    font-family:Merriweather,Georgia,serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.02em;
+    content:attr(data-label);
+  }
+
+  .document-paged-page .document-content .shaiva-parallel td.shaiva-parallel__sanskrit{
+    font-size:17px;
+    line-height:1.58;
+  }
+
+  .shastric-article .document-content details.sanskrit-reveal [lang^="sa"],
+  .shastric-article .document-content .sanskrit-text{
+    font-size:18px;
+    line-height:1.62;
+  }
+
+  .shastric-article .document-content .sanskrit-transliteration{
+    margin:10px 0 14px;
+    font-size:14px;
+  }
+}
+
+/* Keep every reading section addressable while showing only chapter names
+   until a reader opens a group. The current section remains visible in its
+   collapsed chapter label. */
+.document-paged-page details.toc-group{margin:0 0 13px}
+.document-paged-page details.toc-group>summary.toc-parent{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 14px;
+  gap:2px 7px;
+  margin:0;
+  padding:0;
+  color:var(--ink);
+  font-family:Merriweather,Georgia,serif;
+  font-size:15px;
+  line-height:1.4;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+}
+.document-paged-page details.toc-group>summary.toc-parent::-webkit-details-marker{display:none}
+.document-paged-page details.toc-group>summary.toc-parent::marker{content:""}
+.document-paged-page .toc-parent-title{grid-column:1;grid-row:1}
+.document-paged-page .toc-current{
+  grid-column:1 / -1;
+  grid-row:2;
+  min-width:0;
+  overflow:hidden;
+  color:#817970;
+  font-size:11px;
+  font-weight:400;
+  line-height:1.4;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.document-paged-page details.toc-group>.toc-parent::after{
+  grid-column:2;
+  grid-row:1;
+  justify-self:end;
+  color:#8c837b;
+  content:"+";
+  font-family:Merriweather,Georgia,serif;
+  font-size:15px;
+  font-weight:400;
+  line-height:1.2;
+}
+.document-paged-page details.toc-group[open]>.toc-parent::after{content:"−"}
+.document-paged-page details.toc-group.has-current>.toc-parent{color:var(--teal)}
+.document-paged-page details.toc-group>.toc-children{margin-top:8px}
+.document-paged-page details.toc-group>.toc-children a{font-size:13.5px}
+.document-paged-page .toc a.toc-main{
+  display:block;
+  margin:0 0 13px;
+  padding:0;
+  color:var(--ink);
+  font-family:Merriweather,Georgia,serif;
+  font-size:15px;
+  line-height:1.4;
+  font-weight:600;
+}
+.document-paged-page .toc a.toc-main:hover{
+  color:var(--teal);
+  text-decoration:none;
+}
+.document-paged-page .toc a.toc-main.is-active{
+  color:var(--purple);
+  font-weight:700;
+}
+.document-paged-page .meat-cover-art{
+  width:min(100%,150px);
+  margin:0 auto 28px;
+  text-align:center;
+}
+.document-paged-page .meat-cover-art img{display:block;width:100%;height:auto}
+.document-paged-page .meat-cover-art figcaption{
+  margin-top:8px;
+  color:#817970;
+  font-size:11px;
+  line-height:1.4;
+}
+@media(max-width:620px){
+  .document-paged-page details.toc-group{margin-bottom:12px}
+  .document-paged-page details.toc-group>summary.toc-parent{font-size:15px}
+  .document-paged-page details.toc-group>.toc-children a{font-size:13.5px}
+  .document-paged-page .meat-cover-art{width:min(100%,132px);margin-bottom:23px}
+}
+
+/* Additional controls for the Sadvarṇārthaprakāśinī reader. */
+.shastric-article .article-head .article-subtitle{
+  margin:12px 0 0;
+  color:#625b54;
+  font-family:Merriweather,Georgia,serif;
+  font-size:16px;
+  line-height:1.5;
+  font-style:italic;
+}
+.sadvarn-reader .document-content h4{
+  margin:38px 0 16px;
+  color:var(--teal);
+  font-family:Vollkorn,Georgia,serif;
+  font-size:22px;
+  line-height:1.32;
+  font-weight:500;
+  scroll-margin-top:22px;
+}
+.shastric-article .document-paged-page .toc .toc-subitems{
+  margin:-6px 0 13px;
+}
+.document-paged-page .toc a.toc-subitem{
+  display:block;
+  margin:0 0 6px 13px;
+  padding:0 0 0 10px;
+  overflow:hidden;
+  border-left:1px solid #e0dbd5;
+  color:#7a726a;
+  font-size:12px;
+  line-height:1.45;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.document-paged-page .toc details.toc-subgroup{
+  margin:0 0 8px;
+}
+.document-paged-page .toc details.toc-subgroup>summary{
+  margin:0 0 6px 13px;
+  padding:0 18px 0 10px;
+  border-left:1px solid #e0dbd5;
+  color:#817970;
+  font-size:11px;
+  line-height:1.45;
+  cursor:pointer;
+  list-style:none;
+}
+.document-paged-page .toc details.toc-subgroup>summary::-webkit-details-marker{display:none}
+.document-paged-page .toc details.toc-subgroup>summary::marker{content:""}
+.document-paged-page .toc details.toc-subgroup>summary::after{
+  float:right;
+  margin-right:-15px;
+  color:#8c837b;
+  content:"+";
+}
+.document-paged-page .toc details.toc-subgroup[open]>summary::after{content:"−"}
+.document-paged-page .toc details.toc-subgroup>.toc-subitems{margin-bottom:8px}
+.document-paged-page .toc a.toc-subitem:hover,
+.document-paged-page .toc a.toc-subitem.is-active-subsection{
+  color:var(--purple);
+  text-decoration:none;
+}
+.sadvarn-reader .document-content .editorial-note{
+  margin:16px 0 24px;
+  padding:12px 15px;
+  border-left:2px solid #c5a48f;
+  background:#f0ece7;
+  color:#625b54;
+  font-size:14px;
+  line-height:1.55;
+}
+.sadvarn-reader .document-content .definition-verse{
+  margin:20px 0 26px;
+  padding:3px 0 0 14px;
+  border-left:1px solid #d8d2ca;
+}
+.sadvarn-reader .document-content .definition-verse p.translation{
+  margin-bottom:0!important;
+}
+.sadvarn-reader .document-content .rendering-label{
+  display:block;
+  margin:0 0 5px;
+  color:#8a8179;
+  font-size:10px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.sadvarn-reader .document-content .sanskrit-inline,
+.sadvarn-reader .document-content .source-postscript-heading{
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  unicode-bidi:isolate;
+}
+.sadvarn-reader .document-content .sanskrit-inline{
+  font-size:.97em;
+}
+.sadvarn-reader .document-content .source-postscript-heading{
+  margin:0 0 18px;
+  font-size:21px;
+  line-height:1.65;
+  text-align:center;
+}
+.sadvarn-reader .document-content .postscript-verse{
+  margin:20px 0 24px;
+  padding:0 0 0 14px;
+  border-left:1px solid #d8d2ca;
+}
+.sadvarn-reader .document-content .postscript-verse .verse-number{
+  margin:0 0 2px;
+  color:#8a8179;
+  font-size:12px;
+  line-height:1.4;
+  font-weight:700;
+}
+.sadvarn-reader .document-content .postscript-verse p.translation{
+  margin-bottom:0!important;
+}
+.sadvarn-reader .document-content .postscript-verse details.sanskrit-reveal{
+  margin-top:3px;
+}
+@media(max-width:620px){
+  .shastric-article .article-head .article-subtitle{font-size:14.5px}
+  .sadvarn-reader .document-content h4{margin:31px 0 13px;font-size:20px}
+  .shastric-article .toc a.toc-subitem{font-size:12px}
+  .sadvarn-reader .document-content .editorial-note{padding:11px 12px;font-size:13px}
+  .sadvarn-reader .document-content .definition-verse,
+  .sadvarn-reader .document-content .postscript-verse{padding-left:11px}
+  .sadvarn-reader .document-content .source-postscript-heading{font-size:19px}
+  .sadvarn-reader .document-content table.evidence-table,
+  .sadvarn-reader .document-content table.acharya-table{
+    display:block;
+    overflow:visible;
+    font-size:12.5px;
+  }
+  .sadvarn-reader .document-content table.evidence-table thead,
+  .sadvarn-reader .document-content table.acharya-table thead{
+    position:absolute;
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    clip-path:inset(50%);
+    white-space:nowrap;
+  }
+  .sadvarn-reader .document-content table.evidence-table tbody,
+  .sadvarn-reader .document-content table.acharya-table tbody{
+    display:block;
+    width:100%;
+  }
+  .sadvarn-reader .document-content table.evidence-table tr,
+  .sadvarn-reader .document-content table.acharya-table tr{
+    display:grid;
+    grid-template-columns:26px minmax(0,1fr);
+    gap:0 8px;
+    width:100%;
+    margin:0;
+    padding:8px 0 10px;
+    border:0;
+    border-bottom:1px solid #e5e1db;
+    border-radius:0;
+    background:transparent;
+  }
+  .sadvarn-reader .document-content table.evidence-table tr:first-child,
+  .sadvarn-reader .document-content table.acharya-table tr:first-child{
+    border-top:1px solid #e5e1db;
+  }
+  .sadvarn-reader .document-content table.evidence-table td,
+  .sadvarn-reader .document-content table.acharya-table td{
+    display:block;
+    width:100%;
+    min-width:0!important;
+    padding:3px 0!important;
+    border:0!important;
+    background:transparent!important;
+    overflow-wrap:anywhere;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:first-child,
+  .sadvarn-reader .document-content table.acharya-table td:first-child{
+    grid-column:1;
+    grid-row:1 / span 3;
+    color:#766f68;
+    font-weight:700;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(2),
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(3),
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(2),
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(3),
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(4){
+    grid-column:2;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(2)::before,
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(3)::before,
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(2)::before,
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(3)::before,
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(4)::before{
+    display:block;
+    margin:0 0 1px;
+    color:#817970;
+    font-size:10px;
+    line-height:1.3;
+    font-weight:600;
+    letter-spacing:.02em;
+  }
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(2)::before{content:"Reference"}
+  .sadvarn-reader .document-content table.evidence-table td:nth-child(3)::before{content:"Statement"}
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(2)::before{content:"Ācārya"}
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(3)::before{content:"Tradition"}
+  .sadvarn-reader .document-content table.acharya-table td:nth-child(4)::before{content:"Statement"}
+}
+
+
+/* Prevent nested quote styling from drawing parallel left rules. */
+.sadvarn-reader .document-content .aside-note > p.translation{
+  padding-left:0;
+  border-left:0;
+}
+.sadvarn-reader .document-content .definition-verse{
+  padding-left:17px;
+  border-left:2px solid var(--quote-rule);
+}
+.sadvarn-reader .document-content .definition-verse > details.sanskrit-reveal [lang="sa-Deva"],
+.sadvarn-reader .document-content .definition-verse > p.translation{
+  padding-left:0;
+  border-left:0;
+}
+.sadvarn-reader .document-content .postscript-translations{
+  margin:12px 0 28px 28px;
+  padding:0;
+  list-style:decimal;
+}
+.sadvarn-reader .document-content .postscript-translations li{
+  margin:0 0 20px;
+  padding-left:4px;
+}
+.sadvarn-reader .document-content .postscript-translations li::marker{
+  color:#8a8179;
+  font-weight:700;
+}
+.sadvarn-reader .document-content .postscript-translations p.translation{
+  margin:0!important;
+}
+@media(max-width:620px){
+  .sadvarn-reader .document-content .postscript-translations{margin-left:24px}
+  .sadvarn-reader .document-content .postscript-translations li{margin-bottom:17px}
+}
+
+.sadvarn-reader .document-content .postscript-ending{
+  margin:44px 0 8px;
+  padding-top:26px;
+  border-top:1px solid #d8d2ca;
+}
+.sadvarn-reader .document-content .postscript-ending .postscript-translations{
+  margin-top:16px;
+}
+@media(max-width:620px){
+  .sadvarn-reader .document-content .postscript-ending{
+    margin-top:36px;
+    padding-top:21px;
+  }
+}
+
+/* Keep source titles and authors quiet beneath the page title. */
+.document-paged-page .article-head .article-byline,
+.shastric-article .article-head .article-byline{
+  margin:6px 0 0;
+  color:#817970;
+  font-size:12.5px;
+  line-height:1.45;
+  font-style:normal;
+  font-weight:400;
+}
+.document-paged-page .article-body .article-footnote,
+.shastric-article .article-body .article-footnote{
+  margin:12px 0 24px;
+  color:#625b54;
+  font-size:13px;
+  line-height:1.55;
+}
+@media(max-width:620px){
+  .document-paged-page .article-head .article-byline,
+  .shastric-article .article-head .article-byline{font-size:12px}
+  .document-paged-page .article-body .article-footnote,
+  .shastric-article .article-body .article-footnote{font-size:12px}
+}
+
+
+/* Keep every nested Contents link compact and identical in all document readers. */
+.document-paged-page .toc .toc-subitems a.toc-subitem{
+  display:block;
+  box-sizing:border-box;
+  width:auto;
+  max-width:calc(100% - 13px);
+  min-width:0;
+  margin:0 0 5px 13px!important;
+  padding:0 10px 0 9px;
+  overflow:hidden!important;
+  color:#7a726a!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+  font-weight:400!important;
+  text-decoration:none;
+  text-overflow:ellipsis!important;
+  white-space:nowrap!important;
+}
+.document-paged-page .toc .toc-subitems a.toc-subitem:hover,
+.document-paged-page .toc .toc-subitems a.toc-subitem.is-active-subsection{
+  color:var(--purple)!important;
+  text-decoration:none;
+}
+.document-paged-page .toc .toc-subitems a.toc-subitem.toc-level-4{
+  max-width:calc(100% - 23px);
+  margin-left:23px!important;
+}
+.document-paged-page .toc .toc-subitems a.toc-subitem.toc-level-5{
+  max-width:calc(100% - 33px);
+  margin-left:33px!important;
+}
+.document-paged-page .toc .toc-subitems.toc-subitems-nested{
+  margin:3px 0 6px 8px!important;
+}
+.document-paged-page .toc details.toc-subgroup{
+  margin:0 0 7px;
+}
+.document-paged-page .toc details.toc-subgroup>summary{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.document-paged-page .toc .toc-current{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap!important;
+}
+
+/* Bibliography and source pages share one quiet, single-column treatment. */
+.document-paged-page .document-content.document-reference-page .article-index{
+  margin:0 0 8px;
+}
+.document-paged-page .document-content.document-reference-page .index-entry{
+  padding:8px 0 9px;
+  border-color:#e5e1db;
+}
+.document-paged-page .document-content.document-reference-page .index-heading{
+  font-size:16px;
+  line-height:1.42;
+}
+.document-paged-page .document-content.document-reference-page .index-subitem{
+  margin-top:5px;
+  font-size:13px;
+  line-height:1.48;
+}
+#source-content.document-reference-page h3.reader-subheading{
+  margin:18px 0 7px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.38!important;
+  font-weight:500!important;
+}
+#source-content.document-reference-page h3.reader-subheading::after{
+  display:none!important;
+  content:none!important;
+}
+#source-content.document-reference-page h4{
+  margin:13px 0 6px!important;
+  color:#625b54!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.4!important;
+  font-weight:500!important;
+}
+.document-paged-page .document-content.document-reference-page ol,
+.document-paged-page .document-content.document-reference-page ul{
+  margin:0 0 12px;
+  padding-left:22px;
+}
+.document-paged-page .document-content.document-reference-page li{
+  margin:0 0 4px;
+  line-height:1.48;
+}
+.document-paged-page .document-content.document-reference-page .women-bibliography{
+  display:block;
+  margin:0 0 8px;
+}
+.document-paged-page .document-content.document-reference-page .women-bibliography-group{
+  margin:0 0 15px;
+  padding:0 0 12px;
+  border-bottom:1px solid #e5e1db;
+}
+.document-paged-page .document-content.document-reference-page .women-bibliography-group:last-child{
+  margin-bottom:0;
+  border-bottom:0;
+}
+#source-content.document-reference-page .women-bibliography-group>p:first-child{
+  margin:0 0 7px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.38!important;
+  font-weight:500!important;
+}
+#source-content.document-reference-page .women-bibliography-group>p:first-child strong{
+  font-weight:500!important;
+}

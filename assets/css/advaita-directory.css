@@ -1,0 +1,51 @@
+/* Plain Wikisource-like directory lists */
+:root{color-scheme:light;--paper:#fff;--ink:#202122;--link:#0645ad;--line:#a2a9b1;--muted:#54595d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body.advaita-directory-page{margin:0;background:#fff;color:#202122;font:16px/1.6 Arial,Helvetica,sans-serif}
+.ad-topbar{width:min(1080px,calc(100% - 40px));min-height:52px;margin:auto;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.ad-topbar a{color:#202122;font-weight:600;text-decoration:none}
+.ad-page{width:min(1080px,calc(100% - 40px));min-height:calc(100vh - 52px);margin:auto;padding:24px 0 48px;background:#fff}
+.ad-reader,.ad-main{display:block;min-width:0}
+.ad-side{display:none}
+.ad-hero{margin:0 0 22px;padding:0 0 10px;border-bottom:1px solid var(--line);text-align:left}
+.ad-hero h1{margin:0;color:#202122;font:600 1.8em/1.3 Arial,Helvetica,sans-serif}
+.ad-section{margin:0 0 24px;scroll-margin-top:16px}
+.ad-section>h2{margin:0 0 6px;padding:0 0 5px;border-bottom:1px solid var(--line);color:#202122;background:transparent;font:600 1.2em/1.4 Arial,Helvetica,sans-serif}
+.ad-links{display:block;margin:0;padding:0 0 0 1.45em;list-style:disc}
+.ad-entry{display:list-item;min-height:0;margin:0;padding:2px 0;border:0}
+.ad-entry::marker{color:#54595d}
+.ad-entry-link{display:inline;color:var(--link);font:400 16px/1.55 Arial,Helvetica,sans-serif;text-decoration:none;overflow-wrap:anywhere}
+.ad-entry-link:visited{color:#0b0080}
+.ad-entry-link:hover,.ad-entry-link:focus-visible{text-decoration:underline}
+.ad-entry-original{display:inline}
+.ad-entry-original-dev{color:#202122;font:400 16px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif}
+.ad-entry-original-separator{color:#54595d}
+.ad-entry-original-iast{color:inherit;font:400 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-entry-author,.ad-entry-count{display:none}
+@media(max-width:600px){.ad-page,.ad-topbar{width:calc(100% - 32px)}.ad-page{padding-top:18px}.ad-entry{padding:3px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Alphabetical Wikisource-style groupings */
+.ad-title-dev,.ad-heading-dev{font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif}
+.ad-title-separator,.ad-heading-separator{padding:0 .16em;color:var(--muted)}
+.ad-alpha-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:30px;row-gap:0;align-items:start}
+.ad-alpha-group{min-width:0;break-inside:avoid;margin:0 0 10px}
+.ad-alpha-group h3{margin:0 0 3px;color:#202122;font:600 1em/1.4 Arial,Helvetica,sans-serif}
+.ad-entry-original-dev{color:inherit}
+.ad-entry-link:visited{color:var(--link)}
+@media(max-width:850px){.ad-alpha-groups{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}}
+@media(max-width:600px){.ad-alpha-groups{grid-template-columns:1fr}}
+
+.ad-index-navigation{margin:0 0 16px;padding:0 0 8px;border-bottom:1px solid #eaecf0}
+.ad-index-navigation a{color:var(--link);font:400 16px/1.5 Arial,Helvetica,sans-serif}
+.ad-alpha-group h3{padding:0 0 2px;border-bottom:1px solid #eaecf0}
+
+
+/* Keep each same-sound text group compact while preserving Devanāgarī over IAST. */
+.ad-alpha-group .ad-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:4px}
+.ad-alpha-group .ad-links .ad-entry{min-width:0;padding:2px 0}
+.ad-alpha-group .ad-entry-link{display:flex;flex-direction:column;align-items:flex-start}
+.ad-alpha-group .ad-entry-original-dev{color:#202122!important}
+.ad-alpha-group .ad-entry-original-iast{color:#0645ad!important}
+@media(max-width:420px){.ad-alpha-group .ad-links{grid-template-columns:1fr}}

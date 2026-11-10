@@ -1,0 +1,78 @@
+.mmk-content{padding-bottom:46px!important}.mmk-content .gita-hero{padding:44px 0 24px}.mmk-content .gita-hero h1{max-width:820px;margin:0 auto}.mmk-content .gita-hero .subtitle{max-width:720px}.mmk-chapter{max-width:840px;margin:0 auto 42px}.mmk-content .mmk-verse .gita-translation{max-width:840px;margin:0 auto 12px!important;text-align:center!important}.mmk-page-nav{max-width:840px;margin:22px auto 26px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--gita-line);border-bottom:1px solid var(--gita-line);padding:13px 0;font-size:13px}.mmk-page-nav a{color:var(--gita-teal);text-decoration:none}.mmk-page-nav a:hover,.mmk-page-nav a:focus-visible{text-decoration:underline}.mmk-verse-list{max-width:840px;margin:0 auto;padding:0;list-style:none}.mmk-verse-list li{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid #e2ddd7}.mmk-verse-list a,.mmk-passage-list a{color:#2f7f82;text-decoration:none}.mmk-verse-list a:hover,.mmk-passage-list a:hover{text-decoration:underline}.mmk-entry-status{color:#766d63;font:400 11px/1.5 Merriweather,Georgia,serif}.mmk-passage-list{max-width:840px;margin:0 auto 22px;padding-left:24px;columns:3;column-gap:26px}.mmk-passage-list li{break-inside:avoid;padding:3px 0;font:400 13px/1.65 Merriweather,Georgia,serif}.mmk-commentary-unit{max-width:840px;margin:22px auto 34px;padding:18px 0 0;border-top:1px solid #dedbd6;text-align:left}.mmk-commentary-unit>p{font:400 16px/1.78 Merriweather,Georgia,serif;color:#3c362e;margin:0 0 16px}.mmk-commentary-unit h2{color:#2f7f82;font:500 23px/1.35 Vollkorn,Georgia,serif;margin:0 0 14px}.mmk-source-link{max-width:840px;margin:0 auto 14px;font:400 12px/1.65 Merriweather,Georgia,serif}.mmk-source-link a{color:#2f7f82}.mmk-original-sanskrit{font:400 14px/1.7 "Noto Serif",Georgia,serif;white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;color:#443b35}.mmk-sanskrit-original{max-width:840px;margin:20px auto 10px;font:400 12px/1.65 Merriweather,Georgia,serif;color:#736a61}.mmk-sanskrit-original summary{cursor:pointer;color:#2f7f82;font-weight:600}.mmk-sanskrit-original .mmk-original-sanskrit{padding:13px 0}.mmk-commentary-gap{max-width:840px;margin:18px auto 26px;padding:15px 0;border-top:1px solid #dedbd6;color:#766d63;font:400 13px/1.7 Merriweather,Georgia,serif}.mmk-introduction-en{max-width:840px;margin:24px auto 38px;padding-bottom:25px;border-bottom:1px solid #dedbd6;color:#3c362e}.mmk-introduction-en h2{font:500 25px/1.35 Vollkorn,Georgia,serif;color:#2f7f82;margin:0 0 16px;text-align:left}.mmk-introduction-en p{font:400 16px/1.78 Merriweather,Georgia,serif;margin:0 0 14px;text-align:left}.mmk-introduction-en .mmk-introduction-sanskrit{margin:20px 0 0;font:400 13px/1.6 Merriweather,Georgia,serif;color:#2f7f82}.mmk-introduction-en .mmk-introduction-sanskrit summary{cursor:pointer;color:#2f7f82;font-weight:600}.mmk-introduction-en .mmk-introduction-sanskrit .mmk-original-sanskrit{padding:13px 0;white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;color:#443b35;font:400 14px/1.7 "Noto Serif",Georgia,serif}@media(max-width:700px){.mmk-page-nav{font-size:11px}.mmk-verse-list li{display:block}.mmk-entry-status{display:block;margin-top:4px}.mmk-passage-list{columns:2;padding-left:20px}.mmk-commentary-unit>p{font-size:15px;line-height:1.7}.mmk-commentary-unit h2{font-size:21px}.mmk-original-sanskrit{font-size:13px;line-height:1.66}.mmk-introduction-en p{font-size:15px;line-height:1.72}.mmk-introduction-en .mmk-introduction-sanskrit .mmk-original-sanskrit{font-size:13px;line-height:1.66}}
+.mmk-verse-list.mmk-verse-list--nested>li{display:block;padding:13px 0}
+.mmk-verse-list .mmk-index-row{display:flex;align-items:baseline;justify-content:space-between;gap:18px}
+.mmk-verse-list .mmk-index-row>a{font-weight:600}
+.mmk-index-passages{margin:5px 0 0 12px;font:400 12px/1.6 Merriweather,Georgia,serif}
+.mmk-index-passages>summary{cursor:pointer;color:var(--gita-teal);list-style-position:outside}
+.mmk-index-passage-list{display:flex;flex-wrap:wrap;gap:3px 16px;max-width:none;margin:8px 0 0!important;padding:0;list-style:none}
+.mmk-index-passage-list li{padding:0;border:0;font:400 12px/1.55 Merriweather,Georgia,serif}
+.mmk-inline-root-verse{padding-bottom:16px;border-bottom:1px solid #dedbd6}
+.mmk-inline-root-label{margin:0 0 12px;color:var(--gita-teal);font:500 21px/1.35 Vollkorn,Georgia,serif}
+.mmk-inline-root-verse .mmk-verse{margin-top:0}
+.mmk-nav-edge{color:#766d63;font:400 11px/1.5 Merriweather,Georgia,serif}
+@media(max-width:700px){
+ .mmk-verse-list .mmk-index-row{display:block}
+ .mmk-verse-list .mmk-index-row .mmk-entry-status{margin-top:4px}
+ .mmk-index-passages{margin-left:8px}
+}
+
+/* Chapter 1 verse pages with one server-marked current verse */
+.mmk-reader-grid{display:grid;grid-template-columns:minmax(150px,182px) minmax(0,1fr);gap:clamp(20px,3vw,34px);align-items:start;max-width:100%;margin:0 auto}
+.mmk-reader-toc{position:sticky;top:82px;align-self:start;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px);overflow:auto;overscroll-behavior:contain;padding:10px 10px 12px 0;border-right:1px solid var(--gita-line);scrollbar-width:thin}
+.mmk-reader-toc h2{margin:0 0 10px;color:var(--gita-teal);font:500 19px/1.25 Vollkorn,Georgia,serif}
+.mmk-reader-toc__links ol{display:grid;gap:3px;margin:0;padding:0;list-style:none}
+.mmk-reader-toc__links a{display:block;padding:7px 9px;border-left:3px solid transparent;border-radius:0 4px 4px 0;color:#514a43;font:400 12px/1.35 Merriweather,Georgia,serif;text-decoration:none;transition:background-color .15s ease,color .15s ease}
+.mmk-reader-toc__links a:hover{background:#eeece7;color:#514a43;text-decoration:none}
+.mmk-reader-toc__links a[aria-current="page"]{border-left-color:#72577e;background:#f0eaf3;color:#594069;font-weight:700}
+.mmk-reader-toc__links a:focus-visible{outline:3px solid #7ab8bb;outline-offset:2px}
+.mmk-reader-toc__footer{margin:14px 0 0;color:#756c64;font:400 11px/1.6 Merriweather,Georgia,serif}
+.mmk-reader-toc__footer a{color:#5d4c68;text-decoration:none}
+.mmk-reader-toc__footer a:hover{text-decoration:underline}
+.mmk-reader-main{min-width:0}
+.mmk-reader-main .mmk-chapter{max-width:none;margin:0 0 30px}
+.mmk-reader-main .mmk-commentary-unit,.mmk-reader-main .mmk-sanskrit-original{max-width:none}
+.mmk-reader-main .mmk-commentary-unit{margin:20px 0 28px}
+.mmk-reader-main .mmk-sanskrit-original{margin:18px 0 24px}
+.mmk-reader-main .mmk-commentary-unit>p{font:400 16px/1.78 Merriweather,Georgia,serif;color:#3c362e;margin:0 0 16px}
+.mmk-reader-main .mmk-commentary-unit h2{color:#2f7f82;font:500 23px/1.35 Vollkorn,Georgia,serif;margin:0 0 14px}
+.mmk-reader-main .mmk-page-nav{max-width:none}
+.mmk-root-sanskrit{max-width:840px;margin:18px auto 16px!important;color:#443b35;font:400 clamp(15px,1.4vw,18px)/1.9 "Noto Serif",Georgia,serif;text-align:center;overflow-wrap:anywhere}
+.mmk-verse .mmk-readable-translation{font-style:normal}
+.mmk-word-by-word{max-width:840px;margin:24px auto 30px;padding:17px 0 20px;border-top:1px solid #dedbd6;border-bottom:1px solid #dedbd6;text-align:left}
+.mmk-word-by-word h3{margin:0 0 7px;color:#2f7f82;font:500 21px/1.35 Vollkorn,Georgia,serif}
+.mmk-word-by-word-note,.mmk-gloss-note{margin:0 0 12px;color:#6d655d;font:400 12px/1.65 Merriweather,Georgia,serif}
+.mmk-gloss-note{margin:12px 0 0}
+.mmk-word-gloss-list{display:grid;margin:0;border:1px solid #e1dce2;border-radius:5px;overflow:hidden}
+.mmk-word-gloss-list>div{display:grid;grid-template-columns:minmax(132px,.34fr) minmax(0,1fr);gap:12px;padding:8px 11px;border-top:1px solid #e8e4e8}
+.mmk-word-gloss-list>div:first-child{border-top:0}
+.mmk-word-gloss-list>div:nth-child(even){background:#faf9f8}
+.mmk-word-gloss-list dt{color:#594069;font:500 13px/1.55 "Noto Serif",Georgia,serif;overflow-wrap:anywhere}
+.mmk-word-gloss-list dd{margin:0;color:#3c362e;font:400 13px/1.6 Merriweather,Georgia,serif}
+.mmk-skip-link{position:absolute;z-index:30;left:14px;top:8px;transform:translateY(-160%);padding:8px 12px;border:2px solid #72577e;border-radius:4px;background:#fff;color:#594069;font:600 13px Merriweather,Georgia,serif}
+.mmk-skip-link:focus{transform:translateY(0)}
+@media(max-width:850px){
+ .mmk-reader-grid{display:block}
+ .mmk-reader-toc{position:sticky;z-index:5;top:68px;max-height:none;margin:0 -14px 22px;padding:8px 14px 9px;border-right:0;border-bottom:1px solid var(--gita-line);background:#f7f6f4}
+ .mmk-reader-toc h2{margin:0 0 5px;font-size:15px}
+ .mmk-reader-toc__links ol{display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;padding:1px 1px 4px;scrollbar-width:thin}
+ .mmk-reader-toc__links li{flex:0 0 auto}
+ .mmk-reader-toc__links a{min-height:34px;padding:8px 10px;border:1px solid transparent;border-left-width:1px;border-radius:999px;white-space:nowrap}
+ .mmk-reader-toc__links a[aria-current="page"]{border-color:#ad99b8;background:#f0eaf3}
+ .mmk-reader-main .mmk-commentary-unit>p{font-size:15px;line-height:1.7}
+ .mmk-reader-main .mmk-commentary-unit h2{font-size:21px}
+ .mmk-root-sanskrit{font-size:15px;line-height:1.8}
+ .mmk-word-by-word{margin-top:20px}
+}
+@media(max-width:480px){
+ .mmk-word-gloss-list>div{grid-template-columns:1fr;gap:2px;padding:8px 10px}
+ .mmk-word-gloss-list dd{padding-left:8px}
+ .mmk-page-nav{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.mmk-reader-toc__links a{transition:none}}
+.mmk-reader-note{margin:4px 0 26px;padding:12px 14px;border-left:2px solid #9aa9a9;background:#f1efeb;color:#655e57;font:400 12px/1.65 Merriweather,Georgia,serif}
+.mmk-reader-note strong{color:#514a43}
+
+
+/* Root Sanskrit verse text on the MMK verse pages. */
+.mmk-content .mmk-root-sanskrit{max-width:840px;margin:17px auto 14px;color:#3c362e;font:400 18px/1.8 "Noto Serif",Georgia,serif;text-align:center;overflow-wrap:anywhere}
+@media(max-width:700px){.mmk-content .mmk-root-sanskrit{font-size:16px;line-height:1.7}}

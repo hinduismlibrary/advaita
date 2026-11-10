@@ -1,0 +1,25 @@
+/* Page-specific finishing rules; the layout itself comes from varna-vicara-paged.css. */
+.vishnu-vicara-page .source-figure{margin:30px auto 38px;text-align:center}
+.vishnu-vicara-page .source-figure img{display:block;max-width:100%;width:auto;height:auto;margin:auto;object-fit:contain}
+.vishnu-vicara-page .source-figure:first-child img{max-height:340px}
+.vishnu-vicara-page .article h2,.vishnu-vicara-page .article h4{font-family:Vollkorn,Georgia,serif;font-weight:400;color:var(--teal);line-height:1.2}
+.vishnu-vicara-page .article h2{font-size:30px;margin:34px 0 25px}
+.vishnu-vicara-page .article h4{font-size:24px;margin:36px 0 20px}
+.vishnu-vicara-page .article p,.vishnu-vicara-page .article li{overflow-wrap:break-word}
+.vishnu-vicara-page .article ol,.vishnu-vicara-page .article ul{padding-left:1.65em;margin:0 0 28px}
+.vishnu-vicara-page .article li{margin-bottom:10px}
+.vishnu-vicara-page .article hr{height:2px;width:260px;max-width:40%;margin:30px auto 42px;border:0;background:var(--rule)}
+.vishnu-vicara-page .article p.translation,.vishnu-vicara-page .article blockquote{padding:1px 0 1px 17px;border-left:2px solid var(--quote-rule);color:var(--quote);font-size:18.5px;line-height:1.62;background:transparent}
+.vishnu-vicara-page .article blockquote{margin:0 0 30px}
+.vishnu-vicara-page .article p[lang^="sa"],.vishnu-vicara-page .article [lang="sa-Deva"]{overflow-wrap:anywhere;font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif}
+.vishnu-vicara-page .article details.sanskrit-reveal>summary{display:inline-block;list-style:none}
+.vishnu-vicara-page .article details.sanskrit-reveal>summary::-webkit-details-marker{display:none}
+.vishnu-vicara-page .article details.sanskrit-reveal [lang="sa-Deva"]{white-space:normal}
+.vishnu-vicara-page .article a{color:var(--purple);text-decoration:none}
+.vishnu-vicara-page .article a:hover{text-decoration:underline}
+.vishnu-vicara-page .article table{display:block;width:100%;max-width:100%;margin:30px 0;overflow-x:auto;border-collapse:collapse;font-size:15px;line-height:1.5}
+.vishnu-vicara-page .article th,.vishnu-vicara-page .article td{padding:11px 13px;border:1px solid #d9d2c9;text-align:left;vertical-align:top;min-width:80px}
+.vishnu-vicara-page .article th{background:#eee9e2;color:#514941}
+.vishnu-vicara-page .article tr:nth-child(even) td{background:#f0ece7}
+.vishnu-vicara-page .article .source-note{font-size:14px;color:#776d63}
+@media(max-width:620px){.vishnu-vicara-page .source-figure:first-child img{max-height:240px}.vishnu-vicara-page .article h4{font-size:22px}.vishnu-vicara-page .article table{font-size:13px}.vishnu-vicara-page .article th,.vishnu-vicara-page .article td{padding:8px 9px}.vishnu-vicara-page .article p.translation,.vishnu-vicara-page .article blockquote{padding-left:13px;font-size:16.8px}}

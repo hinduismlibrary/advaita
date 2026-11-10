@@ -1,0 +1,62 @@
+:root{--gita-paper:#f7f6f4;--gita-ink:#3c362e;--gita-teal:#2f7f82;--gita-red:#9a3d34;--gita-purple:#65516f;--gita-line:#dedbd6;--gita-soft:#ffffff}
+.gita-page .site-header{border-bottom:0!important;box-shadow:none!important}
+.gita-page .site-main{width:min(1080px,100%);max-width:none;margin:0 auto;padding:0;background:#2b261f}
+.gita-page .article-shell{width:100%;max-width:none;margin:0;padding:0;background:transparent}
+.gita-page .article-body{width:100%;max-width:920px;margin:0 auto;padding:0;background:var(--gita-paper);color:var(--gita-ink);font-family:Merriweather,Georgia,'Times New Roman',serif}
+.gita-page .gita-content{width:100%;max-width:920px;margin:0 auto;padding:0 24px 20px;background:#f7f6f4;color:#3c362e;font-family:Merriweather,Georgia,'Times New Roman',serif}
+.gita-page .gita-chapter-index{width:min(840px,calc(100% - 48px));margin:0 auto}
+.gita-hero{margin:0 auto;text-align:center;padding:44px 0 24px}
+.gita-hero .eyebrow{margin:0 0 8px;color:#766e67;font-family:Merriweather,Georgia,serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.gita-hero h1{margin:0;color:var(--gita-teal);font-family:Vollkorn,Georgia,serif;font-size:clamp(36px,4.8vw,46px);font-weight:400;line-height:1.08}
+.gita-hero .subtitle{margin:12px auto 0;max-width:560px;color:#655e57;font-size:16px;line-height:1.5;font-style:italic}
+.gita-rule{width:44%;height:0;margin:24px auto 0;border-top:1px solid var(--gita-line)}
+.gita-intro{margin:0 0 30px;padding:0 0 0 16px;border-left:2px solid #9aa9a9;background:transparent;font-size:15px;line-height:1.65}
+.gita-intro p{margin:0 0 9px}.gita-intro p:last-child{margin-bottom:0}
+.gita-chapter-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 0 26px}
+.gita-chapter-nav a{display:inline-flex;align-items:center;min-height:28px;padding:4px 9px;border:1px solid #c8dcdc;border-radius:999px;background:transparent;color:var(--gita-teal);cursor:pointer;font-family:Merriweather,Georgia,serif;font-size:11px;line-height:1.2;text-decoration:none}
+.gita-chapter-nav a:hover{background:#fff;text-decoration:none}
+.gita-contents{margin:0 0 16px;padding:0 0 8px;border:0;border-bottom:1px solid var(--gita-line);background:transparent}
+.gita-contents h2{margin:0 0 6px;color:var(--gita-teal);font-family:Vollkorn,Georgia,serif;font-size:16px!important;font-weight:400}
+.gita-contents ol{columns:2;margin:0;padding-left:15px;font-size:10.5px!important;line-height:1.35!important}.gita-contents ol li{margin:0}
+.gita-contents a{color:#5d4c68;text-decoration:none}.gita-contents a:hover{text-decoration:underline}
+.gita-verse{margin:0 0 20px;padding:0;border:0}
+.gita-verse h2{margin:0;text-align:center;color:#2f7f82;font-family:Vollkorn,Georgia,serif;font-size:22px;line-height:1.1;font-weight:600;letter-spacing:.01em}
+.gita-verse h2 span{font-size:1em}
+.gita-verse-rule{border:0;border-top:1px solid #dedbd6;width:56%;max-width:520px;margin:9px auto 11px}
+.gita-sanskrit{max-width:840px;margin:0 auto 10px;text-align:center;color:#3c362e;font-family:Merriweather,Georgia,'Times New Roman',serif;font-size:18px;line-height:1.45;font-weight:400}
+.gita-translation{max-width:840px;margin:0 auto 10px;text-align:center;color:#3c362e;font-size:14px;line-height:1.45;font-weight:400;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.gita-translation:before{content:none!important;display:none!important}
+.gita-controls{max-width:840px;margin:0 auto;padding:0;display:block}
+.gita-details{display:block;max-width:840px;margin:0 auto 5px;padding:0;text-align:left}
+.gita-details[open]{margin:0 auto 5px;padding:0;border:0}
+.gita-details summary{display:block;width:max-content;max-width:100%;cursor:pointer;border:1px solid #9bc5c7!important;border-radius:999px!important;padding:3px 10px;background:transparent!important;color:#2f7f82;font-family:Merriweather,Georgia,'Times New Roman',serif;font-size:12px;line-height:1.15;font-weight:600;list-style:none;box-shadow:none!important;text-decoration:none}
+.gita-details summary::-webkit-details-marker{display:none}.gita-details summary::marker{display:none}
+.gita-details[open] summary{margin-bottom:0;background:transparent!important;border-color:#9bc5c7!important}
+.gita-reveal{margin:5px 0 8px;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e;font-size:11.5px;line-height:1.45;overflow-wrap:anywhere}
+.gita-reveal p{margin:0}.gita-reveal em{color:#3c362e}
+.gita-dual-section{margin:0;padding:0}.gita-dual-section+.gita-dual-section{margin-top:10px;padding-top:8px;border-top:1px solid #ded8d2}
+.gita-dual-label{margin:0 0 4px;font-family:Vollkorn,Georgia,serif;font-size:13px;font-weight:500;line-height:1.25}.gita-dual-gita .gita-dual-label{color:var(--gita-teal)}.gita-dual-sridhara .gita-dual-label{color:var(--gita-red)}
+.gita-wfw-list{margin:0!important;color:var(--gita-ink);font-size:11.5px;line-height:1.45}.gita-wfw-list strong{font-weight:700}.gita-dual-empty{margin:0!important;color:#6e665c;font-style:italic}
+.gita-commentary{display:block!important;max-width:840px;margin:10px auto 0;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;color:#3c362e;font-family:Merriweather,Georgia,'Times New Roman',serif;font-size:14px;line-height:1.45;text-align:left}
+.gita-commentary h3{display:block;margin:0 0 4px;color:#65516f;font-family:Merriweather,Georgia,'Times New Roman',serif;font-size:14px;font-weight:700;line-height:1.25;text-align:left}.gita-commentary p{display:block;margin:0}.gita-commentary p:before{content:none}.gita-commentary .gita-no-source{color:#6e665c;font-style:italic}
+.gita-loading{font-size:15px;text-align:center}.gita-no-source{color:#6e665c;font-style:italic}.gita-index-intro{margin:0 0 22px;font-size:15px;line-height:1.6}.gita-chapter-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 26px}.gita-chapter-card{display:block;padding:8px 0;border-bottom:1px solid var(--gita-line);color:#5d4c68;text-decoration:none}.gita-chapter-card:hover{text-decoration:underline}.gita-chapter-number{font-family:Vollkorn,Georgia,serif;font-size:18px}.gita-chapter-name{font-size:14px}.gita-chapter-sanskrit{display:block;color:#6e665c;font-size:12px}.gita-chapter-status{display:block;color:var(--gita-teal);font-size:11px;text-transform:none}
+@media(max-width:900px){.gita-page .article-body{width:100%}.gita-page .gita-content{width:100%;max-width:920px}.gita-page .gita-chapter-index{width:min(840px,calc(100% - 36px))}.gita-contents ol{columns:1}}
+@media(max-width:700px){.gita-page .gita-content{padding:0 14px 14px}.gita-sanskrit{font-size:16.5px}.gita-verse h2{font-size:20px}.gita-chapter-grid{grid-template-columns:1fr}}
+
+
+/* Word-for-word reader rows: Sanskrit, IAST, and gloss, matching the source-reader style. */
+.gita-page .gita-word-list{display:block;margin:0;padding:0}
+.gita-page .gita-word-row{display:block;margin:0 0 4px;color:#3c362e;font-family:Merriweather,Georgia,'Times New Roman',serif;font-size:15.5px!important;line-height:1.55!important}
+.gita-page .gita-word-dev{color:#84432f;font-family:"Noto Serif Devanagari","Noto Serif",serif;font-size:1.06em;font-weight:700}
+.gita-page .gita-word-iast{color:#3c362e;font-size:.96em;font-weight:700}
+.gita-page .gita-word-iast em{font-style:italic}
+.gita-page .gita-word-gloss{color:#514a43;font-weight:400}
+.gita-page .gita-dual-section+.gita-dual-section{margin-top:18px!important;padding-top:12px!important;border-top:1px solid #ded8d2!important}
+.gita-page .gita-dual-label{margin:0 0 7px!important;font-family:Vollkorn,Georgia,serif!important;font-size:19px!important;line-height:1.25!important;font-weight:500!important}
+.gita-page .gita-dual-gita .gita-dual-label{color:#2f7f82!important}
+.gita-page .gita-dual-sridhara .gita-dual-label{color:#9a3d34!important}
+.gita-page .gita-dual-empty{margin:0!important;color:#6e665c;font-size:14px!important;font-style:italic}
+@media(max-width:700px){
+  .gita-page .gita-word-row{font-size:13.5px!important;line-height:1.48!important}
+  .gita-page .gita-dual-label{font-size:17px!important}
+}

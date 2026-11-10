@@ -1,0 +1,1052 @@
+/* Shared quote and Sanskrit controls for both scholarly article readers. */
+.document-paged-page .document-content blockquote.translation,
+.document-paged-page .document-content p.translation{
+  margin:0 0 30px!important;
+  padding:1px 0 1px 17px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:18.5px!important;
+  line-height:1.62!important;
+  font-style:normal!important;
+}
+.document-paged-page .document-content blockquote.translation>p{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:inherit!important;
+  font:inherit!important;
+}
+.document-paged-page .document-content .women-scripture-pair>p.women-scripture-translation{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font:normal 18.5px/1.62 Merriweather,Georgia,serif!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 11px 5px;
+  border:1px solid var(--orange-soft);
+  border-radius:999px;
+  background:transparent;
+  color:#9b4e1d;
+  font-family:Merriweather,Georgia,serif;
+  font-size:13px;
+  font-weight:400;
+  line-height:1.45;
+  letter-spacing:0;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary::-webkit-details-marker{display:none}
+.document-paged-page .document-content details.sanskrit-reveal>summary::marker{content:""}
+.document-paged-page .document-content details.sanskrit-reveal>summary:hover{background:#eee8e2}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"]{
+  color:var(--sanskrit);
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.8;
+  letter-spacing:0;
+}
+.document-paged-page .document-content .translation-comparison{
+  margin:20px 0 30px;
+}
+.document-paged-page .document-content .translation-option{
+  margin:0 0 22px;
+}
+.document-paged-page .document-content .translation-option:last-child{margin-bottom:0}
+.document-paged-page .document-content .translation-attribution{
+  margin:0 0 7px!important;
+  padding:0!important;
+  border:0!important;
+  color:#625b54!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+  font-weight:700!important;
+}
+.document-paged-page .document-content .translation-option>details.sanskrit-reveal{
+  margin:0 0 8px;
+}
+.document-paged-page .document-content details.quote-source-note{
+  margin:8px 0 10px;
+}
+.document-paged-page .document-content details.quote-source-note .translation-note{
+  margin:8px 0 12px!important;
+  padding:0!important;
+  border:0!important;
+  color:#625b54!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+}
+.document-paged-page .document-content .postscript-translations li>details.sanskrit-reveal{
+  margin:0 0 8px;
+}
+@media(max-width:620px){
+  .document-paged-page .document-content blockquote.translation,
+  .document-paged-page .document-content p.translation{
+    margin-bottom:27px!important;
+    padding-left:13px!important;
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  .document-paged-page .document-content .women-scripture-pair>p.women-scripture-translation{
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal>summary{
+    padding:3px 9px 4px;
+    font-size:12.5px;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal [lang^="sa"]{
+    font-size:18px;
+    line-height:1.78;
+  }
+  .document-paged-page .document-content .translation-comparison{margin:17px 0 26px}
+  .document-paged-page .document-content .translation-option{margin-bottom:18px}
+}
+
+
+/* Apply the same translation and Sanskrit control styling to every article reader. */
+.document-paged-page .document-content blockquote.translation,
+.document-paged-page .document-content p.translation,
+.document-paged-page .document-content blockquote.scripture-translation,
+.document-paged-page .document-content p.scripture-translation{
+  margin:0 0 30px!important;
+  padding:1px 0 1px 17px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:18.5px!important;
+  line-height:1.62!important;
+  font-style:normal!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary,
+.document-paged-page #source-content details.sanskrit-reveal>summary{
+  display:inline-flex!important;
+  align-items:center!important;
+  padding:4px 11px 5px!important;
+  border:1px solid var(--orange-soft)!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#9b4e1d!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.45!important;
+  letter-spacing:0!important;
+  cursor:pointer!important;
+  list-style:none!important;
+  user-select:none!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal>summary:hover,
+.document-paged-page #source-content details.sanskrit-reveal>summary:hover{
+  background:#eee8e2!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+.document-paged-page #source-content details.sanskrit-reveal [lang^="sa"]{
+  color:var(--sanskrit)!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:20px!important;
+  font-weight:400!important;
+  line-height:1.8!important;
+  letter-spacing:0!important;
+}
+.document-paged-page .document-content .sanskrit-transliteration,
+.document-paged-page #source-content .sanskrit-transliteration{
+  color:var(--sanskrit)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.55!important;
+  font-style:normal!important;
+}
+@media(max-width:620px){
+  .document-paged-page .document-content blockquote.translation,
+  .document-paged-page .document-content p.translation,
+  .document-paged-page .document-content blockquote.scripture-translation,
+  .document-paged-page .document-content p.scripture-translation{
+    margin-bottom:27px!important;
+    padding-left:13px!important;
+    font-size:16.8px!important;
+    line-height:1.68!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal>summary,
+  .document-paged-page #source-content details.sanskrit-reveal>summary{
+    padding:3px 9px 4px!important;
+    font-size:12.5px!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+  .document-paged-page #source-content details.sanskrit-reveal [lang^="sa"]{
+    font-size:18px!important;
+    line-height:1.78!important;
+  }
+  .document-paged-page .document-content .sanskrit-transliteration,
+  .document-paged-page #source-content .sanskrit-transliteration{
+    font-size:14px!important;
+    line-height:1.58!important;
+  }
+}
+
+
+/* One content scale for all six article readers: 20px desktop, 18px mobile. */
+.document-paged-page .document-content,
+.document-paged-page #source-content{
+  font-size:20px!important;
+  line-height:1.62!important;
+}
+.document-paged-page .document-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button),
+.document-paged-page #source-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button){
+  font-size:20px!important;
+  line-height:1.62!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+.document-paged-page #source-content details.sanskrit-reveal [lang^="sa"],
+.document-paged-page .document-content .sanskrit-text,
+.document-paged-page #source-content .sanskrit-text{
+  font-size:20px!important;
+  line-height:1.7!important;
+}
+.document-paged-page .document-content p.reference,
+.document-paged-page .document-content p.source-citation,
+.document-paged-page .document-content p.scripture-source,
+.document-paged-page .document-content p.citation,
+.document-paged-page #source-content p.reference,
+.document-paged-page #source-content p.source-citation,
+.document-paged-page #source-content p.scripture-source,
+.document-paged-page #source-content p.citation{
+  margin:14px 0 8px!important;
+  color:#006f71!important;
+  font-size:20px!important;
+  line-height:1.55!important;
+  font-weight:700!important;
+}
+.document-paged-page .document-content blockquote.translation,
+.document-paged-page .document-content p.translation,
+.document-paged-page .document-content blockquote.scripture-translation,
+.document-paged-page .document-content p.scripture-translation,
+.document-paged-page #source-content blockquote.translation,
+.document-paged-page #source-content p.translation,
+.document-paged-page #source-content blockquote.scripture-translation,
+.document-paged-page #source-content p.scripture-translation{
+  margin:0 0 24px!important;
+  padding:1px 0 1px 17px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:20px!important;
+  line-height:1.62!important;
+  font-style:normal!important;
+}
+.document-paged-page .document-content details.sanskrit-reveal [lang^="sa-Latn"],
+.document-paged-page .document-content .sanskrit-transliteration,
+.document-paged-page #source-content [lang^="sa-Latn"],
+.document-paged-page #source-content .sanskrit-transliteration{display:none!important}
+.document-paged-page .document-content .contents-page-list{
+  margin:0;
+  padding-left:1.5em;
+}
+.document-paged-page .document-content .contents-page-list li{margin:0 0 10px}
+@media(max-width:620px){
+  .document-paged-page .document-content,
+  .document-paged-page #source-content,
+  .document-paged-page .document-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button),
+  .document-paged-page #source-content :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(summary):not(button){
+    font-size:18px!important;
+    line-height:1.6!important;
+  }
+  .document-paged-page .document-content details.sanskrit-reveal [lang^="sa"],
+  .document-paged-page #source-content details.sanskrit-reveal [lang^="sa"],
+  .document-paged-page .document-content .sanskrit-text,
+  .document-paged-page #source-content .sanskrit-text{
+    font-size:18px!important;
+    line-height:1.7!important;
+  }
+  .document-paged-page .document-content p.reference,
+  .document-paged-page .document-content p.source-citation,
+  .document-paged-page .document-content p.scripture-source,
+  .document-paged-page .document-content p.citation,
+  .document-paged-page #source-content p.reference,
+  .document-paged-page #source-content p.source-citation,
+  .document-paged-page #source-content p.scripture-source,
+  .document-paged-page #source-content p.citation,
+  .document-paged-page .document-content blockquote.translation,
+  .document-paged-page .document-content p.translation,
+  .document-paged-page .document-content blockquote.scripture-translation,
+  .document-paged-page .document-content p.scripture-translation,
+  .document-paged-page #source-content blockquote.translation,
+  .document-paged-page #source-content p.translation,
+  .document-paged-page #source-content blockquote.scripture-translation,
+  .document-paged-page #source-content p.scripture-translation{
+    font-size:18px!important;
+  }
+}
+
+
+/* The last-loaded shared stylesheet standardises all bibliography and source
+   pages, including pages with article-specific citation markup. */
+.document-paged-page #source-content.document-reference-page{
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+}
+#source-content.document-reference-page p,
+#source-content.document-reference-page li,
+#source-content.document-reference-page .index-subitem,
+#source-content.document-reference-page .women-bibliography-group>p:not(:first-child){
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+}
+#source-content.document-reference-page p:not(.reference):not(.source-citation):not(.scripture-source):not(.citation){
+  margin:0 0 9px!important;
+}
+#source-content.document-reference-page p.reference,
+#source-content.document-reference-page p.source-citation,
+#source-content.document-reference-page p.scripture-source,
+#source-content.document-reference-page p.citation{
+  margin:0 0 9px!important;
+  color:#625b54!important;
+  font-size:13px!important;
+  line-height:1.48!important;
+  font-weight:400!important;
+}
+#source-content.document-reference-page h3.reader-subheading,
+#source-content.document-reference-page h4,
+#source-content.document-reference-page .source-bibliography h4,
+#source-content.document-reference-page [data-vishnu-recap] h4,
+#source-content.document-reference-page .women-bibliography-group>p:first-child{
+  margin:15px 0 7px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:16px!important;
+  line-height:1.4!important;
+  font-weight:500!important;
+}
+#source-content.document-reference-page h3.reader-subheading:after{
+  display:none!important;
+  content:none!important;
+}
+#source-content.document-reference-page ol,
+#source-content.document-reference-page ul,
+#source-content.document-reference-page .source-bibliography ol{
+  margin:0 0 12px!important;
+  padding-left:20px!important;
+}
+#source-content.document-reference-page li,
+#source-content.document-reference-page .source-bibliography li{
+  margin:0 0 5px!important;
+  padding-left:0!important;
+}
+#source-content.document-reference-page .article-index{
+  margin:0 0 8px!important;
+}
+#source-content.document-reference-page .index-entry{
+  padding:8px 0 9px!important;
+  border-bottom:1px solid #e5e1db!important;
+}
+#source-content.document-reference-page .index-heading{
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:16px!important;
+  line-height:1.42!important;
+}
+#source-content.document-reference-page .reference-entry{
+  display:block!important;
+  grid-template-columns:1fr!important;
+  margin:0 0 8px!important;
+  padding:0!important;
+  border:0!important;
+}
+#source-content.document-reference-page table,
+#source-content.document-reference-page table.vishnu-data-table{
+  width:100%!important;
+  max-width:100%!important;
+  margin:12px 0 16px!important;
+  border-collapse:collapse!important;
+  table-layout:auto!important;
+  font-size:13px!important;
+  line-height:1.48!important;
+}
+#source-content.document-reference-page th,
+#source-content.document-reference-page td{
+  padding:6px 7px!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+  text-align:left!important;
+  vertical-align:top!important;
+  overflow-wrap:anywhere;
+}
+#source-content.document-reference-page th{
+  color:#514941!important;
+  background:#f7f6f3!important;
+  font-weight:700!important;
+}
+#source-content.document-reference-page a{
+  color:var(--teal);
+  text-underline-offset:3px;
+}
+
+
+/* Shared six-article presentation. This is loaded last so each paper keeps
+   its original wording and structure while using one visual system. */
+body.document-paged-page{
+  --outer:#f5f6f4;
+  --paper:#ffffff;
+  --ink:#303633;
+  --teal:#5b7568;
+  --purple:#5b7568;
+  --quote:#3b433e;
+  --quote-rule:#9eafa5;
+  --rule:#e2e7e3;
+  --side-rule:#e2e7e3;
+  --orange-soft:#cfd8d2;
+  --sanskrit:#4b6256;
+  background:var(--outer)!important;
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+body.document-paged-page .page,
+body.document-paged-page .sitebar{
+  background:var(--paper)!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page .page{box-shadow:none!important}
+body.document-paged-page .sitebar{border-bottom-color:var(--rule)!important}
+body.document-paged-page .sitebar a,
+body.document-paged-page .page-nav a,
+body.document-paged-page .side-toc-title,
+body.document-paged-page .mobile-toc>summary{
+  color:var(--teal)!important;
+}
+body.document-paged-page .sitebar a,
+body.document-paged-page .side-toc-title,
+body.document-paged-page .mobile-toc>summary,
+body.document-paged-page .article-head h1,
+body.document-paged-page .document-content h2,
+body.document-paged-page .document-content h3,
+body.document-paged-page .document-content h4,
+body.document-paged-page #source-content.document-reference-page h3,
+body.document-paged-page #source-content.document-reference-page h4{
+  font-family:Vollkorn,Georgia,serif!important;
+}
+body.document-paged-page .article-head h1{
+  color:var(--teal)!important;
+  font-size:44px!important;
+  line-height:1.18!important;
+  font-weight:400!important;
+}
+body.document-paged-page .article-head:after,
+body.document-paged-page .article h3:after{
+  display:none!important;
+  content:none!important;
+}
+body.document-paged-page .article h3{
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:27px!important;
+  line-height:1.28!important;
+  font-weight:500!important;
+  text-align:left!important;
+}
+body.document-paged-page .document-content,
+body.document-paged-page #source-content{
+  min-width:0!important;
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+body.document-paged-page .document-content p,
+body.document-paged-page .document-content li,
+body.document-paged-page .document-content dt,
+body.document-paged-page .document-content dd,
+body.document-paged-page .document-content figcaption,
+body.document-paged-page .document-content .article-bullet,
+body.document-paged-page #source-content p,
+body.document-paged-page #source-content li,
+body.document-paged-page #source-content dt,
+body.document-paged-page #source-content dd,
+body.document-paged-page #source-content figcaption{
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+body.document-paged-page .document-content h2,
+body.document-paged-page #source-content h2{
+  margin:30px 0 14px!important;
+  color:var(--teal)!important;
+  font-size:24px!important;
+  line-height:1.3!important;
+  font-weight:500!important;
+  scroll-margin-top:22px;
+}
+body.document-paged-page .document-content h3,
+body.document-paged-page #source-content h3{
+  margin:24px 0 10px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:21px!important;
+  line-height:1.35!important;
+  font-weight:500!important;
+  scroll-margin-top:22px;
+}
+body.document-paged-page .document-content h4,
+body.document-paged-page #source-content h4{
+  margin:20px 0 8px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:19px!important;
+  line-height:1.38!important;
+  font-weight:500!important;
+  scroll-margin-top:22px;
+}
+body.document-paged-page .document-content h5,
+body.document-paged-page #source-content h5{
+  margin:18px 0 7px!important;
+  color:var(--ink)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.4!important;
+  font-weight:600!important;
+}
+body.document-paged-page .document-content a,
+body.document-paged-page #source-content a{
+  color:var(--teal)!important;
+  text-decoration-color:#a9b8af!important;
+  text-underline-offset:3px!important;
+}
+body.document-paged-page .document-content .quoted-inline,
+body.document-paged-page #source-content .quoted-inline{
+  color:var(--ink)!important;
+  font-style:inherit!important;
+}
+body.document-paged-page .document-content p.reference,
+body.document-paged-page .document-content p.source-citation,
+body.document-paged-page .document-content p.scripture-source,
+body.document-paged-page .document-content p.citation,
+body.document-paged-page #source-content p.reference,
+body.document-paged-page #source-content p.source-citation,
+body.document-paged-page #source-content p.scripture-source,
+body.document-paged-page #source-content p.citation{
+  margin:8px 0 18px!important;
+  color:#68726c!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.55!important;
+  font-weight:400!important;
+}
+body.document-paged-page .document-content details.sanskrit-reveal>summary,
+body.document-paged-page #source-content details.sanskrit-reveal>summary{
+  display:inline-flex!important;
+  align-items:center!important;
+  margin:4px 0!important;
+  padding:3px 8px!important;
+  border:1px solid var(--rule)!important;
+  border-radius:4px!important;
+  background:#ffffff!important;
+  color:var(--teal)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.45!important;
+  letter-spacing:0!important;
+  cursor:pointer!important;
+  list-style:none!important;
+}
+body.document-paged-page .document-content details.sanskrit-reveal>summary:hover,
+body.document-paged-page #source-content details.sanskrit-reveal>summary:hover{
+  background:#f5f7f5!important;
+}
+body.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"]:not([lang="sa-Latn"]),
+body.document-paged-page .document-content p.sanskrit-text,
+body.document-paged-page #source-content details.sanskrit-reveal [lang^="sa"]:not([lang="sa-Latn"]),
+body.document-paged-page #source-content p.sanskrit-text{
+  margin:14px 0 18px!important;
+  padding:1px 0 1px 14px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--sanskrit)!important;
+  font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font-size:19px!important;
+  line-height:1.78!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+  overflow-wrap:anywhere!important;
+}
+body.document-paged-page .document-content .sanskrit-transliteration,
+body.document-paged-page #source-content .sanskrit-transliteration,
+body.document-paged-page .document-content [lang="sa-Latn"],
+body.document-paged-page #source-content [lang="sa-Latn"]{
+  display:none!important;
+}
+body.document-paged-page .document-content blockquote.translation,
+body.document-paged-page .document-content p.translation,
+body.document-paged-page .document-content blockquote.scripture-translation,
+body.document-paged-page .document-content p.scripture-translation,
+body.document-paged-page .document-content p.women-scripture-translation,
+body.document-paged-page .document-content p.women-colophon-translation,
+body.document-paged-page #source-content blockquote.translation,
+body.document-paged-page #source-content p.translation,
+body.document-paged-page #source-content blockquote.scripture-translation,
+body.document-paged-page #source-content p.scripture-translation,
+body.document-paged-page #source-content p.women-scripture-translation,
+body.document-paged-page #source-content p.women-colophon-translation{
+  margin:0 0 22px!important;
+  padding:1px 0 1px 14px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+  color:var(--quote)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+  font-style:normal!important;
+  font-weight:400!important;
+}
+body.document-paged-page .document-content blockquote.translation>p,
+body.document-paged-page #source-content blockquote.translation>p{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  color:inherit!important;
+  font:inherit!important;
+}
+body.document-paged-page .document-content .women-scripture-pair,
+body.document-paged-page #source-content .women-scripture-pair{
+  margin:18px 0 24px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.document-paged-page .document-content .women-scripture-pair>details.sanskrit-reveal [lang^="sa"],
+body.document-paged-page .document-content .women-scripture-pair>p.sanskrit-text,
+body.document-paged-page #source-content .women-scripture-pair>details.sanskrit-reveal [lang^="sa"],
+body.document-paged-page #source-content .women-scripture-pair>p.sanskrit-text{
+  margin:0 0 12px!important;
+  padding:1px 0 1px 14px!important;
+  border:0!important;
+  border-left:2px solid var(--quote-rule)!important;
+  background:transparent!important;
+}
+body.document-paged-page .document-content .translation-attribution,
+body.document-paged-page .document-content details.quote-source-note .translation-note,
+body.document-paged-page #source-content .translation-attribution,
+body.document-paged-page #source-content details.quote-source-note .translation-note{
+  margin:6px 0 18px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:#68726c!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.55!important;
+  font-weight:400!important;
+}
+body.document-paged-page .document-content table,
+body.document-paged-page #source-content table{
+  width:100%!important;
+  max-width:100%!important;
+  margin:18px 0 24px!important;
+  border:0!important;
+  border-collapse:collapse!important;
+  table-layout:auto!important;
+  background:transparent!important;
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+  overflow-wrap:anywhere!important;
+}
+body.document-paged-page .document-content table caption,
+body.document-paged-page #source-content table caption{
+  margin:0 0 8px!important;
+  color:#5d6b62!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:18px!important;
+  line-height:1.35!important;
+  text-align:left!important;
+}
+body.document-paged-page .document-content table th,
+body.document-paged-page .document-content table td,
+body.document-paged-page #source-content table th,
+body.document-paged-page #source-content table td{
+  display:table-cell!important;
+  min-width:0!important;
+  width:auto!important;
+  padding:7px 9px!important;
+  border:0!important;
+  border-bottom:1px solid var(--rule)!important;
+  background:transparent!important;
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+  text-align:left!important;
+  vertical-align:top!important;
+  overflow-wrap:anywhere!important;
+}
+body.document-paged-page .document-content table thead th,
+body.document-paged-page #source-content table thead th{
+  background:#f5f7f5!important;
+  color:#4b5850!important;
+  font-weight:700!important;
+}
+body.document-paged-page .document-content table thead,
+body.document-paged-page #source-content table thead{
+  position:static!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  overflow:visible!important;
+  clip:auto!important;
+  clip-path:none!important;
+  white-space:normal!important;
+}
+body.document-paged-page .document-content table tbody,
+body.document-paged-page #source-content table tbody{
+  display:table-row-group!important;
+  width:auto!important;
+}
+body.document-paged-page .document-content table tr,
+body.document-paged-page #source-content table tr{
+  display:table-row!important;
+  width:auto!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+}
+body.document-paged-page .document-content table td::before,
+body.document-paged-page #source-content table td::before{
+  display:none!important;
+  content:none!important;
+}
+body.document-paged-page .document-content .vishnu-diagram,
+body.document-paged-page .document-content .women-figure-transcription,
+body.document-paged-page .document-content .editorial-note,
+body.document-paged-page #source-content .vishnu-diagram,
+body.document-paged-page #source-content .women-figure-transcription,
+body.document-paged-page #source-content .editorial-note{
+  border-color:var(--rule)!important;
+  background:#f6f7f5!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page #source-content .vishnu-veda-column,
+body.document-paged-page #source-content .vishnu-smriti-root,
+body.document-paged-page #source-content .vishnu-smriti-source,
+body.document-paged-page #source-content .vishnu-smriti-node,
+body.document-paged-page #source-content .vishnu-veda-groups>div{
+  border-color:var(--rule)!important;
+  background:#ffffff!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page #source-content .vishnu-veda-column h4{
+  border-color:var(--rule)!important;
+  background:#f5f7f5!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page .document-reference-page,
+body.document-paged-page #source-content.document-reference-page{
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+body.document-paged-page #source-content.document-reference-page p,
+body.document-paged-page #source-content.document-reference-page li,
+body.document-paged-page #source-content.document-reference-page .index-subitem{
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+body.document-paged-page #source-content.document-reference-page p.reference,
+body.document-paged-page #source-content.document-reference-page p.source-citation,
+body.document-paged-page #source-content.document-reference-page p.scripture-source,
+body.document-paged-page #source-content.document-reference-page p.citation{
+  margin:0 0 12px!important;
+  color:#68726c!important;
+  font-size:15px!important;
+  line-height:1.55!important;
+  font-weight:400!important;
+}
+body.document-paged-page #source-content.document-reference-page h3.reader-subheading,
+body.document-paged-page #source-content.document-reference-page h4,
+body.document-paged-page #source-content.document-reference-page .source-bibliography h4,
+body.document-paged-page #source-content.document-reference-page [data-vishnu-recap] h4,
+body.document-paged-page #source-content.document-reference-page .women-bibliography-group>p:first-child{
+  margin:22px 0 9px!important;
+  color:var(--teal)!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:21px!important;
+  line-height:1.35!important;
+  font-weight:500!important;
+}
+body.document-paged-page #source-content.document-reference-page h3.reader-subheading:after{
+  display:none!important;
+  content:none!important;
+}
+body.document-paged-page #source-content.document-reference-page ol,
+body.document-paged-page #source-content.document-reference-page ul,
+body.document-paged-page #source-content.document-reference-page .source-bibliography ol{
+  margin:0 0 16px!important;
+  padding-left:22px!important;
+}
+body.document-paged-page #source-content.document-reference-page li,
+body.document-paged-page #source-content.document-reference-page .source-bibliography li{
+  margin:0 0 8px!important;
+  padding-left:0!important;
+}
+body.document-paged-page #source-content.document-reference-page .reference-entry{
+  display:block!important;
+  grid-template-columns:1fr!important;
+  margin:0 0 12px!important;
+  padding:0 0 10px!important;
+  border:0!important;
+  border-bottom:1px solid var(--rule)!important;
+  background:transparent!important;
+}
+body.document-paged-page #source-content.document-reference-page table,
+body.document-paged-page #source-content.document-reference-page table.vishnu-data-table{
+  width:100%!important;
+  max-width:100%!important;
+}
+body.document-paged-page #source-content.document-reference-page a{
+  color:var(--teal)!important;
+  text-underline-offset:3px!important;
+}
+body.document-paged-page .toc-parent,
+body.document-paged-page .toc a,
+body.document-paged-page .toc a.toc-main,
+body.document-paged-page .toc a.toc-subitem,
+body.document-paged-page .toc details.toc-subgroup>summary{
+  font-family:Merriweather,Georgia,serif!important;
+}
+body.document-paged-page .toc-parent{
+  color:var(--ink)!important;
+  font-size:14px!important;
+  line-height:1.45!important;
+  font-weight:600!important;
+}
+body.document-paged-page .toc a,
+body.document-paged-page .toc a.toc-main{
+  color:var(--ink)!important;
+  font-size:14px!important;
+  line-height:1.5!important;
+}
+body.document-paged-page .toc a.toc-subitem{
+  margin:0 0 5px 12px!important;
+  padding:0 0 0 9px!important;
+  border-left:1px solid var(--rule)!important;
+  color:#69736c!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+body.document-paged-page .toc a:hover,
+body.document-paged-page .toc a.is-active,
+body.document-paged-page .toc a.is-active-subsection{
+  color:var(--teal)!important;
+  text-decoration:none!important;
+}
+body.document-paged-page .toc details.toc-subgroup>summary{
+  color:#68726c!important;
+  font-size:12px!important;
+}
+@media(max-width:620px){
+  body.document-paged-page .article-head h1{font-size:36px!important;line-height:1.2!important}
+  body.document-paged-page .article h3{font-size:24px!important;line-height:1.32!important}
+  body.document-paged-page .document-content,
+  body.document-paged-page #source-content,
+  body.document-paged-page .document-content p,
+  body.document-paged-page .document-content li,
+  body.document-paged-page #source-content p,
+  body.document-paged-page #source-content li{
+    font-size:17px!important;
+    line-height:1.65!important;
+  }
+  body.document-paged-page .document-content details.sanskrit-reveal [lang^="sa"]:not([lang="sa-Latn"]),
+  body.document-paged-page .document-content p.sanskrit-text,
+  body.document-paged-page #source-content details.sanskrit-reveal [lang^="sa"]:not([lang="sa-Latn"]),
+  body.document-paged-page #source-content p.sanskrit-text{
+    font-size:19px!important;
+    line-height:1.78!important;
+  }
+  body.document-paged-page .document-content table,
+  body.document-paged-page #source-content table{
+    display:block!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+  }
+  body.document-paged-page .document-content table th,
+  body.document-paged-page .document-content table td,
+  body.document-paged-page #source-content table th,
+  body.document-paged-page #source-content table td{
+    padding:6px 8px!important;
+    font-size:15px!important;
+  }
+}
+
+
+/* Shared Contents and Sources presentation across all six article readers. */
+body.document-paged-page .toc ol.toc-list,
+body.document-paged-page .toc ul.toc-subitems{
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.document-paged-page .toc li.toc-entry,
+body.document-paged-page .toc li.toc-subentry{
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.document-paged-page .toc ul.toc-subitems{
+  margin:3px 0 8px 10px!important;
+  padding:0 0 0 10px!important;
+  border:0!important;
+  border-left:1px solid var(--rule)!important;
+}
+body.document-paged-page .toc ul.toc-subitems ul.toc-subitems{
+  margin:3px 0 6px 0!important;
+}
+body.document-paged-page .toc a.toc-main{
+  display:block!important;
+  margin:0!important;
+  padding:4px 0!important;
+  border:0!important;
+  background:transparent!important;
+}
+body.document-paged-page .toc a.toc-subitem{
+  display:block!important;
+  margin:0 0 5px!important;
+  padding:0!important;
+  border:0!important;
+  color:#69736c!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+body.document-paged-page .toc a.toc-subitem:hover,
+body.document-paged-page .toc a.toc-subitem.is-active-subsection{
+  color:var(--teal)!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body{
+  max-width:100%!important;
+  font-family:Merriweather,Georgia,serif!important;
+  color:var(--ink)!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-group-heading{
+  display:block!important;
+  margin:18px 0 8px!important;
+  padding:0 0 5px!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+  color:#514941!important;
+  font-family:Vollkorn,Georgia,serif!important;
+  font-size:17px!important;
+  font-weight:500!important;
+  line-height:1.4!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-group-heading::before,
+body.document-paged-page #source-content.document-reference-page .source-group-heading::after{
+  display:none!important;
+  content:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body p:not(.translation):not(.scripture-translation):not(.sanskrit-text),
+body.document-paged-page #source-content.document-reference-page .source-page-body li,
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+  color:var(--ink)!important;
+  font-family:Merriweather,Georgia,serif!important;
+  font-size:17px!important;
+  font-weight:400!important;
+  line-height:1.65!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body p{
+  margin:0 0 9px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body ol,
+body.document-paged-page #source-content.document-reference-page .source-page-body ul{
+  margin:0 0 14px!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry-list>li{
+  margin:0!important;
+  padding:7px 0!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+  list-style:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry-list>li:last-child{
+  border-bottom:0!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .article-index{
+  margin:0 0 14px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-entry{
+  margin:0!important;
+  padding:7px 0!important;
+  border:0!important;
+  border-bottom:1px solid #e5e1db!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-entry:last-child{
+  border-bottom:0!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  text-decoration:none!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+  margin-top:4px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading:hover{
+  color:var(--teal)!important;
+  text-decoration:underline!important;
+}
+@media(max-width:620px){
+  body.document-paged-page #source-content.document-reference-page .source-group-heading{
+    margin:16px 0 7px!important;
+    padding-bottom:4px!important;
+    font-size:16px!important;
+  }
+  body.document-paged-page #source-content.document-reference-page .source-page-body p:not(.translation):not(.scripture-translation):not(.sanskrit-text),
+  body.document-paged-page #source-content.document-reference-page .source-page-body li,
+  body.document-paged-page #source-content.document-reference-page .source-page-body .index-heading,
+  body.document-paged-page #source-content.document-reference-page .source-page-body .index-subitem{
+    font-size:17px!important;
+    line-height:1.65!important;
+  }
+}
+
+body.document-paged-page #source-content.document-reference-page .source-page-body a{
+  color:var(--ink)!important;
+  text-decoration:underline!important;
+  text-decoration-color:var(--side-rule)!important;
+  text-underline-offset:3px!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body a:hover{
+  color:var(--teal)!important;
+}
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry strong,
+body.document-paged-page #source-content.document-reference-page .source-page-body .source-entry b{
+  color:inherit!important;
+  font-weight:500!important;
+}
