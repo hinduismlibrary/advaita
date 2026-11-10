@@ -1,129 +1,69 @@
-name: Review Panchadasi Chapter 1 visually
+name: Review all Advaita readers
 on:
   push:
     branches: [main]
     paths:
       - .github/workflows/panchadasi-visual-review.yml
+      - site/assets/js/shankara-reader-navigation.js
+      - site/assets/js/shankara-reader-runtime.js
+      - site/assets/css/shankara-reader-standard.css
       - site/books/adi-shankaracharya/book-chapter.html
-      - site/assets/css/shankara-reader-refresh.css
+      - site/books/adi-shankaracharya/book-contents.html
+      - site/books/adi-shankaracharya/index.html
+      - site/books/adi-shankaracharya/*/index.html
+      - site/books/adi-shankaracharya/stotrams/index.html
+      - tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - tools/scripts/site-checks/verify-advaita-reader-browser.py
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/panchadasi-visual-review.yml
+      - site/assets/js/shankara-reader-navigation.js
+      - site/assets/js/shankara-reader-runtime.js
+      - site/assets/css/shankara-reader-standard.css
+      - site/books/adi-shankaracharya/book-chapter.html
+      - site/books/adi-shankaracharya/book-contents.html
+      - site/books/adi-shankaracharya/index.html
+      - site/books/adi-shankaracharya/*/index.html
+      - site/books/adi-shankaracharya/stotrams/index.html
+      - tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - tools/scripts/site-checks/verify-advaita-reader-browser.py
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  capture:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Prepare deployed site
         run: python3 tools/scripts/site-checks/prepare-site-deploy.py
-      - name: Install browser
+      - name: Audit all text data, routes, and publication mirrors
+        run: node tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - name: Install Chromium
         run: |
           python3 -m pip install --quiet playwright
           python3 -m playwright install --with-deps chromium
-      - name: Render chapter desktop and mobile
+      - name: Run complete reader and responsive browser audit
+        env:
+          READER_TEST_BASE: http://127.0.0.1:8765/advaita
+          READER_TEST_OUTPUT: advaita-reader-browser-output
         run: |
-          mkdir -p panchadasi-visual-output preview-root
+          mkdir -p preview-root
           ln -s "$GITHUB_WORKSPACE/site" preview-root/advaita
-          python3 -m http.server 8765 --bind 127.0.0.1 --directory preview-root >/tmp/panchadasi-preview-server.log 2>&1 &
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          from playwright.sync_api import sync_playwright
-          base = 'http://127.0.0.1:8765/advaita/books/adi-shankaracharya/book-chapter.html?work=panchadasi&unit=panchadasi-1-01'
-          with sync_playwright() as p:
-              browser = p.chromium.launch()
-              for width,height,name in [(1440,900,'desktop'),(390,844,'mobile')]:
-                  page = browser.new_page(viewport={'width':width,'height':height}, device_scale_factor=1)
-                  errors=[]
-                  page.on('pageerror',lambda err: errors.append(str(err)))
-                  reference=base.split('books/adi-shankaracharya/')[0]+'articles/a-shashtric-lens-of-varna-part-one/'
-                  page.goto(reference,wait_until='domcontentloaded')
-                  page.locator('.article-head h1').wait_for(timeout=30000)
-                  page.evaluate('document.fonts.ready')
-                  page.screenshot(path=f'panchadasi-visual-output/reference-{name}.png')
-                  ref_metrics=page.evaluate("""() => {
-                    const r=s=>{const e=document.querySelector(s);if(!e)return null;const b=e.getBoundingClientRect();return{x:b.x,y:b.y,w:b.width,h:b.height}};
-                    const c=s=>{const e=document.querySelector(s);if(!e)return null;const x=getComputedStyle(e);return{font:x.fontFamily,fs:x.fontSize,color:x.color,bg:x.backgroundColor,lineHeight:x.lineHeight}};
-                    return{title:r('.article-head'),toc:r('.side-toc'),reading:r('.article'),titleStyle:c('.article-head h1'),bodyStyle:c('body'),pageStyle:c('.page'),tocStyle:c('.side-toc-title')}
-                  }""")
-                  print('REFERENCE',name,json.dumps(ref_metrics,ensure_ascii=False))
-                  page.goto(base,wait_until='domcontentloaded')
-                  page.locator('.shankara-verse').first.wait_for(timeout=30000)
-                  page.evaluate('document.fonts.ready')
-                  page.screenshot(path=f'panchadasi-visual-output/{name}.png')
-                  metrics=page.evaluate("""() => {
-                     const sel=(s)=>document.querySelector(s);
-                     const rect=(s)=>{let e=sel(s);if(!e)return null;let r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}};
-                     return {verses:document.querySelectorAll('.shankara-verse').length,
-                       title:sel('.panchadasi-chapter-intro')?.textContent,
-                       main:rect('main.site-main'),reader:rect('#chapter-reader'),
-                       body:document.body.className,
-                       overflow:document.documentElement.scrollWidth>innerWidth,
-                       intro:rect('.panchadasi-chapter-intro'),
-                       toc:rect('#reader-toc'),
-                       verse:rect('.shankara-verse'),
-                       english:rect('.gita-translation'),
-                       activeLinks:document.querySelectorAll('.reader-verse-link').length}
-                  }""")
-                  print(name,json.dumps(metrics,ensure_ascii=False), 'JS errors:',errors)
-                  styles=page.evaluate("""() => {
-                    const cs=(q)=>{const e=document.querySelector(q);if(!e)return null;const s=getComputedStyle(e);return {background:s.backgroundColor,color:s.color,textAlign:s.textAlign,fontSize:s.fontSize,display:s.display}};
-                    return {main:cs('main.site-main'),paper:cs('#chapter-reader'),
-                      sanskrit:cs('.shankara-verse .gita-sanskrit'),
-                      english:cs('.shankara-verse .gita-translation'),
-                      masthead:cs('.panchadasi-reader-masthead'),title:cs('.panchadasi-chapter-intro h1')}
-                  }""")
-                  print(name,'STYLES',json.dumps(styles,ensure_ascii=False))
-                  assert styles['paper']['background'] == 'rgb(255, 253, 250)', styles
-                  assert styles['english']['textAlign'] == 'left', styles
-                  assert styles['masthead']['display'] != 'none',styles
-                  assert styles['title']['color']=='rgb(73, 107, 108)',styles
-                  assert metrics['toc'] and metrics['toc']['width'] > 100,metrics
-                  if name == 'desktop':
-                      assert metrics['toc']['x'] < 130,metrics
-                  assert styles['paper']['background'] == 'rgb(255, 253, 250)',styles
-                  assert page.locator('header.vd-global-header:visible').count()==0
-                  assert page.locator('.reader-toc-head .reader-overline').count()==0
-                  assert not errors,errors
-                  assert metrics['verses']==65 and metrics['activeLinks']==65,metrics
-                  assert not metrics['overflow'],metrics
-                  links=page.locator('#chapter-list>li>a.reader-verse-link')
-                  assert links.count()==65
-                  assert links.first.inner_text()=='1.1'
-                  assert links.last.inner_text()=='1.65'
-                  assert page.locator('.reader-verse-band-details').count()==0
-                  assert page.locator('.panchadasi-script-toggle,.panchadasi-sanskrit-reveal').count()==0
-                  first=page.locator('.shankara-verse').first
-                  sa=first.locator('.panchadasi-visible-sanskrit')
-                  iast=first.locator('.panchadasi-visible-iast')
-                  en=first.locator('.gita-translation')
-                  assert sa.is_visible() and iast.is_visible() and en.is_visible()
-                  ys=[x.bounding_box()['y'] for x in (sa,iast,en)]
-                  assert ys==sorted(ys),ys
-                  gloss=first.locator('.gita-details > summary')
-                  assert gloss.count()==1 and gloss.inner_text()=='Word for Word'
-                  gloss.click()
-                  assert first.locator('.gita-details').get_attribute('open') is not None
-                  if name=='desktop':
-                      toc=page.locator('#reader-toc')
-                      assert toc.evaluate('(e)=>getComputedStyle(e).overflowY')=='visible'
-                      assert toc.evaluate('(e)=>e.scrollHeight<=e.clientHeight+4')
-                      assert toc.bounding_box()['height']>1400
-                  if name=='mobile':
-                      menu=page.locator('.panchadasi-mobile-toc-toggle')
-                      assert menu.is_visible()
-                      menu.click()
-                      assert menu.get_attribute('aria-expanded')=='true'
-                      assert page.locator('#reader-toc .reader-verse-link:visible').count()==65
-                      assert page.locator('#reader-toc').evaluate('(e)=>getComputedStyle(e).overflowY')=='visible'
-                      assert page.locator('#reader-toc').evaluate('(e)=>e.scrollHeight<=e.clientHeight+4')
-                  page.close()
-              browser.close()
-          PY
-      - name: Save screenshots
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory preview-root >/tmp/advaita-preview-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:8765/advaita/books/adi-shankaracharya/ >/dev/null; then break; fi
+            sleep 1
+          done
+          python3 tools/scripts/site-checks/verify-advaita-reader-browser.py
+      - name: Save screenshots and browser audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: panchadasi-visual-${{ github.run_id }}
-          path: panchadasi-visual-output/
+          name: advaita-reader-review-${{ github.run_id }}
+          path: advaita-reader-browser-output/
+          if-no-files-found: warn
