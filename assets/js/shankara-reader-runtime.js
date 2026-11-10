@@ -8,6 +8,9 @@
   var isFullText = params.get("full") === "1";
   var root = document.getElementById("chapter-reader");
   var titleNode = document.getElementById("work-title");
+  // Keep the reader palette above the dynamically injected site-wide chrome.
+  if (root) root.style.setProperty("background-color", "#fffdfa", "important");
+  if (titleNode) titleNode.style.setProperty("color", "#496b6c", "important");
   var authorNode = document.getElementById("work-author");
   var chapterTitle = document.getElementById("chapter-title");
   var contentNode = document.getElementById("chapter-content");
