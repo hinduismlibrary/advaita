@@ -13,6 +13,7 @@ on:
       - site/books/adi-shankaracharya/*/index.html
       - site/books/adi-shankaracharya/stotrams/index.html
       - tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - tools/scripts/site-checks/validate-shankara-reader-data.py
       - tools/scripts/site-checks/verify-advaita-reader-browser.py
   pull_request:
     branches: [main]
@@ -27,6 +28,7 @@ on:
       - site/books/adi-shankaracharya/*/index.html
       - site/books/adi-shankaracharya/stotrams/index.html
       - tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - tools/scripts/site-checks/validate-shankara-reader-data.py
       - tools/scripts/site-checks/verify-advaita-reader-browser.py
   workflow_dispatch:
 permissions:
@@ -37,6 +39,8 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+      - name: Validate reader data and contents routes
+        run: python3 tools/scripts/site-checks/validate-shankara-reader-data.py
       - name: Audit all text data, routes, and publication mirrors
         run: node tools/scripts/site-checks/verify-advaita-reader-standardization.js
       - name: Prepare deployed site
