@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
 <link rel="stylesheet" href="/advaita/assets/css/shankara-reader-refresh.css?v=20261110-panchadasi-ch1-editorial-2">
-<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-book-edition-1">
+<link rel="stylesheet" href="/advaita/assets/css/panchadasi-chapter-one.css?v=20261110-book-edition-2">
 </head>
 <body class="post-page gita-page shankara-reader-page">
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="/advaita/">Viveka Dṛṣṭi</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="/advaita/">Home</a><a href="/advaita/books/adi-shankaracharya/">Advaita texts</a></nav></div></header>
@@ -492,6 +492,33 @@ fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(r
   readingActions.append(scriptButton);
   chapterIntro.append(chapterKicker,chapterHeading,chapterMeta,readingActions);
   document.body.classList.add("panchadasi-chapter-one");
+  var masthead=document.createElement("header");
+  masthead.className="panchadasi-reader-masthead";
+  var mastInner=document.createElement("div");
+  mastInner.className="panchadasi-reader-masthead-inner";
+  var mastBrand=document.createElement("a");
+  mastBrand.className="panchadasi-reader-brand";
+  mastBrand.href="/advaita/";
+  mastBrand.lang="sa-Deva";
+  mastBrand.textContent="विवेकदृष्टिः";
+  var mastEnglish=document.createElement("span");
+  mastEnglish.textContent="Viveka Dṛṣṭi";
+  mastEnglish.lang="en";
+  mastBrand.append(mastEnglish);
+  var mastNav=document.createElement("nav");
+  mastNav.className="panchadasi-reader-nav";
+  mastNav.setAttribute("aria-label","Reader navigation");
+  var mastLibrary=document.createElement("a");
+  mastLibrary.href="/advaita/books/adi-shankaracharya/";
+  mastLibrary.textContent="Advaita texts";
+  var mastWork=document.createElement("a");
+  mastWork.href="/advaita/books/adi-shankaracharya/panchadasi/";
+  mastWork.textContent="Entire Pañcadaśī";
+  mastNav.append(mastLibrary,mastWork);
+  mastInner.append(mastBrand,mastNav);
+  masthead.append(mastInner);
+  var main=document.querySelector("main.site-main");
+  if(main)main.parentNode.insertBefore(masthead,main);
   root.querySelector(".shankara-reading-grid").insertBefore(chapterIntro,document.getElementById("reader-toc"));
  }
  if(!isPanchadasi){

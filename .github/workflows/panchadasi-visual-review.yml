@@ -55,6 +55,17 @@ jobs:
                        activeLinks:document.querySelectorAll('.reader-verse-link').length}
                   }""")
                   print(name,json.dumps(metrics,ensure_ascii=False), 'JS errors:',errors)
+                  styles=page.evaluate("""() => {
+                    const cs=(q)=>{const e=document.querySelector(q);if(!e)return null;const s=getComputedStyle(e);return {background:s.backgroundColor,color:s.color,textAlign:s.textAlign,fontSize:s.fontSize,display:s.display}};
+                    return {main:cs('main.site-main'),paper:cs('#chapter-reader'),
+                      sanskrit:cs('.shankara-verse .gita-sanskrit'),
+                      english:cs('.shankara-verse .gita-translation'),
+                      masthead:cs('.panchadasi-reader-masthead')}
+                  }""")
+                  print(name,'STYLES',json.dumps(styles,ensure_ascii=False))
+                  assert styles['sanskrit']['background'] != 'rgb(255, 255, 255)', styles
+                  assert styles['english']['textAlign'] == 'left', styles
+                  assert styles['masthead']['display'] != 'none',styles
                   assert not errors,errors
                   assert metrics['verses']==65,metrics
                   assert not metrics['overflow'],metrics
