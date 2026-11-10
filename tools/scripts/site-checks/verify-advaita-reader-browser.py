@@ -176,6 +176,23 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             completeSourceReferences:units.every(unit=>{const values=(unit.sourceNumbers||[]).map(String),number=String(unit.number||'');if(!values.length||(unit.number!==undefined&&values.length===1&&values[0]===number))return true;const range=number.match(/^\s*(\d+)\s*[–-]\s*(\d+)\s*$/);if(range&&values.length>1&&values.every((value,index)=>/^\d+$/.test(value)&&Number(value)===Number(range[1])+index)&&Number(values.at(-1))===Number(range[2]))return true;return [...document.querySelectorAll('.reader-source-reference')].some(node=>node.textContent.includes(values.join(' · ')));}),
             standardizedLayout:(()=>{const h=document.querySelector('#work-title'),t=document.querySelector('#reader-toc'),c=document.querySelector('#chapter-content'),paper=document.querySelector('#chapter-reader');return {titleAlign:getComputedStyle(h).textAlign,titleColor:getComputedStyle(h).color,titleFont:getComputedStyle(h).fontFamily,tocLeft:t.getBoundingClientRect().left,readingLeft:c.getBoundingClientRect().left,paper:getComputedStyle(paper).backgroundColor,bodyClass:document.body.className,titleInline:h.getAttribute('style'),
               loadedSheets:[...document.styleSheets].map(sheet=>{try{return {href:sheet.href,rules:sheet.cssRules.length}}catch(error){return {href:sheet.href,error:String(error)}}}),
+              matchedRules:(()=>{
+              const matched={title:[],paper:[]};
+              for(const sheet of document.styleSheets){
+                try{
+                  for(const rule of sheet.cssRules){
+                    if(!rule.selectorText)continue;
+                    if(rule.selectorText.includes('gita-hero')&&rule.selectorText.includes('h1')){
+                      try{if(h.matches(rule.selectorText))matched.title.push({href:sheet.href,selector:rule.selectorText,color:rule.style.color,important:rule.style.getPropertyPriority('color')})}catch(_){}
+                    }
+                    if(rule.selectorText.includes('#chapter-reader')||rule.selectorText.includes('.gita-content')){
+                      try{if(paper.matches(rule.selectorText))matched.paper.push({href:sheet.href,selector:rule.selectorText,background:rule.style.background,important:rule.style.getPropertyPriority('background')})}catch(_){}
+                    }
+                  }
+                }catch(_){}
+              }
+              return matched;
+            })(),
               perUnitReveals:[...document.querySelectorAll('.shankara-verse details')].every(details=>details.classList.contains('gita-details'))};})(),
             desktopToc:(()=>{const e=document.querySelector('#reader-toc');const s=getComputedStyle(e);return {overflow:s.overflowY,scroll:e.scrollHeight,client:e.clientHeight};})()
           };
