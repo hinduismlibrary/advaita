@@ -230,7 +230,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     box.className="error";
     box.textContent=message+" ";
     var link=document.createElement("a");
-    link.href=readerUrl.href;
+    link.href=readerUrl;
     link.textContent="Open the full text";
     renderBilingual(link,link.textContent.trim());
     box.append(link);
@@ -244,7 +244,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   var readerUrl=window.AdvaitaReaderNavigation.readerUrl(work,true);
   var dataUrl=new URL("/advaita/assets/data/shankara/"+encodeURIComponent(work)+".json",window.location.origin);
   dataUrl.searchParams.set("v","reader-gloss-20261027b");
-  completeLink.href=readerUrl.href;
+  completeLink.href=readerUrl;
   fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(response){
     if(!response.ok)throw new Error("The contents data could not be loaded.");
     return response.json();
@@ -285,7 +285,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       complete.append(completeDescription);
       var readLink=document.createElement("a");
       readLink.className="complete-text-link";
-      readLink.href=readerUrl.href;
+      readLink.href=readerUrl;
       readLink.textContent="Read complete text";
       complete.append(readLink);
       sectionsNode.append(complete);
