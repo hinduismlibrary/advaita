@@ -59,6 +59,11 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
 .contents-group h2 .label-dev{font-size:14px}
 .loading,.error{margin:12px 0;color:var(--muted)}
 .complete-link{font-weight:400}
+.editorial-note,.structure-note,.work-description,.complete-text-description{margin:14px 0;color:#54504b;line-height:1.65}
+.editorial-note{padding:0 0 12px;border-bottom:1px solid #d8d4cc;font-size:.92em}
+.structure-note{font-size:.9em;font-style:italic}
+.complete-text-link{display:inline-block;margin:6px 0 0;color:var(--link);font-weight:600}
+
 @media(max-width:680px){
   body.vd-chrome-page.contents-menu-page .page .hero{padding-right:0}
   .page-tools{position:static;justify-content:flex-end;margin:4px 0 16px}
@@ -89,27 +94,13 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     <p class="loading" role="status">Loading the chapter list…</p>
   </div>
 </main>
+<script src="/advaita/assets/js/shankara-reader-navigation.js?v=20261110-global-reader-1"></script>
 <script>
 (function(){
   "use strict";
   var params=new URLSearchParams(window.location.search);
   var work=params.get("work")||"";
-  // Māṇḍūkyakārikā has its own editorial reader; keep previous deep links valid.
-  if(work==="mandukya-karika"){
-    var target=new URL("/advaita/books/adi-shankaracharya/mandukya-karika/",window.location.origin);
-    var chosen=params.get("unit");
-    var chapter=Number(params.get("chapter"));
-    if(chosen&&/^mandukya-karika-[1-4]-/.test(chosen)){
-      target.searchParams.set("chapter",chosen.match(/^mandukya-karika-([1-4])-/)[1]);
-      target.hash=chosen;
-    }else if(Number.isInteger(chapter)&&chapter>=1&&chapter<=4){
-      target.searchParams.set("chapter",String(chapter));
-    }
-    if(window.location.hash)target.hash=window.location.hash;
-    window.location.replace(target.href);
-    return;
-  }
-  var validWorks=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","bhaja-govindam"]);
+  var validWorks=new Set(window.AdvaitaReaderNavigation.workIds);
 
   var labelData=[
     ["Advaita Texts","Advaita texts","अद्वैतग्रन्थाः"],["Contents","Contents","विषयसूची"],["Chapters and sections","Chapters and sections","अध्यायाः तथा विभागाः"],
@@ -159,6 +150,10 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     "aparokshanubhuti":{english:"Direct Knowledge of the Self",devanagari:"अपरोक्षानुभूतिः"},
     "bhaja-govindam":{english:"Worship Govinda",devanagari:"भजगोविन्दम्"}
   };
+  Object.keys(window.AdvaitaReaderNavigation.works).forEach(function(id){
+    var metadata=window.AdvaitaReaderNavigation.metadata(id);
+    workPairs[id]={english:metadata.english,devanagari:metadata.devanagari};
+  });
   var authorPairs={
     "tattvabodha":{english:"By Adi Shankara",devanagari:"आदिशङ्कराचार्यः"},
     "vedantasara":{english:"By Sadananda Yogindra",devanagari:"सदानन्दयोगीन्द्रः"},
@@ -235,141 +230,79 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     box.className="error";
     box.textContent=message+" ";
     var link=document.createElement("a");
-    link.href=readerUrl.href;
+    link.href=readerUrl;
     link.textContent="Open the full text";
     renderBilingual(link,link.textContent.trim());
     box.append(link);
     sectionsNode.append(box);
   }
-  function sourceItems(doc){
-    var sourceNav=doc.querySelector(".gita-contents");
-    if(!sourceNav)return [];
-    return Array.from(sourceNav.querySelectorAll("li a[href^='#']")).map(function(anchor){
-      return {label:anchor.textContent.trim(),hash:anchor.getAttribute("href").slice(1)};
-    }).filter(function(item){return item.label&&item.hash;});
-  }
-  function sourceItemsAreDescriptive(items){
-    return items.some(function(item){
-      return !/^(?:(?:chapter\s+\S+\s*[·:–-]\s*)?)(?:verses?|passages?|sections?|pages?|entries?)\s+\S+$/i.test(item.label)
-        && !/^chapter\s+\d+$/i.test(item.label);
-    });
-  }
-  function hasTraditionalDivisions(data,items){
-    var units=Array.isArray(data&&data.units)?data.units:[];
-    var sections=Array.isArray(data&&data.sections)?data.sections:[];
-    if(data&&data.traditionalDivisions===true)return true;
-    if(sections.some(function(section){return section&&section.traditional===true;}))return true;
-    if(units.some(function(unit){return unit.chapter!==undefined&&unit.chapter!==null&&String(unit.chapter).trim()!=="";}))return true;
-    if(work==="panchadasi"||work==="svsss")return true;
-    if(items.some(function(item){return /^(?:chapter|part|book)\s+(?:\d+|[ivxlcdm]+)\b/i.test(item.label);}))return true;
-    return items.length>1&&items.length<=15&&sourceItemsAreDescriptive(items);
-  }
-  function unitChapter(unit){
-    if(unit.chapter!==undefined&&unit.chapter!==null)return String(unit.chapter);
-    var match=String(unit.id||"").match(/^(?:panchadasi|svsss)-(\d+)-/);
-    return match?match[1]:"";
-  }
-  function sectionItems(data){
-    var units=Array.isArray(data&&data.units)?data.units:[];
-    if(!units.length)return [];
-    var sections=Array.isArray(data.sections)?data.sections:[];
-    if(sections.length){
-      var explicit=sections.map(function(section){
-        var target=units.find(function(unit){return unit.sectionTitle&&unit.sectionTitle===section.title;});
-        if(!target&&section.id!==undefined){
-          target=units.find(function(unit){return unitChapter(unit)===String(section.id);});
-        }
-        if(!target&&section.startVerse!==undefined){
-          target=units.find(function(unit){
-            var numbers=Array.isArray(unit.sourceNumbers)?unit.sourceNumbers:[unit.number];
-            return numbers.some(function(number){var value=Number(String(number).split(".")[0]);return Number.isFinite(value)&&value>=Number(section.startVerse)&&value<=Number(section.endVerse||section.startVerse);});
-          });
-        }
-        return target?{label:section.title,hash:target.id}:null;
-      }).filter(Boolean);
-      if(explicit.length)return explicit;
-    }
-    var grouped=[];
-    units.forEach(function(unit,index){
-      var chapter=unitChapter(unit);
-      var title=unit.sectionTitle||(chapter?(work==="panchadasi"&&panchadasiTitles[chapter]?"Chapter "+chapter+": "+panchadasiTitles[chapter]:work==="svsss"&&svsssTitles[chapter]?"Part "+chapter+": "+svsssTitles[chapter]:"Chapter "+chapter):"");
-      if(!title)return;
-      var prior=grouped[grouped.length-1];
-      if(!prior||prior.title!==title)grouped.push({title:title,hash:unit.id,count:0,index:index});
-      grouped[grouped.length-1].count++;
-    });
-    var hasTraditionalChapter=units.some(function(unit){return unit.chapter!==undefined&&unit.chapter!==null&&String(unit.chapter).trim()!=="";})||work==="panchadasi"||work==="svsss";
-    if(grouped.length>1&&(hasTraditionalChapter||grouped.length<=20))return grouped.map(function(group){return {label:group.title,hash:group.hash};});
-    if(grouped.length===1&&hasTraditionalChapter)return [{label:grouped[0].title,hash:grouped[0].hash}];
-    return [];
-  }
-  function fallbackRanges(data){
-    var units=Array.isArray(data&&data.units)?data.units:[];
-    if(units.length<=50)return [];
-    var result=[];
-    var chunkSize=Math.max(1,Math.ceil(units.length/12));
-    for(var i=0;i<units.length;i+=chunkSize){
-      var part=units.slice(i,i+chunkSize);
-      var numbers=part.flatMap(function(unit){return Array.isArray(unit.sourceNumbers)?unit.sourceNumbers:[unit.number];}).filter(function(value){return value!==undefined&&value!==null;});
-      var start=numbers[0]||part[0].number||String(i+1),end=numbers[numbers.length-1]||part[part.length-1].number||String(Math.min(i+part.length,units.length));
-      var firstLabel=String(part[0].label||"");
-      var kind=/page/i.test(firstLabel)?"Pages":/passage/i.test(firstLabel)?"Passages":/section/i.test(firstLabel)?"Sections":"Verses";
-      result.push({label:kind+" "+start+"–"+end,hash:part[0].id});
-    }
-    return result;
-  }
   if(!validWorks.has(work)){
-    showError("Choose a longer text from the Advaita texts page.",new URL("/advaita/books/adi-shankaracharya/",window.location.origin));
+    showError("Choose a text from the Advaita texts page.",new URL("/advaita/books/adi-shankaracharya/",window.location.origin));
     return;
   }
-  var readerUrl=new URL(work+"/",window.location.href);
+  var metadata=window.AdvaitaReaderNavigation.metadata(work);
+  var readerUrl=window.AdvaitaReaderNavigation.readerUrl(work,true);
   var dataUrl=new URL("/advaita/assets/data/shankara/"+encodeURIComponent(work)+".json",window.location.origin);
   dataUrl.searchParams.set("v","reader-gloss-20261027b");
-  completeLink.href=readerUrl.href;
+  completeLink.href=readerUrl;
   fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(response){
     if(!response.ok)throw new Error("The contents data could not be loaded.");
     return response.json();
   }).then(function(data){
-    var rawTitle=data.title||work;
-    var titlePair=workPairs[work]||labelFor(rawTitle);
-    renderWorkTitle(titleNode,rawTitle,titlePair);
-    var authorPair=authorPairs[work];
-    var authorText=authorPair?authorPair.english:(data.author?"By "+data.author:"");
-    renderBilingual(authorNode,authorText,authorPair||labelFor(authorText));
-    document.title="Text contents — "+titlePair.english+" — Viveka Drishti";
     var units=Array.isArray(data&&data.units)?data.units:[];
-    if(units.length<=50&&!hasTraditionalDivisions(data,[])){
-      sectionsNode.replaceChildren();
-      sectionsNode.hidden=true;
-      completeLink.href=readerUrl.href;
-      return;
-    }
-    sectionsNode.hidden=false;
-    var items=sectionItems(data);
-    if(!items.length&&units.length<=50){
-      sectionsNode.replaceChildren();
-      sectionsNode.hidden=true;
-      completeLink.href=readerUrl.href;
-      return;
-    }
-    if(!items.length)items=fallbackRanges(data);
-    if(!items.length)throw new Error("No chapter or section links were found.");
-    var groups=[{title:"Chapters and sections",items:items}];
-    if(work==="panchadasi"&&items.length>=15){
-      groups=[
-        {title:"Book I — Discrimination (Viveka)",items:items.slice(0,5)},
-        {title:"Book II — Light (Dīpa)",items:items.slice(5,10)},
-        {title:"Book III — Bliss (Ānanda)",items:items.slice(10,15)}
-      ];
-      if(items.length>15)groups.push({title:"Additional sections",items:items.slice(15)});
-    }
+    if(!units.length)throw new Error("The text contains no readable entries.");
+    var rawTitle=metadata.iast||String(data.title||work).replace(/\s+[—–]\s+.*$/," ").trim();
+    var titlePair={english:metadata.english,devanagari:metadata.devanagari};
+    renderWorkTitle(titleNode,rawTitle,titlePair);
+    var authorText=metadata.author||(data.author?"By "+data.author:"");
+    renderBilingual(authorNode,authorText);
+    document.title="Text contents — "+metadata.english+" — Viveka Dṛṣṭi";
     sectionsNode.replaceChildren();
-    var nextOrdinal=1;
-    groups.forEach(function(group,index){
-      var groupId="contents-group-"+(index+1);
+    sectionsNode.hidden=false;
+    var items=window.AdvaitaReaderNavigation.itemsForContents(work,data);
+    var notice=window.AdvaitaReaderNavigation.note(work);
+    if(notice){
+      var note=document.createElement("p");
+      note.className=metadata.editorial?"editorial-note":"structure-note";
+      note.textContent=notice;
+      sectionsNode.append(note);
+    }
+    if(metadata.description){
+      var description=document.createElement("p");
+      description.className="work-description";
+      description.textContent=metadata.description;
+      sectionsNode.append(description);
+    }
+    if(!items.length){
+      var complete=document.createElement("section");
+      complete.className="contents-group complete-text-group";
+      var completeHeading=document.createElement("h2");
+      completeHeading.textContent="Complete text";
+      complete.append(completeHeading);
+      var completeDescription=document.createElement("p");
+      completeDescription.className="complete-text-description";
+      completeDescription.textContent=metadata.description||"Read the text continuously in its existing order and references.";
+      complete.append(completeDescription);
+      var readLink=document.createElement("a");
+      readLink.className="complete-text-link";
+      readLink.href=readerUrl;
+      readLink.textContent="Read complete text";
+      complete.append(readLink);
+      sectionsNode.append(complete);
+      return;
+    }
+    var grouped=[];
+    items.forEach(function(item){
+      var title=item.group|| (metadata.editorial?"Editorial thematic sections":"Chapters and sections");
+      var current=grouped[grouped.length-1];
+      if(!current||current.title!==title){current={title:title,items:[]};grouped.push(current);}
+      current.items.push(item);
+    });
+    var ordinal=1;
+    grouped.forEach(function(group,index){
       var section=document.createElement("section");
       section.className="contents-group";
-      section.id=groupId;
+      section.id="contents-group-"+(index+1);
       var heading=document.createElement("h2");
       heading.textContent=group.title;
       renderBilingual(heading,group.title);
@@ -377,13 +310,19 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       var list=document.createElement("ol");
       list.className="chapter-list";
       list.setAttribute("aria-label",group.title);
-      list.setAttribute("start",String(nextOrdinal));
-      nextOrdinal+=group.items.length;
+      var chapterNumber=(group.items[0].label.match(/\bChapter\s+(\d+)/i)||[])[1];
+      var partNumber=(group.items[0].label.match(/\bPart\s+(\d+)/i)||[])[1];
+      var start=chapterNumber||partNumber||String(ordinal);
+      list.setAttribute("start",start);
+      ordinal=Number(start)+group.items.length;
       group.items.forEach(function(item){
         var entry=document.createElement("li");
         var link=document.createElement("a");
         link.className="chapter-link";
-        link.href=new URL("book-chapter.html?work="+encodeURIComponent(work)+"&unit="+encodeURIComponent(item.hash),window.location.href).href;
+        var destination=new URL("book-chapter.html",window.location.href);
+        destination.searchParams.set("work",work);
+        destination.searchParams.set("unit",item.id);
+        link.href=destination.href;
         link.textContent=item.label;
         renderBilingual(link,item.label);
         entry.append(link);
