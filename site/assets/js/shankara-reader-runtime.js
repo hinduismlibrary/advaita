@@ -19,15 +19,14 @@
     function moveAfterChrome() {
       var chromeStyle = document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
       if (!chromeStyle) return false;
-      if (!(chromeStyle.compareDocumentPosition(readerStyle) & Node.DOCUMENT_POSITION_FOLLOWING)) {
-        document.head.append(readerStyle);
-      }
+      if (chromeStyle.nextElementSibling !== readerStyle) chromeStyle.after(readerStyle);
       if (observer) observer.disconnect();
       return true;
     }
     if (moveAfterChrome()) return;
     observer = new MutationObserver(moveAfterChrome);
     observer.observe(document.head, { childList: true });
+    document.addEventListener("DOMContentLoaded", moveAfterChrome, { once: true });
     global.addEventListener("load", moveAfterChrome, { once: true });
   }
   placeReaderStylesLast();
