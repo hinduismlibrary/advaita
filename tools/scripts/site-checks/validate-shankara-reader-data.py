@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = ROOT / "site/assets/data/shankara"
 BOOK_DIR = ROOT / "site/books/adi-shankaracharya"
 READER_JS = ROOT / "site/assets/js/shankara-reader.js"
+NAVIGATION_JS = ROOT / "site/assets/js/shankara-reader-navigation.js"
 CONTENTS_HTML = BOOK_DIR / "book-contents.html"
 ROOT_INDEX = BOOK_DIR / "index.html"
 STOTRAM_INDEX = BOOK_DIR / "stotrams/index.html"
@@ -92,6 +93,7 @@ def inventory_links(markup: str) -> tuple[dict[str, list[str]], set[str]]:
 
 def main() -> int:
     reader_js = text(READER_JS)
+    navigation_js = text(NAVIGATION_JS)
     contents_html = text(CONTENTS_HTML)
     css = text(STYLE_CSS)
 
@@ -115,6 +117,20 @@ def main() -> int:
 
     data_files = sorted(DATA_DIR.glob("*.json"))
     data_ids = {path.stem for path in data_files}
+    navigation_works = re.search(r"var works = \{(.*?)\n  \};", navigation_js, re.S)
+    navigation_ids = (
+        set(re.findall(r'^    "([a-z0-9-]+)": \{', navigation_works.group(1), re.M))
+        if navigation_works
+        else set()
+    )
+    if not navigation_works:
+        error("the shared navigation's work inventory could not be parsed")
+    if navigation_ids != data_ids:
+        error(
+            "shared navigation/data mismatch: "
+            f"navigation missing {sorted(data_ids - navigation_ids)}; "
+            f"data missing {sorted(navigation_ids - data_ids)}"
+        )
     if set(work_ids) != data_ids:
         error(
             "WORKS/data mismatch: "
@@ -283,31 +299,21 @@ def main() -> int:
         data = data_by_id.get(work_id)
         if not data:
             continue
-        expected = data.get("expectedUnits")
-        long_work = isinstance(expected, int) and expected >= 20
         hrefs = route_by_id.get(work_id, [])
         if len(hrefs) != 1:
             error(f"{work_id}: expected one inventory link, found {len(hrefs)}")
             continue
         is_contents = "book-contents.html" in hrefs[0] and parse_qs(urlsplit(hrefs[0]).query).get("work") == [work_id]
-        if long_work and not is_contents:
-            error(f"{work_id}: long text does not link through its contents page")
-        if not long_work and is_contents:
-            error(f"{work_id}: under-20 text should open as a single reader page")
+        if not is_contents:
+            error(f"{work_id}: text does not link through its contents page")
 
-    contents_match = re.search(
-        r"var validWorks=new Set\(\[([^\]]*)\]\)",
+    if not re.search(
+        r"var validWorks=new Set\(window\.AdvaitaReaderNavigation\.workIds\)",
         contents_html,
-    )
-    if not contents_match:
-        error("the contents page's supported-work list could not be parsed")
-        allowed_contents = set()
-    else:
-        allowed_contents = set(re.findall(r'"([^"]+)"', contents_match.group(1)))
-    for work_id, data in data_by_id.items():
-        expected = data.get("expectedUnits")
-        if isinstance(expected, int) and expected >= 20 and work_id not in allowed_contents:
-            error(f"{work_id}: contents page does not support this work")
+    ) or "shankara-reader-navigation.js" not in contents_html:
+        error("the contents page does not use the shared work inventory")
+    if "complete-text-group" not in contents_html:
+        error("the contents page lacks the continuous reader link for short texts")
 
     if not re.search(
         r"\.shankara-study-button-row[^{]*\{[^}]*gap\s*:\s*0!important",
@@ -326,10 +332,7 @@ def main() -> int:
         f"PASS: {len(data_by_id)} works, {total_units} units, "
         f"{total_gloss_rows} Devanāgarī-to-English gloss rows."
     )
-    print(
-        f"PASS: reader routes and inventory links resolve; all long works use "
-        f"contents pages; short works open as single pages."
-    )
+    print("PASS: reader routes and inventory links resolve; all works use contents pages and the shared navigation inventory.")
     print("PASS: all units satisfy the reader loader and have Sanskrit, English, IAST, and word glosses.")
     print("PASS: verse texts use one source verse per card; numbered prose passage groups remain explicit.")
     print("PASS: named numeric contents ranges have no gaps or overlaps where directly comparable.")
