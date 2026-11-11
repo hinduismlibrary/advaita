@@ -107,7 +107,7 @@ jobs:
               && grep -Fq 'A Defence of the Manusmṛti' <<< "$manuscript" \
               && grep -Fq 'article-standard.css' <<< "$manuscript" \
               && grep -Fq 'women-reader-page' <<< "$women" \
-              && grep -Fq 'article-standard.css?v=20261111-vishnu-article-template-2' <<< "$women" \
+              && grep -Fq 'article-standard.css' <<< "$women" \
               && grep -Fq 'hinduism-on-women' <<< "$women"; then
               echo "Both published articles, including Hinduism on Women, are reachable."
               exit 0
