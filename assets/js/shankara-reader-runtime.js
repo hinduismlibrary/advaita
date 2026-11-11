@@ -155,7 +155,8 @@
     card.setAttribute("aria-label", qualifiedReferenceFor(metadata, unit, index));
 
     var reference = document.createElement("h2");
-    reference.textContent = referenceFor(unit, index);
+    reference.textContent = qualifiedReferenceFor(metadata, unit, index);
+    reference.dataset.readerNumber = referenceFor(unit, index);
     reference.className = "reader-reference";
 
     var sanskrit = document.createElement("div");
