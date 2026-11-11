@@ -245,7 +245,15 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
     if work == "panchadasi":
         page.set_viewport_size({"width": 1440, "height": 900})
         page.goto(route_for(work, unit="panchadasi-1-01"), wait_until="domcontentloaded")
-        page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+        try:
+            page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+        except Exception as error:
+            snapshot = page.evaluate(
+                """() => ({url:location.href,title:document.title,readerError:document.querySelector('.shankara-reader-error')?.innerText||'',
+                  readerText:document.querySelector('#chapter-content')?.innerText.slice(0,600)||'',
+                  scripts:[...document.scripts].map(script=>script.src).filter(Boolean)})"""
+            )
+            raise AssertionError(f"Pañcadaśī direct reader did not render: {snapshot}; page errors: {errors}") from error
         chapter_layout = page.evaluate("""() => ({context:document.querySelector('#chapter-title')?.textContent.trim(),title:document.querySelector('#work-title')?.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim(),reference:document.querySelector('#chapter-content > .shankara-verse h2')?.textContent.trim()})""")
         require(chapter_layout["context"] == "Pañcadaśī · Book I, Chapter 1" and chapter_layout["title"] == "Tattva-viveka" and chapter_layout["byline"].startswith("65 verses · Vidyāraṇya") and chapter_layout["reference"] == "Pañcadaśī 1.1",
                 f"Pañcadaśī Chapter 1 does not match the supplied reader example ({chapter_layout})")
