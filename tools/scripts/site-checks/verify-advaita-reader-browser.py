@@ -109,6 +109,14 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
                 f"{work}: short/continuous text needs one complete-text link")
         complete_text_links.click()
     page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+    page.wait_for_function(
+        """() => {
+          const reader=document.querySelector('link[href*="shankara-reader-standard.css"]');
+          const chrome=document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
+          return !!reader && !!chrome && !!(chrome.compareDocumentPosition(reader)&Node.DOCUMENT_POSITION_FOLLOWING);
+        }""",
+        timeout=30000,
+    )
     selected_query = parse_qs(urlparse(page.url).query)
     require(selected_query.get("work") == [work], f"{work}: contents link routed to the wrong work")
     if section_links.count():
