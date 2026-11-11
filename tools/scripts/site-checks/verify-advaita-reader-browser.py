@@ -108,7 +108,15 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
         require(complete_text_links.count() == 1,
                 f"{work}: short/continuous text needs one complete-text link")
         complete_text_links.click()
-    page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+    try:
+        page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+    except Exception as error:
+        snapshot = page.evaluate(
+            """() => ({url:location.href,title:document.title,readerError:document.querySelector('.shankara-reader-error')?.innerText||'',
+              readerText:document.querySelector('#chapter-content')?.innerText.slice(0,600)||'',
+              scripts:[...document.scripts].map(script=>script.src).filter(Boolean)})"""
+        )
+        raise AssertionError(f"{work}: selected reader route did not render: {snapshot}; page errors: {errors}") from error
     page.wait_for_function(
         """() => {
           const reader=document.querySelector('link[href*="shankara-reader-standard.css"]');
