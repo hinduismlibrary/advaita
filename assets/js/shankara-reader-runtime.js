@@ -28,12 +28,14 @@
     global.addEventListener("load", moveAfterChrome, { once: true });
   }
   placeReaderStylesLast();
-  var authorNode = document.getElementById("work-author");
   var chapterTitle = document.getElementById("chapter-title");
   var contentNode = document.getElementById("chapter-content");
-  var listNode = document.getElementById("chapter-list");
-  var coverageNode = document.getElementById("word-coverage");
-  var tocProgress = document.getElementById("toc-progress");
+  var jumpForm = document.getElementById("reader-jump-form");
+  var jumpInput = document.getElementById("reader-jump-input");
+  var jumpLabel = document.getElementById("reader-jump-label");
+  var jumpRange = document.getElementById("reader-jump-range");
+  var jumpFeedback = document.getElementById("reader-jump-feedback");
+  var jumpUnits = [];
   var contentsLink = document.getElementById("contents-link");
   var fullTextLink = document.getElementById("full-text-link");
   var rootUrl = new URL("/advaita/books/adi-shankaracharya/", global.location.origin);
@@ -118,7 +120,8 @@
   }
 
   function sectionContext(work, metadata, item, index, isFullText) {
-    if (isFullText || item.type === "complete") return metadata.iast + " · Complete text";
+    if (isFullText) return "";
+    if (item.type === "complete") return metadata.iast;
     if (work === "panchadasi") {
       var match = String(item.label).match(/^Chapter\s+(\d+)/i);
       var chapter = Number(item.key || (match && match[1]) || index + 1);
@@ -134,10 +137,6 @@
     return metadata.iast + " · Section " + (index + 1);
   }
 
-  function bylineAuthor(author) {
-    return String(author || "").replace(/^Traditionally attributed to\s+/i, "").split(/[;.]/, 1)[0].trim();
-  }
-
   function sourceReferencesFor(unit) {
     if (!Array.isArray(unit.sourceNumbers) || !unit.sourceNumbers.length) return "";
     var values = unit.sourceNumbers.map(function (value) { return String(value).trim(); }).filter(Boolean);
@@ -145,57 +144,6 @@
     var range = String(unit.number || "").match(/^\s*(\d+)\s*[–-]\s*(\d+)\s*$/);
     if (range && values.length > 1 && values.every(function (value, index) { return /^\d+$/.test(value) && Number(value) === Number(range[1]) + index; }) && Number(values[values.length - 1]) === Number(range[2])) return "";
     return values.join(" · ");
-  }
-
-  function labelForKey(value) {
-    return String(value).replace(/([a-z])([A-Z])/g, "$1 $2").replace(/^./, function (first) { return first.toUpperCase(); });
-  }
-
-  function appendCitationValue(list, label, value) {
-    if (value === undefined || value === null || value === "") return;
-    if (Array.isArray(value)) {
-      value.forEach(function (item, index) { appendCitationValue(list, label + (value.length > 1 ? " " + (index + 1) : ""), item); });
-      return;
-    }
-    if (typeof value === "object") {
-      Object.keys(value).forEach(function (key) { appendCitationValue(list, label ? label + " · " + labelForKey(key) : labelForKey(key), value[key]); });
-      return;
-    }
-    var row = document.createElement("div");
-    row.className = "reader-citation-row";
-    var term = document.createElement("dt");
-    term.textContent = label;
-    var description = document.createElement("dd");
-    var text = String(value);
-    if (/^https?:\/\//i.test(text)) {
-      var link = document.createElement("a");
-      link.href = text;
-      link.rel = "noopener noreferrer";
-      link.textContent = text;
-      description.append(link);
-    } else {
-      description.textContent = text;
-    }
-    row.append(term, description);
-    list.append(row);
-  }
-
-  function makeCitationDetails(data, metadata) {
-    var source = data && data.source;
-    var credit = data && data.translationCredit;
-    var authorship = metadata && metadata.author;
-    if ((!source || !Object.keys(source).length) && !credit && !authorship) return null;
-    var details = document.createElement("details");
-    details.className = "reader-citation-details";
-    var summary = document.createElement("summary");
-    summary.textContent = "Text source, authorship, and translation credit";
-    var list = document.createElement("dl");
-    list.className = "reader-citation-list";
-    if (source) appendCitationValue(list, "Source", source);
-    if (authorship) appendCitationValue(list, "Authorship", authorship);
-    if (credit) appendCitationValue(list, "Translation", credit);
-    details.append(summary, list);
-    return details;
   }
 
   function renderUnit(unit, index, metadata) {
@@ -271,70 +219,37 @@
     return card;
   }
 
-  function renderVerseNavigation(units, startIndex, isFull) {
-    listNode.replaceChildren();
-    var shownUnits = isFull ? units : units.slice(startIndex.start, startIndex.end);
-    var offset = isFull ? 0 : startIndex.start;
-    shownUnits.forEach(function (unit, index) {
-      var item = document.createElement("li");
-      var link = document.createElement("a");
-      var reference = referenceFor(unit, offset + index);
-      link.className = "reader-verse-link";
-      link.href = "#" + encodeURIComponent(String(unit.id));
-      link.textContent = reference;
-      link.dataset.verseId = String(unit.id);
-      link.setAttribute("aria-label", "Jump to " + reference);
-      item.append(link);
-      listNode.append(item);
-    });
+  function configureJumpControl(units, metadata) {
+    jumpUnits = units;
+    if (!jumpForm || !jumpInput || !jumpLabel || !jumpRange) return;
+    var maximum = Math.max(1, units.length);
+    var unitType = metadata.prose ? "section" : "verse";
+    jumpLabel.textContent = "Go to " + unitType + ":";
+    jumpInput.min = "1";
+    jumpInput.max = String(maximum);
+    jumpInput.placeholder = "1–" + maximum;
+    jumpInput.setAttribute("aria-label", "Go to " + unitType + " from 1 to " + maximum);
+    jumpInput.disabled = false;
+    var submitButton = jumpForm.querySelector("button[type=submit]");
+    if (submitButton) submitButton.disabled = false;
+    jumpRange.textContent = "1–" + maximum;
+    if (jumpFeedback) jumpFeedback.textContent = "";
   }
 
-  function trackActiveVerse(units) {
-    var cards = Array.from(contentNode.querySelectorAll(".shankara-verse"));
-    var links = Array.from(listNode.querySelectorAll(".reader-verse-link"));
-    function setActive(id) {
-      links.forEach(function (link) {
-        var selected = link.dataset.verseId === id;
-        link.classList.toggle("is-active", selected);
-        if (selected) link.setAttribute("aria-current", "location");
-        else link.removeAttribute("aria-current");
-      });
-      var unit = units.find(function (item) { return String(item.id) === id; });
-      if (unit) tocProgress.textContent = "Reading " + referenceFor(unit, units.indexOf(unit));
+  if (jumpForm) jumpForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var index = Number(jumpInput && jumpInput.value) - 1;
+    if (!Number.isInteger(index) || index < 0 || index >= jumpUnits.length) {
+      if (jumpFeedback) jumpFeedback.textContent = "Enter a number within the range shown.";
+      return;
     }
-    if ("IntersectionObserver" in global) {
-      var observer = new IntersectionObserver(function (entries) {
-        var visible = entries.filter(function (entry) { return entry.isIntersecting; }).sort(function (a, b) {
-          return Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top);
-        });
-        if (visible[0]) setActive(visible[0].target.id);
-      }, { rootMargin: "-12% 0px -72% 0px", threshold: [0, 0.1, 0.3] });
-      cards.forEach(function (card) { observer.observe(card); });
-    } else if (cards.length) {
-      setActive(cards[0].id);
-    }
-  }
-
-  function addMobileDisclosure() {
-    var toc = document.getElementById("reader-toc");
-    var button = document.createElement("button");
-    button.className = "advaita-mobile-contents-toggle";
-    button.type = "button";
-    button.textContent = "CONTENTS";
-    button.setAttribute("aria-controls", "chapter-list");
-    button.setAttribute("aria-expanded", "false");
-    button.addEventListener("click", function () {
-      var expanded = toc.classList.toggle("is-expanded");
-      button.setAttribute("aria-expanded", String(expanded));
-    });
-    toc.insertBefore(button, toc.firstChild);
-    listNode.addEventListener("click", function (event) {
-      if (event.target.closest("a.reader-verse-link") && global.innerWidth <= 760) {
-        toc.classList.remove("is-expanded");
-        button.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
+    var target = document.getElementById(String(jumpUnits[index].id));
+    if (!target || !contentNode.contains(target)) return;
+    var hash = "#" + encodeURIComponent(target.id);
+    global.history.replaceState(null, "", global.location.pathname + global.location.search + hash);
+    target.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (jumpFeedback) jumpFeedback.textContent = "";
+  });
 
   function renderPager(items, selectedIndex, full) {
     if (full) return null;
@@ -349,17 +264,13 @@
       left.href = chapterUrl(previous.id);
       left.textContent = "← " + previous.label;
     }
-    var contents = document.createElement("a");
-    contents.href = contentsLink.href;
-    contents.className = "reader-contents-return";
-    contents.textContent = "All contents";
     var right = document.createElement(next ? "a" : "span");
     if (next) {
       right.rel = "next";
       right.href = chapterUrl(next.id);
       right.textContent = next.label + " →";
     }
-    pager.append(left, contents, right);
+    pager.append(left, right);
     return pager;
   }
 
@@ -375,17 +286,14 @@
     var contentsUrl = new URL("book-contents.html", rootUrl);
     contentsUrl.searchParams.set("work", work);
     contentsLink.href = contentsUrl.href;
-    contentsLink.textContent = "All text contents";
+    contentsLink.textContent = "← Contents";
     fullTextLink.href = navigation.readerUrl(work, true);
-    fullTextLink.textContent = "Read full text";
+    fullTextLink.textContent = "Full text";
     root.dataset.work = work;
     root.classList.add("page");
     root.querySelector(".shankara-reading-grid").classList.add("reader-grid");
     root.querySelector(".gita-hero").classList.add("article-head");
-    document.getElementById("reader-toc").classList.add("side-toc");
-    document.querySelector(".reader-toc-head h2").classList.add("side-toc-title");
     contentNode.classList.add("article", "document-content");
-    addMobileDisclosure();
 
     var dataUrl = new URL("/advaita/assets/data/shankara/" + encodeURIComponent(work) + ".json", global.location.origin);
     dataUrl.searchParams.set("v", "reader-gloss-20261027b");
@@ -396,12 +304,16 @@
       var units = Array.isArray(data && data.units) ? data.units : [];
       if (!units.length || (data.expectedUnits && units.length !== data.expectedUnits)) throw new Error("The complete text data is incomplete.");
       if (units.some(function (unit) { return !unit || !unit.id || !unit.deva || !unit.iast || !unit.translation; })) throw new Error("A Sanskrit, IAST, or translation field is missing.");
-
-      var tocHeading = document.querySelector(".reader-toc-head h2");
-      tocHeading.textContent = "CONTENTS";
-
+      var isShortText = units.length <= 50;
+      if (isShortText) isFullText = true;
       var items = navigation.itemsForReader(work, data);
       if (!items.length) throw new Error("No readable text units were found.");
+      var contentsItems = navigation.itemsForContents(work, data);
+      var pageActions = root.querySelector(".reader-page-actions");
+      var canBrowseContents = !isShortText && contentsItems.length > 0;
+      contentsLink.hidden = !canBrowseContents;
+      fullTextLink.hidden = !canBrowseContents || isFullText;
+      if (pageActions) pageActions.hidden = !canBrowseContents;
       var selectedIndex = items.findIndex(function (item) { return item.id === requestedUnit; });
       var requestedUnitIndex = requestedUnit ? units.findIndex(function (unit) { return String(unit.id) === requestedUnit; }) : -1;
       if (requestedUnitIndex < 0 && requestedUnit) {
@@ -455,31 +367,17 @@
       titleNode.textContent = selectedTitle;
       titleNode.dataset.vdBilingual = "true";
       chapterTitle.textContent = sectionContext(work, metadata, items[selectedIndex], selectedIndex, isFullText);
-      var unitLabel = metadata.prose ? "prose passages" : "verses";
-      var fullAuthor = metadata.author || data.author || "";
-      var conciseAuthor = bylineAuthor(fullAuthor);
-      authorNode.textContent = selectedUnits.length + " " + unitLabel + (conciseAuthor ? " · " + conciseAuthor : "");
-      authorNode.title = fullAuthor;
-      authorNode.hidden = !authorNode.textContent;
+      chapterTitle.hidden = !chapterTitle.textContent;
       document.title = selectedTitle + " — " + metadata.iast + " — Viveka Dṛṣṭi";
       contentNode.replaceChildren();
 
-      var selectedRange = { start: selectedStart, end: selectedEnd };
-      renderVerseNavigation(units, selectedRange, isFullText);
-      var glossCount = 0;
       selectedUnits.forEach(function (unit, index) {
-        if (Array.isArray(unit.gloss) && unit.gloss.some(function (word) { return word && word.sa && word.en; })) glossCount += 1;
         contentNode.append(renderUnit(unit, isFullText ? index : selectedStart + index, metadata));
       });
-      coverageNode.textContent = glossCount === selectedUnits.length
-        ? "Word for Word glosses are available for all " + glossCount + " entries in this view."
-        : "Word for Word glosses are available for " + glossCount + " of " + selectedUnits.length + " entries in this view.";
+      configureJumpControl(selectedUnits, metadata);
       var pager = renderPager(items, selectedIndex, isFullText);
       if (pager) contentNode.append(pager);
-      var citationDetails = makeCitationDetails(data, metadata);
-      if (citationDetails) contentNode.append(citationDetails);
-      trackActiveVerse(selectedUnits);
-      if (isFullText && global.location.hash && (requestedUnitIndex >= 0 || legacyTargetIndex >= 0)) {
+      if (isFullText && (requestedUnitIndex >= 0 || legacyTargetIndex >= 0)) {
         var anchorIndex = requestedUnitIndex >= 0 ? requestedUnitIndex : legacyTargetIndex;
         var anchorId = String(units[anchorIndex].id);
         if (decodeHash(global.location.hash.slice(1)) !== anchorId) {
