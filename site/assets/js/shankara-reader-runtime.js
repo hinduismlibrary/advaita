@@ -162,18 +162,36 @@
     var sanskrit = document.createElement("div");
     sanskrit.className = "gita-sanskrit sa-text";
     sanskrit.lang = "sa-Deva";
-    sanskrit.textContent = String(unit.deva || "");
+    var devanagariText = document.createElement("span");
+    devanagariText.className = "reader-devanagari-text";
+    devanagariText.textContent = String(unit.deva || "");
+    sanskrit.append(devanagariText);
+
+    var transliterationButton = document.createElement("button");
+    transliterationButton.className = "reader-transliteration-toggle";
+    transliterationButton.type = "button";
+    transliterationButton.textContent = "Show transliteration";
+    transliterationButton.setAttribute("aria-expanded", "false");
 
     var iast = document.createElement("p");
     iast.className = "reader-inline-iast";
     iast.lang = "sa-Latn";
+    iast.id = card.id + "-transliteration";
+    iast.hidden = true;
     iast.textContent = String(unit.iast || "");
+    transliterationButton.setAttribute("aria-controls", iast.id);
+    transliterationButton.addEventListener("click", function () {
+      var expanded = transliterationButton.getAttribute("aria-expanded") !== "true";
+      transliterationButton.setAttribute("aria-expanded", String(expanded));
+      transliterationButton.textContent = expanded ? "Hide transliteration" : "Show transliteration";
+      iast.hidden = !expanded;
+    });
 
     var translation = document.createElement("p");
     translation.className = "gita-translation";
     translation.textContent = String(unit.translation || "");
 
-    card.append(reference, sanskrit, iast, translation);
+    card.append(reference, sanskrit, transliterationButton, iast, translation);
 
     if (unit.editionTranslation) {
       var editionTranslation = document.createElement("p");

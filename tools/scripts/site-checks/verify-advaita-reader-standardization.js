@@ -115,7 +115,7 @@ if (!chapterPage.includes("reader-jump-form") || !runtime.includes("jumpInput.ma
 if (chapterPage.includes("chapter-list") || chapterPage.includes("work-author") || runtime.includes("Text source, authorship, and translation credit")) fail("The reader still includes the old contents list or metadata boilerplate.");
 const brahmaLegacyPage = read(path.join(site, "books/adi-shankaracharya/brahma-siddhi/index.html"));
 if (!brahmaLegacyPage.includes("book-contents.html") || brahmaLegacyPage.includes("book-chapter.html?work=brahma-siddhi&amp;full=1")) fail("Brahmasiddhi's default route still opens the entire work at once.");
-if (!runtime.includes('card.append(reference, sanskrit, iast, translation)') || !runtime.includes('summary.textContent = "Word for Word"')) fail("Reader verse order or the sole per-unit disclosure has changed.");
+if (!runtime.includes('card.append(reference, sanskrit, transliterationButton, iast, translation)') || !runtime.includes('transliterationButton.textContent = "Show transliteration"') || !runtime.includes('summary.textContent = "Word for Word"')) fail("Reader verse order or per-unit disclosures have changed.");
 for (const preserved of ["editionTranslation", "editorialNote", "sourceNote", "sourceNumbers"]) {
   if (!runtime.includes(preserved)) fail(`Reader no longer preserves the ${preserved} source-data field.`);
 }
