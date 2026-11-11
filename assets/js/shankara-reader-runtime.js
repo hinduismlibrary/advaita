@@ -14,18 +14,16 @@
   if (titleNode) titleNode.style.setProperty("color", "#496b6c", "important");
   function placeReaderStylesLast() {
     var readerStyle = document.querySelector('link[href*="shankara-reader-standard.css"]');
-    if (!readerStyle) return;
-    var observer;
+    if (!readerStyle || !document.head) return;
     function moveAfterChrome() {
       var chromeStyle = document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
       if (!chromeStyle) return false;
       if (chromeStyle.nextElementSibling !== readerStyle) chromeStyle.after(readerStyle);
-      if (observer) observer.disconnect();
       return true;
     }
-    if (moveAfterChrome()) return;
-    observer = new MutationObserver(moveAfterChrome);
+    var observer = new MutationObserver(moveAfterChrome);
     observer.observe(document.head, { childList: true });
+    moveAfterChrome();
     document.addEventListener("DOMContentLoaded", moveAfterChrome, { once: true });
     global.addEventListener("load", moveAfterChrome, { once: true });
   }
