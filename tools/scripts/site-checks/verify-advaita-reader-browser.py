@@ -44,6 +44,12 @@ def route_for(work: str, **query: str) -> str:
     return f"{BASE}{CONTENTS_PATH}?{urlencode({'work': work, **query})}"
 
 
+def reader_route_for(work: str, **query: str) -> str:
+    from urllib.parse import urlencode
+
+    return f"{BASE}{READER_PATH}?{urlencode({'work': work, **query})}"
+
+
 def page_errors(page, work: str, errors: list[str]) -> None:
     if errors:
         raise AssertionError(f"{work}: browser JavaScript errors: {errors}")
@@ -108,7 +114,23 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
         require(complete_text_links.count() == 1,
                 f"{work}: short/continuous text needs one complete-text link")
         complete_text_links.click()
-    page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+    try:
+        page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+    except Exception as error:
+        snapshot = page.evaluate(
+            """() => ({url:location.href,title:document.title,readerError:document.querySelector('.shankara-reader-error')?.innerText||'',
+              readerText:document.querySelector('#chapter-content')?.innerText.slice(0,600)||'',
+              scripts:[...document.scripts].map(script=>script.src).filter(Boolean)})"""
+        )
+        raise AssertionError(f"{work}: selected reader route did not render: {snapshot}; page errors: {errors}") from error
+    page.wait_for_function(
+        """() => {
+          const reader=document.querySelector('link[href*="shankara-reader-standard.css"]');
+          const chrome=document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
+          return !!reader && !!chrome && !!(chrome.compareDocumentPosition(reader)&Node.DOCUMENT_POSITION_FOLLOWING);
+        }""",
+        timeout=30000,
+    )
     selected_query = parse_qs(urlparse(page.url).query)
     require(selected_query.get("work") == [work], f"{work}: contents link routed to the wrong work")
     if section_links.count():
@@ -154,7 +176,7 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
           return {
             cards:cards.length,links:links.length,
             referencesMatch:cards.every((card,index)=>card.id===String(units[index].id)),
-            referenceLabelsMatch:cards.every((card,index)=>card.querySelector(':scope > h2')?.textContent===String(units[index].number || (units[index].sourceNumbers||[]).join(' · ') || index+1)),
+            referenceLabelsMatch:cards.every((card,index)=>card.querySelector(':scope > h2')?.textContent===`${payload.iast} ${String(units[index].number || (units[index].sourceNumbers||[]).join(' · ') || index+1)}`),
             tocTargetsMatch:links.length===cards.length && links.every((link,index)=>decoded(link.href)===cards[index].id),
             alternateTranslations:document.querySelectorAll('.reader-edition-translation').length,
             expectedAlternateTranslations:optionalCount('editionTranslation'),
@@ -174,11 +196,11 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             completeEditionTranslation:units.every(unit=>!unit.editionTranslation||[...document.querySelectorAll('.reader-edition-translation')].some(node=>node.textContent.includes(unit.editionTranslation))),
             completeNotes:units.every(unit=>['sourceNote','editorialNote','commentary','note','notes'].every(key=>!unit[key]||[...document.querySelectorAll('.reader-text-note')].some(node=>node.textContent.includes(String(unit[key]))))),
             completeSourceReferences:units.every(unit=>{const values=(unit.sourceNumbers||[]).map(String),number=String(unit.number||'');if(!values.length||(unit.number!==undefined&&values.length===1&&values[0]===number))return true;const range=number.match(/^\s*(\d+)\s*[–-]\s*(\d+)\s*$/);if(range&&values.length>1&&values.every((value,index)=>/^\d+$/.test(value)&&Number(value)===Number(range[1])+index)&&Number(values.at(-1))===Number(range[2]))return true;return [...document.querySelectorAll('.reader-source-reference')].some(node=>node.textContent.includes(values.join(' · ')));}),
-            standardizedLayout:(()=>{const h=document.querySelector('#work-title'),t=document.querySelector('#reader-toc'),c=document.querySelector('#chapter-content'),paper=document.querySelector('#chapter-reader');return {titleAlign:getComputedStyle(h).textAlign,titleColor:getComputedStyle(h).color,titleFont:getComputedStyle(h).fontFamily,tocLeft:t.getBoundingClientRect().left,readingLeft:c.getBoundingClientRect().left,paper:getComputedStyle(paper).backgroundColor,perUnitReveals:[...document.querySelectorAll('.shankara-verse details')].every(details=>details.classList.contains('gita-details'))};})(),
+            standardizedLayout:(()=>{const h=document.querySelector('#work-title'),t=document.querySelector('#reader-toc'),c=document.querySelector('#chapter-content'),paper=document.querySelector('#chapter-reader'),first=cards[0],last=cards.at(-1),citation=document.querySelector('.reader-citation-details');const matchedColors=el=>{const out=[];const visit=rules=>{for(const rule of rules){if(rule.type===1){if(rule.style.getPropertyValue('color')&&el.matches(rule.selectorText))out.push({selector:rule.selectorText,value:rule.style.getPropertyValue('color'),priority:rule.style.getPropertyPriority('color')})}else if(rule.cssRules)visit(rule.cssRules)}};for(const sheet of document.styleSheets){try{visit(sheet.cssRules)}catch(error){}}return out.slice(-12)};return {bodyClasses:document.body.className,readerStylesheets:[...document.styleSheets].map(sheet=>sheet.href||'inline').filter(href=>href.includes('shankara-reader-standard.css')||href.includes('site-chrome.css')),readerLinkOrder:[...document.head.querySelectorAll('link[rel~="stylesheet"]')].filter(link=>link.href.includes('shankara-reader-standard.css')||link.href.includes('site-chrome.css')).map(link=>link.href),readerBox:(()=>{const box=paper.getBoundingClientRect();return {left:box.left,width:box.width}})(),titleAlign:getComputedStyle(h).textAlign,titleColor:getComputedStyle(h).color,titleFont:getComputedStyle(h).fontFamily,tocLeft:t.getBoundingClientRect().left,readingLeft:c.getBoundingClientRect().left,paper:getComputedStyle(paper).backgroundColor,perUnitReveals:[...document.querySelectorAll('.shankara-verse details')].every(details=>details.classList.contains('gita-details')),chapterContext:document.querySelector('#chapter-title')?.textContent.trim(),sectionTitle:h.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim(),tocOverline:document.querySelector('.reader-overline')?.textContent.trim(),tocHeading:document.querySelector('.side-toc-title')?.textContent.trim(),firstReference:first?.querySelector(':scope > h2')?.textContent.trim(),referenceColor:first?getComputedStyle(first.querySelector(':scope > h2')).color:'',referenceInlineColor:first?.querySelector(':scope > h2').style.getPropertyValue('color')||'',referenceColorRules:first?matchedColors(first.querySelector(':scope > h2')):[],sanskritColor:first?getComputedStyle(first.querySelector('.gita-sanskrit')).color:'',sanskritInlineColor:first?.querySelector('.gita-sanskrit').style.getPropertyValue('color')||'',sanskritColorRules:first?matchedColors(first.querySelector('.gita-sanskrit')):[],iastStyle:first?getComputedStyle(first.querySelector('.reader-inline-iast')).fontStyle:'',sectionIntro:!!document.querySelector('.reader-section-intro'),citationAfterText:!!(last&&citation&&(last.compareDocumentPosition(citation)&Node.DOCUMENT_POSITION_FOLLOWING))};})(),
             desktopToc:(()=>{const e=document.querySelector('#reader-toc');const s=getComputedStyle(e);return {overflow:s.overflowY,scroll:e.scrollHeight,client:e.clientHeight};})()
           };
         }""",
-        {"units": units, "source": data.get("source"), "credit": data.get("translationCredit")},
+        {"units": units, "iast": page.evaluate("work => window.AdvaitaReaderNavigation.metadata(work).iast", work), "source": data.get("source"), "credit": data.get("translationCredit")},
     )
     for check in ("referencesMatch", "referenceLabelsMatch", "tocTargetsMatch", "completeTranslation", "completeDevanagari", "completeIAST", "hasWordGloss", "completeGloss", "citationValuesPreserved", "completeEditionTranslation", "completeNotes", "completeSourceReferences"):
         require(rendered[check], f"{work}: full text check failed: {check} ({rendered})")
@@ -191,8 +213,10 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             f"{work}: source number references were lost ({rendered})")
     require(rendered["citations"], f"{work}: text source or edition citation is not rendered")
     layout = rendered["standardizedLayout"]
-    require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and layout["tocLeft"] < layout["readingLeft"] and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"],
+    require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and layout["tocLeft"] < layout["readingLeft"] and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"] and layout["readerStylesheets"] and "shankara-reader-standard.css" in layout["readerStylesheets"][-1],
             f"{work}: standardized scholarly layout or sole per-entry reveal changed ({layout})")
+    require(layout["tocOverline"] == "विषयसूची" and layout["tocHeading"] == "CONTENTS" and layout["referenceColor"] == "rgb(38, 35, 31)" and layout["sanskritColor"] == "rgb(189, 87, 13)" and layout["iastStyle"] == "italic" and not layout["sectionIntro"] and layout["citationAfterText"],
+            f"{work}: the requested contents/verse layout or citation placement changed ({layout})")
     require(rendered["desktopToc"]["overflow"] not in {"auto", "scroll"} and rendered["desktopToc"]["scroll"] <= rendered["desktopToc"]["client"] + 4,
             f"{work}: desktop contents sidebar creates nested scrolling ({rendered['desktopToc']})")
     page.locator("#chapter-content > .shankara-verse .gita-details > summary").first.click()
@@ -226,8 +250,19 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
 
     if work == "panchadasi":
         page.set_viewport_size({"width": 1440, "height": 900})
-        page.goto(f"{BASE}{READER_PATH}?work=panchadasi&unit=panchadasi-1-01", wait_until="domcontentloaded")
-        page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+        page.goto(reader_route_for(work, unit="panchadasi-1-01"), wait_until="domcontentloaded")
+        try:
+            page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
+        except Exception as error:
+            snapshot = page.evaluate(
+                """() => ({url:location.href,title:document.title,readerError:document.querySelector('.shankara-reader-error')?.innerText||'',
+                  readerText:document.querySelector('#chapter-content')?.innerText.slice(0,600)||'',
+                  scripts:[...document.scripts].map(script=>script.src).filter(Boolean)})"""
+            )
+            raise AssertionError(f"Pañcadaśī direct reader did not render: {snapshot}; page errors: {errors}") from error
+        chapter_layout = page.evaluate("""() => ({context:document.querySelector('#chapter-title')?.textContent.trim(),title:document.querySelector('#work-title')?.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim(),reference:document.querySelector('#chapter-content > .shankara-verse h2')?.textContent.trim()})""")
+        require(chapter_layout["context"] == "Pañcadaśī · Book I, Chapter 1" and chapter_layout["title"] == "Tattva-viveka" and chapter_layout["byline"].startswith("65 verses · Vidyāraṇya") and chapter_layout["reference"] == "Pañcadaśī 1.1",
+                f"Pañcadaśī Chapter 1 does not match the supplied reader example ({chapter_layout})")
         page.screenshot(path=str(OUTPUT / "reader-panchadasi-1440x900.png"), full_page=True)
         page.set_viewport_size({"width": 1024, "height": 768})
         page.screenshot(path=str(OUTPUT / "reader-panchadasi-1024x768.png"), full_page=True)
@@ -268,7 +303,7 @@ def main() -> None:
         # Shared template representative pass at all four remaining target widths.
         for width, height in ((1024, 768), (768, 1024), (390, 844)):
             page.set_viewport_size({"width": width, "height": height})
-            page.goto(f"{BASE}{READER_PATH}?work=panchadasi&unit=panchadasi-1-01", wait_until="domcontentloaded")
+            page.goto(reader_route_for("panchadasi", unit="panchadasi-1-01"), wait_until="domcontentloaded")
             page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
             require(not page.evaluate("document.documentElement.scrollWidth > innerWidth"),
                     f"Pañcadaśī has horizontal overflow at {width} px")

@@ -13,6 +13,9 @@ body.article-standard-page.advaita-standard-reader .site-header .brand,
 body.article-standard-page.advaita-standard-reader .site-header .site-nav a{
   color:#326466!important;text-decoration:none!important;
 }
+body.article-standard-page.advaita-standard-reader .site-header .brand[lang="sa-Deva"]{
+  font:600 19px/1.3 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
 body.article-standard-page.advaita-standard-reader main.site-main{
   display:block!important;box-sizing:border-box!important;width:min(1600px,100%)!important;
   max-width:1600px!important;min-height:calc(100vh - 54px)!important;
@@ -40,8 +43,14 @@ body.article-standard-page.advaita-standard-reader #chapter-reader .gita-hero.ar
 body.article-standard-page.advaita-standard-reader #chapter-reader .gita-hero .eyebrow{display:none!important}
 body.article-standard-page.advaita-standard-reader #chapter-reader .gita-hero h1{
   margin:0!important;padding:0!important;border:0!important;color:#496b6c!important;
-  font:400 clamp(25px,3vw,35px)/1.3 Merriweather,Georgia,serif!important;
+  font:400 clamp(25px,3vw,36px)/1.3 Merriweather,Georgia,serif!important;
   letter-spacing:0!important;text-align:center!important;text-wrap:balance!important;overflow-wrap:anywhere!important;
+}
+body.article-standard-page.advaita-standard-reader #chapter-reader .gita-hero .shankara-chapter-title{
+  margin:0 0 4px!important;color:#68635d!important;font:400 14px/1.5 Merriweather,Georgia,serif!important;
+}
+body.article-standard-page.advaita-standard-reader #chapter-reader .gita-hero .shankara-author{
+  margin:7px 0 0!important;color:#68635d!important;font:400 13px/1.5 Merriweather,Georgia,serif!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader .reader-title-dev{
   font:400 .92em/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
@@ -55,7 +64,8 @@ body.article-standard-page.advaita-standard-reader #chapter-reader .shankara-cha
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader .shankara-reader-links{
   display:flex!important;justify-content:center!important;flex-wrap:wrap!important;gap:7px 16px!important;
-  margin:12px 0 0!important;padding:0!important;border:0!important;background:transparent!important;
+  grid-column:2!important;grid-row:3!important;justify-content:flex-start!important;
+  margin:18px 0 0!important;padding:0!important;border:0!important;background:transparent!important;
   font:400 13px/1.5 Merriweather,Georgia,serif!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader .shankara-reader-links a{
@@ -63,7 +73,8 @@ body.article-standard-page.advaita-standard-reader #chapter-reader .shankara-rea
   background:transparent!important;color:#326466!important;text-decoration:underline!important;text-underline-offset:3px!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader .shankara-reader-coverage{
-  margin:8px 0 0!important;color:#77716a!important;font:400 11px/1.5 Merriweather,Georgia,serif!important;text-align:center!important;
+  grid-column:2!important;grid-row:4!important;margin:8px 0 0!important;color:#77716a!important;
+  font:400 11px/1.5 Merriweather,Georgia,serif!important;text-align:left!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #reader-toc.side-toc{
   display:block!important;grid-column:1!important;grid-row:1/3!important;position:static!important;top:auto!important;
@@ -75,21 +86,29 @@ body.article-standard-page.advaita-standard-reader #chapter-reader .reader-toc-h
   position:static!important;margin:0 0 7px!important;padding:0 0 10px!important;
   border:0!important;border-bottom:1px solid #e6e1d8!important;background:transparent!important;
 }
-body.article-standard-page.advaita-standard-reader #chapter-reader .reader-toc-head :is(.reader-overline,#toc-progress){display:none!important}
+body.article-standard-page.advaita-standard-reader #chapter-reader .reader-toc-head #toc-progress{display:none!important}
+body.article-standard-page.advaita-standard-reader #chapter-reader .reader-toc-head .reader-overline{
+  display:block!important;margin:0 0 3px!important;color:#34302d!important;
+  font:400 12px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;text-align:left!important;
+}
 body.article-standard-page.advaita-standard-reader #chapter-reader .reader-toc-head h2{
-  margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:#61596a!important;
-  font:700 13px/1.4 Merriweather,Georgia,serif!important;letter-spacing:.06em!important;text-align:left!important;text-transform:uppercase!important;
+  margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:#0645ad!important;
+  font:700 13px/1.4 Merriweather,Georgia,serif!important;letter-spacing:.02em!important;text-align:left!important;text-transform:uppercase!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-list.reader-chapter-list{
   display:block!important;columns:1!important;max-height:none!important;overflow:visible!important;
   margin:0!important;padding:0!important;list-style:none!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-list>li{
-  display:block!important;margin:0!important;padding:0!important;list-style:none!important;
+  display:block!important;position:relative!important;margin:0!important;padding:0!important;list-style:none!important;
+}
+body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-list>li::before{
+  content:"•"!important;position:absolute!important;top:5px!important;left:7px!important;color:#292521!important;
+  font:400 12px/1.4 Merriweather,Georgia,serif!important;pointer-events:none!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #reader-toc a.reader-verse-link{
   display:block!important;box-sizing:border-box!important;width:100%!important;min-height:0!important;
-  margin:0!important;padding:5px 7px 5px 10px!important;border:0!important;border-left:3px solid transparent!important;
+  margin:0!important;padding:5px 7px 5px 19px!important;border:0!important;border-left:3px solid transparent!important;
   border-radius:0 4px 4px 0!important;background:transparent!important;color:#5d5961!important;
   font:400 12px/1.4 Merriweather,Georgia,serif!important;text-align:left!important;text-decoration:none!important;overflow-wrap:anywhere!important;
 }
@@ -124,21 +143,21 @@ body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-cont
   scroll-margin-top:22px!important;overflow-wrap:anywhere!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>h2{
-  margin:0 0 10px!important;padding:0!important;border:0!important;background:transparent!important;color:#007e87!important;
+  margin:0 0 10px!important;padding:0!important;border:0!important;background:transparent!important;color:#26231f!important;
   font:600 16px/1.45 Merriweather,Georgia,serif!important;text-align:left!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>.gita-sanskrit{
   display:block!important;box-sizing:border-box!important;width:100%!important;max-width:none!important;
   margin:11px 0 9px!important;padding:1px 0 1px 15px!important;border:0!important;border-left:3px solid #a5a9aa!important;
-  border-radius:0!important;background:transparent!important;color:#39342e!important;box-shadow:none!important;
-  font:500 19px/1.8 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;text-align:left!important;
+  border-radius:0!important;background:transparent!important;color:#bd570d!important;box-shadow:none!important;
+  font:600 18px/1.8 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;text-align:left!important;
   white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:normal!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>p.reader-inline-iast{
   display:block!important;box-sizing:border-box!important;width:100%!important;max-width:none!important;
   margin:8px 0 12px!important;padding:1px 0 1px 15px!important;border:0!important;border-left:2px solid #c7c1c3!important;
   background:transparent!important;color:#68635d!important;box-shadow:none!important;
-  font:400 15px/1.75 Merriweather,Georgia,serif!important;text-align:left!important;white-space:pre-wrap!important;
+  font:italic 400 15px/1.75 Merriweather,Georgia,serif!important;text-align:left!important;white-space:pre-wrap!important;
   overflow-wrap:anywhere!important;word-break:normal!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>p.gita-translation{
@@ -180,7 +199,7 @@ body.article-standard-page.advaita-standard-reader #chapter-reader .gita-control
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader .gita-details>summary{
   display:inline-flex!important;align-items:center!important;min-height:0!important;margin:0!important;padding:5px 11px!important;
-  border:1px solid #d8ad8b!important;border-radius:18px!important;background:transparent!important;color:#5c5144!important;
+  border:1px solid #e7a36e!important;border-radius:18px!important;background:transparent!important;color:#6d4e38!important;
   box-shadow:none!important;font:400 13px/1.4 Merriweather,Georgia,serif!important;list-style:none!important;cursor:pointer!important;
 }
 body.article-standard-page.advaita-standard-reader #chapter-reader .gita-details>summary:hover{background:#f6eee5!important}
@@ -221,6 +240,8 @@ body.article-standard-page.advaita-standard-reader #chapter-reader :focus-visibl
  body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-list.reader-chapter-list{display:none!important;margin-top:9px!important}
  body.article-standard-page.advaita-standard-reader #chapter-reader #reader-toc.is-expanded #chapter-list.reader-chapter-list{display:block!important}
  body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content.article.document-content{order:2!important;width:100%!important}
+ body.article-standard-page.advaita-standard-reader #chapter-reader .reader-page-actions{order:3!important}
+ body.article-standard-page.advaita-standard-reader #chapter-reader .shankara-reader-coverage{order:4!important}
  body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>p.gita-translation{font-size:17px!important;line-height:1.7!important}
  body.article-standard-page.advaita-standard-reader #chapter-reader .gita-word-row{grid-template-columns:1fr!important;gap:2px!important}
  body.article-standard-page.advaita-standard-reader #chapter-reader .reader-chapter-nav{gap:10px!important}

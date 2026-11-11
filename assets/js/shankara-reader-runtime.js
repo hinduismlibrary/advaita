@@ -8,9 +8,26 @@
   var isFullText = params.get("full") === "1";
   var root = document.getElementById("chapter-reader");
   var titleNode = document.getElementById("work-title");
-  // Keep the reader palette above the dynamically injected site-wide chrome.
+  // The site chrome is injected by site.js after the document stylesheets. Keep
+  // the reader stylesheet last in the cascade when that late chrome arrives.
   if (root) root.style.setProperty("background-color", "#fffdfa", "important");
   if (titleNode) titleNode.style.setProperty("color", "#496b6c", "important");
+  function placeReaderStylesLast() {
+    var readerStyle = document.querySelector('link[href*="shankara-reader-standard.css"]');
+    if (!readerStyle || !document.head) return;
+    function moveAfterChrome() {
+      var chromeStyle = document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
+      if (!chromeStyle) return false;
+      if (chromeStyle.nextElementSibling !== readerStyle) chromeStyle.after(readerStyle);
+      return true;
+    }
+    var observer = new MutationObserver(moveAfterChrome);
+    observer.observe(document.head, { childList: true });
+    moveAfterChrome();
+    document.addEventListener("DOMContentLoaded", moveAfterChrome, { once: true });
+    global.addEventListener("load", moveAfterChrome, { once: true });
+  }
+  placeReaderStylesLast();
   var authorNode = document.getElementById("work-author");
   var chapterTitle = document.getElementById("chapter-title");
   var contentNode = document.getElementById("chapter-content");
@@ -43,22 +60,6 @@
     link.textContent = "Return to the text contents";
     paragraph.append(link);
     contentNode.append(paragraph);
-  }
-
-  function appendWorkTitle(node, metadata) {
-    var dev = document.createElement("span");
-    dev.className = "reader-title-dev";
-    dev.lang = "sa-Deva";
-    dev.textContent = metadata.devanagari;
-    var separator = document.createElement("span");
-    separator.className = "reader-title-separator";
-    separator.setAttribute("aria-hidden", "true");
-    separator.textContent = " · ";
-    var iast = document.createElement("span");
-    iast.className = "reader-title-iast";
-    iast.lang = "sa-Latn";
-    iast.textContent = metadata.iast;
-    node.replaceChildren(dev, separator, iast);
   }
 
   function makeGloss(words) {
@@ -97,6 +98,44 @@
     if (unit.number !== undefined && unit.number !== null && String(unit.number).trim()) return String(unit.number).trim();
     if (Array.isArray(unit.sourceNumbers) && unit.sourceNumbers.length) return unit.sourceNumbers.map(String).join(" · ");
     return String(index + 1);
+  }
+
+  function qualifiedReferenceFor(metadata, unit, index) {
+    return metadata.iast + " " + referenceFor(unit, index);
+  }
+
+  function shortSectionTitle(label, metadata, isFullText) {
+    if (isFullText) return metadata.iast;
+    var title = String(label || "").trim();
+    title = title.replace(/^(?:Chapter|Part|Section|Prakaraṇa)\s+[\w.-]+\s*[:—–-]\s*/i, "");
+    title = title.replace(/\s*[·•]\s*(?:verses?|stanzas?|passages?)\s+.*$/i, "");
+    if (!title || /^(?:Chapter|Part|Section|Prakaraṇa)\s+[\w.-]+$/i.test(title)) return metadata.iast;
+    return title;
+  }
+
+  function romanNumeral(value) {
+    return ["", "I", "II", "III", "IV", "V", "VI"][Number(value)] || String(value);
+  }
+
+  function sectionContext(work, metadata, item, index, isFullText) {
+    if (isFullText || item.type === "complete") return metadata.iast + " · Complete text";
+    if (work === "panchadasi") {
+      var match = String(item.label).match(/^Chapter\s+(\d+)/i);
+      var chapter = Number(item.key || (match && match[1]) || index + 1);
+      var book = Math.floor((chapter - 1) / 5) + 1;
+      return metadata.iast + " · Book " + romanNumeral(book) + ", Chapter " + chapter;
+    }
+    var label = String(item.label || "");
+    var structural = label.match(/^(Chapter|Part|Section|Prakaraṇa)\s+([\w.-]+)/i);
+    if (structural) return metadata.iast + " · " + structural[1] + " " + structural[2];
+    var group = String(item.group || "").match(/^(Book|Part)\s+([IVX]+)/i);
+    if (group) return metadata.iast + " · " + group[1] + " " + group[2] + ", Section " + (index + 1);
+    if (work === "mandukya-karika") return metadata.iast + " · Prakaraṇa " + (index + 1);
+    return metadata.iast + " · Section " + (index + 1);
+  }
+
+  function bylineAuthor(author) {
+    return String(author || "").replace(/^Traditionally attributed to\s+/i, "").split(/[;.]/, 1)[0].trim();
   }
 
   function sourceReferencesFor(unit) {
@@ -141,17 +180,19 @@
     list.append(row);
   }
 
-  function makeCitationDetails(data) {
+  function makeCitationDetails(data, metadata) {
     var source = data && data.source;
     var credit = data && data.translationCredit;
-    if ((!source || !Object.keys(source).length) && !credit) return null;
+    var authorship = metadata && metadata.author;
+    if ((!source || !Object.keys(source).length) && !credit && !authorship) return null;
     var details = document.createElement("details");
     details.className = "reader-citation-details";
     var summary = document.createElement("summary");
-    summary.textContent = "Text source and translation credit";
+    summary.textContent = "Text source, authorship, and translation credit";
     var list = document.createElement("dl");
     list.className = "reader-citation-list";
     if (source) appendCitationValue(list, "Source", source);
+    if (authorship) appendCitationValue(list, "Authorship", authorship);
     if (credit) appendCitationValue(list, "Translation", credit);
     details.append(summary, list);
     return details;
@@ -163,10 +204,10 @@
     card.className = "gita-verse shankara-verse" + (proseEntry ? " shankara-prose" : "");
     if (proseEntry) card.dataset.readingFormat = "prose";
     card.id = String(unit.id);
-    card.setAttribute("aria-label", String(unit.label || referenceFor(unit, index)));
+    card.setAttribute("aria-label", qualifiedReferenceFor(metadata, unit, index));
 
     var reference = document.createElement("h2");
-    reference.textContent = referenceFor(unit, index);
+    reference.textContent = qualifiedReferenceFor(metadata, unit, index);
     reference.className = "reader-reference";
 
     var sanskrit = document.createElement("div");
@@ -279,7 +320,7 @@
     var button = document.createElement("button");
     button.className = "advaita-mobile-contents-toggle";
     button.type = "button";
-    button.textContent = "Contents";
+    button.textContent = "CONTENTS";
     button.setAttribute("aria-controls", "chapter-list");
     button.setAttribute("aria-expanded", "false");
     button.addEventListener("click", function () {
@@ -356,12 +397,8 @@
       if (!units.length || (data.expectedUnits && units.length !== data.expectedUnits)) throw new Error("The complete text data is incomplete.");
       if (units.some(function (unit) { return !unit || !unit.id || !unit.deva || !unit.iast || !unit.translation; })) throw new Error("A Sanskrit, IAST, or translation field is missing.");
 
-      appendWorkTitle(titleNode, metadata);
-      authorNode.textContent = metadata.author || (data.author ? "By " + data.author : "");
-      authorNode.hidden = !authorNode.textContent;
-      document.title = metadata.iast + " — Advaita reader — Viveka Dṛṣṭi";
       var tocHeading = document.querySelector(".reader-toc-head h2");
-      tocHeading.textContent = "Contents";
+      tocHeading.textContent = "CONTENTS";
 
       var items = navigation.itemsForReader(work, data);
       if (!items.length) throw new Error("No readable text units were found.");
@@ -414,18 +451,18 @@
       if (!selectedUnits.length) throw new Error("The selected section is empty.");
 
       var selectedLabel = isFullText ? "Complete text" : items[selectedIndex].label;
-      chapterTitle.textContent = selectedLabel;
-      var unitLabel = (work === "tattvabodha" || work === "panchikarana-prakarana") ? "prose passages" : "text units";
-      var intro = document.createElement("div");
-      intro.className = "reader-section-intro";
-      var heading = document.createElement("h2");
-      heading.textContent = selectedLabel;
-      var count = document.createElement("span");
-      count.textContent = selectedUnits.length + " " + unitLabel;
-      intro.append(heading, count);
-      contentNode.replaceChildren(intro);
-      var citationDetails = makeCitationDetails(data);
-      if (citationDetails) contentNode.append(citationDetails);
+      var selectedTitle = shortSectionTitle(selectedLabel, metadata, isFullText);
+      titleNode.textContent = selectedTitle;
+      titleNode.dataset.vdBilingual = "true";
+      chapterTitle.textContent = sectionContext(work, metadata, items[selectedIndex], selectedIndex, isFullText);
+      var unitLabel = metadata.prose ? "prose passages" : "verses";
+      var fullAuthor = metadata.author || data.author || "";
+      var conciseAuthor = bylineAuthor(fullAuthor);
+      authorNode.textContent = selectedUnits.length + " " + unitLabel + (conciseAuthor ? " · " + conciseAuthor : "");
+      authorNode.title = fullAuthor;
+      authorNode.hidden = !authorNode.textContent;
+      document.title = selectedTitle + " — " + metadata.iast + " — Viveka Dṛṣṭi";
+      contentNode.replaceChildren();
 
       var selectedRange = { start: selectedStart, end: selectedEnd };
       renderVerseNavigation(units, selectedRange, isFullText);
@@ -439,6 +476,8 @@
         : "Word for Word glosses are available for " + glossCount + " of " + selectedUnits.length + " entries in this view.";
       var pager = renderPager(items, selectedIndex, isFullText);
       if (pager) contentNode.append(pager);
+      var citationDetails = makeCitationDetails(data, metadata);
+      if (citationDetails) contentNode.append(citationDetails);
       trackActiveVerse(selectedUnits);
       if (isFullText && global.location.hash && (requestedUnitIndex >= 0 || legacyTargetIndex >= 0)) {
         var anchorIndex = requestedUnitIndex >= 0 ? requestedUnitIndex : legacyTargetIndex;
