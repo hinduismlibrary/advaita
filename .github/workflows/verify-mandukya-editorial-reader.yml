@@ -9,6 +9,23 @@ on:
       - site/assets/css/mandukya-editorial-reader.css
       - site/assets/js/mandukya-editorial-reader.js
       - site/assets/data/shankara/mandukya-karika.json
+      - site/books/adi-shankaracharya/book-contents.html
+      - site/books/adi-shankaracharya/book-chapter.html
+      - site/assets/css/shankara-reader-standard.css
+      - site/assets/js/shankara-reader-navigation.js
+      - site/assets/js/shankara-reader-runtime.js
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/verify-mandukya-editorial-reader.yml
+      - tools/scripts/site-checks/verify-mandukya-editorial-reader.py
+      - site/books/adi-shankaracharya/mandukya-karika/index.html
+      - site/books/adi-shankaracharya/book-contents.html
+      - site/books/adi-shankaracharya/book-chapter.html
+      - site/assets/css/shankara-reader-standard.css
+      - site/assets/js/shankara-reader-navigation.js
+      - site/assets/js/shankara-reader-runtime.js
+      - site/assets/data/shankara/mandukya-karika.json
   workflow_dispatch:
 permissions:
   contents: read
