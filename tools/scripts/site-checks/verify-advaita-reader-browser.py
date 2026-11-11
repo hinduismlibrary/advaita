@@ -44,6 +44,12 @@ def route_for(work: str, **query: str) -> str:
     return f"{BASE}{CONTENTS_PATH}?{urlencode({'work': work, **query})}"
 
 
+def reader_route_for(work: str, **query: str) -> str:
+    from urllib.parse import urlencode
+
+    return f"{BASE}{READER_PATH}?{urlencode({'work': work, **query})}"
+
+
 def page_errors(page, work: str, errors: list[str]) -> None:
     if errors:
         raise AssertionError(f"{work}: browser JavaScript errors: {errors}")
@@ -244,7 +250,7 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
 
     if work == "panchadasi":
         page.set_viewport_size({"width": 1440, "height": 900})
-        page.goto(route_for(work, unit="panchadasi-1-01"), wait_until="domcontentloaded")
+        page.goto(reader_route_for(work, unit="panchadasi-1-01"), wait_until="domcontentloaded")
         try:
             page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
         except Exception as error:
@@ -297,7 +303,7 @@ def main() -> None:
         # Shared template representative pass at all four remaining target widths.
         for width, height in ((1024, 768), (768, 1024), (390, 844)):
             page.set_viewport_size({"width": width, "height": height})
-            page.goto(route_for("panchadasi", unit="panchadasi-1-01"), wait_until="domcontentloaded")
+            page.goto(reader_route_for("panchadasi", unit="panchadasi-1-01"), wait_until="domcontentloaded")
             page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
             require(not page.evaluate("document.documentElement.scrollWidth > innerWidth"),
                     f"Pañcadaśī has horizontal overflow at {width} px")
