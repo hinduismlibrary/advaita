@@ -142,6 +142,9 @@ body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-cont
   font:700 18px/1.65 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;text-align:left!important;
   white-space:pre-wrap!important;overflow-wrap:anywhere!important;word-break:normal!important;
 }
+body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse>.gita-sanskrit .reader-devanagari-text{
+  color:#000!important;font-weight:700!important;background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;
+}
 body.article-standard-page.advaita-standard-reader #chapter-reader #chapter-content>.shankara-verse.shankara-prose>.gita-sanskrit{
   font-size:19px!important;line-height:1.7!important;
 }
