@@ -8,6 +8,29 @@
   var isFullText = params.get("full") === "1";
   var root = document.getElementById("chapter-reader");
   var titleNode = document.getElementById("work-title");
+  // The site chrome is injected by site.js after the document stylesheets. Keep
+  // the reader stylesheet last in the cascade when that late chrome arrives.
+  if (root) root.style.setProperty("background-color", "#fffdfa", "important");
+  if (titleNode) titleNode.style.setProperty("color", "#496b6c", "important");
+  function placeReaderStylesLast() {
+    var readerStyle = document.querySelector('link[href*="shankara-reader-standard.css"]');
+    if (!readerStyle) return;
+    var observer;
+    function moveAfterChrome() {
+      var chromeStyle = document.querySelector('link[data-viveka-site-chrome],link[href*="site-chrome.css"]');
+      if (!chromeStyle) return false;
+      if (!(chromeStyle.compareDocumentPosition(readerStyle) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+        document.head.append(readerStyle);
+      }
+      if (observer) observer.disconnect();
+      return true;
+    }
+    if (moveAfterChrome()) return;
+    observer = new MutationObserver(moveAfterChrome);
+    observer.observe(document.head, { childList: true });
+    global.addEventListener("load", moveAfterChrome, { once: true });
+  }
+  placeReaderStylesLast();
   var authorNode = document.getElementById("work-author");
   var chapterTitle = document.getElementById("chapter-title");
   var contentNode = document.getElementById("chapter-content");
@@ -433,6 +456,7 @@
       var selectedLabel = isFullText ? "Complete text" : items[selectedIndex].label;
       var selectedTitle = shortSectionTitle(selectedLabel, metadata, isFullText);
       titleNode.textContent = selectedTitle;
+      titleNode.dataset.vdBilingual = "true";
       chapterTitle.textContent = sectionContext(work, metadata, items[selectedIndex], selectedIndex, isFullText);
       var unitLabel = metadata.prose ? "prose passages" : "verses";
       var fullAuthor = metadata.author || data.author || "";
