@@ -191,7 +191,7 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             f"{work}: source number references were lost ({rendered})")
     require(rendered["citations"], f"{work}: text source or edition citation is not rendered")
     layout = rendered["standardizedLayout"]
-    require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and layout["tocLeft"] < layout["readingLeft"] and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"],
+    require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and layout["tocLeft"] < layout["readingLeft"] and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"] and layout["readerStylesheets"] and "shankara-reader-standard.css" in layout["readerStylesheets"][-1],
             f"{work}: standardized scholarly layout or sole per-entry reveal changed ({layout})")
     require(layout["tocOverline"] == "विषयसूची" and layout["tocHeading"] == "CONTENTS" and layout["referenceColor"] == "rgb(38, 35, 31)" and layout["sanskritColor"] == "rgb(189, 87, 13)" and layout["iastStyle"] == "italic" and not layout["sectionIntro"] and layout["citationAfterText"],
             f"{work}: the requested contents/verse layout or citation placement changed ({layout})")
