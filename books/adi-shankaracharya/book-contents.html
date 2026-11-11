@@ -27,7 +27,6 @@ body.vd-chrome-page.contents-menu-page .page .hero{
 body.vd-chrome-page.contents-menu-page .page .hero h1{
   margin:0;color:#202122;font:400 1.8em/1.3 Arial,Helvetica,sans-serif
 }
-.author{margin:5px 0 0;color:var(--muted);font-size:13px;font-style:normal}
 .page-tools{position:absolute;top:22px;right:clamp(20px,3vw,34px);display:flex;align-items:baseline;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin:0;font-size:13px}
 .page-tools a{color:var(--link)}
 .page-tools .separator{color:#72777d}
@@ -83,7 +82,6 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
 <main class="page">
   <header class="hero">
     <h1 id="work-title">Contents</h1>
-    <p class="author" id="work-author"></p>
   </header>
   <nav class="page-tools" aria-label="Text navigation">
     <a href="/advaita/books/adi-shankaracharya/">← All Advaita texts</a>
@@ -220,7 +218,6 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   renderStaticLabels();
   var sectionsNode=document.getElementById("sections");
   var titleNode=document.getElementById("work-title");
-  var authorNode=document.getElementById("work-author");
   var completeLink=document.getElementById("complete-link");
   var panchadasiTitles={1:"Tattva-viveka",2:"Pañca-mahā-bhūta-viveka",3:"Pañca-kośa-viveka",4:"Dvaita-viveka",5:"Mahā-vākya",6:"Citra-dīpa",7:"Tṛpti-dīpa",8:"Kūṭastha-dīpa",9:"Dhyāna-dīpa",10:"Nāṭa-dīpa",11:"Brahmānanda",12:"Ātmānanda",13:"Advaitānanda",14:"Vidyānanda",15:"Viṣayānanda"};
   var svsssTitles={1:"The Topic of this Study and the Successful Student",2:"Identifying Only with Ultimate Reality",3:"Otherwise Mis-identifying with Untruth",4:"You are Only that Ultimate Reality",5:"Assimilating this Knowledge"};
@@ -251,49 +248,21 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   }).then(function(data){
     var units=Array.isArray(data&&data.units)?data.units:[];
     if(!units.length)throw new Error("The text contains no readable entries.");
+    if(units.length<=50){window.location.replace(readerUrl);return;}
     var rawTitle=metadata.iast||String(data.title||work).replace(/\s+[—–]\s+.*$/," ").trim();
     var titlePair={english:metadata.english,devanagari:metadata.devanagari};
     renderWorkTitle(titleNode,rawTitle,titlePair);
-    var authorText=metadata.author||(data.author?"By "+data.author:"");
-    renderBilingual(authorNode,authorText);
     document.title="Text contents — "+metadata.english+" — Viveka Dṛṣṭi";
     sectionsNode.replaceChildren();
     sectionsNode.hidden=false;
     var items=window.AdvaitaReaderNavigation.itemsForContents(work,data);
-    var notice=window.AdvaitaReaderNavigation.note(work);
-    if(notice){
-      var note=document.createElement("p");
-      note.className=metadata.editorial?"editorial-note":"structure-note";
-      note.textContent=notice;
-      sectionsNode.append(note);
-    }
-    if(metadata.description){
-      var description=document.createElement("p");
-      description.className="work-description";
-      description.textContent=metadata.description;
-      sectionsNode.append(description);
-    }
     if(!items.length){
-      var complete=document.createElement("section");
-      complete.className="contents-group complete-text-group";
-      var completeHeading=document.createElement("h2");
-      completeHeading.textContent="Complete text";
-      complete.append(completeHeading);
-      var completeDescription=document.createElement("p");
-      completeDescription.className="complete-text-description";
-      completeDescription.textContent=metadata.description||"Read the text continuously in its existing order and references.";
-      complete.append(completeDescription);
-      var readLink=document.createElement("a");
-      readLink.className="complete-text-link";
-      readLink.href=readerUrl;
-      readLink.textContent="Read complete text";
-      complete.append(readLink);
-      sectionsNode.append(complete);
+      window.location.replace(readerUrl);
       return;
     }
     var grouped=[];
     items.forEach(function(item){
-      var title=item.group|| (metadata.editorial?"Editorial thematic sections":"Chapters and sections");
+      var title=item.group||"Contents";
       var current=grouped[grouped.length-1];
       if(!current||current.title!==title){current={title:title,items:[]};grouped.push(current);}
       current.items.push(item);

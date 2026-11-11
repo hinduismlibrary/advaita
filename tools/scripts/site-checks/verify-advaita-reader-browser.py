@@ -30,7 +30,6 @@ CONTENTS_PATH = "/books/adi-shankaracharya/book-contents.html"
 READER_PATH = "/books/adi-shankaracharya/book-chapter.html"
 LIBRARY_PATH = "/books/adi-shankaracharya/"
 STOTRAMS_PATH = "/books/adi-shankaracharya/stotrams/"
-EDITORIAL_NOTICE = "The following thematic divisions are editorial aids to navigation and do not represent original chapters of the Sanskrit text."
 
 
 def require(condition: bool, message: str) -> None:
@@ -59,50 +58,64 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
     page.set_viewport_size({"width": 1440, "height": 900})
     # Start at a real directory link, preserving the complete user path.
     found = False
+    data = None
+    units = []
     for directory in (LIBRARY_PATH, STOTRAMS_PATH):
         response = page.goto(BASE + directory, wait_until="domcontentloaded")
         require(response and response.status == 200, f"{work}: directory did not load ({directory})")
-        directory_link = page.locator(f'a[href*="book-contents.html?work={work}"]').first
+        directory_link = page.locator(f'a[href*="work={work}"]').first
         if directory_link.count():
-            directory_link.click()
+            data = page.evaluate(
+                """async work => {
+                  const response=await fetch(`/advaita/assets/data/shankara/${encodeURIComponent(work)}.json`);
+                  if(!response.ok)throw new Error(`Data request failed: ${response.status}`);
+                  return await response.json();
+                }""",
+                work,
+            )
+            units = data.get("units", [])
+            if len(units) <= 50:
+                direct_link = page.locator(f'a[href*="book-chapter.html?work={work}"][href*="full=1"]').first
+                require(direct_link.count() > 0, f"{work}: short work still links through a contents page")
+                direct_link.click()
+            else:
+                contents_link = page.locator(f'a[href*="book-contents.html?work={work}"]').first
+                require(contents_link.count() > 0, f"{work}: long work has no contents route")
+                contents_link.click()
             found = True
             break
     require(found, f"{work}: no directory route to its contents page")
 
-    page.wait_for_function(
-        """() => document.querySelector('#work-title .original-work-dev')
-            && document.querySelector('#work-title .original-work-iast')
-            && !document.querySelector('#sections .loading')""",
-        timeout=30000,
-    )
-    author = page.evaluate(
-        "work => {const metadata=window.AdvaitaReaderNavigation.metadata(work);return metadata.author||''}",
-        work,
-    )
-    if author:
-        require(author in page.locator("#work-author").inner_text(),
-                f"{work}: contents page lost its qualified authorship information")
-    require(page.locator("#complete-link").get_attribute("href").find("full=1") >= 0,
-            f"{work}: contents page has no full-text link")
-    if work in {"aparokshanubhuti", "atma-bodha", "atmavidya-vilasa", "tattvabodha", "vivekachudamani", "svsss"}:
-        require(page.locator("#sections .editorial-note").inner_text() == EDITORIAL_NOTICE,
-                f"{work}: editorial divisions lack their transparency note")
-    data = page.evaluate(
-        """async (work) => {
-          const response = await fetch(`/advaita/assets/data/shankara/${encodeURIComponent(work)}.json`);
-          if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
-          return await response.json();
-        }""",
-        work,
-    )
-    units = data.get("units", [])
+    page.wait_for_function("!!window.AdvaitaReaderNavigation", timeout=30000)
     require(units and len(units) == data.get("expectedUnits"),
             f"{work}: contents page source has incomplete units")
 
     section_links = page.locator("#sections a.chapter-link")
-    complete_text_links = page.locator("#sections a.complete-text-link")
-    contents_count = section_links.count()
-    if contents_count:
+    contents_count = page.evaluate(
+        "payload => window.AdvaitaReaderNavigation.itemsForContents(payload.work,payload.data).length",
+        {"work": work, "data": data},
+    )
+    opens_directly = len(units) <= 50 or contents_count == 0
+    if opens_directly:
+        page.wait_for_function(
+            "() => location.pathname.endsWith('/book-chapter.html') && new URLSearchParams(location.search).has('full')",
+            timeout=30000,
+        )
+        require(not page.locator("#work-author, .reader-citation-details, .reader-verse-link").count(),
+                f"{work}: direct text page still shows contents or metadata boilerplate")
+        require(not page.locator("#sections .work-description, #sections .editorial-note").count(),
+                f"{work}: short-text route displayed a redundant contents page")
+    else:
+        page.wait_for_function(
+            "expected => document.querySelectorAll('#sections a.chapter-link').length === expected",
+            arg=contents_count,
+            timeout=30000,
+        )
+        require(not page.locator("#work-author, #sections .work-description, #sections .editorial-note").count(),
+                f"{work}: contents page displays authorship or editorial boilerplate")
+        require(page.locator("#complete-link").get_attribute("href").find("full=1") >= 0,
+                f"{work}: contents page has no full-text link")
+    if not opens_directly and contents_count:
         targets = page.locator("#sections a.chapter-link").evaluate_all(
             "links => links.map(a => new URL(a.href).searchParams.get('unit'))"
         )
@@ -110,10 +123,6 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
         require(all(target in ids for target in targets),
                 f"{work}: contents page links to a missing source unit")
         section_links.first.click()
-    else:
-        require(complete_text_links.count() == 1,
-                f"{work}: short/continuous text needs one complete-text link")
-        complete_text_links.click()
     try:
         page.wait_for_selector("#chapter-content > .shankara-verse", timeout=30000)
     except Exception as error:
@@ -152,8 +161,9 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
     require(first_order["ordered"], f"{work}: Sanskrit → IAST → English rendering order is wrong")
     page_errors(page, work, errors)
 
-    # The full-text link is the canonical complete reading route, with every source entry.
-    page.locator("#full-text-link").click()
+    # Long works can begin in a selected section; short works already opened continuously.
+    if page.locator("#full-text-link").is_visible():
+        page.locator("#full-text-link").click()
     page.wait_for_function(
         "expected => document.querySelectorAll('#chapter-content > .shankara-verse').length === expected",
         arg=len(units),
@@ -163,8 +173,6 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
         r"""(payload) => {
           const units=payload.units;
           const cards=[...document.querySelectorAll('#chapter-content > .shankara-verse')];
-          const links=[...document.querySelectorAll('#reader-toc .reader-verse-link')];
-          const decoded=href=>decodeURIComponent(new URL(href,location.href).hash.slice(1));
           const optionalCount=(key, predicate=()=>true)=>units.filter(u=>u[key] && predicate(u)).length;
           const sourceRefs=units.filter(u=>{
             const values=(u.sourceNumbers||[]).map(String),number=String(u.number||'');
@@ -174,18 +182,17 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             return true;
           }).length;
           return {
-            cards:cards.length,links:links.length,
+            cards:cards.length,
             referencesMatch:cards.every((card,index)=>card.id===String(units[index].id)),
             referenceLabelsMatch:cards.every((card,index)=>card.querySelector(':scope > h2')?.textContent===`${payload.iast} ${String(units[index].number || (units[index].sourceNumbers||[]).join(' · ') || index+1)}`),
-            tocTargetsMatch:links.length===cards.length && links.every((link,index)=>decoded(link.href)===cards[index].id),
+            jumpControl:(()=>{const input=document.querySelector('#reader-jump-input'),range=document.querySelector('#reader-jump-range'),label=document.querySelector('#reader-jump-label');return !!input&&!!range&&!!label&&input.max===String(cards.length)&&range.textContent===`1–${cards.length}`&&label.textContent.trim()===(payload.prose?'Go to section:':'Go to verse:');})(),
+            noMetadataBoilerplate:!document.querySelector('#work-author,.shankara-reader-coverage,.reader-citation-details')&&!document.body.innerText.includes('Text source, authorship, and translation credit'),
             alternateTranslations:document.querySelectorAll('.reader-edition-translation').length,
             expectedAlternateTranslations:optionalCount('editionTranslation'),
             sourceNotes:document.querySelectorAll('.reader-text-note .reader-note-label').length,
             expectedSourceNotes:optionalCount('sourceNote')+optionalCount('editorialNote')+optionalCount('commentary')+optionalCount('note')+optionalCount('notes'),
             sourceReferences:document.querySelectorAll('.reader-source-reference').length,
             expectedSourceReferences:sourceRefs,
-            citations:!!document.querySelector('.reader-citation-details'),
-            citationValuesPreserved:(()=>{const box=document.querySelector('.reader-citation-details');const values=[];const visit=v=>{if(Array.isArray(v))v.forEach(visit);else if(v&&typeof v==='object')Object.values(v).forEach(visit);else if(v!==undefined&&v!==null&&v!=='')values.push(String(v));};visit(payload.source);visit(payload.credit);return !!box&&values.every(v=>box.textContent.includes(v));})(),
             hasWordGloss:!!cards[0]?.querySelector('.gita-details > summary'),
             glossUnits:cards.filter(card=>card.querySelector('.gita-details > summary')).length,
             expectedGlossUnits:units.filter(unit=>Array.isArray(unit.gloss)&&unit.gloss.some(word=>word&&word.sa&&word.en)).length,
@@ -196,13 +203,12 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             completeEditionTranslation:units.every(unit=>!unit.editionTranslation||[...document.querySelectorAll('.reader-edition-translation')].some(node=>node.textContent.includes(unit.editionTranslation))),
             completeNotes:units.every(unit=>['sourceNote','editorialNote','commentary','note','notes'].every(key=>!unit[key]||[...document.querySelectorAll('.reader-text-note')].some(node=>node.textContent.includes(String(unit[key]))))),
             completeSourceReferences:units.every(unit=>{const values=(unit.sourceNumbers||[]).map(String),number=String(unit.number||'');if(!values.length||(unit.number!==undefined&&values.length===1&&values[0]===number))return true;const range=number.match(/^\s*(\d+)\s*[–-]\s*(\d+)\s*$/);if(range&&values.length>1&&values.every((value,index)=>/^\d+$/.test(value)&&Number(value)===Number(range[1])+index)&&Number(values.at(-1))===Number(range[2]))return true;return [...document.querySelectorAll('.reader-source-reference')].some(node=>node.textContent.includes(values.join(' · ')));}),
-            standardizedLayout:(()=>{const h=document.querySelector('#work-title'),t=document.querySelector('#reader-toc'),c=document.querySelector('#chapter-content'),paper=document.querySelector('#chapter-reader'),first=cards[0],last=cards.at(-1),citation=document.querySelector('.reader-citation-details');const matchedColors=el=>{const out=[];const visit=rules=>{for(const rule of rules){if(rule.type===1){if(rule.style.getPropertyValue('color')&&el.matches(rule.selectorText))out.push({selector:rule.selectorText,value:rule.style.getPropertyValue('color'),priority:rule.style.getPropertyPriority('color')})}else if(rule.cssRules)visit(rule.cssRules)}};for(const sheet of document.styleSheets){try{visit(sheet.cssRules)}catch(error){}}return out.slice(-12)};return {bodyClasses:document.body.className,readerStylesheets:[...document.styleSheets].map(sheet=>sheet.href||'inline').filter(href=>href.includes('shankara-reader-standard.css')||href.includes('site-chrome.css')),readerLinkOrder:[...document.head.querySelectorAll('link[rel~="stylesheet"]')].filter(link=>link.href.includes('shankara-reader-standard.css')||link.href.includes('site-chrome.css')).map(link=>link.href),readerBox:(()=>{const box=paper.getBoundingClientRect();return {left:box.left,width:box.width}})(),titleAlign:getComputedStyle(h).textAlign,titleColor:getComputedStyle(h).color,titleFont:getComputedStyle(h).fontFamily,tocLeft:t.getBoundingClientRect().left,readingLeft:c.getBoundingClientRect().left,paper:getComputedStyle(paper).backgroundColor,perUnitReveals:[...document.querySelectorAll('.shankara-verse details')].every(details=>details.classList.contains('gita-details')),chapterContext:document.querySelector('#chapter-title')?.textContent.trim(),sectionTitle:h.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim(),tocOverline:document.querySelector('.reader-overline')?.textContent.trim(),tocHeading:document.querySelector('.side-toc-title')?.textContent.trim(),firstReference:first?.querySelector(':scope > h2')?.textContent.trim(),referenceColor:first?getComputedStyle(first.querySelector(':scope > h2')).color:'',referenceInlineColor:first?.querySelector(':scope > h2').style.getPropertyValue('color')||'',referenceColorRules:first?matchedColors(first.querySelector(':scope > h2')):[],sanskritColor:first?getComputedStyle(first.querySelector('.gita-sanskrit')).color:'',sanskritInlineColor:first?.querySelector('.gita-sanskrit').style.getPropertyValue('color')||'',sanskritColorRules:first?matchedColors(first.querySelector('.gita-sanskrit')):[],iastStyle:first?getComputedStyle(first.querySelector('.reader-inline-iast')).fontStyle:'',sectionIntro:!!document.querySelector('.reader-section-intro'),citationAfterText:!!(last&&citation&&(last.compareDocumentPosition(citation)&Node.DOCUMENT_POSITION_FOLLOWING))};})(),
-            desktopToc:(()=>{const e=document.querySelector('#reader-toc');const s=getComputedStyle(e);return {overflow:s.overflowY,scroll:e.scrollHeight,client:e.clientHeight};})()
+            standardizedLayout:(()=>{const h=document.querySelector('#work-title'),t=document.querySelector('#reader-toc'),c=document.querySelector('#chapter-content'),paper=document.querySelector('#chapter-reader'),form=document.querySelector('.reader-jump-form'),first=cards[0];const matchedColors=el=>{const out=[];const visit=rules=>{for(const rule of rules){if(rule.type===1){if(rule.style.getPropertyValue('color')&&el.matches(rule.selectorText))out.push({selector:rule.selectorText,value:rule.style.getPropertyValue('color'),priority:rule.style.getPropertyPriority('color')})}else if(rule.cssRules)visit(rule.cssRules)}};for(const sheet of document.styleSheets){try{visit(sheet.cssRules)}catch(error){}}return out.slice(-12)};const tbox=t.getBoundingClientRect(),cbox=c.getBoundingClientRect();return {bodyClasses:document.body.className,readerStylesheets:[...document.styleSheets].map(sheet=>sheet.href||'inline').filter(href=>href.includes('shankara-reader-standard.css')||href.includes('site-chrome.css')),readerLinkOrder:[...document.head.querySelectorAll('link[rel~="stylesheet"]')].filter(link=>link.href.includes('shankara-reader-standard.css')||link.href.includes('site-chrome.css')).map(link=>link.href),readerBox:(()=>{const box=paper.getBoundingClientRect();return {left:box.left,width:box.width}})(),titleAlign:getComputedStyle(h).textAlign,titleColor:getComputedStyle(h).color,titleFont:getComputedStyle(h).fontFamily,jumpLeft:tbox.left,readingLeft:cbox.left,jumpWidth:tbox.width,readingWidth:cbox.width,jumpMax:form.querySelector('input').max,paper:getComputedStyle(paper).backgroundColor,perUnitReveals:[...document.querySelectorAll('.shankara-verse details')].every(details=>details.classList.contains('gita-details')),chapterContext:document.querySelector('#chapter-title')?.textContent.trim(),sectionTitle:h.textContent.trim(),firstReference:first?.querySelector(':scope > h2')?.textContent.trim(),referenceColor:first?getComputedStyle(first.querySelector(':scope > h2')).color:'',referenceColorRules:first?matchedColors(first.querySelector(':scope > h2')):[],sanskritColor:first?getComputedStyle(first.querySelector('.gita-sanskrit')).color:'',sanskritColorRules:first?matchedColors(first.querySelector('.gita-sanskrit')):[],iastStyle:first?getComputedStyle(first.querySelector('.reader-inline-iast')).fontStyle:'',sectionIntro:!!document.querySelector('.reader-section-intro'),noSidebar:!document.querySelector('#chapter-list,.reader-verse-link')};})()
           };
         }""",
-        {"units": units, "iast": page.evaluate("work => window.AdvaitaReaderNavigation.metadata(work).iast", work), "source": data.get("source"), "credit": data.get("translationCredit")},
+        {"units": units, "iast": page.evaluate("work => window.AdvaitaReaderNavigation.metadata(work).iast", work), "prose": bool(page.evaluate("work => window.AdvaitaReaderNavigation.metadata(work).prose", work))},
     )
-    for check in ("referencesMatch", "referenceLabelsMatch", "tocTargetsMatch", "completeTranslation", "completeDevanagari", "completeIAST", "hasWordGloss", "completeGloss", "citationValuesPreserved", "completeEditionTranslation", "completeNotes", "completeSourceReferences"):
+    for check in ("referencesMatch", "referenceLabelsMatch", "jumpControl", "noMetadataBoilerplate", "completeTranslation", "completeDevanagari", "completeIAST", "hasWordGloss", "completeGloss", "completeEditionTranslation", "completeNotes", "completeSourceReferences"):
         require(rendered[check], f"{work}: full text check failed: {check} ({rendered})")
     require(rendered["glossUnits"] == rendered["expectedGlossUnits"], f"{work}: Word for Word controls do not cover every gloss ({rendered})")
     require(rendered["alternateTranslations"] == rendered["expectedAlternateTranslations"],
@@ -211,42 +217,33 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             f"{work}: source/editorial notes were lost ({rendered})")
     require(rendered["sourceReferences"] == rendered["expectedSourceReferences"],
             f"{work}: source number references were lost ({rendered})")
-    require(rendered["citations"], f"{work}: text source or edition citation is not rendered")
     layout = rendered["standardizedLayout"]
-    require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and layout["tocLeft"] < layout["readingLeft"] and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"] and layout["readerStylesheets"] and "shankara-reader-standard.css" in layout["readerStylesheets"][-1],
+    require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and abs(layout["jumpLeft"]-layout["readingLeft"]) <= 3 and abs(layout["jumpWidth"]-layout["readingWidth"]) <= 4 and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"] and layout["readerStylesheets"] and "shankara-reader-standard.css" in layout["readerStylesheets"][-1],
             f"{work}: standardized scholarly layout or sole per-entry reveal changed ({layout})")
-    require(layout["tocOverline"] == "विषयसूची" and layout["tocHeading"] == "CONTENTS" and layout["referenceColor"] == "rgb(38, 35, 31)" and layout["sanskritColor"] == "rgb(189, 87, 13)" and layout["iastStyle"] == "italic" and not layout["sectionIntro"] and layout["citationAfterText"],
-            f"{work}: the requested contents/verse layout or citation placement changed ({layout})")
-    require(rendered["desktopToc"]["overflow"] not in {"auto", "scroll"} and rendered["desktopToc"]["scroll"] <= rendered["desktopToc"]["client"] + 4,
-            f"{work}: desktop contents sidebar creates nested scrolling ({rendered['desktopToc']})")
+    require(layout["jumpMax"] == str(len(units)) and layout["noSidebar"] and layout["referenceColor"] == "rgb(38, 35, 31)" and layout["sanskritColor"] == "rgb(189, 87, 13)" and layout["iastStyle"] == "italic" and not layout["sectionIntro"],
+            f"{work}: the full-width reader or compact verse jump changed ({layout})")
     page.locator("#chapter-content > .shankara-verse .gita-details > summary").first.click()
     require(page.locator("#chapter-content > .shankara-verse .gita-details").first.get_attribute("open") is not None,
             f"{work}: Word for Word control does not reveal its gloss")
 
-    # Exercise one exact verse URL from the complete reader's unabridged contents list.
-    last_link = page.locator("#reader-toc .reader-verse-link").last
-    last_target = last_link.evaluate("a => decodeURIComponent(new URL(a.href).hash.slice(1))")
-    last_link.click()
-    require(urlparse(page.url).fragment == last_target, f"{work}: direct verse fragment did not resolve")
+    # The compact control's maximum is the last visible entry and jumps to it.
+    last_target = str(units[-1]["id"])
+    page.locator("#reader-jump-input").fill(str(len(units)))
+    page.locator("#reader-jump-form button[type=submit]").click()
+    require(urlparse(page.url).fragment == last_target, f"{work}: Go to verse did not jump to the requested entry")
     require(page.locator(f"#chapter-content > article#{last_target}").count() == 1,
-            f"{work}: direct verse fragment has no matching source entry")
+            f"{work}: Go to verse has no matching source entry")
 
-    # Audit the narrowest required width for every work and the fully expanding mobile TOC.
+    # Audit the narrowest required width and the compact mobile jump field.
     page.set_viewport_size({"width": 320, "height": 844})
     page.wait_for_timeout(120)
     overflow = page.evaluate("document.documentElement.scrollWidth > innerWidth")
     require(not overflow, f"{work}: horizontal overflow at 320 px")
-    menu = page.locator(".advaita-mobile-contents-toggle")
-    require(menu.is_visible(), f"{work}: mobile Contents disclosure is missing")
-    menu.click()
-    require(menu.get_attribute("aria-expanded") == "true", f"{work}: mobile Contents did not expand")
-    require(page.locator("#reader-toc .reader-verse-link:visible").count() == len(units),
-            f"{work}: mobile Contents is incomplete")
-    toc_scroll = page.locator("#reader-toc").evaluate(
-        "e => ({overflow:getComputedStyle(e).overflowY, scroll:e.scrollHeight, client:e.clientHeight})"
-    )
-    require(toc_scroll["overflow"] not in {"auto", "scroll"} and toc_scroll["scroll"] <= toc_scroll["client"] + 4,
-            f"{work}: mobile TOC creates nested scrolling ({toc_scroll})")
+    require(page.locator("#reader-jump-input").is_visible(), f"{work}: mobile Go to verse control is missing")
+    require(page.locator("#reader-jump-input").get_attribute("max") == str(len(units)),
+            f"{work}: mobile Go to verse control does not show the complete range")
+    require(page.locator("#chapter-list, .reader-verse-link, .advaita-mobile-contents-toggle").count() == 0,
+            f"{work}: old contents sidebar still takes up mobile space")
 
     if work == "panchadasi":
         page.set_viewport_size({"width": 1440, "height": 900})
@@ -260,8 +257,8 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
                   scripts:[...document.scripts].map(script=>script.src).filter(Boolean)})"""
             )
             raise AssertionError(f"Pañcadaśī direct reader did not render: {snapshot}; page errors: {errors}") from error
-        chapter_layout = page.evaluate("""() => ({context:document.querySelector('#chapter-title')?.textContent.trim(),title:document.querySelector('#work-title')?.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim(),reference:document.querySelector('#chapter-content > .shankara-verse h2')?.textContent.trim()})""")
-        require(chapter_layout["context"] == "Pañcadaśī · Book I, Chapter 1" and chapter_layout["title"] == "Tattva-viveka" and chapter_layout["byline"].startswith("65 verses · Vidyāraṇya") and chapter_layout["reference"] == "Pañcadaśī 1.1",
+        chapter_layout = page.evaluate("""() => ({context:document.querySelector('#chapter-title')?.textContent.trim(),title:document.querySelector('#work-title')?.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim()||'',reference:document.querySelector('#chapter-content > .shankara-verse h2')?.textContent.trim(),jumpMax:document.querySelector('#reader-jump-input')?.max,jumpRange:document.querySelector('#reader-jump-range')?.textContent.trim()})""")
+        require(chapter_layout["context"] == "Pañcadaśī · Book I, Chapter 1" and chapter_layout["title"] == "Tattva-viveka" and not chapter_layout["byline"] and chapter_layout["reference"] == "Pañcadaśī 1.1" and chapter_layout["jumpMax"] == "65" and chapter_layout["jumpRange"] == "1–65",
                 f"Pañcadaśī Chapter 1 does not match the supplied reader example ({chapter_layout})")
         page.screenshot(path=str(OUTPUT / "reader-panchadasi-1440x900.png"), full_page=True)
         page.set_viewport_size({"width": 1024, "height": 768})
@@ -308,9 +305,8 @@ def main() -> None:
             require(not page.evaluate("document.documentElement.scrollWidth > innerWidth"),
                     f"Pañcadaśī has horizontal overflow at {width} px")
             if width == 390:
-                page.locator(".advaita-mobile-contents-toggle").click()
-                require(page.locator("#reader-toc .reader-verse-link:visible").count() == 65,
-                        "Pañcadaśī mobile TOC is incomplete at 390 px")
+                require(page.locator("#reader-jump-input").get_attribute("max") == "65",
+                        "Pañcadaśī mobile Go to verse range is incomplete at 390 px")
         article_response = page.goto(BASE + "/articles/a-shashtric-lens-of-varna-part-one/", wait_until="domcontentloaded")
         require(article_response and article_response.status == 200, "The article design reference did not load")
         require(page.locator(".article-head h1").count() == 1, "The article design reference no longer has its article title")

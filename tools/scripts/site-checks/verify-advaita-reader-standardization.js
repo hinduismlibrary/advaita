@@ -27,6 +27,12 @@ const expectedContentsItems = {
   "nirvana-shatkam": 0, "bhaja-govindam": 4, "manisha-panchakam": 0, "maya-panchakam": 0,
   "shatpadi-stotram": 0, "yati-panchakam": 0, "dakshinamurti-ashtakam": 0, "hastamalaka-stotram": 0
 };
+const directTextWorks = new Set([
+  "advaita-makaranda", "upadesha-panchakam", "ekashloki", "tattvabodha", "dashashloki",
+  "drg-drsya-viveka", "panchikarana-prakarana", "brahmajnanavali-mala", "advaita-pancharatnam",
+  "kashi-panchakam", "nirvana-shatkam", "bhaja-govindam", "manisha-panchakam", "maya-panchakam",
+  "shatpadi-stotram", "yati-panchakam", "dakshinamurti-ashtakam", "hastamalaka-stotram"
+]);
 const editorialWorks = new Set(["aparokshanubhuti", "atma-bodha", "atmavidya-vilasa", "tattvabodha", "vivekachudamani", "svsss"]);
 const expectedEditorialNote = "The following thematic divisions are editorial aids to navigation and do not represent original chapters of the Sanskrit text.";
 const fail = (message) => { throw new Error(message); };
@@ -81,12 +87,16 @@ for (const work of expectedWorks) {
   if (editorialWorks.has(work) && navigation.note(work) !== expectedEditorialNote) fail(`${work}: required editorial transparency note is missing.`);
 
   const directoryText = work === "bhaja-govindam" || stotrams.includes(`?work=${work}`) ? stotrams : directory;
-  if (!directoryText.includes(`/book-contents.html?work=${work}`)) fail(`${work}: directory does not lead through its contents page.`);
+  const directoryRoute = directTextWorks.has(work)
+    ? `/book-chapter.html?work=${work}&amp;full=1`
+    : `/book-contents.html?work=${work}`;
+  if (!directoryText.includes(directoryRoute)) fail(`${work}: directory route does not match the short-text rule.`);
   const legacyPath = path.join(site, `books/adi-shankaracharya/${work}/index.html`);
   const legacyRootPath = path.join(root, `books/adi-shankaracharya/${work}/index.html`);
   if (!fs.existsSync(legacyPath)) fail(`${work}: established reader URL was removed.`);
   const legacyPage = read(legacyPath);
-  if (!legacyPage.includes(`var work = "${work}"`) || !legacyPage.includes("book-chapter.html") || !legacyPage.includes("window.location.replace") || !legacyPage.includes("window.location.hash")) fail(`${work}: established reader URL does not preserve its text route and fragment.`);
+  const legacyTarget = work === "brahma-siddhi" ? "book-contents.html" : "book-chapter.html";
+  if (!legacyPage.includes(`var work = "${work}"`) || !legacyPage.includes(legacyTarget) || !legacyPage.includes("window.location.replace") || !legacyPage.includes("window.location.hash")) fail(`${work}: established reader URL does not preserve its text route and fragment.`);
   if (!fs.existsSync(legacyRootPath) || read(legacyRootPath) !== legacyPage) fail(`${work}: root and site legacy reader routes differ.`);
 
   const rootDataPath = path.join(root, `assets/data/shankara/${work}.json`);
@@ -99,14 +109,19 @@ for (const work of expectedWorks) {
 }
 
 if (!contentsPage.includes("shankara-reader-navigation.js") || !chapterPage.includes("shankara-reader-runtime.js")) fail("A shared reader page is missing the navigation/runtime bundle.");
-if (contentsPage.includes("fallbackRanges") || chapterPage.includes("fallbackRanges") || chapterPage.includes("window.location.replace")) fail("Legacy range fabrication or route redirect remains in the shared reader.");
+if (contentsPage.includes("fallbackRanges") || chapterPage.includes("fallbackRanges") || chapterPage.includes("window.location.replace")) fail("Legacy range fabrication or a reader-page redirect remains in the shared reader.");
+if (!contentsPage.includes("units.length<=50") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts do not bypass the contents page.");
+if (!chapterPage.includes("reader-jump-form") || !runtime.includes("jumpInput.max = String(maximum)")) fail("The compact Go to verse/section control or its maximum is missing.");
+if (chapterPage.includes("chapter-list") || chapterPage.includes("work-author") || runtime.includes("Text source, authorship, and translation credit")) fail("The reader still includes the old contents list or metadata boilerplate.");
+const brahmaLegacyPage = read(path.join(site, "books/adi-shankaracharya/brahma-siddhi/index.html"));
+if (!brahmaLegacyPage.includes("book-contents.html") || brahmaLegacyPage.includes("book-chapter.html?work=brahma-siddhi&amp;full=1")) fail("Brahmasiddhi's default route still opens the entire work at once.");
 if (!runtime.includes('card.append(reference, sanskrit, iast, translation)') || !runtime.includes('summary.textContent = "Word for Word"')) fail("Reader verse order or the sole per-unit disclosure has changed.");
-for (const preserved of ["editionTranslation", "editorialNote", "sourceNote", "sourceNumbers", "translationCredit", "reader-citation-details"]) {
+for (const preserved of ["editionTranslation", "editorialNote", "sourceNote", "sourceNumbers"]) {
   if (!runtime.includes(preserved)) fail(`Reader no longer preserves the ${preserved} source-data field.`);
 }
-if (!styles.includes("max-height:none!important;overflow:visible!important")) fail("The standardized reader sidebar can still create nested scrolling.");
-if (!styles.includes(".advaita-mobile-contents-toggle")) fail("The mobile Contents disclosure is missing.");
-if (!styles.includes(".reader-edition-translation") || !styles.includes(".reader-citation-details")) fail("Alternate translations or text citations have no shared reader styling.");
+if (!styles.includes("display:block!important;width:100%!important;max-width:none!important")) fail("The reader does not use the full available width.");
+if (styles.includes(".side-toc") || styles.includes(".advaita-mobile-contents-toggle") || styles.includes(".reader-citation-details")) fail("The reader still contains sidebar or citation boilerplate styling.");
+if (!styles.includes(".reader-edition-translation")) fail("Alternate edition translations have no shared reader styling.");
 
 for (const [sitePath, rootPath] of [
   ["books/adi-shankaracharya/book-contents.html", "books/adi-shankaracharya/book-contents.html"],

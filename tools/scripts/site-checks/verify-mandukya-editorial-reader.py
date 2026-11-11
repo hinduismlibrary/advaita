@@ -90,7 +90,8 @@ def check():
                     arg=29,
                     timeout=30000,
                 )
-                assert desktop.locator("#reader-toc .reader-verse-link").count() == 29
+                assert desktop.locator("#reader-jump-input").get_attribute("max") == "29"
+                assert desktop.locator("#reader-jump-range").inner_text() == "1–29"
                 first = CHAPTERS[1][0]
                 card = desktop.locator("#chapter-content > .shankara-verse").first
                 assert card.get_attribute("id") == first["id"]
@@ -98,20 +99,17 @@ def check():
                 assert card.locator(".reader-inline-iast").text_content().strip() == first["iast"].strip()
                 assert card.locator(".gita-translation").text_content().strip() == first["translation"].strip()
                 assert card.locator(".gita-details > summary").inner_text() == "Word for Word"
-                assert desktop.locator("#reader-toc").bounding_box()["x"] < card.bounding_box()["x"]
-                toc = desktop.locator("#reader-toc").evaluate(
-                    "el => ({overflow: getComputedStyle(el).overflowY, scroll: el.scrollHeight, client: el.clientHeight})"
-                )
-                assert toc["overflow"] not in ("auto", "scroll") and toc["scroll"] <= toc["client"] + 4
+                assert abs(desktop.locator("#reader-toc").bounding_box()["x"] - card.bounding_box()["x"]) <= 3
+                assert desktop.locator("#chapter-list, .reader-verse-link").count() == 0
                 card.locator(".gita-details > summary").click()
                 assert card.locator(".gita-details").get_attribute("open") is not None
                 assert card.locator(".gita-word-row").count() > 0
                 desktop.screenshot(path=str(OUT / "desktop-chapter-1.png"), full_page=False)
 
                 loaded(desktop, reader_url + "&unit=" + CHAPTERS[2][0]["id"], 38)
-                last = desktop.locator("#reader-toc .reader-verse-link").last
                 last_id = CHAPTERS[2][-1]["id"]
-                last.click()
+                desktop.locator("#reader-jump-input").fill("38")
+                desktop.locator("#reader-jump-form button[type=submit]").click()
                 assert urlsplit(desktop.url).fragment == last_id
                 assert desktop.locator("#chapter-content > article#" + last_id).count() == 1
                 desktop.screenshot(path=str(OUT / "desktop-chapter-2.png"), full_page=False)
@@ -122,7 +120,7 @@ def check():
                 assert parse_qs(legacy.query).get("work") == ["mandukya-karika"]
                 assert parse_qs(legacy.query).get("full") == ["1"]
                 assert legacy.fragment == CHAPTERS[2][0]["id"], desktop.url
-                assert desktop.locator("#reader-toc .reader-verse-link").count() == 215
+                assert desktop.locator("#reader-jump-input").get_attribute("max") == "215"
                 report["legacy_chapter_2"] = "redirected to the complete reader and exact first verse"
 
                 tablet = browser.new_page(viewport={"width": 768, "height": 1024})
@@ -136,11 +134,9 @@ def check():
                 mobile.on("pageerror", lambda error: errors.append(str(error)))
                 loaded(mobile, reader_url + "&unit=" + CHAPTERS[4][0]["id"], 100)
                 report["mobile_overflow_px"] = no_overflow(mobile, 390)
-                toggle = mobile.locator(".advaita-mobile-contents-toggle")
-                assert toggle.is_visible()
-                toggle.click()
-                assert toggle.get_attribute("aria-expanded") == "true"
-                assert mobile.locator("#reader-toc .reader-verse-link:visible").count() == 100
+                assert mobile.locator("#reader-jump-input").is_visible()
+                assert mobile.locator("#reader-jump-input").get_attribute("max") == "100"
+                assert mobile.locator("#chapter-list, .reader-verse-link, .advaita-mobile-contents-toggle").count() == 0
                 mobile.screenshot(path=str(OUT / "mobile-chapter-4.png"), full_page=False)
 
                 small = browser.new_page(viewport={"width": 320, "height": 700})
