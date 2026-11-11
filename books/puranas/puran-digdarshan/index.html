@@ -221,7 +221,7 @@ vārāhaṁ mātsyaṁ kaurmaṁ ca brahmāṇḍākhyam iti tri-ṣaṭ</p>
 </div>
 </div></main>
 <footer class="site-footer"><p><a href="/advaita/pages/purana-library/">Purāṇa Library</a> · <a href="/advaita/">Viveka Dṛṣṭi</a></p></footer>
-<script src="/advaita/assets/js/site.js?v=20261111-puran-digdarshan-2"></script>
+<script src="/advaita/assets/js/site.js?v=20261101-site-repair-1"></script>
 <script>
 (()=>{const root=document.querySelector(".puran-reader-page");if(!root)return;const sections=[...root.querySelectorAll(".book-section")];const links=[...root.querySelectorAll("[data-section-link]")];const position=root.querySelector("#reader-position");const setActive=id=>{const index=sections.findIndex(section=>section.id===id);if(index<0)return;links.forEach(link=>{const active=link.dataset.sectionLink===id;link.classList.toggle("is-active",active);if(active)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current")});if(position)position.textContent="Section "+(index+1)+" of "+sections.length};if(location.hash)setActive(decodeURIComponent(location.hash.slice(1)));if("IntersectionObserver"in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible)setActive(visible.target.id)},{rootMargin:"-18% 0px -68% 0px",threshold:0});sections.forEach(section=>observer.observe(section))}root.querySelectorAll(".mobile-toc a").forEach(link=>link.addEventListener("click",()=>{const menu=root.querySelector(".mobile-toc");if(menu)menu.open=false}))})();
 </script>
