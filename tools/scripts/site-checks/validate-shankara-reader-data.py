@@ -303,9 +303,21 @@ def main() -> int:
         if len(hrefs) != 1:
             error(f"{work_id}: expected one inventory link, found {len(hrefs)}")
             continue
-        is_contents = "book-contents.html" in hrefs[0] and parse_qs(urlsplit(hrefs[0]).query).get("work") == [work_id]
-        if not is_contents:
-            error(f"{work_id}: text does not link through its contents page")
+        parsed_href = urlsplit(hrefs[0])
+        query = parse_qs(parsed_href.query)
+        is_short = len(data.get("units", [])) <= 50
+        is_direct_reader = (
+            parsed_href.path.endswith("/book-chapter.html")
+            and query.get("work") == [work_id]
+            and query.get("full") == ["1"]
+        )
+        is_contents = (
+            parsed_href.path.endswith("/book-contents.html")
+            and query.get("work") == [work_id]
+        )
+        if (is_short and not is_direct_reader) or (not is_short and not is_contents):
+            route_type = "the full reader" if is_short else "its contents page"
+            error(f"{work_id}: short/long text does not link through {route_type}")
 
     if not re.search(
         r"var validWorks=new Set\(window\.AdvaitaReaderNavigation\.workIds\)",
@@ -332,7 +344,7 @@ def main() -> int:
         f"PASS: {len(data_by_id)} works, {total_units} units, "
         f"{total_gloss_rows} Devanāgarī-to-English gloss rows."
     )
-    print("PASS: reader routes and inventory links resolve; all works use contents pages and the shared navigation inventory.")
+    print("PASS: reader routes and inventory links resolve; short works open directly and long works use contents pages.")
     print("PASS: all units satisfy the reader loader and have Sanskrit, English, IAST, and word glosses.")
     print("PASS: verse texts use one source verse per card; numbered prose passage groups remain explicit.")
     print("PASS: named numeric contents ranges have no gaps or overlaps where directly comparable.")
