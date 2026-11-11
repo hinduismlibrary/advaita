@@ -3,26 +3,127 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Read an English translation of Purāṇa Digdarśana by Pandit Mādhavācārya Śāstrī. The opening section is now available, with the translation being added in source order.">
+<meta name="description" content="Read the opening English translation of Purāṇa Digdarśana by Pandit Mādhavācārya Śāstrī. Chapter 1, sections 1–2, is available with direct navigation and the original 1957 scan.">
 <meta name="color-scheme" content="light">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://hinduismlibrary.github.io/advaita/books/puranas/puran-digdarshan/">
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Viveka Dṛṣṭi">
 <meta property="og:title" content="A Guide to the Purāṇas — Purāṇa Digdarśana">
-<meta property="og:description" content="An English web edition of Pandit Mādhavācārya Śāstrī’s Purāṇa Digdarśana.">
+<meta property="og:description" content="An English web edition of Pandit Mādhavācārya Śāstrī’s Purāṇa Digdarśana. Chapter 1, sections 1–2, are available to read.">
 <meta property="og:url" content="https://hinduismlibrary.github.io/advaita/books/puranas/puran-digdarshan/">
 <title>A Guide to the Purāṇas — Purāṇa Digdarśana | Viveka Dṛṣṭi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;700&family=Noto+Serif+Devanagari:wght@400;600&family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/advaita/assets/css/site.css">
-<link rel="stylesheet" href="/advaita/assets/css/bhagavad-gita.css">
-<link rel="stylesheet" href="/advaita/assets/css/shankara-books.css?v=reader-controls-20261027b">
-<link rel="stylesheet" href="/advaita/assets/css/article-standard.css?v=20261110-global-reader-1">
-<link rel="stylesheet" href="/advaita/assets/css/shankara-reader-standard.css?v=20261111-reader-layout-1">
+<style>
+:root{--reader-paper:#fbfaf7;--reader-ink:#342f29;--reader-muted:#736a5e;--reader-teal:#326b6b;--reader-line:#e6e0d6;--reader-soft:#f4f2ec}
+body.puran-reader-page{background:#efede7;color:var(--reader-ink);font:400 17px/1.75 Merriweather,Georgia,serif}
+.puran-reader-page .site-header{z-index:100;background:rgba(43,38,31,.98)}
+.puran-reader-page .nav-wrap{width:min(1240px,calc(100% - 36px));gap:clamp(9px,1.4vw,20px)}
+.puran-reader-page .vd-search-form{display:flex;align-items:center;gap:6px;margin:0}
+.puran-reader-page .vd-search-form input{width:132px;min-width:0;height:34px;padding:5px 9px;border:1px solid rgba(255,255,255,.28);border-radius:4px;background:rgba(255,255,255,.09);color:#fff;font:400 13px Merriweather,Georgia,serif}
+.puran-reader-page .vd-search-form input::placeholder{color:#d6cec2}
+.puran-reader-page .vd-search-form button{height:34px;padding:0 10px;border:1px solid rgba(255,255,255,.34);border-radius:4px;background:transparent;color:#f3eee5;font:500 12px Merriweather,Georgia,serif;cursor:pointer}
+.puran-reader-page .vd-search-form button:hover{background:rgba(255,255,255,.1)}
+.puran-reader-page .site-main{display:block;width:min(1320px,100%);max-width:1320px;min-height:calc(100vh - 68px);margin:0 auto;padding:0;background:var(--reader-paper);overflow:visible}
+.puran-reader-page .article-shell,.puran-reader-page .article-body{display:block;width:100%;max-width:none;margin:0;padding:0;background:transparent}
+.reader-frame{width:min(1280px,100%);margin:0 auto;padding:clamp(28px,4vw,54px) clamp(18px,4vw,56px) 68px}
+.book-header{max-width:1000px;margin:0 auto 34px;padding:0 0 25px;border-bottom:1px solid var(--reader-line)}
+.book-overline{margin:0 0 8px;color:var(--reader-muted);font:700 11px/1.4 Merriweather,Georgia,serif;letter-spacing:.12em;text-transform:uppercase}
+.book-title{margin:0;color:var(--reader-teal);font:400 clamp(34px,4.7vw,52px)/1.13 Vollkorn,Georgia,serif;letter-spacing:-.02em}
+.book-original-title{margin:7px 0 0;color:#645e55;font:400 16px/1.55 Merriweather,Georgia,serif}
+.book-original-title [lang="hi-Deva"]{font:400 1.05em/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif}
+.book-author{margin:11px 0 0;color:var(--reader-muted);font-size:13px;line-height:1.5}
+.book-status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin:18px 0 0;color:#4c514a;font-size:12px;line-height:1.5}
+.book-status-label{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border:1px solid #d7dfd6;border-radius:999px;background:#f3f6f1;color:#355b4d;font-weight:700}
+.book-status a,.reader-source-link{color:#326b6b;text-decoration:underline;text-underline-offset:3px}
+.reader-layout{display:grid;grid-template-columns:minmax(210px,260px) minmax(0,1fr);gap:clamp(30px,5vw,68px);align-items:start}
+.reader-toc{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 108px);overflow:auto;padding:19px 17px 17px;border:1px solid var(--reader-line);border-radius:10px;background:var(--reader-soft)}
+.reader-toc-kicker{margin:0 0 5px;color:var(--reader-muted);font:700 10px/1.4 Merriweather,Georgia,serif;letter-spacing:.1em;text-transform:uppercase}
+.reader-toc-title{margin:0 0 14px;color:#3a3630;font:500 16px/1.4 Vollkorn,Georgia,serif}
+.reader-toc ol,.mobile-toc ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.reader-chapter-list a,.mobile-toc a{display:grid;grid-template-columns:27px minmax(0,1fr);gap:1px 9px;align-items:start;padding:10px 9px;border:1px solid transparent;border-radius:7px;color:#4a4842;text-decoration:none;font:500 12px/1.45 Merriweather,Georgia,serif}
+.reader-chapter-list a:hover,.mobile-toc a:hover{background:#fff;border-color:var(--reader-line);text-decoration:none}
+.reader-chapter-list a.is-active,.mobile-toc a.is-active{background:#fff;border-color:#c8d9d2;color:#214f4e}
+.reader-link-number{grid-row:1 / span 2;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#e8e6df;color:#58564e;font:700 11px/1 Merriweather,Georgia,serif}
+.is-active .reader-link-number{background:#dce9e1;color:#28584d}
+.reader-link-title{align-self:center}
+.reader-link-pages{grid-column:2;color:var(--reader-muted);font:400 10px/1.4 Merriweather,Georgia,serif}
+.reader-toc-status{margin:15px 0 0;padding-top:12px;border-top:1px solid var(--reader-line);color:var(--reader-muted);font-size:11px;line-height:1.5}
+.reader-toc-status p{margin:0 0 8px}
+.reader-toc-status a{color:#326b6b;text-decoration:underline;text-underline-offset:3px}
+.mobile-toc{display:none}
+.reading-column{min-width:0}
+.reader-section-intro{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:2px 0 25px;padding:0 0 11px;border-bottom:1px solid var(--reader-line);color:var(--reader-muted)}
+.reader-section-intro h2{margin:0;color:#544f47;font:500 15px/1.45 Merriweather,Georgia,serif}
+.reader-section-intro span{flex:none;font:400 11px/1.45 Merriweather,Georgia,serif}
+.book-section{margin:0 0 32px;padding:0 0 31px;border-bottom:1px solid var(--reader-line);scroll-margin-top:88px}
+.book-section h2{margin:0 0 16px;color:#25231f;font:600 22px/1.32 Vollkorn,Georgia,serif;letter-spacing:-.01em}
+.book-section h2::first-letter{color:var(--reader-teal)}
+.book-text{max-width:78ch;margin:0 0 1.15em;color:var(--reader-ink);font:400 17px/1.78 Merriweather,Georgia,serif;text-align:left}
+.book-text:last-of-type{margin-bottom:0}
+.book-sanskrit{max-width:78ch;margin:18px 0 5px;padding:14px 18px;border-left:3px solid #b27d43;border-radius:0 7px 7px 0;background:#f5f1e9;color:#673f1e;font:600 19px/1.8 "Noto Serif Devanagari","Nirmala UI",Mangal,serif;white-space:pre-wrap;overflow-wrap:anywhere}
+.book-iast{max-width:78ch;margin:0 0 16px;padding:0 0 0 18px;color:var(--reader-muted);font:italic 400 13px/1.65 Merriweather,Georgia,serif;overflow-wrap:anywhere}
+.section-pagination{display:flex;justify-content:space-between;align-items:stretch;gap:12px;margin:0 0 30px}
+.section-pagination a{display:block;max-width:48%;padding:12px 14px;border:1px solid var(--reader-line);border-radius:8px;background:#fff;color:#326b6b;text-decoration:none;font:500 12px/1.5 Merriweather,Georgia,serif}
+.section-pagination a:hover{border-color:#b9cbc2;background:#f8faf7;text-decoration:none}
+.section-pagination a[aria-disabled="true"]{color:var(--reader-muted)}
+.section-pagination small{display:block;color:var(--reader-muted);font-size:10px}
+.section-pagination strong{display:block;margin-top:2px;font-weight:600}
+.edition-notes{margin:10px 0 0;border:1px solid var(--reader-line);border-radius:8px;background:#f8f7f2}
+.edition-notes summary{padding:12px 14px;color:#514d45;cursor:pointer;font:600 12px/1.4 Merriweather,Georgia,serif}
+.edition-notes[open] summary{border-bottom:1px solid var(--reader-line)}
+.edition-notes-content{padding:12px 14px 14px;color:#625c53;font:400 12px/1.65 Merriweather,Georgia,serif}
+.edition-notes-content p{margin:0 0 9px}
+.edition-notes-content p:last-child{margin-bottom:0}
+.edition-notes-content a{color:#326b6b;text-decoration:underline;text-underline-offset:3px}
+.puran-reader-page .site-footer{color:#746d62}
+.puran-reader-page .site-footer a{color:#326b6b}
+.skip-link{position:absolute;left:-10000px;top:8px;z-index:200;padding:9px 12px;background:#fff;color:#1e4d4f}
+.skip-link:focus{left:12px}
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.reader-toc a:focus-visible,.mobile-toc a:focus-visible,.section-pagination a:focus-visible,.book-status a:focus-visible{outline:3px solid #b27d43;outline-offset:3px}
+@media(max-width:900px){.reader-layout{grid-template-columns:minmax(185px,220px) minmax(0,1fr);gap:25px}.reader-toc{padding:15px 12px}}
+@media(max-width:700px){
+ body.puran-reader-page{font-size:16px;line-height:1.72}
+ .puran-reader-page .nav-wrap{width:calc(100% - 24px);min-height:58px;gap:8px}
+ .puran-reader-page .brand{font-size:21px}
+ .puran-reader-page .vd-search-form{gap:4px}
+ .puran-reader-page .vd-search-form input{width:clamp(58px,22vw,92px);height:32px;padding:4px 6px;font-size:11px}
+ .puran-reader-page .vd-search-form button{height:32px;padding:0 6px;font-size:11px}
+ .reader-frame{padding:27px 18px 48px}
+ .book-header{margin-bottom:18px;padding-bottom:18px}
+ .book-overline{font-size:10px}
+ .book-title{font-size:clamp(32px,8vw,42px)}
+ .book-original-title{font-size:14px}
+ .book-author{font-size:12px}
+ .book-status{gap:7px 12px;margin-top:13px;font-size:11px}
+ .reader-layout{display:block}
+ .reader-toc{display:none}
+ .mobile-toc{display:block;margin:0 0 22px;border:1px solid var(--reader-line);border-radius:8px;background:var(--reader-soft)}
+ .mobile-toc>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 13px;color:#315e5d;cursor:pointer;font:600 13px/1.4 Merriweather,Georgia,serif;list-style:none}
+ .mobile-toc>summary::-webkit-details-marker{display:none}
+ .mobile-toc>summary::after{content:"＋";font-size:17px;line-height:1}
+ .mobile-toc[open]>summary::after{content:"−"}
+ .mobile-toc nav{padding:0 9px 9px}
+ .mobile-toc a{font-size:12px}
+ .reader-section-intro{align-items:flex-start;flex-direction:column;gap:3px;margin-bottom:21px}
+ .reader-section-intro h2{font-size:13px}
+ .book-section{margin-bottom:25px;padding-bottom:24px;scroll-margin-top:72px}
+ .book-section h2{margin-bottom:13px;font-size:21px}
+ .book-text{font-size:16px;line-height:1.72}
+ .book-sanskrit{font-size:18px;line-height:1.8;padding:12px 13px}
+ .book-iast{font-size:12px;padding-left:13px}
+ .section-pagination{gap:8px}
+ .section-pagination a{max-width:50%;padding:10px 11px;font-size:11px}
+}
+@media(max-width:380px){.puran-reader-page .brand{font-size:19px}.puran-reader-page .vd-search-form button{font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<body class="post-page gita-page article-standard-page advaita-standard-reader" data-article-standard="1">
+<body class="puran-reader-page">
 <a class="skip-link" href="#chapter-content">Skip to translation</a>
 <header class="site-header vd-global-header"><div class="nav-wrap">
 <a class="brand" href="/advaita/" lang="sa-Deva">विवेकदृष्टिः</a>
@@ -31,73 +132,98 @@
 <a href="/advaita/">Home</a><a href="/advaita/pages/purana-library/">Purāṇa Library</a><a href="/advaita/books/">Other books</a>
 </nav>
 <form class="vd-search-form" action="/advaita/search/" method="get" role="search">
-<label class="vd-visually-hidden" for="puran-site-search">Search Viveka Dṛṣṭi</label>
+<label class="visually-hidden" for="puran-site-search">Search Viveka Dṛṣṭi</label>
 <input id="puran-site-search" type="search" name="q" placeholder="Search" required autocomplete="off">
 <button type="submit">Search</button>
 </form>
 </div></header>
-<main class="site-main"><article class="article-shell"><div class="article-body">
-<div class="gita-content shankara-content page" id="chapter-reader">
-<div class="shankara-reading-grid reader-grid">
-<header class="gita-hero article-head">
-<p class="shankara-chapter-title">English translation · opening section</p>
-<h1 id="work-title"><span class="reader-title-dev" lang="hi-Deva">पुराण दिग्दर्शन</span><span class="reader-title-separator"> · </span><span class="reader-title-iast" lang="sa-Latn">Purāṇa Digdarśana</span><br><span>A Guide to the Purāṇas</span></h1>
-<p class="shankara-author">Pandit Mādhavācārya Śāstrī · 1957 expanded fourth edition</p>
+<main class="site-main purana-main" id="main-content"><div class="reader-frame" id="chapter-reader">
+<header class="book-header">
+<p class="book-overline">English translation · in progress</p>
+<h1 class="book-title" id="work-title">A Guide to the Purāṇas</h1>
+<p class="book-original-title"><span lang="sa-Latn">Purāṇa Digdarśana</span> <span aria-hidden="true">·</span> <span lang="hi-Deva">पुराण दिग्दर्शन</span></p>
+<p class="book-author">Pandit Mādhavācārya Śāstrī · expanded fourth edition (1957)</p>
+<div class="book-status"><span class="book-status-label">Chapter 1 · sections 1–2 available · printed pp. 50–54</span><a href="https://archive.org/details/wg609/page/%E0%A5%AB%E0%A5%AC%E0%A5%A8/mode/2up" rel="noopener noreferrer">Open the original scan ↗</a></div>
 </header>
 <details class="mobile-toc">
-<summary>Contents</summary>
+<summary>Jump to a section <span>2 available</span></summary>
 <nav class="toc" aria-label="Mobile contents">
-<ol><li><a href="#section-purana-word">1 · The word “Purāṇa” · printed pp. 50–52</a></li><li><a href="#section-eighteen-puranas">2 · The eighteen Purāṇas · printed pp. 53–54</a></li></ol>
+<ol>
+<li><a class="reader-verse-link is-active" aria-current="location" data-section-link="section-purana-word" href="#section-purana-word"><span class="reader-link-number">1</span><span class="reader-link-title">The word “Purāṇa”</span><span class="reader-link-pages">Printed pp. 50–52</span></a></li>
+<li><a class="reader-verse-link" data-section-link="section-eighteen-puranas" href="#section-eighteen-puranas"><span class="reader-link-number">2</span><span class="reader-link-title">The eighteen Mahāpurāṇas</span><span class="reader-link-pages">Printed pp. 53–54</span></a></li>
+</ol>
 </nav>
 </details>
-<nav class="gita-contents side-toc" id="reader-toc" aria-label="Contents">
-<div class="reader-toc-head"><span class="reader-overline" lang="sa-Deva">विषयसूची</span><h2 class="side-toc-title">CONTENTS</h2><p>Chapter 1 · Introduction to the Purāṇas</p></div>
+<div class="reader-layout">
+<aside class="reader-toc">
+<p class="reader-toc-kicker">Chapter 1</p>
+<h2 class="reader-toc-title">Introduction to the Purāṇas</h2>
+<nav id="reader-toc" aria-label="Sections in Chapter 1">
 <ol id="chapter-list" class="reader-chapter-list">
-<li><a class="reader-verse-link is-active" aria-current="location" href="#section-purana-word">1 · The word “Purāṇa” · printed pp. 50–52</a></li>
-<li><a class="reader-verse-link" href="#section-eighteen-puranas">2 · The eighteen Purāṇas · printed pp. 53–54</a></li>
+<li><a class="reader-verse-link is-active" aria-current="location" data-section-link="section-purana-word" href="#section-purana-word"><span class="reader-link-number">1</span><span class="reader-link-title">The word “Purāṇa”</span><span class="reader-link-pages">Printed pp. 50–52</span></a></li>
+<li><a class="reader-verse-link" data-section-link="section-eighteen-puranas" href="#section-eighteen-puranas"><span class="reader-link-number">2</span><span class="reader-link-title">The eighteen Mahāpurāṇas</span><span class="reader-link-pages">Printed pp. 53–54</span></a></li>
 </ol>
-<p class="reader-text-note">The first two sections are available here. The translation will continue in the book’s original chapter order.</p>
-<p class="reader-text-note"><a href="https://archive.org/details/wg609" rel="noopener noreferrer">Open the complete Archive scan</a></p>
-<p class="reader-text-note"><a href="https://archive.org/details/wg609/page/%E0%A5%AB%E0%A5%AC%E0%A5%A8/mode/2up" rel="noopener noreferrer">Open the scan page you provided</a></p>
 </nav>
-<article class="shankara-unit-column article document-content" id="chapter-content">
-<header class="reader-section-intro" id="chapter-1"><h2>Chapter 1 · Introduction to the Purāṇas</h2><span>pp. 50–54</span></header>
-<article class="gita-verse shankara-verse shankara-prose" id="section-purana-word">
+<div class="reader-toc-status"><p id="reader-position" aria-live="polite">Section 1 of 2</p><a class="reader-source-link" href="https://archive.org/details/wg609" rel="noopener noreferrer">Open the full 1957 scan ↗</a></div>
+</aside>
+<article class="reading-column" id="chapter-content">
+<header class="reader-section-intro" id="chapter-1"><h2>Chapter 1 · Introduction to the Purāṇas</h2><span>Printed pp. 50–54</span></header>
+<section class="book-section" id="section-purana-word">
 <h2>1 · The word “Purāṇa”</h2>
-<p class="gita-translation">A name can reveal the qualities or defects of the thing it names. Since ancient times, people have tried to choose names that express a thing’s character as fully as possible. Authors and poets therefore give careful thought to the titles of their works, hoping that a short name will convey the work’s subject. The names of many Sanskrit works do just this: Veda, Upaniṣad, Smṛti, and Purāṇa each announce something of their subject. Later works such as the Raghuvaṃśa, Kumārasaṃbhava, and Mudrārākṣasa follow the same practice.</p>
-<p class="gita-translation">The author extends this principle to the names of epic characters. He presents Rāma as one who dwells in the hearts of living beings, and Rāvaṇa as one who makes them weep. Yudhiṣṭhira is praised for remaining steady through the Mahābhārata war and its moral crises. Duryodhana is described as a warrior drawn to unjust conflict; Bhīma as formidable; and Arjuna as a hero whose qualities win others over. Duḥśāsana, the author says, is aptly named for the man who tried to disgrace Draupadī in the assembly. These examples, he argues, show how names were chosen to match character.</p>
-<p class="gita-translation">He contrasts that older ideal with people whose names may not fit them: a “Vidyāsāgara” (ocean of learning), “Vidyādhara” (bearer of knowledge), or “Vedaprakāśa” (light of the Veda) may be ignorant, while a man called “Bahādura Siṃha” (brave lion) may be frightened by the sound of mice. The point, he says, is that ancient authors were especially careful when naming their works. He therefore begins by examining the derivation of the word <em>Purāṇa</em>.</p>
-<p class="gita-translation">The author says the word is formed from the indeclinable <em>purā</em> (“formerly”), the root <em>ṇī</em> (“to obtain”), and the affix <em>ḍa</em>. He also gives an alternative derivation from <em>purā</em> with the sense “what existed before.” He cites Pāṇini’s <em>Aṣṭādhyāyī</em> 4.3.22, 2.1.49, 4.3.105, 2.1.46, and 8.4.2 in support, then turns to Yāska’s <em>Nirukta</em>.</p>
-<div class="gita-sanskrit sa-text" lang="sa-Deva">पुराणं कस्मात्? पुरा नवम् भवति।</div>
-<p class="reader-inline-iast" lang="sa-Latn">purāṇaṃ kasmāt? purā navam bhavati.</p>
-<p class="gita-translation">“Why is it called <em>Purāṇa</em>? Because what was new in former times is now old.” In ordinary terms, something ancient is called <em>purāṇa</em>. The author lists <em>pratna</em>, <em>purātana</em>, and <em>cirantana</em> as related words for “ancient” or “old.”</p>
-<p class="gita-translation">He next cites the traditional definition:</p>
-<div class="gita-sanskrit sa-text" lang="sa-Deva">पुराणं पञ्चलक्षणम्।</div>
-<p class="reader-inline-iast" lang="sa-Latn">purāṇaṃ pañcalakṣaṇam.</p>
-<p class="gita-translation">“A Purāṇa has five defining characteristics.” The five are creation (<em>sarga</em>), secondary creation (<em>pratisarga</em>), genealogies (<em>vaṃśa</em>), the eras of the Manus (<em>manvantara</em>), and the accounts of notable persons (<em>vaṃśānucarita</em>).</p>
-<p class="gita-translation">The author argues that this definition fits the Purāṇas available in his day. He maintains that no other body of literature gives the same broad, connected account of creation and the world. He points to descriptions of the sun, moon, planets, constellations, and stars, and concludes that the Purāṇas preserve knowledge reaching back before the appearance of human beings. This is the argument he develops in the opening section.</p>
-<p class="reader-text-note"><span class="reader-note-label">Source</span> Pandit Mādhavācārya Śāstrī, <em>Purāṇa Digdarśana</em>, expanded fourth edition (1957), printed pages 50–52. The scan’s OCR is uneven in its technical grammatical forms, so the derivation of <em>Purāṇa</em> is rendered conservatively. The author’s claims are presented as his argument.</p>
-<p class="reader-text-note"><span class="reader-note-label">Scan</span> <a href="https://archive.org/details/wg609" rel="noopener noreferrer">Internet Archive item wg609</a> · <a href="https://archive.org/details/wg609/page/%E0%A5%AB%E0%A5%AC%E0%A5%A8/mode/2up" rel="noopener noreferrer">the page supplied for this edition</a>.</p>
-</article>
-<article class="gita-verse shankara-verse shankara-prose" id="section-eighteen-puranas">
+<p class="book-text">A name can reveal the qualities or defects of the thing it names. Since ancient times, people have tried to choose names that express a thing’s character as fully as possible. Authors and poets therefore give careful thought to the titles of their works, hoping that a short name will convey the work’s subject. The names of many Sanskrit works do just this: Veda, Upaniṣad, Smṛti, and Purāṇa each announce something of their subject. Later works such as the Raghuvaṃśa, Kumārasaṃbhava, and Mudrārākṣasa follow the same practice.</p>
+<p class="book-text">The author extends this principle to the names of epic characters. He presents Rāma as one who dwells in the hearts of living beings, and Rāvaṇa as one who makes them weep. Yudhiṣṭhira is praised for remaining steady through the Mahābhārata war and its moral crises. Duryodhana is described as a warrior drawn to unjust conflict; Bhīma as formidable; and Arjuna as a hero whose qualities win others over. Duḥśāsana, the author says, is aptly named for the man who tried to disgrace Draupadī in the assembly. These examples, he argues, show how names were chosen to match character.</p>
+<p class="book-text">He contrasts that older ideal with people whose names may not fit them: a “Vidyāsāgara” (ocean of learning), “Vidyādhara” (bearer of knowledge), or “Vedaprakāśa” (light of the Veda) may be ignorant, while a man called “Bahādura Siṃha” (brave lion) may be frightened by the sound of mice. The point, he says, is that ancient authors were especially careful when naming their works. He therefore begins by examining the derivation of the word <em>Purāṇa</em>.</p>
+<p class="book-text">The author says the word is formed from the indeclinable <em>purā</em> (“formerly”), the root <em>ṇī</em> (“to obtain”), and the affix <em>ḍa</em>. He also gives an alternative derivation from <em>purā</em> with the sense “what existed before.” He cites Pāṇini’s <em>Aṣṭādhyāyī</em> 4.3.22, 2.1.49, 4.3.105, 2.1.46, and 8.4.2 in support, then turns to Yāska’s <em>Nirukta</em>.</p>
+<div class="book-sanskrit" lang="sa-Deva">पुराणं कस्मात्? पुरा नवम् भवति।</div>
+<p class="book-iast" lang="sa-Latn">purāṇaṃ kasmāt? purā navam bhavati.</p>
+<p class="book-text">“Why is it called <em>Purāṇa</em>? Because what was new in former times is now old.” In ordinary terms, something ancient is called <em>purāṇa</em>. The author lists <em>pratna</em>, <em>purātana</em>, and <em>cirantana</em> as related words for “ancient” or “old.”</p>
+<p class="book-text">He next cites the traditional definition:</p>
+<div class="book-sanskrit" lang="sa-Deva">पुराणं पञ्चलक्षणम्।</div>
+<p class="book-iast" lang="sa-Latn">purāṇaṃ pañcalakṣaṇam.</p>
+<p class="book-text">“A Purāṇa has five defining characteristics.” The five are creation (<em>sarga</em>), secondary creation (<em>pratisarga</em>), genealogies (<em>vaṃśa</em>), the eras of the Manus (<em>manvantara</em>), and the accounts of notable persons (<em>vaṃśānucarita</em>).</p>
+<p class="book-text">The author argues that this definition fits the Purāṇas available in his day. He maintains that no other body of literature gives the same broad, connected account of creation and the world. He points to descriptions of the sun, moon, planets, constellations, and stars, and concludes that the Purāṇas preserve knowledge reaching back before the appearance of human beings. This is the argument he develops in the opening section.</p>
+
+
+</section>
+<nav class="section-pagination" aria-label="Section navigation">
+<a href="#chapter-1"><small>Chapter</small><strong>Back to the introduction ↑</strong></a>
+<a href="#section-eighteen-puranas"><small>Next section</small><strong>2 · The eighteen Mahāpurāṇas →</strong></a>
+</nav>
+<section class="book-section" id="section-eighteen-puranas">
 <h2>2 · The eighteen Mahāpurāṇas</h2>
-<p class="gita-translation">From the beginning of creation to the time of dissolution, the author says, the Purāṇas give an ordered history of the universe and a detailed account of its essential transformations, past and future. He describes them as scientific yet accessible, and as living, speaking representations of Ārya culture. He writes that even their opponents, amazed by their scope, have been compelled to call them “real encyclopedias.” He then gives the eighteen names:</p>
-<div class="gita-sanskrit sa-text" lang="sa-Deva">ब्राह्मं पाद्मं वैष्णवं च शैवं लैङ्गं सगारुडम् ।<br>
+<p class="book-text">From the beginning of creation to the time of dissolution, the author says, the Purāṇas give an ordered history of the universe and a detailed account of its essential transformations, past and future. He describes them as scientific yet accessible, and as living, speaking representations of Ārya culture. He writes that even their opponents, amazed by their scope, have been compelled to call them “real encyclopedias.” He then gives the eighteen names:</p>
+<div class="book-sanskrit" lang="sa-Deva">ब्राह्मं पाद्मं वैष्णवं च शैवं लैङ्गं सगारुडम् ।<br>
 नारदीयं भागवतमाग्नेयं स्कान्दसंज्ञितम् ॥<br>
 भविष्यं ब्रह्मवैवर्तं मार्कण्डेयं सवामनम् ।<br>
 वाराहं मात्स्यं कौर्मं च ब्रह्माण्डाख्यमिति त्रिषट् ॥</div>
-<p class="reader-inline-iast" lang="sa-Latn">brāhmaṁ pādmaṁ vaiṣṇavaṁ ca śaivaṁ laiṅgaṁ sa-gāruḍam<br>
+<p class="book-iast" lang="sa-Latn">brāhmaṁ pādmaṁ vaiṣṇavaṁ ca śaivaṁ laiṅgaṁ sa-gāruḍam<br>
 nāradīyaṁ bhāgavatam āgneyaṁ skānda-saṁjñitam<br>
 bhaviṣyaṁ brahma-vaivartaṁ mārkaṇḍeyaṁ sa-vāmanam<br>
 vārāhaṁ mātsyaṁ kaurmaṁ ca brahmāṇḍākhyam iti tri-ṣaṭ</p>
-<p class="gita-translation">“The Brahma, Padma, Viṣṇu and Śiva; the Liṅga together with the Garuḍa; the Nārada, Bhāgavata, Agni and Skanda; the Bhaviṣya, Brahmavaivarta, Mārkaṇḍeya and Vāmana; the Varāha, Matsya, Kūrma, and the one called Brahmāṇḍa—thus, three times six: eighteen.”</p>
-<p class="gita-translation">In order, the eighteen are the Brahma, Padma, Viṣṇu, Śiva, Liṅga, Garuḍa, Nārada, Bhāgavata, Agni, Skanda, Bhaviṣya, Brahmavaivarta, Mārkaṇḍeya, Vāmana, Varāha, Matsya, Kūrma, and Brahmāṇḍa Purāṇas.</p>
-<p class="reader-text-note"><span class="reader-note-label">Source</span> Pandit Mādhavācārya Śāstrī, <em>Purāṇa Digdarśana</em>, expanded fourth edition (1957), printed pages 53–54. The OCR misreads several syllables in the cited verse; its Sanskrit spelling is normalized against the verse cited by the author, <em>Bhāgavata Purāṇa</em> 12.7.23–24.</p>
-<p class="reader-text-note"><span class="reader-note-label">Scan</span> <a href="https://archive.org/details/wg609" rel="noopener noreferrer">Internet Archive item wg609</a> · <a href="https://archive.org/details/wg609/page/%E0%A5%AB%E0%A5%AC%E0%A5%A8/mode/2up" rel="noopener noreferrer">the page supplied for this edition</a>.</p>
+<p class="book-text">“The Brahma, Padma, Viṣṇu and Śiva; the Liṅga together with the Garuḍa; the Nārada, Bhāgavata, Agni and Skanda; the Bhaviṣya, Brahmavaivarta, Mārkaṇḍeya and Vāmana; the Varāha, Matsya, Kūrma, and the one called Brahmāṇḍa—thus, three times six: eighteen.”</p>
+<p class="book-text">In order, the eighteen are the Brahma, Padma, Viṣṇu, Śiva, Liṅga, Garuḍa, Nārada, Bhāgavata, Agni, Skanda, Bhaviṣya, Brahmavaivarta, Mārkaṇḍeya, Vāmana, Varāha, Matsya, Kūrma, and Brahmāṇḍa Purāṇas.</p>
+
+
+</section>
+<nav class="section-pagination" aria-label="Section navigation">
+<a href="#section-purana-word"><small>Previous section</small><strong>← 1 · The word “Purāṇa”</strong></a>
+<a href="#chapter-1"><small>Chapter</small><strong>Back to the introduction ↑</strong></a>
+</nav>
+<details class="edition-notes">
+<summary>Edition and translation notes</summary>
+<div class="edition-notes-content">
+<p>Source: Pandit Mādhavācārya Śāstrī, <em>Purāṇa Digdarśana</em>, expanded fourth edition (1957), printed pages 50–54. The scan’s OCR is uneven in its technical grammatical forms, so the derivation of <em>Purāṇa</em> is rendered conservatively. The author’s claims are presented as his argument.</p>
+<p>The OCR misreads several syllables in the cited verse. Its Sanskrit spelling is normalized against the verse cited by the author, <em>Bhāgavata Purāṇa</em> 12.7.23–24.</p>
+<p><a href="https://archive.org/details/wg609" rel="noopener noreferrer">Open the complete Archive scan</a> · <a href="https://archive.org/details/wg609/page/%E0%A5%AB%E0%A5%AC%E0%A5%A8/mode/2up" rel="noopener noreferrer">Open the page supplied for this edition</a>.</p>
+</div>
+</details>
 </article>
-</article>
-</div></div></div></article></main>
+</div>
+</div></main>
 <footer class="site-footer"><p><a href="/advaita/pages/purana-library/">Purāṇa Library</a> · <a href="/advaita/">Viveka Dṛṣṭi</a></p></footer>
-<script src="/advaita/assets/js/site.js?v=20261111-puran-digdarshan-1"></script>
+<script src="/advaita/assets/js/site.js?v=20261111-puran-digdarshan-2"></script>
+<script>
+(()=>{const root=document.querySelector(".puran-reader-page");if(!root)return;const sections=[...root.querySelectorAll(".book-section")];const links=[...root.querySelectorAll("[data-section-link]")];const position=root.querySelector("#reader-position");const setActive=id=>{const index=sections.findIndex(section=>section.id===id);if(index<0)return;links.forEach(link=>{const active=link.dataset.sectionLink===id;link.classList.toggle("is-active",active);if(active)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current")});if(position)position.textContent="Section "+(index+1)+" of "+sections.length};if(location.hash)setActive(decodeURIComponent(location.hash.slice(1)));if("IntersectionObserver"in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible)setActive(visible.target.id)},{rootMargin:"-18% 0px -68% 0px",threshold:0});sections.forEach(section=>observer.observe(section))}root.querySelectorAll(".mobile-toc a").forEach(link=>link.addEventListener("click",()=>{const menu=root.querySelector(".mobile-toc");if(menu)menu.open=false}))})();
+</script>
 </body>
 </html>
