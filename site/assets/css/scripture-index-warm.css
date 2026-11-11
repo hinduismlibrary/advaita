@@ -320,3 +320,23 @@ html body.vd-chrome-page.scripture-index-page.vd-warm-contents .page .note{
   html body.vd-chrome-page.scripture-index-page.vd-warm-contents .page .chapter-iast{font-size:14px!important}
   html body.vd-chrome-page.scripture-index-page.vd-warm-contents .page .chapter-gloss{font-size:12.5px!important}
 }
+
+/* Keep the Bhagavad Gītā contents list on the same compact chapter rows as Bhāgavatam. */
+html body.vd-chrome-page.scripture-index-page.vd-warm-contents.gita-contents-page .page .chapter-number{
+  display:inline!important;margin:0 .45em 0 0!important;color:var(--warm-teal)!important;
+  font:500 14px/1.55 Vollkorn,Georgia,serif!important;vertical-align:baseline!important;
+}
+html body.vd-chrome-page.scripture-index-page.vd-warm-contents.gita-contents-page .page .chapter-name{
+  display:inline!important;margin:0!important;color:#171513!important;
+  font:600 15px/1.55 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+}
+html body.vd-chrome-page.scripture-index-page.vd-warm-contents.gita-contents-page .page .chapter-name::after{
+  content:" — "!important;color:var(--warm-muted)!important;font-weight:400!important;
+}
+html body.vd-chrome-page.scripture-index-page.vd-warm-contents.gita-contents-page .page .chapter-iast{
+  display:none!important;
+}
+html body.vd-chrome-page.scripture-index-page.vd-warm-contents.gita-contents-page .page .chapter-gloss{
+  display:inline!important;margin:0!important;color:#4a443e!important;
+  font:400 13px/1.55 Merriweather,Georgia,serif!important;
+}
