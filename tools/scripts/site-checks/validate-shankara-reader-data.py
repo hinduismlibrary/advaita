@@ -324,8 +324,8 @@ def main() -> int:
         contents_html,
     ) or "shankara-reader-navigation.js" not in contents_html:
         error("the contents page does not use the shared work inventory")
-    if "complete-text-group" not in contents_html:
-        error("the contents page lacks the continuous reader link for short texts")
+    if 'id="complete-link"' not in contents_html or "units.length<=50" not in contents_html:
+        error("the contents page lacks a full-text link or short-text redirect")
 
     if not re.search(
         r"\.shankara-study-button-row[^{]*\{[^}]*gap\s*:\s*0!important",
