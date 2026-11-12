@@ -226,10 +226,42 @@ In fact, what is intended is knowledge-removability by direct realization. This 
 
 **Translator's note:** *Sublation* is the cancellation of an appearance by a correcting cognition. The passage distinguishes an object's persistence in its own visible form from persistence in its underlying cause. *Udīcya* is retained as a technical term because its precise role belongs to a Nyāya account of the qualities of the self.
 
+### Fourth account of falsity: absence in the object's own locus
+
+**Source heading:** अथ चतुर्थमिथ्यात्वविचारः
+
+**Definition.** Falsity may also be defined as being the counterpositive of an absolute absence located in that very object's own locus. This means that the object is perceived as present in the locus of its own absolute absence. This differs from the preceding definition; the earlier objections and replies apply here as well.
+
+**Objection.** An absolute absence cannot coexist with its counterpositive in a place connected to it by conjunction or inherence. If it could, then the object's role as a material cause and the other relations that depend on its presence would become impossible.
+
+**Reply.** That objection fails. Just as an absence and its counterpositive can be spoken of together in relation to time, their coexistence in a place is not impossible. The existence of an object's prior absence does not prevent that object's cause from being present. Nor can one argue that prior absence is impossible in a locus of absolute absence: time provides a counterexample. We accept, on the strength of ordinary cognition, that prior absence and absolute absence can share a temporal locus—for example, “Now there is no pot at all; now the pot is not yet present.”
+
+**Objection.** That co-location is accepted for time because we have the cognition “now there is an absolute absence of a pot” and “now there is a prior absence of a pot.” But there is no evidence that both absences can share a spatial locus.
+
+**Reply.** That is not so. The inference concerning falsity, scripture, and related means of knowledge supply evidence. As explained earlier, an absence and an existent thing at different levels of reality do not conflict merely because they share a locus. Nor does the definition extend to sheer nonbeing, because it requires that the object be perceived as existent in the locus of its own absolute absence.
+
+**Objection.** A scriptural statement says, “Some say that this was nonbeing alone in the beginning.” If nonbeing is thus presented as existent, the definition would apply to it too.
+
+**Reply.** The negation in the statement “This was being alone in the beginning” denies that meaning; it does not assert that absolute nonbeing exists. Such an assertion would be contradictory. The definition therefore does not extend to absolute nonbeing. The other points have already been answered above, so Madhusūdana concludes this discussion.
+
+### Fifth account of falsity: being distinct from what is established as real
+
+**Source heading:** अथ पञ्चममिथ्यात्वनिरूपणम्
+
+**Definition.** Falsity may be defined as being distinct from what is real. Here “real” means established by a valid means of knowledge, and a means of knowledge is valid when it produces cognition without a defect. On this account, a thing is false when it differs from what a faultless cognition establishes, as a dream object does. Being established by valid knowledge is pervaded by not being sublated.
+
+To prevent the definition from including sheer nonbeing or attribute-free Brahman, it must also specify that the object is presented as existent. Neither of those is the object of a cognition that presents it under the form “existent.”
+
+**Objection.** What does “real” mean in the phrase “distinct from what is real”? Does it mean being the locus of the universal called existence, being unsublatable, or being Brahman? The first reading cannot apply to pots and other things if, as you maintain, their universal existence is produced by ignorance. The second makes falsity amount to sublatability, which merely returns to an earlier definition. The third makes the proof redundant, since the world is already accepted as different from Brahman.
+
+**Reply.** These objections do not apply, because none of those three meanings has been accepted here. The arguments already given for the definition that something is distinct from both real and unreal should also be considered here. The remaining points will be addressed when the example used to establish the definition is discussed.
+
+**Translator's note:** “A valid means of knowledge” translates *pramāṇa*. “Sublated” means cancelled by a later, corrective cognition. The fifth account is stated briefly here; Madhusūdana says that some supporting points remain for a later discussion.
+
 
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first five titled units of the first pariccheda.
-- Still unfinished: 58 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
+- Manually translated in this working draft: opening verses 1–4 and the first seven titled units of the first pariccheda.
+- Still unfinished: 56 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
 - The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with this draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
