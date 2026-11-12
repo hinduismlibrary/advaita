@@ -68,6 +68,7 @@ def run() -> None:
                     return Boolean(link?.sheet && link.sheet.cssRules.length > 0);
                 }""", timeout=20000)
                 page.locator(".hp-home-title-dev").wait_for(timeout=20000)
+                assert "___MASK_" not in page.content() and "</script>___" not in page.content(), "Homepage contains mask artifacts"
                 assert "Vivekadrishti" in page.title(), page.title()
                 assert page.locator(".hp-home-title-iast").count() == 0
                 assert page.locator(".hp-home-intro").count() == 0
@@ -211,25 +212,34 @@ def run() -> None:
                 assert "Manusm" in page.locator(".article-head h1").inner_text()
                 assert page.locator("#desktop-toc a").count() >= 5
                 assert page.locator("#source-content p").count() >= 147
-                details = page.locator("#source-content details.sanskrit-reveal").first
-                details.locator("summary").click()
-                assert details.get_attribute("open") is not None
-                expect(details.locator("summary")).to_have_text("Hide Sanskrit")
-                details.locator("summary").click()
-                assert details.get_attribute("open") is None
-                facsimile = page.locator('.source-document-figure img[src$="manusmriti-mahabharata-table-p8.png"]')
-                assert facsimile.count() == 1
-                facsimile.scroll_into_view_if_needed()
+                sanskrit = page.locator("#source-content p.manu-original-sanskrit")
+                assert sanskrit.count() >= 20, f"Expected separate Devanagari blocks, found {sanskrit.count()}"
+                sanskrit_metrics = sanskrit.evaluate_all("""nodes => nodes.map(node => ({
+                    lang: node.getAttribute("lang"),
+                    display: getComputedStyle(node).display
+                }))""")
+                assert all(
+                    row["lang"] == "sa-Deva" and row["display"] == "block"
+                    for row in sanskrit_metrics
+                ), sanskrit_metrics
+                article_text = page.locator("#source-content").inner_text()
+                for note in (
+                    "Closing colophon in the paper",
+                    "original paper scan, PDF",
+                    "source locator not supplied in the paper",
+                ):
+                    assert note not in article_text, note
+                cover = page.locator('.article-cover img[src$="om-emblem.webp"]')
+                assert cover.count() == 1
                 page.wait_for_function("""() => {
-                    const image = document.querySelector('.source-document-figure img[src$="manusmriti-mahabharata-table-p8.png"]');
+                    const image = document.querySelector('.article-cover img[src$="om-emblem.webp"]');
                     return Boolean(image && image.complete && image.naturalWidth > 0);
                 }""")
+                page.screenshot(path=str(OUT / "manusmriti.png"))
                 contents = page.locator('#desktop-toc a[href="#women"]')
                 contents.click()
                 assert page.locator("#source-content #women").is_visible()
-                report["manusmriti"] = {"contents": "working", "sanskrit": "opens and closes", "table": "source facsimile rendered"}
-                page.screenshot(path=str(OUT / "manusmriti.png"))
-
+                report["manusmriti"] = {"contents": "working", "sanskrit_blocks": len(sanskrit_metrics), "cover": "rendered"}
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
                 page.locator(".ad-entry-original-dev").first.wait_for(timeout=20000)
                 page.evaluate("() => document.fonts.ready")
