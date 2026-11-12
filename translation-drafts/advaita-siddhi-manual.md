@@ -96,13 +96,6 @@ Therefore, just as the moderator sets the terms of a debate, a neutral moderator
 
 **Translator's note:** “Object of a negation” translates *pratiyogin*: the thing whose absence is being asserted. “Locus” translates *upādhi*, the basis in which something is presented. This formulation is setting up the debate; the argument for the definition continues in the following sections.
 
-## Work log
-
-- Translated here: opening verses 1–4 and the first titled argument.
-- Still to translate: the remainder of the first pariccheda, the whole second, third, and fourth paricchedas.
-- Do not move this draft to the live reader or describe the book as complete until every source section has been translated and checked.
-
-
 ## First pariccheda — continued
 
 ### Considering what delimits the inferential subject
@@ -153,3 +146,64 @@ Nor does this account wrongly include Brahman because Brahman is without attribu
 
 **Translator's note:** *Sublation* means the correction of an earlier appearance by a later cognition that cancels it, as when supposed silver is recognized as a shell. *Counterpositive* means the thing whose absence is asserted. The example “the pot is a jar” illustrates a single object described under two names; it is not a claim that every pot is a jar in ordinary usage.
 
+### Second account of falsity: being negated in the locus where it appears
+
+**Source heading:** अथ द्वितीयमिथ्यात्वोपपत्तिः
+
+**Definition.** Falsity is being the counterpositive of an absence that is asserted for all three times in the locus where the object is presented.
+
+**Objection.** If this threefold absence is ultimately real, non-duality is lost. If it is merely an appearance, the point has already been proved and the argument is redundant. If it is empirically real, then, because it can itself be sublated, it does not conflict with ultimate reality. That would leave the argument beside the point. It would also make the non-dual Upaniṣads fail to reveal truth, and it would make the world—the counterpositive of their denial, though only an appearance—ultimately real.
+
+**Reply.** No. Even if the negation is ultimate, it does not destroy non-duality, because the Brahman in which the world is denied is not different from that negation. Nor does it follow that the world, as the counterpositive of an ultimate absence, is itself ultimately real. A counterpositive need not be ultimately real: imagined silver in a shell is also presented as the counterpositive of an absence.
+
+Or the negation may be non-ultimate. Even then, it is not merely an illusory negation; it is empirically real. One cannot conclude that it is irrelevant because it is sublatable and therefore cannot oppose ultimate existence. A dream object is sublated by a negation that occurs within the dream, yet that dream-negation does oppose the dream object. The negation is not required to be unsurpassable in order to negate what appears at its own level. Here the negation and the world it negates have the same empirical status, so the negation does oppose the world.
+
+**Objection.** If the negation itself is later denied, does that not establish the reality of its counterpositive?
+
+**Reply.** That follows only when denying the negation is what makes the counterpositive present. For example, after the judgement “this is not silver,” the further judgement “this is not not-silver” can establish silver. But in other cases both the negation and its counterpositive are denied. At the time of destruction, for instance, both the prior absence of a pot and the pot whose absence it was are denied; the pot is not thereby made real. In the same way, a cognition that sublates both the world and its denial does not establish the world as real.
+
+Nor does it follow that scripture is invalid because it communicates a non-ultimate negation. Scripture can authoritatively teach that what is different from Brahman—including the world and its denial—is non-ultimate. Since it teaches this as non-ultimacy, there is no defect in its authority.
+
+**Objection.** Is the counterpositive of this denial the object in its own nature, or is it the object considered under the aspect of ultimate reality? Neither option seems acceptable. On the first option, space and the other elements, whose existence and causal activity are established by scripture, and which arise from ignorance and are destroyed by knowledge, would be negated at all three times even while they are present to cognition. On the second, there is mutual dependence: an object's ultimate status is defined by its not being sublated, but its falsity is now being defined through that very ultimate status. If ultimate reality is itself denied only under the aspect of ultimate reality, the same problem recurs without end.
+
+**Reply.** Do not understand the definition that way. The world and shell-silver are accepted as the counterpositives of threefold negation in their own nature. After the illusion of silver in a shell, direct knowledge of the basis gives the understanding, “The silver is not, was not, and will not be here.” The negation concerns the apparent silver itself; it does not require first deciding whether the silver is ultimate or merely phenomenal. Scripture likewise gives the understanding that the world itself is denied: “Here there is no plurality.”
+
+**Objection.** Perhaps, then, only ordinary, real silver is the counterpositive of the negation, “This is not silver.” In that case, the appearance of silver in the shell is not itself negated, and the correction would not address the very illusion that prompted it.
+
+**Reply.** The earlier teachers' statement that ordinary, real silver is the counterpositive must be understood carefully. What is presented as the counterpositive is the illusory silver that appears to be identical with ordinary silver. Whether one speaks of that appearance in its own nature or under the aspect of ordinary silver is not the point. The statement is intended to reject the view that silver is perceived only as identical with what is before us: the person who wants silver acts toward the appearance as though it were ordinary silver.
+
+The *Tattvapradīpikā* explains the point this way. The earlier teachers' phrase “ordinary, real silver is the counterpositive of the denial ‘This is not silver’” should be understood by accepting that what is immediately perceived as ordinary silver is denied at all three times as ordinary silver: “This is not ordinary, real silver.” The expression “the silver here is not silver” presents a difference between the illusory silver indicated by “this” and ordinary silver named by “silver”; that difference is a kind of falsity. By contrast, “There is no silver here” expresses absolute absence. Because the locus and the counterpositive are expressed in different grammatical cases, this second statement asserts absence rather than mere difference. It takes the silver that appeared before us as the object of the absolute absence of ordinary silver. This is an explicit account of falsity, so it does not abandon the tradition's position, force an alternative theory of error, or contradict the text.
+
+**Objection.** If this is right, everything must be absolutely nonexistent. Whatever is absent from a given locus at all three times would be a counterpositive of such an absence; the definition would not distinguish the world from a hare's horn. Nor can absolute nonexistence simply mean “without any name or description,” since that would only restate the definition. It cannot mean “not perceived,” either: if nonbeing were never perceived, one could not recognize the difference between nonbeing and what is not nonbeing, remove the perception of nonbeing, or even use the word “nonbeing.” And if it means “not perceived directly,” the definition would wrongly include things that are real but eternally beyond the senses.
+
+**Reply.** Absolute nonexistence is not merely being denied in some locus. It is being unfit to be presented as existent in any locus at all. Before it is sublated, shell-silver and the world are presented as existent in a locus; they therefore are not sheer nonexistence. The word “locus” in the definition points to this presentation as existent. Those who deny any real basis for error cannot account for shell-silver or the world as being presented in this way, but that is not the account adopted here.
+
+**Objection.** The definition still seems too broad. It appears to make falsity the condition of being opposed by an absolute absence that has an existent locus. The logicians already accept cases involving all-pervading absences and things such as space, so the proof would be established before the argument began. If instead one says that a thing is false when it is the counterpositive of an absolute absence residing in something real, the result is still overbroad: a pot is a counterpositive of absences in many places. Adding that the locus must be the locus of the pot by conjunction or by inherence does not solve the problem. If the relation itself is not specified, the account overreaches; if it is specified, non-pervasive relations such as conjunction would again make the proof redundant. One might also deny that space is a counterpositive of absolute absence because there is no direct perception that “space is absent here,” no supporting inference, and no favorable reasoning. But the same lack of evidence would then tell against treating space as a counterpositive of prior or posterior absence. Mere generalization from a few observed cases would establish those other absences as well, although no result requires them.
+
+**Reply.** The word “presented” prevents this overreach. A thing is a counterpositive of an absolute absence in a locus only in the respect in which it was presented as that locus's occupant. That respect includes a particular relation and a particular delimiting condition. A floor is not presented as the locus of a pot without the relation of contact; a tree is not presented as the locus of a monkey's contact without specifying the part of the tree that delimits that contact. Thus the definition concerns the very relation and delimiting condition under which something was presented as a locus. Once these are held fixed, there is no redundant proof of what the logicians already accept.
+
+If one supposes that space cannot be a counterpositive of absolute absence because there is no cognition that “space is absent here,” the same argument would also exclude its being a counterpositive of prior absence or destruction: there is no perception, inference, or consequence that establishes those either. Conversely, mere generalization would establish all of them alike. The argument therefore has to be settled by the way the locus and relation are actually presented, not by adding an unsupported relation after the fact.
+
+On this account, falsity is being the counterpositive of an absolute absence whose locus is sheer existence. One might object that being and absence would then fail to conflict, so their cognitions could not sublate one another. But things at different levels of reality can coexist without conflict. What conflicts are two empirically real cognitions of the same locus and the same thing: where the empirical absolute absence of a pot is present, that pot is not empirically present.
+
+**Objection.** In the correction “This is a shell, not silver,” the cognition of absence is itself empirical. Even if it removes ordinary reality from the silver that appeared before us, it leaves the silver's phenomenal existence untouched. Then, even after correction, the cognition “this is silver” should continue.
+
+**Reply.** Direct, immediate knowledge—“This is a shell”—removes the ignorance that supplied the apparent silver. When that ignorance is removed, the phenomenal existence of the silver is removed as well. If the basis is known only indirectly and the ignorance that produced the illusion remains, the appearance may continue despite the loss of ordinary reality. Thus a cognition such as “the jaggery is bitter” may remain in the relevant sense after only an indirect correction. In the same way, before direct realization of non-dual Brahman, indirect knowledge may remove the world's empirical status while the appearance continues; when the ignorance of the basis is removed by direct realization, the appearance will no longer continue.
+
+This also answers the objection that, if “locus” means merely any locus, form would be false because form is absolutely absent in air. There is no overextension once the relation and the particular respect in which the locus was presented are fixed. If, however, “locus” is taken to mean the underlying basis of an illusion, circularity would follow: the cognition would be called erroneous because its object is false, and the object false because the cognition is erroneous. The relation-sensitive account avoids that circularity.
+
+**Objection.** The scripture “That same one is below” presents Brahman in a locus delimited by space and time. Since Brahman is not ultimately absent there, would the definition make Brahman false? And if Brahman is without qualities, does it not also lack the properties of being and nonbeing, so that the definition would apply to it?
+
+**Reply.** No. Brahman is not a locus of the property of being a counterpositive of an absence. Since the definition does not treat absence as a property separate from its locus, Brahman's lack of such a property does not make Brahman false. Nor does this mean Brahman lacks truth. Brahman is itself of the nature of being, so the absence that constitutes falsity is not opposed to its nature. The Upaniṣadic teaching that Brahman is “reality, knowledge, and infinite” remains intact.
+
+The same reasoning applies to self-luminosity and the other descriptions of Brahman. Self-luminosity is the absence of dependence on another cognition; eternality is the absence of limitation by time; all-pervasiveness is the absence of limitation by space; fullness is the absence of limitation by other things. Although Brahman is not a bearer of positive qualities, it can be described through the absence of every limiting property. There is therefore no inconsistency.
+
+**Translator's note:** “Counterpositive” means the object whose absence is asserted. “Sublation” is the correction of an appearance by a cognition that cancels it. “Locus” here means the basis in which an object is presented, with the relevant relation and delimiting condition held fixed. The *Tattvapradīpikā* is quoted by Madhusūdana within the argument; its words are not a later commentary inserted into the base text.
+
+
+## Work log
+
+- Manually translated in this working draft: opening verses 1–4 and the first four titled units of the first pariccheda.
+- Still unfinished: 59 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
+- The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with this draft.
+- The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
