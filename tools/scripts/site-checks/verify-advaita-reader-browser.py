@@ -74,14 +74,14 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
                 work,
             )
             units = data.get("units", [])
-            if len(units) <= 50:
-                direct_link = page.locator(f'a[href*="book-chapter.html?work={work}"][href*="full=1"]').first
-                require(direct_link.count() > 0, f"{work}: short work still links through a contents page")
-                direct_link.click()
+            directory_href = directory_link.get_attribute("href") or ""
+            if "book-chapter.html" in directory_href:
+                require("full=1" in directory_href,
+                        f"{work}: direct directory route does not open the full text")
             else:
-                contents_link = page.locator(f'a[href*="book-contents.html?work={work}"]').first
-                require(contents_link.count() > 0, f"{work}: long work has no contents route")
-                contents_link.click()
+                require("book-contents.html" in directory_href,
+                        f"{work}: directory link is neither a full-text nor a contents route")
+            directory_link.click()
             found = True
             break
     require(found, f"{work}: no directory route to its contents page")
@@ -150,15 +150,17 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
         """card => {
           const ref=card.querySelector(':scope > h2');
           const deva=card.querySelector(':scope > .gita-sanskrit');
-          const transliterationButton=card.querySelector(':scope > .reader-transliteration-toggle');
           const iast=card.querySelector(':scope > .reader-inline-iast');
           const en=card.querySelector(':scope > .gita-translation');
-          return {ref:!!ref,deva:!!deva,transliterationButton:!!transliterationButton,iast:!!iast,en:!!en,ordered:!!ref && !!deva && !!transliterationButton && !!iast && !!en
+          const controls=card.querySelector(':scope > .reader-disclosure-actions');
+          const transliterationButton=controls?.querySelector(':scope > .reader-transliteration-toggle');
+          const wordButton=controls?.querySelector(':scope > .reader-word-toggle');
+          return {ref:!!ref,deva:!!deva,transliterationButton:!!transliterationButton,wordButton:!!wordButton,iast:!!iast,en:!!en,ordered:!!ref && !!deva && !!transliterationButton && !!wordButton && !!iast && !!en
             && ref.compareDocumentPosition(deva)&Node.DOCUMENT_POSITION_FOLLOWING
-            && deva.compareDocumentPosition(transliterationButton)&Node.DOCUMENT_POSITION_FOLLOWING
-            && transliterationButton.compareDocumentPosition(iast)&Node.DOCUMENT_POSITION_FOLLOWING
             && deva.compareDocumentPosition(iast)&Node.DOCUMENT_POSITION_FOLLOWING
-            && iast.compareDocumentPosition(en)&Node.DOCUMENT_POSITION_FOLLOWING};
+            && iast.compareDocumentPosition(en)&Node.DOCUMENT_POSITION_FOLLOWING
+            && en.compareDocumentPosition(controls)&Node.DOCUMENT_POSITION_FOLLOWING
+            && transliterationButton.parentElement===wordButton.parentElement};
         }"""
     )
     require(first_order["ordered"], f"{work}: Sanskrit → transliteration control → IAST → English rendering order is wrong")
@@ -187,7 +189,7 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
           return {
             cards:cards.length,
             referencesMatch:cards.every((card,index)=>card.id===String(units[index].id)),
-            referenceLabelsMatch:cards.every((card,index)=>card.querySelector(':scope > h2')?.textContent===`${payload.iast} ${String(units[index].number || (units[index].sourceNumbers||[]).join(' · ') || index+1)}`),
+            referenceLabelsMatch:cards.every((card,index)=>card.querySelector(':scope > h2')?.textContent===String(units[index].number || (units[index].sourceNumbers||[]).join(' · ') || index+1)),
             jumpControl:(()=>{const input=document.querySelector('#reader-jump-input'),range=document.querySelector('#reader-jump-range'),label=document.querySelector('#reader-jump-label');return !!input&&!!range&&!!label&&input.max===String(cards.length)&&range.textContent===`1–${cards.length}`&&label.textContent.trim()===(payload.prose?'Go to section:':'Go to verse:');})(),
             noMetadataBoilerplate:!document.querySelector('#work-author,.shankara-reader-coverage,.reader-citation-details')&&!document.body.innerText.includes('Text source, authorship, and translation credit'),
             alternateTranslations:document.querySelectorAll('.reader-edition-translation').length,
@@ -196,8 +198,8 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             expectedSourceNotes:optionalCount('sourceNote')+optionalCount('editorialNote')+optionalCount('commentary')+optionalCount('note')+optionalCount('notes'),
             sourceReferences:document.querySelectorAll('.reader-source-reference').length,
             expectedSourceReferences:sourceRefs,
-            hasWordGloss:!!cards[0]?.querySelector('.gita-details > summary'),
-            glossUnits:cards.filter(card=>card.querySelector('.gita-details > summary')).length,
+            hasWordGloss:!!cards[0]?.querySelector('.reader-word-toggle'),
+            glossUnits:cards.filter(card=>card.querySelector('.reader-word-toggle')).length,
             expectedGlossUnits:units.filter(unit=>Array.isArray(unit.gloss)&&unit.gloss.some(word=>word&&word.sa&&word.en)).length,
             completeGloss:cards.every((card,index)=>{const words=(units[index].gloss||[]).filter(word=>word&&word.sa&&word.en);const rows=[...card.querySelectorAll('.gita-word-row')];return words.length===rows.length&&rows.every((row,wordIndex)=>row.querySelector('.gita-word-dev')?.textContent===String(words[wordIndex].sa).trim()&&row.querySelector('.gita-word-gloss')?.textContent===String(words[wordIndex].en).trim());}),
             completeTranslation:cards.every((card,index)=>card.querySelector('.gita-translation')?.textContent===units[index].translation),
@@ -224,9 +226,27 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
     layout = rendered["standardizedLayout"]
     require(layout["titleAlign"] == "center" and layout["titleColor"] == "rgb(73, 107, 108)" and "Merriweather" in layout["titleFont"] and abs(layout["jumpLeft"]-layout["readingLeft"]) <= 3 and abs(layout["jumpWidth"]-layout["readingWidth"]) <= 4 and layout["paper"] == "rgb(255, 253, 250)" and layout["perUnitReveals"] and layout["readerStylesheets"] and "shankara-reader-standard.css" in layout["readerStylesheets"][-1],
             f"{work}: standardized scholarly layout or sole per-entry reveal changed ({layout})")
-    require(layout["jumpMax"] == str(len(units)) and layout["noSidebar"] and layout["referenceColor"] == "rgb(38, 35, 31)" and layout["sanskritColor"] == "rgb(0, 0, 0)" and layout["sanskritAlign"] == "center" and layout["sanskritTextColor"] == "rgb(0, 0, 0)" and layout["sanskritTextWeight"] == "700" and layout["sanskritBackground"] == "rgba(0, 0, 0, 0)" and layout["translationColor"] == "rgb(0, 0, 0)" and layout["translationWeight"] == "400" and layout["translationAlign"] == "left" and layout["transliterationAlign"] == "center" and layout["transliterationDefault"] and layout["iastStyle"] == "italic" and not layout["sectionIntro"],
+    require(layout["jumpMax"] == str(len(units)) and layout["noSidebar"] and layout["referenceColor"] == "rgb(50, 100, 102)" and layout["sanskritColor"] == "rgb(0, 0, 0)" and layout["sanskritAlign"] == "center" and layout["sanskritTextColor"] == "rgb(0, 0, 0)" and layout["sanskritTextWeight"] == "700" and layout["sanskritBackground"] == "rgba(0, 0, 0, 0)" and layout["translationColor"] == "rgb(0, 0, 0)" and layout["translationWeight"] == "400" and layout["translationAlign"] == "left" and layout["transliterationAlign"] == "center" and layout["transliterationDefault"] and layout["iastStyle"] == "italic" and not layout["sectionIntro"],
             f"{work}: the full-width reader or compact verse jump changed ({layout})")
-    transliteration_button = page.locator("#chapter-content > .shankara-verse > .reader-transliteration-toggle").first
+    controls = page.locator("#chapter-content > .shankara-verse > .reader-disclosure-actions").first
+    control_style = controls.evaluate(
+        """row => {
+          const transliteration=row.querySelector('.reader-transliteration-toggle');
+          const word=row.querySelector('.reader-word-toggle');
+          const translation=row.parentElement.querySelector('.gita-translation');
+          const transliterationStyle=getComputedStyle(transliteration);
+          const wordStyle=getComputedStyle(word);
+          const translationStyle=getComputedStyle(translation);
+          return {
+            adjacent:transliteration.parentElement===word.parentElement&&transliteration.nextElementSibling===word,
+            sameStyle:transliterationStyle.color===wordStyle.color&&transliterationStyle.borderColor===wordStyle.borderColor&&transliterationStyle.borderRadius===wordStyle.borderRadius,
+            noTranslationRule:translationStyle.borderLeftWidth==='0px'&&translationStyle.paddingLeft==='0px'
+          };
+        }"""
+    )
+    require(control_style["adjacent"] and control_style["sameStyle"] and control_style["noTranslationRule"],
+            f"{work}: disclosure buttons are not paired consistently or the translation rule remains ({control_style})")
+    transliteration_button = controls.locator(".reader-transliteration-toggle").first
     transliteration = page.locator("#chapter-content > .shankara-verse > .reader-inline-iast").first
     transliteration_button.click()
     require(transliteration_button.inner_text().strip() == "Hide transliteration" and transliteration.is_visible() and transliteration_button.get_attribute("aria-expanded") == "true",
@@ -234,8 +254,10 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
     transliteration_button.click()
     require(transliteration_button.inner_text().strip() == "Show transliteration" and not transliteration.is_visible() and transliteration_button.get_attribute("aria-expanded") == "false",
             f"{work}: Hide transliteration does not collapse its text")
-    page.locator("#chapter-content > .shankara-verse .gita-details > summary").first.click()
-    require(page.locator("#chapter-content > .shankara-verse .gita-details").first.get_attribute("open") is not None,
+    gloss_button = controls.locator(".reader-word-toggle").first
+    gloss_button.click()
+    require(gloss_button.get_attribute("aria-expanded") == "true"
+            and page.locator("#chapter-content > .shankara-verse > .gita-reveal").first.is_visible(),
             f"{work}: Word for Word control does not reveal its gloss")
 
     # The compact control's maximum is the last visible entry and jumps to it.

@@ -64,15 +64,24 @@
     contentNode.append(paragraph);
   }
 
-  function makeGloss(words) {
+  function makeGloss(words, id) {
     var validWords = Array.isArray(words) ? words.filter(function (word) { return word && word.sa && word.en; }) : [];
     if (!validWords.length) return null;
-    var details = document.createElement("details");
-    details.className = "gita-details shankara-word-gloss";
-    var summary = document.createElement("summary");
-    summary.textContent = "Word for Word";
+    var toggle = document.createElement("button");
+    toggle.className = "reader-word-toggle";
+    toggle.type = "button";
+    toggle.textContent = "Word for Word";
+    toggle.setAttribute("aria-expanded", "false");
     var reveal = document.createElement("div");
     reveal.className = "gita-reveal";
+    reveal.id = id + "-word-for-word";
+    reveal.hidden = true;
+    toggle.setAttribute("aria-controls", reveal.id);
+    toggle.addEventListener("click", function () {
+      var expanded = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", String(expanded));
+      reveal.hidden = !expanded;
+    });
     var list = document.createElement("div");
     list.className = "gita-word-list";
     validWords.forEach(function (word) {
@@ -85,15 +94,14 @@
       deva.lang = "sa-Deva";
       deva.textContent = String(word.sa).trim();
       source.append(deva);
-      var gloss = document.createElement("span");
-      gloss.className = "gita-word-gloss";
-      gloss.textContent = String(word.en).trim();
-      row.append(source, gloss);
+      var wordGloss = document.createElement("span");
+      wordGloss.className = "gita-word-gloss";
+      wordGloss.textContent = String(word.en).trim();
+      row.append(source, wordGloss);
       list.append(row);
     });
     reveal.append(list);
-    details.append(summary, reveal);
-    return details;
+    return { toggle: toggle, reveal: reveal };
   }
 
   function referenceFor(unit, index) {
@@ -154,9 +162,11 @@
     card.id = String(unit.id);
     card.setAttribute("aria-label", qualifiedReferenceFor(metadata, unit, index));
 
+    var readerNumber = referenceFor(unit, index);
+    card.style.setProperty("--reader-reference-gutter", Math.max(46, Math.ceil(readerNumber.length * 8 + 14)) + "px");
     var reference = document.createElement("h2");
-    reference.textContent = qualifiedReferenceFor(metadata, unit, index);
-    reference.dataset.readerNumber = referenceFor(unit, index);
+    reference.textContent = readerNumber;
+    reference.setAttribute("aria-label", qualifiedReferenceFor(metadata, unit, index));
     reference.className = "reader-reference";
 
     var sanskrit = document.createElement("div");
@@ -191,7 +201,14 @@
     translation.className = "gita-translation";
     translation.textContent = String(unit.translation || "");
 
-    card.append(reference, sanskrit, transliterationButton, iast, translation);
+    var controls = document.createElement("div");
+    controls.className = "reader-disclosure-actions";
+    controls.append(transliterationButton);
+    var gloss = makeGloss(unit.gloss, card.id);
+    if (gloss) controls.append(gloss.toggle);
+
+    card.append(reference, sanskrit, iast, translation, controls);
+    if (gloss) card.append(gloss.reveal);
 
     if (unit.editionTranslation) {
       var editionTranslation = document.createElement("p");
@@ -212,14 +229,6 @@
       sourceReferenceLabel.textContent = "Source reference";
       sourceReferenceNode.append(sourceReferenceLabel, document.createTextNode(sourceReferences));
       card.append(sourceReferenceNode);
-    }
-
-    var gloss = makeGloss(unit.gloss);
-    if (gloss) {
-      var controls = document.createElement("div");
-      controls.className = "gita-controls";
-      controls.append(gloss);
-      card.append(controls);
     }
 
     [
@@ -330,6 +339,7 @@
       var contentsItems = navigation.itemsForContents(work, data);
       var pageActions = root.querySelector(".reader-page-actions");
       var canBrowseContents = !isShortText && contentsItems.length > 0;
+      if (!canBrowseContents) isFullText = true;
       contentsLink.hidden = !canBrowseContents;
       fullTextLink.hidden = !canBrowseContents || isFullText;
       if (pageActions) pageActions.hidden = !canBrowseContents;

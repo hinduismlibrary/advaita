@@ -169,6 +169,7 @@
   }
 
   function pageItems(work, data) {
+    if (works[work] && works[work].editorial) return [];
     if (work === "panchadasi" || work === "mandukya-karika" || work === "upadesha-sahasri") return groupedBy(work, data, "chapter");
     if (work === "vedantasara") return groupedBy(work, data, "chapter");
     if (["naishkarmya-siddhi", "brahma-siddhi", "bhaja-govindam"].indexOf(work) >= 0) return sectionItems(work, data).map(function (item) {

@@ -19,19 +19,21 @@ const expectedWorks = [
   "yati-panchakam", "dakshinamurti-ashtakam", "hastamalaka-stotram"
 ];
 const expectedContentsItems = {
-  "advaita-makaranda": 0, "aparokshanubhuti": 5, "atma-bodha": 7, "atmavidya-vilasa": 3,
-  "upadesha-panchakam": 0, "upadesha-sahasri": 22, "ekashloki": 0, "tattvabodha": 6, "dashashloki": 0,
+  "advaita-makaranda": 0, "aparokshanubhuti": 0, "atma-bodha": 0, "atmavidya-vilasa": 0,
+  "upadesha-panchakam": 0, "upadesha-sahasri": 22, "ekashloki": 0, "tattvabodha": 0, "dashashloki": 0,
   "drg-drsya-viveka": 0, "naishkarmya-siddhi": 4, "panchadasi": 15, "panchikarana-prakarana": 0,
   "brahmajnanavali-mala": 0, "brahma-siddhi": 4, "mandukya-karika": 4, "vedantasara": 6,
-  "vivekachudamani": 5, "svsss": 6, "advaita-pancharatnam": 0, "kashi-panchakam": 0,
+  "vivekachudamani": 0, "svsss": 0, "advaita-pancharatnam": 0, "kashi-panchakam": 0,
   "nirvana-shatkam": 0, "bhaja-govindam": 4, "manisha-panchakam": 0, "maya-panchakam": 0,
   "shatpadi-stotram": 0, "yati-panchakam": 0, "dakshinamurti-ashtakam": 0, "hastamalaka-stotram": 0
 };
 const directTextWorks = new Set([
-  "advaita-makaranda", "upadesha-panchakam", "ekashloki", "tattvabodha", "dashashloki",
+  "advaita-makaranda", "aparokshanubhuti", "atma-bodha", "atmavidya-vilasa", "upadesha-panchakam",
+  "ekashloki", "tattvabodha", "dashashloki",
   "drg-drsya-viveka", "panchikarana-prakarana", "brahmajnanavali-mala", "advaita-pancharatnam",
   "kashi-panchakam", "nirvana-shatkam", "bhaja-govindam", "manisha-panchakam", "maya-panchakam",
-  "shatpadi-stotram", "yati-panchakam", "dakshinamurti-ashtakam", "hastamalaka-stotram"
+  "shatpadi-stotram", "yati-panchakam", "dakshinamurti-ashtakam", "hastamalaka-stotram",
+  "vivekachudamani", "svsss"
 ]);
 const editorialWorks = new Set(["aparokshanubhuti", "atma-bodha", "atmavidya-vilasa", "tattvabodha", "vivekachudamani", "svsss"]);
 const expectedEditorialNote = "The following thematic divisions are editorial aids to navigation and do not represent original chapters of the Sanskrit text.";
@@ -110,16 +112,17 @@ for (const work of expectedWorks) {
 
 if (!contentsPage.includes("shankara-reader-navigation.js") || !chapterPage.includes("shankara-reader-runtime.js")) fail("A shared reader page is missing the navigation/runtime bundle.");
 if (contentsPage.includes("fallbackRanges") || chapterPage.includes("fallbackRanges") || chapterPage.includes("window.location.replace")) fail("Legacy range fabrication or a reader-page redirect remains in the shared reader.");
-if (!contentsPage.includes("units.length<=50") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts do not bypass the contents page.");
+if (!contentsPage.includes("units.length<=50||!items.length") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts and works without source divisions do not bypass the contents page.");
 if (!chapterPage.includes("reader-jump-form") || !runtime.includes("jumpInput.max = String(maximum)")) fail("The compact Go to verse/section control or its maximum is missing.");
 if (chapterPage.includes("chapter-list") || chapterPage.includes("work-author") || runtime.includes("Text source, authorship, and translation credit")) fail("The reader still includes the old contents list or metadata boilerplate.");
 const brahmaLegacyPage = read(path.join(site, "books/adi-shankaracharya/brahma-siddhi/index.html"));
 if (!brahmaLegacyPage.includes("book-contents.html") || brahmaLegacyPage.includes("book-chapter.html?work=brahma-siddhi&amp;full=1")) fail("Brahmasiddhi's default route still opens the entire work at once.");
-if (!runtime.includes('card.append(reference, sanskrit, transliterationButton, iast, translation)') || !runtime.includes('transliterationButton.textContent = "Show transliteration"') || !runtime.includes('summary.textContent = "Word for Word"')) fail("Reader verse order or per-unit disclosures have changed.");
+if (!runtime.includes('card.append(reference, sanskrit, iast, translation, controls)') || !runtime.includes('reference.textContent = readerNumber') || !runtime.includes('transliterationButton.textContent = "Show transliteration"') || !runtime.includes('toggle.textContent = "Word for Word"') || !runtime.includes('controls.append(gloss.toggle)')) fail("Reader verse order, visible references, or paired disclosures have changed.");
 for (const preserved of ["editionTranslation", "editorialNote", "sourceNote", "sourceNumbers"]) {
   if (!runtime.includes(preserved)) fail(`Reader no longer preserves the ${preserved} source-data field.`);
 }
 if (!styles.includes("display:block!important;width:100%!important;max-width:none!important")) fail("The reader does not use the full available width.");
+if (styles.includes("border-left:2px solid #a5a9aa") || !styles.includes(".reader-disclosure-actions>button")) fail("The translation rule or matched disclosure controls have returned.");
 if (styles.includes(".side-toc") || styles.includes(".advaita-mobile-contents-toggle") || styles.includes(".reader-citation-details")) fail("The reader still contains sidebar or citation boilerplate styling.");
 if (!styles.includes(".reader-edition-translation")) fail("Alternate edition translations have no shared reader styling.");
 
