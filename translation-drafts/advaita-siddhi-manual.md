@@ -101,3 +101,19 @@ Therefore, just as the moderator sets the terms of a debate, a neutral moderator
 - Translated here: opening verses 1–4 and the first titled argument.
 - Still to translate: the remainder of the first pariccheda, the whole second, third, and fourth paricchedas.
 - Do not move this draft to the live reader or describe the book as complete until every source section has been translated and checked.
+
+
+## First pariccheda — continued
+
+### Considering what delimits the inferential subject
+
+**Source heading:** पक्षतावच्छेदकविचारः
+
+The passage now considers what precisely counts as the subject of an inference. If the aim is to establish the predicate as applying throughout the range fixed by the subject's delimiting condition, then, on one account, the proof is redundant even when the predicate has already been established for only part of that range. To avoid that result in the shell-and-silver example, the subject is qualified as “not sublated by any knowledge other than knowledge of Brahman.” If, however, the aim is to establish the predicate exactly within the range fixed by that delimiting condition, then proving it for a part of the range does not make the proof redundant. On that account, this extra qualification can be left out. The other two qualifications must still be retained: they prevent the subject from wrongly including sheer nonexistence or Brahman.
+
+Alternatively, the disagreement can be stated one object at a time: “Is space unreal, or not? Is the earth unreal, or not?” If space, earth, and the other elements are each treated as the subject, a pot and similar things do not become cases of a doubtful, inconclusive reason. A pot has the same status as the subject. Doubt about the predicate is appropriate in the subject; it becomes a defect only when it occurs outside the subject. Thus the fallacy of a doubtful, inconclusive reason occurs when the reason is uncertain in a case where the absence of the predicate is certain. “Being a subject” can mean either being a case where the predicate is in doubt or lacking a valid cognition that establishes the predicate. Pots share that status, so their inclusion is not a defect. Calling them “equal to the subject” means only that they are not themselves named in the proposition. But being named in a proposition cannot be what makes something a subject, because inference for oneself need not be expressed as a proposition.
+
+Earlier logicians state the inference in this form: “The disputed world is false, because it is perceptible, inert, and limited, like the silver seen in a shell.” There is no need to insist on every formal limb of the inference. Because the disagreement is already governed by an agreed convention, using a concise way of delimiting the subject is not a problem. The convention may not be present at the moment of inference, yet it can still indicate how the subject is delimited. Or the delimiting condition of the subject may simply be whatever delimits the subject matter of the disagreement. On either reading, the older inference's word “disputed” causes no difficulty.
+
+**Translator's note:** “Predicate” here renders *sādhya*, the point to be established; “reason” renders *hetu*. “Shell-silver” is the standard example of silver mistakenly perceived in a shell.
+
