@@ -195,32 +195,110 @@ html body.vd-chrome-page.scripture-index-page.purana-reader-page .section-headin
   font-size:.82em!important
 }
 
-/* Bhagavad Gītā chapter index: compact row format matching the Purāṇa contents lists. */
-body.scripture-index-page.gita-contents-page .chapter-list{
-  columns:1!important;
-  column-gap:0!important;
+/* Numbered contents layout for the Gītā and Bhaviṣya index pages. */
+body.scripture-index-page.numbered-contents-page .chapter-list{
+  columns:3!important;
+  column-gap:28px!important;
   margin:0!important;
   padding:0!important;
   list-style:none!important;
 }
-body.scripture-index-page.gita-contents-page .chapter-number{
+html body.vd-chrome-page.scripture-index-page.numbered-contents-page .chapter-list{
+  columns:3!important;
+  column-gap:28px!important;
+  margin:0!important;
+  padding:0!important;
+  list-style:none!important;
+}
+body.scripture-index-page.numbered-contents-page #part-1 .chapter-list,
+html body.vd-chrome-page.scripture-index-page.numbered-contents-page #part-1 .chapter-list{
+  columns:2!important;
+}
+body.scripture-index-page.numbered-contents-page .chapter-list li{
+  break-inside:avoid!important;
+  margin:0!important;
+  padding:0 0 .15em!important;
+}
+body.scripture-index-page.numbered-contents-page .chapter-list a{
+  display:block!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:5px 3px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#0645ad!important;
+  font:15px/1.5 Arial,Helvetica,sans-serif!important;
+  text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+}
+body.scripture-index-page.numbered-contents-page .chapter-list a:hover,
+body.scripture-index-page.numbered-contents-page .chapter-list a:focus-visible{
+  background:#f8f9fa!important;
+  text-decoration:underline!important;
+}
+body.scripture-index-page.numbered-contents-page .chapter-name-tools,
+body.scripture-index-page.numbered-contents-page .purana-chapter-name-tools{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:6px!important;
+  margin:0 0 10px!important;
+  color:#202122!important;
+  font:13px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.scripture-index-page.numbered-contents-page .chapter-name-tools input,
+body.scripture-index-page.numbered-contents-page .purana-chapter-name-tools input{
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  accent-color:#0645ad;
+}
+body.scripture-index-page.numbered-contents-page .purana-chapter-reference{
+  display:inline-block!important;
+  min-width:3.3em!important;
+  color:#0645ad!important;
+  font:400 13px/1.4 Arial,Helvetica,sans-serif!important;
+  font-variant-numeric:tabular-nums!important;
+}
+body.scripture-index-page.numbered-contents-page .purana-chapter-name{
+  display:block!important;
+  margin:.12em 0 0 3.4em!important;
+  color:#202122!important;
+  font:400 13px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.scripture-index-page.numbered-contents-page .purana-chapter-name[hidden]{
+  display:none!important;
+}
+body.scripture-index-page.gita-contents-page.numbered-contents-page .chapter-number{
   display:inline!important;
   margin:0 .4em 0 0!important;
-  color:#54595d!important;
-  font-size:13px!important;
+  color:#0645ad!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
 }
-body.scripture-index-page.gita-contents-page .chapter-name{
+body.scripture-index-page.gita-contents-page.numbered-contents-page .chapter-name,
+body.scripture-index-page.gita-contents-page.numbered-contents-page .chapter-gloss{
+  display:none!important;
+}
+body.scripture-index-page.gita-contents-page.numbered-contents-page.gita-chapter-names-visible .chapter-name{
   display:inline!important;
   margin:0!important;
   color:#202122!important;
-  font:700 14px/1.45 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
+  font:700 14px/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
 }
-body.scripture-index-page.gita-contents-page .chapter-name::after{
+body.scripture-index-page.gita-contents-page.numbered-contents-page.gita-chapter-names-visible .chapter-name::after{
   content:" — "!important;
   color:#202122!important;
-  font:400 15px/1.65 Arial,Helvetica,sans-serif!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
 }
-body.scripture-index-page.gita-contents-page .chapter-iast{
+body.scripture-index-page.gita-contents-page.numbered-contents-page.gita-chapter-names-visible .chapter-gloss{
+  display:inline!important;
+  margin:0!important;
+  color:#202122!important;
+  font:400 15px/1.5 Arial,Helvetica,sans-serif!important;
+}
+body.scripture-index-page.gita-contents-page.numbered-contents-page .chapter-iast{
   position:absolute!important;
   width:1px!important;
   height:1px!important;
@@ -231,9 +309,9 @@ body.scripture-index-page.gita-contents-page .chapter-iast{
   white-space:nowrap!important;
   border:0!important;
 }
-body.scripture-index-page.gita-contents-page .chapter-gloss{
-  display:inline!important;
-  margin:0!important;
-  color:#202122!important;
-  font:400 15px/1.65 Arial,Helvetica,sans-serif!important;
+@media(max-width:700px){
+  body.scripture-index-page.numbered-contents-page .chapter-list,
+  html body.vd-chrome-page.scripture-index-page.numbered-contents-page .chapter-list{
+    columns:1!important;
+  }
 }
