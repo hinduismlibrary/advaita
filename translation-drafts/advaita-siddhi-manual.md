@@ -117,3 +117,39 @@ Earlier logicians state the inference in this form: “The disputed world is fal
 
 **Translator's note:** “Predicate” here renders *sādhya*, the point to be established; “reason” renders *hetu*. “Shell-silver” is the standard example of silver mistakenly perceived in a shell.
 
+
+
+### First definition of falsity: neither absolutely real nor absolutely unreal
+
+**Source heading:** अथ सदसद्विलक्षणत्वरूपप्रथममिथ्यात्वविचारः
+
+**Objection.** What kind of falsity is to be proved? The *Pañcapādikā* says that *mithyā* means “indefinable,” and describes the indefinable as not belonging to either reality or unreality. But what does this description mean? Does it mean (1) the absence of nonbeing qualified by being; (2) the two properties of absolute absence of being and absolute absence of nonbeing; or (3) an object qualified by both—absolutely lacking being and absolutely lacking nonbeing?
+
+The first account does not work. The world is not accepted as nonbeing qualified by being, when being alone is its basis; and proving the absence of that qualification would merely prove what is already established.
+
+The second account also fails. If being and nonbeing are treated as strict opposites, the absence of one requires the presence of the other, so they cannot both be absent. This account also applies too widely: attribute-free Brahman would lack being as an attribute, yet it remains real by its very nature. It would therefore count as false even though that is not intended. The account also fails to establish the predicate for shell-silver. Although shell-silver is not absolutely real—it is sublated—the proposed definition does not establish the required absence of absolute nonbeing in that case. The proof would therefore fail to cover the intended example.
+
+The third account appears to fail for the same reasons: it brings back the contradiction, the unwanted result concerning Brahman, and the failure to cover shell-silver.
+
+**Reply.** No. Those objections do not apply if the intended account consists of two properties: absolute absence of being and absolute absence of nonbeing. There is no contradiction unless being and nonbeing stand in one of three stronger relations: direct mutual exclusion; each extending throughout the other's absence; or each being included wherever the other's absence occurs.
+
+The first relation is not accepted here. “Being,” in this discussion, means never being sublated at any of the three times. The absence of that kind of being is not absolute nonbeing. Rather, absolute nonbeing is the condition of having no locus at all in which something is cognized as existent. The predicate intended here is the absence of that condition: the thing is not absolutely real, yet it is cognized as existent in some locus. Thus the predicate is that the thing differs from what is never sublated, while still appearing as existent somewhere. Shell-silver meets this description, so the predicate is not missing from the example.
+
+Nor are the absences of being and nonbeing equivalent in the second way. Shell-silver, which is not absolutely real, still appears as existent; its case shows that one absence does not simply extend wherever the other occurs. The third relation does not force a contradiction either. Cowhood and horsehood may be mutually exclusive, yet a camel can lack both. The absence of two mutually exclusive properties can coexist in one thing.
+
+**Objection.** It was also argued that the world should count as real because Brahman, though without attributes, is of the nature of being, and the world too is experienced as being.
+
+**Reply.** That does not follow. One existence, common to all things, is enough to explain why “is” is experienced throughout the world. There is no warrant for supposing that every part of the world has its own independent nature of being, like Brahman; that would also undermine the common use of the word “is.”
+
+Alternatively, the predicate may be stated as two differences: difference from what is real and difference from what is absolutely unreal. If the world were identical with both, or identical with either one, those differences could not be present; this formulation therefore does not create the alleged extra result.
+
+**Objection.** One might say that part of the predicate is already established: the world is already known to be different from absolute nonbeing, so proving it again is redundant.
+
+**Reply.** Not so. In an argument that qualities are both different from and non-different from their qualified objects because they are spoken of in the same grammatical construction, an opponent may already accept difference by itself. Yet the intended point is the combined apprehension of difference and non-difference, so the proof is not redundant. The same applies here. The aim is to establish the combined apprehension of something that appears as existent even though it is not absolutely real. Just as one might aim to establish the combined identity expressed by “the pot is a jar” when that shared reference is not otherwise observed, here the target is the combined status of the world as perceptible yet not absolutely real.
+
+The combined or qualified predicate may therefore be used. One might object that it is never found anywhere and is an unestablished qualification; or that knowing each part separately would allow one to prove something impossible, like a hare's horn. But the particular combination at issue is already found in shell-silver, so the qualification is not unestablished and the hare's-horn comparison does not apply.
+
+Nor does this account wrongly include Brahman because Brahman is without attributes and so lacks being and nonbeing as attributes. Brahman is of the nature of being, so it is not a locus of the absolute absence of being. And because it is without attributes, it is not a locus of attributes consisting in absences either. That is the point.
+
+**Translator's note:** *Sublation* means the correction of an earlier appearance by a later cognition that cancels it, as when supposed silver is recognized as a shell. *Counterpositive* means the thing whose absence is asserted. The example “the pot is a jar” illustrates a single object described under two names; it is not a claim that every pot is a jar in ordinary usage.
+
