@@ -258,10 +258,24 @@ To prevent the definition from including sheer nonbeing or attribute-free Brahma
 
 **Translator's note:** “A valid means of knowledge” translates *pramāṇa*. “Sublated” means cancelled by a later, corrective cognition. The fifth account is stated briefly here; Madhusūdana says that some supporting points remain for a later discussion.
 
+### General defense of the claim that the world is false
+
+**Source heading:** अथ मिथ्यात्वसामान्योपपत्तिः
+
+**Objection.** If the falsity just defined is itself false, the world must be real. When two opposed properties are possible in one thing, the rule is that if one is false, the other is real. If falsity and reality are themselves opposed, then either falsity is false and reality is established, or falsity is both real and false; either way, the reality of the world follows and non-duality is contradicted.
+
+**Reply.** That does not follow. Even if falsity is itself sublated, the world is not thereby established as real. The rule that denying one of two opposed properties establishes the other applies where the condition that delimits what is being denied does not apply to both. For example, in shell-silver, silverhood and the absence of silverhood are mutually exclusive; so too are silverhood and being different from silver. There the properties that delimit the negation are different. In the present case, the same delimiting feature—perceptibility and the like—applies to both reality and falsity. Just as denying both cowhood and horsehood in an elephant does not make either one true, denying one of these two properties here does not make the other true.
+
+Moreover, reality and falsity are neither simply each other's absence nor properties that each extend throughout the other's absence. Even if they were mutually exclusive, properties belonging to different levels of reality would not conflict. An object's empirical falsity can remove its empirical reality without removing its imagined appearance. This is like conjunction and its absence, which logicians allow to be predicated together when the relations differ.
+
+When one property is established by a means of knowledge that sublates the other, the two belong to different levels; shell-silver and its absence are an example. When both are sublated by the same cognition, they belong to the same level; shell-silver and being distinct from the shell are an example. The world and its falsity are both sublated by the same knowledge of Brahman. They therefore have the same level of reality. Since the cognition that sublates falsity also sublates the world, there is no harm to non-duality.
+
+**Translator's note:** The passage distinguishes two ways properties can be related: one may be established while the other is cancelled, or both may be cancelled by the same cognition. That distinction is central to the reply.
+
 
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first seven titled units of the first pariccheda.
-- Still unfinished: 56 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
+- Manually translated in this working draft: opening verses 1–4 and the first eight titled units of the first pariccheda.
+- Still unfinished: 55 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
 - The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with this draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
