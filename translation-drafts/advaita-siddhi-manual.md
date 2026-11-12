@@ -4,7 +4,7 @@
 
 **Translation method:** The English below was translated by me directly from Madhusūdana Sarasvatī's Sanskrit. It was not machine-translated and was not copied from an existing English version.
 
-**Primary digital text:** [Advaita Śāradā, first pariccheda](https://www.advaitasharada.sringeri.net/read/advaitasiddhi/1/). The first pariccheda is also available in two parts on [Wikisource](https://sa.wikisource.org/wiki/अद्वैतसिद्धिः). Compare the Sanskrit against the printed edition before final publication; retain the source's genuine readings and record variants.
+**Working Sanskrit text:** [Advaita Śāradā, first pariccheda](https://www.advaitasharada.sringeri.net/read/advaitasiddhi/1/); the complete work is divided across its four pariccheda pages. The first pariccheda is also available in two parts on [Wikisource](https://sa.wikisource.org/wiki/अद्वैतसिद्धिः). The E-Bharati Unicode record identifies a 1937 Nirṇaya-Sāgar edition with 973 pages and commentaries; its opening headings subdivide material differently from Advaita Śāradā (for example, E-Bharati separately numbers arguments grouped under Advaita Śāradā's second topical unit). I am recording this as a heading and segmentation difference, not silently treating it as a Sanskrit variant. The 1937 edition edited by Anantakṛṣṇa Śāstrī has not yet been collated page by page against its scan; later commentaries must remain distinct from Madhusūdana's base text.
 
 ## Opening verses
 
@@ -67,7 +67,7 @@ Learned authors have composed many vast treatises for the benefit of others, and
 **Sanskrit**
 
 श्रद्धाधनेन मुनिना मधुसूदनेन सङ्गृह्य शास्त्रनिचयं रचितातियत्नात् ।  
-बोधाय वादिविजयाय च सत्वराणामद्वैतसिद्धिरियムस्तु मुदे बुधानाम् ॥
+बोधाय वादिविजयाय च सत्वराणामद्वैतसिद्धिरियमस्तु मुदे बुधानाम् ॥
 
 **IAST**
 
@@ -200,10 +200,36 @@ The same reasoning applies to self-luminosity and the other descriptions of Brah
 
 **Translator's note:** “Counterpositive” means the object whose absence is asserted. “Sublation” is the correction of an appearance by a cognition that cancels it. “Locus” here means the basis in which an object is presented, with the relevant relation and delimiting condition held fixed. The *Tattvapradīpikā* is quoted by Madhusūdana within the argument; its words are not a later commentary inserted into the base text.
 
+### Third account of falsity: being removable by knowledge
+
+**Source heading:** अथ तृतीयमिथ्यात्वविचारः
+
+**Definition.** Falsity may be defined as being removable by knowledge.
+
+**Objection.** This definition is too broad if it includes anything removed by a later cognition: an earlier cognition is removed by a later one. It is too narrow if it excludes things removed by non-cognitive causes: a pot and similar objects are removed by a hammer. Even if the definition is restricted to what is removed by knowledge, the difficulty remains. Shell-silver is removed by direct realization of the underlying shell, and so the example would not establish that the silver is removable by knowledge in the required sense. If instead “knowledge-removable” means removable by some property that pervades knowledge, the definition extends too far to latent impressions, which are affected by memory, a form of knowledge.
+
+**Reply.** Knowledge-removability means being the counterpositive of a general absence of persistence brought about by knowledge. Persistence has two forms: persistence as the thing itself and persistence in the form of its cause. This follows from the doctrine that an effect exists in its cause before it is manifest. When a pot is struck with a hammer, the pot ceases to exist in its own form, but its material cause remains. Its general persistence has therefore not been removed by knowledge. The definition does not wrongly include a pot destroyed by a hammer.
+
+Nor does it include an earlier cognition merely because a later cognition removes it. The earlier cognition, once it has subsided, remains in the form of its causal impression. It has not undergone a general absence of persistence. For the same reason, although a hare's horn does not persist in any form, its absence is not caused by knowledge; it is not knowledge-removable in the defined sense.
+
+Shell-silver, by contrast, must be accepted as persisting while it is being perceived. Its immediate appearance would otherwise be inexplicable. It ceases to persist only when the cognition that corrects it occurs. The ignorance that supplies the silver and the silver produced by that ignorance are removed together by direct realization of the underlying shell. The text of the *Vivaraṇa* says that sublation is the removal, through knowledge, of ignorance together with its present or already subsided effects. The *Vārttika* likewise says:
+
+> “From the very arising of right understanding produced by sentences such as ‘That thou art,’ ignorance, together with its effects, was not, is not, and will not be.”
+
+The phrase “together with its effects, was not” refers to removal along with effects that have already subsided; “together with its effects, will not be” refers to the prevention of future effects. The ignorance that produces silver in a shell is removed by direct realization of its basis, together with its present or subsided effects. Since the account accepts distinct instances of ignorance as the causes of distinct appearances of silver, the example does show the required knowledge-removability. Everyone accepts the cognition “the pot is gone” after a hammer-strike; by the same reasoning, everyone accepts the cognition “the ignorance of the shell and the silver in it are gone” after realization of the shell. There is therefore no failure of the example.
+
+**Objection.** Could “knowledge-removable” mean removable by a property that pervades knowledge? If so, a subsequent cognition does not remove a prior cognition by such a property. Rather, it removes it through a special quality of the self shared with desire and the like, or through the technical property the text calls *udīcya*. The proof would then be redundant only under a different account.
+
+**Reply.** That qualification is also acceptable. Nor does it extend the definition to latent impressions that are not removed by desire and the like. There is no valid evidence that a memory, simply as memory, removes its impression. Experience instead shows that an impression becomes stronger when a memory arises. Its increased strength is explained by the accumulation of several impressions with the same content.
+
+In fact, what is intended is knowledge-removability by direct realization. This avoids the earlier objections. There is also no unwanted extension to doubt on the ground that doubt is removed by a decisive cognition, where decisiveness is a property that pervades knowledge. The definition is thus sound.
+
+**Translator's note:** *Sublation* is the cancellation of an appearance by a correcting cognition. The passage distinguishes an object's persistence in its own visible form from persistence in its underlying cause. *Udīcya* is retained as a technical term because its precise role belongs to a Nyāya account of the qualities of the self.
+
 
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first four titled units of the first pariccheda.
-- Still unfinished: 59 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
+- Manually translated in this working draft: opening verses 1–4 and the first five titled units of the first pariccheda.
+- Still unfinished: 58 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
 - The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with this draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
