@@ -21,7 +21,7 @@
 
 māyākalpitamātṛtāmukhamṛṣādvaitaprapañcāśrayaḥ  
 satyajñānasukhātmakaḥ śrutiśikhotthākhaṇḍadhīgocaraḥ |  
-mithyābandhavidhūnanena paramānandaikatānātmakaṃ  
+mithyābandhavidhūnanena paramānandaikatānātmakaṃ  
 mokṣaṃ prāpta iva svayaṃ vijayate viṣṇurvikalpojjhitaḥ ||
 
 **Translation**
@@ -86,7 +86,7 @@ May this *Advaita Siddhi*, composed with great care by the faithful ascetic Madh
 
 Since the establishment of non-duality depends on first establishing that duality is false, the falsity of duality must be the first point proved. Proof requires both establishing one's own position and refuting the opposing position. These two tasks must be carried out through one of the recognised forms of philosophical exchange: *vāda* (debate aimed at truth), *jalpa* (contentious disputation), or *vitaṇḍā* (criticism that attacks the opponent's position without establishing one's own). Because doubt arising from disagreement has a role in inquiry, a neutral moderator must begin by stating the disagreement.
 
-That doubt, however, does not create the status of a thesis under examination. That status consists in the absence of a valid means of knowledge that would establish the thesis, together with a desire to prove it; doubt is not part of the definition. Otherwise, a person already certain of the Self on the authority of scripture could not infer it merely because they wished to do so. Nor can doubt be required on the ground that debaters are certain: if they are certain, doubt is impossible. And if one allows a doubt that they merely assume for the sake of argument, the rule would apply too broadly.
+That doubt, however, is not what creates *pakṣatā*, the status of a proposition as the subject of inference. The definition being discussed describes *pakṣatā* as the absence of a cognition that would establish the point, conjoined with the absence of a desire to establish it; doubt itself is not part of that definition. Otherwise, a person already certain of the Self on the authority of scripture could not infer it while wishing to do so. Here the text distinguishes the desire to prove a thesis (*sisādhayiṣā*) from the desire to infer (*anumitsā*). Nor can doubt be required on the ground that debaters are certain: if they are certain, doubt is impossible. And if one allows a doubt that they merely assume for the sake of argument, the rule would apply too broadly.
 
 Disagreement is not needed simply to assign the opposing roles. The moderator can do that by saying, “You must prove this,” and, “He must refute that.” Since those instructions already assign the roles, stating the disagreement would be redundant for that purpose.
 
