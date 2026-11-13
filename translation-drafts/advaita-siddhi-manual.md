@@ -419,9 +419,39 @@ Alternatively, sight requires form when it apprehends a substance, but not when 
 Thus boundedness, too, has been established as a reason for falsity. **This concludes the argument establishing boundedness as a reason.**
 
 
+
+### Establishing part-hood as a reason
+
+**Source heading:** The Advaita Śāradā text does not give this unit a separate opening heading; its closing colophon reads इत्यंशित्वहेतूपपत्तिः (“this concludes the argument establishing part-hood as a reason”). E-Bharati labels it अंशित्वादिहेतुभङ्गः (“refutation of part-hood and related reasons”). E-Bharati also splits the compound इतरांशिवत् in its transcription; Advaita Śāradā reads it as one word.
+
+Chitsukha says: “This cloth is the counterpositive of an absolute absence located in these threads, because it has parts, like another composite.” Here “threads” means the cloth's material cause. This would establish falsity as being the counterpositive of an absolute absence located in one's own material cause.
+
+**Objection.** Since the effect is not different from its cause, the cloth's dependence on the threads is already established. The proof would therefore be redundant. Or, if the cloth is not dependent on those threads, the proof would establish a different point.
+
+**Reply.** That does not follow. If effect and cause were wholly identical, the relation of cause and effect would be impossible; some difference between them must be accepted. Nor does the Brahma Sūtra passage “It is non-different from that, because of the words about its arising” contradict this. Its meaning is simply that an effect does not exist apart from its material cause. Alternatively, the subject can be qualified as an effect whose dependence solely on that cause has not been sublated; this does not shift the point to be proved. Nor is the present case already sublated: that objection will be answered later. The question whether absolute absence is established by a valid means of knowledge has also already been settled.
+
+**Objection.** A cloth can be present in these threads through conjunction. The reason would then occur in a case where the cloth is not the counterpositive of an absolute absence located in the threads.
+
+**Reply.** No. If one accepts that something inhering in the threads is the counterpositive of an absolute absence located there, one must accept the same of something conjoined with them. The proposed counterexample is therefore equal to the subject. Nor does this introduce a different point merely because the relation does not extend everywhere. If a cloth and its absence could occupy one and the same locus in the relevant respect, the distinction between the world and its absence would collapse. The opposing view does not accept that conjunction and its absence occupy the same locus in that way. If it did, the absolute absence would have to be qualified as occurring in threads delimited by this particular cloth and at this particular time. An absence at another time would then be no counterexample.
+
+Nor does the direct perception “the cloth is in these threads” defeat the argument. Such a perception is compatible with error, just as the perception that the moon is only a handspan wide is. It therefore cannot by itself sublate the inference. The text will explain the alleged sublation in detail later.
+
+**Objection.** The reason is contradictory: something that does not inhere in these threads cannot be a composite inhering in them.
+
+**Reply.** There is no contradiction. A cloth can be a counterpositive of an absolute absence located in these threads and still inhere in them. Being the counterpositive of that absence is not what makes something inhere in the threads. Otherwise, on the opponent's view, every universally present property would inhere in these threads. What makes something inhere there is, rather, its being the counterpositive of a prior absence located in them, or a related condition; that is compatible with its also being the counterpositive of their absolute absence. And “inhering in these threads” means being their product, not being joined to them by an eternal relation, which the opponent does not accept.
+
+**Objection.** One can counter this inference with another: “This cloth is not the counterpositive of an absolute absence located in these threads, because it is produced from these threads, unlike another cloth.”
+
+**Reply.** This is not an unestablished qualification. In general, being the counterpositive of an absolute absence located in these threads is itself the counterpositive of an absolute absence located somewhere. It is pervaded by being the counterpositive of a relational absence, just as being the counterpositive of a prior absence is. One might object that the absolute absence of space is known to be pervaded by relational absence in a pot, while space, because it is all-pervading, is not the counterpositive of an absolute absence located anywhere. But there is no counterexample: space's all-pervading character belongs to a universal property that is not itself a counterpositive of absence. The absolute absence of space is therefore not pervaded by being the counterpositive of a relational absence.
+
+The proposed limiting condition—that if a cloth is the counterpositive of an absolute absence in these threads, it must not have been produced from those threads—does not block the inference. In the negative pervasion, the opponent's challenge based on the non-counterpositivity of a prior absence is weak: the alleged condition does not occur in the subject, and so does not pervade the uncertain counterpositivity of the absolute absence. The argument will also show later that an opposing line of reasoning cannot establish the impossibility of perceptibility and the other proposed reasons. For the same reason, not being produced from these threads is not a limiting condition. A limiting condition must be removed when one proves the absence of the predicate, as explained above; and if conjunction is accepted as a relation that does not extend everywhere, that condition has counterexamples there. The opponent therefore has no established pervasion between being the counterpositive of the absolute absence in these threads and not being produced from them. The argument is sound.
+
+Accordingly, Vidyāsāgara's inference is sound: “The disputed world does not exist apart from cognition, because it is not apprehended apart from cognition, like dream objects.” Here the predicate, “not existing apart from cognition,” is one of the forms of falsity stated earlier. The reason is that the world is apprehended only when reflected consciousness is present. There is no difficulty in the inference. Other formulations of the argument can be established in the same way, as appropriate. May this be auspicious. **This concludes the argument establishing part-hood as a reason.**
+
+
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first ten titled units of the first pariccheda.
-- Still unfinished: 53 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
-- Advaita Śāradā and the E-Bharati Unicode text have been compared for these units. Their headings differ for the perceptibility argument and the inertness argument. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with the draft.
+- Manually translated in this working draft: opening verses 1–4 and the first twelve titled units of the first pariccheda.
+- Still unfinished: at least 51 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
+- Advaita Śāradā and the E-Bharati Unicode text have been compared for the translated units. Recorded differences include variant headings for the perceptibility, inertness, and boundedness arguments; E-Bharati also splits a compound that Advaita Śāradā prints as one word in the part-hood unit. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated page by page with the draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
