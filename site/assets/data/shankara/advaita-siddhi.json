@@ -1,0 +1,713 @@
+{
+  "id": "advaita-siddhi",
+  "title": "Advaita Siddhi",
+  "subtitle": "Madhusūdana Sarasvatī",
+  "expectedUnits": 6,
+  "longWork": true,
+  "expectedSourceUnits": null,
+  "sourceInventoryComplete": false,
+  "status": "in-progress",
+  "source": {
+    "url": "https://sa.wikisource.org/w/index.php?oldid=197990&title=अद्वैतसिद्धिः%2Fप्रथमपरिच्छेदः_भागः_१",
+    "edition": "Wikisource transcription, first pariccheda, part 1, revision 197990 (CC BY-SA 4.0).",
+    "digitalText": "Devanāgarī copied from the Wikisource transcription; no scan-based OCR was used. Whitespace and quotation typography normalized; the source spelling विप्रतिप्रत्तिजन्यसंशयस्य is preserved as it appears on that page.",
+    "license": "CC BY-SA 4.0 for the Wikisource transcription; the English translation is original for this reader.",
+    "attribution": "Wikisource contributors, Advaita Siddhi, first pariccheda, part 1, revision 197990.",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "New English translations made directly from the Wikisource Sanskrit. This installment contains the four numbered opening verses and source sections [1-1-2]–[1-1-3] only; remaining source sections are not yet included."
+  },
+  "translationCredit": "English translation made directly from Sanskrit for this reader.",
+  "progressNote": "In progress. This installment contains opening verses 1–4 and sections 2–3 only; the remaining sections and paricchedas are not yet included.",
+  "units": [
+    {
+      "id": "advaita-siddhi-opening-1",
+      "label": "Verse 1",
+      "number": "1",
+      "sourceNumbers": [
+        "1"
+      ],
+      "format": "verse",
+      "chapter": 1,
+      "sectionTitle": "Opening verses 1–4",
+      "deva": "मायाकल्पितमातृतामुखमृषाद्वैतप्रपञ्चाश्रयः\nसत्यज्ञानसुखात्मकः श्रुतिशिखोत्थाखण्डधीगोचरः ।\nमिथ्याबन्धविधूननेन परमानन्दैकरतानात्मकं\nमोक्षं प्राप्त इव स्वयं विजयते विष्णुर्विकल्पोज्झितः ॥1॥",
+      "translation": "Free from conceptual divisions, Viṣṇu himself shines forth as though he had attained liberation. That liberation is a single, unbroken fullness of supreme bliss, reached by the removal of false bondage. He is the ground of the false duality-world projected by Māyā, beginning with the apparent knower; his nature is reality, consciousness, and bliss, and he is known by the undivided understanding arising from the Upaniṣads.",
+      "gloss": [
+        {
+          "sa": "मायाकल्पित",
+          "en": "projected by Māyā"
+        },
+        {
+          "sa": "मातृतामुख",
+          "en": "beginning with the apparent knower"
+        },
+        {
+          "sa": "मृषाद्वैतप्रपञ्चाश्रयः",
+          "en": "the ground of the false duality-world"
+        },
+        {
+          "sa": "सत्यज्ञानसुखात्मकः",
+          "en": "whose nature is reality, consciousness, and bliss"
+        },
+        {
+          "sa": "श्रुतिशिखोत्थ",
+          "en": "arising from the crest of the Upaniṣads"
+        },
+        {
+          "sa": "अखण्डधीगोचरः",
+          "en": "known by undivided understanding"
+        },
+        {
+          "sa": "मिथ्याबन्धविधूननेन",
+          "en": "by the removal of false bondage"
+        },
+        {
+          "sa": "परमानन्दैकरतानात्मकम्",
+          "en": "whose nature is an unbroken fullness of supreme bliss"
+        },
+        {
+          "sa": "मोक्षं प्राप्त इव",
+          "en": "as though having attained liberation"
+        },
+        {
+          "sa": "स्वयं विजयते",
+          "en": "shines forth of his own accord"
+        },
+        {
+          "sa": "विष्णुः विकल्पोज्झितः",
+          "en": "Viṣṇu, free from conceptual divisions"
+        }
+      ],
+      "iast": "māyākalpitamātṛtāmukhamṛṣādvaitaprapañcāśrayaḥ\nsatyajñānasukhātmakaḥ śrutiśikhotthākhaṇḍadhīgocaraḥ |\nmithyābandhavidhūnanena paramānandaikaratānātmakaṃ\nmokṣaṃ prāpta iva svayaṃ vijayate viṣṇurvikalpojjhitaḥ ||1||"
+    },
+    {
+      "id": "advaita-siddhi-opening-2",
+      "label": "Verse 2",
+      "number": "2",
+      "sourceNumbers": [
+        "2"
+      ],
+      "format": "verse",
+      "chapter": 1,
+      "sectionTitle": "Opening verses 1–4",
+      "deva": "श्रीरामविश्वेश्वरमाधवानामैक्येन साक्षात्कृतमाधवानाम् ।\nस्पर्शेन निर्धूततमोरजोभ्यः पादोत्थितेभ्योऽस्तु नमो रजोभ्यः ॥2॥",
+      "translation": "Homage be to the particles of dust risen from the feet of Śrī Rāma, Viśveśvara, and Mādhava, who directly realized Mādhava through unity, and by contact with which darkness and passion are swept away.",
+      "gloss": [
+        {
+          "sa": "श्रीरामविश्वेश्वरमाधवानाम्",
+          "en": "of Śrī Rāma, Viśveśvara, and Mādhava"
+        },
+        {
+          "sa": "ऐक्येन",
+          "en": "through unity"
+        },
+        {
+          "sa": "साक्षात्कृतमाधवानाम्",
+          "en": "of those who directly realized Mādhava"
+        },
+        {
+          "sa": "स्पर्शेन",
+          "en": "by contact"
+        },
+        {
+          "sa": "निर्धूततमोरजोभ्यः",
+          "en": "by which darkness and passion are driven away"
+        },
+        {
+          "sa": "पादोत्थितेभ्यः रजोभ्यः",
+          "en": "to the particles of dust risen from the feet"
+        },
+        {
+          "sa": "नमः अस्तु",
+          "en": "may there be homage"
+        }
+      ],
+      "iast": "śrīrāmaviśveśvaramādhavānāmaikyena sākṣātkṛtamādhavānām |\nsparśena nirdhūtatamorajobhyaḥ pādotthitebhyo’stu namo rajobhyaḥ ||2||"
+    },
+    {
+      "id": "advaita-siddhi-opening-3",
+      "label": "Verse 3",
+      "number": "3",
+      "sourceNumbers": [
+        "3"
+      ],
+      "format": "verse",
+      "chapter": 1,
+      "sectionTitle": "Opening verses 1–4",
+      "deva": "बहुभिर्विहिता बुधैः परार्थं विजयन्तेऽमितविस्तृता निबन्धाः ।\nमम तु श्रम एष नूनमात्मम्भरितां भावयितुं भविष्यतीह ॥3॥",
+      "translation": "Many treatises of immeasurable scope, composed by the wise for the benefit of others, flourish. But this effort of mine here will surely serve only for my own satisfaction.",
+      "gloss": [
+        {
+          "sa": "बहुभिः विहिताः",
+          "en": "composed by many"
+        },
+        {
+          "sa": "बुधैः",
+          "en": "by the wise"
+        },
+        {
+          "sa": "परार्थम्",
+          "en": "for the benefit of others"
+        },
+        {
+          "sa": "विजयन्ते",
+          "en": "flourish"
+        },
+        {
+          "sa": "अमितविस्तृताः निबन्धाः",
+          "en": "treatises of immeasurable scope"
+        },
+        {
+          "sa": "मम तु",
+          "en": "but as for me"
+        },
+        {
+          "sa": "श्रमः एषः",
+          "en": "this effort"
+        },
+        {
+          "sa": "नूनम्",
+          "en": "surely"
+        },
+        {
+          "sa": "आत्मम्भरिताम् भावयितुम्",
+          "en": "to provide for my own satisfaction"
+        },
+        {
+          "sa": "भविष्यति इह",
+          "en": "will be here"
+        }
+      ],
+      "iast": "bahubhirvihitā budhaiḥ parārthaṃ vijayante’mitavistṛtā nibandhāḥ |\nmama tu śrama eṣa nūnamātmambharitāṃ bhāvayituṃ bhaviṣyatīha ||3||"
+    },
+    {
+      "id": "advaita-siddhi-opening-4",
+      "label": "Verse 4",
+      "number": "4",
+      "sourceNumbers": [
+        "4"
+      ],
+      "format": "verse",
+      "chapter": 1,
+      "sectionTitle": "Opening verses 1–4",
+      "deva": "श्रद्धाधनेन मुनिना मधुसूदनेन सङ्गृह्य शास्त्रनिचयं रचितातियत्नात् ।\nबोधाय वादिविजयाय च सत्वराणामद्वैतसिद्धिरियमस्तु मुदे बुधानाम् ॥4॥",
+      "translation": "May this Advaita Siddhi, composed with great effort by the sage Madhusūdana, rich in faith, after gathering the body of scripture, bring delight to the wise who are eager for understanding and victory in debate.",
+      "gloss": [
+        {
+          "sa": "श्रद्धाधनेन",
+          "en": "rich in faith"
+        },
+        {
+          "sa": "मुनिना मधुसूदनेन",
+          "en": "by the sage Madhusūdana"
+        },
+        {
+          "sa": "सङ्गृह्य",
+          "en": "having gathered"
+        },
+        {
+          "sa": "शास्त्रनिचयम्",
+          "en": "the body of scripture"
+        },
+        {
+          "sa": "रचितातियत्नात्",
+          "en": "composed with great effort"
+        },
+        {
+          "sa": "बोधाय",
+          "en": "for understanding"
+        },
+        {
+          "sa": "वादिविजयाय च",
+          "en": "and for victory in debate"
+        },
+        {
+          "sa": "सत्वराणाम्",
+          "en": "of those who are eager"
+        },
+        {
+          "sa": "अद्वैतसिद्धिः इयम् अस्तु",
+          "en": "may this Advaita Siddhi be"
+        },
+        {
+          "sa": "मुदे बुधानाम्",
+          "en": "for the delight of the wise"
+        }
+      ],
+      "iast": "śraddhādhanena muninā madhusūdanena saṅgṛhya śāstranicayaṃ racitātiyatnāt |\nbodhāya vādivijayāya ca satvarāṇāmadvaitasiddhiriyamastu mude budhānām ||4||"
+    },
+    {
+      "id": "advaita-siddhi-1-1-2",
+      "label": "Prose passage",
+      "number": "1-1-2",
+      "sourceNumbers": [
+        "1-1-2"
+      ],
+      "format": "prose",
+      "sectionTitle": "2. Examination of disagreement · विप्रतिपत्तिविचारः",
+      "chapter": 1,
+      "deva": "तत्राद्वैतसिद्धेर्द्वैतमिथ्यात्वसिद्धिपूर्वकत्वाद् द्वैतमिथ्यात्वमेव प्रथममुपपादनीयम्। उपपादनं च स्वपक्षसाधनपरपक्षनिराकरणाभ्यां भवतीति तदुभयं वादजल्पवितण्डानामन्यतमां कथामाश्रित्य सम्पादनीयम्। तत्र च विप्रतिपत्तिजन्यसंशयस्य विचाराङ्गत्वान्मध्यस्थेनादौ विप्रतिपत्तिः प्रदर्शनीया। यद्यपि विप्रतिपत्तिजन्यसंशयस्य न पक्षतासम्पादकतयोपयोगः, सिषाधयिषाविरहसहकृतसाधकमानाभावरूपायास्तस्याः संशयाघटितत्वात्। अन्यथा श्रुत्याऽऽत्मनिश्चयवतोऽनुमित्सया तदनुमानं न स्यात्। वाद्यादीनां निश्चयवत्त्वेन संशयासम्भवा दाहार्यसंशयस्यातिप्रसञ्जकत्वाच्च। नापि विप्रतिपत्तेः स्वरूपत एव पक्षप्रतिपक्षपरिग्रहफलतयोपयोगः। “त्वयेदं साधनीयम्” “अनेनेदं दूषणीयम्” इत्यादिमध्यस्थवाक्यादेव तल्लाभेन विप्रतिपत्तिवैयर्थ्यात्। तथापि विप्रतिप्रत्तिजन्यसंशयस्यानुमित्यनङ्गत्वेऽपि व्युदसनीयतया विचाराङ्गत्वमस्त्येव। तादृशसंशयं प्रति विप्रतिपत्तेः क्वचिन्निश्चयादिना प्रतिबन्धादजनकत्वेऽपि स्वरूपयोग्यत्वात्। वाद्यादीनां च निश्चयवत्त्वे नियमाभावात्। “निश्चितौ हि वादं कुरुतः” इत्याभिमानिकनिश्चयाभिप्रायम्। परपक्षमालम्ब्याप्यहङ्कारिणो विपरीतनिश्चयवतो जल्पादौ प्रवृत्तिदर्शनात्। तस्मात् समयबन्धादिवत् स्वकर्तव्यनिर्वाहाय मध्यस्थेन विप्रतिपत्तिः प्रदर्शनीयैव।\n\nतत्र मिथ्यात्वे विप्रतिपत्तिः—ब्रह्मप्रमातिरिक्ताबाध्यत्वे सति सत्त्वेन प्रतीत्यर्हं चिद्भिन्नं प्रतिपन्नोपाधौ त्रैकालिकनिषेधप्रतियोगि न वा? पारमार्थिकत्वाकारेणोक्तनिषेधप्रतियोगि न वेति। अत्र च पक्षतावच्छेदकसामानाधिकरण्येन साध्यसिद्धेरुद्देश्यत्वात् पक्षैकदेशे साध्यसिद्धावपि सिद्धसाधनतेति मते शुक्तिरूप्ये सिद्धसाधनवारणाय ब्रह्मज्ञानेतराबाध्यत्वं पक्षविशेषणम्। यदि पुनः पक्षतावच्छेदकावच्छेदेनैव साध्यसिद्धिरुद्देश्या तदैकदेशे साध्यसिद्धावपि सिद्धसाधनाभावात् तद्वारकं विशेषणमनुपादेयम्। इतरविशेषणद्वयं तु तुच्छे ब्रह्मणि च बाधवारणायादरणीयमेव। प्रत्येकं वा विप्रतिपत्तिः—वियन्मिथ्या न वा? पृथिवी मिथ्या न वेति। एवं वियदादेः प्रत्येकं पक्षत्वेऽपि न घटादौ सन्दिग्धानैकान्तिकता। पक्षसमत्वाद् घटादेः। तथा हि—पक्षे साध्याभावसन्देहस्यानुगुणत्वात् पक्षभिन्न एव तस्य दूषणत्वं वाच्यम्। अत एवोक्तं “साध्याभावनिश्चयवति हेतुसन्देहे एव सन्दिग्धानैकान्तिकता” इति। पक्षत्वं तु साध्यसन्देहवत्त्वम्। साध्यगोचरसाधकमानाभाववत्त्वं वा। एतच्च घटादिसाधारणम्। अत एव तत्रापि सन्दिग्धानैकान्तिकत्वं न दोषः। पक्षसमत्वोक्तिस्तु प्रतिज्ञाविषयत्वाभावमात्रेण। न च तर्हि प्रतिज्ञाविषयत्वमेव पक्षत्वम्। स्वार्थानुमाने तदभावात्.",
+      "translation": "Since the establishment of non-duality depends on first establishing that duality is false, the falsity of duality itself must first be proved. Proof consists in establishing one’s own position and refuting the opponent’s; both tasks are to be carried out through one of the forms of philosophical discussion: truth-seeking debate, contentious dispute, or refutation-only disputation. Because doubt arising from disagreement is part of inquiry, the impartial moderator must first state the disagreement.\n\nAlthough doubt arising from disagreement does not help produce the status of a proposition as the subject of inference, that status is defined as the absence of a proof-producing means of knowledge together with the absence of a wish to establish the point; it does not include doubt. Otherwise, someone certain of the Self through scripture could not infer it while wishing to do so. Nor is doubt possible because debaters and others are certain; moreover, assuming a merely imagined doubt would lead to too many cases. Disagreement also does not help in itself by producing the acceptance of a thesis and its counter-thesis: the moderator’s words—“You must prove this” and “This must be refuted by the other”—already accomplish that, so disagreement would be pointless. Still, although doubt generated by disagreement is not a part of inference, it is a part of inquiry because it must be removed. Even if disagreement sometimes fails to produce such doubt because it is blocked by certainty or the like, it is naturally capable of producing it; and there is no rule that debaters and the rest must be certain. The statement “For the two who are certain conduct a debate” refers to a certainty they presume for themselves. We see that arrogant people, even while adopting the opponent’s side and holding a mistaken certainty, engage in disputation and the like. Therefore, as with establishing the terms of a debate, the impartial moderator must indeed state the disagreement to fulfill the task incumbent on him.\n\nThe disagreement concerning falsity is stated as follows: Is what is distinct from consciousness, fit to be apprehended as existent while not sublatable by any cognition other than knowledge of Brahman, and the counterpositive of a negation at all three times in the locus where it is presented—or is it not? Or, under the aspect of ultimate reality, is it the counterpositive of that stated negation, or is it not? Here the aim is to establish the predicate in the same locus as the delimiting condition of the subject. According to the view that establishing the predicate even for one part of the subject would make the proof redundant, the subject is qualified as “not sublated by anything other than knowledge of Brahman,” to avoid redundant proof in the shell-and-silver case. If, however, one intends to establish the predicate exactly within the delimitation of the subject, then proving it for only part of the subject does not make the proof redundant, and the qualifier that prevents this need not be included. The remaining two qualifications must still be retained to avoid a contradiction concerning sheer nonbeing and Brahman.\n\nAlternatively, the disagreement may be stated separately: Is space false or not? Is earth false or not? Even when space and the other elements are each taken as the subject, a pot and the like do not give rise to doubt-based inconclusiveness, because a pot is on a par with the subject. Doubt about the absence of the predicate in the subject supports the inference; it is a defect only in something other than the subject. Hence the statement: “A doubtful reason is a doubt-based fallacy of inconclusiveness only where the absence of the predicate is certain.” Subjecthood is having doubt about the predicate, or lacking a valid means of knowledge that establishes it; this condition also applies to pots and the like. For that reason, doubt-based inconclusiveness is no defect there either. Saying that a pot is on a par with the subject means only that it is not the object of the proposition. But then is being the object of the proposition itself what makes something the subject? No, because that is absent in inference for oneself.",
+      "gloss": [
+        {
+          "sa": "तत्र अद्वैतसिद्धेः",
+          "en": "there, because of establishing non-duality"
+        },
+        {
+          "sa": "द्वैतमिथ्यात्वसिद्धिपूर्वकत्वात्",
+          "en": "because it depends on establishing duality’s falsity first"
+        },
+        {
+          "sa": "द्वैतमिथ्यात्वम् एव",
+          "en": "the falsity of duality itself"
+        },
+        {
+          "sa": "प्रथमम् उपपादनीयम्",
+          "en": "must be proved first"
+        },
+        {
+          "sa": "उपपादनम् च",
+          "en": "and proof"
+        },
+        {
+          "sa": "स्वपक्षसाधन",
+          "en": "establishing one’s own position"
+        },
+        {
+          "sa": "परपक्षनिराकरणाभ्याम्",
+          "en": "and refuting the opponent’s position"
+        },
+        {
+          "sa": "वादजल्पवितण्डानाम् अन्यतमाम् कथाम् आश्रित्य",
+          "en": "by taking up one of the forms of discussion: debate, contention, or refutation-only dispute"
+        },
+        {
+          "sa": "तदुभयम् सम्पादनीयम्",
+          "en": "both tasks are to be carried out"
+        },
+        {
+          "sa": "विप्रतिपत्तिजन्यसंशयस्य विचाराङ्गत्वात्",
+          "en": "because doubt arising from disagreement is part of inquiry"
+        },
+        {
+          "sa": "मध्यस्थेन आदौ विप्रतिपत्तिः प्रदर्शनीया",
+          "en": "the impartial moderator must first state the disagreement"
+        },
+        {
+          "sa": "पक्षतासम्पादकतया उपयोगः न",
+          "en": "it does not help establish subjecthood"
+        },
+        {
+          "sa": "सिषाधयिषाविरहसहकृतसाधकमानाभावरूपायाः",
+          "en": "whose definition is the absence of a proving means together with the absence of a wish to prove"
+        },
+        {
+          "sa": "तस्याः संशयाघटितत्वात्",
+          "en": "because doubt is not included in that definition"
+        },
+        {
+          "sa": "अन्यथा",
+          "en": "otherwise"
+        },
+        {
+          "sa": "श्रुत्या आत्मनिश्चयवतः",
+          "en": "of someone certain of the Self through scripture"
+        },
+        {
+          "sa": "अनुमित्सया तत् अनुमानम् न स्यात्",
+          "en": "while wishing to infer it, that inference would not occur"
+        },
+        {
+          "sa": "वाद्यादीनाम् निश्चयवत्त्वेन",
+          "en": "because debaters and others are certain"
+        },
+        {
+          "sa": "संशयासम्भवात्",
+          "en": "because doubt is impossible"
+        },
+        {
+          "sa": "आहार्यसंशयस्य अतिप्रसञ्जकत्वात् च",
+          "en": "and because assumed doubt would lead to overextension"
+        },
+        {
+          "sa": "पक्षप्रतिपक्षपरिग्रहफलतया",
+          "en": "as producing adoption of a thesis and its counter-thesis"
+        },
+        {
+          "sa": "मध्यस्थवाक्यात् एव तत् लाभः",
+          "en": "that result already follows from the moderator’s words"
+        },
+        {
+          "sa": "विप्रतिपत्तिवैयर्थ्यात्",
+          "en": "so disagreement would be pointless"
+        },
+        {
+          "sa": "तथापि",
+          "en": "nevertheless"
+        },
+        {
+          "sa": "व्युदसनीयतया विचाराङ्गत्वम् अस्ति एव",
+          "en": "because it must be removed, it is indeed part of inquiry"
+        },
+        {
+          "sa": "स्वरूपयोग्यत्वात्",
+          "en": "because it is intrinsically capable of producing that doubt"
+        },
+        {
+          "sa": "वाद्यादीनाम् निश्चयवत्त्वे नियमाभावात्",
+          "en": "because there is no rule that debaters and others must be certain"
+        },
+        {
+          "sa": "आभिमानिकनिश्चयाभिप्रायम्",
+          "en": "it refers to presumed certainty"
+        },
+        {
+          "sa": "परपक्षम् आलम्ब्य अपि",
+          "en": "even while taking up the opposing side"
+        },
+        {
+          "sa": "विपरीतनिश्चयवतः",
+          "en": "holding mistaken certainty"
+        },
+        {
+          "sa": "जल्पादौ प्रवृत्तिदर्शनात्",
+          "en": "because engagement in disputation and the like is seen"
+        },
+        {
+          "sa": "समयबन्धादिवत्",
+          "en": "as in establishing the terms of debate"
+        },
+        {
+          "sa": "स्वकर्तव्यनिर्वाहाय",
+          "en": "to fulfill one’s own duty"
+        },
+        {
+          "sa": "प्रदर्शनीयैव",
+          "en": "must indeed be presented"
+        },
+        {
+          "sa": "तत्र मिथ्यात्वे विप्रतिपत्तिः",
+          "en": "the disagreement concerning falsity is this"
+        },
+        {
+          "sa": "ब्रह्मप्रमातिरिक्ताबाध्यत्वे सति",
+          "en": "while not sublatable by any cognition other than knowledge of Brahman"
+        },
+        {
+          "sa": "सत्त्वेन प्रतीत्यर्हम्",
+          "en": "fit to be apprehended as existent"
+        },
+        {
+          "sa": "चिद्भिन्नम्",
+          "en": "distinct from consciousness"
+        },
+        {
+          "sa": "प्रतिपन्नोपाधौ",
+          "en": "in the locus in which it is presented"
+        },
+        {
+          "sa": "त्रैकालिकनिषेधप्रतियोगि",
+          "en": "the counterpositive of a negation at all three times"
+        },
+        {
+          "sa": "न वा",
+          "en": "or not?"
+        },
+        {
+          "sa": "पारमार्थिकत्वाकारेण",
+          "en": "under the aspect of ultimate reality"
+        },
+        {
+          "sa": "उक्तनिषेधप्रतियोगि",
+          "en": "the counterpositive of the stated negation"
+        },
+        {
+          "sa": "न वेति",
+          "en": "or not"
+        },
+        {
+          "sa": "पक्षतावच्छेदकसामानाधिकरण्येन",
+          "en": "in the same locus as the delimiting condition of the subject"
+        },
+        {
+          "sa": "साध्यसिद्धेः उद्देश्यत्वात्",
+          "en": "because establishing the predicate is intended"
+        },
+        {
+          "sa": "पक्षैकदेशे",
+          "en": "in one part of the subject"
+        },
+        {
+          "sa": "साध्यसिद्धावपि",
+          "en": "even if the predicate is established"
+        },
+        {
+          "sa": "सिद्धसाधनता",
+          "en": "proof of what is already established"
+        },
+        {
+          "sa": "इति मते",
+          "en": "according to that view"
+        },
+        {
+          "sa": "शुक्तिरूप्ये",
+          "en": "in the shell-and-silver case"
+        },
+        {
+          "sa": "सिद्धसाधनवारणाय",
+          "en": "to prevent redundant proof"
+        },
+        {
+          "sa": "ब्रह्मज्ञानेतराबाध्यत्वम्",
+          "en": "not sublated by anything other than knowledge of Brahman"
+        },
+        {
+          "sa": "पक्षविशेषणम्",
+          "en": "is a qualification of the subject"
+        },
+        {
+          "sa": "यदि पुनः",
+          "en": "if, however"
+        },
+        {
+          "sa": "तदेकदेशे साध्यसिद्धावपि",
+          "en": "even if the predicate is established in one part of it"
+        },
+        {
+          "sa": "सिद्धसाधनाभावात्",
+          "en": "because proof is not redundant"
+        },
+        {
+          "sa": "तद्वारकं विशेषणम् अनुपादेयम्",
+          "en": "the qualifier guarding against that is not needed"
+        },
+        {
+          "sa": "इतरविशेषणद्वयम्",
+          "en": "the remaining two qualifications"
+        },
+        {
+          "sa": "तुच्छे ब्रह्मणि च",
+          "en": "with respect to sheer nonbeing and Brahman"
+        },
+        {
+          "sa": "बाधवारणाय आदरणीयम् एव",
+          "en": "must indeed be retained to prevent a contradiction"
+        },
+        {
+          "sa": "प्रत्येकम् वा विप्रतिपत्तिः",
+          "en": "or the disagreement may be stated separately"
+        },
+        {
+          "sa": "वियत् मिथ्या न वा",
+          "en": "is space false or not?"
+        },
+        {
+          "sa": "पृथिवी मिथ्या न वा",
+          "en": "is earth false or not?"
+        },
+        {
+          "sa": "वियदादेः प्रत्येकं पक्षत्वे अपि",
+          "en": "even when space and the rest are each the subject"
+        },
+        {
+          "sa": "घटादौ सन्दिग्धानैकान्तिकता न",
+          "en": "there is no doubt-based inconclusiveness concerning a pot and the like"
+        },
+        {
+          "sa": "पक्षसमत्वात् घटादेः",
+          "en": "because a pot and the like are on a par with the subject"
+        },
+        {
+          "sa": "पक्षे साध्याभावसन्देहस्य अनुगुणत्वात्",
+          "en": "because doubt about the predicate’s absence in the subject supports the inference"
+        },
+        {
+          "sa": "पक्षभिन्न एव तस्य दूषणत्वम्",
+          "en": "it is a defect only in what is outside the subject"
+        },
+        {
+          "sa": "साध्याभावनिश्चयवति",
+          "en": "where the absence of the predicate is certain"
+        },
+        {
+          "sa": "हेतुसन्देहे",
+          "en": "when the reason is doubtful"
+        },
+        {
+          "sa": "सन्दिग्धानैकान्तिकता",
+          "en": "there is a doubt-based fallacy of inconclusiveness"
+        },
+        {
+          "sa": "पक्षत्वम् तु",
+          "en": "but subjecthood"
+        },
+        {
+          "sa": "साध्यसन्देहवत्त्वम्",
+          "en": "is having doubt about the predicate"
+        },
+        {
+          "sa": "साध्यगोचरसाधकमानाभाववत्त्वम् वा",
+          "en": "or lacking a valid means of knowledge that establishes it"
+        },
+        {
+          "sa": "एतत् च घटादिसाधारणम्",
+          "en": "and this also applies to pots and the like"
+        },
+        {
+          "sa": "तत्र अपि सन्दिग्धानैकान्तिकत्वम् न दोषः",
+          "en": "there too, doubt-based inconclusiveness is not a defect"
+        },
+        {
+          "sa": "पक्षसमत्वोक्तिः",
+          "en": "saying that it is on a par with the subject"
+        },
+        {
+          "sa": "प्रतिज्ञाविषयत्वाभावमात्रेण",
+          "en": "only because it is not the object of the proposition"
+        },
+        {
+          "sa": "प्रतिज्ञाविषयत्वम् एव पक्षत्वम्",
+          "en": "being the object of the proposition itself as subjecthood"
+        },
+        {
+          "sa": "स्वार्थानुमाने तदभावात्",
+          "en": "because that is absent in inference for oneself"
+        }
+      ],
+      "iast": "tatrādvaitasiddherdvaitamithyātvasiddhipūrvakatvād dvaitamithyātvameva prathamamupapādanīyam| upapādanaṃ ca svapakṣasādhanaparapakṣanirākaraṇābhyāṃ bhavatīti tadubhayaṃ vādajalpavitaṇḍānāmanyatamāṃ kathāmāśritya sampādanīyam| tatra ca vipratipattijanyasaṃśayasya vicārāṅgatvānmadhyasthenādau vipratipattiḥ pradarśanīyā| yadyapi vipratipattijanyasaṃśayasya na pakṣatāsampādakatayopayogaḥ, siṣādhayiṣāvirahasahakṛtasādhakamānābhāvarūpāyāstasyāḥ saṃśayāghaṭitatvāt| anyathā śrutyā’’tmaniścayavato’numitsayā tadanumānaṃ na syāt| vādyādīnāṃ niścayavattvena saṃśayāsambhavā dāhāryasaṃśayasyātiprasañjakatvācca| nāpi vipratipatteḥ svarūpata eva pakṣapratipakṣaparigrahaphalatayopayogaḥ| “tvayedaṃ sādhanīyam” “anenedaṃ dūṣaṇīyam” ityādimadhyasthavākyādeva tallābhena vipratipattivaiyarthyāt| tathāpi vipratiprattijanyasaṃśayasyānumityanaṅgatve’pi vyudasanīyatayā vicārāṅgatvamastyeva| tādṛśasaṃśayaṃ prati vipratipatteḥ kvacinniścayādinā pratibandhādajanakatve’pi svarūpayogyatvāt| vādyādīnāṃ ca niścayavattve niyamābhāvāt| “niścitau hi vādaṃ kurutaḥ” ityābhimānikaniścayābhiprāyam| parapakṣamālambyāpyahaṅkāriṇo viparītaniścayavato jalpādau pravṛttidarśanāt| tasmāt samayabandhādivat svakartavyanirvāhāya madhyasthena vipratipattiḥ pradarśanīyaiva|\n\ntatra mithyātve vipratipattiḥ—brahmapramātiriktābādhyatve sati sattvena pratītyarhaṃ cidbhinnaṃ pratipannopādhau traikālikaniṣedhapratiyogi na vā? pāramārthikatvākāreṇoktaniṣedhapratiyogi na veti| atra ca pakṣatāvacchedakasāmānādhikaraṇyena sādhyasiddheruddeśyatvāt pakṣaikadeśe sādhyasiddhāvapi siddhasādhanateti mate śuktirūpye siddhasādhanavāraṇāya brahmajñānetarābādhyatvaṃ pakṣaviśeṣaṇam| yadi punaḥ pakṣatāvacchedakāvacchedenaiva sādhyasiddhiruddeśyā tadaikadeśe sādhyasiddhāvapi siddhasādhanābhāvāt tadvārakaṃ viśeṣaṇamanupādeyam| itaraviśeṣaṇadvayaṃ tu tucche brahmaṇi ca bādhavāraṇāyādaraṇīyameva| pratyekaṃ vā vipratipattiḥ—viyanmithyā na vā? pṛthivī mithyā na veti| evaṃ viyadādeḥ pratyekaṃ pakṣatve’pi na ghaṭādau sandigdhānaikāntikatā| pakṣasamatvād ghaṭādeḥ| tathā hi—pakṣe sādhyābhāvasandehasyānuguṇatvāt pakṣabhinna eva tasya dūṣaṇatvaṃ vācyam| ata evoktaṃ “sādhyābhāvaniścayavati hetusandehe eva sandigdhānaikāntikatā” iti| pakṣatvaṃ tu sādhyasandehavattvam| sādhyagocarasādhakamānābhāvavattvaṃ vā| etacca ghaṭādisādhāraṇam| ata eva tatrāpi sandigdhānaikāntikatvaṃ na doṣaḥ| pakṣasamatvoktistu pratijñāviṣayatvābhāvamātreṇa| na ca tarhi pratijñāviṣayatvameva pakṣatvam| svārthānumāne tadabhāvāt."
+    },
+    {
+      "id": "advaita-siddhi-1-1-3",
+      "label": "Prose passage",
+      "number": "1-1-3",
+      "sourceNumbers": [
+        "1-1-3"
+      ],
+      "format": "prose",
+      "chapter": 1,
+      "sectionTitle": "3. Earlier inferences for falsity · मिथ्यात्वे परोक्तानुमानानि",
+      "deva": "एवं विप्रतिपत्तौ प्राचां प्रयोगाः—विमतं मिथ्या दृश्यत्वात्, जडत्वात्, परिच्छिन्नत्वात्, शुक्तिरूप्यवदिति। नावयवेष्वाग्रहः। अत्र स्वनियामकनियतया विप्रतिपत्त्या लघुभूतया पक्षतावच्छेदो न विरुद्धः। समयबन्धादिना व्यवधानात्। तस्य अनुमानकालासत्त्वेऽपि उपलक्षणतया पक्षतावच्छेदकत्वम्।\n\nयद्वा विप्रतिपत्तिविषयतावच्छेदकमेव पक्षतावच्छेदकम्। प्राचां प्रयोगेष्वपि विमतमिति पदं विप्रतिपत्तिविषयतावच्छेदकावच्छिन्नाभिप्रायेणेत्यदोषः।",
+      "iast": "evaṃ vipratipattau prācāṃ prayogāḥ—vimataṃ mithyā dṛśyatvāt, jaḍatvāt, paricchinnatvāt, śuktirūpyavaditi| nāvayaveṣvāgrahaḥ| atra svaniyāmakaniyatayā vipratipattyā laghubhūtayā pakṣatāvacchedo na viruddhaḥ| samayabandhādinā vyavadhānāt| tasya anumānakālāsattve’pi upalakṣaṇatayā pakṣatāvacchedakatvam|\n\nyadvā vipratipattiviṣayatāvacchedakameva pakṣatāvacchedakam| prācāṃ prayogeṣvapi vimatamiti padaṃ vipratipattiviṣayatāvacchedakāvacchinnābhiprāyeṇetyadoṣaḥ|",
+      "translation": "The earlier formulation in this context of disagreement is: “The disputed object is false because it is perceptible, inert, limited, and like shell-silver.” There is no insistence on every member of the inference. Here it is not improper to delimit the subject by a concise statement of disagreement, restricted by its own governing condition, because an agreement and the like intervene. Although it is absent at the time of inference, it still delimits the subject by way of an indicator.\n\nOr the delimitor of the subject is precisely the delimitor of the object of the disagreement. Even in the earlier formulation, the word “disputed” is intended to mean what is delimited by the delimitor of the object of disagreement; therefore there is no defect.",
+      "gloss": [
+        {
+          "sa": "एवं विप्रतिपत्तौ",
+          "en": "in this disagreement"
+        },
+        {
+          "sa": "प्राचाम् प्रयोगाः",
+          "en": "the earlier formulation"
+        },
+        {
+          "sa": "विमतम् मिथ्या",
+          "en": "the disputed object is false"
+        },
+        {
+          "sa": "दृश्यत्वात्",
+          "en": "because it is perceptible"
+        },
+        {
+          "sa": "जडत्वात्",
+          "en": "because it is inert"
+        },
+        {
+          "sa": "परिच्छिन्नत्वात्",
+          "en": "because it is limited"
+        },
+        {
+          "sa": "शुक्तिरूप्यवत्",
+          "en": "like shell-silver"
+        },
+        {
+          "sa": "न अवयवेषु आग्रहः",
+          "en": "there is no insistence on every member"
+        },
+        {
+          "sa": "स्वनियामकनियतया",
+          "en": "limited by its own governing condition"
+        },
+        {
+          "sa": "विप्रतिपत्त्या लघुभूतया",
+          "en": "by a concise statement of disagreement"
+        },
+        {
+          "sa": "पक्षतावच्छेदः न विरुद्धः",
+          "en": "delimitation of the subject is not objectionable"
+        },
+        {
+          "sa": "समयबन्धादिना व्यवधानात्",
+          "en": "because an agreement and the like intervene"
+        },
+        {
+          "sa": "तस्य अनुमानकालासत्त्वे अपि",
+          "en": "although it is absent at the time of inference"
+        },
+        {
+          "sa": "उपलक्षणतया",
+          "en": "by way of an indicator"
+        },
+        {
+          "sa": "पक्षतावच्छेदकत्वम्",
+          "en": "it delimits the subject"
+        },
+        {
+          "sa": "यद्वा",
+          "en": "or"
+        },
+        {
+          "sa": "विप्रतिपत्तिविषयतावच्छेदकम् एव",
+          "en": "precisely the delimitor of the object of disagreement"
+        },
+        {
+          "sa": "पक्षतावच्छेदकम्",
+          "en": "the delimitor of the subject"
+        },
+        {
+          "sa": "प्राचां प्रयोगेषु अपि",
+          "en": "even in the earlier formulations"
+        },
+        {
+          "sa": "विमतम् इति पदम्",
+          "en": "the word “disputed”"
+        },
+        {
+          "sa": "विप्रतिपत्तिविषयतावच्छेदकावच्छिन्नाभिप्रायेण",
+          "en": "is intended to mean what is delimited by the delimitor of the object of disagreement"
+        },
+        {
+          "sa": "इति अदोषः",
+          "en": "thus there is no defect"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "opening-verses",
+      "title": "Opening verses 1–4",
+      "startVerse": 1,
+      "endVerse": 4,
+      "group": "First pariccheda · प्रथमपरिच्छेदः"
+    },
+    {
+      "id": "1-1-2",
+      "title": "2. Examination of disagreement · विप्रतिपत्तिविचारः",
+      "group": "First pariccheda · प्रथमपरिच्छेदः"
+    },
+    {
+      "id": "1-1-3",
+      "title": "3. Earlier inferences for falsity · मिथ्यात्वे परोक्तानुमानानि",
+      "group": "First pariccheda · प्रथमपरिच्छेदः"
+    }
+  ],
+  "wordGlossComplete": true,
+  "wordGlossCoverage": {
+    "completedSections": [
+      "Opening verses 1–4",
+      "1-1-2",
+      "1-1-3"
+    ],
+    "note": "The displayed Sanskrit, IAST, English translation, and collapsed word-for-word gloss are included for the six reader units in this installment."
+  },
+  "coverage": "Opening verses 1–4 and source sections [1-1-2]–[1-1-3] are transcribed and translated. All later passages remain pending.",
+  "prose": true
+}

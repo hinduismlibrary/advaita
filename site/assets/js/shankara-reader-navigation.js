@@ -4,6 +4,7 @@
   var editorialNotice = "The following thematic divisions are editorial aids to navigation and do not represent original chapters of the Sanskrit text.";
   var works = {
     "advaita-makaranda": { iast: "Advaitamakaranda", devanagari: "अद्वैतमकरन्दः", english: "Nectar of Non-Duality", description: "A continuous 28-verse teaching on the witness Self and non-dual reality.", author: "Traditionally attributed to Lakṣmīdhara Kavi." },
+    "advaita-siddhi": { iast: "Advaita Siddhi", devanagari: "अद्वैतसिद्धिः", english: "Accomplishment of Non-Duality", description: "A Sanskrit philosophical treatise on the falsity of duality and the non-dual reality of Brahman.", author: "Madhusūdana Sarasvatī", prose: true, longWork: true },
     "advaita-pancharatnam": { iast: "Advaitapañcaratnam", devanagari: "अद्वैतपञ्चरत्नम्", english: "Five Jewels of Non-Duality", description: "A short five-verse hymn on the non-dual Self.", author: "Traditionally attributed to Ādi Śaṅkara." },
     "aparokshanubhuti": {
       iast: "Aparokṣānubhūti", devanagari: "अपरोक्षानुभूतिः", english: "Direct Knowledge of the Self", author: "Traditionally attributed to Ādi Śaṅkara.", editorial: true,
@@ -138,7 +139,7 @@
       if (index < 0 && section.startVerse !== undefined) index = indexAt(units, section.startVerse);
       if (work === "atmavidya-vilasa" && Number(section.startVerse) === 1) index = 0;
       if (index < 0 || index >= units.length) return null;
-      return { label: section.title, id: String(units[index].id), index: index, type: config.editorial ? "editorial" : "original", group: "" };
+      return { label: section.title, id: String(units[index].id), index: index, type: config.editorial ? "editorial" : "original", group: section.group || "" };
     }).filter(Boolean);
   }
 
@@ -172,7 +173,7 @@
     if (works[work] && works[work].editorial) return [];
     if (work === "panchadasi" || work === "mandukya-karika" || work === "upadesha-sahasri") return groupedBy(work, data, "chapter");
     if (work === "vedantasara") return groupedBy(work, data, "chapter");
-    if (["naishkarmya-siddhi", "brahma-siddhi", "bhaja-govindam"].indexOf(work) >= 0) return sectionItems(work, data).map(function (item) {
+    if (["naishkarmya-siddhi", "brahma-siddhi", "advaita-siddhi", "bhaja-govindam"].indexOf(work) >= 0) return sectionItems(work, data).map(function (item) {
       if (work === "bhaja-govindam") {
         var canonical = item.label;
         if (/Dvādaśamañjarikā/.test(canonical)) item.label = "Dvādaśamañjarikā · verses 2–13";

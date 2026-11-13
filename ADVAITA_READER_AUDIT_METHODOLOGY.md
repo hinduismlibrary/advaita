@@ -8,7 +8,7 @@ Use this audit for every work listed on the Ādi Śaṅkarācārya texts page an
 
 Compare the work IDs in `site/assets/js/shankara-reader.js` with the JSON data filenames in `site/assets/data/shankara/`. For each ID, confirm that its reader route has an `index.html` and that exactly one of the two collection pages links to it.
 
-Works with 20 or more reader units must open the shared `book-contents.html?work=…` page. Works with fewer than 20 units open directly as a single reader. The contents page must list named divisions, and its supported-work list must include every longer work.
+Works with 20 or more reader units, and shorter works explicitly marked `longWork`, must open the shared `book-contents.html?work=…` page. Works with fewer than 20 units open directly as a single reader. The contents page must list named divisions, and its supported-work list must include every longer work.
 
 ## 2. Check the loader’s exact data contract
 
@@ -54,8 +54,9 @@ The validator checks all work IDs, reader paths, collection links, long-work con
 - Routed Advaitamakaranda (28 verses), Brahmajñānāvalīmālā (21 verses), and Tattvabodha (44 sections) through the contents page.
 - Routed Dṛg-dṛśya-viveka (46 verses) through the named contents page; checked all long-work links in the main collection and Stotrams index.
 - Added Pañcadaśī validation for all 15 chapter IDs and their 15 topic names, which are supplied by the reader’s chapter map rather than a JSON `sections` array.
-- Tightened the reader loader so a work fails clearly if any unit lacks explicit IAST or a non-empty, valid Sanskrit/English gloss object; the deployment workflow now runs the 29-work validator before publishing.
+- Tightened the reader loader so a work fails clearly if any unit lacks explicit IAST or a non-empty, valid Sanskrit/English gloss object; the deployment workflow now runs the 30-work validator before publishing.
 - Split the 14 combined Vivekacūḍāmaṇi verses, 20 combined Sarvavedāntasiddhāntasārasaṅgraha verses, and six combined Pañcadaśī verses into individual source-verse cards. Corrected Māṇḍūkyakārikā verse metadata and added a validator rule for one source verse per card.
 - Added reader-data cache versioning and changed the static fallback so a failed JSON fetch is reported as a loading error, not as a missing word gloss.
 - Changed the contents and chapter readers to build their section lists and verse cards from JSON instead of fetching the entire embedded reader page.
-- Enabled the shared transliteration and Word for Word controls on all 29 text readers.
+- Enabled the shared transliteration and Word for Word controls on all 30 text readers.
+- Added an in-progress Advaita Siddhi reader installment from Wikisource first-pariccheda revision 197990: opening verses 1–4 and source sections [1-1-2]–[1-1-3]. Remaining sections are explicitly marked as pending.

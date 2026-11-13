@@ -202,7 +202,11 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             glossUnits:cards.filter(card=>card.querySelector('.reader-word-toggle')).length,
             expectedGlossUnits:units.filter(unit=>Array.isArray(unit.gloss)&&unit.gloss.some(word=>word&&word.sa&&word.en)).length,
             completeGloss:cards.every((card,index)=>{const words=(units[index].gloss||[]).filter(word=>word&&word.sa&&word.en);const rows=[...card.querySelectorAll('.gita-word-row')];return words.length===rows.length&&rows.every((row,wordIndex)=>row.querySelector('.gita-word-dev')?.textContent===String(words[wordIndex].sa).trim()&&row.querySelector('.gita-word-gloss')?.textContent===String(words[wordIndex].en).trim());}),
-            completeTranslation:cards.every((card,index)=>card.querySelector('.gita-translation')?.textContent===units[index].translation),
+            completeTranslation:cards.every((card,index)=>{
+              const paragraphs=[...card.querySelectorAll('.gita-translation')].map(p=>p.textContent.trim()).filter(Boolean);
+              const expected=String(units[index].translation||'').split(/\n\s*\n+/).map(text=>text.trim()).filter(Boolean);
+              return JSON.stringify(paragraphs)===JSON.stringify(expected);
+            }),
             completeDevanagari:cards.every((card,index)=>card.querySelector('.gita-sanskrit')?.textContent===units[index].deva),
             completeIAST:cards.every((card,index)=>card.querySelector('.reader-inline-iast')?.textContent===units[index].iast),
             transliterationHiddenByDefault:cards.every(card=>{const button=card.querySelector('.reader-transliteration-toggle'),iast=card.querySelector('.reader-inline-iast');return button?.textContent.trim()==='Show transliteration'&&button.getAttribute('aria-expanded')==='false'&&iast?.hidden&&getComputedStyle(iast).display==='none';}),
@@ -291,8 +295,8 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
                   scripts:[...document.scripts].map(script=>script.src).filter(Boolean)})"""
             )
             raise AssertionError(f"Pañcadaśī direct reader did not render: {snapshot}; page errors: {errors}") from error
-        chapter_layout = page.evaluate("""() => ({context:document.querySelector('#chapter-title')?.textContent.trim(),title:document.querySelector('#work-title')?.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim()||'',reference:document.querySelector('#chapter-content > .shankara-verse h2')?.textContent.trim(),jumpMax:document.querySelector('#reader-jump-input')?.max,jumpRange:document.querySelector('#reader-jump-range')?.textContent.trim()})""")
-        require(chapter_layout["context"] == "Pañcadaśī · Book I, Chapter 1" and chapter_layout["title"] == "Tattva-viveka" and not chapter_layout["byline"] and chapter_layout["reference"] == "Pañcadaśī 1.1" and chapter_layout["jumpMax"] == "65" and chapter_layout["jumpRange"] == "1–65",
+        chapter_layout = page.evaluate("""() => ({context:document.querySelector('#chapter-title')?.textContent.trim(),title:document.querySelector('#work-title')?.textContent.trim(),byline:document.querySelector('#work-author')?.textContent.trim()||'',reference:document.querySelector('#chapter-content > .shankara-verse h2')?.textContent.trim(),referenceAria:document.querySelector('#chapter-content > .shankara-verse h2')?.getAttribute('aria-label'),jumpMax:document.querySelector('#reader-jump-input')?.max,jumpRange:document.querySelector('#reader-jump-range')?.textContent.trim()})""")
+        require(chapter_layout["context"] == "Pañcadaśī · Book I, Chapter 1" and chapter_layout["title"] == "Tattva-viveka" and not chapter_layout["byline"] and chapter_layout["reference"] == "1.1" and chapter_layout["referenceAria"] == "Pañcadaśī 1.1" and chapter_layout["jumpMax"] == "65" and chapter_layout["jumpRange"] == "1–65",
                 f"Pañcadaśī Chapter 1 does not match the supplied reader example ({chapter_layout})")
         page.screenshot(path=str(OUTPUT / "reader-panchadasi-1440x900.png"), full_page=True)
         page.set_viewport_size({"width": 1024, "height": 768})

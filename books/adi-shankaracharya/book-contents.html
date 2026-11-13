@@ -31,6 +31,7 @@ body.vd-chrome-page.contents-menu-page .page .hero h1{
 .page-tools a{color:var(--link)}
 .page-tools .separator{color:#72777d}
 .sections{min-width:0}
+.progress-note{margin:.25em 0 1em;color:#202122;font-size:14px}
 .contents-group{margin:0 0 28px;scroll-margin-top:18px}
 .contents-group h2{
   margin:0 0 8px;padding:0 0 5px;border-bottom:1px solid var(--line);
@@ -82,6 +83,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
 <main class="page">
   <header class="hero">
     <h1 id="work-title">Contents</h1>
+    <p class="progress-note" id="work-progress" hidden></p>
   </header>
   <nav class="page-tools" aria-label="Text navigation">
     <a href="/advaita/books/adi-shankaracharya/">← All Advaita texts</a>
@@ -92,13 +94,14 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
     <p class="loading" role="status">Loading the chapter list…</p>
   </div>
 </main>
-<script src="/advaita/assets/js/shankara-reader-navigation.js?v=20261112-source-structure-2"></script>
+<script src="/advaita/assets/js/shankara-reader-navigation.js?v=20261113-advaita-siddhi-1"></script>
 <script>
 (function(){
   "use strict";
   var params=new URLSearchParams(window.location.search);
   var work=params.get("work")||"";
   var validWorks=new Set(window.AdvaitaReaderNavigation.workIds);
+  var progressNode=document.getElementById("work-progress");
 
   var labelData=[
     ["Advaita Texts","Advaita texts","अद्वैतग्रन्थाः"],["Contents","Contents","विषयसूची"],["Chapters and sections","Chapters and sections","अध्यायाः तथा विभागाः"],
@@ -240,7 +243,7 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   var metadata=window.AdvaitaReaderNavigation.metadata(work);
   var readerUrl=window.AdvaitaReaderNavigation.readerUrl(work,true);
   var dataUrl=new URL("/advaita/assets/data/shankara/"+encodeURIComponent(work)+".json",window.location.origin);
-  dataUrl.searchParams.set("v","reader-gloss-20261027b");
+  dataUrl.searchParams.set("v","reader-gloss-20261113-advaita-siddhi-1");
   completeLink.href=readerUrl;
   fetch(dataUrl.href,{credentials:"same-origin",cache:"no-cache"}).then(function(response){
     if(!response.ok)throw new Error("The contents data could not be loaded.");
@@ -248,8 +251,9 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
   }).then(function(data){
     var units=Array.isArray(data&&data.units)?data.units:[];
     if(!units.length)throw new Error("The text contains no readable entries.");
+    if(progressNode&&data.progressNote){progressNode.textContent=data.progressNote;progressNode.hidden=false;}
     var items=window.AdvaitaReaderNavigation.itemsForContents(work,data);
-    if(units.length<=50||!items.length){window.location.replace(readerUrl);return;}
+    if((units.length<=50&&!data.longWork)||!items.length){window.location.replace(readerUrl);return;}
     var rawTitle=metadata.iast||String(data.title||work).replace(/\s+[—–]\s+.*$/," ").trim();
     var titlePair={english:metadata.english,devanagari:metadata.devanagari};
     renderWorkTitle(titleNode,rawTitle,titlePair);
@@ -272,14 +276,14 @@ h1 .original-work-title+.label-en{font-size:25px;line-height:1.3}
       heading.textContent=group.title;
       renderBilingual(heading,group.title);
       section.append(heading);
-      var list=document.createElement("ol");
+      var list=document.createElement(metadata.prose?"ul":"ol");
       list.className="chapter-list";
       list.setAttribute("aria-label",group.title);
       var chapterNumber=(group.items[0].label.match(/\bChapter\s+(\d+)/i)||[])[1];
       var partNumber=(group.items[0].label.match(/\bPart\s+(\d+)/i)||[])[1];
       var start=chapterNumber||partNumber||String(ordinal);
-      list.setAttribute("start",start);
-      ordinal=Number(start)+group.items.length;
+      if(metadata.prose){list.style.listStyleType="none";list.style.paddingLeft="0";}
+      else{list.setAttribute("start",start);ordinal=Number(start)+group.items.length;}
       group.items.forEach(function(item){
         var entry=document.createElement("li");
         var link=document.createElement("a");

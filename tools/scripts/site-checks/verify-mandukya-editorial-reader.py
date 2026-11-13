@@ -98,11 +98,16 @@ def check():
                 assert card.locator(".gita-sanskrit").text_content().strip() == first["deva"].strip()
                 assert card.locator(".reader-inline-iast").text_content().strip() == first["iast"].strip()
                 assert card.locator(".gita-translation").text_content().strip() == first["translation"].strip()
-                assert card.locator(".gita-details > summary").inner_text() == "Word for Word"
+                toggle = card.locator(".reader-word-toggle")
+                reveal = card.locator(".gita-reveal")
+                assert toggle.inner_text() == "Word for Word"
+                assert toggle.get_attribute("aria-expanded") == "false"
+                assert not reveal.is_visible()
                 assert abs(desktop.locator("#reader-toc").bounding_box()["x"] - card.bounding_box()["x"]) <= 3
                 assert desktop.locator("#chapter-list, .reader-verse-link").count() == 0
-                card.locator(".gita-details > summary").click()
-                assert card.locator(".gita-details").get_attribute("open") is not None
+                toggle.click()
+                assert toggle.get_attribute("aria-expanded") == "true"
+                assert reveal.is_visible()
                 assert card.locator(".gita-word-row").count() > 0
                 desktop.screenshot(path=str(OUT / "desktop-chapter-1.png"), full_page=False)
 
