@@ -123,6 +123,19 @@ def main() -> int:
         if navigation_works
         else set()
     )
+    editorial_work_ids = (
+        {
+            work_id
+            for work_id, config in re.findall(
+                r'^[ \t]{4}"([a-z0-9-]+)": \{(.*?)(?=^[ \t]{4}"[a-z0-9-]+": \{|\Z)',
+                navigation_works.group(1),
+                re.M | re.S,
+            )
+            if re.search(r"\beditorial\s*:\s*true\b", config)
+        }
+        if navigation_works
+        else set()
+    )
     if not navigation_works:
         error("the shared navigation's work inventory could not be parsed")
     if navigation_ids != data_ids:
@@ -315,9 +328,16 @@ def main() -> int:
             parsed_href.path.endswith("/book-contents.html")
             and query.get("work") == [work_id]
         )
-        if (is_short and not is_direct_reader) or (not is_short and not is_contents):
-            route_type = "the full reader" if is_short else "its contents page"
-            error(f"{work_id}: short/long text does not link through {route_type}")
+        requires_direct_reader = is_short or work_id in editorial_work_ids
+        if requires_direct_reader and not is_direct_reader:
+            route_type = (
+                "the full reader"
+                if is_short
+                else "the full text because its divisions are editorial"
+            )
+            error(f"{work_id}: should link directly to {route_type}")
+        elif not requires_direct_reader and not is_contents:
+            error(f"{work_id}: long chaptered text should link through its contents page")
 
     if not re.search(
         r"var validWorks=new Set\(window\.AdvaitaReaderNavigation\.workIds\)",
@@ -344,7 +364,10 @@ def main() -> int:
         f"PASS: {len(data_by_id)} works, {total_units} units, "
         f"{total_gloss_rows} Devanāgarī-to-English gloss rows."
     )
-    print("PASS: reader routes and inventory links resolve; short works open directly and long works use contents pages.")
+    print(
+        "PASS: short texts and texts with editorial-only divisions open directly; "
+        "long chaptered texts use contents pages."
+    )
     print("PASS: all units satisfy the reader loader and have Sanskrit, English, IAST, and word glosses.")
     print("PASS: verse texts use one source verse per card; numbered prose passage groups remain explicit.")
     print("PASS: named numeric contents ranges have no gaps or overlaps where directly comparable.")
