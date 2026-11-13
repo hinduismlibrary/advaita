@@ -10,7 +10,7 @@ from pathlib import Path
 from site_seo import base_url_for, prepare_site_seo, url_for_page
 import json
 
-CACHE_VERSION = "20261111-advaita-reader-1"
+CACHE_VERSION = "20261113-sridhara-reader-repair-6"
 DEFAULT_REPOSITORY = "hinduismlibrary/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -30,6 +30,18 @@ SHANKARA_READER_URL = re.compile(
 )
 SITE_CHROME_JS_URL = re.compile(
     r"""/advaita/assets/js/site-chrome\.js(?:\?[^"'\s>]*)?""",
+    re.IGNORECASE,
+)
+BHAGAVATAM_READER_URL = re.compile(
+    r"""/advaita/assets/js/bhagavatam-sridhara-reader\.js(?:\?[^"'\s>]*)?""",
+    re.IGNORECASE,
+)
+ARTICLE_STANDARD_JS_URL = re.compile(
+    r"""/advaita/assets/js/article-standard\.js(?:\?[^"'\s>]*)?""",
+    re.IGNORECASE,
+)
+ARTICLE_STANDARD_CSS_URL = re.compile(
+    r"""/advaita/assets/css/article-standard\.css(?:\?[^"'\s>]*)?""",
     re.IGNORECASE,
 )
 WORD_SUMMARY = re.compile(r"(<summary\b[^>]*>)\s*Word[-– ]for[-– ]word\s*(</summary>)", re.IGNORECASE)
@@ -117,6 +129,9 @@ def prepare(site: Path) -> tuple[int, int]:
         )
         updated = SITE_JS_URL.sub(f"/advaita/assets/js/site.js?v={CACHE_VERSION}", updated)
         updated = SITE_CHROME_JS_URL.sub(f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}", updated)
+        updated = BHAGAVATAM_READER_URL.sub(f"/advaita/assets/js/bhagavatam-sridhara-reader.js?v={CACHE_VERSION}", updated)
+        updated = ARTICLE_STANDARD_JS_URL.sub(f"/advaita/assets/js/article-standard.js?v={CACHE_VERSION}", updated)
+        updated = ARTICLE_STANDARD_CSS_URL.sub(f"/advaita/assets/css/article-standard.css?v={CACHE_VERSION}", updated)
         updated = BHAVISHYA_CONTROLS_URL.sub(f"/advaita/assets/js/bhavishya-controls.js?v={CACHE_VERSION}", updated)
         updated = SHANKARA_READER_URL.sub(f"/advaita/assets/js/shankara-reader.js?v={CACHE_VERSION}", updated)
         updated = WORD_SUMMARY.sub(r'\1Word for Word\2', updated)

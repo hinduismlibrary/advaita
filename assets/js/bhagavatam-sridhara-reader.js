@@ -615,6 +615,26 @@
     });
   }
 
+function renderSridharaChapterPreface(text) {
+    const section = document.createElement('section');
+    section.className = 'gita-sridhara-sanskrit-block gita-sridhara-chapter-preface';
+    section.setAttribute('aria-label', 'Śrīdhara’s chapter introduction');
+    const heading = document.createElement('h3');
+    heading.className = 'gita-sridhara-source-label';
+    heading.textContent = 'Śrīdhara’s opening verses';
+    const source = String(text || '').trim();
+    section.append(
+      heading,
+      makeParagraph(source, { className: 'gita-sridhara-sanskrit', lang: 'sa-Deva' }),
+      makeParagraph(devanagariToIast(source), {
+        className: 'gita-sridhara-iast',
+        italic: true,
+        lang: 'sa-Latn'
+      })
+    );
+    return section;
+  }
+
   function renderVerse(chapter, entry, sridharaEntries, commentaryEntries, wordForWordEntries, localCommentaryEntries) {
     const section = document.createElement('article');
     section.className = 'gita-verse sb-verse-section';
@@ -653,9 +673,30 @@
       translationNodes.push(translation);
     }
 
-    const verseTransliteration = entry.transliteration.join('\n');
+    const verseTransliteration = entry.transliteration.join('\n').trim();
     const sridharaSanskrit = sridharaForRange(sridharaEntries, entry.start, entry.end, chapter);
     const commentaryStatus = commentaryStatusForRange(localCommentaryEntries, entry.start, entry.end);
+
+    const verseIast = verseTransliteration
+      ? makeParagraph(verseTransliteration, { className: 'gita-iast', italic: true, lang: 'sa-Latn' })
+      : null;
+    const sridharaSource = sridharaSanskrit ? document.createElement('section') : null;
+    if (sridharaSource) {
+      sridharaSource.className = 'gita-sridhara-sanskrit-block';
+      sridharaSource.setAttribute('aria-label', 'Śrīdhara Sanskrit');
+      const sourceHeading = document.createElement('h3');
+      sourceHeading.className = 'gita-sridhara-source-label';
+      sourceHeading.textContent = 'Śrīdhara';
+      sridharaSource.append(
+        sourceHeading,
+        makeParagraph(sridharaSanskrit, { className: 'gita-sridhara-sanskrit', lang: 'sa-Deva' }),
+        makeParagraph(devanagariToIast(sridharaSanskrit), {
+          className: 'gita-sridhara-iast',
+          italic: true,
+          lang: 'sa-Latn'
+        })
+      );
+    }
 
     const controls = document.createElement('div');
     controls.className = 'gita-controls';
@@ -685,33 +726,10 @@
     wordSections.push(makeDualSection('Śrīdhara', 'gita-dual-sridhara', sridharaWordNote));
     controls.appendChild(makeDetails('Word for Word', wordSections));
 
-    const transliterationSections = [];
-    if (verseTransliteration) {
-      transliterationSections.push(makeDualSection('Bhāgavatam', 'gita-dual-gita',
-        makeParagraph(verseTransliteration, { italic: true, lang: 'sa-Latn' })));
-    } else {
-      transliterationSections.push(makeDualSection('Bhāgavatam', 'gita-dual-gita',
-        makeEmptyParagraph('No source text')));
-    }
-    if (sridharaSanskrit) {
-      transliterationSections.push(makeDualSection('Śrīdhara', 'gita-dual-sridhara',
-        makeParagraph(devanagariToIast(sridharaSanskrit), { italic: true, lang: 'sa-Latn' })));
-    }
-    controls.appendChild(makeDetails('Transliteration', transliterationSections));
-
-    const sridharaSanskritDetails = makeDetails('Śrīdhara Sanskrit', [
-      sridharaSanskrit
-        ? makeParagraph(sridharaSanskrit, { lang: 'sa-Deva' })
-        : makeParagraph(
-          commentaryStatus === 'source-gap' ? 'Source gap.' :
-            commentaryStatus === 'no-commentary' ? 'No commentary.' :
-              'Śrīdhara source record unavailable.',
-          { className: 'gita-no-source' }
-        )
-    ]);
-    controls.appendChild(sridharaSanskritDetails);
-
-    section.append(heading, rule, devanagari, ...translationNodes, controls);
+    section.append(heading, rule, devanagari);
+    if (verseIast) section.appendChild(verseIast);
+    section.append(...translationNodes);
+    if (sridharaSource) section.appendChild(sridharaSource);
 
     const commentaryText = commentaryForRange(commentaryEntries, entry.start, entry.end) ||
       commentaryForRange(localCommentaryEntries, entry.start, entry.end);
@@ -722,17 +740,9 @@
       commentaryHeading.textContent = 'Śrīdhara’s Commentary';
       commentary.append(commentaryHeading, makeParagraph(commentaryText));
       section.appendChild(commentary);
-    } else {
-      const note = commentaryStatus === 'no-commentary'
-        ? 'The pinned Śrīdhara source explicitly has no separate commentary for this verse.'
-        : commentaryStatus === 'source-gap'
-          ? 'The pinned Śrīdhara source has a gap here; no commentary text is available for this verse.'
-          : sridharaSanskrit
-            ? 'The Śrīdhara Sanskrit is retained, but its English commentary translation is not yet available.'
-            : 'No Śrīdhara source block is available for this verse, so there is no English commentary translation to display.';
-      section.appendChild(makeParagraph(note, { className: 'gita-commentary-note' }));
     }
 
+    section.appendChild(controls);
     return section;
   }
 
@@ -818,7 +828,7 @@
   function commentaryUrl(manifest) {
     const path = (manifest.english_commentary && manifest.english_commentary.path) ||
       'assets/data/bhagavatam-sridhara-english-checkpoints.json';
-    const versionedPath = path + (path.includes('?') ? '&' : '?') + 'v=20261104-coverage-status-1';
+    const versionedPath = path + (path.includes('?') ? '&' : '?') + 'v=20261113-c10-preface-split-2';
     return versionedPath.charAt(0) === '/' ? versionedPath : '/advaita/' + versionedPath;
   }
 
@@ -846,7 +856,7 @@
       const englishUrl = chapterEnglishUrl(manifest, config, chapter);
       const sridharaUrl = chapterSridharaUrl(manifest, config, chapter);
       const commentaryUrlValue = commentaryUrl(manifest);
-      const checkpointUrl = '/advaita/assets/data/bhagavatam-sridhara-checkpoints.json?v=20261015-canto2-source-alignment-1';
+      const checkpointUrl = '/advaita/assets/data/bhagavatam-sridhara-checkpoints.json?v=20261113-c10-preface-split-2';
       const requests = [fetchText(englishUrl)];
       if (sridharaUrl) {
         requests.push(config.sridhara_mode === 'local-cached' ? fetchJson(sridharaUrl) : fetchText(sridharaUrl));
@@ -896,6 +906,8 @@
       loading.remove();
       contentsHeading.textContent = 'Contents';
       populateContents(contentsList, english.entries, chapter);
+      const chapterPreface = sridharaResult && sridharaResult.chapter_preface_sanskrit;
+      if (chapterPreface) shell.appendChild(renderSridharaChapterPreface(chapterPreface));
       if (heroTitle) heroTitle.textContent = 'Canto ' + canto + ', Chapter ' + chapter;
        if (titleNode) titleNode.textContent = english.title || 'Chapter ' + chapter;
       english.entries.forEach((entry) => shell.appendChild(renderVerse(chapter, entry, sridharaEntries, commentaryEntries, wordForWordEntries, localCommentaryEntries)));

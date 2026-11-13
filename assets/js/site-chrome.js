@@ -4,7 +4,7 @@ if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261111-advaita-reader-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261113-sridhara-reader-repair-6";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -169,11 +169,20 @@ function isOriginalSanskritTitle(value){
  return ORIGINAL_TEXT_TITLES.has(normalizeLabel(originalTitleFor(value)));
 }
 function stackLabel(element,original,devanagari,mode="english"){
- if(!element||!original||!devanagari||element.dataset.vdBilingual==="true")return;
+ if(!element||!original||!devanagari)return;
  const originalMode=mode==="original";
+ if(!originalMode){
+  if(element.dataset.vdLabelMode==="english"&&element.dataset.vdOriginal===original&&!element.querySelector(".vd-label-dev"))return;
+  element.textContent=original;
+  element.dataset.vdOriginal=original;
+  element.dataset.vdBilingual="false";
+  element.dataset.vdLabelMode="english";
+  return;
+ }
+ if(element.dataset.vdBilingual==="true")return;
  const roman=document.createElement("span");
- roman.className=originalMode?"vd-label-iast":"vd-label-en";
- roman.lang=originalMode?"sa-Latn":"en";
+ roman.className="vd-label-iast";
+ roman.lang="sa-Latn";
  roman.textContent=original;
  const sa=document.createElement("span");
  sa.className="vd-label-dev";
@@ -181,10 +190,8 @@ function stackLabel(element,original,devanagari,mode="english"){
  sa.textContent=devanagari;
  element.dataset.vdOriginal=original;
  element.dataset.vdBilingual="true";
- element.dataset.vdLabelMode=originalMode?"original":"english";
- if(element.classList.contains("brand"))element.replaceChildren(sa,roman);
- else if(document.body?.classList.contains("home-page"))element.replaceChildren(roman,sa);
- else element.replaceChildren(sa,roman);
+ element.dataset.vdLabelMode="original";
+ element.replaceChildren(sa,roman);
 }
 function stackOriginalDirectoryEntry(element){
  if(!element||element.dataset.vdBilingual==="true")return false;
@@ -387,11 +394,8 @@ function makeHeader(path){
   button.textContent="Search";
   stackLabel(button,"Search","अन्वेषणम्");
   form.append(label,input,button);
-  const navRow=document.createElement("div");
-  navRow.className="vd-nav-subrow";
-  navRow.append(nav);
-  row.append(brand,toggle,form);
-  header.append(row,navRow);
+  row.append(brand,toggle,nav,form);
+  header.append(row);
   const crumbs=(path==="/advaita"||path==="/")?[]:makeCrumbs(path);
   if(crumbs.length){
     const crumbRow=document.createElement("div");
@@ -542,8 +546,28 @@ function repairMmkLayout(path){
   document.body.classList.remove("vp-book-1");
   document.querySelectorAll('link[rel~="stylesheet"][href*="vishnu-purana-chapter-reader.css"]').forEach(link=>link.remove());
 }
+function cleanMaskPlaceholders(root){
+  if(!root)return;
+  const clean=node=>{
+    const cleaned=(node.nodeValue||'').replace(/_+MASK_+/gi,'');
+    if(cleaned.trim())node.nodeValue=cleaned;
+    else node.parentNode?.removeChild(node);
+  };
+  if(root.nodeType===Node.TEXT_NODE){
+    if(/_+MASK_+/i.test(root.nodeValue||''))clean(root);
+    return;
+  }
+  if(!document.createTreeWalker)return;
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  const nodes=[];
+  while(walker.nextNode()){
+    if(/_+MASK_+/i.test(walker.currentNode.nodeValue||''))nodes.push(walker.currentNode);
+  }
+  nodes.forEach(clean);
+}
 function mount(){
   if(!document.head||!document.body)return false;
+  cleanMaskPlaceholders(document.body);
   repairMmkLayout(normalizedPath());
   bindReaderDisclosureState();
   addFavicon();
@@ -560,6 +584,7 @@ function mount(){
     document.body.prepend(header);
   }
   applyPageLabels();
+  normalizeScriptureIndexLabels();
   enhancePuranaChapterLabels();
   const footer=document.querySelector(".site-footer");
   if(footer)applyPageLabels(footer);
@@ -568,12 +593,30 @@ function mount(){
   watchDynamicLabels();
   return true;
 }
+function normalizeScriptureIndexLabels(){
+ if(!document.body.classList.contains("scripture-index-page"))return;
+ const partLabels={
+  "Prathamāṃśaḥ":"Part 1","Dvitīyāṃśaḥ":"Part 2","Tṛtīyāṃśaḥ":"Part 3",
+  "Caturthāṃśaḥ":"Part 4","Pañcamāṃśaḥ":"Part 5","Ṣaṣṭhāṃśaḥ":"Part 6"
+ };
+ document.querySelectorAll("main .catalog-dev").forEach(node=>node.remove());
+ document.querySelectorAll("main .catalog-iast").forEach(node=>{
+  const label=node.textContent.replace(/\s+/g," ").trim();
+  const canto=label.match(/^Skandha\s+(\d+)$/i);
+  if(canto)node.textContent="Canto "+canto[1];
+  else if(partLabels[label])node.textContent=partLabels[label];
+  node.style.setProperty("font-style","normal","important");
+  node.dataset.vdIndexLabel="true";
+ });
+}
 function init(){
   if(!mount()||window.__vivekaSiteChromeObserver)return;
-  const observer=new MutationObserver(()=>{
+  const observer=new MutationObserver(records=>{
+    records.forEach(record=>record.addedNodes.forEach(node=>cleanMaskPlaceholders(node)));
+    normalizeScriptureIndexLabels();
     if(!document.querySelector("body > header.site-header.vd-global-header"))mount();
   });
-  observer.observe(document.body,{childList:true});
+  observer.observe(document.body,{childList:true,subtree:true});
   window.__vivekaSiteChromeObserver=observer;
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});

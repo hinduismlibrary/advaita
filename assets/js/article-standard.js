@@ -1,6 +1,20 @@
 /* Progressive enhancements: every article and every contents link works without JS. */
 (()=>{
   'use strict';
+  const cleanMaskPlaceholders = scope => {
+    if (!scope || !document.createTreeWalker) return;
+    const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) {
+      if (/_+MASK_+/i.test(walker.currentNode.nodeValue || "")) nodes.push(walker.currentNode);
+    }
+    nodes.forEach(node => {
+      const cleaned = (node.nodeValue || "").replace(/_+MASK_+/gi, "");
+      if (cleaned.trim()) node.nodeValue = cleaned;
+      else node.parentNode?.removeChild(node);
+    });
+  };
+  cleanMaskPlaceholders(document.body);
   const root=document.getElementById('source-content');
   if(!root)return;
   const links=[...document.querySelectorAll('.toc a[href*="#"]')];

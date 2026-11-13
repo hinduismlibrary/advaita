@@ -7,6 +7,7 @@ const mmkChapter=/\/articles\/mulamadhyamakakarika-with-chandrakirti\/chapter-\d
 const scripture=/\/articles\/(?:vishnu-purana-book-\d+-chapter-\d+|bhagavad-gita-chapter-\d+|bhavishya-purana-pratisargaparvan-part-\d+-chapter-\d+|bhavishya-purana-brahmaparvan-chapter-\d+|bhavisya-purana-addresses-varna-system|srimad-bhagavatam-(?:second|tenth)-canto-sridhara-svami-rebuild|srimad-bhagavatam-canto-\d{2}-sridhara-svami|mimamsa-sutras-sabara-bhasya-chapter-1)\/?$/.test(p);
 // Viṣṇu Purāṇa WFW integrity guard: never display a full article translation as lexical data.
 const vishnuPuranaRoute=/\/articles\/vishnu-purana-book-\d+-chapter-\d+(?:\/index\.html)?\/?$/.test(p);
+if(vishnuPuranaRoute&&document.body)document.body.classList.add('vishnu-purana-reader');
 const repairVishnuWordForWord=()=>{
  if(!vishnuPuranaRoute)return;
  const normalize=s=>String(s||'').replace(/\s+/g,' ').trim();
@@ -30,16 +31,151 @@ repairVishnuWordForWord();
 // Keep Devanāgarī verses visible in the verse body and remove the extra disclosure.
 const standardizeVishnuControls=()=>{
  if(!vishnuPuranaRoute)return;
- // The verse text is already visible; keep just the two requested disclosures.
- document.querySelectorAll('.gita-devanagari-details').forEach(detail=>detail.remove());
+ const cleanText=node=>String(node?.textContent||'').replace(/\s+/gu,' ').trim();
+ const cleanSourceSeparators=value=>String(value||'')
+  .replace(/([\u0900-\u097F])[-]*\.[-]*([\u0900-\u097F])/gu,'$1 $2')
+  .replace(/(^|\s)[-]*\.[-]*(?=[\u0900-\u097F])/gu,'$1')
+  .replace(/([A-Za-z\u00C0-\u024F])[-]*\.[-]*([A-Za-z\u00C0-\u024F])/gu,'$1 $2')
+  .replace(/(^|\s)[-]*\.[-]*(?=[A-Za-z\u00C0-\u024F])/gu,'$1')
+  .replace(/\s+/gu,' ').trim();
+ const sridharaOnly=value=>cleanSourceSeparators(String(value||'')
+  .split(/(?:विष्णुचित्त(?:ाचार्य)?ः?|viṣṇucitta(?:-?cārya)?ḥ?|vishnucitta(?:-?acharya)?)[\s\u200b]*[-–—:]/iu)[0]);
+ const disclosure=(items,name)=>items.find(item=>
+  new RegExp('^'+name+'$','i').test(cleanText(item.querySelector(':scope>summary'))));
+ let chapterPreface=null;
+ document.querySelectorAll('.gita-verse').forEach(verse=>{
+  const controls=verse.querySelector(':scope>.gita-controls');
+  if(!controls)return;
+  const items=[...controls.children].filter(node=>node.matches('details.gita-details'));
+  const transliteration=disclosure(items,'Transliteration');
+  const devanagari=items.find(item=>item.classList.contains('gita-devanagari-details'))||disclosure(items,'Devanagari');
+  const verseIast=cleanText(transliteration?.querySelector('.gita-dual-gita [lang="sa-Latn"]'));
+  let commentaryDeva=sridharaOnly(cleanText(devanagari?.querySelector('.gita-dual-sridhara [lang="sa-Deva"]')));
+  let commentaryIast=sridharaOnly(cleanText(transliteration?.querySelector('.gita-dual-sridhara p')));
+  if(!chapterPreface&&commentaryDeva.startsWith('श्रीबिन्दुमाधवं वन्दे')){
+   const devaBoundary=commentaryDeva.indexOf('जितं त इति');
+   const iastBoundary=commentaryIast.search(/jitaṃ\s+ta\s+iti/iu);
+   if(devaBoundary>0){
+    chapterPreface={deva:commentaryDeva.slice(0,devaBoundary).trim(),iast:'',translations:[
+     'I bow to Śrī Bindumādhava, whose form is supreme bliss; I bow to Vāc, Viśveśvara, and Gaṅgā, and to the sages headed by Parāśara.',
+     'Having carefully examined the commentary called Ātmaprakāśa—composed by the eminent yogi Citsukha, clear, following his method, and an accessible digest—the ascetic Śrīdhara Svāmin, a bee at the lotus feet of his true teacher, will compose a good exposition on the essence of the glorious Viṣṇu Purāṇa, to purify his own understanding.',
+     'Having seen the earlier commentaries on the glorious Viṣṇu Purāṇa, which are exceedingly extensive, this intermediate-length commentary is undertaken.',
+     'The sage makes an auspicious beginning by means of an Upaniṣadic mantra framed as a salutation to the subject intended here.'
+    ],glosses:[
+     [['śrī-bindu-mādhavam','Śrī Bindumādhava (object of “I bow”)'],['vande','I bow to'],['paramānanda-vigraham','whose form is supreme bliss'],['vācam','Vāc, the goddess of speech'],['viśveśvaram','Viśveśvara'],['gaṅgām','Gaṅgā'],['parāśara-mukhān','headed by Parāśara'],['munīn','sages']],
+     [['śrīmat-cit-sukha-yogi-mukhya-racita-vyākhyām','commentary composed by the eminent Citsukha yogi'],['nirīkṣya','having examined'],['sphuṭam','clearly'],['tan-mārgeṇa','by following that method'],['subodha-saṅgrahavatīm','containing an accessible digest'],['ātma-prakāśābhidhām','called Ātmaprakāśa'],['śrīmad-viṣṇu-purāṇa-sāra-vivṛtim','exposition on the essence of the glorious Viṣṇu Purāṇa'],['kartā','will compose'],['yatiḥ','the ascetic'],['śrīdhara-svāmī','Śrīdhara Svāmin'],['sad-guru-pāda-padma-madhu-paḥ','a bee at the lotus feet of his true teacher'],['sādhu','well'],['sva-dhī-śuddhaye','for the purification of his own understanding']],
+     [['śrīmad-viṣṇu-purāṇasya','of the glorious Viṣṇu Purāṇa'],['vyākhyāḥ','commentaries'],['ati-vistarām','exceedingly extensive'],['prācām','of the earlier authors'],['ālokya','having seen'],['tat-vyākhyā','this commentary'],['madhyamā iyam','this intermediate-length one'],['vidhīyate','is undertaken']],
+     [['asmin','in this'],['vivakṣitam','intended'],['yat tu vastu','whatever subject matter'],['tat-namanātmakam','of the nature of a salutation'],['muniḥ','the sage'],['mantra-upaniṣadā','by means of an Upaniṣadic mantra'],['kṛtam','made'],['badhnāti','sets / secures'],['maṅgalam','an auspicious beginning']]
+    ]};
+    if(iastBoundary>=0){chapterPreface.iast=commentaryIast.slice(0,iastBoundary).trim();commentaryIast=commentaryIast.slice(iastBoundary).trim()}else commentaryIast='';
+    commentaryDeva=commentaryDeva.slice(devaBoundary).trim();
+   }
+  }
+  const verseSanskrit=verse.querySelector(':scope>.gita-sanskrit');
+  if(verseIast&&verseSanskrit&&!verse.querySelector(':scope>.gita-iast')){
+   const line=document.createElement('p');
+   line.className='gita-iast';
+   line.lang='sa-Latn';
+   line.textContent=verseIast;
+   verseSanskrit.after(line);
+  }
+  if(commentaryDeva&&!verse.querySelector(':scope>.gita-sridhara-sanskrit-block')){
+   const block=document.createElement('section');
+   block.className='gita-sridhara-sanskrit-block';
+   block.setAttribute('aria-label','Śrīdhara Sanskrit');
+   const label=document.createElement('h3');
+   label.className='gita-sridhara-source-label';
+   label.textContent='Śrīdhara';
+   const sanskrit=document.createElement('p');
+   sanskrit.className='gita-sridhara-sanskrit';
+   sanskrit.lang='sa-Deva';
+   sanskrit.textContent=commentaryDeva;
+   block.append(label,sanskrit);
+   if(commentaryIast){
+    const iast=document.createElement('p');
+    iast.className='gita-sridhara-iast';
+    iast.lang='sa-Latn';
+    iast.textContent=commentaryIast;
+    block.appendChild(iast);
+   }
+   const english=verse.querySelector(':scope>.gita-sridhara-translation');
+   if(english)english.before(block);
+   else controls.before(block);
+  }
+  items.filter(item=>item===transliteration||item===devanagari).forEach(item=>item.remove());
+ });
+ if(chapterPreface?.deva&&!document.querySelector('.gita-sridhara-chapter-preface')){
+  const firstVerse=document.querySelector('.gita-verse');
+  if(firstVerse){
+   const section=document.createElement('section');
+   section.className='gita-sridhara-sanskrit-block gita-sridhara-chapter-preface';
+   section.setAttribute('aria-label','Śrīdhara’s opening verses');
+   const heading=document.createElement('h3');
+   heading.className='gita-sridhara-source-label';
+   heading.textContent='Śrīdhara’s opening verses';
+   section.appendChild(heading);
+   const devaVerses=chapterPreface.deva.match(/[\s\S]*?॥[०-९]+॥/gu)||[chapterPreface.deva];
+   const iastVerses=chapterPreface.iast.match(/[\s\S]*?\|\|\d+\|\|/gu)||[];
+   devaVerses.forEach((text,index)=>{
+    const verse=document.createElement('article');
+    verse.className='gita-sridhara-preface-verse';
+    const verseHeading=document.createElement('h4');
+    verseHeading.className='gita-sridhara-preface-verse-label';
+    verseHeading.textContent='Opening verse '+(index+1);
+    const sanskrit=document.createElement('p');
+    sanskrit.className='gita-sridhara-sanskrit';
+    sanskrit.lang='sa-Deva';
+    sanskrit.textContent=text.trim();
+    verse.append(verseHeading,sanskrit);
+    if(iastVerses[index]){
+     const iast=document.createElement('p');
+     iast.className='gita-sridhara-iast';
+     iast.lang='sa-Latn';
+     iast.textContent=iastVerses[index].trim();
+     verse.appendChild(iast);
+    }
+    const translation=document.createElement('p');
+    translation.className='gita-sridhara-body gita-sridhara-preface-translation';
+    translation.textContent=chapterPreface.translations[index]||'';
+    verse.appendChild(translation);
+    const glosses=chapterPreface.glosses[index]||[];
+    if(glosses.length){
+     const details=document.createElement('details');
+     details.className='gita-details';
+     const summary=document.createElement('summary');
+     summary.textContent='Word-for-word';
+     const reveal=document.createElement('div');
+     reveal.className='gita-reveal';
+     glosses.forEach(([word,gloss])=>{
+      const row=document.createElement('p');
+      row.className='gita-wfw-list';
+      row.textContent=word+' — '+gloss;
+      reveal.appendChild(row);
+     });
+     details.append(summary,reveal);
+     verse.appendChild(details);
+    }
+    section.appendChild(verse);
+   });
+   firstVerse.before(section);
+  }
+ }
 };
 standardizeVishnuControls();
+if(vishnuPuranaRoute){
+ document.querySelectorAll('.gita-no-commentary').forEach(node=>node.remove());
+ document.querySelectorAll('.gita-sridhara-translation').forEach(section=>{
+  const body=section.querySelector('.gita-sridhara-body');
+  const text=String(body?.textContent||'').replace(/\s+/gu,' ').trim();
+  if(/^no\s+(?:(?:separate|independent)\s+)?(?:śrīdhara\s+)?(?:commentary|translation)\b/iu.test(text))section.remove();
+ });
+}
 
 
 const citation=/\/articles\/compilation-of-peer-reviewed-citations-against-aryan-migration-theory\/?$/.test(p),meat=/\/articles\/meat-eating-in-hinduism-through-the-lens-of-shastra\/?$/.test(p);
 const css=(key,href)=>{if(document.querySelector(`link[data-${key}]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=href;l.dataset[key]='1';document.head.append(l)};
 const js=(key,src)=>{if(document.querySelector(`script[data-${key}]`))return;const s=document.createElement('script');s.src=src;s.async=false;s.dataset[key]='1';document.body.append(s)};
-js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261111-advaita-reader-1');
+js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261113-sridhara-reader-repair-6');
 if(article){
  document.querySelectorAll('link[href*="/assets/css/hindupedia-site.css"]').forEach(n=>n.remove());
  if(mmkChapter){

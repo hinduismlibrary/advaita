@@ -113,3 +113,40 @@ body.article-standard-page .document-content .scripture-quote-pair > p.translati
   color: #171717;
   font-weight: 400;
 }
+
+
+/* Keep the shared article header and search field inside the viewport at every width. */
+body.article-standard-page .sitebar{
+ box-sizing:border-box;min-width:0;max-width:100%;gap:10px clamp(12px,1.8vw,24px);
+}
+body.article-standard-page .sitebar>*{min-width:0;max-width:100%}
+body.article-standard-page .sitebar nav{flex:1 1 320px;min-width:0;flex-wrap:wrap}
+body.article-standard-page .site-search{box-sizing:border-box;flex:1 1 250px;width:min(320px,100%);min-width:0}
+body.article-standard-page .site-search input{box-sizing:border-box;width:100%;min-width:0;flex:1 1 0}
+body.article-standard-page .site-search button{flex:0 0 auto;white-space:nowrap}
+@media(max-width:1000px){
+ body.article-standard-page .sitebar{align-items:flex-start}
+ body.article-standard-page .sitebar nav{flex:1 1 100%;order:3}
+ body.article-standard-page .site-search{flex:1 1 100%;order:4}
+}
+@media(max-width:760px){
+ body.article-standard-page .sitebar{padding-left:16px;padding-right:16px}
+ body.article-standard-page .sitebar nav{gap:10px 14px}
+ body.article-standard-page .site-search{width:100%;max-width:100%}
+}
+body.article-standard-page .document-content,
+body.article-standard-page .document-content *{min-width:0}
+body.article-standard-page .document-content{overflow-wrap:anywhere}
+body.article-standard-page .article-head h1{overflow-wrap:anywhere;text-wrap:balance}
+body.article-standard-page .sitebar .brand{flex:0 1 auto;overflow-wrap:anywhere;white-space:normal}
+body.article-standard-page .site-search input{font-size:14px;line-height:1.4}
+
+/* Desktop search occupies a measured field; navigation and brand keep their own width. */
+@media(min-width:1001px){
+ body.article-standard-page .sitebar nav{flex:0 1 auto;min-width:0}
+ body.article-standard-page .site-search{flex:0 1 320px;width:min(320px,100%);max-width:320px}
+}
+@media(max-width:1000px){
+ body.article-standard-page .sitebar nav{flex:1 1 100%;min-width:0}
+ body.article-standard-page .site-search{flex:1 1 100%;width:100%;max-width:100%}
+}
