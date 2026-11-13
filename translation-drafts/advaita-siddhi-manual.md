@@ -570,9 +570,59 @@ Thus the proposed use of a general-characteristic connection to make the absence
 **Closing mark in source:** इति सामान्यप्रत्यासत्तिभङ्गेन लौकिकालौकिकप्रत्यक्षबाधोद्धारः (“This concludes the reply to the objection from ordinary and extraordinary perception by refuting the proposed general-characteristic connection.”)
 
 
+
+### Answering the objection from witness-consciousness
+
+**Source heading:** अथ साक्षिबाधोद्धारः (“Next, answering the objection from witness-consciousness”).
+
+**Objection.** If direct perception grasps only what is present, how could the falsity of silver seen in a shell be directly known as its being the counterpositive of a denial that holds in all three times in the locus where the silver appears? One might say that the shell's nature, which contradicts silver, is directly perceived; from that, the absence of silver is necessarily established, and the cognition “the silver appeared falsely” is explained by the witness, which reveals every relation to its object. If so, the witness should also grasp directly, across all times, that the sky is not the counterpositive of a real future denial.
+
+**Reply.** No. The witness reveals what is present; it cannot reveal the absence of a future sublation that does not yet exist. And witness-cognition is common to valid cognition and error, so it cannot by itself defeat a valid means of knowledge.
+
+**Objection.** When the witness apprehends that a cognition is valid, it also apprehends that the pot and similar objects are not sublated. Validity cannot be known without including the fact that the object is not contradicted.
+
+**Reply.** No. An action can be successful when its object is not sublated during ordinary transactions, and that is enough to account for the success. Even if the witness apprehends validity in that sense, there is no contradiction. What marks a cognition of a pot as the sort that leads to a successful transaction is not that its object is never sublated in all three times. It is that, unlike an appearance such as shell-silver, its object is not sublated during the period of ordinary activity. As already explained, that does not conflict with a later, real sublation. A future sublation—or its absence—cannot be known by the witness without a means of knowledge, because the witness reveals only what is present.
+
+**Objection.** Then cognitions such as “I am the body” and “the water is hot” must also be valid, since their objects are not sublated during ordinary activity.
+
+**Reply.** Until knowledge of Brahman arises, those cognitions share the same status in this respect as ordinary cognition of a pot. Their being uncontradicted during ordinary activity does not establish that their objects are ultimately real.
+
+**Objection.** A sublating cognition that occurs later either denies the original object at the very time when the original cognition apprehended it, or denies it at a different time. In the first case, how could the original cognition have been valid? In the second, the later cognition establishes only that the object is impermanent.
+
+**Reply.** We do not accept that the validity of the cognition of the world means that its object can never be sublated. We accept only that, during ordinary activity, no contrary valid cognition has arisen. The object is apprehended as existing at the time when it is apprehended, and it is not contradicted at that time; that is the validity we accept.
+
+**Objection.** What distinguishes your cognition of a pot from a merely phenomenal cognition and establishes the pot's empirical reality should also establish its ultimate reality.
+
+**Reply.** No. The difference between cognition of a pot and a phenomenal cognition consists in features such as the pot's being the object of a determinate cognition that is not contradicted during ordinary activity. That cannot establish ultimate reality. The cognition “I am the body” and an immediate error just before knowledge of Brahman provide counterexamples. The distinction establishes only empirical status.
+
+**Objection.** There is no difference between the experiences “the pot exists” and “the silver is false.” How, then, can one distinguish “the pot is false” from “the falsity of silver is itself false”? If the latter too is false, silver would become ultimately real.
+
+**Reply.** No. It has already been explained why the falsity of falsity does not make silver ultimately real.
+
+**Objection.** If ultimate reality is not an object of direct perception, the scriptural statements that deny it would deny something that has never been presented.
+
+**Reply.** Those statements deny what is presented by the senses. Even when they deny duality as ultimately real, the denied object can be present indirectly or as something one might suppose to be present. Scriptural prohibitions such as “Fire is not to be kindled in the open space” show that a negation need not be pointless simply because the prohibited thing has not actually been attempted.
+
+**Objection.** If the world is not ultimately real, and direct perception does not present it as ultimately real, how can direct perception fail to reveal the truth about it? Everyone directly experiences the world as ultimately real.
+
+**Reply.** We do not define truth-revealing cognition as cognition that apprehends an object under a qualifier that belongs to it as real, or falsehood-revealing cognition as cognition that apprehends something different from such an object. A cognition reveals truth when its object is not sublated; it fails to reveal truth when its object is sublated. Only the cognition of Brahman produced by scripture has an unsublated object, because the Veda has Brahman as its purport. Other cognitions do not have that status. Thus the perception of the world need not apprehend ultimate reality in order to fail to reveal the truth about it. The common belief that the world is ultimately real can be explained indirectly, just as the commonly accepted ability of water to quench thirst can be established through experience without being directly perceived as an ultimate fact.
+
+Therefore:
+
+> “Since the reality that is fit for direct perception has not been defined here,  
+> direct perception cannot defeat the inferential sign of falsity.”
+
+And:
+
+> “Neither ordinary perception, nor perception produced by a general characteristic,  
+> nor perception in the form of the witness defeats the sign that infers falsity.”
+
+**Closing mark in source:** इति प्रत्यक्षयोग्यसत्त्वानिरुक्त्या प्रत्यक्षबाधोद्धारः (“This concludes the reply to the objection from direct perception, by showing that reality fit for direct perception has not been defined.”)
+
+
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first fourteen titled units of the first pariccheda. The 19th numbered source unit has been started; its first marked argument is drafted through the refutation of general-characteristic perception, but the source's next marked argument from witness-consciousness and its closing verses are unfinished.
-- Still unfinished: at least 48 remaining titled units in the first pariccheda, plus the unfinished portion of the 19th numbered unit, and all titled units in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
+- Manually translated in this working draft: opening verses 1–4, the first fourteen consecutive titled units, and the two marked arguments (including the closing verses) in the source's section on reality and the objection from direct perception.
+- Still unfinished: the later sections of the first pariccheda and all remaining sections in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
 - Advaita Śāradā and the E-Bharati Unicode text have been compared for the translated units. Recorded differences include variant headings for the perceptibility, inertness, boundedness, limiting-condition, and fallacious-look-alike arguments; E-Bharati also splits a compound that Advaita Śāradā prints as one word in the part-hood unit. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated page by page with the draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
