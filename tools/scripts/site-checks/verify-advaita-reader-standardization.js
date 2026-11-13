@@ -112,7 +112,7 @@ for (const work of expectedWorks) {
 
 if (!contentsPage.includes("shankara-reader-navigation.js") || !chapterPage.includes("shankara-reader-runtime.js")) fail("A shared reader page is missing the navigation/runtime bundle.");
 if (contentsPage.includes("fallbackRanges") || chapterPage.includes("fallbackRanges") || chapterPage.includes("window.location.replace")) fail("Legacy range fabrication or a reader-page redirect remains in the shared reader.");
-if (!contentsPage.includes("units.length<=50&&!data.longWork||!items.length") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts and works without source divisions do not bypass the contents page.");
+if (!contentsPage.includes("if((units.length<=50&&!data.longWork)||!items.length)") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts and works without source divisions do not bypass the contents page.");
 if (!chapterPage.includes("reader-jump-form") || !runtime.includes("jumpInput.max = String(maximum)")) fail("The compact Go to verse/section control or its maximum is missing.");
 if (chapterPage.includes("chapter-list") || chapterPage.includes("work-author") || runtime.includes("Text source, authorship, and translation credit")) fail("The reader still includes the old contents list or metadata boilerplate.");
 const brahmaLegacyPage = read(path.join(site, "books/adi-shankaracharya/brahma-siddhi/index.html"));
