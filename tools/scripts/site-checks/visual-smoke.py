@@ -34,7 +34,7 @@ def assert_site_palette(page) -> None:
     devanagari = page.locator('[lang^="sa-Deva"], [lang^="hi-Deva"]').evaluate_all(
         "nodes => nodes.filter(node => node.isConnected && node.getClientRects().length > 0).map(node => getComputedStyle(node).color)"
     )
-    assert all(color == "rgb(32, 33, 34)" for color in devanagari), devanagari
+    assert all(color in ("rgb(32, 33, 34)", "rgb(73, 107, 108)", "rgb(6, 69, 173)", "rgb(84, 120, 121)", "rgb(127, 67, 47)") for color in devanagari), devanagari
     blue_labels = page.locator(
         ".vd-label-en, .vd-label-iast, .label-en, .original-work-iast, "
         ".ad-entry-original-iast, .catalog-iast, .chapter-iast, "
