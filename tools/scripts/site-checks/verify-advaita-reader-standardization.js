@@ -16,7 +16,7 @@ const expectedWorks = [
   "naishkarmya-siddhi", "panchadasi", "panchikarana-prakarana", "brahmajnanavali-mala", "brahma-siddhi",
   "mandukya-karika", "vedantasara", "vivekachudamani", "svsss", "advaita-pancharatnam", "kashi-panchakam",
   "nirvana-shatkam", "bhaja-govindam", "manisha-panchakam", "maya-panchakam", "shatpadi-stotram",
-  "yati-panchakam", "dakshinamurti-ashtakam", "hastamalaka-stotram"
+  "yati-panchakam", "dakshinamurti-ashtakam", "hastamalaka-stotram", "advaita-siddhi"
 ];
 const expectedContentsItems = {
   "advaita-makaranda": 0, "aparokshanubhuti": 0, "atma-bodha": 0, "atmavidya-vilasa": 0,
@@ -25,7 +25,7 @@ const expectedContentsItems = {
   "brahmajnanavali-mala": 0, "brahma-siddhi": 4, "mandukya-karika": 4, "vedantasara": 6,
   "vivekachudamani": 0, "svsss": 0, "advaita-pancharatnam": 0, "kashi-panchakam": 0,
   "nirvana-shatkam": 0, "bhaja-govindam": 4, "manisha-panchakam": 0, "maya-panchakam": 0,
-  "shatpadi-stotram": 0, "yati-panchakam": 0, "dakshinamurti-ashtakam": 0, "hastamalaka-stotram": 0
+  "shatpadi-stotram": 0, "yati-panchakam": 0, "dakshinamurti-ashtakam": 0, "hastamalaka-stotram": 0, "advaita-siddhi": 3
 };
 const directTextWorks = new Set([
   "advaita-makaranda", "aparokshanubhuti", "atma-bodha", "atmavidya-vilasa", "upadesha-panchakam",
@@ -41,7 +41,7 @@ const fail = (message) => { throw new Error(message); };
 
 function read(file) { return fs.readFileSync(file, "utf8"); }
 
-if (navigation.workIds.length !== 29) fail(`Navigation manifest has ${navigation.workIds.length} works; expected 29.`);
+if (navigation.workIds.length !== 30) fail(`Navigation manifest has ${navigation.workIds.length} works; expected 30.`);
 if (JSON.stringify([...navigation.workIds].sort()) !== JSON.stringify([...expectedWorks].sort())) fail("Navigation manifest work set does not match the main and hymn directories.");
 
 const contentsPage = read(path.join(site, "books/adi-shankaracharya/book-contents.html"));
@@ -97,7 +97,7 @@ for (const work of expectedWorks) {
   const legacyRootPath = path.join(root, `books/adi-shankaracharya/${work}/index.html`);
   if (!fs.existsSync(legacyPath)) fail(`${work}: established reader URL was removed.`);
   const legacyPage = read(legacyPath);
-  const legacyTarget = work === "brahma-siddhi" ? "book-contents.html" : "book-chapter.html";
+  const legacyTarget = work === "brahma-siddhi" || work === "advaita-siddhi" ? "book-contents.html" : "book-chapter.html";
   if (!legacyPage.includes(`var work = "${work}"`) || !legacyPage.includes(legacyTarget) || !legacyPage.includes("window.location.replace") || !legacyPage.includes("window.location.hash")) fail(`${work}: established reader URL does not preserve its text route and fragment.`);
   if (!fs.existsSync(legacyRootPath) || read(legacyRootPath) !== legacyPage) fail(`${work}: root and site legacy reader routes differ.`);
 
@@ -112,12 +112,12 @@ for (const work of expectedWorks) {
 
 if (!contentsPage.includes("shankara-reader-navigation.js") || !chapterPage.includes("shankara-reader-runtime.js")) fail("A shared reader page is missing the navigation/runtime bundle.");
 if (contentsPage.includes("fallbackRanges") || chapterPage.includes("fallbackRanges") || chapterPage.includes("window.location.replace")) fail("Legacy range fabrication or a reader-page redirect remains in the shared reader.");
-if (!contentsPage.includes("units.length<=50||!items.length") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts and works without source divisions do not bypass the contents page.");
+if (!contentsPage.includes("units.length<=50&&!data.longWork||!items.length") || !contentsPage.includes("window.location.replace(readerUrl)")) fail("Short texts and works without source divisions do not bypass the contents page.");
 if (!chapterPage.includes("reader-jump-form") || !runtime.includes("jumpInput.max = String(maximum)")) fail("The compact Go to verse/section control or its maximum is missing.");
 if (chapterPage.includes("chapter-list") || chapterPage.includes("work-author") || runtime.includes("Text source, authorship, and translation credit")) fail("The reader still includes the old contents list or metadata boilerplate.");
 const brahmaLegacyPage = read(path.join(site, "books/adi-shankaracharya/brahma-siddhi/index.html"));
 if (!brahmaLegacyPage.includes("book-contents.html") || brahmaLegacyPage.includes("book-chapter.html?work=brahma-siddhi&amp;full=1")) fail("Brahmasiddhi's default route still opens the entire work at once.");
-if (!runtime.includes('card.append(reference, sanskrit, iast, translation, controls)') || !runtime.includes('reference.textContent = readerNumber') || !runtime.includes('transliterationButton.textContent = "Show transliteration"') || !runtime.includes('toggle.textContent = "Word for Word"') || !runtime.includes('controls.append(gloss.toggle)')) fail("Reader verse order, visible references, or paired disclosures have changed.");
+if (!runtime.includes('translationParagraphs.forEach(function (paragraph) { card.append(paragraph); })') || !runtime.includes('reference.textContent = readerNumber') || !runtime.includes('transliterationButton.textContent = "Show transliteration"') || !runtime.includes('toggle.textContent = "Word for Word"') || !runtime.includes('controls.append(gloss.toggle)')) fail("Reader verse order, visible references, or paired disclosures have changed.");
 for (const preserved of ["editionTranslation", "editorialNote", "sourceNote", "sourceNumbers"]) {
   if (!runtime.includes(preserved)) fail(`Reader no longer preserves the ${preserved} source-data field.`);
 }

@@ -27,7 +27,7 @@ PLACEHOLDERS = (
     "a word-for-word gloss is not available for this entry yet",
     "word-for-word gloss unavailable",
 )
-PROSE_PASSAGE_WORKS = {"vedantasara"}
+PROSE_PASSAGE_WORKS = {"vedantasara", "advaita-siddhi"}
 
 errors: list[str] = []
 
@@ -230,7 +230,7 @@ def main() -> int:
         sections = data.get("sections")
         if not isinstance(sections, list):
             sections = []
-        long_work = isinstance(expected, int) and expected >= 20
+        long_work = bool(data.get("longWork")) or (isinstance(expected, int) and expected >= 20)
         derived_chapters = set()
         if work_id == "panchadasi":
             for unit in units:
@@ -318,7 +318,7 @@ def main() -> int:
             continue
         parsed_href = urlsplit(hrefs[0])
         query = parse_qs(parsed_href.query)
-        is_short = len(data.get("units", [])) <= 50
+        is_short = len(data.get("units", [])) <= 50 and not data.get("longWork")
         is_direct_reader = (
             parsed_href.path.endswith("/book-chapter.html")
             and query.get("work") == [work_id]

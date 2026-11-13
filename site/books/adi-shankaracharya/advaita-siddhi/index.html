@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Advaita Siddhi — Contents — Viveka Dṛṣṭi</title>
+</head>
+<body>
+<p>Opening contents… <a href="/advaita/books/adi-shankaracharya/book-contents.html?work=advaita-siddhi">Open contents</a></p>
+<script src="/advaita/assets/js/site.js?v=20261101-site-repair-1"></script>
+
+<script>
+(function () {
+  var target = new URL("/advaita/books/adi-shankaracharya/book-contents.html", window.location.origin);
+  var work = "advaita-siddhi";
+  var legacy = new URLSearchParams(window.location.search);
+  target.searchParams.set("work", work);
+  var section = legacy.get("section") || legacy.get("chapter");
+  if (legacy.has("unit") || legacy.has("verse") || section || window.location.hash) {
+    target = new URL("/advaita/books/adi-shankaracharya/book-chapter.html", window.location.origin);
+    target.searchParams.set("work", work);
+    target.searchParams.set("full", "1");
+    var unit = legacy.get("unit") || legacy.get("verse") || "";
+    if (unit) {
+      target.searchParams.set("unit", unit);
+      target.hash = unit;
+    } else if (window.location.hash) {
+      target.hash = window.location.hash;
+    } else if (section && /^\d+$/.test(section)) {
+      target.hash = "section-" + work + "-" + section;
+    }
+  }
+  window.location.replace(target.href);
+}());
+</script>
+<noscript><p><a href="/advaita/books/adi-shankaracharya/book-contents.html?work=advaita-siddhi">Open the contents</a></p></noscript>
+</body>
+</html>

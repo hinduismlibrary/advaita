@@ -29,6 +29,7 @@
   }
   placeReaderStylesLast();
   var chapterTitle = document.getElementById("chapter-title");
+  var progressNode = document.getElementById("reader-progress");
   var contentNode = document.getElementById("chapter-content");
   var jumpForm = document.getElementById("reader-jump-form");
   var jumpInput = document.getElementById("reader-jump-input");
@@ -156,7 +157,7 @@
 
   function renderUnit(unit, index, metadata) {
     var card = document.createElement("article");
-    var proseEntry = metadata.prose || /^(?:prose|passage|text)\b/i.test(String(unit.label || ""));
+    var proseEntry = unit.format === "prose" || (metadata.prose && unit.format !== "verse") || /^(?:prose|passage|text)\b/i.test(String(unit.label || ""));
     card.className = "gita-verse shankara-verse" + (proseEntry ? " shankara-prose" : "");
     if (proseEntry) card.dataset.readingFormat = "prose";
     card.id = String(unit.id);
@@ -197,9 +198,12 @@
       iast.hidden = !expanded;
     });
 
-    var translation = document.createElement("p");
-    translation.className = "gita-translation";
-    translation.textContent = String(unit.translation || "");
+    var translationParagraphs = String(unit.translation || "").split(/\n\s*\n+/).map(function (text) {
+      var paragraph = document.createElement("p");
+      paragraph.className = "gita-translation";
+      paragraph.textContent = text.trim();
+      return paragraph;
+    }).filter(function (paragraph) { return paragraph.textContent; });
 
     var controls = document.createElement("div");
     controls.className = "reader-disclosure-actions";
@@ -207,7 +211,9 @@
     var gloss = makeGloss(unit.gloss, card.id);
     if (gloss) controls.append(gloss.toggle);
 
-    card.append(reference, sanskrit, iast, translation, controls);
+    card.append(reference, sanskrit, iast);
+    translationParagraphs.forEach(function (paragraph) { card.append(paragraph); });
+    card.append(controls);
     if (gloss) card.append(gloss.reveal);
 
     if (unit.editionTranslation) {
@@ -251,7 +257,8 @@
     jumpUnits = units;
     if (!jumpForm || !jumpInput || !jumpLabel || !jumpRange) return;
     var maximum = Math.max(1, units.length);
-    var unitType = metadata.prose ? "section" : "verse";
+    var allProse = units.length > 0 && units.every(function (unit) { return unit.format === "prose"; });
+    var unitType = allProse ? "section" : "verse";
     jumpLabel.textContent = "Go to " + unitType + ":";
     jumpInput.min = "1";
     jumpInput.max = String(maximum);
@@ -324,15 +331,19 @@
     contentNode.classList.add("article", "document-content");
 
     var dataUrl = new URL("/advaita/assets/data/shankara/" + encodeURIComponent(work) + ".json", global.location.origin);
-    dataUrl.searchParams.set("v", "reader-gloss-20261027b");
+    dataUrl.searchParams.set("v", "reader-gloss-20261113-advaita-siddhi-1");
     fetch(dataUrl.href, { credentials: "same-origin", cache: "no-cache" }).then(function (response) {
       if (!response.ok) throw new Error("Text data is unavailable.");
       return response.json();
     }).then(function (data) {
       var units = Array.isArray(data && data.units) ? data.units : [];
       if (!units.length || (data.expectedUnits && units.length !== data.expectedUnits)) throw new Error("The complete text data is incomplete.");
+      if (progressNode && data.progressNote) {
+        progressNode.textContent = data.progressNote;
+        progressNode.hidden = false;
+      }
       if (units.some(function (unit) { return !unit || !unit.id || !unit.deva || !unit.iast || !unit.translation; })) throw new Error("A Sanskrit, IAST, or translation field is missing.");
-      var isShortText = units.length <= 50;
+      var isShortText = units.length <= 50 && !data.longWork;
       if (isShortText) isFullText = true;
       var items = navigation.itemsForReader(work, data);
       if (!items.length) throw new Error("No readable text units were found.");

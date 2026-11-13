@@ -29,9 +29,10 @@ const WORKS=[
  {id:"vedantasara",title:"Vedāntasāra",author:"Sadānanda Yogīndra",path:"/advaita/books/adi-shankaracharya/vedantasara/"},
  {id:"naishkarmya-siddhi",title:"Naiṣkarmyasiddhi",author:"Sureśvara",path:"/advaita/books/adi-shankaracharya/naishkarmya-siddhi/"},
 {id:"brahma-siddhi",title:"Brahmasiddhi",author:"Maṇḍana Miśra",path:"/advaita/books/adi-shankaracharya/brahma-siddhi/"},
+ {id:"advaita-siddhi",title:"Advaita Siddhi",author:"Madhusūdana Sarasvatī",path:"/advaita/books/adi-shankaracharya/advaita-siddhi/"},
 ];
 
-const STUDY_LAYOUT_WORKS=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","nirvana-shatkam","maya-panchakam","advaita-pancharatnam","yati-panchakam","kashi-panchakam","dakshinamurti-ashtakam","shatpadi-stotram","bhaja-govindam","manisha-panchakam","hastamalaka-stotram","ekashloki","dashashloki","panchikarana-prakarana","upadesha-panchakam"]);
+const STUDY_LAYOUT_WORKS=new Set(["aparokshanubhuti","vedantasara","svsss","mandukya-karika","brahma-siddhi","panchadasi","vivekachudamani","upadesha-sahasri","naishkarmya-siddhi","advaita-makaranda","atma-bodha","atmavidya-vilasa","brahmajnanavali-mala","drg-drsya-viveka","tattvabodha","nirvana-shatkam","maya-panchakam","advaita-pancharatnam","yati-panchakam","kashi-panchakam","dakshinamurti-ashtakam","shatpadi-stotram","bhaja-govindam","manisha-panchakam","hastamalaka-stotram","ekashloki","dashashloki","panchikarana-prakarana","upadesha-panchakam","advaita-siddhi"]);
 
 const ABOUT={
  "nirvana-shatkam":"Six verses that loosen identification with body, mind, senses, and roles, pointing to the Self as awareness.",

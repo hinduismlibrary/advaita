@@ -124,7 +124,7 @@ jobs:
         run: |
           set -euo pipefail
           base="${PAGE_URL%/}"
-          works="advaita-makaranda aparokshanubhuti atma-bodha atmavidya-vilasa upadesha-panchakam upadesha-sahasri ekashloki tattvabodha dashashloki drg-drsya-viveka naishkarmya-siddhi panchadasi panchikarana-prakarana brahmajnanavali-mala brahma-siddhi mandukya-karika vedantasara vivekachudamani svsss advaita-pancharatnam kashi-panchakam nirvana-shatkam bhaja-govindam manisha-panchakam maya-panchakam shatpadi-stotram yati-panchakam dakshinamurti-ashtakam hastamalaka-stotram"
+          works="advaita-makaranda aparokshanubhuti atma-bodha atmavidya-vilasa upadesha-panchakam upadesha-sahasri ekashloki tattvabodha dashashloki drg-drsya-viveka naishkarmya-siddhi panchadasi panchikarana-prakarana brahmajnanavali-mala brahma-siddhi mandukya-karika vedantasara vivekachudamani svsss advaita-pancharatnam kashi-panchakam nirvana-shatkam bhaja-govindam manisha-panchakam maya-panchakam shatpadi-stotram yati-panchakam dakshinamurti-ashtakam hastamalaka-stotram advaita-siddhi"
           for work in $works; do
             contents_status=$(curl --location --silent --show-error --max-time 20 -o /dev/null -w '%{http_code}' "$base/books/adi-shankaracharya/book-contents.html?work=$work" || true)
             source_status=$(curl --location --silent --show-error --max-time 20 -o /dev/null -w '%{http_code}' "$base/assets/data/shankara/$work.json" || true)
@@ -138,5 +138,5 @@ jobs:
           curl --fail --silent --show-error --location --max-time 20 "$base/assets/css/shankara-reader-standard.css" -o /dev/null
           curl --fail --silent --show-error --location --max-time 20 "$base/assets/js/shankara-reader-navigation.js" -o /dev/null
           curl --fail --silent --show-error --location --max-time 20 "$base/assets/js/shankara-reader-runtime.js" -o /dev/null
-          echo "All 29 public contents pages, legacy reader URLs, source JSON files, and shared bundles are available."
+          echo "All 30 public contents pages, legacy reader URLs, source JSON files, and shared bundles are available."
 
