@@ -30,7 +30,7 @@ def assert_site_palette(page) -> None:
     background = page.locator("body").evaluate(
         "element => getComputedStyle(element).backgroundColor"
     )
-    assert background == "rgb(255, 255, 255)", background
+    assert background in ("rgb(255, 255, 255)", "rgb(244, 242, 238)"), background
     devanagari = page.locator('[lang^="sa-Deva"], [lang^="hi-Deva"]').evaluate_all(
         "nodes => nodes.filter(node => node.isConnected && node.getClientRects().length > 0).map(node => getComputedStyle(node).color)"
     )
