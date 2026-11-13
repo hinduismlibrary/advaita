@@ -383,6 +383,42 @@ Inertness may also mean not being self-luminous, a definition already establishe
 **Translator's note:** “Knower” translates *jñātṛ*; “knowledge” here translates *jñāna*, which Madhusūdana analyzes as consciousness marked by an object or mental modification. The *Vivaraṇa* is quoted within the base text's argument; it is not a commentary added to this translation.
 
 
+
+### Establishing boundedness as a reason for falsity
+
+**Source heading:** अथ परिच्छिन्नत्वहेतूपपत्तिः  
+**Heading variant:** The E-Bharati transcription of the 1937 edition labels this unit परिच्छिन्नत्वहेतुभङ्गः; Advaita Śāradā labels it परिच्छिन्नत्वहेतूपपत्तिः. This is a difference in the heading, not a difference in the argument below.
+
+Boundedness also serves as a reason for the world's falsity. There are three kinds of boundedness: spatial, temporal, and objectual. Spatial boundedness is being the counterpositive of an absolute absence; temporal boundedness is being the counterpositive of destruction; and objectual boundedness is being the counterpositive of mutual absence.
+
+**Objection.** If spatial boundedness means being the counterpositive of an absolute absence related by inherence, the reason applies to the Self too: like space and other things, the Self is not inhered in anything. If the relation is conjunction, the reason is not established for space and similar things, since conjunction applies only to substances with form. If one instead means an absolute absence located in something without form, the reason still applies to the Self. And if one means the absence of every relation, it applies to the supreme Self, which is free from all relations, while it is not established for ignorance, which has relations. Temporal boundedness is not established for space either, since other schools accept it as eternal. Finally, objectual boundedness applies to the Self: the Self is the counterpositive of a mutual absence with inert things, since it is different from them. Otherwise, the Self would itself have to be inert.
+
+**Reply.** No. The reason's application to the Self is prevented by specifying that the absolute absence and mutual absence must be at the same level of reality as their counterpositive. There is no failure to establish the reason for ignorance, space, and similar things, because they are counterpositives of absolute and mutual absences at their own level of reality. When the absence of something empirical—such as ignorance or space—is asserted as ultimately real, add the qualification that its locus must be no less real than the counterpositive. Thus apparent silver in a shell can still be the counterpositive of an empirical absence without making the reason absent from the example. Nor does this make the predicate identical with the thing to be proved: the definitions of falsity stated earlier are not themselves defined in this way.
+
+Space's being subject to destruction is also established. Scripture says, “From this very Self, space arose”; its production is therefore accepted on scriptural authority and may be inferred. The passage that calls the Self “all-pervading and eternal, like space” is to be understood as describing the Self's being all-pervading at the same time as other things and its enduring through the total dissolution of the universe. Scripture says that what is other than the Self is subject to destruction; it is non-Self alone that is perishable.
+
+For this reason, pots and other things are imagined in the reality that appears as common to them all: they are distinguished from one another. A snake, a garland, and similar appearances are distinguished within the “this” that appears in a rope. In the same way, pots and other things are distinguished within Brahman, which pervades them: “The pot exists”; “the cloth exists.” Ānandabodha's account is therefore sound. Here, “distinguished” means objectual limitation through being the counterpositive of a difference at the same level of reality. Brahman and what is absolutely unreal are not counterexamples.
+
+**Objection.** In statements such as “a horned cow” and “a hornless cow,” individual cows are not imagined in cowhood, even though cowhood is what appears in common across the examples. This would be a counterexample.
+
+**Reply.** No separate universal of cowhood, over and above the universal of existence, is accepted. Even if one accepts cowhood and similar universals, one need not accept a further universal that delimits what manifests them. Particular individuals—whether unshared or grouped by incidental features such as having a dewlap—can produce the relevant ordinary usage. The universal of existence, qualified by each particular individual, is enough to account for those usages.
+
+For the same reason, the Brahmasiddhi author's statement is sound: “Pots and the like are imagined in the form of existence, because each is apprehended as pervaded by it—like the moon reflected in each wave of water.” One might object that Brahman, the reality of existence, has no form, never transmigrates, is covered by ignorance, and is knowable only through words; how, then, could it be the object of the cognition “the pot exists”? When someone says “the pot is impermanent,” the cognition concerns impermanence in the pot. Likewise, one might argue, “the pot exists” must concern an existence belonging to the pot itself.
+
+Nor is this like seeing Rāhu only when it is situated next to the moon. If Brahman became perceptible only by being delimited by a pot or another object, then space, when delimited by sound, should be audible too. Rāhu is said to become visible because its blue form, which is otherwise concealed by distance, is made perceptible through its relation to the bright white moon.
+
+**Reply.** Brahman is not covered by root ignorance in its nature as existence; it is covered only by ignorance of the power associated with pots and other objects. When a cognition produced by the senses removes that covering, there is no obstacle to Brahman's shining forth in the cognition “the pot exists.” Nor does Brahman's being without form make visual perception impossible. Form is required only for objects apprehended by a particular sense. Brahman, as existence, is apprehended by every sense. Other schools also accept that existence is perceived by all the senses. As the author of the Vārttika says:
+
+> “Therefore experience alone is the object, whose character is not otherwise known;  
+> where the senses and the other means of knowledge are self-established.”
+
+Mīmāṃsakas and others likewise accept that time, although without form, is perceived by every sense. One might again object that space, when delimited by sound, would then be audible. No: a capacity that belongs to something by nature, but is obstructed by a particular cause, can be brought into operation by a delimiting condition. Rāhu's capacity to be seen, obstructed by distance, is made effective through its relation to the moon. Similarly, Brahman's capacity to be perceived is obstructed by a covering and becomes effective when Brahman is delimited by pots and other things. Space, however, is not naturally capable of being heard and then merely obstructed; sound cannot make it audible by delimiting it.
+
+Alternatively, sight requires form when it apprehends a substance, but not when it apprehends other kinds of things. Brahman is not a substance: scripture denies the four kinds of dimension when it describes Brahman as “neither gross nor minute, neither short nor long,” thereby denying that Brahman is a substance. So there is no difficulty. Even if Brahman is taken to be a substance, sight requires form only in a substance whose level of reality is lower than that of its locus. We observe that qualities in which substancehood has been superimposed can be seen without form. Any substancehood in Brahman would likewise have a lower level of reality than Brahman itself, so form is not required to apprehend it. The separate question of what it means for something to be imagined—whether it is apprehended where its own nature is absent, or whether it is removable by knowledge of its own nature—does not affect this argument.
+
+Thus boundedness, too, has been established as a reason for falsity. **This concludes the argument establishing boundedness as a reason.**
+
+
 ## Work log
 
 - Manually translated in this working draft: opening verses 1–4 and the first ten titled units of the first pariccheda.
