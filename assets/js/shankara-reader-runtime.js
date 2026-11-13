@@ -257,8 +257,7 @@
     jumpUnits = units;
     if (!jumpForm || !jumpInput || !jumpLabel || !jumpRange) return;
     var maximum = Math.max(1, units.length);
-    var allProse = units.length > 0 && units.every(function (unit) { return unit.format === "prose"; });
-    var unitType = allProse ? "section" : "verse";
+    var unitType = metadata && metadata.prose ? "section" : "verse";
     jumpLabel.textContent = "Go to " + unitType + ":";
     jumpInput.min = "1";
     jumpInput.max = String(maximum);
