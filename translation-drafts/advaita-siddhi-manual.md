@@ -473,9 +473,27 @@ Thus perceptibility and the other proposed reasons have not been shown to depend
 **Translator's note:** In inference, an *upādhi* is a limiting condition alleged to break the necessary connection between a reason and what it is meant to prove. It must extend to the thing being proved while failing to extend to the reason.
 
 
+
+### Distinguishing the inference from fallacious look-alikes
+
+**Heading variant:** Advaita Śāradā gives the heading अथ आभाससाम्यभङ्गः (“refutation of resemblance to a fallacious inference”); E-Bharati calls the unit दृश्यत्वादेः आभाससाम्यम् (“the alleged fallacy of perceptibility and similar reasons”).
+
+**Objection.** The proposed inferences resemble fallacies: “The disputed world is merely phenomenal because it is perceptible, like silver seen in a shell”; and “Brahman is false because it is an object of ordinary transactions,” or because it is “different from absolute non-being,” again like shell-silver.
+
+**Reply.** No. Those arguments fail when tested against consequences that run against them. If the world's empirical reality were sublated, ordinary dealings with it would become impossible. And if Brahman were false, the result would be nihilism. Such contrary reasoning defeats the alleged fallacies; the opposing consequence in each case will itself be answered later in the appropriate discussion.
+
+Moreover, “phenomenal” can mean either “sublated by something other than knowledge of Brahman” or “having nothing but appearance as its nature.” If it means the first, the false identity of body and Self is a counterexample: it is false, yet it is not sublated by anything other than knowledge of Brahman. The proposed reason is also not decisive. If it means the second, the inference is already established on the view that things are created only when perceived.
+
+The same analysis applies if the claim to be proved is that Brahman is false. If the claim is that Brahman is false in a qualified or dependent sense, it is already established. If the claim is unqualified, the reason “being an object of ordinary transactions” is not established for Brahman. Even if one accepts that Brahman is an object of a mental cognition produced by Vedānta, that does not make the reason decisive.
+
+Likewise, “being different from absolute non-being” is not established for Brahman. Here, non-being means being unfit to be apprehended as existent in any locus; being different from non-being would mean being fit to be apprehended as existent in some locus. That does not apply to pure Brahman. One cannot instead define non-being as being sublatable and its opposite as being unsublatable: using unsublatability to establish falsity would be self-contradictory, the shell-silver example would fail to establish the reason, and the resulting nihilism will be refuted later.
+
+Thus the inferences from perceptibility and the other proposed reasons are not fallacious look-alikes. **This concludes the refutation of their alleged resemblance to fallacious inferences.**
+
+
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first thirteen titled units of the first pariccheda.
-- Still unfinished: at least 50 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
-- Advaita Śāradā and the E-Bharati Unicode text have been compared for the translated units. Recorded differences include variant headings for the perceptibility, inertness, boundedness, and limiting-condition arguments; E-Bharati also splits a compound that Advaita Śāradā prints as one word in the part-hood unit. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated page by page with the draft.
+- Manually translated in this working draft: opening verses 1–4 and the first fourteen titled units of the first pariccheda.
+- Still unfinished: at least 49 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
+- Advaita Śāradā and the E-Bharati Unicode text have been compared for the translated units. Recorded differences include variant headings for the perceptibility, inertness, boundedness, limiting-condition, and fallacious-look-alike arguments; E-Bharati also splits a compound that Advaita Śāradā prints as one word in the part-hood unit. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated page by page with the draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
