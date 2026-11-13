@@ -154,7 +154,7 @@ def run() -> None:
                 assert colors["dev"] == "rgb(32, 33, 34)", colors
                 assert colors["englishSize"] == "16px" and colors["devSize"] == "16px", colors
                 link_formats = page.locator(".hp-link-list a").evaluate_all("""
-                    links => links.map(link => {
+                    links => links.filter(link => link.querySelector('.hp-link-dev')).map(link => {
                         const [first, second] = Array.from(link.children);
                         return {
                             count: link.children.length,
