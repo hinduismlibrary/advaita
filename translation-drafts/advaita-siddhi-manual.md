@@ -449,9 +449,33 @@ The proposed limiting condition—that if a cloth is the counterpositive of an a
 Accordingly, Vidyāsāgara's inference is sound: “The disputed world does not exist apart from cognition, because it is not apprehended apart from cognition, like dream objects.” Here the predicate, “not existing apart from cognition,” is one of the forms of falsity stated earlier. The reason is that the world is apprehended only when reflected consciousness is present. There is no difficulty in the inference. Other formulations of the argument can be established in the same way, as appropriate. May this be auspicious. **This concludes the argument establishing part-hood as a reason.**
 
 
+
+### Refuting the claim that perceptibility and similar reasons have limiting conditions
+
+**Heading variant:** Advaita Śāradā gives the heading अथ सोपाधिकत्वनिरासः (“refutation of the claim that the reasons have limiting conditions”); E-Bharati titles the unit दृश्यत्वादेः सोपाधिकत्वम् (“perceptibility and similar reasons are limited by conditions”).
+
+**Objection.** Reasons such as perceptibility have a limiting condition (*upādhi*) that makes the inference inconclusive. Two such conditions are proposed: either an object appears because of a defect that is not removed by what is taken to be that object's sublator; or the object is something to be denied by a sublating cognition that is itself not removed by what is taken to be the object's sublator. These conditions are absent from the countercases and coextensive with falsity. They would therefore provide a negative pervasion and count as limiting conditions.
+
+**Reply.** No. They do not extend to every false thing. The identity of the body and the Self is false, yet it is removed only by knowledge of Brahman. But when that knowledge arises, it removes both the identity and the ignorance that caused it. The proposed conditions are therefore absent from this false case. Their alleged absence does not extend to falsity as a whole.
+
+The reply also rejects the move of using a condition that merely excludes the subject of the inference, as though that were enough to establish an upādhi. The argument that the proposed conditions are present in the examples but absent in the subject would then amount to nothing more than defining the condition by its difference from the subject. The objection that sublation establishes the condition does not help: the claim that the world is sublated will itself be examined and refuted later.
+
+A condition whose absence establishes the absence of the predicate must extend wherever that predicate is absent. Thus, in an argument that “space and the other elements are not false because they lack appearance caused by a defect that survives what is taken to be their sublator,” the phrase about the defect's surviving its alleged sublator is unnecessary. It is not what makes falsity absent. Appearance caused by a defect, by contrast, does extend to falsity; but it also extends to the reason being used, such as perceptibility. It is therefore not a limiting condition. Falsity is established by perceptibility and the other reasons themselves.
+
+The same point applies to the second proposed condition: the phrase “by a sublator that is not itself removed by what is taken to be the object's sublator” is unnecessary when proving that falsity is absent. The remaining feature is shared by falsity and the reason for proving it, so it is not a limiting condition either.
+
+For this very reason, being an object of a cognition produced by a defective cause at the same level of reality as the supposed substratum is a genuine limiting condition. Brahman, too, can be the object of a cognition—such as the cognition that it is momentary—produced by a cause that Buddhists regard as defective. The qualification “at the same level of reality as the substratum” is therefore needed to make the condition coextensive, not merely to exclude the subject of the inference. There is no defect of making the subject a special case that the proposed condition excludes. The imagined property of momentariness in Brahman is itself false, yet it is not the object of a cognition produced by a defect at the same level of reality as its supposed substratum. The condition therefore does not fail to extend to falsity.
+
+Nor is being outside the purport of scripture a limiting condition. What scripture has as its purport is confined to Brahman; the absence of that property extends to the reason being used. Phenomenality is not a limiting condition either. Phenomenal status means being sublated by something other than knowledge of Brahman. The false identity of body and Self does not have that status, so this condition does not extend to all falsity. And being nothing but an appearance is no limiting condition: on the view that creation occurs only with perception, this property extends to the reason itself; other schools do not accept that view in the first place.
+
+Thus perceptibility and the other proposed reasons have not been shown to depend on a limiting condition. **This concludes the refutation of the claim that those reasons are limited by an upādhi.**
+
+**Translator's note:** In inference, an *upādhi* is a limiting condition alleged to break the necessary connection between a reason and what it is meant to prove. It must extend to the thing being proved while failing to extend to the reason.
+
+
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first twelve titled units of the first pariccheda.
-- Still unfinished: at least 51 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
-- Advaita Śāradā and the E-Bharati Unicode text have been compared for the translated units. Recorded differences include variant headings for the perceptibility, inertness, and boundedness arguments; E-Bharati also splits a compound that Advaita Śāradā prints as one word in the part-hood unit. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated page by page with the draft.
+- Manually translated in this working draft: opening verses 1–4 and the first thirteen titled units of the first pariccheda.
+- Still unfinished: at least 50 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas. The exact full-work inventory has not yet been reconciled across the witnesses.
+- Advaita Śāradā and the E-Bharati Unicode text have been compared for the translated units. Recorded differences include variant headings for the perceptibility, inertness, boundedness, and limiting-condition arguments; E-Bharati also splits a compound that Advaita Śāradā prints as one word in the part-hood unit. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated page by page with the draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
