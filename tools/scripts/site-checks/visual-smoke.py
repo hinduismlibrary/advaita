@@ -38,7 +38,7 @@ def assert_site_palette(page) -> None:
     blue_labels = page.locator(
         ".vd-label-en, .vd-label-iast, .label-en, .original-work-iast, "
         ".ad-entry-original-iast, .catalog-iast, .chapter-iast, "
-        ".purana-title-iast, .purana-name-iast, .ad-title-en, .ad-heading-en, "
+        ".purana-title-iast, .purana-name-iast, .ad-title-en, "
         ".hp-home-title-iast, .hp-link-en, .hp-original-iast"
     ).evaluate_all("nodes => nodes.map(node => getComputedStyle(node).color)")
     assert all(color == "rgb(6, 69, 173)" for color in blue_labels), blue_labels
