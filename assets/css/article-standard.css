@@ -89,3 +89,27 @@ body.indology-directory-page .hp-link-list a:hover { text-decoration:underline; 
  body.article-standard-page .skip-link { display:none!important; }
  body.article-standard-page .reader-grid { display:block; }
 }
+
+/* Keep scripture, translation, and reference visually connected. */
+body.article-standard-page .document-content .scripture-quote-pair {
+  margin: 1.05em 0 1.35em;
+}
+body.article-standard-page .document-content .scripture-quote-pair > p.reference {
+  margin: 0 0 .25em;
+}
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit {
+  margin: 0;
+}
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit p[lang^="sa"] {
+  margin: 0 0 .2em;
+  color: #171717;
+  font-weight: 700;
+  line-height: 1.5;
+}
+body.article-standard-page .document-content .scripture-quote-pair > p.translation {
+  margin: 0 0 .45em;
+  padding: 0;
+  border: 0;
+  color: #171717;
+  font-weight: 400;
+}
