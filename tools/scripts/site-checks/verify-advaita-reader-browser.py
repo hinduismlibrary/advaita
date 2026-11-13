@@ -202,7 +202,11 @@ def inspect_all_work(page, work: str, errors: list[str]) -> None:
             glossUnits:cards.filter(card=>card.querySelector('.reader-word-toggle')).length,
             expectedGlossUnits:units.filter(unit=>Array.isArray(unit.gloss)&&unit.gloss.some(word=>word&&word.sa&&word.en)).length,
             completeGloss:cards.every((card,index)=>{const words=(units[index].gloss||[]).filter(word=>word&&word.sa&&word.en);const rows=[...card.querySelectorAll('.gita-word-row')];return words.length===rows.length&&rows.every((row,wordIndex)=>row.querySelector('.gita-word-dev')?.textContent===String(words[wordIndex].sa).trim()&&row.querySelector('.gita-word-gloss')?.textContent===String(words[wordIndex].en).trim());}),
-            completeTranslation:cards.every((card,index)=>card.querySelector('.gita-translation')?.textContent===units[index].translation),
+            completeTranslation:cards.every((card,index)=>{
+              const paragraphs=[...card.querySelectorAll('.gita-translation')].map(p=>p.textContent.trim()).filter(Boolean);
+              const expected=String(units[index].translation||'').split(/\n\s*\n+/).map(text=>text.trim()).filter(Boolean);
+              return JSON.stringify(paragraphs)===JSON.stringify(expected);
+            }),
             completeDevanagari:cards.every((card,index)=>card.querySelector('.gita-sanskrit')?.textContent===units[index].deva),
             completeIAST:cards.every((card,index)=>card.querySelector('.reader-inline-iast')?.textContent===units[index].iast),
             transliterationHiddenByDefault:cards.every(card=>{const button=card.querySelector('.reader-transliteration-toggle'),iast=card.querySelector('.reader-inline-iast');return button?.textContent.trim()==='Show transliteration'&&button.getAttribute('aria-expanded')==='false'&&iast?.hidden&&getComputedStyle(iast).display==='none';}),
