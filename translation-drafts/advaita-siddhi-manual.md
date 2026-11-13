@@ -323,10 +323,69 @@ If the point to be proved is only that something is distinct from what is real, 
 
 **Translator's note:** The Sanskrit uses several technical accounts of how an object can be “seen” by consciousness. “Mental modification” translates *vṛtti*; “result of cognition” translates *phala*; “adjunct” translates *upādhi*. The heading differs between the two online transcriptions and remains to be checked against the printed edition.
 
+### Establishing “inertness” as a reason for falsity
+
+**Source heading in Advaita Śāradā:** अथ जडत्वहेतूपपत्तिः  
+**Heading in the E-Bharati transcription:** जडत्वहेतुभङ्गः. I retain both headings because the online witnesses differ.
+
+Inertness can also serve as a reason for falsity.
+
+**Objection.** What does inertness mean? It might mean not being a knower, not being knowledge, or not being the Self. The first definition fails: on your account, the “I”-sense included in the disputed subject is a knower, so the reason is not established there. And the pure Self, which is not a knower, would be an unwanted counterexample.
+
+The second definition also fails. You say that only consciousness reflected in a mental modification is knowledge. The mental modification by itself and consciousness by itself are therefore each “not knowledge.” Even if that avoids the problem concerning the mental modification, it still makes consciousness an unwanted counterexample.
+
+The third definition fails because you have not explained what “Self” means. It is not a special class or species, since you accept only one Self. Even if qualified selves are distinct, they are included within the disputed subject. Nor can the Self be defined simply as bliss: the proposed distinction from bliss is not established for pleasure that arises through the senses. If that pleasure too is Self, the objections raised against defining inertness as non-knowledge return.
+
+**Reply.** No. The second and third definitions can be used without those defects.
+
+If inertness means being non-knowledge, the Self is not an unwanted counterexample. Knowledge is illumination marked by an object, and that illumination does not cease even in liberation. The Self is therefore not “non-knowledge.”
+
+**Objection.** Object-directedness is natural to desire, knowledge, and similar states, just as being the counterpositive of an absence is natural to an absence. If knowledge's object-directedness is real at the same level as knowledge, the account still fails.
+
+**Reply.** Knowledge's being directed toward an object is a relation to that object. That relation is not ultimate; it is superimposed, since an ultimately real relation cannot be established, as will be explained later. It is no more inherent in knowledge than silver is inherent in a shell. Desire and the other states are accepted as object-directed only because of the adjunct that makes them so; the object-directedness is not their intrinsic nature.
+
+**Objection.** Then desire, like knowledge, could sometimes exist without any relation to an object.
+
+**Reply.** That does not follow. What causes a state to be object-directed has a higher level of reality than the adjunct that is the state itself. Desire and its object have the same level of reality, so desire remains dependent on an object.
+
+**Objection.** You accept that in liberation the Self is without an object. If bliss does not shine then, liberation would be purposeless.
+
+**Reply.** In that state bliss itself is the light; it is not that bliss needs to be illuminated by another light. Awareness marked by an object remains as well, so knowledge is not lost.
+
+**Objection.** Even so, if there is no knower, that state is not knowledge. An act of enjoying cannot occur without someone who enjoys. Nor does it help to say that knowledge is beginningless and therefore not an activity. Other beginningless things still depend on something else: prior absence depends on the thing that is its counterpositive; a universal depends on its individual manifestation; the distinction between living self and Brahman depends on the qualified subject and what is distinguished from it; ignorance depends on a locus and an object; and even the existence of Brahman seems to require an agent, as in the sentence “Brahman exists.”
+
+Even if past and future cognition, or God's cognition, does not depend on an object for its production, it is still defined in relation to an object. Knowledge's dependence on a knower and a known object must therefore be natural. Otherwise, the experience “I know this” would not occur, and the account would conflict with the *Vivaraṇa*, which defines knowledge as the knower's illumination of an object.
+
+**Reply.** Not so. A universal may depend on an individual for its definition and yet, at a particular time, be unconnected with that individual, because the adjunct that produces the connection has a higher level of reality. For the same reason, being accompanied by a known object and being accompanied by a knower are not intrinsic to knowledge.
+
+To be accompanied by an object might mean that knowledge is produced by its object. That does not work for indirect knowledge or for God's knowledge. Or it might mean that whenever knowledge exists, its object exists at the same time. This fails for the same reasons as before; a spatial relation between every cognition and its object is even more remote. One might narrow the claim to immediate cognition and say that whenever it is direct, an object is present. But that too fails for God's and a yogin's knowledge. The rule that everyone accepts is narrower: whenever cognition is sensory, there is an object. That does not apply to knowledge that is the nature of the Self, since that knowledge is not sensory.
+
+**Objection.** If you do not accept that direct cognition requires an object, how can you establish the silver in the cognition “This is silver”? Directness could be explained without a real object, so the cognition would not prove the indefinable silver.
+
+**Reply.** The objecthood recalled in the experience “I know this as silver” cannot be explained without another support; the indefinable silver is established on that basis, as will be shown later. The same reasoning establishes an indefinable object even in an indirect illusion. Alternatively, the object is pervaded by knowledge only when the direct cognition is produced; the account does not accept that scripturally taught knowledge is a produced direct cognition. The existence of indefinable silver is therefore not left unexplained.
+
+Being accompanied by a knower might mean being produced by a knower. That fails for God's knowledge, which is not produced, and for knowledge, whose eternality will be established later. It might mean that knowledge is always pervaded by a knower; that is not established as a necessary rule. Or it might mean that knowledge inheres in a knower. But that does not follow either: knowledge could be associated with knowledge in the same way that it could be produced by knowledge. Since knowledge is not accepted here as either a quality or an action, one cannot infer that it must reside in a substance. Experience and the statement in the *Vivaraṇa* can be explained by a knower–known relation arising on some occasions; that relation need not be knowledge's intrinsic nature.
+
+The verb in “Brahman exists” does not make Brahman the agent that brings its own existence about; that would be impossible for what is eternal. The verbal form is used because it is grammatically correct.
+
+**Objection.** Knowledge must be either valid cognition or error. The knowledge that is the Self cannot be valid cognition, because its object would then be ignorance or something else that must be ultimately real. Nor can it be error, since error is produced by defects.
+
+**Reply.** It can be distinct by its own nature from both. Even logicians accept God's knowledge and indeterminate perception of a pot as examples that do not fit their ordinary account of either validity or error. If God's cognition were valid, it would have to be produced by the proper qualities; if it were error, it would have to be produced by defects. Likewise, in indeterminate perception there is no determinate presentation of a property as belonging to a thing. We have no difficulty allowing knowledge to be neither one nor the other by nature. Although self-knowledge is intrinsically distinct from both valid cognition and error, two different mental modifications can condition it, allowing it to function in ordinary dealings as either.
+
+This also clarifies the third definition. Inertness can be defined as being other than the Self, or as being other than bliss. Sensory pleasure too is Brahman in its nature; it is only the adjunct that limits it that is subject to arising and ceasing.
+
+**Objection.** The imagined difference between knowledge and the Self, or between bliss and the Self, is also present in Brahman, so the reason would overextend.
+
+**Reply.** The relevant difference must be at the same level of reality as the thing being considered. Alternatively, specify that the difference is not due to an adjunct. This avoids overextension to sheer nonbeing and to the fifth kind of cessation of ignorance, as explained earlier.
+
+Inertness may also mean not being self-luminous, a definition already established in the preceding discussion. This completes the defense of inertness as a reason.
+
+**Translator's note:** “Knower” translates *jñātṛ*; “knowledge” here translates *jñāna*, which Madhusūdana analyzes as consciousness marked by an object or mental modification. The *Vivaraṇa* is quoted within the base text's argument; it is not a commentary added to this translation.
+
 
 ## Work log
 
-- Manually translated in this working draft: opening verses 1–4 and the first nine titled units of the first pariccheda.
-- Still unfinished: 54 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
-- Advaita Śāradā and the E-Bharati Unicode text have been compared for this unit. Their section headings differ here: “अथ दृश्यत्वहेतूपपत्तिः” versus “अथ दृश्यत्वहेतुभङ्गः.” The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with the draft.
+- Manually translated in this working draft: opening verses 1–4 and the first ten titled units of the first pariccheda.
+- Still unfinished: 53 remaining titled units in the first pariccheda, and all titled units in the second, third, and fourth paricchedas.
+- Advaita Śāradā and the E-Bharati Unicode text have been compared for these units. Their headings differ for the perceptibility argument and the inertness argument. The 1937 Nirṇaya-Sāgar edition edited by Anantakṛṣṇa Śāstrī is identified bibliographically; its scan has not yet been collated passage by passage with the draft.
 - The live reader, IAST for prose, and site data have not been built from this incomplete translation. Do not publish or describe the book as complete until the Sanskrit, transliteration, translation, source collation, reader links, and integrity checks all pass.
