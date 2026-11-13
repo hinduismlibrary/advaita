@@ -1766,9 +1766,7 @@ body.vd-chrome-page:is(.home-page,.page-page) .hp-link-list a *{
 }
 body.vd-chrome-page.ad-shankar-index-page .ad-entry-link,
 body.vd-chrome-page.ad-shankar-index-page .ad-entry-link:visited,
-body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-dev,
-body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-iast,
-body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-separator{
+body.vd-chrome-page.ad-shankar-index-page .ad-entry-link .ad-entry-original-iast{
   color:#0645ad!important;
 }
 
@@ -1790,8 +1788,7 @@ body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a:visited,
 body.vd-chrome-page.vd-chrome-page.home-page .hp-link-list a *{color:#0645ad!important}
 body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-letter-group a .purana-name-dev{color:#0645ad!important}
 body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link,
-body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link:visited,
-body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link *{color:#0645ad!important}
+body.vd-chrome-page.vd-chrome-page.ad-shankar-index-page .ad-entry-link:visited{color:#0645ad!important}
 body.vd-chrome-page.vd-chrome-page.scripture-index-page .reader.reader-single{
   display:block!important;width:100%!important;max-width:none!important;margin:0!important;
 }
@@ -2357,7 +2354,7 @@ body.vd-chrome-page.vd-chrome-page :is(.hp-link-list,.archive-list,.purana-lette
   font:400 15px/1.5 Merriweather,Georgia,serif!important;
 }
 body.vd-chrome-page.vd-chrome-page :is(.hp-link-list,.archive-list,.purana-letter-group ul,.purana-research-list,.ad-links) a :is([lang="sa-Deva"],.purana-name-dev,.ad-entry-original-dev){
-  color:inherit!important;
+  color:#202122!important;
   font-family:"Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;
 }
 body.vd-chrome-page.vd-chrome-page.purana-library-page .purana-alpha-index,
