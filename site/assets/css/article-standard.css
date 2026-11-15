@@ -166,3 +166,49 @@ body.article-standard-page.docs-quote-format .document-content .scripture-quote-
   color: #171717;
   font-weight: 700;
 }
+
+/* Present Manusmṛti comparisons as annotated reading cards instead of a bare reference table. */
+body.article-standard-page.docs-quote-format .document-content ol.manu-cross-reference-list {
+  margin: 1.4em 0 1.8em;
+  padding-left: 1.8em;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list > li {
+  margin: 0 0 1.1em;
+  padding: .85em 1.1em .25em;
+  border: 1px solid #ded9cf;
+  border-left: 3px solid #326466;
+  border-radius: 4px;
+  background: #fcfaf6;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list > li::marker {
+  color: #326466;
+  font-weight: 700;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list > li > h4 {
+  margin: .05em 0 .65em;
+  color: #3f5552;
+  font-size: 1.02em;
+  font-weight: 700;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list .scripture-quote-pair {
+  margin: .8em 0 1em;
+  padding: .45em .7em .1em;
+  border-radius: 3px;
+  background: #fffdfa;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list p.manu-reference-note {
+  margin: .8em .1em .65em;
+  padding: .6em .8em;
+  border-left: 2px solid #a5a9aa;
+  background: #f0f1ec;
+  color: #41413c;
+  font-size: .94em;
+}
+@media(max-width:760px) {
+  body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list > li {
+    padding: .75em .85em .2em;
+  }
+  body.article-standard-page.docs-quote-format .document-content .manu-cross-reference-list .scripture-quote-pair {
+    padding: .4em .55em .05em;
+  }
+}
