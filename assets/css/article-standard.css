@@ -150,3 +150,58 @@ body.article-standard-page .site-search input{font-size:14px;line-height:1.4}
  body.article-standard-page .sitebar nav{flex:1 1 100%;min-width:0}
  body.article-standard-page .site-search{flex:1 1 100%;width:100%;max-width:100%}
 }
+
+/* Keep quoted Sanskrit and its English translation equally visible. */
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p.manu-original-sanskrit,
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p[lang^="sa"] {
+  margin: 0 0 .25em;
+  padding: 0 0 0 16px;
+  border-left: 3px solid #a5a9aa;
+  color: #7f432f;
+  font-weight: 700;
+}
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p.translation {
+  margin: 0 0 .45em;
+  padding: 0 0 0 16px;
+  border-left: 3px solid #a5a9aa;
+  color: #171717;
+  font-weight: 700;
+}
+
+/* Read the cross-reference audit as grouped English notes, not a table. */
+body.article-standard-page.docs-quote-format .document-content .manu-reference-group-title {
+  margin: 1.7em 0 .55em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e6e1d8;
+  color: #3f5552;
+  font-size: 1.05em;
+  font-weight: 700;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-reference-audit-list {
+  display: grid;
+  gap: .55em;
+  margin: .85em 0 1.6em;
+  padding: 0;
+  list-style: none;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-reference-audit-list > li {
+  margin: 0;
+  padding: .78em 1em;
+  border: 1px solid #e3dfd7;
+  border-left: 3px solid #9fa3a4;
+  border-radius: 4px;
+  background: #f8f7f3;
+  line-height: 1.55;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-reference-audit-list > li > p {
+  margin: 0;
+}
+body.article-standard-page.docs-quote-format .document-content .manu-reference-audit-list strong {
+  color: #315a59;
+  font-weight: 700;
+}
+@media(max-width:760px) {
+  body.article-standard-page.docs-quote-format .document-content .manu-reference-audit-list > li {
+    padding: .68em .8em;
+  }
+}

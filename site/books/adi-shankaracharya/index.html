@@ -3,11 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Advaita texts and stotrams, alphabetically arranged.">
+<meta name="description" content="Browse Advaita Vedānta texts in Sanskrit and IAST, including works attributed to Śaṅkara and treatises by other Advaita authors.">
 <meta name="color-scheme" content="light">
-<title>Advaita Library — Viveka Dṛṣṭi</title>
+<title>Advaita Vedānta Texts and Treatises — Viveka Dṛṣṭi</title>
 <link rel="stylesheet" href="/advaita/assets/css/advaita-directory.css?v=20261026-document-cleanup-1">
   <link rel="icon" type="image/svg+xml" href="/advaita/favicon.svg">
+
+<style>
+/* Local repairs for this directory. #texts deliberately outranks the shared
+   site-chrome overrides without changing other directories or reader pages. */
+#page-title{display:flex!important;align-items:baseline!important;flex-wrap:wrap!important;column-gap:.4em;row-gap:0}
+#page-title .ad-title-dev{display:inline!important;color:#202122!important;font:500 .86em/1.5 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+#page-title .ad-title-en{display:inline!important;color:#202122!important;font:600 1em/1.35 Merriweather,Georgia,serif!important;font-style:normal!important}
+#page-title .ad-title-separator{display:none!important}
+.ad-directory-intro{max-width:72ch;margin:0 0 20px;color:#54595d;font:400 15px/1.7 Merriweather,Georgia,serif}
+#collection-navigation{display:flex!important;align-items:center;flex-wrap:wrap;gap:8px 24px;margin:0 0 28px!important;padding:0 0 16px!important;border:0!important;border-bottom:1px solid #eaecf0!important}
+#collection-navigation a{display:inline!important;color:#0645ad!important;font:500 15px/1.5 Merriweather,Georgia,serif!important;text-decoration:none!important}
+#collection-navigation a:hover,#collection-navigation a:focus-visible{text-decoration:underline!important}
+#texts>h2{margin:0 0 12px!important;padding:0 0 8px!important;color:#202122!important;font:600 1.25em/1.4 Merriweather,Georgia,serif!important}
+#texts .ad-alpha-groups{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:38px!important;row-gap:0!important;align-items:start!important}
+#texts .ad-alpha-group{min-width:0!important;margin:0!important;padding:14px 0 16px!important;border:0!important;border-top:1px solid #eaecf0!important;border-radius:0!important;background:transparent!important}
+#texts .ad-alpha-group h3{margin:0 0 6px!important;padding:0!important;border:0!important;color:#54595d!important;font:600 19px/1.4 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important}
+#texts .ad-alpha-group .ad-links{display:block!important;grid-template-columns:none!important;margin:0!important;padding:0!important;list-style:none!important}
+#texts .ad-alpha-group .ad-entry{display:block!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;list-style:none!important}
+#texts .ad-entry::marker{content:""!important}
+#texts .ad-alpha-group .ad-entry-link{display:block!important;width:100%!important;min-width:0!important;padding:7px 0 8px!important;font:400 15px/1.55 Merriweather,Georgia,serif!important;text-decoration:none!important;overflow-wrap:anywhere}
+#texts .ad-entry-original{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:2px!important;min-width:0!important}
+#texts .ad-entry-original-dev{display:block!important;color:#202122!important;font:400 17px/1.55 "Noto Serif Devanagari","Nirmala UI",Mangal,serif!important;overflow-wrap:anywhere}
+#texts .ad-entry-original-separator{display:none!important}
+#texts .ad-entry-original-iast{display:block!important;color:#0645ad!important;font:400 15px/1.5 Merriweather,Georgia,serif!important;font-style:normal!important;overflow-wrap:anywhere}
+#texts .ad-entry-link:hover .ad-entry-original-iast,#texts .ad-entry-link:focus-visible .ad-entry-original-iast{text-decoration:underline!important}
+#texts .ad-entry-link:focus-visible{outline:2px solid #36c!important;outline-offset:3px!important}
+@media(max-width:700px){
+ #page-title{row-gap:2px}
+ #texts .ad-alpha-groups{grid-template-columns:1fr!important;column-gap:0!important}
+ #texts .ad-alpha-group{padding:12px 0 14px!important}
+ #collection-navigation{gap:10px 20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body class="advaita-directory-page ad-shankar-index-page">
 <header class="ad-topbar"><a href="/advaita/">Viveka Dṛṣṭi</a></header>
@@ -18,7 +52,8 @@
     <section class="ad-main" aria-label="Advaita texts">
       <header class="ad-hero"><h1 id="page-title"><span class="ad-title-dev" lang="sa-Deva">अद्वैतवाङ्मयम्</span><span class="ad-title-separator" aria-hidden="true"> · </span><span class="ad-title-en">Advaita Library</span></h1></header>
 
-      <nav class="ad-index-navigation" aria-label="Advaita text collections"><a class="ad-entry-link" href="/advaita/books/adi-shankaracharya/stotrams/"><span class="ad-heading-dev" lang="sa-Deva">स्तोत्राणि</span><span class="ad-heading-separator" aria-hidden="true"> · </span><span class="ad-heading-en">Stotrams and Hymns</span> →</a></nav>
+      <p class="ad-directory-intro">An index of Advaita Vedānta works, including texts traditionally attributed to Śaṅkara and writings by other Advaita authors. Choose a title to open its reader.</p>
+      <nav id="collection-navigation" class="ad-index-navigation" aria-label="Advaita text collections"><a href="/advaita/books/adi-shankaracharya/stotrams/">Browse stotrams and hymns <span aria-hidden="true">→</span></a><a href="/advaita/books/">Other books</a></nav>
 
       <section class="ad-section" id="texts">
         <h2><span class="ad-heading-dev" lang="sa-Deva">ग्रन्थाः</span><span class="ad-heading-separator" aria-hidden="true"> · </span><span class="ad-heading-en">Texts</span></h2>
