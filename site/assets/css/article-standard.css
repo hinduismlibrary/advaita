@@ -150,3 +150,19 @@ body.article-standard-page .site-search input{font-size:14px;line-height:1.4}
  body.article-standard-page .sitebar nav{flex:1 1 100%;min-width:0}
  body.article-standard-page .site-search{flex:1 1 100%;width:100%;max-width:100%}
 }
+
+/* Give the Manusmṛti article's quoted Sanskrit and English the same clear quotation treatment. */
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p.manu-original-sanskrit {
+  margin: 0 0 .25em;
+  padding: 0 0 0 16px;
+  border-left: 2px solid #a5a9aa;
+  color: #7f432f;
+  font-weight: 700;
+}
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p.translation {
+  margin: 0 0 .45em;
+  padding: 0 0 0 16px;
+  border-left: 2px solid #a5a9aa;
+  color: #171717;
+  font-weight: 700;
+}
