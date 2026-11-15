@@ -212,3 +212,73 @@ body.article-standard-page.docs-quote-format .document-content .manu-cross-refer
     padding: .4em .55em .05em;
   }
 }
+
+/* Give the Manusmṛti comparison table a clear, compact reading hierarchy. */
+body.article-standard-page.docs-quote-format .document-content .reference-table {
+  min-width: 760px;
+  border: 1px solid #d7d5cc;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fffdfa;
+  box-shadow: 0 2px 8px rgba(40, 52, 49, .07);
+  font-size: .83em;
+  line-height: 1.55;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table caption {
+  caption-side: top;
+  padding: 0 0 .65em;
+  color: #5b5c55;
+  font-size: .9em;
+  text-align: left;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table th {
+  padding: 12px 14px;
+  border: 0;
+  border-bottom: 1px solid #476d6a;
+  background: #315a59;
+  color: #fff;
+  font-size: .95em;
+  font-weight: 700;
+  text-align: left;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table td {
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #e5e1d9;
+  color: #373833;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table tbody tr:nth-child(even) td {
+  background: #f5f4ef;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table tbody tr:hover td {
+  background: #edf3ef;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table td:first-child {
+  width: 12%;
+  color: #315a59;
+  font-weight: 700;
+  white-space: nowrap;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table td:nth-child(2) {
+  width: 37%;
+}
+body.article-standard-page.docs-quote-format .document-content .reference-table td:nth-child(3) {
+  width: 51%;
+}
+@media(max-width:760px) {
+  body.article-standard-page.docs-quote-format .document-content .reference-table {
+    min-width: 720px;
+    font-size: .8em;
+  }
+  body.article-standard-page.docs-quote-format .document-content .reference-table th,
+  body.article-standard-page.docs-quote-format .document-content .reference-table td {
+    padding: 9px 10px;
+  }
+}
