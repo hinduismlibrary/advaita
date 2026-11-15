@@ -811,3 +811,50 @@ body.gita-page .gita-source-note{display:none!important}
 body.gita-page.vp-book-2 article.gita-verse .gita-controls>details.gita-details>summary{font-size:12px!important}
 @media(max-width:700px){body.gita-page.vp-book-2 article.gita-verse .gita-controls>details.gita-details>summary{font-size:12px!important}}
 body.gita-page.vp-book-1 .gita-source-note,body.gita-page.vp-book-2 .gita-source-note,body.gita-page.vp-book-3 .gita-source-note,body.gita-page.vp-book-4 .gita-source-note,body.gita-page.vp-book-5 .gita-source-note,body.gita-page.vp-book-6 .gita-source-note{display:none!important}
+
+/* Book 1 presents the source verse in study order before the two study disclosures. */
+body.gita-page.vp-book-1 article.gita-verse .gita-text-label{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 4px!important;
+  color:#675d50!important;
+  font-family:Merriweather,Georgia,"Times New Roman",serif!important;
+  font-size:12px!important;
+  line-height:1.25!important;
+  font-weight:700!important;
+  letter-spacing:.045em!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-text-label-inline{
+  display:block!important;
+  color:#675d50!important;
+  font-size:12px!important;
+  line-height:1.25!important;
+  font-style:normal!important;
+  font-weight:700!important;
+  letter-spacing:.045em!important;
+}
+body.gita-page.vp-book-1 article.gita-verse .gita-transliteration{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:840px!important;
+  margin:0 auto 14px!important;
+  color:#514a43!important;
+  font-family:Merriweather,Georgia,"Times New Roman",serif!important;
+  font-size:16px!important;
+  line-height:1.5!important;
+  font-style:italic!important;
+  font-weight:400!important;
+  text-align:center!important;
+  overflow-wrap:anywhere!important;
+}
+@media(max-width:700px){
+  body.gita-page.vp-book-1 article.gita-verse .gita-text-label,
+  body.gita-page.vp-book-1 article.gita-verse .gita-text-label-inline{
+    font-size:11.5px!important;
+  }
+  body.gita-page.vp-book-1 article.gita-verse .gita-transliteration{
+    font-size:15px!important;
+    line-height:1.45!important;
+  }
+}
