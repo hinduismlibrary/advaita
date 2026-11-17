@@ -105,7 +105,7 @@ jobs:
             if manuscript=$(curl --fail --silent --show-error --location --max-time 20 "$manuscript_url") \
               && women=$(curl --fail --silent --show-error --location --max-time 20 "$women_url") \
               && grep -Fq 'A Defence of the Manusmṛti' <<< "$manuscript" \
-              && grep -Fq 'article-standard.css?v=20261115-manusmriti-reference-repair-1' <<< "$manuscript" \
+              && grep -Fq 'article-standard.css?v=20261117-varna-vicara-format-1' <<< "$manuscript" \
               && grep -Fq 'class="manu-reference-audit-list"' <<< "$manuscript" \
               && ! grep -Fq 'class="reference-table"' <<< "$manuscript" \
               && grep -Fq 'women-reader-page' <<< "$women" \

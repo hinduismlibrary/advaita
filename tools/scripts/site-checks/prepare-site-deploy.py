@@ -11,6 +11,7 @@ from site_seo import base_url_for, prepare_site_seo, url_for_page
 import json
 
 CACHE_VERSION = "20261115-manusmriti-reference-repair-1"
+ARTICLE_STANDARD_ASSET_VERSION = "20261117-varna-vicara-format-1"
 DEFAULT_REPOSITORY = "hinduismlibrary/advaita"
 TEXT_SUFFIXES = frozenset({".html", ".css", ".js", ".mjs", ".json", ".xml", ".svg", ".txt", ".md", ".csv", ".webmanifest", ".map"})
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -130,8 +131,8 @@ def prepare(site: Path) -> tuple[int, int]:
         updated = SITE_JS_URL.sub(f"/advaita/assets/js/site.js?v={CACHE_VERSION}", updated)
         updated = SITE_CHROME_JS_URL.sub(f"/advaita/assets/js/site-chrome.js?v={CACHE_VERSION}", updated)
         updated = BHAGAVATAM_READER_URL.sub(f"/advaita/assets/js/bhagavatam-sridhara-reader.js?v={CACHE_VERSION}", updated)
-        updated = ARTICLE_STANDARD_JS_URL.sub(f"/advaita/assets/js/article-standard.js?v={CACHE_VERSION}", updated)
-        updated = ARTICLE_STANDARD_CSS_URL.sub(f"/advaita/assets/css/article-standard.css?v={CACHE_VERSION}", updated)
+        updated = ARTICLE_STANDARD_JS_URL.sub(f"/advaita/assets/js/article-standard.js?v={ARTICLE_STANDARD_ASSET_VERSION}", updated)
+        updated = ARTICLE_STANDARD_CSS_URL.sub(f"/advaita/assets/css/article-standard.css?v={ARTICLE_STANDARD_ASSET_VERSION}", updated)
         updated = BHAVISHYA_CONTROLS_URL.sub(f"/advaita/assets/js/bhavishya-controls.js?v={CACHE_VERSION}", updated)
         updated = SHANKARA_READER_URL.sub(f"/advaita/assets/js/shankara-reader.js?v={CACHE_VERSION}", updated)
         updated = WORD_SUMMARY.sub(r'\1Word for Word\2', updated)

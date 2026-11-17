@@ -205,3 +205,88 @@ body.article-standard-page.docs-quote-format .document-content .manu-reference-a
     padding: .68em .8em;
   }
 }
+
+
+/* Shared quotation and table presentation for every standardized article. */
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa"],
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit .sanskrit-text,
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit .sa-text,
+body.article-standard-page .document-content .scripture-quote-pair > p[lang^="sa"],
+body.article-standard-page .document-content .scripture-quote-pair > p.manu-original-sanskrit {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 0 .3em;
+  padding: 0 0 0 16px;
+  border-left: 3px solid #a5a9aa;
+  color: #7f432f;
+  font-weight: 700;
+}
+body.article-standard-page .document-content .scripture-quote-pair > .translation,
+body.article-standard-page .document-content .scripture-quote-pair > p.translation,
+body.article-standard-page .document-content .scripture-quote-pair > blockquote {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 0 .5em;
+  padding: 0 0 0 16px;
+  border-left: 3px solid #a5a9aa;
+  color: #171717;
+  font-weight: 700;
+}
+body.article-standard-page .document-content .table-scroll {
+  max-width: 100%;
+  margin: 1.5em 0 1.8em;
+  border-radius: 8px;
+}
+body.article-standard-page .document-content table {
+  width: 100%;
+  border: 1px solid #ddd9d0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fffdfa;
+  font-size: .94em;
+  line-height: 1.55;
+}
+body.article-standard-page .document-content th,
+body.article-standard-page .document-content td {
+  padding: .68em .9em;
+  border: 0;
+  border-right: 1px solid #ebe8e1;
+  border-bottom: 1px solid #e5e1d8;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+body.article-standard-page .document-content th:last-child,
+body.article-standard-page .document-content td:last-child {
+  border-right: 0;
+}
+body.article-standard-page .document-content tr:last-child > th,
+body.article-standard-page .document-content tr:last-child > td {
+  border-bottom: 0;
+}
+body.article-standard-page .document-content th {
+  background: #e9eeea;
+  color: #3f5552;
+  font-weight: 700;
+}
+body.article-standard-page .document-content tbody tr:nth-child(even) > td,
+body.article-standard-page .document-content tbody tr:nth-child(even) > th {
+  background: #f7f6f2;
+}
+body.article-standard-page .document-content tbody tr:hover > td,
+body.article-standard-page .document-content tbody tr:hover > th {
+  background: #f0f2ed;
+}
+body.article-standard-page .document-content caption {
+  padding: .4em 0 .65em;
+  color: #3f5552;
+  font-weight: 700;
+  text-align: left;
+}
+@media(max-width:760px) {
+  body.article-standard-page .document-content th,
+  body.article-standard-page .document-content td {
+    padding: .62em .72em;
+  }
+}
