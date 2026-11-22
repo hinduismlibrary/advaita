@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import tempfile
 import threading
 from functools import partial
@@ -22,27 +23,47 @@ class QuietHandler(SimpleHTTPRequestHandler):
         pass
 
 
+def assert_no_visible_devanagari(page) -> None:
+    visible_devanagari = page.locator('[lang$="-Deva"], [lang*="-Deva-"], .devanagari-hidden-text').evaluate_all(
+        "nodes => nodes.filter(node => node.isConnected && node.getClientRects().length > 0).map(node => ({text:node.textContent.trim(), display:getComputedStyle(node).display}))"
+    )
+    assert not visible_devanagari, visible_devanagari
+    visible_devanagari_text = page.evaluate(r"""() => {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const found = [];
+        let node;
+        while ((node = walker.nextNode())) {
+            if (!/[\u0900-\u097f]/.test(node.nodeValue || "")) continue;
+            const parent = node.parentElement;
+            if (!parent || parent.closest("script,style,noscript,template,textarea,[hidden]")) continue;
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            if (range.getClientRects().length && getComputedStyle(parent).visibility !== "hidden") {
+                found.push(node.nodeValue.trim());
+            }
+        }
+        return found.slice(0, 30);
+    }""")
+    assert not visible_devanagari_text, visible_devanagari_text
+
+
 def assert_site_palette(page) -> None:
     colors = page.locator("a").evaluate_all(
         "links => links.filter(link => !link.closest('.hp-section-title') && !link.classList.contains('brand')).map(link => getComputedStyle(link).color)"
     )
-    assert all(color in ("rgb(6, 69, 173)", "rgb(45, 72, 125)", "rgb(61, 73, 107)", "rgb(24, 70, 152)", "rgb(84, 120, 121)") for color in colors), colors
+    assert all(color in ("rgb(6, 69, 173)", "rgb(45, 72, 125)", "rgb(61, 73, 107)", "rgb(24, 70, 152)", "rgb(84, 120, 121)", "rgb(50, 100, 102)") for color in colors), colors
     background = page.locator("body").evaluate(
         "element => getComputedStyle(element).backgroundColor"
     )
     assert background in ("rgb(255, 255, 255)", "rgb(244, 242, 238)"), background
-    devanagari = page.locator('[lang^="sa-Deva"], [lang^="hi-Deva"]').evaluate_all(
-        "nodes => nodes.filter(node => node.isConnected && node.getClientRects().length > 0).map(node => getComputedStyle(node).color)"
-    )
-    # The site uses #54595d as a secondary neutral text color on some indexes.
-    assert all(color in ("rgb(32, 33, 34)", "rgb(73, 107, 108)", "rgb(6, 69, 173)", "rgb(84, 89, 93)", "rgb(84, 120, 121)", "rgb(127, 67, 47)") for color in devanagari), devanagari
+    assert_no_visible_devanagari(page)
     blue_labels = page.locator(
         ".vd-label-en, .vd-label-iast, .label-en, .original-work-iast, "
         ".ad-entry-original-iast, .catalog-iast, .chapter-iast, "
-        ".purana-title-iast, .purana-name-iast, .ad-title-en, "
+        ".purana-name-iast, "
         ".hp-home-title-iast, .hp-link-en, .hp-original-iast"
     ).evaluate_all("nodes => nodes.map(node => getComputedStyle(node).color)")
-    assert all(color == "rgb(6, 69, 173)" for color in blue_labels), blue_labels
+    assert all(color in ("rgb(6, 69, 173)", "rgb(84, 89, 93)") for color in blue_labels), blue_labels
 
 
 def run() -> None:
@@ -68,13 +89,14 @@ def run() -> None:
                     const link = document.querySelector('link[data-viveka-site-chrome]');
                     return Boolean(link?.sheet && link.sheet.cssRules.length > 0);
                 }""", timeout=20000)
-                page.locator(".hp-home-title-dev").wait_for(timeout=20000)
+                home_title_dev = page.locator(".hp-home-title-dev")
+                assert home_title_dev.count() == 1 and not home_title_dev.is_visible(), "Homepage Devanagari title should be hidden"
                 assert "___MASK_" not in page.content() and "</script>___" not in page.content(), "Homepage contains mask artifacts"
                 assert "Vivekadrishti" in page.title(), page.title()
                 assert page.locator(".hp-home-title-iast").count() == 0
                 assert page.locator(".hp-home-intro").count() == 0
                 assert page.locator(".site-footer").count() == 0
-                assert page.locator(".hp-home > h1").inner_text().strip() == "विवेकदृष्टिः"
+                assert page.locator(".hp-home > h1").inner_text().strip() == "Vivekadrishti"
                 home_text = page.locator(".hp-home").inner_text().lower()
                 for note in ("reference library for hindu scripture", "verification in progress", "pinned source mirror", "audit log", "translation review is ongoing"):
                     assert note not in home_text, note
@@ -115,7 +137,7 @@ def run() -> None:
                 assert left_y == sorted(left_y) and right_y == sorted(right_y), (left_y, right_y)
                 documents = page.locator(".home-documents-list")
                 shastras = page.locator(".home-shastra-list")
-                assert documents.locator("li").count() == 8
+                assert documents.locator("li").count() == 9
                 assert documents.locator('a[href="/advaita/articles/a-defence-of-the-manusmriti/"]').count() == 1
                 document_titles = documents.locator("li > a").evaluate_all("""
                     links => links.map(link => (link.querySelector(".hp-link-en") || link).innerText.trim().split(/\\r?\\n/)[0].trim())
@@ -184,13 +206,13 @@ def run() -> None:
                     and row["secondColor"] == "rgb(32, 33, 34)"
                     and row["secondFill"] == "rgb(32, 33, 34)"
                     and row["secondText"]
-                    and row["firstDisplay"] == "block" and row["secondDisplay"] == "block"
-                    and row["firstHeight"] > 0 and row["secondHeight"] > 0
-                    and row["firstTop"] < row["secondTop"]
+                    and row["firstDisplay"] == "block"
+                    and row["secondDisplay"] == "none"
+                    and row["firstHeight"] > 0 and row["secondHeight"] == 0
                     and row["firstFontSize"] == "16px" and row["secondFontSize"] == "16px"
                     for row in link_formats
                 ), link_formats
-                report["home"] = {"columns": 2, "style": "two-column wiki-style lists", "link_format": "English blue above Devanagari black", "links_checked": len(link_formats), "navigation_visible": True, "search_visible": True, **colors}
+                report["home"] = {"columns": 2, "style": "two-column wiki-style lists", "labels": "English only; Devanagari hidden", "links_checked": len(link_formats), "navigation_visible": True, "search_visible": True, **colors}
                 page.screenshot(path=str(OUT / "home.png"))
                 page.set_viewport_size({"width": 390, "height": 844})
                 page.reload(wait_until="domcontentloaded")
@@ -220,7 +242,7 @@ def run() -> None:
                     display: getComputedStyle(node).display
                 }))""")
                 assert all(
-                    row["lang"] == "sa-Deva" and row["display"] == "block"
+                    row["lang"] == "sa-Deva" and row["display"] == "none"
                     for row in sanskrit_metrics
                 ), sanskrit_metrics
                 article_text = page.locator("#source-content").inner_text()
@@ -242,7 +264,8 @@ def run() -> None:
                 assert page.locator("#source-content #women").is_visible()
                 report["manusmriti"] = {"contents": "working", "sanskrit_blocks": len(sanskrit_metrics), "cover": "rendered"}
                 page.goto(base + "books/adi-shankaracharya/", wait_until="domcontentloaded")
-                page.locator(".ad-entry-original-dev").first.wait_for(timeout=20000)
+                directory_dev = page.locator(".ad-entry-original-dev")
+                assert directory_dev.count() > 0 and not directory_dev.first.is_visible(), "Directory Devanagari labels should be hidden"
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
                 directory = page.locator(".ad-entry-original").evaluate_all("""
@@ -254,29 +277,31 @@ def run() -> None:
                             devDisplay: getComputedStyle(devanagari).display,
                             romanDisplay: getComputedStyle(roman).display,
                             devColor: getComputedStyle(devanagari).color,
-                            devTop: devanagari.getBoundingClientRect().top,
+                            devHeight: devanagari.getBoundingClientRect().height,
                             romanColor: getComputedStyle(roman).color,
-                            romanTop: roman.getBoundingClientRect().top,
+                            romanHeight: roman.getBoundingClientRect().height,
                             separatorDisplay: separator ? getComputedStyle(separator).display : "absent"
                         };
                     })
                 """)
                 assert directory and all(
-                    row["devDisplay"] == "block"
+                    row["devDisplay"] == "none"
                     and row["romanDisplay"] == "block"
-                    and row["devTop"] < row["romanTop"]
+                    and row["devHeight"] == 0 and row["romanHeight"] > 0
                     and row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
                     and row["separatorDisplay"] in ("none", "absent")
                     for row in directory
                 ), directory
                 assert page.locator(".ad-entry-link").first.evaluate("(el)=>getComputedStyle(el).color") == "rgb(6, 69, 173)"
-                assert page.locator("body").evaluate("(el)=>getComputedStyle(el).backgroundColor") == "rgb(255, 255, 255)"
-                report["directory"] = {"entries_checked": len(directory), "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST; white background"}
+                assert all(color == "rgb(32, 33, 34)" for color in page.locator(".ad-title-en").evaluate_all("nodes=>nodes.map(node=>getComputedStyle(node).color)"))
+                assert page.locator("body").evaluate("(el)=>getComputedStyle(el).backgroundColor") in ("rgb(255, 255, 255)", "rgb(244, 242, 238)")
+                report["directory"] = {"entries_checked": len(directory), "labels": "IAST visible; Devanagari hidden", "palette": "blue IAST; white or paper background"}
                 page.screenshot(path=str(OUT / "advaita-directory.png"))
 
                 page.goto(base + "pages/purana-library/", wait_until="domcontentloaded")
-                page.locator(".purana-name-dev").first.wait_for(timeout=20000)
+                purana_dev = page.locator(".purana-name-dev")
+                assert purana_dev.count() > 0 and not purana_dev.first.is_visible(), "Purāṇa Devanagari labels should be hidden"
                 page.evaluate("() => document.fonts.ready")
                 assert_site_palette(page)
                 puranas = page.locator(".purana-alpha-index .purana-name-dev").evaluate_all("""
@@ -297,9 +322,8 @@ def run() -> None:
                 assert puranas and all(
                     row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
-                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
-                    and row["devHeight"] > 0 and row["romanHeight"] > 0
-                    and row["devTop"] < row["romanTop"]
+                    and row["devDisplay"] == "none" and row["romanDisplay"] == "block"
+                    and row["devHeight"] == 0 and row["romanHeight"] > 0
                     for row in puranas
                 ), puranas
                 headings = page.locator(".purana-library-title").evaluate_all("""
@@ -324,18 +348,16 @@ def run() -> None:
                 """)
                 assert headings and all(
                     row["devColor"] == "rgb(32, 33, 34)"
-                    and row["romanColor"] == "rgb(6, 69, 173)"
-                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
-                    and row["devHeight"] > 0 and row["romanHeight"] > 0
-                    and row["devTop"] < row["romanTop"]
+                    and row["romanColor"] == "rgb(84, 89, 93)"
+                    and row["devDisplay"] == "none" and row["romanDisplay"] == "block"
+                    and row["devHeight"] == 0 and row["romanHeight"] > 0
                     for row in headings
                 ), headings
                 assert section_headings and all(
                     row["devColor"] == "rgb(32, 33, 34)"
-                    and row["romanColor"] == "rgb(6, 69, 173)"
-                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
-                    and row["devHeight"] > 0 and row["romanHeight"] > 0
-                    and row["devTop"] < row["romanTop"]
+                    and row["romanColor"] == "rgb(84, 89, 93)"
+                    and row["devDisplay"] == "none" and row["romanDisplay"] == "block"
+                    and row["devHeight"] == 0 and row["romanHeight"] > 0
                     for row in section_headings
                 ), section_headings
                 research_links = page.locator(".purana-research-list a").evaluate_all("""
@@ -353,36 +375,34 @@ def run() -> None:
                     row["count"] == 2
                     and row["devColor"] == "rgb(32, 33, 34)"
                     and row["romanColor"] == "rgb(6, 69, 173)"
-                    and row["devDisplay"] == "block" and row["romanDisplay"] == "block"
-                    and row["devHeight"] > 0 and row["romanHeight"] > 0
-                    and row["devTop"] < row["romanTop"]
+                    and row["devDisplay"] == "none" and row["romanDisplay"] == "block"
+                    and row["devHeight"] == 0 and row["romanHeight"] > 0
                     for row in research_links
                 ), research_links
-                page.locator(".vd-breadcrumb-inner span[aria-current='page'] .vd-label-dev").wait_for(timeout=20000)
-                crumb = page.locator(".vd-breadcrumb-inner span[aria-current='page']").evaluate("""
-                    node => ({text:node.textContent, dev:!!node.querySelector(".vd-label-dev"),
-                        roman:!!node.querySelector(".vd-label-en"),
-                        devColor:getComputedStyle(node.querySelector(".vd-label-dev")).color,
-                        romanColor:getComputedStyle(node.querySelector(".vd-label-en")).color,
-                        devTop:node.querySelector(".vd-label-dev").getBoundingClientRect().top,
-                        romanTop:node.querySelector(".vd-label-en").getBoundingClientRect().top})
-                """)
-                assert "□" not in crumb["text"] and crumb["dev"] and crumb["roman"], crumb
-                assert crumb["devColor"] == "rgb(32, 33, 34)" and crumb["romanColor"] == "rgb(6, 69, 173)" and crumb["devTop"] < crumb["romanTop"], crumb
-                footer = page.locator(".site-footer p").evaluate("""
-                    node => ({dev:!!node.querySelector(".vd-label-dev"), roman:!!node.querySelector(".vd-label-iast"),
-                        devColor:getComputedStyle(node.querySelector(".vd-label-dev")).color,
-                        romanColor:getComputedStyle(node.querySelector(".vd-label-iast")).color})
-                """)
-                assert footer["dev"] and footer["roman"] and footer["devColor"] == "rgb(32, 33, 34)" and footer["romanColor"] == "rgb(6, 69, 173)", footer
-                report["puranas"] = {"entries_checked": len(puranas), "headings_checked": len(headings) + len(section_headings), "research_links_checked": len(research_links), "breadcrumb": "Devanagari above blue English", "footer": "black Devanagari; blue IAST", "order": "Devanagari above IAST", "palette": "black Devanagari; blue IAST"}
+                crumb = page.locator(".vd-breadcrumb-inner span[aria-current='page']")
+                assert crumb.count() == 1 and not re.search(r"[\u0900-\u097f]", crumb.inner_text()), crumb.inner_text()
+                footer_text = page.locator(".site-footer p").inner_text()
+                assert not re.search(r"[\u0900-\u097f]", footer_text), footer_text
+                report["puranas"] = {"entries_checked": len(puranas), "headings_checked": len(headings) + len(section_headings), "research_links_checked": len(research_links), "labels": "Romanized names visible; Devanagari hidden"}
                 page.screenshot(path=str(OUT / "purana-library.png"))
+
+                page.goto(base + "articles/puranic-chronology/", wait_until="domcontentloaded")
+                tool_brand = page.locator(".sitebar .brand")
+                tool_brand_metrics = tool_brand.evaluate("""node => {
+                    const devanagari = node.querySelector('[lang$="-Deva"]');
+                    return {before:getComputedStyle(node,"::before").content,
+                        devanagari:Boolean(devanagari),
+                        devanagariDisplay:devanagari ? getComputedStyle(devanagari).display : null};
+                }""")
+                assert tool_brand_metrics == {"before": '"Vivekadrishti"', "devanagari": True, "devanagariDisplay": "none"}, tool_brand_metrics
+                assert_no_visible_devanagari(page)
+                report["article_tool_brand"] = "Latin Vivekadrishti; Devanagari hidden"
 
                 page.goto(base + "pages/bhagavatam-with-sridhara-bhasya/", wait_until="domcontentloaded")
                 canto4 = page.locator("#canto-4 .chapter-list a")
                 assert canto4.count() == 31 and canto4.first.inner_text() == "4.1" and canto4.last.inner_text() == "4.31"
                 canto4_color = canto4.first.locator(".purana-chapter-reference").evaluate("(el)=>getComputedStyle(el).color")
-                assert canto4_color == "rgb(6, 69, 173)", canto4_color
+                assert canto4_color == "rgb(78, 75, 71)", canto4_color
                 page.goto(base + "articles/srimad-bhagavatam-canto-01-sridhara-svami/", wait_until="domcontentloaded")
                 assert page.locator(".source-note").count() == 0
                 assert "Coverage runs through" not in page.locator("body").inner_text()
@@ -395,7 +415,7 @@ def run() -> None:
                 names_toggle = page.locator(".purana-chapter-name-toggle")
                 assert names_toggle.evaluate("(el) => el.tagName") == "INPUT"
                 number_color = bhagavatam_link.locator(".purana-chapter-reference").evaluate("(el) => getComputedStyle(el).color")
-                assert number_color == "rgb(6, 69, 173)", number_color
+                assert number_color == "rgb(78, 75, 71)", number_color
                 assert not names_toggle.is_checked()
                 names_toggle.check()
                 assert chapter_name.is_visible()
@@ -410,7 +430,7 @@ def run() -> None:
                 assert bhavishya_home_link.count() == 1
                 bhavishya_home_link.click()
                 expect(page.locator("#available-texts")).to_be_visible()
-                assert page.locator('a[href="/advaita/pages/bhavishya-purana-pratisargaparvan/"]').count() == 1
+                assert page.locator('a[href="/advaita/articles/bhavishya-purana-pratisargaparvan-part-1-chapter-1/"]').count() == 1
                 page.goto(base + "pages/bhavishya-purana-pratisargaparvan/", wait_until="domcontentloaded")
                 assert page.locator('#source-content a[href*="-chapter-"]').count() == 93
                 page.goto(base + "pages/bhavishya-purana-brahmaparvan/", wait_until="domcontentloaded")
@@ -425,7 +445,7 @@ def run() -> None:
                 assert brahma_link.locator(".purana-chapter-reference").inner_text() == "1.1"
                 assert chapter_links.last.locator(".purana-chapter-reference").inner_text() == "1.216"
                 brahma_color = brahma_link.locator(".purana-chapter-reference").evaluate("(el) => getComputedStyle(el).color")
-                assert brahma_color == "rgb(6, 69, 173)", brahma_color
+                assert brahma_color == "rgb(78, 75, 71)", brahma_color
                 assert not brahma_link.locator(".purana-chapter-name").is_visible()
                 names_toggle = page.locator(".purana-chapter-name-toggle")
                 assert not names_toggle.is_checked()
@@ -447,19 +467,43 @@ def run() -> None:
                 report["purana_indexes"] = {"bhagavatam_canto": "1.1", "bhavishya_parvan_parts": "1.1 and 2.1", "vishnu_purana_book": "1.1"}
 
                 page.goto(base + "articles/varna-vicara/", wait_until="domcontentloaded")
-                document = page.locator("details.sanskrit-reveal").first
-                document.wait_for(timeout=20000)
-                source = document.locator(':scope > [lang^="sa-Deva"]').first
-                document.locator("summary").click()
-                assert document.get_attribute("open") is not None and source.is_visible()
-                page.screenshot(path=str(OUT / "document-open.png"))
-                document.locator("summary").click()
-                assert document.get_attribute("open") is None and not source.is_visible()
-                page.wait_for_function(
-                    "() => document.querySelector('details.sanskrit-reveal summary')?.textContent.trim() === 'Show Sanskrit'"
-                )
-                report["document"] = {"sanskrit_toggle": "content appears and disappears"}
-                page.screenshot(path=str(OUT / "document.png"))
+                quote_pairs = page.locator(".scripture-quote-pair")
+                quote_pairs.first.wait_for(timeout=20000)
+                rail_metrics = quote_pairs.evaluate_all("""
+                    pairs => pairs.map(pair => {
+                        const source = pair.querySelector('.revealed-sanskrit [lang^="sa-Deva"], p[lang^="sa-Deva"]');
+                        const translations = Array.from(pair.querySelectorAll(':scope > p.translation'));
+                        const styles = translations.map(node => getComputedStyle(node));
+                        const boxes = translations.map(node => node.getBoundingClientRect());
+                        return {
+                            sourcePresent: Boolean(source),
+                            sourceDisplay: source ? getComputedStyle(source).display : null,
+                            translationCount: translations.length,
+                            translationsVisible: translations.length > 0 && translations.every(node => getComputedStyle(node).display !== 'none'),
+                            railWidths: styles.map(style => style.borderLeftWidth),
+                            railColors: styles.map(style => style.borderLeftColor),
+                            bottomMargins: styles.map(style => style.marginBottom),
+                            gaps: boxes.slice(0, -1).map((box, index) => boxes[index + 1].top - box.bottom)
+                        };
+                    })
+                """)
+                assert len(rail_metrics) == 16, f"Expected 16 Varṇa quote groups, got {len(rail_metrics)}"
+                assert all(row["sourceDisplay"] == "none" for row in rail_metrics if row["sourcePresent"]), rail_metrics
+                assert all(row["translationsVisible"] for row in rail_metrics), rail_metrics
+                assert all(width == "3px" for row in rail_metrics for width in row["railWidths"]), rail_metrics
+                assert all(color == "rgb(165, 169, 170)" for row in rail_metrics for color in row["railColors"]), rail_metrics
+                assert all(margin == "0px" for row in rail_metrics for margin in row["bottomMargins"]), rail_metrics
+                multi_translation_groups = [row for row in rail_metrics if row["translationCount"] > 1]
+                assert multi_translation_groups, "Expected multi-paragraph translation groups"
+                assert all(abs(gap) < 0.5 for row in multi_translation_groups for gap in row["gaps"]), multi_translation_groups
+                assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Varṇa desktop layout overflows horizontally"
+                page.screenshot(path=str(OUT / "varna-vicara-desktop.png"))
+                page.set_viewport_size({"width": 390, "height": 844})
+                page.reload(wait_until="domcontentloaded")
+                assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Varṇa mobile layout overflows horizontally"
+                assert page.locator(".mobile-toc").is_visible(), "Varṇa mobile contents menu is hidden"
+                page.screenshot(path=str(OUT / "varna-vicara-mobile.png"))
+                report["varna_vicara"] = {"quote_groups": len(rail_metrics), "joined_multi_paragraph_groups": len(multi_translation_groups), "devanagari": "hidden", "viewport_checks": [1366, 390]}
 
                 page.goto(base + "articles/bhavishya-purana-brahmaparvan-chapter-1/", wait_until="domcontentloaded")
                 verse = page.locator(".bp-verse").filter(
@@ -480,7 +524,7 @@ def run() -> None:
                 details = verse.locator(":scope > .gita-controls > details.gita-details")
                 assert details.count() == 2, f"Viṣṇu verse has {details.count()} controls"
                 labels = details.locator("summary").all_text_contents()
-                assert set(labels) == {"Word for Word", "Transliteration"}, labels
+                assert set(labels) == {"Word for Word", "Śrīdhara Sanskrit"}, labels
                 details.first.locator("summary").click()
                 assert details.first.get_attribute("open") is not None
                 details.first.locator("summary").click()
@@ -492,10 +536,7 @@ def run() -> None:
                 page.goto(base + "books/adi-shankaracharya/tattvabodha/", wait_until="domcontentloaded")
                 reader = page.locator('.shankara-content[data-work="tattvabodha"]')
                 reader.wait_for(timeout=20000)
-                page.wait_for_function(
-                    "() => document.querySelector('[data-work=\"tattvabodha\"]')?.getAttribute('aria-busy') === 'false'",
-                    timeout=20000,
-                )
+                reader.locator(".gita-verse").first.wait_for(timeout=20000)
                 assert_site_palette(page)
                 fallback = reader.locator(".shankara-reader-error")
                 assert fallback.count() == 0, "Tattvabodha reader fallback: " + "; ".join(browser_errors) + " / " + fallback.all_text_contents().__str__()

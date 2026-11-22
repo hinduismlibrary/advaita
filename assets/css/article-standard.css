@@ -308,9 +308,10 @@ body.article-standard-page.docs-quote-format .document-content .scripture-quote-
   margin-bottom: 0;
 }
 
-html body.article-standard-page :is(
+html body:is(.article-standard-page,.article-tool-page) :is(
 [lang$="-Deva"],
 [lang*="-Deva-"],
+.devanagari-hidden-text,
 .hp-home-title-dev,
 .hp-section-dev,
 .hp-link-dev,
@@ -337,6 +338,18 @@ html body.article-standard-page :is(
   display: none !important;
 }
 
-body.article-standard-page .sitebar .brand::before {
+body.article-standard-page .sitebar .brand::before,
+body.article-tool-page .sitebar .brand::before {
   content: "Vivekadrishti";
+}
+
+html body.article-standard-page #source-content :is(
+[lang$="-Deva"], [lang*="-Deva-"], .devanagari-hidden-text,
+.hp-home-title-dev, .hp-section-dev, .hp-link-dev, .hp-original-dev, .vd-label-dev,
+.catalog-dev, .chapter-name, .ad-title-dev, .ad-heading-dev, .ad-entry-original-dev,
+.purana-name-dev, .purana-title-dev, .original-work-dev, .label-dev, .bp-sa,
+.gita-word-dev, .gita-devanagari-details, .sb-devanagari, .sanskrit-source-only,
+.book-sanskrit, .sa-text, .sanskrit-text
+) {
+  display: none !important;
 }

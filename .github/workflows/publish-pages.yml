@@ -150,24 +150,30 @@ jobs:
             fi
             manuscript_url="${PAGE_URL%/}/articles/a-defence-of-the-manusmriti/"
             women_url="${PAGE_URL%/}/articles/hinduism-on-women/"
+            varna_url="${PAGE_URL%/}/articles/varna-vicara/"
             if manuscript=$(curl --fail --silent --show-error --location --max-time 20 "$manuscript_url") \
               && women=$(curl --fail --silent --show-error --location --max-time 20 "$women_url") \
+              && varna=$(curl --fail --silent --show-error --location --max-time 20 "$varna_url") \
               && grep -Fq 'A Defence of the Manusmṛti' <<< "$manuscript" \
-              && grep -Fq 'article-standard.css?v=20261117-varna-vicara-format-1' <<< "$manuscript" \
+              && grep -Fq 'article-standard.css?v=' <<< "$manuscript" \
               && grep -Fq 'class="manu-reference-audit-list"' <<< "$manuscript" \
               && ! grep -Fq 'class="reference-table"' <<< "$manuscript" \
               && grep -Fq 'women-reader-page' <<< "$women" \
               && grep -Fq 'article-standard.css' <<< "$women" \
-              && grep -Fq 'hinduism-on-women' <<< "$women"; then
-              css_path=$(grep -oE 'href="[^"]*article-standard\.css[^"]*"' <<< "$manuscript" | head -n 1 | cut -d '"' -f 2)
+              && grep -Fq 'hinduism-on-women' <<< "$women" \
+              && grep -Fq 'varna-vicara-page' <<< "$varna" \
+              && grep -Fq 'article-standard.css?v=' <<< "$varna" \
+              && grep -Fq 'varna-vicara-editorial.css?v=' <<< "$varna"; then
+              css_path=$(grep -oE 'href="[^"]*article-standard\.css[^"]*"' <<< "$varna" | head -n 1 | cut -d '"' -f 2)
               css_url="${PAGE_URL%/}${css_path#/advaita}"
               if [ -n "$css_path" ] \
                 && curl --fail --silent --show-error --location --max-time 20 "$css_url" -o /tmp/vd-article-standard.css \
                 && grep -Fq '.scripture-quote-pair > p.manu-original-sanskrit' /tmp/vd-article-standard.css \
                 && grep -Fq '.scripture-quote-pair > p.translation' /tmp/vd-article-standard.css \
                 && grep -Fq 'border-left: 3px solid #a5a9aa;' /tmp/vd-article-standard.css \
+                && grep -Fq 'Join the quote rail across Sanskrit and all translation paragraphs.' /tmp/vd-article-standard.css \
                 && grep -Fq 'font-weight: 700;' /tmp/vd-article-standard.css; then
-                echo "Published article contains the revised reference notes and bold grey-bar quote styles."
+                echo "Published Varṇa article loads the joined quote rail and passes the shared article stylesheet checks."
                 exit 0
               fi
             fi

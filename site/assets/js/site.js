@@ -1,6 +1,7 @@
 (()=>{
 const hideDevanagariRuns=()=>{
  const devanagari=/[\u0900-\u097f\u200c\u200d]+/u;
+ const skipDevanagariText='script,style,noscript,template,textarea,title,svg,[lang$="-Deva"],[lang*="-Deva-"],.devanagari-hidden-text,.bp-sa,.gita-word-dev,.sb-devanagari,.sanskrit-source-only,.book-sanskrit,.sa-text,.sanskrit-text';
  const hideTextNode=node=>{
   const value=node.nodeValue||'';
   if(!devanagari.test(value)||!node.parentNode)return;
@@ -21,10 +22,11 @@ const hideDevanagariRuns=()=>{
  const hideIn=root=>{
   if(root.nodeType===Node.TEXT_NODE){hideTextNode(root);return}
   if(root.nodeType!==Node.ELEMENT_NODE&&root!==document.body)return;
+  if(root.nodeType===Node.ELEMENT_NODE&&root.matches(skipDevanagariText))return;
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_TEXT,{
    acceptNode(node){
     if(node.nodeType===Node.ELEMENT_NODE){
-     if(node.matches('script,style,noscript,template,textarea,title,svg,[lang$="-Deva"],[lang*="-Deva-"],.devanagari-hidden-text,.bp-sa,.gita-word-dev,.sb-devanagari,.sanskrit-source-only,.book-sanskrit,.sa-text,.sanskrit-text'))return NodeFilter.FILTER_REJECT;
+     if(node.matches(skipDevanagariText))return NodeFilter.FILTER_REJECT;
      return NodeFilter.FILTER_SKIP;
     }
     return devanagari.test(node.nodeValue||'')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
@@ -224,7 +226,7 @@ if(vishnuPuranaRoute){
 const citation=/\/articles\/compilation-of-peer-reviewed-citations-against-aryan-migration-theory\/?$/.test(p),meat=/\/articles\/meat-eating-in-hinduism-through-the-lens-of-shastra\/?$/.test(p);
 const css=(key,href)=>{if(document.querySelector(`link[data-${key}]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=href;l.dataset[key]='1';document.head.append(l)};
 const js=(key,src)=>{if(document.querySelector(`script[data-${key}]`))return;const s=document.createElement('script');s.src=src;s.async=false;s.dataset[key]='1';document.body.append(s)};
-js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261115-manusmriti-reference-repair-1');
+js('siteChrome','/advaita/assets/js/site-chrome.js?v=20261121-joined-quote-rail-1');
 if(article){
  document.querySelectorAll('link[href*="/assets/css/hindupedia-site.css"]').forEach(n=>n.remove());
  if(mmkChapter){

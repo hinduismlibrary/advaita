@@ -5,6 +5,7 @@ window.__vivekaSiteChrome=true;
 if(!window.__vivekaHideDevanagariRuns){
  window.__vivekaHideDevanagariRuns=true;
  const devanagari=/[\u0900-\u097f\u200c\u200d]+/u;
+ const skipDevanagariText='script,style,noscript,template,textarea,title,svg,[lang$="-Deva"],[lang*="-Deva-"],.devanagari-hidden-text,.bp-sa,.gita-word-dev,.sb-devanagari,.sanskrit-source-only,.book-sanskrit,.sa-text,.sanskrit-text';
  const hideTextNode=node=>{
   const value=node.nodeValue||'';
   if(!devanagari.test(value)||!node.parentNode)return;
@@ -21,10 +22,11 @@ if(!window.__vivekaHideDevanagariRuns){
  const hideIn=root=>{
   if(root.nodeType===Node.TEXT_NODE){hideTextNode(root);return}
   if(root.nodeType!==Node.ELEMENT_NODE&&root!==document.body)return;
+  if(root.nodeType===Node.ELEMENT_NODE&&root.matches(skipDevanagariText))return;
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_TEXT,{
    acceptNode(node){
     if(node.nodeType===Node.ELEMENT_NODE){
-     if(node.matches('script,style,noscript,template,textarea,title,svg,[lang$="-Deva"],[lang*="-Deva-"],.devanagari-hidden-text,.bp-sa,.gita-word-dev,.sb-devanagari,.sanskrit-source-only,.book-sanskrit,.sa-text,.sanskrit-text'))return NodeFilter.FILTER_REJECT;
+     if(node.matches(skipDevanagariText))return NodeFilter.FILTER_REJECT;
      return NodeFilter.FILTER_SKIP;
     }
     return devanagari.test(node.nodeValue||'')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
@@ -42,7 +44,7 @@ if(!window.__vivekaHideDevanagariRuns){
 }
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261120-hide-devanagari-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261121-joined-quote-rail-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
