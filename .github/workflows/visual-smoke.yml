@@ -1,17 +1,6 @@
-name: Verify rendered site layout and controls
+name: Manual visual smoke review
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/visual-smoke.yml
-      - tools/scripts/site-checks/visual-smoke.py
-      - tools/scripts/site-checks/prepare-site-deploy.py
-      - site/assets/css/site-chrome.css
-      - site/assets/js/site-chrome.js
-      - site/assets/js/site.js
-      - site/assets/js/bhavishya-controls.js
-      - site/assets/js/shankara-reader.js
-      - site/index.html
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

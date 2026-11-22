@@ -2,21 +2,21 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
-  actions: read
-  pages: write
-  id-token: write
 concurrency:
-  group: github-pages
+  group: pages-validation-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  validate:
+    name: Validate site
     runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -24,6 +24,75 @@ jobs:
         run: python3 tools/scripts/site-checks/validate-shankara-reader-data.py
       - name: Verify every standardized reader and mirrored publication file
         run: node tools/scripts/site-checks/verify-advaita-reader-standardization.js
+      - name: Validate MMK and citation layout
+        run: |
+          python3 tools/scripts/site-checks/verify-mmk-chapter-reader.py
+          python3 tools/scripts/site-checks/verify-quote-alignment.py
+      - name: Prepare site deployment
+        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
+      - name: Verify prepared shared chrome on every page
+        run: VERIFY_PREPARED=1 python3 tools/scripts/site-checks/verify-site-chrome.py
+      - name: Validate routes, complete article content, and SEO
+        run: python3 tools/scripts/site-checks/verify-site-integrity.py
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build local site search index
+        run: npx --yes pagefind@1.5.2 --site site
+      - name: Verify local search bundle
+        run: test -s site/pagefind/pagefind.js
+      - name: Install browser
+        run: |
+          python3 -m pip install --user --quiet playwright
+          python3 -m playwright install --with-deps chromium
+      - name: Check rendered pages
+        run: python3 tools/scripts/site-checks/visual-smoke.py
+      - name: Upload visual review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-visual-smoke-${{ github.run_id }}-${{ github.run_attempt }}
+          path: visual-smoke-output/
+          retention-days: 7
+      - name: Package validated site for deployment
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: prepared-site
+          path: site/
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    name: Publish validated site
+    needs: validate
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Download validated site
+        uses: actions/download-artifact@v4
+        with:
+          name: prepared-site
+          path: site
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Recover stalled Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
@@ -56,27 +125,6 @@ jobs:
             sleep 5
           done
           echo "Branch publisher is slow; attempting the Actions deployment anyway."
-      - name: Prepare site deployment
-        run: python3 tools/scripts/site-checks/prepare-site-deploy.py
-      - name: Verify prepared shared chrome on every page
-        run: VERIFY_PREPARED=1 python3 tools/scripts/site-checks/verify-site-chrome.py
-      - name: Validate routes, complete article content, and SEO
-        run: python3 tools/scripts/site-checks/verify-site-integrity.py
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Build local site search index
-        run: npx --yes pagefind@1.5.2 --site site
-      - name: Verify local search bundle
-        run: test -s site/pagefind/pagefind.js
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: site
-          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
@@ -150,4 +198,3 @@ jobs:
           curl --fail --silent --show-error --location --max-time 20 "$base/assets/js/shankara-reader-navigation.js" -o /dev/null
           curl --fail --silent --show-error --location --max-time 20 "$base/assets/js/shankara-reader-runtime.js" -o /dev/null
           echo "All 30 public contents pages, legacy reader URLs, source JSON files, and shared bundles are available."
-

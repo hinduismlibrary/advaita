@@ -826,3 +826,33 @@
 #source-content.document-reference-page .women-bibliography-group>p:first-child strong{
   font-weight:500!important;
 }
+
+/* User display preference: keep English and IAST, hide marked Devanagari presentation. */
+html body :is(
+[lang$="-Deva"],
+[lang*="-Deva-"],
+.hp-home-title-dev,
+.hp-section-dev,
+.hp-link-dev,
+.hp-original-dev,
+.vd-label-dev,
+.catalog-dev,
+.chapter-name,
+.ad-title-dev,
+.ad-heading-dev,
+.ad-entry-original-dev,
+.purana-name-dev,
+.purana-title-dev,
+.original-work-dev,
+.label-dev,
+.bp-sa,
+.gita-word-dev,
+.gita-devanagari-details,
+.sb-devanagari,
+.sanskrit-source-only,
+.book-sanskrit,
+.sa-text,
+.sanskrit-text
+) {
+  display: none !important;
+}

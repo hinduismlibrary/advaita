@@ -2,9 +2,47 @@
 "use strict";
 if(window.__vivekaSiteChrome)return;
 window.__vivekaSiteChrome=true;
+if(!window.__vivekaHideDevanagariRuns){
+ window.__vivekaHideDevanagariRuns=true;
+ const devanagari=/[\u0900-\u097f\u200c\u200d]+/u;
+ const hideTextNode=node=>{
+  const value=node.nodeValue||'';
+  if(!devanagari.test(value)||!node.parentNode)return;
+  const fragment=document.createDocumentFragment();let start=0;
+  for(const match of value.matchAll(/[\u0900-\u097f\u200c\u200d]+/gu)){
+   if(match.index>start)fragment.append(document.createTextNode(value.slice(start,match.index)));
+   const hidden=document.createElement('span');hidden.className='devanagari-hidden-text';
+   hidden.setAttribute('aria-hidden','true');hidden.textContent=match[0];fragment.append(hidden);
+   start=match.index+match[0].length;
+  }
+  if(start<value.length)fragment.append(document.createTextNode(value.slice(start)));
+  node.parentNode.replaceChild(fragment,node);
+ };
+ const hideIn=root=>{
+  if(root.nodeType===Node.TEXT_NODE){hideTextNode(root);return}
+  if(root.nodeType!==Node.ELEMENT_NODE&&root!==document.body)return;
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_TEXT,{
+   acceptNode(node){
+    if(node.nodeType===Node.ELEMENT_NODE){
+     if(node.matches('script,style,noscript,template,textarea,title,svg,[lang$="-Deva"],[lang*="-Deva-"],.devanagari-hidden-text,.bp-sa,.gita-word-dev,.sb-devanagari,.sanskrit-source-only,.book-sanskrit,.sa-text,.sanskrit-text'))return NodeFilter.FILTER_REJECT;
+     return NodeFilter.FILTER_SKIP;
+    }
+    return devanagari.test(node.nodeValue||'')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+   }
+  });
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(hideTextNode);
+ };
+ const start=()=>{
+  if(!document.body)return;hideIn(document.body);
+  new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{
+   if(node.nodeType===Node.ELEMENT_NODE||node.nodeType===Node.TEXT_NODE)hideIn(node);
+  }))).observe(document.body,{childList:true,subtree:true});
+ };
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+}
 const SITE="/advaita/";
 const FAVICON=SITE+"favicon.svg";
-const CSS=SITE+"assets/css/site-chrome.css?v=20261115-manusmriti-reference-repair-1";
+const CSS=SITE+"assets/css/site-chrome.css?v=20261120-hide-devanagari-1";
 
 function addFavicon(){
   let icons=[...document.querySelectorAll('link[rel~="icon"]')];
@@ -272,9 +310,7 @@ function applyHomepageReferenceFormat(){
   });
   link.querySelectorAll(".hp-link-dev,.vd-label-dev,[lang^='sa-Deva']").forEach(label=>{
    label.style.setProperty("order","2","important");
-   label.style.setProperty("display","block","important");
-   label.style.setProperty("margin","0","important");
-   label.style.setProperty("color","#202122","important");
+   label.style.setProperty("display","none","important");
   });
  });
 }
@@ -330,8 +366,8 @@ function makeHeader(path){
   const brand=document.createElement("a");
   brand.className="brand";
   brand.href=SITE;
-  brand.textContent="विवेकदृष्टिः";
-  brand.lang="sa-Deva";
+  brand.textContent="Vivekadrishti";
+  brand.lang="en";
   const toggle=document.createElement("button");
   toggle.className="vd-menu-toggle";
   toggle.type="button";

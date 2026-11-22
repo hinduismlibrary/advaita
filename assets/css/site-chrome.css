@@ -4214,3 +4214,64 @@ body.vd-chrome-page.scripture-index-page .chapter-grid>a::after{
  content:none!important;
  display:none!important;
 }
+
+/* Keep bilingual chrome overrides from restoring Devanagari labels. */
+html body.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page.vd-chrome-page :is(
+[lang$="-Deva"],
+[lang*="-Deva-"],
+.hp-home-title-dev,
+.hp-section-dev,
+.hp-link-dev,
+.hp-original-dev,
+.vd-label-dev,
+.catalog-dev,
+.chapter-name,
+.ad-title-dev,
+.ad-heading-dev,
+.ad-entry-original-dev,
+.purana-name-dev,
+.purana-title-dev,
+.original-work-dev,
+.label-dev,
+.bp-sa,
+.gita-word-dev,
+.gita-devanagari-details,
+.sb-devanagari,
+.sanskrit-source-only,
+.book-sanskrit,
+.sa-text,
+.sanskrit-text
+) {
+  display: none !important;
+}
+
+/* The home-directory styling below restores bilingual labels with stronger ID selectors.
+   Keep its visible interface English-only while preserving the source text in the DOM. */
+html body#home-directory.home-page.vd-chrome-page.vd-chrome-page :is(
+[lang$="-Deva"],
+[lang*="-Deva-"],
+.hp-home-title-dev,
+.hp-section-dev,
+.hp-link-dev,
+.hp-original-dev,
+.vd-label-dev,
+.catalog-dev,
+.chapter-name,
+.ad-title-dev,
+.ad-heading-dev,
+.ad-entry-original-dev,
+.purana-name-dev,
+.purana-title-dev,
+.original-work-dev,
+.label-dev,
+.bp-sa,
+.gita-word-dev,
+.gita-devanagari-details,
+.sb-devanagari,
+.sanskrit-source-only,
+.book-sanskrit,
+.sa-text,
+.sanskrit-text
+) {
+  display: none !important;
+}

@@ -422,3 +422,53 @@ body.article-standard-page .document-content caption {
     padding: .62em .72em;
   }
 }
+
+/* Join the quote rail across Sanskrit and all translation paragraphs. */
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit,
+body.article-standard-page .document-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa"],
+body.article-standard-page .document-content .scripture-quote-pair > p[lang^="sa"],
+body.article-standard-page .document-content .scripture-quote-pair > p.manu-original-sanskrit,
+body.article-standard-page .document-content .scripture-quote-pair > p.translation,
+body.article-standard-page .document-content .scripture-quote-pair > .translation,
+body.article-standard-page .document-content .scripture-quote-pair > blockquote,
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa"],
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p[lang^="sa"],
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p.manu-original-sanskrit,
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > p.translation,
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > .translation,
+body.article-standard-page.docs-quote-format .document-content .scripture-quote-pair > blockquote {
+  margin-bottom: 0;
+}
+
+html body.article-standard-page :is(
+[lang$="-Deva"],
+[lang*="-Deva-"],
+.hp-home-title-dev,
+.hp-section-dev,
+.hp-link-dev,
+.hp-original-dev,
+.vd-label-dev,
+.catalog-dev,
+.chapter-name,
+.ad-title-dev,
+.ad-heading-dev,
+.ad-entry-original-dev,
+.purana-name-dev,
+.purana-title-dev,
+.original-work-dev,
+.label-dev,
+.bp-sa,
+.gita-word-dev,
+.gita-devanagari-details,
+.sb-devanagari,
+.sanskrit-source-only,
+.book-sanskrit,
+.sa-text,
+.sanskrit-text
+) {
+  display: none !important;
+}
+
+body.article-standard-page .sitebar .brand::before {
+  content: "Vivekadrishti";
+}
