@@ -478,6 +478,7 @@ def run() -> None:
                         return {
                             sourcePresent: Boolean(source),
                             sourceDisplay: source ? getComputedStyle(source).display : null,
+                            sourceVisible: source ? source.getClientRects().length > 0 : false,
                             translationCount: translations.length,
                             translationsVisible: translations.length > 0 && translations.every(node => getComputedStyle(node).display !== 'none'),
                             railWidths: styles.map(style => style.borderLeftWidth),
@@ -488,7 +489,10 @@ def run() -> None:
                     })
                 """)
                 assert len(rail_metrics) == 16, f"Expected 16 Varṇa quote groups, got {len(rail_metrics)}"
-                assert all(row["sourceDisplay"] == "none" for row in rail_metrics if row["sourcePresent"]), rail_metrics
+                assert all(
+                    row["sourceDisplay"] == "block" and row["sourceVisible"]
+                    for row in rail_metrics if row["sourcePresent"]
+                ), rail_metrics
                 assert all(row["translationsVisible"] for row in rail_metrics), rail_metrics
                 assert all(width == "3px" for row in rail_metrics for width in row["railWidths"]), rail_metrics
                 assert all(color == "rgb(165, 169, 170)" for row in rail_metrics for color in row["railColors"]), rail_metrics
@@ -503,7 +507,13 @@ def run() -> None:
                 assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Varṇa mobile layout overflows horizontally"
                 assert page.locator(".mobile-toc").is_visible(), "Varṇa mobile contents menu is hidden"
                 page.screenshot(path=str(OUT / "varna-vicara-mobile.png"))
-                report["varna_vicara"] = {"quote_groups": len(rail_metrics), "joined_multi_paragraph_groups": len(multi_translation_groups), "devanagari": "hidden", "viewport_checks": [1366, 390]}
+                report["varna_vicara"] = {
+                    "quote_groups": len(rail_metrics),
+                    "sanskrit_source_groups_visible": sum(row["sourceVisible"] for row in rail_metrics),
+                    "joined_multi_paragraph_groups": len(multi_translation_groups),
+                    "devanagari": "Sanskrit sources visible; interface labels hidden",
+                    "viewport_checks": [1366, 390],
+                }
 
                 page.goto(base + "articles/bhavishya-purana-brahmaparvan-chapter-1/", wait_until="domcontentloaded")
                 verse = page.locator(".bp-verse").filter(

@@ -102,3 +102,8 @@ body.article-standard-page.varna-vicara-page .document-content .scripture-quote-
     margin-bottom: 20px;
   }
 }
+
+/* Keep the scripture source visible inside the joined Sanskrit and English quote rail. */
+html body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa-Deva"] {
+  display: block !important;
+}
