@@ -57,6 +57,13 @@ body.article-standard-page.varna-vicara-page .article .mobile-toc {
   display: none;
 }
 
+/* Set ordinary article prose in the softer serif already used by the headings. */
+body.article-standard-page.varna-vicara-page #source-content .document-section > p {
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
 /* Keep the Sanskrit and English quote rails visually joined. */
 body.article-standard-page.varna-vicara-page .document-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa"] {
   margin-bottom: 0;
@@ -115,6 +122,13 @@ body.article-standard-page.varna-vicara-page .document-content .scripture-quote-
 
   body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  body.article-standard-page.varna-vicara-page #source-content .document-section > p {
+    font-size: 18px;
+    line-height: 1.58;
   }
 }
 
