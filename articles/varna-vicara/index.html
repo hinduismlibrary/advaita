@@ -43,18 +43,28 @@
   #source-content .vv-stanza { column-gap: .25em; }
 }
 </style><style id="vv-full-width-reading">
-/* Full-width, justified English on desktop; retain a compact contents sidebar. */
+/* Editorial reading layout: generous gutter, readable measure, and quiet navigation. */
 body.article-standard-page.varna-vicara-page {
-  --varna-layout-gap: clamp(16px, 1.8vw, 30px);
-  --varna-toc-width: 205px;
+  --varna-layout-gap: clamp(48px, 4.6vw, 80px);
+  --varna-toc-width: 240px;
+  --varna-layout-width: 1440px;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page {
-  padding-inline: clamp(14px, 1.6vw, 28px);
+  padding: clamp(36px, 3.2vw, 56px) clamp(24px, 3.4vw, 64px) 72px;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--varna-layout-width);
+  margin-inline: auto;
+}
+body.article-standard-page.varna-vicara-page .reader-grid > article.article {
   width: 100%;
   max-width: none;
+  min-width: 0;
+  font-size: clamp(18px, calc(16.5px + .2vw), 20px);
+  line-height: 1.68;
 }
 body.article-standard-page.varna-vicara-page #source-content,
 body.article-standard-page.varna-vicara-page #source-content .document-section,
@@ -66,39 +76,110 @@ body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pa
   max-width: none;
   min-width: 0;
 }
+body.article-standard-page.varna-vicara-page #source-content {
+  max-width: 94ch;
+  margin-inline: auto;
+  color: #242424;
+}
 body.article-standard-page.varna-vicara-page #source-content .document-section > p,
-body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
-body.article-standard-page.varna-vicara-page #source-content .document-section li {
+body.article-standard-page.varna-vicara-page #source-content .document-section li,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
+  font-size: inherit;
+  line-height: 1.68;
   text-align: justify;
   text-align-last: left;
   text-justify: inter-word;
   hyphens: auto;
-  line-height: 1.7;
-  font-size: clamp(17px, calc(16px + .18vw), 19px);
   font-weight: 400;
 }
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-  margin-inline: 0;
+  margin: 0 0 1.25em;
 }
-body.article-standard-page.varna-vicara-page #source-content .document-section > p.emphasis {
+body.article-standard-page.varna-vicara-page #source-content :is(strong, b, h2, h3, h4, h5, p.reference, .emphasis) {
+  font-weight: 400;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation :is(strong, b, em) {
+  color: #000;
   font-weight: 700;
+  font-style: normal;
 }
-@media (min-width: 1001px) {
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
+  hyphens: manual;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair {
+  margin-block: 1.55em;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.reference {
+  font-size: .83em;
+  margin-bottom: .45em;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit [lang="sa-Deva"] {
+  font-weight: 400;
+}
+body.article-standard-page.varna-vicara-page .side-toc {
+  padding: 0 24px 20px 0;
+  border-right: 1px solid #e5e5e5;
+}
+body.article-standard-page.varna-vicara-page .side-toc-title {
+  font-size: 21px;
+  font-weight: 400;
+  padding-bottom: 14px;
+}
+body.article-standard-page.varna-vicara-page .toc {
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+body.article-standard-page.varna-vicara-page .toc a {
+  padding: 5px 8px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+body.article-standard-page.varna-vicara-page .toc a.is-active {
+  font-weight: 400;
+}
+@media (min-width: 1151px) {
   body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
   body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
     grid-template-columns: var(--varna-toc-width) minmax(0, 1fr);
   }
+  body.article-standard-page.varna-vicara-page main#main-content.page > .article-head h1 {
+    width: 100%;
+    max-width: 94ch;
+    justify-self: center;
+  }
+}
+@media (max-width: 1150px) {
+  body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
+  body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
+    display: block;
+  }
+  body.article-standard-page.varna-vicara-page .reader-grid > .side-toc { display: none; }
+  body.article-standard-page.varna-vicara-page .article .mobile-toc {
+    display: block;
+    max-width: 94ch;
+    margin: 0 auto 2em;
+    padding: 12px 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+  }
+  body.article-standard-page.varna-vicara-page .article .mobile-toc > summary { cursor: pointer; }
 }
 @media (max-width: 620px) {
   body.article-standard-page.varna-vicara-page main#main-content.page {
-    padding-inline: clamp(12px, 3.5vw, 18px);
+    padding: 24px 18px 42px;
   }
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 17px; }
   body.article-standard-page.varna-vicara-page #source-content .document-section > p,
   body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
   body.article-standard-page.varna-vicara-page #source-content .document-section li {
     text-align: left;
     hyphens: manual;
   }
+}
+@media print {
+  body.article-standard-page.varna-vicara-page #source-content { max-width: none; }
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 11pt; }
 }
 </style></head>
 <body class="article-standard-page docs-quote-format varna-vicara-page" data-article-standard="1"><a class="skip-link" href="#main-content">Skip to content</a>
@@ -137,7 +218,7 @@ body.article-standard-page.varna-vicara-page #source-content .document-section >
 <span class="vv-verse-line"><span class="vv-verse-words">धर्मप्रवक्ता नृपतेर् न तु शूद्रः कथं चन</span> <span class="vv-danda">॥ २० ॥</span></span></span></div></div>
 <p class="translation">Even a so called Brāhmaṇa, who makes a living by his caste only, may, at pleasure be the propounder of the Law for the king, but not a Śūdra under any circumstances.</p></div><div class="scripture-quote-pair"><p class="reference">Manusmṛti 8.417</p><div class="revealed-sanskrit"><div lang="sa-Deva" class="vv-sanskrit-verse"><span class="vv-stanza"><span class="vv-verse-line"><span class="vv-verse-words">विस्रब्धं ब्राह्मणः शूद्राद् द्रव्योपादानमाचरेत्</span> <span class="vv-danda">।</span></span>
 <span class="vv-verse-line"><span class="vv-verse-words">न हि तस्यास्ति किं चित् स्वं भर्तृहार्यधनो हि सः</span> <span class="vv-danda">॥ ४१७ ॥</span></span></span></div></div>
-<p class="translation">The Brāhmaṇa may confidently have recourse to seizing the goods of the Śūdra, as the latter has no property, and his property is meant to be seized by the master.</p></div></section><section class="document-section"><h3 class="document-section-title" id="rejection-universal">Refutation of Pūrvapakṣa</h3><p>In order to refute the PurvaPaksha position we must make use of the maxim: </p><p><em>One should accept the statement of a guru when it is reasonable or established by scripture. One should not accept it merely because it was spoken by a guru.</em></p><p class="emphasis">Let us begin with Scriptural Pramāṇas against Jāti as a universal prerequisite of Varṇa.</p></section><section class="document-section"><h2 class="document-group-heading" id="vv-bhavishya-purana-varna">Bhaviṣya Purāṇa on Varṇa</h2><h3 class="document-section-title" id="vishvamitra">Mlecchas and Śūdras becoming Brāhmaṇa like Viśvāmitra</h3><div class="scripture-quote-pair"><p class="reference">Bhaviṣya Purāṇa 1.16.56–58</p><div class="revealed-sanskrit"><div lang="sa-Deva" class="vv-sanskrit-verse"><span class="vv-stanza"><span class="vv-verse-line"><span class="vv-verse-words">विश्वामित्रस्तु राजेन्द्र ब्राह्मणत्वजिगीषया</span> <span class="vv-danda">।</span></span>
+<p class="translation">The Brāhmaṇa may confidently have recourse to seizing the goods of the Śūdra, as the latter has no property, and his property is meant to be seized by the master.</p></div></section><section class="document-section"><h3 class="document-section-title" id="rejection-universal">Refutation of Pūrvapakṣa</h3><p>In order to refute the PurvaPaksha position we must make use of the maxim: </p><div class="scripture-quote-pair"><p class="translation maxim">One should accept the statement of a guru when it is reasonable or established by scripture. One should not accept it merely because it was spoken by a guru.</p></div><p class="emphasis">Let us begin with Scriptural Pramāṇas against Jāti as a universal prerequisite of Varṇa.</p></section><section class="document-section"><h2 class="document-group-heading" id="vv-bhavishya-purana-varna">Bhaviṣya Purāṇa on Varṇa</h2><h3 class="document-section-title" id="vishvamitra">Mlecchas and Śūdras becoming Brāhmaṇa like Viśvāmitra</h3><div class="scripture-quote-pair"><p class="reference">Bhaviṣya Purāṇa 1.16.56–58</p><div class="revealed-sanskrit"><div lang="sa-Deva" class="vv-sanskrit-verse"><span class="vv-stanza"><span class="vv-verse-line"><span class="vv-verse-words">विश्वामित्रस्तु राजेन्द्र ब्राह्मणत्वजिगीषया</span> <span class="vv-danda">।</span></span>
 <span class="vv-verse-line"><span class="vv-verse-words">तपश्चचार विपुलं सन्तापाय दिवौकसाम्</span> <span class="vv-danda">॥</span></span></span>
 <span class="vv-stanza"><span class="vv-verse-line"><span class="vv-verse-words">ब्राह्मणत्वं न लेभेऽसौ लेभे विघ्नाननेकशः</span> <span class="vv-danda">॥ ५६</span></span></span>
 <span class="vv-stanza"><span class="vv-verse-line"><span class="vv-verse-words">ततस्तु नियमात्तेषां तिथीनां प्रवरा तिथिः</span> <span class="vv-danda">।</span></span>
