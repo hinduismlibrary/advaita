@@ -1,138 +1,189 @@
-/* Page-specific reading layout for Varṇa-vicāra. */
+/* Varṇa-vicāra: one shared reading column, for both prose and quotations. */
 body.article-standard-page.varna-vicara-page {
   --paper: #fff;
   --outer: #fff;
-  --varna-layout-width: 1520px;
-  --varna-layout-gap: clamp(28px, 3.5vw, 56px);
-  --varna-toc-width: 250px;
+  --varna-layout-width: 1480px;
+  --varna-layout-gap: clamp(44px, 4.5vw, 76px);
+  --varna-toc-width: 240px;
   background: #fff;
 }
-
 body.article-standard-page.varna-vicara-page main#main-content.page {
   box-sizing: border-box;
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding: clamp(28px, 3vw, 48px) clamp(20px, 4vw, 64px) 64px;
+  padding: 40px clamp(24px, 3.4vw, 60px) 72px;
   background: #fff;
 }
-
-body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
+body.article-standard-page.varna-vicara-page main#main-content.page > .article-head,
+body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: minmax(220px, var(--varna-toc-width)) minmax(0, 1fr);
-  gap: var(--varna-layout-gap);
-  width: min(100%, var(--varna-layout-width));
-  max-width: none;
-  margin: 0 auto 42px;
-}
-
-body.article-standard-page.varna-vicara-page main#main-content.page > .article-head h1 {
-  grid-column: 2;
-}
-
-body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid {
-  display: grid;
-  grid-template-columns: minmax(220px, var(--varna-toc-width)) minmax(0, 1fr);
+  grid-template-columns: var(--varna-toc-width) minmax(0, 1fr);
   gap: var(--varna-layout-gap);
   align-items: start;
-  width: min(100%, var(--varna-layout-width));
-  margin: 0 auto;
+  width: 100%;
+  max-width: var(--varna-layout-width);
+  margin-inline: auto;
 }
-
+body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
+  margin-bottom: 42px;
+}
+body.article-standard-page.varna-vicara-page main#main-content.page > .article-head h1 {
+  grid-column: 2;
+  text-align: left;
+  font-weight: 400;
+}
 body.article-standard-page.varna-vicara-page .reader-grid > .side-toc {
+  box-sizing: border-box;
   position: sticky;
   top: 24px;
   max-height: calc(100vh - 48px);
+  padding: 0 24px 20px 0;
+  border-right: 1px solid #e5e5e5;
 }
-
+body.article-standard-page.varna-vicara-page .side-toc-title {
+  font-size: 21px;
+  font-weight: 400;
+  padding-bottom: 14px;
+}
+body.article-standard-page.varna-vicara-page .toc {
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+body.article-standard-page.varna-vicara-page .toc a {
+  padding: 5px 8px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
 body.article-standard-page.varna-vicara-page .reader-grid > article.article {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.72;
+}
+body.article-standard-page.varna-vicara-page .article .mobile-toc { display: none; }
+/* All reading elements inherit the same available width, not separate line measures. */
+body.article-standard-page.varna-vicara-page #source-content,
+body.article-standard-page.varna-vicara-page #source-content .document-section,
+body.article-standard-page.varna-vicara-page #source-content .document-section > p,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
   box-sizing: border-box;
   width: 100%;
   max-width: none;
   min-width: 0;
+  margin-inline: 0;
 }
-
-body.article-standard-page.varna-vicara-page .article .mobile-toc {
-  display: none;
+body.article-standard-page.varna-vicara-page #source-content {
+  color: #242424;
+  font-size: inherit;
+  line-height: inherit;
 }
-
-/* Match the reference font and line measure for ordinary prose. */
+body.article-standard-page.varna-vicara-page #source-content .document-section > p,
+body.article-standard-page.varna-vicara-page #source-content .document-section li,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
+  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-size: inherit;
+  line-height: 1.72;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: manual;
+  font-weight: 400;
+}
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-  max-width: min(652px, calc(100vw - 48px));
-  font-family: "Merriweather", Georgia, "Times New Roman", serif;
-  font-size: clamp(18px, calc(16px + 0.3vw), 20px);
+  margin-block: 0 1.25em;
+}
+body.article-standard-page.varna-vicara-page #source-content :is(strong, b, h2, h3, h4, h5, p.reference, .emphasis) {
+  font-weight: 400;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair {
+  margin-block: 1.55em;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.reference {
+  font-size: .85em;
+  margin: 0 0 .45em;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
+  margin-block: 0;
+  padding: 0 0 0 16px;
+  border-left: 3px solid #a5a9aa;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation :is(strong, b, em) {
+  color: #000;
+  font-weight: 700;
+  font-style: normal;
+}
+html body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit [lang="sa-Deva"] {
+  display: block !important;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #7f432f;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: left;
+}
+
+/* Varṇa-vicāra only: compact Sanskrit with aligned verse-ending dandas. */
+#source-content .scripture-quote-pair .revealed-sanskrit [lang="sa-Deva"] {
   line-height: 1.5;
+  text-align: left;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+#source-content .vv-stanza {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: .35em;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+}
+#source-content .vv-stanza + .vv-stanza { margin-top: .22em; }
+#source-content .vv-verse-line { display: contents; }
+#source-content .vv-verse-words { min-width: 0; overflow-wrap: break-word; }
+#source-content .vv-danda { align-self: end; white-space: nowrap; }
+#source-content .scripture-quote-pair > .revealed-sanskrit { padding-bottom: .2em !important; }
+#source-content .scripture-quote-pair > p.translation + p.translation { padding-top: .3em !important; }
+@media (max-width: 620px) {
+  #source-content .vv-verse-words { text-wrap: pretty; }
+  #source-content .vv-stanza { column-gap: .25em; }
 }
 
-/* Keep the Sanskrit and English quote rails visually joined. */
-body.article-standard-page.varna-vicara-page .document-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa"] {
-  margin-bottom: 0;
-}
-
-/* Use matching, margin-free quote rails so Sanskrit and English form one line. */
-body.article-standard-page.varna-vicara-page .document-content .scripture-quote-pair > .revealed-sanskrit,
-body.article-standard-page.varna-vicara-page .document-content .scripture-quote-pair > p.translation {
-  box-sizing: border-box;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding: 0 0 0 16px !important;
-  border-left: 3px solid #a5a9aa !important;
-}
-
-body.article-standard-page.varna-vicara-page .document-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa"] {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-}
-
-@media (max-width: 1000px) {
-  body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  body.article-standard-page.varna-vicara-page main#main-content.page {
-    padding: 32px clamp(16px, 3vw, 32px) 52px;
-  }
-
+@media (max-width: 1150px) {
+  body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
   body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
     display: block;
-    width: 100%;
-    margin: 0 0 24px;
-    text-align: left;
   }
-
-  body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid {
-    display: block;
-    width: 100%;
-  }
-
-  body.article-standard-page.varna-vicara-page .reader-grid > .side-toc {
-    display: none;
-  }
-
-  body.article-standard-page.varna-vicara-page .reader-grid > article.article {
-    max-width: none;
-  }
-
+  body.article-standard-page.varna-vicara-page .reader-grid > .side-toc { display: none; }
   body.article-standard-page.varna-vicara-page .article .mobile-toc {
     display: block;
+    margin: 0 0 2em;
+    padding: 12px 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
   }
+  body.article-standard-page.varna-vicara-page .article .mobile-toc > summary { cursor: pointer; }
 }
-
 @media (max-width: 620px) {
-  body.article-standard-page.varna-vicara-page main#main-content.page {
-    padding: 24px clamp(12px, 3.5vw, 18px) 42px;
-  }
-
-  body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
-    margin-bottom: 20px;
-  }
+  body.article-standard-page.varna-vicara-page main#main-content.page { padding: 24px 18px 42px; }
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 17px; }
+  body.article-standard-page.varna-vicara-page #source-content .document-section > p,
+  body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+  body.article-standard-page.varna-vicara-page #source-content .document-section li { text-align: left; }
 }
-
-
-/* Keep the scripture source visible inside the joined Sanskrit and English quote rail. */
-html body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa-Deva"] {
-  display: block !important;
+@media print {
+  body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
+  body.article-standard-page.varna-vicara-page main#main-content.page > .article-head { display: block; }
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 11pt; }
+  body.article-standard-page.varna-vicara-page .article .mobile-toc { display: none; }
 }
