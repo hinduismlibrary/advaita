@@ -61,7 +61,7 @@ body.article-standard-page.varna-vicara-page .article .mobile-toc {
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
   font-size: 20px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 /* Keep the Sanskrit and English quote rails visually joined. */
@@ -125,12 +125,6 @@ body.article-standard-page.varna-vicara-page .document-content .scripture-quote-
   }
 }
 
-@media (max-width: 760px) {
-  body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-    font-size: 18px;
-    line-height: 1.58;
-  }
-}
 
 /* Keep the scripture source visible inside the joined Sanskrit and English quote rail. */
 html body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit [lang^="sa-Deva"] {
