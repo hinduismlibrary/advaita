@@ -57,9 +57,9 @@ body.article-standard-page.varna-vicara-page .article .mobile-toc {
   display: none;
 }
 
-/* Match ordinary prose to the Noto Serif face in the WordPress reference. */
+/* Match the Empyrean Trail reference font for ordinary prose. */
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-  font-family: "Noto Serif", Georgia, "Times New Roman", serif;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
   font-size: 20px;
   line-height: 1.55;
 }
