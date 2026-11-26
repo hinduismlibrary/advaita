@@ -43,12 +43,13 @@
   #source-content .vv-stanza { column-gap: .25em; }
 }
 </style><style id="vv-full-width-reading">
-/* Use all available reading space beside the contents, not a fixed 652px column. */
+/* Full-width, justified English on desktop; retain a compact contents sidebar. */
 body.article-standard-page.varna-vicara-page {
-  --varna-layout-gap: clamp(24px, 2.4vw, 40px);
+  --varna-layout-gap: clamp(16px, 1.8vw, 30px);
+  --varna-toc-width: 205px;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page {
-  padding-inline: clamp(16px, 2.5vw, 44px);
+  padding-inline: clamp(14px, 1.6vw, 28px);
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
@@ -65,18 +66,38 @@ body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pa
   max-width: none;
   min-width: 0;
 }
+body.article-standard-page.varna-vicara-page #source-content .document-section > p,
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+body.article-standard-page.varna-vicara-page #source-content .document-section li {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+  line-height: 1.7;
+  font-size: clamp(17px, calc(16px + .18vw), 19px);
+  font-weight: 400;
+}
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
   margin-inline: 0;
-  text-align: left;
-  line-height: 1.65;
 }
-body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
-  line-height: 1.65;
-  text-align: left;
+body.article-standard-page.varna-vicara-page #source-content .document-section > p.emphasis {
+  font-weight: 700;
+}
+@media (min-width: 1001px) {
+  body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
+  body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
+    grid-template-columns: var(--varna-toc-width) minmax(0, 1fr);
+  }
 }
 @media (max-width: 620px) {
   body.article-standard-page.varna-vicara-page main#main-content.page {
     padding-inline: clamp(12px, 3.5vw, 18px);
+  }
+  body.article-standard-page.varna-vicara-page #source-content .document-section > p,
+  body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+  body.article-standard-page.varna-vicara-page #source-content .document-section li {
+    text-align: left;
+    hyphens: manual;
   }
 }
 </style></head>
