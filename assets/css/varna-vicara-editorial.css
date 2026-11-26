@@ -2,9 +2,10 @@
 body.article-standard-page.varna-vicara-page {
   --paper: #fff;
   --outer: #fff;
-  --varna-layout-width: 1480px;
-  --varna-layout-gap: clamp(44px, 4.5vw, 76px);
-  --varna-toc-width: 240px;
+  --varna-layout-width: 1280px;
+  --varna-reading-width: 720px;
+  --varna-layout-gap: clamp(32px, 3.5vw, 56px);
+  --varna-toc-width: 210px;
   background: #fff;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page {
@@ -12,14 +13,14 @@ body.article-standard-page.varna-vicara-page main#main-content.page {
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding: 40px clamp(24px, 3.4vw, 60px) 72px;
+  padding: 44px clamp(24px, 3vw, 48px) 80px;
   background: #fff;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head,
 body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: var(--varna-toc-width) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, var(--varna-reading-width)) minmax(0, 1fr);
   gap: var(--varna-layout-gap);
   align-items: start;
   width: 100%;
@@ -27,11 +28,11 @@ body.article-standard-page.varna-vicara-page main#main-content.page > .reader-gr
   margin-inline: auto;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head h1 {
   grid-column: 2;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
 }
 body.article-standard-page.varna-vicara-page .reader-grid > .side-toc {
@@ -39,20 +40,24 @@ body.article-standard-page.varna-vicara-page .reader-grid > .side-toc {
   position: sticky;
   top: 24px;
   max-height: calc(100vh - 48px);
-  padding: 0 24px 20px 0;
-  border-right: 1px solid #e5e5e5;
+  grid-column: 1;
+  width: 100%;
+  max-width: var(--varna-toc-width);
+  justify-self: end;
+  padding: 0 16px 20px 0;
+  border-right: 0;
 }
 body.article-standard-page.varna-vicara-page .side-toc-title {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 400;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 }
 body.article-standard-page.varna-vicara-page .toc {
   font-size: 13.5px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 body.article-standard-page.varna-vicara-page .toc a {
-  padding: 5px 8px;
+  padding: 4px 8px;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -60,10 +65,11 @@ body.article-standard-page.varna-vicara-page .reader-grid > article.article {
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
-  max-width: none;
+  max-width: var(--varna-reading-width);
+  grid-column: 2;
   font-family: Merriweather, Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.72;
+  font-size: 20px;
+  line-height: 1.55;
 }
 body.article-standard-page.varna-vicara-page .article .mobile-toc { display: none; }
 /* All reading elements inherit the same available width, not separate line measures. */
@@ -89,24 +95,22 @@ body.article-standard-page.varna-vicara-page #source-content .document-section l
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
   font-family: Merriweather, Georgia, "Times New Roman", serif;
   font-size: inherit;
-  line-height: 1.72;
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-word;
+  line-height: 1.55;
+  text-align: left;
   hyphens: manual;
   font-weight: 400;
 }
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-  margin-block: 0 1.25em;
+  margin-block: 0 1.35em;
 }
 body.article-standard-page.varna-vicara-page #source-content :is(strong, b, h2, h3, h4, h5, p.reference, .emphasis) {
   font-weight: 400;
 }
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair {
-  margin-block: 1.55em;
+  margin-block: 1.5em;
 }
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.reference {
-  font-size: .85em;
+  font-size: .82em;
   margin: 0 0 .45em;
 }
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > .revealed-sanskrit,
@@ -127,7 +131,7 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
   padding: 0;
   border: 0;
   color: #7f432f;
-  font-size: 1em;
+  font-size: .94em;
   font-weight: 400;
   line-height: 1.55;
   text-align: left;
@@ -159,12 +163,21 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
   #source-content .vv-stanza { column-gap: .25em; }
 }
 
-@media (max-width: 1150px) {
+/* At medium desktop widths, let the sidebar and reader share a centred two-column grid. */
+@media (min-width: 1001px) and (max-width: 1279px) {
+  body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
+  body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
+    grid-template-columns: var(--varna-toc-width) minmax(0, var(--varna-reading-width));
+    justify-content: center;
+  }
+}
+@media (max-width: 1000px) {
   body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
   body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
     display: block;
   }
   body.article-standard-page.varna-vicara-page .reader-grid > .side-toc { display: none; }
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { margin-inline: auto; }
   body.article-standard-page.varna-vicara-page .article .mobile-toc {
     display: block;
     margin: 0 0 2em;
@@ -176,7 +189,7 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
 }
 @media (max-width: 620px) {
   body.article-standard-page.varna-vicara-page main#main-content.page { padding: 24px 18px 42px; }
-  body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 17px; }
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 18px; }
   body.article-standard-page.varna-vicara-page #source-content .document-section > p,
   body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
   body.article-standard-page.varna-vicara-page #source-content .document-section li { text-align: left; }
@@ -186,4 +199,35 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
   body.article-standard-page.varna-vicara-page main#main-content.page > .article-head { display: block; }
   body.article-standard-page.varna-vicara-page .reader-grid > article.article { font-size: 11pt; }
   body.article-standard-page.varna-vicara-page .article .mobile-toc { display: none; }
+}
+
+/* A restrained article outline, with centred main section titles and a short divider. */
+body.article-standard-page.varna-vicara-page #source-content h2.document-group-heading {
+  text-align: center;
+  font-size: 1.55em;
+  line-height: 1.25;
+  margin: 2.1em 0 1.1em;
+  padding: 0;
+  border: 0;
+}
+body.article-standard-page.varna-vicara-page #source-content h2.document-group-heading::after {
+  content: "";
+  display: block;
+  width: min(150px, 40%);
+  margin: .65em auto 0;
+  border-top: 1px solid #e2e2e2;
+}
+body.article-standard-page.varna-vicara-page #source-content h3.document-section-title {
+  font-size: 1.26em;
+  line-height: 1.35;
+  margin: 1.65em 0 .85em;
+}
+body.article-standard-page.varna-vicara-page .toc a.is-active {
+  background: transparent;
+  color: #326466;
+  border-left-color: #326466;
+  font-weight: 400;
+}
+@media print {
+  body.article-standard-page.varna-vicara-page .reader-grid > article.article { max-width: none; }
 }
