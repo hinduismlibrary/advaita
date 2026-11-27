@@ -285,3 +285,30 @@ body.article-standard-page.varna-vicara-page > header.sitebar .site-search {
 @media (max-width: 620px) {
   body.article-standard-page.varna-vicara-page > header.sitebar { padding: 12px 18px; }
 }
+
+/* Editorial debate structure: labels stand apart from the argument, without heavy boxes. */
+body.article-standard-page.varna-vicara-page #source-content .vv-debate {
+  margin: 1.4em 0 1.65em;
+}
+body.article-standard-page.varna-vicara-page #source-content .vv-debate > p {
+  font-weight: 400;
+  margin: 0 0 .85em;
+}
+body.article-standard-page.varna-vicara-page #source-content .vv-debate > p:last-child {
+  margin-bottom: 0;
+}
+body.article-standard-page.varna-vicara-page #source-content .vv-debate > .vv-debate-label {
+  margin: 0 0 .3em;
+  color: #171717;
+  line-height: 1.4;
+}
+body.article-standard-page.varna-vicara-page #source-content .vv-debate > .vv-debate-label > strong {
+  font-weight: 700;
+}
+body.article-standard-page.varna-vicara-page #source-content :is(.alpha-list, .argument-list) {
+  margin: -.45em 0 1.35em;
+  padding-inline-start: 1.5em;
+}
+body.article-standard-page.varna-vicara-page #source-content :is(.alpha-list, .argument-list) > li {
+  margin: .3em 0;
+}

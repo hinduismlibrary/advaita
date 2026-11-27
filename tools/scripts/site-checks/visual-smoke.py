@@ -541,6 +541,10 @@ def run() -> None:
                     }
                 """
                 assert page.evaluate(panel_edges_match), "Varṇa desktop header/footer misaligned"
+                debate_labels = page.locator("#source-content .vv-debate-label strong")
+                assert debate_labels.all_text_contents() == ["Objection:", "Reply:", "Objection:", "Reply:"]
+                assert debate_labels.evaluate_all("nodes => nodes.every(node => getComputedStyle(node).fontWeight === '700')")
+
                 page.screenshot(path=str(OUT / "varna-vicara-desktop.png"))
                 page.set_viewport_size({"width": 390, "height": 844})
                 page.reload(wait_until="domcontentloaded")
