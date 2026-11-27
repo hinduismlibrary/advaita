@@ -555,6 +555,9 @@ def run() -> None:
                 debate_labels = page.locator("#source-content .vv-debate-label strong")
                 assert debate_labels.all_text_contents() == ["Objection:", "Reply:", "Objection:", "Reply:"]
                 assert debate_labels.evaluate_all("nodes => nodes.every(node => getComputedStyle(node).fontWeight === '700')")
+                assert page.locator("#source-content .vv-debate").evaluate_all("nodes => nodes.every(node => node.querySelectorAll(':scope > p:not(.vv-debate-label)').length === 1)")
+                assert page.locator("#source-content .document-section > p:not([class]) + p:not([class]), #source-content .document-section > p.argument-chain + p:not([class])").count() == 0
+
 
                 page.screenshot(path=str(OUT / "varna-vicara-desktop.png"))
                 page.set_viewport_size({"width": 390, "height": 844})
