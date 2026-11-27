@@ -515,6 +515,11 @@ def run() -> None:
                 """)
                 assert abs(typography["proseWidth"] - typography["quoteWidth"]) < 1, typography
                 assert typography["proseWeight"] == "400", typography
+                assert page.locator("#source-content .scripture-quote-pair > p.reference").first.inner_text() == "Invocation"
+                assert page.locator("#source-content .document-section > p:not(.reference)").first.evaluate("node => getComputedStyle(node).textAlign") == "justify"
+                assert page.locator("#source-content p.translation").first.evaluate("node => getComputedStyle(node).textAlign") == "justify"
+                assert page.locator("#source-content .vv-debate > p:not(.vv-debate-label)").first.evaluate("node => getComputedStyle(node).textAlign") == "justify"
+                assert page.locator("#source-content [lang='sa-Deva']").first.evaluate("node => getComputedStyle(node).textAlign") == "left"
                 assert typography["translationWeight"] == "700" and typography["translationColor"] == "rgb(0, 0, 0)", typography
                 assert typography["sourceWeight"] == "700" and typography["sourceColor"] == "rgb(127, 67, 47)", typography
                 assert typography["outerColor"] == "rgb(43, 38, 31)" and typography["paperColor"] == "rgb(255, 255, 255)", typography

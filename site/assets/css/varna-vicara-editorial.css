@@ -31,7 +31,7 @@ body.article-standard-page.varna-vicara-page main#main-content.page > .reader-gr
   margin-inline: auto;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
-  margin-bottom: 36px;
+  margin-bottom: 22px;
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head h1 {
   grid-column: 2;
@@ -104,7 +104,7 @@ body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pa
   font-weight: 400;
 }
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
-  margin-block: 0 1.4em;
+  margin-block: 0 1.15em;
 }
 body.article-standard-page.varna-vicara-page #source-content :is(strong, b, h2, h3, h4, h5, p.reference, .emphasis) {
   font-weight: 400;
@@ -205,7 +205,7 @@ body.article-standard-page.varna-vicara-page #source-content h2.document-group-h
   text-align: center;
   font-size: 1.55em;
   line-height: 1.25;
-  margin: 2.1em 0 1.1em;
+  margin: 1.05em 0 .45em;
   padding: 0;
   border: 0;
 }
@@ -213,13 +213,13 @@ body.article-standard-page.varna-vicara-page #source-content h2.document-group-h
   content: "";
   display: block;
   width: min(150px, 40%);
-  margin: .65em auto 0;
+  margin: .4em auto 0;
   border-top: 1px solid #e2e2e2;
 }
 body.article-standard-page.varna-vicara-page #source-content h3.document-section-title {
   font-size: 1.26em;
   line-height: 1.35;
-  margin: 1.65em 0 .85em;
+  margin: 1.15em 0 .45em;
 }
 body.article-standard-page.varna-vicara-page .toc a.is-active {
   background: transparent;
@@ -311,4 +311,35 @@ body.article-standard-page.varna-vicara-page #source-content :is(.alpha-list, .a
 }
 body.article-standard-page.varna-vicara-page #source-content :is(.alpha-list, .argument-list) > li {
   margin: .3em 0;
+}
+
+/* English paragraphs use a common justified measure; Sanskrit verse metre is independent. */
+body.article-standard-page.varna-vicara-page #source-content .document-section > p:not(.reference),
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+body.article-standard-page.varna-vicara-page #source-content .vv-debate > p:not(.vv-debate-label),
+body.article-standard-page.varna-vicara-page #source-content .document-section li {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+body.article-standard-page.varna-vicara-page #source-content .document-section > h2.document-group-heading + h3.document-section-title {
+  margin-top: .55em;
+}
+body.article-standard-page.varna-vicara-page #source-content .document-section > :is(h2, h3) + .scripture-quote-pair {
+  margin-top: .65em;
+}
+body.article-standard-page.varna-vicara-page #source-content > .document-section:first-child > .scripture-quote-pair:first-child {
+  margin-top: 0;
+  margin-bottom: .8em;
+}
+@media (max-width: 620px) {
+  /* Narrow screens need natural wrapping to avoid exaggerated word spacing. */
+  body.article-standard-page.varna-vicara-page #source-content .document-section > p:not(.reference),
+  body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
+  body.article-standard-page.varna-vicara-page #source-content .vv-debate > p:not(.vv-debate-label),
+  body.article-standard-page.varna-vicara-page #source-content .document-section li {
+    text-align: left;
+    hyphens: manual;
+  }
 }
