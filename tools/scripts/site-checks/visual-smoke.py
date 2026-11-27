@@ -491,6 +491,10 @@ def run() -> None:
                 # Fifteen bilingual source groups and two English-only repeated maxims.
                 assert len(rail_metrics) == 17, f"Expected 17 Varṇa quote groups, got {len(rail_metrics)}"
                 assert sum(row["sourcePresent"] for row in rail_metrics) == 15, rail_metrics
+                sanskrit_sources = page.locator("#source-content .scripture-quote-pair [lang='sa-Deva']")
+                assert sanskrit_sources.count() == 15
+                assert sanskrit_sources.evaluate_all("nodes => nodes.every(node => !/[०-९]/.test(node.textContent))"), "Displayed Sanskrit contains verse or footnote numbers"
+
                 assert all(row["translationCount"] == 1 for row in rail_metrics), rail_metrics
                 typography = page.evaluate("""
                     () => {
