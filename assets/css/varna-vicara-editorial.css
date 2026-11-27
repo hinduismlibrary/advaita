@@ -1,6 +1,6 @@
 /* Varṇa-vicāra: one shared reading column, for both prose and quotations. */
 body.article-standard-page.varna-vicara-page {
-  --paper: #f4f4f4;
+  --paper: #fff;
   --outer: #2b261f;
   --varna-layout-width: 1104px;
   --varna-panel-width: calc(100% - clamp(32px, 7vw, 112px));
@@ -89,7 +89,7 @@ body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pa
   margin-inline: 0;
 }
 body.article-standard-page.varna-vicara-page #source-content {
-  color: #3c362f;
+  color: #242424;
   font-size: inherit;
   line-height: inherit;
 }
@@ -343,10 +343,6 @@ body.article-standard-page.varna-vicara-page #source-content > .document-section
 }
 
 /* Classic essay typography, using the measured palette and rhythm of the reference. */
-body.article-standard-page.varna-vicara-page {
-  --teal: #097779;
-  --ink: #3c362f;
-}
 body.article-standard-page.varna-vicara-page .reader-grid > article.article,
 body.article-standard-page.varna-vicara-page #source-content {
   font-optical-sizing: none;
@@ -357,22 +353,16 @@ body.article-standard-page.varna-vicara-page main#main-content.page > .article-h
   font-size: clamp(32px, 3.5vw, 43px);
   line-height: 1.22;
   font-weight: 600;
-  color: #097779;
 }
 body.article-standard-page.varna-vicara-page #source-content h2.document-group-heading {
   font-family: Vollkorn, Georgia, serif;
   font-size: 1.65em;
   font-weight: 500;
-  color: #097779;
 }
 body.article-standard-page.varna-vicara-page #source-content h3.document-section-title {
   font-family: Vollkorn, Georgia, serif;
   font-size: 1.35em;
   font-weight: 500;
-  color: #097779;
-}
-body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.reference {
-  color: #097779;
 }
 @media print {
   body.article-standard-page.varna-vicara-page { --paper: #fff; }
