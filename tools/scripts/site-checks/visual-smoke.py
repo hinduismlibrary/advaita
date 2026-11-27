@@ -491,7 +491,7 @@ def run() -> None:
                 # Fifteen bilingual source groups and two English-only repeated maxims.
                 assert len(rail_metrics) == 17, f"Expected 17 Varṇa quote groups, got {len(rail_metrics)}"
                 assert sum(row["sourcePresent"] for row in rail_metrics) == 15, rail_metrics
-                assert sum(row["translationCount"] for row in rail_metrics) == 20, rail_metrics
+                assert all(row["translationCount"] == 1 for row in rail_metrics), rail_metrics
                 typography = page.evaluate("""
                     () => {
                         const content = document.querySelector('#source-content');
@@ -531,9 +531,11 @@ def run() -> None:
                 assert all(width == "3px" for row in rail_metrics for width in row["railWidths"]), rail_metrics
                 assert all(color == "rgb(165, 169, 170)" for row in rail_metrics for color in row["railColors"]), rail_metrics
                 assert all(margin == "0px" for row in rail_metrics for margin in row["bottomMargins"]), rail_metrics
-                multi_translation_groups = [row for row in rail_metrics if row["translationCount"] > 1]
-                assert multi_translation_groups, "Expected multi-paragraph translation groups"
-                assert all(abs(gap) < 0.5 for row in multi_translation_groups for gap in row["gaps"]), multi_translation_groups
+                # Each cited passage reads continuously, with spaces between its sentences.
+                visvamitra_translation = page.locator(".scripture-quote-pair").filter(has=page.get_by_text("Bhaviṣya Purāṇa 1.16.56–58", exact=True)).locator("p.translation")
+                assert visvamitra_translation.count() == 1
+                continuous_text = visvamitra_translation.inner_text()
+                assert all(fragment in continuous_text for fragment in ["obstacles. Then,", "upon it. Thereupon", "body. This is indeed"]), continuous_text
                 assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Varṇa desktop layout overflows horizontally"
                 # The masthead and footer must not overhang the reading panel.
                 panel_edges_match = """
@@ -560,7 +562,7 @@ def run() -> None:
                 report["varna_vicara"] = {
                     "quote_groups": len(rail_metrics),
                     "sanskrit_source_groups_visible": sum(row["sourceVisible"] for row in rail_metrics),
-                    "joined_multi_paragraph_groups": len(multi_translation_groups),
+                    "continuous_translation_groups": sum(row["translationCount"] == 1 for row in rail_metrics),
                     "devanagari": "Sanskrit sources visible; interface labels hidden",
                     "viewport_checks": [1366, 390],
                 }

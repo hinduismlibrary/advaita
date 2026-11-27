@@ -161,7 +161,6 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
 #source-content .vv-verse-words { min-width: 0; overflow-wrap: break-word; }
 #source-content .vv-danda { align-self: end; white-space: nowrap; }
 #source-content .scripture-quote-pair > .revealed-sanskrit { padding-bottom: .2em !important; }
-#source-content .scripture-quote-pair > p.translation + p.translation { padding-top: .3em !important; }
 @media (max-width: 620px) {
   #source-content .vv-verse-words { text-wrap: pretty; }
   #source-content .vv-stanza { column-gap: .25em; }
