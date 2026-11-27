@@ -1,7 +1,7 @@
 /* Varṇa-vicāra: one shared reading column, for both prose and quotations. */
 body.article-standard-page.varna-vicara-page {
   --paper: #fff;
-  --outer: #f8f7f5;
+  --outer: #2b261f;
   --varna-layout-width: 1144px;
   --varna-reading-width: 850px;
   --varna-layout-gap: clamp(38px, 4vw, 64px);
@@ -10,7 +10,7 @@ body.article-standard-page.varna-vicara-page {
 }
 body.article-standard-page.varna-vicara-page main#main-content.page {
   box-sizing: border-box;
-  width: 100%;
+  width: calc(100% - clamp(32px, 7vw, 112px));
   max-width: 1320px;
   margin: 0 auto;
   padding: 44px clamp(26px, 4vw, 64px) 80px;
@@ -131,7 +131,7 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
   margin: 0;
   padding: 0;
   border: 0;
-  color: #946200;
+  color: #7f432f;
   font-size: 1em;
   font-family: "Noto Serif Devanagari", serif;
   font-weight: 700;
@@ -167,6 +167,7 @@ html body.article-standard-page.varna-vicara-page #source-content .scripture-quo
 
 /* Prioritise the reading measure when a persistent sidebar would squeeze the text. */
 @media (max-width: 1099px) {
+  body.article-standard-page.varna-vicara-page main#main-content.page { width: 100%; }
   body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid,
   body.article-standard-page.varna-vicara-page main#main-content.page > .article-head {
     display: block;
@@ -226,4 +227,23 @@ body.article-standard-page.varna-vicara-page .toc a.is-active {
 }
 @media print {
   body.article-standard-page.varna-vicara-page .reader-grid > article.article { max-width: none; }
+}
+
+/* Match the paper column at the footer; leave a modest dark outer margin on desktop. */
+body.article-standard-page.varna-vicara-page .article-footer {
+  box-sizing: border-box;
+  width: calc(100% - clamp(32px, 7vw, 112px));
+  max-width: 1320px;
+  background: var(--paper);
+}
+@media (max-width: 1099px) {
+  body.article-standard-page.varna-vicara-page .article-footer { width: 100%; }
+}
+@media print {
+  body.article-standard-page.varna-vicara-page { background: #fff; }
+  body.article-standard-page.varna-vicara-page main#main-content.page {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
 }

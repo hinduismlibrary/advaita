@@ -488,7 +488,36 @@ def run() -> None:
                         };
                     })
                 """)
-                assert len(rail_metrics) == 16, f"Expected 16 Varṇa quote groups, got {len(rail_metrics)}"
+                # Fifteen bilingual source groups and two English-only repeated maxims.
+                assert len(rail_metrics) == 17, f"Expected 17 Varṇa quote groups, got {len(rail_metrics)}"
+                assert sum(row["sourcePresent"] for row in rail_metrics) == 15, rail_metrics
+                assert sum(row["translationCount"] for row in rail_metrics) == 20, rail_metrics
+                typography = page.evaluate("""
+                    () => {
+                        const content = document.querySelector('#source-content');
+                        const prose = content.querySelector('.document-section > p:not(.reference)');
+                        const quote = content.querySelector('.scripture-quote-pair');
+                        const translation = quote.querySelector('p.translation');
+                        const source = quote.querySelector('[lang="sa-Deva"]');
+                        const main = document.querySelector('main#main-content');
+                        return {
+                            proseWidth: prose.getBoundingClientRect().width,
+                            quoteWidth: quote.getBoundingClientRect().width,
+                            proseWeight: getComputedStyle(prose).fontWeight,
+                            translationWeight: getComputedStyle(translation).fontWeight,
+                            translationColor: getComputedStyle(translation).color,
+                            sourceWeight: getComputedStyle(source).fontWeight,
+                            sourceColor: getComputedStyle(source).color,
+                            outerColor: getComputedStyle(document.body).backgroundColor,
+                            paperColor: getComputedStyle(main).backgroundColor
+                        };
+                    }
+                """)
+                assert abs(typography["proseWidth"] - typography["quoteWidth"]) < 1, typography
+                assert typography["proseWeight"] == "400", typography
+                assert typography["translationWeight"] == "700" and typography["translationColor"] == "rgb(0, 0, 0)", typography
+                assert typography["sourceWeight"] == "700" and typography["sourceColor"] == "rgb(127, 67, 47)", typography
+                assert typography["outerColor"] == "rgb(43, 38, 31)" and typography["paperColor"] == "rgb(255, 255, 255)", typography
                 assert all(
                     row["sourceDisplay"] == "block" and row["sourceVisible"]
                     for row in rail_metrics if row["sourcePresent"]
