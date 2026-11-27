@@ -1,11 +1,11 @@
 /* Varṇa-vicāra: one shared reading column, for both prose and quotations. */
 body.article-standard-page.varna-vicara-page {
-  --paper: #fff;
+  --paper: #f4f4f4;
   --outer: #2b261f;
-  --varna-layout-width: 1144px;
+  --varna-layout-width: 1104px;
   --varna-panel-width: calc(100% - clamp(32px, 7vw, 112px));
   --varna-panel-max: 1320px;
-  --varna-reading-width: 850px;
+  --varna-reading-width: 790px;
   --varna-layout-gap: clamp(38px, 4vw, 64px);
   --varna-toc-width: 220px;
   background: var(--outer);
@@ -16,7 +16,7 @@ body.article-standard-page.varna-vicara-page main#main-content.page {
   max-width: var(--varna-panel-max);
   margin: 0 auto;
   padding: 44px clamp(26px, 4vw, 64px) 80px;
-  background: #fff;
+  background: var(--paper);
 }
 body.article-standard-page.varna-vicara-page main#main-content.page > .article-head,
 body.article-standard-page.varna-vicara-page main#main-content.page > .reader-grid {
@@ -72,7 +72,7 @@ body.article-standard-page.varna-vicara-page .reader-grid > article.article {
   grid-column: 2;
   font-family: Merriweather, Georgia, "Times New Roman", serif;
   font-size: 20px;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 body.article-standard-page.varna-vicara-page .article .mobile-toc { display: none; }
 /* All reading elements inherit the same available width, not separate line measures. */
@@ -89,7 +89,7 @@ body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pa
   margin-inline: 0;
 }
 body.article-standard-page.varna-vicara-page #source-content {
-  color: #242424;
+  color: #3c362f;
   font-size: inherit;
   line-height: inherit;
 }
@@ -98,9 +98,9 @@ body.article-standard-page.varna-vicara-page #source-content .document-section l
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
   font-family: Merriweather, Georgia, "Times New Roman", serif;
   font-size: inherit;
-  line-height: 1.65;
+  line-height: 1.5;
   text-align: left;
-  hyphens: manual;
+  hyphens: none;
   font-weight: 400;
 }
 body.article-standard-page.varna-vicara-page #source-content .document-section > p {
@@ -312,15 +312,14 @@ body.article-standard-page.varna-vicara-page #source-content :is(.alpha-list, .a
   margin: .3em 0;
 }
 
-/* English paragraphs use a common justified measure; Sanskrit verse metre is independent. */
+/* Match the reference essay's natural English wrapping; Sanskrit verse metre is independent. */
 body.article-standard-page.varna-vicara-page #source-content .document-section > p:not(.reference),
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation,
 body.article-standard-page.varna-vicara-page #source-content .vv-debate > p:not(.vv-debate-label),
 body.article-standard-page.varna-vicara-page #source-content .document-section li {
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-word;
-  hyphens: auto;
+  text-align: left;
+  text-align-last: auto;
+  hyphens: none;
 }
 body.article-standard-page.varna-vicara-page #source-content .document-section > h2.document-group-heading + h3.document-section-title {
   margin-top: .55em;
@@ -339,6 +338,42 @@ body.article-standard-page.varna-vicara-page #source-content > .document-section
   body.article-standard-page.varna-vicara-page #source-content .vv-debate > p:not(.vv-debate-label),
   body.article-standard-page.varna-vicara-page #source-content .document-section li {
     text-align: left;
-    hyphens: manual;
+    hyphens: none;
   }
+}
+
+/* Classic essay typography, using the measured palette and rhythm of the reference. */
+body.article-standard-page.varna-vicara-page {
+  --teal: #097779;
+  --ink: #3c362f;
+}
+body.article-standard-page.varna-vicara-page .reader-grid > article.article,
+body.article-standard-page.varna-vicara-page #source-content {
+  font-optical-sizing: none;
+  letter-spacing: normal;
+}
+body.article-standard-page.varna-vicara-page main#main-content.page > .article-head h1 {
+  font-family: Vollkorn, Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 43px);
+  line-height: 1.22;
+  font-weight: 600;
+  color: #097779;
+}
+body.article-standard-page.varna-vicara-page #source-content h2.document-group-heading {
+  font-family: Vollkorn, Georgia, serif;
+  font-size: 1.65em;
+  font-weight: 500;
+  color: #097779;
+}
+body.article-standard-page.varna-vicara-page #source-content h3.document-section-title {
+  font-family: Vollkorn, Georgia, serif;
+  font-size: 1.35em;
+  font-weight: 500;
+  color: #097779;
+}
+body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.reference {
+  color: #097779;
+}
+@media print {
+  body.article-standard-page.varna-vicara-page { --paper: #fff; }
 }
