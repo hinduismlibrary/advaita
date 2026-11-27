@@ -530,11 +530,23 @@ def run() -> None:
                 assert multi_translation_groups, "Expected multi-paragraph translation groups"
                 assert all(abs(gap) < 0.5 for row in multi_translation_groups for gap in row["gaps"]), multi_translation_groups
                 assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Varṇa desktop layout overflows horizontally"
+                # The masthead and footer must not overhang the reading panel.
+                panel_edges_match = """
+                    () => {
+                        const main = document.querySelector('main#main-content').getBoundingClientRect();
+                        return ['header.sitebar', '.article-footer'].every(selector => {
+                            const rect = document.querySelector(selector).getBoundingClientRect();
+                            return Math.abs(rect.left - main.left) < 1 && Math.abs(rect.right - main.right) < 1;
+                        });
+                    }
+                """
+                assert page.evaluate(panel_edges_match), "Varṇa desktop header/footer misaligned"
                 page.screenshot(path=str(OUT / "varna-vicara-desktop.png"))
                 page.set_viewport_size({"width": 390, "height": 844})
                 page.reload(wait_until="domcontentloaded")
                 assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Varṇa mobile layout overflows horizontally"
                 assert page.locator(".mobile-toc").is_visible(), "Varṇa mobile contents menu is hidden"
+                assert page.evaluate(panel_edges_match), "Varṇa mobile header/footer misaligned"
                 page.screenshot(path=str(OUT / "varna-vicara-mobile.png"))
                 report["varna_vicara"] = {
                     "quote_groups": len(rail_metrics),
