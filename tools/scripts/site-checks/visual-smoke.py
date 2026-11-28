@@ -520,7 +520,7 @@ def run() -> None:
                 assert abs(typography["proseWidth"] - typography["quoteWidth"]) < 1, typography
                 assert typography["proseWeight"] == "400", typography
                 prose_style = page.locator("#source-content .document-section > p:not(.reference)").first.evaluate("node => ({family: getComputedStyle(node).fontFamily, color: getComputedStyle(node).color, hyphens: getComputedStyle(node).hyphens})")
-                assert "Merriweather" in prose_style["family"] and prose_style["color"] == "rgb(36, 36, 36)" and prose_style["hyphens"] == "none", prose_style
+                assert "Vollkorn" in prose_style["family"] and prose_style["color"] == "rgb(36, 36, 36)" and prose_style["hyphens"] == "none", prose_style
                 assert page.locator("#source-content .scripture-quote-pair > p.reference").first.inner_text() == "Invocation"
                 assert page.locator("#source-content .document-section > p:not(.reference)").first.evaluate("node => getComputedStyle(node).textAlign") == "left"
                 assert page.locator("#source-content p.translation").first.evaluate("node => getComputedStyle(node).textAlign") == "left"

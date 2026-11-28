@@ -70,7 +70,7 @@ body.article-standard-page.varna-vicara-page .reader-grid > article.article {
   min-width: 0;
   max-width: var(--varna-reading-width);
   grid-column: 2;
-  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
   font-size: 20px;
   line-height: 1.5;
 }
@@ -90,13 +90,14 @@ body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pa
 }
 body.article-standard-page.varna-vicara-page #source-content {
   color: #242424;
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
   font-size: inherit;
   line-height: inherit;
 }
 body.article-standard-page.varna-vicara-page #source-content .document-section > p,
 body.article-standard-page.varna-vicara-page #source-content .document-section li,
 body.article-standard-page.varna-vicara-page #source-content .scripture-quote-pair > p.translation {
-  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
   font-size: inherit;
   line-height: 1.5;
   text-align: left;
@@ -211,7 +212,7 @@ body.article-standard-page.varna-vicara-page #source-content h2.document-group-h
 body.article-standard-page.varna-vicara-page #source-content h2.document-group-heading::after {
   content: "";
   display: block;
-  width: min(150px, 40%);
+  width: min(21rem, 52%);
   margin: .4em auto 0;
   border-top: 1px solid #e2e2e2;
 }
