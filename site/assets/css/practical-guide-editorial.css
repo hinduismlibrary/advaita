@@ -212,6 +212,13 @@ body.article-standard-page.practical-guide-page > header.sitebar .site-search {
     width: 100%;
   }
 }
+@media (max-width: 1000px) {
+  body.article-standard-page.practical-guide-page > header.sitebar .site-search {
+    flex: 1 1 100%;
+    max-width: none;
+    width: 100%;
+  }
+}
 @media (max-width: 620px) {
   body.article-standard-page.practical-guide-page main#main-content.page {
     padding: 24px 18px 42px;
